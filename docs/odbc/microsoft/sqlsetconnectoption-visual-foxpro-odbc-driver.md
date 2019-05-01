@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 398d098615a0453cb016286867836388fd817540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631791"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473028"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
 >  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
- 지원: Partial  
+ 지원: 부분  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
- 연결의 측면을 제어 하는 옵션을 설정 합니다. 이 함수는 부분적으로 지원: 드라이버에 대 한 모든 값을 지원 합니다 *fOption* 인수 하지만 일부 지원 하지 않습니다 *갖고* 에 대 한 값을 *fOption* 인수 SQL_TXN_ISOLATION 합니다.  
+ 연결의 측면을 제어 하는 옵션을 설정 합니다. 이 함수는 부분적으로 지원 합니다. 드라이버에 대 한 모든 값을 지원 합니다 *fOption* 인수 하지만 일부 지원 하지 않습니다 *갖고* 에 대 한 값을 *fOption* SQL_TXN_ISOLATION 인수.  
   
  다음 표에서 Visual FoxPro ODBC 드라이버 구현에 특정 동작을 사용 하 여 해당 인수만 **SQLSetConnectOption**합니다.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "47631791"
 |SQL_LOGINTIMEOUT|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
 |SQL_CURSORS|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
 |SQL_PACKET_SIZE|"드라이버를 사용할 수 없습니다." 오류를 반환합니다.|  
-|SQL_TXN_ISOLATION|드라이버 SQL_TXN_READ_COMMITTED만 허용합니다.<br /><br /> 다음 *갖고*s는 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE로|  
+|SQL_TXN_ISOLATION|드라이버 SQL_TXN_READ_COMMITTED만 허용합니다.<br /><br /> 다음 *갖고*s는 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
  자세한 내용은 [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) 에 *ODBC 프로그래머 참조*합니다.

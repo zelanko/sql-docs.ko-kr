@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754631"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453483"
 ---
 # <a name="project-settings-gui-accesstosql"></a>프로젝트 설정 (GUI) (AccessToSQL)
 GUI 프로젝트 설정 수에 나타나는 데이터를 구성 합니다 **데이터** 탭 및 평가 보고서를 사용 하 여 데이터 보고서를 포함 하는 경우.  
@@ -30,15 +30,15 @@ GUI 창에서 사용할 수는 **프로젝트 설정** 하 고 **기본 프로�
 **원본에 대 한 최대 행 수**  
 에 표시 되는 데이터의 행 수를 구성 합니다 **데이터** 선택한 원본 테이블에 대 한 탭 합니다.  
   
-**기본**: 100  
+**기본값**: 100  
   
 **대상에 대 한 최대 행 수**  
 에 표시 되는 데이터의 행 수를 구성 합니다 **데이터** 선택한 대상 테이블에 대 한 탭 합니다.  
   
-**기본**: 100  
+**기본값**: 100  
   
 **변환 후 보고서를 보여 줍니다.**  
 스키마를 변환한 후 보고서를 표시할 True를 선택 합니다. 결과 변환 보고서를 동일한 레이아웃 및 평가 보고서와 정보를 포함합니다.  
   
-**기본**: False  
+**기본값**: False  
   

@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63d8cb22a8533cf352acb690f87916e2e9d568d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249833"
 ---
 # <a name="using-logical-functions"></a>논리 함수 사용
 
 
   논리 함수는 개체와 식에 대해 논리 연산이나 비교를 수행하고 부울 값을 반환합니다. MDX(Multidimensional Expressions)에서 멤버의 위치를 결정하는 데는 논리 함수가 필수적입니다.  
   
- 가장 일반적으로 사용 되는 논리 함수는는 **IsEmpty** 함수입니다. 사용 하는 방법에 대 한 자세한 내용은 **IsEmpty** 함수, 참조 [빈 값 작업](../mdx/working-with-empty-values.md)합니다.  
+ 자주 사용 하는 논리 함수는 **IsEmpty** 함수입니다. 사용 하는 방법에 대 한 자세한 내용은 합니다 **IsEmpty** 함수를 참조 하십시오 [빈 값 작업](../mdx/working-with-empty-values.md)합니다.  
   
- 다음 쿼리를 사용 하는 방법을 보여 줍니다는 **IsLeaf** 및 **IsAncestor** 함수:  
+ 다음 쿼리를 사용 하는 방법을 보여 줍니다 합니다 **IsLeaf** 하 고 **IsAncestor** 함수:  
   
  `WITH`  
   

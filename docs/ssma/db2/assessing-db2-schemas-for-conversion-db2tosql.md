@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608949"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453429"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>(DB2ToSQL) 변환을 위해 DB2 스키마 평가
 개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 얼마나 복잡 마이그레이션 되며 얼마나 많은 시간을 결정 해야 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  
@@ -35,7 +35,7 @@ SSMA 변환 선택한 DB2 데이터베이스 개체를이 평가 보고서를 �
   
     SSMA는 창의 맨 아래에서 상태 표시줄에 진행률이 표시 됩니다. 출력 창 표시 인 경우 출력 창에는 메시지가 나타납니다.  
   
-    평가가 완료 되 면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: 평가 보고서 창이 나타납니다.  
+    평가가 완료 되 면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: 평가 보고서 창이 표시 됩니다.  
   
 ## <a name="using-assessment-reports"></a>평가 보고서를 사용 하 여  
 평가 보고서 창에는 세 가지 창이 있습니다.  

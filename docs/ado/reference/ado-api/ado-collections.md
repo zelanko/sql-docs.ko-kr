@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248967"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
 이러한 컬렉션 및 ADO 개체 간의 관계가에 표시 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  

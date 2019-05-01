@@ -1,5 +1,5 @@
 ---
-title: '작업 3 (선택 사항): 구독 뷰 검토 | Microsoft Docs'
+title: '태스크 3(선택 사항): 구독 뷰 검토 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249990"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>작업 3 (선택 사항): 구독 뷰 검토
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>태스크 3(선택 사항): 구독 뷰 검토
   이 작업에서는 SQL Server Management Studio를 사용하여 SQL 뷰가 만들어졌는지 확인합니다.  
   
 1.  시작할 **SQL Server Management Studio**합니다. 클릭 합니다 **시작** 단추를 클릭 **모든 프로그램**, 클릭 **Microsoft SQL Server 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  

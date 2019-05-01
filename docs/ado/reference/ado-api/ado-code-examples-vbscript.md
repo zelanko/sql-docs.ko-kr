@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0db3b07328e4b528ed923ea10e0b74550345b0d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249184"
 ---
 # <a name="ado-code-examples-vbscript"></a>ADO 코드 예제 VBScript
 다음 코드 예제를 사용 하 여 Microsoft® Visual Basic® Scripting Edition (VBScript)에서 작성 하는 경우 ADO 메서드를 사용 하는 방법에 알아봅니다.  
@@ -47,5 +47,5 @@ ms.locfileid: "47601811"
   
 ## <a name="see-also"></a>관련 항목  
  [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Visual c + +의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [시각적 개체의 ADO 코드 예제C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
+ [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

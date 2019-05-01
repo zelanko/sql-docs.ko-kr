@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245105"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)
   참조 하는 속성 배열 내에서 속성의 인덱스 값을 가져오거나 합니다 [Properties 속성 (ClientNetworkProtocol 클래스)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 의 합니다 [ClientNetworkProtocol 클래스](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  

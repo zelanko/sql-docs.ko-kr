@@ -1,7 +1,7 @@
 ---
 title: 새로운 기능-SQL Server Machine Learning Services | Microsoft Docs
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MT
+ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645525"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458798"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -30,6 +30,7 @@ ms.locfileid: "58645525"
 
 | 릴리스 | 기능 업데이트 |
 |---------|----------------|
+| CTP 2.5 | 새 [Java 용 SDK Microsoft 확장성](java/java-sdk.md)합니다. |
 | CTP 2.4 | 에 대 한 Linux 지원을 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R, Python 및 Java에 대 한 합니다. |
 | | Java 인터프리터의 위치를 지정 하는 환경 변수에서 변경 되었습니다 `JAVA_HOME` 에 `JRE_HOME`입니다. |
 | CTP 2.3 | 지원 되는 새 [Java 데이터 형식](java/java-sql-datatypes.md)합니다. |
@@ -103,7 +104,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 | 릴리스 |기능 업데이트 |
 |---------|----------------|
-| CU 추가 | [**실시간 점수 매기기** ](real-time-scoring.md) 최적화 된 이진 형식으로 저장 된 모델을 읽고 R 런타임을 호출 하지 않고 예측을 생성할 네이티브 c + + 라이브러리에 의존 합니다. 이렇게 하면 점수 매기기 작업을 훨씬 더 빠릅니다. 실시간 점수 매기기를 사용 하 여 저장된 프로시저를 실행할 수도 있고 R 코드에서 실시간 점수 매기기를 수행할 수 있습니다. 실시간 점수 매기기 역시 사용할 수 있는 SQL Server 2016에 대 한 인스턴스를 최신 릴리스로 업그레이드 되 면 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]합니다. |
+| CU 추가 | [**실시간 점수 매기기** ](real-time-scoring.md) 네이티브 의존 C++ 라이브러리를 최적화 된 이진 형식으로 저장 된 모델을 읽고 다음 R 런타임을 호출 하지 않고 예측을 생성 합니다. 이렇게 하면 점수 매기기 작업을 훨씬 더 빠릅니다. 실시간 점수 매기기를 사용 하 여 저장된 프로시저를 실행할 수도 있고 R 코드에서 실시간 점수 매기기를 수행할 수 있습니다. 실시간 점수 매기기 역시 사용할 수 있는 SQL Server 2016에 대 한 인스턴스를 최신 릴리스로 업그레이드 되 면 [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]합니다. |
 | 초기 릴리스 | [**데이터베이스 내 분석에 R 통합**](r/sql-server-r-services.md)합니다. <br/><br/> 호출 R에 대 한 R 패키지에는 t-sql로 또는 그 반대로 작동 합니다. 관리 분산 처리 및 결과 집계 및 RevoScaleR 함수 조정 구성 요소로 데이터를 청크 하 여 대규모 R 분석을 제공 합니다. SQL Server 2016 R Services (In-database)에서 RevoScaleR 엔진 데이터 및 분석 같은 처리 컨텍스트에서 함께 brining 데이터베이스 엔진 인스턴스를 통합 되어 있습니다. <br/><br/>T-SQL 및 R 통합을 통해 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다. 이 저장된 프로시저를 사용 하 여 R 코드를 호출할 수 있습니다. 이 보안 인프라에 보냈습니다 모델 및 간단한 저장된 프로시저를 사용 하 여 응용 프로그램에서 호출할 수 있는 스크립트의 엔터프라이즈급 배포할을 수 있습니다. SQL에서 R 프로세스 및 MPI 링 병렬화로 스트리밍 데이터에서 추가 성능 향상. <br/><br/>T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-sql.md) 수행 하는 함수 [네이티브 점수 매기기](sql-native-scoring.md) 필요한 이진 형식으로 이전에 저장 하는 미리 학습 된 모델입니다.|
 
 ## <a name="linux-support-roadmap"></a>Linux 지원 로드맵

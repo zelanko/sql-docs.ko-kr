@@ -5,16 +5,16 @@ description: 단계 및 SQL Server 2019 빅 데이터 클러스터 (미리 보�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860434"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472251"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
 
@@ -45,21 +45,23 @@ ms.locfileid: "58860434"
 
 - **Minikube**: Minikube를 사용 하면 단일 서버에서 Kubernetes를 로컬로 실행할 수 있습니다. 빅 데이터 클러스터를 시도해 또는 테스트 또는 개발 시나리오에서 사용 해야 하는 경우는 좋은 옵션입니다. Minikube를 사용 하는 방법에 대 한 자세한 내용은 참조는 [Minikube 설명서](https://kubernetes.io/docs/setup/minikube/)합니다. Minikube를 사용 하 여 빅 데이터 클러스터에 대 한 특정 요구 사항을 참조 하세요 [minikube SQL Server 2019 빅 데이터 클러스터 배포에 대 한 구성](deploy-on-minikube.md)합니다.
 
-## <a name="deployment-scripts"></a>배포 스크립트
-
-배포 스크립트는 Kubernetes와 단일 단계에서 빅 데이터 클러스터를 배포 하는 데 도움이 됩니다. 또한 종종 필수 환경 변수에 대 한 기본값 제공합니다. Azure Kubernetes Service (AKS)에서 빅 데이터 클러스터에 대 한 배포 스크립트의 예제를 참조 하세요 [배포 스크립트 (AKS)를 사용 하 여 빅 데이터 클러스터를 SQL Server 2019 배포](quickstart-big-data-cluster-deploy.md)합니다.
-
-빅 데이터 클러스터 환경 변수를 다르게 구성 하는 고유한 버전을 만들어 배포 스크립트를 사용자 지정할 수 있습니다.
-
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터 배포
 
-Kubernetes 및 빅 데이터 클러스터를 AKS 단일 스크립트를 사용 하 여 배포를 다음 예제를 참조 하세요.
+Kubernetes를 구성한 후 사용 하 여 빅 데이터 클러스터 배포는 `mssqlctl cluster create` 명령입니다. 을 배포할 때는 여러 가지 다른 방법으로 수행할 수 있습니다.
 
-- [배포 스크립트 (AKS)를 사용 하 여 SQL Server 2019 빅 데이터 클러스터를 배포 합니다.](quickstart-big-data-cluster-deploy.md)
+- 개발-테스트 환경에 배포 하는 경우 중 하나를 사용 하도록 선택할 수 있습니다 합니다 [기본 구성](deployment-guidance.md#deploy) 제공한 **mssqlctl**합니다.
 
-AKS, kubeadm, 및 MiniKube를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 자세한 배포 지침은 다음 문서를 참조 합니다.
+- 배포를 사용자 지정 하려면 있습니다 만들고 사용할 수 있는 사용자 고유의 [배포 구성 파일](deployment-guidance.md#configfile)합니다. 
 
-- [Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법](deployment-guidance.md)
+- 완전히 무인 설치의 경우 다른 모든 설정은 환경 변수에 전달할 수 있습니다. 자세한 내용은 [무인된 배포](deployment-guidance.md#unattended)합니다.
+
+## <a name="deployment-scripts"></a>배포 스크립트
+
+배포 스크립트는 Kubernetes와 단일 단계에서 빅 데이터 클러스터를 배포 하는 데 도움이 됩니다. 또한 종종 빅 데이터 클러스터 설정에 대 한 기본값 제공합니다. Azure Kubernetes Service (AKS)에서 빅 데이터 클러스터에 대 한 배포 스크립트의 예제를 보려면 다음 문서를 참조 합니다.
+
+[배포 스크립트 (AKS)를 사용 하 여 빅 데이터 클러스터를 SQL Server 2019 배포](quickstart-big-data-cluster-deploy.md)합니다.
+
+빅 데이터 클러스터 환경 변수를 다르게 구성 하는 고유한 버전을 만들어 배포 스크립트를 사용자 지정할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

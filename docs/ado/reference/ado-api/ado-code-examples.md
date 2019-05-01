@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248987"
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  

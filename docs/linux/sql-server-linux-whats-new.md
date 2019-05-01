@@ -4,18 +4,18 @@ description: 이 문서에서는 Linux의 SQL Server 2017의 새로운 기능을
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/21/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: b248578015e8d821c3c76314ecbbabdf75600a52
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160531"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456725"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux의 SQL Server의 새로운 기능
 
@@ -23,7 +23,7 @@ ms.locfileid: "53160531"
 
 이 문서에서는 Linux에서 실행되는 SQL Server 2017에 대한 주요 기능 및 사용 가능한 서비스를 설명합니다.
 
-SQL Server 2019 preview가 출시되었습니다. 이 문서에서는 SQL Server 2019 미리 보기 릴리스를 다루지 않습니다. SQL Server 2019 미리 보기를 알아보려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)을 참조하세요.
+SQL Server 2019 preview가 출시되었습니다. 이 문서에서는 SQL Server 2019 미리 보기 릴리스를 다루지 않습니다. SQL Server 2019 미리 보기를 알아보려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)을 참조하세요.
 
 > [!NOTE]
 > 이 문서에서의 이러한 기능 외에도, 누적 업데이트는 GA 릴리스 이후 정기적으로 배포됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [ https://aka.ms/sql2017cu ](https://aka.ms/sql2017cu)를 참조하세요. 패키지 다운로드 및 알려진  문제는 [릴리스 노트](sql-server-linux-release-notes.md)를 참조하세요.

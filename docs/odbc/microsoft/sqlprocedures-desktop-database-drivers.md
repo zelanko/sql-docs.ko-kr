@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813637"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457399"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures(데스크톱 데이터베이스 드라이버)
 **SQLProcedures** 적어도 하나 이상의 인수가 있는 해당 절차에는 행만 반환 됩니다. 인수가 있는 프로시저 뷰도 처리 됩니다.  

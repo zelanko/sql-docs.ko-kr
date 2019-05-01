@@ -1,5 +1,5 @@
 ---
-title: '작업 4: 일치를 Excel 파일로 작업의 결과 내보내는 | Microsoft Docs'
+title: '태스크 4: 일치를 Excel 파일로 작업의 결과 내보내는 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250884"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>작업 4: 일치 작업의 결과를 Excel 파일로 내보내기
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>태스크 4: 일치 작업의 결과를 Excel 파일로 내보내기
   이 작업에서는 일치 작업의 결과를 Excel 파일로 내보냅니다.  
   
 1.  **내보내기** 페이지에서 **대상 유형** 으로 **Excel 파일**을 선택합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "56020444"
   
 5.  **Survivorship 규칙** 에 대해 **피벗 레코드**가 선택되었는지 확인합니다. 이 옵션을 선택하면 각 클러스터의 피벗 레코드가 클러스터의 출력으로 선택됩니다. Survivorship 규칙의 다른 옵션은 다음과 같습니다.  
   
-    1.  **가장 완전 한 레코드:** 채워진 필드가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
+    1.  **가장 완전 한 레코드:** 채워진된 필드가 가장 많은 사용 하 여 많은 레코드가 survivor 레코드가 됩니다.  
   
-    2.  **가장 긴 레코드:** 원본 필드에서 용어 수가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
+    2.  **가장 긴 레코드:** 원본 필드에서 용어 수가 가장 많은 레코드가 survivor 레코드가 됩니다.  
   
-    3.  **가장 완전 하 고 가장 긴 레코드:** 채워진 필드가 가장 많고 각 필드의 용어 수가 가장 많은 레코드가 Survivor 레코드가 됩니다.  
+    3.  **가장 완전 하 고 가장 긴 레코드:** 많은 레코드가 survivor 레코드가 됩니다 채워진된 필드가 가장 많은 많고 각 필드의 용어 수가 가장 합니다.  
   
      ![일치 페이지에서 결과 내보낼](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "일치 페이지에서 결과 내보내기")  
   

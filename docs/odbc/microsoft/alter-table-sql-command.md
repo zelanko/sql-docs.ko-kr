@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207012"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457632"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 명령
 프로그래밍 방식으로 테이블의 구조를 수정합니다.  
@@ -64,13 +64,13 @@ ALTER TABLE TableName1
  *TableName1*  
  구조가 수정 될 테이블의 이름을 지정 합니다.  
   
- 추가 [COLUMN] *FieldName1*  
+ ADD [COLUMN] *FieldName1*  
  추가할 필드의 이름을 지정 합니다.  
   
  ALTER [COLUMN] *FieldName1*  
  수정 하려면 기존 필드의 이름을 지정 합니다.  
   
- *FieldType* [( *nFieldWidth* [합니다 *nPrecision*]])  
+ *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
  새롭거나 수정 된 필드에 대 한 필드 형식, 필드 너비 및 필드 전체 자릿수 (소수 자릿수)를 지정합니다.  
   
  *FieldType* 은 필드를 나타내는 단일 문자 [데이터 형식](../../odbc/microsoft/visual-foxpro-field-data-types.md)합니다. 필드 데이터 형식도 지정 해야 *nFieldWidth* 하거나 *nPrecision* 또는 둘 다.  
@@ -82,13 +82,13 @@ ALTER TABLE TableName1
   
  NULL을 생략 하 고이 정보를 NOT NULL, SET NULL의 현재 설정을 필드에 null 값 허용 되는지 여부를 결정 합니다. 그러나 생략 NULL 및 NOT NULL 기본 키 또는 고유 절을 포함 하는 경우 SET NULL의 현재 설정이 무시 됩니다 아니며 필드가 기본적으로 NULL입니다.  
   
- 확인 *lExpression1*  
+ CHECK *lExpression1*  
  필드에 대 한 유효성 검사 규칙을 지정합니다. *lExpression1* 논리 식으로 계산 되 고 사용자 정의 함수 또는 저장된 프로시저일 수 있습니다. 빈 레코드가 추가 될 때마다 유효성 검사 규칙을 확인 합니다. 추가 된 레코드의 빈 필드 값에 대 한 유효성 검사 규칙을 허용 하지 않는 경우 오류가 생성 됩니다.  
   
- 오류 *cMessageText1*  
+ ERROR *cMessageText1*  
  필드 유효성 검사 규칙 오류를 생성 하는 경우 오류 메시지가 표시를 지정 합니다.  
   
- 기본 *eExpression1*  
+ DEFAULT *eExpression1*  
  필드에 대 한 기본값을 지정 합니다. 데이터 형식이 *eExpression1* 필드에 대 한 데이터 형식과 동일 해야 합니다.  
   
  PRIMARY KEY  
@@ -128,7 +128,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  집합 확인 *lExpression2*  
  기존 필드에 대 한 새 유효성 검사 규칙을 지정합니다. *lExpression2* 논리 식으로 계산 되 고 사용자 정의 함수 또는 저장된 프로시저일 수 있습니다.  
   
- 오류 *cMessageText2*  
+ ERROR *cMessageText2*  
  필드 유효성 검사 규칙 오류를 생성 하는 경우 오류 메시지가 표시를 지정 합니다. 메시지는 찾아보기 또는 편집 창 내에서 데이터가 변경 되는 경우에 표시 됩니다.  
   
  DROP DEFAULT  
@@ -145,7 +145,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  집합 확인 *lExpression3*  
  테이블 유효성 검사 규칙을 지정합니다. *lExpression3* 논리 식으로 계산 되 고 사용자 정의 함수 또는 저장된 프로시저일 수 있습니다.  
   
- 오류 *cMessageText3*  
+ ERROR *cMessageText3*  
  테이블 유효성 검사 규칙 오류를 생성 하는 경우 오류 메시지가 표시를 지정 합니다. 메시지는 찾아보기 또는 편집 창 내에서 데이터가 변경 되는 경우에 표시 됩니다.  
   
  삭제 확인  
@@ -157,7 +157,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  기본 키 삭제  
  기본 인덱스 및 인덱스 태그를 제거합니다. 테이블에서 하나의 기본 키를 가질 수 있으므로 기본 키의 이름을 지정 하는 데 필요한 아닙니다. 기본 키를 기반으로 모든 영구 관계 삭제도 기본 인덱스를 제거 합니다.  
   
- 추가 UNIQUE *eExpression4*[태그 *TagName3*]  
+ ADD UNIQUE *eExpression4*[TAG *TagName3*]  
  후보 인덱스를 테이블에 추가합니다. *eExpression4* 후보 인덱스 키 식을 지정 하 고 *TagName3* 후보 인덱스 태그의 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 태그를 생략 하면 *TagName3* 경우에 *eExpression4* 은 단일 필드에 지정 된 필드와 이름이 같은 후보 인덱스 태그 *eExpression4*.  
   
  DROP 고유 태그 *TagName4*  
@@ -166,7 +166,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  추가 외래 키 [ *eExpression5*] 태그 *TagName4*  
  테이블에 외래 (비기본) 인덱스를 추가합니다. *eExpression5* 외래 인덱스 키 식을 지정 하 고 *TagName4* 외래 인덱스 태그의 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
   
- 참조 *TableName2*[태그 *TagName5*]  
+ REFERENCES *TableName2*[TAG *TagName5*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그가 *TagName5* 부모 테이블에 대 한 기존 인덱스 태그에 따라 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 태그를 생략 *TagName5*, 부모 테이블의 기본 인덱스 태그를 사용 하 여 관계가 성립 합니다.  
   
  DROP 외래 키 태그 *TagName6*[저장]  
@@ -192,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  ALTER TABLE-데이터베이스에 수정 하는 테이블이 있을 경우 SQL 데이터베이스를 배타적으로 사용을 해야 합니다. 단독 사용을 위해 데이터베이스를 열려면 배타적 데이터베이스 열에 포함 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE TABLE-SQL 명령](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX 명령](../../odbc/microsoft/index-command.md)

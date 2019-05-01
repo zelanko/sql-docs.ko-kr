@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583406"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472170"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 컨트롤러 란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-컨트롤러를 배포 하 고 빅 데이터 클러스터를 관리 하기 위한 핵심 논리를 호스트 합니다. Kubernetes 클러스터 및 HDFS 및 Spark와 같은 기타 구성 요소에 포함 된 SQL Server 인스턴스를 사용 하 여 모든 상호 작용 담당 합니다. 
+컨트롤러를 배포 하 고 빅 데이터 클러스터를 관리 하기 위한 핵심 논리를 호스트 합니다. Kubernetes 클러스터 및 HDFS 및 Spark와 같은 기타 구성 요소에 포함 된 SQL Server 인스턴스를 사용 하 여 모든 상호 작용 담당 합니다.
 
 컨트롤러 서비스에는 다음 핵심 기능을 제공합니다.
 
@@ -31,9 +31,10 @@ ms.locfileid: "59583406"
 - 계산, 데이터 및 저장소 풀 관리
 - 클러스터의 상태를 관찰 하려면 모니터링 도구를 노출 합니다.
 - 검색 하 고 예기치 않은 문제를 복구 하는 문제 해결 도구를 노출 합니다.
-- 클러스터 보안 관리: 보안 클러스터 끝점을 확인, 사용자 및 역할 관리, 클러스터 간 통신에 대 한 자격 증명 구성
-- 업그레이드의 워크플로 관리 하므로 안전 하 게 구현 됩니다 (CTP 2.4에서 사용할 수 없음)
-- (CTP 2.4에서 사용할 수 없음) 클러스터의 상태 저장 서비스에 대 한 고가용성 및 DR 관리
+- 클러스터 보안을 관리 합니다.
+  - 보안 클러스터 끝점 확인
+  - 사용자 및 역할 관리
+  - 클러스터 간 통신에 대 한 자격 증명 구성
 
 ## <a name="deploying-the-controller-service"></a>컨트롤러 서비스를 배포합니다.
 

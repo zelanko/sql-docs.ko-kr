@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670122"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453510"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant (AccessToSQL) 액세스
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스는 마이그레이션에 대 한 도구에서 데이터베이스 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 97과 2010 버전에 액세스 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 Windows 및 Linux (미리 보기)에서 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] Azure SQL DB입니다. Access 용 SSMA는 Access 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 데이터베이스 개체를 해당 개체를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL 데이터에 대 한 액세스에서 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL입니다.  
@@ -24,7 +24,7 @@ SSMA for Access 소개 하 고 Access 데이터베이스를 마이그레이션�
   
 ## <a name="contents"></a>내용  
   
-|섹션|설명|  
+|섹션|Description|  
 |-----------|---------------|  
 |[Access용 SSMA의 새로운 기능](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|SSMA 릴리스로 변경 내용을 나열합니다.|  
 |[액세스에 대 한 SQL Server Migration Assistant 설치](installing-sql-server-migration-assistant-for-access-accesstosql.md)|SSMA를 설치 하 고 SSMA를 및 최신 버전에 대 한 링크를 라이선스에 대 한 프로시저를 설치 하기 위한 필수 구성 요소를 나열 합니다.|  

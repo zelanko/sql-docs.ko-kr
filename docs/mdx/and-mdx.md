@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249877"
 ---
 # <a name="and-mdx"></a>AND(MDX)
 
@@ -36,10 +36,10 @@ Expression1 AND Expression2
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 매개 변수가 모두로 평가 되 면 true를 반환 하는 부울 값 **true**, 그렇지 않으면 **false**합니다.  
+ 두 매개 변수를 평가 하는 경우 true를 반환 하는 부울 값 **true**이 고, 그렇지 않으면 **false**합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **AND** 연산자는 두 식이 모두 부울 값으로 취급 (0, 0,으로 **false**, 그렇지 않으면 **true**) 연산자는 논리 결합을 수행 하기 전에. 다음 표에서 설명 방법을 **AND** 연산자로 논리 결합을 수행 합니다.  
+ 합니다 **AND** 연산자는 두 식이 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리곱 연산을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **AND** 연산자로 논리 결합을 수행 합니다.  
   
 |*Expression1*|*Expression2*|반환 값|  
 |-------------------|-------------------|------------------|  

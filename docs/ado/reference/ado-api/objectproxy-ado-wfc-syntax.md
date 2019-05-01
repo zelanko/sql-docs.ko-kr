@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af28755fee20c478237edec22936fc694995d554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678511"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459412"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy(ADO - WFC 구문)
 **ObjectProxy** 개체는 서버를 나타내며에서 반환 되는 **createObject** 메서드를 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체입니다. ObjectProxy 클래스에 메서드 하나가 **호출**, 서버에서 메서드를 호출할 수 있으며 해당 호출의 결과 개체를 반환 합니다.  
@@ -49,5 +49,5 @@ public Object ObjectProxy.( String method, Object[] args)
  *method*  
  서버에 대해 호출할 메서드의 이름을 포함 하는 문자열입니다.  
   
- *인수*  
+ *args*  
  (선택 사항) 서버에서 메서드에 대 한 인수는 개체의 배열입니다. 서버에서 사용 하기 적합 한 데이터 형식으로 Java 데이터 형식 자동 변환 됩니다.

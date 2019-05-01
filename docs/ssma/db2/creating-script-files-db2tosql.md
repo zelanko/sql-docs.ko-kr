@@ -11,22 +11,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520639"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453419"
 ---
 # <a name="creating-script-files-db2tosql"></a>스크립트 파일 (DB2ToSQL) 만들기
 첫 번째 스크립트 파일을 만들 때 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일에 필요한 경우 단계입니다.  
   
 스크립트 파일의 세 가지 섹션으로 보도 나눌 수 있습니다. 합니다.  
   
-1.  **구성:** 콘솔 응용 프로그램에 대 한 구성 매개 변수를 설정할 수 있습니다.  
+1.  **config:** 콘솔 응용 프로그램에 대 한 구성 매개 변수를 설정할 수 있습니다.  
   
 2.  **서버:** 사용자를를 원본/대상 서버 정의 설정할 수 있습니다. 이 별도 서버 연결 파일에 있을 수도 있습니다.  
   
-3.  **스크립트 명령:** SSMA 워크플로 명령을 실행할 수 있습니다.  
+3.  **script-commands:** SSMA 워크플로 명령을 실행할 수 있습니다.  
   
 각 섹션 아래에서 자세히 설명 되어 있습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52520639"
   
     -   표시 안 함-메시지: 콘솔에 메시지를 표시 하지 않습니다. 이 기본적으로 ' false'.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -88,7 +88,7 @@ ms.locfileid: "52520639"
   
     -   대상-사용-마지막으로 사용한 = "true" (기본값) 또는 대상 서버 "target_servername" =  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -123,7 +123,7 @@ ms.locfileid: "52520639"
   
     기본 모드가 **오류**합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -148,13 +148,13 @@ ms.locfileid: "52520639"
   
     다시 연결 모드는 다음과 같습니다.  
   
-    -   다시 연결-마지막-사용-서버: 연결이 활성 상태인 경우 마지막 최대 5 번 사용 하는 서버를 다시 연결 하려고 합니다.  
+    -   reconnect-to-last-used-server: 연결이 활성 상태인 경우 마지막 최대 5 번 사용 하는 서버를 다시 연결 하려고 합니다.  
   
     -   생성을-오류: 연결이 활성 상태인 경우 오류가 생성 됩니다.  
   
     기본 모드가 **오류를 생성**합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -198,11 +198,11 @@ ms.locfileid: "52520639"
   
     -   덮어쓰기: 기존 개체 값을 덮어씁니다. 이 작업은 기본적으로 수행 됩니다.  
   
-    -   건너뛰기: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
+    -   skip: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
   
     -   요청 사용자: 입력 하 라는 ('예 '/' 아니요')  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -223,7 +223,7 @@ ms.locfileid: "52520639"
   
 6.  **실패 한 필수 구성 요소 공급자:** 따라서 사용자는 명령을 처리 하는 데 필요한 모든 필수 구성 요소를 처리할 수 있습니다. 기본적으로 strict 모드는 'f a l'입니다. 'True', 예외를 설정 하면 필수 구성 요소를 충족 하기 위해 실패에 대 한 생성을 가져옵니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -241,17 +241,17 @@ ms.locfileid: "52520639"
   
     -   off  
   
-    -   모든 1%  
+    -   every-1%  
   
-    -   모든 2%  
+    -   every-2%  
   
-    -   모든 5%  
+    -   every-5%  
   
-    -   모든 10%  
+    -   every-10%  
   
-    -   모든-20%  
+    -   every-20%  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -292,12 +292,12 @@ ms.locfileid: "52520639"
   
     -   정보: 디버그 메시지를 제외한 모든 수준은 로깅됩니다.  
   
-    -   디버그: 기록 된 메시지의 모든 수준입니다.  
+    -   debug: 기록 된 메시지의 모든 수준입니다.  
   
     > [!NOTE]  
     > 모든 수준에서 필수 메시지가 기록 됩니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -324,7 +324,7 @@ ms.locfileid: "52520639"
   
     2.  경우 재정의 옵션은 **true**, 검색의 순서가 됩니다 스크립트 파일-&gt;서버 연결 파일-&gt;사용자에 게 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -348,7 +348,7 @@ ms.locfileid: "52520639"
   
 스크립트 파일의 모든 명령이 성공적으로 실행 되 면 SSMA 콘솔 응용 프로그램을 종료 하 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 사용 하 여 포함 된 [변수 값 파일 만들기 &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 또는 변수 값에 대 한 스크립트 파일 내에서 별도 섹션에서.  
   
-**예:**  
+**예제:**  
   
 ```xml  
 <!--Sample of script file commands -->  

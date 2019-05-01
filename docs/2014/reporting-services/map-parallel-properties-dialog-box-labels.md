@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968269"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462109"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>지도 위도선 속성 대화 상자, 레이블
   사용 된 **MapParallel 속성** 지도 뷰포트의 가로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 위도선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  

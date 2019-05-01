@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 51254f2045ea7e3125a42abbbab9c1599a1deb2a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787018"
+---
 
 
 보관 파일 웹 페이지 세트에 이전 버전의 SQL Server에 대한 설명서를 누적하고 유지합니다. [SQL Server 이전 버전 설명서](https://docs.microsoft.com/previous-versions/sql/)에서 이러한 보관 파일을 확인할 수 있습니다.

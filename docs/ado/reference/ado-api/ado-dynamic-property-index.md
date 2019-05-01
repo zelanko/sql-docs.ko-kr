@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249562"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
-데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 컬렉션을 아직 열지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 하 고 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 개체를 열 때 지정된 된 공급자 추가 속성을 삽입할 수도 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션입니다. 자세히가 특정 공급자를 나열 합니다 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션입니다.  
+데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 컬렉션을 아직 열지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 하 고 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 개체를 열 때 지정된 된 공급자 추가 속성을 삽입할 수도 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션입니다. 자세히가 특정 공급자에 나열 된 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션입니다.  
   
  다음 표에서 각 표준 OLE DB 공급자 동적 속성에 대 한 OLE DB 및 ADO 이름의 cross-indexes 됩니다. 공급자는 여기 나열 된 것 보다 더 많은 속성을 추가할 수 있습니다. 공급자별 동적 속성에 대 한 자세한 내용은 공급자 설명서를 참조 하세요.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47684731"
 |비동기 가능 중단|DBPROP_ASYNCTXNABORT|  
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|  
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
-|카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|  
+|카탈로그 위치|DBPROP_CATALOGLOCATION|  
 |카탈로그 용어|DBPROP_CATALOGTERM|  
 |열 정의|DBPROP_COLUMNDEFINITION|  
 |연결 제한 시간|DBPROP_INIT_TIMEOUT|  
@@ -44,17 +44,17 @@ ms.locfileid: "47684731"
 |데이터 소스 개체 스레딩 모델|DBPROP_DSOTHREADMODEL|  
 |DBMS 이름|DBPROP_DBMSNAME|  
 |DBMS 버전|DBPROP_DBMSVER|  
-|Extended Properties|DBPROP_INIT_PROVIDERSTRING|  
-|GROUP BY 지원|DBPROP_GROUPBY와 같습니다|  
-|유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|  
+|확장 속성|DBPROP_INIT_PROVIDERSTRING|  
+|GROUP BY 지원|DBPROP_GROUPBY|  
+|유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES|  
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|  
-|초기 카탈로그|DBPROP_INIT_CATALOG|  
+|Initial Catalog|DBPROP_INIT_CATALOG|  
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|  
 |로캘 ID|DBPROP_INIT_LCID|  
 |위치|DBPROP_INIT_LOCATION|  
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|  
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|  
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|  
+|최대 행 크기|DBPROP_MAXROWSIZE|  
 |BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|  
 |모드|DBPROP_INIT_MODE|  
@@ -62,7 +62,7 @@ ms.locfileid: "47684731"
 |여러 결과|DBPROP_MULTIPLERESULTS|  
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|  
 |여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|  
-|NULL 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|  
+|NULL 정렬 순서|DBPROP_NULLCOLLATION|  
 |NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|  
@@ -72,16 +72,16 @@ ms.locfileid: "47684731"
 |출력 매개 변수 가용성|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|  
 |암호|DBPROP_AUTH_PASSWORD|  
-|보안 정보 유지|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |영구 ID 형식|DBPROP_PERSISTENTIDTYPE|  
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|  
-|커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|  
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|  
+|커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR|  
 |프로시저 용어|DBPROP_PROCEDURETERM|  
 |프롬프트|DBPROP_INIT_PROMPT|  
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |공급자 버전|DBPROP_PROVIDERVER|  
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|  
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|  
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |스키마 용어|DBPROP_SCHEMATERM|  
 |스키마 사용|DBPROP_SCHEMAUSAGE|  
@@ -90,7 +90,7 @@ ms.locfileid: "47684731"
 |하위 쿼리 지원|DBPROP_SUBQUERIES|  
 |테이블 용어|DBPROP_TABLETERM|  
 |트랜잭션 DDL|DBPROP_SUPPORTEDTXNDDL|  
-|사용자 ID|DBPROP_AUTH_USERID|  
+|User ID|DBPROP_AUTH_USERID|  
 |사용자 이름|DBPROP_USERNAME|  
 |창 핸들|DBPROP_INIT_HWND|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "47684731"
 |찾기 작업|DBPROP_FINDCOMPAREOPS|  
 |숨겨진된 열 (개수)|DBPROP_HIDDENCOLUMNS|  
 |행 고정|DBPROP_CANHOLDROWS|  
-|부동 행|DBPROP_IMMOBILEROWS|  
+|Immobile Rows|DBPROP_IMMOBILEROWS|  
 |초기 반입 크기|DBPROP_ASYNCHPREFETCHSIZE|  
 |리터럴 책갈피|DBPROP_LITERALBOOKMARKS|  
 |리터럴 행 Id|DBPROP_LITERALIDENTITY|  
@@ -196,7 +196,7 @@ ms.locfileid: "47684731"
 |고유 카탈로그|DBPROP_ADC_UNIQUECATALOG|  
 |고유한 행|DBPROP_UNIQUEROWS|  
 |고유한 스키마|DBPROP_ADC_UNIQUESCHEMA|  
-|고유 테이블|DBPROP_ADC_UNIQUETABLE|  
+|고유한 테이블|DBPROP_ADC_UNIQUETABLE|  
 |업데이트 허용|DBPROP_UPDATABILITY|  
 |업데이트 기준|DBPROP_ADC_UPDATECRITERIA|  
 |다시 동기화를 업데이트 합니다.|DBPROP_ADC_UPDATERESYNC|  

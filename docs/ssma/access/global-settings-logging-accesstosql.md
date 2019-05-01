@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632021"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453555"
 ---
 # <a name="global-settings-logging-accesstosql"></a>전역 설정 (로깅) (AccessToSQL)
 사용 된 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 기술 지원 서비스를 사용 하는 경우에 이러한 설정을 변경할는 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47632021"
 |**데이터 migrator**|원본 데이터베이스에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**포맷터**|에 대 한 스크립트를 생성 하는 변환기의 하위 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마입니다.|  
 |**그래픽 사용자 인터페이스**|SSMA 도구를 사용할 때 나타나는 메시지입니다.|  
-|**링커**|SQL 식별자를 확인 하 고 다른 구성 요소에 대 한 정보를 제공 합니다.|  
+|**Linker**|SQL 식별자를 확인 하 고 다른 구성 요소에 대 한 정보를 제공 합니다.|  
 |**기타**|다른 범주에 없는 모든 메시지입니다.|  
 |**파서**|소스 스키마를 구문 분석합니다.|  
 |**동기화**|로드에 대 한 데이터베이스 개체를 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47632021"
 |**심각한 오류**|심각한 오류 메시지만 로그에 작성 합니다.|  
 |**오류**|로그에 오류 및 심각한 오류 메시지를 작성 합니다.|  
 |**경고**|로그에 경고, 오류 및 심각한 오류 메시지를 작성 합니다.|  
-|**정보**|로그에 정보, 경고, 오류 및 심각한 오류 메시지를 작성 합니다.|  
+|**Info**|로그에 정보, 경고, 오류 및 심각한 오류 메시지를 작성 합니다.|  
 |**디버그**|디버그 로그에 메시지를 비롯 한 모든 메시지를 작성 합니다.|  
   
 **로그 파일 경로**  

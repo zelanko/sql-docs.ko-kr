@@ -5,98 +5,134 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f527aaa18994c1d0c50acc44e0ddba159857a60e
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582286"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472202"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) 저장소 저장소가 제공 됩니다 하는 방법에 Kubernetes에 사용 되는 방법에서 추출 된 완료 된에 대 한 플러그 인 모델을 제공 합니다. 따라서 고유한 항상 사용 가능한 저장소를 가져올 수 있으며 SQL Server 빅 데이터 클러스터에 연결할 수 있습니다. 저장소, 가용성 및 성능이 필요한 유형의 전체 제어할 수 있습니다. Kubernetes는 다양 한 Azure 디스크/파일, NFS, 로컬 저장소 등을 포함 한 저장소 솔루션을 지원 합니다.
+[영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) 저장소 Kubernetes에 대 한 플러그 인 모델을 제공 합니다. 저장소를 제공 하는 방법을 사용 되는 방법에서 추상화 됩니다. 따라서 고유한 항상 사용 가능한 저장소를 가져올 수 있으며 SQL Server 빅 데이터 클러스터에 연결할 수 있습니다. 저장소, 가용성 및 성능이 필요한 유형의 전체 제어할 수 있습니다. Kubernetes는 다양 한 Azure 디스크/파일, NFS, 로컬 저장소 등을 포함 한 저장소 솔루션을 지원 합니다.
 
 ## <a name="configure-persistent-volumes"></a>영구적 볼륨 구성
 
-SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. (풀) 어떤 용도로 사용 하는 저장소 클래스를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 pod에 대 한 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다.
+SQL Server 빅 데이터 클러스터를 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. 저장소 클래스 및 풀 수준에서 어떤 용도로 사용 하 여 영구적 볼륨 클레임 크기를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 구성 요소에 대해 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다. 
+
+## <a name="configure-big-data-cluster-storage-settings"></a>빅 데이터 클러스터 저장소 설정 구성
+
+비슷하게 기타 사용자 지정 설정을 지정할 수 있습니다 저장소 클러스터 구성 파일에서 각 풀 및 제어 평면에 대 한 배포 시. 풀 사양에 저장소 구성 설정은 없습니다, 제어 평면 저장소 설정이 사용 됩니다. 다음은 사양에 포함할 수 있는 저장소 구성 섹션의 샘플입니다.
+
+```json
+    "storage": 
+    {
+        "usePersistentVolume": true,
+        "className": "managed-premium",
+        "accessMode": "ReadWriteOnce",
+        "size": "10Gi"
+    }
+```
+
+배포 하는 동안 영구 저장소를 사용 하려면 값을 설정할 **usePersistentVolume** 키를 *true* 하 고 **className** 데 사용할 저장소 클래스의 이름으로 키 각 풀입니다. 또한 배포의 일부로 만들어진 영구적 볼륨 클레임의 크기를 사용자 지정할 수 있습니다. 저장소 클래스를 사용 하도록 권장 모범 사례로 *보존* [회수 정책](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)합니다.
 
 > [!NOTE]
-> CTP 2.4,만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
-
-## <a name="deployment-settings"></a>배포 설정
-
-배포 하는 동안 영구 저장소를 사용 하려면 구성 합니다 **USE_PERSISTENT_VOLUME** 하 고 **STORAGE_CLASS_NAME** 실행 하기 전에 환경 변수 `mssqlctl cluster create` 명령입니다. **USE_PERSISTENT_VOLUME** 로 설정 된 `true` 기본적으로 합니다. 기본값을 무시 하 고 설정할 수 있습니다 `false` 및 SQL Server 빅 데이터 클러스터 emptyDir 탑재를 사용 하는 예제의 경우. 
+> CTP 2.5에서는 storage 구성 설정은 배포 후 수정할 수 없습니다. 또한만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 > [!WARNING]
-> 영구 저장소 없이 실행 된 테스트 환경에서 작업할 수 있지만 작동 하지 않는 클러스터 될 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다.
+> 영구 저장소 없이 실행 된 테스트 환경에서 작업할 수 있지만 작동 하지 않는 클러스터 될 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다. 이 구성에서 실행 하지 않는 것이 좋습니다. 
 
-도 제공 해야 플래그를 true로 설정 하면 **STORAGE_CLASS_NAME** 배포 시 매개 변수로 합니다.
+이 섹션에서는 SQL Server 빅 데이터 클러스터 배포에 대 한 저장소 설정을 구성 하는 방법에 더 많은 예제를 제공 합니다.
 
 ## <a name="aks-storage-classes"></a>AKS 저장소 클래스
 
-AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **기본** 하 고 **관리 되는 프리미엄** 에 동적 프로 비 저 너와 함께 합니다. 그 중 하나를 지정할 수도 있고 사용 하도록 설정 하는 영구 저장소를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 사용자 고유의 저장소 클래스를 만들 수 있습니다.
+AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **기본** 하 고 **관리 되는 프리미엄** 에 동적 프로 비 저 너와 함께 합니다. 그 중 하나를 지정할 수도 있고 사용 하도록 설정 하는 영구 저장소를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 사용자 고유의 저장소 클래스를 만들 수 있습니다. 기본적으로 기본 제공 aks 클러스터 구성 파일에 *aks-dev-test.json* 사용 하는 영구 저장소 구성에 수반 **관리 되는 프리미엄** 저장소 클래스입니다.
+
+> [!WARNING]
+> 영구적 볼륨을 사용 하 여 만든 **기본** 저장소 클래스 정책이 재요청 *삭제*합니다. 시 있습니다 SQL Server 빅 데이터 클러스터를 삭제 하므로 영구적 볼륨 클레임도 삭제 하 고 다음 영구 볼륨을 가져옵니다. **관리 되는 premium** 의 재요청 정책이 *보관*합니다. AKS에서 저장소 클래스 및 해당 구성에 대 한 자세한 정보를 찾을 수 있습니다 [이](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) 문서.
+
 
 ## <a name="minikube-storage-class"></a>Minikube 저장소 클래스
 
-Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. 경우 minikube를에 유의 `USE_PERSISTENT_VOLUME=true` (기본값)를 재정의 해야에 대 한 기본값을 **STORAGE_CLASS_NAME** 환경 변수 기본값 다르기 때문입니다. 값을 설정 합니다 `standard`: 
+Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. Minikube에 대 한 기본 제공된 구성 파일 *minikube-dev-test.json* 제어 평면 사양에서 저장소 구성 설정을 포함 합니다. 동일한 설정은 모든 풀 사양에 적용 됩니다. 또한이 파일의 복사본을 사용자 지정 하 고 minikube의 빅 데이터 클러스터 배포에 사용할 수 있습니다. 수동으로 사용자 지정 파일을 편집 하 고 실행 하려는 워크 로드를 수용 하기 위해 특정 풀에 대 한 영구적 볼륨 클레임의 크기를 변경할 수 있습니다. 또는 사용 하 여 편집을 수행 하는 방법의 예제이 섹션을 참조 하십시오 *mssqlctl* 명령입니다.
 
-Windows에서 다음 명령을 사용 합니다.
+## <a name="kubeadm-storage-classes"></a>Kubeadm 저장소 클래스
 
-```cmd
-SET STORAGE_CLASS_NAME=standard
-```
+기본 제공 저장소 클래스를 사용 하 여 Kubeadm 제공 되지 않습니다. 사용자 고유의 저장소 클래스와 같은 로컬 저장소 또는 기본 프로 비 저 너 프로그램을 사용 하 여 영구 볼륨을 만들어야 [루크](https://github.com/rook/rook)합니다. 설정한 경우에 **className** 구성한 저장소 클래스입니다. 
 
-Linux에서 다음 명령을 사용 합니다.
+> [!NOTE]
+> 기본 제공 kubeadm에 대 한 배포 구성 파일에서 *kubeadm-dev-test.json*에 대 한 기본값 **usePersistentVolume** 키는 *true*값을 설정 해야 하므로 에 대 한 **className** 그렇지 않으면 배포 전 유효성 검사에 실패 합니다. 배포에 필요한 영구적 볼륨 아니라 저장소 클래스의 존재 여부를 확인 하는 유효성 검사 단계가 있습니다. 클러스터의 규모에 따라 충분 한 볼륨을 만들 수 있어야 합니다. CTP2.5, 기본 클러스터 크기에 대 한 만들어야 이상 23 볼륨입니다. [여기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) 은 로컬 프로 비 저 너를 사용 하 여 영구 볼륨을 만드는 방법의 예입니다.
 
-```cmd
-export STORAGE_CLASS_NAME=standard
-```
 
-Minikube에서 영구적 볼륨을 사용 하 여 설정 하 여 무시할 수 또는 `USE_PERSISTENT_VOLUME=false`합니다.
+## <a name="customize-storage-configurations-for-each-pool"></a>각 풀에 대 한 저장소 구성을 사용자 지정
 
-## <a name="kubeadm"></a>Kubeadm
-
-기본 제공 저장소 클래스를 사용 하 여 Kubeadm 제공 되지 않습니다. 사용자 고유의 영구적 볼륨 및 저장소 클래스와 같은 로컬 저장소 또는 기본 프로 비 저 너 프로그램을 사용 하 여 만들 수 있습니다 [루크](https://github.com/rook/rook)합니다. 설정한 경우에 **STORAGE_CLASS_NAME** 구성한 저장소 클래스입니다. 설정할 수 있습니다 `USE_PERSISTENT_VOLUME=false` 테스트 환경에서의 이전 경고를 확인 하지만 합니다 **배포 설정** 이 문서의 섹션입니다.  
-
-## <a name="on-premises-cluster"></a>온-프레미스 클러스터
-
-설정 해야 하므로, 온-프레미스 클러스터 물론 모든 기본 제공 저장소 클래스를 사용 하 여 제공 되지 않습니다 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[프로 비 저 너를](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) 미리 사용 하 여 해당 SQL Server 빅 데이터 클러스터 배포 시 저장소 클래스입니다.
-
-## <a name="customize-storage-size-for-each-pool"></a>각 풀에 대 한 저장소 크기를 사용자 지정
-기본적으로 각 클러스터에 프로 비전 된 pod에 대 한 프로 비전 된 영구적 볼륨의 크기는 6GB 됩니다. 이 환경 변수를 설정 하 여 구성할 수는 `STORAGE_SIZE` 다른 값으로. 예를 들어, 아래 10GB로 실행 하기 전에 값을 설정 하는 명령을 실행할 수 있습니다는 `mssqlctl cluster create --name command`합니다.
+모든 사용자 지정의 경우 먼저 만들어야 기본 제공의 복사본을 사용 하려면 구성 파일에 있습니다. 예를 들어 다음 명령은의 복사본을 만듭니다는 *aks-dev-test.json* 현재 디렉터리에 배포 구성 파일:
 
 ```bash
-export STORAGE_SIZE=10Gi
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 
-이러한 저장소 클래스 이름 및 클러스터의 다른 풀에 대 한 영구적 볼륨 크기에는 영구 저장소 설정에 대 한 다른 구성 수도 있습니다. 예를 들어, 클러스터를 배포 하기 전에 환경 변수 아래 설정으로 더 많은 용량을 다른 저장소 클래스를 사용 하 여 저장소 풀에 배포 된 영구적 볼륨을 구성할 수 있습니다.
+그런 다음 사용자 지정할 수 있습니다 구성 파일을 수동으로 편집 하 여 하나 또는 사용할 수 있습니다 *mssqlctl 클러스터 구성 섹션 집합* 명령입니다. 이 집합 명령은 jsonpath 및 jsonpatch 라이브러리의 조합을 사용 하 여 구성 파일을 편집 하는 방법을 제공 합니다.
+
+### <a name="configure-size"></a>크기를 구성 합니다.
+
+기본적으로 각 클러스터에 프로 비전 된 pod에 대 한 프로 비전 된 영구적 볼륨 클레임의 크기는 10GB입니다. 클러스터를 배포 하기 전에 사용자 지정 구성 파일에서 실행 중인 워크 로드를 수용 하기 위해이 값을 업데이트할 수 있습니다.
+
+다음 예제에서는 저장소 풀에서 영구적 볼륨 클레임의 크기가 32 Gi만 업데이트:
 
 ```bash
-export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
-export STORAGE_POOL_STORAGE_SIZE=100Gi
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
 ```
 
-SQL Server 빅 데이터 클러스터에 대 한 영구 저장소를 설정 하기 위해 환경 변수를 관련 된 포괄적인 목록은 다음과 같습니다.
+다음 예제에서는 32 Gi에 모든 풀에 대 한 영구적 볼륨 클레임의 크기를 업데이트합니다.
 
-| 환경 변수 | 기본값 | Description |
-|---|---|---|
-| **USE_PERSISTENT_VOLUME** | true | `true` Kubernetes 영구적 볼륨을 사용 하려면 pod 저장소에 대 한 클레임입니다. `false` pod 저장소에 대 한 임시 호스트 저장소를 사용 하 합니다. |
-| **STORAGE_CLASS_NAME** | 기본 | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true` 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다. |
-| **STORAGE_SIZE** | 6Gi | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true`,이 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |
-| **DATA_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` Kubernetes 영구적 볼륨을 사용 하는 데이터 풀에서 pod에 대 한 클레임입니다. `false` 데이터 풀 pod에 대 한 임시 호스트 저장소를 사용 합니다. |
-| **DATA_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | 데이터 풀 pod와 연결 된 영구적 볼륨에 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다.|
-| **DATA_POOL_STORAGE_SIZE** | STORAGE_SIZE |데이터 풀의 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |
-| **STORAGE_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` Kubernetes 영구적 볼륨을 사용 하는 저장소 풀의 pod에 대 한 클레임입니다. `false` 저장소 풀 pod에 대 한 임시 호스트 저장소를 사용 합니다.|
-| **STORAGE_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | TIndicates 저장소 풀 pod를 사용 하 여 연결 된 영구적 볼륨에 사용할 Kubernetes 저장소 클래스의 이름입니다. |
-| **STORAGE_POOL_STORAGE_SIZE** | STORAGE_SIZE | 저장소 풀의 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |
+```bash
+mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+```
+
+### <a name="configure-storage-class"></a>저장소 클래스를 구성 합니다.
+
+다음 예제에는 제어 평면에 대 한 저장소 클래스를 수정 하는 방법을 보여 줍니다.
+
+```bash
+mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlace.spec.storage.className=<yourStorageClassName>"
+```
+
+사용자 지정 구성 파일을 수동으로 편집 하거나 저장소 풀에 대 한 저장소 클래스를 변경 하는 다음 예와 같은 jsonpatch를 사용 하는 방법도 있습니다. 만들기는 *patch.json* 이 콘텐츠로 파일:
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "replicas": 2,
+        "type": "Storage",
+        "storage": {
+          "usePersistentVolume": true,
+          "accessMode": "ReadWriteOnce",
+          "className": "<yourStorageClassName>",
+          "size": "32Gi"
+        }
+      }
+    }
+  ]
+}
+```
+
+패치 파일을 적용 합니다. 사용 하 여 *mssqlctl 클러스터 구성 섹션 집합* JSON 패치 파일에 변경 내용을 적용 하려면 명령입니다. 다음 예제에서는 대상 배포 구성 파일 custom.json patch.json 파일을 적용 합니다.
+
+```bash
+mssqlctl cluster config section set -f custom.json -p ./patch.json
+```
 
 ## <a name="next-steps"></a>다음 단계
 

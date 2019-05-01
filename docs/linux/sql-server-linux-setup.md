@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280627"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455090"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
@@ -109,7 +109,7 @@ SQL Server 2017 Linux에 대 한 다음 시스템 요구 사항에 있습니다.
 
 롤백 또는 SQL Server 이전 버전으로 다운 그레이드 하려면 다음 단계를 사용 합니다.
 
-1. 다운 그레이드 하려는 SQL Server 패키지의 버전 번호를 식별 합니다. 패키지 번호의 목록을 보려면 참조는 [릴리스](sql-server-linux-release-notes.md)합니다.
+1. 다운 그레이드 하려는 SQL Server 패키지의 버전 번호를 식별 합니다. 패키지 번호의 목록을 보려면 참조는 [릴리스](../linux/sql-server-linux-release-notes.md)합니다.
 
 1. SQL Server의 이전 버전으로 다운 그레이드 합니다. 다음 명령에서 대체 `<version_number>` 1 단계에서 확인 된 SQL Server 버전 번호를 사용 하 여 합니다.
 
@@ -178,7 +178,7 @@ Linux 컴퓨터에 없으면 액세스에 사용 된 온라인 리포지토리�
 > [!TIP]
 > 빠른 시작의 단계를 사용 하 여 성공적으로 설치 하는 경우를 다운로드 하거나 SQL Server 패키지를 수동으로 설치할 필요가 없습니다. 이 섹션에서는 오프 라인 시나리오만입니다.
 
-1. **플랫폼에 대 한 데이터베이스 엔진 패키지 다운로드**합니다. 패키지 세부 정보 구역에서 패키지 다운로드 링크를 찾을 합니다 [릴리스](sql-server-linux-release-notes.md)합니다.
+1. **플랫폼에 대 한 데이터베이스 엔진 패키지 다운로드**합니다. 패키지 세부 정보 구역에서 패키지 다운로드 링크를 찾을 합니다 [릴리스](../linux/sql-server-linux-release-notes.md)합니다.
 
 1. **Linux 컴퓨터에 다운로드 한 패키지를 이동**합니다. Linux 컴퓨터에 패키지를 이동 하는 한 가지 방법은 된 다른 컴퓨터를 사용 하 여 패키지를 다운로드 하는 경우는 **scp** 명령입니다.
 

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668302"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453320"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>DB2 콘솔 (DB2ToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 DB2 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 도 나열 여기에 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -53,12 +53,12 @@ SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔�
   
 다음 표에서 콘솔 출력의 색을 해석:  
   
-|색|설명|  
+|색|Description|  
 |---------|---------------|  
 |빨강|실행 하는 동안 오류가 발생 했습니다|  
 |회색|날짜 및 시간 스탬프를 사용자에 게 메시지|  
-|흰색|스크립트 파일 명령, 메시지 유형|  
-|노란색|경고|  
+|하얀|스크립트 파일 명령, 메시지 유형|  
+|노랑|경고|  
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작을 완료 하 고 작업의 결과|  
   

@@ -5,16 +5,16 @@ description: SQL Server 마스터 인스턴스와 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860174"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472292"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 
@@ -45,7 +45,7 @@ Azure Data Studio를 사용 하 여 빅 데이터 클러스터에 연결 하려�
 1. 명령줄에서 다음 명령 사용 하 여 마스터 인스턴스 IP를 찾습니다.
 
    ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-cluster-name>
    ```
 
 1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
@@ -83,7 +83,7 @@ Azure Data Studio 2019 년 2 월 릴리스의 SQL Server 마스터 인스턴스�
 1. 명령줄에서 다음 명령 중 하나를 사용 하 여 HDFS/Spark 게이트웨이의 IP 주소를 찾습니다.
 
    ```
-   kubectl get svc endpoint-security -n <your-cluster-name>
+   kubectl get svc gateway-svc-external -n <your-cluster-name>
    ```
  
 1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.

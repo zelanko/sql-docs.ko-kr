@@ -1,5 +1,5 @@
 ---
-title: '작업 4: SQL Server Data Tools를 사용 하 여 SSIS 프로젝트 만들기 | Microsoft Docs'
+title: '태스크 4: SQL Server Data Tools를 사용 하 여 SSIS 프로젝트 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249939"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>작업 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>태스크 4: SQL Server Data Tools를 사용하여 SSIS 프로젝트 만들기
   이 작업에서는 공급자 데이터 정리 및 일치를 자동화하기 위해 **SQL Server Data Tools** 를 사용해서 SSIS 프로젝트를 만듭니다.  
   
 1.  **SQL Server Data Tools**를 실행합니다. 시작을 클릭하고, **모든 프로그램**을 가리킨 후 **Microsoft SQL Server 2012**를 확장하고 **SQL Server Data Tools**를 클릭합니다.  
