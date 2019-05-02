@@ -45,7 +45,7 @@ ms.locfileid: "63164815"
 ## <a name="shared-data-sources"></a>공유 데이터 원본  
  공유 데이터 원본은 자주 사용하는 데이터 원본이 있는 경우에 유용합니다. 가능한 한 공유 데이터 원본을 사용하는 것이 좋습니다. 공유 데이터 원본을 사용하면 보고서 및 보고서 액세스 관리가 더 쉬울 뿐만 아니라 보고서 및 보고서에서 액세스하는 데이터 원본을 보다 안전하게 유지할 수 있습니다. 공유 데이터 원본이 필요한 경우에는 공유 데이터 원본을 만들어 주도록 시스템 관리자에게 요청하세요.  
   
- 보고서 작성기에서는 공유 데이터 원본을 만들 수 없습니다. 보고서 서버에서 공유 데이터 원본을 찾아보고 선택할 수 있습니다. 자세한 내용은 [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
+ 보고서 작성기에서는 공유 데이터 원본을 만들 수 없습니다. 보고서 서버에서 공유 데이터 원본을 찾아보고 선택할 수 있습니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.  
   
  보고서 디자이너에서는 보고서 서버에 있는 공유 데이터 원본을 찾아볼 수 없습니다. 솔루션 탐색기에서 프로젝트의 일부로 공유 데이터 원본을 만들고 보고서 서버에 배포할지 여부를 선택할 수 있습니다. 사용자 컴퓨터와 보고서 서버에서 필요한 자격 증명의 차이로 인해 로컬에서만 사용하도록 선택할 수도 있습니다. 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)을 참조하세요.  
   
