@@ -156,7 +156,7 @@ ms.locfileid: "58280757"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.mssqltips.com의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
+-    www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
 ## <a name="see-also"></a>참고 항목  
  [상속된 트랜잭션](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

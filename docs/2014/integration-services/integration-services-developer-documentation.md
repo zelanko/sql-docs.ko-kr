@@ -82,7 +82,7 @@ ms.locfileid: "62892417"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.codeplex.com/MSFTISProdSamples의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-    www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Integration Services](sql-server-integration-services.md)  
