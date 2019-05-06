@@ -27,7 +27,7 @@ ms.locfileid: "62731375"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[테이블의 데이터 정렬 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)테이블의 데이터 정렬|이 항목에서는 문자 또는 숫자를 사용하여 데이터를 정렬하는 방법을 설명합니다.|  
+|[테이블의 데이터 정렬 &#40;SSAS 테이블 형식&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)테이블의 데이터 정렬|이 항목에서는 문자 또는 숫자를 사용하여 데이터를 정렬하는 방법을 설명합니다.|  
 |[테이블의 데이터 필터링 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|이 항목의 태스크에서는 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어하는 방법에 대해 설명합니다.|  
   
   

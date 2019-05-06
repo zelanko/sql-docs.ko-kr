@@ -28,7 +28,7 @@ ms.locfileid: "62640213"
   
  [Analysis Services 인스턴스 관리](instances/analysis-services-instance-management.md)  
   
- [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tabular-models-ssas.md)  
+ [테이블 형식 모델링(SSAS 테이블 형식)](tabular-models/tabular-models-ssas.md)  
   
  [다차원 모델링 &#40;SSAS&#41;](multidimensional-models/multidimensional-models-ssas.md)  
   

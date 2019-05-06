@@ -24,7 +24,7 @@ ms.locfileid: "62756568"
   SQL Server Management Studio의 PowerPivot 기능에서 복원을 사용하여 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 PowerPivot 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)합니다.  
+>  SQL Server Data Tools의 PowerPivot 프로젝트 템플릿에서 가져오기가 비슷한 기능을 제공합니다. 자세한 내용은 [PowerPivot에서 가져오기 &#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)합니다.  
   
  PowerPivot에서 복원을 사용할 때는 다음 사항에 유의해야 합니다.  
   

@@ -21,7 +21,7 @@ ms.locfileid: "62730103"
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
   Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](connect-to-analysis-services.md)참조).  
   
- 이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리 하는 방법에 대 한 자세한 내용은 다음이 링크에서 찾을 수 있습니다. [다차원 Model 데이터베이스 &#40;SSAS&#41; ](../multidimensional-models/multidimensional-model-databases-ssas.md) 하 고 [테이블 형식 모델 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
+ 이후에 데이터베이스를 배포할 준비가 되면 추가 작업이 필요합니다. 즉, 데이터베이스에서 역할 멤버 자격을 구성하여 데이터 액세스 권한을 사용자에게 부여해야 하며 데이터베이스 백업 및 복구 전략을 디자인하고 데이터를 정기적으로 새로 고칠 수 있도록 예약된 처리 작업이 필요한지 여부를 결정해야 합니다. 데이터베이스 배포 및 관리 하는 방법에 대 한 자세한 내용은 다음이 링크에서 찾을 수 있습니다. [다차원 Model 데이터베이스 &#40;SSAS&#41; ](../multidimensional-models/multidimensional-model-databases-ssas.md) 하 고 [테이블 형식 모델 데이터베이스 &#40;SSAS 테이블 형식&#41;](../tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>인스턴스 구성  
  Analysis Services는 복제 가능한 서비스이므로 단일 서버에 서비스의 인스턴스를 여러 개 설치할 수 있습니다. 각 추가 인스턴스는 SQL Server 설치 프로그램을 사용하여 명명된 인스턴스로 별도로 설치되며 필요한 용도를 지원하도록 독립적으로 구성됩니다. 예를 들어 개발 서버는 비행 레코더를 실행하거나 데이터 스토리지에 대한 기본값을 사용할 수 있습니다. 이러한 기본값은 프로덕션 작업을 지원하는 서버에서 변경될 수도 있습니다. 시스템 구성을 조정해야 하는 또 다른 예는 다른 서비스들이 공유하는 하드웨어에 Analysis Services 인스턴스를 설치하는 경우입니다. 동일한 하드웨어에서 데이터를 많이 사용하는 여러 애플리케이션을 호스팅하는 경우 모든 애플리케이션 간에 사용 가능한 리소스를 최적화하도록 메모리 임계값을 낮추는 서버 속성을 구성해야 할 수 있습니다.  

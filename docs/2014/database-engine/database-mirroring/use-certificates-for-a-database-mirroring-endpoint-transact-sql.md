@@ -41,7 +41,7 @@ ms.locfileid: "62754025"
   
  파트너와 미러링 모니터 각각에 대해 이러한 단계를 완료해야 합니다.  
   
- 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+ 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
 ## <a name="configuring-inbound-connections"></a>인바운드 연결 구성  
  데이터베이스 미러링을 구성할 각 파트너에 대해 다음 단계를 수행합니다. **master** 데이터베이스에서 다음을 수행합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "62754025"
  자세햔 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
   
 ## <a name="security"></a>보안  
- 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
+ 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&#40;SQL Server&amp;&#41;](the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "62754025"
  [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)   
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   
