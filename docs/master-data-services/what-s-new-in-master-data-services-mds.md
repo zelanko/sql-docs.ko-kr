@@ -8,27 +8,25 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d83bf40c6f5621f694f4ca6a5251dfb148c29ddf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764605"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488036"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]릴리스의 변경 내용 및 업데이트 내용을 요약합니다. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
   
- **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면 ** [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
+ **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면**  [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
  **다운로드**  
   
@@ -229,12 +227,12 @@ ms.locfileid: "52764605"
  **샘플 모델 배포 패키지 업데이트**  
   
  샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)   
- [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+  
+## <a name="see-also"></a>관련 항목  
+ [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)  
+ [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)

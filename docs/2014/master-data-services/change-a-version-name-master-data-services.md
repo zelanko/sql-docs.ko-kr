@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9763c0a12bd9af232c8a2c3d6b7194e901ca5c3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925976"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483640"
 ---
 # <a name="change-a-version-name-master-data-services"></a>버전 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전 이름을 변경하여 조직에 맞게 사용자 지정합니다.  

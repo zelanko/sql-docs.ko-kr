@@ -2,25 +2,40 @@
 title: 릴리스 정보
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143712"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450032"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="may-2019"></a>2019 년 5 월
+
+2019 년 5 월 8 일 &nbsp;  /  &nbsp; 버전: 1.7.0 
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| 스키마 비교 확장 릴리스 | 스키마 비교는 SQL Server 데이터 도구 (SSDT)에서 잘 알려진 기능 및 해당 기본 사용 사례 이며를 비교 하 여 데이터베이스 및.dacpac 파일 간의 차이점을 시각화할 수 있도록 동일한 작업을 실행 합니다. |
+| 작업 보기 출력 창으로 이동 | 사용자가 출력 창에서 작업 보기에서 백업, 복원 및 스키마 비교 등의 장기 실행 작업의 상태를 볼 수 있습니다.
+| 추가 시작 페이지 | &bull; &nbsp; 일반적인 작업에 대 한 링크 같은 새 쿼리를 새 파일을 새 노트북 <br/>&bull; &nbsp; 설명서 및 Github에 대 한 링크 |
+| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 메모 및 테이블에 대 한 더 나은 지원을 비롯 하 여 markdown 렌더링 향상 된 기능 <br/>&bull; &nbsp; 도구 모음 유용성 개선 <br/>&bull; &nbsp; 더 이상 신뢰할 수 있는 notebook에 대 한 markdown 링크 Cmd/Ctrl + 클릭 하며 직접 클릭할 수 있습니다. <br/>&bull; &nbsp; Notebook을 닫고 동시에 여러 notebook을 시작할 때 오류를 줄이고 후 Jupyter 프로세스 정리의 향상 된 기능 <br/>&bull; &nbsp; 동일한 데이터베이스에 대해 2 notebook을 실행 하는 경우 향상 된 SQL notebook 연결 오류 발생 하지 않습니다. <br/>&bull; &nbsp; 자동 스크롤 현재 실행 중인 셀으로 셀 실행 도구 모음에서 단추를 클릭 하면 notebook의 향상 된 기능 <br/>&bull; &nbsp; 일반 안정성 및 성능 향상 |
+| 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)합니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>2019년 4월
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663741"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488229"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>엔터티 만들기(Excel용 MDS 추가 기능)
 
@@ -73,13 +73,13 @@ ms.locfileid: "47663741"
   
 12. **확인**을 클릭합니다. 엔터티가 만들어지면 새 머리글 행이 표시되고 셀이 강조 표시되며 엔터티 이름과 일치하도록 시트 이름이 업데이트됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   발생한 오류를 보려면 **게시 및 유효성 검사** 그룹에서 **상태 표시**를 클릭합니다. ValidationStatus 및 InputStatus 열이 표시됩니다. 자세한 내용은 [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)를 참조하세요.  
   
 -   예상한 데이터 형식으로 특성이 만들어졌는지 확인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [도메인 기반 특성 만들기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

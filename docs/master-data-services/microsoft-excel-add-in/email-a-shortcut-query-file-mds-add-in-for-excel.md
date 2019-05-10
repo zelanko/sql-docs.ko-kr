@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419304"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488067"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일을 전자 메일로 보내기(Excel용 MDS 추가 기능)
 
@@ -37,11 +37,11 @@ ms.locfileid: "52419304"
   
 2.  **저장 및 보내기** 그룹에서 **쿼리 보내기**를 클릭합니다. 전자 메일 메시지가 열리고 바로 가기 쿼리 파일이 첨부됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   바로 가기 쿼리 파일을 열려면 전자 메일을 받는 사람이 MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 설치해야 합니다. 받는 사람이 파일을 두 번 클릭하여 열 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

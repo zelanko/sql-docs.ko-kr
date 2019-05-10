@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 927990916440cc33c56a362b17b77adbb726620e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779565"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488912"
 ---
 # <a name="merge-conflicts-master-data-services"></a>병합 충돌(Master Data Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "52779565"
   
 4.  **적용**을 클릭한 후에 추가 변경을 수행하고 데이터를 다시 게시할 수 있습니다. 또는 **취소** 를 클릭하여 업데이트를 취소하고 서버에서 최신 버전을 다시 로드할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
   

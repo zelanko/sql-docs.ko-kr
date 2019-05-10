@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.general.f1
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d2d2d034424ac4564a66b40b1479acb7dc683d7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 426b165aa99dad2bda0fd7428d4100d384ae66e1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766554"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482791"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>Master Data Services에 대한 데이터베이스 및 웹 사이트 설정
   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 를 사용하여 MDS( [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )에 대한 데이터베이스 및 웹 사이트 설정  

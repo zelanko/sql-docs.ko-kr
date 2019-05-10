@@ -11,15 +11,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923153"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478884"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
   사용자의 사용 권한은 다음 요소에 따라 결정됩니다.  

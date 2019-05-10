@@ -18,12 +18,12 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57c4dfe7a0b798801968acb8afa7b5a2b0341de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2d3cc319a99c9e1b157e5b6bc06cabea2dd19a7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747031"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450076"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  HRESULT 반환 코드에 대 한 자세한 내용은 참조 하세요. [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할 또는 권한이이 저장 프로시저에서 직접 실행 합니다. `Ole Automation Procedures` 구성이 있어야 **활성화** OLE Automation과 관련 된 모든 시스템 프로시저를 사용 하도록 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 합니다 `HostName` 속성 (이전에 생성 **SQLServer** 개체)를 새 값입니다.  

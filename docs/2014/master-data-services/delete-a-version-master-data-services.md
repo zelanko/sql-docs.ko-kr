@@ -10,15 +10,15 @@ helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d75d6719219a41dfc42071a82375a66bdd877a57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1e9f8d65e1a835af954952a64322f21a484a16f3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925032"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483347"
 ---
 # <a name="delete-a-version-master-data-services"></a>버전 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전에 연결된 마스터 데이터가 더 이상 필요하지 않은 경우 해당 버전을 삭제할 수 있습니다. 버전을 삭제한 후에는 연결된 마스터 데이터를 검색할 수 없습니다.  

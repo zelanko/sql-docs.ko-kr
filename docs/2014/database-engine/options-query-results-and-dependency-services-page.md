@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774935"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481201"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>옵션(쿼리 결과 및 종속성 서비스 페이지)
   이 페이지를 사용하여 종속성 서비스를 위해 연결할 서버를 지정할 수 있습니다. 종속성 서비스를 사용하면 서로 다른 서버에 저장된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체 간의 종속성에 대한 정보를 추출할 수 있습니다. 사용 하 여 개체 종속성을 확인 합니다 **개체 종속성** 대화 상자 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  

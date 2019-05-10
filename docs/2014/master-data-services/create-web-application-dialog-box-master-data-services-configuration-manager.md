@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dac7b74969c341b7f68c7dfbf56d2314d9ab4427
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65e057224a8456f893b38e106e6b7f75d03d237a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765746"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483231"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>웹 애플리케이션 만들기 대화 상자(Master Data Services 구성 마법사)
   **웹 응용 프로그램 만들기** 대화 상자를 사용하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 만들 수 있습니다. 이 웹 애플리케이션은 **웹 구성** 페이지에서 선택한 사이트에 만들어집니다.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating explicit hierarchies [Master Data Services]
 - explicit hierarchies, creating
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a0927a940b23a906f2dcd5c595326d9b13f065c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3d117224e9afb331979556d12c6cddc0869382f3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796821"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477162"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>명시적 계층 만들기(Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "52796821"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 -   명시적 계층 및 컬렉션에 엔터티가 사용되어야 합니다.  
   
@@ -59,23 +59,23 @@ ms.locfileid: "52796821"
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 명시적 계층에 대해 열이 7개 포함된 행이 표에 추가됩니다. 아래에서는 이러한 열에 대해 설명합니다.  
   
-|속성|설명|  
+|이름|Description|  
 |----------|-----------------|  
 |상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
-|속성|명시적 계층의 이름입니다.|  
+|이름|명시적 계층의 이름입니다.|  
 |필수|명시적 계층이 필수 항목인지 여부를 지정합니다.|  
 |만든 사람|명시적 계층을 만든 사용자의 사용자 이름입니다.|  
 |만든 날짜|명시적 계층을 만든 날짜와 시간입니다.|  
 |업데이트한 사람|명시적 계층을 마지막으로 업데이트한 사용자의 사용자 이름입니다.|  
 |업데이트한 날짜|명시적 계층을 마지막으로 업데이트한 날짜와 시간입니다.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [통합 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [명시적 캡이 포함된 파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [명시적 계층 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  

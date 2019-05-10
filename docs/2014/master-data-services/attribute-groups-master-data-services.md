@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73b2409f8e3b5b58be15351e05abd92dfc94ac8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877386"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483699"
 ---
 # <a name="attribute-groups-master-data-services"></a>특성 그룹(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹은 엔터티의 특성을 구성하는 데 유용합니다. 엔터티에 있는 특성이 여러 개인 경우 특성 그룹을 사용하면 엔터티가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 표시되는 방식이 향상됩니다.  

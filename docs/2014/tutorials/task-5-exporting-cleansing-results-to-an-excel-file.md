@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276781"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489122"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>태스크 5: 정리 결과를 Excel 파일로 내보내기
   이 작업에서는 정리 작업의 결과를 Excel 파일로 내보냅니다. 참조 [내보내기 단계](https://msdn.microsoft.com/library/hh213061.aspx#Export) 자세한 세부 정보에 대 한 항목입니다.  

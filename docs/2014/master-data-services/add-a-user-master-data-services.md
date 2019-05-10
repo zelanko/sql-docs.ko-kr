@@ -10,15 +10,15 @@ helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9b60c47fd7cf05202a5203c1b908c9240cb5a22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765976"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483778"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
   웹 애플리케이션에 대한 사용 권한을 할당하는 프로세스를 시작하려면 **의** 사용자 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 사용자를 추가합니다. 목록의 사용자에게 하나 이상의 기능 영역과 모델 개체에 대한 사용 권한을 부여해야 해당 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  

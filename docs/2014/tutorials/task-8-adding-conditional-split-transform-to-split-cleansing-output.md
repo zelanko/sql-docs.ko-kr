@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401768ca9a811e9b9709127be391bb52de778b32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866191"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489678"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 조건부 분할 변환을 추가 하 여 정리 출력 분했습니다
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>태스크 8: 분할 정리 출력에 조건부 분할 변환 추가
   이 변환에서는 데이터 흐름에 조건부 분할 변환을 추가합니다. 조건부 분할 변환은 데이터 내용에 따라 각 행을 서로 다른 출력으로 라우팅할 수 있습니다. 이 자습서를 사용 합니다 **레코드 상태** DQS 정리 변환에서 출력 열입니다. 이 자습서에서는 수정 레코드 또는 수정된 레코드만 MDS 서버에 업로드합니다. 따라서 경우 확인 합니다 **레코드 상태** 는 **수정** 또는 **수정 됨**, 레코드를 MDS에 업로드 하기 전에 레코드를 결합 하 고 합니다.  
   
 1.  끌어서 놓기 **조건부 분할 변환** 에서 **일반적인** 섹션을 **SSIS 도구 상자** 하는 **데이터 흐름** 탭**Cleanse Supplier Data**합니다.  

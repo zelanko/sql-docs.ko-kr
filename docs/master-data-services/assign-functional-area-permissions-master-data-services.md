@@ -11,15 +11,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b6faced4ac5f4d585c48571833a61b1ca96bccb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c877274b7706b34e4dc71adb694b39137b8fc316
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817238"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484432"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>기능 영역 권한 할당(Master Data Services)
 
