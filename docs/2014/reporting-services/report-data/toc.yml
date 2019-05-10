@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: '데이터 세트 속성 대화 상자, 쿼리'
       href: ../dataset-properties-dialog-box-query.md
-    - name: 쿼리 매개 변수 정의 대화 상자
-      href: define-query-parameters-dialog-box.md
     - name: 데이터 원본 자격 증명 입력 대화 상자
       href: ../enter-data-source-credentials-dialog-box.md
     - name: '공유 데이터 원본 속성 대화 상자, 자격 증명'

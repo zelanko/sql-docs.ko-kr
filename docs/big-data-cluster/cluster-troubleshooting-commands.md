@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472300"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877659"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -244,7 +244,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > 다음 오류가 발생 하면: *포트 8001에서 수신 대기할 수 없습니다. 모든 수신기는 다음 오류와 함께 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류가 수신 tcp4 127.0.0.1:8001: > 바인딩: 각 소켓 주소 (프로토콜/네트워크 주소/포트) 하나만 사용은 일반적으로 허용 됩니다. 수신기를 만들 수 없습니다. 오류 tcp6 수신: 주소 [[:: 1]]: 8001: 포트에서 누락 > 오류를 해결 합니다. 요청 된 포트에서 수신 대기할 없습니다: [{8001 9090}]*, 사용자가 시작 하지 대시보드에 이미 다른 창에서 있는지 확인 합니다.
 
-브라우저에서 대시보드를 시작, AKS 클러스터에서 기본적으로 사용 되는 RBAC로 인해 권한 경고가 표시 될 수 있습니다 및 대시보드에 사용 되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없는 경우 (예를 들어  *pod는 사용할 수 없음: 사용자 "시스템: serviceaccount:kube-시스템: kubernetes-요청" "default" 네임 스페이스의 pod를 나열할 수 없습니다.*). 에 필요한 권한을 부여 하려면 다음 명령을 실행 `kubernetes-dashboard`, 고 대시보드를 다시 시작 합니다.
+브라우저에서 대시보드를 시작, AKS 클러스터에서 기본적으로 사용 되는 RBAC로 인해 권한 경고가 표시 될 수 있습니다 및 대시보드에 사용 되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없는 경우 (예를 들어  *pod는 사용할 수 없음: 사용자 "시스템: serviceaccount:kube-시스템: kubernetes-대시보드" "default" 네임 스페이스의 pod를 나열할 수 없습니다.*). 에 필요한 권한을 부여 하려면 다음 명령을 실행 `kubernetes-dashboard`, 고 대시보드를 다시 시작 합니다.
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

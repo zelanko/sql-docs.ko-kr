@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: eafc21d079561b6024d23b3e90bd24dbf7b369fc
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774741"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -152,7 +152,7 @@ ms.locfileid: "58566582"
 
 1. **마이그레이션할 수 데이터를 Oracle 및 기타 데이터베이스 엔진에서 Linux의 SQL server?**
 
-   예 SSMA는 여러 유형의 데이터베이스 엔진에서 마이그레이션을 지원합니다. Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)합니다.
+   예 SSMA는 여러 유형의 데이터베이스 엔진에서 마이그레이션을 지원합니다. Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)합니다.
 
 1. **SQL Server 파일에 필요한 권한은 무엇입니까?**
 

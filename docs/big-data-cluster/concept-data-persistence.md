@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472202"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776163"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -49,19 +49,19 @@ SQL Server 빅 데이터 클러스터를 이러한 영구 볼륨을 사용 하�
 > [!WARNING]
 > 영구 저장소 없이 실행 된 테스트 환경에서 작업할 수 있지만 작동 하지 않는 클러스터 될 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다. 이 구성에서 실행 하지 않는 것이 좋습니다. 
 
-이 섹션에서는 SQL Server 빅 데이터 클러스터 배포에 대 한 저장소 설정을 구성 하는 방법에 더 많은 예제를 제공 합니다.
+[저장소 구성](#config-samples) 섹션에서는 SQL Server 빅 데이터 클러스터 배포에 대 한 저장소 설정을 구성 하는 방법에 더 많은 예제를 제공 합니다.
 
 ## <a name="aks-storage-classes"></a>AKS 저장소 클래스
 
 AKS가 함께 [두 개의 기본 제공 저장소 클래스](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **기본** 하 고 **관리 되는 프리미엄** 에 동적 프로 비 저 너와 함께 합니다. 그 중 하나를 지정할 수도 있고 사용 하도록 설정 하는 영구 저장소를 사용 하 여 빅 데이터 클러스터를 배포 하는 것에 대 한 사용자 고유의 저장소 클래스를 만들 수 있습니다. 기본적으로 기본 제공 aks 클러스터 구성 파일에 *aks-dev-test.json* 사용 하는 영구 저장소 구성에 수반 **관리 되는 프리미엄** 저장소 클래스입니다.
 
 > [!WARNING]
-> 영구적 볼륨을 사용 하 여 만든 **기본** 저장소 클래스 정책이 재요청 *삭제*합니다. 시 있습니다 SQL Server 빅 데이터 클러스터를 삭제 하므로 영구적 볼륨 클레임도 삭제 하 고 다음 영구 볼륨을 가져옵니다. **관리 되는 premium** 의 재요청 정책이 *보관*합니다. AKS에서 저장소 클래스 및 해당 구성에 대 한 자세한 정보를 찾을 수 있습니다 [이](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) 문서.
+> 기본 제공 저장소 클래스를 사용 하 여 만든 영구적 볼륨 **기본** 하 고 **관리 되는 premium** 재요청 정책이 *삭제*합니다. 시 있습니다 SQL Server 빅 데이터 클러스터를 삭제 하므로 영구적 볼륨 클레임도 삭제 하 고 다음 영구 볼륨을 가져옵니다. 사용 하 여 사용자 지정 저장소 클래스를 만들 수 있습니다 **azure 디스크** 사용 하 여 privioner를 *보존* 에 표시 된 대로 정책을 회수 [이](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) 문서.
 
 
 ## <a name="minikube-storage-class"></a>Minikube 저장소 클래스
 
-Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. Minikube에 대 한 기본 제공된 구성 파일 *minikube-dev-test.json* 제어 평면 사양에서 저장소 구성 설정을 포함 합니다. 동일한 설정은 모든 풀 사양에 적용 됩니다. 또한이 파일의 복사본을 사용자 지정 하 고 minikube의 빅 데이터 클러스터 배포에 사용할 수 있습니다. 수동으로 사용자 지정 파일을 편집 하 고 실행 하려는 워크 로드를 수용 하기 위해 특정 풀에 대 한 영구적 볼륨 클레임의 크기를 변경할 수 있습니다. 또는 사용 하 여 편집을 수행 하는 방법의 예제이 섹션을 참조 하십시오 *mssqlctl* 명령입니다.
+Minikube 라는 기본 제공 저장소 클래스를 함께 **표준** 는 대 한 동적 프로 비 저 너와 함께 합니다. Minikube에 대 한 기본 제공된 구성 파일 *minikube-dev-test.json* 제어 평면 사양에서 저장소 구성 설정을 포함 합니다. 동일한 설정은 모든 풀 사양에 적용 됩니다. 또한이 파일의 복사본을 사용자 지정 하 고 minikube의 빅 데이터 클러스터 배포에 사용할 수 있습니다. 수동으로 사용자 지정 파일을 편집 하 고 실행 하려는 워크 로드를 수용 하기 위해 특정 풀에 대 한 영구적 볼륨 클레임의 크기를 변경할 수 있습니다. 또는 참조 하세요 [저장소 구성](#config-samples) 수행 하는 방법에 대 한 예제 섹션을 사용 하 여 편집 *mssqlctl* 명령입니다.
 
 ## <a name="kubeadm-storage-classes"></a>Kubeadm 저장소 클래스
 
@@ -97,7 +97,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>저장소 클래스를 구성 합니다.
+### <a id="config-samples"></a> 저장소 클래스를 구성 합니다.
 
 다음 예제에는 제어 평면에 대 한 저장소 클래스를 수정 하는 방법을 보여 줍니다.
 
