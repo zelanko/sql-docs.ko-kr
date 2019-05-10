@@ -37,7 +37,7 @@ ms.locfileid: "56290141"
 |`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|매개 변수 값을 문자열로 반환합니다.|  
 |`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|매개 변수와 동일한 이름을 갖고 있는 필드에 대해 값을 반환합니다.|  
   
- 필터에서 매개 변수를 사용하는 방법은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
+ 필터에서 매개 변수를 사용하는 방법은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 ##  <a name="Multi"></a> 식에서 다중값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 다중값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  

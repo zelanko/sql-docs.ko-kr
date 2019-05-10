@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04cc1acdc8e3cdec83545671736a452a2c176d3d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 13a2805109787b96fd416422bb3f44dbbf512b17
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038764"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487518"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
 
@@ -28,9 +28,9 @@ ms.locfileid: "56038764"
   
  내보내기 프로세스에서 만든 .dqs 데이터 파일은 암호화되므로 내용을 볼 수 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  기술 자료를 .dqs 데이터 파일로 내보내려면 기술 자료를 만들고 열어 두어야 합니다. 기술 자료를 내보낼 .dqs 파일은 자동으로 생성되므로 필요하지 않습니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -38,9 +38,9 @@ ms.locfileid: "56038764"
 ####  <a name="Permissions"></a> Permissions  
  기술 자료를 .dqs 데이터 파일로 내보내려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Export"></a> .Dqs 파일로 기술 자료 내보내기  
+##  <a name="Export"></a> .dqs 파일로 기술 자료 내보내기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "56038764"
   
 5.  **기술 자료 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인을 .dqs 파일로 내보낸 후  
+##  <a name="FollowUp"></a> 후속 작업: 도메인을.dqs 파일로 내보낸 후  
  기술 자료를 .dqs 파일로 내보낸 후 기술 자료를 동일한 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (새 이름 적용) 또는 다른 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 가져올 수 있습니다.  
   
   

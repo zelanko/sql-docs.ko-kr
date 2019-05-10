@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d6f3d0b7fd60a39ce81a8464abdb6f2908f54239
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63456725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774753"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Linux의 SQL Server의 새로운 기능
 
@@ -66,7 +66,7 @@ Linux의 SQL Server를 설치하려면 다음 자습서 중 하나를 사용합�
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
-- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 SQL Server 2017에 도입된 다른 개선 사항은 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)을 참조하세요.
 

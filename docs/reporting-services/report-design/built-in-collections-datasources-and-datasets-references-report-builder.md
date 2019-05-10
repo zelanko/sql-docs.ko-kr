@@ -38,7 +38,7 @@ ms.locfileid: "56295575"
 |**RewrittenCommandText**|**String**|데이터 공급자의 확장 CommandText 값입니다. 일반적으로 이 값은 보고서 매개 변수에 매핑된 쿼리 매개 변수가 있는 보고서에 사용됩니다. 데이터 공급자는 명령 텍스트 매개 변수 참조를 매핑된 보고서 매개 변수에 대해 선택된 상수 값으로 확장할 때 이 속성을 설정합니다.|  
   
 ### <a name="using-query-expressions"></a>쿼리 식 사용  
- 식을 사용하여 데이터 세트에 포함된 쿼리를 정의할 수 있습니다. 이 기능을 사용하면 사용자의 입력, 다른 데이터 세트의 데이터 또는 다른 변수를 기반으로 쿼리가 변경되는 보고서를 디자인할 수 있습니다. 쿼리에 대한 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 식을 사용하여 데이터 세트에 포함된 쿼리를 정의할 수 있습니다. 이 기능을 사용하면 사용자의 입력, 다른 데이터 세트의 데이터 또는 다른 변수를 기반으로 쿼리가 변경되는 보고서를 디자인할 수 있습니다. 쿼리에 대한 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

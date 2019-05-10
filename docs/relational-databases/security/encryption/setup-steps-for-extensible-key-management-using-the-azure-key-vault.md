@@ -35,7 +35,7 @@ ms.locfileid: "58306081"
 
 -   Azure Active Directory 만들기  
 
--   [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &amp;#40;SQL Server&amp;#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure 주요 자격 증명 모음을 사용하는 EKM 스토리지의 보안 주체를 파악합니다.  
+-   [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 검토하여 Azure 주요 자격 증명 모음을 사용하는 EKM 스토리지의 보안 주체를 파악합니다.  
 
 -   실행 중인 SQL Server 버전에 적절한 재배포 가능한 Visual Studio C++의 최신 버전이 설치되어 있는지 확인하세요.
   

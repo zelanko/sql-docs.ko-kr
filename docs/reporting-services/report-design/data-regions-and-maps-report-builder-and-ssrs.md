@@ -50,7 +50,7 @@ ms.locfileid: "56290901"
  다른 데이터 영역에 데이터 영역을 중첩할 수 있습니다. 예를 들어 각 영업 사원의 영업 실적을 데이터베이스로 만들려는 경우 입력란과 이미지를 포함하는 목록을 만들어 직원에 대한 정보를 표시하고 테이블과 차트 데이터 영역을 목록에 추가하여 영업 사원의 영업 실적을 표시할 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>동일한 데이터 세트에 연결된 여러 데이터 영역  
- 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="data-for-a-data-region"></a>데이터 영역의 데이터  
  각 테이블릭스, 차트 및 계기는 단일 데이터 세트의 데이터를 표시하도록 디자인되었습니다. 지도는 같은 데이터 세트 또는 여러 데이터 세트의 공간 데이터와 분석 데이터를 표시합니다. 그 밖에 다음과 같은 방법으로 데이터 영역에 연결되지 않은 데이터 세트의 값을 포함할 수 있습니다.  

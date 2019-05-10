@@ -286,7 +286,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
  이 동작을 해결하려면 서식 파일을 사용하여 과학적 표기법 **float** 데이터를 Decimal 열로 대량 가져옵니다. 서식 파일에서 명시적으로 열을 **real** 또는 **float** 데이터로 설명합니다. 두 데이터 형식에 대한 자세한 내용은 [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)을 참조하십시오.  
   
 > [!NOTE]  
->  서식 파일은 **실수** 데이터를 **SQLFLT4** 데이터 형식으로, **부동** 데이터를 **SQLFLT8** 데이터 형식으로 나타냅니다. XML이 아닌 서식 파일에 대한 자세한 내용은 [bcp를 사용하여 파일 스토리지 형식 지정 &amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)를 참조하세요.  
+>  서식 파일은 **실수** 데이터를 **SQLFLT4** 데이터 형식으로, **부동** 데이터를 **SQLFLT8** 데이터 형식으로 나타냅니다. XML이 아닌 서식 파일에 대한 자세한 내용은 [bcp를 사용하여 파일 스토리지 형식 지정 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)를 참조하세요.  
   
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>과학적 표기법을 사용하는 숫자 값 가져오기 예  
 

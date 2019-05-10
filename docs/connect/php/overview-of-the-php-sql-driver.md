@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
 ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/29/2019
 ms.locfileid: "58645485"
@@ -48,4 +48,4 @@ ms.locfileid: "58645485"
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[예제 애플리케이션&amp;#40;SQLSRV 드라이버&amp;#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)

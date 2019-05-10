@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_facets catalog view
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34370bd923a2ea6ccd66964ff9499de740171e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84008ec923ef5203ede7e4bd8827e21eb475720e
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684111"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945898"
 ---
 # <a name="sysxmlschemafacets-transact-sql"></a>sys.xml_schema_facets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47684111"
 |**xml_component_id**|**int**|이 패싯이 속하는 XML 구성 요소(유형)의 ID입니다.|  
 |**facet_id**|**int**|구성 요소 ID 내에서 고유한 패싯의 ID입니다. 서수이며 1부터 시작합니다.|  
 |**kind**|**char(2)**|패싯의 종류이며 다음과 같습니다.<br /><br /> LG = 길이<br /><br /> LN = 최소 길이<br /><br /> LX = 최대 길이<br /><br /> PT = 패턴(정규식)<br /><br /> EU = 열거<br /><br /> IN = 최소 포함 값<br /><br /> IX = 최대 포함 값<br /><br /> EN = 최소 제외 값<br /><br /> EX = 최대 제외 값<br /><br /> DT = 전체 자릿수<br /><br /> DF = 소수 자릿수<br /><br /> WS = 공백 정규화|  
-|**kind_desc**|**Nvarchar (60)**|패싯의 종류에 대한 설명이며 다음과 같습니다.<br /><br /> LENGTH<br /><br /> MINIMUM_LENGTH<br /><br /> MAXIMUM_LENGTH<br /><br /> PATTERN<br /><br /> ENUMERATION<br /><br /> MINIMUM_INCLUSIVE_VALUE<br /><br /> MAXIMUM_INCLUSIVE_VALUE<br /><br /> MINIMUM_EXCLUSIVE_VALUE<br /><br /> MAXIMUM_EXCLUSIVE_VALUE<br /><br /> TOTAL_DIGITS<br /><br /> FRACTION_DIGITS<br /><br /> WHITESPACE_NORMALIZATION|  
+|**kind_desc**|**nvarchar (60)**|패싯의 종류에 대한 설명이며 다음과 같습니다.<br /><br /> LENGTH<br /><br /> MINIMUM_LENGTH<br /><br /> MAXIMUM_LENGTH<br /><br /> PATTERN<br /><br /> ENUMERATION<br /><br /> MINIMUM_INCLUSIVE_VALUE<br /><br /> MAXIMUM_INCLUSIVE_VALUE<br /><br /> MINIMUM_EXCLUSIVE_VALUE<br /><br /> MAXIMUM_EXCLUSIVE_VALUE<br /><br /> TOTAL_DIGITS<br /><br /> FRACTION_DIGITS<br /><br /> WHITESPACE_NORMALIZATION|  
 |**is_fixed**|**bit**|1 = 패싯에 미리 지정된 고정 값이 있습니다.<br /><br /> 0 = 고정 값이 (기본값)|  
 |**value**|**nvarchar (4000)**|패싯의 미리 지정된 고정 값입니다.|  
   

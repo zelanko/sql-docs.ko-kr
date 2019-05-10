@@ -92,7 +92,7 @@ ms.locfileid: "53590127"
     GO  
     ```  
   
-     자세한 내용은 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
+     자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
 5.  다른 서버에서 로그인할 경우 CONNECT 권한이 있는지 확인합니다. 엔드포인트에 대한 CONNECT 권한이 있는 사용자를 파악하려면 각 서버 인스턴스에서 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "53590127"
     ```  
   
 ##  <a name="SystemName"></a> System Name  
- 엔드포인트 URL에서 서버 인스턴스의 시스템 이름에는 시스템을 명확하게 식별하는 모든 이름을 사용할 수 있습니다. 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소(가급적 고정 IP 주소)일 수 있습니다. 정규화된 도메인 이름을 사용하는 것이 좋습니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
+ 엔드포인트 URL에서 서버 인스턴스의 시스템 이름에는 시스템을 명확하게 식별하는 모든 이름을 사용할 수 있습니다. 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소(가급적 고정 IP 주소)일 수 있습니다. 정규화된 도메인 이름을 사용하는 것이 좋습니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  가용성 복제본을 호스팅하는 각 서버 인스턴스에서 TCP를 통해 다른 각 서버 인스턴스의 포트에 액세스할 수 있어야 합니다. 이는 서버 인스턴스가 서로 트러스트하지 않는 다른 도메인(트러스트되지 않은 도메인)에 있을 경우 특히 유용합니다.  

@@ -40,7 +40,7 @@ ms.locfileid: "54226670"
 -   **비동기-커밋 복제본** 은 수동 장애 조치(Failover) 모드만 지원합니다. 또한, 절대 동기화되지 않기 때문에 강제 장애 조치(Failover)만 지원합니다.  
   
 > [!NOTE]  
->  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 애플리케이션은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 애플리케이션이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
+>  장애 조치(Failover) 후 주 데이터베이스에 액세스해야 하는 클라이언트 애플리케이션은 새로운 주 복제본에 연결되어야 합니다. 또한 새로운 보조 복제본이 읽기 전용 액세스를 허용하도록 구성되면 읽기 전용 클라이언트 애플리케이션이 해당 복제본에 연결할 수 있습니다. 클라이언트가 가용성 그룹에 연결하는 방법에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
  **이 항목의 섹션:**  
   
@@ -222,7 +222,7 @@ ms.locfileid: "54226670"
     > [!NOTE]  
     >  새로운 보조 복제본이 해당 데이터베이스를 다시 동기화한 후 즉시 장애 조치(Failover)를 반대 방향으로 다시 수행할 수 있습니다.  
   
- 장애 조치(Failover) 후 클라이언트는 현재 주 데이터베이스에 다시 연결해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+ 장애 조치(Failover) 후 클라이언트는 현재 주 데이터베이스에 다시 연결해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 ###  <a name="ManualFailoverDuringUpgrades"></a> 업그레이드 중에 가용성 유지  
  하드웨어나 소프트웨어를 업그레이드할 때 가용성 그룹의 데이터베이스 관리자는 수동 장애 조치(Failover)를 사용하여 데이터베이스 가용성을 유지 관리할 수 있습니다. 소프트웨어 업그레이드에 가용성 그룹을 사용하려면 대상 보조 복제본을 호스팅하는 서버 인스턴스 및/또는 컴퓨터 노드는 업그레이드를 이미 수신한 상태여야 합니다. 자세한 내용은 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.  

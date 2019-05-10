@@ -85,7 +85,7 @@ ms.locfileid: "56290301"
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
- [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
+ [공유 데이터 세트 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
  공유 데이터 세트 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  

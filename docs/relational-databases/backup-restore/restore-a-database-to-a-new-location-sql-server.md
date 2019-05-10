@@ -142,7 +142,7 @@ ms.locfileid: "53590847"
   
      { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+     자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
      { **RECOVERY** | NORECOVERY }  
      전체 복구 모델을 사용하는 데이터베이스의 경우, 데이터베이스를 복원한 후 트랜잭션 로그 백업을 적용해야 할 수도 있습니다. 이 경우 NORECOVERY 옵션을 지정하세요.  

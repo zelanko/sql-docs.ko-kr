@@ -640,6 +640,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-content"></a>관련 내용  
- www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
+  [www.mattmasson.com](www.mattmasson.com) 의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
   
   

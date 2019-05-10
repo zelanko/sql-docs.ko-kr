@@ -20,7 +20,7 @@ ms.locfileid: "56286051"
   
  필터를 사용하여 보고서에서 표시 및 처리되는 데이터를 제어할 수 있습니다. 데이터 세트, 데이터 영역, 그룹 또는 이러한 항목의 조합에 대해 필터를 지정할 수 있습니다.  
   
- 자세한 내용은 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

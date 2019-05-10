@@ -27,7 +27,7 @@ ms.locfileid: "53588707"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   데이터베이스 미러링 세션을 설정하려면 각 서버 인스턴스에 대한 서버 네트워크 주소가 필요합니다. 서버 인스턴스의 서버 네트워크 주소는 시스템 주소와 인스턴스가 수신하는 포트 번호를 제공하여 인스턴스를 명확하게 식별해야 합니다.  
   
- 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+ 서버 인스턴스에 데이터베이스 미러링 엔드포인트가 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
   
 ##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
@@ -56,7 +56,7 @@ ms.locfileid: "53588707"
         > [!NOTE]  
         >  정규화된 도메인 이름을 찾는 방법은 이 항목의 뒷부분에 나오는 "정규화된 도메인 이름 찾기"를 참조하세요.  
   
--   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다. 엔드포인트 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+-   *\<포트&gt;* 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용하는 포트 번호입니다. 엔드포인트 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
      데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 컴퓨터 시스템의 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 데이터베이스 미러링 세션을 설정할 때 서버 네트워크 주소에 지정하는 포트는 항상 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 세션을 지정합니다.  
   
@@ -132,10 +132,10 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

@@ -57,7 +57,7 @@ ms.locfileid: "53209442"
 ##  <a name="WhereBuJobsRun"></a> 백업 작업이 실행되는 위치 구성  
  보조 복제본에서 백업을 수행하여 주 프로덕션 서버에서 백업 작업을 오프로드하면 많은 이점이 있습니다. 그러나 보조 복제본에서 백업을 수행하면 백업 작업이 실행되어야 하는 위치를 결정하는 프로세스가 상당히 복잡해집니다. 이 문제를 해결하려면 백업 작업이 실행되는 위치를 다음과 같이 구성합니다.  
   
-1.  가용성 그룹을 구성하여 백업을 수행할 가용성 복제본을 지정합니다. 자세한 내용은 *CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;* 또는 *ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;* 에서 [CREATE AVAILABILITY GROUP&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) 또는 [ALTER AVAILABILITY GROUP&amp;#40;Transact-SQL&amp;#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)상태여야 합니다.  
+1.  가용성 그룹을 구성하여 백업을 수행할 가용성 복제본을 지정합니다. 자세한 내용은 *CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;* 또는 *ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;* 에서 [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md) 또는 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)상태여야 합니다.  
   
 2.  백업을 수행할 후보 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 모든 가용성 데이터베이스에 대한 스크립트 백업 작업을 만듭니다. 자세한 내용은 [가용성 복제본에 백업 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)의 보조 복제본에 백업을 구성한 후" 섹션을 참조하세요.  
   

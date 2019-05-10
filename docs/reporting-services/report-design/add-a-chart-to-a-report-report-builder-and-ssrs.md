@@ -40,7 +40,7 @@ ms.locfileid: "56298351"
   
 ## <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
+1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   

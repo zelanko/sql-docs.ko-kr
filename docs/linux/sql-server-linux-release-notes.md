@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 21ee0544a91199648f2d96a631c567dd9788bc2f
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: e13ee9f8046eb53db8e59ee33b3039757bbc4aa4
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671409"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776177"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -539,7 +539,7 @@ Linux에서 SSIS에 대 한 자세한 내용은 다음 문서를 참조 합니�
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
-- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [실행 및 연결 - 클라우드](quickstart-install-connect-clouds.md)
 
 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.

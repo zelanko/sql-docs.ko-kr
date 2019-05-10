@@ -170,11 +170,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
     5. **확인**을 선택합니다.  
   
-     데이터 세트를 만드는 방법에 대한 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+     데이터 세트를 만드는 방법에 대한 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
   
 ## <a name="see-also"></a>관련 항목:  
-* [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [공유 데이터 세트 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 * [자습서: Power BI의 트리맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 * [트리맵: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  

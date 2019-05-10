@@ -115,7 +115,7 @@ ms.locfileid: "57974342"
 ##  <a name="ClientConnections"></a> 클라이언트 연결  
  가용성 그룹 수신기를 만들어 지정된 가용성 그룹의 주 복제본에 대한 클라이언트 연결을 제공할 수 있습니다. *가용성 그룹 수신기* 는 지정된 가용성 그룹에 연결된 리소스 집합을 해당 가용성 복제본에 대한 직접 클라이언트 연결에 제공합니다.  
   
- 가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+ 가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 > [!TIP]  
 >  가용성 그룹에 두 개의 가용성 복제본만 있고 보조 복제본에 대한 읽기 액세스를 허용하도록 구성되지 않은 경우, 클라이언트는 [데이터베이스 미러링 연결 문자열](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)을 사용하여 주 복제본에 연결할 수 있습니다. 이 방법은 데이터베이스 미러링에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 데이터베이스를 마이그레이션한 후 일시적으로 유용할 수 있습니다. 보조 복제본을 더 추가하기 전에 가용성 그룹의 가용성 그룹 수신기를 만들고 수신기의 네트워크 이름을 사용하도록 애플리케이션을 업데이트해야 합니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "57974342"
   
      가용성 복제본이 보조 역할을 수행할 경우 로컬 데이터베이스에 대한 읽기 전용 액세스를 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 또한 주 복제본에서 읽기 전용 작업이 실행되지 않도록 하려는 경우에는 주 역할로 실행될 때 읽기/쓰기 액세스만 허용하도록 복제본을 구성할 수 있습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
-     가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
+     가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
 ##  <a name="SessionTimeoutPerios"></a> 세션 제한 시간  
  세션 제한 시간은 다른 가용성 복제본과의 연결이 얼마 동안 비활성으로 유지되면 연결이 종료되는지를 결정하는 가용성 복제본 속성입니다. 주 복제본과 보조 복제본은 활성 상태임을 알리기 위해 서로 ping합니다. 제한 시간 내에 다른 복제본으로부터 ping을 받으면 연결이 아직 열려 있고 서버 인스턴스가 통신하고 있음을 나타냅니다. ping을 받으면 가용성 복제본은 해당 연결에서의 세션 제한 시간 카운터를 다시 설정합니다.  

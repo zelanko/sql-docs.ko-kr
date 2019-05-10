@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: ba86595524c825d328e16ea4a3e2d81a457026cf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017224"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487478"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
 
@@ -46,7 +46,7 @@ ms.locfileid: "56017224"
   
 ##  <a name="Import"></a> Excel 파일에서 도메인으로 값 가져오기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56017224"
   
 14. **마침** 을 클릭하여 기술 자료에 값을 추가합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: Excel 파일에서 도메인으로 값을 가져온 후  
+##  <a name="FollowUp"></a> 후속 작업: 값을 가져온 후 Excel 파일에서 도메인으로  
  값을 도메인으로 가져온 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 지식을 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Synonyms"></a> 동의어 가져오기  
