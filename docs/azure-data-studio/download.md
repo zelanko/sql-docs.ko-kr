@@ -2,21 +2,21 @@
 title: 를 다운로드하여 설치합니다
 titleSuffix: Azure Data Studio
 description: 다운로드 및 Windows에 대 한 Azure 데이터 Studio 설치, macOS 또는 Linux
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.reviewer: alayu; sstein
+ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180536"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104865"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -160,11 +160,12 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="recommended-system-requirements"></a>권장 시스템 요구 사항
 최적의 경험, 권장된 시스템 요구 사항을 사용 하세요.
+[업데이트 여기 메모리 수를 수치화 해야 함]
 
 |             | CPU 코어 | 메모리/RAM |
-|:-----------:|:---------:|:----------:|
-| 권장 |     4     |      8     |
-|   최소   |     2     |      4     |
+|:-----------|:---------|:----------|
+| 권장 |     4     |      8GB    |
+|   최소   |     2     |      4GB     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>업데이트 확인

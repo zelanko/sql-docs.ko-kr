@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services]
 - e-mail [Master Data Services], about e-mail notifications
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ac5fbbd7a2ea3988fab52aaf921a74ba36519c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923302"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478977"
 ---
 # <a name="notifications-master-data-services"></a>알림(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델 버전 변경의 상태 또는 비즈니스 규칙 유효성 검사가 실패할 때 전자 메일 알림을 보내도록 구성할 수 있습니다.  

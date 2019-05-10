@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-author: douglaslms
-ms.author: douglasl
+author: lrtoyou1223
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217791"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489619"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>태스크 8: 복합 도메인 규칙 만들기
   이 작업에 대 한 규칙을 만듭니다는 **Address Validation** 복합 도메인입니다. 도메인 간 규칙을 정의: 경우 **도시** 됩니다 **Los Angeles**, **상태** 여야 합니다 **CA** 여기서 **City** 및 **상태** 는 두 개의 도메인입니다.  

@@ -15,17 +15,18 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17146ee01a2e4b99dbe50b1d81aedaf0ad7e0b94
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678671"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095884"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server는 SQLOLEDB 통해 Microsoft SQL Server에 액세스 하는 ADO를 수 있습니다.
 
-**참고:**  하지 새로운 개발에이 드라이버를 사용 하는 것이 좋습니다. 새 OLE DB 공급자가 호출 된 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 앞으로 최신 서버 기능을 사용 하 여 업데이트 됩니다.
+> [!IMPORTANT]
+> Microsoft OLE DB Provider for SQL Server (SQLOLEDB) 사용 되지 않는 상태로 유지 됩니다 하 고 새로운 개발 작업에 사용 하는 것은 권장 되지 않습니다. 대신 새 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 최신 서버 기능을 사용 하 여 업데이트 됩니다.
 
 ## <a name="connection-string-parameters"></a>연결 문자열 매개 변수
  이 공급자에 연결을 설정 합니다 *공급자* 인수를 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을:

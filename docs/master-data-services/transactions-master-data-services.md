@@ -11,15 +11,15 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 887380136c96cb9cb1dbcd8d9d04b486daaf6659
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782735"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486102"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
 
@@ -55,7 +55,7 @@ ms.locfileid: "52782735"
   
  다음 저장 프로시저를 호출하여 트랜잭션 로그를 정리할 수도 있습니다.  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|트랜잭션 기록을 정리합니다.|  
 |mdm.udpValidationsCleanup|유효성 검사 기록을 정리합니다.|  
