@@ -18,12 +18,12 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: faf9af4fee3d49dfacaea9ab6e73daef0d56465f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b4a7b238d3f7ade1706a78c3e595ec63ae2cce7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714881"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449734"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_OADestroy objecttoken
  하는 경우 **sp_OADestroy** 를 호출 하지 않으면 만들어진 OLE 개체 일괄 처리의 끝에 자동으로 제거 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할 또는 권한이이 저장 프로시저에서 직접 실행 합니다. `Ole Automation Procedures` 구성이 있어야 **활성화** OLE Automation과 관련 된 모든 시스템 프로시저를 사용 하도록 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 이전에 만든 소멸 **SQLServer** 개체입니다.  

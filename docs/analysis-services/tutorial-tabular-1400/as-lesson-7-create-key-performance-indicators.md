@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5f3b3de71cb60a27613482255556bfbff6bcc8cf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685410"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877627"
 ---
 # <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기
 
@@ -23,11 +23,11 @@ ms.locfileid: "57685410"
 
 이 단원에서는 핵심 성과 지표 (Kpi) 만들 수 있습니다. Kpi는 정의 되는 값의 성능을 측정 하는 데 사용 되는 *자료* 측정값을에 대해를 *대상* 측정값 또는 절대값으로 정의 된 값입니다. 비즈니스 전문가는 보고 클라이언트 애플리케이션에서 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 이해하기 쉬운 요약 정보를 얻거나 추세를 확인할 수 있습니다. 자세한 내용은를 참조 하세요. [Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-이 단원에 소요되는 예상 시간: **15 분**  
+예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [6단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.   
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [6단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.   
   
 ## <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기  
   
@@ -40,7 +40,7 @@ ms.locfileid: "57685410"
 3.  테이블 위의 수식 입력줄에 다음 수식을 입력합니다. 
  
     ```  
-    InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
+    InternetCurrentQuarterSalesPerformance :=IF([InternetPreviousQuarterSalesProportionToQTD]<>0,([InternetCurrentQuarterSales]-[InternetPreviousQuarterSalesProportionToQTD])/[InternetPreviousQuarterSalesProportionToQTD],BLANK()) 
     ```
 
     이 측정값은 KPI에 대 한 기본 측정값으로 사용 됩니다.  

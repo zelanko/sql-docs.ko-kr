@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 5: 계산된 열 만들기 | Microsoft Docs'
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685560"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776073"
 ---
 # <a name="create-calculated-columns"></a>계산 열 만들기
 
@@ -27,11 +27,11 @@ ms.locfileid: "57685560"
 
 이 단원에서는 먼저 데이터 분석 식 (DAX)를 사용할 이기도 합니다. DAX는 테이블 형식 모델에 대 한 고도로 사용자 지정 가능한 수식 식을 만들기 위한 특별 한 언어입니다. 이 자습서에서는 DAX를 사용 하 여 계산된 열, 측정값 및 역할 필터를 만듭니다. 자세한 내용은 참조 하세요 [테이블 형식 모델에서 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)합니다. 
   
-이 단원에 소요되는 예상 시간: **15 분**  
+예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [4단원: 관계를 만들](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)합니다. 
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [4단원: 관계를 만들](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)합니다. 
   
 ## <a name="create-calculated-columns"></a>계산 열 만들기  
   
@@ -47,7 +47,7 @@ ms.locfileid: "57685560"
   
     **계산 열 1** 이라는 새 열이 **Calendar Quarter** 열의 왼쪽에 삽입됩니다.  
   
-4.  테이블 위의 수식 입력줄에 다음 DAX 수식을 입력 합니다. 자동 완성 기능을 사용하면 정규화된 열 및 테이블 이름을 입력하고 사용 가능한 함수를 나열할 수 있습니다.  
+4.  테이블 위의 수식 입력줄에 다음 DAX 수식을 입력 합니다. 자동 완성 열 및 테이블의 정규화 된 이름을 입력 하는 데 도움이 되 고 사용할 수 있는 함수를 나열 합니다.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ DayOfWeek 계산 열은 요일에 대 한 정렬 가능한 이름을 제공 합�
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>DimProduct 테이블의 ProductSubcategoryName 계산 된 열 만들기  
   
   
-1.  에 **DimProduct** 테이블, 테이블의 맨 오른쪽으로 스크롤합니다. 맨 오른쪽 열 이름은 **열 추가** (기울임꼴)입니다. 열 제목을 클릭합니다.  
+1.  에 **DimProduct** 테이블, 테이블의 맨 오른쪽으로 스크롤합니다. 맨 오른쪽 열 이름은 ***열 추가***, 열 머리글을 클릭 합니다.  
   
 2.  수식 입력줄에 다음 수식을 입력합니다.  
     

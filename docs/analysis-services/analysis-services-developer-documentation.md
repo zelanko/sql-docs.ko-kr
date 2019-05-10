@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930320"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449975"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ Analysis Services는 코드를 통해 솔루션을 사용자 지정 하는 여�
 - MDX 및 XMLA 개방형 표준에 따라 솔루션을 구축할 수 있지만, 그러려면 상당히 드문 경우 것입니다. XMLA 이외의 문서가 및.NET 또는 네이티브 (MSOLAP) 기술을 사용 하 여 환경에서, 대부분의 커뮤니티 및 지원 포럼 도움말에 대 한 MDX 참조 그립니다.
 
 ## <a name="programming-in-analysis-services"></a>Analysis Services의 프로그래밍
-[데이터 마이닝 프로그래밍](../analysis-services/data-mining-programming.md) 데이터 마이닝 개체를 포함 하는 솔루션을 구축 하는 방법에 설명 합니다.
+[데이터 마이닝 프로그래밍](../analysis-services/data-mining/data-mining-programming.md) 데이터 마이닝 개체를 포함 하는 솔루션을 구축 하는 방법에 설명 합니다.
 
 [다차원 모델 프로그래밍](../analysis-services/multidimensional-models/multidimensional-model-programming.md) 개발 작업 및 사용자 지정 솔루션에서 다차원 모델 개체를 통합 하는 방법에 설명 합니다.
 

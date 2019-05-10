@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트와 SSAS 관리 태스크 예약 | Microsoft Docs
+title: SQL Server 에이전트를 사용 하 여 SSAS 관리 태스크 예약 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019120"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357507"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,14 +24,14 @@ ms.locfileid: "34019120"
   
  이 항목은 SQL Server 에이전트를 사용하여 XMLA 스크립트를 실행하는 두 가지 방법을 보여 주는 연습입니다. 첫 번째 예에서는 1차원 처리를 예약하는 방법을 보여 줍니다. 예 2에서는 처리 태스크를 일정대로 실행되는 단일 스크립트에 결합하는 방법을 보여 줍니다. 이 연습을 완료하려면 다음 사전 요구 사항을 충족해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  SQL Server 에이전트 서비스가 설치되어 있어야 합니다.  
   
- 기본적으로 서비스 계정으로 작업이 실행됩니다. SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<인스턴스 이름 >. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
+ 기본적으로 서비스 계정으로 작업이 실행됩니다. SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<n a m e >입니다. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
   
- 또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
+ 또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../multidimensional-tutorial/install-sample-data-and-projects.md)을(를) 참조하세요.  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예제 1: 예약된 태스크에서 차원 처리  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예 1: 예약된 된 태스크에서 차원 처리  
  이 예에서는 차원을 처리하는 작업을 만들고 예약하는 방법을 보여 줍니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예약된 태스크는 SQL Server 에이전트 작업에 포함되는 XMLA 스크립트입니다. 이 작업은 원하는 시간 또는 빈도로 실행하도록 예약됩니다. SQL Server 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부이므로 데이터베이스 엔진 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 관리 태스크를 만들고 예약할 수 있습니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "34019120"
   
 7.  **서버**에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대해 **localhost**를 입력하고 명명된 인스턴스에 대해 **localhost\\**\<*instance name*>를 입력합니다.  
   
-     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 형식을 사용 하 여 \< *서버 이름*> 기본 인스턴스에 대 한 및 \< *서버 이름*>\\<*인스턴스 이름*> 명명 된 인스턴스에 대 한 합니다.  
+     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 형식을 사용 하 여 \< *서버 이름*> 기본 인스턴스의 경우 및 \< *서버 이름*>\\<*인스턴스 이름*> 명명 된 인스턴스에 대 한 합니다.  
   
 8.  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019120"
   
 15. 작업이 끝나면 **닫기**를 클릭합니다.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>예제 2: 예약된 태스크에서 차원 및 파티션 일괄 처리  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>예 2: 예약된 태스크에서 차원 및 파티션 일괄 처리  
  이 예의 절차는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 차원을 일괄 처리하는 작업을 만들고 예약하는 동시에 집계를 위해 차원에 종속되는 큐브 파티션을 처리하는 방법을 보여 줍니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   
 ###  <a name="bkmk_BatchProcess"></a> SQL Server 에이전트 작업에서 차원 및 파티션 일괄 처리를 위한 스크립트 만들기  
@@ -221,7 +221,7 @@ ms.locfileid: "34019120"
   
 16. 작업이 끝나면 **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [처리 옵션 및 설정 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
   
   

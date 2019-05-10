@@ -13,15 +13,15 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bba9009365a4353a6fc5610fe97b6c859ea8910f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781785"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484953"
 ---
 # <a name="users-and-groups-master-data-services"></a>사용자 및 그룹(Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52781785"
   
  개별 사용자에게는 추가 권한을 할당하지 말고 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 대한 액세스 권한이 있는 여러 그룹에 사용자를 포함하지 마십시오. 또한 그룹에서 특정 멤버에 대해 제한된 액세스 권한을 부여하려는 경우를 제외하고는 계층 멤버 권한을 사용하지 마십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [사용자 추가&#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
  [그룹 추가&#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
  [사용자 또는 그룹 삭제&#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   

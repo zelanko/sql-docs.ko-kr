@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020000"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450050"
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,25 +26,25 @@ ms.locfileid: "34020000"
   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   
- [데이터베이스 저장소 위치](../../analysis-services/multidimensional-models/database-storage-location.md)  
+ [데이터베이스 스토리지 위치](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
- [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  비즈니스 인텔리전스 솔루션에서 데이터 마이닝을 구현하는 방법은 MSDN Library의 솔루션 가이드를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [논리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [물리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [데이터 마이닝 서비스 및 데이터 원본](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
  [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [보안 개요 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [보안 개요&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델 프로그래밍](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [데이터 마이닝 프로그래밍](../../analysis-services/data-mining-programming.md)  
+ [데이터 마이닝 프로그래밍](../../analysis-services/data-mining/data-mining-programming.md)  
   
   
