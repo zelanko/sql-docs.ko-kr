@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7b06a5f8816339772b6828d857d28c4b278aa5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 5394724845e66e1d51f0c48379f10df124a63e4d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669336"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486052"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>열 순서 바꾸기(Excel용 MDS 추가 기능)
 
@@ -53,7 +53,7 @@ ms.locfileid: "47669336"
   
 8.  **데이터 로드**를 클릭합니다. 시트에 MDS 관리 데이터가 채워지고 사용자가 지정한 순서에 따라 열이 표시됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

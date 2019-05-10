@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 82713725dc8b4bf0d2214e2ba79121c2b330b697
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc6bbaee5ea36f175e70cbf0fe71a65e8150c618
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469707"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488293"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
 

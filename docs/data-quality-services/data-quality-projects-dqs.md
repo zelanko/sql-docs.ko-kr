@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e6a58554d045ab907820016c8d51782fa7f02e8e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032244"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480310"
 ---
 # <a name="data-quality-projects-dqs"></a>데이터 품질 프로젝트(DQS)
 
@@ -41,8 +41,8 @@ ms.locfileid: "56032244"
   
  데이터 품질 프로젝트의 정리 작업에 대한 자세한 내용은 [Data Cleansing](../data-quality-services/data-cleansing.md)를 참조하세요.  
   
-##  <a name="Matching"></a> 데이터 품질 프로젝트: 일치 작업  
- 일치 데이터 품질 프로젝트를 사용하면 정확한 수치 및 근사치 일치를 확인하고 이를 통해 중복 데이터를 제거하는 방식으로 기술 자료의 일치 정책에 따라 일치 작업을 수행하여 데이터 중복을 방지할 수 있습니다. 따라서 일치를 실행하기 전에 데이터를 정리하는 것이 좋습니다. 이렇게 하려면  
+##  <a name="Matching"></a> 데이터 품질 프로젝트: 일치 하는 작업  
+ 일치 데이터 품질 프로젝트를 사용하면 정확한 수치 및 근사치 일치를 확인하고 이를 통해 중복 데이터를 제거하는 방식으로 기술 자료의 일치 정책에 따라 일치 작업을 수행하여 데이터 중복을 방지할 수 있습니다. 따라서 일치를 실행하기 전에 데이터를 정리하는 것이 좋습니다. 이를 수행하려면:  
   
 1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택한 다음 원본 데이터에 대해 데이터 정리 작업을 완료하고 SQL Server 데이터베이스의 테이블로 데이터를 내보냅니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56032244"
 |데이터 품질 프로젝트를 열기, 잠금 해제, 이름 바꾸기 및 삭제하는 방법에 대해 설명합니다.|[데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 Integration Services 프로젝트를 여는 방법에 대해 설명합니다.|[Data Quality Client에서 Integration Services 프로젝트 열기](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

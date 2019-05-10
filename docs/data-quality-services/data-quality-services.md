@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d65dee84a2636508af997a4aac2c851e7bd9e72
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 53e92a9e6af2111fabb911b81eede5473341b2b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480252"
 ---
-# <a name="data-quality-services"></a>데이터베이스 엔진 서비스
+# <a name="data-quality-services"></a>Data  Quality  Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "56017204"
   
  ![작은 파일 폴더 아이콘](../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") [DQS 보안](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 소개](../data-quality-services/introduction-to-data-quality-services.md)   
  [Data Quality Services 개념](../data-quality-services/data-quality-services-concepts.md)   
  [DQS 리소스](https://technet.microsoft.com/sqlserver/hh780961)   

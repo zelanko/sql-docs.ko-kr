@@ -8,21 +8,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6a65e16bd82c6f44df7b8a2d4172a75d5b4ef9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 077e9268c7a68e7b6e5b96cdbf7aca6f22daf860
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668421"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485251"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  
   
 ## <a name="model-operations"></a>모델 작업  
  이러한 작업은 모델을 만들고, 업데이트하고, 삭제하는 데 사용될 뿐 아니라 모델의 모든 콘텐츠(예: 엔터티, 계층 및 버전)에 대해 작업을 수행하는 데에도 사용됩니다. 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)을 참조하세요.  
@@ -122,7 +122,7 @@ ms.locfileid: "47668421"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>데이터 가져오기 작업  
- 이러한 작업은 데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스로 가져오는 데 사용됩니다. 자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
+ 이러한 작업은 데이터를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스로 가져오는 데 사용됩니다. 자세한 내용은 [ 개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  
@@ -141,7 +141,7 @@ ms.locfileid: "47668421"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>데이터 내보내기 작업  
- 이러한 작업은 구독 뷰를 통해 데이터를 내보내는 데 사용됩니다. 자세한 내용은 [개요: 데이터 내보내기&#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
+ 이러한 작업은 구독 뷰를 통해 데이터를 내보내는 데 사용됩니다. 자세한 내용은 [ 개요: 데이터 내보내기&#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  

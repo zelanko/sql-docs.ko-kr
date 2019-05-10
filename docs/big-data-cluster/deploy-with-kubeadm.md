@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860624"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488270"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성
 
@@ -80,7 +80,7 @@ ms.locfileid: "58860624"
 
 ## <a name="configure-the-kubernetes-master"></a>Kubernetes 마스터 구성
 
-각 컴퓨터에서 이전 명령 실행 후 Kubernetes 마스터 할 컴퓨터 중 하나를 선택 합니다. 그런 다음 해당 컴퓨터에서 다음 명령을 재미 있는 예입니다.
+각 컴퓨터에서 이전 명령 실행 후 Kubernetes 마스터 할 컴퓨터 중 하나를 선택 합니다. 해당 컴퓨터에서 다음 명령을 실행 합니다.
 
 1. 먼저, 다음 명령 사용 하 여 현재 디렉터리에 rbac.yaml 파일을 만듭니다. 
 

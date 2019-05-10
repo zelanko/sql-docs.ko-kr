@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797135"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488076"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
 
@@ -92,7 +92,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> 멤버 보안  
- 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   null 재귀에 앵커를 지정하지 않는 재귀적 파생 계층(RDH)입니다(재귀 수준에서 각 구성원은 루트와 해당 재귀 부모 아래에 나타남).  
   
@@ -103,7 +103,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
 ## <a name="collections"></a>컬렉션  
  컬렉션 및 명시적 계층은 사용되지 않습니다. 변환 저장 프로시저(udpConvertCollectionAndConsolidatedMembersToLeaf)는 컬렉션 구성원을 리프 구성원으로 변환하고 컬렉션 구성원 정보를 캡처하기 위해 다 대 다 파생 계층을 만듭니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

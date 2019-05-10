@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee0818babb7fb973aed7e61c5efc4b42600af5a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 5153aebb1598a3cba9ff860654e2dae9ae7f33d8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031724"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487310"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
 
@@ -26,9 +26,9 @@ ms.locfileid: "56031724"
 
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   Data Quality 클라이언트의 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 도메인을 사용한 경우에만 정리 프로젝트 값을 도메인으로 가져올 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "56031724"
   
 ##  <a name="Import"></a> 정리 프로젝트 값 가져오기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "56031724"
     > [!NOTE]  
     >  **도메인 값** 탭의 값에 대한 작업 방법은 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하세요.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인에 프로젝트 값을 가져온 후  
+##  <a name="FollowUp"></a> 후속 작업: 프로젝트 값을 도메인으로 가져온 후  
  정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져온 후 도메인 및 값에 대해 다른 도메인 관리 태스크를 수행할 수 있습니다. 자세한 내용은 [도메인 관리](../data-quality-services/managing-a-domain.md)를 참조하세요.  
   
 ##  <a name="Values"></a> 가져올 수 있는 값  
@@ -114,7 +114,7 @@ ms.locfileid: "56031724"
   
 -   기술 자료가 작업 중인 상태이고 가져오기 작업을 수행하는 사용자에 의해 잠긴 경우에만 프로젝트에서 값을 가져올 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 정리](../data-quality-services/data-cleansing.md)   
  [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

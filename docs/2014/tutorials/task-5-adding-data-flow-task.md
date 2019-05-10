@@ -1,5 +1,5 @@
 ---
-title: '작업 5: 데이터 흐름 태스크 추가 | Microsoft Docs'
+title: '태스크 5: 데이터 흐름 태스크 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753008"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489142"
 ---
-# <a name="task-5-adding-data-flow-task"></a>작업 5: 데이터 흐름 태스크 추가
+# <a name="task-5-adding-data-flow-task"></a>태스크 5: Data Flow Task 추가
   이 작업에서는 SSIS 패키지의 제어 흐름에 데이터 흐름 태스크를 추가합니다.  
   
 1.  끌어서 놓기 **데이터 흐름 태스크** 에서 **SSIS 도구 상자** 하는 **제어 흐름** SSIS 디자이너의 탭 합니다. 표시 되지 않으면 합니다 **SSIS 도구 상자**, 아무 곳 이나 클릭 합니다 **제어 흐름** 탭을 클릭 **SSIS** 메뉴를 클릭 **SSIS 도구 상자**.  

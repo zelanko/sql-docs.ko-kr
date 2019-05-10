@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b39b71f65dfe9c41c3e2ea7282729691e78a5986
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62627988"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484521"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "62627988"
 
 SNAC, 또는 SQL Server Native Client ODBC 및 OLE DB 드라이버 SQL Server에 대 한 참조를 같은 의미로 사용 된 용어입니다.
 
-**참고:**  하지 새로운 개발에이 드라이버를 사용 하는 것이 좋습니다. 새 OLE DB 공급자가 호출 된 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 앞으로 최신 서버 기능을 사용 하 여 업데이트 됩니다.
+> [!IMPORTANT] 
+> SQL Server 네이티브 클라이언트 (SQLNCLI) 사용 되지 않는 상태로 유지 됩니다 하 고 새로운 개발 작업에 사용 하는 것은 권장 되지 않습니다. 대신 새 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 최신 서버 기능을 사용 하 여 업데이트 됩니다.
 
-
-**자세한 내용은 및 SNAC 또는 ODBC 드라이버를 다운로드 하려면 방문 [SNAC 수명 주기를 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)합니다.**
-
-SQL Server 용 ODBC 드라이버에 자세한 내용은 참조 [Windows의 SQL Server 용 Microsoft ODBC Driver](https://msdn.microsoft.com/library/jj730314(v=sql.110).aspx)합니다.  도 참조 하세요 [새로운 Microsoft ODBC Driver for SQL Server 소개](https://blogs.msdn.microsoft.com/sqlnativeclient/2013/01/23/introducing-the-new-microsoft-odbc-drivers-for-sql-server/), 및 [ODBC Driver 13.1 for SQL Server 출시](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)합니다.  
+> [!NOTE]
+> 자세한 내용은 및 SNAC 또는 ODBC 드라이버를 다운로드 하려면 참조는 [SNAC 수명 주기 블로그 게시물 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)합니다.
+> SQL Server 용 ODBC 드라이버에 자세한 내용은 참조 [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.  
 
  에 대 한 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 기능와 함께 릴리스된 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 마지막 사용 가능한 버전의 SQL Server native Client:
 

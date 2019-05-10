@@ -12,15 +12,15 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25de38d04af8b98b600422a843c6b6fb6260d514
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 56c7203db3e7c32383b59a85d2bc7cb16cba4d0a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783465"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484393"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "52783465"
   
 -   **시스템 관리** 와 **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. **사용자 및 그룹 권한** 기능 영역에 대한 권한이 없으면 알림을 보낼 사용자 및 그룹 목록을 볼 수 없습니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 -   유효성 검사 동작을 사용하는 비즈니스 규칙이 있어야 합니다. 자세한 내용은 [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)를 참조하세요.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52783465"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **활성** 으로 변경된 **비즈니스 규칙 상태** 열의 값 및 **알림** 열에서는 알림을 보내도록 선택한 사용자 또는 그룹을 표시합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52783465"
   
     -   [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

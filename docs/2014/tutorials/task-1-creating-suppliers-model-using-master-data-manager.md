@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222694"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481341"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기
   이 태스크에서는 명명 된 모델을 만듭니다 **공급 업체** 사용 하 여 MDS **마스터 데이터 관리자**합니다.  

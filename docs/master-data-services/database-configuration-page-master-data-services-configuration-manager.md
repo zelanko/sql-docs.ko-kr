@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3e588c32a8fce8cd33f096cc22ebb2e2b9e5d0d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1d42e3f616aa4d4811f471648f57858487e91472
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817885"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487712"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>데이터베이스 구성 페이지(Master Data Services 구성 관리자)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52817885"
 ## <a name="current-database"></a>현재 데이터베이스  
  시스템 설정을 편집할 기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 새 데이터베이스를 만듭니다. 새 데이터베이스는 만든 후 자동으로 선택됩니다.  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |**SQL Server 인스턴스**|선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름을 표시합니다. 인스턴스에 연결하고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 만들 때까지 비어 있습니다.|  
 |**Master Data Services 데이터베이스**|선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 이름을 표시합니다. 인스턴스에 연결하고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 만들 때까지 비어 있습니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "52817885"
   
  이러한 설정은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 사용할 수 있으며 시스템 설정 테이블(mdm.tblSystemSetting)의 데이터베이스에 저장됩니다. 모든 설정 목록은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md) [데이터베이스 요구 사항&#40;Master Data Services&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   
   

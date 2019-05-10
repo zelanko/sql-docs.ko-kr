@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e725d3c1bce7e10b202751169ebaa88408ea129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714411"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486098"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일 저장(Excel용 MDS 추가 기능)
 
@@ -35,13 +35,13 @@ ms.locfileid: "47714411"
   
 2.  (선택 사항) 쿼리 이름을 바꾸려면 **쿼리 저장** 아래의 화살표를 클릭하고 **쿼리 관리**를 클릭합니다. 쿼리를 선택하고 **이름 바꾸기**를 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   **쿼리 저장** 아래의 화살표를 클릭하여 바로 가기 쿼리를 표시하고 엽니다.  
   
 -   [바로 가기 쿼리 파일을 메일로 보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

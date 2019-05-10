@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: c45e7f7122aba245297a4ab6fe74ea978bb2a6ad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027484"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480447"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -69,13 +69,13 @@ ms.locfileid: "56027484"
   
 -   **제안**: 신뢰도 수준이 *자동 제안 임계값*보다 높지만 *자동 수정 임계값*보다 낮은 것으로 DQS에서 검색된 제안 값입니다. 이러한 값은 검토 후 적절하게 승인 또는 거부해야 합니다.  
   
--   **새로 만들기**: DQS가 충분한 정보(제안)를 갖고 있지 않아 다른 탭에 매핑할 수 없는 유효한 값입니다. 또한 이 탭에는 신뢰도 수준이 *자동 제안 임계값* 보다 낮지만 유효한 것으로 표시될 수 있는 값도 포함됩니다.  
+-   **새로 만들기**: 유효한 값은 DQS가 충분 한 정보 (제안)를 갖고 있지 않아 다른 탭에 매핑할 수 없습니다. 또한 이 탭에는 신뢰도 수준이 *자동 제안 임계값* 보다 낮지만 유효한 것으로 표시될 수 있는 값도 포함됩니다.  
   
--   **잘못됨**: 기술 자료의 도메인에 유효하지 않은 것으로 표시된 값 또는 도메인 규칙이나 참조 데이터를 준수하지 않은 값입니다. 이 탭에는 또한 대화형 정리 프로세스 중에 다른 네 개 탭 중에서 사용자가 거부한 값이 포함됩니다.  
+-   **잘못됨**: 기술 자료 또는 도메인 규칙이 나 참조 데이터를 실패 한 값을 도메인에서 잘못 된 데이터로 표시 된 값입니다. 이 탭에는 또한 대화형 정리 프로세스 중에 다른 네 개 탭 중에서 사용자가 거부한 값이 포함됩니다.  
   
 -   **수정됨**: 자동화된 정리 프로세스 중에 DQS에서 신뢰도 수준이 *자동 수정 임계값*보다 높은 값에 대한 수정 값을 검색하여 수정한 값입니다. 이 탭에는 또한 대화형 정리 중 **다음으로 수정** 열에서 사용자가 올바른 값을 지정했고 다른 네 개 탭 중에서 **승인** 열의 라디오 단추를 클릭하여 승인한 값이 포함됩니다.  
   
--   **올바름**: 올바른 것으로 발견된 값입니다. 예를 들어 도메인 값과 일치하는 값이 여기에 해당합니다. 필요한 경우 이 탭에서 값을 거부하거나 **다음으로 수정** 열에서 대체 단어를 지정하고 **수락** 열에서 라디오 단추를 클릭하여 DQS 정리를 재정의할 수 있습니다. 또한 이 탭에는 **새로 만들기** 또는 **잘못됨** 탭에서 **승인** 열의 라디오 단추를 클릭하여 대화형 정리 중에 사용자가 승인한 값도 포함됩니다.  
+-   **올바름**: 올바른 발견 된 값입니다. 예를 들어 도메인 값과 일치하는 값이 여기에 해당합니다. 필요한 경우 이 탭에서 값을 거부하거나 **다음으로 수정** 열에서 대체 단어를 지정하고 **수락** 열에서 라디오 단추를 클릭하여 DQS 정리를 재정의할 수 있습니다. 또한 이 탭에는 **새로 만들기** 또는 **잘못됨** 탭에서 **승인** 열의 라디오 단추를 클릭하여 대화형 정리 중에 사용자가 승인한 값도 포함됩니다.  
   
 > [!NOTE]  
 >  **제안됨**, **수정됨**및 **수정** 탭에서 DQS는 각 도메인 값에 대해 **다음으로 수정** 열에 도메인에 대한 선행 값(적용되는 경우)을 표시합니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "56027484"
 |참조 데이터 서비스의 지식을 사용하여 데이터를 정리하는 방법을 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |복합 도메인을 정리하는 방법을 설명합니다.|[복합 도메인의 데이터 정리](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [데이터 일치](../data-quality-services/data-matching.md)  
   

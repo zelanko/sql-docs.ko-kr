@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793171"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481020"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 일치 정책을 만드는 방법에 대해 설명합니다. 예제 데이터에서 일치 정책 작업을 실행하여 DQS에서 일치 프로세스를 준비할 수 있습니다. 이 작업에서는 정책에서 하나 이상의 일치 규칙을 만들고 테스트한 다음, 일치 규칙을 공개적으로 사용할 수 있도록 기술 자료를 게시합니다. 기술 자료에는 하나의 일치 정책만 있을 수 있지만 해당 정책에 여러 일치 규칙이 포함되어 있을 수 있습니다.  
