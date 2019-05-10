@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning member permissions
 - members [Master Data Services], assigning permissions
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b454a152eac9a61edafeaf02e30fd18f351c9daa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926192"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483731"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 할당(Master Data Services)
   계층 멤버에 사용 권한을 할당하여 사용자나 그룹에 **의** 탐색기 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에서 데이터를 볼 수 있는 액세스 권한을 부여합니다.  

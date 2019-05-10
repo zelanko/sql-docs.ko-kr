@@ -10,15 +10,15 @@ helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a7e762a450a28f1d07e58a0baa6f7f3ff3948681
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924388"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482949"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
   계층 멤버 권한은 선택 사항이며 사용자에게 특정 멤버에 대한 제한된 액세스 권한을 부여하려는 경우에만 사용해야 합니다. **계층 멤버** 탭에서 아무 권한도 할당하지 않을 경우 사용자의 권한은 전적으로 **모델** 탭에서 할당한 권한을 기반으로 합니다.  

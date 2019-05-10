@@ -10,15 +10,15 @@ helpviewer_keywords:
 - members [Master Data Services], applying permissions immediately
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 88c574e713862699e72a0f596371c64f9f6a11cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f2d400a4ba29ebf042324877ed8d62c2a2f70ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765156"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482981"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>멤버 권한 즉시 적용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버 보안이 일정한 간격으로 적용되기를 기다리는 대신 멤버 권한을 즉시 적용할 수 있습니다.  

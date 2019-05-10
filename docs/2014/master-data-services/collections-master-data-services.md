@@ -10,15 +10,15 @@ helpviewer_keywords:
 - collections [Master Data Services]
 - collections [Master Data Services], about collections
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3533108054d1c65e73f3167d68a05727e95fa2d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925612"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483540"
 ---
 # <a name="collections-master-data-services"></a>컬렉션(Master Data Services)
   컬렉션은 단일 엔터티의 리프 멤버와 통합 멤버의 그룹입니다. 전체 계층이 필요 없고 보고나 분석을 위해 멤버의 다른 그룹을 보려는 경우 또는 분류를 만들어야 할 경우 컬렉션을 사용합니다.  

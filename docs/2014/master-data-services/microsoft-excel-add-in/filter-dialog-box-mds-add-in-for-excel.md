@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923824"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482563"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
