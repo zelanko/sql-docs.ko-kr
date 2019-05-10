@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0c6e29b89a4ff5908ac48cc70bf0b94c75195455
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792928"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480739"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
   이 화면에서는 기술 자료 관리, 데이터 품질 프로젝트 및 관리라는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 세 가지 주요 태스크 그룹에 대한 사용자 인터페이스 액세스 권한을 얻을 수 있습니다.  

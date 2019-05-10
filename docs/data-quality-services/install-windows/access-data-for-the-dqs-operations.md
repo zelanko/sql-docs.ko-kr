@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 3481d9f8460182d58e11c0910c1c86bd10563459
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024594"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487559"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
 
@@ -48,16 +48,16 @@ ms.locfileid: "56024594"
   
     -   **db_datareader**: 테이블/뷰에서 데이터를 읽습니다.  
   
-    -   **db_datawriter**: 테이블에서 데이터를 추가, 삭제 또는 변경합니다.  
+    -   **db_datawriter**: 추가, 삭제 또는 테이블에서 데이터를 변경 합니다.  
   
-    -   **db_ddladmin**: 테이블/뷰를 생성, 수정 또는 삭제합니다.  
+    -   **db_ddladmin**: 만들기, 수정 또는 테이블/뷰를 삭제 합니다.  
   
 6.  **로그인 속성** 대화 상자에서 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  DQS 작업을 위한 데이터 원본으로 데이터베이스에 액세스하는 DQS 작업을 수행한 다음 처리된 데이터를 데이터베이스로 내보냅니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52ff3370fe6e71b6253432c2aa1ec15239b59a53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: b27bc6e2a9e75ee7112269fc3af5dc1ba7a4bbe0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600311"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488173"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>Export Data to Excel from Master Data Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "47600311"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 사용하려면 MDS 리포지토리에서 데이터를 내보내야 합니다.  
   
- 로드하기 전에 데이터 집합을 필터링하려는 경우 대신 [내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)을 참조하세요.  
+ 로드하기 전에 데이터 세트를 필터링하려는 경우 대신 [내보내기 전 데이터 필터링&amp;#40;Excel용 MDS 추가 기능&amp;#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)을 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
@@ -52,12 +52,12 @@ ms.locfileid: "47600311"
     > [!NOTE]  
     >  32비트 Excel에서 Microsoft Excel용 추가 기능을 사용하여 텍스트 구분 데이터를 로드하면 **로드할 셀 개** 및 **게시할 셀 개수** 속성에 대한 설정이 모두 최대값 1000으로 설정되어 메모리 부족 오류가 발생합니다. **로드할 셀 개수** 및 **게시할 셀 개수**에 대한 최대값 설정을 사용하려면 64비트 Excel을 사용해야 합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  [Excel에서 Master Data Services로 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>참고 항목  
- [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>관련 항목  
+ [개요: Excel로 데이터 내보내기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [필터 대화 상자&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
- [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [개요: Excel에서 데이터 가져오기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

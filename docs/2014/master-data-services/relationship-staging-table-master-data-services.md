@@ -10,15 +10,15 @@ helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9db9d44ac174619a8cd0061d048fefe2dfdfa1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b51cfde7e4d23d734a86955b3d639fab3e4625e3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765366"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482696"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 관계 준비 테이블(stg.name_Relationship)을 사용하여 멤버 사이의 관계를 기반으로 명시적 계층의 멤버 위치를 변경할 수 있습니다.  

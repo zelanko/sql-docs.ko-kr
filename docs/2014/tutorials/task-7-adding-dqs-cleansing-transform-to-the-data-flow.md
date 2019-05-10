@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866381"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488939"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: 데이터 흐름에 추가 DQS 정리 변환
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: Data Flow에 DQS 정리 변환 추가
   이 작업에서는 데이터 흐름에 DQS 정리 변환을 추가하여 DQS를 사용해서 입력 공급자 데이터를 정리합니다. 참조 **[DQS 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 변환에 대 한 자세한 내용은 합니다.  
   
 1.  마우스 오른쪽 단추로 클릭 **DQS 정리** 에 **데이터 흐름** 탭을 클릭 **이름 바꾸기**합니다. 형식 **Cleanse Supplier Data**, 누릅니다 **ENTER**합니다.  

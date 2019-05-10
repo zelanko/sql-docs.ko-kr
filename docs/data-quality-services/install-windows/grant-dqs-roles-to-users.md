@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: b12f9e95163df4a090ddfb2e4061930438947802
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028444"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487515"
 ---
 # <a name="grant-dqs-roles-to-users"></a>사용자에게 DQS 역할 부여
 
@@ -49,10 +49,10 @@ ms.locfileid: "56028444"
     > [!NOTE]  
     >  사용자에게 **dqs_administrator** 역할을 부여할 경우 변경 내용을 적용한 후 사용자 권한을 다시 확인하면 다른 두 개의 DQS 역할 확인란(**dq_kb_editor** 및 **dqs_kb_operator**)도 함께 선택됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  바로 전에 SQL 로그인을 만들고 DQS 역할을 부여한 Windows 사용자 계정을 사용하여 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 에 로그인을 시도합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   

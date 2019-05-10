@@ -34,7 +34,7 @@ ms.locfileid: "53206492"
  장애 조치(failover) 중에 보조 복제본은 주 역할로 전환되고 이전의 주 복제본은 보조 역할로 전환됩니다. 장애 조치(failover) 프로세스 동안 주 복제본 및 보조 복제본에 대한 모든 클라이언트 연결은 종료됩니다. 장애 조치(failover) 후 클라이언트가 가용성 그룹 수신기에 다시 연결할 때 수신기는 읽기 전용 연결 요청을 제외하고 새로운 주 복제본에 클라이언트를 다시 연결합니다. 새로운 주 복제본을 호스팅하는 클라이언트 및 서버 인스턴스와 최소 하나 이상의 읽기 가능한 보조 복제본에서 읽기 전용 라우팅이 구성되어 있는 경우 읽기 전용 연결 요청은 클라이언트에 필요한 연결 액세스 유형을 지원하는 보조 복제본으로 다시 라우팅됩니다. 장애 조치(failover) 후 정상적인 클라이언트 환경을 위해 모든 가용성 복제본의 보조 역할 및 주 역할에 대해 연결 액세스를 구성해야 합니다.  
   
 > [!NOTE]  
->  클라이언트 연결 요청을 처리하는 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
+>  클라이언트 연결 요청을 처리하는 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
 ##  <a name="ConnectAccessForSecondary"></a> 보조 역할에서 지원되는 연결 액세스의 유형  
  보조 역할은 클라이언트 연결에 대해 다음과 같은 세 가지 대체 방법을 지원합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "53206492"
 |주|읽기/쓰기|읽기 전용만|실패|  
 |주|읽기/쓰기|읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
   
- 해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
+ 해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
 ### <a name="example-connection-access-configuration"></a>연결 액세스 구성의 예  
  구성 액세스에 대해 가용성 복제본을 구성하는 방법에 따라 가용성 그룹이 장애 조치된 후 클라이언트 연결에 대한 지원이 변경될 수 있습니다. 예를 들어 원격 비동기 커밋 보조 복제본에서 보고가 수행되는 가용성 그룹의 경우, 모든 읽기 전용 연결이 읽기 전용 연결이 되도록 이 가용성 그룹의 데이터베이스에 대한 모든 읽기 전용 애플리케이션은 **애플리케이션 의도** 연결 속성을 **ReadOnly**로 설정합니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "53206492"
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [통계](../../../relational-databases/statistics/statistics.md)  
   
   

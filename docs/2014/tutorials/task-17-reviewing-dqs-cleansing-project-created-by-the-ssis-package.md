@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057852"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484711"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>태스크 17: SSIS 패키지로 생성된 DQS 정리 프로젝트 검토
   이 작업에서는 DQS 클라이언트에서 SSIS 패키지로 생성된 DQS 프로젝트를 열고, 정리 프로세스의 결과를 검토하고, 선택적으로 대화형 정리를 수행하고, 결과를 내보냅니다.  

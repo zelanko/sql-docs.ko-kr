@@ -11,15 +11,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777345"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489612"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>비즈니스 규칙 만들기 및 게시(Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52777345"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>비즈니스 규칙을 만들어 게시하려면  
   
@@ -103,16 +103,16 @@ ms.locfileid: "52777345"
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 비즈니스 규칙에 대해 열이 6개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|속성|설명|  
+|이름|Description|  
 |----------|-----------------|  
 |상태|**저장** 을 클릭하면 비즈니스 규칙이 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> 비즈니스 규칙을 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|속성|비즈니스 규칙 이름입니다.|  
-|설명|비즈니스 규칙 설명입니다.|  
+|이름|비즈니스 규칙 이름입니다.|  
+|Description|비즈니스 규칙 설명입니다.|  
 |비즈니스 규칙 상태|비즈니스 규칙 상태는 다음 중 하나입니다. 정의되지 않은 규칙, 활성, 제외됨, 보류 중인 제외 및 보류 중인 삭제.|  
 |제외됨|비즈니스 규칙을 제외할지 여부를 지정합니다.|  
 |알림|전자 메일 알림을 보내도록 선택한 사용자 또는 그룹을 지정합니다.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "52777345"
   
     -   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [비즈니스 규칙 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [비즈니스 규칙에 여러 조건 추가&#40;Master Data Services&#41;](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

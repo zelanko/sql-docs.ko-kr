@@ -18,12 +18,12 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac4989b43ca507fb1d24a36b6957bb774c69a90e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634501"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450044"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_OAStop
  OLE Automation 저장 프로시저를 사용하는 모든 클라이언트는 하나의 실행 환경을 공유합니다. 클라이언트에서 호출 하는 경우 **sp_OAStop** 모든 클라이언트에 대해 공유 실행 환경이 중지 됩니다. 실행 환경을 중지 된 후 호출 하 여 **sp_OACreate** 실행 환경을 다시 시작 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할 또는 권한이이 저장 프로시저에서 직접 실행 합니다. `Ole Automation Procedures` 구성이 있어야 **활성화** OLE Automation과 관련 된 모든 시스템 프로시저를 사용 하도록 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 공유 OLE Automation 실행 환경을 중지합니다.  

@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7261d8b5b72b835c726a268477c44e4d0663f131
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516519"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376842"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
@@ -83,11 +83,11 @@ docker run --name sqlenterprise `
       -d "store/microsoft/mssql-server-linux:2017-latest"
  ```
 
-      > [!IMPORTANT]
-      > By passing the value **Y** to the environment variable **ACCEPT_EULA** and an edition value to **MSSQL_PID**, you are expressing that you have a valid and existing license for the edition and version of SQL Server that you intend to use. You also agree that your use of SQL Server software running in a Docker container image will be governed by the terms of your SQL Server license.
+> [!IMPORTANT]
+> 값을 전달 하 여 **Y** 환경 변수에 **ACCEPT_EULA** 과 버전 값을 **MSSQL_PID**를 유효 하 고 기존 라이선스를 있다고 표현 됩니다 버전 및 사용 하려는 SQL Server의 버전입니다. 또한는 Docker 컨테이너 이미지가 실행 되는 SQL Server 소프트웨어의 사용 받습니다 SQL Server 라이선스 조건에 동의 합니다.
 
-      > [!NOTE]
-      > For a full list of possible values for **MSSQL_PID**, see [Configure SQL Server settings with environment variables on Linux](sql-server-linux-configure-environment-variables.md).
+> [!NOTE]
+> 에 대 한 가능한 값의 전체 목록은 **MSSQL_PID**를 참조 하세요 [Linux의 환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
 
 ::: moniker-end
 

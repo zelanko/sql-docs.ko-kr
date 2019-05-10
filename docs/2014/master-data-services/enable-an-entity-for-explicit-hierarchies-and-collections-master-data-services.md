@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5cb6d1de246a3bb91173f9ae25b317836a876e99
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924633"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479451"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>명시적 계층 및 컬렉션에 엔터티 사용(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티에 대한 명시적 계층 및 컬렉션을 만들 수 있도록 명시적 계층 및 컬렉션에 엔터티를 사용합니다.  
