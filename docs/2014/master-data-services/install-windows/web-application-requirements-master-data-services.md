@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482881"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 애플리케이션 요구 사항(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]은 Internet Explorer (IE) 7 이상에서만 사용할 수 있습니다. IE 7 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  

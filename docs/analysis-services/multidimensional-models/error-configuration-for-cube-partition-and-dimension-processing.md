@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025550"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357348"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>큐브, 파티션 및 차원 처리에 대 한 오류 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "34025550"
   
 -   **NullProcessing**=**Error** 로 설정하여 Null 값이 있는 레코드를 제외합니다. 그러면 **NullKeyNotAllowed** 오류가 생성됩니다. 이 오류는 기록되고 키 오류 제한에 오류 수가 계산됩니다. **Null 키가 허용되지 않는 경우** 에서 오류 구성 속성을 **IgnoreError** 로 설정하여 처리가 계속되도록 할 수 있습니다.  
   
- MDX 쿼리는 Null이 0으로 해석되는지 공백으로 해석되는지에 따라 다른 값을 반환하므로 키가 아닌 필드의 경우 Null이 문제가 될 수 있습니다. 이러한 이유로, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 원하는 변환 동작을 미리 정의할 수 있도록 Null 처리 옵션을 제공합니다. 자세한 내용은 [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 및 <xref:Microsoft.AnalysisServices.NullProcessing> 를 참조하세요.  
+ MDX 쿼리는 Null이 0으로 해석되는지 공백으로 해석되는지에 따라 다른 값을 반환하므로 키가 아닌 필드의 경우 Null이 문제가 될 수 있습니다. 이러한 이유로, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 원하는 변환 동작을 미리 정의할 수 있도록 Null 처리 옵션을 제공합니다.  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>차원 특성에 대한 NullProcessing 속성 설정  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025550"
 ##  <a name="bkmk_next"></a> 다음 단계  
  오류로 인해 처리를 중지할지 오류를 무시할지 결정합니다. 오류만 무시됩니다. 오류를 발생시킨 레코드는 무시되지 않으며 삭제되거나 알 수 없는 멤버로 변환됩니다. 데이터 무결성 규칙을 위반하는 레코드는 데이터베이스에 추가되지 않습니다. 기본적으로 첫 번째 오류가 발생할 때 처리가 중지되지만 오류 제한을 높여서 이를 변경할 수 있습니다. 큐브 개발 시 오류 구성 규칙을 완화하여 테스트할 데이터가 있도록 처리를 계속할 수 있게 허용하는 것이 유용할 수 있습니다.  
   
- 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다. 특성에 대한 Null 처리를 설정하는 데 대한 지침은 [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 를 참조하십시오.  
+ 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [로그 속성](../../analysis-services/server-properties/log-properties.md)   
- [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [알 수 없는 멤버 및 Null 처리 속성 정의](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

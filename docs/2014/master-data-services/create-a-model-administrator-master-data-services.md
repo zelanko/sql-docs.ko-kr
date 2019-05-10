@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925347"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483401"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 그룹 또는 사용자 할 경우 모델 관리자를 만듭니다 **업데이트** 하나 이상의 모델에 있는 모든 개체에 대 한 사용 권한.  

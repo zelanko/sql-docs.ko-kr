@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 357b7d9e6ec63de52c5a7128b60330ce53943251
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241971"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357378"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "59241971"
   
 |||  
 |-|-|  
-|큐브 마법사|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 큐브 마법사를 실행하여 큐브를 만듭니다.<br /><br /> 솔루션 탐색기에서 **큐브**를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택합니다. 이러한 단계에 대한 도움이 필요하면 [다차원 모델링&#40;Adventure Works 자습서&#41;](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)을 참조하세요.<br /><br /> 기존 데이터 웨어하우스의 테이블을 기반으로 큐브를 만드는 경우 측정값 및 측정값 그룹에 대한 정의는 큐브 만들기 프로세스의 일부로 구체화됩니다. 마법사에서 큐브의 측정값 및 측정값 그룹 개체의 기초로 사용할 팩트 및 팩트 테이블을 선택합니다.|  
+|큐브 마법사|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 큐브 마법사를 실행하여 큐브를 만듭니다.<br /><br /> 솔루션 탐색기에서 **큐브**를 마우스 오른쪽 단추로 클릭하고 **새 큐브**를 선택합니다. 이러한 단계에 대한 도움이 필요하면 [다차원 모델링&#40;Adventure Works 자습서&#41;](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)을 참조하세요.<br /><br /> 기존 데이터 웨어하우스의 테이블을 기반으로 큐브를 만드는 경우 측정값 및 측정값 그룹에 대한 정의는 큐브 만들기 프로세스의 일부로 구체화됩니다. 마법사에서 큐브의 측정값 및 측정값 그룹 개체의 기초로 사용할 팩트 및 팩트 테이블을 선택합니다.|  
 |새 측정값 대화 상자|큐브가 이미 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 있다고 가정하고 솔루션 탐색기에서 큐브 이름을 두 번 클릭하여 큐브 디자이너에서 엽니다. 측정값 창에서 맨 위 노드를 마우스 오른쪽 단추로 클릭하여 새 측정값 그룹을 만들거나 원본 테이블, 열 및 집계 유형을 지정하여 새 측정값을 만듭니다. 이 접근 방식을 사용하려면 미리 작성된 함수의 고정 목록에서 집계 방법을 선택해야 합니다. 일반적으로 사용되는 집계에 대한 자세한 내용은 [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) 을 참조하세요.|  
 |계산 멤버|사용자가 계산 멤버가 만들어지는 시기와 방식을 제어할 수 있으므로 계산 멤버는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 큐브에 유연성과 분석 기능을 추가합니다. 사용자 세션 기간 동안이나 조사의 일환으로 Management Studio에서 일시적으로 측정값 하나만 필요한 경우가 있습니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 계산 탭을 열어 새 계산 멤버를 만듭니다.<br /><br /> 측정값의 기반이 MDX 식인 경우 이 접근 방식을 선택합니다. 자세한 내용은이 항목을 참조 하세요. [MDX로 측정값 구축](../../analysis-services/multidimensional-models/mdx/mdx-building-measures.md), [계산](../../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)를 [다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) 하 고 [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md).|  
 |MDX 또는 XMLA|SQL Server Management Studio에서 MDX 또는 XMLA를 실행하여 새 계산 멤버를 포함하도록 데이터베이스를 변경할 수 있습니다. 이 접근 방식은 솔루션이 서버에 배포된 후 데이터의 임시 테스트에 유용합니다. [Document and Script an Analysis Services Database](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)을 참조하세요.|  

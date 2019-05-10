@@ -54,7 +54,7 @@ ms.locfileid: "56294701"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 데이터 원본 **AdventureWorks2014** 는 **보고서 데이터** 창에 추가되었습니다.  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>다음 태스크  
-[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. [3단원: 테이블 보고서에 대한 데이터 세트 정의&amp;#40;Reporting Services&amp;#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)를 참조하세요.  
+[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. [3단원: 테이블 보고서에 대한 데이터 세트 정의&#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

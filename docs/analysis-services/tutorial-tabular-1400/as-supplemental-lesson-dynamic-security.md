@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685710"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776093"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>추가 단원 - 동적 보안
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685710"
   
 이러한 태스크는 이 Adventure Works 테이블 형식 모델 시나리오에 해당되는 것이며 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 태스크에는 태스크의 목적을 설명하는 추가 정보가 포함되어 있습니다.  
   
-이 단원에 소요되는 예상 시간: **30 분**  
+예상이 단원을 완료 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
@@ -43,7 +43,7 @@ ms.locfileid: "57685710"
   
 1.  테이블 형식 모델 탐색기에서 > **데이터 원본**연결을 마우스 오른쪽 단추로 클릭 한 다음 클릭 **새 테이블 가져오기**합니다.  
 
-    가장 자격 증명 대화 상자가 나타나면 2단원: 데이터 추가에서 사용한 가장 자격 증명을 입력합니다.
+    가장 자격 증명 대화 상자가 나타나면 2 단원에서에서 사용한 가장 자격 증명을 입력 합니다. 데이터를 추가 합니다.
   
 2.  탐색 창에서 선택 합니다 **DimSalesTerritory** 테이블을 마우스 클릭 **확인**합니다.    
   
@@ -150,10 +150,9 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
 9. 에 대 한 합니다 **DimSalesTerritory** 테이블에서 다음 수식을 입력 합니다.  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     이 수식에서 LOOKUPVALUE 함수 여기서 EmployeeSecurity [LoginId]는 현재 로그온 된 Windows 사용자 이름을 동일 하 고 EmployeeSecurity [SalesTerritoryId]는 DimEmployeeSecurity [SalesTerritoryId] 열에 대 한 모든 값을 반환 합니다 DimSalesTerritory [SalesTerritoryId]와 동일 합니다.  
