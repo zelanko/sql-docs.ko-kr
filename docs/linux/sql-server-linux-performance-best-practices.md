@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676909"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106264"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침
 
@@ -100,7 +100,7 @@ sysctl -w vm.max_map_count=262144
 
 대부분의 Linux 설치는 기본적으로이 옵션 있어야 합니다. 이 구성 옵션을 사용 하도록 설정 하려면 가장 일관 된 성능 경험에 대 한 것이 좋습니다.
 
-### <a name="swapfile"></a>스왑 파일
+### <a name="swapfile"></a>swapfile
 
 모든 메모리 부족 문제를 방지 하려면 올바르게 구성 된 스왑 파일 확인 합니다. 만들고 제대로 스왑 파일 크기를 조정 하는 방법에 대 한 Linux 설명서를 참조 하십시오.
 

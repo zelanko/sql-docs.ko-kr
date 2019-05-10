@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532485"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088501"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,6 +101,8 @@ sp_describe_undeclared_parameters
 -   하는 경우 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에서 선언 된 매개 변수 이름이 같은 지역 변수를 선언 \@매개 변수입니다.  
   
 - 문이 임시 테이블을 참조 하는 경우.
+
+- 쿼리에 다음으로 쿼리되는 영구 테이블 생성이 포함되는 경우
   
  하는 경우 \@tsql 이외의 선언 된 매개 변수가 \@매개 변수, 프로시저 빈 결과 집합을 반환 합니다.  
   

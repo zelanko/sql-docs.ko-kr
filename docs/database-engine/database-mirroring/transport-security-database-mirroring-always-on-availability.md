@@ -30,7 +30,7 @@ ms.locfileid: "53589217"
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 엔드포인트에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 엔드포인트에 대한 개요를 보려면 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
+  전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 엔드포인트에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 엔드포인트에 대한 개요를 보려면 [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
   
  **항목 내용:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53589217"
 ### <a name="certificates"></a>인증서  
  서버 인스턴스가 트러스트된 도메인에 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 서비스로 실행되고 있는 경우와 같이 Windows 인증을 사용할 수 없는 경우가 있습니다. 이런 경우에는 연결 요청을 인증하는 데 사용자 자격 증명 대신 인증서가 필요합니다. 각 서버 인스턴스의 미러링 엔드포인트는 로컬에서 만든 자체 인증서를 사용하여 구성해야 합니다.  
   
- 암호화 방법은 인증서를 만들 때 결정됩니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요. 인증서는 신중하게 관리해야 합니다.  
+ 암호화 방법은 인증서를 만들 때 결정됩니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요. 인증서는 신중하게 관리해야 합니다.  
   
  서버 인스턴스는 자체 인증서의 개인 키를 사용하여 연결 설정 시 해당 ID를 설정합니다. 연결 요청을 수신하는 서버 인스턴스는 보낸 사람의 인증서 공개 키를 사용하여 보낸 사람의 ID를 인증합니다. 예를 들어 Server_A와 Server_B라는 서버 인스턴스가 있다고 가정합니다. Server_A가 자신의 개인 키를 사용하여 연결 헤더를 암호화한 다음 Server_B에 연결 요청을 보내면 Server_B는 Server_A의 인증서 공개 키를 사용하여 연결 헤더의 암호를 해독합니다. 해독된 헤더가 정확한 경우 Server_B는 Server_A가 헤더를 암호화했음을 확인하고 연결을 인증합니다. 해독된 헤더가 잘못된 경우 Server_B는 연결 요청을 인증할 수 없음을 확인하고 연결을 거부합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "53589217"
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **데이터베이스 미러링 엔드포인트에 대한 전송 보안을 구성하려면**  
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   

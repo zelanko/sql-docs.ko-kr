@@ -2,21 +2,21 @@
 title: 확장성 API
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 확장성 Api에 알아봅니다
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 55ab9fb45b37595c84303a5a52b83de14a05068d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180221"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105246"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 Api
 

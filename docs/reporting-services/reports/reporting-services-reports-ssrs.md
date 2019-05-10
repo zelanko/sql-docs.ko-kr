@@ -75,7 +75,7 @@ ms.locfileid: "56291361"
   
     -   **데이터 원본을 확인합니다.** 각 데이터 원본에 하나씩 보고서 데이터 원본을 정의합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
-    -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 세트를 정의합니다. 각 데이터 세트에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&amp;#40;보고서 작성기 및 보고서 디자이너&amp;#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
+    -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 세트를 정의합니다. 각 데이터 세트에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
     -   **데이터 시각화를 선택합니다.** 각 데이터 세트에 대해 데이터를 표시하는 데 사용할 데이터 영역을 선택합니다. 테이블, 차트, 계기 및 지도 목록에서 선택할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
