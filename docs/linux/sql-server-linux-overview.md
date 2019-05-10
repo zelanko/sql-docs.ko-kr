@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 9feb60a7e3498bd940f97b8176375dc0f63133af
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63457369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775755"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 
@@ -52,7 +52,7 @@ SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 많은 유사 기
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
-- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 > [!NOTE]
 > Docker 자체는 여러 플랫폼에서 실행됩니다. 즉, Linux, Mac 및 Windows에서 Docker 이미지를 실행할 수 있습니다.

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765824"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479944"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>구독 뷰 만들기(Master Data Services)
   구독 뷰를 만들면 데이터의 뷰를 만들려는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 구독 시스템에서 사용 합니다.  

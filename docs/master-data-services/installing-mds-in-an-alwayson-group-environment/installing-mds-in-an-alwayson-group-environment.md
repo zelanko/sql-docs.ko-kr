@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215822"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489600"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -317,9 +317,9 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
 8.  **복제본 지정** 페이지에서 **수신기** 탭을 클릭하고 다음을 수행합니다. 그림 18을 참조하세요.
 
-    1.  **가용성 그룹 수신기 만들기**를 클릭하여 MDS 데이터베이스 연결에 대한 가용성 그룹 수신기를 설정합니다.
+    a.  **가용성 그룹 수신기 만들기**를 클릭하여 MDS 데이터베이스 연결에 대한 가용성 그룹 수신기를 설정합니다.
 
-    2.  MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
+    b.  MDSSQLServer와 같은 **수신기 DNS 이름**을 입력합니다.
 
     c.  **포트** 텍스트 상자에 기본 SQL 포트 1433을 입력합니다.
 

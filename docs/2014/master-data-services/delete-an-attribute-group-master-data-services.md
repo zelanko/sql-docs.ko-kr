@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 02a0eac15050584d2ce232a82bbf327db3b44fd9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924863"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479559"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>특성 그룹 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 **의** 탐색기 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에 탭을 더 이상 표시하지 않아도 되는 경우 특성 그룹을 삭제할 수 있습니다.  

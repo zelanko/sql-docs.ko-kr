@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 111b4dc0c1731b28da503794008be2b4d269094f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755817"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481118"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료의 메타데이터를 변경하고 보강하는 방법에 대해 설명합니다. 기술 자료 검색, 기술 자료로 정보 또는 도메인 가져오기, 기술 자료를 기반으로 다른 기술 자료 작성 등의 작업을 통해 기술 자료를 생성한 후 데이터 값을 대화식으로 변경할 수 있습니다. 기술 자료 생성은 컴퓨터 기반 프로세스를 활용할 뿐만 아니라 다음과 같이 사용자의 고유한 정보를 사용하여 데이터 값을 확인하고 변경하는 방법도 제공합니다.  

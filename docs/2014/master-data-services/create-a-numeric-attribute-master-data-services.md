@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating number attributes
 - creating number attributes [Master Data Services]
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: adc2a5156c84545c90a9ae904749f96a729c251a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925113"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483360"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>숫자 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 숫자를 특성 값으로 입력할 수 있도록 하려면 숫자 특성을 만듭니다.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5daf66aeb2eba3fd30302ef9e3e806c490f46e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766016"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483766"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>컬렉션에 멤버 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 컬렉션에 리프 멤버 및 통합 멤버를 추가할 수 있습니다.  

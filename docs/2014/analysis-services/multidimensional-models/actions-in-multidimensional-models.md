@@ -77,7 +77,7 @@ ms.locfileid: "62701932"
 |**응용 프로그램**|동작의 애플리케이션을 나타냅니다.|  
 |**설명**|동작에 대한 설명입니다.|  
 |**캡션**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 이면 지정할 `True` 에 대 한 **캡션이 MDX 인지**합니다.|  
-|**True**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
+|**캡션이 MDX 인지**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
   
 > [!NOTE]  
 >  HTML 및 명령줄 동작 유형을 정의하려면 ASSL(Analysis Services Scripting Language)이나 AMO(Analysis Management Objects)를 사용해야 합니다. 자세한 내용은 [Action 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl), [Type 요소&#40;Action&#41;&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 및 [AMO OLAP 고급 개체 프로그래밍](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)을 참조하세요.  

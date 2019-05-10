@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222764"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481310"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>태스크 1: 일치 정책 정의
   이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 규칙 하나의 필요 조건이 포함 됩니다. **Supplier ID**, 규칙의 다른 도메인을 사용 하려면 먼저 Supplier Id와 일치 해야 함을 의미 합니다. 다른 두 도메인을 사용 하는 규칙: **Supplier Name** 사용 하 여 **유사성** 값으로 설정 **70%** 하 고 **Contact Email** 사용 하 여 **유사성** 값설정**30%** 합니다.  

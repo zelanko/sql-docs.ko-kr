@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7f50c5e77e93fcddbf7eb6f1d16432dd54bc7625
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b46b7d020e7a9ebd8bd0ac96d0971b63230c2b0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755803"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480759"
 ---
 # <a name="data-quality-client-application"></a>Data Quality 클라이언트 애플리케이션
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 사용하면 독립형 도구를 사용하여 데이터 품질 작업을 수행할 수 있습니다. 이 애플리케이션을 사용하면 기술 자료를 만들고, 데이터 품질 프로젝트를 생성 및 실행하고, 관리 태스크를 수행할 수 있습니다.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925304"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483400"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>리프 멤버 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], 시스템에 마스터 데이터를 추가 하 고 준비 테이블을 사용 하지 않는 경우 리프 멤버를 만듭니다 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 데이터를 가져옵니다.  

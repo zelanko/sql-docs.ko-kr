@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f6cc706bb7e4852e37f473378d519c813001a96d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07642b9a47d23893e67ff035e9967b940aedb813
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925846"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483591"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>특성 그룹 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹의 이름을 변경할 수 있습니다.  

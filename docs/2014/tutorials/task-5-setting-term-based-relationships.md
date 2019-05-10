@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63277239"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489118"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>태스크 5: 용어 기반 관계 설정
   이 태스크에서는 몇 가지 용어 기반 관계에 대 한 값에 대 한 정의 **Supplier Name** 도메인입니다. 용어 기반 관계를 사용하면 도메인에서 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 **Inc.** 로 수정할 수 있습니다 **Incorporated**합니다. DQS는 기술 자료 검색, 정리 또는 일치 프로세스에서 이러한 관계를 사용합니다. 참조 [만들 용어 기반 관계](https://msdn.microsoft.com/library/hh510404.aspx) 대 한 자세한 내용은 합니다.  

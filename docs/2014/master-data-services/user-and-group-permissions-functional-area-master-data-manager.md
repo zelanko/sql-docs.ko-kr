@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763369"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482548"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)
   사용자 및 그룹 권한 기능 영역에서 관리자는 기능 영역, 특성(모델 탭에서) 및 멤버(계층 멤버 탭에서)에 사용 권한을 부여할 수 있습니다. 개별 특성 값에 대한 사용자의 사용 권한을 확인하려면 겹치는 사용 권한을 확인합니다.  

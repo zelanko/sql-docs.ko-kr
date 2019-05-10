@@ -8,15 +8,15 @@ ms.technology:
 - master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764932"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482772"
 ---
 # <a name="master-data-services"></a>Master  Data  Services
   MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )는 마스터 데이터 관리용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. MDM(마스터 데이터 관리)은 조직에서 유지 가능한 마스터 목록을 컴파일할 목적으로 비트랜잭션 데이터 목록을 검색 및 정의하기 위해 수행하는 작업을 의미합니다. MDM 프로젝트에는 일반적으로 MDM 기술 구현과 함께 내부 비즈니스 프로세스의 평가 및 재구성 과정이 포함됩니다. 성공적인 MDM 솔루션의 결과로 분석 가능한 신뢰할 수 있는 중앙 집중식 데이터를 얻게 되므로 비즈니스 의사 결정의 효율성을 높일 수 있습니다.  

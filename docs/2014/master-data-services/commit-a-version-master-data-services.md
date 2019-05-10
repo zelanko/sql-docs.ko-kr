@@ -10,15 +10,15 @@ helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: db793009e2dd1c2be243b65c6bc50778578b0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65ac3c0c590a3b5d1fc03ab17625f039c163ac57
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925645"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480029"
 ---
 # <a name="commit-a-version-master-data-services"></a>버전 커밋(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델의 멤버 및 특성이 변경되지 않게 하려면 모델의 버전을 커밋합니다. 커밋된 버전의 잠금은 해제할 수 없습니다.  

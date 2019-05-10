@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce2b909ea7853a0a77d42f8c14a510b529f4ae88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7207cd8e3a087ed0aa85931254754d4009d73c53
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765886"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479877"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 만들기 마법사(Master Data Services 구성 관리자)
   **데이터베이스 만들기** 마법사를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 만들 수 있습니다.  

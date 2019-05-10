@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866187"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488958"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>태스크 6: 마스터 데이터 관리자를 사용 하 여 도메인 기반 특성이 생성 되었는지 확인
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>태스크 6: 마스터 데이터 관리자를 사용하여 도메인 기반 특성이 생성되었는지 확인
   이 작업에서는 **마스터 데이터 관리자** 를 사용해서 **State** 엔터티가 **MDS** 에 만들어졌고 **Supplier** 엔터티의 **State** 특성이 **State**엔터티에 종속된 도메인 기반 특성인지 확인합니다.  
   
 1.  **마스터 데이터 관리자** 웹 애플리케이션으로 전환합니다.  

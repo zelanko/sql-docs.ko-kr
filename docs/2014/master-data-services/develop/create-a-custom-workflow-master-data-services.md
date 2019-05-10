@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479543"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 이러한 솔루션을 사용하면 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. 기본 제공 워크플로 동작으로 가능한 것보다 복잡한 처리가 필요한 경우에는 사용자 지정 워크플로를 사용하십시오. 사용자 지정 워크플로는 사용자가 만드는 .NET 어셈블리입니다. 사용자 워크플로 어셈블리가 호출되면 상황에 따라 필요한 동작이 코드에 사용될 수 있습니다. 예를 들어, 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 CEP(복합 이벤트 처리)가 필요한 경우 데이터를 분석하고 어디로 데이터를 보내서 승인을 받을지를 결정하는 사용자 지정 워크플로를 시작하도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다.  

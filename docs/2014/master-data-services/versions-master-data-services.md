@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767395"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481353"
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 내에 여러 버전의 마스터 데이터를 만들 수 있습니다. 버전은 데이터 유효성을 검사하는 동안 잠그고 데이터 유효성 검사 이후에 커밋할 수 있습니다. 커밋된 버전은 감사 가능한 변경 사항 레코드를 형성합니다. 이러한 각 버전에는 모델의 모든 멤버, 특성 값, 계층 멤버, 계층 관계 및 컬렉션이 포함됩니다.  

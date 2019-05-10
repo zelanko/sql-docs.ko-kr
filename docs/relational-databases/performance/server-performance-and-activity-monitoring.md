@@ -37,7 +37,7 @@ ms.locfileid: "53368525"
   
 -   [시스템 모니터 시작&#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
--   [Windows 애플리케이션 로그 보기&amp;#40;Windows&amp;#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
+-   [Windows 애플리케이션 로그 보기&#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
 ## <a name="to-create-sql-server-database-alerts-with-windows-tools"></a>Windows 도구로 SQL Server 데이터베이스 경고 만들기  
   

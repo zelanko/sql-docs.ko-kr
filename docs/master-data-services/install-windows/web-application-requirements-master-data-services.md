@@ -10,15 +10,15 @@ ms.topic: conceptual
 keywords:
 - Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cfad36590bc36e604efb563390f4e50442080676
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658257"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480165"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 애플리케이션 요구 사항(MDS(Master Data Services))
 
@@ -52,14 +52,14 @@ ms.locfileid: "58658257"
   
 ||  
 |-|  
-|인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 애플리케이션 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치하지 마십시오.]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
+|인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 애플리케이션 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치 하지 마십시오]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
   
 ### <a name="features"></a>기능 
  Windows Server 2012 및 Windows Server 2012 R2에서 **서버 관리자** 를 사용하여 다음 필수 기능을 설치할 수 있습니다.  
   
 ||  
 |-|  
-|.NET framework 3.5(.NET 2.0 및 3.0 포함)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 활성화 [참고: 필수 항목입니다.]<br /><br /> TCP 포트 공유<br /><br /> Windows Process Activation Service<br /><br /> 프로세스 모델<br /><br /> .NET 환경<br /><br /> 구성 API<br/><br/>동적 콘텐츠 압축|  
+|.NET framework 3.5(.NET 2.0 및 3.0 포함)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 활성화 [참고: 이것이 필요 합니다.]<br /><br /> TCP 포트 공유<br /><br /> Windows Process Activation Service<br /><br /> 프로세스 모델<br /><br /> .NET 환경<br /><br /> 구성 API<br/><br/>동적 콘텐츠 압축|  
   
  다음은 필수 구성 요소 서버 역할 및 기능을 추가하는 예제 PowerShell 스크립트입니다. 필수 구성 요소 서버 역할 및 기능은 환경에 따라 달라집니다.  
   
