@@ -13,15 +13,15 @@ helpviewer_keywords:
 - derived hierarchies, moving members
 - members [Master Data Services], moving
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96f3c1232f1124ef5f2cd9e77d89fa06607392c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 160c3ab39c09d6c0ecd9517a270e770bde118751
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923440"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478958"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>계층 내에서 멤버 이동(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 계층 내에서 멤버를 이동하여 할당된 위치나 부모를 변경할 수 있습니다.  

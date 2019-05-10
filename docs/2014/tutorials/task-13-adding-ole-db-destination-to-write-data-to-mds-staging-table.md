@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222582"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476990"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>태스크 13: OLE DB 대상을 추가하여 MDS 준비 테이블에 데이터 쓰기
   추가한 했으므로 **ImportType** 하 고 **BatchTag** 로 전송할 수 MDS 준비에 대 한 준비가 됩니다 모든 레코드 값입니다. 이 작업을 사용 하 여 OLE DB 대상 데이터를 쓸 **stg.supplier_Leaf** 준비 테이블입니다.  

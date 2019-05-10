@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c8db1cbcd5cd0ebfd1f629a7ecd7ac14ce67806f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2984927575e6dcd3c8d6c530a94061b1dc0b6c17
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016180"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449935"
 ---
 # <a name="data-mining-stored-procedures-analysis-services---data-mining"></a>데이터 마이닝 저장 프로시저(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34016180"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저 호출에 대한 자세한 내용은 [저장 프로시저 호출](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md)을 참조하세요.  
   
- 프로그래밍 기능에 대 한 일반 정보를 참조 하십시오. [데이터 마이닝 프로그래밍](../../analysis-services/data-mining-programming.md)합니다.  
+ 프로그래밍 기능에 대 한 일반적인 정보를 참조 하세요 [데이터 마이닝 프로그래밍](../../analysis-services/data-mining/data-mining-programming.md)합니다.  
   
  데이터 마이닝 개체 프로그래밍 방법은 MSDN 라이브러리에서 "[SQL Server 데이터 마이닝 프로그래밍 기능(SQL Server Data Mining Programmability)](http://go.microsoft.com/fwlink/?LinkId=93735)" 문서를 참조하십시오.  
   
@@ -33,15 +33,15 @@ ms.locfileid: "34016180"
   
 -   [SystemGetCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
 -   [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)   
- [교차 유효성 검사 탭 &#40;마이닝 정확도 차트 뷰&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
+ [교차 유효성 검사 탭&#40;마이닝 정확도 차트 뷰&#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)   
  [저장 프로시저 호출](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
   
   

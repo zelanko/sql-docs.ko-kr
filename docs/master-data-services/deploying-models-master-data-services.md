@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a6272c8daa1bc6895a064bd936c55af5678887c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783235"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477361"
 ---
 # <a name="deploying-models-master-data-services"></a>모델 배포(Master Data Services)
 
@@ -33,11 +33,11 @@ ms.locfileid: "52783235"
 ## <a name="tools-for-deploying-models"></a>모델 배포 도구  
  모델 패키지를 사용하려면 필요에 따라 다음 세 도구 중 하나를 사용합니다.  
   
--   **MDSModelDeploy 도구**: 모델 개체와 데이터를 만들고 배포하려면 MDSModelDeploy.exe 도구를 사용합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
+-   **MDSModelDeploy 도구**: 를 만들고 모델 개체 및 데이터를 배포 하려면 MDSModelDeploy.exe 도구를 사용 합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
   
--   **모델 배포 마법사**: 모델 구조만의 패키지를 만들고 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 마법사를 사용합니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
+-   **모델 배포 마법사**: 를 만들고 모델 구조만의 패키지를 배포 하려면 마법사를 사용 합니다 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램입니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
   
--   **모델 패키지 편집기**: 모델 패키지를 편집하려면 모델 패키지 편집기 마법사를 실행하는 ModelPackageEditor.exe를 사용합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
+-   **모델 패키지 편집기**: 모델 패키지를 편집 하려면 모델 패키지 편집기 마법사를 시작 하는 ModelPackageEditor.exe를 사용 합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로를 선택한 경우 이 도구는 *드라이브*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration에 있습니다.  
   
 > [!IMPORTANT]  
 >  MDSModelDeploy 도구를 사용하여 새 모델을 만들거나 모델의 복제본을 만들거나 기존 모델 및 해당 데이터를 업데이트할 수 있습니다. MDSModelDeploy 도구를 사용하여 기존 모델 및 해당 데이터를 업데이트하고 패키지에 엔터티, 특성 또는 대상 모델에 있는 멤버를 포함하지 않는 경우 MDSModelDeploy는 모델에서 해당 엔터티, 특성 또는 멤버를 삭제하지 않습니다.  

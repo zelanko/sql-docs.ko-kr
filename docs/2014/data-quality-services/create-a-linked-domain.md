@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755731"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481006"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 연결된 도메인을 만드는 방법에 대해 설명합니다. 이전의 다른 기존 도메인에서 연결된 도메인을 만들고 해당 도메인의 모든 값, 규칙 및 속성을 상속(이름 및 설명 제외)할 수 있습니다. 연결된 도메인 집합을 하나로 관리할 수 있습니다. 하나의 도메인을 다른 도메인에 연결하여 다른 도메인의 콘텐츠를 상속하는 도메인을 만들 수 있습니다.  

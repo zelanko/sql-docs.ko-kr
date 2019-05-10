@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cef68db4bc688aafae6f6c106063ff61fa7ad015
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670707"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449970"
 ---
 # <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,6 +82,6 @@ ms.locfileid: "62670707"
 |데이터 마이닝 솔루션을 업데이트하고 관리합니다.|Link TBD|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 자습서&#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [데이터 마이닝 자습서&#40;Analysis Services&#41;](../../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
   
   

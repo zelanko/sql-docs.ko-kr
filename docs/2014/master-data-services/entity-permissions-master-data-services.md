@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7945561aa40e6d62841bfda9cfc74792e7d7813c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924482"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479532"
 ---
 # <a name="entity-permissions-master-data-services"></a>엔터티 권한(Master Data Services)
   엔터티 권한은 다음에 적용됩니다.  

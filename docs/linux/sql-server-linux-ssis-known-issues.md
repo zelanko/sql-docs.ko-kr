@@ -1,7 +1,7 @@
 ---
 title: 제한 사항 및 Linux에서 SSIS에 대 한 알려진된 문제 | Microsoft Docs
 description: 이 문서에서는 설명 제한 사항 및 알려진된 문제 SQL Server Integration Services (SSIS)에 대 한 Linux 컴퓨터
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: cb186426441092ddfcb350d6c8ad6c5e65a972d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a2918e2461fec5cdbf0261679c28cfb1693300
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839991"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487761"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>제한 사항 및 Linux에서 SSIS에 대 한 알려진된 문제
 
@@ -122,7 +122,7 @@ SQL Server 유지 관리 계획에서 다양 한 SSIS 작업을 일반적으로 
 - 피벗
 - 행 개수
 - 느린 변경 차원
-- Sort
+- 정렬
 - 용어 조회
 - Union All
 - 피벗 해제

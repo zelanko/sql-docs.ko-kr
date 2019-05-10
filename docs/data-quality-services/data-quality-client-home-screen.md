@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 928624480fca725392bb13c87a18c6d48e639f25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8d93ae5e43a550cb1c7faaa9a05e57e4408bbd43
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024044"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480300"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
 
@@ -26,7 +26,7 @@ ms.locfileid: "56024044"
 
   이 화면에서는 기술 자료 관리, 데이터 품질 프로젝트 및 관리라는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 세 가지 주요 태스크 그룹에 대한 사용자 인터페이스 액세스 권한을 얻을 수 있습니다.  
   
-## <a name="options"></a>옵션  
+## <a name="options"></a>변수  
   
 ### <a name="knowledge-base-management"></a>기술 자료 관리  
  DQS 기술 자료는 DQS에서 데이터 품질을 향상시키는 데 사용되는 메타데이터의 리포지토리입니다. 이 메타데이터는 DQS 플랫폼에서 컴퓨터 기반 기술 자료 검색 프로세스를 통해 만들어지거나, 데이터 관리자가 대화형 도메인 관리 프로세스를 통해 만듭니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "56024044"
  **Configuration**  
  참조 데이터 서비스 계정(Windows Azure Marketplace 및 참조 데이터 서비스 직접 사용)에 대한 구성 속성, 일반 설정(대화형 정리, 일치 및 프로파일링) 및 로그 심각도 설정을 표시합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 관리](../data-quality-services/dqs-administration.md)  

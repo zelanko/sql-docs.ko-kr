@@ -11,15 +11,15 @@ keywords:
 - Master Data Services
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 6526794fe6895e31b618a25d17b47ccabb940258
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205822"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487973"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지(MDS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "53205822"
  
  Master Data Services에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 환경에 새로운 모델을 만듭니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589584"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450025"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>인수  
  *progid*  
- 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명하며 **'**_OLEComponent_**.** _개체_**'**  
+ 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열이 OLE 개체의 클래스를 설명 하며 그 형식은: **'**_OLEComponent_**.** _개체_**'**  
   
  *OLEComponent* 은 OLE Automation 서버의 구성 요소 이름 및 *개체* OLE 개체의 이름입니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다 **IDispatch** 인터페이스입니다.  
   
@@ -52,7 +52,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  예를 들어 {00026ba1-0000-0000-c000-000000000046}은 SQL-DMO의 CLSID **SQLServer** 개체입니다.  
   
- _objecttoken_ **출력**  
+ _objecttoken_ **OUTPUT**  
  토큰이 반환 되는 개체 및 데이터 형식의 지역 변수 이어야 합니다 **int**합니다. 이 개체 토큰은 만들어진 OLE 개체를 식별하고 다른 OLE Automation 저장 프로시저 호출에 사용됩니다.  
   
  *context*  
@@ -84,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  만들어진 OLE 개체는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝 부분에서 자동으로 삭제됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할 또는 권한이이 저장 프로시저에서 직접 실행 합니다. `Ole Automation Procedures` 구성이 있어야 **활성화** OLE Automation과 관련 된 모든 시스템 프로시저를 사용 하도록 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -123,7 +123,7 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE Automation 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Ole Automation Procedures 서버 구성 옵션](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  

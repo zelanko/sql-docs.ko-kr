@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: dcf52d8c69c59ca7318a2a20ce82ab2a8217c9c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022093"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480426"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
 
@@ -35,11 +35,11 @@ ms.locfileid: "56022093"
 ### <a name="controlling-data-flow-to-composite-domains"></a>복합 도메인에 대한 데이터 흐름 제어  
  연결된 도메인을 사용하여 필드와 복합 도메인 간의 데이터 흐름을 제어할 수 있습니다. 한 필드의 데이터가 복합 도메인으로 이동하는 시점과 유사한 다른 필드의 데이터가 복합 도메인으로 이동하지 않는 시점을 차별화할 수 있습니다. 이 작업을 수행하려면 연결된 두 도메인 중 하나만 복합 도메인의 일부로 지정하면 됩니다. 도메인 뷰에서는 연결된 도메인이 서로 동일합니다. 즉, 연결된 도메인에는 같은 정보가 포함되어 있습니다. 그러나 복합 도메인 뷰에서는 연결된 도메인이 서로 다릅니다. 한 도메인은 복합 도메인에 참여하지만 다른 도메인은 그렇지 않습니다.  
   
- 예를 들어 고객 이름, 고객 성 및 아버지의 이름 필드가 포함된 레코드가 여기에 해당합니다. 고객 이름과 아버지의 이름을 둘 다 이름 도메인에 매핑하고 이름 도메인과 성 도메인을 전체 이름 복합 도메인의 일부로 지정한 경우를 가정해 보겠습니다. 이 경우의 문제는 아버지의 이름이 성 없이 복합 도메인에 추가된다는 점입니다. 그러나 두 이름 필드를 각각 서로 다른 도메인에 연결하고 두 도메인을 연결한 경우 고객 이름 도메인은 전체 복합 도메인에 추가하고 아버지의 이름 필드는 복합 도메인에 추가하지 않을 수 있습니다. 이렇게 하면 아버지의 이름이 복합 도메인에 추가되지 않습니다.  
+ 예제는 다음 필드가 포함 된 레코드: 고객 이름, 고객 성 및 아버지의 이름 필드가 포함된 레코드가 여기에 해당합니다. 고객 이름과 아버지의 이름을 둘 다 이름 도메인에 매핑하고 이름 도메인과 성 도메인을 전체 이름 복합 도메인의 일부로 지정한 경우를 가정해 보겠습니다. 이 경우의 문제는 아버지의 이름이 성 없이 복합 도메인에 추가된다는 점입니다. 그러나 두 이름 필드를 각각 서로 다른 도메인에 연결하고 두 도메인을 연결한 경우 고객 이름 도메인은 전체 복합 도메인에 추가하고 아버지의 이름 필드는 복합 도메인에 추가하지 않을 수 있습니다. 이렇게 하면 아버지의 이름이 복합 도메인에 추가되지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -49,7 +49,7 @@ ms.locfileid: "56022093"
   
 ##  <a name="Create"></a> 연결된 도메인 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56022093"
   
 4.  도메인 만들기 대화 상자에서 도메인 이름과 설명을 입력한 다음 확인을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 연결된 도메인을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 연결 된 도메인을 만든 후  
  연결된 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Behavior"></a> 연결된 도메인의 동작  
