@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072450"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356506"
 ---
 # <a name="dax-in-tabular-models"></a>테이블 형식 모델의 DAX 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  처음 네 경우에서 DAX는 잘못된 수식이 포함된 열 전체에 플래그를 지정합니다. 마지막 경우 DAX는 열이 처리되지 않은 상태임을 나타내기 위해 열을 회색으로 표시합니다.  
   
 ##  <a name="bkmk_addional_resources"></a> 추가 리소스  
- [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
+ [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
   
  합니다 [Analysis Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 최신 정보, 팁, 뉴스 및 알림을 제공 합니다. 
   
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [지원되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

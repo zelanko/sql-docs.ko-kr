@@ -1,5 +1,5 @@
 ---
-title: '작업 1: 데이터 품질 프로젝트 만들기 | Microsoft Docs'
+title: '태스크 1: 데이터 품질 프로젝트 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62735811"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484901"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>작업 1: 데이터 품질 프로젝트 만들기
+# <a name="task-1-creating-a-data-quality-project"></a>태스크 1: 데이터 품질 프로젝트 만들기
   이 작업에서는 이 자습서의 앞 부분에서 만든 Suppliers 기술 자료에 대해 Excel 파일에서 공급자 데이터를 정리하기 위한 데이터 품질 프로젝트를 만듭니다.  
   
 1.  에 **데이터 품질 프로젝트** 페이지의 주 창 클릭 **새 데이터 품질 프로젝트**합니다.  
