@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41c11138d00b4aea7332dac9984cbd609eba05e3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62866343"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489079"
 ---
 # <a name="task-6-setting-synonyms"></a>태스크 6: 동의어 설정
   이 작업에서는 **Country** 도메인의 **USA**및 **United States** 두 도메인 값을 동의어로 설정하고 **United States** 를 선행 값으로 설정합니다. **Country** 도메인을 만들 때 **선행 값 사용** 옵션을 선택했기 때문에 **Country** 도메인의 모든 **USA** 값은 United States가 선행 값이므로 **United States** 로 출력됩니다. 자세한 내용은 [도메인 값 변경](https://msdn.microsoft.com/library/hh510408.aspx) 을 참조하십시오.  

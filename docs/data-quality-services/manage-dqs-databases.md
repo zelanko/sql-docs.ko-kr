@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad93599b547b2227bba1a2daa49c98fae962e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 312f6d2fa6e7dce9cb128ac4f0f1d615b0d73617
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038794"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488145"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -25,7 +25,7 @@ ms.locfileid: "56038794"
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  
   
 ##  <a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
- SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]는 크게 DQS_MAIN과 DQS_PROJECTS라는 두 개의 SQL Server 데이터베이스로 구현됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
+ SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 두 SQL Server 데이터베이스에서 주로 구현 됩니다. DQS_MAIN과 DQS_PROJECTS 됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
   
 -   DQS 데이터베이스의 백업 및 복원 작업이 동기화되어야 합니다. 그렇지 않으면 복원된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 작동하지 않습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "56038794"
 |DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.|[DQS 데이터베이스 백업 및 복원](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS 데이터베이스를 분리 및 연결하는 방법을 설명합니다.|[DQS 데이터베이스 분리 및 연결](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   

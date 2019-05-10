@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b24c20d468cadbe4f4c7268ac6696b366b792e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764488"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478801"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Excel에서 MDS로 데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  

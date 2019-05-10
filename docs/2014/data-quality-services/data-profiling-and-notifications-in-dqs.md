@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a367f08cc77aebcad4c195a7921b7a75af619eae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53fbe246db44b8aaa1dfda1e79d543f063919ede
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792968"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480807"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 프로파일링은 기존 데이터 원본의 데이터를 분석하고 DQS 작업의 데이터에 대한 통계를 표시하는 프로세스입니다. 자동화된 데이터 품질 평가를 제공합니다. DQS 프로파일링은 DQS 기술 자료 관리 및 데이터 품질 프로젝트에 통합되어 있습니다. 동적이며 조정 가능합니다. 프로파일링에는 두 가지 주요 목표가 있습니다. 첫째는 데이터 품질 프로세스를 안내하고 의사 결정을 지원하는 것이고, 둘째는 프로세스의 효율성을 평가하는 것입니다. DQS 프로파일링 프로세스에는 다음과 같은 이점이 있습니다.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96e5ef33776e1b8d7e78bec22b6cc46dee6055d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925046"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483599"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 만들기
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체로만 패키지를 만들 수 있습니다. 패키지에 데이터를 포함해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  

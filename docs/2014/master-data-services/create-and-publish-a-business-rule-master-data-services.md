@@ -10,15 +10,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65670b6958d2b0de36d1771d8c85bacfed1fa9a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b52be0b8c76333b069c018415ff698f13f824ae
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765796"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479891"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>비즈니스 규칙 만들기 및 게시(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 마스터 데이터의 정확성 유지를 위한 비즈니스 규칙을 만듭니다. 규칙을 만든 후 게시해야 데이터에 적용할 수 있습니다.  

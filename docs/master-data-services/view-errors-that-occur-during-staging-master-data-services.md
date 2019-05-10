@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9f4e66d45a7116f20d4903da21508d0d22c6da61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb7bb94f99a110342914c9d37037b54773da0248
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654328"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489584"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>준비 과정에서 발생하는 오류 보기(Master Data Services)
 

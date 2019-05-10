@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923960"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482805"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>데이터 로드(Excel용 MDS 추가 기능)
   에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 로드 해야 데이터 MDS 저장소에서 활성 Excel 워크시트로 함께 사용할 수 있도록 합니다. 데이터 사용을 마쳤으면 다른 사용자가 공유할 수 있도록 다시 MDS 저장소에 게시합니다.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ed014aaed74ea9da70485b73d089e8ddaae0f43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765496"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479029"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 다른 사용자와 공유하려는 경우 데이터를 MDS 리포지토리에 게시합니다. 데이터가 게시되는 즉시 추가 기능의 다른 사용자가 다운로드할 수 있습니다.  

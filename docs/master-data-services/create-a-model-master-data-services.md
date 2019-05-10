@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748835"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477060"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52748835"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-create-a-model"></a>모델을 만들려면  
   
@@ -72,11 +72,11 @@ ms.locfileid: "52748835"
   
 -   **업데이트한 날짜 및 시간**: 모델을 마지막으로 업데이트한 날짜 및 시간입니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [모델 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   

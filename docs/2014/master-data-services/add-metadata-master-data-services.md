@@ -11,15 +11,15 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services], adding
 - metadata [Master Data Services], adding
 ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8d5c5f393983f6955f94392552d62a079eac206f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9990246a597e61a503fbef06d3aeabeb18bdf2e6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877381"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483781"
 ---
 # <a name="add-metadata-master-data-services"></a>메타데이터 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 사용자 정의 메타 데이터를 추가 합니다 **메타 데이터** 모델 개체를 설명 하는 모델입니다.  

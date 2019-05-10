@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589127"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450073"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  사용 하 여 이전에 만든 OLE 개체의 개체 토큰 **sp_OACreate** null입니다. 하는 경우 *objecttoken* 는 지정 하면 해당 개체에 대 한 오류 정보가 반환 됩니다. NULL이 지정되면 전체 일괄 처리에 대한 오류 정보가 반환됩니다.  
   
- _소스_ **출력**  
+ _source_ **OUTPUT**  
  오류 정보의 원본입니다. 를 지정 하는 경우 로컬 이어야 합니다 **char**, **nchar**합니다 **varchar**, 또는 **nvarchar** 변수입니다. 필요한 경우 반환 값을 잘라내어 지역 변수에 맞춥니다.  
   
- _설명을_ **출력**  
+ _description_ **OUTPUT**  
  오류에 대한 설명입니다. 를 지정 하는 경우 로컬 이어야 합니다 **char**, **nchar**합니다 **varchar**, 또는 **nvarchar** 변수입니다. 필요한 경우 반환 값을 잘라내어 지역 변수에 맞춥니다.  
   
- _helpfile_ **출력**  
+ _helpfile_ **OUTPUT**  
  OLE 개체의 도움말 파일입니다. 를 지정 하는 경우 로컬 이어야 합니다 **char**, **nchar**합니다 **varchar**, 또는 **nvarchar** 변수입니다. 필요한 경우 반환 값을 잘라내어 지역 변수에 맞춥니다.  
   
- _helpid_ **출력**  
+ _helpid_ **OUTPUT**  
  도움말 파일 컨텍스트 ID입니다. 를 지정 하는 경우 로컬 이어야 합니다 **int** 변수입니다.  
   
 > [!NOTE]  
@@ -75,7 +75,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**오류**|**binary(4)**|오류 번호의 이진 표시입니다.|  
 |**원본**|**nvarchar(nn)**|오류의 원본입니다.|  
 |**설명**|**nvarchar(nn)**|오류에 대 한 설명입니다.|  
-|**도움말 파일**|**nvarchar(nn)**|원본에 대한 도움말 파일입니다.|  
+|**Helpfile**|**nvarchar(nn)**|원본에 대한 도움말 파일입니다.|  
 |**HelpID**|**int**|도움말 원본 파일에 있는 도움말 컨텍스트 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**서버 실행이 실패 했습니다 (0x80080005)**|지정된 OLE 개체가 로컬 OLE 서버(.exe 파일)로 등록되어 있지만 .exe 파일을 찾거나 시작할 수 없습니다.|  
 |**지정된 된 모듈 (0x8007007e) 찾을 수 없습니다.**|지정된 OLE 개체가 종속 OLE 서버(.dll 파일)로 등록되어 있지만 .dll 파일을 찾거나 로드할 수 없습니다.|  
 |**형식이 일치 하지 않습니다 (0x80020005)**|반환된 속성 값 또는 메서드 반환 값을 저장하는 데 사용한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수의 데이터 형식이 속성 또는 메서드 반환 값의 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식과 일치하지 않습니다. 또는 속성 또는 메서드 반환 값을 요청했으나 값이 반환되지 않았습니다.|  
-|**Datatype or value of the 'context' parameter of sp_OACreate is invalid. (0x8004275B)**|컨텍스트 매개 변수의 값은 1, 4, 5 중 하나여야 합니다.|  
+|**Sp_OACreate의 'context' 매개 변수 값 이나 데이터 형식이 올바르지 않습니다. (0x8004275B)**|컨텍스트 매개 변수 값 중 하나 여야 합니다. 1, 4 또는 5입니다.|  
   
  HRESULT 반환 코드를 처리 하는 방법에 대 한 자세한 내용은 참조 하십시오 [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
+ 멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할 또는 권한이이 저장 프로시저에서 직접 실행 합니다. `Ole Automation Procedures` 구성이 있어야 **활성화** OLE Automation과 관련 된 모든 시스템 프로시저를 사용 하도록 합니다.  
   
 ## <a name="examples"></a>예  
  다음은 OLE Automation 오류 정보를 표시하는 예입니다.  

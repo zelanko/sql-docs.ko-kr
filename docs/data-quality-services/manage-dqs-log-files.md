@@ -12,15 +12,15 @@ helpviewer_keywords:
 - log files
 - dqs log files
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eaf7ced1193059e9559749786f73703a4160a7a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: de7325ccf703866355f7b1cc2699ea7ac5587fc0
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040264"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489266"
 ---
 # <a name="manage-dqs-log-files"></a>DQS 로그 파일 관리
 
@@ -77,7 +77,7 @@ ms.locfileid: "56040264"
 |[!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 DQS 로그 파일의 로그 심각도 설정을 구성하는 방법에 대해 설명합니다.|[DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |DQS 로그 파일의 고급 설정을 수동으로 구성하는 방법에 대해 설명합니다.|[DQS 로그 파일에 대한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   

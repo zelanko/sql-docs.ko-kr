@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e31b673d7bb80a74cccd664f1e29b72dcd49f4a8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156687"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489328"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>태스크 6: Data Flow에 Excel 원본 추가
   이 작업에서는 데이터 흐름에 Excel 원본을 추가하여 원본 Excel 파일에서 공급자 데이터를 읽습니다. Excel 원본은 Microsoft Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다. 자세한 내용은 [Excel 원본](../integration-services/data-flow/excel-source.md) 항목을 참조하십시오.  

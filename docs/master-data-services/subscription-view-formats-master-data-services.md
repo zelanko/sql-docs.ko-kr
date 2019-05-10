@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 27d0f3f85117812719a642c947fda71b71c4e32c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766643"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488008"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52766643"
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
   
-|속성|설명|  
+|이름|Description|  
 |----------|-----------------|  
 |**리프 멤버**|리프 멤버 및 해당 특성 값을 포함합니다.|  
 |**리프 멤버 기록**|리프 멤버 기록 데이터 및 관련 특성 값을 포함합니다. 보기 형식은 느린 변경 차원 유형 4 스타일입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "52766643"
 |**파생 부모 자식(파생 계층 뷰)**|파생 계층 구조를 부모 자식 형식으로 포함합니다.|  
 |**파생 수준(파생 계층 뷰)**|파생 계층 구조를 수준 형식으로 포함합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

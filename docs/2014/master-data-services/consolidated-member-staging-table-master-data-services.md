@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bcb553e6762580c20aa3fc126f2f1576d1d5ff68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0ade33df500a35f8319a2eb0bc412e16b2d1cf8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925510"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480047"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>통합 멤버 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 통합 멤버 준비 테이블(stg.name_Consolidated)을 사용하여 통합 멤버를 만들고, 업데이트하고, 비활성화하고, 삭제할 수 있습니다. 또한 통합 멤버에 대한 특성 값을 업데이트하기 위해 사용할 수도 있습니다.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877241"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483654"
 ---
 # <a name="business-rules-master-data-services"></a>비즈니스 규칙(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙은 마스터 데이터의 품질과 정확성을 유지하는 데 사용되는 규칙입니다. 비즈니스 규칙을 사용하여 자동으로 데이터를 업데이트하거나, 전자 메일을 보내거나, 비즈니스 프로세스 또는 워크플로를 시작할 수 있습니다.  

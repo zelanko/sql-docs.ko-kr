@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e987ab75413334865b5e7d577860c498540adcd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: c134a2e540fd597c36f07bc312e2f67a73e07d28
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200853"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476968"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
 
@@ -50,10 +50,10 @@ ms.locfileid: "53200853"
 > [!NOTE]  
 >  워크시트에 새 멤버(행)를 추가하는 중이고 MDS 리포지토리에 성공적으로 게시할 수 없으면 사용자에게 워크시트에 있는 모든 특성에 대한 **업데이트** 권한이 없을 수 있습니다. **검토** 탭의 **변경 내용** 그룹에서 **시트 보호 해제** 를 클릭하여 다시 게시합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  [비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

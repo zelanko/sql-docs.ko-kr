@@ -10,15 +10,15 @@ helpviewer_keywords:
 - members staging table [Master Data Services]
 - database [Master Data Services], members staging table
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24e6d55dda51e663247a3a54900004b2e18f24ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3730ed26ec94d64dedb0ac17cd306a3d6d75a2b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765060"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482910"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>리프 멤버 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 리프 멤버 준비 테이블(stg.name_Leaf)을 사용하여 리프 멤버를 만들고, 업데이트하고, 비활성화하고, 삭제할 수 있습니다. 또한 리프 멤버에 대한 특성 값을 업데이트하기 위해 사용할 수도 있습니다.  

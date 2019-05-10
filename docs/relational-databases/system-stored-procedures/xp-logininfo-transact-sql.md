@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62644810"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099955"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  하는 경우 *account_name* 하 고 **멤버** 는 지정 하면 그룹의 다음 수준 멤버 목록이 반환 됩니다. 하는 경우 *account_name* 이 로컬 그룹인 경우, 로컬 사용자, 도메인 사용자 및 그룹 목록을 포함할 수 있습니다. 하는 경우 *account_name* 도메인 계정이 도메인 사용자의 목록 이루어집니다. 그룹 멤버 자격 정보를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 도메인 컨트롤러에 연결해야 합니다. 서버에서 도메인 컨트롤러에 연결할 수 없는 경우에는 아무 정보도 반환되지 않습니다.  
   
- **xp_logininfo** 만 범용 그룹이 아니라 Active Director 글로벌 그룹에서 정보를 반환 합니다.  
+ **xp_logininfo** 만 범용 그룹이 아니라 Active Directory 글로벌 그룹에서 정보를 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  멤버 자격이 필요 합니다 **sysadmin** 고정 서버 역할의 멤버 자격이 **공용** 고정된 데이터베이스 역할에는 **마스터** EXECUTE 권한이 부여 된 데이터베이스.  

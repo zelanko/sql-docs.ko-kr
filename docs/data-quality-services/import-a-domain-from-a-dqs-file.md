@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4628ed370354ff1551892bf979b3627e00f119b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 577b1afce1fc90db91beb29ff0e7e9a1f1a87cde
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020774"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487548"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>.dqs 파일에서 도메인 가져오기
 
@@ -40,7 +40,7 @@ ms.locfileid: "56020774"
   
 ##  <a name="Import"></a> Import a domain from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "56020774"
   
 6.  가져온 도메인이 **도메인** 목록에 표시되는지 확인합니다. 복합 도메인을 가져온 경우 복합 도메인과 포함된 단일 도메인이 모두 **도메인** 목록에 있는지 확인합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: .dqs 파일에서 도메인을 가져온 후  
+##  <a name="FollowUp"></a> 후속 작업: .Dqs 파일에서 도메인을 가져온 후  
  .dqs 파일에서 도메인을 가져온 후 도메인에 정보를 추가하거나 도메인의 내용에 따라 정리 또는 일치 프로젝트에서 도메인을 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
   

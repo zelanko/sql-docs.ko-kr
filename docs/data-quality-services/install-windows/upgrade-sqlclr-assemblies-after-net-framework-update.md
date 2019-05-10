@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bfd64d3707d5a750a797a38605babf2e90a3026
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 19a012c9aeb8a07a3da89d98bc0a589cfb6663c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018989"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487587"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
 
@@ -56,7 +56,7 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 4.  나머지 단계는 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer) 의 [시작 화면, 시작 메뉴 또는 Windows 탐색기에서 DQSInstaller.exe 실행](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)섹션에 설명된 2~6단계와 같습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드](../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   

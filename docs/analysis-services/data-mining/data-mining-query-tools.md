@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147948"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449946"
 ---
 # <a name="data-mining-query-tools"></a>데이터 마이닝 쿼리 도구
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147948"
 |데이터 마이닝 쿼리 변환|데이터 흐름 원본에서 제공된 데이터를 사용하여 데이터 흐름 내에서 예측 쿼리를 실행합니다.<br /><br /> 태스크 편집기는 예측 쿼리 작성기와 DMX 쿼리를 수동으로 수정하기 위한 입력란을 제공합니다.<br /><br /> 변환은 데이터 흐름의 데이터를 사용하는 쿼리(즉, PREDICTION JOIN 구문을 사용하는 쿼리)를 만드는 데만 사용할 수 있습니다. 이 구성 요소는 내용 쿼리나 다른 종류의 DMX 문을 실행하는 데 사용할 수 없습니다.|  
   
 ##  <a name="bkmk_API"></a> 응용 프로그래밍 인터페이스(Application Programming Interfaces)  
- OLE DB 또는 Analysis Services ADOMD 클라이언트와 같은 서버 프로토콜과 함께 다양한 프로그래밍 언어를 사용하여 데이터 마이닝 모델에 대해 쿼리를 실행하는 사용자 지정 애플리케이션을 만들 수 있습니다. 자세한 내용은 [데이터 마이닝 프로그래밍](../../analysis-services/data-mining-programming.md)을 참조하세요.  
+ OLE DB 또는 Analysis Services ADOMD 클라이언트와 같은 서버 프로토콜과 함께 다양한 프로그래밍 언어를 사용하여 데이터 마이닝 모델에 대해 쿼리를 실행하는 사용자 지정 애플리케이션을 만들 수 있습니다. 자세한 내용은 [데이터 마이닝 프로그래밍](../../analysis-services/data-mining/data-mining-programming.md)을 참조하세요.  
   
  하지만 XMLA는 Analysis Service 서버와의 모든 상호 작용에 대한 기본 메시지 형식을 구성합니다. XMLA 메시지 내에서 쿼리는 DMX를 기반으로 하는 예측 쿼리를 전송하는지, 내용 쿼리를 전송하는지 또는 데이터 마이닝 스키마 행 집합을 사용하여 모델 메타데이터를 검색하는 쿼리를 전송하는지에 따라 다르게 표현됩니다.  
   

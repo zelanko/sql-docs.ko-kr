@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bda48b3645260ed3886316a0ba478aad214b593
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62817708"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486392"
 ---
 # <a name="approval-required-master-data-services"></a>승인 필요(Master Data Services)
 

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250057"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489276"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>태스크 4(선택 사항): 새 데이터 세트 결합, 일치 및 게시
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가 하기 전에 새 데이터 중복 되거나 정확 하지 않은 데이터를 추가 하지 않는 되도록 MDS에서 이미 관리 되는 데이터를 비교할 때 유용 수 있습니다. Excel용 Master Data Services 추가 기능에서는 데이터를 MDS에 게시하기 전에 두 워크시트의 데이터를 결합하고 데이터를 비교해서 중복된 항목을 식별하고 제거할 수 있습니다. MDS Excel 추가 기능의 일치 기능에는 데이터에서 일치 항목을 식별하기 위해 DQS 일치 기능이 사용됩니다. 이 작업에서는 MDS에 데이터를 게시하기 전에 두 워크시트의 데이터를 하나로 결합한 후 일치 작업을 수행해서 중복된 항목을 식별하고 제거합니다. 참조 [MDS 추가 기능에서 Excel 용 데이터 품질 일치](https://msdn.microsoft.com/library/hh548681.aspx) 하 고 [데이터 결합](https://msdn.microsoft.com/library/hh548680.aspx) 자세한 세부 정보에 대 한 항목입니다.  

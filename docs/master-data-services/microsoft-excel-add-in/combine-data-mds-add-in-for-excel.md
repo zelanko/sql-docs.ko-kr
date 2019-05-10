@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 366f1f60f078334f1d0e6f25c8ad6b65443238d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640797"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488898"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>데이터 결합(Excel용 MDS 추가 기능)
 
@@ -46,12 +46,12 @@ ms.locfileid: "47640797"
   
 7.  **결합**을 클릭합니다. 데이터가 MDS의 데이터인지 외부 원본에서 가져온 데이터인지를 나타내는 **원본** 열이 표시됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   MDS 관리 데이터와 외부 데이터 간의 유사성을 찾으려면 [유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
- [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>관련 항목  
+ [개요: Excel로 데이터 내보내기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Excel용 MDS 추가 기능의 데이터 품질 일치](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
   

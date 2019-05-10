@@ -1,6 +1,6 @@
 ---
-title: Analysis Services 테이블 형식 모델링 (1200 호환성 수준) | Microsoft Docs
-ms.date: 05/07/2019
+title: Analysis Services Internet Sales 자습서 (호환성 수준 1200) | Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403355"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503616"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>테이블 형식 모델링 (1200 호환성 수준)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Adventure Works Internet Sales 자습서 (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 자습서에서 Analysis Services 테이블 형식 모델을 만드는 방법에 대 한 단원을 제공 합니다 [1200 호환성 수준](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) 사용 하 여 [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt), Analysis services 모델을 배포 하 고 서버 온-프레미스 또는 Azure입니다.  
@@ -98,7 +98,7 @@ SQL Server 2017 또는 Azure Analysis Services를 사용 하는 경우 모델에
 |[Power View 보고서의 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30분| 
 
   
-## <a name="next-step"></a>다음 단계  
+## <a name="next-steps"></a>다음 단계  
 자습서를 시작 하려면 첫 번째 단원으로 이동 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 96f3d36c77e12f69184a3f5644b6bbc3d52ac394
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015244"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487442"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
 
@@ -61,12 +61,12 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  DQS 데이터베이스 스키마 업그레이드에 성공하면 완료 메시지가 표시됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
  Data Quality 클라이언트 애플리케이션에서 업그레이드된 Data Quality Server에 로그온합니다.  
   
  SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드 및 관련 문제 해결 단계에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

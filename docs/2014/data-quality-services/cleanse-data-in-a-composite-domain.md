@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3129be8603d31a26978a1789be59f4d649da1b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755854"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481144"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 복합 도메인 정리에 대한 정보를 제공합니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 복합 도메인의 개별 도메인은 서로 공통된 정보 영역이 있어야 합니다. 복합 도메인에 대한 자세한 내용은 [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  

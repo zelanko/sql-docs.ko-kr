@@ -2,26 +2,26 @@
 title: Azure Data Studio에서 노트북을 실행 합니다.
 titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 연결 하는 Azure Data Studio에서 Jupyter Notebook을 실행 하는 방법에 설명 합니다.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859974"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462057"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서는 Notebook 환경을 Azure 데이터 Studio에서 시작 하는 방법 및 고유한 전자 필기장 제작을 시작 하는 방법을 설명 합니다. 또한 다른 커널 사용 하 여 Notebook을 작성 하는 방법을 보여 줍니다.
+이 문서에서는 최신 릴리스의 Notebook 환경을 시작 하는 방법 설명 [ **Azure Data Studio** ](../azure-data-studio/download.md) 및 고유한 전자 필기장 제작을 시작 하는 방법입니다. 또한 다른 커널 사용 하 여 Notebook을 작성 하는 방법을 보여 줍니다.
 
 ## <a name="connect-to-sql-server"></a>SQL Server에 연결
 
@@ -48,7 +48,7 @@ Azure Data Studio 또한 f1을 고 수 클릭 **새 연결** SQL Server에 연�
 
 Azure Data Studio Notebook 설치 SQL 커널을 고유 하 게 지원합니다. SQL 개발자 및 노트북을 사용 하려는 경우 선택한은 커널입니다. 
 
-SQL 커널은 PostgreSQL 서버 인스턴스에 연결 하려면 데도 사용할 수 있습니다. PostgreSQL 개발자가 PostgreSQL 서버에 연결 하려고 하는 경우를 다운로드 합니다 [ **PostgreSQL 확장** ](../azure-data-studio/postgres-extension.md) Azure Data Studio 확장 marketplace에서.
+SQL 커널은 PostgreSQL 서버 인스턴스에 연결 하려면 데도 사용할 수 있습니다. PostgreSQL 개발자 노트북 PostgreSQL 서버에 연결 하려고 하는 경우를 다운로드 합니다 [ **PostgreSQL 확장** ](../azure-data-studio/postgres-extension.md) Azure Data Studio 확장 marketplace에서 차례로 시작할 **새 노트북** 를 PostgreSQL 서버에 연결 하도록 노트북 인스턴스를 엽니다.
 
 ![PostgreSQL 연결](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ PostgreSQL 서버 인스턴스에 연결 하려면 SQL 커널
 쿼리 결과
 
 ![쿼리 결과](media/notebooks-guidance/pgsql-cell-results.png)
+
+Notebook SQL 커널에 연결 하 여 기존 텍스트 셀을 추가 하려는 경우를 클릭 합니다 **+ 텍스트** 도구 모음에서 명령을 합니다.
+
+![Notebook 도구 모음](media/notebooks-guidance/notebook-toolbar.png)
+
+편집 모드에 있고 markdown을 이제 입력 셀 변경 내용을 동시에 미리 보기를 표시 합니다.
+
+![Markdown 셀](media/notebooks-guidance/notebook-markdown-cell.png)
+
+텍스트 셀 바깥쪽을 클릭 하 여 markdown 텍스트를 표시 됩니다.
+
+![Markdown 텍스트](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Notebook에 대 한 Python 구성
 
@@ -119,9 +132,27 @@ Azure Data Studio에서 열기 notebook은 default **신뢰할 수 있는**합�
 
 열에 다른 소스에서 Notebook을 열면 **신뢰할 수 없는** 모드 및 다음 수 있도록 **신뢰할 수 있는**합니다.
 
+### <a name="run-cells"></a>셀 실행
+클릭 한 다음 노트북의 모든 셀을 실행 하려는 경우는 **셀 실행** 도구 모음에서 단추입니다.
+
+![Markdown 텍스트](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>결과 지우기
+
+Notebook 실행된 모든 셀의 결과 취소 하려는 경우 클릭할 수 있습니다 합니다 **Clear Results** 도구 모음에서 단추입니다.
+
+![Markdown 텍스트](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>저장
 
-노트북을 저장할 수 있습니다 **Ctrl + S** 누르거나 합니다 **파일 저장**, **다른 이름으로 저장...**  하 고 **모두 파일 저장** 파일 메뉴에서 명령 및 **파일: 저장** 명령 팔레트에서 입력 된 명령입니다.
+Notebook를 저장 하려면 다음 중 하나를 수행 합니다.
+
+- Ctrl + S를 선택 합니다.
+- 클릭 **파일** > **저장**
+- 클릭 **파일** > **로 저장 하는 중...**
+- 클릭 **파일** > **모두 저장** 
+- 명령 팔레트에서 입력 **파일: 저장** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Pyspark3/PySpark 커널
 

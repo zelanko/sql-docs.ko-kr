@@ -3,17 +3,17 @@ title: 설치 SQL Server 2016 R Services (In-database)-SQL Server Machine Learni
 description: R 프로그래밍 언어 지원 Windows의 SQL Server 2016 R Services에서 데이터베이스 엔진에 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 787b26c401f825c6c74298a803a16d59f1a37d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748715"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095941"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -208,6 +208,7 @@ R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일
 * [SQL Server Machine Learning Services에 대 한 방화벽 구성](../../advanced-analytics/security/firewall-configuration.md)
 * [추가 네트워크 프로토콜을 사용 하도록 설정](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [원격 연결을 사용 하도록 설정](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+* [디스크 할당량 관리](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) 디스크 공간 할당량을 모두 작업을 실행 하는 외부 스크립트를 방지 하려면
 
 <a name="bkmk_configureAccounts"></a>
 <a name="bkmk_AllowLogon"></a>

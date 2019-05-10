@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3453c6418c2871e697f1eb9de2a1499d4262d226
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 64e8a75df1cfda03d0f90e1debb6fcbab750eaf6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765095"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478211"
 ---
 # <a name="delete-an-entity-master-data-services"></a>엔터티 삭제(Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "52765095"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-delete-an-entity"></a>엔터티를 삭제하려면  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52765095"
   
 6.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

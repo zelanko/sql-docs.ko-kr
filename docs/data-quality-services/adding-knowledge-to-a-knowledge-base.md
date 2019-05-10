@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 15802f061f9996d377aa5110b180e0a1fb065081
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 262e1f889911e2469b9217e698bd2a72859646e9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862471"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480351"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
 

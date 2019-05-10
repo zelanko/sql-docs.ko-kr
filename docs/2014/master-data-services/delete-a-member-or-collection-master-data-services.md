@@ -13,15 +13,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925023"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479711"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 멤버나 컬렉션이 더 이상 필요하지 않으면 삭제할 수 있습니다. 멤버를 대량으로 삭제하려면 준비 프로세스를 대신 사용합니다. 자세한 내용은 [비활성화 하거나 준비 프로세스를 사용 하 여 멤버가 삭제 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)합니다.  

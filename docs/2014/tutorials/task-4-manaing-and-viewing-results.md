@@ -1,5 +1,5 @@
 ---
-title: '작업 4: 결과 관리 및 보기 | Microsoft Docs'
+title: '태스크 4: 결과 관리 및 보기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745634"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489454"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>작업 4: 결과 관리 및 보기
+# <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
   이 작업에서는 컴퓨터 기반 정리 결과를 검토하고 공급자 데이터에서 대화형 정리를 수행할 수도 있습니다. 참조 [대화형 정리 단계](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) 대 한 자세한 내용은 합니다.  
   
 1.  선택 **Contact Email** 도메인 목록에서 도메인입니다.  

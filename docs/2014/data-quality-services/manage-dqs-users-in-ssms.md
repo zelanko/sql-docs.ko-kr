@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792393"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480345"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>SSMS에서 DQS 사용자 관리
   이 항목에서는 SQL Server Management Studio를 사용하여 SQL Server 인스턴스에서 추가 사용자를 만들고 사용자에게 DQS_MAIN 데이터베이스에 대한 적절한 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 역할을 부여하는 방법에 대해 설명합니다.  

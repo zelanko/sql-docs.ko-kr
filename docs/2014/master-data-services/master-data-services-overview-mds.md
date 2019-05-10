@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 782a0e87c481aacbe6dc145b79aec41aba26039f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 359010e0fd86d350cc081b7f07b2b12fe7d6ef5a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764944"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479042"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 개요
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델은 마스터 데이터의 구조에서 가장 높은 수준의 컨테이너입니다. 온라인 제품 데이터를 관리하는 등의 목적으로 유사한 데이터의 그룹을 관리하기 위해 모델을 만듭니다. 모델에는 하나 이상의 엔터티가 포함되며 엔터티에는 데이터 레코드인 멤버가 포함됩니다.  

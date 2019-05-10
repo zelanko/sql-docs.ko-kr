@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d5089921156f97509e157f771dbe20e1c33cf569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925971"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480087"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 비즈니스 규칙 조건은 True일 때만 하나 이상의 동작이 수행되는 조건을 결정합니다.  

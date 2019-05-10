@@ -1,5 +1,5 @@
 ---
-title: '개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능) | Microsoft Docs'
+title: '개요: (MDS 추가 기능에 Excel 용)는 Excel에서 데이터 가져오기 | Microsoft Docs'
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 6a43eb9fbf6877a43454e85bf59f97b4650e96ae
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502944"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481177"
 ---
-# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>개요: Excel에서 데이터 가져오기(Excel용 MDS 추가 기능)
+# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>개요: Excel로 데이터 가져오기(Excel용 MDS 추가 기능)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

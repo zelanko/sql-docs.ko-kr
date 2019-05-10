@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ec0413f72261bf2890c372773a13a662e9182498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792760"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480608"
 ---
 # <a name="end-the-domain-management-activity"></a>도메인 관리 작업 종료
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 관리 작업 완료, 닫기 또는 취소를 수행하는 방법에 대해 설명합니다. 도메인 관리는 마법사에 의해 수행되지 않으므로 아래 설명된 컨트롤은 도메인 관리 작업의 여러 페이지에서 사용할 수 있습니다.  

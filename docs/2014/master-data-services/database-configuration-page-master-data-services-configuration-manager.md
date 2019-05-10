@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b28eb8d2455584bae77d8a7b62707b8888da27cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f5f11ba4154b70c5aa1fd0ae0e7579c746ce744
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765786"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483181"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>데이터베이스 구성 페이지(Master Data Services 구성 관리자)
   **데이터베이스 구성** 페이지를 사용하여 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정을 편집할 수 있습니다. 시스템 설정은 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 애플리케이션 및 웹 서비스에 영향을 줍니다. 시스템 설정을 활성화하고 구성에 사용하려면 먼저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 선택하거나 만들어야 합니다.  

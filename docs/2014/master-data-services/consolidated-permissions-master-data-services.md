@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], consolidated members
 - members [Master Data Services], consolidated member permissions
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86b20b7bbe0e9cf95805dd859c3c85bab60b61a9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925415"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483502"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>통합 사용 권한(Master Data Services)
   통합 사용 권한은 엔터티의 모든 통합 멤버에 대한 특성 값에 적용됩니다.  

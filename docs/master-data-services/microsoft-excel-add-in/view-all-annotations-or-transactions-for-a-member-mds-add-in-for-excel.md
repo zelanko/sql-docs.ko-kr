@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7eef632f4c38961176986d500b8f2ce134731f65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 26e016369bf2498bce87e39fb05880712608184b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403868"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489661"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>멤버에 대한 모든 주석 또는 트랜잭션 보기(Excel용 MDS 추가 기능)
 
@@ -39,7 +39,7 @@ ms.locfileid: "52403868"
   
 3.  **트랜잭션 보기** 대화 상자에 트랜잭션 목록이 표시됩니다. 트랜잭션과 연결된 모든 주석을 보려면 표에서 행을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>관련 항목  
+ [개요: Excel에서 데이터 가져오기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

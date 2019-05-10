@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cb6eaf922842e63f491db6d3108ff1f6c151d498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765166"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479420"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>탐색기 기능 영역(마스터 데이터 관리자)
   탐색기 기능 영역에서 데이터를 업데이트하고 계층 및 컬렉션 작업을 할 수 있습니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96dda963b6d36219b9945f692458a27ab812de66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b9714831e823117032e0cb81a6d016c6b7c30a8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518167"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488458"
 ---
 # <a name="edit-model-master-data-services"></a>모델 편집(Master Data Services)
 

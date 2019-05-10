@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3f1d3eb7-2baa-4215-b040-0b41e3d10740
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249990"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489257"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>태스크 3(선택 사항): 구독 뷰 검토
   이 작업에서는 SQL Server Management Studio를 사용하여 SQL 뷰가 만들어졌는지 확인합니다.  

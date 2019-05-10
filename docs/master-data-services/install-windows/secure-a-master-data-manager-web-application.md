@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
-ms.translationtype: HT
+ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641489"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480168"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션의 보안 설정
 
@@ -31,7 +31,7 @@ ms.locfileid: "52641489"
   
 -   사용자가 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 설치된 웹 서버의 관리자여야 합니다.  
   
--   MDS가 웹 서버에 설치되어 있으며 웹 애플리케이션이 있어야 합니다. 자세한 내용은 [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md) 및 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
+-   MDS가 웹 서버에 설치되어 있으며 웹 애플리케이션이 있어야 합니다. 자세한 내용은 [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md) 및 [마스터 데이터 관리자 웹 애플리케이션 만들기&amp;#40;Master Data Services&amp;#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>HTTPS를 사용하여 마스터 데이터 관리자 웹 애플리케이션의 보안을 설정하려면  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52641489"
 13. 파일을 저장하고 닫습니다. 오류가 발생하는 경우 UAC를 사용하기 때문일 수 있습니다. 자세한 내용은 [사용자 계정 컨트롤 해제](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)를 참조하십시오. 이제 사용자가 HTTPS를 사용하여 사이트에 액세스할 수 있습니다.  
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

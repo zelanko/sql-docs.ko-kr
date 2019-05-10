@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ee6fd4fbf047ecb29dae4f35fe3bbbf5a3f9da61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 80be0aea6705ed98fd12ea3481af59e289b94604
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923200"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482583"
 ---
 # <a name="security-master-data-services"></a>보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 사용하면 사용자가 작업을 수행하는 데 필요한 특정 마스터 데이터에 액세스할 수 있도록 하며 사용해서는 안 되는 데이터에는 액세스할 수 없도록 할 수 있습니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7bcb622370b691ae48161d65dbc56d922c735fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8522ece96543fa9ca5ae743079f955524e5967c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036392"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480597"
 ---
 # <a name="create-a-domain"></a>도메인 만들기
 
@@ -28,9 +28,9 @@ ms.locfileid: "56036392"
   
  새 도메인을 만드는 방법에는 두 가지가 있습니다. 첫 번째는 새 기술 자료 또는 기존 기술 자료에 정보를 추가할 데이터 샘플을 분석하는 기술 자료 검색 작업의 매핑 단계에서 만드는 방법입니다. 두 번째는 도메인 관리 작업에서 기존 도메인을 변경하는 대신 새 도메인을 만드는 방법입니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  도메인을 만들려면 기술 자료를 만들고 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -40,7 +40,7 @@ ms.locfileid: "56036392"
   
 ##  <a name="Discovery"></a> 기술 자료 검색 작업에서 도메인 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기** 를 클릭한 다음 기술 자료를 선택하거나 **새 기술 자료** 를 클릭하고 새 기술 자료의 속성을 입력합니다.  
   

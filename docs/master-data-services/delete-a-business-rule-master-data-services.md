@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting business rules [Master Data Services]
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41229ed69a75e86f8b37199fa392ae5e277ce7cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8dee36c433cc1fec26bd66bf3498e505fd3edc9c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769945"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487757"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
 
@@ -35,7 +35,7 @@ ms.locfileid: "52769945"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-delete-a-business-rule"></a>비즈니스 규칙을 삭제하려면  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52769945"
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. 삭제된 비즈니스 규칙은 더 이상 눈금에 표시되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [비즈니스 규칙 제외&#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
