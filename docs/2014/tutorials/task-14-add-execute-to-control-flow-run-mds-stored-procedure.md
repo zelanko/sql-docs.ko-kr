@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3fe1eb6032d9d550b36252e16eee51c98c5d2384
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222707"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477091"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>태스크 14: Control Flow에 SQL 실행 태스크를 추가하여 MDS에 대한 저장 프로시저 실행
   데이터를 MDS의 준비 테이블에 로드한 다음에는 준비 테이블의 데이터를 MDS 데이터베이스의 적합한 테이블로 로드하기 위해 해당 테이블과 연관된 저장 프로시저를 실행합니다. 이 저장된 프로시저에 전달 해야 하는 두 개의 필수 매개 변수: LogFlag 및 VersionName 합니다. LogFlag는 준비 프로세스 중 트랜잭션을 기록할지 여부를 지정하고, VersionName은 모델의 버전을 나타냅니다. 참조 [준비 된 저장 프로시저](https://msdn.microsoft.com/library/hh231028.aspx) 자세한 세부 정보에 대 한 항목입니다.  
