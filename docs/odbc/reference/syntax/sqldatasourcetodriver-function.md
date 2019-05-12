@@ -20,19 +20,19 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 022387847cb1371af13465cee7a9e3e1c21e5749
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259403"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537651"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver 함수
 **SQLDataSourceToDriver** supportstranslations ODBC 드라이버에 대 한 합니다. 이 함수는 ODBC 사용 응용 프로그램에서 호출 되지 않습니다. 응용 프로그램 요청을 통해 번역 **SQLSetConnectAttr**합니다. 연결 된 드라이버는 *ConnectionHandle* 에 지정 된 **SQLSetConnectAttr** 드라이버는 데이터 소스에서 이동 하는 모든 데이터 변환을 수행 하려면 지정 된 DLL을 호출 합니다. ODBC 초기화 파일의 기본 번역 DLL을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 BOOL SQLDataSourceToDriver(  
      UDWORD     fOption,  

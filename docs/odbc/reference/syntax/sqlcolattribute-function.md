@@ -20,12 +20,12 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca10614062a495de2c8f0ee80d7bbd5c0e675ad4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449751"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537569"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
@@ -39,7 +39,7 @@ ms.locfileid: "65449751"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -192,7 +192,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="example"></a>예제  
  다음 샘플 코드에는 핸들 및 연결 해제 하지 않습니다. 참조 [SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)를 [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md), 및 [SQLFreeStmt 함수](../../../odbc/reference/syntax/sqlfreestmt-function.md) 핸들과 문을 해제 하는 코드 샘플입니다.  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   

@@ -20,12 +20,12 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062411"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537649"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
@@ -48,7 +48,7 @@ ms.locfileid: "63062411"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -291,7 +291,7 @@ SQLRETURN SQLDriverConnect(
   
  자세한 내용은 [SQLDriverConnect를 사용 하 여 연결](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)합니다.  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

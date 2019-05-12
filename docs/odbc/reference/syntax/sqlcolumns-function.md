@@ -20,12 +20,12 @@ ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259346"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537691"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259346"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -182,7 +182,7 @@ SQLRETURN SQLColumns(
 ## <a name="code-example"></a>코드 예  
  다음 예제에서는 응용 프로그램에서 반환한 결과 집합에 대 한 버퍼를 선언 **SQLColumns**합니다. 호출한 **SQLColumns** EMPLOYEE 테이블의 각 열을 설명 하는 결과 집합을 반환 합니다. 그런 다음 호출 **SQLBindCol** 결과 버퍼 집합의 열을 바인딩해야 합니다. 응용 프로그램에서 사용 하 여 데이터의 각 행을 인출 하는 마지막으로, **SQLFetch** 하 고 처리 합니다.  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

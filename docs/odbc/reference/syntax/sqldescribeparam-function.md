@@ -20,12 +20,12 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982299"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537620"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 함수(SQLDescribeParam Function)
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982299"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>코드 예  
  다음 예제에서는 SQL 문에 대 한 사용자를 다음 해당 문을 준비 합니다. 다음으로 호출 **SQLNumParams** 문에 매개 변수를 포함 하는지 여부를 확인 하려면. 호출 문에 매개 변수가 있으면 **SQLDescribeParam** 이러한 매개 변수를 설명 하 고 **SQLBindParameter** 에 바인딩해야 합니다. 마지막으로 모든 매개 변수 값에 대 한 라는 메시지를 하 고 문을 실행 합니다.  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

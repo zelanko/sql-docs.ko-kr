@@ -20,12 +20,12 @@ ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edcffe36c0185276fae89f800e1bbcfc5bc33b33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b56a5ebd0ad00e2c3abb87b72d2de8735245f99
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63232019"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537984"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63232019"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 BOOL ConfigTranslator(  
      HWND     hwndParent,  

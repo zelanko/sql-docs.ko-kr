@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259274"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537724"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259274"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>코드 예  
  다음 예에서 설명자 작업 PartsSource 테이블의 필드 PartsCopy 테이블로 복사할 사용 됩니다. PartsSource 테이블의 내용에서 행 집합 버퍼로 인출 *hstmt0*합니다. 이러한 값에 INSERT 문의 매개 변수로 사용 됩니다 *hstmt1* PartsCopy 테이블의 열을 채우기 위해. 이렇게 하려면의 IRD 필드 *hstmt0* 의 IPD 필드에 복사 됩니다 *hstmt1*, 및의 카드가 필드 *hstmt0* APD의필드에복사됩니다*hstmt1*합니다. 사용 하 여 **SQLSetDescField** 특성을 설정 IPD의 DESC_PARAMETER_TYPE을 SQL_PARAM_INPUT IRD 필드에서에서 복사할 출력 매개 변수를 사용 하 여 문을 IPD 필드 입력된 매개 변수를 해야 하는 경우.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  
