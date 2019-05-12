@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237854"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538024"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63237854"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +261,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>코드 예  
  다음 예에서는 Customers 테이블에서 한 번에 10 개의 데이터 행을 인출합니다. 그런 다음 사용자가 취해야 할 작업에 대 한 메시지가 나타납니다. 네트워크 사용량을 줄이기 위해 예제에서는 버퍼 업데이트, 삭제 및 바인딩된 배열의 하지만 이전의 행 집합 데이터 오프셋 로컬 삽입 합니다. 사용자 업데이트, 삭제를 보내도록 선택 하 고 데이터 원본에 삽입 하는 경우 코드 오프셋을 적절 하 게 바인딩을 설정 하 고 호출 **SQLBulkOperations**합니다. 간단히 하기 위해 10 개 업데이트, 삭제 또는 삽입 사용자 버퍼 수 없습니다.  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

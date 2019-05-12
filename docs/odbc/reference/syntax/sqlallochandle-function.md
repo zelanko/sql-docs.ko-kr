@@ -20,12 +20,12 @@ ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62761770"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538111"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 함수
 **규칙**  
@@ -39,7 +39,7 @@ ms.locfileid: "62761770"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLAllocHandle(  
       SQLSMALLINT   HandleType,  

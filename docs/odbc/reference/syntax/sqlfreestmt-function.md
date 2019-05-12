@@ -20,12 +20,12 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ff8cb5bd0ff257d42cd658da54415697e99ae0f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259314"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538145"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259314"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -83,7 +83,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="example"></a>예제  
  핸들을 해제 하려면 바람직한 프로그래밍 관행을 것입니다. 그러나 간단히 하기 위해 다음 샘플 포함 되지 않습니다 핸들을 할당 해제 하는 코드. 핸들을 해제 하는 방법의 예제를 참조 하세요 [SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

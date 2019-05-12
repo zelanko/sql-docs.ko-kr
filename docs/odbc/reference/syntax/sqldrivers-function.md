@@ -20,12 +20,12 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bac7f88dcbd9895cfd0d07a5993ab9e38a4608d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 181d3aea0b2c756abc0dc603348cc9cfd728ac4f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061901"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538162"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63061901"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLDrivers(  
      SQLHENV         EnvironmentHandle,  

@@ -21,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237892"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538185"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -37,7 +37,7 @@ ms.locfileid: "63237892"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -223,7 +223,7 @@ SQLRETURN SQLBrowseConnect(
   
  이 마지막 부분 드라이버는 데이터 원본에 연결 하는 데 필요한 정보 **SQLBrowseConnect** 관계 없이 SQL_SUCCESS를 반환 하 고 **OutConnectionString* 완료 된 연결 문자열을 포함 합니다.  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

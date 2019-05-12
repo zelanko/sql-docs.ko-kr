@@ -20,12 +20,12 @@ ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f22051ca07dbdb732cfcda2f8200b7375f593463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 120738ec967d8d90a32d156386590c91b53edd50
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982160"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536294"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 함수
 **규칙**  
@@ -39,7 +39,7 @@ ms.locfileid: "62982160"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetStmtAttr(  
      SQLHSTMT      StatementHandle,  

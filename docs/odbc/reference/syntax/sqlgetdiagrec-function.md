@@ -20,12 +20,12 @@ ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259332"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538167"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259332"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDiagRec(  
      SQLSMALLINT     HandleType,  

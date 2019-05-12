@@ -20,12 +20,12 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465959"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536527"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql 함수(SQLNativeSql Function)
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465959"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -97,25 +97,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>주석  
  다음은 항목의 예 **SQLNativeSql** CONVERT 스칼라 함수를 포함 하는 다음 입력된 SQL 문자열에 대해 반환할 수 있습니다. 데이터 원본에는 정수 유형의 열 empid 임을 가정 합니다.  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Microsoft SQL Server 용 driver 다음 변환 된 SQL 문자열을 반환할 수 있습니다.  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  ORACLE 서버에 대 한 드라이버는 다음 변환 된 SQL 문자열을 반환할 수 있습니다.  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Ingres 드라이버는 다음 변환 된 SQL 문자열을 반환할 수 있습니다.  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

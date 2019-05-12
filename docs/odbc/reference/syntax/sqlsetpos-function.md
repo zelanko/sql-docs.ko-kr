@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982391"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536315"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982391"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>코드 예  
  다음 예제에서는 응용 프로그램 사용자를를 ORDERS 테이블을 검색 하 고 주문 상태를 업데이트할 수 있습니다. 커서 행 집합 크기는 20 사용 하 여 키 집합 구동 하며 행 버전을 비교 하는 낙관적 동시성 제어를 사용 합니다. 각 행 집합 인출 되는 응용 프로그램 출력 후 선택 하 고 주문의 상태를 업데이트할 수 있습니다. 응용 프로그램에서는 **SQLSetPos** 선택한 행에 커서를 배치 하 고 행의 현재 위치 업데이트를 수행 합니다. (오류 처리는 명확성을 위해 생략 됨).  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

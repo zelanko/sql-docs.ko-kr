@@ -13,12 +13,12 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33688a46be5e5e33aa940f3553c98db5091b159d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b4d7b20c690a1f4d7f3b445afb8348549309e5c
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62677378"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538205"
 ---
 # <a name="odbcconfexe"></a>ODBCCONF 합니다. EXE
 ODBCCONF.exe는 ODBC 드라이버 및 데이터 원본 이름을 구성할 수 있는 명령줄 도구입니다.  
@@ -28,7 +28,7 @@ ODBCCONF.exe는 ODBC 드라이버 및 데이터 원본 이름을 구성할 수 �
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 ODBCCONF [switches] action  
 ```  
   

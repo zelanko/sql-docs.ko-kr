@@ -20,12 +20,12 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258959"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537998"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258959"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -204,7 +204,7 @@ SQLRETURN SQLGetData(
   
  에 대 한 연속 호출 **SQLGetData** 요청한 마지막 열에서 데이터를 검색 하는, 이전 오프셋 유효 하지 않게 됩니다. 예를 들어, 다음 순서 대로 수행 될 때:  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +218,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>코드 예  
  다음 예제에서는 응용 프로그램 실행을 **선택** Id, 이름, 고객의 결과 집합을 반환 하 고 전화 번호를 이름, ID 및 전화 번호를 정렬할 문을 합니다. 호출 데이터의 각 행에 대해 **SQLFetch** 다음 행으로 커서를 놓습니다. 호출한 **SQLGetData** 검색할 인출된 된 데이터, 데이터 및 반환 된 바이트 수에 대 한 버퍼에에서 지정 된 호출 **SQLGetData**합니다. 마지막으로, 각 직원의 이름, ID 및 전화 번호 인쇄 합니다.  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   

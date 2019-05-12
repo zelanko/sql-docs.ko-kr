@@ -15,17 +15,17 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628617"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536668"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL 예제
 다음 코드는 간단한 embedded SQL 프로그램, C로 작성 된 프로그램에는 아니지만 많은 전부는 아님 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 라는 메시지를 고객 번호, 영업 사원, 및는 주문 상태를 검색 하며 화면에 검색된 된 정보를 표시 합니다.  
   
-```  
+```cpp  
 int main() {  
    EXEC SQL INCLUDE SQLCA;  
    EXEC SQL BEGIN DECLARE SECTION;  

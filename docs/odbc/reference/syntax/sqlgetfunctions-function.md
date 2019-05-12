@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240235"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538016"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240235"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>코드 예  
  다음 세 가지 예제 응용 프로그램을 사용 하는 방법을 보여 줍니다 **SQLGetFunctions** 드라이버를 지원 하는지 확인 하 **SQLTables**하십시오 **SQLColumns**, 및  **SQLStatistics**합니다. 드라이버는 이러한 함수를 지원 하지 않으면, 응용 프로그램이 드라이버에서 연결을 끊습니다. 첫 번째 예제에서는 호출 **SQLGetFunctions** 각 함수에 한 번씩입니다.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  두 번째 예제에서는 ODBC 3.x 응용 프로그램 호출 **SQLGetFunctions** 는 배열을 전달 **SQLGetFunctions** 모든 ODBC에 대 한 정보를 반환 합니다. 3.x 및 이전 함수입니다.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  세 번째 예제는 ODBC 2.x 응용 프로그램 호출 **SQLGetFunctions** 는 100 개 요소 배열을 전달 **SQLGetFunctions** 모든 ODBC에 대 한 정보를 반환 합니다. 2.x 및 이전 함수입니다.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
