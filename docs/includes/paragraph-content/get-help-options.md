@@ -1,6 +1,13 @@
+---
+ms.openlocfilehash: e0ef092d2227f380c9da1f982d954b8b5d310aaf
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877737"
+---
 ##  <a name="infotipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) 도움말 보기
 
-- [도움말을 사용하는 모든 방법](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [UserVoice - SQL Server 개선을 위한 제안](https://feedback.azure.com/forums/908035-sql-server)
 - [설치 및 업그레이드 -  MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
 - [SQL Server Data Tools - MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
@@ -12,6 +19,4 @@
 - [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/download/details.aspx?id=39299)
 - [비즈니스 사용자에 대한 지원 옵션](https://support.microsoft.com/gp/support-options-for-business)
 - [Microsoft에 문의](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [SQL 문서 편집](https://aka.ms/editsqldocs)
-- [SQL 문서 피드백](https://aka.ms/sqldocsfeedback)
-- [SQL 문서 설문 조사](https://aka.ms/sqldocsurvey)
+- [도움말을 사용하는 모든 방법](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

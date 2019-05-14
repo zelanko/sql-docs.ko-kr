@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255018"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946236"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "54255018"
   
 -   2. 문자 데이터용 비 XML 서식 파일 만들기  
   
--   3. 유니코드 네이티브 데이터용 비 XML 서식 파일 만들기  
+-   C. 유니코드 네이티브 데이터용 비 XML 서식 파일 만들기  
   
 -   D. 유니코드 문자 데이터용 비 XML 서식 파일 만들기  
   
@@ -119,7 +119,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
   
  자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)에서 원래 지원했던 서식 파일입니다.  
   
-#### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>3. 유니코드 네이티브 데이터용 비 XML 서식 파일 만들기  
+#### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. 유니코드 네이티브 데이터용 비 XML 서식 파일 만들기  
  `HumanResources.Department` 테이블을 위한 유니코드 네이티브 데이터용 비 XML 서식 파일을 만들려면 다음 명령을 사용합니다.  
   
 ```cmd

@@ -2,20 +2,22 @@
 title: PolyBase Kerberos 연결 문제 해결 | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
+ms.reviewer: jroth
 manager: craigg
 ms.technology: polybase
 ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776007"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -236,7 +238,7 @@ Kerberos를 액세스하는 문제가 여전히 발생하는 경우 아래 단�
 1. SQL Server 외부에서 Kerberos HDFS 데이터에 액세스할 수 있는지 확인합니다. 다음 작업 중 하나를 수행할 수 있습니다. 
 
     - 고유한 Java 프로그램을 작성하거나
-    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 예를 들어 다음과 같이 사용할 수 있습니다.
+    - PolyBase 설치 폴더에서 `HdfsBridge` 클래스를 사용하세요. 예를 들어
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

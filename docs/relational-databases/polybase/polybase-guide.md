@@ -1,6 +1,6 @@
 ---
 title: PolyBase란? | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e91afc38ec7cfa4d37217a3152ca731d3c8dac39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3520ff79f3bc79107966024a8c28b80ee8b47507
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775462"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-asdw-pdw-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
@@ -44,7 +44,7 @@ PolyBase는 Hadoop 노드로 몇몇 계산을 푸시하여 전체 쿼리를 최�
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 PolyBase를 통해 SQL Server 인스턴스는 외부 데이터 원본에서 데이터를 읽는 Transact-SQL 쿼리를 처리할 수 있습니다. SQL Server 2016 이상에서는 Hadoop 및 Azure Blob Storage의 외부 데이터에 액세스할 수 있습니다. SQL Server 2019 CTP 2.0부터 이제 PolyBase를 사용하여 [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) 및 [MongoDB](polybase-configure-mongodb.md)의 외부 데이터에 액세스할 수 있습니다.
 
@@ -95,7 +95,7 @@ PolyBase를 사용할 경우 SQL Server에서 다음 시나리오가 가능합�
 
 - **Hadoop에 계산을 푸시합니다.** 쿼리 최적화 프로그램은 비용 기반 결정을 내려 Hadoop에 계산을 푸시하며 이를 통해 쿼리 성능이 향상됩니다.  외부 테이블의 통계를 사용하여 비용 기반 결정을 내립니다. 계산을 푸시하는 데는 MapReduce 작업을 만들고 Hadoop의 분산된 계산 리소스를 활용합니다.
 
-- **계산 리소스 크기 조정.** 쿼리 성능을 향상시키기 위해 SQL Server [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 사용할 수 있습니다. 이를 통해 Hadoop 노드와 SQL Server 인스턴스 간에 병렬 데이터 전송이 가능하며 외부 데이터에서 작동하기 위한 컴퓨팅 리소스를 추가합니다.
+- **컴퓨팅 리소스 크기 조정.** 쿼리 성능을 향상시키기 위해 SQL Server [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 사용할 수 있습니다. 이를 통해 Hadoop 노드와 SQL Server 인스턴스 간에 병렬 데이터 전송이 가능하며 외부 데이터에서 작동하기 위한 컴퓨팅 리소스를 추가합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -109,7 +109,7 @@ PolyBase를 사용하기 전에 [PolyBase 기능을 설치](polybase-installatio
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)

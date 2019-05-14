@@ -14,16 +14,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215479"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946169"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "53215479"
         >  **bcp** 명령의 모든 필드를 대화형으로 지정하면 명령에서 비 XML 서식 파일의 각 필드에 대한 응답을 저장하라는 메시지를 표시합니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 참조하세요.  
   
 ### <a name="guidelines-for-using-terminators"></a>종결자 사용 지침  
- 상황에 따라 종결자는 **char** 또는 **nchar** 데이터 필드에 유용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 상황에 따라 종결자는 **char** 또는 **nchar** 데이터 필드에 유용합니다. 예를 들어  
   
 -   접두사 길이 정보를 인식하지 못하는 프로그램으로 가져올 데이터 파일에서 Null 값을 포함하는 데이터 열  
   
@@ -97,7 +97,7 @@ ms.locfileid: "53215479"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>대량 내보내기에 대한 행 종결자로 `\n`지정
 
-대량 내보내기에 대한 행 종결자로 `\n`을 지정하거나 기본 행 종결자를 암묵적으로 사용하면 bcp가 행 종결자로 CRLF(캐리지 리턴-줄 바꿈) 조합을 출력합니다. LF(줄 바꿈) 문자만 행 종결자로 출력하려면(Unix 및 Linux 컴퓨터에서 일반적임) 16진수 표기법을 사용하여 LF 행 종결자를 지정하세요. 예를 들어 다음과 같이 사용할 수 있습니다.
+대량 내보내기에 대한 행 종결자로 `\n`을 지정하거나 기본 행 종결자를 암묵적으로 사용하면 bcp가 행 종결자로 CRLF(캐리지 리턴-줄 바꿈) 조합을 출력합니다. LF(줄 바꿈) 문자만 행 종결자로 출력하려면(Unix 및 Linux 컴퓨터에서 일반적임) 16진수 표기법을 사용하여 LF 행 종결자를 지정하세요. 예를 들어
 
 ```cmd
 bcp -r '0x0A'
@@ -210,6 +210,6 @@ GO
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   
