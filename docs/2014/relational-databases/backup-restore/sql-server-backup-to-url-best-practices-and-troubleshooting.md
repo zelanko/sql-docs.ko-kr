@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877095"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619591"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "62877095"
   
      백업 데이터베이스가 비정상적으로 종료됩니다.  
   
--   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
+-   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
   
  추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
