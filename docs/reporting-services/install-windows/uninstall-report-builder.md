@@ -2,17 +2,17 @@
 title: 보고서 작성기 제거 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f543e0c3a12b86eb82ad7cefcdb0dee8e868e218
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292021"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502653"
 ---
 # <a name="uninstall-report-builder"></a>보고서 작성기 제거
 
