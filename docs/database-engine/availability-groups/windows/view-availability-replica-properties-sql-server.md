@@ -12,23 +12,18 @@ ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59c7b1d75f8573c2043acf9ec811c56b1f0a2549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bf0e948dd5f6e6334e9eb66b4e395bad5fde52c
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606191"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "63049058"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 Always On 가용성 그룹에 대한 가용성 복제본 속성을 보는 방법에 대해 설명합니다.  
   
--   **다음을 사용하여 가용성 복제본 속성을 보려면**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+ 
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 복제본의 속성을 보고 변경하려면**  
   
