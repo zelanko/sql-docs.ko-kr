@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Azure Virtual Machines +
+                - name: Azure 가상 머신 >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: 방법
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 개발
   items:
-    - name: 프로그래밍 상호 작용 ++
+    - name: 클라이언트 프로그램 코딩 >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: 데이터 계층 애플리케이션
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 데이터 마이그레이션 및 로드
   items:
-    - name: SSIS(SQL Server Integration Services) ++
+    - name: SSIS(SQL Server Integration Services) >>
       href: ../integration-services/index.md
     - name: 대량 복사 유틸리티(BCP)
       href: ../tools/bcp-utility.md
-    - name: Azure Migration Services +
-      displayName: 'DMS, Data Migration Service'
+    - name: Azure Migration Services >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: DQS(Data Quality Services)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: 메모리 최적화 테이블 구독자
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: SQL Database에 복제 +
+                - name: SQL Database에 복제 >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: 데이터 다시 게시
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: 병합 구독
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: 구독 다시 초기화
-                  itmes:
+                  items:
                     - name: 모든 구독
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: 하나의 구독
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: 리소스
           items:
-            - name: 가격 책정 +
+            - name: 가격 책정 >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: 블로그 +
+            - name: 블로그 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: 업데이트 서비스 +
+            - name: 업데이트 서비스 >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: 비디오 +
+            - name: 비디오 >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: 데이터베이스 실험 마법사
       href: ../dea/database-experimentation-assistant-overview.md
@@ -7310,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: 리소스
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: 스택 오버플로 +
+            - name: 스택 오버플로 >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 포럼 +
+            - name: MSDN 포럼 >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: 사용자 의견 보내기 +
+            - name: 사용자 의견 보내기 >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: 연결된 서버
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7414,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: 보고 및 분석
   items:
-    - name: 고급 분석 및 기계 학습 ++
+    - name: 고급 분석 및 기계 학습 >>
       href: ../advanced-analytics/index.md
-    - name: 분석 플랫폼 시스템 ++
+    - name: 분석 플랫폼 시스템 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SSAS(SQL Server Analysis Services) ++
+    - name: SSAS(SQL Server Analysis Services) >>
       href: ../analysis-services/index.md
-    - name: SSRS(SQL Server Reporting Services) ++
+    - name: SSRS(SQL Server Reporting Services) >>
       href: ../reporting-services/index.md
     - name: Master  Data  Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: 시작
@@ -7951,11 +7952,11 @@
           items:
             - name: 암호화를 사용하여 SQL Server 커넥터
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: 사용자 고유 키 가져오기 +
+            - name: 사용자 고유 키 가져오기 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: TDE BYOK 키 순환 +
+            - name: TDE BYOK 키 순환 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: TDE 보호기 제거 +
+            - name: TDE 보호기 제거 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: Azure Key Vault를 사용한 EKM
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8024,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: TDE(투명한 데이터 암호화)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: Azure SQL Database를 사용한 TDE +
+            - name: Azure SQL Database를 사용한 TDE >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: 사용자 고유 키 가져오기 +
+                - name: 사용자 고유 키 가져오기 >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8153,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: 리소스
           items:
-            - name: Azure Data Studio GitHub 리포지토리 +
+            - name: Azure Data Studio GitHub 리포지토리 >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 블로그 +
+            - name: SQL Server 블로그 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: FAQ
               href: ../azure-data-studio/faq.md
-            - name: 문제 보고 및 제안 +
+            - name: 문제 보고 및 제안 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 명령 프롬프트 유틸리티
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9045,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: 새 작업 범주
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: 작업 속성
-                      items: null
+                - name: 작업 속성
+                  items:
                     - name: 일정 참조 작업
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: 경고 페이지
@@ -10040,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: 실행 및 연결 - Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: Azure에서 SQL VM 프로비전 +
+        - name: Azure에서 SQL VM 프로비전 >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: 실행 및 연결 - 클라우드
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10254,63 +10255,63 @@
       items:
         - name: 문제 해결
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: 라이선스 사용 방법
+        - name: 라이선스 사용 방법 >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: 스택 오버플로 +
+        - name: 스택 오버플로 >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 +
+        - name: MSDN 포럼 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: 사용자 의견 보내기 +
+        - name: 사용자 의견 보내기 >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure의 SQL
   items:
-    - name: Azure SQL Database +
+    - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse +
+    - name: Azure SQL Data Warehouse >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: Azure VM의 SQL Server +
+    - name: Azure VM의 SQL Server >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 리소스
   items:
     - name: 배우기
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9의 SQL +
+        - name: Channel 9의 SQL >
           href: 'https://channel9.msdn.com/Search'
     - name: 블로그
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 데이터베이스 엔진 +
+        - name: SQL Server 데이터베이스 엔진 >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 보안 +
+        - name: SQL Server 보안 >
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 피드백 및 도움말
       items:
         - name: 도움말 보기
           href: ../sql-server/sql-server-get-help.md
-        - name: SQL 문서에 대한 피드백 +
+        - name: SQL 문서에 대한 피드백 >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server에 대한 피드백(UserVoice) +
+        - name: SQL Server에 대한 피드백(UserVoice) >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 문서 설문 조사 +
+        - name: SQL 문서 설문 조사 >
           href: 'https://aka.ms/sqldocsurvey'
         - name: SQL 설명서에 참여하세요!
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: 스택 오버플로 +
+        - name: 스택 오버플로 >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 +
+        - name: MSDN 포럼 >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: 파트너
       items:
@@ -10328,14 +10329,14 @@
   items:
     - name: SQL 문서 포함 파일
       href: ../sql-server/applies-to-includes.md
-    - name: 보관된 콘텐츠(SQL 2005 - 2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: 보관된 콘텐츠(SQL 2005 - 2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 데이터베이스 샘플
       items:
         - name: 샘플 개요
           href: ../samples/sql-samples-where-are.md
-        - name: 모든 Github 샘플 +
+        - name: 모든 Github 샘플 >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17118,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: 결과 집합 캐싱
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL

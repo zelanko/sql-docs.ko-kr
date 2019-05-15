@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server Integration Services
   href: ../integration-services/sql-server-integration-services.md
@@ -1784,11 +1784,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: 리소스
   items:
-    - name: SSIS 포럼에서 도움말 보기 +
+    - name: SSIS 포럼에서 도움말 가져오기 >
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: Stack Overflow에서 도움말 보기 +
+    - name: Stack Overflow에서 도움말 가져오기 >
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: SSIS 팀 블로그 수행 +
+    - name: SSIS 팀 블로그 수행 >
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: 문제 보고 및 기능 요청 +
+    - name: 문제 보고 및 기능 요청 >
       href: 'https://feedback.azure.com/forums/908035-sql-server'

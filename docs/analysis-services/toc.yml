@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: SQL Server Analysis Services 정보
   href: ../analysis-services/analysis-services.md
@@ -823,13 +823,13 @@
               href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
             - name: 파워 뷰 보고서 만들기
               href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-            - name: ADOMD.NET 서버 기능 +
+            - name: ADOMD.NET Server 기능 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-            - name: ADOMD.NET 서버 개체 아키텍처 +
+            - name: ADOMD.NET 서버 개체 아키텍처 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-            - name: ADOMD.NET 서버 프로그래밍 +
+            - name: ADOMD.NET Server 프로그래밍 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-            - name: 사용자 정의 함수 및 저장 프로시저 +
+            - name: 사용자 정의 함수 및 저장 프로시저 >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
         - name: 어셈블리 관리
           href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1378,7 +1378,7 @@
               href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
             - name: 성능 카운터
               href: ../analysis-services/instances/performance-counters-ssas.md
-            - name: 추적 이벤트 +
+            - name: 추적 이벤트 >
               href: /bi-reference/trace-events/analysis-services-trace-events
             - name: 로그 작업
               href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1426,11 +1426,11 @@
           items:
             - name: 호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
               href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-            - name: TMSL(테이블 형식 모델 스크립팅 언어) +
+            - name: TMSL(테이블 형식 모델 스크립팅 언어) >
               href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-            - name: TOM(테이블 형식 개체 모델) +
+            - name: TOM(테이블 형식 개체 모델) >
               href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-            - name: AMO(Analysis Management Objects)
+            - name: AMO(Analysis Management Objects) >
               href: /bi-reference/amo/amo-classes-introduction
         - name: 테이블 형식 1103 이하
           items:
@@ -1443,7 +1443,7 @@
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
                 - name: CSDLBI 개념
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-                - name: CSDL(개념 스키마 정의 언어) 참조 +
+                - name: CSDL(개념 스키마 정의 언어) 참조 >
                   href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
             - name: 표시
               items:
@@ -1477,13 +1477,13 @@
       items:
         - name: 다차원 모델 프로그래밍
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-        - name: AMO(Analysis Management Objects)
+        - name: AMO(Analysis Management Objects) >
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
         - name: ASSL(Analysis Services Scripting Language)
           items:
             - name: ASSL(Analysis Services Scripting Language)을 사용하여 개발
               href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-            - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) 참조
+            - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) 참조 >
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: ASSL 개체 및 개체 특징
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1523,11 +1523,11 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: ASSL XML 표기 규칙
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: XML for Analysis(XMLA) 참조 +
+        - name: XML for Analysis(XMLA) 참조 >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: ADOMD.NET
           items:
-            - name: ADOMD.NET 참조 +
+            - name: ADOMD.NET 참조 >
               href: /bi-reference/adomd/developing-with-adomd-net
             - name: ADOMD.NET Server 프로그래밍
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
@@ -1754,11 +1754,11 @@
       items:
         - name: 데이터 마이닝 프로그래밍
           href: ../analysis-services/data-mining/data-mining-programming.md
-        - name: AMO(Analysis Management Objects)
+        - name: AMO(Analysis Management Objects) >
           href: /bi-reference/amo/amo-classes-introduction
-        - name: ADOMD.NET +
+        - name: ADOMD.NET >
           href: /bi-reference/adomd/developing-with-adomd-net
-        - name: XMLA(XML for Analysis) +
+        - name: XML for Analysis(XMLA) >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: 데이터 마이닝용 OLE DB
           href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1772,27 +1772,27 @@
       href: ../analysis-services/powershell/analysis-services-powershell-reference.md
     - name: SharePoint용 PowerPivot에 대한 PowerShell
       href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: DAX(Data Analysis Expressions)
+    - name: DAX(Data Analysis Expressions) >
       href: /dax/data-analysis-expressions-dax-reference
-    - name: 파워 쿼리 M
+    - name: 파워 쿼리 M >
       href: /powerquery-m/power-query-m-reference
-    - name: TMSL(테이블 형식 모델 스크립팅 언어)
+    - name: TMSL(테이블 형식 모델 스크립팅 언어) >
       href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: TOM(테이블 형식 개체 모델)
+    - name: TOM(테이블 형식 개체 모델) >
       href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-    - name: AMO(Analysis Management Objects)
+    - name: AMO(Analysis Management Objects) >
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: CSDL(개념 스키마 정의 언어)
+    - name: CSDL(개념 스키마 정의 언어) >
       href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-    - name: XMLA(XML for Analysis)
+    - name: XML for Analysis(XMLA) >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services 스크립팅 언어(XMLA용 ASSL)
+    - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) >
       href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-    - name: 스키마 행 집합
+    - name: 스키마 행 집합 >
       href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-    - name: 추적 이벤트
+    - name: 추적 이벤트 >
       href: /bi-reference/trace-events/analysis-services-trace-events
     - name: DMX(Data Mining Extensions) 참조
       href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2162,7 +2162,7 @@
                       href: ../mdx/comment-mdx-double-slash.md
                     - name: 으로 디코딩된 문자입니다. (Range)
                       href: ../mdx/range-mdx.md
-                    - name: + (추가)"
+                    - name: + (추가)
                       href: ../mdx/add-mdx.md
                     - name: + (양수)
                       href: ../mdx/positive-mdx.md
