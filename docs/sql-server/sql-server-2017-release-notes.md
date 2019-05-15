@@ -94,9 +94,9 @@ ms.locfileid: "58797013"
     1. 관리자 모드로 명령 프롬프트를 시작합니다.
     2. 나머지 보고서 서버가 설치된 디렉터리로 이동합니다.
 
-        ‘Power BI Report Server 기본 위치: C:\Program Files\Microsoft Power BI Report Server’*
+        *‘Power BI Report Server 기본 위치: C:\Program Files\Microsoft Power BI Report Server’*
 
-        ‘SQL Server Reporting Services 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services’*
+        *‘SQL Server Reporting Services 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services’*
 
     3. 그런 다음 남아 있는 기능에 따라 *SSRS* 또는 *PBIRS* 폴더로 이동합니다.
     4. WMI 폴더로 이동합니다.
