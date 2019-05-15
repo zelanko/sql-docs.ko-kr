@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78036e91dd87b3295c9b8c4e6d0a39311133bbdd
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52777955"

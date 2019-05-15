@@ -16,7 +16,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58535725"

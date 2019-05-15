@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
 ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860335"

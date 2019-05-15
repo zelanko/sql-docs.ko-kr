@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628160"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577995"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628160"
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+
+## <a name="notes-on-linux-version"></a>Linux 버전에 대 한 참고 사항
+
+Linux에서 SQL 엔진 작동 방식으로 인해이 정보 중 일부 Linux 진단 데이터를 일치 하지 않습니다. 예를 들어 `os_thread_id` 와 같은 도구의 결과 일치 하지 않습니다 `ps`를`top` procfs는 또는 (/proc/`pid`).  이 플랫폼 추상화 계층 (SQLPAL)로 인해 SQL Server 구성 요소 및 운영 체제 사이 계층입니다.
 
 ## <a name="examples"></a>예  
  시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스레드를 시작한 다음 작업자를 해당 스레드에 연결합니다. 그러나 확장 저장 프로시저와 같은 외부 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 스레드를 시작할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 스레드를 제어하지 않습니다. sys.dm_os_threads에서 리소스를 사용 하는 rogue 스레드에 대 한 정보를 제공할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스입니다.  

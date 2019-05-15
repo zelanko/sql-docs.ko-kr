@@ -23,15 +23,16 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c4f054e6690f6b836864a69b27a22a0bb3edf07
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: d1318a4a3a72c0deb27e86487782ca835cd552e9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803228"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094198"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 명시적 값을 테이블의 ID 열에 삽입할 수 있도록 합니다.  
 
@@ -61,7 +62,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
   
  SET IDENTITY_INSERT 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 테이블을 소유하거나 테이블에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

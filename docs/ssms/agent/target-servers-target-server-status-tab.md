@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.status.f1
 ms.assetid: 010a4cab-d878-4889-8ac8-7d91db6345d6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00b908dc1162ea3c0392a2fdaaf48c405a32a9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e40e3615932b0ff1615760d851d118173faa559
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805091"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097516"
 ---
 # <a name="target-servers-target-server-status-tab"></a>대상 서버(대상 서버 상태 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47805091"
 
 이 페이지를 사용하여 이 마스터 서버와 관련된 대상 서버의 상태를 확인할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **대상 서버**  
 대상 서버의 이름을 표시합니다.  
   

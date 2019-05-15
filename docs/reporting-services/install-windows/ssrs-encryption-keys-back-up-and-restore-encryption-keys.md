@@ -10,14 +10,14 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306161"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502847"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 암호화 키 - 암호화 키 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "58306161"
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
  다음 이벤트가 발생할 경우 암호화 키의 백업 복사본을 복원해야 합니다.  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306161"
  대칭 키를 백업하면 사용자가 지정한 파일에 키가 기록된 후 사용자가 제공한 암호를 사용하여 키가 스크램블됩니다. 대칭 키는 암호화되지 않은 상태로는 저장될 수 없으므로 디스크에 저장할 때 암호를 제공하여 키를 암호화해야 합니다. 파일이 생성되면 해당 파일을 안전한 위치에 저장하고 파일 잠금을 해제하는 데 사용되는 **암호를 기억해야** 합니다. 대칭 키를 백업하려면 다음과 같은 도구를 사용할 수 있습니다.  
   
  **기본 모드:** Reporting Services 구성 관리자 또는 **rskeymgmt** 유틸리티  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **SharePoint 모드:** SharePoint 중앙 관리 페이지 또는 PowerShell  
   
 ##  <a name="bkmk_backup_sharepoint"></a> SharePoint 모드 보고서 서버 백업  
  SharePoint 모드 보고서 서버의 경우 PowerShell 명령을 사용하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션용 관리 페이지를 사용할 수 있습니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 “키 관리” 섹션을 참조하세요.  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> 암호화 키 백업 - Reporting Services 구성 관리자(기본 모드)  
   

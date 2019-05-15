@@ -10,21 +10,21 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextcolumn
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2d29e7565cf1fa25e93015682f9d700d8079f49a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8b47ec263ad22317990fd547e93a5ec3821abdb1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503420"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105089"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 열 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자에는 테이블 디자이너에 열려 있는 테이블에 대한 전체 텍스트 인덱스와 관련된 열이 나열됩니다. 이 대화 상자를 열려면 테이블 디자이너에서 테이블을 마우스 오른쪽 단추로 클릭하고 **전체 텍스트 인덱스**를 선택한 다음, **전체 텍스트 인덱스** 대화 상자에서 보거나 편집하려는 열이 포함된 인덱스를 클릭하고 오른쪽 표에서 **열** 필드를 클릭한 후 줄임표(**...**)를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **열**  
 전체 텍스트 인덱스에 관련된 열의 이름을 표시합니다. 열을 추가하려면 비어 있는 첫 번째 셀을 클릭하고 드롭다운 목록에서 열을 선택합니다. 텍스트를 기반으로 한 열이나 이미지 데이터 형식의 열만 선택할 수 있습니다.  
   

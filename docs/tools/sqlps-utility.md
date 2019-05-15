@@ -17,7 +17,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
 ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/29/2019
 ms.locfileid: "58657897"

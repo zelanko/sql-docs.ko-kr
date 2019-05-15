@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 1f911829-8c73-4542-b75e-6273f0dd52bf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7bbfa1fe5af73e4ae68392daa1ad726d2c16a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d37a359dde18416f0648d8ce7defc816d1af426
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811271"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088869"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>프록시 노드(SQL Server 에이전트 F1 도움말)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
