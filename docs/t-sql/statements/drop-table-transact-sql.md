@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201529"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503469"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,15 +57,14 @@ ms.locfileid: "53201529"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -102,7 +101,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 > [!IMPORTANT]  
 >  동일한 일괄 처리에서 동일한 테이블에 대해 DROP TABLE과 CREATE TABLE을 실행할 수는 없습니다. 이를 실행하면 예기치 않은 오류가 발생할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블이 속한 스키마에 대한 ALTER 권한, 테이블에 대한 CONTROL 권한 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -121,7 +120,7 @@ DROP TABLE ProductVendor1 ;
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
-### <a name="c-dropping-a-temporary-table"></a>3. 임시 테이블 삭제  
+### <a name="c-dropping-a-temporary-table"></a>C. 임시 테이블 삭제  
  다음 예에서는 임시 테이블을 만들고 존재 여부를 테스트한 다음 테이블을 삭제하고 다시 존재 여부를 테스트합니다. 이 예에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 사용 가능한 **IF EXISTS** 구문을 사용하지 않습니다.  
   
 ```  
@@ -142,7 +141,7 @@ SELECT * FROM #temptable;
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. IF EXISTS를 사용하여 테이블 삭제  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  다음 예에서는 T1이라는 리소스 풀을 만듭니다. 다음으로 두 번째 문이 삭제됩니다. 세 번째 문은 테이블이 이미 삭제되었으므로 아무런 작업도 수행하지 않지만 오류는 발생하지 않습니다.  
   

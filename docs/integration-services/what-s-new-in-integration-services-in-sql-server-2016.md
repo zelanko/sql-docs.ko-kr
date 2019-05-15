@@ -15,15 +15,14 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a747f7dea48d8c8d733e256473609f37764850a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290639"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877725"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 이 항목에서는 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다. 또한 SQL Server 2016 시간 프레임 동안 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)에 포함되거나 업데이트된 기능도 포함됩니다.  
 
@@ -367,10 +366,10 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 는 **서비스 팩 2에** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 속성을 도입했습니다. 이 새 속성은 당시에는 발표되거나 문서화되지 않았습니다. **ValidationDetails** 속성은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서도 사용할 수 있습니다.   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2016의 버전과 지원하는 기능](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

@@ -1,19 +1,19 @@
 ---
 title: 보고서 서버 데이터베이스 만들기, SSRS Configuration Manager | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184989"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502662"
 ---
 # <a name="create-a-report-server-database"></a>보고서 서버 데이터베이스 만들기 
 
@@ -25,7 +25,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 
 
 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하면 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다. 이 두 데이터베이스는 **보고서 서버 데이터베이스** 또는 **보고서 서버 카탈로그**로 통칭됩니다.
 
-SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드**에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 각 SSRS 서비스 애플리케이션에 3개의 데이터베이스가 생성됩니다. 기본적으로 데이터베이스 이름에는 서비스 애플리케이션을 나타내는 GUID가 포함됩니다. 다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.
+SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드**에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 각 SSRS 서비스 애플리케이션에 3개의 데이터베이스가 생성됩니다. 기본적으로 데이터베이스 이름에는 서비스 애플리케이션을 나타내는 GUID가 포함됩니다. 
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
+
+다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - **자동**. 기본 구성 설치 옵션을 선택하는 경우 SQL Server 설치 마법사를 사용합니다. SQL Server 설치 마법사에서 이 옵션은 **보고서 서버 설치 옵션** 페이지의 **설치 및 구성** 입니다. **설치만** 옵션을 선택한 경우 SQL Server Reporting Services 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
   
 - **수동**. SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용합니다. 원격 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 사용하여 데이터베이스를 호스팅하는 경우 보고서 서버 데이터베이스를 수동으로 만듭니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>SharePoint 모드 
 **보고서 서버 설치 옵션** 페이지에는 SharePoint 모드의 유일한 **설치만** 옵션이 있습니다. 이 옵션은 모든 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 및 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스를 설치합니다. 다음 단계에는 다음 방법 중 하나를 사용하여 SSRS 서비스 애플리케이션을 하나 이상 만듭니다.  
@@ -53,6 +60,8 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 - SSRS 서비스 애플리케이션을 만들려면 SharePoint Server에서 중앙 관리로 이동하세요. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 **서비스 애플리케이션 만들기** 섹션을 참조하세요.  
   
 - SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 사용하여 서비스 애플리케이션 및 보고서 서버 데이터베이스를 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)항목에서 서비스 애플리케이션 만들기 예제를 참조하세요.  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>데이터베이스 서버 버전 요구 사항
 

@@ -14,15 +14,15 @@ f1_keywords:
 - sql.data.tools.publishdacproject
 - sql.data.tools.DacExtractDialog
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af7f836549563783686dfb3209fc4e7eedf9727a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b22c1c3f26112cf6232eb314eeb8f8c330ee03
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770081"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090133"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac 파일 추출, 게시 및 등록
 이 항목에서는 SQL Server 개체 탐색기에서 연결된 데이터베이스를 마우스 오른쪽 단추로 클릭하여 수행할 수 있는 네 가지 절차에 대해 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47770081"
   
 이제 **게시** 및 **스크립트 생성** 단추가 사용할 수 있게 됩니다. 스크립트를 생성하면 해당 스크립트가 문서 창에서 열리므로 필요한 경우 저장할 수 있습니다. 데이터베이스에 직접 게시하도록 선택할 경우 **Data Tools 작업** 창에서 업데이트 요약과 사용되는 실제 스크립트를 볼 수 있습니다.  
   
-**데이터 계층 응용 프로그램으로 등록** 확인란을 선택하면 결과 데이터베이스가 서버 메타데이터에 데이터 계층 응용 프로그램으로 등록됩니다. 게시하려는 데이터베이스가 등록된 경우 데이터베이스의 스키마가 현재 등록된 dacpac와 다르면 게시가 실패할 수 있습니다.  
+**데이터 계층 애플리케이션으로 등록** 확인란을 선택하면 결과 데이터베이스가 서버 메타데이터에 데이터 계층 애플리케이션으로 등록됩니다. 게시하려는 데이터베이스가 등록된 경우 데이터베이스의 스키마가 현재 등록된 dacpac와 다르면 게시가 실패할 수 있습니다.  
   
 **고급** 단추를 클릭하여 액세스할 수 있는 **고급 게시 설정** 대화 상자에서 추가 게시 구성을 사용할 수 있습니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47770081"
 ## <a name="register-data-tier-application"></a>데이터 계층 응용 프로그램 등록  
 데이터베이스를 인스턴스 내에 DAC(데이터 계층 응용 프로그램)로 등록할 수 있습니다. 이렇게 하면 시스템 메타데이터의 데이터베이스 스키마에 대한 현재 상태 표현이 저장됩니다.  
   
-**데이터 계층 응용 프로그램 등록** 대화 상자에서 등록된 DAC의 속성을 지정합니다.  
+**데이터 계층 애플리케이션 등록** 대화 상자에서 등록된 DAC의 속성을 지정합니다.  
   
 ## <a name="unregister-data-tier-application"></a>데이터 계층 응용 프로그램 등록 취소  
 등록 취소하면 인스턴스에서 등록된 데이터 계층 응용 프로그램의 메타데이터를 제거할 수 있습니다. 등록 취소해도 등록된 데이터베이스가 삭제되지는 않습니다.  

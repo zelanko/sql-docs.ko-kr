@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f3fb094b8d3e852a5ffb0cce77e52cdfe47293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740381"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089037"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47740381"
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
   
-1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 응용 프로그램에서는 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수와 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
+1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [GetFileNamespacePath&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수와 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
 2.  그러면 애플리케이션에서는 이 논리 경로를 사용하여 파일 또는 디렉터리에 대한 핸들을 가져오고 개체에 대해 일부 작업을 수행합니다. 경로를 CreateFile() 또는 CreateDirectory()와 같은 지원되는 파일 시스템 API 함수에 전달하여 파일을 만들거나 열고 핸들을 가져올 수 있습니다. 그런 다음 핸들을 사용하여 데이터 스트리밍, 디렉터리 열거 또는 구성, 파일 특성 가져오기 또는 설정, 파일 또는 디렉터리 삭제 등과 같은 작업을 수행할 수 있습니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "47740381"
  그러나 **OpenSqlFileStream()** 을 호출하여 트랜잭션 FILESTREAM 액세스를 통해 FileTable의 FILESTREAM 열에 액세스할 수도 있습니다. 이러한 종류의 액세스는 완전한 트랜잭션이 될 수 있으며 현재 지원되는 모든 트랜잭션 일관성 수준을 유지합니다.  
   
 ###  <a name="concurrency"></a> 동시성 제어  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파일 시스템 응용 프로그램과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 응용 프로그램 간에는 물론 파일 시스템 응용 프로그램 간에도 FileTable 액세스에 동시성 제어를 적용합니다. 이 동시성 제어는 FileTable 행에 대해 적절한 잠금을 얻음으로써 수행됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 파일 시스템 애플리케이션과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 애플리케이션 간에는 물론 파일 시스템 애플리케이션 간에도 FileTable 액세스에 동시성 제어를 적용합니다. 이 동시성 제어는 FileTable 행에 대해 적절한 잠금을 얻음으로써 수행됩니다.  
   
 ###  <a name="triggers"></a> 트리거  
  파일 시스템을 통해 파일, 디렉터리 또는 해당 특성 만들기, 수정, 삭제 작업을 수행하면 FileTable에서는 해당되는 삽입, 업데이트 또는 삭제 작업이 수행됩니다. 또한 연결된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거가 이러한 작업의 일부로 실행됩니다.  
@@ -106,14 +106,14 @@ ms.locfileid: "47740381"
   
 |기능|지원됨|주석|  
 |----------------|---------------|--------------|  
-|**Oplock**|사용자 계정 컨트롤|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
+|**Oplock**|예|수준 2, 수준 1, 일괄 처리 및 필터 oplock을 지원합니다.|  
 |**확장 특성**|아니오||  
 |**구문 재분석 지점**|아니오||  
 |**영구 ACL**|아니오||  
 |**명명된 스트림**|아니오||  
-|**스파스 파일**|사용자 계정 컨트롤|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
-|**압축**|사용자 계정 컨트롤||  
-|**암호화**|사용자 계정 컨트롤||  
+|**스파스 파일**|예|스파스는 파일에 대해서만 설정할 수 있으며 데이터 스트림 스토리지에는 영향을 줍니다. FILESTREAM 데이터는 NTFS 볼륨에 저장되므로 FileTable 기능은 NTFS 파일 시스템에 대한 요청을 전달하여 스파스 파일을 지원합니다.|  
+|**압축**|예||  
+|**암호화**|예||  
 |**TxF**|아니오||  
 |**파일 ID**|아니오||  
 |**개체 ID**|아니오||  
@@ -121,15 +121,15 @@ ms.locfileid: "47740381"
 |**하드 링크**|아니오||  
 |**짧은 이름**|아니오||  
 |**디렉터리 변경 알림**|아니오||  
-|**바이트 범위 잠금**|사용자 계정 컨트롤|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
+|**바이트 범위 잠금**|예|바이트 범위 잠금에 대한 요청은 NTFS 파일 시스템에 전달됩니다.|  
 |**메모리 매핑된 파일**|아니오||  
-|**취소 I/O**|사용자 계정 컨트롤||  
+|**취소 I/O**|예||  
 |**보안**|아니오|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
 |**USN 저널**|아니오|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   
- [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

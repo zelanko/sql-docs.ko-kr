@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.sqlcomment
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a8f22be01ff75aae6f6eb663c046eb3e5cba6697
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 946434a3d49881fc631499656e7462664eb33d5a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105646"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>SQL 주석 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
