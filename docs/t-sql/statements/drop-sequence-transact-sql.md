@@ -19,12 +19,12 @@ ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3f8779cf1460fdf2ca7aecbc4b57d52d6d542807
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f35db71f46a6b6147a6a2758878c25b890ab9ca
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205482"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503696"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53205482"
 ## <a name="syntax"></a>구문  
   
 ```  
-DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name. ]    sequence_name } [ ,...n ]  
+DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  
   
@@ -72,7 +72,7 @@ GO
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  스키마에 대한 ALTER 또는 CONTROL 권한이 필요합니다.  
   
 ### <a name="audit"></a>감사  

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012664"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503961"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ CREATE TABLE AS SELECT(CTAS)는 사용할 수 있는 매우 중요한 T-SQL 기�
 ## <a name="syntax"></a>구문   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
@@ -114,7 +114,7 @@ SELECT 문은 CTAS와 CREATE TABLE 간의 기본적인 차이점입니다.
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대한 `SELECT` 권한이 필요합니다.
 
 테이블을 만들기 위한 권한은 CREATE TABLE의 [권한](https://msdn.microsoft.com/library/mt203953/#Permissions)을 참조하세요. 

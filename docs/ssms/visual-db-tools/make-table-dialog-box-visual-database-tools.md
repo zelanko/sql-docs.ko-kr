@@ -11,21 +11,21 @@ f1_keywords:
 - vdtsql.chm:69650
 - vdt.dlgbox.maketable
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5fecc39eb41cc39c9879c1f68f778575cde04fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a4a512a552448c1ef50320dd3269365ab487968
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763532"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096737"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 이 대화 상자를 사용하면 행을 복사하려는 대상 테이블을 만들고 이름을 지정할 수 있습니다. 이 대화 상자는 쿼리 형식을 MAKE TABLE 쿼리로 변경하면 나타납니다. 쿼리 형식을 변경하려면 **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **테이블 이름**  
 만들 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지 또는 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
   

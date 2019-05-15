@@ -2,8 +2,8 @@
 title: '빠른 시작: 연결 및 SQL Server 쿼리'
 titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서 Azure Data Studio를 사용하여 SQL Server에 연결하고 쿼리를 실행하는 방법 설명
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142424"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620388"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.
@@ -37,7 +37,7 @@ SQL Server에 액세스할 수 없는 경우 다음 링크에서 플랫폼을 �
 
    
 1. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** 를 시작합니다.
-1. *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 를 처음 실행하면 **연결** 대화 상자가 열립니다. **연결** 대화 상자가 열리지 않는 경우 **서버** 페이지에서 **새 연결** 아이콘을 클릭합니다.
+1. 처음 실행 하면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 는 **시작** 페이지가 열려야 합니다. 표시 되지 않는 경우는 **시작** 페이지에서 **도움말** > **시작**합니다. 선택 **새 연결** 열려는 합니다 **연결** 창:
    
    ![새 연결 아이콘](media/quickstart-sql-server/new-connection-icon.png)
 

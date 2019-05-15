@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.history.f1
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 236734ffb81e728704f87e72fd3bcefd40499425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 099f576409f4f6052065cf6b3c8fc55bd03bfe03
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743711"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105405"
 ---
 # <a name="operator-properties-history-page"></a>운영자 속성(기록 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47743711"
 
 이 페이지를 사용하여 가장 최근에 운영자에게 보낸 알림의 날짜, 시간 및 유형을 확인할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **전자 메일로**  
 전자 메일을 통한 가장 최근의 알림을 표시하거나 이 운영자에게 전자 메일로 알린 적이 없으면 **(전자 메일 보낸 적 없음)** 을 표시합니다.  
   

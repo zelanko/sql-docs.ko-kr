@@ -13,16 +13,16 @@ helpviewer_keywords:
 - errors [SQL Server], logs
 - SQL Server Agent, errors
 ms.assetid: 0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0f2e40233d679bf79b0a4e3ee944ad10b57a19af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362f31bf1daaf842f911bba5781683ac32915373
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608431"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095471"
 ---
 # <a name="sql-server-agent-error-log"></a>SQL Server 에이전트 오류 로그
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -12,21 +12,21 @@ helpviewer_keywords:
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13e530d68185bd6a2433a446456481672162e2b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3440b7dd15b95c8ef890c7d2827f72cbe43d118
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625831"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102886"
 ---
 # <a name="external-tools-dialog-box"></a>외부 도구 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**외부 도구** 대화 상자를 사용하여 SQLCMD 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경에서 작업하는 동안에 다른 응용 프로그램을 간편하게 시작할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 **출력** 창에 표시할 수 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
+**외부 도구** 대화 상자를 사용하여 SQLCMD 또는 메모장과 같은 외부 도구를 **도구** 메뉴에 추가할 수 있습니다. 외부 도구를 추가하면 [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경에서 작업하는 동안에 다른 애플리케이션을 간편하게 시작할 수 있습니다. 도구를 실행할 때 인수 및 작업 디렉터리를 지정할 수 있습니다. 또한 일부 도구의 출력을 **출력** 창에 표시할 수 있습니다. **외부 도구** 대화 상자는 **도구** 메뉴에서 사용할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **메뉴 내용**  
 현재 **도구** 메뉴에 추가된 항목의 제목을 나열합니다. **위로 이동** 및 **아래로 이동** 화살표를 사용하여 메뉴에 나타나는 항목의 순서를 변경할 수 있습니다. **삭제** 단추를 사용하여 메뉴에서 항목을 제거할 수 있습니다.  
   

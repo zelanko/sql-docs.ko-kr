@@ -20,12 +20,12 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982177"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537360"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
@@ -38,7 +38,7 @@ ms.locfileid: "62982177"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetchScroll(  
       SQLHSTMT      StatementHandle,  
@@ -259,7 +259,7 @@ SQLRETURN SQLFetchScroll(
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
-```  
+```cpp  
 // Fetch the next rowset.  
 SQLFetchScroll(hstmt, SQL_FETCH_NEXT, 0);  
 // Delete third row of the rowset. Does not modify the rowset buffers.  
@@ -346,7 +346,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  **SQLFetchScroll** 설명자를 사용 하 여 동일한 방식으로 상호 작용 **SQLFetch**합니다. 자세한 내용은의 "설명자 및 SQLFetchScroll" 섹션을 참조 하세요 [SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)합니다.  
   
 ## <a name="code-example"></a>코드 예  
- 참조 [열 단위 바인딩을](../../../odbc/reference/develop-app/column-wise-binding.md), [행 단위 바인딩은](../../../odbc/reference/develop-app/row-wise-binding.md)를 [Update 및 Delete 문을 배치](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 및 [SQLSetPos를사용하여행집합의행을업데이트하는중입니다.](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
+ 참조 [열 단위 바인딩을](../../../odbc/reference/develop-app/column-wise-binding.md), [행 단위 바인딩은](../../../odbc/reference/develop-app/row-wise-binding.md)를 [Update 및 Delete 문을 배치](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 및 [SQLSetPos를사용하여행집합의행을업데이트하는중입니다](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
   
 ## <a name="related-functions"></a>관련 함수  
   

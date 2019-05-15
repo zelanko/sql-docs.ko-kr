@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e75ebba2f48d0e2ec15ea871fe8d70a4b49e7318
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fa7395141a040beb8fdc71aff5a5068bdfd7eb03
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493054"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626783"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -62,10 +62,13 @@ ms.locfileid: "58493054"
 
 다음 예제에서는 반환 테이블 이름, 열 이름, 레이블 나열 되어 있는 표 레이블 ID, 정보 유형, 데이터베이스의 각 분류 된 열에 대 한 정보 유형 ID입니다.
 
+> [!NOTE]
+> 레이블은은 Azure SQL Data Warehouse에 대 한 키워드입니다.
+
 ```sql
 SELECT
     sys.all_objects.name AS TableName, sys.all_columns.name As ColumnName,
-    Label, Label_ID, Information_Type, Information_Type_ID
+    [Label], Label_ID, Information_Type, Information_Type_ID
 FROM
           sys.sensitivity_classifications
 left join sys.all_objects on sys.sensitivity_classifications.major_id = sys.all_objects.object_id

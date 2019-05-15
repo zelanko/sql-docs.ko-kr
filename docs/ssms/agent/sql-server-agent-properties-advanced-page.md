@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.advanced.f1
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af35f8b88048c0d77ea0182e2ccde4adb79e685e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1165ae7e319e5e8cd9d0548d404c9b356e378b38
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652841"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089657"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 에이전트 속성(고급 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47652841"
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 고급 속성을 확인하고 수정할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **SQL Server 이벤트 전달**  
 이 범주의 옵션은 이벤트 전달을 활성화하고 구성합니다.  
   

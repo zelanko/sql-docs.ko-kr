@@ -15,15 +15,15 @@ helpviewer_keywords:
 - number of values
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b0c049d11cf1e7a7a1d3fa4654756652b242183f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68e4d3787e1ad71673ddecfbcf94abb9b97afc6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759981"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089481"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>테이블의 행 계산(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

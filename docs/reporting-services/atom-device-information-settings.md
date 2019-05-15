@@ -2,18 +2,18 @@
 title: ATOM 디바이스 정보 설정 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 34ffe695a79ed0f7c7f71d82238c945723218373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2d04fae8687e31df79d72aec2b41bfe67cc1cc3
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629783"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504114"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 디바이스 정보 설정
   Atom 렌더링 확장 프로그램의 디바이스 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  
@@ -27,8 +27,8 @@ ms.locfileid: "47629783"
   
 ## <a name="see-also"></a>참고 항목  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

@@ -1,9 +1,8 @@
 ---
 title: 등록된 서버 제거(SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -15,15 +14,14 @@ ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca56a7b636e1375bf78cdd3e061dff19ff2d4e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1940edae255d84d55a879479ef94cb14e87360a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658371"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104297"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>등록된 서버 제거(SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 등록된 서버에서 서버를 제거하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a>  

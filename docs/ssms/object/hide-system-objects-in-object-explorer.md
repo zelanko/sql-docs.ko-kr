@@ -13,15 +13,15 @@ helpviewer_keywords:
 - objects [SQL Server], hiding
 - Object Explorer, hiding objects
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18033b708c4ea909d941c5ceb01aca1f6caaab9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b36198aba754f8424e29ba529fe936516213cad
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640767"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102921"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체 숨기기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

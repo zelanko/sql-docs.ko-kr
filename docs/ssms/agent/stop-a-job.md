@@ -12,16 +12,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, stopping
 - stopping jobs
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 38a3f3cc58f0ddcc9f7864e94466095316cc2e17
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: daedb5dbd9bb08c0ee68e149ee70deab24426782
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696331"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089459"
 ---
 # <a name="stop-a-job"></a>Stop a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "51696331"
 -   다중 서버 작업의 경우 해당 작업에 대한 STOP 명령이 작업의 모든 대상 서버에 게시됩니다.  
   
 ### <a name="Security"></a>보안  
-자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ## <a name="SSMS"></a>SQL Server Management Studio 사용  
   

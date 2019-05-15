@@ -1,34 +1,32 @@
 ---
 title: SQL Server Management Studio 정보 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.aboutsqlserverworkbench.f1
+- sql12.swb.aboutsqlserverworkbench.f1
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae5dd450183648335f4702bad49849071d4426bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd2f22dd0af9b069dda1634c72d7e51a565b023
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105822"
 ---
 # <a name="about-sql-server-management-studio"></a>SQL Server Management Studio 정보
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
+  이 대화 상자를 사용하여 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 정보를 확인하거나 복사할 수 있습니다. 평가 버전은 제품 사용 만료일까지 남은 일 수를 표시합니다.  
   
-## <a name="options"></a>Options  
-**구성 요소 이름**  
-컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소 및 운영 체제를 표 형태의 목록으로 표시합니다.  
+## <a name="options"></a>옵션  
+ **구성 요소 이름**  
+ 컴퓨터에 설치되어 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소 및 운영 체제를 표 형태의 목록으로 표시합니다.  
   
 -   **Microsoft SQL Server Management Studio**  
   
@@ -44,9 +42,10 @@ ms.locfileid: "47723781"
   
 -   **운영 체제**  
   
-**버전**  
-설치되어 있는 구성 요소의 버전을 표 형태의 목록에 구성 요소 이름순으로 표시합니다.  
+ **버전**  
+ 설치되어 있는 구성 요소의 버전을 표 형태의 목록에 구성 요소 이름순으로 표시합니다.  
   
-**정보 복사**  
-표의 정보를 클립보드로 복사합니다.  
+ **정보 복사**  
+ 표의 정보를 클립보드로 복사합니다.  
+  
   

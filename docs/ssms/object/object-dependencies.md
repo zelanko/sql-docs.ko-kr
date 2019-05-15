@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591537"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102978"
 ---
 # <a name="object-dependencies"></a>개체 종속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +29,10 @@ ms.locfileid: "53591537"
 선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
-**** _\<선택한 개체>에 종속된 개체 표시_  
+**** _\<선택한 개체>에_ 종속된 개체 표시  
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
-**** _\<선택한 개체>에_  **종속된 개체**  
+**** _\<선택한 개체>에_ **종속된 개체**  
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
 **종속성**  

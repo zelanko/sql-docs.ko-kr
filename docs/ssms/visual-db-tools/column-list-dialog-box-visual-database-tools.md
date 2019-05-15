@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4ed7786ce4bf63e8b3f44d8ea79a38a566e1bd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515376"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093875"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>열 목록 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52515376"
   
 이 대화 상자에는 데이터 형식과 열의 null 값 허용 여부와 같은 기본 속성을 비롯하여 선택한 테이블 반환 개체의 열 목록이 표시됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **이름**  
 선택한 테이블 반환 개체의 열 이름을 표시합니다.  
   

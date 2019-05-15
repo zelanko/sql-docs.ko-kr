@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.manageschedules.f1
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dc219f1a5ec75d98d90168811630a39438a9bbd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56e8fcb2048b4d741708beff3fae2267981be475
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683639"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105398"
 ---
 # <a name="manage-schedules"></a>일정 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47683639"
 
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 일정의 속성을 확인하고 변경할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **사용 가능한 일정**  
 이 사용자가 사용할 수 있는 일정을 나열합니다. 작업 및 일정은 소유자가 동일해야 합니다. 따라서 이 목록에는 작업의 소유자가 소유한 일정만 표시됩니다.  
   

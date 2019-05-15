@@ -1,24 +1,20 @@
 ---
 title: 데이터베이스 참조 추가 대화 상자 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.adddatabasereference.dialog
-ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.reviewer: ''
+ms.custom: SSDT
+ms.date: 02/09/2017
+ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400608"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097431"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
 이 항목에서는 **데이터베이스 참조 추가** 대화 상자에서 수행할 수 있는 절차에 대해 설명합니다.  
@@ -40,7 +36,7 @@ ms.locfileid: "52400608"
   
 시스템 데이터베이스 중 하나를 데이터베이스 참조로 선택하려는 경우 **시스템 데이터베이스**를 선택합니다.  
   
-**데이터 계층 응용 프로그램(.dacpac)** 을 선택하여 DACPAC의 데이터베이스를 참조하고 DACPAC 파일이 있는 디렉터리로 이동합니다.  
+**데이터 계층 애플리케이션(.dacpac)** 을 선택하여 DACPAC의 데이터베이스를 참조하고 DACPAC 파일이 있는 디렉터리로 이동합니다.  
   
 ## <a name="selecting-the-databases-relative-location"></a>데이터베이스의 상대적 위치 선택  
 참조할 데이터베이스를 선택한 후 데이터베이스 개체의 참조 중인 프로젝트에 상대적인 예상 위치를 지정할 수 있습니다.  

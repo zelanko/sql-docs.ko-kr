@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent
 - administering SQL Server, automatically
 ms.assetid: 541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e6ad8b25e1777f1683d9fc28caa81e9a61f3c9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15218e5f58daf9fba8e204d70fba719151fe33e3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636031"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65100297"
 ---
 # <a name="automated-administration-tasks-sql-server-agent"></a>관리 태스크 자동화(SQL Server 에이전트)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47636031"
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
-Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 관리 태스크를 자동화할 수 있습니다. 관리를 자동화하려면 예측 가능한 관리 태스크를 정의한 다음 각 태스크를 수행할 조건을 지정합니다. 자동화된 관리를 사용하여 일상적인 태스크와 이벤트를 처리하면 시간이 절약되므로 다른 관리 기능을 수행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  

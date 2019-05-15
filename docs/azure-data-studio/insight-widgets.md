@@ -1,9 +1,9 @@
 ---
-title: 정보 위젯을 사용 하 여 서버 및 데이터베이스 모니터링
+title: Azure Data Studio의 정보 위젯을 사용 하 여 서버 및 데이터베이스 모니터링
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 정보 위젯 알아보기
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238882"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620337"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>서버 및 데이터베이스에 대 한 정보 위젯 사용 하 여 관리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-정보 위젯 서버 및 데이터베이스를 사용 하면 TRANSACT-SQL (T-SQL) 쿼리를 수행할 통찰력 시각화로 전환 하 고 있습니다. 
+정보 위젯 서버 및 데이터베이스를 사용 하면 TRANSACT-SQL (T-SQL) 쿼리를 수행할 통찰력 시각화로 전환 하 고 있습니다.
 
-Insights는 사용자 지정 가능한 차트 및 대시보드를 모니터링 하는 데이터베이스 서버를 추가 하는 그래프입니다. 서버 및 데이터베이스에서 요약 정보 보기 하 고 자세한 세부 정보를 정의 하는 관리 작업을 시작 합니다. 
+Insights는 사용자 지정 가능한 차트 및 대시보드를 모니터링 하는 데이터베이스 서버를 추가 하는 그래프입니다. 서버 및 데이터베이스에서 요약 정보 보기 하 고 자세한 세부 정보를 정의 하는 관리 작업을 시작 합니다.
 
 멋진 서버 및 데이터베이스 관리 대시보드는 다음 예제와 비슷한를 빌드할 수 있습니다.
 
@@ -33,11 +33,11 @@ Insights는 사용자 지정 가능한 차트 및 대시보드를 모니터링 �
 
 - [빌드 사용자 지정 정보 위젯](tutorial-build-custom-insight-sql-server.md)
 - *기본 제공 정보 위젯 사용*
-   - [성능 모니터링 정보를 사용 하도록 설정](tutorial-qds-sql-server.md)
-   - [테이블 공간 사용량 정보를 사용 하도록 설정](tutorial-table-space-sql-server.md)
+  - [성능 모니터링 정보를 사용 하도록 설정](tutorial-qds-sql-server.md)
+  - [테이블 공간 사용량 정보를 사용 하도록 설정](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>SQL 쿼리 
+## <a name="sql-queries"></a>SQL 쿼리
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 다른 언어 또는 많은 사용자 인터페이스 최소 JSON 구성을 사용 하 여 최대한 많은 T-SQL을 사용 하려고 하므로 아직 추가 되지 않도록 하려고 합니다. T-SQL을 사용 하 여 정보 위젯 구성 수많은 기존 원본 통찰력 있는 위젯에 설정할 수 있는 유용한 T-SQL 쿼리의 수가 활용 합니다.
 

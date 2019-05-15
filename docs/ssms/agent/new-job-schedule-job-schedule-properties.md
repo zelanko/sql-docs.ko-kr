@@ -11,16 +11,16 @@ f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1cc425cb817873d50966bf8c5fcbcc54864414c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744651"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105510"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>새 작업 일정 - 작업 일정 속성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47744651"
 
 이 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **이름**  
 새 일정 이름을 입력합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47744651"
 일정을 무기한 유지하도록 지정합니다.  
   
 ## <a name="one-time-schedule-types-options"></a>일회 일정 유형 옵션  
-**날짜**  
+**Date**  
 작업을 실행할 날짜를 선택합니다.  
   
 **Time**  

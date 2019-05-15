@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2051f89e5f7b9d07dccacbb441d95a72ff1de22a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391666"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502665"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -47,6 +47,8 @@ ms.locfileid: "52391666"
 -   System32 폴더에 Authz.dll이 있어야 합니다.  
   
  설치 프로그램은 더 이상 인터넷 정보 서비스(IIS) 또는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]이 설치되어 있는지 확인하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 MDAC 2.0 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0이 필요하므로 이들이 설치되어 있지 않은 경우 설치 프로그램에서 설치합니다.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
   
@@ -77,9 +79,9 @@ ms.locfileid: "52391666"
 ###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
  **설명:** SharePoint 모드에서 SQL Server 2016 Reporting Services 및 SharePoint 2013/2016용 SQL Server 2016 Reporting Services 추가 기능을 성공적으로 설치한 후 다음 두 메뉴에 "SQL Server Reporting Services"가 나타나지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록되지 않은 것입니다.  
   
--   SharePoint 2013/2016 중앙 관리 -> "응용 프로그램 관리" -> "서버의 서비스 관리" 페이지  
+-   SharePoint 2013/2016 중앙 관리 -&gt; "애플리케이션 관리" -&gt; "서버의 서비스 관리" 페이지  
   
--   SharePoint 2013/2016 중앙 관리 -> "응용 프로그램 관리" -> "서비스 응용 프로그램 관리" -> "새로 만들기" 메뉴  
+-   SharePoint 2013/2016 중앙 관리 -&gt; "애플리케이션 관리" -&gt; "서비스 애플리케이션 관리" -&gt; "새로 만들기" 메뉴  
   
  **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Services를 등록하고 시작하려면 다음 단계를 완료합니다.  
   
@@ -176,7 +178,7 @@ ms.locfileid: "52391666"
   
  이 기능은 SQL Server Reporting Services 서비스 애플리케이션이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
   
- **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
+ **해결 방법:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
@@ -188,6 +190,8 @@ ms.locfileid: "52391666"
  **해결 방법:** 해결 방법이 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SYSPREP(PREPAREIMAGE)를 지원하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 SYSPREP을 지원하지 않습니다.  
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+
+::: moniker-end
   
 ##  <a name="bkmk_tshoot_native"></a> 기본 모드 설치 관련 문제 해결  
   

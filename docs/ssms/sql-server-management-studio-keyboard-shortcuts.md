@@ -18,15 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6289e84ecfce552345688368810a9081529b5f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf5eec621d32ac0454700e6519332b3419c9aa8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615523"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102856"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -407,7 +407,7 @@ ms.locfileid: "47615523"
 |------------|-----------------------------|---------------------------------|  
 |작업 모니터를 실행합니다.|Ctrl+Alt+A|Ctrl+Alt+A|  
 |작업 모니터를 닫습니다.|Ctrl+F4|Ctrl+F4|  
-|새로 고침|F5 |F5|  
+|새로 고침|F5|F5|  
 |모니터 표시 필터링|Ctrl+Shift+F|Ctrl+Shift+F|  
 |패널 순환|F6|F6|  
 |선택한 창 확장 또는 축소|Ctrl 및 + 또는 -|Ctrl 및 + 또는 -|  
@@ -421,7 +421,7 @@ ms.locfileid: "47615523"
   
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|새로 고침|F5 |F5|  
+|새로 고침|F5|F5|  
 |표에서 세부 정보 창 열기|Enter|Enter|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>복제 충돌 뷰어 바로 가기 키  

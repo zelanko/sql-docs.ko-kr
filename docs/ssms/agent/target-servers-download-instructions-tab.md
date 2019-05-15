@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.download.f1
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeadcc3de3e7b183bf89c09f2287984db814589b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15341e02e6e34f82470d3cf687884023f36adacd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799241"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089403"
 ---
 # <a name="target-servers-download-instructions-tab"></a>대상 서버(다운로드 명령 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47799241"
 
 이 페이지를 사용하여 하나 이상의 대상 서버에 대한 다운로드 명령을 표시하고 업데이트할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **대상 서버**  
 명령을 확인하거나 수정할 서버를 선택합니다.  
   

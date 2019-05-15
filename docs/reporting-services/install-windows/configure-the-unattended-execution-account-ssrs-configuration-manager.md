@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099914"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502942"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
@@ -75,6 +75,9 @@ ms.locfileid: "50099914"
  보고서 서버는 자동으로 계정을 사용하여 이미지 파일을 검색하므로 사용자가 별도의 동작을 수행하지 않아도 됩니다. 보고서에 데이터를 제공하는 외부 데이터 원본에 연결하는 데 계정을 사용하려면 보고서 데이터 원본 또는 공유 데이터 원본의 데이터 원본 속성 페이지에서 **자격 증명 유형** 옵션을 지정해야 합니다.  
   
 -   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 또는 SharePoint 사이트에서 **자격 증명 필요 없음** 옵션을 선택합니다.  
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
  무인 보고서 처리 계정은 기본적으로 데이터베이스 서버에 로그인할 때가 아닌 외부 서버에 연결할 때 사용됩니다. 이 계정 자격 증명을 사용하여 데이터베이스에 로그인하려면 연결 문자열에 자격 증명을 지정해야 합니다. 데이터베이스 서버가 Windows 통합 보안을 지원하고 무인 보고서 처리에 사용된 계정에 데이터베이스 읽기 권한이 있는 경우 **Integrated Security=SSPI** 를 지정할 수 있습니다. 그렇지 않은 경우, 연결 문자열에 사용자 이름 및 암호를 입력해야 하며 이것은 데이터 원본 연결 속성에 대한 편집 권한이 있는 모든 사용자에게 일반 텍스트로 표시됩니다.  
   

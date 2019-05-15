@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0da82a782dcebeee22e422d5c25b05e17584393c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503199"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56319204"
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -68,7 +68,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  원격 서버 컴퓨터의 이름 또는 원격 서버의 IPv4 주소입니다. IPv6 주소는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스를 **Computer_Name\Instance_Name** 또는 **IP_address\Instance_Name** 형식으로 지정할 수 있습니다. 서버는 원격이어야 하되 (local)로 지정할 수 없습니다.  
   
  TCP *port* 번호  
- 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. **ServerA,1450** 또는 **10.192.14.27,1435**  
+ 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예를 들어 **ServerA,1450** 또는 **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP 주소를 사용하여 원격 서버에 연결하는 것이 좋습니다. 네트워크 구성에 따라 컴퓨터 이름을 사용하여 연결할 때는 비 어플라이언스 DNS 서버를 사용하여 올바른 서버에 대한 이름을 확인하는 추가 단계가 필요할 수 있습니다. IP 주소를 사용하여 연결하는 경우에는 이 단계가 필요하지 않습니다. 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]의 “DNS 전달자를 사용하여 비 어플라이언스 DNS 이름 확인(분석 플랫폼 시스템)”을 참조하세요.  
@@ -87,7 +87,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  SELECT \<select_criteria> 새 원격 테이블을 채울 데이터를 지정하는 쿼리 조건자입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  다음이 필요합니다.  
   
 -   SELECT 절에 있는 각 개체에 대한 SELECT 권한이 필요합니다.  

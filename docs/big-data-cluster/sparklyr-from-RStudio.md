@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969879"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620309"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 사용 하 여 sparklyr
 
@@ -36,17 +36,20 @@ Sparklyr은 Apache Spark에 대 한 R 인터페이스를 제공 합니다. Spark
 
 1. 설치가 완료 되 면 필요한 패키지를 설치 하려면 RStudio Desktop 내에서 다음 명령을 실행 합니다.
 
-   ```RStudio Desktop install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>빅 데이터 클러스터에 Spark 연결
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+Livy 및 HDFS/Spark 게이트웨이 사용 하 여 빅 데이터 클러스터에 클라이언트에서 연결할 sparklyr을 사용할 수 있습니다. 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+RStudio에서 R 스크립트를 만들고 다음 예제와 같이 Spark에 연결 합니다.
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> 에 대 한 합니다 `<USERNAME>` 및 `<PASSWORD>` 사용자 이름 (예: 루트)를 사용 하는 값, 및 빅 데이터 클러스터 배포 중에 설정한 암호입니다. 에 대 한는 `<IP>` 및 `<PORT>` 설명서를 참조 하는 값을 [HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md#hdfs)합니다.
 
 ```r
 library(sparklyr)

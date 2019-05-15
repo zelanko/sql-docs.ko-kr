@@ -11,15 +11,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], viewing properties
 - viewing project properties
 ms.assetid: 5537efab-19da-40a1-a201-20adc1d71e7e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 69865f34786995a14119d02d7dd55636eaaa8720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd69a7ea6336c44e653dd03f1b25f22465713107
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705081"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102974"
 ---
 # <a name="view-project-properties"></a>프로젝트 속성 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

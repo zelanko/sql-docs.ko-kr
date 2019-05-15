@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215459"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626668"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
@@ -27,7 +27,9 @@ ms.locfileid: "53215459"
 > 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.
 
 ## <a id="connection"></a> 연결 오류 문제 해결
-Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 사항입니다. 
+Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 사항입니다.
+
+- 로컬로 사용 하 여 연결할 수 없는 경우 **localhost**, IP 주소 127.0.0.1을 대신 사용해 보세요. 가능성이 있는 **localhost** 이 주소에 올바르게 매핑되어 있지 않습니다.
 
 - 서버 이름 또는 IP 주소를 클라이언트 컴퓨터에서 연결할 수 있는지 확인 합니다.
 

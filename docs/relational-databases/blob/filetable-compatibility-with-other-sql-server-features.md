@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4afc0cfe0b310dcfcc106fc9d38b028c88f0261c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522372"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094372"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "52522372"
  복제 및 관련 기능(트랜잭션 복제, 병합 복제, 변경 데이터 캡처 및 변경 내용 추적 포함)은 FileTable에서 지원되지 않습니다.  
   
 ##  <a name="OtherIsolation"></a> 트랜잭션 의미 체계와 FileTable  
- **Windows 응용 프로그램**  
+ **Windows 애플리케이션**  
  Windows 애플리케이션은 데이터베이스 트랜잭션을 인식하지 못하므로 Windows 쓰기 작업에서는 데이터베이스 트랜잭션의 ACID 속성을 제공하지 않습니다. 따라서 Windows 업데이트 작업에는 트랜잭션 롤백 및 복구를 수행할 수 없습니다.  
   
- **Transact-SQL 응용 프로그램**  
+ **Transact-SQL 애플리케이션**  
  FileTable의 FILESTREAM(file_stream) 열에서 작동하는 TSQL 애플리케이션의 경우 격리 의미 체계는 일반적인 사용자 테이블의 FILESTREAM 데이터 형식을 사용할 때와 동일합니다.  
   
 ##  <a name="OtherQueryNot"></a> 쿼리 알림과 FileTable  
@@ -88,7 +88,7 @@ ms.locfileid: "52522372"
   
 -   "업데이트 가능한 뷰" 의미 체계에 따라 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 기본 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
--   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+-   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 예를 들어  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

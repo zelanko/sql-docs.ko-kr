@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.options.f1
 ms.assetid: 6e4f41aa-832d-46ba-b6b5-cf1d3b15d33f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 344f4788ecc2b5c6b23127843d78ba7e323af6bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2e2e04d210900a60d6d6cff432e19a61d6c88fe
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679801"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099431"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>경고 속성 - 새 경고(옵션 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47679801"
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 옵션을 확인하고 수정할 수 있습니다.  
 
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **전자 메일**  
 전자 메일 알림에 이벤트의 오류 텍스트(있는 경우)를 포함합니다.  
   

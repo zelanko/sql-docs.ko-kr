@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256948"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101966"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  

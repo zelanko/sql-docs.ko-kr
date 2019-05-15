@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518378"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096668"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52518378"
 > [!NOTE]  
 > 테이블이 복제용으로 게시된 경우 Transact-SQL 문 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 SMO(SQL Server 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **선택한 Primary/Unique 키 또는 인덱스**  
 기존의 기본 또는 고유 키와 인덱스를 나열합니다. 키나 인덱스를 선택하면 오른쪽의 표에 해당 속성이 표시됩니다. 목록이 비어 있는 경우 테이블에 정의된 항목이 없음을 의미합니다.  
   

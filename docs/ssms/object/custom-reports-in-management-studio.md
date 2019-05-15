@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5486e2dc10e13d3c022ec3d470781a5556c63dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 966cd899d5a3d6019febd4ba939f360c16c9cd78
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723801"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095212"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47723801"
 ## <a name="managing-custom-reports"></a>사용자 지정 보고서 관리  
 많은 사용자 지정 보고서를 보유하고 있는 사용자의 경우 적절한 NTFS 파일 시스템 권한이 있는 파일 시스템 폴더를 사용하여 보고서를 구성하는 것이 좋습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 사용자 지정 보고서는 현재 사용자의 사용 권한을 사용하여 실행됩니다. 보고서에서 실행하는 쿼리를 악의적인 사용자가 변경하지 못하게 하려면 보고서 파일이 있는 파일 시스템 폴더에 대한 액세스가 제한되도록 사용 권한을 설정해야 합니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 사용되는 사용자와 계정 모두에는 보고서 파일이 있는 파일 시스템 폴더에 대한 읽기 권한이 필요합니다.  

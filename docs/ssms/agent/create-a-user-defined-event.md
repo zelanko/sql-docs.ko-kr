@@ -21,16 +21,16 @@ helpviewer_keywords:
 - custom events [SQL Server Agent]
 - international considerations [SQL Server], alerts
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9557a8fb28d3d02462d466ac71c3e15dc3fcbfcd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f4b13211edd8d22116607dda97f792e2d362d522
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695401"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095503"
 ---
 # <a name="create-a-user-defined-event"></a>사용자 정의 이벤트 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51695401"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 미리 정의된 이벤트 이외의 이벤트를 모니터링하려는 경우 사용자 정의 이벤트를 만들 수 있습니다. 각 사용자 정의 이벤트에 심각도 수준을 할당할 수도 있습니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 때 각 사용자 정의 이벤트 메시지에 대해 **Windows 응용 프로그램 이벤트 로그에 쓰기** 옵션을 선택하여 메시지를 로그에 기록합니다. 기본적으로 심각도가 19보다 낮은 사용자 정의 메시지가 발생하면 이 메시지는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 애플리케이션 로그로 전송되지 않습니다. 심각도 수준이 19보다 낮은 사용자 정의 메시지는 SQL Server 에이전트 경고를 트리거하지 않습니다.  
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 때 각 사용자 정의 이벤트 메시지에 대해 **Windows 애플리케이션 이벤트 로그에 쓰기** 옵션을 선택하여 메시지를 로그에 기록합니다. 기본적으로 심각도가 19보다 낮은 사용자 정의 메시지가 발생하면 이 메시지는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 애플리케이션 로그로 전송되지 않습니다. 심각도 수준이 19보다 낮은 사용자 정의 메시지는 SQL Server 에이전트 경고를 트리거하지 않습니다.  
   
 사용자 정의 이벤트에는 고유한 메시지 번호가 필요합니다. 사용자 정의 이벤트의 메시지 번호는 50,000보다 커야 합니다. 이벤트에 대한 메시지는 여러 언어로 정의할 수 있습니다. 그러나 다른 언어로 된 메시지를 추가하려면 먼저 **En-US** 오류 메시지가 있어야 합니다.  
   

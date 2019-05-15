@@ -15,15 +15,15 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+ms.openlocfilehash: 7bb60aac75343a65264c2a87f72957dae336dacb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267858"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105738"
 ---
 # <a name="create-and-update-database-tables"></a>데이터베이스 테이블 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

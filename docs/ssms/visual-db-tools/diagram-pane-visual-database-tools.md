@@ -13,15 +13,15 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 66ae7b0d2c5b2f959e17720a37e679a2dec7cecc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9fcd20a9915e6f0b0a3c5164b035a2fb5acf54
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666821"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105728"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47666821"
   
 각 테이블 또는 테이블 반환 개체는 다이어그램 창에서 별도의 창으로 나타납니다. 각 사각형의 제목 표시줄에 있는 아이콘은 다음 표에서 설명하는 바와 같이 사각형이 나타내는 개체 형식을 보여 줍니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **테이블**  
 다이어그램 창에 추가할 수 있는 테이블을 나열합니다. 테이블을 추가하려면 테이블을 선택하고 **추가**를 클릭합니다. 여러 테이블을 한번에 추가하려면 원하는 테이블을 모두 선택하고 **추가**를 클릭합니다.  
   

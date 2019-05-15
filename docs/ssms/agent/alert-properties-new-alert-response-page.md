@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.response.f1
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a8d46d0d43d3e1fd1e56b6774976640b690c7d7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: da2d50d1601567c15622350a461d32b2e21ebd37
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906183"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099502"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>경고 속성 - 새 경고(응답 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "48906183"
 
 이 페이지에서 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 응답으로 실행할 작업을 지정하거나 알림을 받을 운영자 목록을 가져올 수 있습니다.  
 
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **작업 실행**  
 **작업 목록**, **새 작업** 및 **작업 보기** 옵션을 설정합니다.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7e61525c8ea3e158543673e1f2dcb8ccf7a46dae
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700385"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102730"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "51700385"
   
 -   스크립트와 함께 연결 정보를 저장합니다.  
   
-솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 응용 프로그램을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
+솔루션 탐색기는 같은 프로젝트에 관련된 스크립트를 작성하고 다시 사용하기 위한 개발자용 도구입니다. 나중에 유사한 태스크가 필요할 경우 프로젝트에 저장된 스크립트 그룹을 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]를 사용하여 애플리케이션을 만들어 본 경험이 있다면 솔루션 탐색기가 전혀 낯설지 않을 것입니다.  
   
 솔루션은 하나 이상의 스크립트 프로젝트로 구성됩니다. 프로젝트는 하나 이상의 스크립트 또는 연결로 구성되며 스크립트가 아닌 파일도 포함할 수 있습니다.  
   

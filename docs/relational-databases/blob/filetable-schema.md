@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40bca8db984a0f1c4b84dd6ba01f78c5be915b32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5d944e359091a7f6c3b7ee6bcf88ee1b41d6bce
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623841"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094232"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "47623841"
 |파일 특성 이름|유형|크기|Default|설명|파일 시스템 접근성|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|**hierarchyid**|변수|이 항목의 위치를 식별하는 **hierarchyid** 입니다.|계층적 FileNamespace에서 이 노드의 위치입니다.<br /><br /> 테이블의 기본 키입니다.|Windows 경로 값을 설정하여 만들고 수정할 수 있습니다.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 함수가 반환하는 값|FILESTREAM 데이터의 고유 ID입니다.|이 오류에는 이 작업을 적용할 수 없습니다.|  
-|**file_stream**|**varbinary(max)**<br /><br /> **filestream**|변수|NULL|FILESTREAM 데이터를 포함합니다.|이 오류에는 이 작업을 적용할 수 없습니다.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||**NEWID()** 함수가 반환하는 값|FILESTREAM 데이터의 고유 ID입니다.|해당 사항 없음|  
+|**file_stream**|**varbinary(max)**<br /><br /> **filestream**|변수|NULL|FILESTREAM 데이터를 포함합니다.|해당 사항 없음|  
 |**file_type**|**nvarchar(255)**|변수|NULL<br /><br /> 파일 시스템에서 만들기 또는 이름 바꾸기 작업을 수행하면 해당 이름에서 파일 확장명 값이 채워집니다.|파일의 유형을 나타냅니다.<br /><br /> 전체 텍스트 인덱스를 만들 때 이 열을 **TYPE COLUMN** 으로 사용할 수 있습니다.<br /><br /> **file_type** 은 지속형 계산 열입니다.|자동으로 계산되며, 수동으로 설정할 수 없습니다.|  
 |**이름**|**nvarchar(255)**|변수|GUID 값|파일 또는 디렉터리 이름입니다.|Windows API를 사용하여 만들거나 수정할 수 있습니다.|  
 |**parent_path_locator**|**hierarchyid**|변수|이 항목을 포함하는 디렉터리를 식별하는 **hierarchyid** 입니다.|포함 디렉터리의 **hierarchyid** 입니다.<br /><br /> **parent_path_locator** 는 지속형 계산 열입니다.|자동으로 계산되며, 수동으로 설정할 수 없습니다.|  

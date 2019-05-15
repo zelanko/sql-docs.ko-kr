@@ -17,12 +17,12 @@ ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83afb8016d2887af305ed61089a05a6e85150fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ec1bbc16f12424c1be539e9b82f56224822646b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855071"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450080"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,22 +45,22 @@ Windows PowerShell용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공
   
 |Folder|SQL Server 개체 모델 네임스페이스|개체|  
 |------------|---------------------------------------|-------------|  
-|SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|테이블, 뷰 및 저장 프로시저와 같은 데이터베이스 개체입니다.|  
-|SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  
-|SQLSERVER:\SQLRegistration|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|서버 그룹 및 등록된 서버와 같은 등록된 서버 개체입니다.|  
-|SQLSERVER:\Utility|<xref:Microsoft.SqlServer.Management.Utility>|[!INCLUDE[ssDE](../includes/ssde-md.md)]의 관리되는 인스턴스와 같은 유틸리티 개체입니다.|  
-|SQLSERVER:\DAC|<xref:Microsoft.SqlServer.Management.DAC>|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
-|SQLSERVER:\DataCollection|<xref:Microsoft.SqlServer.Management.Collector>|컬렉션 집합 및 구성 저장소와 같은 데이터 수집기 개체입니다.|  
-|SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
-|SQLSERVER:\SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체|  
+|`SQLSERVER:\SQL`|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|테이블, 뷰 및 저장 프로시저와 같은 데이터베이스 개체입니다.|  
+|`SQLSERVER:\SQLPolicy`|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|정책 및 패싯과 같은 정책 기반 관리 개체입니다.|  
+|`SQLSERVER:\SQLRegistration`|<xref:Microsoft.SqlServer.Management.RegisteredServers><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.RegSvrEnum>|서버 그룹 및 등록된 서버와 같은 등록된 서버 개체입니다.|  
+|`SQLSERVER:\Utility`|<xref:Microsoft.SqlServer.Management.Utility>|[!INCLUDE[ssDE](../includes/ssde-md.md)]의 관리되는 인스턴스와 같은 유틸리티 개체입니다.|  
+|`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|DAC 패키지와 같은 데이터 계층 애플리케이션 개체 및 DAC 배포와 같은 작업입니다.|  
+|`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|컬렉션 집합 및 구성 저장소와 같은 데이터 수집기 개체입니다.|  
+|`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체.|  
+|`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체|  
   
  예를 들어 SQLSERVER:\SQL 폴더를 사용하여 SMO 개체 모델에서 지원하는 개체를 표시할 수 있는 경로를 시작할 수 있습니다. SQLSERVER:\SQL 경로의 앞쪽 부분은 SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*입니다. 인스턴스 이름 뒤에 오는 노드에는 개체 컬렉션(예: *데이터베이스* 또는 *뷰*)과 개체 이름(예: AdventureWorks2012)이 번갈아 사용됩니다. 스키마는 개체 클래스로 표현되지 않습니다. 스키마의 테이블 또는 뷰와 같은 최상위 수준 개체에 대한 노드를 지정할 때는 개체 이름을 *SchemaName.ObjectName*형식으로 지정해야 합니다.  
   
  다음 예제에서는 로컬 컴퓨터의 기본 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에서 AdventureWorks2012 데이터베이스의 Purchasing 스키마에 있는 Vendor 테이블의 경로를 보여줍니다.  
   
-```  
+```powershell
 SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.Vendor  
-```  
+```
   
  SMO 개체 모델 계층 구조에 대한 자세한 내용은 [SMO Object Model Diagram](../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)을 참조하십시오.  
   
@@ -68,8 +68,8 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
 |경로|SMO 클래스|  
 |----------|---------------|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
-|SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases`|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
+|`SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012`|<xref:Microsoft.SqlServer.Management.Smo.Database>|  
   
 ## <a name="sql-server-provider-tasks"></a>SQL Server 공급자 태스크  
   

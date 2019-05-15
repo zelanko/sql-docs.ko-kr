@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.targets.f1
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2691a0b0b27879d06053888511360e08f17aa9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3a2cddd6e77d388076fba0129cfb332297f0fbb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784751"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095820"
 ---
 # <a name="job-properties---new-job-targets-page"></a>작업 속성 - 새 작업(대상 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47784751"
 
 이 페이지를 사용하여 작업의 대상 서버를 관리할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **대상 로컬 서버**  
 로컬 서버에서 작업을 실행합니다. 참여한 대상 서버가 없으면 이 옵션만 사용할 수 있습니다.  
   

@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e5a25efc158922bf070931a203965544a180807e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0446ae198b5e4468dfb14a5ba86f51f2839c8608
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840081"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105266"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>도구 상자 항목 선택(유지 관리 태스크 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **도구 상자 사용자 지정** 대화 상자의 이 탭에는 컴퓨터에 등록되어 있는 모든 유지 관리 태스크 구성 요소의 목록이 표시되며 이 탭을 사용하여 도구 상자에 표시되는 구성 요소를 변경할 수 있습니다. **도구 상자 사용자 지정** 대화 상자는 **도구** 메뉴에서 열 수 있습니다. 구성 요소 목록을 정렬하려면 열 머리글 중 하나를 선택합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **유지 관리 태스크** 탭에는 다음 정보 열이 포함되어 있습니다.  
   
 **이름**  
@@ -41,7 +41,7 @@ ms.locfileid: "47840081"
   
 **언어** 및 **버전** 상자에 구성 요소의 특성을 아이콘과 함께 표시하려면 이름을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **언어**  
 구성 요소의 언어입니다.  
   

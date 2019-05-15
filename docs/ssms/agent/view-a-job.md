@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, viewing
 - displaying jobs
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 68f154a268a4ed3cac1b4dcd1ebad493db361ae8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 41db40bfdb2de654a924da50c1c2de46fe65a625
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696152"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089581"
 ---
 # <a name="view-a-job"></a>View a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51696152"
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Security"></a>보안  
-**sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 볼 수 있습니다. 이 역할의 멤버는 모든 작업을 볼 수 있습니다. 자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+**sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 볼 수 있습니다. 이 역할의 멤버는 모든 작업을 볼 수 있습니다. 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ## <a name="SSMS"></a>SQL Server Management Studio 사용  
   

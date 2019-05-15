@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b574de14749a7317a4da64c850dbf4d2103c7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac9ce3c3def4341fd653d7e4c750890c58a77c76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763921"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096849"
 ---
 # <a name="job-categories-properties---new-job-category"></a>작업 범주 속성 - 새 작업 범주
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47763921"
 
 하나의 작업 범주 또는 모든 작업 범주에 속해 있는 작업이 나열되며 새 작업 범주를 추가할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **이름**  
 새 작업 범주의 이름을 입력합니다. 작업 범주 속성 대화 상자의 경우 현재 화면에 표시된 작업 범주의 이름이 여기에 표시됩니다.  
   
