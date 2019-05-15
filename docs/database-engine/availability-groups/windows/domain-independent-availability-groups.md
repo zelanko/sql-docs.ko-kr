@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744563"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090252"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 
 도메인 독립 가용성 그룹은 현재 SQL Server Management Studio를 사용하여 만들 수는 없습니다. 도메인 독립 가용성 그룹을 만드는 것은 기본적으로 일반적인 가용성 그룹을 만드는 것과 동일하지만 인증서 생성과 같은 특정 측면은 Transact-SQL에서만 가능합니다. 아래 예제에서는 두 개의 복제본, 즉 주 복제본 하나와 보조 복제본 하나가 있는 가용성 그룹 구성을 가정하고 있습니다. 
 
-1. [이 링크에 있는 지침을 사용](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/)하여 가용성 그룹에 참여할 모든 서버로 구성된 작업 그룹 클러스터를 배포합니다. 작업 그룹 클러스터를 구성하기 전에 공통 DNS 접미사가 이미 구성되어 있는지 확인합니다.
+1. [이 링크에 있는 지침을 사용](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059)하여 가용성 그룹에 참여할 모든 서버로 구성된 작업 그룹 클러스터를 배포합니다. 작업 그룹 클러스터를 구성하기 전에 공통 DNS 접미사가 이미 구성되어 있는지 확인합니다.
 2. 가용성 그룹에 참여할 각 인스턴스에서 [Always On 가용성 그룹 기능을 사용하도록 설정합니다](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server). 이렇게 하려면 각각의 SQL Server 인스턴스를 다시 시작해야 합니다.
 3. 주 복제본을 호스팅할 각 인스턴스에는 데이터베이스 마스터 키가 필요합니다. 마스터 키가 아직 없으면 다음 명령을 실행합니다.
 
@@ -126,7 +126,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
    ```
 
 10. 주 복제본일 수 있는 모든 복제본에 대해 모든 관련 보조 복제본에 로그인 및 사용자를 만듭니다.
-11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+11. 각 인스턴스에서 로그인 및 사용자가 작성된 다른 인스턴스의 인증서를 복원합니다. 주 복제본에서 모든 보조 복제본 인증서를 복원합니다. 각 보조 복제본에서 주 복제본의 인증서를 복원하고 주 복제본이 될 수 있는 다른 모든 복제본에서도 복원합니다. 예를 들어
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]

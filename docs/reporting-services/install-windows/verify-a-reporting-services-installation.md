@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814056"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503289"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Reporting Services 설치 확인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나로 설치할 수 있습니다. 설치를 확인하기 위해 수행해야 하는 단계는 보고서 서버 모드에 따라 다릅니다.  
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 모드 설치 확인  
   
@@ -38,7 +43,7 @@ ms.locfileid: "51814056"
   
 1.  중앙 관리에서 적어도 하나의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있는지 확인하려면 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
-2.  **SQL Server Reporting Services 서비스 응용 프로그램** 유형의 서비스 응용 프로그램과 해당 응용 프로그램 프록시가 있는지 확인합니다.  
+2.  **SQL Server Reporting Services 서비스 애플리케이션** 유형의 서비스 애플리케이션과 해당 애플리케이션 프록시가 있는지 확인합니다.  
   
 3.  서비스 애플리케이션 이름 **근처** 를 클릭한 다음 SharePoint 도구 모음에서 **속성** 을 클릭합니다.  서비스 애플리케이션 이름을 클릭하면 서비스 애플리케이션의 속성 페이지가 아닌 관리 페이지가 열립니다.  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814056"
 1.  Reporting Services 자습서 중 하나를 완료합니다. 자세한 내용은 [Reporting Services 자습서&#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)를 참조하세요.  
   
 2.  Adventure Works 예제 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서를 GitHub에서 다운로드합니다. 자세한 내용은 [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 참조하세요.  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> 기본 모드 설치 확인  
  기본 구성을 사용하여 기본 모드 보고서 서버를 설치하는 경우 설치 프로그램은 서버를 설치하고 배포합니다. 몇 가지 간단한 테스트를 수행하여 보고서 서버의 배포 여부를 확인할 수 있습니다. 이러한 단계를 수행하기 위해서는 로컬 관리자여야 합니다. 다른 사용자가 테스트를 수행할 수 있도록 하려면 해당 사용자에 대한 보고서 서버 액세스 권한을 구성해야 합니다.  

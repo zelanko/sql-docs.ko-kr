@@ -1,7 +1,7 @@
 ---
 title: Microsoft BI(business intelligence) 도구로 분석 및 보고
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658077"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503901"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -23,6 +23,9 @@ ms.locfileid: "58658077"
 다음 표는 데이터 분석 작업과 이러한 작업에 가장 적합한 Microsoft BI 도구에 대한 보고를 매핑합니다. 제품에 대한 자세한 내용을 보려면 표의 제품 링크를 클릭하세요.  
   
  사용자에게 적합한 도구를 결정하는 데 도움이 되도록 이러한 도구에 대한 간략한 개요를 알아보려면 [Microsoft BI(비즈니스 인텔리전스) 도구 소개](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx)를 참조하세요.
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
 |작업|사용자|||BI 도구|||  
 |---------------|----------|-|-|--------------|-|-|  

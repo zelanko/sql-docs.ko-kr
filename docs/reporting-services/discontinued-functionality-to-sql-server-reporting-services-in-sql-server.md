@@ -1,21 +1,21 @@
 ---
 title: 지원되지 않는 기능
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552935"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503985"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)에서 지원되지 않는 기능
 
@@ -29,14 +29,12 @@ ms.locfileid: "53552935"
 
 |기능|대체 기능 또는 해결 방법|
 |-|-|
-|웹 포털을 통해 보고서 모델 업로드|SOAP API를 통해 계속 수행할 수 있습니다.|
-|웹 포털을 통해 보고서 모델 관리|SOAP API를 통해 계속 수행할 수 있습니다.|
 |HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정|여전히 [웹 포털을 브랜드화](branding-the-web-portal.md)할 수 있습니다.|
 
 ## <a name="next-steps"></a>다음 단계
 
-[Reporting Services의 새로운 기능](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Reporting Services의 새로운 기능](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [SQL Server 2016에서 SQL Server Reporting Services의 동작 변경](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

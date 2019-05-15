@@ -12,16 +12,16 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 manager: craigg
-ms.openlocfilehash: 711ebc8f8abb3fb703a26978afe60f11e423bee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178068ee909369fa8559bdce284364630b7763f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619781"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094338"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,7 +98,7 @@ Win32 스트리밍은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
 
 FILESTREAM 파일 시스템 액세스는 파일 열기 및 닫기를 통해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 모델로 합니다. 파일 핸들이 열릴 때 문이 시작되고 파일 핸들이 닫힐 때 문이 종료됩니다. 예를 들어 쓰기 핸들이 닫히면 UPDATE 문이 완료된 경우와 같이 테이블에 등록된 가능한 모든 AFTER 트리거가 실행됩니다.
 
-**저장소 네임스페이스**
+**스토리지 네임스페이스**
 
 FILESTREAM에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 BLOB 물리적 파일 시스템 네임스페이스를 제어합니다. 새 내장 함수인 [PathName](../../relational-databases/system-functions/pathname-transact-sql.md)에서는 테이블의 각 FILESTREAM 셀에 해당하는 BLOB의 논리 UNC 경로를 제공합니다. 애플리케이션에서는 이 논리 경로를 사용하여 Win32 핸들을 얻고 일반적인 Win32 파일 시스템 인터페이스를 사용하여 BLOB 데이터에 대한 작업을 수행합니다. FILESTREAM 열의 값이 NULL인 경우 함수는 NULL을 반환합니다.  
 
@@ -154,10 +154,10 @@ FILESTREAM 핸들을 사용하여 메모리 매핑된 뷰(메모리 매핑된 I/
 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
 [FILESTREAM 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
 [FILESTREAM 데이터 저장용 테이블 만들기](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
-[Transact-SQL을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-transact-sql.md) [FILESTREAM 데이터용 클라이언트 응용 프로그램 만들기](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
+[Transact-SQL을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-transact-sql.md)[FILESTREAM 데이터용 클라이언트 애플리케이션 만들기](../../relational-databases/blob/create-client-applications-for-filestream-data.md)  
 [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
 [FILESTREAM 데이터 부분 업데이트](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  
-[FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+[FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
 [FILESTREAM 사용 데이터베이스 이동](../../relational-databases/blob/move-a-filestream-enabled-database.md)  
 [장애 조치(Failover) 클러스터에서 FILESTREAM 설정](../../relational-databases/blob/set-up-filestream-on-a-failover-cluster.md)  
 [FILESTREAM 액세스를 위한 방화벽 구성](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)

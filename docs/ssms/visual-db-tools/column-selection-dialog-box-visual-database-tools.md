@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 337f2d0c9dc4a063b6219125e8f6e0ffa188eb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dad897e09518fa181916676e4a2b4c8a3c14face
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845815"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093750"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>열 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47845815"
   
 이 대화 상자를 열려면 테이블을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **사용자 지정 보기 수정** 을 선택합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **사용 가능한 열**  
 선택한 데이터베이스 테이블에 있는 모든 열이 나열됩니다. 여기에 나열되는 열은 데이터베이스 테이블의 속성과 데이터베이스 형식에 따라 달라집니다. 원하는 열을 선택하여 강조 표시하고 화살표 단추를 사용하여 열을 **선택한 열** 상자로 옮깁니다.  
   

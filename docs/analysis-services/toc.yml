@@ -33,74 +33,78 @@
   items:
     - name: Analysis Services 자습서 개요
       href: ../analysis-services/analysis-services-tutorials-ssas.md
-    - name: 테이블 형식 모델링(1400 호환성 수준)
-      href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+    - name: 테이블 형식 모델링
       items:
-        - name: 1 - 테이블 형식 모델 프로젝트 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - 데이터 가져오기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3 - 날짜 테이블로 표시
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4 - 관계 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5 - 계산 열 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6 - 측정값 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7 - KPI(핵심 성과 지표) 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8 - 큐브 뷰 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9 - 계층 구조 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10 - 파티션 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11 - 역할 만들기
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: 12 - Excel에서 분석
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13 - 배포
-          href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: 추가 단원 - 세부 정보 행
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: 추가 단원 - 동적 보안
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: 추가 단원-비정형 계층 구조
-          href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: 테이블 형식 모델링(1200 호환성 수준)
-      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
-      items:
-        - name: 1 - 새 테이블 형식 모델 프로젝트 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - 데이터 추가
-          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
-        - name: 3 - 날짜 테이블로 표시
-          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
-        - name: 4 - 관계 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
-        - name: 5 - 계산 열 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
-        - name: 6 - 측정값 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
-        - name: 7 - KPI(핵심 성과 지표) 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
-        - name: 8 - 큐브 뷰 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
-        - name: 9 - 계층 구조 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
-        - name: 10 - 파티션 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
-        - name: 11 - 역할 만들기
-          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
-        - name: 12 - Excel에서 분석
-          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
-        - name: 13 - 배포
-          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
-        - name: 추가 단원 - 행 필터를 사용하여 동적 보안 구현
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: 추가 단원 - 파워 뷰 보고서의 보고 속성 구성
-          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+        - name: Internet Sales 자습서(1400)
+          items:
+            - name: Internet Sales 자습서 개요(1400)
+              href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
+            - name: 1 - 테이블 형식 모델 프로젝트 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - 데이터 가져오기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-2-get-data.md
+            - name: 3 - 날짜 테이블로 표시
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+            - name: 4 - 관계 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-4-create-relationships.md
+            - name: 5 - 계산 열 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+            - name: 6 - 측정값 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-6-create-measures.md
+            - name: 7 - KPI(핵심 성과 지표) 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+            - name: 8 - 큐브 뷰 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+            - name: 9 - 계층 구조 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+            - name: 10 - 파티션 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-10-create-partitions.md
+            - name: 11 - 역할 만들기
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-11-create-roles.md
+            - name: 12 - Excel에서 분석
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+            - name: 13 - 배포
+              href: ../analysis-services/tutorial-tabular-1400/as-lesson-13-deploy.md
+            - name: 추가 단원 - 세부 정보 행
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+            - name: 추가 단원 - 동적 보안
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+            - name: 추가 단원-비정형 계층 구조
+              href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+        - name: Internet Sales 자습서(1200)
+          items:
+            - name: Internet Sales 자습서 개요(1200)
+              href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
+            - name: 1 - 새 테이블 형식 모델 프로젝트 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
+            - name: 2 - 데이터 추가
+              href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
+            - name: 3 - 날짜 테이블로 표시
+              href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
+            - name: 4 - 관계 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
+            - name: 5 - 계산 열 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
+            - name: 6 - 측정값 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
+            - name: 7 - KPI(핵심 성과 지표) 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
+            - name: 8 - 큐브 뷰 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
+            - name: 9 - 계층 구조 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
+            - name: 10 - 파티션 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
+            - name: 11 - 역할 만들기
+              href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
+            - name: 12 - Excel에서 분석
+              href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
+            - name: 13 - 배포
+              href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
+            - name: 추가 단원 - 행 필터를 사용하여 동적 보안 구현
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+            - name: 추가 단원 - 파워 뷰 보고서의 보고 속성 구성
+              href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: 다차원 모델링
       href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
@@ -1414,7 +1418,7 @@
           href: ../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md
 - name: Developer
   items:
-    - name: Analysis Services 개발자 설명서
+    - name: 개발자 설명서 개요
       href: ../analysis-services/analysis-services-developer-documentation.md
     - name: 테이블 형식 모델
       items:
@@ -1475,10 +1479,11 @@
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
         - name: AMO(Analysis Management Objects)
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-        - name: ASSL(Analysis Services Scripting Language)을 사용하여 개발
-          href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+        - name: ASSL(Analysis Services Scripting Language)
           items:
-            - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) 참조 +
+            - name: ASSL(Analysis Services Scripting Language)을 사용하여 개발
+              href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+            - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) 참조
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: ASSL 개체 및 개체 특징
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1518,222 +1523,233 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: ASSL XML 표기 규칙
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: XMLA(XML for Analysis) +
+        - name: XML for Analysis(XMLA) 참조 +
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-        - name: ADOMD.NET 서버 프로그래밍
-          href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+        - name: ADOMD.NET
           items:
+            - name: ADOMD.NET 참조 +
+              href: /bi-reference/adomd/developing-with-adomd-net
+            - name: ADOMD.NET Server 프로그래밍
+              href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
             - name: ADOMD.NET Server 기능
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
             - name: ADOMD.NET 서버 개체 아키텍처
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
             - name: 사용자 정의 함수 및 저장 프로시저
               href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
-            - name: ADOMD.NET 참조 +
-              href: /bi-reference/adomd/developing-with-adomd-net
-        - name: 데이터베이스 개체(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-        - name: 의 차원 디자이너에 있는 차원 구조 뷰의
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-        - name: 특성 및 특성 계층
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-        - name: 데이터베이스 차원 속성 - 형식
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-        - name: 데이터베이스 차원 속성
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
-        - name: 차원 개체(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-        - name: 차원 번역
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-        - name: 차원 - 소개
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
-        - name: 차원 - Storage
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-        - name: 차원(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
-        - name: 자동 관리 캐싱(차원)
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-        - name: 사용자 계층- 수준 속성
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-        - name: 사용자 계층 - 속성
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-        - name: 사용자 계층
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
-        - name: 쓰기 가능 차원
-          href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-        - name: Aggregations and Aggregation Designs
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-        - name: 새 명명된 집합
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
-        - name: 큐브 셀(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-        - name: 큐브 개체(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-        - name: 큐브 속성 - 다차원 모델 프로그래밍
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-        - name: 큐브 스토리지(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-        - name: 큐브 번역
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
-        - name: 차원 관계
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-        - name: 파티션 - 파티션 스토리지 모드 및 처리
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-        - name: 파티션 - 자동 관리 캐싱
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-        - name: 파티션 - 원격 파티션
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-        - name: 파티션 - 쓰기 가능 파티션
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-        - name: 파티션(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
-        - name: 큐브 뷰
-          href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
-        - name: 논리 아키텍처 개요(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-        - name: 보안 역할(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-        - name: 서버 개체(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-        - name: Microsoft OLAP 논리 아키텍처 이해
-          href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-        - name: Analysis Services 배포의 클라이언트 아키텍처 요구 사항
-          href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-        - name: Analysis Services의 데이터 형식
-          href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
-        - name: 로컬 큐브(Analysis Services - 다차원 데이터)
-          href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-        - name: 최대 용량 사양(Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-        - name: 개체 명명 규칙(Analysis Services)
-          href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-        - name: OLAP 엔진 서버 구성 요소
-          href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
-        - name: Microsoft OLAP 아키텍처 이해
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-        - name: Microsoft OLAP 물리적 아키텍처 이해
-          href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-        - name: Analysis Services 개인 설정 확장 프로그램
-          href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-        - name: 저장 프로시저의 쿼리 컨텍스트 액세스
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-        - name: 저장 프로시저 호출
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-        - name: 저장 프로시저 만들기
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-        - name: 저장 프로시저 디버깅
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-        - name: 저장 프로시저 정의
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-        - name: 저장 프로시저 디자인
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-        - name: 저장 프로시저의 보안 설정
-          href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-        - name: OLAP 기능 확장
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
-        - name: 개별화를 통해 OLAP 확장
-          href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-        - name: MDX를 사용하여 데이터 액세스
-          href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
-        - name: MDX를 사용하여 다차원 데이터 쿼리
-          href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
-        - name: MDX의 주요 개념
-          href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+        - name: OLAP
           items:
-            - name: AUTOEXIST
-              href: ../analysis-services/multidimensional-models/mdx/autoexists.md
-            - name: 계산 컨텍스트
-              href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
-            - name: 하위 SELECT 및 하위 큐브의 계산 멤버
-              href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
-            - name: 큐브 공간
-              href: ../analysis-services/multidimensional-models/mdx/cube-space.md
-            - name: 쿼리의 하위 SELECT
-              href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
-            - name: 튜플
-              href: ../analysis-services/multidimensional-models/mdx/tuples.md
-            - name: 보이는 값 합계 및 보이지 않는 값 합계
-              href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
-            - name: '멤버, 튜플 및 집합 작업(MDX)'
-              href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
-        - name: MDX 쿼리 기본 사항
-          href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+            - name: OLAP 논리
+              items:
+                - name: 데이터베이스 개체(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+                - name: 의 차원 디자이너에 있는 차원 구조 뷰의
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+                - name: 특성 및 특성 계층
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+                - name: 데이터베이스 차원 속성 - 형식
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+                - name: 데이터베이스 차원 속성
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+                - name: 차원 개체(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+                - name: 차원 번역
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+                - name: 차원 - 소개
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md
+                - name: 차원 - Storage
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+                - name: 차원(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+                - name: 자동 관리 캐싱(차원)
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+                - name: 사용자 계층- 수준 속성
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+                - name: 사용자 계층 - 속성
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+                - name: 사용자 계층
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+                - name: 쓰기 가능 차원
+                  href: ../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+                - name: Aggregations and Aggregation Designs
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+                - name: 새 명명된 집합
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md
+                - name: 큐브 셀(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+                - name: 큐브 개체(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+                - name: 큐브 속성 - 다차원 모델 프로그래밍
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+                - name: 큐브 스토리지(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+                - name: 큐브 번역
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md
+                - name: 차원 관계
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+                - name: 파티션 - 파티션 스토리지 모드 및 처리
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+                - name: 파티션 - 자동 관리 캐싱
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+                - name: 파티션 - 원격 파티션
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+                - name: 파티션 - 쓰기 가능 파티션
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+                - name: 파티션(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+                - name: 큐브 뷰
+                  href: ../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md
+                - name: 논리 아키텍처 개요(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+                - name: 보안 역할(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+                - name: 서버 개체(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+                - name: Microsoft OLAP 논리 아키텍처 이해
+                  href: ../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
+            - name: OLAP 실제
+              items:
+                - name: Analysis Services 배포의 클라이언트 아키텍처 요구 사항
+                  href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+                - name: Analysis Services의 데이터 형식
+                  href: ../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md
+                - name: 로컬 큐브(Analysis Services - 다차원 데이터)
+                  href: ../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+                - name: 최대 용량 사양(Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+                - name: 개체 명명 규칙(Analysis Services)
+                  href: ../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+                - name: OLAP 엔진 서버 구성 요소
+                  href: ../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md
+                - name: Microsoft OLAP 아키텍처 이해
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+                - name: Microsoft OLAP 물리적 아키텍처 이해
+                  href: ../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
+            - name: OLAP 확장
+              items:
+                - name: OLAP 기능 확장
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-functionality.md
+                - name: 개별화를 통해 OLAP 확장
+                  href: ../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+                - name: Analysis Services 개인 설정 확장 프로그램
+                  href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+                - name: 저장 프로시저의 쿼리 컨텍스트 액세스
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+                - name: 저장 프로시저 호출
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+                - name: 저장 프로시저 만들기
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+                - name: 저장 프로시저 디버깅
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+                - name: 저장 프로시저 정의
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+                - name: 저장 프로시저 디자인
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+                - name: 저장 프로시저의 보안 설정
+                  href: ../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: MDX(Multidimensional Data Expressions)
           items:
-            - name: MDX 쿼리 - 기본 쿼리
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
-            - name: MDX 쿼리 - EXISTING 키워드
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
-            - name: MDX 쿼리 및 Slicer 축 - 쿼리 제한
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
-            - name: MDX 쿼리 및 Slicer 축 - 쿼리 축의 내용 지정
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
-            - name: MDX 쿼리 및 Slicer 축 - Slicer 축의 내용 지정
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
-            - name: MDX 쿼리 및 Slicer 축 - 간단한 예에서 축 사용
-              href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
-            - name: 쿼리에 큐브 컨텍스트 설정
-              href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
-            - name: MDX로 하위 큐브 작성
-              href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
-            - name: MDX 명명된 집합 - 빌드
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
-            - name: MDX 명명된 집합 - 쿼리 범위 집합 만들기
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
-            - name: MDX 명명된 집합 - 세션 범위 집합 만들기
-              href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
-            - name: MDX 계산 멤버 - 계산 멤버 작성
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
-            - name: MDX 계산 멤버 - 쿼리 범위
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
-            - name: MDX 계산 멤버 - 세션 범위
-              href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
-            - name: MDX 셀 계산 - 빌드
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
-            - name: MDX 셀 계산 - 쿼리 범위
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
-            - name: MDX 셀 계산 - 세션 범위
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
-            - name: MDX 빌드 측정값
-              href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
-            - name: MDX 멤버 속성
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
-            - name: MDX 멤버 속성 - 내장
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
-            - name: MDX 멤버 속성 - 사용자 정의
-              href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
-            - name: MDX 셀 속성 - 사용
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
-            - name: MDX 셀 속성 - FORMAT_STRING 콘텐츠
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
-            - name: MDX 셀 속성 - FORE_COLOR 및 BACK_COLOR 콘텐츠
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
-            - name: MDX 셀 속성 - FORMATTED_VALUE
-              href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
-            - name: MDX 데이터 조작
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
-            - name: MDX 데이터 조작 - DRILLTHROUGH를 사용하여 원본 데이터 검색
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
-            - name: MDX 데이터 조작 - RollupChildren 함수
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
-            - name: MDX 데이터 조작 - 패스 및 계산 순서 이해
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
-            - name: MDX 데이터 수정
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
-            - name: MDX 데이터 수정 - 큐브 쓰기 저장(Writeback) 사용
-              href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
-            - name: 변수 및 매개 변수 사용
-              href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
-        - name: MDX 스크립팅 기본 사항
-          href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
-          items:
-            - name: 기본 MDX 스크립트
-              href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
-            - name: 범위 및 컨텍스트 관리
-              href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
-            - name: 오류 처리
-              href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
-            - name: 지원되는 MDX
-              href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
+            - name: MDX를 사용하여 데이터 액세스
+              href: ../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md
+            - name: MDX를 사용하여 다차원 데이터 쿼리
+              href: ../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md
+            - name: MDX의 주요 개념
+              href: ../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md
+              items:
+                - name: AUTOEXIST
+                  href: ../analysis-services/multidimensional-models/mdx/autoexists.md
+                - name: 계산 컨텍스트
+                  href: ../analysis-services/multidimensional-models/mdx/calculation-context.md
+                - name: 하위 SELECT 및 하위 큐브의 계산 멤버
+                  href: ../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md
+                - name: 큐브 공간
+                  href: ../analysis-services/multidimensional-models/mdx/cube-space.md
+                - name: 쿼리의 하위 SELECT
+                  href: ../analysis-services/multidimensional-models/mdx/subselects-in-queries.md
+                - name: 튜플
+                  href: ../analysis-services/multidimensional-models/mdx/tuples.md
+                - name: 보이는 값 합계 및 보이지 않는 값 합계
+                  href: ../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md
+                - name: '멤버, 튜플 및 집합 작업(MDX)'
+                  href: ../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md
+            - name: MDX 쿼리 기본 사항
+              href: ../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md
+              items:
+                - name: MDX 쿼리 - 기본 쿼리
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md
+                - name: MDX 쿼리 - EXISTING 키워드
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md
+                - name: MDX 쿼리 및 Slicer 축 - 쿼리 제한
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md
+                - name: MDX 쿼리 및 Slicer 축 - 쿼리 축의 내용 지정
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+                - name: MDX 쿼리 및 Slicer 축 - Slicer 축의 내용 지정
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+                - name: MDX 쿼리 및 Slicer 축 - 간단한 예에서 축 사용
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+                - name: 쿼리에 큐브 컨텍스트 설정
+                  href: ../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md
+                - name: MDX로 하위 큐브 작성
+                  href: ../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md
+                - name: MDX 명명된 집합 - 빌드
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md
+                - name: MDX 명명된 집합 - 쿼리 범위 집합 만들기
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md
+                - name: MDX 명명된 집합 - 세션 범위 집합 만들기
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md
+                - name: MDX 계산 멤버 - 계산 멤버 작성
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md
+                - name: MDX 계산 멤버 - 쿼리 범위
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md
+                - name: MDX 계산 멤버 - 세션 범위
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md
+                - name: MDX 셀 계산 - 빌드
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md
+                - name: MDX 셀 계산 - 쿼리 범위
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md
+                - name: MDX 셀 계산 - 세션 범위
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md
+                - name: MDX 빌드 측정값
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-building-measures.md
+                - name: MDX 멤버 속성
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties.md
+                - name: MDX 멤버 속성 - 내장
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md
+                - name: MDX 멤버 속성 - 사용자 정의
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md
+                - name: MDX 셀 속성 - 사용
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md
+                - name: MDX 셀 속성 - FORMAT_STRING 콘텐츠
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md
+                - name: MDX 셀 속성 - FORE_COLOR 및 BACK_COLOR 콘텐츠
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md
+                - name: MDX 셀 속성 - FORMATTED_VALUE
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-cell-properties-formatted-value-property.md
+                - name: MDX 데이터 조작
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md
+                - name: MDX 데이터 조작 - DRILLTHROUGH를 사용하여 원본 데이터 검색
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+                - name: MDX 데이터 조작 - RollupChildren 함수
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-rollupchildren-function.md
+                - name: MDX 데이터 조작 - 패스 및 계산 순서 이해
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+                - name: MDX 데이터 수정
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md
+                - name: MDX 데이터 수정 - 큐브 쓰기 저장(Writeback) 사용
+                  href: ../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md
+                - name: 변수 및 매개 변수 사용
+                  href: ../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md
+            - name: MDX 스크립팅 기본 사항
+              href: ../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md
+              items:
+                - name: 기본 MDX 스크립트
+                  href: ../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md
+                - name: 범위 및 컨텍스트 관리
+                  href: ../analysis-services/multidimensional-models/mdx/managing-scope-and-context-mdx.md
+                - name: 오류 처리
+                  href: ../analysis-services/multidimensional-models/mdx/error-handling-mdx.md
+                - name: 지원되는 MDX
+                  href: ../analysis-services/multidimensional-models/mdx/supported-mdx-mdx.md
     - name: 데이터 마이닝
       items:
         - name: 데이터 마이닝 프로그래밍

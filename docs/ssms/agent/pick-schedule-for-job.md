@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Pick Schedule for Job dialog box
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 38a26cecb2915f992578e49dc48ad6447f8d4223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce303fcf282a25515e87005ac9e8225e612e17fd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635991"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088850"
 ---
 # <a name="pick-schedule-for-job"></a>작업 일정 선택
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47635991"
 
 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 기존 일정을 선택할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **사용 가능한 일정**  
 이 작업에 사용할 수 있는 일정을 나열합니다. 작업과 일정의 소유자가 같아야 하므로 이 목록에는 작업 소유자가 소유한 일정만 포함됩니다.  
   

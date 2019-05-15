@@ -25,12 +25,12 @@ ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 997334b76a2f07d5e9c9b7a06cc5499838251e7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665083"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503437"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +50,7 @@ ms.locfileid: "47665083"
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -98,7 +96,7 @@ ms.locfileid: "47665083"
   
  GET CONVERSATION GROUP은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  큐에서 대화 그룹 식별자를 가져오려면 현재 사용자가 큐에 대한 RECEIVE 권한을 가져야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -127,7 +125,7 @@ WAITFOR (
 TIMEOUT 60000 ;  
 ```  
   
-### <a name="c-getting-a-conversation-group-returning-immediately"></a>3. 즉시 실행하여 대화 그룹 가져오기  
+### <a name="c-getting-a-conversation-group-returning-immediately"></a>C. 즉시 실행하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 사용 가능한 메시지가 없으면 `GET CONVERSATION GROUP`은 `@conversation_group_id`를 변경하지 않은 채 즉시 반환합니다.  
   
 ```  

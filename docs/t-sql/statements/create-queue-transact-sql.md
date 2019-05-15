@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc12318b9d19ec7d14d1d97e5c83276fedfe6c98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777471"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503237"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +60,10 @@ CREATE QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <procedure> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }  
   
 ```  
   
@@ -159,16 +153,16 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|이 메시지가 속하는 대화의 핸들입니다.|  
 |message_sequence_number|**bigint**|대화 내의 메시지 시퀀스 번호입니다.|  
 |service_name|**nvarchar(512)**|대화와 연관된 서비스의 이름입니다.|  
-|service_id|**int**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|service_id|**ssNoversion**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |service_contract_name|**nvarchar(256)**|대화에서 준수하는 계약의 이름입니다.|  
-|service_contract_id|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|service_contract_id|**ssNoversion**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |message_type_name|**nvarchar(256)**|메시지를 설명하는 메시지 유형의 이름입니다.|  
-|message_type_id|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|message_type_id|**ssNoversion**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |validation|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> E=비어 있음<br /><br /> N=없음<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|메시지 내용입니다.|  
 |message_id|**uniqueidentifier**|메시지의 고유 식별자입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  큐를 만들 수 있는 권한은 기본적으로 ddl_admin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
  큐에 대한 REFERENCES 권한은 기본적으로 큐의 소유자, ddl_admin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
@@ -191,7 +185,7 @@ CREATE QUEUE ExpenseQueue ;
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
-### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>3. 큐 만들기 및 내부 활성화 정보 지정  
+### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. 큐 만들기 및 내부 활성화 정보 지정  
  다음 예에서는 메시지를 받을 수 있는 큐를 만듭니다. 큐에서 메시지를 받으면 큐가 `expense_procedure` 저장 프로시저를 시작합니다. 이 저장 프로시저는 `ExpenseUser` 사용자로 실행됩니다. 큐는 최대 `5`개의 저장 프로시저 인스턴스를 시작합니다.  
   
 ```  
@@ -203,7 +197,7 @@ CREATE QUEUE ExpenseQueue
         EXECUTE AS 'ExpenseUser' ) ;  
 ```  
   
-### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>4. 특정 파일 그룹에 큐 만들기  
+### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. 특정 파일 그룹에 큐 만들기  
  다음 예에서는 `ExpenseWorkFileGroup` 파일 그룹에 큐를 만듭니다.  
   
 ```  
@@ -211,7 +205,7 @@ CREATE QUEUE ExpenseQueue
     ON ExpenseWorkFileGroup ;  
 ```  
   
-### <a name="e-creating-a-queue-with-multiple-parameters"></a>5. 여러 매개 변수로 큐 만들기  
+### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 여러 매개 변수로 큐 만들기  
  다음 예에서는 `DEFAULT` 파일 그룹에 큐를 만듭니다. 이 큐는 사용할 수 없습니다. 메시지가 속한 대화가 끝날 때까지 이 큐에 메시지가 보관됩니다. ALTER QUEUE를 사용하여 큐를 사용할 수 있게 설정하면 큐가 `2008R2.dbo.expense_procedure` 저장 프로시저를 시작하여 메시지를 처리합니다. 이 저장 프로시저는 `CREATE QUEUE` 문을 실행한 사용자로 실행됩니다. 큐는 최대 `10`개의 저장 프로시저 인스턴스를 시작합니다.  
   
 ```  

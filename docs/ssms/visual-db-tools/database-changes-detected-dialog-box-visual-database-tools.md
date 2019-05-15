@@ -12,15 +12,15 @@ f1_keywords:
 - vdtsql.chm:65543
 - vdtsql.chm:65554
 ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e55edc62cac89390b059b39825c5603b513b7b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a55f1cf74c8d0a98256811095d43fed1ebe10d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789091"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095161"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>데이터베이스 변경 감지 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47789091"
 > [!NOTE]  
 > 테이블이나 데이터베이스 다이어그램에 적용된 변경 내용을 실행 취소할 수는 없지만 테이블이나 다이어그램을 저장하기 전까지는 변경 내용이 데이터베이스에 저장되지 않습니다. **아니요** 를 선택하고 모든 열려 있는 다이어그램을 저장하지 않은 채 닫으면 저장되지 않은 변경 내용을 모두 취소할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **차이점 발견 경고**  
 이후에 데이터베이스 다이어그램이나 선택된 테이블을 저장하려 할 때 이 대화 상자를 표시할지 여부를 지정합니다. 이 옵션을 선택하면 오래된 다이어그램이나 테이블을 데이터베이스와 함께 저장하려 할 때마다 이 대화 상자가 계속하여 나타납니다. 이 옵션을 해제하면 대화 상자가 나타나지 않습니다. 이 확인란은 기본적으로 선택되어 있습니다. 이 옵션이 해제되어 있는 경우 **옵션** 대화 상자에서 다시 선택할 수 있습니다.  
   

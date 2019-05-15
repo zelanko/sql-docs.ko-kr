@@ -25,15 +25,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667052"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102062"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 이 항목에서는 Transact-SQL 편집기의 일부 옵션에 대한 정보를 제공합니다. 이러한 옵션을 설정하려면 **옵션** 대화 상자에서 **도구\옵션** 메뉴로 이동합니다.  

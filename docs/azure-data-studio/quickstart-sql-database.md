@@ -2,8 +2,8 @@
 title: '빠른 시작: Azure SQL database 연결 및 쿼리'
 titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure 데이터 Studio를 사용 하 여 SQL database에 연결 하 고 쿼리를 실행 하는 방법을 보여 줍니다.
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255950"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620363"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL database에 연결하고 쿼리하기
 
@@ -39,7 +39,7 @@ Azure SQL server가 없는 경우, 다음 Azure SQL Database 빠른 시작 중 �
 
 Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용합니다.
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면, **서버** 사이드바의 **연결 추가**, 또는 **새 연결** 아이콘을 선택합니다.
+1. 처음 실행 하면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 는 **시작** 페이지가 열려야 합니다. 표시 되지 않는 경우는 **시작** 페이지에서 **도움말** > **시작**합니다. 선택 **새 연결** 열려는 합니다 **연결** 창:
    
    ![새 연결 아이콘](media/quickstart-sql-database/new-connection-icon.png)
 
