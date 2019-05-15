@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.connection.f1
 ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e243186d8c5a5747e73eb2098cae5c5c041134ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6cdb4cc45876377a34e75fbdaffa8bd726d8e64
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845741"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089409"
 ---
 # <a name="sql-server-agent-properties-connection-page"></a>SQL Server 에이전트 속성(연결 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47845741"
 
 이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]간의 연결 설정을 확인하고 수정할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **로컬 호스트 서버 별칭**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에 연결하는 데 사용할 별칭을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 기본 연결 옵션을 사용할 수 없는 경우 인스턴스에 대한 별칭을 정의한 후 여기에서 해당 별칭을 지정합니다.  
   

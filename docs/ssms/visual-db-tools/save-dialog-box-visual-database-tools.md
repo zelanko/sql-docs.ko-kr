@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65541
 - vdt.dlgbox.save
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2a2a05ecd4156d7ec93f7ae543409cab99044f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08c851ad758d4320e0f45041d24e1a1d9ea3b423
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849421"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099209"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47849421"
 > [!NOTE]  
 > 테이블 디자이너에서 테이블에 대해 변경한 내용을 데이터베이스에 커밋하려면 테이블을 저장해야 합니다. 테이블을 저장한 후에는 변경 내용을 취소할 수 없습니다. 저장되지 않은 변경 내용을 취소하려면 열려 있는 모든 테이블을 저장하지 않은 채 닫습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **영향을 받는 테이블 경고**  
 선택한 테이블을 다음에 저장할 때 이 대화 상자를 표시할지 여부를 지정합니다. 이 확인란은 기본적으로 선택되어 있습니다. 이 옵션을 해제한 경우 **옵션** 대화 상자에서 다시 선택할 수 있습니다.  
   

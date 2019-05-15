@@ -13,16 +13,16 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cdf2add41c7aec5a4044ea05271cfa723a8da2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607111"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946108"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47607111"
 > [!NOTE]  
 >  필드를 내보낼 때 접두사 길이 프롬프트에 제공되는 기본값은 해당 필드에 가장 효과적인 접두사 길이를 나타냅니다.  
   
- Null 값이 빈 필드로 나타납니다. 필드가 비어 있음(NULL)을 나타내기 위해 필드 접두사에 -1을 포함하므로 최소 1바이트가 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 열에서 Null 값을 허용하는 경우 해당 열은 파일 저장 유형에 따라 1이상의 접두사 길이가 필요합니다.  
+ Null 값이 빈 필드로 나타납니다. 필드가 비어 있음(NULL)을 나타내기 위해 필드 접두사에 -1을 포함하므로 최소 1바이트가 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 열에서 Null 값을 허용하는 경우 해당 열은 파일 스토리지 유형에 따라 1이상의 접두사 길이가 필요합니다.  
   
  대량 내보내기한 데이터를 네이티브 데이터 형식이나 문자 형식으로 저장하는 경우 다음 표에서 설명하는 접두사 길이를 사용하십시오.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47607111"
 |**numeric**|1|1|1|1|  
 |**float**|0|1|0|1|  
 |**real**|0|1|0|1|  
-|**int**|0|1|0|1|  
+|**ssNoversion**|0|1|0|1|  
 |**bigint**|0|1|0|1|  
 |**smallint**|0|1|0|1|  
 |**tinyint**|0|1|0|1|  
@@ -98,6 +98,6 @@ ms.locfileid: "47607111"
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
- [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

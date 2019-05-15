@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939701"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626768"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,6 +62,10 @@ ms.locfileid: "62939701"
 |memory_object_address|**varbinary(8)**|스케줄러 메모리 개체의 메모리 주소입니다. NULL을 허용하지 않습니다.|  
 |task_memory_object_address|**varbinary(8)**|태스크 메모리 개체의 메모리 주소입니다. Null을 허용하지 않습니다. 자세한 내용은 [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)합니다.|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] SQLOS에 사용된 스케줄러 퀀텀을 노출합니다.|  
+| total_cpu_usage_ms |**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 <br><br> 총 CPU 작업 자가 비선점형 보고이 스케줄러에서 사용 합니다. Null을 허용하지 않습니다.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 기반 조정을 나타냅니다 [서비스 수준 목표](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), 값은 항상 0의 비 Azure 버전에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. Null을 허용합니다.|
+|total_scheduler_delay_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 <br><br> 외부 전환 하는 하나의 작업자 및 다른 전환 사이의 시간입니다. 선점형 작업 자가 비선점형 다음 작업자에 또는 다른 프로세스에서 스레드를 예약 하는 OS로 인해 예약 지연 발생할 수 있습니다. Null을 허용하지 않습니다.|
+|ideal_workers_limit|**int**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br> 얼마나 많은 작업 자가 스케줄러에 이상적으로 있어야 합니다. 현재 작업 자가 유휴 상태가 되 면 불균형 작업 부하로 인해 제한을 초과 하는 경우 잘립니다. Null을 허용하지 않습니다.|
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
