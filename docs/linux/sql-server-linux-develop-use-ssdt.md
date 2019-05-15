@@ -12,7 +12,7 @@ ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
 ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
 ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/07/2019
 ms.locfileid: "52750365"
