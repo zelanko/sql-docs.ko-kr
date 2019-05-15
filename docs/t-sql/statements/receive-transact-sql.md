@@ -22,12 +22,12 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5016c697c83ff286fe9d1d66f59dad92f1c534dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700931"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503673"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,7 @@ ms.locfileid: "51700931"
 }     [ ,...n ]   
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
-  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -169,15 +165,15 @@ ms.locfileid: "51700931"
 |**conversation_handle**|**uniqueidentifier**|이 메시지가 속하는 대화의 핸들입니다.|  
 |**message_sequence_number**|**bigint**|대화 내의 메시지 시퀀스 번호입니다.|  
 |**service_name**|**nvarchar(512)**|대화와 연관된 서비스의 이름입니다.|  
-|**service_id**|**int**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**service_id**|**ssNoversion**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**service_contract_name**|**nvarchar(256)**|대화에서 준수하는 계약의 이름입니다.|  
-|**service_contract_id**|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**service_contract_id**|**ssNoversion**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 응용 프로그램 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
-|**message_type_id**|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**message_type_id**|**ssNoversion**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|메시지 내용입니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  메시지를 받으려면 현재 사용자는 큐에서 RECEIVE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -197,14 +193,14 @@ RECEIVE conversation_handle, message_type_name, message_body
 FROM ExpenseQueue ;  
 ```  
   
-### <a name="c-receiving-the-first-available-message-in-the-queue"></a>3. 큐에서 수신 가능한 첫 번째 메시지 받기  
+### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. 큐에서 수신 가능한 첫 번째 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 수신 가능한 첫 번째 메시지를 결과 집합으로 받습니다.  
   
 ```  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
-### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>4. 지정된 대화에 대한 모든 메시지 받기  
+### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. 지정된 대화에 대한 모든 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화에 대해 수신 가능한 모든 메시지를 결과 집합으로 받습니다.  
   
 ```  
@@ -217,7 +213,7 @@ FROM ExpenseQueue
 WHERE conversation_handle = @conversation_handle ;  
 ```  
   
-### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>5. 지정된 대화 그룹에 대한 메시지 받기  
+### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. 지정된 대화 그룹에 대한 메시지 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화 그룹에 대해 수신 가능한 모든 메시지를 결과 집합으로 받습니다.  
   
 ```  
@@ -231,7 +227,7 @@ FROM ExpenseQueue
 WHERE conversation_group_id = @conversation_group_id ;  
 ```  
   
-### <a name="f-receiving-into-a-table-variable"></a>6. 테이블 변수로 받기  
+### <a name="f-receiving-into-a-table-variable"></a>F. 테이블 변수로 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 지정된 대화 그룹에 대해 수신 가능한 모든 메시지를 테이블 변수로 받습니다.  
   
 ```  
@@ -263,7 +259,7 @@ INTO @procTable
 WHERE conversation_group_id = @conversation_group_id ;  
 ```  
   
-### <a name="g-receiving-messages-and-waiting-indefinitely"></a>7. 메시지 받기 및 무기한 대기  
+### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. 메시지 받기 및 무기한 대기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 적어도 하나 이상의 메시지를 사용할 수 있을 때까지 대기한 다음 모든 메시지 열을 포함하는 결과 집합을 반환합니다.  
   
 ```  
@@ -272,7 +268,7 @@ WAITFOR (
     FROM ExpenseQueue) ;  
 ```  
   
-### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>8. 메시지 받기 및 지정된 기간 동안 대기  
+### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. 메시지 받기 및 지정된 기간 동안 대기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 어떤 경우가 먼저 발생하는지에 관계없이 60초 동안 대기하거나 적어도 하나 이상의 메시지를 사용할 수 있을 때까지 대기합니다. 적어도 하나 이상의 메시지를 사용할 수 있으면 문은 모든 메시지 열을 포함하는 결과 집합을 반환합니다. 그렇지 않으면 빈 결과 집합을 반환합니다.  
   
 ```  
@@ -296,7 +292,7 @@ WAITFOR (
 TIMEOUT 60000 ;  
 ```  
   
-### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>10. 메시지 받기, 메시지 본문에서 데이터 추출, 대화 상태 검색  
+### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. 메시지 받기, 메시지 본문에서 데이터 추출, 대화 상태 검색  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대해 수신 가능한 다음 메시지를 받습니다. 메시지가 `//Adventure-Works.com/Expenses/SubmitExpense` 유형이면 문은 메시지 본문에서 직원 ID와 항목 목록을 추출합니다. 또한 문은 `ConversationState` 테이블에서 대화의 상태를 검색합니다.  
   
 ```  

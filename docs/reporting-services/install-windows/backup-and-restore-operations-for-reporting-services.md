@@ -1,25 +1,28 @@
 ---
 title: Reporting Services 백업 및 복원 작업 | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 157bc376-ab72-4c99-8bde-7b12db70843a
-ms.date: 05/24/2018
-ms.openlocfilehash: 557dd30f14bf990cdfce2dd5e2de153bec3a72c4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.date: 05/08/2019
+ms.openlocfilehash: 8e56ea122ccd0760ea50a901a80b84b6035ef487
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390286"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503059"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Reporting Services 백업 및 복원 작업
 
   이 문서에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 원본 파일 등의 백업이 포함됩니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+
+> [!NOTE]
+> SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
  백업 및 복원 작업은 주로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 전체나 일부를 이동하는 데 사용됩니다.  
   
@@ -27,11 +30,14 @@ ms.locfileid: "52390286"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 새 컴퓨터로 이동하는 것을 마이그레이션이라고 합니다. 설치를 마이그레이션할 때는 설치 프로그램을 실행하여 새 보고서 서버 인스턴스를 설치한 후 인스턴스 데이터를 새 컴퓨터로 복사합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하는 방법에 대한 자세한 내용은 다음 문서를 참조하십시오.  
   
-    -   [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+    - [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+    - [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+
+    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
-    -   [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
-  
-    -   [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    - [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+
+    ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>보고서 서버 데이터베이스 백업  
  보고서 서버는 상태 비저장 서버이므로 애플리케이션 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 방법 중 하나를 사용하여 **reportserver** 및 **reportservertempdb** 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
@@ -43,17 +49,27 @@ ms.locfileid: "52390286"
 -   데이터베이스마다 다른 백업 일정을 사용할 수 있습니다. **reportservertempdb** 를 백업하는 유일한 이유는 하드웨어 오류가 있을 때 데이터베이스를 다시 만들지 않아도 되게 하기 위해서입니다. 하드웨어 오류가 발생할 경우 **reportservertempdb**의 데이터를 복구할 필요는 없지만 테이블 구조는 복구해야 합니다. **reportservertempdb**가 손실된 경우 보고서 서버 데이터베이스를 다시 만들어야만 복구가 가능합니다. **reportservertempdb**를 다시 만드는 경우에는 기본 보고서 서버 데이터베이스와 같은 이름을 지정하는 것이 중요합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 백업 및 복구에 대한 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"  
+
 > [!IMPORTANT]  
 >  보고서 서버가 SharePoint 모드에 있는 경우에는 SharePoint 구성 데이터베이스 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 경고 데이터베이스 등 추가 데이터베이스를 고려해야 합니다. SharePoint 모드에서는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 대해 3개의 데이터베이스( **Reportserver**, **reportservertempdb**및 **dataalerting** 데이터베이스)가 만들어집니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)을 참조하세요.  
+
+::: moniker-end
   
 ## <a name="backing-up-the-encryption-keys"></a>암호화 키 백업  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 처음으로 구성하는 경우에는 암호화 키를 백업해야 합니다. 서비스 계정의 ID를 변경하거나 컴퓨터 이름을 바꾸는 경우에도 항상 키를 백업해야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요. SharePoint 모드 보고서 서버에 대한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 처음으로 구성하는 경우에는 암호화 키를 백업해야 합니다. 서비스 계정의 ID를 변경하거나 컴퓨터 이름을 바꾸는 경우에도 항상 키를 백업해야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+SharePoint 모드 보고서 서버에 대한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션을 참조하세요.  
+
+::: moniker-end
   
 ## <a name="backing-up-the-configuration-files"></a>구성 파일 백업  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 구성 파일을 사용하여 응용 프로그램 설정을 저장합니다. 서버를 처음 구성할 때와 사용자 지정 확장 프로그램을 배포한 후에 파일을 백업해야 합니다. 백업할 파일에는 다음이 포함됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 구성 파일을 사용하여 애플리케이션 설정을 저장합니다. 서버를 처음 구성할 때와 사용자 지정 확장 프로그램을 배포한 후에 파일을 백업해야 합니다. 백업할 파일에는 다음이 포함됩니다.  
   
--   Rsreportserver.config  
+-   RSReportServer.config  
   
 -   Rssvrpolicy.config  
   
