@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.references.f1
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9cde086cf2b9d96d0224cf294ba2d5428bc589f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 885d85b1a9dc8c665572155597629730a05dd1d9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774661"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088810"
 ---
 # <a name="proxy-account-properties-references-tab"></a>프록시 계정 속성(참조 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47774661"
 
 이 읽기 전용 페이지에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정을 참조하는 작업 단계가 나열됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **작업 이름**  
 이 프록시 계정을 사용하는 작업의 이름입니다.  
   

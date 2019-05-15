@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.definecolumncollation
 - vdtsql.chm:65561
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3876b59b4ca11bb81d590e4f5941be7da0c497e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ffdd615647e1dea318d5cec7fa5075b6449b4dae
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505275"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093833"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52505275"
   
 -   **열 속성** 탭의 **데이터 정렬** 필드를 클릭한 다음, 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭한 경우  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
 **SQL 데이터 정렬**  
 드롭다운 목록의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 정의되어 있는 데이터 정렬 순서 중에서 하나를 선택합니다.  
   
