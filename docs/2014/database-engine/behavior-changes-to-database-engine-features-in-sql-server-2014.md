@@ -102,7 +102,7 @@ select geometry::Parse('POLYGON EMPTY').STEnvelope().ToString()
  XML 모드를 사용 하 여 sqlcmd.exe를 사용 하는 경우 동작 변경 내용이 (: XML ON 명령) SELECT를 실행 하는 경우 * from T FOR XML...  
   
 ### <a name="dbcc-checkident-revised-message"></a>DBCC CHECKIDENT 수정 메시지  
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 DBCC CHECKIDENT 명령을 통해 반환되는 메시지는 해당 명령을 RESEED *new_reseed_value*  에 사용하는 경우에만 현재 ID 값을 변경하도록 변경되었습니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 DBCC CHECKIDENT 명령을 통해 반환되는 메시지는 해당 명령을 RESEED *new_reseed_value*  에 사용하는 경우에만 현재 ID 값을 변경하도록 변경되었습니다. 새 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."  
   
  이전 버전의 메시지는 "id 정보 확인: 현재 id 값 '\<현재 id 값 >', 현재 열 값 '\<현재 열 값 >'입니다. DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요." DBCC CHECKIDENT를 지정할 때 NORESEED를 사용하거나 두 번째 매개 변수를 사용하지 않거나 reseed 값을 사용하지 않으면 메시지가 변경되지 않습니다. 자세한 내용은 [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)를 참조하세요.  
   
