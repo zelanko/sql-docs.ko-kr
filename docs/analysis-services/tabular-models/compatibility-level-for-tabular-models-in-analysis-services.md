@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 테이블 형식 모델에 호환성 수준 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472322"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709120"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   합니다 *호환성 수준* Analysis Services 엔진의 릴리스 관련 동작을 가리킵니다. 예를 들어 DirectQuery 및 테이블 형식 개체 메타 데이터는 호환성 수준에 따라 서로 다른 구현을 갖습니다. 일반에 서버에서 지 원하는 최신 호환성 수준을 선택 해야 합니다.
 
-  **최신 호환성 수준은 1400입니다.** 
+  **최신 지원 되는 호환성 수준은 1400입니다.** 
   
 1400 호환성 수준에서 주요 기능은 다음과 같습니다.
 
@@ -38,8 +38,9 @@ ms.locfileid: "63472322"
 |||  
 |-|-|- 
 |**호환성 수준**|**서버 버전**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|SQL Server 2019 (CTP 2.3 이상) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
