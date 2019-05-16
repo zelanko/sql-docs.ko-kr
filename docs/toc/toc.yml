@@ -223,7 +223,6 @@
               href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Azure BLOB 스토리지
               href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
-            - name: 상호 운용성 및 공존성
         - name: 방법
           items:
             - name: Azure에 백업
@@ -353,6 +352,9 @@
                 - name: 존재하지 않는 파일 그룹 제거
                   href: ../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md
                 - name: suspect_pages 테이블 관리
+                  href: ../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md
+                - name: 상호 운용성 및 공존성
+                  href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
         - name: 개념
           items:
             - name: Azure

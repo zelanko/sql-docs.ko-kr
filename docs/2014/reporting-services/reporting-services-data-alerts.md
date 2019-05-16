@@ -13,7 +13,7 @@ ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3e317659f4c0efb964b996de7afd46663538eed
 ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/22/2019
 ms.locfileid: "59958719"
@@ -21,7 +21,7 @@ ms.locfileid: "59958719"
 # <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 사용자가 관심을 가지고 있거나 사용자에게 중요한 보고서 데이터에 대한 정보를 적절한 시간에 받아 볼 수 있게 해주는 데이터 기반의 경고 솔루션입니다. 데이터 경고를 사용하면 정보를 자동으로 받아 볼 수 있으므로 더 이상 정보를 직접 찾을 필요가 없습니다.  
   
- 데이터 경고 메시지는 전자 메일로 전송됩니다. 정보의 중요도에 따라 메시지를 자주 보내거나 가끔 보내도록 선택하고 결과가 변경될 경우에만 메시지를 보내도록 선택할 수 있습니다. 전자 메일 받는 사람을 여러 명 지정하고 다른 사람들에게도 정보를 알려 효율성 및 공동 작업을 향상시킬 수 있습니다.  
+ 데이터 경고 메시지는 전자 메일로 전송됩니다. 정보의 중요도에 따라 메시지를 자주 보내거나 가끔 보내도록 선택하고 결과가 변경될 경우에만 메시지를 보내도록 선택할 수 있습니다. 전자 메일 받는 사람을 여러 명 지정하고 다른 사람들에게도 정보를 알려 효율성 및 협업을 향상시킬 수 있습니다.  
   
 ||  
 |-|  

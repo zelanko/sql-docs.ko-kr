@@ -19,7 +19,7 @@ ms.locfileid: "63273834"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
-**SharePoint 모드**에 대해 구성된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 공동 작업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
+**SharePoint 모드**에 대해 구성된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 협업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
   
 설치 및 구성하는 방법은 다음 항목을 참조하세요.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63273834"
 
  SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성하면 이 모드에서 보고서 서버를 배포할 때만 사용 가능한 다음 추가 기능이 제공됩니다.  
   
--   경고를 포함한 SharePoint 문서 관리 및 공동 작업 기능을 사용할 수 있습니다. SharePoint 사이트는 단일 위치에서 모든 보고서 항목에 대해 액세스 및 관리 작업을 수행할 수 있는 통합 포털을 제공합니다.  
+-   경고를 포함한 SharePoint 문서 관리 및 협업 기능을 사용할 수 있습니다. SharePoint 사이트는 단일 위치에서 모든 보고서 항목에 대해 액세스 및 관리 작업을 수행할 수 있는 통합 포털을 제공합니다.  
   
 -   SharePoint 권한 및 인증 공급자를 사용하여 보고서, 모델 및 기타 항목에 대한 액세스를 제어할 수 있습니다.  
   

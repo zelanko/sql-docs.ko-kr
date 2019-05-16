@@ -22,7 +22,7 @@ ms.locfileid: "59583356"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  **SharePoint 모드**에 구성된 Reporting Services 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 공동 작업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 Reporting Services 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
+  **SharePoint 모드**에 구성된 Reporting Services 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 협업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 Reporting Services 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
   
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
@@ -37,7 +37,7 @@ ms.locfileid: "59583356"
 
  SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성하면 이 모드에서 보고서 서버를 배포할 때만 사용 가능한 다음 추가 기능이 제공됩니다.  
   
--   경고를 포함한 SharePoint 문서 관리 및 공동 작업 기능을 사용할 수 있습니다. SharePoint 사이트는 단일 위치에서 모든 보고서 항목에 대해 액세스 및 관리 작업을 수행할 수 있는 통합 포털을 제공합니다.  
+-   경고를 포함한 SharePoint 문서 관리 및 협업 기능을 사용할 수 있습니다. SharePoint 사이트는 단일 위치에서 모든 보고서 항목에 대해 액세스 및 관리 작업을 수행할 수 있는 통합 포털을 제공합니다.  
   
 -   SharePoint 권한 및 인증 공급자를 사용하여 보고서, 모델 및 기타 항목에 대한 액세스를 제어할 수 있습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59583356"
   
 -   *로컬 모드*: 로컬 모드에서는 Reporting Services 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 Reporting Services 추가 기능이 필요하지만 Reporting Services 보고서 서버는 필요하지 않습니다. 추가 기능은 SharePoint 2010 제품 준비 도구를 비롯한 여러 가지 방법으로 설치할 수 있습니다. 로컬 모드에 대한 자세한 내용은 [보고서 뷰어의 로컬 모드 및 연결된 모드 보고서](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 및 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
--   *연결된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 Reporting Services 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 공동 작업 기능과 구독, 스냅숏 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
+-   *연결된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 Reporting Services 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 협업 기능과 구독, 스냅숏 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
   
 ## <a name="unsupported-sharepoint-features"></a>지원되지 않는 SharePoint 기능
 

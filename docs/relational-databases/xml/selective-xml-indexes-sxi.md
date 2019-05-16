@@ -30,7 +30,7 @@ ms.locfileid: "58513349"
   
  일반 XML 인덱스의 주요 제한 사항은 일반 인덱스는 전체 XML 문서를 인덱싱한다는 것입니다. 이로 인해 쿼리 성능 저하 및 주로 인덱스의 스토리지 비용과 관련된 인덱스의 유지 관리 비용 증가와 같은 몇 가지 중요한 단점이 생겨났습니다.  
   
- 선택적 XML 인덱스 기능을 사용하면 특정 경로만 XML 문서에서 인덱스로 승격시킬 수 있습니다. 인덱스를 만들 때 이러한 경로가 승격되고 이러한 경로가 가리키는 노드는 분할되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관계형 테이블 내에 저장됩니다. 이 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 팀이 공동으로 개발한 효율적인 매핑 알고리즘을 사용합니다. 이 알고리즘은 XML 노드를 단일 관계형 테이블에 매핑하며, 적당한 스토리지 공간만을 사용하면서도 뛰어난 성능을 제공합니다.  
+ 선택적 XML 인덱스 기능을 사용하면 특정 경로만 XML 문서에서 인덱스로 승격시킬 수 있습니다. 인덱스를 만들 때 이러한 경로가 승격되고 이러한 경로가 가리키는 노드는 분할되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관계형 테이블 내에 저장됩니다. 이 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 팀의 협업으로 개발한 효율적인 매핑 알고리즘을 사용합니다. 이 알고리즘은 XML 노드를 단일 관계형 테이블에 매핑하며, 적당한 스토리지 공간만을 사용하면서도 뛰어난 성능을 제공합니다.  
   
  또한 선택적 XML 인덱스 기능은 선택적 XML 인덱스에 의해 이미 인덱싱된 노드에 대해 보조 선택적 XML 인덱스를 지원합니다. 이러한 보조 선택적 인덱스는 효율적이며, 쿼리 성능을 한층 더 향상시킵니다.  
   
