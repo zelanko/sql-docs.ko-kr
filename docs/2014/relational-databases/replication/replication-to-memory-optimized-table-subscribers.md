@@ -301,7 +301,7 @@ GO
   
 -   구독자에서 메모리 최적화 테이블에 복제하는 테이블의 기본 키는 업데이트하는 데 제한 사항이 있습니다. 자세한 내용은 [기본 키에 변경 내용 복제](#PrimaryKey)합니다.  
   
--   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
+-   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 T-SQL 구문](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
   
 ##  <a name="Schema"></a> 스키마 파일 수정  
   
