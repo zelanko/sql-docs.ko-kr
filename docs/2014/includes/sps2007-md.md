@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7e48d2190673eb8a8a6c10235bef0cd7f6b7e697
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260853"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820554"
 ---
- SharePoint Server 2007 
+SharePoint Server 2007
