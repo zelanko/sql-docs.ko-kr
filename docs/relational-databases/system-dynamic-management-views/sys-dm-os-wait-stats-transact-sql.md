@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690814"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805167"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ GO
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |QUERY_TRACEOUT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |RBIO_WAIT_VLF |TBD <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|RBIO_RG_STORAGE |지연 된 로그 페이지 서버 사용량으로 인해 제한 되 고 대규모 데이터베이스 계산 노드 때 발생 합니다. <br /> **적용 대상**: Azure SQL Database 대규모 합니다.|
+|RBIO_RG_DESTAGE |대규모 데이터베이스 계산 노드 장기 로그 저장소에 의해 지연 된 로그 사용으로 인해 제한 되 면 발생 합니다. <br /> **적용 대상**: Azure SQL Database 대규모 합니다.|
+|RBIO_RG_REPLICA |읽기 가능한 보조 복제본 노드 로그 소비 지연으로 인해 제한 되 고 데이터베이스 계산 노드는 대규모 때 발생 합니다. <br /> **적용 대상**: Azure SQL Database 대규모 합니다.|
+|RBIO_RG_LOCALDESTAGE |대규모 데이터베이스 계산 노드 지연 된 로그 사용으로 인해 로그 서비스에 의해 제한 되 면 발생 합니다. <br /> **적용 대상**: Azure SQL Database 대규모 합니다.|
 |RECOVER_CHANGEDB |웜 대기 데이터베이스의 데이터베이스 상태 동기화 중에 발생합니다.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
