@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS 지원 정책
               href: ../ssms/support-policy.md
-        - name: '자습서: SQL Server Management Studio'
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: SSMS를 사용하여 SQL Server 연결 및 쿼리
@@ -9274,6 +9274,10 @@
                           items:
                             - name: 스크립트 생성 마법사에 지원되는 개체
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: 문제 해결
+          items:
+            - name: 전체 메모리 덤프 가져오기
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: References
           items:
             - name: SSMS 환경
