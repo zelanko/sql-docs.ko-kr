@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470471"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836203"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014용 온라인 설명서
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 온라인 설명서에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행하는 방법을 설명하는 태스크 설명과 참조 설명서가 들어 있습니다.  
-  
+
+SQL Server 2016 및 이후 버전에서는 나와 [여기](https://docs.microsoft.com/sql/sql-server/index)합니다. SQL Server 2012 및 이전 버전에서 나와 [여기](#previous-versions-gm2014)합니다. <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **사용해보기:**  
  ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보](https://support.microsoft.com/en-us/kb/3058865)합니다. 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470471"
 -   [데이터 플랫폼 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016+
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>관련 항목  
 
  [SQL Server 구성 관리자 도움말](../tools/configuration-manager/sql-server-configuration-manager-help.md)  

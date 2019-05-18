@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e0dac258c03bafb0769e5abb1697be67b1289f2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105524"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836177"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -42,6 +42,8 @@ ms.locfileid: "65105524"
 |command|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 포함 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. 4000 바이트를 초과할 수 있는 쿼리는 잘립니다.|  
 |resource_class|**nvarchar(20)**|이 요청에 대 한 리소스 클래스입니다. 관련 참조 **concurrency_slots_used** 에 [sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  리소스 클래스에 대 한 자세한 내용은 참조 하세요. [리소스 클래스 및 워크 로드 관리](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(32)**|요청을 설정 하는 중요도 사용 하 여 제출 되었습니다. 낮은 중요도 사용 하 여 요청 남아 대기 중인 일시 중단 된 상태에서 더 높은 중요도 요청 제출 되 면 있습니다.  높은 중요도 사용 하 여 요청 이전에 전송 된 낮은 중요도 요청 하기 전에 실행 됩니다.  중요도에 대 한 자세한 내용은 참조 하세요. [워크 로드 중요도](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)합니다.  |NULL</br>낮음</br>below_normal</br>보통 (기본값)</br>above_normal</br>고가용성|
+|group_name| |내부 사용을 위해 예약되어 있습니다.</br>적용 대상: Azure SQL 데이터 웨어하우스|
+|resource_allocation_percentage| |내부 사용을 위해 예약되어 있습니다.</br>적용 대상: Azure SQL 데이터 웨어하우스|
   
  이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.   
   
