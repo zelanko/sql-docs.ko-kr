@@ -56,7 +56,7 @@ ms.locfileid: "63265923"
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
   
 -   예제 보고서에 데이터를 제공하는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 예제 데이터베이스가 필요합니다.  
   

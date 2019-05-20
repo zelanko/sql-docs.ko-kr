@@ -50,7 +50,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
 ## <a name="remarks"></a>Remarks  
  CREATE MEMBER 문은 세션 전체에서 사용할 수 있는 계산 멤버를 정의하므로 세션 중에 여러 쿼리에서 사용할 수 있습니다. 자세한 내용은 [세션 범위 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
   
- 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 [계산 멤버 만들기 &#40;mdx&#41 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
+ 또한 단일 쿼리에서 사용할 계산 멤버를 정의할 수 있습니다. 단일 쿼리로 제한된 계산 멤버를 정의하려면 SELECT 문에서 WITH 절을 사용합니다. 자세한 내용은 [계산 멤버 만들기 &#40;mdx&#41; &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
   
  *Property_Name* 표준 나 선택적 계산된 멤버 속성이 속성 중 하나를 참조할 수 있습니다. 표준 멤버 속성은 이 항목의 후반부에 나열되어 있습니다. 없이 CREATE MEMBER로 만든 계산 멤버를 **세션** 값 세션 범위를 가집니다. 또한 계산 멤버 정의 내부의 문자열은 큰따옴표로 구분됩니다. 이것은 문자열이 작은따옴표로 구분되어야 한다고 지정하는 OLE DB에 의해 정의된 메서드와는 다릅니다.  
   
@@ -62,7 +62,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  계산 멤버는 다음 테이블에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [계산 멤버 만들기 &#40;mdx&#41 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
+ 계산 멤버의 표시 여부 및 수명은 쿼리로 제한됩니다. 계산 멤버는 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [계산 멤버 만들기 &#40;mdx&#41; &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)합니다.  
   
  세션 범위  
  계산 멤버의 표시 여부 및 수명은 계산 멤버를 만들 때의 세션에 따라 결정됩니다. (수명 보다 작은 경우 세션 기간을 DROP MEMBER 문이 계산된 멤버에서 실행 되는 경우) CREATE MEMBER 문은 세션 범위로 계산된 멤버를 만듭니다.  

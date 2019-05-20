@@ -146,7 +146,7 @@ ms.locfileid: "63273834"
 |SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치 및 구성을 위한 세부 단계|[Reporting Services SharePoint 2010 용 SharePoint 모드 설치](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) 하 고 [팜에 추가 보고서 서버 추가 &#40;SSRS 확장&#41;](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)합니다.|  
 |보고서 서버를 추가하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 배포를 확대합니다.|[팜에 추가 보고서 서버 추가 &#40;SSRS 스케일 아웃&#41; ](install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 하 고 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md) 합니다.|  
 |보기용으로 설치된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 및 구독 기능에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 애플리케이션에 대한 메일 구성&amp;#40;SharePoint 2010 및 SharePoint 2013&amp;#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 및 구독 기능에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 애플리케이션에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|  
 |TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkId=221297)(영문)|  
   
 ## <a name="see-also"></a>관련 항목  

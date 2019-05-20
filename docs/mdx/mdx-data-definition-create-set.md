@@ -52,7 +52,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
   
  CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 [세션 범위 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
   
- 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 참조 하세요. [명명 된 집합 만들기 &#40;mdx&#41 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
+ 또한 단일 쿼리에서 사용할 명명된 집합을 정의할 수 있습니다. 이러한 집합을 정의하려면 SELECT 문에서 WITH 절을 사용합니다. WITH 절에 대 한 자세한 내용은 참조 하세요. [명명 된 집합 만들기 &#40;mdx&#41; &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
   
  합니다 *Set_Expression* 절에는 MDX 구문을 지 원하는 함수가 포함 될 수 있습니다. SESSION 절을 지정하지 않는 CREATE SET 문으로 만든 집합에는 세션 범위가 포함됩니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  
   
@@ -62,7 +62,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  사용자 정의 집합은 다음 표에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  
- 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [명명 된 집합 만들기 &#40;mdx&#41 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
+ 집합의 표시 여부 및 수명은 쿼리에 따라 결정됩니다. 집합은 개별 쿼리에서 정의됩니다. 쿼리 범위는 세션 범위보다 우선합니다. 자세한 내용은 [명명 된 집합 만들기 &#40;mdx&#41; &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)합니다.  
   
  세션 범위  
  집합의 표시 여부 및 수명은 집합이 생성될 때의 세션에 따라 결정됩니다. (수명 보다 작은 경우 세션 기간을 DROP SET 문이 집합에서 실행 되는 경우) CREATE SET 문은 세션 범위로 집합을 만듭니다. 쿼리 범위의 집합을 만들려면 WITH 절을 사용합니다.  

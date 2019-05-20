@@ -49,7 +49,7 @@ ms.locfileid: "63266257"
   
  [2단원: 연결 정보 지정&#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
- [3단원: 테이블 보고서에 대한 데이터 세트 정의&amp;#40;Reporting Services&amp;#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
+ [3단원: 테이블 보고서에 대한 데이터 세트 정의&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   
  [4단원: 보고서에 테이블 추가&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)  
   

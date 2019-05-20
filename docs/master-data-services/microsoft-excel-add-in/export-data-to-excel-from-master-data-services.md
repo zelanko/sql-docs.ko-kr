@@ -24,7 +24,7 @@ ms.locfileid: "65488173"
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 사용하려면 MDS 리포지토리에서 데이터를 내보내야 합니다.  
   
- 로드하기 전에 데이터 세트를 필터링하려는 경우 대신 [내보내기 전 데이터 필터링&amp;#40;Excel용 MDS 추가 기능&amp;#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)을 참조하세요.  
+ 로드하기 전에 데이터 세트를 필터링하려는 경우 대신 [내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)을 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  

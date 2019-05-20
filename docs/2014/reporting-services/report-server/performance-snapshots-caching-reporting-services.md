@@ -53,13 +53,13 @@ ms.locfileid: "63190966"
  [보고서 캐시&#40;SSRS&#41;](caching-reports-ssrs.md)  
  보고서 서버의 보고서 캐시 동작에 대해 설명합니다.  
   
- [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](cache-shared-datasets-ssrs.md)  
+ [공유 데이터 세트 캐시&#40;SSRS&#41;](cache-shared-datasets-ssrs.md)  
  보고서 서버의 공유 데이터 세트 캐싱 동작에 대해 설명합니다.  
   
  [큰 보고서 처리](process-large-reports.md)  
  대형 보고서를 구성 및 배포하는 권장 방법을 제공합니다.  
   
- [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  쿼리 및 보고서 처리에 대한 제한 시간을 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
