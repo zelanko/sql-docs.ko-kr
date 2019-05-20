@@ -17,14 +17,18 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81208bc35b86927aa797ef7a2ee2efdf46804eda
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7265a07dc603bd686fa6e90b4d296145a138a67a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270339"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725993"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  
   
  UNION ALL 변환은 여러 입력을 조합합니다. 변환에 연결된 첫 번째 입력은 참조 입력이며 이후에 연결되는 입력은 보조 입력입니다. 출력에는 참조 입력에 있는 열이 포함됩니다.  

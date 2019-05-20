@@ -17,14 +17,18 @@ ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8e028b0ae0c9bd72b6b7d561b2ce316bd765cde8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a90017caa4a5c556924756696b61f2686f57ba3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282477"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727529"
 ---
 # <a name="notify-operator-task"></a>운영자에게 알림 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   운영자에게 알림 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자에게 알림 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자는 전자 알림을 받을 수 있는 사람 또는 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영자에 대한 자세한 내용은 [운영자](../../ssms/agent/operators.md)를 참조하세요.  
   
  운영자에게 알림 태스크를 사용하면 패키지가 메일, 호출기 또는 **net send**를 통해 한 명 이상의 운영자에게 알림을 보낼 수 있습니다. 각 운영자는 다른 방법으로 알림을 받을 수 있습니다. 예를 들어 OperatorA는 메일과 호출기를 통해 알림을 받고 OperatorB는 호출기와 **net send**를 통해 알림을 받습니다. 태스크에서 알림을 받는 운영자는 운영자에게 알림 태스크의 **OperatorNotify** 컬렉션 멤버여야 합니다.  

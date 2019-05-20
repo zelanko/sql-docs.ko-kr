@@ -13,14 +13,18 @@ ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 44fbd6a90140951d77465a53cbda2c6ab3436505
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3f75b32af49fffe2ee871ca2eeb76854d5d8e203
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275754"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725699"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 시작
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **느린 변경 차원 마법사** 를 사용하여 다양한 유형의 느린 변경 차원으로 데이터를 로드하도록 구성할 수 있습니다.  
   
  이 마법사에 대한 자세한 내용은 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)를 참조하십시오.  

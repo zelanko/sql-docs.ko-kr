@@ -11,14 +11,18 @@ ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec7fbb111e1c5cbc8e98117d3cb3be5d2bebab30
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7abae509ebd99757dcac51571353a38386f9e7d2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277882"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715226"
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 환경에 대한 환경 변수 정보를 표시합니다.  

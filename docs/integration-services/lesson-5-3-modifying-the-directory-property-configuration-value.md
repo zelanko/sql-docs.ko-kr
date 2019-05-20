@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274828"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721210"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>5-3단원: Directory 속성 구성 값 수정
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 작업에서는 패키지 수준 변수 `User::varFolderName`의 **Value** 속성을 설정하도록 **SSISTutorial.dtsConfig** 파일에 저장된 구성 설정을 수정합니다. 이 변수는 Foreach 루프 컨테이너의 **Directory** 속성을 업데이트합니다. 수정된 값은 이전 작업에서 만들어진 **New Sample Data** 폴더를 가리킵니다. 구성 설정을 수정하고 패키지를 실행한 후에 **Directory** 속성은 구성 파일의 변수로부터 업데이트되었습니다. 이전에 **Directory** 속성 값은 패키지의 일부였습니다.  
   

@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 129b2b760f755985028de214a1f18b00be004cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758151"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720589"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 문서에 설명된 메서드 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그에 배포된 SSIS 패키지를 실행할 수 있습니다. 패키지를 직접 실행하거나 Azure Data Factory 파이프라인의 일부로 패키지를 실행할 수 있습니다. Azure에서 SSIS에 대한 개요는 [Azure에서 SSIS 패키지 배포 및 실행](ssis-azure-lift-shift-ssis-packages-overview.md)을 참조합니다.
 

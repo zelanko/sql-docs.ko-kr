@@ -24,14 +24,18 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 195291c878f0529d24fe05a1b806974f61fa6df9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272580"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719901"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
   
  패키지는 **dtexecui.exe** 유틸리티와 같은 프로세스로 실행됩니다. 이 유틸리티는 32비트 도구이므로 패키지는 WOW(Windows on Win32)에서 실행되는 64비트 환경에서 **dtexecui.exe** 를 사용하여 실행됩니다. 64비트 컴퓨터에서 dtexecui.exe 유틸리티를 사용하여 명령을 개발하고 테스트하는 경우에는 프로덕션 서버에서 명령을 배포하거나 예약하기 전에 64비트 버전의 **dtexec.exe** 를 사용하여 64비트 모드에서 명령을 테스트해야 합니다.  

@@ -16,14 +16,18 @@ ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46fc751556c7e9e1ca9fc122bf8c80a2f5056fc8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f27e5f7a9227ee9792c45eca87dbef9f78c34df3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276358"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727257"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 항목에서는 한 패키지 내에서 또는 패키지 간에 제어 흐름 항목, 데이터 흐름 항목 및 연결 관리자를 복사하는 방법에 대해 설명합니다.  
   
 ### <a name="to-copy-control-and-data-flow-items"></a>제어 흐름 항목 및 데이터 흐름 항목을 복사하려면  

@@ -24,14 +24,18 @@ ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c2e1bbc3dd3e4e4aeda45bc07161d04188c2dd52
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 138dd405df110c42e8f5b754ebd64a96b133bba9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279827"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724078"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>스크립트 태스크에서 데이터 원본에 연결
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   연결 관리자를 사용하면 패키지에 구성된 데이터 원본에 액세스할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
  스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A> 속성을 통해 이러한 연결 관리자에 액세스합니다. <xref:Microsoft.SqlServer.Dts.Runtime.Connections> 컬렉션의 각 연결 관리자는 기본 데이터 원본에 연결하는 방법에 대한 정보를 저장합니다.  

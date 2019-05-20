@@ -11,14 +11,18 @@ ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1f9edd63a9855bf87b653c0b4cbbdfffc5b70db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280767"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717110"
 ---
-# <a name="catalogadddatatap"></a>catalog.add_data_tap
+# <a name="catalogadddatatap"></a>catalog.add_data_tap 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   실행 패키지에 대한 패키지 데이터 흐름에서 구성 요소 출력에 데이터 탭을 추가합니다.  

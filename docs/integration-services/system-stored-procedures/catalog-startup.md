@@ -11,14 +11,18 @@ ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecf3e743fc0f5f4a9af213e97fc7adbf6ce1fe8c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3e5bec6c25f53da66a4f1d3e6aa09d94b621c81f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271044"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715871"
 ---
-# <a name="catalogstartup"></a>catalog.startup
+# <a name="catalogstartup"></a>catalog.startup 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   SSISDB 카탈로그에 대한 작업의 상태를 유지 관리합니다.  

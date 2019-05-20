@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280027"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723082"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>1-5단원: 플랫 파일 원본 추가 및 구성
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 태스크에서는 플랫 파일 원본을 패키지에 추가하고 구성합니다. 플랫 파일 원본은 플랫 파일 연결 관리자에서 정의한 메타데이터를 사용하는 데이터 흐름 구성 요소입니다. 이 메타데이터는 변환 프로세스를 통해 플랫 파일에서 추출할 데이터 형식과 구조를 지정합니다. 플랫 파일 원본은 플랫 파일 연결 관리자의 형식 정의를 사용하여 단일 플랫 파일에서 데이터를 추출합니다.  
   
 이 태스크에서는 이전에 생성한 **Sample Flat File Source Data** 연결 관리자를 사용하도록 플랫 파일 원본을 구성합니다.  

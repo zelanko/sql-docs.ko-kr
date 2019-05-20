@@ -16,14 +16,18 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a14545174705a0352023567bbb943d56dac9d336
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea0f60f98ef86908e7e81f810c9160a71d91755c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279377"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727294"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 방법 중 하나를 사용하여 새 패키지를 만들 수 있습니다.  
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 포함된 패키지 템플릿을 사용합니다.  

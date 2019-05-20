@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4bbb7d1fff70060ec0d3cf5878710177a231896e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00211061180339a1c537fba2101caf323758dd8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727861"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718563"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out 로깅을 위한 계정 변경
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Scale Out에서 SSIS 패키지를 실행하면 SSISDB 데이터베이스에 자동으로 생성된 사용자 계정인 **##MS_SSISLogDBWorkerAgentLogin##** 으로 이벤트 메시지가 기록됩니다. 이 사용자 로그인은 SQL Server 인증을 사용합니다.
 
 Scale Out 로깅에 사용되는 계정을 변경하려면 다음을 수행합니다.

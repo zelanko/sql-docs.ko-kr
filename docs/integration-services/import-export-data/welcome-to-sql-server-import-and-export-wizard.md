@@ -12,14 +12,18 @@ ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24f278e21564f771fc2a0f897eba24473ddeb7e6
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 94bd2f66ee3406bab6d1d69281d83f2de5f68e65
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042062"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723791"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작할 때 첫 번째 페이지는 **SQL Server 가져오기 및 내보내기 마법사 시작**입니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.
 
 > [!IMPORTANT]

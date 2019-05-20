@@ -11,14 +11,18 @@ ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 498c21f148a82e8e03b97e3fe3877986b43269ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86752adeb2770d2c89b616ac2ba42f2aeb2215d8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279267"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714810"
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   사용자에게 명시적으로 할당된 사용 권한만 표시합니다.  
@@ -27,10 +31,10 @@ ms.locfileid: "58279267"
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다.|  
 |object_id|**bigint**|보안 개체의 고유 식별자(ID) 또는 기본 키입니다.|  
-|principal_id|**int**|데이터베이스 보안 주체의 ID입니다.|  
+|principal_id|**ssNoversion**|데이터베이스 보안 주체의 ID입니다.|  
 |permission_type|**smallint**|사용 권한의 유형입니다.|  
 |is_deny|**bit**|사용 권한이 거부되었는지 허용되었는지를 나타냅니다. 값이 `1`이면 사용 권한이 거부되었고, 값이 `0`이면 사용 권한이 거부되지 않았습니다.|  
-|grantor_id|**int**|사용 권한을 부여받은 보안 주체의 ID입니다.|  
+|grantor_id|**ssNoversion**|사용 권한을 부여받은 보안 주체의 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  이 뷰는 다음 표에 나열된 사용 권한 유형을 표시합니다.  

@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a32e2b54899c8897f3aefbe7ff94f42355114d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d1a3a27bfce0a62aa70d047e221f54ccc33c0c6b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275456"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717554"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 빠른 시작에서는 명령 프롬프트에서 적절한 매개 변수로 `DTExec.exe`를 실행하여 SSIS 패키지를 실행하는 방법을 보여줍니다.
 
 > [!NOTE]

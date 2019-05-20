@@ -11,14 +11,18 @@ ms.assetid: ''
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d73eff658ecfa8f5f145f29c8522a0723d93ff8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b555dfd5c92212e6a8a24568964c96af35eb8c0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275705"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729466"
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Integration Services(SSIS)에 대한 Attunity의 Oracle 및 Teradata용 Microsoft Connectors
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS 패키지에서 Oracle 또는 Teradata 간 데이터를 로드할 때 성능을 최적화하는 Attunity의 Integration Services에 대한 커넥터를 다운로드할 수 있습니다.
 

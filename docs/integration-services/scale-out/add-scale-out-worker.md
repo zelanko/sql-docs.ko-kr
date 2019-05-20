@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: b028c143cdc635792f9f1bd01cbdadf9e8f98454
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5375f3992cd5d969276b02612f02ab4c32842689
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642991"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718782"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Scale Out 관리자를 사용하여 Scale Out 작업자 추가
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Integration Services Scale Out 관리자는 기존 Scale Out 환경에 Scale Out 작업자를 추가하는 프로세스를 간소화합니다. 
 

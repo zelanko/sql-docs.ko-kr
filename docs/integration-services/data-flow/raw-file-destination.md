@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282307"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726529"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
   
  원시 데이터를 파일에 기록하는 것 외에도 패키지를 실행할 필요 없이 원시 파일 대상을 사용하여 열만 포함된 비어 있는 원시 파일(메타데이터 전용 파일)을 생성할 수 있습니다. 원시 파일 원본을 사용하면 대상이 이전에 기록한 원시 데이터를 검색할 수 있습니다. 또한 원시 파일 원본이 메타데이터 전용 파일을 가리키도록 설정할 수 있습니다.  

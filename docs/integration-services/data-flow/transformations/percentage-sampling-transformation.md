@@ -22,14 +22,18 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67fb4b94e777a974ff42c59d730a58bb1396f289
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275276"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725919"
 ---
 # <a name="percentage-sampling-transformation"></a>비율 샘플링 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   비율 샘플링 변환은 변환 입력 행의 비율을 선택하여 샘플 데이터 집합을 만듭니다. 샘플 데이터 집합은 입력을 대표하는 결과 샘플을 만들기 위해 변환 입력에서 임의로 선택한 행입니다.  
   
 > [!NOTE]  

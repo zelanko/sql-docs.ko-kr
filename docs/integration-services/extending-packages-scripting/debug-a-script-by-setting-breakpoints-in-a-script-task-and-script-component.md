@@ -14,14 +14,18 @@ ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1719647906f96bdf5602ca6110195a141d4e787
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cf18c8a549a53c1e872d456e28625b7ec0ffa95c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277582"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724150"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 절차에서는 스크립트 태스크 및 스크립트 구성 요소에 사용되는 스크립트에서 중단점을 설정하는 방법에 대해 설명합니다.  
   
  스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 함께 **중단점 설정 - \<개체 이름>** 대화 상자에 나열됩니다.  

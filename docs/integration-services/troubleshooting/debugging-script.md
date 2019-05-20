@@ -15,14 +15,18 @@ ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4309524aa80c09b92a486cbb210656a756ed18af
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0b038e81c70e3368e9f66c6dfefc925e282b27d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290329"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713744"
 ---
 # <a name="debugging-script"></a>스크립트 디버깅
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   VSTA( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  
   
  VSTA에서 중단점을 설정하고 스크립팅합니다. VSTA에서 중단점을 관리할 수 있지만 **디자이너에서 제공하는** 중단점 설정 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 사용하여 중단점을 관리할 수도 있습니다. 자세한 내용은 [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)을 참조하세요.  

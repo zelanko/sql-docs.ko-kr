@@ -11,14 +11,18 @@ ms.assetid: e74217c8-234a-4095-b3c0-5870707e5a87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edd31f295d1254698a186f80e0d34a82320efa7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 96190f1c17fe084545a652901f5b7c327325c44d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282407"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723271"
 ---
 # <a name="integration-services-tutorials"></a>Integration Services 자습서
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 단원에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]자습서가 포함되어 있습니다.  
   
 -   [SSIS ETL 패키지를 만드는 방법](../integration-services/ssis-how-to-create-an-etl-package.md)  

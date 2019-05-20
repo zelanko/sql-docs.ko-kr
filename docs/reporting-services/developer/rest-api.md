@@ -1,21 +1,21 @@
 ---
 title: Reporting Services에 대한 REST API를 사용하여 개발 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254698"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502739"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services에 대한 REST API를 사용하여 개발
 
@@ -56,7 +56,7 @@ REST API 요청/응답 쌍은 5개의 구성 요소로 구분할 수 있습니�
 
 ## <a name="api-documentation"></a>API 설명서
 
-최신 REST API에는 최신 API 설명서가 필요합니다. REST API는 OpenAPI 사양(일명 Swagger 사양)을 기반으로 하며, 설명서는 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0)에서 찾아볼 수 있습니다. API 설명서 이외에도 SwaggerHub에서 클라이언트 라이브러리를 JavaScript, TypeScript, C#, Java, Python, Ruby 등의 언어로 생성하는 데 도움을 받을 수 있습니다.
+최신 REST API에는 최신 API 설명서가 필요합니다. REST API는 OpenAPI 사양(Swagger 사양이라고도 함)을 기반으로 하며, [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0)에서 문서를 확인할 수 있습니다. API 설명서 이외에도 SwaggerHub에서 클라이언트 라이브러리를 JavaScript, TypeScript, C#, Java, Python, Ruby 등의 언어로 생성하는 데 도움을 받을 수 있습니다.
 
 ## <a name="testing-api-calls"></a>API 호출 테스트
 

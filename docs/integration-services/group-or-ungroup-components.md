@@ -16,14 +16,18 @@ ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 165c9d05e91be151377d23f597ddb1ca1d66e851
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9ae4716ec1f239cbe939970e8b37f0d733e34106
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271650"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724028"
 ---
 # <a name="group-or-ungroup-components"></a>구성 요소 그룹화 또는 그룹 해제
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **디자이너의**제어 흐름 **,** 데이터 흐름 **및** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭에서는 축소 가능한 그룹화를 지원합니다. 패키지에 여러 구성 요소가 있는 경우 탭이 복잡해져서 모든 구성 요소를 한 번에 확인하기 어렵고 사용하려는 항목을 쉽게 찾기 어려울 수 있습니다. 축소 가능한 그룹화 기능을 사용하면 작업 공간을 절약하고 큰 패키지를 쉽게 사용할 수 있습니다.  
   
  그룹화하려는 구성 요소를 선택하여 그룹화한 다음 작업에 맞게 그룹을 확장하거나 축소합니다. 그룹을 확장하면 해당 그룹에 들어 있는 구성 요소의 속성을 사용할 수 있습니다. 태스크와 컨테이너를 연결하는 선행 제약 조건은 그룹에 자동으로 포함됩니다.  

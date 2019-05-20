@@ -11,14 +11,18 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2dae52f3b8729e919f9ad653c02bc1023d2ed8c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e03317e9d37387e6c2482aea3bdf102a0b063b03
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276882"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721195"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>6-2단원: 프로젝트를 프로젝트 배포 모델로 변환
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 작업에서는 프로젝트를 프로젝트 배포 모델로 변환하기 위해 Integration Services 프로젝트 변환 마법사를 사용합니다.  
   

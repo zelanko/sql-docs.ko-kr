@@ -19,71 +19,74 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 16a364827b01af9d6bf6695741c376983a163965
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744573"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093822"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 독립 실행형 데이터 액세스 응용 프로그래밍 인터페이스 (API) OLE DB에 도입 된 데는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. OLE DB Driver for SQL Server는 하나의 동적 연결 라이브러리 (DLL)에 SQL OLE DB 드라이버를 제공합니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. SQL Server용 OLE DB 드라이버를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 새 애플리케이션을 작성하거나 기존 애플리케이션을 개선할 수 있습니다.  
+OLE DB Driver for SQL Server는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기술로, OLE DB에 사용되는 독립 실행형 데이터 액세스 API(애플리케이션 프로그래밍 인터페이스)입니다. OLE DB Driver for SQL Server는 하나의 DLL(동적 연결 라이브러리)로 SQL OLE DB 드라이버를 제공합니다. 또한 Windows Data Access Components(Windows DAC, 이전의 Microsoft Data Access Components 또는 MDAC)에서 제공하는 것보다 뛰어난 새로운 기능을 제공합니다. OLE DB Driver for SQL Server를 사용하여 MARS(Multiple Active Result Sets), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리, XML 데이터 형식 지원 등 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 기능을 활용해야 하는 기존 애플리케이션을 개선하거나 새 애플리케이션을 만들 수 있습니다.  
   
 > [!NOTE]  
->  OLE DB Driver for SQL Server 용 OLE DB 드라이버 Windows DAC 응용 프로그램을 업데이트 하기 전에 고려해 야 할 문제에 대 한 정보 및 SQL Server 및 Windows DAC 간의 차이점 목록은 참조 하세요. [SQL에 대 한 OLE DB 드라이버로 응용 프로그램을 업데이트 하는 중입니다. MDAC에서 서버](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)합니다.  
+> OLE DB Driver for SQL Server와 Windows DAC 간의 차이점 목록과 Windows DAC 애플리케이션을 OLE DB Driver for SQL Server로 업데이트하기 전에 고려해야 할 문제에 대한 자세한 내용은 [MDAC에서 OLE DB Driver for SQL Server로 애플리케이션 업데이트](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)를 참조하세요.  
+
+> [!IMPORTANT]
+> 이전의 [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)(SQLOLEDB) 및 [SQL Server Native Client OLE DB](../../relational-databases/native-client/sql-server-native-client.md) 공급자(SQLNCLI)는 계속 사용되지 않으며, 새로운 개발 작업에 사용하지 않는 것이 좋습니다.
   
  SQL Server용 OLE DB 드라이버는 Windows DAC와 함께 공급된 OLE DB 핵심 서비스와 연동하여 사용할 수 있지만 반드시 그래야 하는 것은 아니며 개별 애플리케이션 요구 사항(예를 들어 연결 풀링이 필요한지 여부)에 따라 핵심 서비스를 사용할지 여부를 선택할 수 있습니다.  
   
- 데이터 개체 (ADO (ActiveX) 응용 프로그램이 SQL Server 용 OLE DB 드라이버를 사용할 수 있지만와 함께에서 ADO를 사용 하는 것이 좋습니다.는 **DataTypeCompatibility** 연결 문자열 키워드 (또는 해당  **DataSource** 속성). ADO 응용 프로그램에 도입 된 새로운 기능을 이용할 수 있습니다 SQL Server 용 OLE DB 드라이버를 사용할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 는 OLE DB Driver for SQL Server를 통해 연결 문자열 키워드 또는 OLE DB 속성을 통해 사용할 수 있는 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. ADO 사용 하 여 이러한 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 [OLE DB Driver for SQL Server를 사용 하 여 ADO를 사용 하 여](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)입니다.  
+ ADO(ActiveX Data Objects) 애플리케이션은 OLE DB Driver for SQL Server를 사용할 수 있지만, **DataTypeCompatibility** 연결 문자열 키워드(또는 해당 **DataSource** 속성)와 함께 ADO를 사용하는 것이 좋습니다. OLE DB Driver for SQL Server를 사용하는 경우, ADO 애플리케이션은 연결 문자열 키워드 또는 OLE DB 속성이나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 통해 OLE DB Driver for SQL Server에서 제공되는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 새로운 기능을 이용할 수 있습니다. ADO에서 이러한 기능을 사용하는 방법에 대한 자세한 내용은 [OLE DB Driver for SQL Server에서 ADO 사용](../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)을 참조하세요.  
   
- SQL Server용 OLE DB 드라이버는 OLE DB를 사용하여 SQL Server의 네이티브 데이터에 액세스하는 간단한 방법을 제공하도록 디자인되었습니다. 혁신적이 고 현재 Windows DAC 구성 요소를 이제 Microsoft Windows 플랫폼의 일부인 변경 하지 않고 새로운 데이터 액세스 기능을 발전 하는 방법을 제공 합니다.  
+ SQL Server용 OLE DB 드라이버는 OLE DB를 사용하여 SQL Server의 네이티브 데이터에 액세스하는 간단한 방법을 제공하도록 디자인되었습니다. SQL Server용 OLE DB 드라이버를 사용하면 이제 Microsoft Windows 플랫폼에 통합된 현재 Windows DAC 구성 요소를 변경하지 않고 새로운 데이터 액세스 기능을 혁신적으로 발전시킬 수 있습니다.  
   
- SQL Server용 OLE DB 드라이버가 Windows DAC의 구성 요소를 사용하기는 하지만 Windows DAC의 특정 버전에 명시적으로 종속되지는 않습니다. SQL Server 용 OLE DB 드라이버에서 지 원하는 운영 체제와 함께 설치 된 Windows DAC의 버전을 사용 하 여 SQL Server 용 OLE DB 드라이버를 사용할 수 있습니다.  
+ SQL Server용 OLE DB 드라이버가 Windows DAC의 구성 요소를 사용하기는 하지만 Windows DAC의 특정 버전에 명시적으로 종속되지는 않습니다. OLE DB Driver for SQL Server에서 지원하는 운영 체제에 설치된 모든 Windows DAC 버전에서 OLE DB Driver for SQL Server를 사용할 수 있습니다.  
 
- ## <a name="different-generations-of-ole-db-drivers"></a>OLE DB 드라이버의 다양 한 세대
+ ## <a name="different-generations-of-ole-db-drivers"></a>OLE DB 드라이버의 다양한 세대
 
-SQL Server 용 Microsoft OLE DB 공급자의 세 가지 고유한 세대가 있습니다.
+Microsoft OLE DB Provider for SQL Server의 세 가지 고유한 세대가 있습니다.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. SQL Server용 Microsoft OLE DB 공급자(SQLOLEDB)
-합니다 [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB)의 일부로 계속 제공 되 [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx)합니다. 더 이상 유지 되지 않습니다 하 고 새로운 개발에 대 한이 드라이버를 사용 하는 것은 권장 되지 않습니다.
+[Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)(SQLOLEDB)는 [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx)의 일부로 계속 제공됩니다. 더 이상 유지 관리되지 않으며, 새로운 개발에 이 드라이버를 사용하지 않는 것이 좋습니다.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client(SNAC)
-부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서 [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) OLE DB 공급자 인터페이스 (SQLNCLI)를 포함 하 고 함께 제공 되는 OLE DB 공급자 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [SNAC(SQL Server Native Client)](../../relational-databases/native-client/sql-server-native-client.md)가 OLE DB 공급자 인터페이스(SQLNCLI)를 포함하며, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 OLE DB 공급자입니다.
 
-되었기 [2011에서 사용 중단 될 예정](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) 새로운 개발에이 드라이버를 사용 하는 권장 되지 않습니다. SNAC 수명 주기 및 제공 되는 다운로드에 대 한 자세한 내용은 참조 [SNAC 수명 주기를 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)합니다.
+[2011년에 사용되지 않는 드라이버로 발표](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/)되었으며, 새로운 개발에 이 드라이버를 사용하지 않는 것이 좋습니다. SNAC 수명 주기 및 사용 가능한 다운로드에 대한 자세한 내용은 [SNAC 수명 주기 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)을 참조하세요.
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. SQL Server용 Microsoft OLE DB 드라이버(MSOLEDBSQL)
-OLE DB가 [다시 사용](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) 2018에 릴리스 합니다.
+OLE DB가 [다시 사용](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/)되었으며, 2018년에 릴리스되었습니다.
 
-새 OLE DB 공급자는 SQL Server (MSOLEDBSQL)에 대 한 Microsoft OLE DB 드라이버 호출 됩니다. 새 공급자를 앞으로 최신 서버 기능을 사용 하 여 업데이트 됩니다.
+새 OLE DB 공급자를 Microsoft OLE DB Driver for SQL Server(MSOLEDBSQL)라고 합니다. 새 공급자는 앞으로 최신 서버 기능으로 업데이트될 예정입니다.
 
 > [!NOTE]
-> 새 Microsoft OLE DB Driver for SQL Server 기존 응용 프로그램에서를 사용 하려면 SQLOLEDB 또는 SQLNCLI에서 MSOLEDBSQL 연결 문자열을 변환할 계획 해야 합니다.
+> 기존 애플리케이션에서 새 Microsoft OLE DB Driver for SQL Server를 사용하려면 연결 문자열을 SQLOLEDB 또는 SQLNCLI에서 MSOLEDBSQL로 변환할 계획을 해야 합니다.
   
 ## <a name="in-this-section"></a>섹션 내용  
 [SQL Server용 OLE DB 드라이버를 사용해야 하는 경우](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  SQL Server용 OLE DB 드라이버를 Microsoft 데이터 액세스 기술과 연동하는 방법, Windows DAC 및 ADO.NET과 비교되는 특징을 설명하고, 사용할 데이터 액세스 기술을 결정하는 데 도움이 되는 팁을 제공합니다.  
   
  [SQL Server용 OLE DB 드라이버 기능](../oledb/features/oledb-driver-for-sql-server-features.md )  
- SQL Server 용 OLE DB 드라이버에서 지 원하는 기능을 설명 합니다.  
+ OLE DB Driver for SQL Server에서 지원하는 기능을 설명합니다.  
   
  [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  SQL Server용 OLE DB 드라이버가 Windows DAC와 다른 점, 사용되는 구성 요소, ADO와 연동하는 방법 등 개발에 대한 개요를 제공합니다.  
   
- 또한이 섹션에서는 SQL Server 설치 및 배포에 포함 된 OLE DB Driver for SQL Server 라이브러리를 재배포 하는 방법에 대 한 OLE DB 드라이버를 설명 합니다.  
+ 이 섹션에서는 OLE DB Driver for SQL Server 라이브러리를 재배포하는 방법을 포함하여 OLE DB Driver for SQL Server 설치 및 배포에 관해서도 설명합니다.  
   
  [SQL Server용 OLE DB 드라이버 시스템 요구 사항](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
- SQL Server 용 OLE DB 드라이버를 사용 하는 데 필요한 시스템 리소스에 설명 합니다.  
+ OLE DB Driver for SQL Server를 사용하는 데 필요한 시스템 리소스에 대해 설명합니다.  
   
  [SQL Server용 OLE DB 드라이버 프로그래밍](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
- SQL Server 용 OLE DB 드라이버를 사용 하는 방법에 대 한 정보를 제공 합니다.  
+ OLE DB Driver for SQL Server를 사용하는 방법을 설명합니다.  
   
  [더 많은 SQL Server용 OLE DB 드라이버 정보 찾기](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
- 받기 및 외부 리소스에 대 한 링크를 포함 하 여 SQL Server 용 OLE DB 드라이버에 대 한 추가 리소스를 제공 합니다.  
+ 외부 리소스 및 추가 지원 링크를 포함하여 OLE DB Driver for SQL Server에 대한 추가 리소스를 제공합니다.  
   
   
 ## <a name="see-also"></a>관련 항목:  

@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281817"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726969"
 ---
 # <a name="define-a-state-variable"></a>상태 변수 정의
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 절차에서는 CDC 상태가 저장되는 패키지 변수를 정의하는 방법을 설명합니다.  
   
  CDC 상태 변수는 CDC 제어 태스크에 의해 로드, 초기화 및 업데이트되고 변경 레코드의 현재 처리 범위를 결정하기 위해 CDC 원본 데이터 흐름 구성 요소에 사용됩니다. CDC 상태 변수는 CDC 제어 태스크 및 CDC 원본에 공통되는 모든 컨테이너에 정의할 수 있습니다. 이는 패키지 수준에 있을 수 있지만 루프 컨테이너와 같은 다른 컨테이너에 있을 수도 있습니다.  

@@ -10,14 +10,18 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221817"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723886"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 아티클에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Microsoft Excel** 데이터 원본에 연결하는 방법을 보여 줍니다.
 
 다음 스크린샷은 Microsoft Excel 통합 문서에 대한 샘플 연결을 보여 줍니다.
@@ -35,7 +39,7 @@ Excel 파일에 연결하려면 추가 파일을 다운로드하여 설치해야
 > 이 데이터 공급자에 대한 연결 옵션은 Excel이 원본 또는 대상인지 여부에 관계없이 동일합니다. 즉 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지 모두에서 동일한 옵션이 표시됩니다.
 
 **Excel 파일 경로**  
- Excel 파일의 경로와 파일 이름을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+ Excel 파일의 경로와 파일 이름을 지정합니다. 예를 들어
 -   로컬 컴퓨터의 파일은 **C:\\MyData.xlsx**입니다.
 -   네트워크 공유의 파일은 **\\\\Sales\\Database\\Northwind.xlsx**입니다.
 

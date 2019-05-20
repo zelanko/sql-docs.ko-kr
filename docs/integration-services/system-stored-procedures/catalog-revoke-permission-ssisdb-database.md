@@ -14,14 +14,18 @@ ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2ba95693f64cecdefc140e38f9ae048ca9945b5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 41946fdf50ec72d7c81340dd40c99447a9dbbf40
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274713"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715967"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 보안 개체에 대한 사용 권한을 취소합니다.  

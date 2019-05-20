@@ -20,14 +20,18 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c6951b59ac5a78a63990e071fa83fe791e550d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c397dee795409a69e9371e6066b85cb24817869c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279960"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724337"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
   
  성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 응용 프로그램 성능 정보를 저장합니다. **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  

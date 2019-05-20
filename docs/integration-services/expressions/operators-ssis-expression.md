@@ -16,14 +16,18 @@ ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef0f0c4cb73c28d23eec35a30f8d120c9b49c66f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 480716e1afd453a9eb229dbbe11b35e877bb77e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280377"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725098"
 ---
 # <a name="operators-ssis-expression"></a>연산자(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 섹션에서는 식 언어가 제공하는 연산자 및 식 계산기에 사용되는 연산자 우선 순위 및 계산 방향에 대해 설명합니다.  
   
  다음 표에서는 이 섹션의 연산자에 대한 항목을 나열합니다.  

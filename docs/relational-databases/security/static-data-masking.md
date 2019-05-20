@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59516469"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580976"
 ---
 # <a name="static-data-masking"></a>정적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-정적 데이터 마스킹은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 미리 보기 5 이상의 구성 요소로 릴리스되었습니다. 현재 프로토타입은 고객의 기대를 충족하지 못하는 것으로 결정되었습니다. 따라서 이 기능은 유지하지 않을 것입니다. 대체할 후보가 있는 경우 사용자 플랜이 업데이트됩니다.
+정적 데이터 마스킹은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 미리 보기 5 이상의 구성 요소로 릴리스되었습니다. 
+> [!IMPORTANT]
+> 현재 프로토타입은 고객의 기대를 충족하지 못하는 것으로 결정되었습니다. 따라서 이 기능은 유지하지 않을 것입니다. 대체할 후보가 있는 경우 사용자 플랜이 업데이트됩니다.
+>
+
+
 
 ![정적 데이터 마스킹](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

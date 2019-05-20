@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: bb649888638ec4e194d64679b73fc69806664fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718456"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out 작업자는 Scale Out 작업자 서비스를 실행하여 Scale Out 마스터에서 실행 작업을 끌어옵니다. 그런 다음 작업자가 `ISServerExec.exe`를 사용하여 로컬에서 패키지를 실행합니다.
 

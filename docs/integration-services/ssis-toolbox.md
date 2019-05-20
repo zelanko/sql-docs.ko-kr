@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289639"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717276"
 ---
 # <a name="ssis-toolbox"></a>SSIS 도구 상자
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   로컬 컴퓨터에 설치된 모든 구성 요소는 **SSIS 도구 상자**에 자동으로 나타납니다. 추가 구성 요소를 설치할 때는 도구 상자 내부를 마우스 오른쪽 단추로 클릭한 다음 **도구 상자 새로 고침** 을 클릭하여 구성 요소를 추가합니다.  
  
  새 SSIS 프로젝트를 만들거나 기존 프로젝트를 열면 **SSIS 도구 상자**가 자동으로 표시됩니다. 패키지 디자인 화면의 오른쪽 위에 있는 도구 상자 단추를 클릭하거나 보기 -> 다른 창 -> SSIS 도구 상자를 클릭하여 도구 상자를 열 수도 있습니다.

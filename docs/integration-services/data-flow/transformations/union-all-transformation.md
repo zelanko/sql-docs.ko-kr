@@ -19,14 +19,18 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273754"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725834"
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 예를 들어 5개 플랫 파일 원본의 출력이 UNION ALL 변환의 입력이 되어 하나의 출력으로 결합될 수 있습니다.  
   
 ## <a name="inputs-and-outputs"></a>입/출력  

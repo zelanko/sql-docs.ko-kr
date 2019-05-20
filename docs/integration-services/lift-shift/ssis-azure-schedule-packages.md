@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 8e82b888f06c7a1dbdf2f5b40211bab4a6a012c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c080e380c28a137c3bb02bf1506276d8319fac3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418833"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721074"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행 예약
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 문서에 설명된 메서드 중 하나를 선택하여 Azure SQL Database 서버의 SSISDB 카탈로그에 배포된 SSIS 패키지의 실행을 예약할 수 있습니다. 패키지를 직접 예약하거나 Azure Data Factory 파이프라인의 일부로 패키지를 간접적으로 예약할 수 있습니다. Azure의 SSIS에 대한 개요는 [SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트](ssis-azure-lift-shift-ssis-packages-overview.md)를 참조하세요.
 
@@ -56,33 +60,33 @@ SQL Database의 탄력적 작업에 대한 자세한 내용은 [규모가 확장
 다음 예제에 표시된 스크립트와 비슷한 Transact-SQL 스크립트를 사용하여 작업을 만듭니다.
 
 ```sql
--- Create Elastic Jobs target group 
-EXEC jobs.sp_add_target_group 'TargetGroup' 
+-- Create Elastic Jobs target groupÂ 
+EXECÂ jobs.sp_add_target_group 'TargetGroup'Â 
 
--- Add Elastic Jobs target group member 
-EXEC jobs.sp_add_target_group_member @target_group_name='TargetGroup', 
-    @target_type='SqlDatabase', @server_name='YourSQLDBServer.database.windows.net',
-    @database_name='SSISDB' 
+-- Add Elastic Jobs target group memberÂ 
+EXECÂ jobs.sp_add_target_group_memberÂ @target_group_name='TargetGroup',Â 
+    @target_type='SqlDatabase',Â @server_name='YourSQLDBServer.database.windows.net',
+    @database_name='SSISDB'Â 
 
 -- Add a job to schedule SSIS package execution
-EXEC jobs.sp_add_job @job_name='ExecutePackageJob', @description='Description', 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60
+EXECÂ jobs.sp_add_jobÂ @job_name='ExecutePackageJob',Â @description='Description',Â 
+    @schedule_interval_type='Minutes',Â @schedule_interval_count=60
 
 -- Add a job step to create/start SSIS package execution using SSISDB catalog stored procedures
-EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob', 
-    @command=N'DECLARE @exe_id bigint 
+EXECÂ jobs.sp_add_jobstepÂ @job_name='ExecutePackageJob',Â 
+    @command=N'DECLAREÂ @exe_idÂ bigintÂ 
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runinscaleout=1, @useanyworker=1, 
-            @execution_id=@exe_id OUTPUT         
-        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
-    @credential_name='YourDBScopedCredentials', 
-    @target_group_name='TargetGroup' 
+            @runinscaleout=1, @useanyworker=1,Â 
+            @execution_id=@exe_idÂ OUTPUT       Â 
+        EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0',Â 
+    @credential_name='YourDBScopedCredentials',Â 
+    @target_group_name='TargetGroup'Â 
 
--- Enable the job schedule 
-EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1, 
-    @schedule_interval_type='Minutes', @schedule_interval_count=60 
+-- Enable the job scheduleÂ 
+EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
+    @schedule_interval_type='Minutes',Â @schedule_interval_count=60Â 
 ```
 
 ## <a name="agent"></a> 프레미스에서 SQL Server 에이전트를 사용하여 패키지 예약
@@ -142,17 +146,17 @@ SQL Server 에이전트에 대한 자세한 내용은 [패키지에 대한 SQL S
 
     ```sql
     -- T-SQL script to create and start SSIS package execution using SSISDB stored procedures
-    DECLARE @return_value int, @exe_id bigint 
+    DECLARE @return_valueÂ int,Â @exe_idÂ bigintÂ 
 
-    EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
-        @folder_name=N'folderName', @project_name=N'projectName', 
-        @package_name=N'packageName', @use32bitruntime=0, @runincluster=1, @useanyworker=1,
-        @execution_id=@exe_id OUTPUT 
+    EXEC @return_valueÂ =Â [YourLinkedServer].[SSISDB].[catalog].[create_execution]Â 
+        @folder_name=N'folderName',Â @project_name=N'projectName',Â 
+        @package_name=N'packageName',Â @use32bitruntime=0,Â @runincluster=1,Â @useanyworker=1,
+        @execution_id=@exe_idÂ OUTPUTÂ 
 
     EXEC [YourLinkedServer].[SSISDB].[catalog].[set_execution_parameter_value] @exe_id,
         @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
 
-    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
+    EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution]Â @execution_id=@exe_id
     ```
 
 6.  작업 구성 및 예약을 완료합니다.

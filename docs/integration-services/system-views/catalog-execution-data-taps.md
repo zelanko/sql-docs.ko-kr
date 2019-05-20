@@ -11,14 +11,18 @@ ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f305c0439c7c7f30343f1dea42b5965716f9e927
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280357"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714780"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
+# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   실행 중에 정의된 각 데이터 탭에 대한 정보를 표시 합니다.  
@@ -30,7 +34,7 @@ ms.locfileid: "58280357"
 |package_path|**nvarchar(max)**|데이터 탭이 수행되는 데이터 흐름 태스크의 패키지 경로입니다.|  
 |dataflow_path_id_string|**nvarchar(4000)**|데이터 흐름 경로의 ID 문자열입니다.|  
 |dataflow_task_guid|**uniqueidentifier**|데이터 흐름 태스크의 고유 ID입니다.|  
-|max_rows|**int**|캡처할 행의 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다.|  
+|max_rows|**ssNoversion**|캡처할 행의 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다.|  
 |filename|**nvarchar(4000)**|데이터 덤프 파일의 이름입니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.|  
   
 ## <a name="permissions"></a>사용 권한  

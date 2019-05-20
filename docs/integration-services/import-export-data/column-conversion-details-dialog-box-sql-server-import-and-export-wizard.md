@@ -12,14 +12,18 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8d2b65f4184ed599cd737cdbb14779f411d09808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221917"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723926"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **데이터 형식 매핑 검토** 페이지의 개별 열에 대한 행을 두 번 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **열 변환 정보** 대화 상자가 표시됩니다. 이 페이지에서 개별 열에 대한 자세한 변환 정보를 검토할 수 있습니다. 이 정보에는 다음 항목이 포함됩니다.
 -   원본 및 대상의 열 데이터 형식입니다.
 -   변환이 필요한 경우 마법사에서 수행하는 데이터 형식 변환입니다.

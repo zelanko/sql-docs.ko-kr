@@ -14,14 +14,18 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993c9bcaeb92f7ec4eabc11beaf444e97622821f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 07c926a292c657eecceb13ca1cdc1d3f8dcc5a71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271166"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729256"
 ---
 # <a name="saving-a-package-programmatically"></a>프로그래밍 방식으로 패키지 저장
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   프로그래밍 방식으로 새 패키지를 작성하거나 기존 패키지를 수정한 후에는 일반적으로 변경 내용을 저장합니다.  
   
  이 항목에서 설명하는 패키지 저장 방법을 사용할 경우에는 항상 **Microsoft.SqlServer.ManagedDTS** 어셈블리에 대한 참조가 필요합니다. 새 프로젝트에 참조를 추가한 후 **using** 또는 **Imports** 문을 사용하여 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스를 가져옵니다.  

@@ -17,14 +17,18 @@ ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15e1ef5983228eb9da820897e7f4a78358c12513
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c035be98a8327ff0abc6fa6beece3c5cb6a2d7ad
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270676"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725583"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  

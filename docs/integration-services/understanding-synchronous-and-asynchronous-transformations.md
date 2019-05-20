@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283027"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713603"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 동기 변환과 비동기 변환의 차이점을 가장 쉽게 이해하려면 먼저 동기 변환을 이해해야 합니다. 동기 변환이 개발자의 요구에 맞지 않으면 디자인에 비동기 변환을 사용해야 합니다.  
   
 ## <a name="synchronous-transformations"></a>동기 변환  
@@ -42,7 +46,7 @@ ms.locfileid: "58283027"
   
 -   입력 행과 출력 행은 일 대 일로 대응하지 않는 경우. 예를 들어 구성 요소에서 출력에 행을 추가하여 계산된 집계 값을 저장해야 하는 집계 변환의 경우가 이에 해당합니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립팅 및 프로그래밍에서 구성 요소 출력의 **SynchronousInputID** 속성에 0 값을 할당하여 비동기 변환을 지정합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 이렇게 하면 데이터 흐름 엔진에서는 자동으로 각 행을 출력으로 보내지 않게 됩니다. 그런 다음 각 행을 비동기 변환의 출력을 위해 만들어진 새 출력 버퍼에 추가하여 해당 행을 명시적으로 적절한 출력으로 보내는 코드를 작성해야 합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립팅 및 프로그래밍에서 구성 요소 출력의 **SynchronousInputID** 속성에 0 값을 할당하여 비동기 변환을 지정합니다. . 이렇게 하면 데이터 흐름 엔진에서는 자동으로 각 행을 출력으로 보내지 않게 됩니다. 그런 다음 각 행을 비동기 변환의 출력을 위해 만들어진 새 출력 버퍼에 추가하여 해당 행을 명시적으로 적절한 출력으로 보내는 코드를 작성해야 합니다.  
   
 > [!NOTE]  
 >  원본 구성 요소에서도 데이터 원본에서 읽어 온 각 행을 해당 출력 버퍼에 명시적으로 추가해야 하므로 비동기 출력을 사용할 경우에는 원본과 변환이 유사하게 됩니다.  

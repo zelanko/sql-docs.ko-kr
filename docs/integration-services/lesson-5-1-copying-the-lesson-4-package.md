@@ -11,14 +11,18 @@ ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16dde3b03f85834a66c0cdddbc9c530997affde9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d97cf4f9f877ad29f1e5b17d9f79df4a8171b8ed
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279917"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721752"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>5-1단원: 4단원 패키지 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 작업에서는 4단원의 **Lesson 4.dtsx** 패키지 복사본을 만듭니다. 4단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 4단원 패키지를 프로젝트에 추가한 다음, 작업을 수행할 복사본을 만들 수 있습니다. 5단원의 나머지 부분에서 이 새 복사본을 사용하세요.  
   

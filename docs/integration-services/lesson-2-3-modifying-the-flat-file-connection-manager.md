@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278927"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722546"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>2-3단원: 플랫 파일 연결 관리자 수정
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 태스크에서는 1단원에서 플랫 파일 연결 관리자를 수정합니다. 해당 플랫 파일 연결 관리자는 단일 파일을 정적으로 로드하도록 구성됩니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User::varFileName`을 사용하도록 연결 관리자의 ConnectionString 속성을 변경합니다.  
   

@@ -14,14 +14,18 @@ ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a10ddc0db0edf2509b6b74b5f3d3c394dab0ad2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ccb2fc90312b20ae44081e847e92cf4e9710494
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272059"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725169"
 ---
 # <a name="--negate-ssis-expression"></a>-(부정)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   숫자 식을 부정합니다.  
   
 ## <a name="syntax"></a>구문  

@@ -11,14 +11,18 @@ ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db32185da7c27d94b0afb52230aa89ff71abf95
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280167"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722745"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>2-2단원: Foreach 루프 컨테이너 추가 및 구성
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 작업에서는 플랫 파일 폴더를 통해 루핑하고 1단원의 데이터 흐름 변환을 각 플랫 파일에 적용합니다. 제어 흐름에 Foreach 루프 컨테이너를 추가하고 구성하여 이 작업을 수행합니다.  
   

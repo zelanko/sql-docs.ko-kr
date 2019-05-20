@@ -15,14 +15,18 @@ ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289939"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728314"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 데이터를 읽고 이를 캐시 파일에 저장할 수 있습니다. 캐시 연결 관리자가 캐시 파일을 사용하도록 구성했는지 여부에 관계없이 데이터는 항상 메모리에 저장됩니다.  
   
  캐시 변환은 데이터 흐름에 있는 연결된 데이터 원본의 데이터를 캐시 연결 관리자에 기록합니다. 패키지의 조회 변환은 데이터에 대해 조회를 수행합니다.  

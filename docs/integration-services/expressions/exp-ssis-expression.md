@@ -14,14 +14,18 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6374e8b33c678f418ee456021ef739bde5ac22d9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ffe52a392dfec79afa301df7650cf73f2ad35ac
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271728"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725436"
 ---
 # <a name="exp-ssis-expression"></a>EXP(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   밑이 e인 숫자 식의 지수를 반환합니다. EXP 함수는 LN 함수의 동작을 보완하며 역대수라고도 합니다.  
   
 ## <a name="syntax"></a>구문  

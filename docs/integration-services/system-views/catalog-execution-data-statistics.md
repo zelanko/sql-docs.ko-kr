@@ -11,17 +11,21 @@ ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90872764fd09ab78d9a98a0c9edc2c6e71479d26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eafc03f9e9b12bf60e3b0bd13c727ddd51c6637b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272944"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714717"
 ---
-# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
+# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 뷰는 지정된 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 뷰의 정보를 사용하여 구성 요소에 대한 데이터 처리량을 컴퓨팅할 수 있습니다.  
+  이 뷰는 지정된 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 뷰의 정보를 사용하여 구성 요소에 대한 데이터 처리량을 계산할 수 있습니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  

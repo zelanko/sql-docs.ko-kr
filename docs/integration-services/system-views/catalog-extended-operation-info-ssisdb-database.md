@@ -11,14 +11,18 @@ ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1104890dc1ea9a2894d1d32bf6f6d44d546e7569
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e77a6574bafaf743ebcc77721ac7e1b812fec974
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276299"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714607"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 모든 작업에 대한 확장 정보를 표시합니다.  
@@ -30,7 +34,7 @@ ms.locfileid: "58276299"
 |object_name|**nvarchar(260)**|개체 이름입니다.|  
 |object_type|**smallint**|작업의 영향을 받는 개체의 유형입니다. 개체는 폴더(`10`), 프로젝트(`20`), 패키지(`30`), 환경(`40`) 또는 실행 인스턴스(`50`)일 수 있습니다.|  
 |reference_id|**bigint**|작업에 사용된 참조의 고유 ID입니다.|  
-|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**ssNoversion**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset(7)**|작업이 시작된 날짜 및 시간입니다.|  
 |end_time|**datetimeoffset(7)**|작업이 종료된 날짜 및 시간입니다.|  
   

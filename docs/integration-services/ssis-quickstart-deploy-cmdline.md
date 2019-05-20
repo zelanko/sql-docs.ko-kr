@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 583e6f8f5213ae8fb7f803f872813551f7fb07fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b313dcc83da401cfb371e708e36456645a11296e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290209"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717665"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe를 사용하여 명령 프롬프트에서 SSIS 프로젝트 배포
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 빠른 시작에서는 Integration Services 배포 마법사인 `ISDeploymentWizard.exe`를 실행하여 명령 프롬프트에서 SSIS 프로젝트를 배포하는 방법을 보여줍니다.
 
 Integration Services 배포 마법사에 대한 자세한 내용은 [ Integration Services 배포 마법사](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)를 참조하세요.

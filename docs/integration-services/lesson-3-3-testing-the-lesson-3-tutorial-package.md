@@ -11,14 +11,18 @@ ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5884506c83dfc0f3cbee6119ad9047807c35fbfe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274849"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722094"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>3-3단원: 3단원 자습서 패키지 테스트
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 태스크에서는 **Lesson 3.dtsx** 패키지를 실행합니다. 패키가 실행될 때 **로그 이벤트** 창에는 로그 공급자가 로그 파일에 기록하는 SSIS인 로그 항목이 나열됩니다. 패키지 실행이 완료되면 로그 파일의 내용을 볼 수 있습니다.  
   

@@ -11,14 +11,18 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 566c3db45d64f0ce013ed538691bd8ce6af60f0f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca91b9a6e432346e4ecb6e43e333a80e7cded22f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275199"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721246"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>6-1단원: 5단원 패키지 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 작업에서는 5단원의 **Lesson 5.dtsx** 패키지에 대한 복사본을 만듭니다. 5단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 5단원 패키지를 프로젝트에 추가한 다음, 작업을 수행할 복사본을 만들 수 있습니다. 6단원의 나머지 부분에서 이 새 복사본을 사용합니다. 
 

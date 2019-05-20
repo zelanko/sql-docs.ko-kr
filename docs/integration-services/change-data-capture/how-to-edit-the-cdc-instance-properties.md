@@ -11,14 +11,18 @@ ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42cc80b22f5daae0deeaa355b4c8d23d2c888455
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9da51ac14564fc7e6a00b7ee9d9f5325073b6b48
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289849"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728788"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 편집하는 방법
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스에 대한 구성 속성을 편집하는 방법에 대해 설명합니다.  
   
 ### <a name="to-edit-the-cdc-instance-configuration-properties"></a>CDC 인스턴스 구성 속성을 편집하려면  

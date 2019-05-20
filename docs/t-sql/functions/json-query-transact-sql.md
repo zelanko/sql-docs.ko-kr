@@ -18,15 +18,17 @@ ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 6c9c5d1a9b1e61bfd6cb93ea57ad6eafabbe9636
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: ba0fdffbc354e87419da9d349841d63c38ab794b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577425"
 ---
 # <a name="jsonquery-transact-sql"></a>JSON_QUERY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  JSON 문자열에서 개체 또는 배열을 추출합니다.  
   
@@ -40,7 +42,8 @@ ms.locfileid: "56038464"
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *expression*  
  식입니다. 일반적으로 JSON 텍스트를 포함하는 변수 또는 열의 이름입니다.  
   
@@ -57,14 +60,15 @@ JSON 경로는 구문 분석을 위해 lax 또는 strict 모드를 지정할 수
 
 *path*의 형식이 유효하지 않으면 **JSON_QUERY**가 오류를 반환합니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>반환 값
+
  nvarchar(max) 형식의 JSON 조각을 반환합니다. 반환된 값의 데이터 정렬은 입력된 식의 데이터 정렬과 동일합니다.  
   
  값이 개체 또는 배열이 아닌 경우:  
   
--   lax 모드에서 **JSON_QUERY**는 null을 반환합니다.  
+- lax 모드에서 **JSON_QUERY**는 null을 반환합니다.  
   
--   strict 모드에서 **JSON_QUERY**는 오류를 반환합니다.  
+- strict 모드에서 **JSON_QUERY**는 오류를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -107,7 +111,8 @@ FOR JSON을 사용하여 결과를 반환하고 이미 JSON 형식인 데이터(
 
 ## <a name="examples"></a>예  
   
-### <a name="example-1"></a>예 1  
+### <a name="example-1"></a>예 1
+
  다음 예에서는 쿼리 결과의 `CustomFields` 열에서 JSON 조각을 반환하는 방법을 보여줍니다.  
   
 ```sql  
@@ -116,7 +121,8 @@ SELECT PersonID,FullName,
 FROM Application.People
 ```  
   
-### <a name="example-2"></a>예제 2  
+### <a name="example-2"></a>예제 2
+
 다음 예에서는 FOR JSON 절의 출력에 JSON 조각을 포함하는 방법을 보여줍니다.  
   
 ```sql  
@@ -127,6 +133,7 @@ FROM Warehouse.StockItems
 FOR JSON PATH
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:
+
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

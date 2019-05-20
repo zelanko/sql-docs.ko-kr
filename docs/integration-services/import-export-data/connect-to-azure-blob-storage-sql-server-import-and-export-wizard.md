@@ -10,14 +10,18 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf57a0b6dd76e95d0fada08aa2f5049341884a72
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221907"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723850"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Azure Blob Storage에 연결(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Azure Blob Storage** 데이터 원본에 연결하는 방법을 보여 줍니다.
 
 > [!NOTE]

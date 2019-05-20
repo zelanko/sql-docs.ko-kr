@@ -19,14 +19,18 @@ ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61f4236d4bfe3578afc83bb9ac034e2ebc792928
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4db63681f489b0f375846272b7093545eb8fefa6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270009"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725926"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  
   
  A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지는 행 개수를 사용하여 스크립트, 식 및 속성 식에 사용된 변수를 업데이트할 수 있습니다. (예를 들어 행 개수가 저장되는 변수는 행 개수가 포함되도록 전자 메일 메시지의 메시지 텍스트를 업데이트할 수 있습니다.) 행 개수 변환에 사용되는 변수는 이미 존재해야 하며 행 개수 변환이 포함된 데이터 흐름이 속해 있는 데이터 흐름 태스크의 범위 내에 있어야 합니다.  

@@ -11,14 +11,18 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272006"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721805"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>4-3단원: 오류 흐름 리디렉션 추가
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이전 태스크에서 변환이 오류를 생성하는 손상된 샘플 플랫 파일을 처리하려고 할 때 Lookup Currency Key 변환은 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
   

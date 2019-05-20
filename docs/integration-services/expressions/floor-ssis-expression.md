@@ -14,14 +14,18 @@ ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 581af0f46f9ef2408a016f8b89c10812d82a807e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f419fa11c27f912f9e020c83ec8c2164a7b4b13f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275738"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725405"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   숫자 식보다 작거나 같은 최대 정수를 반환합니다.  
   
 ## <a name="syntax"></a>구문  

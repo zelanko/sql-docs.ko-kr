@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277072"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720816"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>6-4단원: 6단원 패키지 배포
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 패키지를 배포하려면 SQL Server 인스턴스의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SSISDB 카탈로그에 패키지를 추가해야 합니다. 이 단원에서는 6단원 패키지를 SSISDB 카탈로그에 추가하고, 매개 변수를 설정하고 패키지를 실행하세요. 이 단원에서는 SQL Server Management Studio를 사용하여 SSISDB 카탈로그에 6단원 패키지를 추가하고 패키지를 배포하세요. 패키지를 배포한 후에 새 위치를 가리키도록 매개 변수를 수정한 다음, 패키지를 실행하세요.   
 이 작업에서는 다음을 수행합니다.  

@@ -11,14 +11,18 @@ ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf21c4c676ef7aef038f1b6e11a53d148e20a822
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dff95f63c43425f9189413bde0c1ee71c5eae287
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277602"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724938"
 ---
 # <a name="token--ssis-expression"></a>TOKEN(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   문자열에서 토큰을 구분하는 지정된 구분 기호와 반환할 토큰을 나타내는 토큰 번호를 기반으로 문자열에서 토큰(부분 문자열)을 반환합니다.  
   
 ## <a name="syntax"></a>구문  

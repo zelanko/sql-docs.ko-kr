@@ -11,14 +11,18 @@ ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10460dc01d07e9fe73a4f9e320d262311e9018a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272601"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716949"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 환경 변수를 만듭니다.  
@@ -98,7 +102,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
 |**Double**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**Int16**|**smallint**|  
-|**Int32**|**int**|  
+|**Int32**|**ssNoversion**|  
 |**Int64**|**bigint**|  
 |**단일**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  

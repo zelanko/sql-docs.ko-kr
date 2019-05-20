@@ -20,14 +20,18 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224c5e74a1f6019404faa45eed3c5a02f18943bb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d7267c2d4f86025f213208baae90057a84ced3e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276754"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725977"
 ---
 # <a name="merge-transformation"></a>병합 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   병합 변환은 두 개의 정렬된 데이터 세트를 단일 데이터 세트로 결합합니다. 각 데이터 세트의 행은 해당 키 열의 값을 기반으로 출력에 삽입됩니다.  
   
  데이터 흐름에 병합 변환을 포함하면 다음 태스크를 수행할 수 있습니다.  

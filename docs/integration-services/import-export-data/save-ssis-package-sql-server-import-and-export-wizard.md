@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279887"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723759"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS 패키지 저장(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **패키지 저장 및 실행** 페이지에서 SSIS(SQL Server Integration Services) 패키지로 설정을 저장하도록 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **SSIS 패키지 저장**을 표시합니다. 이 페이지에서 마법사에서 만든 패키지를 저장하기 위한 추가 옵션을 지정합니다.  
 
 **SSIS 패키지 저장** 페이지에 표시되는 옵션은 이전에 **패키지 저장 및 실행** 페이지에서 패키지를 SQL Server 또는 파일 시스템에 저장하도록 선택했는지에 따라 달라집니다. **패키지 저장 및 실행** 페이지를 다시 살펴보려면 [패키지 저장 및 실행](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)을 참조하세요.

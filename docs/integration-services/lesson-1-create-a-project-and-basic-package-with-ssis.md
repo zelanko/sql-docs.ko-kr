@@ -11,14 +11,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e1b4aef64ef4b7f0d99d7b5f44e88ca26d063c0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3cc37fe2dce76dd59baf776238e141a685c94cb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281667"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722572"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 단원에서는 단일 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환을 사용하여 데이터를 변환하고, 변환된 데이터를 **AdventureWorksDW2012** 샘플 데이터베이스의 **FactCurrencyRate** 팩트 테이블 사본에 기록하는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고, 데이터 원본 및 대상 연결을 추가 및 구성하고, 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법을 알아봅니다.  
   

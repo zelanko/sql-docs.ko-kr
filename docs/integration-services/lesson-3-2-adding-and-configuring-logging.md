@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277912"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722069"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>3-2단원: 로깅 추가 및 구성
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 태스크에서는 Lesson 3.dtsx 패키지의 데이터 흐름에 로깅을 사용하도록 설정합니다. 그런 다음, PipelineExecutionPlan 및 PipelineExecuteTrees 이벤트를 로그하도록 텍스트 파일 로그 공급자를 구성합니다. 텍스트 파일 로그 공급자는 보고 전송하기 쉬운 로그를 만듭니다. 이러한 로그 파일은 단순하기 때문에 패키지의 기본 테스트 단계에서 유용합니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 **로그 이벤트** 창에서 로그 항목을 볼 수도 있습니다.  
   

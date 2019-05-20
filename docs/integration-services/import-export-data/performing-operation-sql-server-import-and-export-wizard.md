@@ -12,14 +12,18 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05b5e0867d9bbe5ab4ea5e583db40a21aaafe76c
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 8feee241eb883cc889dc1888c95a9bbe3c58babb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221977"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723747"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 마법사에서 선택한 항목을 검토하고 **마법사 완료** 페이지에서 **마침** 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **작업을 수행하는 중**이 표시됩니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.
 
 ## <a name="screen-shot---operation-in-progress"></a>스크린샷 - 작업 진행 중 

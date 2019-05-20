@@ -12,14 +12,18 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a8a3624eeae89d520fb9e97e50af1d32de6dab55
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: fadf1fac6929433c217241039634a7af8658f4f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724003"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 복사 작업을 즉시 실행할 것인지 여부를 지정하고 필요에 따라 마법사에서 만든 패키지를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **마법사 완료**를 표시합니다. 이 페이지에서는 마법사에서 수행한 선택 사항을 검토한 다음 **마침** 을 클릭하여 복사 작업을 시작합니다.
  
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>마법사 완료 페이지의 스크린샷 

@@ -14,14 +14,18 @@ ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea6bdfd015c59ffa6fcfceb4169f9a03bbe14e74
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 808738f9b391091ad019c0bcab40f1c9416503d0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290409"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726964"
 ---
 # <a name="destination-assistant"></a>대상 길잡이
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   대상 길잡이 구성 요소는 대상 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  
   
 > [!NOTE]  

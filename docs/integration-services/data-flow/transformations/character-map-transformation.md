@@ -19,14 +19,18 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0e5ebfb5edbcbb0cc6ec47b063ffb11d87b01c55
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272996"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726240"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  
   
  문자표 변환은 사용 중인 열 데이터를 변환하거나 열을 변환 출력에 추가하고 변환된 데이터를 새 열에 배치할 수 있습니다. 다양한 매핑 작업 집합을 동일한 입력 열에 적용하고 결과를 다른 열에 배치할 수 있습니다. 예를 들어 동일한 열을 대문자와 소문자로 변환하고 결과를 두 개의 서로 다른 열에 배치할 수 있습니다.  

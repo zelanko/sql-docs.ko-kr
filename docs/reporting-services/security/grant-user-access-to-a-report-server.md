@@ -1,8 +1,8 @@
 ---
 title: 사용자에게 보고서 서버에 대한 액세스 권한 부여 | Microsoft Docs
-ms.date: 05/15/2017
+ms.date: 05/6/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021857"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449694"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 데이터베이스 액세스 권한 부여
 
@@ -29,7 +29,7 @@ ms.locfileid: "50021857"
 
  **SharePoint 모드 보고서 서버:** SharePoint 통합 모드로 구성된 보고서 서버의 경우 SharePoint 사이트에서 SharePoint 사용 권한을 사용하여 액세스를 구성합니다. SharePoint 사이트의 사용 권한 수준에 따라 보고서 서버 내용 및 작업에 대한 액세스 권한이 결정됩니다. SharePoint 사이트에 대한 사용 권한을 부여하려면 사이트 관리자여야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)를 참조하세요.
 
- **기본 모드 보고서 서버:** 이 항목에서는 기본 모드로 구성된 보고서 서버 및 웹 포털을 사용하여 역할에 사용자를 할당하는 방법에 대해 설명합니다. 역할에는 다음과 같은 두 가지 유형이 있습니다.
+ **기본 모드 보고서 서버:** 이 문서에서는 기본 모드로 구성된 보고서 서버 및 웹 포털을 사용하여 역할에 사용자를 할당하는 방법을 중점적으로 설명합니다. 역할에는 다음과 같은 두 가지 유형이 있습니다.
 
 - 항목 수준 역할은 보고서 서버 내용, 구독, 보고서 처리 및 보고서 기록을 보고, 추가하고, 관리하는 데 사용됩니다. 항목 수준 역할 할당은 루트 노드(홈 폴더)에 정의되거나 계층의 하위 수준에 있는 특정 폴더 또는 항목에 정의됩니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "50021857"
 
 - 이 태스크를 다른 사용자에게 위임하려면 사용자 계정을 내용 관리자 및 시스템 관리자 역할에 매핑하는 역할 할당을 만듭니다. 내용 관리자 및 시스템 관리자 권한이 있는 사용자는 보고서 서버에 사용자를 추가할 수 있습니다.
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 웹 포털에는 작업 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.
+-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 웹 포털에는 작업 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.
 
 - 필요에 따라 필요한 태스크 모음을 포함하는 추가 역할을 정의하거나 역할을 사용자 지정합니다. 예를 들어 개별 항목에 대해 사용자 지정 보안 설정을 사용하려는 경우 폴더에 대한 보기 액세스 권한을 부여하는 새 역할 정의를 만들 수 있습니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "50021857"
 
 5. **그룹 또는 사용자 추가**를 선택합니다.
 
-6. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다. 
+6. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다.
 
     > [!NOTE]
     > 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.
@@ -95,10 +95,8 @@ ms.locfileid: "50021857"
 
 ## <a name="next-steps"></a>다음 단계
 
-[역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[새 역할 할당: 역할 할당 편집 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[보안 속성 페이지, 항목&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
-[역할 할당](../../reporting-services/security/role-assignments.md)   
+[역할 할당 만들기 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)  
+[역할 할당](../../reporting-services/security/role-assignments.md)  
 [역할 정의](../../reporting-services/security/role-definitions.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

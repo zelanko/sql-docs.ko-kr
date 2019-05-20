@@ -11,14 +11,18 @@ ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 972cc532916a135562fbd0e860ad2d003cdc9ee7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 255068b1d20d67b18a9c0a1679b8ee424192045e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275306"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716006"
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
+# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   기존 사용자 지정 로깅 수준의 이름을 바꿀 수 있습니다. 사용자 지정 로깅 수준에 대한 자세한 내용은 [Integration Services &#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  

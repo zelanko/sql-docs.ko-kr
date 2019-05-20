@@ -1,21 +1,21 @@
 ---
 title: 보고서 뷰어 현재 분기 버전 지원
 uthor: markingmyname
-ms.author: maghan
+ms.author: maggies
 manager: kfile
 ms.reviewer: jonhp
 ms.prod: reporting-services
-ms.prod_service: reporting-services-native, reporting-services-sharepoint
+ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 01/09/2019
-ms.openlocfilehash: a3e0866507b34b6f36c76d2786af852f2bdd9cf7
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: f1e4bd4868580ca2497a1ba594de52bb42179b13
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185089"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503920"
 ---
 # <a name="support-for-report-viewer-current-branch-versions"></a>보고서 뷰어 현재 분기 버전 지원
 

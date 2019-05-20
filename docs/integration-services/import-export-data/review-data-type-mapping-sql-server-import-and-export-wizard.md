@@ -12,14 +12,18 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8af55ff084a0f6202bf830a006b01460748d8b4e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281527"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723768"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **열 매핑** 대화 상자의 **매핑** 목록에서 성공하지 않을 수 있는 데이터 형식 매핑을 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **데이터 형식 매핑 검토** 페이지를 표시합니다. 이 페이지에서는 원본 데이터가 대상과 호환되도록 하기 위해 마법사에서 수행해야 하는 데이터 형식 변환에 대한 세부 정보를 검토합니다. 이 정보에는 오류 또는 잘림이 발생할 수 있는 변환에서 성공할 것으로 예상되는 데이터 형식 변환을 구별하는 시각적 표시가 포함됩니다. 각 변환에 대해 마법사에서 제안하는 변환을 적용할지 여부를 결정하고 발생할 수 있는 오류를 처리하는 방법을 지정합니다.   
   
 > [!TIP]

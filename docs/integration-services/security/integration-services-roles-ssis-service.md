@@ -21,14 +21,18 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54f0d5afc9893c188c79658fe6301394ac17bb2b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2b8a69e22a9765ee67c9c80a625a0093c268f3a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274221"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718049"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지에 대한 액세스를 보호하는 데 사용할 수 있는 특정 고정 데이터베이스 수준 역할을 제공합니다. 사용 가능한 역할은 패키지를 SSIS 카탈로그 데이터베이스(SSISDB)에 저장하는지 아니면 msdb 데이터베이스에 저장하는지에 따라 달라집니다.  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>SSIS 카탈로그 데이터베이스(SSISDB)의 역할  

@@ -11,14 +11,18 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e3cc04877f54df9c1865633d2ac7ec4430cbbe00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b120ee8d8744214119df9442a4901a5cf9295b13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795901"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715703"
 ---
 # <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 스케일 아웃 마스터 엔드포인트를 업데이트합니다.
@@ -39,7 +43,7 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
 ## <a name="result-sets"></a>결과 집합  
  없음  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
    
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

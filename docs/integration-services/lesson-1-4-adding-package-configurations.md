@@ -11,14 +11,18 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282437"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723039"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>1-4단원 - 패키지 구성 추가
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다양한 구성 유형이 제공됩니다. 구성을 환경 변수, 레지스트리 항목, 사용자 정의 변수, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 및 XML 파일에 저장할 수 있습니다. 보다 나은 유연성을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 간접 구성 사용을 지원합니다. 이는 실제 값을 지정하는 구성의 위치는 환경 변수를 사용하여 지정한다는 것을 의미합니다. Deployment Tutorial 프로젝트의 패키지는 XML 구성 파일과 간접 구성의 조합을 사용합니다. XML 구성 파일은 여러 속성에 대한 구성을 포함할 수 있으며 가능한 경우 여러 패키지에서 참조할 수 있습니다. 이 자습서에서는 각 패키지에 대한 별개의 구성 파일을 사용합니다.  

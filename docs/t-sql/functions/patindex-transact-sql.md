@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec39c68294ae1de6563e37857f2c6e1041e674fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666741"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875217"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,9 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="remarks"></a>Remarks  
  *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
-  
+ 
+ 반환된 시작 위치는 0이 아닌 1부터 시작합니다.
+ 
  PATINDEX는 입력 데이터 정렬에 따라 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 COLLATE를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
@@ -96,7 +98,7 @@ GO
   
  `WHERE` 절을 사용하여 검색할 행을 제한하지 않으면 쿼리는 테이블의 모든 행을 반환하고 패턴을 찾은 행에 대해서는 0이 아닌 값을 보고하고 패턴을 찾지 못한 모든 행에 대해서는 0을 보고합니다.  
   
-### <a name="c-using-wildcard-characters-with-patindex"></a>3. PATINDEX와 함께 와일드카드 문자 사용  
+### <a name="c-using-wildcard-characters-with-patindex"></a>C. PATINDEX와 함께 와일드카드 문자 사용  
  다음 예에서는 % 및 와일드카드를 사용하여 지정된 문자열에서 하나의 문자 및 `'en'`가 뒤에 오는 `'ure'` 패턴이 시작하는 위치를 찾습니다(인덱스가 1에서 시작함).  
   
 ```  
@@ -114,7 +116,7 @@ SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');
   
  `LIKE`와 달리 `PATINDEX`는 위치를 반환하는데, 이는 `CHARINDEX`와 유사합니다.  
   
-### <a name="d-using-collate-with-patindex"></a>4. PATINDEX와 함께 COLLATE 사용  
+### <a name="d-using-collate-with-patindex"></a>D. PATINDEX와 함께 COLLATE 사용  
  다음 예에서는 `COLLATE` 함수를 사용하여 검색된 식의 데이터 정렬을 명시적으로 지정합니다.  
   
 ```  
@@ -124,7 +126,7 @@ SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;
 GO  
 ```  
   
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>5. 변수를 사용하여 패턴 지정  
+### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 변수를 사용하여 패턴 지정  
  다음 예에서는 변수를 사용하여 *패턴* 매개 변수로 값을 전달합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  

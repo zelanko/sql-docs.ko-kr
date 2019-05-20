@@ -14,14 +14,18 @@ ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 608e3fd8ebf7de4e2f84357c8b7a1874c33e1230
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279622"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714508"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** 카탈로그에 표시된 모든 패키지에 대한 자세한 정보를 표시합니다.  
@@ -32,10 +36,10 @@ ms.locfileid: "58279622"
 |NAME|**nvarchar(256)**|패키지의 고유 이름입니다.|  
 |package_guid|**uniqueidentifier**|패키지를 식별하는 GUID(Globally Unique Identifier)입니다.|  
 |description|**nvarchar(1024)**|패키지에 대한 설명(옵션)입니다.|  
-|package_format_version|**int**|패키지를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
-|version_major|**int**|패키지의 주 버전입니다.|  
-|version_minor|**int**|패키지의 부 버전입니다.|  
-|version_build|**int**|패키지의 빌드 버전입니다.|  
+|package_format_version|**ssNoversion**|패키지를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
+|version_major|**ssNoversion**|패키지의 주 버전입니다.|  
+|version_minor|**ssNoversion**|패키지의 부 버전입니다.|  
+|version_build|**ssNoversion**|패키지의 빌드 버전입니다.|  
 |version_comments|**nvarchar(1024)**|패키지 버전에 대한 설명(옵션)입니다.|  
 |version_guid|**uniqueidentifier**|패키지 버전을 고유하게 식별하는 GUID입니다.|  
 |project_id|**bigint**|프로젝트의 고유 ID입니다.|  

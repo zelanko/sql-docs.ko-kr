@@ -13,14 +13,18 @@ ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 555e0c387debf92a578b71f87c8f5304a8ba1550
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed7cf9232930e867c2761bd60aaaf8ecc9e8c261
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273397"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724022"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services(SSIS)에서 Hadoop 및 HDFS 지원
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 2016 Integration Services(SSIS)에는 Hadoop 및 HDFS 온-프레미스에 대한 지원을 제공하는 다음 구성 요소가 포함됩니다.  
   
  HDInsight 및 Microsoft Azure의 다른 기능을 지원하는 Integration Services 구성 요소에 대한 정보는 [Integration Services용 Azure Feature Pack&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  

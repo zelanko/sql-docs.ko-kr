@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9cdaf6d6fdf6ebe713cde17e87480b5fac4047f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65367068"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570808"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "65367068"
 |----------------|-----------------|-----------------|
 |단일 NUMA 노드가 있는 서버|논리 프로세서 8개 미만|MAXDOP을 #개 이하 논리 프로세서로 유지|
 |단일 NUMA 노드가 있는 서버|논리 프로세서 8개 초과|MAXDOP을 8개로 유지|
-|여러 NUMA 노드가 있는 서버|NUMA 노드당 논리 프로세서 8개 초과|MAXDOP을 NUMA 노드당 #개 이하 논리 프로세서로 유지|
+|여러 NUMA 노드가 있는 서버|NUMA 노드당 논리 프로세서 8개 미만|MAXDOP을 NUMA 노드당 #개 이하 논리 프로세서로 유지|
 |여러 NUMA 노드가 있는 서버|NUMA 노드당 논리 프로세서 8개 초과|MAXDOP을 8개로 유지|
   
 ###  <a name="Security"></a> 보안  

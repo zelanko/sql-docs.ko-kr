@@ -18,14 +18,18 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 683d3bcee8450a62a040663dacf30d337556529d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276316"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727679"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 **False**가 될 때까지 워크플로를 반복합니다.  
   
  For 루프 컨테이너는 다음 요소를 사용하여 루프를 정의합니다.  

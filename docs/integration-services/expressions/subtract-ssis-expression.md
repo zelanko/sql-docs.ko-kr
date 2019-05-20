@@ -14,14 +14,18 @@ ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0abad5caf128ac49a3d764684716436f54a14322
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 69d2edc4de33348daaab80344f9174ae7e308e27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271065"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724929"
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   첫 번째 숫자 식에서 두 번째 식을 뺍니다.  
   
 ## <a name="syntax"></a>구문  

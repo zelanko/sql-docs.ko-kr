@@ -17,14 +17,18 @@ ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78fabbab0e38e65fdb77dc1b1a5e300154d1569a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ad0dca79322d67e357f4629357367f0ecfb50b03
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280617"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805223"
 ---
 # <a name="rebuild-index-task"></a>인덱스 다시 작성 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   인덱스 다시 작성 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블과 뷰의 인덱스를 다시 작성합니다. 인덱스 관리에 대한 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
  인덱스 다시 작성 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스의 인덱스를 다시 작성할 수 있습니다. 태스크가 단일 데이터베이스의 인덱스만 다시 작성하는 경우 인덱스를 다시 작성할 뷰와 테이블을 선택할 수 있습니다.  

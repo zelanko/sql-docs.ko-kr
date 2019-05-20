@@ -10,14 +10,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659761"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718757"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out 관리자는 하나의 앱으로 전체 SSIS Scale Out 토폴로지를 관리할 수 있는 관리 도구입니다. 여러 컴퓨터에서 관리 작업을 수행하고 Transact-SQL 명령을 실행하는 부담을 없애줍니다.
 

@@ -11,14 +11,18 @@ ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b145bff827dfa60d6d5d232af8fb26816ebd873
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f830393b516ac583a6c0ae72332bef8ac8177714
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283127"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722837"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>1-8단원: 1단원 패키지 주석 달기 및 형식 
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이제 1단원 패키지의 구성을 완료했으므로 패키지 레이아웃을 정리해야 할 때입니다. 제어 흐름과 데이터 흐름 레이아웃의 모양이 다른 크기이거나 균등하지 않은 경우 패키지를 이해하기가 더 어려울 수 있습니다.  
   

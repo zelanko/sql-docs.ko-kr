@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279467"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722392"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>3-1단원 - 배포 번들 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 태스크에서는 배포 번들을 대상 컴퓨터에 복사합니다.  
   
 배포 번들을 대상 컴퓨터에 복사하는 가장 쉬운 방법은 먼저 대상 컴퓨터에서 공유 위치를 만든 다음 드라이브를 공유 위치에 매핑하고 배포 번들을 공유 위치에 복사하는 것입니다. 공유 폴더를 생성 및 구성하거나 드라이브를 매핑하는 방법을 모를 경우 Windows 설명서를 참조하십시오.  

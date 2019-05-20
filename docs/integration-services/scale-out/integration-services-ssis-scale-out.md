@@ -12,14 +12,18 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bea5d30cb17920584c4d4eafdf888eeedbc014e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 86a3db60a6eea2dce25394cab069d9ca9e1f9f8d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282947"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718376"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services(SSIS) 규모 확장
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SSIS(SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out에서는 여러 컴퓨터에 패키지 실행을 배포하여 SSIS 패키지의 고성능 실행을 제공합니다. Scale Out을 설정한 후에 SSMS(SQL Server Management Studio)에서 스케일 아웃 모드로 동시에 여러 패키지를 실행할 수 있습니다.
 
 ## <a name="components"></a>구성 요소

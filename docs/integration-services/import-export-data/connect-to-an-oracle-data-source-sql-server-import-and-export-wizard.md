@@ -10,14 +10,18 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 106318f35e6cf4ee730b4cd2a6b0cb1831151041
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 04a7354fac044a835ab5d5649d56c01e72e6e995
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221937"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723885"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Oracle** 데이터 원본에 연결하는 방법을 보여 줍니다. Oracle에 연결하는 데 사용할 수 있는 데이터 공급자는 여러 개입니다.
 
 > [!IMPORTANT]

@@ -11,14 +11,18 @@ ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671269"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720575"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS(SQL Server Integration Services) 패키지를 만들어 SQL Server 또는 [Azure SQL Database](/azure/sql-database/)에 데이터를 로드합니다. SSIS 데이터 흐름을 통해 전달될 때 필요에 따라 데이터를 재구성, 변형 및 정리할 수 있습니다.
 

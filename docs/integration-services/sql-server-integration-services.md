@@ -21,14 +21,18 @@ helpviewer_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f11fac0a7f875c019f4371144f38c3882d4c013c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c3c7c128cc74e43877e481f405d8b7df30ce6b5f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271502"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717906"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 엔터프라이즈 수준 데이터 통합 및 데이터 변환 솔루션을 빌드하는 데 필요한 플랫폼입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 파일을 복사 또는 다운로드하고, 데이터 웨어하우스를 로드하고, 데이터를 정리 및 마이닝하고, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체와 데이터를 관리하여 복잡한 비즈니스 문제를 해결합니다.
 

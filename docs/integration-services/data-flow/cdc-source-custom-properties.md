@@ -11,14 +11,18 @@ ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b82c9db104783e4a725964a2d781d4f3ded40aeb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 821071096967e1a6bfa767f920baafeaa094b0dc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289709"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727146"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 원본 사용자 지정 속성
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   다음 표에서는 CDC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성 이름|데이터 형식|설명|  

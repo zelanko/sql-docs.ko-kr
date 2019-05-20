@@ -16,14 +16,18 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274248"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726157"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
  파생 열 변환은 식을 사용하여 기존 열의 값을 업데이트하거나 새 열에 값을 추가합니다. 새 열에 값을 추가하는 경우 **파생 열 변환 편집기** 대화 상자에서 식을 계산하고 열의 메타데이터를 적절히 정의합니다. 예를 들어 식에서 각각 데이터 형식이 DT_WSTR이고 길이가 50인 두 개의 열을 해당 두 열 값 사이의 공백으로 연결할 경우 새 열은 데이터 형식이 DT_WSTR이고 길이는 101이 됩니다. 새 열의 데이터 형식을 업데이트할 수 있습니다. 유일한 요구 사항은 데이터 형식이 삽입된 데이터와 호환되어야 한다는 것입니다. 예를 들어 정수 데이터 형식이 있는 열에 데이터 값을 할당할 경우 **파생 열 변환 편집기** 대화 상자에서 유효성 검사 오류가 발생합니다. 선택한 데이터 형식에 따라 열의 길이, 전체 자릿수, 소수 자릿수 및 코드 페이지를 지정할 수 있습니다.  

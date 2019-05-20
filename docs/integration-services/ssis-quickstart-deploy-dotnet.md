@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d773d0d75c843c05b9e9273f1fbbe9eec9a16721
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48055b6713eeab212859afe974df71e51c223010
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279687"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717727"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 빠른 시작에서는 C# 코드를 작성하여 데이터베이스 서버에 연결하고 SSIS 프로젝트를 배포하는 방법을 보여줍니다.
 
 C# 앱을 만들려면 Visual Studio, Visual Studio Code 또는 원하는 다른 도구를 사용할 수 있습니다.

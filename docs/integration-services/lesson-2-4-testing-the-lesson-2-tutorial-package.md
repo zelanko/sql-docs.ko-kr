@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272212"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722456"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>2-4단원: 2단원 자습서 패키지 테스트
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Foreach 루프 컨테이너와 플랫 파일 연결 관리자가 이제 구성되었으므로 2단원 패키지에서는 Sample Data 폴더에 있는 14개의 플랫 파일을 반복할 수 있습니다. 파일 이름이 지정된 기준과 일치할 때마다 Foreach 루프 컨테이너는 사용자 정의 변수를 해당 파일 이름으로 채웁니다. 이에 따라 이 변수는 해당 플랫 파일에 연결하는 플랫 파일 연결 관리자의 ConnectionString 속성을 업데이트합니다. 그런 다음, Foreach 루프 컨테이너는 해당 플랫 파일의 데이터에 대해 수정되지 않은 데이터 흐름 태스크를 실행합니다.  
   

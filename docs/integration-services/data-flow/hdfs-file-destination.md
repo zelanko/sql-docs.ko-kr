@@ -13,14 +13,18 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a18a12c10e23e44b597ec6dc5bddebf6a5a77db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275787"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726776"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 파일 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS 패키지는 HDFS 파일 대상 구성 요소를 통해 HDFS 파일에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 텍스트, Avro 및 ORC입니다.
 
  HDFS 파일 대상을 구성하려면 데이터 흐름 디자이너에서 HDFS 파일 원본을 끌어서 놓은 다음 구성 요소를 두 번 클릭하여 편집기를 엽니다.

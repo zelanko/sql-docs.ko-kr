@@ -13,14 +13,18 @@ ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b977bb313d151ef71b754e6c58725f1e3032144c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aa8b290379e871e4446a7b49f5e52b12ffe4873d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280277"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724064"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  
   
  **에서** 일반 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]페이지를 열려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **Business Intelligence 디자이너**를 확장하여 **Integration Services 디자이너**를 엽니다.  

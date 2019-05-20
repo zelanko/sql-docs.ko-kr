@@ -11,14 +11,18 @@ ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b166ceafd545952039d9c1929dc8aea6dc538d24
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273549"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724496"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 멀티 타기팅 지원
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  이제 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. Visual Studio 2015용 SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. 
 
  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
@@ -34,7 +38,7 @@ ms.locfileid: "58273549"
 -   로그 공급자
 -   데이터 흐름 구성 요소
 
-관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+관리되는 확장의 경우 SSIS 디자이너는 지정된 대상 버전에 대한 확장 버전을 로드합니다. 예를 들어
 -   대상 버전이 SQL Server 2012인 경우 디자이너는 2012 버전의 확장을 로드합니다.
 -   대상 버전이 SQL Server 2016인 경우 디자이너는 2016 버전의 확장을 로드합니다.
 

@@ -11,14 +11,18 @@ ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a07c27744956f2156f7806ad3e7a1763e374fa17
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d2a7d45616ee7707ce4a0b5c01f222035a227fec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270878"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729164"
 ---
 # <a name="set-parameter-value-dialog-box"></a>매개 변수 값 설정 대화 상자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **매개 변수 값 설정** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수 및 연결 관리자 속성 값을 설정할 수 있습니다.  
   
  **수행 작업**  

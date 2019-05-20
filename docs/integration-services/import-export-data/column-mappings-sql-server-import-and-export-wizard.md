@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222097"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723950"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후 **매핑 편집**을 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 **열 매핑** 대화 상자를 표시합니다. 이 페이지에서는 원본 열에서 복사한 데이터를 받을 대상 열을 지정하고 구성합니다. 종종 이 페이지에서 아무 것도 변경할 필요가 없습니다.
   
 선택한 테이블의 모든 열을 복사하지 않으려면 이 페이지에서 수행할 수 있는 한 가지 작업은 원하지 않는 열을 제외하는 것입니다. 복사하지 않으려는 열에 대한 **매핑** 목록의 **대상** 열에서 **무시**를 선택합니다.

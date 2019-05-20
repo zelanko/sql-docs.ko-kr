@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275242"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725664"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  
   
  속성 식을 만들거나 변경하려면 **속성 식 편집기** 또는 **식 작성기**를 사용하면 됩니다. **속성 식 편집기** 는 태스크와 컨테이너에 사용할 수 있는 사용자 지정 편집기나 **속성** 창에서 액세스할 수 있고, **식 작성기** 는 **속성 식 편집기**내에서 액세스할 수 있습니다. **속성 식 편집기** 와 **식 작성기**모두에서 식을 작성할 수 있지만 **식 작성기** 에서는 복잡한 식을 간단하게 작성할 수 있게 해주는 그래픽 도구 집합을 제공합니다.  

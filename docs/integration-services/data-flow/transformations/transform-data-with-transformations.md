@@ -15,14 +15,18 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 20a65f9755e0cea30a79435f885912c15cce5e7b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275258"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725766"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  
   
  다음 다이어그램에서는 원본 하나, 변환 두 가지, 대상 하나를 포함하는 간단한 데이터 흐름을 보여 줍니다.  

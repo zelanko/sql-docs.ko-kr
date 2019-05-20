@@ -20,14 +20,18 @@ ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0efefea6391b9c9da82dc3c960ea1c0774e1aaaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6fe2095d7e5bdd47a4442084b9d75c6880a64cfc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282687"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713708"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 및 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 제어 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 컨테이너 및 태스크에서의 중단점을 지원합니다.  

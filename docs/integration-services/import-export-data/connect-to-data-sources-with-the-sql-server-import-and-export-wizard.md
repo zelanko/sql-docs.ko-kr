@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221896"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723862"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 단원의 항목에서는 SQL Server 가져오기 및 내보내기 마법사를 실행할 때 자주 사용되는 데이터 원본에 연결하는 방법을 보여 줍니다. 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 데이터 원본에 대한 연결 정보를 제공해야 합니다.
 
 이 섹션의 항목에서는 마법사의 **데이터 원본 선택** 및 **대상 선택** 페이지에서 **데이터 원본에 연결**하는 방법만 설명합니다. 다른 내용을 찾으려면 [관련 태스크 및 콘텐츠](#related)를 참조하세요.

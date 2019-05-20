@@ -17,14 +17,18 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed952b3e9d275d54c751aa64c6544653511667c3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272140"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715461"
 ---
 # <a name="system-variables"></a>시스템 변수
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
   
  SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  

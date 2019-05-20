@@ -11,14 +11,18 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05b8024ababbe6e0c07ee72e50d844609c7a816c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a018123080076cfcc3886395345e29df62feed79
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281497"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714745"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   실행 인스턴스 중에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용한 실제 매개 변수 값을 표시합니다.  

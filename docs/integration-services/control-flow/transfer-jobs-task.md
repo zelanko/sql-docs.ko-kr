@@ -17,14 +17,18 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8dd39c8803b5b03a3595191d58bf4bd3f6a54812
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 258c04583f5494e158c9a92fd9ae53dfc501ad9a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271868"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727378"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  
   
  작업 전송 태스크는 모든 작업 또는 지정된 작업만 전송하도록 구성할 수 있습니다. 또한 전송된 작업을 대상에서 활성화할지 여부를 나타낼 수 있습니다.  

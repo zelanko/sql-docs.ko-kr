@@ -11,14 +11,18 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f97121a1916362d415eef3de717ad091fbac7958
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272288"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721553"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>5-4단원: 5단원 패키지 테스트
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 런타임에 패키지는 패키지를 만들 때 지정한 원래 디렉터리 이름을 사용하지 않고 구성 변수에서 **Directory** 속성 값을 가져옵니다. 변수의 값은 **SSISTutorial.dtsConfig** XML 파일에서 가져옵니다.  
   

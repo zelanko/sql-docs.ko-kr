@@ -11,14 +11,18 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24e34745d8562f5e990855f1e67526684d171383
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280927"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726422"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 대상 구성 요소입니다. 따라서 SAP BW 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드합니다.  
   
  이 대상에는 하나의 입력과 하나의 오류 출력이 포함됩니다.  

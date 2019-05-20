@@ -11,14 +11,18 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d93b7e9fbcc1e614ba12a5974b45a5993411d98
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b686a585b037a9377926198278a3a34f6fd4881
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273922"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721663"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>4-1단원: 3단원 패키지 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 태스크에서는 3단원에서 Lesson 3.dtsx 패키지의 복사본을 만듭니다. 3단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 3단원 패키지를 프로젝트에 추가한 다음, 작업을 수행할 복사본을 만들 수 있습니다. 4단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
   

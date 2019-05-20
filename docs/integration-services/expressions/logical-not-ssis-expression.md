@@ -14,14 +14,18 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a0fc2dcf29877c1c1fe0e3c0a4a75ca9b23096bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8a649e1e60ffd44047377ed1b8eaaaba0569aa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276665"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725196"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (논리적 Not)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   부울 피연산자를 부정합니다.  
   
 > [!NOTE]  

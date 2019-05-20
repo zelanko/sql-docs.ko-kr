@@ -11,14 +11,18 @@ ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9e03e2deced99be885ee5b0982fd8d3b3ed0f367
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 25e07fb354d739d6a8aa1964e50e31e847194471
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271189"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727058"
 ---
 # <a name="create-infosource-for-transaction-data"></a>트랜잭션 데이터용 InfoSource 만들기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **트랜잭션 데이터용 InfoSource 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoSource를 만들 수 있습니다.  
   
  **트랜잭션 데이터용 InfoSource 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자**페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  

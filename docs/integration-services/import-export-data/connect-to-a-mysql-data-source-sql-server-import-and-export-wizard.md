@@ -10,14 +10,18 @@ ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3772028888e7c91b9be9b6fd3f905fb57db8636b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: a359cdc0467d06cf0f67c1229981466f9b440101
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221947"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723925"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **MySQL** 데이터 원본에 연결하는 방법을 보여 줍니다. MySQL에 연결하는 데 사용할 수 있는 데이터 공급자는 여러 개입니다.
 
 > [!IMPORTANT]

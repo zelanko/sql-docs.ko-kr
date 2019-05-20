@@ -19,14 +19,18 @@ ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6e9af4d3d2f1b3157d239c7f1bdc9ae201391f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3c37cdf1866a10f538baaa7b6536e74c88225de8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272548"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723591"
 ---
 # <a name="integration-services-ssis-development-and-management-tools"></a>SSIS(Integration Services) 배포 및 관리 도구
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지에 사용할 수 있는 두 가지 스튜디오가 포함되어 있습니다.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서는 비즈니스 솔루션에 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 개발할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 는 패키지를 만들 수 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 제공합니다.  

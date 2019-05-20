@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273287"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726005"
 ---
 # <a name="lookup-transformation"></a>조회 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
   
  참조 데이터 세트는 캐시 파일, 기존 테이블이나 뷰, 새 테이블 또는 SQL 쿼리의 결과일 수 있습니다. 조회 변환은 OLE DB 연결 관리자 또는 캐시 연결 관리자를 사용하여 참조 데이터 세트에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 및 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)을 참조하세요.  
@@ -131,7 +135,7 @@ ms.locfileid: "58273287"
   
 ## <a name="related-content"></a>관련 내용  
   
--   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
+-   MSDN Library의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
   
 -   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   

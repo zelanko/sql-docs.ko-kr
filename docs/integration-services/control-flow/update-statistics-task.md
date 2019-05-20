@@ -16,14 +16,18 @@ ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a1a82c380a26d2de22c5f66dbf67f23f4cef14d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 04dc5c791a9a3cfc0cd28941705c5e300ebeef8a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282377"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727346"
 ---
 # <a name="update-statistics-task"></a>통계 업데이트 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   통계 업데이트 태스크는 지정된 테이블이나 인덱싱된 뷰에서 하나 이상의 통계 그룹(컬렉션)의 키 값 배포에 대한 정보를 업데이트합니다. 자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
   
  통계 업데이트 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스의 통계를 업데이트할 수 있습니다. 태스크가 단일 데이터베이스의 통계만 업데이트하는 경우 통계를 업데이트할 뷰 또는 테이블을 선택할 수 있습니다. 모든 통계, 열 통계만 또는 인덱스 통계만 업데이트하도록 구성할 수 있습니다.  

@@ -2,7 +2,7 @@
 title: SQL Server용 OLE DB 드라이버에서 UTF-8 지원| Microsoft Docs
 description: SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: 4a30b233190817faee581106db5c8a18695a00d1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583016"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775174"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "59583016"
 
 SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩을 위한 지원을 추가합니다. SQL Server UTF-8 지원에 대한 자세한 내용은 다음을 참조하세요.
 - [데이터 정렬 및 유니코드 지원](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 지원](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
+- [UTF-8 지원](#ctp23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8로 인코딩된 CHAR 또는 VARCHAR 열로의 데이터 삽입
 삽입하기 위해 입력 매개 변수 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](https://go.microsoft.com/fwlink/?linkid=2071182)의 배열을 사용하여 설명합니다. 각 DBBINDING 구조체는 단일 매개 변수를 소비자의 버퍼에 연결하고 데이터 값의 길이 및 형식과 같은 정보를 포함합니다. CHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정해야 합니다. WCHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정해야 합니다.
@@ -46,7 +46,25 @@ SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩
 결과 버퍼 형식 표시기 DBTYPE_STR의 경우 드라이버는 UTF-8로 인코딩된 데이터를 클라이언트 인코딩으로 변환합니다. 사용자는 클라이언트 인코딩에서 UTF-8 열의 데이터를 표시할 수 있는지 확인해야 합니다. 표시할 수 없으면 데이터 손실이 발생할 수 있습니다.
 
 결과 버퍼 형식 표시기 DBTYPE_WSTR의 경우 드라이버는 UTF-8로 인코딩된 데이터를 UTF-16 인코딩으로 변환합니다.
-  
+
+<a name="ctp23"></a>
+
+### <a name="utf-8-support-sql-server-2019-ctp-23"></a>UTF-8 지원(SQL Server 2019 CTP 2.3)
+
+[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)]에서는 가져오기 또는 내보내기 인코딩이나 텍스트 데이터의 데이터베이스 수준 또는 열 수준 데이터 정렬로 널리 사용되는 UTF-8 문자 인코딩이 완벽하게 지원됩니다. UTF-8은 `CHAR` 및 `VARCHAR` 데이터 형식에서 허용되며, `UTF8` 접미사를 사용하여 개체의 데이터 정렬을 만들거나 이 접미사를 갖는 데이터 정렬로 변경하여 설정합니다.
+
+예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
+
+이 기능은 사용 중인 문자 집합에 따라 스토리지 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 UTF-8 사용 데이터 정렬을 통해 ASCII(Latin) 문자열이 있는 기존 열 데이터 유형을 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
+
+자세한 내용은 [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+
+**CTP 2.1** [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]설정 중 UTF-8 데이터 정렬을 기본값으로 선택하도록 지원을 추가했습니다.
+
+**CTP 2.2** SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
+
+**CTP 2.3** BIN2 데이터 정렬(UTF8_BIN2)로 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
+
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 기능용 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 

@@ -11,15 +11,17 @@ ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 15d32c3f97791c6c87b95e431f02e4d75bf8da6f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026524"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577453"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.  
   
@@ -31,7 +33,8 @@ ms.locfileid: "56026524"
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *expression*  
  식입니다. 일반적으로 JSON 텍스트를 포함하는 변수 또는 열의 이름입니다.  
   
@@ -44,16 +47,16 @@ JSON_MODIFY ( expression , path , newValue )
   
  `[append] [ lax | strict ] $.<json path>`  
   
--   *append*  
+- *append*  
     *\<json path>* 가 참조하는 배열에 새 값을 추가하도록 지정하는 선택적 한정자입니다.  
   
--   *lax*  
+- *lax*  
     *\<json path>* 가 참조하는 속성이 존재하지 않아도 된다는 것을 지정합니다. 속성이 없으면 JSON_MODIFY가 지정된 경로에 새 값을 삽입하려고 시도합니다. 속성을 경로에 삽입할 수 없는 경우 삽입이 실패할 수 있습니다. *lax* 또는 *strict*를 지정하지 않으면 *lax*가 기본 모드입니다.  
   
--   *strict*  
+- *strict*  
     *\<json path>* 가 참조하는 속성이 JSON 식에 있어야 함을 지정합니다. 속성이 없으면 JSON_MODIFY가 오류를 반환합니다.  
   
--   *\<json path>*  
+- *\<json path>*  
     업데이트할 속성에 대한 경로를 지정합니다. 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
@@ -67,10 +70,12 @@ JSON_MODIFY ( expression , path , newValue )
   
 JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모든 특수 문자를 이스케이프합니다. FOR JSON, JSON_QUERY 또는 JSON_MODIFY에 의해 생성된 JSON 형식이 올바르다면 텍스트 값은 이스케이프되지 않습니다.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>반환 값
+
  올바른 형식의 JSON 텍스트로 *expression*의 업데이트된 값을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  JSON_MODIFY 함수를 사용하여 기존 속성의 값을 업데이트하거나, 새 키:값 쌍을 삽입하거나, 모드와 제공된 값의 조합을 기반으로 키를 삭제할 수 있습니다.  
   
  다음 표에서는 lax 모드 및 strict 모드에서 **JSON_MODIFY**의 동작을 비교합니다. 선택적 경로 모드 사양(lax 또는 strict)에 대한 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.  
@@ -86,10 +91,11 @@ JSON_MODIFY는 값의 형식이 VARCHAR 또는 NVARCHAR인 경우 새 값의 모
   
 ## <a name="examples"></a>예  
   
-### <a name="example---basic-operations"></a>예 - 기본 작업  
+### <a name="example---basic-operations"></a>예 - 기본 작업
+
  다음 예제에서는 JSON 텍스트를 사용하여 수행할 수 있는 기본 작업을 보여줍니다.  
   
- **쿼리**  
+ **쿼리**
   
 ```sql  
 
@@ -122,7 +128,7 @@ SET @info=JSON_MODIFY(@info,'append $.skills','Azure')
 PRINT @info
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -144,10 +150,11 @@ PRINT @info
 }
 ```  
   
-### <a name="example---multiple-updates"></a>예 - 여러 개 업데이트  
+### <a name="example---multiple-updates"></a>예 - 여러 개 업데이트
+
  JSON_MODIFY를 사용하면 하나의 속성만 업데이트할 수 있습니다. 여러 개를 업데이트를 해야 하는 경우 여러 JSON_MODIFY 호출을 사용할 수 있습니다.  
   
- **쿼리**  
+ **쿼리**
   
 ```sql  
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
@@ -161,7 +168,7 @@ SET @info=JSON_MODIFY(JSON_MODIFY(JSON_MODIFY(@info,'$.name','Mike'),'$.surname'
 PRINT @info
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -177,7 +184,7 @@ PRINT @info
 ### <a name="example---rename-a-key"></a>예 - 키 이름 바꾸기  
  다음 예에서는 JSON_MODIFY 함수를 사용하여 JSON 텍스트의 속성 이름을 바꾸는 방법을 보여줍니다. 먼저 기존 속성의 값을 가져와 새 키:값 쌍으로 삽입할 수 있습니다. 그런 다음, 이전 속성 값을 NULL로 설정하여 이전 키를 삭제할 수 있습니다.  
   
- **쿼리**  
+ **쿼리**
   
 ```sql  
 DECLARE @product NVARCHAR(100)='{"price":49.99}'
@@ -196,7 +203,7 @@ SET @product=
 PRINT @product
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -208,10 +215,11 @@ PRINT @product
   
  새 값을 숫자 형식으로 캐스팅하지 않는 경우 JSON_MODIFY가 이를 텍스트로 처리하고 큰따옴표로 묶습니다.  
   
-### <a name="example---increment-a-value"></a>예 - 값 증분  
+### <a name="example---increment-a-value"></a>예 - 값 증분
+
  다음 예에서는 JSON_MODIFY 함수를 사용하여 JSON 텍스트의 속성 값을 증분하는 방법을 보여줍니다. 먼저 기존 속성의 값을 가져와 새 키:값 쌍으로 삽입할 수 있습니다. 그런 다음, 이전 속성 값을 NULL로 설정하여 이전 키를 삭제할 수 있습니다.  
   
- **쿼리**  
+ **쿼리**
   
 ```sql  
 DECLARE @stats NVARCHAR(100)='{"click_count": 173}'
@@ -226,7 +234,7 @@ SET @stats=JSON_MODIFY(@stats,'$.click_count',
 PRINT @stats
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -236,7 +244,8 @@ PRINT @stats
 }
 ```  
   
-### <a name="example---modify-a-json-object"></a>예 - JSON 개체 수정  
+### <a name="example---modify-a-json-object"></a>예 - JSON 개체 수정
+
  JSON_MODIFY는 올바른 형식의 JSON 텍스트가 포함되어 있어도 *newValue* 인수를 일반 텍스트로 취급합니다. 결과적으로, 다음 예와 같이 함수의 JSON 출력은 큰따옴표로 묶이고 모든 특수 문자는 이스케이프됩니다.  
   
  **쿼리**  
@@ -253,7 +262,7 @@ SET @info=JSON_MODIFY(@info,'$.skills','["C#","T-SQL","Azure"]')
 PRINT @info
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -281,7 +290,7 @@ SET @info=JSON_MODIFY(@info,'$.skills',JSON_QUERY('["C#","T-SQL","Azure"]'))
 PRINT @info
 ```  
   
- **결과**  
+ **결과**
   
 ```json  
 {
@@ -293,7 +302,8 @@ PRINT @info
 }
 ```  
   
-### <a name="example---update-a-json-column"></a>예 - JSON 열 업데이트  
+### <a name="example---update-a-json-column"></a>예 - JSON 열 업데이트
+
  다음 예에서는 JSON이 포함된 테이블 열에서 속성 값을 업데이트합니다.  
   
 ```sql  
@@ -303,8 +313,8 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [JSON 데이터&#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
   

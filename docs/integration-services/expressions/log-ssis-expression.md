@@ -14,14 +14,18 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d59d1ecc0f250d19196a356f77ecae00b097fdd9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77e50116aee1dfc144e5175de7cc56077d205e86
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282747"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725243"
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   숫자 식의 상용 로그를 반환합니다.  
   
 ## <a name="syntax"></a>구문  

@@ -11,14 +11,18 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04f04b8847dbdfac12f5b78c3eabb3b493e2d895
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 97cde3fcfb5effa7c61fde6673a830f67d9fc634
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275238"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714565"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out 마스터의 속성을 표시합니다.

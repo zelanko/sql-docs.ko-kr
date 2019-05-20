@@ -12,14 +12,18 @@ ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 708448cb0993af1bdb9f4d1784daf217ffd442c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270706"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723688"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>테이블 복사 또는 쿼리 지정(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   데이터 대상 및 연결하는 방법에 대한 정보를 제공하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **테이블 복사 또는 쿼리 지정**을 표시합니다. 이 페이지에서 다음 옵션 중 하나를 선택합니다.
 -   **하나 이상의 테이블 또는 뷰에서 데이터 복사**을 표시합니다. 목록에서 테이블을 선택하려고 합니다.
 -   **전송 데이터를 지정할 쿼리 작성**을 표시합니다. SQL 쿼리의 텍스트를 입력하거나 붙여넣으려고 합니다.
