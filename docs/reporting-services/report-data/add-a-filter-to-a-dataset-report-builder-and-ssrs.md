@@ -2,18 +2,18 @@
 title: 데이터 세트에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec72f42975b7c81d50f58f0dc0a9ef141757e47d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c42f6cf00329129ea1137ecba4228a92f9665319
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660971"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571760"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 세트에 필터 추가(보고서 작성기 및 SSRS)
   데이터 세트에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 세트에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47660971"
   
 1.  공유 데이터 세트 모드에서 공유 데이터 세트를 엽니다.  
   
-2.  **홈** 탭의 **공유 데이터 집합** 그룹에서 데이터 집합을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+2.  **홈** 탭의 **공유 데이터 세트** 그룹에서 데이터 세트를 클릭합니다. **데이터 세트 속성** 대화 상자가 열립니다.  
   
 3.  **필터**를 클릭합니다. 그러면 현재 필터 수식 목록이 표시됩니다. 기본적으로 이 목록은 비어 있습니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47660971"
   
 1.  보고서 디자인 모드에서 보고서를 엽니다.  
   
-2.  **보고서 데이터** 창에서 데이터 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 속성**을 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+2.  **보고서 데이터** 창에서 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 속성**을 클릭합니다. **데이터 세트 속성** 대화 상자가 열립니다.  
   
 3.  **필터**를 클릭합니다. 그러면 현재 필터 수식 목록이 표시됩니다. 기본적으로 이 목록은 비어 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47660971"
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

@@ -2,29 +2,29 @@
 title: 보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722712"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580384"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 모든 사용 가능한 메모리를 사용할 수 있지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 응용 프로그램에 할당되는 총 메모리 리소스 양에 대한 상한값을 구성하여 기본 동작을 재정의할 수 있습니다. 메모리 가중 정도가 낮은지, 보통인지, 높은지에 따라 보고서 서버가 요청의 우선 순위를 정하고 해당 요청을 처리하는 방법을 변경하도록 하는 임계값을 설정할 수도 있습니다. 메모리 가중 정도가 낮은 수준에서 보고서 서버는 대화형 또는 요청 시 실행 보고서 처리에 약간 더 높은 우선 순위를 부여하여 응답합니다. 메모리 가중 정도가 높은 수준에서 보고서 서버는 사용 가능한 제한된 리소스를 통해 여러 기술을 사용하여 작동 상태를 유지합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 모든 사용 가능한 메모리를 사용할 수 있지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 애플리케이션에 할당되는 총 메모리 리소스 양에 대한 상한값을 구성하여 기본 동작을 재정의할 수 있습니다. 메모리 가중 정도가 낮은지, 보통인지, 높은지에 따라 보고서 서버가 요청의 우선 순위를 정하고 해당 요청을 처리하는 방법을 변경하도록 하는 임계값을 설정할 수도 있습니다. 메모리 가중 정도가 낮은 수준에서 보고서 서버는 대화형 또는 요청 시 실행 보고서 처리에 약간 더 높은 우선 순위를 부여하여 응답합니다. 메모리 가중 정도가 높은 수준에서 보고서 서버는 사용 가능한 제한된 리소스를 통해 여러 기술을 사용하여 작동 상태를 유지합니다.  
   
  이 항목에서는 메모리 가중 상태가 요청 처리의 요인이 될 때 지정할 수 있는 구성 설정과 서버의 응답 방식을 설명합니다.  
   
 ## <a name="memory-management-policies"></a>메모리 관리 정책  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 특정 응용 프로그램에 할당된 메모리 양과 처리 요청의 유형을 조정하여 시스템 리소스 제약 조건에 응답합니다. 보고서 서버 서비스에서 실행되고 메모리 관리의 대상이 되는 애플리케이션은 다음과 같습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 특정 애플리케이션에 할당된 메모리 양과 처리 요청의 유형을 조정하여 시스템 리소스 제약 조건에 응답합니다. 보고서 서버 서비스에서 실행되고 메모리 관리의 대상이 되는 애플리케이션은 다음과 같습니다.  
   
 -   보고서 관리자 - 보고서 서버용 웹 프런트 엔드 애플리케이션입니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47722712"
   
 |요소|설명|  
 |-------------|-----------------|  
-|**WorkingSetMaximum**|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다.<br /><br /> 기본적으로 보고서 서버는 **WorkingSetMaximum** 을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 보고서 서버가 메모리를 더 적게 사용하도록 하려면 RSReportServer.config 파일을 수정하고 요소와 값을 추가합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.<br /><br /> **WorkingSetMaximum** 의 값에 도달하면 보고서 서버가 새 요청을 받아들이지 않습니다. 현재 진행 중인 요청은 완료되도록 허용됩니다. 새 요청은 메모리 사용이 **WorkingSetMaximum**을 통해 지정된 값 아래로 떨어질 때만 받아들여집니다.<br /><br /> **WorkingSetMaximum** 값에 도달한 후에도 기존 요청이 추가 메모리를 계속 사용하는 경우 모든 보고서 서버 응용 프로그램 도메인이 재활용됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.|  
+|**WorkingSetMaximum**|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다.<br /><br /> 기본적으로 보고서 서버는 **WorkingSetMaximum** 을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 보고서 서버가 메모리를 더 적게 사용하도록 하려면 RSReportServer.config 파일을 수정하고 요소와 값을 추가합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.<br /><br /> **WorkingSetMaximum** 의 값에 도달하면 보고서 서버가 새 요청을 받아들이지 않습니다. 현재 진행 중인 요청은 완료되도록 허용됩니다. 새 요청은 메모리 사용이 **WorkingSetMaximum**을 통해 지정된 값 아래로 떨어질 때만 받아들여집니다.<br /><br /> **WorkingSetMaximum** 값에 도달한 후에도 기존 요청이 추가 메모리를 계속 사용하는 경우 모든 보고서 서버 애플리케이션 도메인이 재활용됩니다. 자세한 내용은 [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)을 참조하세요.|  
 |**WorkingSetMinimum**|리소스 소비량에 대한 하한값을 지정합니다. 보고서 서버는 전체 메모리 사용이 이 값 미만인 경우 메모리를 해제하지 않습니다.<br /><br /> 기본적으로 이 값은 서비스 시작 시 계산됩니다. 계산 시 초기 메모리 할당 요청은 **WorkingSetMaximum**의 60%입니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 이 값을 사용자 지정하려는 경우 RSReportServer.config 파일에 **WorkingSetMinimum** 요소를 추가해야 합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.|  
 |**MemoryThreshold**|높음 및 보통 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 보고서 서버 메모리 사용이 이 값에 도달하는 경우 보고서 서버는 요청 처리 속도를 낮추고 다른 서버 애플리케이션에 할당된 메모리 양을 변경합니다. 기본값은 90입니다. 이 값은 **MemorySafetyMargin**에 설정된 값보다 커야 합니다.|  
 |**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 이 값은 시스템용으로 예약된 사용 가능한 메모리 비율이며 보고서 서버 작업에 사용할 수 없습니다. 기본값은 80입니다.|  
@@ -91,6 +91,6 @@ ms.locfileid: "47722712"
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [보고서 서버 응용 프로그램을 위한 응용 프로그램 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

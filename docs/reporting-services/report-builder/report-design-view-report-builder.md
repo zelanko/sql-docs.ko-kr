@@ -2,7 +2,7 @@
 title: 보고서 디자인 뷰 (보고서 작성기) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74b2396d7e32e5f8b596e4dcb5abc84645e8fc84
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3dff76f6293b5f02373234fb2546076f7584f13
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577982"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 페이지가 매겨진 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 디자인 화면은 창의 가운데에 있고 그 주위에 리본과 창이 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 이 문서에서는 보고서 리소스를 추가, 선택 및 구성하고 보고서 항목 속성을 변경하는 데 사용하는 창에 대해 설명합니다.  
@@ -100,9 +100,9 @@ ms.locfileid: "56286041"
   
 -   [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
--   [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+-   [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
--   [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+-   [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ##  <a name="ReptPartGallery"></a> 보고서 파트 갤러리  
@@ -143,7 +143,7 @@ ms.locfileid: "56286041"
   
   
 ##  <a name="GroupPane"></a> 그룹화 창(보고서 작성기)  
- 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹이라는 두 개의 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
+ 그룹은 보고서 데이터를 시각적 계층으로 구성하고 합계를 계산하는 데 사용됩니다. 디자인 화면은 물론 그룹화 창에서도 데이터 영역 내의 행 및 열 그룹을 볼 수 있습니다. 그룹화 창에는 행 그룹과 열 그룹의 두 창이 있습니다. 데이터 영역을 선택하면 해당 데이터 영역 내의 모든 그룹이 계층적 목록으로 그룹화 창에 표시되며, 자식 그룹은 해당 부모 그룹보다 한 수준 아래에 표시됩니다.  
   
  ![보고서 작성기 행 그룹](../../reporting-services/report-builder/media/ssrb-rowgroups.png "보고서 작성기 행 그룹")  
   

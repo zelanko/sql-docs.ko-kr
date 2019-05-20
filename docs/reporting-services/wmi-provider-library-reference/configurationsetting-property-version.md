@@ -2,20 +2,20 @@
 title: Version 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a6352530174b36a2377d2fbd8fd09438ba545779
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750981"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570159"
 ---
 # <a name="configurationsetting-property---version"></a>ConfigurationSetting 속성 - Version
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

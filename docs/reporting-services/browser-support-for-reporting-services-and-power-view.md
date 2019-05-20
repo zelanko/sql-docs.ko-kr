@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 161b69416fcdcda57487f0ce2762807835dbd368
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65504098"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574814"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 

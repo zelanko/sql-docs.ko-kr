@@ -2,20 +2,20 @@
 title: 보고서 디자이너의 보고서 파트(SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ba88f0735460fe0a3a1bae3cdeddbb6fef6b75e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295872"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576790"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "56295872"
   
  일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
- 그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 즉, 다른 사람이 만들어 게시한 보고서 파트를 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
+ 그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 보고서 파트를 만들고 게시합니다. 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
   
 ##  <a name="ComponentWorkflow"></a> 보고서 파트 게시 수명 주기  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  

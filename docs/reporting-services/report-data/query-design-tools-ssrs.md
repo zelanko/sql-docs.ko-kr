@@ -2,7 +2,7 @@
 title: 쿼리 디자인 도구(SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0d20ddfbc872429ecf47d001067f1e7f2738c9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021237"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571215"
 ---
 # <a name="query-design-tools-ssrs"></a>쿼리 디자인 도구(SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 디자이너에서 데이터 집합 쿼리를 만드는 데 사용할 수 있는 다양한 쿼리 디자인 도구를 제공합니다. 일부 쿼리 디자이너에서는 비주얼 모드로 작업할지 쿼리 언어로 직접 작업할지 선택할 수 있도록 대체 모드를 제공합니다. 이 항목에서는 각 도구를 소개하고 각 도구가 지원하는 데이터 원본 유형에 대해 설명합니다. 이 항목에서 설명하는 도구는 다음과 같습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 보고서 디자이너에서 데이터 세트 쿼리를 만드는 데 사용할 수 있는 다양한 쿼리 디자인 도구를 제공합니다. 일부 쿼리 디자이너에서는 비주얼 모드로 작업할지 쿼리 언어로 직접 작업할지 선택할 수 있도록 대체 모드를 제공합니다. 이 항목에서는 각 도구를 소개하고 각 도구가 지원하는 데이터 원본 유형에 대해 설명합니다. 이 항목에서 설명하는 도구는 다음과 같습니다.  
   
 -   [텍스트 기반 쿼리 디자이너](#Textbased)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "50021237"
  ![디자인 모드의 MDX를 사용하는 쿼리 디자이너](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "디자인 모드의 MDX를 사용하는 쿼리 디자이너")  
   
 ##  <a name="Hyperion"></a> Hyperion Essbase 쿼리 디자이너  
- [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 쿼리 디자이너는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터베이스 및 응용 프로그램에서 데이터를 검색하는 데 사용됩니다. 다음 이미지는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 쿼리 디자이너를 보여줍니다.  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 쿼리 디자이너는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터베이스 및 애플리케이션에서 데이터를 검색하는 데 사용됩니다. 다음 이미지는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 쿼리 디자이너를 보여줍니다.  
   
  ![Hyperion Essbase 데이터 원본을 위한 쿼리 디자이너](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 데이터 원본을 위한 쿼리 디자이너")  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021237"
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   

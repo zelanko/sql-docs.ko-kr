@@ -2,20 +2,20 @@
 title: SQL Server Data Tools의 Reporting Services(SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581343"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
@@ -56,7 +56,7 @@ ms.locfileid: "56292331"
   
 -   **데이터 세트** 각 데이터 세트는 데이터 원본에서 검색할 데이터를 지정하는 쿼리를 포함합니다. 데이터 세트를 확장하여 데이터 세트 쿼리로 지정된 필드 컬렉션을 볼 수 있습니다.  
   
-     다차원 데이터 세트에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 세트가 자동으로 만들어집니다.  기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)을 참조하세요.  
+     다차원 데이터 세트에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 세트가 자동으로 만들어집니다.  기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)을 참조하세요.  
   
 -   **보고서 매개 변수** 보고서 매개 변수 목록입니다. 매개 변수는 데이터 세트 쿼리에 쿼리 매개 변수가 포함되면 수동이나 자동으로 만들어질 수 있습니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "56292331"
   
 -   **보고서 속성**   **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
   
--   **뷰** 보고서 디자이너의 [디자인] 탭과 [미리 보기] 탭 간에 전환합니다.  
+-   **뷰** 보고서 디자이너의 디자인 탭과 미리 보기 탭 간에 전환합니다.  
   
 -   **페이지 머리글** 보고서에서 페이지 머리글을 추가하거나 삭제합니다. 페이지 머리글을 삭제하면 페이지 머리글의 모든 항목이 삭제됩니다.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56292331"
   
 
 ##  <a name="bkmk_SourceControl"></a> 원본 제어  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. 옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 사용자 지정 보고서 템플릿  
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로 이 폴더는 다음 위치에 있습니다. `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  

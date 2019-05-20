@@ -2,20 +2,20 @@
 title: 보고서 서버 HTTP 로그 | Microsoft Docs
 ms.date: 03/02/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85e0bf1588739c5e27ec46273ad1a24908639c14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581398"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
   보고서 서버 HTTP 로그 파일은 보고서 서버에서 처리하는 모든 HTTP 요청 및 응답에 대한 기록을 유지합니다. 요청 오버플로 및 제한 시간 오류는 보고서 서버에 도달하지 않으므로 로그 파일에 기록되지 않습니다.   
@@ -56,18 +56,18 @@ ms.locfileid: "47789951"
   
 |필드|설명|Default|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|이 값은 선택 사항입니다. 기본값은 ReportServerServiceHTTP_입니다. 로그 파일을 중앙 위치에 저장하기 위해 서버 이름을 포함하는 경우와 같이 다른 파일 명명 규칙을 사용하려면 다른 값을 지정할 수 있습니다.|사용자 계정 컨트롤|  
+|HttpTraceFileName|이 값은 선택 사항입니다. 기본값은 ReportServerServiceHTTP_입니다. 로그 파일을 중앙 위치에 저장하기 위해 서버 이름을 포함하는 경우와 같이 다른 파일 명명 규칙을 사용하려면 다른 값을 지정할 수 있습니다.|예|  
 |HTTPTraceSwitches|이 값은 선택 사항입니다. 이 값을 지정하면 로그 파일에 사용되는 필드를 쉼표로 구분된 형식으로 구성할 수 있습니다.|아니오|  
 |date|작업이 발생한 날짜입니다.|아니오|  
 |Time|작업이 발생한 시간입니다.|아니오|  
-|ClientIp|보고서 서버에 액세스하는 클라이언트의 IP 주소입니다.|사용자 계정 컨트롤|  
+|ClientIp|보고서 서버에 액세스하는 클라이언트의 IP 주소입니다.|예|  
 |UserName|보고서 서버에 액세스한 사용자의 이름입니다.|아니오|  
 |ServerPort|연결에 사용되는 포트 번호입니다.|아니오|  
 |Host|호스트 헤더의 내용입니다.|아니오|  
-|메서드|클라이언트에서 호출된 동작 또는 SOAP 메서드입니다.|사용자 계정 컨트롤|  
-|UriStem|액세스한 리소스입니다.|사용자 계정 컨트롤|  
+|메서드|클라이언트에서 호출된 동작 또는 SOAP 메서드입니다.|예|  
+|UriStem|액세스한 리소스입니다.|예|  
 |UriQuery|리소스에 액세스하는 데 사용된 쿼리입니다.|아니오|  
-|ProtocolStatus|HTTP 상태 코드입니다.|사용자 계정 컨트롤|  
+|ProtocolStatus|HTTP 상태 코드입니다.|예|  
 |BytesReceived|서버가 받은 바이트 수입니다.|아니오|  
 |TimeTaken|네트워크 전송 시간을 제외하고 HTTP.SYS가 요청 데이터를 반환한 순간부터 서버가 마지막 보내기 작업을 마칠 때까지의 시간(밀리초)입니다.|아니오|  
 |ProtocolVersion|클라이언트에 사용된 프로토콜 버전입니다.|아니오|  

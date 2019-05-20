@@ -2,20 +2,20 @@
 title: RemoveURL 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveURL method
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 043cf48d208378ab3fee65c52b9f7fb9c4e98f67
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3471c54ae18269c281104c3572235099bcf4e61b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509119"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571301"
 ---
 # <a name="configurationsetting-method---removeurl"></a>ConfigurationSetting 메서드 - RemoveURL
   보고서 서버용으로 예약된 URL을 제거합니다. 제거할 URL이 여러 개인 경우 이 API를 호출하여 하나씩 수행해야 합니다.  
@@ -34,7 +34,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *응용 프로그램*  
+ *애플리케이션*  
  예약을 제거할 애플리케이션의 이름입니다.  
   
  *URLString*  

@@ -2,7 +2,7 @@
 title: 보고서 서버 성능 모니터링 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 369e398c92a9b7c2057ca07d75db66d461f773a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ba639ea5bc65cb8d5e753883418ad3937919fa1d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603651"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577663"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 애플리케이션 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "47603651"
   
  작업 관리자는 컴퓨터에서 실행되는 프로그램 및 프로세스에 대한 정보를 제공합니다. 작업 관리자를 사용하여 보고서 서버의 성능을 나타내는 주요 표시기를 모니터링할 수 있습니다. 또한 실행 중인 프로세스의 활동을 평가하고 CPU 및 메모리 사용량에 대한 그래프와 데이터를 볼 수 있습니다. 작업 관리자를 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 제품 설명서를 참조하십시오.  
   
- 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성된 Windows 이벤트에 대한 자세한 내용은 [Windows 응용 프로그램 로그](../../reporting-services/report-server/windows-application-log.md)를 참조하세요. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
+ 성능 콘솔과 이벤트 뷰어를 사용하여 보고서 처리 및 리소스 소비량에 대한 로그와 경고를 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성된 Windows 이벤트에 대한 자세한 내용은 [Windows 애플리케이션 로그](../../reporting-services/report-server/windows-application-log.md)를 참조하세요. 성능 콘솔에 대한 자세한 내용은 이 항목 뒷부분에서 "Windows 성능 카운터"를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 캐싱 및 세션 관리에 사용되는 보고서 서버 데이터베이스 및 임시 데이터베이스에 대한 정보를 제공합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "47603651"
  SharePoint 제품을 사용하여 보고 환경을 실행할 때 기록할 유용한 진단 이벤트를 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
+ [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)  
   

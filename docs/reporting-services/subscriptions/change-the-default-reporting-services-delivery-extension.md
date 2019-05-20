@@ -2,20 +2,20 @@
 title: 기본 Reporting Services 배달 확장 프로그램 변경 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1d26927099ecbd5655d02afc0aba98f8aab796f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: de3fe01573e9719ef63b09735c2701789582d7c3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402267"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578405"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>기본 Reporting Services 배달 확장 프로그램 변경
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 설정을 수정하여 구독 정의 페이지의 **배달 방법** 목록에 표시될 배달 확장 프로그램을 결정할 수 있습니다. 예를 들어, 구성을 수정하여 사용자가 새 구독을 만들었을 때 전자 메일 배달 대신 기본적으로 파일 공유 전달을 선택할 수 있습니다. 또한 배달 확장 프로그램이 사용자 인터페이스에 나열되는 순서를 변경할 수 있습니다.  
@@ -90,13 +90,13 @@ ms.locfileid: "52402267"
      RSReportServer.config 파일 수정  
   
 ## <a name="sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 RsrReportServer.config 파일이 아니라 SharePoint 서비스 응용 프로그램 데이터베이스에 확장 프로그램 정보를 저장합니다. SharePoint 모드에서 PowerShell을 사용하 여 배달 확장 프로그램 구성을 수정합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 RsrReportServer.config 파일이 아니라 SharePoint 서비스 애플리케이션 데이터베이스에 확장 프로그램 정보를 저장합니다. SharePoint 모드에서 PowerShell을 사용하 여 배달 확장 프로그램 구성을 수정합니다.  
   
 #### <a name="configure-the-default-delivery-extension"></a>기본 배달 확장 프로그램 구성  
   
 1.  **SharePoint 관리 셸**을 엽니다.  
   
-2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 알고 있는 경우에 이 단계를 건너뛸 수 있습니다. SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 나열하려면 다음 PowerShell을 사용합니다.  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 알고 있는 경우에 이 단계를 건너뛸 수 있습니다. SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 나열하려면 다음 PowerShell을 사용합니다.  
   
     ```  
     get-sprsserviceapplication | format-list *  

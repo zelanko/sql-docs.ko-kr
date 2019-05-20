@@ -2,7 +2,7 @@
 title: InstanceName 속성(WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01d216ffa7341ff0ba196510aa8e42bf74ddb47b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809121"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569102"
 ---
 # <a name="msreportserverinstance-properties---instancename"></a>MSReportServer_Instance 속성 - InstanceName
   특정 컴퓨터의 보고서 서버 인스턴스 이름을 반환합니다. 읽기 전용입니다.  

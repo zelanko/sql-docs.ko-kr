@@ -2,18 +2,18 @@
 title: Reporting Services 보고서의 데이터 검색 문제 해결 | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905148"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574424"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 보고서에서 데이터 검색 문제 해결
 보고서 처리의 첫 번째 단계는 데이터 세트 쿼리를 실행하여 각 데이터 세트에 대한 보고서 데이터를 검색하는 것입니다. 보고서를 로컬로 미리 볼 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 데이터를 컴퓨터로 읽어 들여야 합니다. 보고서 서버에서 보고서를 실행할 때 데이터 원본 연결 및 자격 증명은 충분한 권한을 사용하여 보고서 서버에서 데이터를 검색해야 합니다. 이 항목을 사용하여 보고서 데이터 검색 관련 문제를 해결할 수 있습니다.   
@@ -56,7 +56,7 @@ ms.locfileid: "48905148"
   
 데이터 세트 필드 컬렉션을 채우려면 다음을 수행합니다.  
 * 데이터베이스에서 필드 정보를 검색할 수 있는 권한이 있는지 확인합니다. 일부 데이터 원본의 경우 데이터 원본에 액세스할 수는 있지만 테이블이나 열에 대한 사용 권한은 없을 수 있습니다. 뷰에 액세스할 수는 있지만 뷰를 만드는 저장 프로시저를 실행할 수 있는 사용 권한은 없을 수 있습니다. 데이터베이스의 특정 테이블 또는 열에 대한 액세스 권한이 유효한지 검사하려면 보고서에 사용하는 것과 동일한 권한을 사용하여 SQL Server Management Studio와 같은 별도의 애플리케이션에서 쿼리 결과를 확인합니다. 쿼리에 대해 원하는 결과를 볼 수 없는 경우 시스템 관리자에게 문의하여 데이터에 대한 사용 권한을 조정합니다.   
-* **데이터 집합 속성** 대화 상자의 쿼리 창에서 쿼리를 실행합니다. 자세한 내용은 [보고서 데이터 세트(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
+* **데이터 세트 속성** 대화 상자의 쿼리 창에서 쿼리를 실행합니다. 자세한 내용은 [보고서 데이터 세트(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
 * 수동으로 필드를 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침(보고서 작성기 3.0 및 SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.   
   
 ## <a name="see-also"></a>참고 항목  

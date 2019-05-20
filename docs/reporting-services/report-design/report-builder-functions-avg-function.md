@@ -2,18 +2,18 @@
 title: Avg 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9da04fb9fdba05beda263d2200c74140861e4e00
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 255201c7f24f013becd8230e9329e41a6d6a8d0d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297205"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576399"
 ---
 # <a name="report-builder-functions---avg-function"></a>보고서 작성기 함수 - Avg 함수
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 평균을 반환합니다.  

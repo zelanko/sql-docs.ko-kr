@@ -2,7 +2,7 @@
 title: DatabaseServerName 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 772d3aefc9d61c55edf42fb1fe8f3fa94e394bc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a967cb012f8647d51a33b2a603144bfd4dd8d9e7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744351"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573538"
 ---
 # <a name="configurationsetting-property---databaseservername"></a>ConfigurationSetting 속성 - DatabaseServerName
   보고서 서버 데이터베이스가 설치되어 있는 서버 이름을 지정합니다. 읽기/쓰기입니다.  

@@ -2,20 +2,20 @@
 title: 작업 속성(Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e93afa5dd974ed7ae6dbdff5844f849d50e72bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630570"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571124"
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
   **작업 속성** 페이지를 사용하여 진행 중인 보고서 또는 구독을 취소하기 전에 이에 대한 정보를 볼 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47630570"
   
 3.  작업이 표시되면 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **작업 ID**  
  작업이 처리되는 중에 작업에 할당된 GUID입니다. 이 값은 보고서 또는 구독이 실행될 때마다 임의로 생성됩니다.  
   

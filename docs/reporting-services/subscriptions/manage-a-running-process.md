@@ -2,7 +2,7 @@
 title: 실행 중인 프로세스 관리 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c029b1d3964b508655091e87c8774e76e4cc2639
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6eeec8517b9b55e30eb51abc25fefed0b36b2a79
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579010"
 ---
 # <a name="manage-a-running-process"></a>실행 중인 프로세스 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버에서 실행 중인 작업의 상태를 모니터링합니다. 보고서 서버는 진행 중인 작업을 정기적으로 검색하고 SharePoint 모드용 서비스 애플리케이션 데이터베이스 또는 보고서 서버 데이터베이스에 상태 정보를 씁니다. 원격 또는 로컬 데이터베이스 서버에서 쿼리가 실행되거나 보고서가 처리되거나 보고서가 렌더링되는 경우 작업이 진행 중인 것입니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "50021957"
   
 -   개별 사용자가 소유한 표준 구독  
   
- 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)를 참조하세요. 보고서를 일시적으로 중지하는 방법에 대한 자세한 내용은 [보고서 및 구독 처리 해제 또는 일시 중지](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.  
+ 작업을 취소하면 보고서 서버에서 실행 중인 프로세스만 취소됩니다. 보고서 서버는 다른 컴퓨터에서 발생하는 데이터 처리를 관리하지 않으므로 이후에 다른 시스템에서 분리되는 쿼리 프로세스는 수동으로 취소해야 합니다. 실행하는 데 시간이 너무 오래 걸리는 쿼리는 자동으로 종료되도록 쿼리 제한 시간 값을 지정하세요. 자세한 내용은 [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)을 참조하세요. 보고서를 일시적으로 중지하는 방법에 대한 자세한 내용은 [보고서 및 구독 처리 해제 또는 일시 중지](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)를 참조하세요.  
   
 > [!NOTE]  
 >  간혹 프로세스를 취소하기 위해 서버를 다시 시작해야 할 수도 있습니다. SharePoint 모드의 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 호스팅하는 애플리케이션 풀을 다시 시작해야 할 수 있습니다. 자세한 내용은 [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)를 참조하세요.  
@@ -105,7 +105,7 @@ ms.locfileid: "50021957"
   
 1.  SharePoint 중앙 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 찾아서 클릭하여 응용 프로그램 관리 페이지를 엽니다.  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 찾아서 클릭하여 애플리케이션 관리 페이지를 엽니다.  
   
 3.  **작업 관리**를 클릭합니다.  
   

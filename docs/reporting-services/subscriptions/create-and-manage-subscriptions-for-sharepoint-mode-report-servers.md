@@ -2,7 +2,7 @@
 title: SharePoint 모드 보고서 서버에 구독 만들기 및 관리 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578344"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 애플리케이션에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "50100094"
   
 6.  **파일 옵션**에서 구독으로 만들 문서의 파일 이름과 제목을 지정합니다.  
   
-7.  **출력 형식**에서 응용 프로그램 형식을 선택합니다.  
+7.  **출력 형식**에서 애플리케이션 형식을 선택합니다.  
   
      MHTML(웹 보관 파일)은 자체 포함된 HTML 파일을 생성하므로 기본값이지만 원래 보고서에 있을 수 있는 대화형 보고서 기능을 유지하지 않습니다.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "50100094"
   
 6.  **경로**에 컴퓨터의 네트워크 이름을 포함하는 UNC(Uniform Naming Convention) 형식으로 폴더 경로를 입력합니다. 이때 폴더 경로에 후행 백슬래시를 포함하지 마세요. 예를 들어 경로는 `\\ComputerName01\Public\MyReports`가 될 수 있습니다. 여기서 Public 및 MyReports는 공유 폴더입니다.  
   
-7.  **렌더링 형식**에서 보고서의 응용 프로그램 형식을 선택합니다.  
+7.  **렌더링 형식**에서 보고서의 애플리케이션 형식을 선택합니다.  
   
 8.  **쓰기 모드**에서 **없음**, **자동 증가**, **덮어쓰기**중 하나를 선택합니다. 이러한 옵션은 이후 배달 시 파일을 덮어쓸지 여부를 결정합니다. 이전 배달을 유지하려면 **자동 증가**를 선택합니다. 그러면 새 파일에 번호가 추가되어 고유한 파일 이름이 생성됩니다. **없음**을 선택하면 동일한 이름의 파일이 대상 위치에 있는 경우 배달되지 않습니다.  
   
-9. **파일 확장명**에서 응용 프로그램 파일 형식에 해당하는 파일 확장명을 추가하려면 **True** 를 선택하고 확장명 없이 파일을 만들려면 False를 선택합니다.  
+9. **파일 확장명**에서 애플리케이션 파일 형식에 해당하는 파일 확장명을 추가하려면 **True** 를 선택하고 확장명 없이 파일을 만들려면 False를 선택합니다.  
   
 10. **사용자 이름** 및 **암호**에 공유 폴더에 대한 쓰기 권한이 있는 자격 증명을 입력합니다.  
   

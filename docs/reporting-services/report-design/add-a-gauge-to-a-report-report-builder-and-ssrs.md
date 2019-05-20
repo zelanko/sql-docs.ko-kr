@@ -2,18 +2,18 @@
 title: 보고서에 계기 추가(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e70b99c0918cd7121866b51a82bc9a5d9ae70c6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9b5c1a9989831e6c28cd2aecd58a3e9f8640465c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575015"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>보고서에 계기 추가(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 시각적 형식으로 데이터를 요약하려는 경우 계기 데이터 영역을 사용할 수 있습니다. 디자인 화면에 계기 데이터 영역을 추가한 후에는 보고서 데이터 세트 필드를 계기의 데이터 창으로 끌 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "56297371"
   
      보고서에 데이터 원본 및 데이터 세트가 없으면 **데이터 원본 속성** 대화 상자가 열려 데이터 원본과 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
-     보고서에 데이터 원본은 있지만 데이터 세트가 없는 경우에는 **데이터 세트 속성** 대화 상자가 열려 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+     보고서에 데이터 원본은 있지만 데이터 세트가 없는 경우에는 **데이터 세트 속성** 대화 상자가 열려 데이터 세트를 만드는 단계를 안내합니다. 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 4.  계기를 클릭하여 데이터 창을 표시합니다. 기본적으로 계기에는 하나의 값에 해당하는 하나의 포인터가 있습니다. 하지만 포인터를 추가할 수도 있습니다.  
   

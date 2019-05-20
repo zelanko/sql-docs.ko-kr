@@ -2,20 +2,20 @@
 title: 데이터 영역 및 지도(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6065e26f36561b446257825f7f953c5eeccc3b25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b9ed0e835bf8d2b926fc21acfd4edda3db9d04f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290901"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580880"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
   데이터 영역은 보고서 데이터 세트에 있는 데이터를 표시하는 보고서의 개체입니다. 보고서 데이터는 테이블, 행렬 또는 목록에 숫자 및 텍스트로 표시되거나, 차트 또는 계기에 그래픽으로 표시되거나, 지도에 지리적 배경을 바탕으로 표시될 수 있습니다. 테이블, 행렬 및 목록은 모두 데이터 세트의 모든 데이터를 표시하기 위해 필요에 따라 확장되는 *테이블릭스* 데이터 영역을 기반으로 합니다. 테이블릭스 데이터 영역은 정적 행과 열 및 동적 행과 열이 모두 포함된 여러 행 및 열 그룹을 지원합니다. 차트는 여러 계열 및 범주 그룹을 다양한 차트 형식으로 표시하고, 계기는 데이터 세트의 단일 값 또는 집계 값을 표시합니다. 또한 지도는 공간 데이터를 데이터 세트에서 집계한 데이터를 기반으로 모양이 변하는 지도 요소로 표시합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "56290901"
  다른 데이터 영역에 데이터 영역을 중첩할 수 있습니다. 예를 들어 각 영업 사원의 영업 실적을 데이터베이스로 만들려는 경우 입력란과 이미지를 포함하는 목록을 만들어 직원에 대한 정보를 표시하고 테이블과 차트 데이터 영역을 목록에 추가하여 영업 사원의 영업 실적을 표시할 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>동일한 데이터 세트에 연결된 여러 데이터 영역  
- 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 동일한 데이터 세트에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="data-for-a-data-region"></a>데이터 영역의 데이터  
  각 테이블릭스, 차트 및 계기는 단일 데이터 세트의 데이터를 표시하도록 디자인되었습니다. 지도는 같은 데이터 세트 또는 여러 데이터 세트의 공간 데이터와 분석 데이터를 표시합니다. 그 밖에 다음과 같은 방법으로 데이터 영역에 연결되지 않은 데이터 세트의 값을 포함할 수 있습니다.  

@@ -2,18 +2,18 @@
 title: URL에 하이퍼링크 추가(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574823"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  의 페이지를 매긴 보고서에서 입력란, 이미지, 차트 및 계기에 하이퍼링크 동작을 추가하는 방법을 알아봅니다. 링크를 통해 다른 보고서, 보고서의 책갈피 또는 정적 또는 동적 URL로 이동할 수 있습니다. 
@@ -26,7 +26,7 @@ ms.locfileid: "56288951"
  
  *  동일한 보고서에서 **특정 위치에 책갈피를 추가** 할 수 있습니다. 
   
-[자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)를 참조하세요.  
+[자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)에서 샘플 데이터를 사용하여 하이퍼링크를 추가해 보세요.  
   
 > [!NOTE]  
 >  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md)를 참조하세요.  

@@ -2,18 +2,18 @@
 title: SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409540"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580944"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -42,8 +42,8 @@ ms.locfileid: "52409540"
 |--------------|-----------|-----------------|  
 |데이터베이스|자세히|데이터베이스 액세스를 포함하는 이벤트를 기록합니다.|  
 |일반|자세히|다음 항목에 대한 액세스를 포함하는 이벤트를 기록합니다.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 페이지<br /><br /> 보고서 뷰어 HTTP 처리기<br /><br /> 보고서 액세스 파일(.rdl)<br /><br /> 데이터 원본 파일(.rsds)<br /><br /> SharePoint 사이트의 URL(.smdl 파일)|  
-|Office Server 일반|Exception|로그온 실패를 기록합니다.|  
-|토폴로지|Verbose|현재 사용자 정보를 기록합니다.|  
+|Office Server 일반|예외|로그온 실패를 기록합니다.|  
+|토폴로지|자세히|현재 사용자 정보를 기록합니다.|  
 |웹 파트|자세히|보고서 뷰어 웹 파트에 대한 액세스를 포함하는 이벤트를 기록합니다.|  
   
 ##  <a name="bkmk_turnon"></a> Reporting Services 범주에서 Reporting Services 이벤트를 설정 및 해제하려면  

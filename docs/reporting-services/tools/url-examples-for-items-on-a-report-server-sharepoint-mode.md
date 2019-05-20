@@ -2,18 +2,18 @@
 title: 보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812959"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574015"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>보고서 서버의 항목에 대한 URL 예제 - SharePoint 모드
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51812959"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
  보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: `https://*servername/site*` 또는 `https://*servername/site/subsite*`).  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 웹 응용 프로그램에서 사이트와 하위 사이트는 주 사이트의 탭에 해당하는 경우가 많습니다. 사이트 이름이나 하위 사이트 이름을 찾으려면 **홈**, **모든 사이트 콘텐츠**를 차례로 클릭합니다. 그런 다음 아래쪽으로 스크롤하여 **사이트 및 작업 영역**을 찾습니다. 이 섹션에 사이트 목록이 표시됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 웹 애플리케이션에서 사이트와 하위 사이트는 주 사이트의 탭에 해당하는 경우가 많습니다. 사이트 이름이나 하위 사이트 이름을 찾으려면 **홈**, **모든 사이트 콘텐츠**를 차례로 클릭합니다. 그런 다음 아래쪽으로 스크롤하여 **사이트 및 작업 영역**을 찾습니다. 이 섹션에 사이트 목록이 표시됩니다.  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint 라이브러리에 대한 URL  
  SharePoint 라이브러리에 보고서나 관련 항목을 배포하는 경우 SharePoint 라이브러리에 대한 URL을 사용해야 합니다. 라이브러리에 사용할 URL은 사용하는 SharePoint 버전에 따라 달라집니다.  

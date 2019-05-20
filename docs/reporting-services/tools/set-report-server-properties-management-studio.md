@@ -2,23 +2,23 @@
 title: 보고서 서버 속성 설정(Management Studio) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4e44e48a505cbbd69c20e3ff32c67108debd2538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794771"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578994"
 ---
 # <a name="set-report-server-properties-management-studio"></a>보고서 서버 속성 설정(Management Studio)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 보고서 서버 시스템 속성을 설정하여 기능 또는 서버 기본값을 설정할 수 있습니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 보고서 서버 시스템 속성을 설정하여 기능 또는 서버 기본값을 설정할 수 있습니다.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>고급 서버 속성 페이지를 열려면  
   

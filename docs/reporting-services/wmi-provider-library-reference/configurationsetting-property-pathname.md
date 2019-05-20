@@ -2,7 +2,7 @@
 title: PathName 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PathName property
 ms.assetid: 368346ea-8ae4-42b4-a884-733558103046
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 62c4e3897b2fe52bbd3ca2d5c0d815ebc378cade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd4b7857faf7de561831485643afecf5c0e721e4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570305"
 ---
 # <a name="configurationsetting-property---pathname"></a>ConfigurationSetting 속성 - PathName
   보고서 서버 인스턴스의 설치 경로를 지정합니다. 읽기 전용입니다.  

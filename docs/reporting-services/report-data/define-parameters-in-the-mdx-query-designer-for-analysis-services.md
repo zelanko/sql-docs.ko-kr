@@ -2,7 +2,7 @@
 title: Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3fdf267ff11964314ad222e41872304aa70386da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850403"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573661"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX 쿼리를 매개 변수화하려면 쿼리 매개 변수를 쿼리에 추가해야 합니다. MDX 쿼리 디자이너에서 필터를 지정하여 디자인 모드와 쿼리 모드 모두에서 쿼리 매개 변수를 추가할 수 있습니다. 쿼리 매개 변수를 사용하여 쿼리를 정의하면 Reporting Services에서 자동으로 보고서 매개 변수 및 데이터 세트를 만들어 올바른 값 목록을 제공합니다. 따라서 사용자는 쿼리에 직접 전달되는 값을 지정할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47850403"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>디자인 모드에서 MDX의 쿼리 매개 변수를 정의하려면  
   
-1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 집합을 마우스 오른쪽 단추로 클릭한 다음 **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
+1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
   
 2.  차원을 필터 영역으로 끈 다음 **차원** 열의 첫 번째 셀 위에 놓습니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47850403"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>쿼리 모드에서 MDX의 쿼리 매개 변수를 정의하려면  
   
-1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 집합을 마우스 오른쪽 단추로 클릭한 다음 **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
+1.  보고서 데이터 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 유형에서 만든 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **쿼리**를 클릭합니다. MDX 쿼리 디자이너가 디자인 모드에서 열립니다.  
   
 2.  도구 모음에서 **디자인** 을 클릭하여 쿼리 모드로 전환합니다.  
   

@@ -1,19 +1,19 @@
 ---
 title: 여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 03/01/2017
-ms.openlocfilehash: 8bd2ab9ebfceeb8689dcaa5ce2afe912ecb4b1c6
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
-ms.translationtype: HT
+ms.openlocfilehash: c0cf0e8c98c2a89521c7b59753401fe164a7651d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305321"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577846"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)
 

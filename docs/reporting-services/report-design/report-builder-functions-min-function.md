@@ -2,18 +2,18 @@
 title: Min 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 19c8b6a2f5f2e6468844d9ad5a2ad11b94f16b7a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d4df9f6bb3996c06ea3b6907ab0687e4e8b4a266
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289201"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577140"
 ---
 # <a name="report-builder-functions---min-function"></a>보고서 작성기 함수 - Min 함수
   특정 범위의 컨텍스트에서 식에 의해 지정된 Null이 아닌 모든 숫자 값의 최소값을 반환합니다.  

@@ -2,7 +2,7 @@
 title: 공유 데이터 원본 항목 보안 설정 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09ec5980236f5bd7f48431ff58a7ff9ae3ddb66c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603501"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570577"
 ---
 # <a name="secure-shared-data-source-items"></a>공유 데이터 원본 항목 보안 설정
   공유 데이터 원본 항목에 대한 보안을 설정하여 해당 항목에 대한 액세스를 허용하거나 허용하지 않을 수 있습니다.  

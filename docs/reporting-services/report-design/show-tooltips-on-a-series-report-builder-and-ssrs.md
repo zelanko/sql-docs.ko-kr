@@ -2,18 +2,18 @@
 title: 계열에 도구 설명 표시(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 90dd863f1c948d39be6e26402bb09a992e0afd3c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 247a1ddeec14c38f2cc29d2d57df663c1c2368df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285171"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581271"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)
   차트에 있는 계열의 각 데이터 요소에 도구 설명을 추가하여 그룹 이름, 데이터 요소 값 또는 계열 합계에 대한 백분율 같은 데이터 요소에 대한 정보를 표시할 수 있습니다. 사용자가 렌더링된 페이지가 매겨진 보고서의 데이터 요소를 마우스로 가리키면 이 정보가 표시됩니다.  

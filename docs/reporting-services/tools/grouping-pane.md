@@ -2,7 +2,7 @@
 title: 그룹화 창 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f20b9d4ed3f6e82e613e9d42c219d464cdf282f5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5352a4b71e485a58907d4702dd10929955f92500
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293401"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570973"
 ---
 # <a name="grouping-pane"></a>그룹화 창
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 디자인할 때 그룹화 창에는 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 차트 및 계기 데이터 영역은 그룹화 창에서 사용할 수 없습니다. 그룹화 창은 행 그룹 창과 열 그룹 창으로 구성되며 기본 및 고급 모드의 두 가지 모드를 제공합니다. 기본 모드에서는 행 및 열 그룹의 동적 멤버의 계층 뷰를 표시하고 고급 모드에서는 행과 열 그룹의 동적 및 정적 멤버를 모두 표시합니다. 그룹은 데이터 영역에 표시되는 보고서 데이터 세트의 명명된 데이터 세트입니다. 그룹은 정적 및 동적 멤버를 포함하는 계층으로 구성됩니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  

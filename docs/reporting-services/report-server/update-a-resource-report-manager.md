@@ -2,21 +2,21 @@
 title: 리소스 업데이트(보고서 관리자) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031567"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571465"
 ---
 # <a name="update-a-resource-report-manager"></a>리소스 업데이트(보고서 관리자)
   리소스를 최신 버전으로 바꾸어 업데이트할 수 있습니다. 리소스는 보고서 서버에 저장된 항목이며 사용자가 업로드한 파일의 내용을 포함합니다. 새롭거나 다른 파일 내용을 기존 리소스에 가져와 기존 리소스를 바꿀 수 있습니다. 리소스를 업데이트하면 리소스에 대한 기존 속성과 보안 설정을 유지하면서 내용을 업데이트할 수 있습니다.  

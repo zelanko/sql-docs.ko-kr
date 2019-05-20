@@ -2,18 +2,18 @@
 title: 보고서 인쇄(SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c3b18a02c29be7221e70f1b4092cd9b212de3133
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581153"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>보고서 인쇄 - Reporting Services(SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 애플리케이션 또는 웹 포털에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "56292381"
  [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  클라이언트 쪽 인쇄 기능을 사용하여 웹 포털에서 보고서를 인쇄하는 방법을 설명합니다.  
   
- [다른 애플리케이션에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [다른 애플리케이션에서 보고서 인쇄&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  다른 애플리케이션으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  
   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  

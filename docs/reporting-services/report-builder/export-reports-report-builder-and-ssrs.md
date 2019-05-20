@@ -2,17 +2,17 @@
 title: 보고서 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289031"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580812"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
 
@@ -100,11 +100,11 @@ ms.locfileid: "56289031"
   
 -   **소프트 페이지 나누기 렌더러 확장 프로그램** 소프트 페이지 나누기 렌더링 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 이렇게 내보낸 파일은 웹 페이지나 **ReportViewer** 컨트롤 같은 화면 중심의 보기 및 배달용으로 최적화됩니다.  
   
-     지원되는 소프트 페이지 나누기 렌더링 확장 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 MHTML(웹 보관 파일)입니다.  
+     지원되는 소프트 페이지 나누기 렌더링 확장 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 웹 보관 파일(MHTML)입니다.  
   
 -   **하드 페이지 나누기 렌더링 확장 프로그램** 하드 페이지 나누기 렌더러 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다.  
   
-     지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF와 PDF입니다.  
+     지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF 및 PDF입니다.  
   
 ##  <a name="ExportFormats"></a> 보고서를 보는 중에 내보낼 수 형식  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다.  다음 표에는 사용자 인터페이스에서 내보낼 수 형식이 나와 있습니다.  URL에 액세스하여 내보내는 경우 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에서 내보내는 경우에는 추가 형식을 사용할 수 있습니다.  이 항목의 [보고서를 내보내는 다른 방법](#OtherWaysExportingReports)섹션을 참조하세요.  

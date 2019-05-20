@@ -2,7 +2,7 @@
 title: 보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b2b9c0607b2e7fbcc43ba45190c7acb6e0d92cd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030702"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580954"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다. 보고서 서버는 다음 두 가지 제한 시간 값을 지원합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "50030702"
  대부분의 제한 시간 오류는 쿼리가 처리되는 동안 발생합니다. 제한 시간 오류가 발생하면 쿼리 제한 시간 값을 늘려 보십시오. 보고서 실행 제한 시간 값을 쿼리 제한 시간보다 크게 조정해야 합니다. 시간은 쿼리와 보고서 둘 다를 처리하기에 충분해야 합니다.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>보고서에 포함된 데이터 세트의 쿼리 제한 시간 설정  
- 쿼리 제한 시간 값은 보고서를 작성하는 동안 포함된 데이터 세트를 정의할 때 지정됩니다. 쿼리 제한 시간 값은 보고서 정의의 **Timeout** 요소에 보고서와 함께 저장됩니다. 기본적으로 이 값은 30초로 설정됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 쿼리 제한 시간 값은 보고서를 작성하는 동안 포함된 데이터 세트를 정의할 때 지정됩니다. 쿼리 제한 시간 값은 보고서 정의의 **Timeout** 요소에 보고서와 함께 저장됩니다. 기본적으로 이 값은 30초로 설정됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
  게시된 보고서의 속성을 수정할 권한이 있는 사용자는 보고서 정의 파일을 편집하여 이 값을 다시 설정할 수 있습니다.  
   

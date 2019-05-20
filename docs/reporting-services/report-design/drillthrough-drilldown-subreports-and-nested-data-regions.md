@@ -2,18 +2,18 @@
 title: 드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: da900964e69bc36828726e8874222e5e1e3f0541
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291621"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578772"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역
   일반 데이터와 세부 데이터 간의 관계를 표시하기 위해 여러 가지 방법으로 데이터를 구성할 수 있습니다.  보고서에 데이터를 모두 넣을 수 있지만 사용자가 세부 사항을 표시하기 위해 클릭( *드릴다운* 동작)할 때까지 표시되지 않도록 설정할 수 있습니다. 데이터 영역에 테이블이나 행렬처럼 다른 데이터 영역에 *중첩된* 테이블이나 차트와 같은 데이터를 데이터 영역에 표시할 수 있습니다. 주 보고서 내에 포함되어 있는 *하위 보고서* 에 데이터를 표시할 수 있습니다. 또는 사용자가 링크를 클릭했을 때 표시되는 별도의 보고서인 *드릴스루* 보고서에 세부 데이터를 지정할 수 있습니다.  

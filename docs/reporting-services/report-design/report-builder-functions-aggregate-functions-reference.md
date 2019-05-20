@@ -2,18 +2,18 @@
 title: 집계 함수 참조(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dcc037b7aa813c89510d1179da94ca7efba09119
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296941"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577413"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>보고서 작성기 함수 - 집계 함수 참조
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  

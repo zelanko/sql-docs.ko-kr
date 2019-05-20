@@ -2,20 +2,20 @@
 title: ConfigurationSetting 속성 - VirtualDirectoryReportServer | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c852b1cae4a741cd8f5cfd0287ddf918e7efced0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 162106619fce4a8868064abd42687041203221bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649551"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569178"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting 속성 - VirtualDirectoryReportServer
   보고서 서버 애플리케이션에 대한 가상 디렉터리를 반환합니다. 읽기 전용입니다.  

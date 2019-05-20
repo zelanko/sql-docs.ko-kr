@@ -2,20 +2,20 @@
 title: 카탈로그 항목 삭제(Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792121"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573943"
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "47792121"
   
  삭제 작업은 실행 취소할 수 없습니다. 삭제한 항목을 복구하려면 해당 항목을 다시 만들거나 보고서 서버 데이터베이스의 백업 복사본을 복원해야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **이름**  
  삭제할 항목의 이름을 지정합니다.  
   

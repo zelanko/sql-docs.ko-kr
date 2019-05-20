@@ -72,7 +72,7 @@ Windows Server 2012 권장 또는를 순서 대로 이상:
   
 4.  설치 하 고 InfiniBand 네트워크 어댑터에 대 한 적절 한 Windows 드라이버를 구성 합니다.  
   
-    -   Windows에 대 한 infiniband InfiniBand 공급 업체의 업계 컨소시엄 OpenFabrics Alliance에서 개발 됩니다.  올바른 드라이버 InfiniBand 네트워크 어댑터를 사용 하 여 배포 될 수 있습니다. 그렇지 않은 경우 www.openfabrics.org에서 드라이버를 다운로드할 수 있습니다.  
+    -   Windows에 대 한 infiniband InfiniBand 공급 업체의 업계 컨소시엄 OpenFabrics Alliance에서 개발 됩니다.  올바른 드라이버 InfiniBand 네트워크 어댑터를 사용 하 여 배포 될 수 있습니다. 그렇지 않은 경우 www.openfabrics.org 에서 드라이버를 다운로드할 수 있습니다.  
   
 5.  네트워크 어댑터에 대 한 InfiniBand 및 DNS 설정을 구성 합니다. 구성 지침을 참조 하세요 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)합니다.  
   

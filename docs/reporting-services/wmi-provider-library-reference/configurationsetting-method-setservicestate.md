@@ -2,7 +2,7 @@
 title: SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceState method
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 79b79cd7b7e179413cbf5338a98ffa832f6a6b6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 83aa9fb906fc71b1dfb7fd3d036c119d9b4e41e2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600371"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580984"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>ConfigurationSetting 메서드 - SetServiceState
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  

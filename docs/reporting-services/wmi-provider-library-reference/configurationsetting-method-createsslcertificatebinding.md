@@ -2,20 +2,20 @@
 title: CreateSSLCertificateBinding 메서드(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543454"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570754"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 메서드 - CreateSSLCertificateBinding
   SSL 인증서 바인딩을 만듭니다.  
@@ -36,7 +36,7 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>매개 변수  
- *응용 프로그램*  
+ *애플리케이션*  
  인증서 바인딩을 만들어야 하는 애플리케이션의 이름입니다.  
   
  *CertificateHash*  

@@ -2,18 +2,18 @@
 title: Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405718"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574342"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원
 
@@ -31,13 +31,13 @@ ms.locfileid: "52405718"
 ### <a name="limitations-and-restrictions"></a>제한 사항
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 백업 및 복원 기능을 사용하여 부분적으로 백업 및 복원할 수 있습니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 **데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지** 않습니다[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션은 SharePoint 백업 및 복원 기능을 사용하여 부분적으로 백업 및 복원할 수 있습니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 **데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지** 않습니다[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
 ### <a name="recommendations"></a>권장 사항
   
 -   SharePoint 백업을 시작하기 전에 암호화 키를 백업합니다. 암호화 키를 백업하지 않으면 서비스 애플리케이션을 복원한 후 암호화된 데이터에 액세스할 수 없습니다. 이 경우 암호화된 데이터를 삭제해야 합니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 데이터베이스 액세스를 위해 UEA 또는 Windows 인증이 사용되고 있는지 확인합니다. 둘 중 하나가 사용되고 있는 경우 복원 프로세스 후에 서비스 애플리케이션을 올바르게 구성할 수 있도록 적절한 자격 증명이 무엇인지 확인합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션에 데이터베이스 액세스를 위해 UEA 또는 Windows 인증이 사용되고 있는지 확인합니다. 둘 중 하나가 사용되고 있는 경우 복원 프로세스 후에 서비스 애플리케이션을 올바르게 구성할 수 있도록 적절한 자격 증명이 무엇인지 확인합니다.  
   
 -   SharePoint 백업 로그가 백업 파일과 동일한 폴더에 생성되어 있는지 검토합니다. 이 파일의 이름은 일반적으로 **spbackup.log**입니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52405718"
   
 1.  SharePoint 중앙 관리의 **백업 및 복원** 그룹에서 **백업 실행**을 선택합니다.  
   
-2.  **공유 서비스** 노드에서 **공유 서비스 응용 프로그램** 을 확장하고 서비스 응용 프로그램을 선택합니다. 유형은 **SQL Server Reporting Services 서비스 애플리케이션**입니다.  
+2.  **공유 서비스** 노드에서 **공유 서비스 애플리케이션** 을 확장하고 서비스 애플리케이션을 선택합니다. 유형은 **SQL Server Reporting Services 서비스 애플리케이션**입니다.  
   
 3.  **다음**을 선택합니다.  
   
@@ -71,13 +71,13 @@ ms.locfileid: "52405718"
   
  자세한 내용은 SharePoint 설명서의 다음 항목을 참조하세요.  
   
- [SharePoint 설명서의 서비스 응용 프로그램 백업(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)  
+ [SharePoint 설명서의 서비스 애플리케이션 백업(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)  
   
- [서비스 응용 프로그램 백업(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [서비스 애플리케이션 백업(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 확인
 
- **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있는지 확인하려면  
+ **실행 계정:** 서비스 애플리케이션에 실행 계정이 사용되고 있는지 확인하려면  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52405718"
   
 4.  실행 계정이 구성된 경우 서비스 애플리케이션 백업을 복원할 때 자격 증명을 알아야 합니다. 올바른 자격 증명을 알 때까지 백업 및 복원 절차를 진행하지 마세요.  
   
- **데이터베이스 인증:** 서비스 응용 프로그램에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있는지 확인하려면  
+ **데이터베이스 인증:** 서비스 애플리케이션에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있는지 확인하려면  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52405718"
 
  다음 단계를 순서대로 수행하세요.  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 복원합니다.  
+1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 복원합니다.  
   
 2.  암호화 키를 복원합니다.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "52405718"
   
 2.  **백업 디렉터리 위치** 상자에서 백업 파일에 대한 경로를 입력하고 **새로 고침**을 선택합니다.  
   
-3.  **최상위 구성 요소** 목록에서 서비스 응용 프로그램 백업을 선택하고 **다음**을 선택합니다.  
+3.  **최상위 구성 요소** 목록에서 서비스 애플리케이션 백업을 선택하고 **다음**을 선택합니다.  
   
-4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램을 선택하고 **다음**을 선택합니다.  
+4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 선택하고 **다음**을 선택합니다.  
   
 5.  **로그인 이름 및 암호** 섹션에 로그인 이름의 암호를 입력합니다. 로그인 이름 입력란은 백업 전에 서비스 애플리케이션에 사용되던 로그인으로 채워야 합니다.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "52405718"
   
  자세한 내용은 SharePoint 설명서의 다음 항목을 참조하세요.  
   
- [서비스 응용 프로그램 복원(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)  
+ [서비스 애플리케이션 복원(SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)  
   
- [서비스 응용 프로그램 복원(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
+ [서비스 애플리케이션 복원(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>SharePoint 중앙 관리를 사용하여 암호화 키 복원
 
@@ -135,7 +135,7 @@ ms.locfileid: "52405718"
 
 ### <a name="configure-the-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 구성
 
- **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있었던 경우 다음 단계를 수행하여 구성하세요.  
+ **실행 계정:** 서비스 애플리케이션에 실행 계정이 사용되고 있었던 경우 다음 단계를 수행하여 구성하세요.  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52405718"
   
 5.  **확인**을 선택합니다.  
   
- **데이터베이스 인증:** 서비스 응용 프로그램에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있었던 경우 다음 단계를 수행하세요.  
+ **데이터베이스 인증:** 서비스 애플리케이션에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있었던 경우 다음 단계를 수행하세요.  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 선택합니다.  
   

@@ -2,20 +2,20 @@
 title: 서버 속성(일반 페이지) | Microsoft Docs
 ms.date: 06/08/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9c9079baf374b6ab60cf275aaa6551eba5385e79
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71c0d3d28de1a9c63770b37f2bb6013768aaee78
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712034"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576165"
 ---
 # <a name="report-server-properties-general-page"></a>보고서 서버 속성(일반 페이지)
   이 페이지를 사용하여 보고서 관리자에 사용된 제목을 보거나 수정하고, 내 보고서를 설정 또는 해제하고, 내 보고서의 보안에 대한 역할 정의를 선택하고 클라이언트 인쇄 컨트롤을 설정 또는 해제할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52712034"
   
  서버 모드에 따라 설정할 수 있는 서버 속성이 결정됩니다. SharePoint 통합 모드로 구성된 보고서 서버를 관리하는 경우 내 보고서를 활성화하거나 웹 포털에 대한 제목을 설정할 수 없습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **이름**  
  웹 포털의 맨 위에 표시되는 이름을 입력합니다. 기본적으로 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 지정한 이름은 보고서 관리자에만 나타납니다.  
   

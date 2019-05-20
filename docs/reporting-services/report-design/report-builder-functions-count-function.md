@@ -2,18 +2,18 @@
 title: Count 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0eba548573866c89dffe91df44c4ba78f1417c0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579715"
 ---
 # <a name="report-builder-functions---count-function"></a>보고서 작성기 함수 - Count 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  

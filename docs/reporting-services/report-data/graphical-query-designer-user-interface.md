@@ -2,7 +2,7 @@
 title: 그래픽 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 025635208eea862fd43a05567a2d223d9ac7645c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020287"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572744"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 디자이너의 보고서 데이터 세트에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)를 참조하세요. 특정 데이터 원본 유형 작업에 대한 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
- 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
  이 그래픽 쿼리 디자이너에서 지원하는 쿼리 명령에는 **Text**, **StoredProcedure**또는 **TableDirect**의 세 가지 유형이 있습니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "50020287"
 |단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
-|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
+|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
 |![다이어그램 창 표시/숨기기 토글 단추](../../reporting-services/report-data/media/rsqdicon-showhidediagram.gif "다이어그램 창 표시/숨기기 토글 단추")|다이어그램 창을 표시하거나 숨깁니다.|  
 |![표 형태 창 표시/숨기기 토글](../../reporting-services/report-data/media/rsqdicon-showhidegrid.gif "표 형태 창 표시/숨기기 토글")|표 형태 창을 표시하거나 숨깁니다.|  
 |![SQL 창 표시/숨기기 토글](../../reporting-services/report-data/media/rsqdicon-showhidesql.gif "SQL 창 표시/숨기기 토글")|SQL 창을 표시하거나 숨깁니다.|  
@@ -114,7 +114,7 @@ EXEC uspGetEmployeeManagers '1';
 |단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
-|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
+|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
 |![일반 쿼리 디자이너 단추 아이콘](../../reporting-services/report-data/media/icongenericquerydesigner.gif "일반 쿼리 디자이너 단추 아이콘")|쿼리 텍스트 또는 저장 프로시저 보기를 유지하면서 일반 쿼리 디자이너 및 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|선택한 테이블의 모든 열을 선택합니다.|  
   
@@ -132,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 |단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
-|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
+|**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|선택한 저장 프로시저를 실행합니다.|  
 |저장 프로시저 드롭다운 목록|아래쪽 화살표를 클릭하면 데이터 원본의 사용 가능한 저장 프로시저 목록이 표시됩니다. 저장 프로시저를 선택하려면 목록에서 클릭합니다.|  
   
@@ -143,10 +143,10 @@ EXEC uspGetEmployeeManagers '1';
   
 ## <a name="see-also"></a>참고 항목  
  [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [SQL Server 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
  [OLE DB 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)   
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Oracle 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  

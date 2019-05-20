@@ -2,18 +2,18 @@
 title: 페이지 나누기, 머리글, 열 및 행 제어(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2cab3e56eeda23d10e7b8a5b909792ff136591d0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 321f6949208bbf73a3f6750806812f8d08ceae46
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294329"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65572282"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>페이지 나누기, 머리글, 열 및 행 제어(보고서 작성기 및 SSRS)
   페이지 나누기를 사용하여 보고서를 개별 페이지로 나누어 보고 인쇄할 수 있습니다. 페이지 나누기는 보고서를 미리 볼 때나 다른 파일 형식으로 내보낼 때 최적의 상태로 표시하기 위해 내용을 보고서 페이지에 맞추는 방식을 결정합니다.  

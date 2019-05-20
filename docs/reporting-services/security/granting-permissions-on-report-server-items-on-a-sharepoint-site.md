@@ -2,7 +2,7 @@
 title: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dc2b972c797a6f78170eeeba4867f6f377793dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631151"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580032"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 은 SharePoint 사이트 및 라이브러리에서 액세스하는 보고서 서버 항목에 대한 액세스를 허용하는 데 사용할 수 있는 기본 제공 보안 기능을 제공합니다. 이미 사용자에게 사용 권한을 할당한 경우 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 와 보고서 서버 간의 통합 설정을 구성하는 즉시 해당 사용자가 보고서 서버 항목 및 작업에 액세스할 수 있게 됩니다. 기존 사용 권한을 사용하여 보고서 정의와 기타 문서를 업로드하고, 보고서를 보고, 구독을 만들고, 항목을 관리할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "47631151"
  [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  보고서 서버 작업에 액세스하는 데 사용할 수 있는 모든 SharePoint 제품 사용 권한에 대한 참조를 제공합니다.  
   
- [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  임시 보고에 대한 사용 권한 요구 사항을 설명하고 기능을 사용할 수 있게 만드는 방법을 제안합니다.  
   
  [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  

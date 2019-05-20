@@ -2,7 +2,7 @@
 title: IsWebServiceEnabled 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IsWebServiceEnabled property
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f0fa4db9037c41e29fe79aacc3cc5e3143286ab9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9859e89a35f7e2da6dbfe9f033984c7c7b514fbd
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694611"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573600"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 속성 - IsWebServiceEnabled
   보고서 서버 웹 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  

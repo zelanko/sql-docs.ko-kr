@@ -2,20 +2,20 @@
 title: Version 속성(WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 59c8f217c2ce52b08d5fe0fbc3c09d9fbda4722d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 059f517b3309b059f3944f04131e02e8722e7fc6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747651"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571063"
 ---
 # <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance 속성 - Version
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

@@ -2,18 +2,18 @@
 title: 항목에 확장 또는 축소 작업 추가(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d79c923a332667b6d971eede5ab0b67e12a99063
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287961"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582130"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
   사용자가 보고서 항목을 대화형으로 확장 또는 축소하거나, 테이블이나 행렬의 경우 그룹과 연결된 행과 열을 축소 또는 확장할 수 있도록 설정할 수 있습니다. 사용자가 항목을 확장 또는 축소할 수 있도록 하려면 해당 항목에 표시 유형 속성을 설정합니다. 표시 유형을 설정하면 HTML 보고서 뷰어에서 사용할 수 있으며 이를 *드릴다운* 동작이라고도 합니다.  

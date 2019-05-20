@@ -2,7 +2,7 @@
 title: InstanceID 속성(WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 397a82b01be8bf2ab0f053b26b9c15509f8a48c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616531"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569125"
 ---
 # <a name="msreportserverinstance-properties---instanceid"></a>MSReportServer_Instance 속성 - InstanceID
   이 개체는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  

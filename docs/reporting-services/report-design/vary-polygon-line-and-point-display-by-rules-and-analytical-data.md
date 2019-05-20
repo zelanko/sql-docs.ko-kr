@@ -2,7 +2,7 @@
 title: 규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +16,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3279ace83e7ed2e3dc2f9997c68331fd0ddbb645
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286402"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578449"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  
@@ -98,15 +98,15 @@ ms.locfileid: "56286402"
 ##  <a name="Distribution"></a> 분포 옵션 이해  
  값의 분포를 만들려면 데이터를 범위로 나눌 수 있습니다. 분포 유형, 하위 범위 수 및 최소 및 최대 범위 값을 지정합니다.  
   
- 다음 목록에서는 세 가지 지도 요소와 범위가 1 ~ 9999이고 값이 1, 10, 200, 2000, 4777, 8999인 1, 10, 200, 2000, 4777, 8999.  
+ 다음 목록에서는 세 가지 지도 요소와 범위가 1 ~ 9999이고 값이 1, 10, 200, 2000, 4777, 8999인 6가지 관련 분석 값이 있다고 가정합니다.  
   
--   **동일 간격.** 데이터를 동일한 범위 간격으로 나누는 범위를 만듭니다. 예를 들어 세 범위는 0-2999, 3000-5999, 6000-8999입니다. 하위 범위 1: 1, 10, 200, 500. 하위 범위 2: 4777. 하위 범위 3: 8999. 이 방법은 데이터가 분포되는 방법을 고려하지 않습니다. 매우 큰 값이나 매우 작은 값은 분포 결과를 왜곡시킬 수 있습니다.  
+-   **동일 간격.** 데이터를 동일한 범위 간격으로 나누는 범위를 만듭니다. 예를 들어 세 범위는 0-2999, 3000-5999, 6000-8999입니다. 하위 범위 1: 1, 10, 200, 500 하위 범위 2: 4777 하위 범위 3: 8999 이 방법은 데이터가 분포되는 방법을 고려하지 않습니다. 매우 큰 값이나 매우 작은 값은 분포 결과를 왜곡시킬 수 있습니다.  
   
--   **동일 분포** . 각 범위에 동일한 수의 항목이 있도록 해당 데이터를 나누는 범위를 만듭니다. 예제 데이터의 경우 세 범위는 0-10, 11-500, 501-8999입니다. 하위 범위 1: 1, 10. 하위 범위 2: 200, 500. 하위 범위 3: 4777, 8999. 이 방법은 매우 크거나 매우 작은 범위에 걸쳐 있는 부분을 만들어 분포를 왜곡시킬 수 있습니다.  
+-   **동일 분포** . 각 범위에 동일한 수의 항목이 있도록 해당 데이터를 나누는 범위를 만듭니다. 예제 데이터의 경우 세 범위는 0-10, 11-500, 501-8999입니다. 하위 범위 1: 1, 10 하위 범위 2: 200, 500 하위 범위 3: 4777, 8999 이 방법은 매우 크거나 매우 작은 범위에 걸쳐 있는 부분을 만들어 분포를 왜곡시킬 수 있습니다.  
   
 -   **최적** . 균형 있는 하위 범위를 만들기 위해 분포를 자동으로 조정하는 범위를 만듭니다. 하위 범위의 수는 알고리즘에 따라 결정됩니다.  
   
--   **사용자 지정.** 값의 분포를 제어하기 위해 범위 수를 지정합니다. 예제 데이터의 경우 세 범위 1-2, 3-8, 9.  
+-   **사용자 지정.** 값의 분포를 제어하기 위해 범위 수를 지정합니다. 예제 데이터의 경우 세 범위: 1-2, 3-8, 9를 지정할 수 있습니다.  
   
  분포 값은 지도 요소 표시 값을 변경하기 위해 규칙에서 사용됩니다.  
   

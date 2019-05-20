@@ -2,18 +2,18 @@
 title: CountDistinct 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287871"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579619"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>보고서 작성기 함수 - CountDistinct 함수
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 고유 값의 수를 반환합니다.  

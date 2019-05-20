@@ -2,24 +2,24 @@
 title: 보고서 서버 액세스를 위한 방화벽 구성 | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4044dc8ac56d7aad17f61f314e0536a08c6a8d6e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dadbeda727f03347dee70a1e860d1a0afd0eb535
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030112"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580434"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 응용 프로그램과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 원격 클라이언트 컴퓨터에서 **보고서 관리자** 를 열었을 때 빈 페이지가 나타나거나 보고서를 요청한 후 빈 웹 페이지가 나타나면 포트가 닫힌 것입니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 애플리케이션과 게시된 보고서는 IP 주소, 포트 및 가상 디렉터리를 지정하는 URL을 통해 액세스할 수 있습니다. Windows 방화벽을 켜면 보고서 서버에서 사용하도록 구성된 포트는 대부분 닫혀 있습니다. 원격 클라이언트 컴퓨터에서 **보고서 관리자** 를 열었을 때 빈 페이지가 나타나거나 보고서를 요청한 후 빈 웹 페이지가 나타나면 포트가 닫힌 것입니다.  
   
  이 경우 포트를 열려면 보고서 서버 컴퓨터에서 Windows 방화벽 유틸리티를 사용해야 합니다. Reporting Services에서 자동으로 포트를 열지 않기 때문에 이 단계는 수동으로 수행해야 합니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "50030112"
   
 2.  **고급 설정**을 클릭합니다.  
   
-3.  **인바운드 규칙**을 클릭합니다.  
+3.   **인바운드 규칙**을 클릭합니다.  
   
 4.  **동작** 창의 **새 규칙** 을 클릭합니다 **.**  
   
-5.  **포트** 의 **규칙 종류**를 클릭합니다.  
+5.   **포트** 의 **규칙 종류**를 클릭합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "50030112"
   
 13. **다음**을 클릭합니다.  
   
-14. **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
+14.  **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
   
 15. **마침**을 클릭합니다.  
   

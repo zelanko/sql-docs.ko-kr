@@ -2,25 +2,25 @@
 title: 데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6d397d3c2f841bb98d49cfdf42d525f0d9b4fc2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286051"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582060"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 세트를 사용하는 경우와 같이 데이터 세트 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
   
  필터를 사용하여 보고서에서 표시 및 처리되는 데이터를 제어할 수 있습니다. 데이터 세트, 데이터 영역, 그룹 또는 이러한 항목의 조합에 대해 필터를 지정할 수 있습니다.  
   
- 자세한 내용은 [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
