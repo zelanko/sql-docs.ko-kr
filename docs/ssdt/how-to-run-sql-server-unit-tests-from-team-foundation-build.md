@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226540"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099657"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>방법: Team Foundation Build에서 SQL Server 단위 테스트 실행
 Team Foundation Build를 사용하여 BVT(빌드 확인 테스트)의 일부로 SQL Server 단위 테스트를 실행할 수 있습니다. 데이터베이스를 배포하도록 단위 테스트를 구성하고, 테스트 데이터를 생성하고, 선택한 테스트를 실행할 수 있습니다. Team Foundation Build에 익숙하지 않으면 이 항목의 절차를 수행하기 전에 다음 정보를 검토하십시오.  
@@ -167,7 +167,7 @@ x64 빌드 에이전트에서 단위 테스트를 실행하려면 먼저 호스�
   
 9. 솔루션 탐색기에서 app.config를 두 번 클릭합니다.  
   
-10. 편집기에서 각 \<SqlUnitTesting_*VSVersion*> 노드에 `AllowConfigurationOverride="true"`를 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+10. 편집기에서 각 \<SqlUnitTesting_*VSVersion*> 노드에 `AllowConfigurationOverride="true"`를 추가합니다. 예를 들어  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703811"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105967"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47703811"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  로그 전달 저장 프로시저를 사용하려면 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -70,7 +70,7 @@ ms.locfileid: "47703811"
   
 5.  **백업 폴더의 네트워크 경로** 입력란에 트랜잭션 로그 백업 폴더용으로 만든 공유의 네트워크 경로를 입력합니다.  
   
-6.  백업 폴더가 주 서버에 있는 경우 **백업 폴더가 주 서버에 있는 경우 폴더의 로컬 경로를 입력하세요** 입력란에 백업 폴더의 로컬 경로를 입력합니다. 백업 폴더가 주 서버에 있지 않은 경우 이 입력란을 비워 둘 수 있습니다.  
+6.  **백업 폴더가 주 서버에 있는 경우 백업 폴더에 로컬 경로 입력** 상자. 백업 폴더가 주 서버에 있지 않은 경우 이 입력란을 비워 둘 수 있습니다.  
   
     > [!IMPORTANT]  
     >  주 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정이 로컬 시스템 계정으로 실행 중인 경우 주 서버에 백업 폴더를 만들고 해당 폴더의 로컬 경로를 지정해야 합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703811"
   
 8.  백업 일정은 **백업 작업** 의 **일정**상자에 나열됩니다. 설치 일정을 사용자 지정하려면 **일정** 을 클릭한 다음 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정을 조정합니다.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 **기본 서버 설정 사용**, **백업 압축**또는 **백업 압축 안 함**중 하나를 선택하여 로그 백업에 대한 백업 압축 동작을 제어할 수 있습니다. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 다음 옵션 중 하나를 선택하여 로그 백업의 백업 압축 동작을 제어할 수 있습니다. **기본 서버 설정 사용**, **백업 압축** 또는 **백업 압축 안 함**. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
   
 10. **확인**을 클릭합니다.  
   

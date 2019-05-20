@@ -24,12 +24,12 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 472f70d3f522eabf5d0e901639683a6a9f9ef117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a336b58ed148fa135835f4d991d73644c5f1799e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697132"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503232"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,7 @@ ALTER QUEUE <object>
 [ ; ]  
   
 <object> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <queue_settings> : :=  
 WITH  
@@ -73,10 +70,7 @@ WITH
    | MOVE TO { file_group | "default" }  
   
 <procedure> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
   
 <queue_rebuild_options> : :=  
 {  
@@ -175,7 +169,7 @@ WITH
   
  RECEIVE 문 또는 GET CONVERSATION GROUP 문에서 사용할 수 없는 큐를 지정하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류로 인해 이 문은 실패합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  큐를 변경할 수 있는 권한은 기본적으로 큐의 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
@@ -197,14 +191,14 @@ ALTER QUEUE ExpenseQueue
         EXECUTE AS SELF) ;  
 ```  
   
-### <a name="c-changing-the-number-of-queue-readers"></a>3. 큐 판독기 수 변경  
+### <a name="c-changing-the-number-of-queue-readers"></a>C. 큐 판독기 수 변경  
  다음 예에서는 이 큐에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저 인스턴스의 최대 수를 `7`로 설정합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
-### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>4. 활성화 저장 프로시저 및 EXECUTE AS 계정 변경  
+### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. 활성화 저장 프로시저 및 EXECUTE AS 계정 변경  
  다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저를 변경합니다. 이 저장 프로시저는 `SecurityAccount` 사용자로 실행됩니다.  
   
 ```  
@@ -214,21 +208,21 @@ ALTER QUEUE ExpenseQueue
         EXECUTE AS 'SecurityAccount') ;  
 ```  
   
-### <a name="e-setting-the-queue-to-retain-messages"></a>5. 메시지를 유지하도록 큐 설정  
+### <a name="e-setting-the-queue-to-retain-messages"></a>E. 메시지를 유지하도록 큐 설정  
  다음 예에서는 메시지를 유지하도록 큐를 설정합니다. 이 큐에는 메시지가 포함된 대화가 종료될 때까지 이 큐를 사용하는 서비스와 주고 받은 모든 메시지가 유지됩니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
-### <a name="f-removing-activation-from-a-queue"></a>6. 큐에서 활성화 제거  
+### <a name="f-removing-activation-from-a-queue"></a>F. 큐에서 활성화 제거  
  다음 예에서는 큐에서 모든 활성화 정보를 제거합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;  
 ```  
   
-### <a name="g-rebuilding-queue-indexes"></a>7. 큐 인덱스 다시 작성  
+### <a name="g-rebuilding-queue-indexes"></a>G. 큐 인덱스 다시 작성  
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -238,7 +232,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
-### <a name="h-reorganizing-queue-indexes"></a>8. 큐 인덱스 다시 구성  
+### <a name="h-reorganizing-queue-indexes"></a>H. 큐 인덱스 다시 구성  
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   

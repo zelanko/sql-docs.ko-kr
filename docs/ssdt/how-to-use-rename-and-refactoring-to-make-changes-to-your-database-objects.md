@@ -14,15 +14,15 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737671"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090090"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>방법: 이름 바꾸기 및 리팩터링을 사용하여 데이터베이스 개체 변경
 Transact\-SQL 편집기의 리팩터링 상황에 맞는 메뉴를 사용하여 개체의 이름을 바꾸거나 개체를 다른 스키마로 이동하고, 변경 내용을 커밋하기 전에 영향을 받는 모든 영역을 미리 볼 수 있습니다. 리팩터링 메뉴를 사용하여 데이터베이스 개체에 대한 모든 참조를 정규화하거나 데이터베이스 프로젝트에서 `SELECT` 문의 와일드카드 문자를 확장할 수도 있습니다.  

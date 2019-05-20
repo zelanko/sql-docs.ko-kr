@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 99ed8322745c86bbcf18356c27ed9ec68ab34b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604531"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099378"
 ---
 # <a name="data-tools-operations-window"></a>Data Tools 작업 창
 **Data Tools 작업 창**에는 이 항목에서 설명하는 일부 작업의 진행률이 표시되고 오류가 발생하는 경우 알림이 표시됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47604531"
   
 -   **SQL Server 개체 탐색기**에서 개체 삭제. 자세한 내용은 [방법: 개체 삭제 및 종속성 해결](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)을 참조하세요.  
   
--   결과 게시. 자세한 내용은 [방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)를 참조하세요.  
+-   결과 게시. 자세한 내용은 [방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
 -   배포. 자세한 내용은 [방법: 로컬 데이터베이스 빌드 및 배포](../ssdt/how-to-build-and-deploy-to-a-local-database.md)를 참조하세요.  
   

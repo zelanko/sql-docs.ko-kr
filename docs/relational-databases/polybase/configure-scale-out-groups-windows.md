@@ -1,6 +1,6 @@
 ---
 title: Windows에서 PolyBase 스케일 아웃 그룹 개선 | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417484"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774725"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
 
@@ -40,7 +41,7 @@ ms.locfileid: "52417484"
 
 4. [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 사용하여 그룹에서 노드를 모니터링합니다.
 
-5. (선택 사항) [sp_polybase_leave_group&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 계산 노드를 제거합니다.
+5. (선택 사항) [sp_polybase_leave_group&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 컴퓨팅 노드를 제거합니다.
 
 ## <a name="example-walk-through"></a>예제 연습
 

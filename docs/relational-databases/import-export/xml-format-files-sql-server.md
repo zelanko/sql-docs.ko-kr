@@ -12,16 +12,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8c29bf1705343972bf8921bad1523f2ad5b19a8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9b65b89ea70d48991af89190c7577cd7dee2043a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256118"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946351"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -351,7 +351,7 @@ for(int i=0;i<ColumnList.Count;i++)
 ###  <a name="OrderCharFieldsSameAsCols"></a> 1. 테이블 열과 동일하게 문자 데이터 필드 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 데이터 필드는 테이블 열과 일 대 일로 대응합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
  **데이터 파일(레코드):** Age\<tab>Firstname\<tab>Lastname\<return>  
   
@@ -389,7 +389,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OrderFieldsAndColsDifferently"></a> 2. 데이터 필드와 테이블 열을 서로 다르게 정렬  
  다음 예에서는 3개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 데이터 파일의 필드와 다르게 정렬된 3개의 열을 포함하는 테이블로 매핑합니다.  
   
- **테이블(행):** Person (Age int, FirstName varchar(20), LastName varchar(30))  
+ **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
  **데이터 파일**(레코드): Age\<tab>Lastname\<tab>Firstname\<return>  
   
@@ -424,7 +424,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="OmitField"></a> 3. 데이터 필드 생략  
  다음 예에서는 4개의 문자 데이터 필드가 포함된 데이터 파일을 설명하는 XML 서식 파일을 보여 줍니다. 서식 파일은 데이터 파일을 3개의 열이 포함된 테이블로 매핑합니다. 두 번째 데이터 필드는 대응되는 테이블 열이 없습니다.  
   
- **테이블(행):** Person (Age int, FirstName Varchar(20), LastName Varchar(30))  
+ **테이블(행):** Person(Age int, FirstName Varchar(20), LastName Varchar(30))  
   
  **데이터 파일(레코드):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
   

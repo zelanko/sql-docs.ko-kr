@@ -16,15 +16,15 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a4df3e9ed712975aa6d372dbc9afc3ce76bbeaa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514046"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095202"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52514046"
   
 조건 창이 표시되지 않을 경우 디자이너를 마우스 오른쪽 단추로 클릭하고 **창**을 가리킨 다음 **조건**을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 |**열**|**쿼리 유형**|**설명**|  
 |--------------|------------------|-------------------|  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342874"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089448"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "58342874"
 ## <a name="understanding-using-tokens"></a>토큰 사용 이해  
   
 > [!IMPORTANT]  
-> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 > 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 토큰이 간단하고 효율적으로 바뀝니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰을 해당하는 리터럴 문자열 값으로 바꿉니다. 모든 토큰은 대/소문자가 구분되며 작업 단계에서 이를 고려하여 사용하는 토큰을 따옴표로 올바르게 묶거나 교체 문자열을 올바른 데이터 형식으로 변환해야 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰 대체는 간단하고 효율적입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 토큰의 정확한 리터럴 문자열 값을 대체합니다. 모든 토큰은 대/소문자가 구분되며 작업 단계에서 이를 고려하여 사용하는 토큰을 따옴표로 올바르게 묶거나 교체 문자열을 올바른 데이터 형식으로 변환해야 합니다.  
   
 예를 들어, 다음 문을 사용하여 작업 단계에서 데이터베이스 이름을 인쇄할 수 있습니다.  
   
@@ -72,13 +72,13 @@ ms.locfileid: "58342874"
 |**(JOBNAME)**|작업의 이름입니다. 이 토큰은 SQL Server 2016 이상에서만 지원됩니다.|  
 |**(STEPNAME)**|단계 이름입니다. 이 토큰은 SQL Server 2016 이상에서만 지원됩니다.|  
 |**(DATE)**|현재 날짜(YYYYMMDD 형식)입니다.|  
-|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER가 지정됩니다.|  
+|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 다음과 같은 기본 인스턴스 이름이 있습니다. MSSQLSERVER.|  
 |**(JOBID)**|작업 ID입니다.|  
 |**(MACH)**|컴퓨터 이름입니다.|  
 |**(MSSA)**|마스터 SQLServerAgent 서비스 이름입니다.|  
 |**(OSCMD)**|**CmdExec** 작업 단계를 실행하는 데 사용되는 프로그램의 접두사입니다.|  
 |**(SQLDIR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 디렉터리입니다. 기본적으로 C:\Program Files\Microsoft SQL Server\MSSQL에 설치됩니다.|  
-|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다(예: $(ESCAPE_SQUOTE(SQLLOGDIR))).|  
+|**(SQLLOGDIR)**|SQL Server 오류 로그 폴더 경로의 대체 토큰입니다(예: $(ESCAPE_SQUOTE(SQLLOGDIR))). 이 토큰은 SQL Server 2014 이상에서만 지원됩니다.|  
 |**(STEPCT)**|해당 단계가 실행된 횟수(다시 시도 제외)입니다. 단계 명령이 다중 단계 루프를 강제로 종료하기 위해 사용할 수 있습니다.|  
 |**(STEPID)**|단계 ID입니다.|  
 |**(SRVR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 명명된 인스턴스이면 이 이름에는 해당 인스턴스 이름이 포함됩니다.|  

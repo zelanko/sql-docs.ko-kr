@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD 분류자(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -21,17 +21,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: dd10a628e5a60487ceaf11a6dd39f781fbc41596
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 64235b77ea2e1cf2f2c4c8d8240f34ad2e8eab8b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090040"
 ---
-# <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD CLASSIFIER(Transact-SQL)(미리 보기)
-
-> [!Note]
-> 워크로드 분류는 SQL Data Warehouse Gen2에서 미리 보기로 사용 가능합니다. 워크로드 관리 분류 및 중요도 미리 보기는 2019년 4월 9일 이후의 릴리스 날짜로 빌드됩니다.  워크로드 관리 테스트에 이 날짜 이전의 빌드를 사용하지 않아야 합니다.  빌드에 워크로드 관리 기능이 있는지 확인하려면 SQL Data Warehouse 인스턴스에 연결되었을 때 select @@version을 실행하세요.
+# <a name="create-workload-classifier-transact-sql"></a>워크로드 분류자 만들기(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

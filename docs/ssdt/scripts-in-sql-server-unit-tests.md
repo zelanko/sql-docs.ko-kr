@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751631"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101896"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 단위 테스트의 스크립트
 각 SQL Server 단위 테스트에는 단일 테스트 전 작업, 테스트 작업 및 테스트 후 작업이 포함됩니다. 이러한 작업에는 각각 다음과 같은 항목이 포함됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 도구 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
+title: SQL Server 도구(CEIP) 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243517"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376849"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>SQL Server 도구 사용 현황 및 진단 데이터 수집 구성
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>SQL Server 도구(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "59243517"
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>SQL Server Data Tools에 대한 CEIP 참여 및 참여 거부  
 
- 사용자 환경 개선 프로그램은 Microsoft가 시간에 따라 제품을 개선하는 데 도움이 되도록 설계된 프로그램입니다. 이 프로그램은 컴퓨터 하드웨어에 대한 정보는 물론, 컴퓨터 작업 수행 시 사용자를 방해하지 않고 사용자의 제품 사용 방식을 수집합니다. 수집된 정보를 통해 Microsoft는 개선할 기능을 식별할 수 있습니다. 이 문서에서는 Visual Studio 2017, Visual Studio 2015 및 Visual Studio 2013에 대한 SQL Server Data Tools(SSDT)의 CEIP에 참여 또는 참여 거부하는 방법을 다룰 것입니다.  
+ 사용자 환경 개선 프로그램은 Microsoft가 시간에 따라 제품을 개선하는 데 도움이 되도록 설계된 프로그램입니다. 이 프로그램은 컴퓨터 하드웨어에 대한 정보는 물론, 컴퓨터 작업 수행 시 사용자를 방해하지 않고 사용자의 제품 사용 방식을 수집합니다. 수집된 정보를 통해 Microsoft는 개선할 기능을 식별할 수 있습니다. 이 문서에서는 Visual Studio 2017, Visual Studio 2015 및 Visual Studio 2013에 대한 SQL Server Data Tools(SSDT)의 CEIP에 참여 또는 참여 거부하는 방법을 다룰 것입니다.  SQL Server용 CEIP의 옵트아웃에 대한 자세한 내용은 [SQL Server에 대한 로컬 감사 끄기](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)를 참조하세요.
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Visual Studio 2017용 SQL Server Data Tools와 CEIP에 대한 선택과 제어
 

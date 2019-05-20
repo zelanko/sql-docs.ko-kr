@@ -11,12 +11,13 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775050"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -40,15 +41,16 @@ SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsof
    
 - PolyBase가 제대로 작동하려면 TCP/IP를 사용하도록 설정해야 합니다. Developer 및 Express SQL Server 버전을 제외하고 모든 버전의 SQL Server에서 TCP/IP는 기본적으로 사용하도록 설정되어 있습니다. Developer 및 Express 버전에서 PolyBase가 제대로 작동하기 위해서는 TCP/IP 연결을 사용하도록 설정해야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.
 
-- MSVC++ 2012. 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase는 컴퓨터당 하나의 SQL Server 인스턴스에만 설치할 수 있습니다.
-> 
-> [!IMPORTANT]
-> 
-> Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS, YARN 및 MapReduce의 핵심 구성 요소가 있어야 하며 작업 기록 서버가 활성화되어 있어야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 작업 기록 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다.
+
+
+>[!NOTE]
+>PolyBase를 사용하려면 데이터베이스에 대한 sysadmin 또는 CONTROL SERVER 수준 사용 권한이 있어야 합니다.
+
+>[!IMPORTANT]
+>Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS, YARN 및 MapReduce의 핵심 구성 요소가 있어야 하며 작업 기록 서버가 활성화되어 있어야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 작업 기록 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다.
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>단일 노드 또는 PolyBase 스케일 아웃 그룹
 
@@ -74,11 +76,10 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
    ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
    
 4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 **SQL Server PolyBase 데이터 이동 서비스**를 구성하여 동일한 도메인 계정 하에서 실행합니다.  
-   
-   > [!IMPORTANT] 
-   >
+
+   >[!IMPORTANT]
    >PolyBase 스케일 아웃 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스는 동일한 도메인 계정으로 실행되어야 합니다. [PolyBase 스케일 아웃 그룹](#enable)을 참조하세요
-   
+
 5. PolyBase 구성 페이지에서 두 옵션 중 하나를 선택합니다. 자세한 내용은 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
    
    - SQL Server 인스턴스를 독립 실행형 PolyBase 사용 인스턴스로 사용합니다.  
@@ -91,8 +92,7 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
    
 6. PolyBase 구성 페이지에서 6개 이상의 포트로 포트 범위를 지정합니다. SQL Server 설치 프로그램은 범위에서 처음 6개의 사용 가능한 포트를 할당합니다.  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
 
 

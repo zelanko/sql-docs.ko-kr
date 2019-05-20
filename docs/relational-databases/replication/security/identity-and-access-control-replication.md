@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135983"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776263"
 ---
 # <a name="identity-and-access-control-replication"></a>ID 및 Access Control(복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,8 @@ ms.locfileid: "54135983"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>복제의 로그인 및 암호 관리
 복제를 구성할 때 복제 에이전트에 대한 로그인과 암호를 지정합니다. 복제를 구성한 후에는 로그인과 암호를 변경할 수 있습니다. 자세한 내용은 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을(를) 참조하세요. 복제 에이전트에서 사용하는 계정의 암호를 변경하는 경우 [sp_changereplicationserverpasswords&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다.  
+
+gMSA(그룹 관리 서비스 계정)의 사용에 대한 지원은 SQL Server 2014에 도입되었습니다. 자세한 내용은 [복제 및 그룹 관리 서비스 계정](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) 블로그를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [위협 요소 및 취약성 완화&#40;복제&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [복제 에이전트 보안 모델](../../../relational-databases/replication/security/replication-agent-security-model.md)   

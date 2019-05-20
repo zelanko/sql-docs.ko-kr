@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991906"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099966"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
 
@@ -176,6 +176,11 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 4. 1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅숏 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
   
+## <a name="ScriptUpgrade"></a> 스크립트 업그레이드 모드
+
+누적 업데이트 또는 서비스 팩을 인스턴스에 적용하면 다시 시작할 때 인스턴스가 스크립트 업그레이드 모드로 입력할 수 있습니다. 이 모드에서 SQL Server는 내부 CDC 테이블을 분석하고 업그레이드하는 단계를 실행할 수 있으며, 이로 인해 캡처 테이블에 인덱스와 같은 개체를 다시 만들 수 있습니다. 관련된 데이터의 양에 따라 이 단계는 시간이 다소 소요되거나 사용 가능한 CDC 데이터베이스에 대한 높은 트랜색션 로그 사용을 유발할 수 있습니다.
+
+
 ## <a name="see-also"></a>참고 항목
 
 - [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

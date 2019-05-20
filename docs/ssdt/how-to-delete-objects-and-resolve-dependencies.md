@@ -12,15 +12,15 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090211"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>방법: 개체 삭제 및 종속성 해결
 **SQL Server 개체 탐색기**에서 개체의 이름을 바꾸거나 개체를 삭제하면 SQL Server Data Tools에서는 모든 종속성 개체를 자동으로 검색하고, 필요한 경우 종속성 개체의 이름을 바꾸거나 삭제할 ALTER 스크립트를 준비합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "47676173"
     > [!WARNING]  
     > 뷰 또는 저장 프로시저에서 사용하는 테이블에 대한 참조와 같은 스크립트 기반 종속성은 SSDT에서 자동으로 업데이트되지 않습니다. 이름을 바꾼 후 **오류 목록** 창을 사용하여 다른 모든 종속성 개체를 찾고 수동으로 수정할 수 있습니다.  
   
-5.  이전 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계에 따라 변경을 적용합니다.  
+5.  이전 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) 절차의 단계에 따라 변경 내용을 적용합니다.  
   
 6.  다시 **SQL Server 개체 탐색기**에서 **Customers** 테이블을 마우스 오른쪽 단추로 클릭하고 **데이터 보기**를 선택합니다. 이름 바꾸기 작업 후에도 테이블 데이터가 그대로 유지되는지 확인합니다.  
   

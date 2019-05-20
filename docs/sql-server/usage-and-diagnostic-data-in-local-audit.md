@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582767"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372444"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>소개
 
-Microsoft SQL Server에는 컴퓨터 또는 디바이스에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server 사용 현황 및 진단 데이터 수집](https://support.microsoft.com/kb/3153756)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보낼 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 규정 준수 또는 개인 정보 유효성 검사를 위해 Microsoft가 이 기능을 사용하여 수집하는 모든 데이터를 고객이 확인할 수 있도록 하는 것입니다.  
+Microsoft SQL Server에는 컴퓨터 또는 디바이스에 대한 정보를 수집하여 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. 이를 *표준 컴퓨터 정보*라고 합니다. [SQL Server 사용 현황 및 진단 데이터 수집](usage-and-diagnostic-data-configuration-for-sql-server.md)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보낼 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 규정 준수 또는 개인 정보 유효성 검사를 위해 Microsoft가 이 기능을 사용하여 수집하는 모든 데이터를 고객이 확인할 수 있도록 하는 것입니다.  
 
 SQL Server 2016 CU2부터 SQL Server 데이터베이스 엔진 및 SSAS(SQL Server Analysis Services)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서는 SSIS(SQL Server Integration Services)에도 로컬 감사를 사용할 수 있습니다. 설정 중 설치한 다른 SQL Server 구성 요소와 설정 후 다운로드하거나 설치한 SQL Server 도구에는 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 기능이 포함되어 있지 않습니다.
+
+## <a name="remarks"></a>Remarks
+
+ - SQL CEIP 서비스 제거 또는 비활성화는 지원되지 않습니다. 
+ - 클러스터 그룹에서 SQL CEIP 리소스를 제거하는 것은 지원되지 않습니다. 
+
+데이터 수집을 옵트아웃하려면 [로컬 감사 켜기 또는 끄기](#turning-local-audit-on-or-off)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항 
 

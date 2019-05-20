@@ -1,5 +1,5 @@
 ---
-title: SQL Server 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
+title: SQL Server(CEIP) 사용 현황 및 진단 데이터 수집 구성 | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582716"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372753"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>SQL Server 사용 현황 및 진단 데이터 수집 구성
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -55,6 +55,12 @@ Linux의 SQL Server에 대해서는 [Linux의 SQL Server에 대한 고객 의견
 
 > [!NOTE]
 > 유료 버전의 SQL Server에서만 Microsoft로 정보를 보내지 못하게 설정할 수 있습니다.
+
+## <a name="remarks"></a>Remarks
+ - SQL CEIP 서비스 제거 또는 비활성화는 지원되지 않습니다. 
+ - 클러스터 그룹에서 SQL CEIP 리소스를 제거하는 것은 지원되지 않습니다. 
+
+데이터 수집을 옵트아웃하려면 [로컬 감사 켜기 또는 끄기](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off)를 참조하세요.
 
 ## <a name="error-and-usage-reporting-application"></a>오류 및 사용 보고 애플리케이션 
 

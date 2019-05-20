@@ -11,15 +11,15 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 68b5acfe67f0fc8f1408a50a09f48ee9515e3cb9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535509"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105678"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ FROM titles
   
     쿼리 및 뷰 디자이너에서 요약 대상 열에 대한 열 별칭이 자동으로 할당됩니다. 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
-4.  표 형태의 **그룹화 방법** 열에서 **Sum**, **Avg**, **Min**, **Max**, **Count** 등 적절한 집계 함수를 선택합니다. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
+4.  **그룹화 방법** 표 형태 열에서 **Sum**, **Avg**, **Min**, **Max**, **Count** 등과 같은 적절한 집계 함수를 선택합니다. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
   
     쿼리 및 뷰 디자이너에서 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 에 있는 문의 열 이름이 사용자가 지정한 집계 함수로 바뀝니다. 예를 들어, SQL 문은 다음과 같은 형식입니다.  
   

@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282707"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376883"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>PowerShell을 사용하여 SSIS 프로젝트 배포
 이 빠른 시작에서는 PowerShell 스크립트를 사용하여 데이터베이스 서버에 연결하고 SSIS 프로젝트를 SSIS 카탈로그에 배포하는 방법을 보여줍니다.
@@ -37,12 +37,42 @@ Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 �
 
 Azure SQL Database에 프로젝트를 배포하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 5. **데이터베이스 연결 문자열 표시**를 클릭합니다.
 6. **ADO.NET** 연결 문자열 전체를 검토합니다.
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 공급자
+다음 스크립트를 기반으로 변수에 적절한 값을 제공한 후 SSIS 프로젝트를 배포하는 스크립트를 실행하세요.
+
+> [!NOTE]
+> 다음 예제에서는 Windows 인증을 사용하여 SQL Server 온-프레미스를 배포합니다. `New-PSDive` cmdlet을 통해 SQL Server 인증을 사용하여 연결을 설정합니다. Azure SQL Database 서버에 연결하는 경우 Windows 인증을 사용할 수 없습니다.
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>PowerShell 스크립트
 다음 스크립트를 기반으로 변수에 적절한 값을 제공한 후 SSIS 프로젝트를 배포하는 스크립트를 실행하세요.

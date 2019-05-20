@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213512"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105156"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "53213512"
 현재 전체 텍스트 인덱스를 사용하여 전체 텍스트 검색을 지금 수행할 수 있는지 여부를 나타냅니다.  
   
 **추적 설정 변경**  
-수동, 자동 또는 해제와 같이 현재 인덱스의 변경 내용 추적 상태를 표시합니다.  
+다음 인덱스에 대한 변경 내용 추적 상태를 설명합니다. 수동, 자동 또는 해제.  
   
 **탐색 완료**  
 가장 최근의 탐색이 완료되었는지 여부를 표시합니다. 이 속성 값이 No이면 탐색이 아직 진행 중임을 의미합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "53213512"
 다음 탐색을 시작할 날짜와 시간을 표시합니다.  
   
 **현재 또는 마지막 탐색의 형식**  
-최대 사용, 증분, 업데이트 또는 자동 전파와 같이 현재 또는 가장 최근 탐색의 형식을 표시합니다.  
+현재 또는 가장 최근 크롤링 유형을 다음과 같이 표시합니다. 최대 사용, 증분, 업데이트 또는 자동 전파.  
   
 **고유 인덱스 이름**  
 현재 데이터베이스에서 고유한 단일 열 인덱스가 있는 열의 이름에 대한 전체 목록을 표시합니다. 이러한 열은 전체 텍스트 인덱스를 만드는 데 사용할 수 있습니다.  

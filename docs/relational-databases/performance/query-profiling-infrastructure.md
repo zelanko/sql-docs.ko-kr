@@ -1,7 +1,7 @@
 ---
 title: 쿼리 프로파일링 인프라 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568277"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "58645565"
 - [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]를 사용하는 활성 쿼리 통계는 표준 프로파일링 인프라를 활용합니다.    
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상위 버전에서는 [간단한 프로파일링 인프라](#lwp)를 사용하도록 설정하면 표준 프로파일링 대신 활성 쿼리 통계에서 활용됩니다.
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 *활성 쿼리 통계 포함* 단추를 클릭하면 표준 프로파일링 인프라가 활용됩니다.    
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상위 버전에서는 [경량 프로파일링 인프라](#lwp)가 활성화된 경우 [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md)를 통해 보거나 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV를 직접 쿼리할 때 표준 프로파일링 대신 활성 쿼리 통계에 의해 활용됩니다. 
 
 **모든 세션**에 대한 실행 계획 정보를 전역적으로 수집하는 다음 방법은 표준 프로파일링 인프라를 활용합니다.
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 모든 실행의 행 수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 기본적으로 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 간단한 프로파일링이 사용되며 추적 플래그 7412는 영향을 주지 않습니다.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 모든 실행의 행 수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 기본적으로 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 간단한 프로파일링이 사용되며 추적 플래그 7412는 영향을 주지 않습니다. LIGHTWEIGHT_QUERY_PROFILING [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`를 사용하여 데이터베이스 수준에서 경량 프로파일링을 사용하지 않도록 설정할 수 있습니다.
 
-새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었습니다. 새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. 
+새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었으며 *마지막 쿼리 계획 통계*라고 합니다. 마지막 쿼리 계획 통계는 LAST_QUERY_PLAN_STATS [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)(`ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`)을 사용하여 데이터베이스 수준에서 사용하도록 설정할 수 있습니다.
 
-*query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
+새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. *query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>예제 1 - 표준 프로파일링을 사용한 확장 이벤트 세션
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>예제 2 - 경량 프로파일링을 사용한 확장 이벤트 세션
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Remarks

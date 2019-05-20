@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aea2f8900f4c56168b6e1ef95fe2383b1b8163cc
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282537"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376831"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell을 사용하여 SSIS 패키지 실행
 이 빠른 시작에서는 PowerShell 스크립트를 사용하여 데이터베이스 서버에 연결하고 SSIS 패키지를 실행하는 방법을 보여줍니다.
@@ -37,12 +37,22 @@ Azure SQL Database 서버는 1433 포트에서 수신 대기합니다. 회사 �
 
 Azure SQL Database에서 패키지를 실행하려면 SSISDB(SSIS 카탈로그 데이터베이스)에 연결해야 하는 연결 정보를 가져옵니다. 다음 절차에는 정규화된 서버 이름과 로그인 정보가 필요합니다.
 
-1. [Azure 포털](https://portal.azure.com/)에 로그인합니다.
+1. [Azure Portal](https://portal.azure.com/)에 로그인합니다.
 2. 왼쪽 메뉴에서 **SQL Databases**를 선택한 다음, **SQL 데이터베이스** 페이지에서 SSISDB 데이터베이스를 선택합니다. 
 3. 데이터베이스의 **개요** 페이지에서 정규화된 서버 이름을 검토합니다. **복사하려면 클릭** 옵션을 표시하려면 마우스로 서버 이름 위를 가리킵니다. 
 4. Azure SQL Database 서버 로그인 정보를 잊은 경우, SQL Database 서버 페이지로 이동하여 서버 관리자 이름을 확인합니다. 필요한 경우 암호를 다시 설정할 수 있습니다.
 5. **데이터베이스 연결 문자열 표시**를 클릭합니다.
 6. **ADO.NET** 연결 문자열 전체를 검토합니다.
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell 공급자
+SSIS PowerShell 공급자를 사용하여 SSIS 카탈로그에 연결하고 이 카탈로그 내에서 패키지를 실행할 수 있습니다.
+
+아래는 SSIS PowerShell 공급자를 사용하여 패키지 카탈로그에서 SSIS 패키지를 실행하는 방법에 대한 기본 예제입니다.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell 스크립트
 다음 스크립트를 기반으로 변수에 적절한 값을 제공한 후 SSIS 패키지를 실행하는 스크립트를 실행하세요.

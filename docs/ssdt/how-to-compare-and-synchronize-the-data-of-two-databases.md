@@ -12,15 +12,15 @@ f1_keywords:
 - sql.data.tools.datacompare.watermark.f1
 - sql.data.tools.datacompare.connection.objectselection.f1
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a481e5c603f5bf427b7d86dd19203fd899694b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685731"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090120"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
 두 데이터베이스에 포함된 데이터를 비교할 수 있습니다. 비교하는 데이터베이스는 각각 ‘원본’ 및 ‘대상’이라고 합니다.  

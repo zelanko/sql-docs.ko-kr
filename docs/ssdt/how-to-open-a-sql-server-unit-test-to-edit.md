@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0c1f46ea807e7f51c92df16f7dfc21cfe49ad6bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659069"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098450"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>방법: 편집할 SQL Server 단위 테스트 열기
 SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 디자이너**를 사용하여 Transact\-SQL 문과 테스트 조건을 추가합니다. 디자이너를 사용하여 만든 테스트는 Visual C# 또는 Visual Basic 코드를 생성합니다. 이 코드는 테스트를 실행할 때 실행됩니다.  
@@ -34,7 +34,7 @@ SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 �
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2010"></a>[테스트 뷰] 창에서 SQL Server 단위 테스트의 소스 코드 파일을 열려면(Visual Studio 2010)  
   
-1.  단위 테스트를 실행합니다. 자세한 내용은 [연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)에서 “SQL Server 단위 테스트 실행” 섹션을 참조하세요.  
+1.  단위 테스트를 실행합니다. 자세한 내용은 [연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)에서 "SQL Server 단위 테스트 실행" 섹션을 참조하세요.  
   
 2.  [테스트 뷰] 창에서 테스트를 마우스 오른쪽 단추로 클릭하고 **테스트 열기**를 클릭합니다.  
   
@@ -42,7 +42,7 @@ SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 �
   
 ### <a name="to-open-the-source-code-file-of-a-sql-server-unit-test-from-the-test-view-window-visual-studio-2012"></a>[테스트 뷰] 창에서 SQL Server 단위 테스트의 소스 코드 파일을 열려면(Visual Studio 2012)  
   
-1.  단위 테스트를 실행합니다. 자세한 내용은 [연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)에서 “SQL Server 단위 테스트 실행” 섹션을 참조하세요.  
+1.  단위 테스트를 실행합니다. 자세한 내용은 [연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)에서 "SQL Server 단위 테스트 실행" 섹션을 참조하세요.  
   
 2.  테스트 탐색기 창에서 단위 테스트 원본 코드 파일의 이름을 클릭합니다.  
   

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613231"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099684"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>방법: 기능 확장 설치 및 관리
 데이터베이스 코드를 분석하기 위한 규칙, 데이터베이스 단위 테스트의 조건 및 빌드/배포 참가자를 추가하여 SQL Server Data Tools가 포함된 Visual Studio 버전에서 제공하는 기능을 늘릴 수 있습니다. 그러나 사용자가 확장을 만들었든지 다른 사람이 만든 확장을 설치하려는 것이든지 관계없이 기능 확장을 사용하려면 먼저 이를 설치해야 합니다.  

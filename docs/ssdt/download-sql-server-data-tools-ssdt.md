@@ -10,16 +10,16 @@ ms.topic: conceptual
 keywords:
 - ssdt 설치, ssdt 다운로드, 최신 ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243507"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65368350"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,8 +37,8 @@ Visual Studio 2019에 대한 라이선스가 이미 있으면 다음을 수행�
 - Analysis Services, Integration Services 또는 Reporting Services 프로젝트의 경우 마켓플레이스에서 적절한 확장을 설치합니다.
 
 Visual Studio 2019에 대한 라이선스가 아직 없으면 다음을 수행합니다.
-- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_campaign=tailored+install&utm_source=docs.microsoft.com&utm_medium=microsoft&utm_content=sqlssdt&rid=35007)를 설치합니다. 
-- 필요에 따라 Analysis Services, Integration Services 또는 Reporting Services를 설치합니다.
+- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt)를 설치합니다. 
+- 필요에 따라 Analysis Services, Integration Services 또는 Reporting Services 확장명을 설치합니다.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Visual Studio 2017용 SSDT의 변경 내용 ##
 
@@ -52,7 +52,7 @@ Visual Studio 2017부터 데이터베이스 프로젝트를 만드는 기능이 
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 SSDT 설치
 
-[Visual Studio를 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 스토리지 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다. Visual Studio가 이미 설치된 경우 SSDT: ![데이터 스토리지 및 처리 워크로드를 포함하여 [워크로드 목록을 편집](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)할 수 있습니다.](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)
+[Visual Studio를 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)하는 동안 SSDT를 설치하려면 **데이터 스토리지 및 처리** 작업을 선택한 다음, **SQL Server Data Tools**를 선택합니다. Visual Studio가 이미 설치된 경우 [작업의 목록을 편집](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)하여 SSDT: ![데이터 스토리지 및 처리 워크로드](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)를 포함할 수 있습니다.
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Analysis Services, Integration Services 및 Reporting Services 도구 설치
 
@@ -66,18 +66,18 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>VS 2017용 SSDT(독립 실행형 설치 관리자)
 
-[![d다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.9.0) 다운로드](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![다운로드](../ssdt/media/download.png) Visual Studio 2017용 SSDT(15.9.1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2086373) 
 
 > [!IMPORTANT]
-> - Visual Studio 2017용 SSDT(15.9.0)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
+> - Visual Studio 2017용 SSDT(15.9.1)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
 > - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017(15.8.0)이나 그 이전 버전을 위한 SSDT를 사용하세요. 15.8.0 이후의 Visual Studio 2017용 SSDT로는 Attunity의 Teradata 원본/대상이 포함된 SSIS 패키지를 디자인할 수 없습니다.
 
 
 **버전 정보**  
   
-릴리스 번호: 15.9.0  
-빌드 번호: 14.0.16186.0  
-릴리스 날짜: 2019년 1월 28일  
+릴리스 번호: 15.9.1  
+빌드 번호: 14.0.16191.0  
+릴리스 날짜: 2019년 4월 27일  
 
 전체 변경 내용은 [Release notes for SQL Server Data Tools(SSDT)](release-notes-ssdt.md)(SQL Server Data Tools 릴리스 정보)를 참조하세요.
 
@@ -87,17 +87,17 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 
 이 **VS 2017용 SSDT** 릴리스는 다음 언어로 설치할 수 있습니다.
 
-- [중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
-- [중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
-- [영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
-- [프랑스어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
-- [독일어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
-- [이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x410)
-- [일본어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x411)
-- [한국어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x412)
-- [포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x416)
-- [러시아어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x419)
-- [스페인어]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40a)
+- [중국어(간체)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
+- [중국어(번체)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
+- [영어(미국)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
+- [프랑스어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
+- [독일어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
+- [이탈리아어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
+- [일본어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
+- [한국어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
+- [포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
+- [러시아어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
+- [스페인어]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
 
 ## <a name="offline-install"></a>오프라인 설치
 
@@ -120,9 +120,9 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 1. `vs_setup.exe --NoWeb`을 실행하여 VS2017 Shell 및 SQL Server Data Project를 설치합니다.
 2. 레이아웃 폴더에서 `SSDT-Setup-ENU.exe /install`을 실행하고 SSIS/SSRS/SSAS를 선택합니다.
 
-   - 무인 설치의 경우 다음을 실행합니다. `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - 무인 설치의 경우 `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`를 실행합니다.  
 
-사용 가능한 옵션을 보려면 다음을 실행하세요. `SSDT-Setup-ENU.exe /help`
+사용 가능한 옵션을 보려면 `SSDT-Setup-ENU.exe /help`를 실행하세요.
 
 > [!NOTE]
 > Visual Studio 2017 전체 버전을 사용하는 경우 SSDT 전용 오프라인 폴더를 만들고 새로 생성된 이 폴더에서 `SSDT-Setup-ENU.exe`를 실행합니다(다른 Visual Studio 2017 오프라인 레이아웃에 SSDT를 추가 안 함). 기존 Visual Studio 오프라인 레이아웃에 SSDT 레이아웃을 추가하면 필요한 런타임(.exe) 구성 요소가 만들어지지 않습니다.

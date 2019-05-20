@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405870"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101926"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>데이터베이스 코드 분석 규칙의 확장성 개요
 SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스 코드의 Transact\-SQL 디자인, 명명 및 성능 경고에 대해 보고하는 코드 분석 규칙이 포함되어 있습니다. 자세한 내용은 [데이터베이스 코드를 분석하여 코드 품질 향상](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)을 참조하세요.  
@@ -30,7 +30,7 @@ SQL Server Data Tools가 포함된 Visual Studio 버전에는 데이터베이스
   
 ![데이터베이스 코드 분석 규칙 구성 요소](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "데이터베이스 코드 분석 규칙 구성 요소")  
   
-정적 코드 분석을 직접 실행하거나(자세한 내용은 [방법: Transact-SQL 코드를 분석하여 오류 찾기](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) 참조) 빌드를 수행하여 데이터베이스 코드 분석 규칙 기능을 사용하는 경우 프로젝트에서 규칙을 구성한 방식에 따라 모든 규칙이 로드되고 사용됩니다. 자세한 내용은 [방법: 데이터베이스 코드의 정적 분석에 대한 특정 규칙 활성화 및 비활성화](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)를 참조하세요. 확장 관리자는 만들고 등록한 모든 사용자 지정 규칙 어셈블리도 로드합니다. 자세한 내용은 [방법: 기능 확장 설치 및 관리](../ssdt/how-to-install-and-manage-feature-extensions.md)를 참조하세요.  
+데이터베이스 코드 분석 규칙을 사용하는 경우 정적 코드 분석을 직접 실행하거나(자세한 내용은 [방법: Transact-SQL 코드를 분석하여 결함 찾기](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx) 참조) 빌드를 수행하여 모든 규칙이 프로젝트에서 구성한 방법에 따라 로드되고 사용됩니다. 자세한 내용은 [방법: 데이터베이스 코드의 정적 분석에 대한 특정 규칙 활성화 및 비활성화](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)를 참조하세요. 확장 관리자는 만들고 등록한 모든 사용자 지정 규칙 어셈블리도 로드합니다. 자세한 내용은 [방법: 기능 확장 설치 및 관리](../ssdt/how-to-install-and-manage-feature-extensions.md)를 참조하세요.  
   
 사용자 지정 코드 분석 규칙 클래스는 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)에서 상속합니다. 사용자 지정 규칙 클래스는 규칙 실행 컨텍스트를 통해 다양한 유용한 개체에 액세스할 수 있습니다. 이러한 개체는 다음과 같습니다.  
   

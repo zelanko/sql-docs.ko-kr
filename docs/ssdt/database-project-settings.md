@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143583"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099382"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 데이터베이스 프로젝트 설정을 사용하여 데이터베이스, 디버깅 및 빌드 구성의 여러 측면을 제어할 수 있습니다. 이러한 설정은 다음 범주로 구분됩니다.  

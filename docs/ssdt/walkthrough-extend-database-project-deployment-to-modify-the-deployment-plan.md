@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 073d32e69df1ab852271b1c921f1f3e99bae92c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099548"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 또는 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 중에서 만들 수 있습니다. [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 SqlRestartableScriptContributor라는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 만듭니다. 이 배포 참가자는 배포 스크립트의 일괄 처리에 IF 문을 추가해서 실행 중 오류가 발생할 경우 완료될 때까지 스크립트를 다시 실행할 수 있게 합니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "52531559"
   
     ```  
   
-    이 코드에서는 몇 가지 지역 변수를 정의하고, 배포 계획의 모든 단계 처리를 수행하는 루프를 설정합니다. 루프가 완료된 뒤에는 일부 사후 처리를 수행해야 하며, 계획 실행 중 진행 상황을 추적하기 위해 배포 중에 생성된 임시 테이블을 삭제합니다. 여기서 핵심 유형은 [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 및 [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx)입니다. 핵심 메서드는 AddAfter입니다.  
+    이 코드에서는 몇 가지 지역 변수를 정의하고, 배포 계획의 모든 단계 처리를 수행하는 루프를 설정합니다. 루프가 완료된 뒤에는 일부 사후 처리를 수행해야 하며, 계획 실행 중 진행 상황을 추적하기 위해 배포 중에 생성된 임시 테이블을 삭제합니다. 핵심 유형은 다음과 같습니다. [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) 및 [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). 핵심 메서드는 AddAfter입니다.  
   
 3.  이제 추가 단계 처리를 추가해서 "Add additional step processing here" 주석과 바꿉니다.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "52531559"
   
     ```  
   
-    코드 주석은 해당 처리에 대한 설명을 제공합니다. 간단하게 말해서 이 코드는 다른 것을 건너뛰고 사후 배포 단계의 시작 지점에 도달할 때 실행을 중지하여 사용자가 설정한 단계를 찾아 봅니다. 단계에 조건문으로 둘러싸야 하는 문이 포함된 경우 추가 처리를 수행합니다. 핵심 유형, 메서드 및 속성에는 [BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx), [BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx), Script, [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) 및 [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx)이 포함됩니다.  
+    코드 주석은 해당 처리에 대한 설명을 제공합니다. 간단하게 말해서 이 코드는 다른 것을 건너뛰고 사후 배포 단계의 시작 지점에 도달할 때 실행을 중지하여 사용자가 설정한 단계를 찾아 봅니다. 단계에 조건문으로 둘러싸야 하는 문이 포함된 경우 추가 처리를 수행합니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. [BeginPreDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpredeploymentscriptstep.aspx), [BeginPostDeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.beginpostdeploymentscriptstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [TSqlScript](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlscript.aspx), Script, [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx) 및 [SqlPrintStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlprintstep.aspx).  
   
 4.  이제 일괄 처리 코드를 추가하여 "Add batch processing here" 주석과 바꿉니다.  
   
@@ -298,7 +298,7 @@ ms.locfileid: "52531559"
   
     ```  
   
-    이 코드는 BEGIN/END 블록이 포함된 IF 문을 만듭니다. 그런 후 일괄 처리의 문에서 추가 처리를 수행합니다. 처리가 완료되면 스크립트 실행의 진행 상태를 추적하는 정보를 임시 테이블에 추가하기 위해 INSERT 문을 추가합니다. 마지막으로 일괄 처리를 업데이트해서 해당 문을 포함하는 새로운 IF 문으로 이전에 사용된 문을 바꿉니다. 핵심 유형, 메서드 및 속성에는 [IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx), [BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx), [StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx), [TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx), [PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx), [SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) 및 [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx)가 포함됩니다.  
+    이 코드는 BEGIN/END 블록이 포함된 IF 문을 만듭니다. 그런 후 일괄 처리의 문에서 추가 처리를 수행합니다. 처리가 완료되면 스크립트 실행의 진행 상태를 추적하는 정보를 임시 테이블에 추가하기 위해 INSERT 문을 추가합니다. 마지막으로 일괄 처리를 업데이트해서 해당 문을 포함하는 새로운 IF 문으로 이전에 사용된 문을 바꿉니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. [IfStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.ifstatement.aspx), [BeginEndBlockStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.beginendblockstatement.aspx), [StatementList](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.statementlist.aspx), [TSqlBatch](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.tsqlbatch.aspx), [PredicateSetStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.predicatesetstatement.aspx), [SetOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.setoptions.aspx) 및 [InsertStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.insertstatement.aspx).  
   
 5.  이제 문 처리 루프의 본문을 추가합니다. "Add additional statement processing here" 주석과 바꿉니다.  
   
@@ -363,12 +363,12 @@ ms.locfileid: "52531559"
   
     |**메서드**|**설명**|  
     |--------------|-------------------|  
-    |CreateExecuteSQL|제공된 문에 EXEC sp_executesql 문을 포함하기 위한 CreateExecuteSQL 메서드를 정의합니다. 핵심 유형, 메서드 및 속성에는 [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 및 [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx)가 포함됩니다.|  
-    |CreateCompletedBatchesName|CreateCompletedBatchesName 메서드를 정의합니다. 이 메서드는 일괄 처리에 대한 임시 테이블에 삽입할 이름을 만듭니다. 핵심 유형, 메서드 및 속성에는 [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx)이 포함됩니다.|  
-    |IsStatementEscaped|IsStatementEscaped 메서드를 정의합니다. 이 메서드는 해당 모델 요소 유형에 대해 IF 문 내에 포함하기 전에 해당 문에 EXEC sp_executesql 문을 래핑해야 하는지 여부를 결정합니다. 핵심 유형, 메서드 및 속성에는 TSqlObject.ObjectType, ModelTypeClass 및 모델 유형 Schema, Procedure, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger의 TypeClass 속성이 포함됩니다.|  
-    |CreateBatchCompleteInsert|CreateBatchCompleteInsert 메서드를 정의합니다. 이 메서드는 스크립트 실행의 진행 상태를 추적하기 위해 배포 스크립트에 추가할 INSERT 문을 만듭니다. 핵심 유형, 메서드 및 속성에는 InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource 및 RowValue가 포함됩니다.|  
-    |CreateIfNotExecutedStatement|CreateIfNotExecutedStatement 메서드를 정의합니다. 이 메서드는 임시 일괄 처리가 테이블을 실행하는지 여부를 확인하는 IF 문을 생성하여 이 일괄 처리가 이미 실행되었음을 나타냅니다. 핵심 유형, 메서드 및 속성에는 IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression 및 BooleanNotExpression이 포함됩니다.|  
-    |GetStepInfo|GetStepInfo 메서드를 정의합니다. 이 메서드는 단계 이름 외에도 단계의 스크립트를 만드는 데 사용된 모델 요소에 대한 정보를 추출합니다. 중요한 유형 및 메서드에는 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 및 [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)이 포함됩니다.|  
+    |CreateExecuteSQL|제공된 문에 EXEC sp_executesql 문을 포함하기 위한 CreateExecuteSQL 메서드를 정의합니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. [ExecuteStatement](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executestatement.aspx), [ExecutableProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executableprocedurereference.aspx), [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx), [ProcedureReference](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.procedurereference.aspx) 및 [ExecuteParameter](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.executeparameter.aspx).|  
+    |CreateCompletedBatchesName|CreateCompletedBatchesName 메서드를 정의합니다. 이 메서드는 일괄 처리에 대한 임시 테이블에 삽입할 이름을 만듭니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. [SchemaObjectName](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.schemaobjectname.aspx).|  
+    |IsStatementEscaped|IsStatementEscaped 메서드를 정의합니다. 이 메서드는 해당 모델 요소 유형에 대해 IF 문 내에 포함하기 전에 해당 문에 EXEC sp_executesql 문을 래핑해야 하는지 여부를 결정합니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. TSqlObject.ObjectType, ModelTypeClass 및 다음 모델 유형의 TypeClass 속성: 스키마, 프로시저, View,  TableValuedFunction, ScalarFunction, DatabaseDdlTrigger, DmlTrigger, ServerDdlTrigger.|  
+    |CreateBatchCompleteInsert|CreateBatchCompleteInsert 메서드를 정의합니다. 이 메서드는 스크립트 실행의 진행 상태를 추적하기 위해 배포 스크립트에 추가할 INSERT 문을 만듭니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. InsertStatement, NamedTableReference, ColumnReferenceExpression, ValuesInsertSource 및 RowValue.|  
+    |CreateIfNotExecutedStatement|CreateIfNotExecutedStatement 메서드를 정의합니다. 이 메서드는 임시 일괄 처리가 테이블을 실행하는지 여부를 확인하는 IF 문을 생성하여 이 일괄 처리가 이미 실행되었음을 나타냅니다. 핵심 유형, 메서드 및 속성에는 다음이 포함됩니다. IfStatement, ExistsPredicate, ScalarSubquery, NamedTableReference, WhereClause, ColumnReferenceExpression, IntegerLiteral, BooleanComparisonExpression 및 BooleanNotExpression.|  
+    |GetStepInfo|GetStepInfo 메서드를 정의합니다. 이 메서드는 단계 이름 외에도 단계의 스크립트를 만드는 데 사용된 모델 요소에 대한 정보를 추출합니다. 중요한 유형 및 메서드에는 다음이 포함됩니다. [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), [DeploymentScriptDomStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptdomstep.aspx), [TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx) 및 [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).|  
     |GetElementName|TSqlObject에 대한 형식 이름을 만듭니다.|  
   
 1.  도우미 메서드를 정의하기 위해 다음 코드를 추가합니다.  
@@ -674,7 +674,7 @@ ms.locfileid: "52531559"
   
     2.  대상 파일을 저장할 "MyContributors"라는 새 폴더를 만듭니다.  
   
-    3.  이 디렉터리 내에 "MyContributors.targets"라는 새 파일을 만들고 다음 텍스트를 추가하여 파일을 저장합니다.  
+    3.  이 디렉터리 내에 “MyContributors.targets”라는 새 파일을 만들고 다음 텍스트를 추가하여 파일을 저장합니다.  
   
         ```  
         <?xml version="1.0" encoding="utf-8"?>  
@@ -697,13 +697,13 @@ ms.locfileid: "52531559"
 이러한 방법 중 하나에 따라 작업한 후에는 MSBuild를 사용해서 명령줄 빌드에 대한 매개 변수를 전달할 수 있습니다.  
   
 > [!NOTE]  
-> 참가자 ID를 지정하려면 항상 "DeploymentContributors" 속성을 업데이트해야 합니다. 이 ID는 기여자 원본 파일의 "ExportDeploymentPlanModifier" 특성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. "ContributorArguments" 속성은 기여자가 실행하기 위해 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
+> 참가자 ID를 지정하려면 항상 "DeploymentContributors" 속성을 업데이트해야 합니다. 이 ID는 기여자 원본 파일의 "ExportDeploymentPlanModifier" 특성에 사용된 것과 동일한 ID입니다. 이 ID가 없으면 프로젝트를 빌드할 때 참가자가 실행되지 않습니다. “ContributorArguments” 속성은 기여자가 실행하기 위해 필요한 인수가 있는 경우에만 업데이트해야 합니다.  
   
 ## <a name="deploy-the-database-project"></a>데이터베이스 프로젝트 배포  
   
 #### <a name="to-deploy-your-sql-project-and-generate-a-deployment-report"></a>SQL 프로젝트를 배포하고 배포 보고서를 생성하려면  
   
--   프로젝트는 Visual Studio 내에서 일반적으로 게시 및 배포할 수 있습니다. 단순히 SQL 프로젝트가 포함된 솔루션을 열고 프로젝트에 대한 오른쪽 마우스 클릭 컨텍스트 메뉴에서 [게시...] 옵션을 선택하거나 LocalDB에 대한 디버그 배포에 대해 F5를 사용하면 됩니다. 이 예제에서는 "게시..." 대화 상자를 사용하여 배포 스크립트를 생성합니다.  
+-   프로젝트는 Visual Studio 내에서 일반적으로 게시 및 배포할 수 있습니다. 단순히 SQL 프로젝트가 포함된 솔루션을 열고 프로젝트에 대한 오른쪽 마우스 클릭 컨텍스트 메뉴에서 [게시...] 옵션을 선택하거나 LocalDB에 대한 디버그 배포에 대해 F5를 사용하면 됩니다. 이 예에서는 “게시...” 대화 상자를 사용하여 배포 스크립트를 생성합니다.  
   
     1.  Visual Studio를 열고 SQL 프로젝트가 포함된 솔루션을 엽니다.  
   

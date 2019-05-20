@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802887"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503248"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "56802887"
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -94,7 +94,7 @@ BULK INSERT
  **'** _data_file_ **'**  
  지정한 테이블이나 뷰로 가져올 데이터가 포함된 데이터 파일의 전체 경로입니다. BULK INSERT는 디스크(예: 네트워크, 플로피 디스크, 하드 디스크 등)에서 데이터를 가져올 수 있습니다.   
  
- *data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들어 다음과 같이 사용할 수 있습니다.   
+ *data_file*은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 서버에서 유효한 경로를 지정해야 합니다. *data_file*이 원격 파일일 경우 UNC(Universal Naming Convention) 이름을 지정합니다. UNC 이름의 형식은 \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*입니다. 예를 들어   
 
 ```sql
 BULK INSERT Sales.Orders
@@ -286,7 +286,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
  이 동작을 해결하려면 서식 파일을 사용하여 과학적 표기법 **float** 데이터를 Decimal 열로 대량 가져옵니다. 서식 파일에서 명시적으로 열을 **real** 또는 **float** 데이터로 설명합니다. 두 데이터 형식에 대한 자세한 내용은 [float 및 real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)을 참조하십시오.  
   
 > [!NOTE]  
->  서식 파일은 **실수** 데이터를 **SQLFLT4** 데이터 형식으로, **부동** 데이터를 **SQLFLT8** 데이터 형식으로 나타냅니다. XML이 아닌 서식 파일에 대한 자세한 내용은 [bcp를 사용하여 파일 스토리지 형식 지정 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)를 참조하세요.  
+>  서식 파일은 **실수** 데이터를 **SQLFLT4** 데이터 형식으로, **부동** 데이터를 **SQLFLT8** 데이터 형식으로 나타냅니다. XML이 아닌 서식 파일에 대한 자세한 내용은 [bcp를 사용하여 파일 스토리지 형식 지정 &amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)를 참조하세요.  
   
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>과학적 표기법을 사용하는 숫자 값 가져오기 예  
 
@@ -341,7 +341,7 @@ GO
 
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 
- BULK INSERT 문, INSERT ... SELECT \* FROM OPENROWSET(BULK...) 문 및 **bcp** 명령은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조하세요.  
+ BULK INSERT 문과 INSERT 문을 비교하면 다음과 같습니다. SELECT \* FROM OPENROWSET(BULK...) 문 및 **bcp** 명령은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조하세요.  
   
  대량 가져오기를 위한 데이터 준비에 대한 자세한 내용은 [대량 내보내기 또는 가져오기를 위한 데이터 준비 &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)를 참조하세요.  
   
@@ -380,7 +380,7 @@ GO
   
  이에 대한 자세한 내용 및 BULK INSERT를 사용하기 위한 기타 보안 고려 사항에 대한 자세한 내용은 [Import Bulk Data by Using BULK INSERT 또는 OPENROWSET을 사용하여 대량 데이터 가져오기 &#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
 
  INSERT 및 ADMINISTER BULK OPERATIONS 권한이 필요합니다. Azure SQL Database에서는 INSERT 및 ADMINISTER DATABASE BULK OPERATIONS 권한이 필요합니다. 또한 다음 중 하나 이상이 적용되는 경우에는 ALTER TABLE 권한이 필요합니다.  
   

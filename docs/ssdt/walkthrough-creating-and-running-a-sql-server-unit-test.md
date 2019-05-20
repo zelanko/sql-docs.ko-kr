@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305961"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101937"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 애플리케이션 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 애플리케이션 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
@@ -274,7 +274,7 @@ ms.locfileid: "58305961"
   
 2.  저장 프로시저 중 하나를 마우스 오른쪽 단추로 클릭하고 **단위 테스트 만들기**를 클릭하여 **단위 테스트 만들기** 대화 상자를 표시합니다.  
   
-3.  다섯 개의 저장된 프로시저 전체에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** 및 **Sales.uspShowOrderDetails**.  
+3.  다섯 개의 저장된 프로시저 모두에 대한 확인란을 선택합니다. **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** 및 **Sales.uspShowOrderDetails**.  
   
 4.  **프로젝트** 드롭다운 목록에서 **새 Visual C# 테스트 프로젝트 만들기**를 선택합니다.  
   

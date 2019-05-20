@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad4046f9db50df0255ef6ab71f499cd6abbb63ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102003"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>SQL Server 단위 테스트를 사용하여 데이터베이스 코드 확인
 SQL Server 단위 테스트를 사용하면 데이터베이스의 기준 상태를 설정하고 이후 데이터베이스 개체에 대해 수행하는 변경 내용을 확인할 수 있습니다.  
@@ -45,14 +45,14 @@ Visual Studio 2010 및 Visual Studio 2012 통합 SQL Server Data Tools 셸은 SQ
 |일반 태스크|지원 콘텐츠|  
 |----------------|----------------------|  
 |**실습 가져오기:** 기능 소개 연습에 따라 간단한 SQL Server 단위 테스트를 만들고 실행하는 방법에 익숙해질 수 있습니다. 이 연습에는 부정 SQL Server 단위 테스트 예도 포함됩니다.|[연습: SQL Server 단위 테스트 만들기 및 실행](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
-|**SQL Server 단위 테스트 정의:** SQL Server 단위 테스트는 각각의 고유한 프로젝트로 만들어야 합니다. 해당 프로젝트에 대한 설정을 구성하고 각 테스트에 대해 하나 이상의 테스트 조건을 정의합니다.|[SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
-|**SQL Server 단위 테스트 실행:** 하나 이상의 SQL Server 단위 테스트를 정의한 후 이를 실행하고, 문제를 디버그하고, 테스트 결과를 검사합니다.|[SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)|  
+|**SQL Server 단위 테스트 정의:** 자신의 프로젝트에서 SQL Server 단위 테스트를 만들어야 합니다. 해당 프로젝트에 대한 설정을 구성하고 각 테스트에 대해 하나 이상의 테스트 조건을 정의합니다.|[SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
+|**SQL Server 단위 테스트 실행:** 하나 이상의 단위 테스트를 정의한 후 이를 실행하고, 문제를 디버그하고, 테스트 결과를 검사합니다.|[SQL Server 단위 테스트 실행](../ssdt/running-sql-server-unit-tests.md)|  
 |**테스트 그룹 관리(Visual Studio 2010):** 일반적으로 동시에 실행해야 하는 테스트는 그룹으로 구성할 수 있습니다. 테스트 목록은 계속 지원되지만 새로운 테스트 그룹의 경우 대신 테스트 범주를 사용해야 합니다. 예를 들어 특정 ‘스키마’의 모든 개체 또는 트리거의 테스트에 대해 테스트 범주를 만들 수 있습니다.|[테스트 그룹 지정을 위한 테스트 범주 정의](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[테스트 그룹 지정을 위한 테스트 목록 정의](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
-|**테스트 프로젝트 및 테스트를 버전 제어에 체크 인:** 테스트를 실행하고 올바르게 작동하는지 확인한 후에는 모든 팀 멤버가 테스트를 실행할 수 있도록 테스트 프로젝트 및 모든 관련 파일을 버전 제어에 체크 인해야 합니다. 테스트 프로젝트를 SQL Server 데이터베이스 프로젝트와 함께 버전 제어에 체크 인하면 데이터베이스와 데이터베이스 테스트 모두의 호환되는 버전을 쉽게 복원할 수 있습니다.|[버전 제어에 파일 추가](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[체크 인 및 보류 중인 변경 내용 창 사용](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
-|**사용자 지정 테스트 조건 정의:** 기본 테스트 조건 집합에 포함되지 않는 동작을 테스트해야 할 경우에는 사용자 지정 테스트 조건을 만들 수 있습니다. 이러한 조건은 새 조건을 사용하는 테스트를 실행하기 원하는 모든 팀 멤버에게 배포해야 합니다.|[시나리오: SQL Server 단위 테스트의 사용자 지정 테스트 조건 정의](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
+|**테스트 프로젝트 및 테스트를 버전 제어에서 확인:** 테스트를 실행하고 올바르게 작동하는지 확인한 후에는 모든 팀 멤버가 테스트를 실행할 수 있도록 테스트 프로젝트 및 모든 관련 파일을 버전 제어에서 확인해야 합니다. 테스트 프로젝트를 SQL Server 데이터베이스 프로젝트와 함께 버전 제어에 체크 인하면 데이터베이스와 데이터베이스 테스트 모두의 호환되는 버전을 쉽게 복원할 수 있습니다.|[버전 제어에 파일 추가](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[체크 인 및 보류 중인 변경 내용 창 사용](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
+|**사용자 지정 테스트 조건 정의:** 기본 테스트 조건 세트에 포함되지 않는 동작을 테스트해야 할 경우에는 사용자 지정 테스트 조건을 만들 수 있습니다. 이러한 조건은 새 조건을 사용하는 테스트를 실행하기 원하는 모든 팀 멤버에게 배포해야 합니다.|[시나리오: SQL Server 단위 테스트에 대한 사용자 지정 테스트 조건 정의](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
 |**기존 단위 테스트 업데이트:** 이전 버전의 Visual Studio에서 만든 데이터베이스 단위 테스트를 이 릴리스에서 성공적으로 빌드하고 실행하기 위해서는 업그레이드해야 합니다.<br /><br />**참고:** 이전 버전의 Visual Studio에서 만든 데이터베이스 단위 테스트 프로젝트와 데이터베이스 프로젝트가 모두 포함된 솔루션을 열면 데이터베이스 프로젝트를 업그레이드하라는 메시지가 표시됩니다. 데이터베이스 단위 테스트 프로젝트를 업그레이드하라는 메시지는 표시되지 않으며 이러한 프로젝트는 수동으로 업그레이드해야 합니다.|[데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**확장성:** 기능 확장을 만들어 SQL Server Data Tools를 확장할 수 있습니다.|[SQL Server 단위 테스트의 사용자 지정 테스트 조건](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
-|**문제 해결:** SQL Server 단위 테스트와 관련된 일반적인 문제를 해결하는 방법에 대해 자세히 확인할 수 있습니다.|[SQL Server 데이터베이스 단위 테스트 문제 해결](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
+|**문제 해결**: SQL Server 단위 테스트와 관련된 일반적인 문제를 해결하는 방법을 자세히 알아볼 수 있습니다.|[SQL Server 데이터베이스 단위 테스트 문제 해결](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
   
 ## <a name="related-scenarios"></a>관련 시나리오  
 [프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md)  

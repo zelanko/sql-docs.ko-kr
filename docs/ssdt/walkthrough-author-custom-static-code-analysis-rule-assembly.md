@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406240"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090162"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>SQL Server의 사용자 지정 정적 코드 분석 규칙 어셈블리 작성 연습
 이 연습에서는 SQL Server 코드 분석 규칙을 만드는 데 사용되는 단계를 보여 줍니다. 이 연습에서 만든 규칙은 저장 프로시저, 트리거 및 함수에서 WAITFOR DELAY 문을 방지하는 데 사용됩니다.  
@@ -539,7 +539,7 @@ Visual Studio 2012의 경우 <Visual Studio Install Dir>은 일반적으로 C:\P
   
 3.  **코드 분석**을 클릭합니다. RuleSamples.CategorySamples라는 새 범주가 표시됩니다.  
   
-4.  RuleSamples .CategorySamples를 확장합니다. SR1004: 저장 프로시저, 함수 및 트리거에서 WaitFor Delay 문을 사용하지 마세요.가 표시됩니다.  
+4.  RuleSamples .CategorySamples를 확장합니다. SR1004가 표시되어야 합니다. 저장 프로시저, 함수 및 트리거에서 WAITFOR DELAY 문을 사용하지 마세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 코드 분석 규칙의 확장성 개요](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  

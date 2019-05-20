@@ -1,7 +1,7 @@
 ---
 title: 국가별 Transact-SQL 문 작성 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -19,20 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fece5fabc394ff01175273378a2fb7c23ef483cf
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256568"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776106"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
+
+-   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 다음 중 하나를 사용합니다.
+    -   [UTF-8 사용 데이터 정렬 활성화](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support)가 있는 **char**, **varchar** 및 **varchar(최대)** 데이터 형식.
+    -   모든 데이터 정렬이 있는 **nchar**, **nvarchar** 및 **nvarchar(최대)** 데이터 형식.      
+
+    이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+
+-   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지 **char**, **varchar** 및 **varchar(max)** 데이터 형식을 사용하는 경우 모두 **nchar**, **nvarchar** 및 **nvarchar(max)** 로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. 
+    > [!IMPORTANT]
+    > **텍스트** 데이터 형식은 더 이상 사용되지 않으며 새로운 개발 작업에 사용하면 안됩니다. **텍스트** 데이터를 **varchar(max)** 로 변환하도록 계획합니다.
   
--   **char**, **varchar**및 **text** 데이터 형식을 사용하는 경우 모두 **nchar**, **nvarchar**및 **nvarchar(max)** 로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
-  
--   월과 요일을 비교하고 연산하려면 문자열 이름 대신 숫자 형식의 날짜 부분을 사용하십시오. 언어 설정이 다르면 월과 요일에 대해 각기 다른 이름이 반환됩니다. 예를 들어 DATENAME(MONTH,GETDATE())은 언어가 영어(미국)로 설정되었을 경우 May를 반환하고 독일어로 설정되었을 경우 Mai를 반환하며 프랑스어로 설정되었을 경우에는 mai를 반환합니다. 대신 이름이 아닌 해당 월의 숫자를 사용하는 DATEPART 함수 등을 사용하십시오. 날짜 이름이 숫자 표시보다 의미를 쉽게 알 수 있으므로 사용자에게 표시되는 결과 집합을 만들 때에는 DATEPART 이름을 사용합니다. 그러나 특정 언어로 표시된 이름에 따라 달라지는 논리는 코딩하지 마십시오.  
+-   월과 요일을 비교하고 작업을 수행할 때는 문자열 이름 대신 숫자 형식의 날짜 부분을 사용합니다. 언어 설정이 다르면 월과 요일에 대해 각기 다른 이름이 반환됩니다. 예를 들어 언어가 미국으로 설정된 경우 `DATENAME(MONTH,GETDATE())`는 `May`를 반환합니다. 영어는 언어가 독일어로 설정된 경우 `Mai`를 반환하고 언어가 프랑스어로 설정된 경우 `mai`를 반환합니다. 대신 이름이 아닌 해당 월의 숫자를 사용하는 [DATEPART](../../t-sql/functions/datepart-transact-sql.md)와 같은 함수를 사용합니다. 날짜 이름이 숫자 표시보다 의미를 쉽게 알 수 있으므로 사용자에게 표시되는 결과 집합을 만들 때에는 DATEPART 이름을 사용합니다. 그러나 특정 언어로 표시된 이름에 따라 달라지는 논리는 코딩하지 마세요.  
   
 -   INSERT 또는 UPDATE 문을 위한 입력이나 비교를 위해 날짜를 지정할 때 모든 언어 설정에서 동일하게 해석되는 상수를 사용하십시오.  
   
@@ -46,14 +54,15 @@ ms.locfileid: "54256568"
   
     -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저, 트리거를 사용하는 애플리케이션에서는 분리되지 않은 숫자 문자열을 사용해야 합니다. 예를 들어 19980924와 같은 *yyyymmdd* 를 사용합니다.  
   
-    -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저 및 트리거를 사용하는 애플리케이션에서는 **time**, **date**, **smalldate**, **datetime**, **datetime2**및 **datetimeoffset** 데이터 형식과 문자열 데이터 형식 간의 모든 변환에 명시적 스타일 매개 변수가 있는 CONVERT 문을 사용해야 합니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
+    -   다른 API나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트, 저장 프로시저 및 트리거를 사용하는 애플리케이션에서는 **time**, **date**, **smalldate**, **datetime**, **datetime2** 및 **datetimeoffset** 데이터 형식과 문자열 데이터 형식 간의 모든 변환에 명시적 스타일 매개 변수가 있는 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 문을 사용해야 합니다. 예를 들어 다음 문은 모든 언어 또는 날짜 형식 연결 설정에서 똑같이 해석됩니다.  
   
-        ```  
+        ```sql  
         SELECT *  
         FROM AdventureWorks2012.Sales.SalesOrderHeader  
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-         자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
-  
-  
+## <a name="see-also"></a>관련 항목:
+[CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
+[DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
+[데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)      

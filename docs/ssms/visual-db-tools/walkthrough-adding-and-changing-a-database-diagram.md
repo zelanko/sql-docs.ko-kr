@@ -1,5 +1,5 @@
 ---
-title: '연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft 문서'
+title: '연습: 데이터베이스 다이어그램 추가 및 변경 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787502"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105598"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>연습: 데이터베이스 다이어그램 추가 및 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47787502"
   
 3.  데이터베이스 다이어그램 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스 다이어그램**을 선택합니다.  
   
-    데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없는 경우에는 다음과 같은 메시지가 나타납니다. **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
+    데이터베이스에 다이어그램을 만드는 데 필요한 개체가 없으면 다음 메시지가 나타납니다. **이 데이터베이스에는 데이터베이스 다이어그램을 사용하는 데 필요한 지원 개체가 하나 이상 없습니다. 지원 개체를 만드시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택합니다.  
   
     **테이블 추가** 대화 상자가 표시됩니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47787502"
   
 1.  `Address` 테이블을 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 **테이블 뷰**를 가리킨 다음 **표준**을 클릭합니다.  
   
-    테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 표시됩니다.  
+    테이블 표에는 다음과 같은 세 개의 열이 표시됩니다. **열 이름**, **데이터 형식** 및 **Null 허용**.  
   
 2.  `Address` 테이블을 마우스 오른쪽 단추로 클릭하고 **테이블 뷰** 를 클릭한 다음 **키**를 선택합니다.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "47787502"
   
 2.  **이름 선택** 대화 상자에서 **확인** 을 클릭하여 기본 이름인 **Table1**을 적용합니다.  
   
-    새 테이블 표에 **열 이름**, **데이터 형식**및 **Null 허용**의 세 열이 나타납니다.  
+    새 테이블 표에는 다음과 같은 세 개의 열이 표시됩니다. **열 이름**, **데이터 형식** 및 **Null 허용**.  
   
 3.  **Table1**에 다음 정보를 추가합니다.  
   
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|선택|  
+    |**T1col1**|**ssNoversion**|선택|  
     |**T1col2**|**varchar(50)**|선택|  
     |**T1col3**|**float**|선택|  
   
@@ -123,7 +123,7 @@ ms.locfileid: "47787502"
   
     |**열 이름**|**데이터 형식**|**Null 허용**|  
     |-------------------|-----------------|-------------------|  
-    |**T2col1**|**int**|선택 안 함|  
+    |**T2col1**|**ssNoversion**|선택 안 함|  
     |**T2col2**|**varchar(50)**|선택|  
     |**T2col3**|**xml**|선택|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "47787502"
   
 2.  `T2col1` 을 `T1col1`로 끕니다.  
   
-    백그라운드의 **외래 키 관계** 대화 상자와 포그라운드의 **테이블 및 열** 대화 상자 두 개가 나타납니다.  
+    백그라운드에 **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열** 대화 상자가 나타납니다.  
   
 3.  **확인** 을 클릭하여 새 관계를 저장합니다.  
   

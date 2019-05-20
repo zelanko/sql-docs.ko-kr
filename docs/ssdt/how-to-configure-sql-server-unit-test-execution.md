@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666762"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090180"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>방법: SQL Server 단위 테스트 실행 구성
 테스트 프로젝트를 구성하여 SQL Server 단위 테스트가 실행되는 방법의 여러 측면을 제어하는 몇 가지 설정을 지정할 수 있습니다. 이러한 구성 설정은 테스트 프로젝트의 app.config 파일에 저장됩니다. 이 파일을 직접 편집하는 경우 테스트 구성 대화 상자에 새 값이 나타납니다.  

@@ -1,8 +1,8 @@
 ---
 title: 동적 데이터 마스킹 | Microsoft 문서
-ms.date: 04/23/2018
+ms.date: 05/02/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -10,45 +10,45 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82afdd3febbd85efc137cc8877f5759ad6428ede
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088982"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ![동적 데이터 마스킹](../../relational-databases/security/media/dynamic-data-masking.png)
 
 DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹하여 중요한 데이터 노출을 제한합니다. 애플리케이션의 보안 설계 및 코딩을 크게 간소화하는 데 사용됩니다.  
 
-동적 데이터 마스킹을 사용하면 고객이 애플리케이션 계층에 미치는 영향을 최소화하고 표시할 중요한 데이터의 양을 지정할 수 있게 하여 중요한 데이터에 대한 무닥 액세스를 방지할 수 있습니다. 데이터베이스의 데이터는 변경되지 않으면서 지정된 데이터베이스 필드에 대한 쿼리의 결과 집합에서 중요한 데이터를 숨기도록 데이터베이스에서 DDM을 구성할 수 있습니다. 동적 데이터 마스킹은 마스킹 규칙이 쿼리 결과에서 적용되므로 기존 애플리케이션과 함께 사용하기 쉽습니다. 많은 애플리케이션이 기존 쿼리를 수정하지 않고 중요한 데이터를 마스킹할 수 있습니다.
+동적 데이터 마스킹을 사용하면 고객이 애플리케이션 계층에 미치는 영향을 최소화하고 표시할 중요한 데이터의 양을 지정할 수 있게 하여 중요한 데이터에 대한 무단 액세스를 방지할 수 있습니다. 지정된 데이터베이스 필드에 DDM을 구성하여 쿼리 결과 집합의 중요한 데이터를 숨길 수 있습니다. DDM을 사용하면 데이터베이스의 데이터가 변경되지 않습니다. 동적 데이터 마스킹은 마스킹 규칙이 쿼리 결과에서 적용되므로 기존 애플리케이션과 함께 사용하기 쉽습니다. 많은 애플리케이션이 기존 쿼리를 수정하지 않고 중요한 데이터를 마스킹할 수 있습니다.
 
 * 중앙 데이터 마스킹 정책은 데이터베이스의 중요한 필드에 직접 작동합니다.
 * 중요한 데이터에 대한 액세스 권한이 있는 권한 있는 사용자 또는 역할을 지정합니다.
-* DDM은 전체 마스킹 및 부분 마스킹 기능뿐 아니라 숫자 데이터에 대한 임의 마스크 기능을 갖추고 있습니다.
+* DDM은 전체 마스킹 및 부분 마스킹 기능과 숫자 데이터에 대한 임의 마스크 기능을 갖추고 있습니다.
 * 간단한 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 명령에서 마스크를 정의하고 관리합니다.
 
-예를 들어, 콜 센터 지원 담당자는 사회 보장 번호 또는 신용 카드 번호의 여러 숫자로 발신자를 식별할 수 있지만, 이러한 데이터 항목이 지원 담당자에게 완전히 노출되어서는 안 됩니다. 모든 마스킹 규칙은 어떠한 쿼리의 결과 집합에서 사회 보장 번호 또는 신용 카드 번호의 마지막 네 자리 숫자를 제외하고 모두 마스킹하도록 정의할 수 있습니다. 또 다른 예로, 개인 식별이 가능한 정보(PII) 데이터를 보호하기 위해 적합한 데이터 마스크를 사용하여 개발자는 적합성 규정 준수 규칙을 위반하지 않고 문제 해결 목적으로 프로덕션 환경을 쿼리할 수 있습니다.
+예를 들어, 콜 센터 지원 담당자는 사회 보장 번호 또는 신용카드 번호의 여러 숫자로 발신자를 식별할 수 있습니다.  사회 보장 번호나 신용카드 번호가 지원 담당자에게 완전히 노출되지 않아야 합니다. 모든 마스킹 규칙은 어떠한 쿼리의 결과 집합에서 사회 보장 번호 또는 신용 카드 번호의 마지막 네 자리 숫자를 제외하고 모두 마스킹하도록 정의할 수 있습니다. 또 다른 예로, 개인 식별이 가능한 정보(PII) 데이터를 보호하기 위해 적합한 데이터 마스크를 사용하여 개발자는 적합성 규정 준수 규칙을 위반하지 않고 문제 해결 목적으로 프로덕션 환경을 쿼리할 수 있습니다.
 
 동적 데이터 마스킹의 목적은 중요한 데이터의 노출을 제한하여 데이터에 대한 액세스 권한이 없는 사용자가 보지 못하게 하는 것이지 데이터베이스 사용자가 데이터베이스에 직접 연결하여 중요한 데이터 조각을 노출하는 과도한 쿼리를 실행하지 못하게 하는 것은 아닙니다. 동적 데이터 마스킹은 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 기능(감사, 암호화, 행 수준 보안...)에 보완적이며 데이터베이스에서 중요한 데이터의 보호를 강화하기 위해 추가적으로 이 기능을 함께 사용하는 것이 좋습니다.  
   
-동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure 포털을 사용하여 동적 데이터 마스킹을 구성하는 방법은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure 포털)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
+동적 데이터 마스킹은에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 사용할 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하여 구성됩니다.합니다. Azure Portal을 사용하여 동적 데이터 마스킹을 구성하는 방법에 대한 자세한 내용은 [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure Portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)을 참조하세요.  
   
-## <a name="defining-a-dynamic-data-mask"></a>동적 데이터 마스크 정의  
+## <a name="defining-a-dynamic-data-mask"></a>동적 데이터 마스크 정의
  해당 열에서 데이터 난독 처리를 위해 테이블의 열에 마스킹 규칙을 정의할 수 있습니다. 네 가지 유형의 마스크를 사용할 수 있습니다.  
   
 |함수|설명|예|  
 |--------------|-----------------|--------------|  
-|Default|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
-|Email|전자 메일 주소 형식에서 전자 메일 주소의 첫 글자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. `aXXX@XXXX.com`을 참조하세요.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
-|임의|지정된 범위 내에서 임의 값으로 원래 값을 마스킹하기 위해 숫자 유형에서 사용할 임의 마스킹 함수입니다.|정의 구문 예제: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 변경 구문 예제: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
-|사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
+|Default|지정된 필드의 데이터 형식에 따라 전체 마스킹.<br /><br /> 문자열 데이터 형식의 경우 필드의 크기가 4자 미만인 경우 XXXX 미만의 X를 사용합니다(**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> 숫자 데이터 형식의 경우 영(0) 값을 사용합니다(**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> 날짜 및 시간 데이터 형식의 경우 01.01.1900 00:00:00.0000000(**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**)을 사용합니다.<br /><br />이진 데이터 형식의 경우 단일 바이트의 ASCII 값 0을 사용합니다(**binary**, **varbinary**, **image**).|열 정의 구문 예제: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
+|Email|이메일 주소의 형식에서 이메일 주소의 첫 번째 문자와 상수 접미사 ".com"을 표시하는 마스킹 방법입니다. `aXXX@XXXX.com`입니다.|정의 구문 예제: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
+|임의|지정된 범위 내에서 임의 값으로 원래 값을 마스킹하기 위해 숫자 유형에서 사용할 임의 마스킹 함수입니다.|정의 구문 예제: `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
+|사용자 지정 문자열|첫 번째 및 마지막 문자를 표시하고 가운데에 사용자 지정 안쪽 여백 문자열을 추가하는 마스킹 방법입니다. `prefix,[padding],suffix`<br /><br /> 참고: 원래 값이 너무 짧아서 전체 마스크를 완료할 수 없는 경우 접두사 또는 접미사 부분이 표시되지 않습니다.|정의 구문 예제: `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 변경 구문의 예제: `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 추가 예:<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  동적 데이터 마스크로 테이블을 만드는 데 특별한 권한이 필요하지 않습니다. 구성표 권한에 대한 표준 **CREATE TABLE** 및 **ALTER** 만 필요합니다.  
   
  열 마스크를 추가, 대체 또는 제거하려면 테이블에서 **ALTER ANY MASK** 권한 및 **ALTER** 권한이 필요합니다. **ALTER ANY MASK** 를 보안 책임자에게 부여하는 것이 적합합니다.  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [SQL 데이터베이스 동적 데이터 마스킹시작(Azure 미리 보기 포털)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [SQL 데이터베이스 동적 데이터 마스킹 시작(Azure Portal)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

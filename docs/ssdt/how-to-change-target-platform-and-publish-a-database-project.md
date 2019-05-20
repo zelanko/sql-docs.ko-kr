@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516705"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090099"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시
 SSDT(SQL Server Data Tools) 데이터베이스 프로젝트의 대상 SQL Server 버전을 지원되는 SQL Server 인스턴스(SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 또는 SQL Azure)로 변경할 수 있습니다. 이렇게 하면 데이터베이스 개발을 한 프로젝트에 중앙 집중화하고 필요할 때 여러 버전의 SQL Server 인스턴스에 프로젝트를 게시할 수 있습니다.  
@@ -41,7 +41,7 @@ SSDT에서는 대상 플랫폼이 인식되고 코드의 오류(예를 들어 SQ
   
 2.  `ON [PRIMARY]` 문의 끝에 `CREATE TABLE` 을 추가합니다.  
   
-3.  **오류 목록** 창에 SQL70015: SQL Azure에서는 ‘파일 그룹 참조 및 파티션 구성표’가 지원되지 않습니다.라는 오류가 표시되는지 확인합니다.  
+3.  **오류 목록** 창에 다음 오류가 표시됩니다.  SQL70015: '파일 그룹 참조 및 파티션 구성표'는 SQL Azure에서 지원되지 않습니다..  
   
     SSDT에서는 대상 플랫폼에 따라 스크립트의 유효성을 자동으로 검사합니다. 이 예의 경우 SQL Azure에서는 파일 그룹이 지원되지 않으므로 오류가 반환됩니다. SQL Azure에서 지원되지 않는 Transact\-SQL 문 목록은 [부분적으로 지원되는 Transact-SQL 문(Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx)을 참조하세요.  
   

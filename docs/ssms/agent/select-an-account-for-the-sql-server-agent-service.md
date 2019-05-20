@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Windows domain accounts [SQL Server]
 - security [SQL Server], SQL Server Agent
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 264de74dbc3ee09cd333ceb4815c77890938894b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 9991405a69aa43a7452d65003e2ef149c8dbc074
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697871"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104900"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,9 +91,9 @@ ms.locfileid: "51697871"
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
-대상 서버를 마스터 서버에 참여시키면 실패하고 "참여 작업이 실패했습니다."라는 오류 메시지가 표시될 수 있습니다.  
+대상 서버를 마스터 서버에 등록하면 다음 오류 메시지와 함께 실패할 수 있습니다. "등록 작업이 실패했습니다."  
   
-이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 모두 다시 시작합니다. 자세한 내용은 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)을 참조하세요.  
+이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 모두 다시 시작합니다. 자세한 내용은 [SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6)을 참조하세요.  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>제한 사항 2: 다중 서버 관리에 로컬 시스템 계정 사용  
 마스터 서버와 대상 서버가 같은 컴퓨터에 있을 경우에만 로컬 시스템 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 실행할 때 다중 서버 관리가 지원됩니다. 이 구성을 사용하면 대상 서버를 마스터 서버에 참여시킬 때 다음 메시지가 반환됩니다.  

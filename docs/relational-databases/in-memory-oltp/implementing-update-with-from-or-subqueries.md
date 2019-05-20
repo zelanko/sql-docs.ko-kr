@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653305"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104994"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-고유하게 컴파일된 T-SQL 모듈은 FROM 절을 지원하지 않으며 UPDATE 문에서 하위 쿼리를 지원하지 않습니다(SELECT에서 지원됨). FROM 절이 있는 UPDATE 문은 일반적으로 TVP(테이블 반환 매개 변수)에 따라 테이블의 정보를 업데이트하거나 AFTER 트리거에서 테이블의 열을 업데이트하는 데 사용됩니다. 
+
+
+Transact-SQL UPDATE 문에서 기본적으로 컴파일된 T-SQL 모듈에서는 다음 구문 요소가 지원되지 *않습니다*.
+
+- FROM 절
+- 하위 쿼리
+
+대조적으로 선행 요소는 SELECT 문에서 기본적으로 컴파일된 모듈에서 지원*됩니다*.
+
+FROM 절이 있는 UPDATE 문은 종종 TVP(테이블 반환 매개 변수)에 따라 테이블의 정보를 업데이트하거나 AFTER 트리거에서 테이블의 열을 업데이트하는 데 사용됩니다.
 
 TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일된 저장 프로시저에서 MERGE 기능 구현](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)을 참조하세요. 
 
-아래 샘플에서는 트리거에서 수행되는 업데이트를 보여 줍니다. 테이블의 LastUpdated 열이 현재 날짜/시간 AFTER 업데이트로 업데이트됩니다. 해결 방법은 ID 열과 함께 테이블 변수를 사용하고 WHILE 루프를 통해 테이블 변수에서 행을 반복하여 개별 업데이트를 수행하는 것입니다.
-  
-원래 T-SQL UPDATE 문은 다음과 같습니다.  
-  
-  
-  
-   ```
+다음 샘플에서는 트리거에서 수행되는 업데이트를 보여줍니다. 테이블에서 LastUpdated라는 열은 현재 날짜-시간 AFTER 업데이트로 설정됩니다. 해결 방법은 다음 항목을 사용하여 개별 업데이트를 수행합니다.
+
+- IDENTITY 열이 있는 테이블 변수입니다.
+- WHILE 루프는 테이블 변수의 행을 반복합니다.
+
+원래 T-SQL UPDATE 문은 다음과 같습니다.
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-이 섹션의 샘플 T-SQL 코드는 좋은 성능을 제공하는 해결 방법을 보여 줍니다. 해결 방법은 고유하게 컴파일된 트리거에서 구현되었습니다. 코드에서 주의해야 할 사항은 다음과 같습니다.  
+다음 블록의 샘플 T-SQL 코드는 좋은 성능을 제공하는 해결 방법을 보여줍니다. 해결 방법은 고유하게 컴파일된 트리거에서 구현되었습니다. 코드에서 주의해야 할 사항은 다음과 같습니다.  
   
 - 메모리 최적화 테이블 형식인 dbo.Type1 형식  
 - 트리거의 WHILE 루프.  
@@ -50,13 +59,13 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

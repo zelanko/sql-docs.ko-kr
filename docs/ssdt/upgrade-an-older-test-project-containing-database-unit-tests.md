@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c2006cad1fd9ef8708257c331c2411fa916cca89
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616230"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101994"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>데이터베이스 단위 테스트가 포함된 이전 테스트 프로젝트 업그레이드
 Visual Studio 2010에서 만들었고 데이터베이스 단위 테스트를 포함하는 이전 테스트 프로젝트를 업그레이드하여 새 SQL Server Data Tools 데이터베이스 단위 테스트 런타임 및 도구를 사용할 수 있습니다. 이전 프로젝트를 업그레이드한 후에는 프로젝트에 SQL Server 단위 테스트를 추가할 수 있습니다. 자세한 내용은 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)를 참조하세요.  
@@ -24,7 +24,7 @@ Visual Studio 2010에서 만들었고 데이터베이스 단위 테스트를 포
 > [!TIP]  
 > Visual Studio 2010을 사용하는 경우에는 테스트 프로젝트에 SQL Server 단위 테스트를 추가한 후 이전 데이터베이스 단위 테스트 템플릿을 사용하여 SQL Server 단위 테스트를 추가하면 안 됩니다. 그럴 경우 프로젝트를 다시 변환해야만 테스트가 올바르게 실행됩니다.  
   
-Visual Studio 2010 이전 릴리스에서 만든 테스트 데이터베이스 프로젝트가 있는 경우 프로젝트를 Visual Studio 2010으로 업그레이드하기 전에 [방법: 이전 버전의 Visual Studio에서 데이터베이스 단위 테스트 업그레이드](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)의 정보를 사용하여 데이터베이스 프로젝트를 SQL Server Data Tools로 업그레이드할 수 있습니다.  
+Visual Studio 2010 이전 버전에서 만든 테스트 데이터베이스 프로젝트가 있는 경우 [방법: 이전 버전의 Visual Studio에서 데이터베이스 단위 테스트 업그레이드](https://msdn.microsoft.com/library/dd193412(VS.100).aspx)의 정보를 사용하여 프로젝트를 SQL Server Data Tools로 업그레이드하기 전에 데이터베이스 프로젝트를 Visual Studio 2010으로 업그레이드할 수 있습니다.  
   
 ### <a name="initiating-an-upgrade"></a>업그레이드 시작  
   

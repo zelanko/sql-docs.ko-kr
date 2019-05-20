@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664021"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090245"
 ---
 # <a name="how-to-fix-errors"></a>방법: 오류 수정
 오류 목록 창에는 모든 배포 또는 빌드 오류가 표시됩니다. 데이터베이스 엔터티와 해당 정의를 편집하는 경우 Transact\-SQL 편집기나 테이블 디자이너에서 수행한 편집 작업으로 인해 발생한 구문 및 의미 오류도 이 목록에 표시됩니다. 오류 목록은 여러 탭에서 스크립트를 편집할 때 동적으로 업데이트됩니다. 그러면 식별된 오류에 따라 보다 세부적으로 문제를 해결할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "47664021"
   
 3.  화면 아래쪽의 **오류 목록** 창에 다음 팝업과 비슷한 경고 및 오류가 즉시 표시됩니다.  
   
-**경고 SQL71502: 함수: 개체에 대한 확인되지 않은 참조가 [dbo].[GetProductsBySupplier]에 포함되어 있습니다. 개체가 존재하지 않거나, 참조가 다음 개체를 참조할 수 있으므로 모호합니다. [dbo].[Product].[p]::[ShelfLife] 또는 [dbo].[Product].[ShelfLife]. 오류 SQL71501: CHECK 제약 조건: [dbo].[Product].[ShelfLife] 개체에 대한 확인되지 않은 참조가 [dbo].[CK_Product_ShelfLife]에 포함되어 있습니다.**  
+**경고 SQL71502: 함수: 개체에 대한 확인되지 않은 참조가 [dbo].[GetProductsBySupplier]에 포함되어 있습니다. 개체가 없거나, [dbo].[Product].[p]::[ShelfLife] 또는 [dbo].[Product].[ShelfLife].Error SQL71501 개체를 참조할 수 있기 때문에 참조가 모호합니다. 오류 제약 조건: [dbo].[CK_Product_ShelfLife]에 [dbo].[Product].[ShelfLife] 개체에 대한 확인되지 않은 참조가 있습니다.**  
   
 4.  **오류 목록**을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴를 사용하여 결과를 정렬하고 표시할 항목과 각 항목에 대해 표시할 정보 열을 필터링할 수 있습니다.  
   

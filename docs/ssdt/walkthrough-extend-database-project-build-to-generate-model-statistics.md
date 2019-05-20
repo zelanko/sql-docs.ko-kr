@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523418"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102036"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>연습: 데이터베이스 프로젝트 빌드를 확장하여 모델 통계 생성
 빌드 참가자를 만들어서 데이터베이스 프로젝트를 빌드할 때 사용자 지정 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 빌드할 때 SQL 데이터베이스 모델에서 통계를 출력하는 ModelStatistics라는 빌드 참가자를 만듭니다. 이 빌드 참가자는 빌드할 때 매개 변수가 사용되기 때문에 몇 가지 추가 단계가 필요합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52523418"
   
 ```  
   
-이 예제에서 특성의 첫 번째 매개 변수는 고유 식별자이며, 이 식별자는 프로젝트 파일에서 기여자를 식별하는 데 사용됩니다. 식별자를 생성하려면 라이브러리의 네임스페이스(이 연습에서는 "ExampleContributors")를 클래스 이름(이 연습에서는 "ModelStatistics")과 결합하는 것이 가장 좋습니다. 이 연습의 뒷부분에서는 이 네임스페이스를 사용해서 실행할 참가자를 지정하는 방법을 볼 수 있습니다.  
+이 경우 특성의 첫 번째 매개 변수는 고유 식별자여야 하며, 이 식별자는 프로젝트 파일에서 기여자를 식별하는 데 사용됩니다. 식별자를 생성하려면 라이브러리의 네임스페이스(이 연습에서는 "ExampleContributors")를 클래스 이름(이 연습에서는 "ModelStatistics")과 결합하는 것이 가장 좋습니다. 이 연습의 뒷부분에서는 이 네임스페이스를 사용해서 실행할 참가자를 지정하는 방법을 볼 수 있습니다.  
   
 ## <a name="CreateBuildContributor"></a>빌드 참가자 만들기  
 빌드 참가자를 만들려면 다음 작업을 수행해야 합니다.  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fcf4ca3b7cd83a365bade7fe729e24ead04f4c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a407063bfd76e937f13587d02ad472df566bb83c
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665368"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946651"
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47665368"
   
 -   **bcp** 명령에 **format** 옵션을 지정하여 비 XML 서식 파일을 자동으로 만들 수 있습니다.  
   
--   **bcp** 명령에 기존 서식 파일을 지정할 때 명령은 서식 파일에 기록되어 있는 값을 사용하며 파일 저장 형식, 접두사 길이, 필드 길이 또는 필드 종결자 입력을 요구하지 않습니다.  
+-   **bcp** 명령에 기존 서식 파일을 지정할 때 명령은 서식 파일에 기록되어 있는 값을 사용하며 파일 스토리지 형식, 접두사 길이, 필드 길이 또는 필드 종결자 입력을 요구하지 않습니다.  
   
 -   문자 데이터 또는 네이티브 데이터와 같은 특정 데이터 형식의 서식 파일을 만들 수 있습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47665368"
 |서식 파일 필드|설명|  
 |------------------------|-----------------|  
 |**호스트 파일 필드 순서**|데이터 파일에서 각 필드의 위치를 나타내는 번호. 예를 들어 행의 첫 번째 필드 번호는 1입니다.|  
-|**호스트 파일 데이터 형식**|데이터 파일의 특정 필드에 저장되는 데이터 형식 표시. ASCII 데이터 파일에는 SQLCHAR을, 네이티브 형식의 데이터 파일에는 기본 데이터 형식을 사용합니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.|  
+|**호스트 파일 데이터 형식**|데이터 파일의 특정 필드에 저장되는 데이터 형식 표시. ASCII 데이터 파일에는 SQLCHAR을, 네이티브 형식의 데이터 파일에는 기본 데이터 형식을 사용합니다. 자세한 내용은 [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.|  
 |**접두사 길이**|필드의 길이 접두사 문자 수. 유효한 접두사 길이는 0, 1, 2, 4 및 8입니다. 길이 접두사를 지정하지 않으려면 이 값을 0으로 설정합니다. 필드에 NULL 데이터 값이 있으면 길이 접두사를 지정해야 합니다. 자세한 내용은 [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)을 참조하세요.|  
 |**호스트 파일 데이터 길이**|데이터 파일의 특정 필드에 저장된 데이터 형식의 최대 길이(바이트).<br /><br /> 구분 기호로 분리된 텍스트 파일에 대한 비 XML 서식 파일을 만드는 경우 모든 데이터 필드에 대한 호스트 파일 데이터 길이를 0으로 지정할 수 있습니다. 구분 기호로 분리된 텍스트 파일에서 접두사 길이가 0이며 종결자를 가져온 경우 필드 길이 값은 무시됩니다. 이는 필드에서 사용한 스토리지 공간이 데이터와 종결자를 합한 길이와 동일하기 때문입니다.<br /><br /> 자세한 내용은 [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)을 참조하세요.|  
 |**종결자**|데이터 파일의 필드를 구분하는 구분 기호. 일반적인 종결자는 쉼표(,), 탭(\t), 줄의 끝(\r\n)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  

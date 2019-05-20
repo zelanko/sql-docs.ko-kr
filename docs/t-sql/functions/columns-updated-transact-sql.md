@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775018"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+트리거가 열에 적용되면 열 값이 변경되지 않는 경우에도 `COLUMNS_UPDATED`는 `true` 또는 `1`로 반환됩니다. 이는 의도적으로 설계된 것이며 트리거는 삽입/업데이트/삭제 작업이 허용되는지 여부를 결정하는 비즈니스 논리를 구현해야 합니다. 
   
 ## <a name="column-sets"></a>열 집합
 테이블에 열 집합이 정의되면 `COLUMNS_UPDATED` 함수가 다음과 같은 방식으로 작동합니다.

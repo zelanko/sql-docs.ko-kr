@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396886"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099590"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>방법: CLR 데이터베이스 개체 작업
 Transact\-SQL 프로그래밍 언어뿐만 아니라 .NET Framework 언어를 사용하여 데이터를 검색 및 업데이트하는 데이터베이스 개체를 만들 수 있습니다. 관리 코드로 작성된 데이터베이스 개체를 SQL Server CLR(공용 언어 런타임) 데이터베이스 개체라고 합니다. SQL Server에서 호스트되는 CLR 데이터베이스 개체를 사용할 경우의 이점과 Transact\-SQL 및 CLR 중에서 선택하는 방법은 [CLR 통합의 장점](../relational-databases/clr-integration/clr-integration-overview.md) 및 [관리 코드를 사용하여 데이터베이스 개체를 만드는 경우의 이점](https://msdn.microsoft.com/library/k2e1fb36.aspx)을 참조하세요.  
@@ -27,7 +27,7 @@ SQL Server Data Tools를 사용하는 CLR 데이터베이스 개체를 만들려
   
 CLR 및 CLR 빌드 속성 페이지에는 프로젝트에서 CLR 데이터베이스 개체를 사용하기 위한 여러 설정이 포함되어 있습니다. 특히 CLR 속성 페이지에는 CLR 어셈블리에 대한 사용 권한을 설정할 수 있는 권한 수준 설정이 있습니다. 또한 이 페이지에는 프로젝트에 추가된 CLR 데이터베이스 개체에 대한 DDL을 생성할지 여부를 제어하는 "DDL 생성" 설정도 있습니다. CLR 빌드 속성 페이지에는 프로젝트에서 CLR 코드의 컴파일을 구성하기 위해 설정할 수 있는 모든 컴파일러 옵션이 포함되어 있습니다. 이러한 속성 페이지는 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 액세스할 수 있습니다.  
   
-CLR 데이터베이스 개체 디버깅을 사용하도록 설정하려면 **SQL Server 개체 탐색기**를 엽니다. 디버그하려는 CLR 데이터베이스 아티팩트를 포함한 서버를 마우스 오른쪽 단추로 클릭하고 **SQL/CLR 디버깅 허용**을 선택합니다. 다음 경고와 함께 메시지 상자가 나타납니다. "디버깅하는 동안 서버의 모든 관리되는 스레드가 중지됩니다. 이 서버에서 SQL/CLR 디버깅을 사용하도록 설정하시겠습니까?" CLR 데이터베이스 개체를 디버깅할 때 실행을 중단하면 서버의 모든 스레드가 중단되어 다른 사용자에게 영향을 미치게 됩니다. 따라서 프로덕션 서버에서 CLR 데이터베이스 개체 응용 프로그램을 디버깅하면 안 됩니다. 또한 디버깅을 시작한 후에는 **SQL Server 개체 탐색기**에서 설정을 변경할 수 없습니다. **SQL Server 개체 탐색기**의 변경 내용은 다음에 디버깅 세션을 시작할 때까지 적용되지 않습니다.  
+CLR 데이터베이스 개체 디버깅을 사용하도록 설정하려면 **SQL Server 개체 탐색기**를 엽니다. 디버그하려는 CLR 데이터베이스 아티팩트를 포함한 서버를 마우스 오른쪽 단추로 클릭하고 **SQL/CLR 디버깅 허용**을 선택합니다. 경고와 함께 다음과 같은 메시지 상자가 표시됩니다. "디버깅하는 동안 이 서버의 모든 관리되는 스레드가 중지됩니다. 이 서버에서 SQL/CLR 디버깅을 사용하도록 설정하시겠습니까?" CLR 데이터베이스 개체를 디버깅할 때 실행을 중단하면 서버의 모든 스레드가 중단되어 다른 사용자에게 영향을 미치게 됩니다. 따라서 프로덕션 서버에서 CLR 데이터베이스 개체 응용 프로그램을 디버깅하면 안 됩니다. 또한 디버깅을 시작한 후에는 **SQL Server 개체 탐색기**에서 설정을 변경할 수 없습니다. **SQL Server 개체 탐색기**의 변경 내용은 다음에 디버깅 세션을 시작할 때까지 적용되지 않습니다.  
   
 CLR 데이터베이스 개체를 작성할 때의 요구 사항에 대한 자세한 내용은 [CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성](https://msdn.microsoft.com/library/ms131046.aspx)을 참조하세요.  
   

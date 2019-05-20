@@ -12,15 +12,15 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652878"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096860"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>방법: 테이블 디자이너를 사용하여 테이블 및 관계 관리
 테이블 디자이너에서는 Transact\-SQL 편집기와 함께 테이블 관련 프로그래밍 개체를 포함하여 SQL Server 데이터베이스의 테이블 구조를 만들고 편집하기 위한 시각적 환경을 제공합니다.  연결된 데이터베이스 또는 프로젝트의 새 테이블을 만들거나 SQL Server 개체 탐색기 또는 솔루션 탐색기에서 테이블을 편집하기 위해 두 번 클릭하면 테이블 디자이너가 시작됩니다.  

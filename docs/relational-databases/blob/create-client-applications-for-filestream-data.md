@@ -3,22 +3,21 @@ title: FILESTREAM 데이터용 클라이언트 애플리케이션 만들기 | Mi
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0699d7d270536c81b254694be5fad273bbc207dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20573362cc8eb41c3b6741bbc6efb8f6a3f9c9f5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671812"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094286"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 애플리케이션 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51671812"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) 는 세션의 현재 트랜잭션을 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다.  
   
--   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 애플리케이션에서는 이 핸들을 사용하여 FILESTREAM 데이터를 스트리밍한 후 [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)같은 Win32 API 함수에 핸들을 전달합니다. 애플리케이션이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 애플리케이션에서는 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
+-   [OpenSqlFilestream API](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 애플리케이션은 이 핸들을 사용하여 FILESTREAM 데이터를 스트리밍한 후 핸들을 다음 Win32 API로 전달할 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 애플리케이션이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 애플리케이션에서는 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 SQL 데이터 및 FILESTREAM 데이터 간에 일관성을 유지할 수 있습니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "51671812"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Win32 파일 핸들 가져오기  
- Win32 파일 핸들을 가져오려면 OpenSqlFilestream API를 호출합니다. 이 API는 sqlncli.dll 파일에서 내보내집니다. 다음 Win32 API 중 하나로 반환된 핸들이 전달될 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 다음 예에서는 Win32 파일 핸들을 가져오고 이를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓰는 방법을 보여 줍니다.  
+ Win32 파일 핸들을 가져오려면 OpenSqlFilestream API를 호출합니다. 이 API는 sqlncli.dll 파일에서 내보내집니다. 반환된 핸들은 다음 Win32 API 중 하나로 전달될 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 다음 예에서는 Win32 파일 핸들을 가져오고 이를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓰는 방법을 보여 줍니다.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   
@@ -67,7 +66,7 @@ ms.locfileid: "51671812"
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../relational-databases/blob/codesnippet/cpp/create-client-applicatio_5.cpp)]  
   
-##  <a name="best"></a> 응용 프로그램 디자인 및 구현을 위한 최상의 방법  
+##  <a name="best"></a> 애플리케이션 디자인 및 구현을 위한 최상의 방법  
   
 -   FILESTREAM이 사용된 애플리케이션을 디자인하고 구현할 때는 다음 지침을 고려하십시오.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "51671812"
 -   애플리케이션이 SMB1(메시지 블록 1) 프로토콜을 사용하는 경우 성능 최대화를 위해 FILESTREAM BLOB 데이터를 60KB의 배수로 읽어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
+ [FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [FILESTREAM 데이터 부분 업데이트](../../relational-databases/blob/make-partial-updates-to-filestream-data.md)  

@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797043"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095332"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
 SQL Server, SQL Database, SQL Data Warehouse 또는 Analytics Platform System 데이터베이스에 대한 로그인을 만듭니다. 특정 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제는 다음 탭 중 하나를 클릭합니다.
+
+CREATE LOGIN은 트랜잭션에 참여합니다. CREATE LOGIN이 트랜잭션 내에서 실행되고 트랜잭션이 롤백된 다음, 로그인 생성이 롤백됩니다. 트랜잭션 내에서 실행하는 경우 트랜잭션이 커밋될 때까지 생성된 로그인을 사용할 수 없습니다.
 
 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하십시오.
 

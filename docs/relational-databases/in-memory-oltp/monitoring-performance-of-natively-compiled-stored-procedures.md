@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c5203d03ed1a216f4aedc6913ea6e1bddefa2d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711514"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106227"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 문서에서는 고유하게 컴파일된 저장 프로시저 및 고유하게 컴파일된 다른 T-SQL 모듈의 성능을 모니터링하는 방법에 대해 설명합니다.  
   
@@ -29,7 +30,9 @@ ms.locfileid: "52711514"
  확장 이벤트의**line_number**와 함께 **line_number** 를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
   
 ```sql  
-select [definition] from sys.sql_modules where object_id=object_id  
+SELECT [definition]
+    from sys.sql_modules
+    where object_id=object_id;
 ```  
   
   
@@ -38,7 +41,7 @@ select [definition] from sys.sql_modules where object_id=object_id
 
 실행 통계는 [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에서와 마찬가지로 시스템 뷰 [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) 및 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)에 반영됩니다.
 
-### <a name="enabling-procedure-level-execution-statistics-collection"></a>프로시저 수준 실행 통계 수집 활성화
+## <a name="procedure-level-execution-statistics"></a>프로시저 수준 실행 통계
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
@@ -47,10 +50,12 @@ EXEC sys.sp_xtp_control_proc_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_PROCEDURE_EXECUTION_STATISTICS`를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
-### <a name="enabling-query-level-execution-statistics-collection"></a>쿼리 수준 실행 통계 수집 활성화
+## <a name="query-level-execution-statistics"></a>쿼리 수준 실행 통계
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_query_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
@@ -59,7 +64,9 @@ EXEC sys.sp_xtp_control_query_exec_stats 1
 
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_QUERY_EXECUTION_STATISTICS`를 사용하여 명령문 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
-ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
+ALTER DATABASE
+    SCOPED CONFIGURATION
+    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>샘플 쿼리
@@ -68,49 +75,63 @@ ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON
  
   
  다음 쿼리에서는 통계 컬렉션 후 현재 데이터베이스에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 및 프로시저 이름을 반환합니다.  
-  
-```sql  
-select object_id,  
-       object_name(object_id) as 'object name',  
-       cached_time,  
-       last_execution_time,  
-       execution_count,  
-       total_worker_time,  
-       last_worker_time,  
-       min_worker_time,  
-       max_worker_time,  
-       total_elapsed_time,  
-       last_elapsed_time,  
-       min_elapsed_time,  
-       max_elapsed_time   
-from sys.dm_exec_procedure_stats  
-where database_id=db_id() and object_id in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by total_worker_time desc  
-```  
-  
- 다음 쿼리에서는 쿼리 텍스트와 함께 현재 데이터베이스에서 통계가 수집된 고유하게 컴파일된 저장 프로시저의 코든 쿼리에 대한 실행 통계(전체 작업자 시간을 기준으로 정렬됨)도 내림차순으로 반환합니다.  
-  
-```sql  
-select st.objectid,   
-       object_name(st.objectid) as 'object name',   
-       SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
-       qs.creation_time,  
-       qs.last_execution_time,  
-       qs.execution_count,  
-       qs.total_worker_time,  
-       qs.last_worker_time,  
-       qs.min_worker_time,  
-       qs.max_worker_time,  
-       qs.total_elapsed_time,  
-       qs.last_elapsed_time,  
-       qs.min_elapsed_time,  
-       qs.max_elapsed_time  
-from sys.dm_exec_query_stats qs cross apply sys.dm_exec_sql_text(sql_handle) st  
-where  st.dbid=db_id() and st.objectid in (select object_id   
-from sys.sql_modules where uses_native_compilation=1)  
-order by qs.total_worker_time desc  
-```  
+
+```sql
+SELECT
+        object_id,
+        object_name(object_id) as 'object name',
+        cached_time,
+        last_execution_time,  execution_count,
+        total_worker_time,    last_worker_time,
+        min_worker_time,      max_worker_time,
+        total_elapsed_time,   last_elapsed_time,
+        min_elapsed_time,     max_elapsed_time
+    from
+        sys.dm_exec_procedure_stats
+    where
+        database_id = db_id()
+        and
+        object_id in
+            (
+            SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    order by
+        total_worker_time desc;
+```
+
+다음 쿼리에서는 쿼리 텍스트와 함께 현재 데이터베이스에서 통계가 수집된 고유하게 컴파일된 저장 프로시저의 코든 쿼리에 대한 실행 통계(전체 작업자 시간을 기준으로 정렬됨)도 내림차순으로 반환합니다.  
+
+```sql
+SELECT
+        st.objectid,
+        object_name(st.objectid) as 'object name',
+        SUBSTRING()
+            st.text,
+            (qs.statement_start_offset/2) + 1,
+            ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
+            ) as 'query text',
+        qs.creation_time,
+        qs.last_execution_time,   qs.execution_count,
+        qs.total_worker_time,     qs.last_worker_time,
+        qs.min_worker_time,       qs.max_worker_time,
+        qs.total_elapsed_time,    qs.last_elapsed_time,
+        qs.min_elapsed_time,      qs.max_elapsed_time
+    FROM
+                    sys.dm_exec_query_stats qs
+        cross apply sys.dm_exec_sql_text(sql_handle) st
+    WHERE
+        st.dbid = db_id()
+        and
+        st.objectid in
+            (SELECT object_id
+                from sys.sql_modules
+                where uses_native_compilation=1
+            )
+    ORDER BY
+        qs.total_worker_time desc;
+```
 
 ## <a name="query-execution-plans"></a>쿼리 실행 계획
 

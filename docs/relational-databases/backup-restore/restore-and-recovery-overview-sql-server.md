@@ -1,7 +1,7 @@
 ---
 title: 복원 및 복구 개요(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242044"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461822"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242044"
 -   [복구 관리자: 소개](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> 가속 데이터베이스 복구
+
+SQL Server 2019 미리 보기 CTP 2.3에는 SQL Server 온-프레미스에 대한 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)가 도입되었습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 SQL Server 데이터베이스 엔진 복구 프로세스를 다시 설계하여 데이터베이스 가용성을 크게 향상시킵니다. [데이터베이스 복구](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)는 SQL Server에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다. 가속 데이터베이스 복구를 사용하도록 설정된 데이터베이스는 장애 조치 또는 정리되지 않은 다른 종료 후에 복구를 훨씬 더 빨리 수행합니다. 
+
+다음 구문을 사용하여 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 이상에서 데이터베이스별로 가속 데이터베이스 복구를 사용하도록 활성화할 수 있습니다.
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> 이 기능이 기본적으로 설정되어 있는 Azure SQL DB에서는 이 구문을 활용할 필요가 없습니다.
+
+대규모 트랜잭션이 발생할 수 있는 중요한 데이터베이스가 있는 경우 미리 보기 동안에 이 기능을 실험해 보세요. 그리고 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 팀 ](<https://aka.ms/sqlfeedback>)에 피드백도 제공해 주세요.
+
 ##  <a name="RelatedContent"></a> 관련 내용  
  없음  
   

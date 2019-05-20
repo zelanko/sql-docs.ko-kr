@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400037"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090262"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>방법: SQL Server 단위 테스트 디자이너용 테스트 조건 만들기
 확장 가능한 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 클래스를 사용하여 새 테스트 조건을 만들 수 있습니다. 예를 들어 결과 집합의 열 또는 값 수를 확인하는 새 테스트 조건을 만들 수 있습니다.  

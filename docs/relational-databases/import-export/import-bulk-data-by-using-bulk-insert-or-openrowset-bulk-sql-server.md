@@ -19,16 +19,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c004a991872257baa045be6e0253d7d63979f2f7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542441"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946579"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ ms.locfileid: "52542441"
   
 -   [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)은 함수  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) 함수  
  OPENROWSET 대량 행 집합 공급자는 OPENROWSET 함수를 호출하고 BULK 옵션을 지정하여 액세스합니다. OPENROWSET(BULK...) 함수를 사용하면 OLE DB 공급 기업을 통해 데이터 파일 등의 원격 데이터 원본에 연결하여 원격 데이터에 액세스할 수 있습니다.  
 
 **적용 대상:** `OPENROWSET`은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 사용할 수 없습니다.
   
  데이터를 대량으로 가져오려면 INSERT 문 내의 SELECT...FROM 절에서 OPENROWSET(BULK...)를 호출합니다. 데이터 대량 가져오기의 기본 구문은 다음과 같습니다.  
   
- INSERT ... 로 기본 값 사용  
+ INSERT ... 선택 * OPENROWSET (BULK)에서  
   
- INSERT 문에서 사용하는 경우 OPENROWSET(BULK...)은 테이블 힌트를 지원합니다. 또한 TABLOCK과 같은 일반적인 테이블 힌트 외에도 BULK 절에는 IGNORE_CONSTRAINTS(CHECK 제약 조건만 무시), IGNORE_TRIGGERS, KEEPDEFAULTS 및 KEEPIDENTITY와 같은 특수 테이블 힌트도 사용할 수 있습니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
+ INSERT 문에서 사용하는 경우 OPENROWSET(BULK...)은 테이블 힌트를 지원합니다. 또한 TABLOCK과 같은 일반적인 테이블 힌트 외에도 BULK 절에는 다음과 같은 특수 테이블 힌트를 사용할 수 있습니다. IGNORE_CONSTRAINTS(CHECK 제약 조건만 무시), IGNORE_TRIGGERS, KEEPDEFAULTS 및 KEEPIDENTITY. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  BULK 옵션의 추가 사용법에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)를 참조하세요.  
   

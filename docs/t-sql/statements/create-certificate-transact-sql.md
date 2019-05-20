@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774942"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 인증서 생성 또는 개인 키 파일 사용을 지원하지 않습니다.
   
+ BINARY =*asn_encoded_certificate*  
+ 이진 상수로 지정된 ASN 인코딩 인증서 바이트.  
+ **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
+  
  WITH PRIVATE KEY  
- 인증서의 개인 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 인증서가 파일에서 생성되는 경우에만 유효합니다. 어셈블리의 개인 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
+ 인증서의 개인 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 어셈블리에서 인증서를 만들 때 유효하지 않습니다. 어셈블리에서 생성된 인증서의 개인 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
   
  FILE ='*path_to_private_key*'  
  개인 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. *path_to_private_key*는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
   
 > [!IMPORTANT]  
 >  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
-  
- asn_encoded_certificate  
- ASN으로 인코딩된 인증서 비트로, 이진 상수로 지정됩니다.  
   
  BINARY =*private_key_bits*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 기능의 시작자가 인증서를 사용할 수 있게 합니다. 기본값은 ON입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 인증서는 X.509 표준을 따르고 X.509 V1 필드를 지원하는 데이터베이스 수준의 보안 개체입니다. CREATE CERTIFICATE는 파일이나 어셈블리로부터 인증서를 로드할 수 있습니다. 이 문은 또한 키 쌍을 생성하고 자체 서명된 인증서를 만들 수 있습니다.  
+ 인증서는 X.509 표준을 따르고 X.509 V1 필드를 지원하는 데이터베이스 수준의 보안 개체입니다. CREATE CERTIFICATE는 파일, 이진 상수 또는 어셈블리에서 인증서를 로드할 수 있습니다. 이 문은 또한 키 쌍을 생성하고 자체 서명된 인증서를 만들 수 있습니다.  
   
  개인 키는 암호화된 형식으로 \< = 2500 바이트여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 개인 키는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 1024 비트 길이이고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 2048 비트 길이입니다. 외부 원본으로부터 가져온 개인 키의 최소 길이는 384비트이고 최대 길이는 4,096비트입니다. 가져온 개인 키의 길이는 64비트의 정수 배수여야 합니다. TDE에 사용되는 인증서의 개인 키 크기는 3456비트로 제한됩니다.  
   
@@ -183,7 +184,7 @@ CREATE CERTIFICATE certificate_name
   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 및 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 함수를 사용하여 인증서의 이진 설명을 만들 수 있습니다. **CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 예는 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 문서의 예제 B를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE CERTIFICATE 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 인증서를 소유할 수 있습니다. 그룹 및 역할은 인증서를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  
@@ -213,7 +214,7 @@ GO
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 인증서 생성을 지원하지 않습니다.
    
-### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>3. 서명된 실행 파일로부터 인증서 만들기  
+### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 서명된 실행 파일로부터 인증서 만들기  
   
 ```  
 CREATE CERTIFICATE Shipping19   
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 인증서 생성을 지원하지 않습니다.
-   
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 ['CLR 엄격한 보안'](../../database-engine/configure-windows/clr-strict-security.md) 서버 구성 옵션을 통해 먼저 보안을 설정하지 않고도 어셈블리를 로드할 수 있습니다. 인증서를 로드하고, 인증서를 만들고, 해당 로그인에 `UNSAFE ASSEMBLY`를 부여한 다음, 어셈블리를 로드합니다.
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 자체 서명된 인증서 만들기  
  다음 예에서는 암호화된 암호를 지정하지 않고 `Shipping04`라는 인증서를 만듭니다. 이 예제는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]와 함께 사용할 수 있습니다.
   
@@ -250,7 +254,9 @@ GO
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
- [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

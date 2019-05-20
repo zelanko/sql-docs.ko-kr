@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670470"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098112"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>방법: 방법: 데이터베이스에 연결 및 기존 개체 찾아보기
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>방법: 데이터베이스에 연결 및 기존 개체 찾아보기
 데이터베이스 관리자 및 개발자가 수행하는 가장 일반적인 작업은 라이브 데이터베이스에 연결하고, 해당 스키마를 디자인하거나 찾아보고, 개체에 대해 쿼리하는 것입니다. 이제 Visual Studio의 SQL Server 개체 탐색기에는 연결된 모든 **SQL Server** 인스턴스와 해당 데이터베이스가 SSMS와 유사한 계층 구조로 그룹화되는 전용 SQL Server 노드가 포함되어 있습니다. 연결된 SQL Server 인스턴스는 실행 중인 SQL Server 2008과 같은 내부 인스턴스이거나 외부 SQL Azure 인스턴스일 수 있습니다.  
   
 다음 절차에서는 AdventureWorks 예제 데이터베이스를 이미 설치했다고 가정합니다. [CodePlex](https://msftdbprodsamples.codeplex.com/)를 사용하여 다른 SQL Server 버전의 예제 데이터베이스를 찾아 설치합니다. 원하는 경우 단계에 따라 사용 중인 서버의 기존 데이터베이스를 사용할 수도 있습니다.  

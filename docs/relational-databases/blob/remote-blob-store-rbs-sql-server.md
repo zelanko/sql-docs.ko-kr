@@ -11,20 +11,20 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a4748e76ac377e87003f2b811753db5de1cbe02
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 589edbc9b3f19597a84a3393f693078bca89dee7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094180"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 저장소 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 스토리지 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
   
  RBS는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 미디어에 포함되어 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치되지 않습니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52393658"
  SQL Remote Blob Storage 팀 블로그에서 이 기능에 대한 유익한 정보를 참고할 수 있습니다. RBS 보안 모델은 [RBS 보안 모델](https://blogs.msdn.com/b/sqlrbs/archive/2010/08/05/rbs-security-model.aspx)의 게시물에 설명되어 있습니다.  
   
 ### <a name="custom-providers"></a>사용자 지정 공급자  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에 BLOB을 저장하기 위해 사용자 지정 공급자를 사용하는 경우, 사용자 지정 공급자가 사용하는 저장소 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]외부에 BLOB를 저장하기 위해 사용자 지정 공급자를 사용하는 경우, 사용자 지정 공급자가 사용하는 스토리지 미디어에 적합한 권한과 암호화 옵션을 사용하여 저장된 BLOB를 보호해야 합니다.  
   
 ### <a name="credential-store-symmetric-key"></a>자격 증명 저장소 대칭 키  
  공급자가 자격 증명 저장소 내에 저장되는 비밀의 설정 및 사용을 요구하는 경우, RBS는 대칭 키를 사용하여 공급자의 Blob 저장소에 대한 권한을 확보하기 위해 클라이언트가 사용할 수 있는 공급자 비밀을 암호화합니다.  
@@ -72,12 +72,12 @@ ms.locfileid: "52393658"
   
 ### <a name="rotating-the-symmetric-key"></a>대칭 키 회전  
  RBS를 사용하는 경우, 자격 증명 저장소 대칭 키를 정기적으로 회전해야 합니다. 이것은 조직의 보안 정책을 충족하기 위한 일반적인 보안 모범 사례입니다.  RBS 자격 증명 저장소 대칭 키를 회전하는 한 가지 방법은 RBS 데이터베이스에 [아래 스크립트](#Key_rotation) 를 사용하는 것입니다.  이 스크립트를 사용하여 알고리즘 또는 키 길이와 같은 보다 강력한 암호화 강도 속성으로 마이그레이션할 수 있습니다. 키를 회전하기 전에 데이터베이스를 백업합니다.  스크립트의 결론에 몇 가지 확인 단계가 있습니다.  
-보안 정책에 의해 제공된 것과 다른 키 속성(예: 알고리즘 또는 키 길이)이 요구되면 스크립트가 템플릿으로 사용될 수 있습니다. 두 곳(1) 임시 키 생성 2) 영구적인 키 생성)에서 키 속성을 수정합니다.  
+보안 정책에 의해 제공된 것과 다른 키 속성(예: 알고리즘 또는 키 길이)이 요구되면 스크립트가 템플릿으로 사용될 수 있습니다. 다음 두 위치에서 키 속성을 수정합니다. 1) 임시 키 생성 2) 영구적인 키 생성.  
   
 ##  <a name="rbsresources"></a> RBS 리소스  
   
  **RBS 예제**  
- [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
+ [Codeplex](https://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 애플리케이션을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
   
  **RBS 블로그**  
  [RBS 블로그](https://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  

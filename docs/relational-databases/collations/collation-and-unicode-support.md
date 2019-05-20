@@ -1,7 +1,7 @@
 ---
 title: 데이터 정렬 및 유니코드 지원 | Microsoft 문서
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206442"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775033"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "53206442"
 |------------|-----------------|    
 |대/소문자 구분(_CS)|대/소문자를 구분합니다. 이 정렬 순서를 선택하면 소문자가 대문자보다 먼저 정렬됩니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 대소문자를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 대문자와 소문자를 동일한 것으로 간주합니다. _CI를 지정하여 대/소문자를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
 |악센트 구분(_AS)|악센트가 있는 문자와 악센트가 없는 문자를 구분합니다. 예를 들어 'a'와 'ấ'는 같지 않습니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 악센트를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다. _AI를 지정하여 악센트를 구분하지 않도록 명시적으로 선택할 수 있습니다.|    
-|일본어 가나 구분(_KS)|일본어 가나 문자의 두 가지 유형인 히라가나와 가타카나)를 구분할지 여부를 나타냅니다. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
+|일본어 가나 구분(_KS)|일본어 가나 문자의 다음 두 가지 유형을 구분합니다. 히라가나 및 가타가나. 이 옵션을 선택하지 않으면 데이터 정렬에서 가나를 구분하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 히라가나 문자와 가타카나 문자를 동일한 것으로 간주합니다. 일본어 가나를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |전자/반자 구분(_WS)|전자와 반자 문자를 구분합니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정렬할 때 같은 문자의 전자 표시와 반자 표시를 동일한 문자로 간주합니다. 전자/반자를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |변형 선택기 구분(_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서 처음 도입된 일본어 데이터 정렬 Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140에서 다양한 표의 변형 선택기를 구분합니다. 변형 시퀀스는 기본 문자와 추가 변형 선택기로 구성됩니다. 이 _VSS 옵션을 선택하지 않으면 데이터 정렬이 변형 선택기를 구분하지 않고 변형 선택기가 비교에서 고려되지 않습니다. 즉, SQL Server는 정렬할 때 다른 변형 선택기를 사용하여 동일한 기본 문자 위에 구축된 문자를 동일한 것으로 간주합니다. [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(유니코드 표의 변형 데이터베이스)도 참조하세요. <br/><br/> 변형 선택기 구분(_VSS) 데이터 정렬은 전체 텍스트 검색 인덱스에서 지원되지 않습니다. 전체 텍스트 검색 인덱스는 악센트 구분(_AS), 일본어 가나 구분(_KS) 및 전자/반자 구분(_WS) 옵션만 지원합니다. SQL Server XML 및 CLR 엔진은 (_VSS) 변형 선택기를 지원하지 않습니다.
 |UTF-8(_UTF8)|UTF-8 인코딩 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수 있습니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 데이터 형식에 기본 비유니코드 인코딩 형식을 사용합니다.| 
@@ -147,15 +147,20 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
     -   버전 100 데이터 정렬    
     
-    -   버전 140 데이터 정렬    
+    -   버전 140 데이터 정렬   
+    
+    -   BIN2<sup>1</sup> 이진 데이터 정렬
     
 -   UTF8 플래그는 다음에 적용할 수 없습니다.    
     
     -   보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS)을 지원하지 않는 버전 90 데이터 정렬    
     
-    -   BIN 또는 BIN2 이진 데이터 정렬    
+    -   BIN 또는 BIN2<sup>2</sup> 이진 데이터 정렬    
     
-    -   SQL\* 데이터 정렬       
+    -   SQL\* 데이터 정렬  
+    
+<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 시작     
+<sup>2</sup> 최대 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 사용
     
 유니코드 데이터 형식 또는 비유니코드 데이터 형식 사용과 관련된 문제점을 평가하려면 작업 시나리오를 테스트하여 사용자 환경에서 나타나는 성능 차이를 측정하세요. 조직 전반의 시스템에 사용되는 데이터 정렬을 표준화하고 유니코드 서버 및 클라이언트를 배포하는 것이 좋습니다.    
     
@@ -245,8 +250,18 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 새 데이터 정렬은 모두 보조 문자를 기본 지원하므로 새 데이터 정렬에 SC 플래그가 없거나 필요하지 않습니다.
 
 이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 최적화 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
-    
-##  <a name="Related_Tasks"></a> 관련 작업    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>UTF-8 지원
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 가져오기 또는 내보내기 인코딩이나 텍스트 데이터의 데이터베이스 수준 또는 열 수준 데이터 정렬로 널리 사용되는 UTF-8 문자 인코딩이 완벽하게 지원됩니다. UTF-8은 `CHAR` 및 `VARCHAR` 데이터 형식에서 허용되며, `UTF8` 접미사를 사용하여 개체의 데이터 정렬을 만들거나 이 접미사를 갖는 데이터 정렬로 변경하여 설정합니다. 
+
+예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
+
+이 기능은 사용 중인 문자 집합에 따라 스토리지 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 UTF-8 사용 데이터 정렬을 통해 ASCII(Latin) 문자열이 있는 기존 열 데이터 유형을 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
+
+##  <a name="Related_Tasks"></a> 관련 태스크    
     
 |태스크|항목|    
 |----------|-----------|    
@@ -260,6 +275,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ##  <a name="Related_Content"></a> 관련 내용    
 [SQL Server 모범 사례 데이터 정렬 변경](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server 모범 사례 유니코드로 마이그레이션"](https://go.microsoft.com/fwlink/?LinkId=113890) - 더 이상 유지 관리되지 않음   
 [유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

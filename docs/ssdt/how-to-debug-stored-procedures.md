@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533420"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090204"
 ---
-# <a name="how-to-debug-stored-procedures"></a>방법: 저장 프로시저 디버깅
+# <a name="how-to-debug-stored-procedures"></a>방법: 저장된 프로시저 디버깅
 Transact\-SQL 디버거를 사용하면 SQL 저장 프로시저의 SQL 호출 스택, 지역 변수 및 매개 변수를 표시하여 저장 프로시저를 대화식으로 디버그할 수 있습니다. 다른 프로그래밍 언어로 디버그할 때와 마찬가지로 Transact\-SQL 스크립트를 디버그하는 동안 지역 변수 및 매개 변수를 보고 수정하고, 전역 변수를 볼 수 있을 뿐 아니라, 중단점을 제어 및 관리할 수도 있습니다.  
   
 이 예에서는 Transact\-SQL 저장 프로시저를 만들고 이를 한 단계씩 실행하여 디버그하는 방법을 보여줍니다.  

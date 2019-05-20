@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305341"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774845"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> columnstore 인덱스가 있는 경우 [복제 데이터베이스에서 columnstore 인덱스로 쿼리를 조정할 때 고려 사항](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)을 참조하여 **DBCC CLONEDATABASE** 명령을 실행하기 전에 columnstore 인덱스 통계를 업데이트하세요.  SQL Server 2019부터 **DBCC CLONEDATABASE** 명령이 이 정보를 자동으로 수집하므로 위 문서에 설명된 수동 단계가 더 이상 필요하지 않습니다.
+> columnstore 인덱스가 있는 경우 [복제 데이터베이스에서 columnstore 인덱스로 쿼리를 조정할 때 고려 사항](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)을 참조하여 **DBCC CLONEDATABASE** 명령을 실행하기 전에 columnstore 인덱스 통계를 업데이트하세요.  SQL Server 2019부터 **DBCC CLONEDATABASE** 명령이 이 정보를 자동으로 수집하므로 위 문서에 설명된 수동 단계가 더 이상 필요하지 않습니다.
 
-복제된 데이터베이스의 데이터 보안과 관련된 자세한 내용은 [복제 된 데이터베이스의 데이터 보안 이해](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/)를 참조하세요.
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>columnstore 인덱스에 대한 통계 Blob
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE`는 columnstore 인덱스에 대한 통계 Blob을 자동으로 캡처하므로 수동 단계가 필요하지 않습니다.`DBCC CLONEDATABASE` 는 데이터를 복사하지 않고 쿼리 성능 문제를 해결하는 데 필요한 모든 요소가 포함된 데이터베이스의 스키마 전용 복사본을 만듭니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 명령은 columnstore 인덱스 쿼리 문제를 정확히 해결하는 데 필요한 통계를 복사하지 않으므로 수동 단계를 통해 이 정보를 캡처해야 했습니다.
+
+복제된 데이터베이스의 데이터 보안과 관련된 자세한 내용은 [복제 된 데이터베이스의 데이터 보안 이해](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287)를 참조하세요.
 
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏
 DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관성을 위해 원본 데이터베이스의 내부 데이터베이스 스냅숏을 사용합니다. 이 스냅숏을 사용하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 스냅숏을 만들 수 없는 경우 DBCC CLONEDATABASE가 실패합니다. 
@@ -176,7 +182,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
 
 ## <a name="error-log-messages"></a>오류 로그 메시지

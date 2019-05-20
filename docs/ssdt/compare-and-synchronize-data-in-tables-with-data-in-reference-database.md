@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105808"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
 ‘원본’ 데이터베이스 및 ‘대상’ 데이터베이스의 데이터를 비교하고 비교할 테이블을 지정할 수 있습니다. 데이터를 검토하고 동기화할 변경 내용을 결정할 수 있습니다. 그런 후 대상을 업데이트해서 데이터베이스를 동기화하거나 업데이트 스크립트를 Transact\-SQL 편집기 또는 파일로 내보낼 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "47745111"
 ## <a name="common-tasks"></a>일반 태스크  
 이 섹션에서는 이 시나리오를 지원하는 일반적인 작업에 대한 설명을 찾을 수 있습니다.  
   
-**데이터 비교 방법을 제어하는 옵션 설정:** 데이터를 비교할 때는 ID 열을 안전하게 무시하고, 트리거 및 외래 키를 사용하지 않도록 설정할 수 있습니다. 또한 업데이트 스크립트에서 기본 키, 인덱스 및 고유 제약 조건을 삭제할 수도 있습니다.  
+**데이터 비교 방법을 제어하는 옵션을 설정합니다.** 데이터를 비교할 때는 ID 열을 안전하게 무시하고, 트리거 및 외래 키를 사용하지 않도록 설정할 수 있습니다. 또한 업데이트 스크립트에서 기본 키, 인덱스 및 고유 제약 조건을 삭제할 수도 있습니다.  
   
 **테이블의 데이터 비교 및 선택적으로 원본과 일치하도록 대상 업데이트:** 비교할 원본 및 대상 데이터베이스를 지정하고 비교를 실행한 후에는 **데이터 비교** 창에서 결과를 볼 수 있습니다. 차이점 세부 정보뿐만 아니라 데이터를 동기화하는 데 사용할 수 있는 업데이트 스크립트도 볼 수 있습니다. 두 데이터베이스 간의 차이점을 식별한 후에는 각 차이점에 대한 작업을 지정할 수 있습니다. 그런 후 대상을 업데이트하거나 업데이트 스크립트를 Transact\-SQL 편집기 또는 파일로 내보낼 수 있습니다. 변경 내용을 적용하기 전에 사용자 또는 다른 사용자가 검토할 수 있도록 스크립트를 내보낼 수도 있습니다.  
   

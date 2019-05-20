@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775954"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 기능 및 제한 사항
 
@@ -48,7 +48,7 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 Hadoop 클러스터로 푸시
 
 ||||
 |-|-|-| 
-|**연산자 유형**|**Hadoop으로 푸시 가능**|**Blob 저장소로 푸시 가능**|
+|**연산자 유형**|**Hadoop으로 푸시 가능**|**Blob 스토리지로 푸시 가능**|
 |열 프로젝션|예|아니오|
 |조건자|예|아니오|
 |집계|부분|아니오|
@@ -61,6 +61,8 @@ SQL Server 및 APS에서 모든 T-SQL 운영자가 Hadoop 클러스터로 푸시
 ## <a name="known-limitations"></a>알려진 제한 사항
 
 PolyBase에는 다음과 같은 제한 사항이 있습니다.
+
+- PolyBase를 사용하려면 데이터베이스에 대한 sysadmin 또는 CONTROL SERVER 수준 사용 권한이 있어야 합니다.
 
 - 가변 길이 열의 전체 길이를 포함하는 행의 최대 가능 크기는 SQL Server에서 32KB를 초과하거나, Azure SQL Data Warehouse에서 1MB를 초과할 수 없습니다.
 

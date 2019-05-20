@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802317"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504121"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -514,11 +511,11 @@ DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 인덱스가 
 
 \<partition_number_expression>은 다음과 같은 방법으로 지정할 수 있습니다.
 
-- 파티션의 번호를 지정합니다(예: ON PARTITIONS (2)).
-- 여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1, 5)).
-- 범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2, 4, 6 TO 8)).
+- 파티션의 번호를 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(2).
+- 여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(1, 5).
+- 범위와 개별 파티션을 모두 지정합니다. 예를 들면 다음과 같습니다. ON PARTITIONS(2, 4, 6~8).
 
-\<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 다음과 같습니다. ON PARTITIONS (6 TO 8)).
+\<range>는 TO라는 단어로 구분된 파티션 번호로 지정할 수 있습니다. 예를 들면 다음과 같습니다. ON PARTITIONS(6~8).
 
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.
 
@@ -752,12 +749,12 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 다음은 분할된 인덱스에 적용되는 제한 사항입니다.
 
 - 테이블에 정렬되지 않은 인덱스가 있으면 단일 파티션의 압축 설정을 변경할 수 없습니다.
-- The ALTER INDEX \<index> ... REBUILD  PARTITION  ...  구문은 인덱스의 지정된 파티션을 다시 작성합니다.
-- The ALTER INDEX \<index> ... REBUILD  WITH  ...  구문은 인덱스의 모든 파티션을 다시 작성합니다.
+- The ALTER INDEX \<index> ... REBUILD PARTITION ... 구문은 인덱스의 지정된 파티션을 다시 빌드합니다.
+- The ALTER INDEX \<index> ... REBUILD WITH ... 구문은 인덱스의 모든 파티션을 다시 빌드합니다.
 
 압축 상태를 변경할 경우 테이블, 인덱스 또는 파티션에 어떤 영향을 주는지 확인하려면 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 저장 프로시저를 사용합니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
 
@@ -820,7 +817,7 @@ WITH ( DROP_EXISTING = ON );
 
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 고유한 비클러스터형 인덱스 만들기
 
-다음 예에서는 `Name` 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Name` 테이블의 `Production.UnitMeasure` 열에 고유한 비클러스터형 인덱스를 만듭니다. 인덱스는 `Name` 열에 삽입된 데이터의 고유성을 강제 적용합니다.
 
 ```sql
 CREATE UNIQUE INDEX AK_UnitMeasure_Name
@@ -908,7 +905,7 @@ Number of rows
 
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기
 
-다음 예에서는 `ProductID` 옵션을 사용하여 `Production.WorkOrder` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.
+다음 예에서는 `ProductID` 옵션을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.WorkOrder` 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID
@@ -985,7 +982,7 @@ GO
 
 ### <a name="j-create-a-partitioned-index"></a>J. 분할된 인덱스 만들기
 
-다음은 `TransactionsPS1` 데이터베이스에 있는 기존 파티션 구성표인 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.
+다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 기존 파티션 구성표인 `TransactionsPS1`에 분할된 비클러스터형 인덱스를 만드는 예입니다. 이 예에서는 분할된 인덱스 샘플이 설치되었다고 가정합니다.
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
 

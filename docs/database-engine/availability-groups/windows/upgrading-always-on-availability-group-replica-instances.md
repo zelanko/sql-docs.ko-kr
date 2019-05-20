@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535855"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450091"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 - [변경 데이터 캡처 또는 복제가 AG 데이터베이스에 사용되는지 확인](#special-steps-for-change-data-capture-or-replication): CDC(변경 데이터 캡처)를 위해 AG의 데이터베이스가 활성화되어 있는 경우, 다음 [지침](#special-steps-for-change-data-capture-or-replication)을 완료합니다.
 
 >[!NOTE]  
->준비가 된 복제본을 업그레이드하는 롤링 업그레이드 외부에서는 동일한 AG의 SQL Server 인스턴스 혼합 버전이 지원되지 않습니다. 더 높은 버전의 SQL Server 인스턴스를 기존 AG에 새 복제본으로 추가할 수 없습니다. 예를 들어 SQL Server 2017 복제본은 기존 SQL Server 2016 AG에 추가할 수 없습니다. AG를 사용하여 SQL Server 인스턴스의 새 버전으로 마이그레이션하기 위해 지원되는 유일한 방법은 SQL Server 2016 Enterprise Edition 이상에 포함된 분산 AG입니다.
+>동일한 AG의 SQL Server 인스턴스 혼합 버전은 롤링 업그레이드 외부에서 지원되지 않으며, 업그레이드가 신속하게 이루어져야 하므로 장기간 해당 상태로 있어서는 안됩니다. SQL Server 2016을 업그레이드하기 위한 다른 옵션은 분산 가용성 그룹을 사용하는 것입니다.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Always On AG의 롤링 업그레이드 기본 사항  
 서버 업그레이드 또는 업데이트를 수행할 때 AG의 가동 중단 시간 및 데이터 손실을 최소화하려면 다음과 같은 지침을 따르세요.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760291"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095278"
 ---
 # <a name="object-explorer-details-pane"></a>개체 탐색기 세부 정보 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "47760291"
 ## <a name="sql-server-object-search"></a>SQL Server 개체 검색  
 와일드카드  
   
--   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드 카드로 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
+-   표준 와일드카드 문자를 사용할 수 있습니다. 예를 들어 **dm_os%counters** 를 검색하면 dm_os_memory_cache_counters와 dm_os_performance_counters가 모두 반환됩니다. 자세한 내용은 [방법: 와일드카드로 검색](../../relational-databases/scripting/search-text-with-wildcards.md)을 참조하세요.  
   
 검색 범위  
   

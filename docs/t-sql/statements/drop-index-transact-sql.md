@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132453"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503465"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -100,16 +97,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -238,7 +232,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  인덱스를 다시 구성 또는 다시 작성하기 위해 인덱스를 삭제하고 다시 만드는 경우도 있습니다. 예를 들면 새 채우기 비율 값을 적용하거나 대량 로드 후 데이터를 다시 구성하기 위해서입니다. 이렇게 하려면 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)를 사용하는 것이 더 효율적이며 특히 클러스터형 인덱스의 경우 매우 효율적입니다. ALTER INDEX REBUILD는 비클러스터형 인덱스를 다시 작성하는 데 따른 오버헤드를 막기 위한 최적화 기능을 갖고 있습니다.  
   
 ## <a name="using-options-with-drop-index"></a>DROP INDEX에 옵션 사용  
- 클러스터형 인덱스를 삭제할 때 MAXDOP, ONLINE 및 MOVE TO와 같은 인덱스 옵션을 설정할 수 있습니다.  
+ 클러스터형 인덱스를 삭제할 때 다음 인덱스 옵션을 설정할 수 있습니다. MAXDOP, ONLINE 및 MOVE TO.  
   
  한 번의 트랜잭션으로 클러스터형 인덱스를 삭제하고 결과 테이블을 다른 파일 그룹 또는 파티션 구성표로 옮기려면 MOVE TO 옵션을 사용합니다.  
   
@@ -270,7 +264,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  공간 인덱스에 대한 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP INDEX를 실행하려면 최소한 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할에 부여됩니다.  
   
 ## <a name="examples"></a>예  
@@ -294,7 +288,7 @@ DROP INDEX
 GO  
 ```  
   
-### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>3. 온라인으로 클러스터형 인덱스 삭제 및 MAXDOP 옵션 설정  
+### <a name="c-dropping-a-clustered-index-online-and-setting-the-maxdop-option"></a>C. 온라인으로 클러스터형 인덱스 삭제 및 MAXDOP 옵션 설정  
  다음 예에서는 `ONLINE` 옵션을 `ON`으로 설정하고 `MAXDOP`를 `8`로 설정해 클러스터형 인덱스를 삭제합니다. MOVE TO 옵션을 지정하지 않았기 때문에 결과 테이블은 인덱스와 동일한 파일 그룹에 저장됩니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
@@ -371,7 +365,7 @@ WITH (ONLINE = ON);
 ```  
   
 ### <a name="f-dropping-an-xml-index"></a>F. XML 인덱스 삭제  
- 다음 예에서는 `ProductModel` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 XML 인덱스를 삭제합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ProductModel` 테이블의 XML 인덱스를 삭제합니다.  
   
 ```  
 DROP INDEX PXML_ProductModel_CatalogDescription   

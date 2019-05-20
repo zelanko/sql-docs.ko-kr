@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconfig
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 35ed4fd4090a3a7ef5cff862817bbaec592749a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670682"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101878"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server 단위 테스트 실행
 코드 품질을 향상하고 유지 관리하기 위해 데이터베이스 개체의 동작을 확인하는 SQL Server 단위 테스트를 만들어 실행한 후 해당 테스트를 버전 제어에 체크 인할 수 있습니다. 사용자 본인이나 팀의 멤버가 데이터베이스 스키마를 변경하는 경우 SQL Server 단위 테스트와 소프트웨어 단위 테스트를 모두 실행하여 변경 내용으로 인해 기존 기능이 손상되지 않았는지 확인해야 합니다. 개별 테스트를 실행하거나 테스트 목록이라고 하는 테스트 그룹을 실행할 수 있습니다. 자세한 내용은 [테스트 목록 사용(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx)을 참조하세요.  
@@ -26,9 +26,9 @@ ms.locfileid: "51670682"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>SQL Server 단위 테스트를 실행하는 방법  
 아래에서 보여 주는 것과 같이 설치한 소프트웨어에 따라 다른 여러 가지 방법으로 SQL Server 단위 테스트를 실행할 수 있습니다.  
   
--   Visual Studio 2010 **테스트 뷰** 창을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행](../ssdt/how-to-run-sql-server-unit-tests.md) 및 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)을 참조하세요. Visual Studio 2012의 경우에는 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
+-   Visual Studio 2010 **테스트 뷰** 창을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: SQL Server 단위 테스트 실행](../ssdt/how-to-run-sql-server-unit-tests.md) 및 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)을 참조하세요. Visual Studio 2012의 경우 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
   
--   명령 프롬프트에서 MSTest.exe 명령을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) 또는 [MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)을 참조하세요.  
+-   명령 프롬프트에서 MSTest.exe 명령을 사용하여 테스트를 실행합니다. 자세한 내용은 [방법: MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) 또는 [방법: MSTest를 사용하여 명령줄에서 자동화된 테스트 실행(Visual Studio 2012)](https://msdn.microsoft.com/library/ms182487.aspx)을 참조하세요.  
   
 -   테스트 프로젝트를 실행하여 **솔루션 탐색기**에서 테스트를 실행합니다. 자세한 내용은 [방법: Microsoft Visual Studio 2010에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) 또는 [방법: Microsoft Visual Studio 2012에서 자동화된 테스트 실행](https://msdn.microsoft.com/library/ms182470.aspx)을 참조하세요.  
   

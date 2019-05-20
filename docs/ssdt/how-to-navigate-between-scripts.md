@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.editor.howto.navigate
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0627b9a4f0512c7e711212606b855c11011fff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702881"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099671"
 ---
 # <a name="how-to-navigate-between-scripts"></a>방법: 스크립트 간 이동
-오프라인 개발을 위한 Transact\-SQL 편집기에는 Visual Studio 개발자에게 익숙한 “정의로 이동” 및 “모든 참조 찾기”라는 두 개의 유용한 탐색 도구가 있습니다. 예를 들어 테이블 이름을 마우스 오른쪽 단추로 클릭하고 "모든 참조 찾기"를 사용하여 프로젝트의 테이블에 대한 모든 참조를 나열할 수 있습니다. 검색 결과를 두 번 클릭하면 특정 코드 파일로 이동할 수 있습니다. 이 파일에서 테이블 이름을 다시 마우스 오른쪽 단추로 클릭하고 "정의로 이동"을 선택하면 테이블 정의로 다시 이동할 수 있습니다.  
+오프라인 개발을 위한 Transact\-SQL 편집기는 Visual Studio 개발자에게 익숙한 다음 두 개의 유용한 탐색 도구를 제공합니다. 정의로 이동 및 모든 참조 찾기. 예를 들어 테이블 이름을 마우스 오른쪽 단추로 클릭하고 "모든 참조 찾기"를 사용하여 프로젝트의 테이블에 대한 모든 참조를 나열할 수 있습니다. 검색 결과를 두 번 클릭하면 특정 코드 파일로 이동할 수 있습니다. 이 파일에서 테이블 이름을 다시 마우스 오른쪽 단추로 클릭하고 "정의로 이동"을 선택하면 테이블 정의로 다시 이동할 수 있습니다.  
   
 > [!WARNING]  
 > 다음 절차에서는 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md) 및 [프로젝트 기반 오프라인 데이터베이스 개발](../ssdt/project-oriented-offline-database-development.md) 섹션의 이전 절차에서 만들어진 엔터티를 사용합니다.  

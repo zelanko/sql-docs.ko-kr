@@ -3,22 +3,21 @@ title: FileTable의 필수 구성 요소를 사용하도록 설정 | Microsoft �
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: 0080302b493845165e90fff3c6f10dc065a6d89c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79de94cb3474a49e47ff6eee9fcd13a54ff73de9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624701"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094342"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47624701"
 ##  <a name="BasicsFilestream"></a> 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
  FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 FILESTREAM 기능을 확장합니다. 따라서 FileTable을 만들고 사용하려면 먼저 Windows 수준과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 파일 I/O 액세스를 위해 FILESTREAM을 사용하도록 설정해야 합니다.  
   
-###  <a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
+###  <a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM 사용  
  FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
  **sp_configure** 를 호출하여 인스턴스 수준에서 FILESTREAM을 사용하도록 설정하려면 filestream_access_level 옵션을 2로 설정해야 합니다. 자세한 내용은 [FILESTREAM 액세스 수준 서버 구성 옵션](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.  

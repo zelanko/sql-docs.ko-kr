@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336102"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098068"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기
 데이터베이스 개체를 평가하는 단위 테스트를 작성하려면 먼저 테스트 프로젝트를 만들어야 합니다. 이 프로젝트에는 SQL Server 단위 테스트가 포함되지만 다른 유형의 테스트도 포함될 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "49336102"
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>SQL Server 단위 테스트 클래스로 테스트 프로젝트를 만들려면  
   
--   [방법: 빈 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) 또는 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)에 설명된 절차를 따릅니다.  
+-   [방법: 빈 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) 또는 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)에 설명된 절차를 수행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 단위 테스트 만들기 및 정의](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

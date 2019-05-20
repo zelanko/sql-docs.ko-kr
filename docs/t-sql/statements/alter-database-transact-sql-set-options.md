@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202435"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -60,6 +60,8 @@ ms.locfileid: "59583386"
 ## <a name="sql-server"></a>SQL Server
 
 데이터베이스 미러링, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 및 호환성 수준은 `SET` 옵션이지만 길이 때문에 별도의 항목에서 설명합니다. 자세한 내용은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) 및 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
+
+데이터베이스 범위 구성은 개별 데이터베이스 수준에서 여러 데이터베이스 구성을 설정하는 데 사용됩니다. 자세한 내용은 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.
 
 > [!NOTE]
 > 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.

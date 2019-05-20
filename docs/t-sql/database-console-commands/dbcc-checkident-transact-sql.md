@@ -29,36 +29,38 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 89545e2bb480dc038219a3724f500c43d4b01319
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: e0bf1d84d568d9c23723b0b1adead72ad9ebe2f7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736778"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104353"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 지정된 테이블에 대한 현재 ID 값을 검사하고 필요한 경우 ID 값을 변경합니다. DBCC CHECKIDENT를 사용하여 ID 열의 새 현재 ID 값을 수동으로 설정할 수도 있습니다.  
-   
   
  ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console
   
-DBCC CHECKIDENT   
- (   
+DBCC CHECKIDENT
+ (
     table_name  
         [, { NORESEED | { RESEED [, new_reseed_value ] } } ]  
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a>인수
+
  *table_name*  
- 현재 ID 값을 검사할 테이블의 이름입니다. 지정한 테이블에는 ID 열이 있어야 합니다. 테이블 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다. 'Person.AddressType' 또는 [Person.AddressType]과 같이 둘 또는 세 부분으로 된 이름을 구분해야 합니다.   
+ 현재 ID 값을 검사할 테이블의 이름입니다. 지정한 테이블에는 ID 열이 있어야 합니다. 테이블 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다. 'Person.AddressType' 또는 [Person.AddressType]과 같이 둘 또는 세 부분으로 된 이름을 구분해야 합니다.
   
  NORESEED  
  현재 ID 값을 변경하지 않도록 지정합니다.  
@@ -72,16 +74,18 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  모든 정보 메시지를 표시하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  현재 ID 값의 구체적인 수정 사항은 매개 변수 지정에 따라 달라집니다.  
   
 |DBCC CHECKIDENT 명령|ID 수정 사항|  
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT(*table_name*, NORESEED)|현재 ID 값을 다시 설정하지 않습니다. DBCC CHECKIDENT는 ID 열의 현재 ID 값과 현재 최대값을 반환합니다. 두 값이 같지 않으면 ID 값을 다시 설정하여 잠재적 오류를 방지하고 값이 간격 없이 순서대로 지정되도록 해야 합니다.|  
 |DBCC CHECKIDENT(*table_name*)<br /><br /> 로 구분하거나 여러<br /><br /> DBCC CHECKIDENT( *table_name*, RESEED )|테이블의 현재 ID 값이 ID 열에 저장된 최대 ID 값보다 작을 경우 ID 열의 최대값을 사용하여 다시 설정됩니다. 뒷부분에 나오는 '예외' 섹션을 참조하십시오.|  
-|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다.<br /><br /> 테이블에 행이 있거나 DELETE 문을 사용하여 모든 행을 제거한 경우 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다.<br /><br /> 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> - ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> - PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
+|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다. 테이블에 행이 있거나 DELETE 문을 사용하여 모든 행을 제거한 경우 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 트랜잭션이 행을 삽입하고 나중에 롤백되는 경우 삽입된 다음 행은 행이 삭제된 것처럼 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다. 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> - ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> - PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
   
-## <a name="exceptions"></a>예외  
+## <a name="exceptions"></a>예외
+
  다음 표에서는 DBCC CHECKIDENT가 자동으로 현재 ID 값을 다시 설정하지 않는 조건을 보여주고 해당 값을 다시 설정하는 방법을 제공합니다.  
   
 |조건|다시 설정 방법|  
@@ -89,18 +93,20 @@ DBCC CHECKIDENT
 |현재 ID 값이 테이블의 최대값보다 큰 경우|DBCC CHECKIDENT(*table_name*, NORESEED)를 실행하여 열의 현재 최댓값을 확인합니다. 그런 다음, DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*) 명령에서 해당 값을 *new_reseed_value*로 지정합니다.<br /><br /> -또는-<br /><br /> *new_reseed_value*를 매우 낮은 값으로 설정하여 DBCC CHECKIDENT(*table-name*, RESEED,*new_reseed_value*)를 실행한 다음, DBCC CHECKIDENT(*table_name*, RESEED)를 실행하여 값을 수정합니다.|  
 |모든 행이 테이블에서 삭제되는 경우|*new_reseed_value*를 새 시작 값으로 설정하여 DBCC CHECKIDENT(*table_name*, RESEED,*new_reseed_value*)를 실행합니다.|  
   
-## <a name="changing-the-seed-value"></a>초기값 변경  
+## <a name="changing-the-seed-value"></a>초기값 변경
+
  초기값은 테이블에 로드되는 첫 번째 행에 대한 ID 열에 삽입되는 값입니다. 현재 ID 값이 테이블 또는 뷰에서 생성된 마지막 ID 값인 경우 이후의 모든 행에는 현재 ID 값과 증가값이 포함됩니다.  
   
  DBCC CHECKIDENT는 다음 작업에 사용할 수 없습니다.  
   
--   테이블 또는 보기를 만들 때 ID 열에 대해 지정된 원래 초기값을 변경합니다.  
+- 테이블 또는 보기를 만들 때 ID 열에 대해 지정된 원래 초기값을 변경합니다.  
   
--   테이블 또는 뷰에서 기존 행의 초기값을 다시 설정합니다.  
+- 테이블 또는 뷰에서 기존 행의 초기값을 다시 설정합니다.  
   
  원래 초기값을 변경하고 기존 행을 다시 시드하려면 ID 열을 삭제하고 새로운 초기값을 지정하여 다시 만듭니다. 테이블에 데이터가 포함된 경우 지정된 초기값 및 증가값을 사용하여 기존 행에 ID 번호가 추가됩니다. 행이 업데이트되는 순서는 보장되지 않습니다.  
   
-## <a name="result-sets"></a>결과 집합  
+## <a name="result-sets"></a>결과 집합
+
  ID 열이 포함된 테이블에 대한 옵션을 지정했는지 여부에 관계없이 DBCC CHECKIDENT는 하나를 제외한 모든 작업에 대해 다음 메시지를 반환합니다. 해당 작업은 새 초기값을 지정하는 것입니다.  
   
 `Checking identity information: current identity value '\<current identity value>', current column value '\<current column value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
@@ -109,56 +115,60 @@ DBCC CHECKIDENT
   
 `Checking identity information: current identity value '\<current identity value>'. DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
- 호출자는 테이블을 포함하는 스키마를 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버이어야 합니다.  
+## <a name="permissions"></a>사용 권한
+
+ 호출자는 테이블을 포함하는 스키마를 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버이어야 합니다.
+
+Azure SQL Data Warehouse에는 **db_owner** 권한이 필요합니다.
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-resetting-the-current-identity-value-if-its-needed"></a>1. 필요에 따라 현재 ID 값 다시 설정  
  다음 예제에서는 필요에 따라 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 지정된 테이블의 현재 ID 값을 다시 설정합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKIDENT ('Person.AddressType');  
 GO  
 ```  
   
-### <a name="b-reporting-the-current-identity-value"></a>2. 현재 ID 값 보고  
+### <a name="b-reporting-the-current-identity-value"></a>2. 현재 ID 값 보고
+
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 지정된 테이블의 현재 ID 값을 보고하고, ID 값이 잘못되었더라도 그 값을 수정하지 않습니다.  
   
-```  
-USE AdventureWorks2012;   
+```sql
+USE AdventureWorks2012;
 GO  
-DBCC CHECKIDENT ('Person.AddressType', NORESEED);   
+DBCC CHECKIDENT ('Person.AddressType', NORESEED);
 GO  
-  
 ```  
   
 ### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. 현재 ID 값을 새로운 값으로 설정  
  다음 예에서는 `AddressTypeID` 테이블에 있는 `AddressType` 열의 현재 ID 값을 10으로 강제 설정합니다. 테이블에는 기존 행이 있으므로 다음에 삽입되는 11을 사용합니다. 즉, 열에 대해 정의된 새로운 현재 ID 값에 1을 더한 값(열의 증분 값)이 사용됩니다.  
 
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);  
 GO  
-  
-```  
+```
+
 ### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 빈 테이블에 ID 값 다시 설정
+
  다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLog` 테이블의 `ErrorLogID` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 TRUNCATE TABLE dbo.ErrorLog
 GO
 DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);  
 GO  
-  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
@@ -167,5 +177,3 @@ GO
 [USE&#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  
 [IDENT_SEED &#40;Transact-SQL&#41;](../../t-sql/functions/ident-seed-transact-sql.md)  
 [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)  
-
-  

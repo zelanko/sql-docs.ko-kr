@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f2862d1e5ae68e5b97a9721d22758c5441e9b50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669771"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102068"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행
 Transact\-SQL 편집기에서는 스크립트 작업에 사용할 수 있는 다양한 기능의 편집 및 디버깅 환경을 제공합니다. 이 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용하여 연결된 데이터베이스 또는 프로젝트의 데이터베이스 엔터티를 열 때 호출됩니다. SQL Server 개체 탐색기의 **새 쿼리** 상황에 맞는 메뉴를 사용하거나 데이터베이스 프로젝트에 새 스크립트 개체를 추가하는 경우에도 이 편집기가 자동으로 열립니다.  
@@ -35,7 +35,7 @@ Transact\-SQL 편집기에는 Transact\-SQL 스크립트를 작성하고 편집�
 |[방법: 스크립트 간 이동](../ssdt/how-to-navigate-between-scripts.md)|정의로 이동 및 모든 참조 찾기를 사용하여 스크립트 간을 이동합니다.|  
 |[방법: 이름 바꾸기 및 리팩터링을 사용하여 데이터베이스 개체 변경](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|모든 스크립트에서 개체의 이름을 바꾸고 변경 내용을 미리 봅니다.|  
 |[방법: 부분 쿼리 실행](../ssdt/how-to-execute-a-partial-query.md)|스크립트의 특정 세그먼트를 강조 표시하고 이를 단일 쿼리로 실행합니다.|  
-|[방법: 저장 프로시저 디버그](../ssdt/how-to-debug-stored-procedures.md)|Transact\-SQL 저장 프로시저를 만들고 이를 한 단계씩 실행하여 디버그합니다.|  
+|[방법: 저장된 프로시저 디버깅](../ssdt/how-to-debug-stored-procedures.md)|Transact\-SQL 저장 프로시저를 만들고 이를 한 단계씩 실행하여 디버그합니다.|  
 |[스크립트 성능 분석](../ssdt/analyze-script-performance.md)|실행 계획, 클라이언트 통계 및 코드 분석을 사용하여 쿼리, 저장 프로시저 또는 스크립트의 성능을 향상시킬 수 있는지 여부를 확인합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

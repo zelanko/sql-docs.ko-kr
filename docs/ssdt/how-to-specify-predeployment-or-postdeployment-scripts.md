@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731251"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098467"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>방법: 배포 전 또는 배포 후 스크립트 지정
-배포 전 및 배포 후 스크립트는 데이터베이스 프로젝트에서 생성되는 주 배포 스크립트 이전과 이후에 Transact\-SQL 문을 실행합니다. 프로젝트에는 배포 전 스크립트와 배포 후 스크립트가 각각 하나씩만 포함될 수 있습니다. 이러한 스크립트는 다양한 용도로 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+배포 전 및 배포 후 스크립트는 데이터베이스 프로젝트에서 생성되는 주 배포 스크립트 이전과 이후에 Transact\-SQL 문을 실행합니다. 프로젝트에는 배포 전 스크립트와 배포 후 스크립트가 각각 하나씩만 포함될 수 있습니다. 이러한 스크립트는 다양한 용도로 사용할 수 있습니다. 예를 들어  
   
 -   배포 전 스크립트는 변경할 테이블에 있는 데이터의 서식을 다시 지정하고 해당 데이터를 배포 후 스크립트의 변경된 테이블에 적용하기 전에 임시 테이블로 복사할 수 있습니다.  
   
@@ -46,7 +46,7 @@ END
   
     Transact\-SQL 편집기가 열리고 파일 내용이 표시됩니다.  
   
-스크립트에 SQLCMD 구문 및 변수를 사용하고 이러한 구문과 변수를 데이터베이스 프로젝트 속성에 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+스크립트에 SQLCMD 구문 및 변수를 사용하고 이러한 구문과 변수를 데이터베이스 프로젝트 속성에 설정할 수 있습니다. 예를 들어  
   
 -   SQLCMD 구문을 사용하여 파일 내용을 배포 전 스크립트 또는 배포 후 스크립트에 포함할 수 있습니다. 파일은 정의하는 순서대로 포함되고 실행됩니다(`:r .\myfile.sql`).  
   

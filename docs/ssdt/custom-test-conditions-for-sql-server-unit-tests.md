@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b136f2707012860ba7be88f61cd5f6de17ec148d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6573a8667224eacef61c9c22cb4ede026e7d0a61
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635891"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106328"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>SQL Server 단위 테스트의 사용자 지정 테스트 조건
 SQL Server 단위 테스트의 사용자 지정 테스트 조건을 추가할 수 있습니다. 그러나 사용자가 확장을 만들었든지 다른 사람이 만든 확장을 설치하려는 것이든지 관계없이 테스트 조건을 사용하려면 먼저 이를 설치해야 합니다.  

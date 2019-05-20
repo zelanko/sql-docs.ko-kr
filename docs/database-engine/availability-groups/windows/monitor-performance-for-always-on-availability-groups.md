@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872323"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104917"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 가용성 그룹의 성능 양상은 중요 업무용 데이터베이스의 SLA(서비스 수준 약정)를 유지하기 위해 중요합니다. 가용성 그룹이 로그를 보조 복제본에 전달하는 방법을 이해하면 성능이 떨어지는 가용성 그룹 또는 복제본에서 가용성 구현의 RTO(복구 시간 목표) 및 RPO(복구 지점 목표)를 예측하고 병목 상태를 식별하는 데 도움이 될 수 있습니다. 이 문서에서는 동기화 프로세스를 설명하고 몇몇 주요 메트릭을 계산하는 방법을 보여 주고 몇 가지 일반적인 성능 문제 해결 시나리오에 대한 링크를 제공합니다.  
-  
- 다음과 같은 주제를 다룹니다.  
-  
--   [데이터 동기화 프로세스](#data-synchronization-process)  
-  
--   [흐름 제어 게이트](#flow-control-gates)  
-  
--   [장애 조치(failover) 시간 예측(RTO)](#estimating-failover-time-rto)  
-  
--   [잠재적 데이터 손실 예측(RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [RTO 및 RPO 모니터링](#monitoring-for-rto-and-rpo)  
-  
--   [성능 문제 해결 시나리오](#BKMK_SCENARIOS)  
-  
--   [유용한 확장 이벤트](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>데이터 동기화 프로세스  
  전체 동기화 시간을 예측하고 병목 상태를 식별하려면 동기화 프로세스를 이해해야 합니다. 성능 병목 상태는 프로세스의 어디에서나 발생할 수 있으며 병목 상태를 찾으면 기본 문제를 더 깊이 파악하는 데 도움이 될 수 있습니다. 다음 그림과 표에서 데이터 동기화 프로세스를 보여 줍니다.  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872323"
 |**시퀀스**|**단계 설명**|**설명**|**유용한 메트릭**|  
 |1|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|캡처|각 데이터베이스에 대한 로그가 캡처되어 해당 파트너 큐(데이터베이스-복제본 쌍마다 한 개)로 전송됩니다. 이 캡처 프로세스는 가용성 복제본이 연결되고 데이터 이동이 어떤 이유로든 일시 중단되지 않는 한 지속적으로 실행되며 데이터베이스-복제본 쌍이 동기화 중이거나 동기화된 것으로 표시됩니다. 캡처 프로세스가 메시지를 충분히 빠르게 스캔하여 큐에 넣을 수 없는 경우 로그 전송 큐가 축적됩니다.|[SQL Server:가용성 복제본 > 복제본에 전송된 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)는 해당 가용성 복제본의 큐에 저장된 모든 데이터베이스 메시지의 합계를 집계한 것입니다.<br /><br /> 주 복제본의 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB/sec).|  
-|3|Send|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server:가용성 복제본 > 전송에 보낸 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 메시지 승인 시간](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
+|3|Send|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server: 가용성 복제본 > transport\sec에 보낸 바이트 수](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|수신 및 캐시|각 보조 복제본이 메시지를 수신하고 캐시합니다.|성능 카운터 [SQL Server:가용성 복제본 > 수신된 로그 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|확정|로그가 확정을 위해 보조 복제본에 플러시됩니다. 로그가 플러시된 후 승인이 주 복제본으로 다시 보내집니다.<br /><br /> 로그가 확정된 후 데이터 손실이 방지됩니다.|성능 카운터 [SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 대기 유형 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|다시 실행|보조 복제본에 대해 플러시된 페이지를 다시 실행합니다. 페이지는 다시 실행을 위해 대기하는 동안 다시 실행 큐에 보관됩니다.|[SQL Server:데이터베이스 복제본 > 다시 실행한 바이트 수/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> 대기 유형 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

@@ -1,7 +1,7 @@
 ---
 title: 계산 열 마이그레이션 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 12/17/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,21 +11,21 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c41e5cc3d72f2871e5dfbd9e68d32d85f4d0c53c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 07e50f290d7e1e0a9202c1aaeae02d1dce76dbfa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829571"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104423"
 ---
 # <a name="migrating-computed-columns"></a>계산 열 마이그레이션
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 계산 열은 메모리 최적화 테이블에서 지원되지 않습니다. 그러나 계산 열을 시뮬레이션할 수 있습니다.
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 최적화 테이블 및 인덱스에서 지원됩니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 계산 열이 메모리 최적화 테이블 및 인덱스에서 지원됩니다.
 
 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하는 경우 계산 열을 유지할 필요성을 고려해야 합니다. 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저의 다양한 성능 특성 때문에 계산 열을 유지할 필요성이 무시될 수 있습니다.  
   
@@ -64,14 +64,17 @@ CREATE VIEW dbo.v_order_details AS
 --  
 -- Total is computed as SalePrice * Quantity and is persisted.  
 -- we need to create insert and update procedures to calculate Total.  
+
 CREATE PROCEDURE sp_insert_order_details   
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
 -- for bulk inserts, accept a table-valued parameter into the stored procedure  
 -- and use an INSERT INTO SELECT statement.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 INSERT INTO dbo.OrderDetails (OrderId, ProductId, SalePrice, Quantity, Total)  
 VALUES (@OrderId, @ProductId, @SalePrice, @Quantity, @total)  
@@ -82,8 +85,10 @@ CREATE PROCEDURE sp_update_order_details_by_id
 @OrderId int, @ProductId int, @SalePrice money, @Quantity int  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH (LANGUAGE = N'english', TRANSACTION ISOLATION LEVEL = SNAPSHOT)  
+
 -- compute the value here.   
 -- this stored procedure works with single rows only.  
+
 DECLARE @total money = @SalePrice * @Quantity  
 UPDATE dbo.OrderDetails   
 SET ProductId = @ProductId, SalePrice = @SalePrice, Quantity = @Quantity, Total = @total  

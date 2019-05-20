@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:73728
 - vdt.dlgbox.description
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a0f79247c6de064288704b3cce6d04fbef6ed584
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 976581be4308563d3580d1b4553333c1fe5fda2d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696971"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095182"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>설명 속성 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507760"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098374"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>옵션(환경 - 글꼴 및 색 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52507760"
   
 -   표시기 여백: 코드 편집기 왼쪽에 중단점 아이콘과 책갈피 아이콘이 표시되는 여백입니다.  
   
--   축소 가능 텍스트: 코드 편집기에서 보기로 또는 보기에서 전환할 수 있는 텍스트 또는 코드 블록입니다(XML만 해당).  
+-   축소 가능 텍스트: CodeEditor 내에서 보기로 또는 보기에서 전환할 수 있는 텍스트 또는 코드 블록입니다(XML만 해당).  
   
 **항목 전경**  
 **표시 항목**에서 선택한 항목의 전경색으로 사용할 수 있는 색을 나열합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 전경색을 변경하면 문자열과 같은 요소의 전경색도 변경됩니다.  

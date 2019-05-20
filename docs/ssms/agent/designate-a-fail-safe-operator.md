@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2f79ccd9b759275f3811ed0de2cb84114ce0609f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096528"
 ---
 # <a name="designate-a-fail-safe-operator"></a>유사 시 대기 운영자 지정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52501983"
   
 5.  **운영자** 목록에서 유사 시 대기 운영자로 설정할 운영자를 선택합니다.  
   
-6.  **전자 메일**, **호출기**또는 **Net send**확인란 중 하나 이상을 선택하여 운영자에게 알림을 보낼 방법을 지정합니다.  
+6.  각 알림에 대한 알림 방법을 다음 확인란에서 선택합니다. **이메일**, **호출기** 또는 **Net 보내기**.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   

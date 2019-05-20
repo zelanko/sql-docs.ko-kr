@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512607"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097453"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 분석
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 DeploymentPlanModifier 또는 DeploymentPlanExecutor 중에서 만들 수 있습니다. DeploymentPlanModifier를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 DeploymentPlanExecutor를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 데이터베이스 프로젝트를 배포할 때 수행된 작업에 대한 보고서를 만드는 DeploymentUpdateReportContributor라는 DeploymentPlanExecutor를 만듭니다. 이 빌드 참가자는 보고서가 생성되는지 여부를 제어하기 위한 매개 변수를 받기 때문에 추가 필수 단계를 수행해야 합니다.  
@@ -251,7 +251,7 @@ ms.locfileid: "52512607"
   
     OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 빌드 속성 및 확장 파일에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 모델을 가져온 후 모델에 대한 정보를 출력하기 위한 도우미 함수를 호출합니다. 기본 클래스에서 PublishMessage 도우미 메서드를 사용하여 발생한 모든 오류를 보고합니다.  
   
-    중요한 추가 유형 및 메서드에는 [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx)가 포함됩니다.  
+    중요한 추가 유형 및 메서드는 다음과 같습니다. [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) 및 [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     그런 다음 배포 계획의 세부 정보를 자세히 살펴보는 도우미 클래스를 정의합니다.  
   
@@ -526,7 +526,7 @@ ms.locfileid: "52512607"
     |-----------------|--------------------|  
     |클래스 멤버|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |WriteReport 메서드|XmlWriter 및 XmlWriterSettings|  
-    |ReportPlanOperations 메서드|중요한 유형에는 [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx)이 포함됩니다.<br /><br />이외에도 다른 여러 단계가 있습니다. 전체 단계 목록은 API 설명서를 참조하세요.|  
+    |ReportPlanOperations 메서드|중요한 유형에는 다음이 포함됩니다. [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />이외에도 다른 여러 단계가 있습니다. 전체 단계 목록은 API 설명서를 참조하세요.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -586,7 +586,7 @@ ms.locfileid: "52512607"
   
 1.  %Program Files%\MSBuild로 이동합니다.  
   
-2.  대상 파일을 저장할 “MyContributors”라는 새 폴더를 만듭니다.  
+2.  대상 파일을 저장할 "MyContributors"라는 새 폴더를 만듭니다.  
   
 3.  이 디렉터리 내에 “MyContributors.targets”라는 새 파일을 만들고 다음 텍스트를 추가하여 파일을 저장합니다.  
   

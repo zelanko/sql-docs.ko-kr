@@ -1,7 +1,7 @@
 ---
 title: Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: polybase
@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
+ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265250"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65198059"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -40,7 +41,7 @@ ms.locfileid: "56265250"
   - Linux의 Cloudera CDH 4.3, 5.1 – 5.5, 5.9 - 5.13
 
 > [!NOTE]
-> PolyBase는 SQL Server 2016 SP1 CU7 및 SQL Server 2017 CU3부터 Hadoop 암호화 영역을 지원합니다. [PolyBase 스케일 아웃 그룹](polybase-scale-out-groups.md)을 사용 중인 경우 모든 계산 노드도 Haddop 암호화 영역 지원을 포함하는 빌드에 있어야 합니다.
+> PolyBase는 SQL Server 2016 SP1 CU7 및 SQL Server 2017 CU3부터 Hadoop 암호화 영역을 지원합니다. [PolyBase 스케일 아웃 그룹](polybase-scale-out-groups.md)을 사용 중인 경우 모든 컴퓨팅 노드도 Haddop 암호화 영역 지원을 포함하는 빌드에 있어야 합니다.
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 연결 구성
 
@@ -73,14 +74,14 @@ ms.locfileid: "56265250"
 1. SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
    ```  
 
 1. Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 동일한 파일을 찾습니다. 이 파일에서 구성 키 yarn.application.classpath의 값을 찾아서 복사합니다.  
   
-1. SQL Server 컴퓨터의 **yarn.site.xml 파일** 에서 **yarn.application.classpath** 속성을 찾은 다음 Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
+1. SQL Server 머신의 **yarn-site.xml 파일**에서 **yarn.application.classpath** 속성을 찾습니다. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
-1. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn.site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
+1. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn-site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
 
 ## <a name="configure-an-external-table"></a>외부 테이블 구성
 

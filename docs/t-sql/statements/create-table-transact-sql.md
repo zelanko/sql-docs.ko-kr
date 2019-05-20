@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478288"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503732"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -70,7 +70,7 @@ ms.locfileid: "58478288"
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -463,7 +462,7 @@ DEFAULT
 열의 기본값으로 사용되는 상수, NULL 또는 시스템 함수입니다.
 
 *memory_optimized_constant_expression*     
-열의 기본값으로 사용되는 상수, NULL 또는 시스템 함수입니다. 고유하게 컴파일된 저장 프로시저에서 지원되어야 합니다. 고유하게 컴파일된 저장 프로시저의 기본 제공 함수에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.
+지원되는 상수, NULL 또는 시스템 함수로 열의 기본값으로 사용됩니다. 고유하게 컴파일된 저장 프로시저에서 지원되어야 합니다. 고유하게 컴파일된 저장 프로시저의 기본 제공 함수에 대한 자세한 내용은 [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)을 참조하세요.
 
 IDENTITY    
 새 열이 ID 열임을 나타냅니다. 테이블에 새 행이 추가되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 열에 대해 고유한 증가값을 제공합니다. ID 열은 일반적으로 PRIMARY KEY 제약 조건과 함께 사용되어 테이블에 대한 고유한 행 식별자 역할을 합니다. `IDENTITY` 속성은 **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** 또는 **numeric(p,0)** 열에 할당할 수 있습니다. ID 열은 테이블당 하나만 만들 수 있습니다. ID 열에는 바인딩된 기본값 및 DEFAULT 제약 조건을 사용할 수 없습니다. 초기값과 증가값은 둘 다 지정하거나 또는 둘 다 지정하지 않아야 합니다. 둘 다 지정하지 않은 경우에는 기본값 (1,1)이 사용됩니다.
@@ -699,7 +698,7 @@ TRUE 또는 FALSE를 반환하는 논리 식입니다. 별칭 데이터 형식�
 > 분할된 테이블 및 ALTER TABLE...SWITCH 작업의 원본이나 대상인 분할되지 않은 테이블의 분할 열에 NOT NULL을 지정하는 것이 좋습니다. 이렇게 하면 분할 열의 CHECK 제약 조건에서 Null 값을 확인하지 않아도 됩니다.
 
 WITH FILLFACTOR **=**_fillfactor_     
-[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 정도를 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.
+[!INCLUDE[ssDE](../../includes/ssde-md.md)]가 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 방법을 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.
 
 > [!IMPORTANT]
 > 현재 WITH FILLFACTOR = *fillfactor*가 PRIMARY KEY 또는 UNIQUE 제약 조건에 적용되는 유일한 인덱스 옵션으로 기술되어 있는 것은 이전 버전과의 호환성을 위한 것이며 이후 릴리스에서는 이런 식으로 기술되지 않을 것입니다.
@@ -1087,7 +1086,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
 테이블 및 해당 열에 대한 보고서는 `sp_help` 또는 `sp_helpconstraint`를 사용합니다. 테이블 이름을 바꾸려면 `sp_rename`을 사용합니다. 테이블에 종속적인 뷰 및 저장 프로시저에 대한 보고서를 만들려면 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) 및 [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)를 사용하십시오.
 
 ## <a name="nullability-rules-within-a-table-definition"></a>테이블 정의 내의 NULL 허용 여부 규칙
-열의 Null 허용 여부에 따라 해당 열의 데이터로 Null 값(NULL)을 허용할 수 있는지 여부가 결정됩니다. NULL은 0 또는 공백이 아니며 항목을 만들지 않았거나 명시적인 NULL을 지정했음을 의미하는 것으로 일반적으로 값을 알 수 없거나 적용할 수 없음을 나타냅니다.
+열의 Null 허용 여부에 따라 해당 열의 데이터로 Null 값(NULL)을 허용할 수 있는지 여부가 결정됩니다. NULL은 0 또는 공백이 아닙니다. 항목을 만들지 않았거나 명시적인 NULL을 지정했음을 의미하는 것으로 일반적으로 값을 알 수 없거나 적용할 수 없음을 나타냅니다.
 
 `CREATE TABLE` 또는 `ALTER TABLE`을 사용하여 테이블을 만들거나 변경할 때 데이터베이스 및 세션 설정은 열 정의에 사용되는 데이터 형식의 Null 허용 여부에 영향을 주거나 이를 무시할 수 있습니다. 비계산 열은 항상 NULL 또는 NOT NULL로 명시적으로 정의하는 것이 좋으며 사용자 정의 데이터 형식을 사용할 때는 열에 해당 데이터 형식의 기본 Null 허용 여부를 적용하는 것이 좋습니다. 스파스 열은 항상 NULL을 허용해야 합니다.
 

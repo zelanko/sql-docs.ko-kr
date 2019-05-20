@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203071"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -72,6 +72,9 @@ ALTER DATABASE 현재 아티클은 데이터베이스의 이름 및 데이터 �
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Always On 가용성 그룹의 보조 복제본에서 보조 데이터베이스를 구성하기 위한 ALTER DATABASE의 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 옵션에 대한 구문 및 관련 정보를 제공합니다.
 
 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 데이터베이스 호환성 수준과 관련된 ALTER DATABASE의 SET 옵션에 대한 구문 및 관련 정보를 제공합니다.
+
+[데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+쿼리 최적화 및 쿼리 실행 관련 동작과 같은 개별 데이터베이스 수준 설정에 사용되는 데이터베이스 범위 구성과 관련된 구문을 제공합니다. 
 
 ## <a name="syntax"></a>구문
 

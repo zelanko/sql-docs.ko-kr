@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980349"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775997"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - 트리거 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  IF UPDATE(*colum*n) 절은 IF, IF...ELSE 또는 WHILE 절과 같은 기능을 수행하며 BEGIN...END 블록을 사용할 수 있습니다. 자세한 내용은 [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)을 참조하세요.  
   
  UPDATE(*column*)는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거 본문 내의 어디서나 사용할 수 있습니다.  
+ 
+트리거가 열에 적용되면 열 값이 변경되지 않는 경우에도 `UPDATED` 값은 `true` 또는 `1`로 반환됩니다. 이는 의도적으로 설계된 것이며 트리거는 삽입/업데이트/삭제 작업이 허용되는지 여부를 결정하는 비즈니스 논리를 구현해야 합니다. 
   
 ## <a name="examples"></a>예  
  다음 예에서는 사용자가 `StateProvinceID` 테이블의 `PostalCode` 또는 `Address` 열을 업데이트하려고 하면 클라이언트에게 메시지를 출력하는 트리거를 만듭니다.  
