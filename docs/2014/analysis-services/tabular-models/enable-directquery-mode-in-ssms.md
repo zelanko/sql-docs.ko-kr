@@ -21,7 +21,7 @@ ms.locfileid: "62757268"
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성
   이 항목에서는 직접 쿼리 모드에서 모델을 사용할 수 있도록 이미 배포된 테이블 형식 모델의 연결 속성을 변경하는 방법에 대해 설명합니다.  
   
- 이러한 속성 및 가장 일반적인 시나리오에 대 한 구성에 대 한 자세한 내용은 참조 하세요. [DirectQuery 배포 시나리오 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../directquery-deployment-scenarios-ssas-tabular.md)합니다.  
+ 이러한 속성 및 가장 일반적인 시나리오에 대 한 구성에 대 한 자세한 내용은 참조 하세요. [DirectQuery 배포 시나리오 &#40;&#40;SSAS 테이블 형식&#41;](../directquery-deployment-scenarios-ssas-tabular.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  테이블 형식 모델에서 직접 쿼리 모드를 사용하도록 설정하는 작업은 다단계 프로세스입니다. 다음을 수행해야 합니다.  

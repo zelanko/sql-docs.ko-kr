@@ -48,7 +48,7 @@ ms.locfileid: "63265439"
   
  전자 메일 배달을 사용하려면 먼저 구성해야 합니다. 구성하지 않으면 사용할 수 없습니다. 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
- 특정 확장 프로그램을 해제하려면 RSReportServer.config 파일에서 해당 확장 프로그램 항목을 제거합니다. 자세한 내용은 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) 하 고 [전자 메일 배달을 위한 보고서 서버를 구성 &#40;&AMP;#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ 특정 확장 프로그램을 해제하려면 RSReportServer.config 파일에서 해당 확장 프로그램 항목을 제거합니다. 자세한 내용은 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md) 하 고 [전자 메일 배달을 위한 보고서 서버를 구성 &#40;&#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  배달 확장 프로그램을 제거한 후에는 보고서 관리자나 SharePoint 사이트에서 더 이상 사용할 수 없습니다. 배달 확장 프로그램을 제거하면 비활성 구독이 생성될 수 있습니다. 확장 프로그램을 제거하기 전에 구독이 다른 배달 확장 프로그램을 사용하도록 구성하거나 구독을 삭제하십시오.  
   

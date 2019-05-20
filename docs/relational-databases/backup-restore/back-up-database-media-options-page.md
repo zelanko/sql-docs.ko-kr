@@ -105,7 +105,7 @@ ms.locfileid: "53212092"
  **테이프 드라이브** 패널의 옵션은 백업 작업 동안 테이프 관리를 제어합니다. **테이프** 가 **데이터베이스 백업** 대화 상자의 [일반](../../relational-databases/backup-restore/back-up-database-general-page.md) 페이지에 있는 **대상** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
->  테이프 디바이스를 사용하는 방법은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+>  테이프 디바이스를 사용하는 방법은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  **백업 후 테이프 언로드**  
  백업이 완료된 후 테이프를 언로드합니다.  
