@@ -24,14 +24,18 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4764ae6b782ea1f7f8187a4d76ce89ea320b145f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275859"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728244"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
   
 -   텍스트, XML, Excel 통합 문서 및 관계형 데이터베이스와 같은 원본 및 대상 데이터 저장소에 연결하여 데이터 추출 및 로드  

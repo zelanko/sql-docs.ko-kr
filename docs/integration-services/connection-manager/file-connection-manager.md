@@ -20,14 +20,18 @@ ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a083f3481cb18877886555422a630bba1bb05ce0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8b2eb595f6c12d6ed1cb777ee4c36de957f96cf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271089"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728293"
 ---
 # <a name="file-connection-manager"></a>파일 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   파일 연결 관리자를 사용하면 패키지에서 기존 파일 또는 폴더를 참조하거나 런타임에 파일 또는 폴더를 만들 수 있습니다. 예를 들어 Excel 파일을 참조할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 구성 요소는 파일에 있는 정보를 사용하여 작업을 수행합니다. 예를 들어 SQL 실행 태스크에서는 해당 태스크가 실행하는 SQL 문이 포함된 파일을 참조할 수 있습니다. 다른 구성 요소는 파일에 대한 작업을 수행합니다. 예를 들어 파일 시스템 태스크는 파일을 참조하여 새 위치로 복사할 수 있습니다.  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>파일 연결 관리자의 사용 유형  

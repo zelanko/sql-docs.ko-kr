@@ -21,14 +21,18 @@ ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 538799037cd634f48a0eb2a2d2138fef9ded0c5b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 257f4ebaba273ad465c259a9bdd633e6513cda53
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280727"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726949"
 ---
 # <a name="dimension-processing-destination"></a>차원 처리 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   차원 처리 대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원을 로드하고 처리합니다. 차원에 대한 자세한 내용은 [차원&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)을 참조하세요.  
   
  차원 처리 대상에는 다음 기능이 포함됩니다.  

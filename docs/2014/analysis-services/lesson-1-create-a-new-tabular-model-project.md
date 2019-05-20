@@ -21,7 +21,7 @@ ms.locfileid: "62729462"
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트 만들기
   이 단원에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만듭니다. 새 프로젝트를 만든 후 테이블 가져오기 마법사를 사용하여 데이터를 추가할 수 있습니다. 이 단원에서는 새 프로젝트를 만들 뿐 아니라 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 테이블 형식 모델 제작 환경에 대해서도 간단히 소개합니다.  
   
- 다양한 유형의 테이블 형식 모델 프로젝트에 대한 자세한 내용은 [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)를 참조하세요. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)합니다.  
+ 다양한 유형의 테이블 형식 모델 프로젝트에 대한 자세한 내용은 [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)를 참조하세요. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너 &#40;&#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)합니다.  
   
  예상이 단원을 완료 시간: **10 분**  
   

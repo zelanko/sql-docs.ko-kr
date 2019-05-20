@@ -14,14 +14,18 @@ ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90c7ee4cff732acbd068dc50ff9f009c26dc41c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c07444ff1dd425671fbc17176fc3aa94e0705bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281297"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725604"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~(비트 Not)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   정수의 비트 부정을 수행합니다. 이 연산자는 부호 있는 정수 또는 부호 없는 정수 데이터 형식에 적용할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  

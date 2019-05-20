@@ -18,14 +18,18 @@ ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67b3b3446cc6890a802e972e9c12a93b3e58c6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a089ea233f99294c1e4a38a643e93607e5c56d13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282357"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728299"
 ---
 # <a name="excel-connection-manager"></a>Excel 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel 연결 관리자를 사용하면 패키지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서 파일에 연결할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함되는 Excel 원본과 Excel 대상에서 Excel 연결 관리자가 사용됩니다.  
  
 > [!IMPORTANT]

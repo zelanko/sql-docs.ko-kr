@@ -74,9 +74,9 @@ ms.locfileid: "62733417"
 ### <a name="exporting-and-importing"></a>내보내기 및 가져오기  
  DMX 문을 사용하여 마이닝 모델 및 구조를 내보낸 다음 다시 가져오는 것은 개별 관계형 데이터 마이닝 개체를 이동하거나 백업하는 가장 쉬운 방법입니다. 이러한 작업에 사용하는 DMX 구문에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [내보내기 & #40; DMX & #41;](/sql/dmx/export-dmx)  
+-   [내보내기 &#40; DMX &#41;](/sql/dmx/export-dmx)  
   
--   [가져오기 & #40; DMX & #41;](/sql/dmx/import-dmx)  
+-   [가져오기 &#40; DMX &#41;](/sql/dmx/import-dmx)  
   
  INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
   

@@ -19,14 +19,18 @@ ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 181ea0007d2a61ba3705d3d318bda3b0da62fe77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280747"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723658"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개발자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로그래밍에 사용할 수 있는 기본적인 방법은 다음 두 가지가 있습니다.  

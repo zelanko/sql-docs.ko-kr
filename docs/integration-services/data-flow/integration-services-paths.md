@@ -21,14 +21,18 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282457"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726868"
 ---
 # <a name="integration-services-paths"></a>Integration Services 경로
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   경로는 하나의 데이터 흐름 구성 요소의 출력을 다른 구성 요소의 입력에 연결함으로써 데이터 흐름의 두 구성 요소를 연결합니다. 경로에는 원본과 대상이 있습니다. 예를 들어 경로가 OLE DB 원본과 정렬 변환을 연결하는 경우 OLE DB 원본은 경로의 원본이며, 정렬 변환은 경로의 대상입니다. 원본은 경로가 시작되는 구성 요소이며, 대상은 경로가 끝나는 구성 요소입니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 패키지를 실행하는 경우에는 데이터 뷰어를 경로에 연결하여 데이터 흐름의 데이터를 볼 수 있습니다. 표에 데이터를 표시하도록 데이터 뷰어를 구성할 수 있습니다. 데이터 뷰어는 유용한 디버깅 도구입니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  

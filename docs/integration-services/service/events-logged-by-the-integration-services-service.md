@@ -15,14 +15,18 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18d4e70daf68267675678803134b3f04c0c48f24
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277212"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718103"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 Windows 애플리케이션 로그에 다양한 메시지를 기록합니다. 이러한 메시지는 서비스가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  
   
  이 항목에서는 서비스가 애플리케이션 이벤트 로그에 기록하는 일반적인 이벤트 메시지에 대해 설명합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 SQLISService의 이벤트 원본을 사용하여 이 항목에서 설명하는 모든 메시지를 기록합니다.  

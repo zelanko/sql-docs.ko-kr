@@ -88,7 +88,7 @@ ms.locfileid: "65482881"
   
 ## <a name="see-also"></a>관련 항목  
  [MDS(Master Data Services) 설치](install-master-data-services.md)   
- [마스터 데이터 관리자 웹 애플리케이션 만들기&amp;#40;Master Data Services&amp;#41;](create-a-master-data-manager-web-application-master-data-services.md)   
+ [마스터 데이터 관리자 웹 애플리케이션 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
  [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

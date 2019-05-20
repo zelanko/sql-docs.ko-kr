@@ -17,14 +17,18 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275420"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723523"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 탭의 디자인 화면 외에도 사용자 인터페이스를 사용하면 패키지에 기능을 추가하고 패키지 개체의 속성을 구성하기 위한 다음 창과 대화 상자에 액세스할 수 있습니다.  
   
 -   대화 상자와 창에서는 로깅 및 구성과 같은 기능을 패키지에 추가할 수 있습니다.  

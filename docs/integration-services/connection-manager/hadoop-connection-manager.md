@@ -13,14 +13,18 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281437"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728218"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS(SQL Server Integration Services) 패키지는 Hadoop 연결 관리자를 통해 속성에 대해 지정된 값을 사용하여 Hadoop 클러스터에 연결할 수 있습니다.  
   
 ## <a name="configure-the-hadoop-connection-manager"></a>Hadoop 연결 관리자 구성  

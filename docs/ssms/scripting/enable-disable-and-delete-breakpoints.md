@@ -8,23 +8,23 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa887ae052c51b2a79ad1016437c136ad0360457
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a2c7ad89e8097f690b275f927588796665a36b45
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643721"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820797"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>중단점 설정, 해제 및 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   열려 있는 모든 중단점을 보고 관리하려면 **중단점** 창을 사용합니다. 이 창을 사용하여 중단점 정보를 보고 중단점 삭제, 해제, 설정 등과 같은 동작을 수행할 수 있습니다.  
   
 ## <a name="the-breakpoints-window"></a>중단점 창  
- **중단점** 창에는 중단점이 위치한 코드 줄과 같은 정보가 나열됩니다. **중단점** 창에서 중단점을 삭제, 해제 및 설정할 수 있습니다. **중단점** 창에 대한 자세한 내용은 [중단점 Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)을 참조하십시오.  
+ **중단점** 창에는 중단점이 위치한 코드 줄과 같은 정보가 나열됩니다. **중단점** 창에서 중단점을 삭제, 해제 및 설정할 수 있습니다.  **중단점** 창에 대한 자세한 내용은 [중단점 Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)을 참조하십시오.  
   
  중단점을 해제하면 실행이 일시 중지되지 않지만 사용자가 나중에 중단점을 설정할 경우를 위해 정의는 그대로 유지됩니다. 중단점을 삭제하면 영구적으로 제거됩니다. 문에서 실행을 일시 중지하려면 새 중단점을 설정해야 합니다.  
   

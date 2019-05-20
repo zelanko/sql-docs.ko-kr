@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280647"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725915"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
   
 -   데이터 흐름에서 여러 변환을 사용하는 대신 데이터에 여러 변환을 적용합니다. 예를 들어 스크립트로 두 열에 값을 추가하고 합계의 평균을 계산할 수 있습니다.  

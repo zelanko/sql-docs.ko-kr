@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984104"
@@ -153,7 +153,7 @@ DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버 오류
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|특정 데이터 원본에 대해 XMLA 공급자에서 지원하는 열거자의 이름, 데이터 형식 및 열거 값 목록을 반환합니다.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|서버의 인스턴스를 설명합니다.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|서버에서 실행되는 활성 작업에 대한 정보를 제공합니다. 작업은 명령을 대신하여 특정 태스크를 실행하는 명령의 일부입니다.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|XMLA 서버에서 예약 된 키워드에 대 한 정보를 반환 합니다.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|XMLA 서버에서 예약 된 키워드에 대 한 정보를 반환 합니다.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|서버에서 지 원하는 리터럴에 대 한 정보를 반환 합니다.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|백업 파일의 콘텐츠에 대한 정보를 반환합니다. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|서버에서 현재 고정된 잠금에 대한 정보를 제공합니다.|  

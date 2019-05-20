@@ -13,14 +13,18 @@ ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc77716e8df17175c0951645eb1034b6ecb9e183
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2dcaff5b7b8ad834eb12277c587b222b8f782d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282667"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726379"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   원본, 대상 및 변환을 비롯한 데이터 흐름 구성 요소 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 구성 요소 편집기. 이러한 편집기에는 각 데이터 흐름 구성 요소의 사용자 지정 속성만 포함됩니다.  

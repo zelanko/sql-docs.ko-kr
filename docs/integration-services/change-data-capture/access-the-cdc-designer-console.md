@@ -13,14 +13,18 @@ ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f100526ed890b3c180d0d0e948da81081c0171ab
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57e8a0986fda07fb0850172497f27af2618dd962
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277802"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729135"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   콘솔을 설치한 컴퓨터에서 CDC Designer 콘솔에 액세스할 수 있습니다. 설치에 대한 자세한 내용은 설치를 참조하십시오.  
   
  CDC Designer 콘솔을 열 때 SQL Server에 연결 대화 상자가 열립니다.  
@@ -45,7 +49,7 @@ ms.locfileid: "58277802"
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  **연결 제한 시간**  
- 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
+ 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 15**입니다.  
   
  **실행 제한 시간**  
  제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  

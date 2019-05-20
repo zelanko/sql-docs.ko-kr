@@ -22,14 +22,18 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a598695807d978df8dd14635f127949e835b9e7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277365"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805258"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 실행
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행하려면 해당 패키지가 저장된 위치에 따라 여러 도구 중 하나를 사용할 수 있습니다. 도구는 다음 표에 나열되어 있습니다.  
 
 > [!NOTE]

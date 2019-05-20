@@ -21,14 +21,18 @@ ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67f27f17df5bf41f0b2b88265d0eb91df824a57c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273567"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718122"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>위협 요소 및 취약성 완화

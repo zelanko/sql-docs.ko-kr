@@ -7,12 +7,12 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
-ms.translationtype: HT
+ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503599"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570721"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
@@ -76,7 +76,7 @@ ms.locfileid: "65503599"
   
 * 새 인스턴스가 완벽하게 작동하는지 확인한 후 사용하지 않는 애플리케이션과 도구를 제거합니다.  
   
- 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 제한되어 있습니다. 이전 설치에서 만든 보고서 서버 데이터베이스를 다시 사용하는 경우에는 다음 항목을 검토하세요.  
+ 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 제한되어 있습니다. 이전 설치에서 만든 보고서 서버 데이터베이스를 다시 사용하는 경우에는 다음 항목을 검토하십시오.  
   
 * [보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65503599"
   
 * WMI 공급자를 호출하여 데이터베이스 간에 데이터를 복사하는 코드를 작성합니다. 이 접근 방법은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
-* 항목 수가 적은 경우 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 보고서 및 공유 데이터 원본을 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅샷 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만듭니다. 이 작업을 따르면 보고서 기록과 보고서 실행 로그 데이터 손실에 대비해야 합니다.
+* 항목 수가 적은 경우 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 보고서 및 공유 데이터 원본을 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅숏 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만듭니다. 이 작업을 따르면 보고서 기록과 보고서 실행 로그 데이터 손실에 대비해야 합니다.
   
 ## <a name="bkmk_before_you_start"></a> 시작하기 전에
 
@@ -120,7 +120,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
 ## <a name="bkmk_backup"></a> 파일 및 데이터 백업
 
- 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하기 전에 현재 설치의 모든 파일을 백업하세요.  
+ 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하기 전에 현재 설치의 모든 파일을 백업하십시오.  
   
 1. 보고서 서버 데이터베이스에 대한 암호화 키를 백업합니다. 이 단계는 성공적인 마이그레이션을 위해 매우 중요합니다. 나중에 마이그레이션 프로세스에서 보고서 서버가 암호화된 데이터에 다시 액세스할 수 있도록 이 키를 복원해야 하기 때문입니다. 키를 백업하려면 Reporting Services 구성 관리자를 사용합니다.  
   
@@ -146,7 +146,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 
  새 보고서 서버 인스턴스를 기본값 이외의 값을 사용하여 구성할 수 있도록 파일만 모드로 설치합니다. 명령줄 설치의 경우에는 **FilesOnly** 인수를 사용합니다. 설치 마법사에서 **구성 없이 설치**옵션을 선택합니다.  
   
- 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하는 방법에 대한 지침을 보려면 다음 링크 중 하나를 클릭하세요.  
+ 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하는 방법에 대한 지침을 보려면 다음 링크 중 하나를 클릭하십시오.  
   
 * [설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
   
@@ -190,19 +190,19 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
 4. [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)의 지침을 따릅니다.  
   
- 보고서 서버 데이터베이스와 임시 데이터베이스는 상호 종속적이므로 함께 이동해야 합니다. 데이터베이스를 복사할 경우 모든 보안 설정이 새 설치로 옮겨지지 않으므로 데이터베이스를 복사하지 마세요. 예약된 보고서 서버 작업에 해당하는 SQL Server 에이전트 작업은 이동하지 마세요. 보고서 서버는 이러한 작업을 자동으로 다시 만듭니다.  
+ 보고서 서버 데이터베이스와 임시 데이터베이스는 상호 종속적이므로 함께 이동해야 합니다. 데이터베이스를 복사할 경우 모든 보안 설정이 새 설치로 옮겨지지 않으므로 데이터베이스를 복사하지 마십시오. 예약된 보고서 서버 작업에 해당하는 SQL Server 에이전트 작업은 이동하지 마십시오. 보고서 서버는 이러한 작업을 자동으로 다시 만듭니다.  
 
 ## <a name="bkmk_move_custom"></a> 사용자 지정 어셈블리 또는 확장 프로그램 이동
 
- 설치에 사용자 지정 보고서 항목, 어셈블리 또는 확장 프로그램이 포함되어 있는 경우에는 이러한 사용자 지정 구성 요소를 다시 배포해야 합니다. 사용자 지정 구성 요소를 사용하고 있지 않은 경우에는 [보고서 서버 구성](#bkmk_configure_reportserver)섹션으로 건너뛰세요.  
+ 설치에 사용자 지정 보고서 항목, 어셈블리 또는 확장 프로그램이 포함되어 있는 경우에는 이러한 사용자 지정 구성 요소를 다시 배포해야 합니다. 사용자 지정 구성 요소를 사용하고 있지 않은 경우에는 [보고서 서버 구성](#bkmk_configure_reportserver)섹션으로 건너뛰십시오.  
   
  사용자 지정 구성 요소를 다시 배포하려면 다음 단계를 따릅니다.  
   
 1. 어셈블리가 지원되거나 어셈블리를 다시 컴파일해야 하는지 확인합니다.
 
-    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다.
+    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다. 
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대한 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   
     * HTML 3.2 및 HTML OWC 렌더러는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이상 버전에서 지원되지 않습니다.  
   
