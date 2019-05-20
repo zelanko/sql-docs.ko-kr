@@ -2,18 +2,18 @@
 title: 페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296801"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580888"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "56296801"
   
 1.  [&PageNumber]가 들어 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **식**을 클릭합니다.  
   
-     **다음에 대한 식 설정: 값** 텍스트 상자에 식 =Globals!PageNumber가 포함됩니다.  
+     **다음에 대한 식 설정: 값** 입력란에 식 =Globals!PageNumber가 포함됩니다.  
   
 2.  = 기호 뒤에 커서를 두고 **"Page " &** 를 입력합니다.  
   

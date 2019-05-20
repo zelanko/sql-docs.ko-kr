@@ -2,25 +2,25 @@
 title: 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e019ee45eaffdd3a95bde64d284caa61e24788f3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a802faa9ba493e835e53f104e885b848d5a730cf
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028802"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573144"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 세트는 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 세트에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 세트에는 두 가지 유형이 있습니다.  
   
--   **공유 데이터 집합** 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 공유 데이터 세트는 캐시 새로 고침 계획을 만들어 캐시하고 예약할 수 있습니다.  
+-   **공유 데이터 세트.** 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 공유 데이터 세트는 공유 데이터 원본을 기반으로 해야 합니다. 공유 데이터 세트는 캐시 새로 고침 계획을 만들어 캐시하고 예약할 수 있습니다.  
   
--   **포함된 데이터 집합** 포함된 데이터 세트는 단일 보고서에서 정의되고 사용됩니다.  
+-   **포함된 데이터 세트.** 포함된 데이터 세트는 단일 보고서에서 정의되고 사용됩니다.  
   
  두 유형 간의 차이점은 연결 문자열이 작성, 저장 및 관리되는 방법입니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50028802"
   
  보고서 작성기에서 다음을 수행할 수 있습니다.  
   
-1.  공유 데이터 세트를 만들려면 공유 데이터 세트 디자인 뷰를 사용합니다. 이 뷰를 보고서 서버나 SharePoint  사이트에 저장하여 다른 보고서와 공유할 수 있습니다. 보고서 서버를 찾아 기존의 공유 데이터 세트를 편집할 수도 있습니다. 이 뷰에서는 쿼리를 작성하고 모든 데이터 세트 옵션을 설정할 수 있습니다. 자세한 내용은 [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)를 참조하세요.  
+1.  공유 데이터 세트를 만들려면 공유 데이터 세트 디자인 뷰를 사용합니다. 이 뷰를 보고서 서버나 SharePoint  사이트에 저장하여 다른 보고서와 공유할 수 있습니다. 보고서 서버를 찾아 기존의 공유 데이터 세트를 편집할 수도 있습니다. 이 뷰에서는 쿼리를 작성하고 모든 데이터 세트 옵션을 설정할 수 있습니다. 자세한 내용은 [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)를 참조하세요.  
   
 2.  보고서에 공유 데이터 세트를 추가하려면 보고서 디자인 뷰에서 보고서 작성기를 엽니다. 마법사나 보고서 데이터 창에서 보고서 서버로 이동하고 보고서에 추가할 공유 데이터 세트를 선택합니다. 이 뷰에서는 필드를 추가하는 것을 제외하고는 쿼리를 변경할 수 없습니다. 다른 데이터 옵션을 무시하고 필터를 추가할 수도 있지만 필터를 제거할 수는 없습니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "50028802"
   
 ## <a name="see-also"></a>참고 항목  
  [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   

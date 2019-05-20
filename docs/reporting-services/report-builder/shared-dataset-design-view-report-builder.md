@@ -2,18 +2,18 @@
 title: 공유 데이터 세트 디자인 뷰 (보고서 작성기) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bea2da3329bce5ffa6adaf4be57109ac7c801dc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287951"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581102"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 세트를 만들 수 있습니다. 공유 데이터 세트 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 세트에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "56287951"
  보고서에서 데이터 작업에 대한 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 ##  <a name="Ribbon"></a> 리본  
- 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 집합, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
+ 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 세트, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
   
 ### <a name="connection"></a>연결  
  연결 그룹의 **선택** 단추를 사용하여 보고서에서 공유 데이터 원본을 선택하거나 보고서 서버에서 공유 데이터 원본을 찾습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56287951"
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
-### <a name="dataset"></a>데이터 세트  
+### <a name="dataset"></a>Dataset  
  **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 -   필드. 필드 컬렉션에 필드를 추가하거나 편집할 수 있습니다.  

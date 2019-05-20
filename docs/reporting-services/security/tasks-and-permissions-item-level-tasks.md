@@ -2,20 +2,20 @@
 title: 항목 수준 작업 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8dc24ff10be5f9621f01ba8ec71e97cce7680074
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792859"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570273"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>작업 및 사용 권한 - 항목 수준의 작업
   항목 수준 태스크는 보고서, 폴더, 보고서 모델, 리소스 또는 공유 데이터 원본과 관련된 사용 권한 모음입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 서버 사이트에 전체적으로 적용되는 시스템 수준 태스크도 있습니다. 자세한 내용은 [시스템 수준 태스크](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)를 참조하세요. 일반적인 태스크 및 사용 권한에 대한 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하십시오.  
@@ -28,7 +28,7 @@ ms.locfileid: "47792859"
   
  공유 데이터 세트는 보고서와 동일한 사용 권한 집합을 사용합니다. 보고서 파트는 리소스와 동일한 사용 권한 집합을 사용합니다.  
   
-|태스크|적용 항목|Permissions|  
+|태스크|적용 항목|사용 권한|  
 |----------|---------------------|-----------------|  
 |보고서 사용|보고서|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  
 |보고서 사용|공유 데이터 세트|내용 읽기<br /><br /> 보고서 정의 읽기<br /><br /> 속성 읽기|  

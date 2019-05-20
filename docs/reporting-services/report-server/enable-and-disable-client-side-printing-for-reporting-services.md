@@ -2,7 +2,7 @@
 title: Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - reportviewer
 - toolbar
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05f63018eb5af5ec4c3a12c9bce14b550512471e
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ae8d963b599191970497d841a6caa1f73fd920b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711945"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580348"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
 
@@ -72,9 +72,9 @@ ms.locfileid: "52711945"
   
     1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
-    2.  **서비스 응용 프로그램 관리**를 클릭합니다.  
+    2.  **서비스 애플리케이션 관리**를 클릭합니다.  
   
-    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 클릭하고 SharePoint 리본 메뉴에서 **관리** 를 클릭합니다.  
+    3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 클릭하고 SharePoint 리본 메뉴에서 **관리** 를 클릭합니다.  
   
     4.  **시스템 설정**을 클릭합니다.  
   

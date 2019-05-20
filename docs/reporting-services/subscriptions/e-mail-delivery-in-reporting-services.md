@@ -2,7 +2,7 @@
 title: Reporting Services의 전자 메일 배달 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a5ff1c1266e5d2586ec063c18db5c83737f0409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827251"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575565"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서를 전자 메일로 배포하려면 1) 전자 메일 배달용 보고서 서버를 구성하고 2) 표준 구독 또는 데이터 기반 구독을 정의합니다. 단일 구독에서 전자 메일 메시지 하나에 여러 보고서를 포함해 배달할 수는 없습니다. 그러나 여러 구독을 만들 수는 있습니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "47827251"
  기본 모드 보고서 서버의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하는 방식으로 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 통해 메일 배달 확장 프로그램을 구성합니다. SharePoint 모드 보고서 서버의 경우에는 SharePoint 관리 페이지 및 PowerShell 스크립트에서 전자 메일 배달 확장 프로그램을 구성합니다.  
   
  
- 기본 모드 보고서 서버를 구성하는 방법은 [메일 설정 - Reporting Services 기본 모드(Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조하세요.
+ 기본 모드 보고서 서버를 구성하는 방법은 [메일 설정 - Reporting Services 기본 모드(구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조하세요.
  
  
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  

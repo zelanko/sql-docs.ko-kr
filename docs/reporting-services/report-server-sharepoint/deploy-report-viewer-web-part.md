@@ -2,17 +2,17 @@
 title: SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포 | Microsoft Docs
 ms.date: 11/15/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8c5e406cdab8f4950a897cc66556e54a1faa53f1
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805729"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579985"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트에 SQL Server Reporting Services 보고서 뷰어 웹 파트 배포
 
@@ -38,7 +38,7 @@ ms.locfileid: "54805729"
 
 **Reporting Services 버전 지원:**  
 * SQL Server 2008 Reporting Services(기본 모드) 이상
-* Power BI 보고서 서버
+* Power BI Report Server
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>보고서 뷰어 웹 파트 솔루션 패키지 다운로드
 

@@ -2,7 +2,7 @@
 title: 계기(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -154,14 +154,14 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 57a871f330b3b3beae9ab371305b2d7887f955d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580273"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서의 계기 데이터 영역에는 데이터 세트의 단일 값이 표시됩니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 필터링, 그룹화, 정렬 등 일반적인 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -204,7 +204,7 @@ ms.locfileid: "56287381"
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 불릿(Bullet) 그래프  
+ 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 블릿(Bullet) 그래프  
   
 ##  <a name="AddingData"></a> 계기에 데이터 추가  
  디자인 화면에 계기를 추가한 후에 데이터 세트 필드를 계기 데이터 창으로 끕니다. 기본적으로 계기에서는 필드 값을 하나의 값으로 집계하여 계기에 표시합니다. Value 속성을 사용하여 이 값을 포인터에 연결합니다. 필드의 데이터 형식에 따라 계기에서는 SUM 또는 COUNT 집계를 사용합니다. 덧셈이 가능한 숫자 데이터를 사용할 때는 계기에서 SUM 함수를 사용하고 그렇지 않은 경우에는 COUNT 집계를 사용합니다. 포인터 값은 다른 집계를 사용하거나 집계를 사용하지 않을 수도 있습니다.  

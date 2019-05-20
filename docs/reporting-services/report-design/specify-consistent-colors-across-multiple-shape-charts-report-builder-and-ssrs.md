@@ -2,18 +2,18 @@
 title: 여러 셰이프 차트에 일관된 색 지정-보고서 작성기-SSRS | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 38ff22fcfdb291c2ac3924985949142006eff812
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292191"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578453"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
   페이지를 매긴 보고서의 셰이프가 아닌 차트에서 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 는 차트 내 계열의 인덱스를 기반으로 색상표에서 새로운 색을 선택합니다. 예를 들어 차트의 첫 번째 계열은 색상표의 첫 번째 색에 매핑됩니다. 그러나 셰이프 차트의 경우 다르게 동작합니다. 셰이프 차트에서 색상표의 각 색은 데이터 세트의 데이터 요소와 매핑됩니다. 즉 데이터 요소 1은 색상표의 첫 번째 색과 매핑되며 데이터 요소 2는 두 번째 색 등의 형태로 매핑됩니다.  

@@ -2,18 +2,18 @@
 title: CountRows 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b9bb3a1c8fcfa71560d4f5973a03588948ae99fd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292765"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579611"
 ---
 # <a name="report-builder-functions---countrows-function"></a>보고서 작성기 함수 - CountRows 함수
   Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.  

@@ -2,18 +2,18 @@
 title: 기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결 | Microsoft Docs
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811776"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573857"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결
   

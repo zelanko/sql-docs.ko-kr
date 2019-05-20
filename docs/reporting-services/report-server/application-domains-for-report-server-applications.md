@@ -2,24 +2,24 @@
 title: 보고서 서버 애플리케이션의 애플리케이션 도메인 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec98c02ff88a1d343b96f149bce4bebdb7aa707d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751624"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574792"
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 애플리케이션의 애플리케이션 도메인
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 애플리케이션은 단일 보고 서버 프로세스 내 자체 애플리케이션 도메인에서 실행됩니다. 대부분의 경우 애플리케이션 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 애플리케이션 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션을 포함하는 단일 서비스로 구현됩니다. 각 애플리케이션은 단일 보고 서버 프로세스 내 자체 애플리케이션 도메인에서 실행됩니다. 대부분의 경우 애플리케이션 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 애플리케이션 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  
   
 > [!NOTE]  
 >  기본 인증을 사용하는 보고서 서버에서 보고서 작성기 액세스를 구성하는 경우 보고서 작성기는 자체 애플리케이션 도메인에서 실행됩니다. 이 애플리케이션 도메인은 서버 프로세스에서 실행되는 다른 애플리케이션 도메인과 다릅니다. 이 도메인은 서비스 컨트롤러에 의해 관리되며 보고서 서버의 메모리 부족에 대한 응답으로 메모리 할당을 다시 조정하는 메모리 관리 기능의 영향을 받지 않습니다.  
@@ -36,12 +36,12 @@ ms.locfileid: "47751624"
   
  다음 표에서는 이러한 이벤트에 대한 응답으로 발생하는 애플리케이션 도메인 재활용 동작을 요약하여 설명합니다.  
   
-|이벤트|이벤트 설명|적용 대상|구성 가능 여부|재활용 작업 설명|  
+|이벤트|이벤트 설명|적용 대상|구성 가능|재활용 작업 설명|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
 |미리 정의된 간격에 따라 발생하는 예약된 재활용 작업|기본적으로 애플리케이션 도메인은 12시간 간격으로 재활용됩니다.<br /><br /> 예약된 재활용 작업은 전반적인 프로세스 상태를 개선하는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션에 일반적입니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|예 RSReportServer.config 파일의**RecycleTime** 구성 설정에 따라 재활용 간격이 결정됩니다.<br /><br /> **MaxAppDomainUnloadTime** 은 백그라운드 처리가 완료되도록 허용되는 대기 시간을 설정합니다.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 웹 서비스 및 보고서 관리자에 대한 재활용 작업을 관리합니다.<br /><br /> 백그라운드 처리 애플리케이션의 경우 보고서 서버는 일정에서 시작되는 새 작업에 대해 새 애플리케이션 도메인을 만듭니다. 이미 진행 중인 작업은 대기 시간이 만료될 때까지 현재 애플리케이션 도메인에서 완료되도록 허용됩니다.|  
-|보고서 서버의 구성 변경|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일 변경에 대한 응답으로 응용 프로그램 도메인을 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|아니요.|재활용 작업이 발생하지 않도록 할 수는 없습니다. 그러나 구성 변경에 대한 응답으로 발생하는 재활용 작업은 예약된 재활용 작업과 같은 방식으로 처리됩니다. 현재 요청 및 작업이 현재 애플리케이션 도메인에서 완료되는 동안 새 요청에 대해 새 애플리케이션 도메인이 만들어집니다.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 구성 변경|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 모니터링하는 파일(예: machine.config 파일, Web.config 파일 및 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 프로그램 파일)에 변경 내용이 있는 경우 응용 프로그램 도메인을 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자|아니요.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 해당 작업을 관리합니다.<br /><br /> [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 응용 프로그램 도메인에 영향을 주지 않습니다.|  
-|메모리 부족 및 메모리 할당 실패|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR은 메모리 할당 실패 시 또는 서버의 메모리가 매우 부족한 상태인 경우 응용 프로그램 도메인을 즉시 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|아니요.|메모리가 매우 부족한 경우 보고서 서버는 현재 애플리케이션 도메인에서 새 요청을 받지 않습니다. 서버가 새 요청을 거부하는 동안에는 HTTP 503 오류가 발생합니다. 이전 애플리케이션 도메인이 언로드될 때까지 새 애플리케이션 도메인이 만들어지지 않습니다. 즉, 서버의 메모리가 매우 부족한 상태에서 구성 파일을 변경하는 경우 진행 중인 요청 및 작업이 시작 또는 완료되지 않을 수 있습니다.<br /><br /> 메모리 할당이 실패하면 모든 애플리케이션 도메인이 즉시 다시 시작되고, 진행 중이던 작업 및 요청이 삭제됩니다. 이러한 작업 및 요청은 수동으로 다시 시작해야 합니다.|  
+|보고서 서버의 구성 변경|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일 변경에 대한 응답으로 애플리케이션 도메인을 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|아니요.|재활용 작업이 발생하지 않도록 할 수는 없습니다. 그러나 구성 변경에 대한 응답으로 발생하는 재활용 작업은 예약된 재활용 작업과 같은 방식으로 처리됩니다. 현재 요청 및 작업이 현재 애플리케이션 도메인에서 완료되는 동안 새 요청에 대해 새 애플리케이션 도메인이 만들어집니다.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 구성 변경|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 모니터링하는 파일(예: machine.config 파일, Web.config 파일 및 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 프로그램 파일)에 변경 내용이 있는 경우 애플리케이션 도메인을 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자|아니요.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 해당 작업을 관리합니다.<br /><br /> [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 애플리케이션 도메인에 영향을 주지 않습니다.|  
+|메모리 부족 및 메모리 할당 실패|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR은 메모리 할당 실패 시 또는 서버의 메모리가 매우 부족한 상태인 경우 애플리케이션 도메인을 즉시 재활용합니다.|보고서 서버 웹 서비스<br /><br /> 보고서 관리자<br /><br /> 백그라운드 처리 애플리케이션|아니요.|메모리가 매우 부족한 경우 보고서 서버는 현재 애플리케이션 도메인에서 새 요청을 받지 않습니다. 서버가 새 요청을 거부하는 동안에는 HTTP 503 오류가 발생합니다. 이전 애플리케이션 도메인이 언로드될 때까지 새 애플리케이션 도메인이 만들어지지 않습니다. 즉, 서버의 메모리가 매우 부족한 상태에서 구성 파일을 변경하는 경우 진행 중인 요청 및 작업이 시작 또는 완료되지 않을 수 있습니다.<br /><br /> 메모리 할당이 실패하면 모든 애플리케이션 도메인이 즉시 다시 시작되고, 진행 중이던 작업 및 요청이 삭제됩니다. 이러한 작업 및 요청은 수동으로 다시 시작해야 합니다.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>계획되거나 계획되지 않은 재활용 작업  
  재활용 작업은 이 작업을 발생시키는 조건에 따라 계획되거나 계획되지 않을 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "47751624"
   
  재활용 작업을 발생시키는 상황에 따라 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션의 애플리케이션 도메인은 함께 또는 개별적으로 재활용될 수 있습니다.  
   
--    [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 보고서 서버 웹 서비스 및 보고서 관리자와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 영향을 줍니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 모니터링하는 파일에 변경 내용이 있는지 여부에 따라 응용 프로그램 도메인을 재활용합니다. 일반적으로 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 애플리케이션에 대한 재활용 작업과 무관합니다.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 보고서 서버 웹 서비스 및 보고서 관리자와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션에 영향을 줍니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 모니터링하는 파일에 변경 내용이 있는지 여부에 따라 애플리케이션 도메인을 재활용합니다. 일반적으로 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 애플리케이션에 대한 재활용 작업과 무관합니다.  
   
 -   일반적으로 보고서 서버에서 시작된 재활용 작업은 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션에 영향을 줍니다. 재활용 작업은 구성 설정 변경에 대한 응답으로 발생하며 서비스가 다시 시작됩니다.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "47751624"
 ## <a name="see-also"></a>참고 항목  
  [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
+ [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  
   
   

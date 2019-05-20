@@ -2,20 +2,20 @@
 title: GetDatabaseVersionDisplayName 메서드(WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5fdabaeb773d0311cf079c46b09fc30f90189bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854161"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570955"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
   지정된 보고서 서버 데이터베이스 버전 문자열의 표시 이름을 가져옵니다.  

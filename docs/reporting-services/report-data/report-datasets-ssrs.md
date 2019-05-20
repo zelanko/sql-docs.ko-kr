@@ -2,37 +2,37 @@
 title: 보고서 데이터 세트(SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029152"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571380"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 세트(SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  
   
- 데이터 세트에는 포함된 데이터 세트와 공유 데이터 세트의 두 가지 유형이 있습니다. 포함된 데이터 세트는 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 세트는 보고서 서버 또는 SharePoint 사이트에서 정의되고 여러 보고서에서 사용될 수 있습니다. 보고서 작성기에서는 공유 데이터 세트 모드로 공유 데이터 세트를 만들거나, 보고서 디자이너 모드로 포함된 데이터 세트를 만들 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 프로젝트의 일부로 공유 데이터 집합을 만들거나, 보고서의 일부로 포함된 데이터 집합을 만들 수 있습니다.  
+ 데이터 세트에는 포함된 데이터 세트와 공유 데이터 세트의 두 가지 유형이 있습니다. 포함된 데이터 세트는 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 세트는 보고서 서버 또는 SharePoint 사이트에서 정의되고 여러 보고서에서 사용될 수 있습니다. 보고서 작성기에서는 공유 데이터 세트 모드로 공유 데이터 세트를 만들거나, 보고서 디자이너 모드로 포함된 데이터 세트를 만들 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서는 프로젝트의 일부로 공유 데이터 세트를 만들거나, 보고서의 일부로 포함된 데이터 세트를 만들 수 있습니다.  
   
--   **포함된 데이터 집합** 워크시트에서 직접 데이터에 대해 작업을 수행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 등의 애플리케이션과 달리 보고서 작성기나 보고서 디자이너에서는 보고서가 처리될 때 검색될 데이터를 나타내는 메타데이터에 대해 작업을 수행합니다. 포함된 데이터 세트를 만들려면 데이터 원본을 선택하고 쿼리를 지정합니다. 데이터 세트를 만든 후에는 보고서 데이터 창을 사용하여 필드 컬렉션을 봅니다. 데이터 세트의 데이터를 테이블 또는 차트와 같은 데이터 영역에 표시할 수 있습니다. 또한 각 데이터 영역에서 데이터를 그룹화, 필터링 및 정렬하여 데이터를 구성할 수 있습니다. 보고서 레이아웃을 디자인한 후에 보고서를 실행하여 실제 데이터를 확인합니다.  
+-   **포함된 데이터 세트.** 워크시트에서 직접 데이터에 대해 작업을 수행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 등의 애플리케이션과 달리 보고서 작성기나 보고서 디자이너에서는 보고서가 처리될 때 검색될 데이터를 나타내는 메타데이터에 대해 작업을 수행합니다. 포함된 데이터 세트를 만들려면 데이터 원본을 선택하고 쿼리를 지정합니다. 데이터 세트를 만든 후에는 보고서 데이터 창을 사용하여 필드 컬렉션을 봅니다. 데이터 세트의 데이터를 테이블 또는 차트와 같은 데이터 영역에 표시할 수 있습니다. 또한 각 데이터 영역에서 데이터를 그룹화, 필터링 및 정렬하여 데이터를 구성할 수 있습니다. 보고서 레이아웃을 디자인한 후에 보고서를 실행하여 실제 데이터를 확인합니다.  
   
      다음 그림의 보고서 데이터 창에는 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)]라는 데이터 원본, DataSet1이라는 데이터 세트 및 데이터 세트 필드 컬렉션의 필드 다섯 개가 표시되어 있습니다. 레이아웃 창에 표시되는 테이블에서 위쪽 행에는 열 제목이 있고 아래쪽 행에는 텍스트가 포함된 테이블 셀이 있습니다. 자리 표시자 텍스트인 [Name]은 Name 필드의 메타데이터입니다. 보고서를 실행하면 자리 표시자 텍스트가 실제 데이터 값으로 바뀝니다. 필요에 따라 테이블을 확장하여 모드 데이터를 표시할 수 있습니다.  
   
      ![rs_DataDesignandPreview](../../reporting-services/report-data/media/rs-datadesignandpreview.gif "rs_DataDesignandPreview")  
   
--   **공유 데이터 집합** 둘 이상의 보고서에서 데이터 세트를 사용하려면 공유 데이터 세트를 만듭니다. 공유 데이터 세트를 만들어 보고서 서버나 SharePoint 사이트에 저장하려면 보고서 작성기를 공유 데이터 세트 디자인 뷰 상태에서 사용합니다. 공유 데이터 세트를 서버나 사이트에 배포할 수 있는 프로젝트의 일부로 만들려면 보고서 디자이너를 사용합니다.  
+-   **공유 데이터 세트.** 둘 이상의 보고서에서 데이터 세트를 사용하려면 공유 데이터 세트를 만듭니다. 공유 데이터 세트를 만들어 보고서 서버나 SharePoint 사이트에 저장하려면 보고서 작성기를 공유 데이터 세트 디자인 뷰 상태에서 사용합니다. 공유 데이터 세트를 서버나 사이트에 배포할 수 있는 프로젝트의 일부로 만들려면 보고서 디자이너를 사용합니다.  
   
      다음 그림에서는 보고서 작성기의 공유 데이터 세트 디자인 뷰를 보여 줍니다. 데이터 연결, 데이터 세트 속성, 쿼리 및 필터를 선택하거나 수정하고 원하는 경우 필터를 매개 변수로 표시하고 쿼리 결과를 확인할 수 있습니다. 그런 후에 변경 내용을 서버나 사이트에 다시 저장합니다.  
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 자세한 내용은 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
+ 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&amp;#40;보고서 작성기 및 SSRS&amp;#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
   
  종속되는 데이터 세트를 포함하는 보고서 파트를 추가하여 보고서에 데이터 세트를 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "50029152"
 -   포함된 데이터 원본을 기반으로 하는 포함된 데이터 세트를 추가합니다.  
   
 > [!NOTE]  
->  보고서 서버에서 공유 항목은 개별적으로 또는 해당 항목이 게시된 폴더의 사용 권한을 상속하여 보호됩니다. 자신이 저장하는 공유 데이터 세트에 다른 사용자가 액세스할 수 있도록 설정하려면 사용 권한이 부여되는 방식을 이해해야 합니다. 자세한 내용은 [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md) 또는 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
+>  보고서 서버에서 공유 항목은 개별적으로 또는 해당 항목이 게시된 폴더의 사용 권한을 상속하여 보호됩니다. 자신이 저장하는 공유 데이터 세트에 다른 사용자가 액세스할 수 있도록 설정하려면 사용 권한이 부여되는 방식을 이해해야 합니다. 자세한 내용은 [보안&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/security-report-builder.md) 또는 [공유 데이터 세트 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
   
  보고서에 데이터를 추가한 후에는 데이터 영역을 사용해 보고서 페이지에서 데이터를 구성하고, 보고서 파트를 수정한 다음 해당 변경 내용을 다른 사람과 공유하고, 사용자가 보고서에 표시되는 데이터를 제한 또는 정렬할 수 있도록 설정할 수 있습니다. 자세한 내용은 다음 관련 항목을 참조하십시오.  
   
@@ -100,15 +100,15 @@ ms.locfileid: "50029152"
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
  [관계형 쿼리 디자이너에서 쿼리 작성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
  [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
@@ -118,15 +118,15 @@ ms.locfileid: "50029152"
   
   
 ##  <a name="Section"></a> 섹션 내용  
- [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
   
  [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>참고 항목  

@@ -2,18 +2,18 @@
 title: 이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c27c732f04d661d210e089948416d10e3274b9d5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288391"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580233"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 테이블, 행렬 및 차트 같은 데이터 영역 외에도 이미지, 입력란 및 사각형과 같은 다른 보고서 항목을 사용하여 시각적 효과를 추가하거나 핵심 정보를 강조 표시하거나 관련 정보를 제공할 수 있습니다. 또한 보고서 항목의 서식을 변경할 수도 있습니다. 예를 들어 테두리 또는 패딩을 추가하거나 초기 표시 유형 또는 방향을 변경하거나 항목의 정확한 크기와 위치를 지정할 수 있습니다.  

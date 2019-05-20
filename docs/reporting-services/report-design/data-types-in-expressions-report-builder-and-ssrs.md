@@ -2,18 +2,18 @@
 title: 식의 데이터 형식(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284592"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580867"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -28,10 +28,10 @@ ms.locfileid: "56284592"
   
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
-|String|기본값: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|기본값: Boolean|  
+|String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
+|Boolean|기본값: 부울|  
 |정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|기본값: DateTime<br /><br /> DateTimeOffset|  
+|DateTime|기본값: 날짜/시간<br /><br /> DateTimeOffset|  
 |float|기본값: Double<br /><br /> Single, Decimal|  
 |이진|기본값: Byte[]|  
 |Variant|Byte[]를 제외한 위의 모든 항목|  
@@ -106,7 +106,7 @@ ms.locfileid: "56284592"
   
  다음 방법 중 하나를 사용하여 이 데이터를 하나 이상의 CLR 값으로 변환할 수 있습니다.  
   
--   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+-   입력란에서 식을 사용하여 문자열의 일부를 추출합니다. 예를 들어  
   
     -   다음 식은 UTC 표준 시간대 오프셋의 시간 부분만 추출하여 분으로 변환합니다. `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -114,7 +114,7 @@ ms.locfileid: "56284592"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
+         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM` (2007년 7월 6일 오후 4:07)입니다.  
   
  문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
   

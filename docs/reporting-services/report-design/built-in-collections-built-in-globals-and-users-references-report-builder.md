@@ -2,18 +2,18 @@
 title: 기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3b39bf6a3a7c04d5d8ca457bb199229fdaebae76
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581846"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션 - 기본 제공 Globals 및 Users 참조(보고서 작성기)
   **Globals** 및 **User** 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. **Globals** 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. **User** 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  

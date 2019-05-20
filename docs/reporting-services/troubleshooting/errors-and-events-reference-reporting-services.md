@@ -1,34 +1,33 @@
 ---
 title: 오류 및 이벤트 참조(Reporting Services) | Microsoft Docs
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021787"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574011"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 오류 및 이벤트에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에도 오류 정보가 포함됩니다. 사용할 수 있는 로그 파일의 형식 및 로그를 보는 방법에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
-  
+
+이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 오류 및 이벤트에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에도 오류 정보가 포함됩니다. 사용할 수 있는 로그 파일의 형식 및 로그를 보는 방법에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Reporting Services 오류 메시지의 원인 및 해결 방법  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 가장 자주 검색되는 오류에 대한 원인과 해결 방법 정보를 확인할 수 있습니다. 자세한 내용은 [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)을 참조하세요.  
+
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 사이트에서 가장 자주 검색되는 오류에 대한 원인과 해결 방법 정보를 확인할 수 있습니다. 자세한 내용은 [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)을 참조하세요.  
   
-## <a name="report-server-events"></a>보고서 서버 이벤트  
- 다음과 같은 보고서 서버 이벤트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록됩니다.  
+## <a name="report-server-events"></a>보고서 서버 이벤트
+
+다음과 같은 보고서 서버 이벤트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션 로그에 기록됩니다.  
   
 |이벤트 ID|형식|범주|원본|설명|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021787"
 |133|Error|관리|보고서 서버<br /><br /> 보고서 관리자<br /><br /> 일정 예약 및 배달 프로세서|구성 파일을 로드하지 못했습니다. XML이 잘못된 경우 이러한 오류가 발생할 수 있습니다.|  
 |134|Error|관리|보고서 서버|보고서 서버에서 구성 파일의 설정 값을 암호화하지 못했습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>관련 항목:
+
+- [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Reporting Services 로그 파일 및 원본](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

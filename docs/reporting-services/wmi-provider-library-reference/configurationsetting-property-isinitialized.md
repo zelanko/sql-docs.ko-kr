@@ -2,7 +2,7 @@
 title: IsInitialized 속성(WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bed6b8366ecd452cd3c65fcb06e16e108adf7932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1d247dacc79e237f06a513aaa8673d4462151b1b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855591"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573792"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>ConfigurationSetting 속성 - IsInitialized
   보고서 서버 인스턴스가 초기화되었는지 여부를 나타냅니다. 읽기 전용입니다.  

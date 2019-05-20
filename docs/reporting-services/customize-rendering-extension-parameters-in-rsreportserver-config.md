@@ -2,7 +2,7 @@
 title: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정 | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fdd3fb449e43fdfd2877150a50afdc1c29eb6327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846718"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571586"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "47846718"
   
 -   **OverrideNames** 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
   
--   **DeviceInfo** XML 구조는 렌더링 확장 프로그램에서 사용하는 장치 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
+-   **DeviceInfo** XML 구조는 렌더링 확장 프로그램에서 사용하는 디바이스 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
   
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
@@ -129,12 +129,12 @@ ms.locfileid: "47846718"
 ## <a name="see-also"></a>참고 항목  
  [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 구성 파일](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [CSV 장치 정보 설정](../reporting-services/csv-device-information-settings.md)   
- [Excel 장치 정보 설정](../reporting-services/excel-device-information-settings.md)   
- [HTML 장치 정보 설정](../reporting-services/html-device-information-settings.md)   
- [이미지 장치 정보 설정](../reporting-services/image-device-information-settings.md)   
- [MHTML 장치 정보 설정](../reporting-services/mhtml-device-information-settings.md)   
- [PDF 장치 정보 설정](../reporting-services/pdf-device-information-settings.md)   
- [XML 장치 정보 설정](../reporting-services/xml-device-information-settings.md)  
+ [CSV 디바이스 정보 설정](../reporting-services/csv-device-information-settings.md)   
+ [Excel 디바이스 정보 설정](../reporting-services/excel-device-information-settings.md)   
+ [HTML 디바이스 정보 설정](../reporting-services/html-device-information-settings.md)   
+ [이미지 디바이스 정보 설정](../reporting-services/image-device-information-settings.md)   
+ [MHTML 디바이스 정보 설정](../reporting-services/mhtml-device-information-settings.md)   
+ [PDF 디바이스 정보 설정](../reporting-services/pdf-device-information-settings.md)   
+ [XML 디바이스 정보 설정](../reporting-services/xml-device-information-settings.md)  
   
   

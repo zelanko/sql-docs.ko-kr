@@ -2,18 +2,18 @@
 title: Sum 함수(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 690422b46505a22f9d15f59449be08162ec2e85a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8f2b86d4fe54943ccc3f4c0f06243b72af5779ce
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292235"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577213"
 ---
 # <a name="report-builder-functions---sum-function"></a>보고서 작성기 함수 - Sum 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합계를 반환합니다.  

@@ -2,18 +2,18 @@
 title: 파워 피벗 연결 형식(SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 21b727f60c0c60495c50e2e583b4cd776fd2e997
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812666"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571282"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
   SQL Server Analysis Services 데이터 처리 확장 프로그램을 사용하면 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "51812666"
 ## <a name="queries"></a>쿼리  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 연결한 후 MDX 그래픽 쿼리를 통해 기본 데이터 구조에서 찾아보고 선택하여 쿼리를 작성합니다. 쿼리를 작성한 후에는 해당 쿼리를 실행하여 결과 창에서 예제 데이터를 봅니다.  
   
- 쿼리 디자이너는 쿼리를 분석하여 데이터 세트 필드를 결정합니다. **보고서 데이터** 창에서 데이터 집합 필드 컬렉션을 수동으로 편집할 수도 있습니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
+ 쿼리 디자이너는 쿼리를 분석하여 데이터 세트 필드를 결정합니다. **보고서 데이터** 창에서 데이터 세트 필드 컬렉션을 수동으로 편집할 수도 있습니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="filters"></a>필터  
  필터 창에서 쿼리 결과에 포함하거나 필터링하여 제외할 차원 및 멤버를 지정합니다.  

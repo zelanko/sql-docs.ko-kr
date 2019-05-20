@@ -2,18 +2,18 @@
 title: 보고서 서버의 구성 및 관리(SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5bdb765ec6e582d95d7a34b26c2324b381acc610
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 6e39153fb15c79cdbc07dc7d97407e2880bdc156
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031592"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574417"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>SSRS(SQL Server Reporting Services) 보고서 서버의 구성 및 관리
 
@@ -36,7 +36,7 @@ SQL Server Reporting Services는 조직에서 사용할 보고서를 작성, 배
   
     -   [SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트](../../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md)  
   
-    -   [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
+    -   [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   
     -   [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   

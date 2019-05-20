@@ -2,20 +2,20 @@
 title: Microsoft Word로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296601"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581223"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296601"
   
  이는 Word 렌더러가 **PageNumber** 및 **TotalPages** 등의 페이지 매김과 관련된 필드에 대해 보고서를 구문 분석하며, 함수를 호출하는 것이 아니라 단순 참조만 처리하기 때문입니다. 이 경우 식에서는 **ToString** 함수를 호출합니다. 다음 두 식은 동일하며, 보고서를 보고서 작성기 또는 보고서 디자이너에서 미리 보거나 게시된 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 라이브러리에서 렌더링할 때 두 식 모두 올바르게 렌더링됩니다. 그러나 Word 렌더러는 두 번째 식만 올바르게 구문 분석하여 올바른 페이지 번호를 렌더링합니다.  
   
--   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`입니다.  
+-   **복합 식:**  식은 `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식, `=Avg(Fields!YTDPurchase.Value, "Sales)` 및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
+-   **텍스트 실행을 사용하는 식:** 텍스트, **평균 판매**와 식,  `=Avg(Fields!YTDPurchase.Value, "Sales)`및 텍스트, **페이지 번호**와 식 `=Globals!PageNumber`  
   
  이러한 문제를 방지하려면 머리글 및 바닥글에서 식을 사용할 때 하나의 복합 식 대신 여러 텍스트를 사용해 실행하세요. 다음은 이와 동등한 두 가지 식입니다. 첫 번째 식은 복합식이고 두 번째 식은 텍스트 실행을 사용합니다. Word 렌더러는 두 번째 식만 성공적으로 구문 분석합니다.  
   

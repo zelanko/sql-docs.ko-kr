@@ -2,7 +2,7 @@
 title: 항목 삭제(Management Studio) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - deleting report items
 - report items [Reporting Services], deleting
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1b089c749a1f7a9ef55d82b5c324f80d5de3dfb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667141"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574325"
 ---
 # <a name="delete-an-item-management-studio"></a>항목 삭제(Management Studio)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버 인스턴스에 연결된 경우 역할 정의 및 공유 일정을 삭제할 수 있습니다. 보고서 서버의 보고서, 모델 또는 기타 항목을 삭제할 수 없습니다. 보고서 서버 내용을 삭제하려면 보고서 관리자를 대신 사용합니다. 또는 보고서 서버가 SharePoint 통합 모드용으로 구성된 경우 계정이 들어 있는 SharePoint 라이브러리의 항목 관리 기능을 사용합니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 보고서 서버 인스턴스에 연결된 경우 역할 정의 및 공유 일정을 삭제할 수 있습니다. 보고서 서버의 보고서, 모델 또는 기타 항목을 삭제할 수 없습니다. 보고서 서버 내용을 삭제하려면 보고서 관리자를 대신 사용합니다. 또는 보고서 서버가 SharePoint 통합 모드용으로 구성된 경우 계정이 들어 있는 SharePoint 라이브러리의 항목 관리 기능을 사용합니다.  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>보고서 서버 폴더 네임스페이스에서 항목을 삭제하려면  
   

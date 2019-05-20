@@ -2,20 +2,20 @@
 title: RSExecRole 만들기 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f08ddfed806f1b6476599b0d83ef3d795633cb0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8596cf62ddf4212023841db003ec7936a2cb70c7
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029700"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577904"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole 만들기
 
@@ -47,7 +47,7 @@ ms.locfileid: "50029700"
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio를 사용하여 Master 시스템 데이터베이스에서 RSExecRole을 만들려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+1.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
 2.  **데이터베이스**를 엽니다.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50029700"
   
 11. **개체 유형**을 클릭합니다.  
   
-12. **저장 프로시저**를 클릭합니다.  
+12.  **저장 프로시저**를 클릭합니다.  
   
 13. **확인**을 클릭합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "50029700"
   
 22. **개체 유형**을 클릭합니다.  
   
-23. **테이블**을 클릭합니다.  
+23.  **테이블**을 클릭합니다.  
   
 24. **확인**을 클릭합니다.  
   
