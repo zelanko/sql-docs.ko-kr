@@ -13,14 +13,18 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b542d886c20ef0560e92565106d72d8e1303e2b8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 781f734ac394ffa1374c6bc93861c552dc32618a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290529"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727668"
 ---
 # <a name="expression-task"></a>식 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   식 태스크는 식 작성기를 사용하여 런타임에 변수 값을 설정하는 식을 만들고 평가합니다. 태스크를 편집하면 [Expression Builder](../../integration-services/expressions/expression-builder.md) 가 시작됩니다.  
   
 ## <a name="expression-examples"></a>식 예  

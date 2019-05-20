@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271655"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728626"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 보완 로깅 스크립트
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 대화 상자에는 Oracle 보완 로깅 스크립트가 표시됩니다.  
   
  사용할 CDC 인스턴스를 준비할 때 CDC Designer는 캡처할 테이블에 대한 보완 로깅을 설정하는 Oracle SQL 스크립트를 만듭니다. 보완 로깅 스크립트는 특정 테이블이 업데이트될 경우 트랜잭션 로그에 기록되는 변경 레코드에 변경된 열뿐만 아니라 관련 열의 데이터도 모두 포함되도록 Oracle에 지시합니다.  

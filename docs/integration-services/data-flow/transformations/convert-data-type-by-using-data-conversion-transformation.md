@@ -15,14 +15,18 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 251f3dbb12ac77bfd8a14d50bc10cb692947fd73
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283117"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726216"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>데이터 변환을 사용하여 데이터 형식 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   데이터 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>데이터를 다른 데이터 형식으로 변환하려면  

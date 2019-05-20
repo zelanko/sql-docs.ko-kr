@@ -11,14 +11,18 @@ ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65e004be009a1be3608ee867467ea12422d07438
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270671"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726580"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   파티션 처리 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 파티션 처리 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  

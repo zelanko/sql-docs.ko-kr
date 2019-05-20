@@ -16,14 +16,18 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: d07d683b217b4f4eff6c9cfd1c6275ab4a9e5ca1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1c5e56d0ed0d422770311ba8135992c4254370a0
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214892"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805393"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services 업그레이드
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상이 현재 컴퓨터에 설치되어 있으면 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]로 업그레이드할 수 있습니다.  
   
  이전 버전의 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 중 하나가 설치된 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로 업그레이드하면 이전 버전과 함께 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 가 설치됩니다.  

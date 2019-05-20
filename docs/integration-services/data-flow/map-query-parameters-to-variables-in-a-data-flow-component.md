@@ -16,14 +16,18 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62517e3934c7ebb446cdcf02a19eca1e1a547b3b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270527"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726702"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   매개 변수가 있는 쿼리를 사용하도록 OLE DB 원본을 구성할 경우 매개 변수를 변수에 매핑할 수 있습니다.  
   
  OLE DB 원본은 데이터 원본에 연결될 때 매개 변수가 있는 쿼리를 사용하여 데이터를 필터링합니다.  

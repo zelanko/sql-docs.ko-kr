@@ -15,14 +15,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 3d544999b83645e40b7579d7c5e049cff2d36439
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 441c5d157be083baff6b3ae1810bc2da932f188e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782065"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728376"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS(SQL Server Integration Services) 패키지는 Azure Data Lake Analytics 연결 관리자를 사용하여 다음 두 가지 인증 유형 중 하나로 Data Lake Analytics 계정에 연결할 수 있습니다.
 -   Azure AD(Azure Active Directory) 사용자 ID

@@ -11,14 +11,18 @@ ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d9530fb2267450493a1beafebe2cff2c7de089e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4b57a3ca1893d44cc2ed3fd60e20a39c4e43f473
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274656"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715932"
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property(SSISDB 데이터베이스)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 있는 환경 변수의 속성을 설정합니다.  

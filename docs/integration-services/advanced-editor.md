@@ -17,14 +17,18 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276495"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729418"
 ---
 # <a name="advanced-editor"></a>고급 편집기
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  
   
  **고급 편집기** 는 구성 가능한 속성이 있는 대부분의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체에 사용할 수 있습니다. 이 편집기는 사용자 지정 사용자 인터페이스를 노출하지 않는 개체에 사용할 수 있는 유일한 편집기입니다.  

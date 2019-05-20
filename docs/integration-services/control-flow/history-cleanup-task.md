@@ -16,14 +16,18 @@ ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0ddf56fbd3556d04b59b215902f15a6c214f47e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c795064669166b905a4420809d66ba2b40143f5e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289789"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727611"
 ---
 # <a name="history-cleanup-task"></a>기록 정리 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   기록 정리 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스의 다음 기록 테이블에서 항목을 삭제합니다.  
   
 -   backupfile  

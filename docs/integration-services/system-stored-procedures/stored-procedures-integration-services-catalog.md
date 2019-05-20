@@ -13,14 +13,18 @@ ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1065b6ce1d57bd52ed306a54b166334df998d6e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 93eebaef840f3a1030c7f1f625db2ab93f12f12d
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280827"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805272"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>저장 프로시저(Integration Services 카탈로그)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 관리하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저에 대해 설명합니다.  

@@ -15,14 +15,18 @@ ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 100dbd947b8b5b8de340bfd45a4d2705a4b0d475
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290829"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726978"
 ---
 # <a name="data-viewer"></a>데이터 뷰어
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   경로에서 데이터 뷰어를 사용하도록 구성한 경우 데이터 뷰어에서는 데이터가 두 데이터 흐름 구성 요소 간을 이동할 때 데이터를 버퍼별로 표시합니다.  
   
 ## <a name="options"></a>옵션  

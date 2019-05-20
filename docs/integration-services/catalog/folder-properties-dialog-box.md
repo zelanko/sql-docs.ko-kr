@@ -15,14 +15,18 @@ ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b5ba4c8a12c194eda57379c1fa382e70142bf8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280517"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729189"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   폴더에는 **SSISDB** 카탈로그의 프로젝트 및 환경이 포함됩니다. 각 폴더는 폴더 내용에 적용되는 사용 권한을 정의합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 권한에 대한 자세한 내용은 [catalog.grant_permission&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)을 참조하세요.  
   
 ## <a name="to-set-folder-description-and-permissions"></a>폴더 설명 및 사용 권한을 설정 하려면  

@@ -16,14 +16,18 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027c7c142a825b6ebed8bac35f38779a6ac4bd12
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279837"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725945"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   OLE DB 명령 변환은 데이터 흐름의 각 행에 대해 SQL 문을 실행합니다. 예를 들어 데이터베이스 테이블에서 행을 삽입, 업데이트 또는 삭제하는 SQL 문을 실행할 수 있습니다.  
   
  다음과 같은 방법으로 OLE DB 명령 변환을 구성할 수 있습니다.  

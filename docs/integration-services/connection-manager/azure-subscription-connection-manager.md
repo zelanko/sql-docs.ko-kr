@@ -14,14 +14,18 @@ ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1256bec97be65752d63b9d05c78e068e7d83d420
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b3dec7a683bcebc28f9bfe90e4b4091a70892f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270574"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728339"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS 패키지는 **Azure 구독 연결 관리자** 를 통해 속성에 대해 지정된 값(Azure 구독 ID 및 관리 인증서)을 사용하여 Azure 구독에 연결할 수 있습니다.  
   
  **Azure 구독 연결 관리자**는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.

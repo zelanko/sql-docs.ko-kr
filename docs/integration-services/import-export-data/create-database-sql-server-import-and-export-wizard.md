@@ -12,14 +12,18 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3b051e5f2dc951eb07d4a23a5a22e15f1b2cc071
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222017"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805121"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>데이터베이스 만들기(SQL Server 가져오기 및 내보내기 마법사)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **대상 선택** 페이지에서 **새로 만들기** 를 선택하여 새 SQL Server 대상 데이터베이스를 만드는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **데이터베이스 만들기** 대화 상자가 표시됩니다. 이 페이지에서 새 데이터베이스의 이름을 입력합니다. 필요에 따라 새 데이터베이스의 처음 크기와 자동 증가 및 해당 로그 파일에 대한 설정을 변경할 수도 있습니다. 
 
 마법사의 **데이터베이스 만들기** 대화 상자에는 새 SQL Server 데이터베이스를 만드는 데 사용할 수 있는 기본 옵션만 제공됩니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 모든 옵션을 보고 구성하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스를 만들거나, 마법사가 생성한 후에 데이터베이스를 구성하세요. 

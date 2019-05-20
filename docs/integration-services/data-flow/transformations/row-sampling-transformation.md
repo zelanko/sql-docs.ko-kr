@@ -23,14 +23,18 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271938"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725905"
 ---
 # <a name="row-sampling-transformation"></a>행 샘플링 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   행 샘플링 변환은 임의로 선택된 입력 데이터 세트의 하위 세트를 얻는 데 사용합니다. 출력 샘플의 정확한 크기와 난수 생성기의 초기값을 지정할 수 있습니다.  
   
  무작위 샘플링은 다양한 용도로 응용될 수 있습니다. 예를 들어 복권 당첨 경품을 받을 50명의 직원을 임의로 선택하려는 회사는 직원 데이터베이스에 대해 행 샘플링 변환을 사용하여 정확한 수의 당첨자를 생성할 수 있습니다.  

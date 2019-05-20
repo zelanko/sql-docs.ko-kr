@@ -11,14 +11,18 @@ ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2f83708d8a384e6b010c816556bf3da187a5f86
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a1811d0e5fc203b9a97336933c3943a684fb5c9a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65714862"
 ---
-# <a name="catalogexecutables"></a>catalog.executables
+# <a name="catalogexecutables"></a>catalog.executables 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 뷰는 지정된 실행 작업에서 각 실행에 대한 행을 표시합니다.  

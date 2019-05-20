@@ -18,14 +18,18 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8f12ca10a98e278d43023bebcb1c3b3d6b169d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9bcae930fc19aa252356f94fbdd387c2f721d048
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281647"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726514"
 ---
 # <a name="recordset-destination"></a>레코드 집합 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   레코드 집합 대상은 메모리 내 ADO 레코드 집합을 만들고 채웁니다. 레코드 집합의 모양은 디자인 타임에 레코드 집합 대상에 대한 입력에 의해 정의됩니다.  
   
 ## <a name="configuration-of-the-recordset-destination"></a>레코드 집합 대상 구성  

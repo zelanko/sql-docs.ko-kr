@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786241"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720717"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure SQL Database에 배포된 SSIS 패키지를 예약하려면 SQL Server Management Studio(SSMS)를 사용할 수 있습니다. 온-프레미스 SQL Server 및 SQL Database Managed Instance에는 고급 SSIS 작업 스케줄러인 SQL Server 에이전트 및 관리되는 인스턴스 에이전트가 각각 있습니다. 반면 SQL Database에는 기본 제공 고급 SSIS 작업 스케줄러가 없습니다. 이 아티클에 설명된 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다.
 

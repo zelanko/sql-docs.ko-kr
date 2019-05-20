@@ -14,14 +14,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 2a8ed5e2326a5d769f190421d2427c06bc2e1211
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531108"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728368"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SSIS(SQL Server Integration Services) 패키지는 Azure Data Lake Store 연결 관리자를 사용하여 다음 두 가지 인증 유형 중 하나로 Azure Data Lake Storage Gen1 계정에 연결할 수 있습니다.
 -   Azure AD 사용자 ID
 -   Azure AD 서비스 ID 

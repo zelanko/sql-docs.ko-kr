@@ -15,14 +15,18 @@ ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 855e96dbc95b7b6b76fce213524705b289bce42b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1fada6d5b7d8599b1bdfbc67d47c2ac6c1553686
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277542"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725184"
 ---
 # <a name="modulo-ssis-expression"></a>(모듈로)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   첫 번째 숫자 식을 두 번째 식으로 나눈 다음 나머지의 정수 부분을 제공합니다.  
   
 ## <a name="syntax"></a>구문  

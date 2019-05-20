@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe0248f455cc95c14486373af6f9374edaebc97
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 94002a79d53c008249836541fc84f7e9ff06a6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356446"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720727"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Azure의 SSIS 패키지에서 Windows 인증으로 데이터 저장소 및 파일 공유 액세스
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Windows 인증을 사용하여 Azure Data Factory(ADF)의 Azure-SSIS Integration Runtime(IR)에서 실행되는 SSIS 패키지에서 SQL Server, 파일 공유, Azure Files 등과 같은 데이터 저장소에 액세스할 수 있습니다. 데이터 저장소는 온-프레미스 상태이거나, Azure VM(가상 머신)에서 호스트되거나 Azure에서 관리형 서비스로서 실행 중일 수 있습니다. 온-프레미스일 경우 온-프레미스 네트워크에 연결된 VNet(가상 네트워크)에 Azure-SSIS IR을 조인해야 합니다. [Azure-SSIS IR을 VNet에 조인](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)을 참조하세요. Azure SSIS IR을 실행하는 SSIS 패키지에서 Windows 인증을 사용하여 데이터 저장소에 액세스하는 방법에는 네 가지가 있습니다.
 
 | 연결 방법 | 유효 범위 | 설정 단계 | 패키지의 액세스 방법 | 자격 증명 집합 및 연결된 리소스 수 | 연결된 리소스 유형 | 

@@ -15,14 +15,18 @@ ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54dc72a80f2ad6d49353662ded956608d7eadd66
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6da812de105f4afe4b7844057da97af17bc752e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282467"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728390"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **파일 연결 관리자 추가** 대화 상자를 사용하여 파일 또는 폴더 그룹에 대한 연결을 정의할 수 있습니다.  
   
  다중 파일 연결 관리자에 대한 자세한 내용은 [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)를 참조하십시오.  

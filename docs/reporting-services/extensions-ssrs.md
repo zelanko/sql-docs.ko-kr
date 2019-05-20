@@ -1,21 +1,21 @@
 ---
 title: 확장 프로그램
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 59a716d08047c69655f775f7553e2d80d5ff396f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.openlocfilehash: 86c4ed5aea5989a4e77765814a85f837fb1f7d97
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553155"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503967"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services) 확장
 
@@ -57,7 +57,7 @@ ms.locfileid: "53553155"
   
 ## <a name="rendering-extensions"></a>렌더링 확장 프로그램
 
- 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 디바이스 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 다음 7개의 렌더링 확장 프로그램이 포함되어 있습니다. HTML, Excel, CSV, XML, Image, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word 렌더링 확장 프로그램이 포함되어 있습니다.  
+ 렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 디바이스 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
   
 - **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 및 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "53553155"
   
 - **XML 렌더링 확장 프로그램** XML 렌더링 확장 프로그램은 보고서를 XML 파일로 렌더링합니다. 이렇게 렌더링된 XML 파일은 다른 프로그램에서 읽거나 저장할 수 있습니다. XSLT 변환을 사용하여 보고서를 다른 애플리케이션에서 사용할 수 있는 다른 XML 스키마로 변환할 수도 있습니다. XML 렌더링 확장 프로그램에서 생성한 XML은 UTF-8로 인코딩됩니다. 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
-- **이미지 렌더링 확장 프로그램** 이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 이 확장 프로그램으로 보고서를 BMP, EMF, GIF, JPEG, PNG, TIFF 및 WMF 형식으로 렌더링할 수 있습니다. 기본적으로 이미지는 TIFF 형식으로 렌더링됩니다. 이 형식은 Windows 사진 및 팩스 뷰어와 같은 운영 체제의 기본 이미지 뷰어로 표시할 수 있습니다. 이미지를 뷰어에서 프린터로 보낼 수 있습니다. 이미지 렌더링 확장 프로그램을 사용하여 보고서를 렌더링하면 보고서가 모든 클라이언트에 동일하게 나타납니다. 예를 들어 보고서를 HTML로 보면 사용자의 브라우저 버전, 브라우저 설정 및 사용 가능한 글꼴에 따라 보고서 모양이 달라질 수 있습니다. 이미지 렌더링 확장 프로그램은 서버에서 보고서를 렌더링하므로 모든 사용자에게 이미지가 동일하게 표시됩니다. 보고서가 서버에서 렌더링되므로 보고서에 사용된 모든 글꼴이 서버에 설치되어 있어야 합니다. 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
+- **이미지 렌더링 확장 프로그램** 이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 이 확장 프로그램으로 보고서를 BMP, EMF, GIF, JPEG, PNG, TIFF 및 WMF 형식으로 렌더링할 수 있습니다. 기본적으로 이미지는 TIFF 형식으로 렌더링됩니다. 이 형식은 Windows 사진 및 팩스 뷰어와 같은 운영 체제의 기본 이미지 뷰어로 표시할 수 있습니다. 이미지를 뷰어에서 프린터로 보낼 수 있습니다. 이미지 렌더링 확장 프로그램을 사용하여 보고서를 렌더링하면 보고서가 모든 클라이언트에 동일하게 나타납니다. 보고서를 HTML로 보는 경우 사용자의 브라우저 버전, 브라우저 설정 및 사용 가능한 글꼴에 따라 보고서 모양이 달라질 수 있습니다. 이미지 렌더링 확장 프로그램은 서버에서 보고서를 렌더링하므로 모든 사용자에게 이미지가 동일하게 표시됩니다. 보고서가 서버에서 렌더링되므로 보고서에 사용된 모든 글꼴이 서버에 설치되어 있어야 합니다. 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   
 - **PDF 렌더링 확장 프로그램** PDF 렌더링 확장 프로그램은 보고서를 Adobe Acrobat 6.0 이상에서 열어 볼 수 있는 PDF 파일로 렌더링합니다. 자세한 내용은 [PDF 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)에서 이 데이터로 작업할 수 있습니다.  
   

@@ -11,14 +11,18 @@ ms.assetid: c67b72f1-0a1e-42f0-878a-84e85efc915b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abb86d31c3d91736f951946f519de87250ebcec9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea7b40ca0a7a7bd0502feb6c8613141257d3ee20
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282057"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805374"
 ---
 # <a name="integration-services-language-reference"></a>Integration Services 언어 참조
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 섹션에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 인스턴스에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 관리하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] API에 대해 설명합니다.  

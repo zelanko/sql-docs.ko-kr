@@ -16,14 +16,18 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1851f2f8970d05f695b90f2024f44450c437164
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7dfb6976d5a08dabe3341a5b9c8644b57e4a3797
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283147"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726068"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  
   
 ### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>데이터 흐름에서 유사 항목 그룹화 변환을 구현하려면  

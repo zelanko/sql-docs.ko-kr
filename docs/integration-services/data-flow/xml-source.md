@@ -20,14 +20,18 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e6c504b96e181a0362cf7d20daa95017d2140fa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290629"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725706"
 ---
 # <a name="xml-source"></a>XML 원본
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
   
  XML 파일의 데이터에 계층 관계가 포함되어 있는 경우가 많습니다. 예를 들어 XML 데이터 파일은 카탈로그 및 카탈로그의 항목을 나타낼 수 있습니다. 데이터가 데이터 흐름을 시작할 수 있으려면 먼저 XML 데이터 파일에 있는 각 요소의 관계를 결정하고 파일의 각 요소에 대해 출력을 생성해야 합니다.  

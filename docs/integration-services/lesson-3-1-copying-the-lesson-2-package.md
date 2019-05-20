@@ -11,14 +11,18 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9e03c2b26d702dee0edc1ef445a4a362e9ab359
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281417"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722400"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>3-1단원: 2단원 패키지 복사
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 태스크에서는 2단원에서 Lesson 2.dtsx 패키지의 복사본을 만듭니다. 2단원을 완료하지 않은 경우에는 자습서에 포함되어 있는 완성된 2단원 패키지를 프로젝트에 추가한 다음, 복사할 수도 있습니다. 3단원의 나머지 부분에서 이 새 복사본을 사용합니다.
 

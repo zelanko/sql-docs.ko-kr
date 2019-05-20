@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271975"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727333"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
   
 -   웹 서비스 메서드에서 반환되는 값을 변수에 기록합니다. 예를 들어 웹 서비스 메서드로부터 그 날의 최고 기온을 가져온 다음 이 값을 사용하여 열 값을 설정하는 식에 사용된 변수를 업데이트할 수 있습니다.  
@@ -181,4 +185,4 @@ ms.locfileid: "58271975"
  **관련 항목:**  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>관련 내용  
- technet.microsoft.com의 비디오 - [방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=259642)을 참조하세요.  
+ MSDN Library의 비디오 - [방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=259642)을 참조하세요.  

@@ -13,14 +13,18 @@ ms.assetid: 90646316-9822-48aa-9900-295a33750780
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4991fd3ad95a633881099b9677c9db55935f6a13
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271717"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727604"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 작업
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop Pig 태스크를 사용하여 Hadoop 클러스터에서 Pig 스크립트를 실행합니다.  
   
  Hadoop Pig 태스크를 추가하려면 태스크를 디자이너로 끌어서 놓습니다. 그런 다음 태스크를 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집**을 클릭하여 **Hadoop 피그 작업 편집기** 대화 상자를 표시합니다.  

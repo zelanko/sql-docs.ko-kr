@@ -11,14 +11,18 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f9f23826d6d56b4a1ca52b4552538c9a5af5ef11
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e59efeb278c7d5f1236a9943f03ad471491f354a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279417"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726655"
 ---
 # <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 Connector for ODBC(Open Database Connectivity)는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  

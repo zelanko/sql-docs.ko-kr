@@ -18,14 +18,18 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8874015d91d377a46688f042599a8f2f98d1dc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280947"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728145"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 연결 관리자를 사용하면 패키지에서 ODBC(Open Database Connectivity) 사양을 사용하여 다양한 데이터베이스 관리 시스템에 연결할 수 있습니다.  
   
  패키지에 ODBC 연결을 추가하고 연결 관리자 속성을 설정할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 연결 관리자를 만들고 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 런타임 시 연결 관리자는 물리적 ODBC 연결로 확인됩니다.  

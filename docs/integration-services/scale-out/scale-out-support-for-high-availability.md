@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241468"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718424"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out에서 여러 Scale Out 작업자를 사용하여 패키지를 실행함으로써 Scale Out 작업자 쪽에 고가용성을 제공할 수 있습니다.
 
@@ -112,5 +116,5 @@ Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 자세한 내용은 다음 문서를 참조하세요.
--   [Integration Services(SSIS) 규모 확장 마스터](integration-services-ssis-scale-out-master.md)
--   [Integration Services(SSIS) 규모 확장 작업자](integration-services-ssis-scale-out-worker.md)
+-   [Integration Services(SSIS) Scale Out 마스터](integration-services-ssis-scale-out-master.md)
+-   [Integration Services(SSIS) Scale Out 작업자](integration-services-ssis-scale-out-worker.md)

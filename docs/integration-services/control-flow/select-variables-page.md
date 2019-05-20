@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270440"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727453"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   스크립트 태스크 또는 스크립트 구성 요소를 구성하는 경우 **변수 선택** 대화 상자를 사용하여 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성에 대한 값을 하나 이상 선택할 수 있습니다.  
   
  **변수 선택** 대화 상자를 열려면 **스크립트 변환 편집기** 대화 상자의 **스크립트** 페이지의 **사용자 지정 속성**에서 **ReadOnlyVariables** 또는 **ReadWriteVariables** 속성을 찾은 다음, 해당 속성과 연결된 줄임표(…) 단추를 클릭합니다.  

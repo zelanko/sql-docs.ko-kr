@@ -13,14 +13,18 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 4c718dd14e1c7d2fc508efa403a9abfbcbae100d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b466bb90d9a40599bad9c924da7f2ae6f5f74089
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205812"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718291"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services(SSIS) Scale Out에서 패키지 실행
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Integration Services 서버에 패키지를 배포한 후 다음 방법 중 하나를 사용하여 Scale Out에서 패키지를 실행할 수 있습니다.
 
 -   [Scale Out에서 패키지 실행 대화 상자](#scale_out_dialog)
@@ -99,7 +103,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id,  @retry_count=0
 GO
 ```
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 Scale Out에서 패키지를 실행하려면 다음 권한 중 하나가 있어야 합니다.
 
 -   **ssis_admin** 데이터베이스 역할의 멤버 자격  

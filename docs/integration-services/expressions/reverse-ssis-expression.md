@@ -14,14 +14,18 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85d35a4f1fbf0f55960e1550e9bd030631ca2c04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1ee2c26de6058e6daef58b5dbdf64ef025298bc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277306"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725031"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   문자 식을 역 순서로 반환합니다.  
   
 ## <a name="syntax"></a>구문  

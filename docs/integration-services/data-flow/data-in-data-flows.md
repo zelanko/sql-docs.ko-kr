@@ -18,14 +18,18 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07917304412c77e7cd58dd771d9ef97199270f4e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ae28de186f1f411792b1f20b728c473e6df4bca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281187"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727008"
 ---
 # <a name="data-in-data-flows"></a>데이터 흐름의 데이터
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 흐름에 사용되는 데이터 형식 집합이 제공됩니다.  
   
 ## <a name="data-type-conversion"></a>데이터 형식 변환  

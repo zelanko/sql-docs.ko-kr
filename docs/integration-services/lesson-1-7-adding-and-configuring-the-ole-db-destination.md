@@ -11,14 +11,18 @@ ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47ba9be2a6ff8a03f40cc6253b0dbd0674e1ec48
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281827"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722986"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>1-7단원: OLE DB 대상 추가 및 구성
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 해당 데이터를 대상과 호환되는 형식으로 변환할 수 있습니다. 다음 작업은 변환된 데이터를 대상에 로드하는 것입니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가합니다. OLE DB 대상은 데이터베이스 테이블, 보기 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  
   

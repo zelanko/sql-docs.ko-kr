@@ -13,14 +13,18 @@ ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76135d7b32f0d75bb23abb065d133c467dc51e5a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d8ba67f262a735efbb8419a43cadd213e1845693
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280706"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728868"
 ---
-# <a name="finish"></a>마침
+# <a name="finish"></a>마침 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **마침** 페이지에서는 마법사 프로세스를 요약합니다. **마침** 를 클릭하여 마법사를 닫고 CDC 인스턴스 만들기 마법사에서 정의한 모든 테이블을 생성합니다.  
   
 ## <a name="see-also"></a>참고 항목  

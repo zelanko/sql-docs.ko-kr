@@ -2,7 +2,7 @@
 title: Reporting Services 및 파워 뷰에 대한 브라우저 지원 | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 161b69416fcdcda57487f0ce2762807835dbd368
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021221"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504098"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰 브라우저 지원
 
@@ -82,7 +82,11 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 제품을 사용하는 경우에는  [SharePoint 2016의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>인증 요구 사항
 
@@ -104,7 +108,7 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  스크립팅을 설정하지 않으면 보고서를 열 때 다음과 비슷한 오류 메시지가 나타납니다.
 
-- **브라우저가 스크립트를 지원하지 않거나 스크립트를 허용하지 않도록 구성되어 있습니다. 스크립트 없이 이 보고서를 보려면 여기를 클릭하세요**.
+- **브라우저가 스크립트를 지원하지 않거나 스크립트 실행을 허용하지 않도록 구성되어 있습니다. 스크립트 없이 이 보고서를 보려면 여기를 클릭하세요**.
 
  스크립트 지원 없이 보고서를 보도록 선택하면 보고서는 보고서 도구 모음과 문서 구조와 같은 보고서 뷰어 기능 없이 HTML로 렌더링됩니다.
 
@@ -142,7 +146,11 @@ SQL Server Reporting Services, ReportViewer 컨트롤 및 파워 뷰 관리 및 
 
  **(+)** 최신 공개 릴리스 버전
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  SharePoint 2016 브라우저 지원에 대한 자세한 내용은 [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>다음 단계
 

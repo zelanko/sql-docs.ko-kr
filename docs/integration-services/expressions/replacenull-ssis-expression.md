@@ -11,14 +11,18 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7f931a95981ae15fe98c80770e91d370fe0a6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d0d250b3b3b6ac37982794a3580dee0eabfdd8a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290119"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725069"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   첫 번째 식 매개 변수의 값이 NULL이면 두 번째 식 매개 변수의 값을 반환하고, 그렇지 않으면 첫 번째 식의 값을 반환합니다.  
   
 ## <a name="syntax"></a>구문  

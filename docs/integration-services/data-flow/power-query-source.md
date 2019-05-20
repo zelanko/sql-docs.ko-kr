@@ -17,14 +17,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 0e2bcd19b705aa3dd0afb229d523b9ceb3725fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319314"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726566"
 ---
 # <a name="power-query-source-preview"></a>파워 쿼리 원본(미리 보기)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 문서에서는 SSIS(SQL Server Integration Services) 데이터 흐름에서 파워 쿼리 원본의 속성을 구성하는 방법에 대해 설명합니다. 파워 쿼리는 Excel/Power BI Desktop을 사용하여 다양한 데이터 원본에 연결하고 데이터를 변환할 수 있는 기술입니다. 자세한 내용은 [파워 쿼리 - 개요 및 학습](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d) 문서를 참조하세요. 파워 쿼리에서 생성된 스크립트를 복사하여 SSIS 데이터 흐름의 파워 쿼리 원본에 붙여넣어 스크립트를 구성할 수 있습니다.
   

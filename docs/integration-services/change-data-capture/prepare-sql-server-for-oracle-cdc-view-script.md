@@ -11,14 +11,18 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ef9d19eea3ca9c7207f8b55b612006a0807f2f5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e3297b1b799865f600476a65e63e65a29bc2d3c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281447"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728659"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC를 위한 SQL Server 준비-스크립트 보기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 대화 상자에서는 MSXDBCDC 데이터베이스를 만드는 SQL 준비 스크립트를 보여 줍니다. 이 데이터베이스를 SQL Server용 Oracle CDC에 사용하려면 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다.  
   
  SQL Server 준비 스크립트 대화 상자에서 다음 작업을 수행합니다.  

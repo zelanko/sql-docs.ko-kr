@@ -13,14 +13,18 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa74a85020afdac21fd83178679be6e5db3231ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289819"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728666"
 ---
 # <a name="manage-a-cdc-service"></a>CDC Service 관리
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Designer 콘솔을 사용하면 CDC Service 구성 콘솔로 만든 서비스를 보고 Oracle CDC Service의 모든 인스턴스를 관리할 수 있습니다.  
   
  왼쪽 창에 있는 서비스 이름을 클릭하여 서비스에 대한 정보를 표시하고 서비스를 관리할 수 있습니다.  

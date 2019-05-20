@@ -11,14 +11,18 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18b1fd7ce88d7b9be5dfa8440a9675945e99837c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e2e2fffae3b6c57e0251fdd5b851160824de0f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280457"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726789"
 ---
 # <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **원본 사용자 지정 속성**  
   
  플랫 파일 원본에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

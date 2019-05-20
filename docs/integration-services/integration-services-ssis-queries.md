@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289438"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723542"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  
   
  쿼리 유효성 여부를 확인하기 위해 구문 분석을 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 연결을 사용하는 쿼리를 구문 분석하는 경우 쿼리를 구문 분석하고 실행한 다음 구문 분석 결과에 실행 결과(성공 또는 실패)를 할당합니다. 쿼리가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이외의 데이터로의 연결을 사용하는 경우 문은 구문 분석만 됩니다.  

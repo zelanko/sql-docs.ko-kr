@@ -15,14 +15,18 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d88d3c6f4b0df9e1ff569ca1b68e9d1cc0405e6f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1d15c7d890901d168d6779d1715cf44f5d9b31ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277022"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724899"
 ---
 # <a name="trim-ssis-expression"></a>TRIM(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   선행 및 후행 공백을 제거하고 문자 식을 반환합니다.  
   
 > [!NOTE]  

@@ -19,14 +19,18 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab8a7da7e45d9d623fd436ac3b6c0e8b3d945536
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bca1c858dd57d13ed89b817c97818784cf275a2b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289829"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726895"
 ---
 # <a name="excel-destination"></a>Excel 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
 
 > [!IMPORTANT]

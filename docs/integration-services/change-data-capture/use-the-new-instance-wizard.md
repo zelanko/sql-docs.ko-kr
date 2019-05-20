@@ -11,14 +11,18 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75735a8f7bbcd442bd67b550b096732abcaf8544
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d77c5c6b1c0402a277eda9da944199b3f11301d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289909"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728456"
 ---
 # <a name="use-the-new-instance-wizard"></a>새 인스턴스 마법사 사용
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   새 인스턴스 마법사는 CDC Service에 대한 새 인스턴스를 만드는 데 사용됩니다. CDC Designer 콘솔에서 Oracle CDC 인스턴스 만들기 마법사를 엽니다. 새 인스턴스 마법사에서 다음 작업을 수행할 수 있습니다.  
   
 -   [SQL Server 변경 데이터베이스 만들기](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  

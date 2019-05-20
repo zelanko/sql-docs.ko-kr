@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274177"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722452"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>2단원: SSIS를 사용하여 루핑 추가
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)의 단일 플랫 파일 원본에서 데이터를 추출하는 패키지를 만들었습니다. 그런 다음, 조회 변환을 사용하여 데이터를 변환합니다. 마지막으로 패키지는 **AdventureWorksDW2012** 샘플 데이터베이스의 **FactCurrencyRate** 팩트 테이블 복사본에 데이터를 로드합니다.  
   

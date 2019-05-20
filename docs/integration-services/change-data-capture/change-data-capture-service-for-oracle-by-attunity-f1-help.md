@@ -11,14 +11,18 @@ ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc59a55c4965d179b0d960dd455e101b4277a226
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c1d388657efd74dc8cceb1ecc82d152a109d7939
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271743"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729068"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Service 구성 콘솔을 사용하여 로컬 Oracle CDC Service를 정의, 업데이트 및 삭제합니다.  
   
  이 섹션 도움말의 항목에서는 CDC Service 구성 콘솔을 사용할 때 제공해야 하는 정보에 대해 설명합니다.  

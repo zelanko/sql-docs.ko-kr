@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e6128e455714f8b5977903646f01d6d8d1584c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fbf5c43d58f56a3a383023e5818f1494e86ed68
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643937"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821861"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -174,7 +174,7 @@ Changed database context to 'AdventureWorks2012'
 1>
 ```
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>3. sqlcmd 내에서 명령 프롬프트 환경 변수 사용  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. sqlcmd 내에서 명령 프롬프트 환경 변수 사용  
  다음 예에서는 환경 변수 4개를 `are` 다음 `sqlcmd`에서 호출합니다.  
 
 ```
@@ -189,7 +189,7 @@ C:\>sqlcmd -d AdventureWorks2012
 4> GO
 ```
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>4. sqlcmd 내에서 사용자 수준 환경 변수 사용  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. sqlcmd 내에서 사용자 수준 환경 변수 사용  
  다음 예에서는 명령 프롬프트에서 사용자 수준 환경 변수인 `%Temp%` 를 설정하고 `sqlcmd` 입력 파일로 전달합니다. 사용자 수준 환경 변수를 얻으려면 **제어판**에서 **시스템**을 두 번 클릭하고 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
   
  입력 파일 `c:\testscript.txt`의 코드는 다음과 같습니다.
@@ -224,7 +224,7 @@ Humberto
 (4 rows affected)
 ```
 
-### <a name="e-using-a-startup-script"></a>5. 시작 스크립트 사용  
+### <a name="e-using-a-startup-script"></a>E. 시작 스크립트 사용  
  **sqlcmd** 시작 스크립트는 **sqlcmd** 가 시작될 때 실행됩니다. 다음 예에서는 `SQLCMDINI`환경 변수를 설정합니다. 다음은 `init.sql.`  
 
 ```
@@ -263,7 +263,7 @@ c:\> SET sqlcmdini=c:\init.sql
 > [!NOTE]  
 >  **-X** 옵션은 시작 스크립트 기능을 사용하지 않도록 설정합니다.  
   
-### <a name="f-variable-expansion"></a>6. 변수 확장  
+### <a name="f-variable-expansion"></a>F. 변수 확장  
  다음 예에서는 **sqlcmd** 변수 형식의 데이터로 작업하는 방법을 보여 줍니다.  
 
 ```

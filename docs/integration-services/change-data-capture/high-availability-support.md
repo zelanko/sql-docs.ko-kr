@@ -11,14 +11,18 @@ ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0dc24825795c3066ed92759597388e563a9eb4ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 610da7f6b7ef6fed5e3be6cb5ae2e7be53bf31fc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273398"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728839"
 ---
 # <a name="high-availability-support"></a>고가용성 지원
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC Service는 고가용성을 위해 디자인되었습니다. 다음 기능은 일부 고가용성 지원을 제공합니다.  
   
 -   Oracle CDC Service는 파일 리소스(로컬 또는 기타 방식)를 사용하지 않습니다. 전체 상태는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 저장됩니다. 그러면 서비스가 실행되는 컴퓨터에 장애가 발생할 경우 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하는 다른 컴퓨터에서 서비스를 쉽게 시작할 수 있습니다. 복구 시간을 줄이기 위해 긴 또는 장기 실행되는 Oracle 트랜잭션은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 테이블에 유지되므로 장애(또는 서비스 다시 시작) 후에 많은 트랜잭션 로그를 다시 검색할 필요가 없습니다.  
