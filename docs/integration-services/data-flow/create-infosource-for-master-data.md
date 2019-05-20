@@ -11,14 +11,18 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd51e064196d2c3c0de0a0da7d10b1a5e1c0b23b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 077ea12b10278be8a38a50f82b6b7e6873be5dab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290509"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727090"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **마스터 데이터용 InfoSource 만들기** 대화 상자에서는 SAP Netweaver BW 시스템의 마스터 데이터에 대한 새 InfoSource를 만듭니다.  
   
  **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 **마스터 데이터용 InfoSource 만들기**대화 상자를 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  

@@ -15,14 +15,18 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4df9d8299d7c423dc0fe96fb41222cc041a01146
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283157"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729219"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **구성** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수, 연결 관리자, 환경 참조 등을 구성할 수 있습니다.  
   
  **수행 작업**  

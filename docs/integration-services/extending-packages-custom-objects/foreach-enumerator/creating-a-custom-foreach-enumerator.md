@@ -16,14 +16,18 @@ ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c665a05485b2830045cdc46d0afa43e541d2a73
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a3e40472e41f9798499770e0a2198c52a1d32e44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724572"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>사용자 지정 Foreach 열거자 만들기
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   사용자 지정 foreach 열거자를 만드는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만드는 단계와 비슷합니다.  
   
 -   기본 클래스에서 상속되는 새 클래스를 만듭니다. foreach 열거자의 경우 기본 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>입니다.  

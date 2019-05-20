@@ -14,14 +14,18 @@ f1_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 20421d29832aab8fdeb9532c335c689a1314ad2e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276197"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728109"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  OData 연결 관리자를 사용하여 OData 데이터 원본에 연결합니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 데이터 원본에 연결하고 서비스에서 데이터를 사용합니다. 자세한 내용은 [OData Source](../../integration-services/data-flow/odata-source.md)를 참조하십시오.  
   
 ## <a name="adding-an-odata-connection-manager-to-an-ssis-package"></a>SSIS 패키지에 OData 연결 관리자 추가  

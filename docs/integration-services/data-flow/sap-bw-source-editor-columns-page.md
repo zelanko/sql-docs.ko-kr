@@ -13,14 +13,18 @@ ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015fad5db2b0c6a8c40118ff6886839693573bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c68ab7fd6392d8740c03ab891a587859dec2c000
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274784"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726428"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 원본 편집기(열 페이지)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SAP BW 원본 편집기** 의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 원본 구성 요소에 대한 자세한 내용은 [SAP BW 원본](../../integration-services/data-flow/sap-bw-source.md)을 참조하세요.  

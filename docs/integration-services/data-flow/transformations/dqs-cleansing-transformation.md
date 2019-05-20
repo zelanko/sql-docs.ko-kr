@@ -17,14 +17,18 @@ ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea4d69647f0f3908fe48fa09ac78005f597013d3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9253eca362352a86baeac943eaf524b4b3f4c04f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271985"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726148"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DQS 정리 변환은 DQS(Data Quality Services)를 통해, 데이터 원본 또는 유사한 데이터 원본에 대해 만든 승인된 규칙을 적용하여 연결된 데이터 원본에서 데이터를 수정합니다. 데이터 수정 규칙에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오. DQS에 대한 자세한 내용은 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)을 참조하십시오.  
   
  데이터를 수정해야 할지 여부를 확인하기 위해 DQS 정리 변환은 다음과 같은 조건이 충족되는 경우 입력 열의 데이터를 처리합니다.  

@@ -15,14 +15,18 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64218cb8435f7bb30fc1a1309daeb93632d2bad9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1109e0b7c86e03efe41c05b47af9e74c266edb3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277862"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724126"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [스크립트 구성 요소 코딩 및 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)에서 설명한 대로 스크립트 구성 요소 프로젝트에는 다음 세 개의 프로젝트 항목이 있습니다.  
   
 1.  **ScriptMain** 항목 - 코드를 작성하는 **ScriptMain** 클래스가 포함되어 있습니다. **ScriptMain** 클래스는 **UserComponent** 클래스에서 상속됩니다.  

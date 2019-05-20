@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274306"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726209"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   느린 변경 차원 마법사는 느린 변경 차원 변환에 대한 편집기 역할을 수행합니다. 느린 변경 차원 데이터에 대한 데이터 흐름의 작성 및 구성은 복잡한 태스크일 수 있습니다. 느린 변경 차원 마법사를 사용하면 열을 매핑하고, 비즈니스 키 열을 선택하고, 열 변경 특성을 설정하고, 유추 차원 멤버에 대한 지원을 구성하는 단계별 안내에 따라 가장 쉬운 방법으로 느린 변경 차원 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다.  
   
  차원 테이블에 있는 적어도 하나 이상의 비즈니스 키 열을 선택하고 이를 입력 열에 매핑해야 합니다. 비즈니스 키의 값은 원본의 레코드를 차원 테이블의 레코드로 연결합니다. 이 매핑은 변환에서 차원 테이블의 레코드를 찾고 레코드가 새로운 것인지 변경되는 것인지 확인하는 데 사용됩니다. 비즈니스 키는 일반적으로 원본의 기본 키이지만 레코드를 고유하게 식별하고 해당 값이 변경되지 않는 한 대체 키로 사용될 수 있습니다. 또한 비즈니스 키는 여러 개의 열로 구성된 복합 키로 사용될 수도 있습니다. 차원 테이블의 기본 키는 일반적으로 서로게이트 키입니다. 즉, ID 열 또는 스크립트와 같은 사용자 지정 솔루션을 통해 자동으로 생성되는 숫자 값입니다.  

@@ -13,14 +13,18 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277633"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728319"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 사용할 수 있는 데이터 원본인 디자인 타임 개체를 포함합니다.  
   
  데이터 원본 개체는 연결에 대한 참조이며 최소한 연결 문자열과 데이터 원본 식별자가 포함됩니다. 또한 여기에는 설명, 이름, 사용자 이름 및 암호와 같은 추가 메타데이터가 포함될 수 있습니다.  

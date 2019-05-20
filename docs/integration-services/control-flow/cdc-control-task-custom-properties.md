@@ -11,14 +11,18 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db93ad1d3f838e82c03b3512ea25c39c0dc1e2de
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d207f253b3604cfc15b5cf5cc792eeba4e668fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289229"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727907"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 제어 태스크 사용자 지정 속성
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   다음 표에서는 CDC 제어 태스크의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
   
 |속성 이름|데이터 형식|설명|  

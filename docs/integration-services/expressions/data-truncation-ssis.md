@@ -16,14 +16,18 @@ ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2542aeb97a3cc8c2ccd57a3e3b07445b085ed369
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7417f763aaff5d541f351848eb59b71e9a67a70f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290029"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725529"
 ---
 # <a name="data-truncation-ssis"></a>데이터 잘림(SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   값의 데이터 형식을 변환하면 값이 잘릴 수 있습니다.  
   
  값이 잘릴 수 있는 경우는 다음과 같습니다.  

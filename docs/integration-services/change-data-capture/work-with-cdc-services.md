@@ -13,14 +13,18 @@ ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eef1093a9ce223ac922ff41d5143f6f4e312eedf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 87fea9fe64be5e2bc4aadda9e0ffc799e3cd20bb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275304"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728468"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service 작업
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Service 구성 콘솔을 사용하여 새 CDC Service를 만들고 CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
