@@ -46,11 +46,11 @@ ms.locfileid: "63187603"
 |[= &#40;같음&#41; &#40;MDX&#41;](../mdx/equal-to-mdx.md)|하나의 MDX 식의 값이 다른 MDX 식의 값과 동일한지 확인하는 비교 연산을 수행합니다.|  
 |[&#62;&#40;보다 큰&#41; &#40;MDX&#41;](../mdx/greater-than-mdx.md)|하나의 MDX 식의 값이 다른 MDX 식의 값보다 큰지 확인하는 비교 연산을 수행합니다.|  
 |[&#62;= &#40;크거나 같거나&#41; &#40;MDX&#41;](../mdx/greater-than-or-equal-to-mdx.md)|하나의 MDX 식의 값이 다른 MDX 식의 값보다 크거나 같은지 확인하는 비교 연산을 수행합니다.|  
-|[및 &AMP;#40;MDX&AMP;#41;](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
-|[&AMP;#40;MDX&AMP;#41;](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
-|[되지 &AMP;#40;MDX&AMP;#41;](../mdx/not-mdx.md)|숫자 식에 논리 부정을 수행합니다.|  
-|[또는 &AMP;#40;MDX&AMP;#41;](../mdx/or-mdx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
-|[XOR &AMP;#40;MDX&AMP;#41;](../mdx/xor-mdx.md)|두 숫자 식에 대해 논리 제외를 수행합니다.|  
+|[및 &#40;MDX&#41;](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
+|[&#40;MDX&#41;](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
+|[되지 &#40;MDX&#41;](../mdx/not-mdx.md)|숫자 식에 논리 부정을 수행합니다.|  
+|[또는 &#40;MDX&A#41;](../mdx/or-mdx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
+|[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|두 숫자 식에 대해 논리 제외를 수행합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
