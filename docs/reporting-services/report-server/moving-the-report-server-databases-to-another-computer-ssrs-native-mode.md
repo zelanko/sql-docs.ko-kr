@@ -2,18 +2,18 @@
 title: 다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100224"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619678"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100224"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 새 데이터베이스 인스턴스에서 다시 만들어집니다. 해당 작업을 새 컴퓨터로 이동하지 않아도 되지만 더 이상 사용되지 않을 컴퓨터 작업은 삭제할 수 있습니다.  
   
--   구독, 캐시된 보고서 및 스냅숏은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅숏이 새로 고친 데이터를 가져오지 않은 경우 보고서 관리자에서 스냅숏 옵션의 선택을 취소하고 **적용** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 일정을 다시 만들고 **적용** 을 클릭하여 변경 내용을 저장합니다.  
+-   구독, 캐시된 보고서 및 스냅숏은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅숏이 새로 고친 데이터를 가져오지 않은 경우 스냅숏 옵션의 선택을 취소하고 **적용**을 선택하여 변경 내용을 저장하고, 일정을 다시 만들고, **적용**을 선택하여 변경 내용을 저장합니다.  
   
 -   reportservertempdb에 저장된 임시 보고서 및 사용자 세션 데이터는 해당 데이터베이스를 이동해도 그대로 유지됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 및 복원, 연결 및 분리, 복사를 비롯한 여러 가지 방법으로 데이터베이스를 이동할 수 있습니다. 기존 데이터베이스 위치를 새 서버 인스턴스로 다시 지정하는 데 이러한 방법이 모두 적합한 것은 아닙니다. 보고서 서버 데이터베이스를 이동하는 데 사용해야 하는 방법은 시스템 가용성 요구 사항에 따라 달라집니다. 보고서 서버 데이터베이스를 이동하는 가장 쉬운 방법은 데이터베이스를 분리 후 연결하는 것입니다. 그러나 이 방법을 사용하려면 데이터베이스를 분리하는 동안 보고서 서버를 오프라인 상태로 설정해야 합니다. 서비스 장애를 최소화하려면 백업 및 복원을 사용하는 것이 낫지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 작업을 수행해야 합니다. 데이터베이스 복사 마법사를 사용하여 데이터베이스를 복사할 경우 데이터베이스의 사용 권한 설정이 유지되지 않으므로 이 방법은 사용하지 않는 것이 좋습니다.  
   
 > [!IMPORTANT]  
->  이 항목에 설명된 단계는 기존 설치에서 보고서 서버 데이터베이스를 재배치하는 작업만 수행하려는 경우에 사용하는 것이 좋습니다. 전체 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하려면, 즉 데이터베이스를 이동하고 해당 데이터베이스를 사용하는 보고서 서버 Windows 서비스의 ID를 변경하려면 연결을 다시 구성하고 암호화 키를 다시 설정해야 합니다.  
+>  보고서 서버 데이터베이스의 재배치가 기존 설치에 대한 유일한 변경 내용인 경우 이 문서에 제공된 단계가 권장됩니다. 전체 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하려면, 즉 데이터베이스를 이동하고 해당 데이터베이스를 사용하는 보고서 서버 Windows 서비스의 ID를 변경하려면 연결을 다시 구성하고 암호화 키를 다시 설정해야 합니다.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>보고서 서버 데이터베이스 분리 및 연결  
  보고서 서버를 오프라인 상태로 만들 수 있는 경우 데이터베이스를 분리한 후 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다. 이 방법을 사용하면 데이터베이스의 사용 권한이 유지됩니다. SQL Server 데이터베이스를 사용하는 경우 이를 다른 SQL Server 인스턴스로 이동해야 합니다. 데이터베이스를 이동한 후에는 보고서 서버와 보고서 서버 데이터베이스의 연결을 다시 구성해야 합니다. 스케일 아웃 배포를 실행하려면 배포 환경의 각 보고서 서버에 대한 보고서 서버 데이터베이스 연결을 다시 구성해야 합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "50100224"
   
 2.  보고서 서버 서비스를 중지합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스를 중지할 수 있습니다.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+3.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
   
 4.  보고서 서버 데이터베이스를 마우스 오른쪽 단추로 클릭하고 태스크를 가리킨 다음 **분리**를 클릭합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   

@@ -1,22 +1,22 @@
 ---
 title: URL 액세스 매개 변수 참조 | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515120"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620589"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 디바이스 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 디바이스별 매개 변수에 대한 자세한 내용은 [URL에 디바이스 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
@@ -35,7 +35,7 @@ ms.locfileid: "52515120"
 -   [보고서 뷰어 웹 파트 명령(rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 뷰어 명령(rc:)  
- HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며(예를 들어 보고서 관리자에서) *rc:* 접두사가 붙음:  
+ - HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며 *rc:* 접두사가 붙음:
   
 -   *Toolbar* :  
                   도구 모음을 표시하거나 숨깁니다. 이 매개 변수 값이 **false**이면 모든 나머지 옵션이 무시됩니다. 이 매개 변수를 생략하면 도구 모음이 지원하는 렌더링 형식에 맞게 자동으로 표시됩니다. 이 매개 변수의 기본값은 **true**입니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "52515120"
   
 -   *Stylesheet*: HTML 뷰어에 적용할 스타일시트를 지정합니다.  
   
--   디바이스 정보 설정: `rc:tag=value`형식으로 디바이스 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
+-   디바이스 정보 설정: `rc:tag=value`형식으로 디바이스 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&amp;#40;Reporting Services&amp;#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)  
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
@@ -159,7 +159,7 @@ ms.locfileid: "52515120"
         https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
-    -   **GetSharedDatasetDefinition** 공유 데이터 집합과 연결되는 XML 정의를 표시합니다. 쿼리, 데이터 세트 매개 변수, 기본값, 데이터 세트 필터, 데이터 정렬 및 대/소문자 구분 등의 데이터 옵션을 포함하여 공유 데이터 세트 속성이 정의에 저장됩니다. 이 값을 사용하려면 공유 데이터 세트에 대한 **보고서 정의 읽기** 권한이 있어야 합니다.  
+    -   **GetSharedDatasetDefinition** 공유 데이터 세트와 연결되는 XML 정의를 표시합니다. 쿼리, 데이터 세트 매개 변수, 기본값, 데이터 세트 필터, 데이터 정렬 및 대/소문자 구분 등의 데이터 옵션을 포함하여 공유 데이터 세트 속성이 정의에 저장됩니다. 이 값을 사용하려면 공유 데이터 세트에 대한 **보고서 정의 읽기** 권한이 있어야 합니다.  
   
          **Native** 모드의 예제.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "52515120"
      세션 ID를 쿠키로 지정하거나 URL의 일부로 지정할 수 있습니다. 보고서 서버가 세션 쿠키를 사용하지 않도록 구성된 경우 지정된 세션 ID가 없는 첫 번째 요청은 세션 ID가 있는 항목으로 리디렉션됩니다. 보고서 서버 세션에 대한 자세한 내용은 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)을 참조하십시오.  
   
 -   *ClearSession*:  
-                  **true** 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. 보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다. 기본 값은 **false**입니다.  
+                  **true** 값은 보고서 서버가 보고서 세션에서 보고서를 제거하도록 합니다. 인증된 사용자와 연관된 모든 보고서 인스턴스가 보고서 세션에서 제거됩니다. (보고서 인스턴스는 다양한 보고서 매개 변수 값을 사용하여 여러 번 실행되는 동일한 보고서로 정의됩니다.) 기본 값은 **false**입니다.  
   
 -   *ResetSession*:  
                   **true** 값은 보고서 서버가 보고서 세션과 모든 보고서 스냅숏의 연결을 제거하여 보고서 세션을 다시 설정하도록 합니다. 기본 값은 **false**입니다.  
@@ -296,7 +296,7 @@ ms.locfileid: "52515120"
   
     -   **Full**: 전체 머리글을 표시합니다.  
   
-    -   **BreadCrumbsOnly**: 응용 프로그램 내 사용자의 위치를 알려주는 bread-crumb 탐색만 머리글에 표시합니다.  
+    -   **BreadCrumbsOnly**: 애플리케이션 내 사용자의 위치를 알려주는 bread-crumb 탐색만 머리글에 표시합니다.  
   
     -   **None**: 머리글을 표시하지 않습니다.  
   

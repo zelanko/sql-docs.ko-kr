@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860184"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945157"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 notebook 실행
 
@@ -45,7 +45,7 @@ ms.locfileid: "58860184"
 1. 다음을 실행 합니다 **curl** GitHub에서 notebook 파일을 다운로드 하는 명령:
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark-sql.ipynb' -o spark-sql.ipynb
+   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>Notebook을 열려면
@@ -71,7 +71,7 @@ ms.locfileid: "58860184"
 연속에서 샘플 전자 필기장의 각 셀을 실행 합니다. SQL Server 빅 데이터 클러스터를 사용 하 여 notebook을 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
 
 - [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법](notebooks-guidance.md)
-- [Azure Data Studio에서 notebook을 관리 하는 방법](notebooks-how-to-manage.md)
+- [Azure Data Studio에서 Notebooks를 관리하는 방법](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>다음 단계
 

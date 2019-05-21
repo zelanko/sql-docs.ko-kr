@@ -2,7 +2,7 @@
 title: 보고서 서버에서 표준 시간대 및 시계 설정 변경 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973482"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578370"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>보고서 서버에서 표준 시간대 및 시계 설정 변경
   보고서 서버는 항상 설치된 컴퓨터의 현지 시간을 사용합니다. 다른 표준 시간대를 사용하도록 구성할 수 없습니다. 클라이언트 애플리케이션이 다른 표준 시간대의 보고서 서버를 가리키는 경우 해당 보고서 서버의 표준 시간대를 사용하여 예약된 작업을 실행합니다. 보고서 관리자 및 SharePoint 관리 페이지에서 표준 시간대가 각 일정 페이지에 표시되므로 예약된 작업이 언제 수행되는지 정확히 알 수 있습니다. 예를 들어 사용자 지정 일정을 만들기 위한 페이지에 "시간은 (UTC-08: 00) 태평양 표준시(미국 및 캐나다)로 표시됩니다."라고 나타납니다.
-또한 보고서 서버는 해당 일정을 트리거하는 데 사용되는 SQL Server 에이전트 작업을 만듭니다. 보고서 서버와 SQL Server 에이전트를 별도 서버에 위치한 모든 서버에서 동일한 표준 시간대 여야 합니다.
+또한 보고서 서버는 해당 일정을 트리거하는 데 사용되는 SQL Server 에이전트 작업을 만듭니다. 보고서 서버와 SQL Server 에이전트가 별도의 서버에 있는 경우 모든 서버에서 표준 시간대가 동일해야 합니다.
   
 ## <a name="changing-the-time-zone-native-mode"></a>표준 시간대(기본 모드) 변경  
  보고서 서버를 호스팅하는 컴퓨터의 표준 시간대를 변경하는 경우 보고서 서버 서비스를 다시 시작해야 표준 시간대의 변경 내용이 적용됩니다.  

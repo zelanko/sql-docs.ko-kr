@@ -1,8 +1,8 @@
 ---
 title: SQL Server의 보고서 작성기 | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290301"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620604"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server의 보고서 작성기
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 Visual Studio의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서를 미리 볼 수 있습니다. 그런 다음, 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 기본 모드 또는 SharePoint 통합 모드(2016 이하)로 게시할 수 있습니다. 페이지를 매긴 보고서를 Power BI 서비스에 게시할 수도 있습니다. [Power BI Premium의 페이지를 매긴 보고서](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)(미리 보기)에 대해 자세히 알아보세요.
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 Visual Studio / SSDT의 보고서 디자이너를 사용하는 대신 독립 실행형 환경에서 작업하려는 비즈니스 사용자가 페이지를 매긴 보고서를 작성하는 데 사용할 수 있는 도구입니다.  페이지를 매긴 보고서를 디자인할 때 검색할 데이터, 가져올 위치 및 표시 방법을 지정하는 보고서 정의를 만듭니다. 보고서를 실행하면 보고서 처리기는 지정된 보고서 정의를 가져와 데이터를 검색한 다음 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 보고서를 미리 볼 수 있습니다. 그런 다음, 보고서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 기본 모드 또는 SharePoint 통합 모드(2016 이하)로 게시할 수 있습니다. 
+
+페이지를 매긴 보고서를 Power BI 서비스에 게시할 수도 있습니다. [Power BI Premium의 페이지를 매긴 보고서](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi)(미리 보기)에 대해 자세히 알아보세요.
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -46,7 +49,6 @@ ms.locfileid: "56290301"
 -   **기존 보고서를 수정합니다.** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 사용하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너에서 만든 보고서를 사용자 지정하고 업데이트할 수 있습니다.  
   
 -   **데이터를 수정** 합니다. 데이터를 필터링/그룹화/정렬하거나 수식 또는 식을 추가할 수 있습니다.  
-  
 -   **차트, 계기, 스파크라인 및 표시기** 를 추가하여 데이터를 시각적 형식으로 요약하고 많은 양의 집계 정보를 한눈에 볼 수 있게 표시합니다.  
   
 -   문서 구조, 표시/숨기기 단추, 하위 보고서와 드릴스루 보고서에 대한 드릴스루 링크 등의**대화형 기능을 추가** 합니다. 매개 변수와 필터로 데이터를 필터링하여 사용자 지정 뷰를 만들 수 있습니다.  
@@ -85,7 +87,7 @@ ms.locfileid: "56290301"
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
- [공유 데이터 세트 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
+ [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)  
  공유 데이터 세트 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  

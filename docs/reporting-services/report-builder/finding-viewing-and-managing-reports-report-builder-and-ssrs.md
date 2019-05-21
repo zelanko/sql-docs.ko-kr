@@ -2,18 +2,18 @@
 title: 보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711014"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581241"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52711014"
   
  이러한 태스크 중 일부는 보고서 서버 관리자가 수행합니다. 보고서 서버에서 수행된 태스크에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
   
- 보고서 관리자에는 보통 폴더, 보고서, 데이터 원본, 보고서 모델과 내 보고서 폴더가 포함됩니다. 내 보고서는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 내 보고서 내에 폴더를 만들어 보고서를 더 자세하게 구성할 수 있습니다.  
+ 보고서 관리자에는 일반적으로 내 보고서 폴더뿐만 아니라 폴더, 보고서, 데이터 원본이 포함됩니다. 내 보고서는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 내 보고서 내에 폴더를 만들어 보고서를 더 자세하게 구성할 수 있습니다.  
   
  보고서 관리자는 Reporting Services HTML 뷰어에 보고서를 표시합니다. HTML 뷰어는 HTML 형식의 보고서를 보는 데 필요한 프레임워크를 제공하며 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 포함합니다. 보고서 도구 모음은 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다. 보고서 도구 모음은 URL을 통해 보고서에 액세스할 때 보고서 상단의 브라우저 창에도 나타납니다. 인쇄 기능은 선택 사항이며 관리자가 설정해야 합니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 다음 그림에서는 보고서 관리자 창 및 보고서 도구 모음 기능 클로즈업 화면의 보고서 도구 모음을 보여 줍니다.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "52711014"
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트에서 보고서 서버 항목 찾기  
  속성을 설정하려면 먼저 항목을 찾아야 합니다. 보고서 서버 항목은 항상 라이브러리나 라이브러리 내의 폴더에 저장됩니다.  
   
- SharePoint 사이트에 액세스하면 찾아보기 페이지와 라이브러리 도구 탭이 표시됩니다. 찾아보기 페이지에는 라이브러리와 선택한 라이브러리의 콘텐츠가 나열됩니다. 보고서, 보고서 모델 및 라이브러리의 기타 항목을 보고 폴더를 탐색하고 사이트를 검색하여 항목을 찾을 수 있습니다.  
+ SharePoint 사이트에 액세스하면 찾아보기 페이지와 라이브러리 도구 탭이 표시됩니다. 찾아보기 페이지에는 라이브러리와 선택한 라이브러리의 콘텐츠가 나열됩니다. 보고서 및 라이브러리의 다른 항목을 보고, 폴더를 탐색하고, 사이트를 검색하여 항목을 찾을 수 있습니다.  
   
- 보고서 서버 항목을 SharePoint 사이트의 다른 항목과 구분하기 위해 아이콘을 사용하여 항목을 시각적으로 식별하거나 유형 위에 마우스 커서를 놓아 파일 확장명을 읽을 수 있습니다. 다음 이미지에서는 **보고서** 라이브러리의 폴더, 보고서 모델 및 보고서 정의를 보여 줍니다.  
+ 보고서 서버 항목을 SharePoint 사이트의 다른 항목과 구분하기 위해 아이콘을 사용하여 항목을 시각적으로 식별하거나 유형 위에 마우스 커서를 놓아 파일 확장명을 읽을 수 있습니다. 다음 이미지에서는 **보고서** 라이브러리의 폴더 및 보고서 정의를 보여줍니다.  
   
  ![보고서 서버 항목이 있는 SharePoint 라이브러리](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "보고서 서버 항목이 있는 SharePoint 라이브러리")  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52711014"
  ![보고서 서버 항목에 대한 메뉴 명령](../../reporting-services/report-builder/media/rs-ecbforrsitems.gif "보고서 서버 항목에 대한 메뉴 명령")  
   
   
-##  <a name="DeskTop"></a> 데스크톱 응용 프로그램에서 보고서 보기  
+##  <a name="DeskTop"></a> 데스크톱 애플리케이션에서 보고서 보기  
  브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel과 같은 데스크톱 애플리케이션을 보고서 뷰어로 사용할 수 있습니다. 이렇게 하려면 데스크톱 애플리케이션 형식과 공유 폴더 대상을 지정하는 구독을 정의합니다. 그러면 보고서 서버에서 보고서를 애플리케이션 파일로 생성하고 파일 이름 확장명을 추가한 후 하드 디스크에 파일로 저장합니다. 그런 다음 브라우저 대신 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 다른 애플리케이션을 사용하여 보고서를 볼 수 있습니다.  
   
   

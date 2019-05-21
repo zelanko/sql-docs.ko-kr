@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs
+title: ssbdiagnose 유틸리티(Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,21 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc67193013c0ea546f69aaa87fb1fb0aa0ad7cac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590547"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821099"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
-  
+  **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.
+
+> [!NOTE]
+> Ssbdiagnose 유틸리티는 더 이상 최신 버전의 SSMS(SQL Server Management Studio) 18.0과 함께 설치되지 않습니다. 최신 버전의 ssbdiagnose를 설치하려면 [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791)을 설치합니다.
+> 최신 ssbdiagnose를 가져오기 위해 SSMS의 이전 릴리스를 설치해야 할 필요성이 향후 릴리스에서 해결될 것입니다. SSMS 18.x는 17.x 버전과 함께 side-by-side 실행되므로 두 버전을 동일한 컴퓨터에 설치할 수 있습니다.
+
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -158,7 +162,7 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  대화가 지정된 수준의 암호화에 대해 올바로 구성되었는지 확인하도록 요청합니다.  
   
- **ON**: 기본 설정. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
+ **ON**: 기본 설정입니다. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
   
  **OFF**: 대화 보안이 구성되지 않습니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
@@ -310,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 환경 변수  
  **ssbdiagnose** 유틸리티는 **sqlcmd** 유틸리티도 사용하는 SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD 및 SQLCMDLOGINTIMOUT 환경 변수를 지원합니다. 환경 변수는 명령 프롬프트 SET 명령을 사용하여 설정하거나 **sqlcmd** 를 사용하여 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 **setvar**명령을 사용하여 설정할 수 있습니다. **sqlcmd** 에서 **setvar**을 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  각 **connectionoptions** 절에서 **-E** 또는 **-U** 를 사용하여 지정된 로그인은 **-S** 에 지정된 인스턴스에 있는 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -338,7 +342,7 @@ ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVI
 ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator -S InitiatorComputer -d InitiatorDatabase TO SERVICE /test/target -S TargetComputer -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### <a name="c-checking-the-configuration-of-two-services-on-separate-computers-that-use-separate-logins"></a>3. 별개의 컴퓨터에 있으며 서로 다른 로그인을 사용하는 두 서비스의 구성 검사  
+### <a name="c-checking-the-configuration-of-two-services-on-separate-computers-that-use-separate-logins"></a>C. 별개의 컴퓨터에 있으며 서로 다른 로그인을 사용하는 두 서비스의 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있고 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 서로 다른 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인증 로그인이 필요한 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 ```  

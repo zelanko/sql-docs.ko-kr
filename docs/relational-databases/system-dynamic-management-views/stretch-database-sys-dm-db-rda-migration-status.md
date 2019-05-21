@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_migration_status (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_rda_migration_status dynamic management view
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3027978ca57b5ea94c69dc2410b0d25d73ce3823
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740981"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945458"
 ---
-# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>-Stretch Database sys.dm_db_rda_migration_status
+# <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   각 일괄 처리의 로컬 인스턴스에서 각 스트레치 사용 테이블에서 마이그레이션된 데이터의 행이 하나씩 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 일괄 처리의 시작 시간과 종료 시간으로 식별 됩니다.  

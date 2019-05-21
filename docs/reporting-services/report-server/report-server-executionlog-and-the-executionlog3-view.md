@@ -2,21 +2,21 @@
 title: 보고서 서버 ExecutionLog 및 ExecutionLog3 뷰 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414101"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619695"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 실행 로그에는 단일 서버 또는 기본 모드를 사용하는 스케일 아웃 배포 또는 SharePoint 팜을 사용한 다중 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 세트 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 세트 또는 처리)에 대한 사항을 제안할 수 있습니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "52414101"
   
  이전 단계에 설명된 대로 로깅을 설정한 후 다음을 완료해야 합니다.  
   
-1.  **서비스 응용 프로그램의** 시스템 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지에서 **사용자 정의** 섹션을 찾습니다.  
+1.  **서비스 애플리케이션의** 시스템 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지에서 **사용자 정의** 섹션을 찾습니다.  
   
 2.  **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     에서 추가되었습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      값은 밀리초 단위입니다. 이 데이터를 사용하여 성능 문제를 진단할 수 있습니다. 외부 웹 서버에서 이미지를 검색하는 데 필요한 시간으로 인해 전반적인 보고서 실행 속도가 느려질 수 있습니다.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **연결**  
-  
-     에서 추가되었습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      여러 수준의 구조  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  다음 표에서는 보고서 실행 로그에 캡처되는 데이터에 대해 설명합니다.  
   
 |Column|설명|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
-|ReportPath|보고서의 경로 구조입니다.  예를 들어 보고서 관리자의 루트 폴더에 있고 이름이 "test"인 보고서의 ReportPath는 "/test"입니다.<br /><br /> 보고서 관리자에서 "samples" 폴더에 저장된 이름이 "test"인 보고서의 ReportPath는 "/Samples/test"입니다.|  
+|ReportPath|보고서의 경로 구조입니다. 루트 폴더에 "test"로 저장된 repost에는 "/test"의 ReportPath가 있습니다.<br /><br /> "samples" 폴더에 저장된 "test"라는 보고서에는 "/Samples/test/"의 ReportPath가 있습니다.|  
 |UserName|사용자 식별자|  
 |ExecutionID||  
 |RequestType|요청 형식(사용자 또는 시스템)|  
@@ -358,7 +354,7 @@ select * from ExecutionLog order by TimeStart DESC
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportID|보고서 식별자|  
 |UserName|사용자 식별자|  
-|RequestType|가능한 값:<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
+|RequestType|가능한 값은 다음과 같습니다.<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  

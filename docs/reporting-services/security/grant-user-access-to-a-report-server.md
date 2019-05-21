@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449694"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619606"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 데이터베이스 액세스 권한 부여
 
@@ -53,24 +53,24 @@ ms.locfileid: "65449694"
 
 1. [웹 포털](../web-portal-ssrs-native-mode.md)을 시작합니다.
 
-2. 오른쪽 상단에서 *기어 아이콘*을 선택합니다.
+2. 오른쪽 상단의 **기어** 아이콘을 선택한 다음, 드롭다운 메뉴에서 **사이트 설정**을 선택합니다.
 
-3. **사이트 설정**을 선택합니다.
+    ![보고서 서버 웹 포털 기어 아이콘 및 드롭다운 메뉴](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. **보안**을 선택합니다.
+3. **보안**을 선택합니다.
 
-5. **그룹 또는 사용자 추가**를 선택합니다.
+4. **그룹 또는 사용자 추가**를 선택합니다.
 
-6. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다.
+5. **그룹 또는 사용자**에 Windows 도메인 사용자 또는 \<domain>\\<account\> 형식으로 그룹 계정을 입력합니다.
 
     > [!NOTE]
     > 폼 인증 또는 사용자 지정 보안을 사용하는 경우에는 해당 배포에 적절한 형식으로 사용자 또는 그룹 계정을 지정합니다.
 
-7. 시스템 역할을 선택한 다음 **확인**을 선택합니다.
+6. 시스템 역할을 선택한 다음 **확인**을 선택합니다.
 
     역할은 누적되므로 시스템 관리자와 시스템 사용자를 모두 선택하면 사용자 또는 그룹이 두 역할 모두에서 태스크를 수행할 수 있습니다.
 
-8. 위의 단계를 반복하여 추가 사용자 또는 그룹에 대한 할당을 만듭니다.
+7. 위의 단계를 반복하여 추가 사용자 또는 그룹에 대한 할당을 만듭니다.
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>항목 역할에 사용자 또는 그룹을 추가하려면
 

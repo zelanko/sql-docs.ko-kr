@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560129"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949106"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "65560129"
 |**is_temporal_retention_enabled**|**bit**|임시 재방문 주기 정책 정리 작업이 사용 되는지 여부를 나타냅니다.<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|카탈로그 데이터 정렬 설정:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|카탈로그 데이터 정렬 설정:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 켜져</br>0 = is_result_set_caching_on 꺼져</br>**적용 대상**: Azure SQL Data Warehouse Gen2
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on 켜져</br>0 = is_result_set_caching_on 꺼져</br>**적용 대상**: Azure SQL Data Warehouse Gen2 합니다. 이 기능을는 모든 지역에 롤아웃 되는 동안 인스턴스를 최신 배포 된 버전을 확인 하십시오 [Azure SQL DW 릴리스](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 기능 가용성에 대 한 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
  경우 호출자 `sys.databases` 데이터베이스의 소유자가 아니고 및 데이터베이스가 `master` 또는 `tempdb`, 해당 행을 보는 데 필요한 최소 권한이 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 권한이 있거나 `CREATE DATABASE` 에 대 한 권한과 `master` 데이터베이스입니다. 호출자가 연결 된 데이터베이스에서 항상 볼 수 있습니다 `sys.databases`합니다.  

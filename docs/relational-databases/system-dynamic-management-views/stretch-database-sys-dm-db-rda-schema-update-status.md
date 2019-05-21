@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,17 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_db_rda_schema_update_status dynamic management view
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 930e717767c44f5d8151cd94c29f9b6aaa205fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85c12ae224203def43c9f9953cada0c336e9ebbd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755801"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947388"
 ---
-# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>-Stretch Database sys.dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 각 스트레치 사용 테이블의 원격 데이터 보관에 대 한 각 스키마 업데이트 작업에 대 한 하나의 행을 포함 합니다. 작업은 해당 작업 id로 식별 됩니다.  
