@@ -143,7 +143,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 로드 된 데이터를 받을 SQL Server PDW 어플라이언스를 지정 합니다.  
   
 *Infiniband 연결용*, *target_appliance* < 어플라이언스-이름 >으로 지정 됩니다-SQLCTL01 합니다. 이 연결을 명명 된 구성 참조 [InfiniBand 네트워크 어댑터 구성](configure-infiniband-network-adapters.md)합니다.  
@@ -159,7 +159,7 @@ For more information about this install option, see [Install dwloader Command-Li
 **-T** *target_database_name.*[*schema*].*table_name*  
 대상 테이블에 대해 세 부분으로 이루어진 이름입니다.  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 로드할 하나 이상의 소스 파일의 위치입니다. 각 소스 파일은 텍스트 파일 또는 사용 하 여 gzip 압축 텍스트 파일 이어야 합니다. 각 gzip 파일로 하나의 소스 파일을 압축할 수 있습니다.  
   
 소스 파일 형식:  

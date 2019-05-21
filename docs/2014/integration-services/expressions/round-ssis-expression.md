@@ -38,7 +38,7 @@ ROUND(numeric_expression,length)
  정수 식입니다. *numeric_expression* 을 반올림할 전체 자릿수입니다.  
   
 ## <a name="result-types"></a>결과 형식  
-  *numeric*_*expression*과 동일한 형식입니다.  
+ *numeric*_*expression*과 동일한 형식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  *length* 인수는 양의 정수이거나 0이어야 합니다.  
