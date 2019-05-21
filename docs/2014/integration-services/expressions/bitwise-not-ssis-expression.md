@@ -36,7 +36,7 @@ ms.locfileid: "62769499"
  정수 데이터 형식의 유효한 식입니다. *integer*_*expression* 은 비트 연산을 위해 이진수로 변환되는 정수입니다. 자세한 내용은 [Integration Services Data Types](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ## <a name="result-types"></a>결과 형식  
-  *integer_expression*의 데이터 형식을 반환합니다.  
+ *integer_expression*의 데이터 형식을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
  없음  
