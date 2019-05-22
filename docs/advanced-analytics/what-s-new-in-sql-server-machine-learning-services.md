@@ -1,7 +1,7 @@
 ---
 title: 새로운 기능-SQL Server Machine Learning Services | Microsoft Docs
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 7c5871c6e33947f744dde571c329e8025b4a0813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775165"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993443"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -28,18 +28,17 @@ ms.locfileid: "64775165"
 
 이 릴리스는 SQL Server에서 R 및 Python machine learning 작업에 대 한 상위 요청한 기능을 추가합니다. 모든이 릴리스의 기능에에서 대 한 자세한 내용은 참조 하세요. [What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) 하 고 [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)합니다.
 
+> [!NOTE]
+> 새로운 SQL Server 2019의 Java에 대 한 새 설명서를 참조 합니다 [SQL 서버 언어 확장의 새로운 기능?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+
 | 릴리스 | 기능 업데이트 |
 |---------|----------------|
-| CTP 2.5 | 새 [Java 용 SDK Microsoft 확장성](java/java-sdk.md)합니다. |
-| CTP 2.4 | 에 대 한 Linux 지원을 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R, Python 및 Java에 대 한 합니다. |
-| | Java 인터프리터의 위치를 지정 하는 환경 변수에서 변경 되었습니다 `JAVA_HOME` 에 `JRE_HOME`입니다. |
-| CTP 2.3 | 지원 되는 새 [Java 데이터 형식](java/java-sql-datatypes.md)합니다. |
-| | Windows에만 해당에서 Java 코드에서 액세스할 수 있습니다는 외부 라이브러리를 사용 하는 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문. 동등한 기능 예정 된 CTP에는 Linux에서 제공 됩니다. 자세히 알아보기 [SQL Server에서 Java를 호출 하는 방법을](java/howto-call-java-from-sql.md)합니다. |
-| | Windows에만 해당에서 Python 코드에서 액세스할 수 있습니다는 외부 라이브러리를 사용 하는 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문. 동등한 기능 예정 된 CTP에는 Linux에서 제공 됩니다. |
+| CTP 2.5 | 변경 내용이 없습니다. |
+| CTP 2.4 | 에 대 한 Linux 지원을 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R 및 Python에 대 한 합니다. |
+| CTP 2.3 | Windows에만 해당에서 Python 코드에서 액세스할 수 있습니다는 외부 라이브러리를 사용 하는 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문. |
 | CTP 2.2 | 변경 내용이 없습니다. |
 | CTP 2.1 | 변경 내용이 없습니다. |
 | CTP 2.0 | R 및 Python machine learning 위해 Linux 플랫폼 지원 합니다. 시작 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다. |
-|   | [Java 언어 확장](java/extension-java.md) Windows와 Linux 모두에서 새로운 SQL Server 2019 미리 보기로 제공에서 됩니다. 사용 권한을 할당 하 고 경로 설정 하 여 컴파일된 Java 코드 SQL Server에 사용할 수 있습니다. SQL Server 액세스를 사용 하 여 클라이언트 앱 수 데이터를 사용 하 고 호출 하 여 코드를 실행할 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), SQL Server에서 R 및 Python 통합에 사용 되는 동일한 절차입니다. | 
 |  | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 소개 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
 |   | 장애 조치 클러스터 지원 Windows 및 Linux, SQL Server 실행 패드 서비스가 모든 노드에서 시작 하는 것으로 가정에서 이제 지원 됩니다. 자세한 내용은 [SQL Server 장애 조치 클러스터 설치](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)합니다. |
 
@@ -109,7 +108,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 ## <a name="linux-support-roadmap"></a>Linux 지원 로드맵
 
-SQL Server 2019 CTP 2.3 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R, Python 및 Java에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
+SQL Server 2019 CTP 2.3 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R 및 Python에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
 
 Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) Linux에서 해당 기능을 T-SQL을 통해 사용할 수 있으므로 [PREDICT](../t-sql/queries/predict-transact-sql.md), Linux에서 실행 되는 합니다. 네이티브 점수 매기기를 호출 하거나 심지어는 R 런타임 요구 하지 않고 미리 학습 된 모델에서 점수 매기기 고성능 수 있습니다.
 
@@ -117,7 +116,7 @@ Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 �
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning에서 Azure SQL Database 서비스
 
-Machine Learning 서비스 (R)을 사용한 Azure SQL Database의 공개 미리 보기로 제공 됩니다. 자세한 내용은 참조 하세요. [빠른 시작: (R)을 사용 하는 Machine Learning 서비스를 사용 하 여 Azure SQL Database (미리 보기)에서](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r)합니다.
+Machine Learning 서비스 (R)을 사용한 Azure SQL Database의 공개 미리 보기로 제공 됩니다. 자세한 내용은 [R (미리 보기)를 사용 하 여 Azure SQL Database Machine Learning Services](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

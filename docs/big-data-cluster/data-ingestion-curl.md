@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774227"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994045"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용
 
@@ -32,7 +32,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> 합니다 `<cluster name>` 실행 했을 때 제공한 클러스터의 이름은 여기에 `mssqlctl cluster create --name <cluster name>`입니다.
+> `<cluster name>` 배포 구성 파일에 지정 된 클러스터의 이름입니다. 기본 이름은 `mssql-cluster`입니다.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS를 액세스 하는 URL 생성
 

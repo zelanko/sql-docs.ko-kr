@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775593"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994073"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 컨트롤러 란?
 
@@ -38,11 +38,7 @@ ms.locfileid: "64775593"
 
 ## <a name="deploying-the-controller-service"></a>컨트롤러 서비스를 배포합니다.
 
-컨트롤러를 배포 하 고 고객이 있는 빅 데이터 클러스터를 구축 하려는 동일한 Kubernetes 네임 스페이스에서 호스트 합니다. 이 서비스 관리자가 설치 하는 Kubernetes 클러스터 부트스트랩 mssqlctl 명령줄 유틸리티를 사용 하는 동안:
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+컨트롤러를 배포 하 고 고객이 있는 빅 데이터 클러스터를 구축 하려는 동일한 Kubernetes 네임 스페이스에서 호스트 합니다. 이 서비스 관리자가 설치 하는 Kubernetes 클러스터를 사용 하 여 부트스트랩 중 합니다 **mssqlctl** 명령줄 유틸리티입니다. 자세한 내용은 [SQL Server 빅 데이터 클러스터를 사용 하 여 시작](deploy-get-started.md)합니다.
 
 Buildout 워크플로 Kubernetes 기반으로 레이아웃에 설명 된 모든 구성 요소를 포함 하는 모든 기능을 갖춘 SQL Server 빅 데이터 클러스터를 [개요](big-data-cluster-overview.md) 문서. 먼저 부트스트랩 워크플로에서 컨트롤러 서비스를 만들고 컨트롤러 서비스를 설치 및 구성의 마스터, 계산, 데이터 및 저장소 풀의 서비스 파트의 나머지 부분을 조정 합니다이 배포 되 면 합니다.
 

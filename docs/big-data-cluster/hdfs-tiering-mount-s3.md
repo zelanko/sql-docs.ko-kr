@@ -1,27 +1,27 @@
 ---
-title: HDFS 계층으로 구성 하는 것에 대 한 탑재 S3
+title: HDFS 계층화를 위한 S3 탑재
 titleSuffix: SQL Server big data clusters
 description: 이 문서 (미리 보기)는 SQL Server 2019 빅 데이터 클러스터에서 HDFS에 외부 S3 파일 시스템 탑재에 계층화 하는 HDFS를 구성 하는 방법에 설명 합니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330607"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993957"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 S3 하는 방법
 
 다음 섹션에서는 HDFS S3 저장소 데이터 원본을 사용 하 여 계층을 구성 하는 방법의 예제를 제공 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [배포 된 빅 데이터 클러스터](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ ms.locfileid: "64330607"
 - 만들고 S3 버킷에 데이터 업로드 
   - CSV 업로드 하 여 S3 버킷에 파일 Parquet 또는 합니다. 이 빅 데이터 클러스터의 HDFS에 탑재 하는 외부 HDFS 데이터입니다.
 
-## <a name="access-keys"></a>선택키
+## <a name="access-keys"></a>액세스 키
 
 1. 빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다.
 
@@ -48,22 +48,22 @@ ms.locfileid: "64330607"
 
 액세스 키를 사용 하 여 자격 증명 파일을 준비, 했으므로 탑재를 시작할 수 있습니다. 다음 단계를 빅 데이터 클러스터의 로컬 HDFS 저장소에 S3에서 원격 HDFS storage를 탑재 합니다.
 
-1. 사용 하 여 **kubectl** 에 대 한 IP 주소를 찾으려면 합니다 **mgmtproxy svc 외부** 빅 데이터 클러스터에 서비스입니다. 검색할 합니다 **EXTERNAL-IP**합니다.
+1. 사용 하 여 **kubectl** 끝점에 대 한 IP 주소를 찾으려면 **컨트롤러 svc 외부** 빅 데이터 클러스터의 서비스입니다. 검색할 합니다 **EXTERNAL-IP**합니다.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. 사용 하 여 로그인 **mssqlctl** 관리 프록시 끝점의 외부 IP 주소를 사용 하 여 클러스터 사용자 이름 및 암호를 사용 하 여:
+1. 사용 하 여 로그인 **mssqlctl** 컨트롤러 끝점의 외부 IP 주소를 사용 하 여 클러스터 사용자 이름 및 암호를 사용 하 여:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 저장소 탑재 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
+1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 클러스터 저장소 풀 마운트 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ ms.locfileid: "64330607"
 빅 데이터 클러스터의 모든 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 HDFS에서 특정 경로에 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 탑재를 삭제 합니다.
 
-탑재를 삭제 하려면 사용 합니다 **mssqlctl 저장소 탑재 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
+탑재를 삭제 하려면 사용 합니다 **mssqlctl 클러스터 저장소 풀 마운트 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>다음 단계

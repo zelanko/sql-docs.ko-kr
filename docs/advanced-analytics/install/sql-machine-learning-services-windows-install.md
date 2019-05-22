@@ -3,17 +3,17 @@ title: Windows-SQL Server에서 설치 SQL Server Machine Learning Services (In-
 description: SQL Server 또는 Windows에서 SQL Server 2017 Machine Learning Services에 대 한 SQL Server 설치 단계에서 Python R입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/03/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097296"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994219"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
@@ -25,7 +25,7 @@ SQL Server 2017부터 R 및 Python에 대 한 지원이 데이터베이스 내 �
 
 ## <a name="bkmk_prereqs"> </a> 설치 전 검사 목록
 
-+ R, Python 또는 Java 언어 지원을 사용 하 여 Machine Learning 서비스를 설치 하려면 SQL Server 2017 (또는 그 이상) 설치가 필요 합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 설치할 수 있습니다 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
++ R 또는 Python 언어 지원을 사용 하 여 Machine Learning 서비스를 설치 하려면 SQL Server 2017 (또는 그 이상) 설치가 필요 합니다. 대신 SQL Server 2016 설치 미디어가 있는 경우 설치할 수 있습니다 [SQL Server 2016 R Services (In-database)](sql-r-services-windows-install.md) R 언어 지원을 받을 수 있습니다.
 
 + 데이터베이스 엔진 인스턴스를 반드시 입력 해야 합니다. 기존 인스턴스를 증분 방식으로 추가할 수는 있지만 방금 R 또는 Python 기능을 설치할 수 없습니다.
 
@@ -53,7 +53,7 @@ SQL Server 2017부터 R 및 Python에 대 한 지원이 데이터베이스 내 �
 
 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.
 
-1. SQL Server 2017 설치 마법사를 시작 합니다. 다운로드할 수 있습니다. 
+1. SQL Server 2017 설치 마법사를 시작 합니다. 
   
 2. 에 **설치** 탭을 선택 **새 SQL Server 독립 실행형 설치 또는 기존 설치에 기능 추가**합니다.
 
@@ -126,13 +126,13 @@ R 기능 통합만로 설정 해야 합니다 **MKL_CBWR** 환경 변수를 [일
     > [!TIP]
     > 다운로드 하 고이 페이지에서 적절 한 버전을 설치할 수 있습니다. [SSMS(SQL Server Management Studio) 다운로드합니다](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > 미리 보기 릴리스도 사용할 수 있는 [Azure Data Studio](../../azure-data-studio/what-is.md), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
+    > 사용할 수도 있습니다 [Azure Data Studio](../../azure-data-studio/what-is.md), 관리 작업 및 SQL Server에 대 한 쿼리를 지 합니다.
   
 2. Machine Learning 서비스를 설치한 인스턴스에 연결, 클릭 **새 쿼리** 쿼리 창을 열고 다음 명령을 실행 합니다.
 
-   ```sql
-   sp_configure
-   ```
+    ```sql
+    sp_configure
+    ```
 
     이때 속성 값 `external scripts enabled`는 **0**이어야 합니다. 기능을 기본적으로 해제 되어 있으므로입니다. R 또는 Python 스크립트를 실행 하기 전에 기능 관리자가 명시적으로 설정 해야 합니다.
     

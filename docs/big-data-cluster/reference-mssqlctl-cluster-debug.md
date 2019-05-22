@@ -5,16 +5,16 @@ description: Mssqlctl 클러스터 디버그 명령에 대 한 참조 문서입�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774864"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993657"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl 클러스터 디버그
 
@@ -28,7 +28,7 @@ ms.locfileid: "64774864"
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | 로그를 복사 합니다.
 [mssqlctl 클러스터 디버그 덤프](#mssqlctl-cluster-debug-dump) | 트리거 로깅 덤프 합니다.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-클러스터에서 디버그 로그를 복사 합니다.
+클러스터에서 디버그 로그를 복사-kube 구성 시스템에 필요 합니다.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ JMESPath 쿼리 문자열입니다. 참조 [ http://jmespath.org/ ](http://jmesp
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 사용-전체 디버그 로그에 대 한 디버그 합니다.
 ## <a name="mssqlctl-cluster-debug-dump"></a>mssqlctl 클러스터 디버그 덤프
-로깅 덤프를 트리거하고 컨테이너에서이 복사 합니다.
+컨테이너에서 복사 및 로깅 덤프 트리거-kube 구성 시스템에 필요 합니다.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

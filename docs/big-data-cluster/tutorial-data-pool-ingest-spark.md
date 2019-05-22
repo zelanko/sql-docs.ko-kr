@@ -5,17 +5,17 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582756"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994162"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "59582756"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. 명명 된 외부 테이블을 만듭니다 **web_clickstreams_spark_results** 데이터 풀에 있습니다.
@@ -74,13 +74,13 @@ ms.locfileid: "59582756"
       );
    ```
   
-1. CTP 2.4에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 3.0에서는 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 
 다음 단계는 Spark 스트리밍 (HDFS) 저장소 풀에서 웹 클릭 동향 데이터를 로드 하는 작업을 만들려면 데이터 풀에서 만든 외부 테이블에입니다.
 
-1. Azure Data Studio에 연결 합니다 **HDFS/Spark 게이트웨이** 빅 데이터 클러스터. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md#hdfs)합니다.
+1. Azure 데이터 스튜디오에서 빅 데이터 클러스터의 마스터 인스턴스에 연결 합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)합니다.
 
 1. HDFS/Spark 게이트웨이 연결을 두 번 클릭 합니다 **서버** 창입니다. 선택한 **새 Spark 작업**합니다.
 
@@ -109,7 +109,7 @@ ms.locfileid: "59582756"
    | 서버 이름(server name) | 테이블 스키마를 읽는 SQL Server 사용 |
    | 포트 번호 | SQL Server 포트 (기본값 1433)에서 수신 대기 |
    | username | SQL Server 로그인 사용자 이름 |
-   | 암호 | SQL Server 로그인 암호 |
+   | password | SQL Server 로그인 암호 |
    | 데이터베이스 이름 | 대상 데이터베이스 |
    | 외부 테이블 이름 | 결과에 사용할 테이블 |
    | 스트리밍에 대 한 원본 디렉터리 | 와 같은 전체 URI 여야 합니다 "hdfs: / / / clickstream_data" |

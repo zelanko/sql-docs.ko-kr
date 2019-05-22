@@ -1,7 +1,7 @@
 ---
 title: Master Data Services 설치 및 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488227"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994112"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -128,8 +128,19 @@ ms.locfileid: "65488227"
   
 2.  **데이터베이스 만들기**를 클릭한 다음 **데이터베이스 만들기 마법사** 에서 **다음**을 클릭합니다.  
   
-3.  **데이터베이스 서버** 페이지에서 **인증 유형** 을 선택하고 **연결 테스트** 를 클릭하여 선택한 인증 유형에 대한 자격 증명으로 데이터베이스에 연결할 수 있는지 확인합니다. **다음**을 클릭합니다.
-  
+3.  에 **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server 관리 되는 인스턴스에 대 한 지원을 추가합니다. 값을 설정할 **SQL Server 인스턴스** Azure SQL Database의 호스트 인스턴스를 관리 합니다. `xxxxxx.xxxxxx.database.windows.net`) 을 입력합니다.
+
+4. 선택 합니다 **인증 유형** 클릭 하 고 **연결 테스트** 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
+
+    >에 대 한 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], Azure SQL Database에 연결할 관리 되는 인스턴스, 다음 인증 유형 중 하나를 사용 합니다.
+    >
+    >- Azure Active Directory 통합된 인증: **현재 사용자 – Active Directory 통합**
+    >- SQL Server 인증: **SQL Server 계정**합니다.
+    >
+    >Azure SQL Database 관리 되는 경우에서 사용자의 구성원 이어야는 `sysadmin` 고정된 서버 역할입니다.
+
     > [!NOTE]  
     >  인증 유형으로 **현재 사용자 – 통합 보안**을 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
 

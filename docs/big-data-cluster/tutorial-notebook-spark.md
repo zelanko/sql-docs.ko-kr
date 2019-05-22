@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945157"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994151"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 notebook 실행
 
@@ -52,7 +52,7 @@ ms.locfileid: "65945157"
 
 다음 단계를 Azure Data Studio에서 notebook 파일을 여는 방법을 보여 줍니다.
 
-1. Azure Data Studio, 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결 합니다. 자세한 내용은 [HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md#hdfs)합니다.
+1. Azure 데이터 스튜디오에서 빅 데이터 클러스터의 마스터 인스턴스에 연결 합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)합니다.
 
 1. HDFS/Spark 게이트웨이 연결을 두 번 클릭 합니다 **서버** 창입니다. 선택한 **노트북 열기**합니다.
 

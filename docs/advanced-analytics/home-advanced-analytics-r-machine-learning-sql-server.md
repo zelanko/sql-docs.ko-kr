@@ -1,51 +1,37 @@
 ---
-title: R 및 Python 기계 학습 및 프로그래밍 확장 설명서 - SQL Server Machine Learning
+title: R 및 Python machine learning 설명서-SQL Server Machine Learning 서비스
 description: 대규모 엔터프라이즈 데이터 분석을 위한 기본 제공 데이터 과학 모델링 및 Machine Learning 알고리즘이 포함된 SQL Server의 R 및 Python
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 20acdf2789158bf067319930a5be65770eae67f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93d9ad5fd6415b6d8c1b6208857e81d60de2bd0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126814"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994124"
 ---
-# <a name="sql-server-machine-learning"></a>SQL Server Machine Learning
+# <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
+
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning 서비스 (R 및 Python) 설명서
+
+빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning](what-is-sql-server-machine-learning.md)의 R 및 Python 라이브러리에는 네트워크를 통해 데이터를 전송할 필요없이 대규모로 고성능 분석을 수행하기 위한 기본 배포, 데이터 과학 모델, Machine Learning 알고리즘 및 함수가 포함되어 있습니다.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-
-## <a name="sql-server-machine-learning-and-programming-extensions-documentation"></a>SQL Server Machine Learning 및 프로그래밍 확장 설명서
-
-빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning](what-is-sql-server-machine-learning.md)의 R 및 Python 라이브러리에는 네트워크를 통해 데이터를 전송할 필요없이 대규모로 고성능 분석을 수행하기 위한 기본 배포, 데이터 과학 모델, Machine Learning 알고리즘 및 함수가 포함되어 있습니다.
-
-SQL Server 2019에서 Java 코드 실행은 R 및 Python과 동일한 확장성 프레임워크를 사용하지만 데이터 과학 및 Machine Learning 함수 라이브러리는 포함하지 않습니다. 새로운 기능에 대한 자세한 내용은 [SQL Server Machine 서비스의 새로운 기능](what-s-new-in-sql-server-machine-learning-services.md)을 참조하세요.
-
-|   |   |
-|---|:--|
-| ![R 로고](media/index/logo_r.png) | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)의 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 및 Microsoft AI 알고리즘으로 확장된 오픈 소스 R입니다. 이러한 라이브러리는 대규모 예측 및 예측 모델, 통계 분석, 시각화 및 데이터 조작을 지원합니다.<br/>R 통합은 [SQL Server 2016](install/sql-r-services-windows-install.md)에서 시작되며 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md)에도 제공됩니다. |
-| ![Python 로고](media/index/logo_python.png) | Python 개발자는 대규모 예측 분석 및 Machine Learning에 Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) 라이브러리를 사용할 수 있습니다. Anaconda 및 Python 3.5 호환 라이브러리는 기준 배포입니다.<br/>Python 통합은 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md)에서 시작됩니다. |
-| ![Java 로고](media/index/logo_java.png) | Java 개발자는 [Java 언어 확장](java/extension-java.md)을 사용하여 저장 프로시저 또는 Transact-SQL를 통해 액세스할 수 있는 이진 형식에 코드를 래핑할 수 있습니다.<br/>Java 통합은 [SQL Server 2019 - 미리 보기](install/sql-machine-learning-services-ver15.md)에서 시작됩니다. |
-| &nbsp; | &nbsp; |
+> [!NOTE]
+> Java에 대 한 설명서를 참조 하세요. 합니다 [SQL Server 언어 확장 설명서](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)합니다.
 ::: moniker-end
-
-::: moniker range="=sql-server-2016||=sql-server-2017"
-
-## <a name="sql-server-machine-learning-r-and-python-documentation"></a>SQL Server Machine Learning R 및 Python 설명서
-
-빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning](what-is-sql-server-machine-learning.md)의 R 및 Python 라이브러리에는 네트워크를 통해 데이터를 전송할 필요없이 대규모로 고성능 분석을 수행하기 위한 기본 배포, 데이터 과학 모델, Machine Learning 알고리즘 및 함수가 포함되어 있습니다.
 
 |   |   |
 |---|:--|
 | ![R 로고](media/index/logo_r.png) | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package)의 [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) 및 Microsoft AI 알고리즘으로 확장된 오픈 소스 R입니다. 이러한 라이브러리는 대규모 예측 및 예측 모델, 통계 분석, 시각화 및 데이터 조작을 지원합니다.<br/>R 통합은 [SQL Server 2016](install/sql-r-services-windows-install.md)에서 시작되며 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md)에도 제공됩니다. |
 | ![Python 로고](media/index/logo_python.png) | Python 개발자는 대규모 예측 분석 및 Machine Learning에 Microsoft [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 및 [microsoftml](/machine-learning-server/python-reference/microsoftml/microsoftml-package) 라이브러리를 사용할 수 있습니다. Anaconda 및 Python 3.5 호환 라이브러리는 기준 배포입니다.<br/>Python 통합은 [SQL Server 2017](install/sql-machine-learning-services-windows-install.md)에서 시작됩니다. |
 | &nbsp; | &nbsp; |
-::: moniker-end
 
 ## <a name="5-minute-quickstarts"></a>5분 빠른 시작
 

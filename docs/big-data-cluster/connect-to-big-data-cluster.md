@@ -5,30 +5,22 @@ description: SQL Server 마스터 인스턴스와 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774662"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994059"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 연결 하는 방법을 설명 합니다. 빅 데이터 클러스터와 상호 작용 하는 데 사용 되는 기본 끝점을 두 가지가 있습니다.
-
-| 엔드포인트 | Description |
-|---|---|
-| SQL Server 마스터 인스턴스 | 관계형 SQL Server 데이터베이스를 포함 하는 클러스터에서 SQL Server 마스터 인스턴스. |
-| HDFS/Spark 게이트웨이 | Spark 작업을 실행 하는 기능과 클러스터에 HDFS 저장소에 액세스 합니다. |
-
-> [!TIP]
-> Azure Data Studio는 2019 년 2 월 릴리스를 자동으로 SQL Server 마스터 인스턴스에 연결할 HDFS/Spark 게이트웨이에 UI 액세스를 제공 합니다.
+이 문서에서는 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 연결 하는 방법을 설명 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -72,37 +64,6 @@ Azure Data Studio 2019 년 2 월 릴리스의 SQL Server 마스터 인스턴스�
 - **서버 대시보드** 에 연결에 대 한 탭에도 포함 되어 있습니다 **SQL Server 빅 데이터 클러스터** 하 고 **SQL Server 2019 (미리 보기)** 확장이 설치 되는 경우.
 
    ![Azure Data Studio 데이터 서비스 노드](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> 표시 되 면 **알 수 없는 오류가** ui에서 해야 할 수 있습니다 [HDFS/Spark 게이트웨이에 직접 연결할](#hdfs)합니다. 이 오류에 대 한 한 가지 원인은 SQL Server 마스터 인스턴스 및 HDFS/Spark 게이트웨이에 대 한 서로 다른 암호를 Azure Data Studio 동일한 암호를 둘 다에 사용 되는 것을 가정 합니다.
-  
-## <a id="hdfs"></a> HDFS/Spark 게이트웨이에 연결
-
-대부분의 경우에서 SQL Server 마스터 인스턴스에 연결할에 액세스할 수는 HDFS 및 Spark 에서도 통해 합니다 **Data Services** 노드. 그러나 전용된 연결을 여전히 만들 수는 **HDFS/Spark 게이트웨이** 필요한 경우. 다음 단계에서는 Azure Data Studio를 사용 하 여 연결 하는 방법에 설명 합니다.
-
-1. 명령줄에서 다음 명령 중 하나를 사용 하 여 HDFS/Spark 게이트웨이의 IP 주소를 찾습니다.
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
-
-1. **연결 유형**를 선택 **SQL Server 빅 데이터 클러스터**합니다.
-
-   > [!TIP]
-   > 표시 되지 않으면를 **SQL Server 빅 데이터 클러스터** 연결 입력, 설치 했는지 확인 합니다 [SQL Server 2019 확장](../azure-data-studio/sql-server-2019-extension.md) 확장 완료 한 후 다시 시작 하면 Azure Data Studio 및 설치 합니다.
-
-1. 빅 데이터 클러스터의 IP 주소를 입력 **서버 이름** (포트를 지정 하지 않으면).
-
-1. 입력 `root` 에 대 한는 **사용자** 지정 합니다 **암호** 빅 데이터 클러스터에 있습니다.
-
-   ![HDFS/Spark 게이트웨이에 연결](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > 기본적으로 사용자 이름이 **루트** 암호에 해당 합니다 **KNOX_PASSWORD** 배포 중에 사용 되는 환경 변수입니다.
-
-1. 키를 눌러 **Connect**, 및 **Server 대시보드** 표시 되어야 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

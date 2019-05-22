@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775375"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994111"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -45,7 +45,7 @@ ms.locfileid: "64775375"
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (미리 보기) CTP 2.5 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
+SQL Server 2019 (미리 보기) CTP 3.0 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
 
 |Command |Description |
 |:---|:---|
@@ -68,10 +68,10 @@ mssqlctl app create --help
 
 ## <a name="sign-in"></a>로그인
 
-배포 하거나 응용 프로그램과 상호 작용 하기 전에 먼저 로그인을 사용 하 여 빅 데이터 클러스터 SQL Server는 `mssqlctl login` 명령입니다. 외부 IP 주소를 지정 합니다 `mgmtproxy-svc-external` 서비스 (예: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
+배포 하거나 응용 프로그램과 상호 작용 하기 전에 먼저 로그인을 사용 하 여 빅 데이터 클러스터 SQL Server는 `mssqlctl login` 명령입니다. 외부 IP 주소를 지정 합니다 `controller-svc-external` 서비스 (예: `https://ip-address:30080`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
+mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS

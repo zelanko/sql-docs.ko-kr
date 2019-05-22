@@ -5,22 +5,22 @@ description: Spark에서 SQL Server에 읽기 및 쓰기를 MSSQL Spark 커넥�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759220"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994185"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>읽기 및 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 기록 하는 방법
 
 키 빅 데이터 사용 패턴은 뒤에 기간 업무 응용 프로그램에 대 한 액세스에 대 한 SQL Server로 데이터를 작성 하 여 Spark에서 대용량 데이터 처리 합니다. 이러한 사용 패턴 주요 SQL 최적화를 활용 하 고 효율적인 쓰기 메커니즘을 제공 하는 커넥터에서 활용 합니다.
 
-CTP2.5 빅 데이터 클러스터를 사용 하 여 대량 SQL 쓰기 성능이 우수한 Spark에 대 한 Api를 작성 하는 SQL Server를 사용 하는 새 MSSQL Spark 커넥터를 제공 합니다. 이 문서를 읽고 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 쓰는 방법 보여 주는 예제를 제공 합니다. 이 예제에서는 데이터를 Spark에서 처리 하 고 새 MSSQL Spark 커넥터를 사용 하 여 클러스터에서 SQL Server 마스터 인스턴스를 작성 한 다음 빅 데이터 클러스터에서 HDFS에서 읽습니다.
+빅 데이터 클러스터 대량 SQL 쓰기 성능이 우수한 Spark에 대 한 Api를 작성 하는 SQL Server를 사용 하는 새 MSSQL Spark 커넥터를 제공 합니다. 이 문서를 읽고 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 쓰는 방법 보여 주는 예제를 제공 합니다. 이 예제에서는 데이터를 Spark에서 처리 하 고 새 MSSQL Spark 커넥터를 사용 하 여 클러스터에서 SQL Server 마스터 인스턴스를 작성 한 다음 빅 데이터 클러스터에서 HDFS에서 읽습니다.
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 커넥터 인터페이스
 

@@ -5,17 +5,17 @@ description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775076"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993355"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -25,6 +25,104 @@ ms.locfileid: "64775076"
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## <a id="ctp30"></a> CTP 3.0 (월)
+
+다음 섹션에서는 새로운 기능 및 SQL Server 2019 CTP 3.0에서 빅 데이터 클러스터에 대해 알려진된 문제를 설명합니다.
+
+### <a name="whats-new"></a>What's New
+
+| 새로운 기능 또는 업데이트 | 설명 |
+|:---|:---|
+| **mssqlctl** updates | 몇 가지 **mssqlctl** [명령 및 매개 변수 업데이트](../big-data-cluster/reference-mssqlctl.md)합니다. 이에 대 한 업데이트를 포함 합니다 **mssqlctl 로그인** 이제 컨트롤러 사용자 이름 및 끝점을 대상으로 하는 명령입니다. |
+| 저장소 기능 향상 | 로그 및 데이터에 대 한 다양 한 저장소 구성 지원 합니다. 또한 빅 데이터 클러스터에 대 한 영구적 볼륨 클레임 수가 감소 했습니다. |
+| 여러 계산 풀 인스턴스 | 여러 계산 풀 인스턴스를 지원 합니다. |
+| 새 풀의 동작 및 기능 | 계산 풀 이제는 기본적으로 저장소 풀 및 데이터 풀 작업에 **ROUND_ROBIN** 만 배포 합니다. 데이터 풀 이제 사용할 수 있습니다 새 new **복제 된** 데이터 풀 인스턴스를 모두에 동일한 데이터가 있는지 즉 분포 유형입니다. |
+
+### <a name="known-issues"></a>알려진 문제
+
+다음 섹션의 알려진된 문제 및 제한 사항이이 릴리스를 사용 하 여 설명합니다.
+
+#### <a name="hdfs"></a>HDFS
+
+- Azure Data Studio HDFS에서 새 폴더를 만들려고 할 때 오류를 반환 합니다. 이 기능을 사용 하도록 설정 하려면 Azure Data Studio의 참가자 빌드를 설치 합니다.
+  
+   - [Windows 사용자 관리자- **참가자 빌드**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Windows 시스템 관리자- **참가자 빌드**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows ZIP- **참가자 빌드**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS-ZIP **참가자 빌드**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [TAR Linux입니다. -GZ **참가자 빌드**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- 미리 HDFS의 파일을 마우스 오른쪽 단추로 클릭 하는 경우 다음 오류가 표시 될 수 있습니다.
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   현재는 Azure Data Studio에서 30 MB 보다 큰 파일을 미리 볼 수 없습니다.
+
+- 구성 변경 내용은 hdfs-site.xml 변경 내용을 포함 하는 HDFS에 지원 되지 않습니다.
+
+#### <a name="deployment"></a>배포
+
+- CTP 3.0에서 GPU 사용 하는 빅 데이터 클러스터에 대 한 이전 배포 절차를 사용 하는 것이 없습니다. 대체 배포 프로시저를 조사 중입니다. 지금은 "배포는 빅 데이터 GPU 지원이 포함 된 클러스터 및 TensorFlow 실행" 문서 혼동을 피하기 위해 일시적으로 게시 된가 합니다.
+
+- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다.
+
+   > [!IMPORTANT]
+   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
+
+- AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
+
+#### <a name="external-tables"></a>외부 테이블
+
+- 빅 데이터 클러스터 배포에서는 더 이상 합니다 **SqlDataPool** 하 고 **SqlStoragePool** 외부 데이터 원본입니다. 이러한 데이터 원본은 데이터 풀 및 저장소 풀 데이터 가상화를 지원 하도록 수동으로 만들 수 있습니다.
+
+   > [!NOTE]
+   > 이러한 외부 데이터 원본 만들기에 대 한 URI가 Ctp에 따라 다릅니다. 만드는 방법은 다음 TRANSACT-SQL 명령을 참조 하세요 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 저장소 풀 외부 테이블을 쿼리 하는 경우 오류가 발생할 수 있습니다는 동시에 기본 파일은 HDFS에 복사 되는 경우.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
+
+#### <a name="application-deployment"></a>응용 프로그램 개발
+
+- R, Python 또는 MLeap 응용 프로그램에서 RESTful API를 호출할 때 호출에에서 시간 초과 5 분입니다.
+
+#### <a name="spark-and-notebooks"></a>Spark 및 notebook
+
+- POD IP 주소는 Pod 다시 시작으로 Kubernetes 환경에서 변경 될 수 있습니다. 마스터 pod를 다시 시작 되는 시나리오에서 Spark 세션을 사용 하 여 못할 `NoRoteToHostException`합니다. 이 새 IP를 사용 하 여 새로 고쳐지는 가져오기 하지 JVM 캐시 주소입니다.
+
+- Windows에 이미 설치 된 Jupyter 및 별도 Python을 있다면 Spark 노트북 실패할 수 있습니다. 이 문제를 해결 하려면 Jupyter를 최신 버전으로 업그레이드 합니다.
+
+- 노트북을 클릭할 경우에 **텍스트 추가** 명령, 텍스트 셀이 편집 모드 보다는 미리 보기 모드에서 추가 됩니다. 편집 모드에 있고 셀을 편집 하 여 전환한 다음 미리 보기 아이콘을 클릭할 수 있습니다.
+
+#### <a name="security"></a>보안
+
+- SA_PASSWORD는 (예: 코드 덤프 파일)의 일부 환경의 및 검색할 수입니다. 배포 후 마스터 인스턴스에서 SA_PASSWORD 다시 설정 해야 합니다. 이 변경은 버그 아니라 보안 단계입니다. Linux 컨테이너에서 SA_PASSWORD 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
+
+- AKS 로그는 빅 데이터 클러스터 배포에 대 한 SA 암호를 포함할 수 있습니다.
+
 ## <a id="ctp25"></a> CTP 2.5 (월)
 
 다음 섹션에서는 새로운 기능 및 SQL Server 2019 CTP 2.5에서 빅 데이터 클러스터에 대해 알려진된 문제를 설명합니다.
@@ -33,10 +131,10 @@ ms.locfileid: "64775076"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| 배포 프로필 | 기본값을 사용 하 고 사용자 지정할 [배포 구성 JSON 파일](deployment-guidance.md#configfile) 환경 변수 대신 빅 데이터 클러스터 배포에 대 한 합니다. |
-| 배포 확인된 | `mssqlctl cluster create` 이제 기본 배포에 필요한 모든 설정에 대 한 라는 메시지가 나타납니다. |
-| 서비스 끝점 및 pod 이름 변경 | 다음 외부 끝점 이름이 변경 되었습니다.<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** 개선 사항 | 사용 하 여 **mssqlctl** 하 [외부 끝점을 나열](deployment-guidance.md#endpoints) 의 버전을 확인 하 고 **mssqlctl** 사용 하 여는 `--version` 매개 변수입니다. |
+| 배포 프로필 | 환경 변수 대신 빅 데이터 클러스터 배포를 위해 기본 및 사용자 지정된 [배포 구성 JSON 파일](deployment-guidance.md#configfile)을 사용합니다. |
+| 프롬프트된 배포 | `mssqlctl cluster create`는 이제 기본 배포에 필요한 설정을 묻는 메시지를 표시합니다. |
+| 서비스 엔드포인트 및 pod 이름 변경 | 다음 외부 끝점 이름이 변경 되었습니다.<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** 개선 사항 | **mssqlctl**를 사용하여 [외부 엔드포인트를 나열](deployment-guidance.md#endpoints)하고 **mssqlctl**의 버전을 `--version` 매개 변수로 확인합니다. |
 | 오프라인 설치 | 오프 라인 빅 데이터 클러스터 배포에 대 한 지침입니다. |
 | HDFS 계층화 개선 사항 | S3 계층, 탑재 캐싱 및 OAuth Gen2 ADLS에 대 한 지원. |
 | 새 `mssql` Spark-SQL Server 커넥터 | |
@@ -60,24 +158,19 @@ ms.locfileid: "64775076"
 
 - 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
 
-
-
-#### <a id="externaltablesctp24"></a> 외부 테이블
+#### <a name="external-tables"></a>외부 테이블
 
 - 빅 데이터 클러스터 배포에서는 더 이상 합니다 **SqlDataPool** 하 고 **SqlStoragePool** 외부 데이터 원본입니다. 이러한 데이터 원본은 데이터 풀 및 저장소 풀 데이터 가상화를 지원 하도록 수동으로 만들 수 있습니다.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
@@ -126,11 +219,11 @@ ms.locfileid: "64775076"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 TensorFlow 실행](spark-gpu-tensorflow.md)합니다. |
-| **SqlDataPool** 하 고 **SqlStoragePool** 데이터 원본에 더 이상 기본적으로 만들어집니다. | 필요에 따라 수동으로 이러한를 만듭니다. 참조 된 [알려진 문제](#externaltablesctp24)합니다. |
-| `INSERT INTO SELECT`가 데이터 풀을 지원합니다. | 예를 들어 참조 [자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집](tutorial-data-pool-ingest-sql.md)합니다. |
-| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션입니다. | 강제로 또는 외부 테이블에서 쿼리 계산 풀을 사용 하는 사용 하지 않도록 설정 합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`) 을 입력합니다. |
-| 업데이트 된 AKS 배포 권장 사항입니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 권장 크기의 단일 노드를 사용 하 여 **Standard_L8s**합니다. |
+| Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함된 빅 데이터 클러스터를 배포하고 TensorFlow를 실행](spark-gpu-tensorflow.md)합니다. |
+| **SqlDataPool** 및 **SqlStoragePool** 데이터 원본은 더 이상 기본적으로 생성되지 않습니다. | 필요에 따라 수동으로 만듭니다. [알려진 문제](#externaltablesctp24)를 참조하세요. |
+| `INSERT INTO SELECT`가 데이터 풀을 지원합니다. | 예제를 보려면 [ 자습서: Transact-SQL을 사용하여 SQL Server 데이터 풀에 데이터 수집](tutorial-data-pool-ingest-sql.md)을 참조하세요. |
+| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션. | 강제로 또는 외부 테이블에서 쿼리 계산 풀을 사용 하는 사용 하지 않도록 설정 합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`) 을 입력합니다. |
+| AKS 배포 권장 사항을 업데이트합니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 **Standard_L8s** 크기의 단일 노드를 사용하는 것이 좋습니다. |
 | Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다. | |
 
 ### <a name="known-issues"></a>알려진 문제
@@ -201,21 +294,14 @@ make: *** [deploy-clean] Error 2
 - 빅 데이터 클러스터 배포에서는 더 이상 합니다 **SqlDataPool** 하 고 **SqlStoragePool** 외부 데이터 원본입니다. 이러한 데이터 원본은 데이터 풀 및 저장소 풀 데이터 가상화를 지원 하도록 수동으로 만들 수 있습니다.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
@@ -264,17 +350,17 @@ make: *** [deploy-clean] Error 2
 
 | 새로운 기능 또는 업데이트 | 설명 |
 | :---------- | :------ |
-| IntelliJ에서 빅 데이터 클러스터에서 Spark 작업을 제출 합니다. | [IntelliJ에서 SQL Server 빅 데이터 클러스터에서 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
-| 응용 프로그램 배포 및 클러스터 관리에 대 한 일반 CLI입니다. | [SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법](big-data-cluster-create-apps.md) |
-| VS Code 확장 빅 데이터 클러스터에 응용 프로그램을 배포 합니다. | [VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법](app-deployment-extension.md) |
-| 변경 된 **mssqlctl** 명령 사용법을 도구입니다. | 자세한 내용은 참조는 [알려진 mssqlctl 문제](#mssqlctlctp23)합니다. |
-| 빅 데이터 클러스터에 사용 하 여 Sparklyr | [SQL Server 2019 빅 데이터 클러스터에 사용 하 여 Sparklyr](sparklyr-from-RStudio.md) |
-| **HDFS 계층화**를 통해 빅 데이터 클러스터에 외장 HDFS 호환 스토리지를 탑재합니다. | 참조 [HDFS 계층화](hdfs-tiering.md)합니다. |
-| 마스터 SQL Server 인스턴스 및 HDFS/Spark 게이트웨이에 대 한 새로운 통합 된 연결 환경입니다. | 참조 [SQL Server 마스터 인스턴스와 HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md)합니다. |
-| 사용 하 여 클러스터를 삭제 **mssqlctl 클러스터 삭제** 이제 빅 데이터 클러스터에 포함 된 네임 스페이스에 있는 개체만 삭제 합니다. | 네임 스페이스 삭제 되지 않습니다. 그러나 이전 릴리스에서이 명령은 전체 네임 스페이스를 삭제 하지 못했습니다. |
-| _보안_ 끝점 이름이 변경 되었으며 통합 합니다. | **서비스-보안-lb** 하 고 **서비스-보안-nodeport** 로 통합 되었습니다 합니다 **끝점 보안** 끝점입니다. |
-| _프록시_ 끝점 이름이 변경 되었으며 통합 합니다. | **서비스-프록시-lb** 하 고 **nodeport-프록시 서비스-** 로 통합 되었습니다 합니다 **끝점 서비스 프록시** 끝점. |
-| _컨트롤러_ 끝점 이름이 변경 되었으며 통합 합니다. | **서비스 mssql-컨트롤러 lb** 하 고 **서비스 mssql-컨트롤러 nodeport** 로 통합 되었습니다 합니다 **끝점-컨트롤러** 끝점. |
+| IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
+| 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [SQL Server 2019 빅 데이터 클러스터에 앱을 배포하는 방법(미리 보기)](big-data-cluster-create-apps.md) |
+| 애플리케이션을 빅 데이터 클러스터에 배포하기 위한 VS Code 확장. | [VS Code를 사용하여 SQL Server 빅 데이터 클러스터에 애플리케이션을 배포하는 방법](app-deployment-extension.md) |
+| **mssqlctl** 도구 명령 사용법이 변경되었습니다. | 자세한 내용은 [mssqlctl의 알려진 문제](#mssqlctlctp23)를 참조하세요. |
+| 빅 데이터 클러스터에 사용 하 여 Sparklyr | [SQL Server 2019 빅 데이터 클러스터에서 Sparklyr 사용](sparklyr-from-RStudio.md) |
+| **HDFS 계층화**를 통해 빅 데이터 클러스터에 외장 HDFS 호환 스토리지를 탑재합니다. | [HDFS 계층화](hdfs-tiering.md)를 참조하세요 |
+| SQL Server 마스터 인스턴스 및 HDFS/Spark 게이트웨이에 대한 새로운 통합 연결 환경. | [SQL Server 마스터 인스턴스 및 HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md)를 참조하세요. |
+| **mssqlctl 클러스터 삭제**를 통해 클러스터를 삭제하면 이제 빅 데이터 클러스터의 일부인 네임스페이스의 개체만 삭제됩니다. | 네임스페이스는 삭제되지 않습니다. 그러나 이전 릴리스에서 이 명령은 전체 네임스페이스를 삭제했습니다. |
+| _보안_ 엔드포인트 이름이 변경되고 통합되었습니다. | **service-security-lb** 및 **service-security-nodeport**가 **endpoint-security** 엔드포인트에 통합되었습니다. |
+| _프록시_ 엔드포인트 이름이 변경되고 통합되었습니다. | **service-proxy-lb** 및 **service-proxy-nodeport**가 **endpoint-service-proxy** 엔드포인트에 통합되었습니다. |
+| _컨트롤러_ 엔드포인트 이름이 변경되고 통합되었습니다. | **service-mssql-controller-lb** 및 **service-mssql-controller-nodeport**가 **endpoint-controller** 엔드포인트에 통합되었습니다. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제

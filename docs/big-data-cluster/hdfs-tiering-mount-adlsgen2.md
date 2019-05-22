@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317132"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993965"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 ADLS Gen2 하는 방법
 
@@ -100,22 +100,22 @@ Azure portal에서 ADLS 계정에 액세스할 수 있는 액세스 키를 사�
 
 액세스 키 또는 OAuth를 사용 하 여 자격 증명 파일을 준비 했는지 여부, 했으므로 탑재를 시작할 수 있습니다. 다음 단계를 빅 데이터 클러스터의 로컬 HDFS 저장소에 Azure Data Lake에서 원격 HDFS storage를 탑재 합니다.
 
-1. 사용 하 여 **kubectl** 끝점에 대 한 IP 주소를 찾으려면 **mgmtproxy svc 외부** 빅 데이터 클러스터의 서비스입니다. 검색할 합니다 **EXTERNAL-IP**합니다.
+1. 사용 하 여 **kubectl** 끝점에 대 한 IP 주소를 찾으려면 **컨트롤러 svc 외부** 빅 데이터 클러스터의 서비스입니다. 검색할 합니다 **EXTERNAL-IP**합니다.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. 사용 하 여 로그인 **mssqlctl** 관리 프록시 끝점의 외부 IP 주소를 사용 하 여 클러스터 사용자 이름 및 암호를 사용 하 여:
+1. 사용 하 여 로그인 **mssqlctl** 컨트롤러 끝점의 외부 IP 주소를 사용 하 여 클러스터 사용자 이름 및 암호를 사용 하 여:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 저장소 탑재 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
+1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 클러스터 저장소 풀 마운트 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Azure portal에서 ADLS 계정에 액세스할 수 있는 액세스 키를 사�
 빅 데이터 클러스터의 모든 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 HDFS에서 특정 경로에 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 탑재를 삭제 합니다.
 
-탑재를 삭제 하려면 사용 합니다 **mssqlctl 저장소 탑재 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
+탑재를 삭제 하려면 사용 합니다 **mssqlctl 클러스터 저장소 풀 마운트 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>다음 단계

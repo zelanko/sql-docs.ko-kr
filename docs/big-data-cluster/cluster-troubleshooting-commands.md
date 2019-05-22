@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877659"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994087"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -121,7 +121,7 @@ kubectl get svc -n mssql-cluster
 | **appproxy-svc-external** | 응용 프로그램 배포 시나리오를 지원 합니다. |
 
 > [!TIP]
-> 이 사용 하 여 서비스를 표시 하는 방법 **kubectl**를 사용 하 여도 가능 하지만 `mssqlctl cluster endpoints list` 이러한 끝점을 보려면 명령입니다. 자세한 내용은 [빅 데이터 클러스터 끝점 가져오기](deployment-guidance.md#endpoints)합니다.
+> 이 사용 하 여 서비스를 표시 하는 방법 **kubectl**를 사용 하 여도 가능 하지만 `mssqlctl cluster endpoint list` 이러한 끝점을 보려면 명령입니다. 자세한 내용은 [빅 데이터 클러스터 끝점 가져오기](deployment-guidance.md#endpoints)합니다.
 
 ## <a name="get-service-details"></a>서비스 세부 정보 가져오기
 

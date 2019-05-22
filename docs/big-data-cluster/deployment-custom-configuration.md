@@ -5,16 +5,16 @@ description: 구성 파일을 사용 하 여 빅 데이터 클러스터 배포�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dd774d390587d0c2c0248ab9b419ad40f8f212b
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759170"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993994"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>빅 데이터 클러스터에 대 한 배포 설정을 구성 합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "63759170"
 다음 명령을 전송 하는 키-값 쌍을 **--json 값** 빅 데이터 클러스터 이름을 변경 하려면 매개 변수 **테스트 클러스터**:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-cluster"
+mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -84,7 +84,7 @@ mssqlctl cluster config section set -f custom.json -j ".metadata.name=test-clust
 다음 예제에서는 인라인 JSON을 사용 하 여에 대 한 포트를 변경 하는 **컨트롤러** 끝점:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> 복제본 풀 구성
@@ -102,11 +102,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
             "type": "Storage",
             "replicas": 2,
             "storage": {
-                "usePersistentVolume": true,
-                "className": "managed-premium",
-                "accessMode": "ReadWriteOnce",
-                "size": "10Gi"
-            }
+               "data": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "15Gi"
+               },
+               "logs": {
+                  "className": "default",
+                  "accessMode": "ReadWriteOnce",
+                  "size": "10Gi"
+               }
+           },
         }
     }
 ]
@@ -115,31 +121,17 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.controlPlane.spec.
 수정 하 여 풀의 인스턴스 수를 구성할 수 있습니다 합니다 **복제본** 각 풀에 대 한 값입니다. 다음 예제에서는 인라인 JSON을 사용 하 여 저장소 및 데이터 풀에 대 한 이러한 값을 변경 하려면 `10` 고 `4` 각각.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
 ```
-
-> [!IMPORTANT]
-> 이 릴리스에서 계산 풀의 인스턴스 수를 변경할 수 없습니다.
 
 ## <a id="storage"></a> 저장소 구성
 
-또한 저장소 클래스와 각 풀에 사용 되는 특성을 변경할 수 있습니다. 다음 예제에서는 저장소 풀에 사용자 지정 저장소 클래스를 할당합니다.
+또한 저장소 클래스와 각 풀에 사용 되는 특성을 변경할 수 있습니다. 다음 예제에서는 저장소 풀에 사용자 지정 저장소 클래스를 할당 및 100 gb 데이터를 저장 하는 데는 영구적 볼륨 클레임의 크기를 업데이트 합니다. 사용 하 여 설정을 업데이트 하려면 구성 파일에서이 섹션에서는 사용 해야 합니다 *mssqlctl 클러스터 구성 집합* 명령이 패치 파일을 사용 하 여이 섹션을 추가 하는 방법을 아래를 참조 하세요:
 
 ```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec={""replicas"": 2,""storage"": {""className"": ""newStorageClass"",""size"": ""20Gi"",""accessMode"": ""ReadWriteOnce"",""usePersistentVolume"": true},""type"": ""Storage""}"
-```
-
-다음 예제에서는 저장소 풀의 크기를만 업데이트 `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.size=32Gi"
-```
-
-다음 예제에서는 업데이트를 모든 풀의 크기 `32Gi`:
-
-```bash
-mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
@@ -170,7 +162,7 @@ mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON 패치 파일
@@ -181,10 +173,10 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
 
 - 단일 끝점의 포트를 업데이트합니다.
 - 모든 끝점을 업데이트 (**포트** 하 고 **serviceType**).
-- 제어 평면 저장소를 업데이트합니다.
+- 제어 평면 저장소를 업데이트합니다. 이러한 설정은 풀 수준에서 재정의 되지 않은 경우 모든 클러스터 구성 요소에 적용할 수 있습니다.
 - 제어 평면 저장소의 저장소 클래스 이름을 업데이트합니다.
-- 업데이트 풀 저장소 (저장소 풀) 복제본을 포함 합니다.
-- 특정 풀 (저장소 풀)에 대 한 Spark 설정을 업데이트합니다.
+- 저장소 풀에 대 한 풀 저장소 설정을 업데이트합니다.
+- 저장소 풀에 대 한 Spark 설정을 업데이트합니다.
 
 ```json
 {
@@ -222,30 +214,39 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage",
+      "path": "spec.controlPlane.spec.controlPlane",
       "value": {
-        "usePersistentVolume":true,
-        "accessMode":"ReadWriteMany",
-        "className":"managed-premium",
-        "size":"10Gi"
-      }
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
+        }
     },
     {
       "op": "replace",
-      "path": "spec.controlPlane.spec.storage.className",
-      "value": "default"
+      "path": "spec.controlPlane.spec.storage.data.className",
+      "value": "managed-premium"
     },
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "op": "add",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
       "value": {
-        "replicas": 2,
-        "type": "Storage",
-        "storage": {
-          "usePersistentVolume": true,
-          "accessMode": "ReadWriteOnce",
-          "className": "managed-premium",
-          "size": "10Gi"
+          "data": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "100Gi"
+          },
+          "logs": {
+            "className": "managed-premium",
+            "accessMode": "ReadWriteOnce",
+            "size": "32Gi"
+          }
         }
       }
     },
@@ -270,7 +271,7 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
 사용 하 여 **mssqlctl 클러스터 구성 섹션 집합** JSON 패치 파일에 변경 내용을 적용 합니다. 다음 예제에서는 적용 합니다 **patch.json** 대상 배포 구성 파일에 파일 **custom.json**합니다.
 
 ```bash
-mssqlctl cluster config section set -f custom.json -p ./patch.json
+mssqlctl cluster config section set -c custom.json -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>다음 단계

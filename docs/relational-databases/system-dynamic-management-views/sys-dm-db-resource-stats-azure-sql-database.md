@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325506"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993884"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325506"
 |max_session_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 백분율로 최대 동시 세션|  
 |dtu_limit|**int**|현재 최대 데이터베이스 DTU 설정이이 데이터베이스에 대 한 간격입니다. VCore 기반 모델을 사용 하 여 데이터베이스에 대 한이 열은 NULL입니다.|
 |cpu_limit|**10 진수 (5,2)**|이 간격 중에이 데이터베이스에 대 한 vcore 수입니다. DTU 기반 모델을 사용 하 여 데이터베이스에 대 한이 열은 NULL입니다.|
+|avg_instance_cpu_percent|**10 진수 (5,2)**|평균 데이터베이스 CPU 사용량 백분율에서입니다.|
+|avg_instance_memory_percent|**10 진수 (5,2)**|데이터베이스 평균 메모리 사용량 백분율입니다.|
+|avg_login_rate_percent|**10 진수 (5,2)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|replica_role|**int**|현재 복제본 역할을 기본으로 0, 1을 사용 하 여 보조 데이터베이스와 2 전달자 (지역 보조 복제본의 주)를 나타냅니다. 모든 읽기 가능한 보조 복제본에 읽기 전용 의도 사용 하 여 연결 된 경우 "1"을 볼 수 있습니다. 읽기 전용 의도 지정 하지 않고 지역 보조 복제본에 연결, "2" (에 연결 전달자) 표시 됩니다.|
 |||
   
 > [!TIP]  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634000"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982816"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -34,7 +34,7 @@ Fci에 대 한 장애 조치는 Windows Server 장애 조치 클러스터 (WSFC)
 - [RHEL 또는 Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#rhelFailover"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
 
 Red Hat Enterprise Linux (RHEL) 제목을 또는 Ubuntu 서버는 수동 장애 조치를 수행 하려면 다음 단계를 실행 합니다.
 1.  다음 명령을 사용 합니다. 
@@ -55,7 +55,7 @@ Red Hat Enterprise Linux (RHEL) 제목을 또는 Ubuntu 서버는 수동 장애 
 
 \<FCIResourceName >은 FCI에 대 한 Pacemaker 리소스 이름입니다. 
 
-## <a name = "#slesFailover"></a> 수동 장애 조치 (SLES)
+## <a name = "#-manual-failover-sles"></a> 수동 장애 조치 (SLES)
 
 
 Enterprise Server SLES (Suse Linux)를 사용 하 여는 `migrate` SQL Server FCI 수동 장애 조치 하는 명령입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.

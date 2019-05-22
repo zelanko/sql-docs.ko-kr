@@ -3,30 +3,30 @@ title: SQL Server 2019-SQL Server Machine Learning 서비스의 차이점
 description: SQL Server 2019 미리 보기 릴리스에서 R 및 SQL Server Python 기계 학습 확장에 대 한 새로운 기능에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: dphansen
+ms.author: davidph
+manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ef383a0f2c85525e408607c22513065dd5bcb50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745903"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994231"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019에 SQL Server Machine Learning Services 설치의 차이점  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Windows, SQL Server 2019 설치 외부 프로세스에 대 한 격리 메커니즘을 변경합니다. 이 변경은 로컬 작업자 계정을 사용 하 여 대체 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), 클라이언트 응용 프로그램의 Windows에서 실행 되는 격리 기술 합니다. 
 
-수정 결과로 관리자에 대 한 특정 작업 항목이 없습니다. 새 패키지나 업그레이드 된 서버, 모든 외부 스크립트 및 코드에서 실행할 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 새 격리 모델을 자동으로 따릅니다. 이 R, Python 및 SQL Server 2019에 도입 된 새 Java 언어 확장에 적용 됩니다.
+수정 결과로 관리자에 대 한 특정 작업 항목이 없습니다. 새 패키지나 업그레이드 된 서버, 모든 외부 스크립트 및 코드에서 실행할 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 새 격리 모델을 자동으로 따릅니다. 
 
 이 릴리스의 주요 차이점은 요약:
 
 + 로컬 사용자 계정 **SQL 제한 된 사용자 그룹 (SQLRUserGroup)** 는 더 이상 만들거나 외부 프로세스를 실행 하는 데 사용 됩니다. AppContainers 바꿔야 합니다.
-+ **SQLRUserGroup** 멤버 자격 변경 되었습니다. 여러 로컬 사용자 계정 대신 멤버 자격만 SQL Server 실행 패드 서비스 계정으로 구성 됩니다. 이제 R, Python 및 Java 프로세스 격리 AppContainers 통해 실행 패드 서비스 id로 실행 합니다.
++ **SQLRUserGroup** 멤버 자격 변경 되었습니다. 여러 로컬 사용자 계정 대신 멤버 자격만 SQL Server 실행 패드 서비스 계정으로 구성 됩니다. R 및 Python 프로세스는 이제 AppContainers을 통해 격리 실행 패드 서비스 id로 실행 합니다.
 
 격리 모델을 변경 하지만 설치 마법사 및 명령줄 매개 변수를 SQL Server 2019에 동일 하 게 유지 합니다. 설치 도움말을 참조 하세요 [SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)합니다.
 
@@ -49,7 +49,7 @@ AppContainers 이동의 일부로, 가지 AppContainer Sid에 따라 새 방화�
 
 ## <a name="program-file-permissions"></a>프로그램 파일 사용 권한
 
-이전 릴리스와 마찬가지로 합니다 **SQLRUserGroup** 읽기를 제공 하 고 SQL Server에서 실행 파일에 대 한 실행을 계속 **Binn**합니다 **R_SERVICES**, 및  **PYTHON_SERVICES** 디렉터리입니다. 이 릴리스에서 유일한 구성원 **SQLRUserGroup** SQL Server 실행 패드 서비스 계정입니다.  실행 패드 서비스에는 R, Python 또는 Java 실행 환경을 시작 되 면 프로세스는 실행 패드 서비스로 실행 됩니다.
+이전 릴리스와 마찬가지로 합니다 **SQLRUserGroup** 읽기를 제공 하 고 SQL Server에서 실행 파일에 대 한 실행을 계속 **Binn**합니다 **R_SERVICES**, 및  **PYTHON_SERVICES** 디렉터리입니다. 이 릴리스에서 유일한 구성원 **SQLRUserGroup** SQL Server 실행 패드 서비스 계정입니다.  실행 패드 서비스에는 R 또는 Python 실행 환경을 시작 되 면 프로세스는 실행 패드 서비스로 실행 됩니다.
 
 ## <a name="implied-authentication"></a>암시적 인증
 

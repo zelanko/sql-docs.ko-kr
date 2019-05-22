@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 00c8a5aeba30d16e2ae2f5c98290797765c9a357
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: e93c417f286246f6db25d0463cec97eba8541c1c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620182"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993844"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio 란?
 
@@ -165,3 +165,7 @@ SQL 코드 조각에는 데이터베이스, 테이블, 뷰, 저장된 프로시�
 - [다운로드 및 설치 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [연결 및 SQL Server 쿼리](quickstart-sql-server.md)
 - [Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
+
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

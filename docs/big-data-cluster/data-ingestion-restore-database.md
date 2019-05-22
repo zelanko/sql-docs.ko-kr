@@ -5,17 +5,17 @@ description: 이 아티클에서 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7ac5e43a92012d2027847d9ea3630a17e7722609
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a806d31350747b951dc673da409ad358bf33272f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774245"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994039"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스를 복원 합니다.
 
@@ -99,14 +99,12 @@ GO
 -- Create the SqlDataPool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
   CREATE EXTERNAL DATA SOURCE SqlDataPool
-  WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+  WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
 
 -- Create the SqlStoragePool data source:
 IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-BEGIN
-    CREATE EXTERNAL DATA SOURCE SqlStoragePool
-    WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-END
+   CREATE EXTERNAL DATA SOURCE SqlStoragePool
+   WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 GO
 ```
 

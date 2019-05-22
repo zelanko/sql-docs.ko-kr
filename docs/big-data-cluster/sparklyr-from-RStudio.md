@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620309"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994175"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 사용 하 여 sparklyr
 
@@ -49,7 +49,7 @@ Livy 및 HDFS/Spark 게이트웨이 사용 하 여 빅 데이터 클러스터에
 RStudio에서 R 스크립트를 만들고 다음 예제와 같이 Spark에 연결 합니다.
 
 > [!TIP]
-> 에 대 한 합니다 `<USERNAME>` 및 `<PASSWORD>` 사용자 이름 (예: 루트)를 사용 하는 값, 및 빅 데이터 클러스터 배포 중에 설정한 암호입니다. 에 대 한는 `<IP>` 및 `<PORT>` 설명서를 참조 하는 값을 [HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md#hdfs)합니다.
+> 에 대 한 합니다 `<USERNAME>` 및 `<PASSWORD>` 사용자 이름 (예: 루트)를 사용 하는 값, 및 빅 데이터 클러스터 배포 중에 설정한 암호입니다. 에 대 한는 `<IP>` 하 고 `<PORT>` 설명서를 참조 하는 값을 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)합니다.
 
 ```r
 library(sparklyr)

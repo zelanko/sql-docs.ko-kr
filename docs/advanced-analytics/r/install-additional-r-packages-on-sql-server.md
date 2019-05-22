@@ -3,17 +3,17 @@ title: 새 R 언어 패키지-SQL Server Machine Learning Services 설치
 description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)를 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506922"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994203"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새로운 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "62506922"
 
 R 패키지 라이브러리를 물리적으로 제한 된 액세스를 사용 하 여 안전한 폴더에서 SQL Server 인스턴스, Program Files 폴더에 있습니다. 이 위치에 쓰기는 관리자 권한이 필요합니다.
 
-관리자가 아닌 패키지를 설치할 수 있지만 이렇게 하려면 addititional 구성 및 기능 초기 설치에서 사용할 수 없습니다. 관리자가 아닌 패키지 설치 하는 방법은 두 가지가 있습니다. RevoScaleR 버전 9.0.1 사용 하거나 나중에 CREATE EXTERNAL LIBRARY (SQL Server 2017에만 해당)를 사용 하 여 합니다. SQL Server 2017에서 **dbo_owner** 또는 현재 데이터베이스에 CREATE EXTERNAL LIBRARY 권한이 있는 사용자를 다른 R 패키지를 설치할 수 있습니다.
+관리자가 아닌 패키지를 설치할 수 있지만 이렇게 하려면 추가 구성 및 기능 초기 설치에서 사용할 수 없습니다. 관리자가 아닌 패키지 설치 하는 방법은 두 가지가 있습니다. RevoScaleR 버전 9.0.1 사용 하거나 나중에 CREATE EXTERNAL LIBRARY (SQL Server 2017에만 해당)를 사용 하 여 합니다. SQL Server 2017에서 **dbo_owner** 또는 현재 데이터베이스에 CREATE EXTERNAL LIBRARY 권한이 있는 사용자를 다른 R 패키지를 설치할 수 있습니다.
 
 R 개발자가 익숙한 중앙에 위치한 라이브러리 쉽지 경우 필요한 패키지에 대 한 사용자 라이브러리 만들기. 이 방법은 SQL Server 데이터베이스 엔진 인스턴스를 실행 하는 R 코드에 대 한 문제가 됩니다. 해당 라이브러리는 동일한 컴퓨터의 경우에 SQL Server 외부 라이브러리에서 패키지를 로드할 수 없습니다. SQL Server에서 실행 되는 R 코드에서 인스턴스 라이브러리에서 패키지에만 사용할 수 있습니다.
 
@@ -41,7 +41,6 @@ R 개발자가 익숙한 중앙에 위치한 라이브러리 쉽지 경우 필�
 새 패키지를 설치 하기 전에 지정 된 패키지에서 사용할 수 있는 기능 SQL Server 환경에 적합 한지를 고려 합니다. 확정 된 SQL Server 환경에서 다음을 방지 수 있습니다.
 
 + 네트워크 액세스 해야 하는 패키지
-+ Java 또는 SQL Server 환경에서 사용 되지 일반적으로 다른 프레임 워크를 필요로 하는 패키지
 + 상승 된 파일 시스템 액세스를 필요로 하는 패키지
 + 웹 개발 또는 SQL Server 내에서 실행 하 여 활용 하지 하는 기타 작업에 대 한 패키지는
 
@@ -51,7 +50,7 @@ R 개발자가 익숙한 중앙에 위치한 라이브러리 쉽지 경우 필�
 
 모든 종속성을 식별 복잡해 집니다. R을 사용 하는 권장 [로컬 리포지토리를 만드는 miniCRAN](create-a-local-package-repository-using-minicran.md) 다음 격리 된 SQL Server 인스턴스를 완전히 정의 된 리포지토리를 전송 합니다.
 
-Alternativley를 사용 하면이 단계를 수동으로 수행할 수 있습니다.:
+또는 수동으로 이러한 단계를 수행할 수 있습니다.
 
 1. 모든 패키지 종속성을 식별 합니다. 
 2. 모든 필요한 패키지를 서버에 이미 설치 되어 있는지 여부를 확인 합니다. 패키지를 설치 하는 경우 버전이 올바른지 확인 합니다.

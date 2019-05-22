@@ -5,17 +5,17 @@ description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb0bd2639dc2e2738215c51a18d87a3eb771c826
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583436"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994155"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "59583436"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. 명명 된 외부 테이블을 만듭니다 **web_clickstream_clicks_data_pool** 데이터 풀에 있습니다.
@@ -79,7 +79,7 @@ ms.locfileid: "59583436"
       );
    ```
   
-1. CTP 2.4에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 3.0에서는 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="load-data"></a>데이터 로드
 
@@ -88,32 +88,13 @@ ms.locfileid: "59583436"
 1. 변수 데이터 풀에 데이터를 삽입 하려면 사용 하려는 쿼리를 정의 합니다. CTP 2.3에 대 한 또는 이전 버전의 **모델... sp_data_pool_table_insert_data** 저장된 프로시저가 필요 합니다. CTP 2.4 이상 버전에서는 사용할 수는 `INSERT INTO` 쿼리에서 결과 데이터 풀 삽입 문을 (합니다 **web_clickstream_clicks_data_pool** 외부 테이블).
 
    ```sql
-   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-   BEGIN
-      INSERT INTO web_clickstream_clicks_data_pool
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-        FROM sales.dbo.web_clickstreams_hdfs_parquet
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-                              AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;
-   END
-
-   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-   BEGIN
-      DECLARE @db_name SYSNAME = 'Sales'
-      DECLARE @schema_name SYSNAME = 'dbo'
-      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-      DECLARE @query NVARCHAR(MAX) = '
-      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-      FROM sales.dbo.web_clickstreams
-      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-         AND wcs_user_sk IS NOT NULL)
-      GROUP BY wcs_user_sk, i_category_id
-      HAVING COUNT_BIG(*) > 100;'
-
-      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
-   END
+   INSERT INTO web_clickstream_clicks_data_pool
+   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+     FROM sales.dbo.web_clickstreams_hdfs_parquet
+   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                           AND wcs_user_sk IS NOT NULL)
+   GROUP BY wcs_user_sk, i_category_id
+   HAVING COUNT_BIG(*) > 100;
    ```
 
 1. 두 개의 SELECT 쿼리를 사용 하 여 삽입된 된 데이터를 검사 합니다.

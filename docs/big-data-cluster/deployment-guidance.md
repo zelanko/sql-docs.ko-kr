@@ -5,17 +5,17 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 99e9c837250c6020bb91c376a6ec34c5e5847f2b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65099479"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993990"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -137,11 +137,8 @@ mssqlctl cluster create
 
 | 환경 변수 | Description |
 |---|---|---|---|
-| **DOCKER_REGISTRY** | 클러스터를 배포 하는 데 사용 되는 이미지가 저장 된 개인 레지스트리입니다. 사용 하 여 *개인 repo.microsoft.com* ducration 제어 된 체크 인 공개 미리 보기에 대 한 합니다.|
-| **DOCKER_REPOSITORY** | 이미지가 저장 된 위의 레지스트리 내 개인 저장소. 사용 하 여 *mssql-private-미리 보기* 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다.|
 | **DOCKER_USERNAME** | 개인 저장소에 저장 됩니다 하는 경우 컨테이너 이미지에 액세스 하려면 사용자 이름입니다. |
 | **DOCKER_PASSWORD** | 위의 개인 리포지토리에 액세스 하기 위한 암호입니다. |
-| **DOCKER_IMAGE_TAG** | 이미지 태그를 지정 하는 데 사용 되는 레이블. 기본값으로 **최신**, 있지만 버전 비 호환성 문제를 방지 하려면 릴리스에 해당 태그를 사용 하는 것이 좋습니다. |
 | **CONTROLLER_USERNAME** | 클러스터 관리자의 사용자 이름입니다. |
 | **CONTROLLER_PASSWORD** | 클러스터 관리자의 암호입니다. |
 | **KNOX_PASSWORD** | Knox 사용자에 대 한 암호입니다. |
@@ -156,11 +153,8 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
 export DOCKER_USERNAME=<docker-username>
 export DOCKER_PASSWORD=<docker-password>
-export DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 ```PowerShell
@@ -168,11 +162,8 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_REGISTRY=private-repo.microsoft.com
-SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
-SET DOCKER_IMAGE_TAG=ctp2.5
 ```
 
 환경 변수를 설정에 따라 실행 해야 `mssqlctl cluster create` 배포를 트리거하도록 합니다. 이 예제에서는 위에서 만든 클러스터 구성 파일을 사용 합니다.
@@ -186,7 +177,6 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 - 이때 개인 Docker 레지스트리에 대 한 자격 증명 됩니다 시 제공 해야 할 심사 하 [Early Adoption Program 등록](https://aka.ms/eapsignup)합니다. SQL Server 빅 데이터 클러스터를 테스트 하려면 초기 Adoption Program 등록이 필요 합니다.
 - 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 설정할 수 있습니다 합니다 **MSSQL_SA_PASSWORD** 하 무엇이 든 처럼 있지만 암호가 충분히 복잡 한 인지 확인을 사용 하지는 `!`를 `&` 또는 `'` 문자입니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
 - 합니다 **SA** 가 설치 중에 생성 되는 SQL Server 마스터 인스턴스에서 시스템 관리자에 로그인 합니다. SQL Server 컨테이너를 만든 후 합니다 **MSSQL_SA_PASSWORD** 지정한 환경 변수를 실행 하 여 검색할 수 $MSSQL_SA_PASSWORD 컨테이너에 출력 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
-- 합니다 **DOCKER_IMAGE_TAG** 컨트롤 릴리스 하는이 예제에서 설치 하는 합니다. 이 예제에서는 CTP 2.5 릴리스에 것입니다.
 
 ## <a id="unattended"></a> 무인된 설치
 
@@ -227,37 +217,44 @@ URL을 확인 합니다 **포털 끝점** 다음 섹션에서 사용 하기 위�
 
 배포 스크립트를 성공적으로 완료 된 후에 다음 단계를 사용 하 여 빅 데이터 클러스터에 대 한 외부 끝점의 IP 주소를 가져올 수 있습니다.
 
-1. 배포 출력을 복사 합니다 **포털 끝점** 및 제거는 `/portal/` 끝입니다. 이 url은 관리 프록시 URL (예를 들어 `https://<ip-address>:30777`).
-
-   > [!TIP]
-   > 배포 출력 없으면 여 가져올 수 있습니다 IP 주소 관리 프록시에 대 한 중 EXTERNAL-IP 출력을 살펴보면 **kubectl** 명령:
-   >
-   > ```bash
-   > kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-   > ```
-
-1. 사용 하 여 빅 데이터 클러스터에 로그인 **mssqlctl 로그인**합니다. 설정 된 **-끝점** 관리 프록시에 대 한 매개 변수입니다.
+1. 배포 후 다음의 외부 IP 출력을 보면 컨트롤러 끝점의 IP 주소를 찾으려면 **kubectl** 명령:
 
    ```bash
-   mssqlctl login --endpoint https://<ip-address>:30777
+   kubectl get svc controller-svc-external -n <your-cluster-name>
+   ```
+
+1. 사용 하 여 빅 데이터 클러스터에 로그인 **mssqlctl 로그인**합니다. 설정 된 **-컨트롤러 끝점** 컨트롤러 끝점의 외부 IP 주소 매개 변수입니다.
+
+   ```bash
+   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
    배포 하는 동안 사용자 이름 및 컨트롤러 (CONTROLLER_USERNAME 및 CONTROLLER_PASSWORD)에 대해 구성한 암호를 지정 합니다.
 
-1. 실행할 **mssqlctl 클러스터 끝점 목록** 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 예를 들어, 다음 관리 포털 끝점에 대 한 출력을 표시 합니다.
+1. 실행할 **mssqlctl 클러스터 끝점 목록** 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 
 
-   ```output
-   {
-     "description": "Management Portal",
-     "endpoint": "https://<ip-address>:30777/portal",
-     "ip": "<ip-address>",
-     "name": "portal",
-     "port": 30777,
-     "protocol": "https"
-   },
+   ```bash
+   mssqlctl cluster endpoint list
    ```
 
-1. 모든 클러스터 끝점에 설명 되어는 **서비스 끝점** 클러스터 관리 포털을 탭 합니다. 관리 포털 끝점을 사용 하 여 이전 단계에서 포털에 액세스할 수 있습니다 (예를 들어 `https://<ip-address>:30777/portal`). 관리 포털에 액세스 하기 위한 자격 증명은 컨트롤러 이름과 배포 중에 지정한 암호에 대 한 값입니다. 또한 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다.
+   다음은이 명령의 샘플 출력을 보여 줍니다.
+
+   ```output
+   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
+   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
+   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
+   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
+   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
+   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
+   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
+   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
+   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
+   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
+   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
+   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
+   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
+   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   ```
 
 ### <a name="minikube"></a>Minikube
 

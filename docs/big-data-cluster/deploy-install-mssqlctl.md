@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 32beeaf5ee7dd12b4efb4792ab5e1c489868705e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776097"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994022"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 
@@ -44,16 +44,16 @@ ms.locfileid: "64776097"
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.3` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
+   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.5` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl 설치
@@ -82,16 +82,16 @@ Linux에서 Python 3.5를 설치 하 고 그런 다음 pip를 업그레이드 �
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.3` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
+   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.5` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

@@ -11,12 +11,12 @@ manager: craigg
 ms.custom: seodec18
 ms.date: 05/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 6ac951b377806f66eaea2f39969f84b92c91ee50
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: 3c99b33c4986aef9a5885de26697d444d8bbf39f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449960"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993581"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -212,7 +212,8 @@ Windows 설치 관리자를 사용하여 [!INCLUDE[name-sos-short](../includes/n
 - [Azure SQL 데이터베이스 연결 및 쿼리](quickstart-sql-database.md)
 - [Azure 데이터 웨어하우스 연결 및 쿼리](quickstart-sql-dw.md)
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]에 기여하기:
-- [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio) 
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 [Microsoft 개인정보취급방침](https://go.microsoft.com/fwlink/?LinkId=521839) 및 [사용 현황 데이터 수집](usage-data-collection.md).

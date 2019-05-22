@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472140"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994095"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>클러스터 관리 포털을 사용 하 여 SQL Server 빅 데이터 클러스터를 모니터링 하는 방법
 
@@ -38,7 +38,7 @@ ms.locfileid: "63472140"
 컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `mgmtproxy-svc-external` (예: **https://\<ip 주소\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
 
 > [!NOTE]
-> CTP 2.5에 대 한 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
+> CTP 3.0의 경우 보안 경고를 자동으로 생성 된 SSL 인증서 사용 하므로 웹 페이지에 액세스 하는 경우
 
 ## <a name="overview"></a>개요
 
