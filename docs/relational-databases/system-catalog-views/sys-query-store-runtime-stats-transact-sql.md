@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542253"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980049"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542253"
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)합니다.|  
 |**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
 |**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4 -  Exception|  
-|**first_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리 계획에 대 한 첫 번째 실행 시간입니다.|  
-|**last_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리에 대해 마지막 실행 시간을 계획 합니다.|  
+|**first_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리 계획에 대 한 첫 번째 실행 시간입니다. 쿼리 실행의 종료 시간을 나타냅니다.|  
+|**last_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리에 대해 마지막 실행 시간을 계획 합니다. 쿼리 실행의 종료 시간을 나타냅니다.|  
 |**count_executions**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 실행의 총 수입니다.|  
 |**avg_duration**|**float**|평균 기간 (마이크로초 단위로 보고) 집계 간격 내에서 쿼리 계획에 대 한 합니다.|  
 |**last_duration**|**bigint**|쿼리에 대 한 마지막 기간 (마이크로초 단위로 보고) 집계 간격 내에서 계획 합니다.|  

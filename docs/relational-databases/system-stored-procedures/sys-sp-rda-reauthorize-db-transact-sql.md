@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d700fd19999da3905a0ff69231a286a022d57e5
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790441"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982910"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  원격 데이터를 포함 하는 Azure 데이터베이스의 이름을 지정 합니다. *@azure_databasename* sysname 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0(성공) 또는 >0(실패)  
+ 0 (성공) 또는 > 0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  

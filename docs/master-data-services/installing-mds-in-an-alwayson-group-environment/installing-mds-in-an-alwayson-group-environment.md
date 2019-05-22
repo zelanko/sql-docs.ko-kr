@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489600"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982111"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -302,8 +302,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
     그림 17
 
-    각 복제본의 경우 다음 **동기 커밋**, **자동 장애 조치** 및 **읽기용 보조** 설정을 구성합니다. 그림을 참조하세요.
-17.
+    각 복제본의 경우 다음 **동기 커밋**, **자동 장애 조치** 및 **읽기용 보조** 설정을 구성합니다. 그림 17을 참조하세요.
 
     **동기 커밋**: 이는 트랜잭션이 데이터베이스의 주 복제본에 커밋되는 경우 트랜잭션이 다른 모든 동기 복제본에도 커밋됨을 보장합니다. 비동기 커밋은 이를 보장하지 않으며 주 복제본보다 뒤떨어질 수도 있습니다.
 

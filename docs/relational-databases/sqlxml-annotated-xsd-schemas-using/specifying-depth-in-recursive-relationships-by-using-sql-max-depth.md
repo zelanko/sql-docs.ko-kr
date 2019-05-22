@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030724"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980757"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  관계가 재귀적이므로 스키마에서 재귀 깊이를 지정할 방법이 필요합니다. 그렇지 않으면 무한 재귀(직원이 직원에게 보고하고 이 직원은 또 다른 직원에게 보고하는 등)가 생성됩니다. 합니다 **sql:max-깊이** 주석을 사용 하면 재귀가 계속 깊이에서 지정할 수 있습니다. 에 대 한 값을 지정 하려면이 특정 예제의 **sql:max-깊이**를 얼마나 깊이 관리 계층은 회사에서 알고 있어야 합니다.  
   
 > [!NOTE]  
->  스키마를 지정 합니다 **sql:-필드** 주석을 하지만 지정 하지 않습니다는 **sql:-값** 주석입니다. 따라서 결과 계층 구조에서 최상위 노드는 누구에게도 보고하지 않는 직원 즉, ReportsTo가 NULL인 직원으로만 제한됩니다. 지정 **sql:-필드** 지정 하지 않으면 **sql:-값** (기본값은 NULL) 주석이 작업을 수행 합니다. 가능한 모든 보고를 포함 하는 결과 XML 트리 (테이블의 모든 직원에 대 한 보고 트리)를 제거 합니다 **sql:-필드** 스키마에서 주석입니다.  
+>  스키마를 지정 합니다 **sql:-필드** 주석을 하지만 지정 하지 않습니다는 **sql:-값** 주석입니다. 따라서 결과 계층 구조에서 최상위 노드는 누구에게도 보고하지 않는 직원 (ReportsTo은 NULL입니다.) 지정 **sql:-필드** 지정 하지 않으면 **sql:-값** (기본값은 NULL) 주석이 작업을 수행 합니다. 가능한 모든 보고를 포함 하는 결과 XML 트리 (테이블의 모든 직원에 대 한 보고 트리)를 제거 합니다 **sql:-필드** 스키마에서 주석입니다.  
   
 > [!NOTE]  
 >  다음 절차에서는 tempdb 데이터베이스를 사용합니다.  
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  사용 된 **sql:max-깊이** 스키마에 설명 된 재귀 관계의 재귀 깊이 지정 하려면 스키마에서 주석입니다. 값을 **sql:max-깊이** 주석은 재귀 횟수를 나타내는 양의 정수 (1 ~ 50):  값이 1는 요소에서 재귀가 중단 되는 **sql:max-깊이** 주석이 지정 되지 않으면 값이 2는 요소에서 다음 수준에서 재귀가 중단 됩니다 **sql:max-깊이** 지정 ; 등에입니다.  
   
 > [!NOTE]  
->  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 변환됩니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. 에 대해 지정한 값이 높을수록 **sql:max-깊이**클수록 FOR XML EXPLICIT 쿼리는 생성 됩니다. 그러면 검색 시간이 느려질 수 있습니다.  
+>  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 합니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. 에 대해 지정한 값이 높을수록 **sql:max-깊이**클수록 FOR XML EXPLICIT 쿼리는 생성 됩니다. 그러면 검색 시간이 느려질 수 있습니다.  
   
 > [!NOTE]  
 >  Updategrams 및 XML 대량 로드에서는 max-depth 주석을 무시합니다. 따라서 max-depth에 지정하는 값에 상관없이 재귀 업데이트 또는 삽입이 수행됩니다.  

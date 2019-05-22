@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_removedocument
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5319f3cd1cb7f06677bfe35eb19ba66f2dca4151
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 5f249871fd1037ad5fcf485c85e7b758e9becf7a
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947607"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65979971"
 ---
 # <a name="spxmlremovedocument-transact-sql"></a>sp_xml_removedocument(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_xml_removedocument hdoc
  새로 생성된 문서의 핸들입니다. 유효하지 않은 핸들은 오류를 반환합니다. *hdoc* 는 정수입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0(성공) 또는 >0(실패)  
+ 0 (성공) 또는 > 0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
@@ -59,10 +59,10 @@ sp_xml_removedocument hdoc
 EXEC sp_xml_removedocument @hdoc;  
 ```  
   
-## <a name="see-also"></a>관련 항목:      
+## <a name="see-also"></a>관련 항목      
  <br>[시스템 저장 프로시저 (Transact SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[XML 저장 프로시저 (Transact SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[sys.dm_exec_xml_handles (TRANSACT-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_preparedocument(Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
  <br>[OPENXML (TRANSACT-SQL)](../../t-sql/functions/openxml-transact-sql.md)
   

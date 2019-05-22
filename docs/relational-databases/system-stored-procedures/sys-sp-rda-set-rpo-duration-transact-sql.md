@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_rpo_duration (TRANSACT-SQL) | Microsoft Docs
+title: sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11336658a557d9a2ceced08425a12963dd15782e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685231"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982952"
 ---
-# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact SQL)
+# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   확인 하려면 원격 Azure 데이터베이스를 전체 복원 지정 시간 복원은 필요한 경우 준비 테이블의 SQL Server 유지 하는 마이그레이션된 데이터의 시간 수를 설정 합니다.    
@@ -42,7 +42,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>인수    
- [ @duration_hrs =] *duration_hrs*    
+ [ @duration_hrs = ] *duration_hrs*    
  시간입니다 (null이 아닌 정수 값)의 마이그레이션된 데이터를 유지 하려면 SQL Server는 현재 스트레치 사용 데이터베이스에 대 한 합니다. 기본 값 및 최 솟 값은 8 시간입니다.    
  
  > [!NOTE]
@@ -55,7 +55,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
  실행 하 여 현재 값을 가져올 [sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)합니다.    
     
 ## <a name="see-also"></a>관련 항목    
- [sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
+ [sys.sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [스트레치 사용 데이터베이스 (Stretch Database)를 복원 합니다.](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

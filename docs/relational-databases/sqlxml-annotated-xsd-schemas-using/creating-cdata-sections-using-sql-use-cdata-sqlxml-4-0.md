@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,23 @@ helpviewer_keywords:
 - sql:use-cdata
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9b7cac79155e89217a64fbbc309082322853f80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b7f6ff5e7f16012d33f805227e6dda997cfc60d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041594"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981061"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML에서 CDATA 섹션은 태그 문자로 인식될 문자가 포함된 텍스트 블록을 이스케이프하는 데 사용됩니다.  
   
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스에는 XML 파서에서 태그 문자로 처리되는 문자가 포함될 수 있습니다. 예를 들어 꺾쇠 괄호(< 및 >), 작거나 같음 기호(<=) 및 앰퍼샌드(&)는 태그 문자로 처리됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
+ 데이터베이스에 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태그 문자 XML 파서에서 처리는; 예를 들어, 괄호 (< 및 >), 덜-보다-또는-같음 기호 각도 문자를 포함할 수 있습니다 때로는 (< =), 앰퍼샌드 (&)는 처리 태그 문자입니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
   
  합니다 **sql:use-cdata** 주석에서 반환 된 데이터를 지정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDATA 섹션에 래핑해야 합니다 (열에서 값을 인지 여부는 나타냅니다 즉, 지정 된 **sql: field** CDATA 섹션으로 묶어야 합니다). 합니다 **sql:use-cdata** 주석은 데이터베이스 열에 매핑되는 요소에 대해서만 지정할 수 있습니다.  
   

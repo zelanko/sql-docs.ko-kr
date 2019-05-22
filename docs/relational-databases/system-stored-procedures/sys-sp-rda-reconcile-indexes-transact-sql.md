@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 329446a2ca5b7719e68123b2257d32ceddcd0e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcb2226c52e8572e6432e0f21f4a782e130df067
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756521"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982948"
 ---
 # <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [@objname =] *'objname'*  
+ [@objname = ] *'objname'*  
  인덱스를 조정 하려는 스트레치 사용 테이블의 정규화 되거나 정규화 되지 않은 이름이입니다. 따옴표는 정규화 된 개체를 지정 하는 경우에 필요 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0(성공) 또는 >0(실패)  
+ 0 (성공) 또는 > 0 (실패)  
   
 ## <a name="see-also"></a>관련 항목  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

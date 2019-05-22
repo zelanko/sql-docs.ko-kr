@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -27,15 +26,16 @@ helpviewer_keywords:
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3baef0dec3d2c4817378cd23684f6012a8050212
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013914"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980703"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -201,9 +201,9 @@ ms.locfileid: "56013914"
   
  하나는 XML 문서에는 Sales.SalesOrderHeader 테이블의 각 주문에 대 한  **\<순서 >** 요소입니다. 및 각  **\<순서 >** 요소에는 목록이  **\<제품 >** 자식 요소를 순서 대로 요청 된 각 제품에 대 한 합니다.  
   
- 이 계층을 생성하는 XSD 스키마를 지정하려면 두 개의 관계, 즉 OrderOD와 ODProduct, 두 값을 지정합니다. OrderOD 관계는 Sales.SalesOrderHeader와 Sales.SalesOrderDetail 테이블 간의 부모-자식 관계를 지정합니다. ODProduct 관계는 Sales.SalesOrderDetail와 Production.Product 테이블 간의 관계를 지정합니다.  
+ 이 계층 구조를 생성 하는 XSD 스키마를 지정 하려면 두 개의 관계를 지정 해야 합니다. OrderOD와 ODProduct 합니다. OrderOD 관계는 Sales.SalesOrderHeader와 Sales.SalesOrderDetail 테이블 간의 부모-자식 관계를 지정합니다. ODProduct 관계는 Sales.SalesOrderDetail와 Production.Product 테이블 간의 관계를 지정합니다.  
   
- 다음 스키마에는 **msdata: relationship** 주석이 합니다  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct, 두 값을 지정합니다. 이 두 값이 지정되는 순서가 중요합니다.  
+ 다음 스키마에는 **msdata: relationship** 주석이 합니다  **\<제품 >** 두 값을 지정 하는 요소: OrderOD와 ODProduct 합니다. 이 두 값이 지정되는 순서가 중요합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

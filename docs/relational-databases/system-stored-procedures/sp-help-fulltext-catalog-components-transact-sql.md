@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720371"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983108"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_help_fulltext_catalog_components
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**전체 텍스트 카탈로그 이름**|**int**|전체 텍스트 카탈로그의 이름입니다.|  
-|**전체 텍스트 카탈로그 id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
+|**full-text catalog id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> Assert<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  

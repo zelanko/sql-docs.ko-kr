@@ -1,5 +1,5 @@
 ---
-title: 마이닝 모델 콘텐츠 시퀀스 클러스터링 모델에 대 한 | Microsoft Docs
+title: 시퀀스 클러스터링 모델에 대 한 모델 콘텐츠를 마이닝 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019290"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961367"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -175,7 +175,7 @@ ORDER BY Count(*) DESC
   
 |OrderNumber|LineNumber|Model|  
 |-----------------|----------------|-----------|  
-|SO58845|1.|Mountain-500|  
+|SO58845|1|Mountain-500|  
 |SO58845|2|LL Mountain Tire|  
 |SO58845|3|Mountain Tire Tube|  
 |SO58845|4|Fender Set - Mountain|  
@@ -257,9 +257,9 @@ ORDER BY Count(*) DESC
   
  모델 콘텐츠를 쿼리하여 관찰된 경로 목록을 가져오는 방법이나 시퀀스 클러스터링 모델에 대한 다른 쿼리 예를 보려면 [시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

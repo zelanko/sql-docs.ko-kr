@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (TRANSACT-SQL) | Microsoft Docs
+title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740551"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982879"
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact SQL)
+# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   로컬 및 원격 데이터 (기본값) 또는 로컬 데이터에만 현재 스트레치 사용 데이터베이스 및 해당 테이블에 대 한 쿼리를 반환 하는지 여부를 지정 합니다.  
@@ -53,7 +53,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
  유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값이입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0(성공) 또는 >0(실패)  
+ 0 (성공) 또는 > 0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  

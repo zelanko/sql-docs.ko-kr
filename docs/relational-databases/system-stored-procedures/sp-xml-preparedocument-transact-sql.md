@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947627"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980040"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ OUTPUT
  기본값은  **\<xmlns:mp 루트 = "urn: 스키마-microsoft-com:xml-metaprop" >** 합니다. *xpath_namespaces* 올바른 형식의 XML 문서를 사용 하 여 OPENXML의 XPath 식에 사용 되는 접두사에 대 한 네임 스페이스 Uri를 제공 합니다. *xpath_namespaces* 네임 스페이스를 참조 하려면 사용 해야 하는 접두사를 선언 **urn: 스키마-microsoft-com:xml-metaprop**;이 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. 접두사 **mp** 여전히 유효한 **urn: 스키마-microsoft-com:xml-metaprop** 경우에 *xpath_namespaces* 이러한 선언이 없는 포함 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0(성공) 또는 >0(실패)  
+ 0 (성공) 또는 > 0 (실패)  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
@@ -153,11 +153,11 @@ SET @doc ='
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespace"/>';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  <br>[XML 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
- <br>[시스템 저장 Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+ <br>[System Stored Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[sys.dm_exec_xml_handles (TRANSACT-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
- <br>[sp_xml_removedocument (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   
