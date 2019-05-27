@@ -1,7 +1,7 @@
 ---
 title: Windows용 이벤트 추적 대상 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478118"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198320"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478118"
 |default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
 |default_etw_session_buffer_size_kb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 메모리 내 버퍼 크기(KB)입니다. 기본값은 128KB입니다.|  
 |retries|부호 없는 정수|이벤트가 삭제되기 전에 ETW 하위 시스템에 이벤트 게시를 재시도한 횟수입니다. 기본값은 0입니다.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  이러한 설정의 구성은 선택 사항입니다. ETW 대상은 이러한 설정에 대해 기본값을 사용합니다.  
   
  ETW 대상의 역할은 다음과 같습니다.  
@@ -80,19 +81,22 @@ ms.locfileid: "58478118"
     > [!IMPORTANT]  
     >  첫 번째 세션이 시작되면 파일 경로를 변경할 수 없습니다.  
   
--   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
-  
+-   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
  확장 이벤트 세션에 ETW 대상을 추가하려면 이벤트 세션을 만들거나 변경할 때 다음 문을 포함해야 합니다.  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  데이터를 보는 방법을 비롯한 ETW 대상을 사용하는 방법을 보여 주는 전체 예에 대한 자세한 내용은 [확장 이벤트를 사용하여 시스템 작업 모니터링](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 확장 이벤트 대상](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 확장 이벤트 대상](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

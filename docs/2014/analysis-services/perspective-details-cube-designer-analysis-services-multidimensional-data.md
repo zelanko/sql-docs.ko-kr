@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
@@ -13,12 +12,12 @@ ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743459"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072056"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>큐브 뷰 세부 정보(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 뷰** 탭에 있는 **큐브 뷰 세부 정보** 창을 사용하면 선택한 큐브 뷰를 쿼리하는 사용자에게 제공되는 메타데이터를 관리할 수 있습니다.  

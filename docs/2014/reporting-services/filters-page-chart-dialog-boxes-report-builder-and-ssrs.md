@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
@@ -18,12 +17,12 @@ ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3cf8757eb1c2bdf7e1642aa16d24b7adae40680a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261265"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109136"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>필터 페이지, 차트 대화 상자(보고서 작성기 및 SSRS)
   다음 위치에서 **필터** 를 클릭합니다.  

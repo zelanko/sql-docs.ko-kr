@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
@@ -13,12 +12,12 @@ ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2046dc87627aded9415d537c37c6cf21880c8e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109303"
 ---
 # <a name="design-the-matrix"></a>행렬 디자인
   보고서 마법사의 행렬 디자인 페이지를 사용하여 보고서에 대한 필드를 선택할 수 있습니다.  

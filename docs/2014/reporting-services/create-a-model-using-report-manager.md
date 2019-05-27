@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
@@ -14,12 +13,12 @@ ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b67e2a7048520d8a411789e501dbbe545d3cc02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265965"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109667"
 ---
 # <a name="create-a-model-using-report-manager"></a>보고서 관리자를 사용하여 모델 만들기
   보고서 관리자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 또는 Oracle 데이터베이스에서 모델을 생성할 수 있습니다. 보고서 모델은 보고서 서버에 게시된 공유 데이터 원본에서 생성됩니다. 공유 데이터 원본이 없는 경우 새로 만들어야 합니다.  

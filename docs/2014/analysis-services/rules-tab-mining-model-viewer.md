@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
@@ -13,12 +12,12 @@ ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748015"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070096"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>규칙 탭(마이닝 모델 뷰어)
   연결 모델의 **규칙** 창을 사용하여 알고리즘이 데이터에서 추출한 규칙을 볼 수 있습니다. 규칙은 항목이 어떻게 서로 관련되어 있는지를 설명하며 권장 항목을 만드는 데 사용할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748487"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070513"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>데이터 원본 뷰 새로 고침 대화 상자
   **의** 데이터 원본 뷰 새로 고침 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰 새로 고침의 결과로 발생하는 변경 내용을 적용하거나 취소할 수 있습니다. 이 대화 상자는 기본 데이터 원본을 변경한 결과로 인해 데이터 원본 뷰에서 변경될 내용을 표시합니다. **확인** 을 클릭하여 변경 내용을 적용하고 데이터 원본 뷰를 새로 고치거나, **취소** 를 클릭하여 변경 내용을 무시하고 데이터 원본 뷰를 변경되지 않은 상태로 그대로 둡니다. 다음 방법으로 **데이터 원본 뷰 새로 고침** 대화 상자를 표시할 수 있습니다.  

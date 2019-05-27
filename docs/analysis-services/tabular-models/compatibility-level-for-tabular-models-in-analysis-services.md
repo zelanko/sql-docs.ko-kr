@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 테이블 형식 모델에 호환성 수준 | Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 05/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
-ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
+ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175127"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,8 +60,11 @@ ms.locfileid: "65709120"
   
 ## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>SSMS의 서버에 대해 지원되는 호환성 수준 확인  
  SSMS에서 서버 이름을 마우스 오른쪽 단추로 클릭 > **속성** > **지원 되는 호환성 수준**합니다.  
-  
- 이 속성에는 서버에서 실행 되는 데이터베이스의 가장 높은 호환성 수준을 지정 합니다. 지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.  
+
+ 이 속성에는 서버에서 실행 되는 데이터베이스의 가장 높은 호환성 수준을 지정 합니다. 지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.
+ 
+> [!NOTE]  
+>  SSMS는 SQL Server Analysis Services 서버, Azure Analysis Services 서버 또는 Power BI 프리미엄 작업 영역에 연결 하는 경우 지원 되는 호환성 수준 속성 1200를 표시 됩니다. 알려진된 문제 이며 향후 SSMS에서 해결 될 것이 업데이트 합니다. 해결 하는 경우이 속성에는 가장 높은 지원 되는 호환성 수준을 표시 됩니다. 
   
 ## <a name="see-also"></a>참고자료  
  [다차원 데이터베이스의 호환성 수준](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   

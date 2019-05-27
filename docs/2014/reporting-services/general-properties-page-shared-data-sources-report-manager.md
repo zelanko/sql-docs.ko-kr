@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261094"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109082"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>일반 속성 페이지, 공유 데이터 원본(보고서 관리자)
   일반 속성 페이지를 사용하여 공유 데이터 원본 항목의 속성을 보거나 수정할 수 있습니다. 속성에 대한 모든 변경 내용은 **적용**을 클릭하면 해당 항목을 참조하는 모든 보고서에 적용됩니다.  

@@ -2407,6 +2407,8 @@
           items:
             - name: SQL Server에서 Java 호출
               href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: Java용 확장성 SDK
+              href: ../language-extensions/how-to/extensibility-sdk-java-sql-server.md
             - name: Java에서 SQL 데이터 유형으로
               href: ../language-extensions/how-to/java-to-sql-data-types.md
             - name: Java jar 파일 만들기

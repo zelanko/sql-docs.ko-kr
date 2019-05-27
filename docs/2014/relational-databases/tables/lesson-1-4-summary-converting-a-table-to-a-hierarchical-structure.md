@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760875"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110129"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>요약: 테이블을 계층 구조로 변환
   `hierarchyid` 데이터 형식은 단순하고 간단한 형식으로 계층 관계를 저장할 수 있습니다. 적절한 인덱스를 사용하면 계층 수준, 계층의 하위 트리 또는 기존의 단일 조회별로 데이터를 효율적으로 반환할 수 있습니다.  

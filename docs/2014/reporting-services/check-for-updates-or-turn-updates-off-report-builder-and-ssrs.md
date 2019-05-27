@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266067"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109867"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)
   보고서를 열 때마다 보고서 작성기는 해당 보고서에 있는 보고서 파트의 게시된 인스턴스가 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에서 업데이트되었는지 확인합니다. 또한 데이터 세트 및 매개 변수와 같은 보고서 파트의 종속 항목에서 변경 내용을 확인합니다. 보고서 파트나 보고서 파트의 종속성이 사이트 또는 서버에서 업데이트되었으면 보고서의 알림 표시줄에 업데이트된 파트의 수가 표시됩니다. 업데이트를 확인하고 허용 또는 거부하도록 선택하거나 알림 표시줄을 해제할 수 있습니다.  

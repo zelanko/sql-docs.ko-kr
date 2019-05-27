@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
@@ -16,12 +15,12 @@ ms.assetid: 0140478a-8046-42da-a7af-caca69ca2f66
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b3c7d20d92b56de299f25665701a295e54fce89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164586"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109305"
 ---
 # <a name="delete-rows-dialog-box"></a>행 삭제 대화 상자
   **행 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 행을 삭제할 수 있습니다. 그룹과 연결된 행의 경우에는 그룹 정의도 삭제할 수 있습니다.  

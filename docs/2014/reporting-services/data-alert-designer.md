@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -18,12 +17,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 26dfca58a3e5bcac89eb8ddac2ff8a0f98ba2071
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109557"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
   데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
@@ -198,7 +197,7 @@ ms.locfileid: "59964269"
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 관련 태스크  
+##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
   
 -   [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - managing data in a table
@@ -13,12 +12,12 @@ ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 127eeec7f3abe52e247dadb284a5ca7b91ed1cad
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110087"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>요약: 계층적 테이블의 데이터 관리
   `hierarchyid` 데이터 형식을 사용하면 계층적 데이터를 반영하는 테이블을 쉽게 만든 다음 깊이 우선 및 너비 우선 인덱스를 만들어 테이블에 효율적으로 액세스할 수 있습니다. 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  
