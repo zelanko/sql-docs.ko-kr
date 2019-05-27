@@ -14,16 +14,16 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617880"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821872"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52617880"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **참고:** 위 예에서 **-E** 는 기본값이므로 따로 지정하지 않았으며 **sqlcmd** 는 Windows 인증을 사용하여 기본 인스턴스에 연결합니다.  
+    > **참고:** 위 예에서 **-E**는 기본값이므로 따로 지정하지 않았으며 **sqlcmd**는 Windows 인증을 사용하여 기본 인스턴스에 연결합니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 대화형으로 실행하기 위해 Windows 인증을 사용하여 명명된 인스턴스에 연결  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52617880"
     > **힌트** **sqlcmd** 유틸리티에서 지원하는 옵션 목록을 보려면 `sqlcmd -?`를 실행하세요.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
- **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52617880"
 ## <a name="quoted-strings"></a>따옴표 붙은 문자열  
  따옴표 두 개를 연속으로 입력하여 문자열 내에 따옴표를 삽입하는 예외적인 경우를 제외하고 따옴표로 묶인 문자는 추가적인 전처리 없이 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자 시퀀스를 하나의 따옴표로 처리합니다. 변환은 서버에서 발생합니다. 스크립팅 변수 역시 문자열 내에서는 단순한 문자로 처리됩니다.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `sqlcmd`  
   
@@ -270,7 +270,7 @@ ms.locfileid: "52617880"
   
  `2> GO`  
   
-### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>3. sqlcmd를 사용하여 저장 프로시저 실행  
+### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>C. sqlcmd를 사용하여 저장 프로시저 실행  
  다음 예에서는 `sqlcmd`를 사용하여 저장 프로시저를 실행하는 방법을 보여 줍니다. 다음 저장 프로시저를 만듭니다.  
   
  `USE AdventureWorks2012;`  
@@ -323,7 +323,7 @@ ms.locfileid: "52617880"
   
  `gustavo0@adventure-works.com`  
   
-### <a name="d-using-sqlcmd-for-database-maintenance"></a>4. 데이터베이스 유지 관리에 sqlcmd 사용  
+### <a name="d-using-sqlcmd-for-database-maintenance"></a>D. 데이터베이스 유지 관리에 sqlcmd 사용  
  다음 예에서는 데이터베이스 유지 관리 태스크에 `sqlcmd` 를 사용하는 방법을 보여 줍니다. 다음 코드로 `C:\BackupTemplate.sql` 을 만듭니다.  
   
  `USE master;`  
@@ -354,7 +354,7 @@ ms.locfileid: "52617880"
   
  `BACKUP DATABASE successfully processed 693 pages in 0.725 seconds (7.830 MB/sec)`  
   
-### <a name="e-using-sqlcmd-to-execute-code-on-multiple-instances"></a>5. sqlcmd를 사용하여 여러 인스턴스의 코드 실행  
+### <a name="e-using-sqlcmd-to-execute-code-on-multiple-instances"></a>E. sqlcmd를 사용하여 여러 인스턴스의 코드 실행  
  단일 파일에 있는 다음 코드는 두 개의 인스턴스에 연결하는 스크립트를 보여 줍니다. 두 번째 인스턴스에 대한 연결 전에 `GO` 가 있습니다.  
   
  `:CONNECT <server>\,<instance1>`  
@@ -369,7 +369,7 @@ ms.locfileid: "52617880"
   
  `GO`  
   
-### <a name="e-returning-xml-output"></a>5. XML 출력 반환  
+### <a name="e-returning-xml-output"></a>E. XML 출력 반환  
  다음 예에서는 XML 출력이 서식이 지정되지 않은 연속 스트림으로 반환되는 방법을 보여 줍니다.  
   
  `C:\>sqlcmd -d AdventureWorks2012`  
@@ -384,7 +384,7 @@ ms.locfileid: "52617880"
   
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
-### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>6. Windows 스크립트 파일에서 sqlcmd 사용  
+### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Windows 스크립트 파일에서 sqlcmd 사용  
  **sqlcmd**명령(예: `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` )은 VBScript와 함께 .bat 파일에서 실행될 수 있습니다. 이 경우 대화형 옵션은 사용하지 마십시오. **sqlcmd** 는 .bat 파일을 실행하는 컴퓨터에 설치되어야 합니다.  
   
  첫 번째 단계로 다음과 같은 4개의 파일을 만듭니다.  
@@ -474,7 +474,7 @@ ms.locfileid: "52617880"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>7. sqlcmd를 사용하여 Windows Azure SQL 데이터베이스에 암호화 설정  
+### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. sqlcmd를 사용하여 Windows Azure SQL 데이터베이스에 암호화 설정  
  **sqlcmd**는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터에 대한 연결에서 암호화 및 인증서 신뢰를 지정하기 위해 실행할 수 있습니다. 2가지 **sqlcmd**``옵션을 사용할 수 있습니다.  
   
 -   -N 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다. 이 옵션은 ADO.net 옵션 `ENCRYPT = true`와 동일합니다.  

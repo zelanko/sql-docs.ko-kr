@@ -24,14 +24,18 @@ ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b91f4afcedf7348919758fa2ce691b6a457d72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270589"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724222"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 **System.Drawing** 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  
   
  [예제 1: JPEG 형식으로 이미지 변환](#example1)  
@@ -150,7 +154,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> 예 2 설명: 축소판 이미지 만들기 및 저장  
+##  <a name="example2"></a> 예 2 설명: 썸네일 이미지 만들기 및 저장  
  다음 예에서는 변수로 지정된 이미지 파일을 열고, 가로 세로 비율을 일정하게 유지하면서 이미지의 축소판 그림을 만들고, 이 축소판 그림을 수정된 파일 이름으로 저장합니다. 가로 세로 비율을 일정하게 유지하면서 축소판 그림의 높이와 너비를 계산하는 코드는 전용 서브루틴에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  

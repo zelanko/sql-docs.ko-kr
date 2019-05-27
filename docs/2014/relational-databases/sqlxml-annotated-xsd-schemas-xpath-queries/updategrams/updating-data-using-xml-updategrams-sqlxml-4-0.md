@@ -23,15 +23,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131513"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014682"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
   기존 데이터를 업데이트할 때 둘 다 지정 해야 하는  **\<하기 전에 >** 및  **\<후 >** 블록입니다. 에 지정 된 요소를  **\<하기 전에 >** 하 고  **\<후 >** 블록 원하는 변경 내용을 설명 합니다. Updategram에 지정 된 요소를 사용 합니다  **\<하기 전에 >** 데이터베이스의 기존 레코드를 식별 하는 블록입니다. 해당 요소는  **\<후 >** 블록의 레코드 업데이트 작업을 실행 한 후 표시 되는 방법을 나타냅니다. Updategram은이 정보를 통해 일치 하는 SQL 문의 만듭니다는  **\<후 >** 블록입니다. 그런 다음 Updategram은 이 문을 사용하여 데이터베이스를 업데이트합니다.  

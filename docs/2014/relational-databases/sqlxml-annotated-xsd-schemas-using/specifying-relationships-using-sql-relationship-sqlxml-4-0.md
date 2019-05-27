@@ -25,15 +25,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717910"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013667"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
   XML 문서의 요소는 서로 관련될 수 있습니다. 이러한 요소는 계층적으로 중첩될 수 있으며 요소 간에 ID, IDREF 또는 IDREFS 관계가 지정될 수 있습니다.  

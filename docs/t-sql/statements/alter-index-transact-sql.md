@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502875"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580131"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>인수  
+```
+
+## <a name="arguments"></a>인수
+
  *index_name*  
  인덱스의 이름입니다. 인덱스 이름은 테이블이나 뷰에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
@@ -653,23 +655,28 @@ ONLINE, MAXDOP 및 SORT_IN_TEMPDB에 대한 값은 시스템 카탈로그에 저
   
 클러스터형 columnstore 인덱스를 다시 작성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  다시 작성 작업이 발생한 동안 테이블 또는 파티션에서 배타적 잠금을 획득합니다. 다시 작성 중에 데이터는 “오프라인”이며 사용할 수 없습니다.  
+1. 다시 작성 작업이 발생한 동안 테이블 또는 파티션에서 배타적 잠금을 획득합니다. 다시 작성 중에 데이터는 “오프라인”이며 사용할 수 없습니다.  
   
-2.  테이블에서 논리적으로 삭제된 행을 물리적으로 삭제하여 columnstore를 조각 모음합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다.  
+1. 테이블에서 논리적으로 삭제된 행을 물리적으로 삭제하여 columnstore를 조각 모음합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다.  
   
-3.  deltastore를 비롯하여 원래 columnstore 인덱스의 모든 데이터를 읽습니다. 데이터를 새 행 그룹으로 결합하고 행 그룹을 columnstore로 압축합니다.  
+1. deltastore를 비롯하여 원래 columnstore 인덱스의 모든 데이터를 읽습니다. 데이터를 새 행 그룹으로 결합하고 행 그룹을 columnstore로 압축합니다.  
   
-4.  다시 작성이 진행되는 동안 실제 미디어에 columnstore 인덱스의 사본을 두 개 저장할 공간이 필요합니다. 다시 작성 작업이 끝나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원래 클러스터형 columnstore 인덱스를 삭제합니다.  
+1. 다시 작성이 진행되는 동안 실제 미디어에 columnstore 인덱스의 사본을 두 개 저장할 공간이 필요합니다. 다시 작성 작업이 끝나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원래 클러스터형 columnstore 인덱스를 삭제합니다.
+
+1. 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 ALTER INDEX REBUILD가 데이터를 다시 정렬합니다.  
   
-## <a name="reorganizing-indexes"></a> 인덱스 다시 구성  
+## <a name="reorganizing-indexes"></a> 인덱스 다시 구성
 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  
   
 ALL을 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비클러스터형 모두와 XML 인덱스가 다시 구성됩니다. ALL을 지정할 때는 몇 가지 제한 사항이 적용됩니다. 이 문서의 인수 섹션에서 ALL에 대한 정의를 참조하세요.  
   
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
- 
+
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인덱스를 다시 구성하면 통계가 업데이트되지 않습니다.
+
+>[!IMPORTANT]
+> 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 `ALTER INDEX REORGANIZE`가 데이터를 다시 정렬하지 않습니다. 데이터를 다시 정렬하려면 `ALTER INDEX REBUILD`를 사용하세요.
   
 ## <a name="disabling-indexes"></a> 인덱스 비활성화  
 인덱스를 비활성화하면 사용자가 인덱스에 액세스할 수 없으며 클러스터형 인덱스의 경우 기본 테이블 데이터에도 액세스할 수 없습니다. 인덱스 정의는 시스템 카탈로그에 유지됩니다. 뷰의 비클러스터형 인덱스 또는 클러스터형 인덱스를 비활성화하면 인덱스 데이터가 물리적으로 삭제됩니다. 클러스터형 인덱스를 비활성화하면 데이터에 액세스할 수 없지만 인덱스가 삭제되거나 다시 작성될 때까지는 데이터가 B-트리에서 유지 관리되지 않는 상태로 남아 있습니다. 활성 또는 비활성 인덱스의 상태를 보려면 **sys.indexes** 카탈로그 뷰의 **is_disabled** 열을 쿼리합니다.  
@@ -1151,7 +1158,7 @@ GO
    ```sql
    ALTER INDEX test_idx on test_table RESUME WITH (MAXDOP=4) ;
    ```
-6. 다시 시작 가능한 것으로 실행된 인덱스 온라인 다시 작성에 대해 온라인 인덱스 다시 작성 작업을 다시 시작합니다. MAXDOP를 2로 설정하고, 다시 시작 가능한 것으로 실행 중인 인덱스의 실행 시간을 240분으로 실행하며, 잠금에 대해 차단된 인덱스의 경우 10분 대기하고 그 후에는 모든 블로커를 종료합니다. 
+6. 다시 시작 가능한 것으로 실행된 인덱스 온라인 다시 작성에 대해 온라인 인덱스 다시 작성 작업을 다시 시작합니다. MAXDOP를 2로 설정하고, 다시 시작 가능한 것으로 실행 중인 인덱스의 실행 시간을 240분으로 실행하며, 잠금에 대해 차단된 인덱스의 경우 10분 대기하고 그 후에는 모든 차단기를 종료합니다. 
 
    ```sql
       ALTER INDEX test_idx on test_table  

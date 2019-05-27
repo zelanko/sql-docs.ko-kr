@@ -32,14 +32,18 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e5a9b49b743ed95766bfbd8d310bba40c6bfe396
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276758"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719971"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
   
  패키지 배포 과정은 다음 네 단계로 구성됩니다.  

@@ -1,7 +1,7 @@
 ---
 title: SQL Server에서 JSON 데이터 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -13,16 +13,16 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82df7760fbcf82d6f9699a0adeb95036e64c946e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801937"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620617"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON은 최신 웹 및 모바일 애플리케이션에서 데이터를 교환하는 데 사용되는 일반적인 텍스트 데이터 형식입니다. JSON은 로그 파일 또는 Microsoft Azure Cosmos DB와 같은 NoSQL 데이터베이스에 구조화되지 않은 데이터를 저장하는 데에도 사용됩니다. 많은 REST 웹 서비스에서 JSON 텍스트로 형식이 지정된 결과를 반환하거나 JSON으로 형식이 지정된 데이터를 허용합니다. 예를 들어 Azure Search, Azure Storage, Azure Cosmos DB 등 대부분의 Azure 서비스에는 JSON을 반환하거나 사용하는 REST 엔드포인트가 있습니다. 또한 JSON은 AJAX 호출을 사용하여 웹 페이지와 웹 서버 간에 데이터를 교환하는 기본 형식입니다. 
 
@@ -30,10 +30,10 @@ SQL Server의 JSON 함수를 사용하면 NoSQL과 관계형 개념을 동일한
 
 *NoSQL과 관계형 간에 브리지인 JSON*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-JSON 텍스트의 예는 다음과 같습니다. 
- 
-```json 
+
+JSON 텍스트의 예는 다음과 같습니다.
+
+```json
 [{
     "name": "John",
     "skills": ["SQL", "C#", "Azure"]
@@ -41,7 +41,7 @@ JSON 텍스트의 예는 다음과 같습니다.
     "name": "Jane",
     "surname": "Doe"
 }]
-``` 
+```
  
 SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 다음 작업을 수행할 수 있습니다. 
  
@@ -125,7 +125,7 @@ FROM OPENJSON(@json)
   
 **결과**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|ID|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -165,7 +165,7 @@ FROM OPENJSON(@json)
 
 **결과**  
   
-|id|firstName|lastName|age|dateOfBirth|skill|  
+|ID|firstName|lastName|age|dateOfBirth|skill|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -175,6 +175,10 @@ FROM OPENJSON(@json)
 `OUTER APPLY OPENJSON`은 하위 배열과 첫 번째 수준 엔터티를 조인하고, 결과 집합을 평면화합니다. JOIN으로 인해 모든 기술에 대해 두 번째 행이 반복됩니다.
 
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>SQL Server 데이터를 JSON으로 변환하거나 JSON 내보내기
+
+>[!NOTE]
+>Azure SQL Data Warehouse 데이터를 JSON으로 변환하거나 JSON을 내보낼 수 없습니다.
+
 **SELECT** 문에 **FOR JSON** 절을 추가하여 SQL Server 데이터 또는 SQL 쿼리 결과를 JSON으로 서식 지정합니다. **FOR JSON**을 사용하여 JSON 출력의 형식을 클라이언트 애플리케이션에서 SQL Server로 위임합니다. 자세한 내용은 [FOR JSON을 사용하여 쿼리 결과 서식을 JSON으로 지정(SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.  
   
 다음 예제에서는 **FOR JSON** 절에서 PATH 모드를 사용합니다.  
@@ -330,11 +334,11 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
   
 예를 들어 OData 사양을 준수하는 JSON 출력을 생성할 수 있습니다. 웹 서비스에는 다음과 같은 형식의 요청 및 응답이 필요합니다. 
   
--   요청: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- 요청: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   응답: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- 응답: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-다음 OData URL은 ProductID 및 ProductName 열에서 `id`가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON**을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
+다음 OData URL은 ProductID 및 ProductName 열에서 `ID`가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON**을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

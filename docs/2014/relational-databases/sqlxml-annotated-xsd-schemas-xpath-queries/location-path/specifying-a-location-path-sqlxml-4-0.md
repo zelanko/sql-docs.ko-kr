@@ -13,15 +13,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127588"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012662"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>위치 경로 지정(SQLXML 4.0)
   XPath 쿼리는 식 형식으로 지정합니다. 식에는 다양한 종류가 있습니다. 위치 경로는 컨텍스트 노드에 상대적인 노드 집합을 선택하는 식이고 위치 경로에 대한 평가 결과는 노드 집합입니다.  

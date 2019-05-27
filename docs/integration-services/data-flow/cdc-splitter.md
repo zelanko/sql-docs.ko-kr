@@ -13,14 +13,18 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38a72f9628e621f5ed960a125800451badd180e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273654"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727138"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  
   
 |작업 값|출력|설명|  
@@ -45,7 +49,7 @@ ms.locfileid: "58273654"
   
 -   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
--   **오류 행 열**: 오류의 원인이 된 행의 입력 열입니다.  
+-   **오류 행 열**: 오류를 유발한 행의 입력 열입니다.  
   
 ## <a name="configuring-the-cdc-splitter"></a>CDC 분할자 구성  
  CDC 분할자에 대해 구성 가능한 속성은 없습니다.  

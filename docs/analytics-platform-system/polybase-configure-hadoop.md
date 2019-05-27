@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: afa5728d651444aeb633c69b310c36af6b0e821a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678649"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175258"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -25,6 +25,7 @@ ms.locfileid: "62678649"
 PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
  - Linux/Windows Server에서 Hortonworks HDP 1.3  
  - Linux에서 Hortonworks HDP 2.1-2.6
+ - Linux에서 Hortonworks HDP 3.1 3.0
  - Windows Server에서 Hortonworks HDP 2.1 - 2.3  
  - Linux에서 Cloudera CDH 4.3  
  - Cloudera CDH 5.1 5.5, 5.9-5.13 linux
@@ -37,7 +38,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
 
    ```sql  
    -- Values map to various external data sources.  
-   -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
+   -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 and 3.0 - 3.1 on Linux,
    -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
@@ -65,6 +66,147 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
 4. 제어 노드에서는 **yarn.site.xml 파일** 찾을 합니다 **yarn.application.classpath** 속성. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
 5. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn.site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
+
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>예제 XML 파일 cdh 5.X 클러스터 기본값
+
+yarn.application.classpath 및 mapreduce.application.classpath 구성이 포함된 Yarn-site.xml입니다.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
+<!-- Applications' Configuration-->
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
+   </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
+-->
+</configuration>
+```
+
+Mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 중단 하려는 경우 파일은 다음과 같을 것.
+
+**yarn-site.xml**
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
+<!-- Applications' Configuration-->
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
+   </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
+-->
+</configuration>
+```
+
+**mapred-site.xml**
+
+mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 Ambari에서 동일한 명명 규칙에서 구성 값을 확인할 수 있습니다.
+
+```xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+   <property>
+     <name>mapred.min.split.size</name>
+       <value>1073741824</value>
+   </property>
+   <property>
+     <name>mapreduce.app-submission.cross-platform</name>
+     <value>true</value>
+   </property>
+<property>
+     <name>mapreduce.application.classpath</name>
+     <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
+   </property>
+
+
+<!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+     <name>mapreduce.jobhistory.principal</name>
+     <value></value>
+   </property>
+   <property>
+     <name>mapreduce.jobhistory.address</name>
+     <value></value>
+   </property>
+-->
+</configuration>
+```
+
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP에 대 한 예제 XML 파일 3.X 클러스터 기본값
+
+**yarn-site.xml**
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+  <property>
+     <name>yarn.resourcemanager.connect.max-wait.ms</name>
+     <value>40000</value>
+  </property>
+  <property>
+     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+     <value>30000</value>
+  </property>
+<!-- Applications' Configuration-->
+  <property>
+    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <name>yarn.application.classpath</name>
+     <value>$HADOOP_CONF_DIR,/usr/hdp/3.1.0.0-78/hadoop/*,/usr/hdp/3.1.0.0-78/hadoop/lib/*,/usr/hdp/current/hadoop-hdfs-client/*,/usr/hdp/current/hadoop-hdfs-client/lib/*,/usr/hdp/current/hadoop-yarn-client/*,/usr/hdp/current/hadoop-yarn-client/lib/*,/usr/hdp/3.1.0.0-78/hadoop-mapreduce/*,/usr/hdp/3.1.0.0-78/hadoop-yarn/*,/usr/hdp/3.1.0.0-78/hadoop-yarn/lib/*,/usr/hdp/3.1.0.0-78/hadoop-mapreduce/lib/*,/usr/hdp/share/hadoop/common/*,/usr/hdp/share/hadoop/common/lib/*,/usr/hdp/share/hadoop/tools/lib/*</value>
+  </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+  <property>
+     <name>yarn.resourcemanager.principal</name>
+     <value></value>
+  </property>
+-->
+</configuration>
+```
 
 ## <a name="configure-an-external-table"></a>외부 테이블 구성
 

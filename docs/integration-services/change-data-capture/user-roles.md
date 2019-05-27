@@ -11,14 +11,18 @@ ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d4e6174317c2588a0c12b4ef6f1f2d0b1d09e44
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358f85dfd404aecc712f44aae46dad84cf2713b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290849"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728451"
 ---
 # <a name="user-roles"></a>사용자 역할
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 섹션에서는 Attunity Oracle CDC Service의 사용자 역할에 대해 설명합니다. 여기서 설명하는 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할, Windows 역할 또는 Oracle 데이터베이스 역할입니다.  
   
 ## <a name="windows-user-roles"></a>Windows 사용자 역할  

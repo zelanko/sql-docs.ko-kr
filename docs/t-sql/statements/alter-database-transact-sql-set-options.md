@@ -29,17 +29,17 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
+ms.openlocfilehash: 9fe393ecdbef5a515d0850b7d859c1c2a7e670a2
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63202435"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560179"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Azure SQL Database의 데이터베이스 옵션을 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Azure SQL Database, Azure SQL Data Warehouse에서 데이터베이스 옵션을 설정합니다. 다른 ALTER DATABASE 옵션은 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.
 
 작업 중인 특정 SQL 버전에 대한 구문, 인수, 설명, 사용 권한 및 예제를 보려면 다음 탭 중 하나를 클릭합니다.
 
@@ -51,9 +51,9 @@ ms.locfileid: "63202435"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||
+> |||||
+> |---|---|---|---|
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -475,7 +475,7 @@ OFFLINE 데이터베이스가 닫히고 완전히 종료되어 오프라인 상�
 
 ONLINE 데이터베이스가 열려 사용할 수 있게 됩니다.
 
-EMERGENCY 데이터베이스가 READ_ONLY로 표시되고 로깅이 사용 중지되며 sysadmin 고정 서버 역할의 멤버로 액세스가 제한됩니다. EMERGENCY는 주로 문제 해결을 위해 사용됩니다. 예를 들어 손상된 로그 파일로 인해 주의 대상으로 표시된 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다. 이 설정을 사용하면 시스템 관리자가 읽기 전용으로 데이터베이스에 액세스할 수 있습니다. sysadmin 고정 서버 역할의 멤버만 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다.
+EMERGENCY 데이터베이스가 READ_ONLY로 표시되고 로깅이 사용 중지되며 sysadmin 고정 서버 역할의 구성원으로 액세스가 제한됩니다. EMERGENCY는 주로 문제 해결을 위해 사용됩니다. 예를 들어 손상된 로그 파일로 인해 주의 대상으로 표시된 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다. 이 설정을 사용하면 시스템 관리자가 읽기 전용으로 데이터베이스에 액세스할 수 있습니다. sysadmin 고정 서버 역할의 구성원만 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다.
 
 > [!NOTE]
 > **사용 권한:** 데이터베이스를 오프라인 또는 응급 상태로 변경하려면 주제 데이터베이스에 대한 ALTER DATABASE 권한이 필요합니다. 데이터베이스를 오프라인 상태에서 온라인 상태로 전환하려면 서버 수준 ALTER ANY DATABASE 권한이 필요합니다.
@@ -518,7 +518,7 @@ SINGLE_USER **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 활성 작업이 있을 경우 [KILL STATS JOB](../../t-sql/language-elements/kill-stats-job-transact-sql.md)을 사용하여 해당 작업을 완료하도록 허용하거나 수동으로 종료합니다.
 
-RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용합니다. RESTRICTED_USER는 연결되는 수를 제한하지 않습니다. ALTER DATABASE 문의 termination 절에 지정된 기간을 사용하여 데이터베이스에 대한 모든 연결을 끊습니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.
+RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 구성원만 데이터베이스로의 연결을 허용합니다. RESTRICTED_USER는 연결되는 수를 제한하지 않습니다. ALTER DATABASE 문의 termination 절에 지정된 기간을 사용하여 데이터베이스에 대한 모든 연결을 끊습니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다.
 
 MULTI_USER 데이터베이스에 연결할 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
 
@@ -1148,9 +1148,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1457,7 +1457,7 @@ READ_WRITE 데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니
 
 데이터베이스에 대한 사용자 액세스를 제어합니다.
 
-RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 구성원만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
 
 MULTI_USER 데이터베이스에 연결할 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
 
@@ -1834,9 +1834,9 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2095,7 +2095,7 @@ READ_WRITE 데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니
 
 데이터베이스에 대한 사용자 액세스를 제어합니다.
 
-RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 구성원만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
 
 MULTI_USER 데이터베이스에 연결할 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
 
@@ -2442,5 +2442,137 @@ SET QUERY_STORE = ON
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
 - [sys.data_spaces](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)
 - [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)
+
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> ||||
+> |---|---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+
+&nbsp;
+
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
+
+> [!NOTE]
+> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.
+
+## <a name="syntax"></a>구문
+
+```
+ALTER DATABASE { database_name | Current }
+SET
+{
+    <optionspec> [ ,...n ]
+}
+;
+
+<auto_option> ::=
+{}
+RESULT_SET_CACHING { ON | OFF}
+}
+```
+
+## <a name="arguments"></a>인수
+
+*database_name* 수정할 데이터베이스의 이름입니다.
+
+**\<auto_option> ::=**
+
+자동 옵션을 제어합니다.
+
+**권한** 다음과 같은 사용 권한이 필요합니다.
+
+- 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
+- dbmanager 데이터베이스 역할의 구성원.
+
+데이터베이스의 소유자가 dbmanager 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
+
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Gen2용 미리 보기) 이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
+
+ON은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
+
+OFF은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되지 않도록 지정합니다.
+사용자는 specific request_id로 sys.pdw_request_steps를 쿼리하여 결과 캐시 적중 또는 누락을 통해 쿼리가 실행되었는지 알 수 있습니다.   캐시가 적중된 경우 쿼리 결과에는 다음 세부 정보와 함께 단일 단계가 포함됩니다.
+
+|**열 이름** |**같음** |**Value** |
+|----|----|----|
+| operation_type|=|ReturnOperation|
+|step_index|=|0|
+|location_type|=|Control|
+command|Like|%DWResultCacheDb%|
+| | |
+
+## <a name="examples"></a>예
+
+### <a name="enable-result-set-caching-for-a-database"></a>데이터베이스의 결과 집합 캐싱 사용 설정
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING ON;
+```
+
+### <a name="disable-result-set-caching-for-a-database"></a>데이터베이스의 결과 집합 캐싱 사용 설정 안 함
+
+```sql
+ALTER DATABASE myTestDW  
+SET RESULT_SET_CACHING OFF;
+```
+
+### <a name="check-result-set-caching-setting-for-a-database"></a>데이터베이스의 결과 집합 캐싱 설정 확인
+
+```sql
+SELECT name, is_result_set_caching  
+FROM sys.databases;
+```
+
+### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>결과 집합 캐시 적중 및 캐시 누락으로 쿼리 수 확인
+
+```sql
+SELECT  
+Queries=CacheHits+CacheMisses,
+CacheHits,
+CacheMisses 
+CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
+FROM  
+(SELECT  
+CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
+r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
+s.step_index = 0 then s.request_id else null end) , 
+CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
+s.request_id else null end) 
+     FROM sys.dm_pdw_request_steps s  
+     JOIN sys.dm_pdw_exec_requests r  
+     ON s.request_id = r.request_id) A;
+```
+
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>쿼리의 결과 집합 캐시 적중 또는 캐시 누락 확인
+
+```sql
+If
+(SELECT step_index  
+FROM sys.dm_pdw_request_steps  
+WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
+SELECT 1 as is_cache_hit  
+ELSE 
+SELECT 0 as is_cache_hit;
+```
+
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>결과 집합 캐시 적중으로 모든 쿼리 확인
+
+```sql
+SELECT *  
+FROM sys.dm_pdw_request_steps  
+WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+## <a name="see-also"></a>참고 항목
+
+- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
+- [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
+- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
+- [Azure SQL Data Warehouse의 모범 사례](/azure/sql-data-warehouse/sql-data-warehouse-best-practices#maintain-statistics)
+- [Azure SQL Data Warehouse의 테이블 디자인](/azure/sql-data-warehouse/sql-data-warehouse-tables-overview#statistics)
+- [SQL Data Warehouse 언어 요소](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end

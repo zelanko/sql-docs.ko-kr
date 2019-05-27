@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542243"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779249"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  문제가 지속되면 쿼리 저장소 데이터의 손상이 디스크에서 지속되고 있음을 나타냅니다.
  
- 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다.
+ SQL 2017 이상의 경우 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. 2016의 경우 아래 표시된 바와 같이 쿼리 저장소에서 데이터를 정리해야 합니다.
  
  그래도 해결되지 않으면 읽기-쓰기 모드를 요청하기 전에 쿼리 저장소를 정리할 수 있습니다.  
   

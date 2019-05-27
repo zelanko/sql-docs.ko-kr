@@ -1,8 +1,7 @@
 ---
 title: 다양 한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교 | Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.openlocfilehash: 13ae9380cc3f034ace5f43d83640eea665cb3b02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267266"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109759"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>다양한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교
 

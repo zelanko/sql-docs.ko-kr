@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -34,12 +33,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231188"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110077"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>동작 속성 대화 상자(보고서 작성기 및 SSRS)
   **동작** 대화 상자를 사용하여 링크를 지원하는 차트, 계기 및 지도 요소에 대한 하이퍼링크 옵션을 활성화할 수 있습니다. 사용자가 보고서를 클릭하여 URL로 이동하거나, 동일한 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 있는 다른 보고서로 이동하거나, 동일한 보고서 내의 다른 위치로 이동할 수 있는 동작을 정의합니다.  

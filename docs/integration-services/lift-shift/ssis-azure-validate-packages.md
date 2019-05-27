@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9aae0735f4dec61ebafa991afb579c32ee560260
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767751"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720279"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSIS) 프로젝트를 배포하면 패키지 배포 마법사는 **검토** 페이지 이후에 추가 유효성 검사 단계를 추가합니다. 이 유효성 검사 단계에서는 Azure SSIS Integration Runtime에서 패키지가 예상대로 실행되지 않을 수 있는 알려진 문제점을 프로젝트의 패키지에서 확인합니다. 그런 다음 마법사는 **유효성 검사** 페이지에서 적용 가능한 경고를 표시합니다.
 
@@ -40,23 +44,23 @@ Azure 서버의 SSIS 카탈로그(SSISDB)에 SQL Server Integration Services(SSI
 
 | 연결 관리자 | Windows 인증 | 파일 경로 | UNC 경로 | 호스트 이름 | 공급자 또는 드라이버 |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| 내보내기              |          | ✓         | ✓   |           |                   |
-| 파일               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| Odbc               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| 내보내기              |          | âœ“         | âœ“   |           |                   |
+| 파일               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| Ftp                |          |           |     | âœ“         |                   |
+| MsOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| Odbc               | âœ“        |           |     | âœ“         | âœ“                 |
+| OleDb              | âœ“        |           |     | âœ“         | âœ“                 |
+| SmoServer          | âœ“        |           |     | âœ“         |                   |
+| Smtp               | âœ“        |           |     | âœ“         |                   |
+| SqlMobile          |          | âœ“         | âœ“   |           |                   |
+| Wmi                | âœ“        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>원본 및 대상 유효성 검사

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807255"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011154"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한
   [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 및 [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 함수는 0부터 1000까지의 서수 값(순위 값)이 포함된 RANK라는 열을 반환합니다. 이러한 값은 반환된 행이 선택 조건에 얼마나 일치하는지에 따라 순위를 매기는 데 사용됩니다. 순위 값은 결과 집합에 포함된 행의 관련성을 나타내는 상대적 순서일 뿐이며 값이 작을수록 관련이 없는 것입니다. 실제 값은 중요하지 않으며 일반적으로 쿼리가 실행될 때마다 달라집니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52807255"
   
 ##  <a name="examples"></a> 순위를 사용하여 검색 결과를 제한하는 예  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>예 1: 상위 3개의 일치하는 항목만 검색  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>A: 예 상위 3개의 일치하는 항목만 검색  
  다음 예제에서는 CONTAINSTABLE을 사용하여 상위 3개의 일치하는 항목만 반환합니다.  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  `IndexRowCount`와 같은 통계는 크게 달라질 수 있습니다. 예를 들어 카탈로그의 마스터 인덱스에 20억 개 행이 있고 메모리 내 중간 인덱스에 하나의 새 문서가 인덱싱되면 메모리 내 인덱스의 문서 수를 기준으로 한 해당 문서의 순위와 마스터 인덱스 문서에 대한 순위에 차이가 생길 수 있습니다. 이런 이유로 다수의 행이 인덱싱 또는 다시 인덱싱 채우기 후에는 ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 인덱스를 마스터 인덱스에 병합하는 것이 좋습니다. 또한 전체 텍스트 검색 엔진은 중간 인덱스의 개수와 크기 같은 매개 변수를 기준으로 인덱스를 자동으로 병합합니다.  
   
- `MaxOccurrence` 값은 32개 범위 중 하나로 정규화됩니다. 예를 들어 이것은 50단어 길이의 문서가 100단어 길이의 문서와 동일하게 처리된다는 것을 의미합니다. 정규화에 사용되는 표는 아래와 같습니다. 문서 길이가 둘 다 인접 테이블 값 32와 128 사이의 범위에 있기 때문에 실제로 두 문서는 모두 길이가 128인 것으로 처리됩니다(32 < `docLength` <= 128).  
+ `MaxOccurrence` 값은 32개 범위 중 하나로 정규화됩니다. 예를 들어 이것은 50단어 길이의 문서가 100단어 길이의 문서와 동일하게 처리된다는 것을 의미합니다. 정규화에 사용되는 표는 아래와 같습니다. 문서 길이가 인접 테이블 값 32와 128 사이의 범위에 이기 때문에 효과적으로 배열과 길이가 같은, 128로 간주 됩니다 (32 < `docLength` < = 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   
@@ -203,7 +203,7 @@ qtf is the frequency of the term in the query.
 ```  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [전체 텍스트 검색을 사용한 쿼리](query-with-full-text-search.md)  
   
   

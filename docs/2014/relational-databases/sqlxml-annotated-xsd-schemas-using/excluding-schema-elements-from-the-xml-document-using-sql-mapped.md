@@ -19,15 +19,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228459"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013867"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped를 사용하여 결과 XML 문서에서 스키마 요소 제외(SQLXML 4.0)
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 그러나 어느 데이터베이스 테이블(뷰) 또는 열에도 매핑되지 않고 XML에 표시되지 않는 요소를 XSD 스키마에 만들려면 `sql:mapped` 주석을 지정할 수 있습니다.  

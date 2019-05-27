@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c923a239ad0eeb677b476665a4c99b45d430b421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108673"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
   설치 중에 오류가 발생하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치할 수 없는 경우 이 항목에 설명된 지침에 따라 설치 오류가 발생할 가능성이 가장 높은 상황을 처리하세요.  

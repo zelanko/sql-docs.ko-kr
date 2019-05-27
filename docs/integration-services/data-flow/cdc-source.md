@@ -16,14 +16,18 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290539"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727169"
 ---
 # <a name="cdc-source"></a>CDC 원본
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
   
  CDC 원본이 읽는 변경 데이터의 범위를 CDC 처리 범위라고 합니다. 이 범위는 현재 데이터 흐름이 시작되기 전에 실행되는 CDC 제어 태스크에 의해 결정됩니다. CDC 처리 범위는 테이블 그룹의 CDC 처리 상태를 유지 관리하는 패키지 변수의 값에서 파생됩니다.  

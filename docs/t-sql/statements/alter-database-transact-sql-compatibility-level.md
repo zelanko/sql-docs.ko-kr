@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583376"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626685"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -237,9 +237,9 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 |데이터베이스 포함이 부분으로 설정된 경우 `MERGE` 문의 `OUTPUT` 절에서 `$action` 필드의 유효성을 검사하면 데이터 정렬 오류가 반환될 수 있습니다.|`MERGE` 문의 `$action` 절에서 반환되는 값의 데이터 정렬은 서버 데이터 정렬 대신 데이터베이스 데이터 정렬이며 데이터 정렬 충돌 오류가 반환되지 않습니다.|
 |`SELECT INTO` 문은 항상 단일 스레드 삽입 작업을 만듭니다.|`SELECT INTO` 문은 병렬 삽입 작업을 만들 수 있습니다. 많은 수의 행을 삽입하는 경우 병렬 작업은 성능을 향상시킬 수 있습니다.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>낮은 호환성 수준과 수준 110 및 120 사이의 차이
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>낮은 호환성 수준과 수준 100 및 110 사이의 차이
 
-이 섹션에서는 호환성 수준 110으로 정의된 새로운 동작에 대해 설명합니다. 이 섹션은 또한 수준 120에도 적용됩니다.
+이 섹션에서는 호환성 수준 110으로 정의된 새로운 동작에 대해 설명합니다. 이 섹션에서는 호환성 수준 110 이상도 적용됩니다.
 
 |호환성 수준 설정 100 이하|호환성 수준 설정 110 이상|
 |--------------------------------------------------|--------------------------------------------------|

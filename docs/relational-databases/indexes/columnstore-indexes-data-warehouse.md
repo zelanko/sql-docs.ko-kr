@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412070"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581310"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore 인덱스 - 데이터 웨어하우스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  그 결과는 두 인덱스에 대해 모두 기본 키 제약 조건을 적용하는 비클러스터형 인덱스를 포함한 columnstore 인덱스입니다.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a80eb337bfc03d826ab0933ac235f76dd16bfde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140608"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012117"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>데이터 대량 가져오기 및 내보내기(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는*테이블에서 대량으로 데이터(* 대량 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )를 내보내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블이나 분할되지 않은 뷰로 대량의 데이터를 가져올 수 있습니다. 대량 가져오기 및 대량 내보내기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 데이터 원본 간에 데이터를 효과적으로 전송하는 데 필수적입니다. *대량 내보내기* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 데이터 파일로 복사하는 것입니다. *대량 가져오기* 는 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 로드하는 것입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 애플리케이션의 데이터를 데이터 파일로 내보낸 다음 해당 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져올 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "63140608"
   
  서식 파일을 사용하면 가져오기 작업 중 데이터 파일에 있는 데이터의 해석뿐만 아니라 내보내기 작업 중 데이터 파일에 있는 데이터의 서식을 지정할 수 있습니다. 이와 같이 융통성이 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 외부 애플리케이션에 대한 특정 요구 사항에 따라 데이터를 해석하거나 데이터의 서식을 다시 지정하기 위해 특수한 목적의 코드를 작성할 필요가 없습니다. 예를 들어 대량으로 내보낸 데이터를 쉼표로 값을 구분해야 하는 애플리케이션으로 로드해야 할 경우 서식 파일을 사용하여 내보낸 데이터에서 쉼표를 필드 종결자로 삽입할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 두 유형의 서식 파일을 지원합니다. XML 서식 파일과 비 XML 서식 파일입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 종류의 서식 파일을 지원합니다. XML 서식 파일 및 비 XML 서식 파일.  
   
  서식 파일을 생성할 수 있는 유일한 도구는 **bcp** 유틸리티입니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요. 서식 파일에 대한 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725796"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073672"
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
   큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  

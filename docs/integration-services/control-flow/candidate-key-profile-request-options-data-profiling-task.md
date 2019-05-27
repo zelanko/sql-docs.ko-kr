@@ -13,14 +13,18 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276185"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727938"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **후보 키 프로필 요청** 의 옵션을 설정할 수 있습니다. 후보 키 프로필은 열 또는 열 집합이 선택한 테이블에 대해 키, 아니면 근사 키인지 보고합니다. 또한 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
@@ -104,7 +108,7 @@ ms.locfileid: "58276185"
 |값|설명|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
-|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
+|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "Ã¥"와 "a"는 동일합니다.|  
 |**IgnoreKanaType**|비교 시 두 가지 형식의 일본어 가나 문자인 히라가나와 가타가나를 구분합니다. 이 옵션을 설정하면 문자열 비교 시 가나 형식이 무시됩니다.|  
 |**IgnoreWidth**|비교 시 싱글바이트 문자와 동일 문자의 더블바이트 문자 표현을 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 동일 문자에 대한 싱글바이트 표현과 더블바이트 표현이 동일하게 인식됩니다.|  
   

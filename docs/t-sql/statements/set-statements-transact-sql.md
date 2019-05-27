@@ -25,15 +25,16 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+monikerRange: = azure-sqldw-latest ||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: bc660aeb0ca4e7b56cae69a8eb294c6681b1765c
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590288"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620333"
 ---
 # <a name="set-statements-transact-sql"></a>SET 문(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 언어는 특정 정보를 처리하는 현재 세션을 변경할 수 있는 몇 가지 SET 문을 제공합니다. SET 문은 다음 표에 표시된 범주별로 그룹화됩니다.  
   
@@ -44,14 +45,14 @@ SET 문을 사용하여 지역 변수를 설정하는 방법은 [SET @local_vari
 |날짜 및 시간 문|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)<br /><br /> [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|  
 |잠금 문|[SET DEADLOCK_PRIORITY](../../t-sql/statements/set-deadlock-priority-transact-sql.md)<br /><br /> [SET LOCK_TIMEOUT](../../t-sql/statements/set-lock-timeout-transact-sql.md)|  
 |기타 문|[SET CONCAT_NULL_YIELDS_NULL](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md)<br /><br /> [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)<br /><br /> [SET FIPS_FLAGGER](../../t-sql/statements/set-fips-flagger-transact-sql.md)<br /><br /> [SET IDENTITY_INSERT](../../t-sql/statements/set-identity-insert-transact-sql.md)<br /><br /> [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)<br /><br /> [SET OFFSETS](../../t-sql/statements/set-offsets-transact-sql.md)<br /><br /> [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)|  
-|쿼리 실행 문|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /><br /> 참고: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
+|쿼리 실행 문|[SET ARITHABORT](../../t-sql/statements/set-arithabort-transact-sql.md)<br /><br /> [SET ARITHIGNORE](../../t-sql/statements/set-arithignore-transact-sql.md)<br /><br /> [SET FMTONLY](../../t-sql/statements/set-fmtonly-transact-sql.md)<br /> 참고: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> [SET NOCOUNT](../../t-sql/statements/set-nocount-transact-sql.md)<br /><br /> [SET NOEXEC](../../t-sql/statements/set-noexec-transact-sql.md)<br /><br /> [SET NUMERIC_ROUNDABORT](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)<br /><br /> [SET PARSEONLY](../../t-sql/statements/set-parseonly-transact-sql.md)<br /><br /> [SET QUERY_GOVERNOR_COST_LIMIT](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)<br /><br /> [결과 집합 캐싱 설정](../../t-sql/statements/set-result-set-caching-transact-sql.md?view=azure-sqldw-latest)(미리 보기)<br /> 참고:  이 기능은 Azure SQL Data Warehouse에만 적용됩니다.<br /><br /> [SET ROWCOUNT](../../t-sql/statements/set-rowcount-transact-sql.md)<br /><br /> [SET TEXTSIZE](../../t-sql/statements/set-textsize-transact-sql.md)|  
 |ISO 설정 문|[SET ANSI_DEFAULTS](../../t-sql/statements/set-ansi-defaults-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_OFF](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)<br /><br /> [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)<br /><br /> [SET ANSI_NULLS](../../t-sql/statements/set-ansi-nulls-transact-sql.md)<br /><br /> [SET ANSI_PADDING](../../t-sql/statements/set-ansi-padding-transact-sql.md)<br /><br /> [SET ANSI_WARNINGS](../../t-sql/statements/set-ansi-warnings-transact-sql.md)|  
 |통계 문|[SET FORCEPLAN](../../t-sql/statements/set-forceplan-transact-sql.md)<br /><br /> [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md)<br /><br /> [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md)<br /><br /> [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)<br /><br /> [SET STATISTICS IO](../../t-sql/statements/set-statistics-io-transact-sql.md)<br /><br /> [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)<br /><br /> [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)<br /><br /> [SET STATISTICS TIME](../../t-sql/statements/set-statistics-time-transact-sql.md)|  
-|트랜잭션 문|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)|  
+|트랜잭션 문|[SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)<br /><br /> [SET REMOTE_PROC_TRANSACTIONS](../../t-sql/statements/set-remote-proc-transactions-transact-sql.md)<br /><br /> [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)<br /><br /> [SET XACT_ABORT](../../t-sql/statements/set-xact-abort-transact-sql.md)| 
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>SET 문 사용 시 고려 사항  
   
-- 구문 분석 시간에 실행되는 다음 문을 제외하고 모든 SET 문은 실행 시간 또는 런타임에 실행됩니다. 
+- 구문 분석 시간에 실행되는 다음 문을 제외하고 모든 SET 문은 실행 시간 또는 런타임에 실행됩니다.
 
   - SET FIPS_FLAGGER
   - SET OFFSETS
@@ -69,7 +70,7 @@ SET 문을 사용하여 지역 변수를 설정하는 방법은 [SET @local_vari
 - SET 문에서 ON이나 OFF를 사용하면 여러 SET 옵션을 ON 또는 OFF로 지정할 수 있습니다.
   
     > [!NOTE]  
-    >  통계 관련 SET 옵션에는 적용되지 않습니다.  
+    >  통계 관련 SET 옵션에는 적용되지 않습니다.
   
      예를 들어 `SET QUOTED_IDENTIFIER, ANSI_NULLS ON`은 QUOTED_IDENTIFIER 및 ANSI_NULLS를 ON으로 설정합니다.  
   
@@ -89,6 +90,7 @@ SET 문을 사용하여 지역 변수를 설정하는 방법은 [SET @local_vari
   
 - 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 다음 SET 옵션을 ON으로 설정해야 합니다. ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING 및 ANSI_WARNINGS. NUMERIC_ROUNDABORT 옵션을 OFF로 설정합니다.  
   
-  이 옵션 중 하나라도 필요한 값으로 설정하지 않으면 인덱싱된 뷰나 계산 열에 인덱스가 있는 테이블에서의 INSERT, UPDATE, DELETE, DBCC CHECKDB 및 DBCC CHECKTABLE 동작이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 잘못 설정된 모든 옵션을 나열하는 오류 메시지를 표시합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 옵션이 잘못 설정된 테이블이나 인덱싱된 뷰에 대해 계산 열이나 뷰에 이러한 인덱스가 존재하지 않는 것처럼 SELECT 문을 처리합니다.  
-  
-  
+  이 옵션 중 하나라도 필요한 값으로 설정하지 않으면 인덱싱된 뷰나 계산 열에 인덱스가 있는 테이블에서의 INSERT, UPDATE, DELETE, DBCC CHECKDB 및 DBCC CHECKTABLE 동작이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 잘못 설정된 모든 옵션을 나열하는 오류 메시지를 표시합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 옵션이 잘못 설정된 테이블이나 인덱싱된 뷰에 대해 계산 열이나 뷰에 이러한 인덱스가 존재하지 않는 것처럼 SELECT 문을 처리합니다. 
+
+- SET RESULT_SET_CACHING이 ON이면 현재 클라이언트 세션의 결과 캐싱 기능을 사용하도록 설정합니다.   데이터베이스 수준에서 Result_set_caching이 OFF인 경우 세션에서 ON으로 설정할 수 없습니다.    SET RESULT_SET_CACHING이 OFF이면 현재 클라이언트 세션의 결과 집합 캐싱 기능을 사용하지 않도록 설정합니다. 이 설정을 변경하려면 public 역할의 멤버 자격이 필요합니다.
+적용 대상: Azure SQL Data Warehouse Gen2

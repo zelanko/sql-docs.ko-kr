@@ -10,22 +10,22 @@ helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ac7238d643165bc093a8a1cabd5d1dac662dfc
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273498"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011137"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
   통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
   
 ## <a name="installing-semantic-search"></a>의미 체계 검색 설치  
   
-###  <a name="HowToCheckInstalled"></a> 어떻게: 의미 체계 검색이 설치되어 있는지 확인  
+###  <a name="HowToCheckInstalled"></a> 방법: 의미 체계 검색이 설치되어 있는지 확인  
  [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) 메타데이터 함수의 **IsFullTextInstalled** 속성을 쿼리합니다.  
   
  반환 값이 1이면 전체 텍스트 검색과 의미 체계 검색이 설치되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a> 어떻게: 의미 체계 검색 설치  
+###  <a name="BasicsSemanticSearch"></a> 방법: 의미 체계 검색 설치  
  의미 체계 검색을 설치하려면 설치 중에 **설치할 기능** 페이지에서 **검색을 위한 전체 텍스트 및 의미 체계 추출** 을 선택합니다.  
   
  통계 의미 체계 검색은 전체 텍스트 검색을 기반으로 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 이 두 가지 선택적 기능이 함께 설치됩니다.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>의미 체계 언어 통계 데이터베이스 설치 또는 제거  
  의미 체계 검색에는 의미 체계 언어 통계 데이터베이스라고 하는 추가적인 외부 종속성이 있습니다. 이 데이터베이스는 의미 체계 검색에 필요한 통계적 언어 모델을 포함합니다. 단일 의미 체계 언어 통계 데이터베이스에는 의미 체계 인덱싱에 지원되는 모든 언어에 대한 언어 모델이 포함되어 있습니다.  
   
-###  <a name="HowToCheckDatabase"></a> 어떻게: 의미 체계 언어 통계 데이터베이스가 설치 되어 있는지 확인 합니다.  
+###  <a name="HowToCheckDatabase"></a> 방법: 의미 체계 언어 통계 데이터베이스가 설치 되어 있는지 확인 합니다.  
  카탈로그 뷰 [sys.fulltext_semantic_language_statistics_database&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)를 쿼리합니다.  
   
  인스턴스에 대해 의미 체계 언어 통계 데이터베이스를 설치하여 등록한 경우 쿼리 결과에 데이터베이스에 대한 단일 정보 행이 포함되어 있습니다.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a> 어떻게: 설치, 연결 및 의미 체계 언어 통계 데이터베이스 등록  
+###  <a name="HowToInstallModel"></a> 방법: 설치, 연결 및 의미 체계 언어 통계 데이터베이스 등록  
  의미 체계 언어 통계 데이터베이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 통해 설치되지 않습니다. 의미 체계 언어 통계 데이터베이스를 의미 체계 인덱싱을 위한 필수 구성 요소로 설정하려면 다음 태스크를 수행합니다.  
   
  **1. 의미 체계 언어 통계 데이터베이스를 설치합니다.**  
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 어떻게: 등록 취소, 분리 및 의미 체계 언어 통계 데이터베이스 제거  
+###  <a name="HowToUnregister"></a> 방법: 등록 취소, 분리 및 의미 체계 언어 통계 데이터베이스 제거  
  **의미 체계 언어 통계 데이터베이스 등록을 취소 합니다.**  
  저장 프로시저 [sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)를 호출합니다. 인스턴스는 의미 체계 언어 통계 데이터베이스를 하나만 가질 수 있으므로 데이터베이스의 이름을 제공할 필요는 없습니다.  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>최신 문서 유형에 대한 선택적 지원 설치  
   
-###  <a name="office"></a> 어떻게: Microsoft Office 및 다른 Microsoft 문서 유형에 대 한 최신 필터 설치  
+###  <a name="office"></a> 방법: Microsoft Office 및 다른 Microsoft 문서 유형에 대 한 최신 필터 설치  
  이번 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 릴리스에서는 최신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 단어 분리기 및 형태소 분석기를 설치하지만 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 문서 및 다른 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 문서 유형용 최신 필터는 설치하지 않습니다. 이 필터는 최신 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 및 다른 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 애플리케이션을 사용하여 만든 문서를 인덱싱하는 데 필요합니다. 최신 필터를 다운로드하려면 [Microsoft Office 2010 Filter Packs](https://go.microsoft.com/fwlink/?LinkId=218293)를 참조하세요.  
   
   

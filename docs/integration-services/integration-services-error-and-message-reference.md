@@ -15,14 +15,18 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290889"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723640"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
   
  이 목록은 아무런 설명 없이 오류가 발생할 경우 유용할 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  

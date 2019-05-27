@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108410"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 (Reporting Services) 추가
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
@@ -41,13 +40,13 @@ ms.locfileid: "63278804"
   
 2.  표시 되지 않으면 합니다 **Rowgroups** 창 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **보기** 클릭 하 고 **그룹화**.  
   
-3.  **보고서 데이터** 창으로 끕니다 합니다 `Date` 필드를 **행 그룹** 창입니다. **(자세히)** 라는 행 위에 놓습니다.  
+3.  **보고서 데이터** 창에서 `Date` 필드를 **행 그룹** 창으로 끕니다. **(자세히)** 라는 행 위에 놓습니다.  
   
      행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  **보고서 데이터** 창으로 끕니다 합니다 `Order` 필드를 **행 그룹** 창입니다. Date 아래, **(자세히)** 위에 놓습니다.  
+4.  **보고서 데이터** 창에서 `Order` 필드를 **행 그룹** 창으로 끕니다. Date 아래, **(자세히)** 위에 놓습니다.  
   
      행 핸들 안에 두 개의 대괄호가 표시되어 두 개의 그룹임을 나타냅니다. 테이블에 두 개의 `Order` 열을 너무 합니다.  
   

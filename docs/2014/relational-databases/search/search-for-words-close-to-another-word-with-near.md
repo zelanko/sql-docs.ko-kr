@@ -17,15 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238395"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011072"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
   [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 함수에서 근접 단어(NEAR)를 사용하여 단어나 구를 검색할 수 있습니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 단어나 구를 순서에 관계 없이 검색하거나 지정한 순서로 검색할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 모두 지원 [일반 근접 단어](#Generic_NEAR)에 이제 사용 되지 및 [사용자 지정 근접 단어](#Custom_NEAR)의 새로운 기능인 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]합니다.  

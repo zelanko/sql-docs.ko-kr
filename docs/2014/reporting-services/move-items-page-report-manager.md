@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108218"
 ---
 # <a name="move-items-page-report-manager"></a>항목 이동 페이지(보고서 관리자)
   항목 이동 페이지를 사용하여 보고서, 폴더 또는 기타 항목을 보고서 서버의 새 위치로 이동할 수 있습니다. 새 위치의 경로를 입력하거나 트리 뷰를 사용하여 보고서 서버 네임스페이스에서 새 위치를 찾아볼 수 있습니다. 현재 보고서 서버에 저장되어 있고 이동 권한 있는 항목만 이동할 수 있습니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f31498e5b73ce639808df6c659250a4ba6268308
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637854"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012388"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  

@@ -11,20 +11,24 @@ ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5b02db809cf8bb0d7d9b049cfec9fe895a3af3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcacaf20a5216754992b28ab2e29460437fc0f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276689"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728499"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC Designer 콘솔 소개
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
   
 ## <a name="installation"></a>설치  
  이 섹션에서는 Attunity Oracle CDC Designer 설치 절차에 대해 설명합니다.  
   
- Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+ Microsoft SQL ServerÂ® 2016용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
 ## <a name="supported-windows-environments"></a>지원되는 Windows 환경  
  CDC Designer 콘솔은 다음과 같은 Windows 환경에서 실행될 수 있습니다.  

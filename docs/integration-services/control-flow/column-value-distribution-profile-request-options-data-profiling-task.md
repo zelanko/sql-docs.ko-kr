@@ -13,14 +13,18 @@ ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d10496080bd9103bb3814ec0abe97f3e690982e9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9251b25d0f4f353312a56a2117d1388f813d839f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281908"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727844"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 값 분포 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 값 분포 프로필은 선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 프로필은 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수 있습니다. 이 프로필을 사용하면 열에 포함된 잘못된 고유 값 수와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값이 검색될 수 있습니다.  
   
 > [!NOTE]  
@@ -82,7 +86,7 @@ ms.locfileid: "58281908"
 |값|설명|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
-|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
+|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "Ã¥"와 "a"는 동일합니다.|  
 |**IgnoreKanaType**|비교 시 두 가지 형식의 일본어 가나 문자인 히라가나와 가타가나를 구분합니다. 이 옵션을 설정하면 문자열 비교 시 가나 형식이 무시됩니다.|  
 |**IgnoreWidth**|비교 시 싱글바이트 문자와 동일 문자의 더블바이트 문자 표현을 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 동일 문자에 대한 싱글바이트 표현과 더블바이트 표현이 동일하게 인식됩니다.|  
   

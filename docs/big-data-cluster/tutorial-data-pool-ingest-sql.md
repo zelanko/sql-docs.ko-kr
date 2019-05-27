@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994155"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014944"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "65994155"
 
 다음 단계를 이전 단계에서 만든 외부 테이블을 사용 하 여 데이터 풀에 샘플 웹 클릭 동향 데이터를 수집 합니다.
 
-1. 변수 데이터 풀에 데이터를 삽입 하려면 사용 하려는 쿼리를 정의 합니다. CTP 2.3에 대 한 또는 이전 버전의 **모델... sp_data_pool_table_insert_data** 저장된 프로시저가 필요 합니다. CTP 2.4 이상 버전에서는 사용할 수는 `INSERT INTO` 쿼리에서 결과 데이터 풀 삽입 문을 (합니다 **web_clickstream_clicks_data_pool** 외부 테이블).
+1. 사용 하 여는 `INSERT INTO` 쿼리에서 결과 데이터 풀 삽입 문을 (합니다 **web_clickstream_clicks_data_pool** 외부 테이블).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

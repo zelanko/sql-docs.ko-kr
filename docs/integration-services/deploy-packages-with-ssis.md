@@ -21,14 +21,18 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a6be73e7253bc0be8d8dde9766f9fcb8be0a2dfa
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277282"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725747"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    
     
 먼저 배포를 준비하기 위한 태스크를 수행합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 새 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 기존 패키지와 데이터 파일을 프로젝트에 추가합니다. 새 패키지를 처음부터 만드는 대신에 이 자습서용으로 만들어진 완성된 패키지만 사용하여 작업합니다. 이 자습서에서 패키지의 기능을 수정하지는 않습니다. 그러나 패키지를 프로젝트에 추가한 후에 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 열고 각 패키지의 내용을 검토하면 도움이 될 것입니다. 패키지를 검사하면 로그 파일과 같은 패키지 종속 파일과 패키지의 다른 흥미로운 기능에 대해 알 수 있습니다.    

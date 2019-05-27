@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 28447ca0e1e503e73826aba5e02b22bf71cff6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920304"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010425"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  

@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829680"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721471"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이제 SSIS(SQL Server Integration Services) 프로젝트 및 워크로드를 Azure 클라우드로 이동할 수 있습니다. SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 SQL Database Managed Instance 또는 Azure SQL Database의 SSIS 카탈로그(SSISDB)에서 SSIS 프로젝트와 패키지를 배포, 실행 및 관리합니다.
 
 ## <a name="benefits"></a>이점
@@ -42,9 +46,9 @@ ms.locfileid: "47829680"
 
 **프로비전**. Azure에서 SSIS 패키지를 배포하고 실행하려면 먼저 SSISDB(SSIS 카탈로그)와 Azure-SSIS Integration Runtime을 프로비전해야 합니다.
 
--   Azure Portal에서 SSIS를 프로비전하려면 [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비전](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 문서의 프로비전 단계에 따릅니다. 
+-   Azure Portal의 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비저닝](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure) 
 
--   PowerShell을 통해 Azure에서 SSIS를 프로비전하려면 [PowerShell을 통해 Azure Data Factory에서 Azure-SSIS Integration Runtime 프로비전](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell) 문서의 프로비전 단계에 따릅니다.
+-   PowerShell을 통해 Azure에서 SSIS를 프로비저닝하려면 이 문서의 프로비저닝 단계를 따르세요. [Azure Data Factory에서 PowerShell을 통해 Azure-SSIS Integration Runtime 프로비저닝](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)
 
 Azure-SSIS IR은 한 번만 프로비전해야 합니다. 그런 다음 SSDT(SQL Server Data Tools) 및 SSMS(SQL Server Management Studio)와 같은 친숙한 도구를 사용하여 패키지를 배포, 구성, 실행, 모니터링, 예약 및 관리할 수 있습니다.
 
@@ -88,7 +92,7 @@ Azure SQL Database에서는 탄력적 트랜잭션을 사용할 수 있습니다
 
 ## <a name="deploy-and-run-packages"></a>패키지 배포 및 실행
 
-시작하려면 [자습서: Azure에 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
+시작하려면 [자습서를 참조하세요. Azure에서 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
@@ -112,7 +116,7 @@ Azure에서 프로젝트를 배포하려면 다음과 같은 몇 가지 친숙�
 
 배포 프로세스는 패키지의 유효성을 검사하여 Azure-SSIS Integration Runtime에서 실행할 수 있는지를 확인합니다. 자세한 내용은 [Azure에 배포된 SSIS(SQL Server Integration Services) 패키지 유효성 검사](ssis-azure-validate-packages.md)를 참조하세요.
 
-SSMS 및 Integration Services 배포 마법사를 사용하는 배포 예제는 [자습서: Azure에서 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)을 참조하세요.
+SSMS 및 Integration Services Deployment Wizard를 사용하는 배포 예제는 [자습서를 참조하세요. Azure에서 SSIS(SQL Server Integration Services) 패키지 배포 및 실행](ssis-azure-deploy-run-monitor-tutorial.md)
 
 ### <a name="version-support"></a>버전 지원
 

@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658297"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713319"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658297"
   
 -   하나 이상의 파티션에서 유지 관리 작업을 더 빠르게 수행할 수 있습니다. 전체 테이블 대신 이 데이터 하위 집합만 대상으로 하기 때문에 작업이 더 효율적입니다. 예를 들어 하나 이상의 파티션에서 데이터를 압축하거나 인덱스의 파티션 중 하나 이상을 다시 작성할 수 있습니다.  
   
--   자주 실행하는 쿼리 유형과 사용 중인 하드웨어 구성에 따라 쿼리 성능이 향상될 수 있습니다. 예를 들어 쿼리 최적화 프로그램에서는 파티션 자체를 조인할 수 있으므로 테이블의 분할 열이 동일한 경우 두 개 이상의 분할된 테이블 간의 동등 조인 쿼리를 더 빠르게 처리할 수 있습니다.  
+-   자주 실행하는 쿼리 유형과 사용 중인 하드웨어 구성에 따라 쿼리 성능이 향상될 수 있습니다. 예를 들어 쿼리 최적화 프로그램에서는 분할 열이 테이블이 조인된 열과 동일한 경우 2개 이상의 분할된 테이블 간의 동등 조인 쿼리를 더 빠르게 처리할 수 있습니다. 자세한 정보는 아래 [쿼리](#queries)를 참조하세요.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
   

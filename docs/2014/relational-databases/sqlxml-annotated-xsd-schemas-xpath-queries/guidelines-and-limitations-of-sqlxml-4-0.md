@@ -1,9 +1,8 @@
 ---
 title: 지침 및 SQLXML 4.0의 제한 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -13,16 +12,14 @@ ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffe5c84f4ac76fe339735b50843185d122b1cb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dec69250a728edbb61805528320670908a0671bb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127691"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012714"
 ---
 # <a name="guidelines-and-limitations-of-sqlxml-40"></a>SQLXML 4.0에 대한 지침 및 제한 사항
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQLXML 4.0에서 작업을 수행할 때는 다음 사항을 기억해야 합니다.  
   
 -   쿼리 결과로 반환되는 XML은 XML을 생성한 매핑 스키마에 대해 유효성이 검사되지 않습니다.  

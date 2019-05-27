@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283065"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727557"
 ---
 # <a name="precedence-constraints"></a>선행 제약 조건
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   선행 제약 조건은 패키지에 있는 실행 개체, 컨테이너 및 태스크를 제어 흐름으로 연결하고 실행 개체의 실행 여부를 결정하는 조건을 지정합니다. 실행 개체는 For 루프, Foreach 루프 또는 시퀀스 컨테이너나 태스크 또는 이벤트 처리기일 수 있습니다. 또한 이벤트 처리기에서는 해당 실행 개체를 제어 흐름으로 연결하기 위해 선행 제약 조건이 사용됩니다.  
   
  선행 제약 조건은 선행 실행 개체 및 제약 조건이 지정된 실행 개체의 두 실행 개체를 연결합니다. 선행 실행 개체는 제약 조건이 지정된 실행 개체 전에 실행되며, 선행 실행 개체의 실행 결과로 제약 조건이 지정된 실행 개체의 실행 여부가 결정될 수 있습니다. 다음 다이어그램에서는 선행 제약 조건으로 연결된 두 개의 실행 개체를 보여 줍니다.  

@@ -21,7 +21,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63316138"
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
-   **편집기**, **속성** 창 및 **도구 상자** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 기본 요소 중 일부입니다.  
+  **편집기**, **속성** 창 및 **도구 상자** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 기본 요소 중 일부입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [정보 대화 상자](about-dialog-box.md)  

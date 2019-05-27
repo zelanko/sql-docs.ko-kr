@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], bcp utility
 - bcp utility [SQL Server], about bcp utility
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd68505153eb43d826f3854bd4f525ed06ea072a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b291b24d18420005cdda4e5b079eb08abee27b8b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62827425"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011927"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
   이 항목에서는 분할된 뷰를 포함하여 SELECT 문이 작동하는 [데이터베이스의 어디에서나 데이터를 가져올 수 있도록](../../tools/bcp-utility.md) bcp 유틸리티 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하는 방법에 대해 간략하게 설명합니다.  

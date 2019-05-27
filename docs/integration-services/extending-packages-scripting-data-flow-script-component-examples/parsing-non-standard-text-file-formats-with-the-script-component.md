@@ -16,14 +16,18 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28bfe8de3327702c0d56e762a560732c3b9812a4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277812"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724420"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
   
  [예제 1: 행으로 구분된 레코드의 구문 분석](#example1)  

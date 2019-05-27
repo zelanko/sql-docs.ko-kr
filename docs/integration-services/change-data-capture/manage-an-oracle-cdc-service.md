@@ -13,14 +13,18 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4d5bf2b8247d3ee7907f5a064f090c88344c18e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2d3941108c9cd8969f4082a4c6aed765f39bb013
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275584"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728679"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리할 수 있습니다.  
   
  **작업할 CDC Service를 선택하려면**  

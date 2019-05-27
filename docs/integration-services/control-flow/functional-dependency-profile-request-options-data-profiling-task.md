@@ -13,14 +13,18 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ac20c9f13bbf39bc4ffd46cb6b036c8314684ca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274947"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727646"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>함수 종속성 프로필 요청 옵션(데이터 프로파일링 태스크)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **함수 종속성 프로필 요청** 의 옵션을 설정할 수 있습니다. 함수 종속성 프로필은 한 열(종속 열)의 값이 다른 열 또는 열 집합(결정 열)의 값에 종속되는 범위를 보고합니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 Zip Code/Postal Code 열과 US State 열 간 종속성을 프로파일링하는 중 같은 우편 번호는 항상 같은 주여야 하는데 이 프로필이 종속성 위반을 검색할 수 있습니다.  
   
 > [!NOTE]  
@@ -96,7 +100,7 @@ ms.locfileid: "58274947"
 |값|설명|  
 |-----------|-----------------|  
 |**IgnoreCase**|비교 시 대문자와 소문자를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 대/소문자가 무시됩니다. 예를 들어 "ABC"는 "abc"와 동일하게 인식됩니다.|  
-|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "å"와 "a"는 동일합니다.|  
+|**IgnoreNonSpace**|비교 시 공백 문자와 분음 기호를 구분할지 여부를 지정합니다. 이 옵션을 설정하면 비교 시 분음 기호가 무시됩니다. 예를 들어 "Ã¥"와 "a"는 동일합니다.|  
 |**IgnoreKanaType**|비교 시 두 가지 형식의 일본어 가나 문자인 히라가나와 가타가나를 구분합니다. 이 옵션을 설정하면 문자열 비교 시 가나 형식이 무시됩니다.|  
 |**IgnoreWidth**|비교 시 싱글바이트 문자와 동일 문자의 더블바이트 문자 표현을 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 동일 문자에 대한 싱글바이트 표현과 더블바이트 표현이 동일하게 인식됩니다.|  
   

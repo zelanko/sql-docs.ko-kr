@@ -30,19 +30,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 829459fadb58ff24093d422c365089639e7b76b9
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 7a6414ca219cbc2ca871a1100c4ff82570409873
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503819"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580634"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 rowstore 테이블을 클러스터형 columnstore 인덱스로 변환하거나 비클러스터형 columnstore 인덱스를를 만듭니다. OLTP 워크로드에서 실시간 운영 분석을 효율적으로 실행하거나 데이터웨어 하우징 워크로드에 대한 데이터 압축 및 쿼리 성능을 향상시키기 위해 columnstore 인덱스를 사용합니다.  
   
-> [!NOTE]  
+> [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 테이블을 클러스터형 columnstore 인덱스로 만들 수 있습니다.   더 이상 rowstore 테이블을 생성하여 클러스터형 columnstore 인덱스로 변환할 필요가 없습니다.  
 
 > [!TIP]
@@ -64,14 +64,15 @@ rowstore 테이블을 클러스터형 columnstore 인덱스로 변환하거나 �
   
 ## <a name="syntax"></a>구문  
   
-```  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Create a clustered columnstore index on disk-based table.  
 CREATE CLUSTERED COLUMNSTORE INDEX index_name  
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]  
+    [ ON <on_option> ] 
+    [ORDER (column [,…n])]  --(Preview) 
 [ ; ]  
   
 --Create a non-clustered columnstore index on a disk-based table.  
@@ -80,7 +81,7 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
         ( column  [ ,...n ] )  
     [ WHERE <filter_expression> [ AND <filter_expression> ] ]
     [ WITH ( < with_option> [ ,...n ] ) ]  
-    [ ON <on_option> ]   
+    [ ON <on_option> ]
 [ ; ]  
   
 <with_option> ::=  
@@ -92,9 +93,9 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
       [ ON PARTITIONS ( { partition_number_expression | range } [ ,...n ] ) ]  
   
 <on_option>::=  
-      partition_scheme_name ( column_name )   
-    | filegroup_name   
-    | "default"   
+      partition_scheme_name ( column_name )
+    | filegroup_name
+    | "default"
   
 <filter_expression> ::=  
       column_name IN ( constant [ ,...n ]  
@@ -102,14 +103,14 @@ CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name
   
 ```  
   
-```  
+```
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE CLUSTERED COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( DROP_EXISTING = { ON | OFF } ) ] --default is OFF  
 [;]  
-```  
+```
   
 ## <a name="arguments"></a>인수  
 
@@ -124,7 +125,8 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 
 모든 옵션을 Azure SQL Database에서 사용할 수 있습니다.
 
-### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX
+
 모든 데이터가 압축되고 열로 저장되는 클러스터형 columnstore 인덱스를 만듭니다. 인덱스에 테이블의 모든 열이 포함되고 전체 테이블이 저장됩니다. 기존 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 클러스터형 columnstore 인덱스로 변환됩니다. 테이블이 클러스터형 columnstore 인덱스로 이미 저장된 경우 기존 인덱스가 삭제되고 다시 작성됩니다.  
   
 *index_name*  
@@ -132,11 +134,14 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 테이블에 클러스터형 columnstore 인덱스가 이미 있다면 같은 이름을 기존 인덱스로 지정하거나 DROP EXISTING 옵션을 사용하여 새 이름을 지정할 수 있습니다.  
   
-ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*  
-   클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다.  
+ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
+
+클러스터형 columnstore 인덱스로 저장할 테이블의 한, 두 또는 세 부분으로 이루어진 이름을 지정합니다. 테이블이 힙 또는 클러스터형 인덱스인 경우 테이블이 rowstore에서 columnstore로 변환됩니다. 테이블이 이미 columnstore인 경우 이 명령문은 클러스터형 columnstore 인덱스를 다시 작성합니다. 순서가 지정된 클러스터형 열 저장소 인덱스로 변환하려면 기존 인덱스가 클러스터형 columnstore 인덱스여야 합니다.
   
-#### <a name="with-options"></a>WITH 옵션  
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 옵션
+
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+
    `DROP_EXISTING = ON`은 기존 인덱스를 삭제하고 새로운 columnstore 인덱스를 생성하도록 지정합니다.  
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
@@ -156,6 +161,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
        WITH (MAXDOP = 2);
 ```
+
    자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 및 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
  
 ###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
@@ -742,3 +748,11 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
+### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
+
+SHIPDATE에서 순서가 지정된 클러스터형 columnstore 인덱스를 만듭니다.
+
+```sql 
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+```

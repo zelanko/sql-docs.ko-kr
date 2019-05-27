@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620571"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718494"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 다음 작업을 수행하여 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) Scale Out을 설정합니다. 
 
 > [!TIP]

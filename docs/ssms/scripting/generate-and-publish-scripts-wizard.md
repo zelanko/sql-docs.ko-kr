@@ -40,16 +40,16 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530568"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820805"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52530568"
   
  데이터베이스를 웹 호스팅 서비스에 게시하려면 마법사의 **스크립팅 옵션 설정** 페이지에서 **웹 서비스에 게시** 옵션을 선택합니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  데이터베이스를 게시하려면 최소한 원본 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요하고, 호스팅 공급자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스 스크립트를 게시하려면 최소한 대상 데이터베이스에 대해 db_ddladmin 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
  또한 마법사를 사용하여 게시하려면 해당 호스팅 공급자 계정에 액세스하기 위한 사용자 이름과 암호를 제공해야 합니다. 원본 데이터베이스를 게시하려면 먼저 호스팅 공급자에서 대상 데이트베이스를 만들어야 합니다. 게시하면 기존 데이터베이스의 개체를 덮어씁니다.  
@@ -348,8 +348,8 @@ ms.locfileid: "52530568"
 
 1. **도구** 를 클릭한 다음 **옵션**을 클릭합니다.  
 2. **일반 스크립팅 옵션** 설정에서 다음을 수행합니다.  
-    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
-    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
+    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL Database**  
+    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL Data Warehouse Edition**  
 3. **확인**을 클릭합니다.
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>기본 스크립팅 옵션이 아닌 경우 SQL 데이터 웨어하우스에 대한 스크립트를 생성하는 방법  
@@ -360,8 +360,8 @@ ms.locfileid: "52530568"
 2. **스크립트 생성...** 을 선택합니다.  
 3. 스크립팅하려는 개체를 선택합니다.  
 4. **스크립팅 옵션**에서 **고급**을 클릭합니다. **일반** 설정에서 다음을 수행합니다.  
-    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
-    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
+    1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL Database**  
+    2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL Data Warehouse Edition**  
 5. **스크립트 저장 또는 게시** 를 클릭한 다음 **마침**을 클릭합니다.  
 
 4단계에서 설정한 옵션은 저장되지 않습니다. 이러한 옵션을 저장하려면 **SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법**의 지침을 따릅니다.  

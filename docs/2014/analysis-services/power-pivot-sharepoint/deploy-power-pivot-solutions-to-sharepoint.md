@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071512"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
   다음 지침을 사용하여 SharePoint Server 2010 환경에 PowerPivot 기능을 추가하는 두 개의 솔루션 패키지를 수동으로 배포할 수 있습니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 PowerPivot을 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면를 참조 하세요 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b52ed239cd8e27e6304c1335b57a6598f441cac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127626"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012505"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
   이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. CommandText 값으로 SQL 또는 XPath 쿼리를 지정 하지 않고 값으로 파일 이름을 지정할 수 있습니다. 다음 예제에서는 CommandType 속성 SqlXmlCommandType.TemplateFile로 지정 됩니다.  

@@ -15,14 +15,18 @@ ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78371637089696416b5a753f57458275d27d6aa6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 22ea0df2836f762eeb001e17ef0c66c7202593b8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274824"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725547"
 ---
 # <a name="-concatenate-ssis-expression"></a>+(연결)(SSIS 식)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   두 식을 하나의 식으로 연결합니다.  
   
 ## <a name="syntax"></a>구문  

@@ -17,14 +17,18 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65d62759cff20cb0c41acd7a9955ccea52a5968c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272234"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713734"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함됩니다.  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 데이터 뷰어를 제공합니다.  
@@ -260,7 +264,7 @@ EXEC [SSISDB].[catalog].remove_data_tap @tap_id
 ```  
   
 ### <a name="listing-all-data-taps"></a>모든 데이터 탭 나열  
- catalog.execution_data_taps 뷰를 사용하여 모든 데이터 탭을 나열할 수도 있습니다. 다음 예에서는 사양 실행 인스턴스(ID: 54)에 대한 데이터 탭을 추출합니다.  
+ catalog.execution_data_taps 뷰를 사용하여 모든 데이터 탭을 나열할 수도 있습니다. 다음 예에서는 사양 실행 인스턴스(ID: 54)의 데이터 탭을 추출합니다.  
   
 ```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  

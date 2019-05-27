@@ -11,14 +11,18 @@ ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89f36819720e987a652f99dbd5d1f9edb933c96
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7fa50ac8dda0575eb752f0111a597d4b337fe88d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290379"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726924"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림 전송
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 분할자 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 CDC 원본이 들어 있어야 합니다.  
   
  패키지에 추가되는 CDC 원본에는 NetCDC 처리 모드가 선택되어 있어야 합니다. 처리 모드 선택에 대한 자세한 내용은 [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)를 참조하세요.  
@@ -37,11 +41,11 @@ ms.locfileid: "58290379"
   
 6.  다음 출력 중 하나를 선택합니다.  
   
-    -   삭제 출력: 삭제 변경 행이 전송되는 출력입니다.  
+    -   삭제 출력: DELETE 변경 행이 전송되는 출력입니다.  
   
-    -   삽입 출력: 삽입 변경 행이 전송되는 출력입니다.  
+    -   삽입 출력: INSERT 변경 행이 전송되는 출력입니다.  
   
-    -   업데이트 출력: 업데이트 전/후 변경 행 및 병합 변경 행이 전송되는 출력입니다.  
+    -   업데이트 출력: UPDATE 전/후 변경 행 및 병합 변경 행이 전송되는 출력입니다.  
   
 7.  필요에 따라 **고급 편집기** 대화 상자를 사용하여 고급 속성을 구성할 수도 있습니다.  
   

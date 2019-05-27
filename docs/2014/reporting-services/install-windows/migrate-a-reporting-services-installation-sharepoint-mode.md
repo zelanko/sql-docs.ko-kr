@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46b689a3eee612bdeb5bac5e0706574e21493635
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c2d28900e8e0c75123e48704de56ff69d720d17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260998"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108744"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services 설치 마이그레이션(SharePoint 모드)
   이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 배포를 한 SharePoint 환경에서 다른 SharePoint 환경으로 마이그레이션하는 데 필요한 단계에 대한 개요입니다. 마이그레이션하려는 원본 버전에 따라 특정 단계는 달라질 수 있습니다. SharePoint 모드에 대한 업그레이드 및 마이그레이션 시나리오에 대한 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하십시오. 한 서버에서 다른 서버로 보고서 항목을 복사하기만 하려면 [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  

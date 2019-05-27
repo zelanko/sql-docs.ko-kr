@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae0350a239414b4e20299cf42d46ebc5b9a69023
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273358"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010626"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 부울 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  

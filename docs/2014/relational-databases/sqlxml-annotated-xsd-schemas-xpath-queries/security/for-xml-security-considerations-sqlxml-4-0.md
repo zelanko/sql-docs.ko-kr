@@ -14,15 +14,15 @@ helpviewer_keywords:
 - AUTO mode
 - security [SQLXML], FOR XML
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d7dd5294b96545c0b0f03d1e82bd1e7fd2799921
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34172dcb60e5f2729d8810f697ef975f042f5233
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63268574"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010536"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>FOR XML 보안 고려 사항(SQLXML 4.0)
   FOR XML AUTO 모드에서는 요소 이름이 테이블 이름에 매핑되고 특성 이름이 열 이름에 매핑되는 XML 계층이 생성됩니다. 이를 통해 데이터베이스 테이블과 열 정보가 표시됩니다. AUTO 모드(서버 쪽 서식)를 사용할 때는 쿼리에 테이블 별칭과 열 별칭을 지정하여 데이터베이스 정보를 숨길 수 있습니다. 이러한 별칭은 결과 XML 문서에 요소 이름과 특성 이름으로 반환됩니다.  

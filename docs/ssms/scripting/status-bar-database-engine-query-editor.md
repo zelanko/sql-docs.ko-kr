@@ -7,24 +7,24 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9d870762becec1ff0717c4e9d7aef5eda7be94c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1c93fcf0c19f41f1dfbb3f2e44a95b623836ebca
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541897"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821854"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 각 창이 연결되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 나타내도록 상태 표시줄을 색으로 구분할 수 있습니다.  
   
-1.  **시작하기 전에:**  [상태 표시줄 색](#StatusBarColors)  
+1.  **시작하기 전 주의 사항:**  [상태 표시줄 색](#StatusBarColors)  
   
-2.  **개체 탐색기에서 서버 상태 색을 설정하려면:**  [개체 탐색기](#SetOEServerColor), [등록되 서버](#SetRegServerColor)  
+2.  **서버 상태 색을 설정하려면:**  [개체 탐색기](#SetOEServerColor), [등록된 서버](#SetRegServerColor)  
   
 3.  **상태 색을 사용하려면:**  [서버 색을 사용하여 쿼리 편집기 열기](#OpenServerColor), [상태 색을 지정하여 쿼리 편집기 열기](#OpenSpecColor)  
   

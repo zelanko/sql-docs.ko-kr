@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7662587e1cffad5b111c747c0af2116991743296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228917"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013950"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
   XSD 스키마에서 `xsd:type` 특성은 요소 또는 특성의 XSD 데이터 형식을 지정합니다. XSD 스키마를 사용하여 데이터베이스에서 데이터를 추출할 경우 지정된 데이터 형식이 데이터 서식 지정에 사용됩니다.  

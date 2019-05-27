@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277512"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719590"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지 실행 중에 발생하는 로깅 범위를 구성할 수 있습니다. 자세한 내용은 [SSIS 서버에서 패키지 실행에 대한 로깅 설정](#server_logging)을 참조하세요.  

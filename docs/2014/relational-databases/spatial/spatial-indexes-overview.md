@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524305"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014015"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 공간 데이터 및 공간 인덱스를 지원합니다. *공간 인덱스* 는 공간 열을 인덱싱할 수 있는 확장된 인덱스의 유형입니다. 공간 열은 `geometry` 또는 `geography`와 같은 공간 데이터 형식의 데이터를 포함하는 테이블 열입니다.  

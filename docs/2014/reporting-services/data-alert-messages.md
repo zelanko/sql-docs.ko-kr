@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 622fa9e74ca4195363220f00dfa7dd7875f5ba47
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109512"
 ---
 # <a name="data-alert-messages"></a>데이터 경고 메시지
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 전자 메일을 통해 두 가지 유형의 데이터 경고 메시지를 제공 합니다. 데이터 경고 결과와 오류 설명이 포함 된 메시지는 메시지입니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "63164804"
   
  
   
-##  <a name="HowTo"></a> 관련 태스크  
+##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 데이터 경고 메시지에 표시되는 많은 정보를 제공하는 데이터 경고 정의를 만들고 편집하는 방법을 보여 주는 절차가 나열되어 있습니다.  
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](create-a-data-alert-in-data-alert-designer.md)  

@@ -21,7 +21,7 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63250706"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR 개체
-   **SQLServer:CLR** 개체는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임)을 모니터링하는 카운터를 제공합니다.  
+  **SQLServer:CLR** 개체는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임)을 모니터링하는 카운터를 제공합니다.  
   
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** 카운터에 대해 설명합니다.  
   

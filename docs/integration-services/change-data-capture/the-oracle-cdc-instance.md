@@ -11,14 +11,18 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276684"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728489"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 인스턴스
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 캡처된 변경 내용을 처리하기 위해 Oracle CDC Service에서 만든 프로세스입니다. Oracle CDC 인스턴스는 **cdc.xdbcdc_config** 테이블에서 구성을 검색하고 **cdc.xdbcdc_state** 테이블에서 상태를 유지 관리합니다. 이러한 테이블은 Oracle CDC 인스턴스를 정의하는 CDC 데이터베이스의 일부입니다. xdbcdc 데이터베이스 및 테이블에 대한 자세한 내용은 [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)를 참조하십시오.  
   
  다음은 Oracle CDC 인스턴스에 의해 수행되는 태스크에 대한 설명입니다.  

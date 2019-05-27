@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
@@ -18,12 +17,12 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fbccf5cfd31e79252933a67b2e0c66a73ee6dc3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074714"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
   하위 큐브는 기본 데이터의 필터링된 뷰를 나타내는 큐브의 하위 집합입니다. 큐브를 하위 큐브로 제한하여 쿼리 성능을 높일 수 있습니다.  

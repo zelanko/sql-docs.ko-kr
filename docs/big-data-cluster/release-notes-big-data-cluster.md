@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993355"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014987"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -37,6 +37,7 @@ ms.locfileid: "65993355"
 | 저장소 기능 향상 | 로그 및 데이터에 대 한 다양 한 저장소 구성 지원 합니다. 또한 빅 데이터 클러스터에 대 한 영구적 볼륨 클레임 수가 감소 했습니다. |
 | 여러 계산 풀 인스턴스 | 여러 계산 풀 인스턴스를 지원 합니다. |
 | 새 풀의 동작 및 기능 | 계산 풀 이제는 기본적으로 저장소 풀 및 데이터 풀 작업에 **ROUND_ROBIN** 만 배포 합니다. 데이터 풀 이제 사용할 수 있습니다 새 new **복제 된** 데이터 풀 인스턴스를 모두에 동일한 데이터가 있는지 즉 분포 유형입니다. |
+| 외부 테이블 개선 사항 | 외부 HADOOP 데이터 원본 테이블 읽기를 지원 최대 1MB 크기에 행이 이제를 입력 합니다. 외부 테이블 (ODBC, 저장소 풀 데이터 풀) 이제 지원 행을 SQL Server 테이블 너비입니다. |
 
 ### <a name="known-issues"></a>알려진 문제
 

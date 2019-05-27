@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064014"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011897"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
   기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
@@ -171,7 +171,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   

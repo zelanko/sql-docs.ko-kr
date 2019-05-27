@@ -18,15 +18,17 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a9088b3502a010ce6b46f29516eefee5aa8934d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012045"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576312"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 **OPENJSON**은 JSON 텍스트를 구문 분석하고 JSON 입력의 개체 및 속성을 행 및 열로 반환하는 테이블 반환 함수입니다. 즉, **OPENJSON**은 JSON 문서를 통해 행 집합 뷰를 제공합니다. 행 집합의 열과 열을 채우는 데 사용되는 JSON 속성 경로를 명시적으로 지정할 수 있습니다. **OPENJSON**은 행 집합을 반환하기 때문에 다른 테이블, 뷰 또는 테이블 반환 함수를 사용할 수 있는 것처럼, **OPENJSON**을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 `FROM` 절에서 사용할 수 있습니다.  
   
@@ -38,14 +40,14 @@ ms.locfileid: "56012045"
 > `sys.databases` 뷰 또는 데이터베이스 속성에서 호환성 수준을 확인할 수 있습니다. 다음 명령을 사용하여 데이터베이스의 호환성 수준을 변경할 수 있습니다.  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->   
+>
 > 새 Azure SQL Database에서도 호환성 수준 120이 기본값일 수 있습니다.  
   
  ![토픽 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "토픽 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -65,8 +67,10 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 *with_clause*는 반환할 **OPENJSON**에 대한 열과 형식의 목록을 포함합니다. 기본적으로 **OPENJSON**은 *jsonExpression*의 키와 *with_clause*의 열 이름을 일치시킵니다(이 경우 matches 키는 대/소문자를 구분함을 의미). 열 이름이 키 이름과 일치하지 않으면 *jsonExpression* 내의 키를 참조하는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md)인 선택적 *column_path*를 제공할 수 있습니다. 
 
-## <a name="arguments"></a>인수  
-### <a name="jsonexpression"></a>*jsonExpression*  
+## <a name="arguments"></a>인수
+
+### <a name="jsonexpression"></a>*jsonExpression*
+
 JSON 텍스트를 포함하는 유니코드 문자 식입니다.  
   
 OPENJSON은 JSON 식에 있는 배열의 요소 또는 개체의 속성을 반복하고 각 요소 또는 속성마다 하나의 행을 반환합니다. 다음 예제에서는 *jsonExpression*으로 제공된 개체의 각 속성을 반환합니다.  
@@ -86,7 +90,7 @@ SELECT *
 FROM OPENJSON(@json)
 ```  
   
-**결과**  
+**결과**
   
 |Key|value|유형|  
 |---------|-----------|----------|  
@@ -98,7 +102,8 @@ FROM OPENJSON(@json)
 |ArrayValue|["a", "r", "r",”a”,"y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
 
-### <a name="path"></a>*path*  
+### <a name="path"></a>*path*
+
 *jsonExpression* 내의 개체 또는 배열을 참조하는 선택적 JSON 경로 식입니다. **OPENJSON**은 지정된 위치에서 JSON 텍스트를 검색하고 참조된 조각만 구문 분석합니다. 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.
 
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 *path* 값으로 변수를 제공할 수 있습니다.
@@ -127,12 +132,13 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
- 
+
 **OPENJSON**이 JSON 배열을 구문 분석할 때, 이 함수는 JSON 텍스트에 있는 요소의 인덱스를 키로 반환합니다.
 
 경로 단계와 JSON 식의 속성을 일치시키는 데 사용되는 비교는 대/소문자를 구분하고 데이터 정렬을 인식하지 못합니다(즉, BIN2 비교). 
 
 ### <a name="withclause"></a>*with_clause*
+
 반환할 **OPENJSON** 함수의 출력 스키마를 명시적으로 정의합니다. 선택적 *with_clause*는 다음 요소를 포함할 수 있습니다.
 
 *colName*은 출력 열의 이름입니다.  
@@ -157,9 +163,9 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 *AS JSON*  
 열 정의에 **AS JSON** 옵션을 사용하여 참조된 속성이 JSON 개체 또는 배열 내부에 포함되도록 지정합니다. **AS JSON** 옵션을 지정하면 열의 형식이 NVARCHAR(MAX)여야 합니다.
 
--   열에 **AS JSON**을 지정하지 않으면 지정된 경로의 지정된 JSON 속성에서 스칼라 값(예: int, string, true, false)이 반환됩니다. 경로가 개체 또는 배열을 나타내고, 지정된 경로에서 속성을 찾을 수 없으면, 이 함수는 lax 모드에서 null을 반환하거나 strict 모드에서 오류를 반환합니다. 이 동작은 **JSON_VALUE** 함수의 동작과 비슷합니다.  
+- 열에 **AS JSON**을 지정하지 않으면 지정된 경로의 지정된 JSON 속성에서 스칼라 값(예: int, string, true, false)이 반환됩니다. 경로가 개체 또는 배열을 나타내고, 지정된 경로에서 속성을 찾을 수 없으면, 이 함수는 lax 모드에서 null을 반환하거나 strict 모드에서 오류를 반환합니다. 이 동작은 **JSON_VALUE** 함수의 동작과 비슷합니다.  
   
--   열에 **AS JSON**을 지정하면 지정된 경로의 지정된 JSON 속성에서 JSON 조각이 반환됩니다. 경로가 스칼라 값을 나타내고 지정된 경로에서 속성을 찾을 수 없으면, 이 함수는 lax 모드에서 null을 반환하거나 strict 모드에서 오류를 반환합니다. 이 동작은 **JSON_QUERY** 함수의 동작과 비슷합니다.  
+- 열에 **AS JSON**을 지정하면 지정된 경로의 지정된 JSON 속성에서 JSON 조각이 반환됩니다. 경로가 스칼라 값을 나타내고 지정된 경로에서 속성을 찾을 수 없으면, 이 함수는 lax 모드에서 null을 반환하거나 strict 모드에서 오류를 반환합니다. 이 동작은 **JSON_QUERY** 함수의 동작과 비슷합니다.  
   
 > [!NOTE]  
 > JSON 속성에서 중첩된 JSON 조각을 반환하려면 **AS JSON** 플래그를 제공해야 합니다. 이 옵션이 없으면 속성을 찾을 수 없으며, OPENJSON은 참조된 JSON 개체 또는 배열 대신 NULL 값을 반환하거나 strict 모드에서 런타임 오류를 반환합니다.  
@@ -203,15 +209,14 @@ WITH (
  )
 ```  
   
-**결과**  
+**결과**
   
 |Number|date|Customer|수량|주문|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
-
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>반환 값
 OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.  
   
 1. 기본 스키마를 사용하여 OPENJSON을 호출하면(즉, WITH 절에 명시적 스키마를 지정하지 않으면) 이 함수는 다음 열이 있는 테이블을 반환합니다.  
@@ -236,8 +241,8 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
 
 **OPENJSON**의 두 번째 인수 또는 *with_clause*에 사용된 *json_path*는 **lax** 또는 **strict** 키워드로 시작될 수 있습니다.
 
--   **lax** 모드에서 지정된 경로의 개체 또는 값을 찾을 수 없는 경우 **OPENJSON**에서 오류를 반환하지 않습니다. 경로를 찾을 수 없는 경우 **OPENJSON**은 빈 결과 집합 또는 NULL 값을 반환합니다.
--   **strict** 모드에서 경로를 찾을 수 없는 경우 **OPENJSON**은 오류를 반환합니다.
+- **lax** 모드에서 지정된 경로의 개체 또는 값을 찾을 수 없는 경우 **OPENJSON**에서 오류를 반환하지 않습니다. 경로를 찾을 수 없는 경우 **OPENJSON**은 빈 결과 집합 또는 NULL 값을 반환합니다.
+- **strict** 모드에서 경로를 찾을 수 없는 경우 **OPENJSON**은 오류를 반환합니다.
 
 이 페이지의 예제 중 일부는 경로 모드인 lax 또는 strict를 명시적으로 지정합니다. 경로 모드는 선택적입니다. 경로 모드를 명시적으로 지정하지 않으면 lax 모드가 기본값입니다. 경로 모드 및 경로 식에 대한 자세한 내용은 [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)을 참조하세요.    
 
@@ -257,8 +262,9 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
 
 ## <a name="examples"></a>예  
   
-### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>예 1 - JSON 배열을 임시 테이블로 변환  
-다음 예에서는 JSON 숫자 배열로 식별자 목록을 제공합니다. 이 쿼리는 JSON 배열을 식별자 테이블로 변환하고 지정된 id를 사용하여 모든 제품을 필터링합니다.  
+### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>예 1 - JSON 배열을 임시 테이블로 변환
+
+다음 예에서는 JSON 숫자 배열로 식별자 목록을 제공합니다. 이 쿼리는 JSON 배열을 식별자 테이블로 변환하고 지정된 ID를 사용하여 모든 제품을 필터링합니다.  
   
 ```sql  
 DECLARE @pSearchOptions NVARCHAR(4000) = N'[1,2,3,4]'
@@ -277,7 +283,8 @@ FROM products
 WHERE product.productTypeID IN (1,2,3,4)
 ```  
   
-### <a name="example-2---merge-properties-from-two-json-objects"></a>예 2 - 두 JSON 개체의 속성 병합  
+### <a name="example-2---merge-properties-from-two-json-objects"></a>예 2 - 두 JSON 개체의 속성 병합
+
 다음 예에서는 두 JSON 개체의 모든 속성의 합집합을 선택합니다. 두 개체에는 중복된 *name* 속성이 있습니다. 이 예에서는 키 값을 사용하여 중복 행을 결과에서 제외합니다.  
   
 ```sql  
@@ -295,7 +302,8 @@ FROM OPENJSON(@json2)
 WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
 ```  
   
-### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>예 3 - CROSS APPLY를 사용하여 테이블 셀에 저장된 JSON 데이터와 행 조인  
+### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>예 3 - CROSS APPLY를 사용하여 테이블 셀에 저장된 JSON 데이터와 행 조인
+
 다음 예에서 `SalesOrderHeader` 테이블에는 JSON 형식의 `SalesOrderReasons` 배열을 포함하는 `SalesReason` 텍스트 열이 있습니다. `SalesOrderReasons` 개체에는 *Quality* 및 *Manufacturer*와 같은 속성이 포함됩니다. 이 예에서는 모든 판매 주문 행을 관련된 판매 이유에 조인하는 보고서를 만듭니다. OPENJSON 연산자는 이유가 별도의 자식 테이블에 저장된 것처럼 JSON 판매 이유 배열을 확장합니다. 그런 다음, CROSS APPLY 연산자가 각 판매 주문 행을 OPENJSON 테이블 반환 함수가 반환한 행에 조인합니다.  
   
 ```sql  
@@ -317,7 +325,8 @@ FROM Sales.SalesOrderHeader
   
 이 예에서 `$` 경로는 배열에 있는 각 요소를 참조합니다. 반환된 값을 명시적으로 캐스팅하려는 경우 이러한 형식의 쿼리를 사용할 수 있습니다.  
   
-### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>예 4 - CROSS APPLY를 사용하여 관계형 행과 JSON 요소 결합  
+### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>예 4 - CROSS APPLY를 사용하여 관계형 행과 JSON 요소 결합
+
 다음 쿼리는 관계형 행과 JSON 요소를 다음 테이블에 나와 있는 결과에 결합합니다.  
   
 ```sql  
@@ -329,14 +338,15 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
      AS location
 ```  
   
-**결과**  
+**결과**
   
 |title|street|postcode|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
 |Whole Food Markets|17991 Redmond Way|WA  98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA  98052|47.63024|-122.141246,17|  
   
-### <a name="example-5---import-json-data-into-sql-server"></a>예 5 - SQL Server로 JSON 데이터 가져오기  
+### <a name="example-5---import-json-data-into-sql-server"></a>예 5 - SQL Server로 JSON 데이터 가져오기
+
 다음 예에는 전체 JSON 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 로드합니다.  
   
 ```sql  
@@ -353,16 +363,16 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
+  WITH id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:
+
  [JSON 경로 식&#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환&#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [기본 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [명시적 스키마와 함께 OPENJSON 사용&#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
-  
   

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740517"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010744"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 개체(SQLXML 관리되는 클래스)
   SqlXmlCommand 개체에 대 한 생성자는 다음과 같습니다.  

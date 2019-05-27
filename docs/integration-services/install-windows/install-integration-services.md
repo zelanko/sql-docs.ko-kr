@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271201"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723673"
 ---
 # <a name="install-integration-services"></a>Integration Services 설치
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 비롯한 구성 요소 중 일부 또는 전체를 설치하는 한 개의 설치 프로그램을 제공합니다. 설치 프로그램을 사용하여 한 개의 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소와 함께 설치하거나 단독으로 설치합니다.    
     
@@ -119,6 +123,6 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 -   **선택적 추가 구성 요소**. 필요에 따라 SQL Server 기능 패키지에서 추가 타사 구성 요소를 다운로드할 수 있습니다.
 
-    -   Microsoft® Connector for SAP BW for Microsoft SQL Server®. 이러한 구성 요소를 얻는 방법은 [Microsoft® SQL Server® 2017 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992)을 참조하세요.
+    -   MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ®. 이러한 구성 요소를 얻는 방법은 [MicrosoftÂ® SQL ServerÂ® 2017 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992)을 참조하세요.
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity 및 Microsoft Connector Version 5.0 for Teradata by Attunity. 이러한 구성 요소를 얻는 방법은 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)를 참조하세요.

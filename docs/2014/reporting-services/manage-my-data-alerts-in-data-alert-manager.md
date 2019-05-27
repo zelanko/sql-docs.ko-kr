@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
@@ -14,12 +13,12 @@ ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37ca741b57be38108407b52ed5e626f80466aea6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302804"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108313"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>데이터 경고 관리자에서 내 데이터 경고 관리
   SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 대한 정보를 볼 수 있습니다. 또한 자신의 경고를 삭제하고, 데이터 경고 디자이너에서 편집할 경고 정의를 열고, 자신의 경고를 실행할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 사용자에게 제공되는 기능을 보여 줍니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "63302804"
      데이터 경고 디자이너에서 지정한 일정 옵션에 관계없이 경고 인스턴스가 생성되고 데이터 경고 메시지가 즉시 전송됩니다. 예를 들어 매주, 그리고 결과가 변경된 경우에만 전송되도록 구성된 경고가 전송됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [경고 담당자를 위한 데이터 경고 관리자입니다.](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [경고 담당자를 위한 데이터 경고 관리자](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 데이터 경고](../ssms/agent/alerts.md)  
   
   

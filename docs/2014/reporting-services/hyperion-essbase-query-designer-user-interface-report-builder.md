@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -16,12 +15,12 @@ ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4960524f7723f91a96790b579b588be73425502
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064780"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109004"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[extEssbase](../includes/extessbase-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에 두 가지 모드가 있습니다. 디자인 모드와 쿼리 모드입니다. 각 모드는 메타데이터 창을 제공하며 이 창을 통해 데이터 원본에 정의되어 있는 큐브에서 멤버를 끌어 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  

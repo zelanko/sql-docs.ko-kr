@@ -11,14 +11,18 @@ ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 92a2d442803d8d6268cce71e202f2e912ed707b8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271124"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726855"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC 원본을 사용하여 변경 데이터 추출
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 CDC 제어 태스크가 이미 들어 있어야 합니다.  
   
  CDC 제어 태스크에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.  

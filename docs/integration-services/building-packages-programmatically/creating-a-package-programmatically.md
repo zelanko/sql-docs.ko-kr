@@ -19,14 +19,18 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87a757f007b2a4b30172c51971e56dd585c166f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77cdd97bf322097b72d6e300629b734c320b2194
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280662"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729318"
 ---
 # <a name="creating-a-package-programmatically"></a>프로그래밍 방식으로 패키지 만들기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 개체는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 프로젝트 솔루션에 있는 다른 모든 개체의 최상위 컨테이너입니다. 최상위 컨테이너인 패키지는 첫 번째로 만들어지는 개체이며 그 이후에 만들어지는 개체는 패키지에 추가된 다음 패키지의 컨텍스트 내에서 실행됩니다. 패키지 자체는 데이터를 이동하거나 변환하지 않습니다. 패키지는 패키지에 포함된 태스크를 통해서만 작업을 수행합니다. 태스크는 패키지에서 수행하는 대부분의 작업을 수행하고 패키지의 기능을 정의합니다. 단 세 줄의 코드만으로도 패키지를 만들고 실행할 수 있지만 다양한 태스크와 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 추가하면 패키지에 추가 기능을 제공할 수 있습니다. 이 섹션에서는 프로그래밍 방식으로 패키지를 만드는 방법을 설명하며, 태스크 또는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>를 만드는 방법에 대해서는 설명하지 않습니다. 이러한 내용은 뒷부분의 섹션에서 설명합니다.  
   
 ## <a name="example"></a>예제  
@@ -72,7 +76,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 이때 차이점은 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 개체가 먼저 만들어진 다음 패키지 개체가 응용 프로그램의 오버로드된 메서드인 **LoadPackage**(플랫 파일의 경우), **LoadFromSQLServer**([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지의 경우) 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>(파일 시스템에 저장된 패키지의 경우) 중 하나로 채워진다는 것입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
+ 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 이때 차이점은 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 개체가 먼저 만들어진 다음 패키지 개체가 애플리케이션의 오버로드된 메서드인 **LoadPackage**(플랫 파일의 경우), **LoadFromSQLServer**([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지의 경우) 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>(파일 시스템에 저장된 패키지의 경우) 중 하나로 채워진다는 것입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
   
 ```csharp  
 using System;  

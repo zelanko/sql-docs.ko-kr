@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280857"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729059"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Designer 콘솔은 Oracle CDC 인스턴스를 개발하고 유지 관리하는 데 사용됩니다. CDC Designer 콘솔은 다음 요소를 포함하는 Microsoft 관리 콘솔 스냅인입니다.  
   
 -   새 인스턴스 마법사: 이 마법사는 새 Oracle CDC 인스턴스를 만듭니다. 새 인스턴스 마법사를 사용하는 방법은 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)을 참조하십시오.  
@@ -29,7 +33,7 @@ ms.locfileid: "58280857"
   
 -   CDC 인스턴스 속성 편집기: 이 대화 상자는 기존 Oracle CDC Service 인스턴스를 편집하는 데 사용됩니다. CDC 인스턴스 속성을 편집하는 방법은 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)을 참조하십시오.  
   
- Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+ Microsoft SQL ServerÂ® 2016용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
 ## <a name="in-this-documentation"></a>이 설명서의 내용  
   

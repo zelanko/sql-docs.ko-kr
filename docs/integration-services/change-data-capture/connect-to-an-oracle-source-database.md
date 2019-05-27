@@ -13,14 +13,18 @@ ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e14dc619cfe913239e47090ccc2a635454ea6e92
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271708"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728961"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle 원본 페이지를 사용하여 Oracle 원본 데이터베이스에 연결하는 데 필요한 정보를 제공할 수 있습니다. CDC 인스턴스는 연결된 Oracle 데이터베이스의 다시 실행 로그를 읽습니다.  
   
  **Oracle 연결 문자열**  

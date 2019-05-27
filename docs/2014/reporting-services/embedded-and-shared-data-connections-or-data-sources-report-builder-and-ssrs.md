@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
@@ -15,12 +14,12 @@ ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf9b9bfd500c5ddb9e10fb1e2320bf0287114808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164815"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109269"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본(보고서 작성기 및 SSRS)
   보고서는 쿼리가 실행되거나 보고서가 처리될 때 데이터 연결을 사용하여 보고서에 대한 데이터를 검색합니다. 기본 제공 데이터 연결 유형 목록에서 선택하여 관계형 데이터베이스, 다차원 데이터베이스, 웹 서비스 또는 다른 데이터 원본에 연결할 수 있습니다. 데이터 연결 설명에는 다음과 같은 용어가 사용됩니다.  

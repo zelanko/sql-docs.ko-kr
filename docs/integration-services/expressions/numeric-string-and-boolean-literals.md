@@ -18,14 +18,18 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0ba8cbd66c809e5d32448e1489f38d02ddadf921
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279167"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725119"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>숫자, 문자열 및 부울 리터럴
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식 계산기는 정수, 10진수 및 부동 소수점 상수와 같은 다양한 숫자 리터럴을 지원합니다. 또한 식 계산기의 값 처리 방법을 지정하는 long 및 float 접미사와 숫자 리터럴의 과학적 표기법을 지원합니다.  
   
 ## <a name="numeric-literals"></a>숫자 리터럴  
@@ -55,14 +59,14 @@ ms.locfileid: "58279167"
   
 |정규식|설명|  
 |------------------------|-----------------|  
-|{D}+{IS}|한 자릿수 이상의 정수 숫자 리터럴(D) 및 선택적인 Long 및/또는 부호 없는 접미사(IS).  예: 457, 785u, 986L, 7945ul입니다.|  
-|{D}+{E}{FS}|한 자릿수 이상의 비정수 숫자 리터럴(D), 과학적 표기법 및 Long 또는 float 접미사.  예: 4E8l, 13e-2f, 5E+L입니다.|  
-|{D}*"."{D}+{E}?{FS}|소수 자릿수가 있는 비정수 숫자 리터럴, 한 자릿수 이상의 소수 부분, 선택적 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 6.45E3f, .89E-2l, 1.05E+7F입니다.|  
-|{D}+"."{D}*{E}?{FS}|한 자릿수 이상의 유효 자릿수가 있는 비정수 숫자 리터럴(D), 소수 자릿수, 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 1.E-4f, 4.6E6L, 8.365E+2f입니다.|  
+|{D}+{IS}|한 자릿수 이상의 정수 숫자 리터럴(D) 및 선택적인 Long 및/또는 부호 없는 접미사(IS).  예: 457, 785u, 986L, 7945ul.|  
+|{D}+{E}{FS}|한 자릿수 이상의 비정수 숫자 리터럴(D), 과학적 표기법 및 Long 또는 float 접미사.  예: 4E8l, 13e-2f, 5E+L.|  
+|{D}*"."{D}+{E}?{FS}|소수 자릿수가 있는 비정수 숫자 리터럴, 한 자릿수 이상의 소수 부분, 선택적 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 6.45E3f, .89E-2l, 1.05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|한 자릿수 이상의 유효 자릿수가 있는 비정수 숫자 리터럴(D), 소수 자릿수, 지수(E) 및 한 개의 float 또는 한 개의 Long 식별자(FS). 이 숫자 리터럴은 DT_R4 또는 DT_R8 데이터 형식을 갖습니다.  예: 1.E-4f, 4.6E6L, 8.365E+2f.|  
 |{D}*.{D}+|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 소수 자릿수와 한 자릿수 이상의 소수 부분(D)이 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: .9, 5.8, 0.346|  
-|{D}+.{D}*|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 한 자릿수 이상의 유효 자릿수(D)와 소수 자릿수가 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: 6., 0.2, 8.0입니다.|  
+|{D}+.{D}*|전체 자릿수와 소수 자릿수를 갖는 비정수 숫자 리터럴. 한 자릿수 이상의 유효 자릿수(D)와 소수 자릿수가 있습니다. 이 숫자 리터럴은 DT_NUMERIC 데이터 형식을 갖습니다.  예: 6., 0.2, 8.0.|  
 |#{D}+|계보 식별자. 파운드(#) 문자와 한 자릿수(D) 이상으로 구성됩니다. 예: #123|  
-|0[xX]{H}+{uU}|16진수 형식의 숫자 리터럴. 0, 대문자 또는 소문자 x, 하나 이상의 대문자 H, 선택적으로 부호 없는 접미사가 포함됩니다. 예: 0xFF0A, 0X000010000U입니다.|  
+|0[xX]{H}+{uU}|16진수 형식의 숫자 리터럴. 0, 대문자 또는 소문자 x, 하나 이상의 대문자 H, 선택적으로 부호 없는 접미사가 포함됩니다. 예: 0xFF0A, 0X000010000U.|  
   
  식 계산기에 사용되는 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717752"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013505"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship 및 키 순서 지정 규칙(SQLXML 4.0)
   XML 대량 로드는 해당 노드의 범위가 시작될 때 레코드를 생성하고 해당 노드의 범위가 끝날 때 이러한 노드를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내기 때문에 레코드의 데이터는 노드 범위 내에 있어야 합니다.  

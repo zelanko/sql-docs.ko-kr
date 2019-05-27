@@ -19,14 +19,18 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274082"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727818"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
   
  데이터 흐름은 적어도 하나 이상의 데이터 흐름 구성 요소로 구성되지만 일반적으로 데이터를 추출하는 원본, 데이터를 수정, 라우팅 또는 요약하는 변환 및 데이터를 로드하는 대상과 같은 일련의 연결된 데이터 흐름 구성 요소로 구성됩니다.  

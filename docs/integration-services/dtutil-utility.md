@@ -26,14 +26,18 @@ ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d627540315f63e63d4f6220540222cf3f98073a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 396e9b59f41ae31b7ae2a6f091dd540fa41afdcc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281597"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725728"
 ---
 # <a name="dtutil-utility"></a>Encrypt
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 스토리지 유형은 **/SQL**, **/FILE**및 **/DTS** 옵션으로 식별됩니다.  
   
  **dtutil** 명령 프롬프트 유틸리티는 명령 파일이나 리디렉션 사용을 지원하지 않습니다.  

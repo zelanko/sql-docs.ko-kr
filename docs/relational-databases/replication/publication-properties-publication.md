@@ -21,12 +21,12 @@ ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c11e3fe3388cfb39445e1f4ad2feffd57d035c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da86b20dba26536626010d14c1f81a1bbd852156
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125448"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620374"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 복제 '게시 속성' 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,8 @@ ms.locfileid: "54125448"
  에이전트 작업이 생성된 경우 **보안 설정** 을 클릭하여 에이전트 보안 설정을 변경할 수 있는 대화 상자에 액세스합니다. 에이전트 작업이 생성되지 않은 경우 **에이전트 만들기** 를 클릭하여 새 에이전트를 만들고 보안 설정을 지정합니다.  
 
 ## <a name="data-partitions"></a>데이터 파티션
-데이터 파티션 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+데이터 파티션  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   **게시 속성** 대화 상자의 **데이터 파티션** 페이지를 사용하여 매개 변수가 있는 필터링을 사용하는 병합 게시를 위한 데이터 파티션을 정의할 수 있습니다. 파티션을 정의하고 나면 이들 파티션에 대한 스냅숏을 생성하여 구독자의 연결 속성(로그인 및/또는 컴퓨터 이름)을 기준으로 다양한 구독자에 대한 각기 다른 초기 데이터 집합을 제공할 수 있습니다. 또한 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅숏을 가지고 있지 않은 경우 스냅숏 배달 및 생성을 요청할 수 있도록 선택할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
@@ -187,7 +188,8 @@ ms.locfileid: "54125448"
  구독자가 스냅숏 생성 및 적용을 요청할 수 있도록 할 경우 이 옵션을 선택합니다. 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅숏을 가지고 있지 않은 경우 이 옵션이 필요할 수 있습니다.  
 
 ## <a name="snapshot"></a>스냅숏
-스냅숏 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+스냅숏  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   **게시 속성** 대화 상자의 **스냅숏** 페이지를 사용하여 스냅숏 형식, 스냅숏 폴더 위치 및 스냅숏 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅숏 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 > [!NOTE]  

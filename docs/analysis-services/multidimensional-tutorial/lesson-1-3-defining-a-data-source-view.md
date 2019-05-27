@@ -53,7 +53,7 @@ ms.locfileid: "65403685"
   
 5.  **>** 를 클릭하여 선택한 테이블을 **포함된 개체** 목록에 추가합니다.  
   
-6.   **다음.**  
+6.  **다음.**  
   
 7.  이름 필드에서 **Adventure Works DW 2012** 가 표시되는지 확인하고 **마침**을 클릭합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65403685"
   
     -   데이터 원본 뷰 디자이너용 도구 모음  
   
-8.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개발 환경을 최대화하려면 **최대화** 단추를 클릭합니다.  
+8.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 개발 환경을 최대화하려면 **최대화** 단추를 클릭합니다.  
   
 9. **다이어그램** 창의 테이블을 50% 비율로 보려면 데이터 원본 뷰 디자이너 도구 모음의 **확대/축소** 아이콘을 클릭합니다. 이렇게 하면 각 테이블의 열 정보가 숨겨집니다.  
   

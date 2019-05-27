@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c60455bf38fc0cb8efb3ce44e4121adfe099a393
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063487"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108787"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
   보고서 작성기를 설치할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=168472) 또는 보고서 작성기는 Windows Installer 패키지인 ReportBuilder3_x86.msi를가지고 있는 공용 폴더와 같은 위치 다운로드 되었습니다.  

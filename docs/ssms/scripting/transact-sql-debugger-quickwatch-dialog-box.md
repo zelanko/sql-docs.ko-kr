@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c572e5b4812d0348728da55fbdf0de8d4e699db8
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c653130f1b2d3cfee447a3c7dec5790d14c9641f
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643729"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821708"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Transact-SQL 디버거 - 간략한 조사식 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51643729"
   
     -   @IntegerCounter + 1 또는 FirstName + LastName과 같이 하나 이상의 변수, 매개 변수 또는 시스템 함수에 연산자를 적용하여 빌드한 식  
   
-    -   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1 등의 단일 값을 반환하는 Transact-SQL 문입니다.  
+    -   SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1과 같이 단일 값을 반환하는 Transact-SQL 문  
   
 2.  **다시 계산**을 클릭합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51643729"
   
 -   식을 마우스 오른쪽 단추로 클릭하고 **값 편집**을 선택합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **식 목록**  
  현재 선택한 식을 표시합니다. 드롭다운 목록에는 표시하도록 선택할 수 있는 식 집합이 있습니다. 목록에 있는 식은 현재 **호출 스택** 창에서 선택한 스택 프레임 범위에서 사용할 수 있는 식입니다. 다른 식을 표시하려면 식을 입력하거나 목록에서 선택합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 변수, 매개 변수 및 @@ 기호로 시작하는 시스템 함수를 지원합니다.  
   

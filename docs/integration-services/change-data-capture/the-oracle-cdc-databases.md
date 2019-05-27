@@ -11,14 +11,18 @@ ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f41ef937dd3045be524eeb71274ce3f46f85653
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a4743cd96f3075915bb2ed1071f781e1787cf9b6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282680"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728511"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
   
  CDC 데이터베이스는 Oracle CDC Designer 콘솔을 사용하여 만들고 구성하며 다음과 같은 요소를 포함합니다.  
@@ -143,7 +147,7 @@ ms.locfileid: "58282680"
 |상태|현재 Oracle CDC 인스턴스에 대한 현재 상태 코드입니다. 상태는 CDC의 현재 상태를 설명합니다.|  
 |sub_status|현재 상태에 대한 추가 정보를 제공하는 두 번째 수준 상태입니다.|  
 |active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태입니다.|  
-|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태에 있지 않습니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태에 있습니다.|  
+|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태입니다.|  
 |status_message|오류 또는 상태에 대해 설명하는 문자열입니다.|  
 |TIMESTAMP|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
 |active_capture_node|Oracle 트랜잭션 로그를 처리 중인 Oracle CDC Service 및 Oracle CDC 인스턴스를 현재 실행 중인 호스트의 이름입니다. 호스트는 클러스터 내의 노드일 수 있습니다.|  

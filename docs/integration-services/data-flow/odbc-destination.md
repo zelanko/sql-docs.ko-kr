@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273428"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726628"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
   
  ODBC 대상에는 입력 열과 대상 데이터 원본 열 사이의 매핑이 포함됩니다. 입력 열을 모든 대상 열에 매핑할 필요는 없지만 대상 열에 매핑된 입력 열이 없으면 대상 열의 속성에 따라 오류가 발생할 수 있습니다. 예를 들어 대상 열에 Null 값이 허용되지 않는 경우에는 입력 열을 해당 열에 매핑해야 합니다. 유형이 다른 열을 매핑할 수도 있지만 입력 데이터가 대상 열 유형과 호환되지 않으면 런타임에 오류가 발생합니다. 오류 동작 설정에 따라 오류가 무시되거나, 오류가 발생하거나, 오류 출력에 행이 전송됩니다.  

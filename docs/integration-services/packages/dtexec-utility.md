@@ -11,14 +11,18 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282987"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720137"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
   
 > **참고:** 최신 버전의 **dtexec** 유틸리티를 사용하여 이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]로 만든 패키지를 실행하면 유틸리티가 패키지를 최신 패키지 형식으로 일시적으로 업그레이드합니다. 그러나 **dtexec** 유틸리티를 사용하여 업그레이드된 패키지를 저장할 수는 없습니다. 패키지를 영구적으로 최신 버전으로 업그레이드하는 방법은 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하십시오.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee49bec234f5ee29d377253034a2bc58b195c3b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131357"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012315"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  

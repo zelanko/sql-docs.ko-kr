@@ -17,15 +17,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], relationships
 - sql:inverse
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf8d5dee0d72800c5b6250d83106cda552004536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e1f1e7e34ce3ae80d18c13a4cafd0d60128a3b6
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717880"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013627"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>sql:relationship에 sql:inverse 특성 지정(SQLXML 4.0)
   `sql:inverse` 특성은 XSD 스키마를 대량 로드용이나 updategram에서 사용할 경우에만 유용합니다. 합니다 `sql:inverse` 특성에 지정할 수 있습니다 합니다  **\<sql: relationship >** 요소입니다. Updategram에서 updategram 논리는 스키마를 해석하여 updategram 작업으로 업데이트되는 테이블 및 열을 결정합니다. 스키마에 지정하는 부모-자식 관계에 따라 레코드가 수정(삽입 또는 삭제)되는 순서가 결정됩니다.  

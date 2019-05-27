@@ -16,14 +16,18 @@ ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8a0bef11a16b939c4d169a3b2ee967d6b374f2eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289839"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726617"
 ---
 # <a name="odbc-source"></a>ODBC 원본
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
   
  ODBC 원본은 데이터 추출을 위한 다음 데이터 액세스 모드를 제공합니다.  

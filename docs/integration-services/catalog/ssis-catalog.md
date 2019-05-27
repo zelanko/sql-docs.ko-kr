@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283207"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729171"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SSISDB** 카탈로그는 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버에 배포한 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)](SSIS) 프로젝트를 사용할 수 있는 중앙 위치입니다. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
  
 > [!NOTE]
@@ -172,13 +176,13 @@ ms.locfileid: "58283207"
 |속성 이름(**카탈로그 속성** 대화 상자)|속성 이름(데이터베이스 뷰)|  
 |---------------------------------------------------------|-------------------------------------|  
 |암호화 알고리즘 이름|ENCRYPTION_ALGORITHM|  
-|주기적으로 로그 정리|OPERATION_CLEANUP_ENABLED|  
+|주기적으로 로그 정리|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |보존 기간(일)|RETENTION_WINDOW|  
 |주기적으로 이전 버전을 제거|VERSION_CLEANUP_ENABLED|  
 |프로젝트당 최대 버전 수|MAX_PROJECT_VERSIONS|  
 |서버 차원의 기본 로깅 수준|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  프로젝트, 환경 및 패키지는 보안 개체인 폴더에 포함됩니다. MANAGE_OBJECT_PERMISSIONS 권한을 포함하여 폴더에 대한 사용 권한을 부여할 수 있습니다. MANAGE_OBJECT_PERMISSIONS는 ssis_admin 역할에 대한 사용자 멤버 자격을 부여하지 않고도 사용자에게 폴더 내용에 대한 관리를 위임할 수 있습니다. 프로젝트, 환경 및 작업에 사용 권한을 부여할 수도 있습니다. 작업에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]초기화, 프로젝트 배포, 실행 만들기 및 시작, 프로젝트 및 패키지 유효성 검사, **SSISDB** 카탈로그 구성 등이 있습니다.  
   
  데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  

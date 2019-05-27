@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10026"
@@ -13,12 +12,12 @@ ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164752"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109356"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>쿼리 매개 변수 정의 대화 상자(보고서 작성기)
   디자인 타임에 샘플 데이터를 보기 위해 쿼리 디자이너에서 쿼리를 실행할 때 **쿼리 매개 변수 정의** 대화 상자를 사용하여 매개 변수 값을 지정할 수 있습니다. 쿼리 매개 변수는 데이터 원본의 데이터를 필터링하고 보고서에서 처리하는 데이터 양을 제한하는 데 도움이 됩니다. 이러한 값은 보고서 정의에 저장되지 않습니다.  

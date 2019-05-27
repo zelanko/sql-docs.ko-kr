@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10127"
@@ -13,12 +12,12 @@ ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58381a9e56ed6ace1f8ff18109d9746072f76774
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109805"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>열 표시 유형 대화 상자(보고서 작성기)
   **열 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 열을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 열의 표시 유형을 전환할 수 있습니다.  

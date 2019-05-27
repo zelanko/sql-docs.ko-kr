@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795410"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067627"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>테이블 형식 모델 프로젝트 새로 만들기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다. 새 모델 프로젝트를 만든 후 데이터 원본에서 데이터를 가져와서 모델 프로젝트 제작을 시작할 수 있습니다.  

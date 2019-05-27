@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874803"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009844"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 저장소 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  

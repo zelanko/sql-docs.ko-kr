@@ -14,14 +14,18 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 72c03667c768f19569dbcce37079f24dc85ef2db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 29d8806e055088bbf659ecf52fcc7f1c12fdf846
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273452"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725321"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   식 계산기는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  
   
 ## <a name="variables"></a>변수  
@@ -122,7 +126,7 @@ ms.locfileid: "58273452"
   
 -   수치 연산 함수에 전달된 인수는 숫자 데이터 형식이어야 합니다. 함수나 연산에 따라 특정 숫자 데이터 형식이 필요할 수 있습니다. 예를 들어 HEX 함수는 부호 있는 정수나 부호 없는 정수가 필요합니다.  
   
--   문자열 함수에 전달된 인수는 문자 데이터 형식 DT_STR 또는 DT_WSTR여야 합니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
+-   문자열 함수에 전달된 인수는 문자 데이터 형식은 DT_STR 또는 DT_WSTR여야 합니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
   
 -   날짜 및 시간 함수에 전달된 인수는 유효한 날짜여야 합니다. 예를 들어 DAY(GETDATE())와 같습니다. DATEADD와 같은 일부 함수는 날짜에 추가할 일 수를 나타내는 추가 정수 인수가 필요합니다.  
   

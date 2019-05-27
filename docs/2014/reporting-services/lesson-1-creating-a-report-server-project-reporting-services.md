@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143280"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108528"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: (Reporting Services) 보고서 서버 프로젝트 만들기
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 보고서를 만들려면 먼저 보고서 정의 파일(.rdl) 및 보고서에 필요한 다른 리소스 파일을 저장할 보고서 서버 프로젝트를 만들어야 합니다. 그런 다음 실제 보고서 정의 파일을 만들고 보고서에 대한 데이터 원본, 데이터 집합 및 보고서 레이아웃을 정의합니다. 보고서를 실행하면 실제 데이터가 검색되어 레이아웃과 결합된 후 해당 보고서를 내보내고 인쇄하고 저장할 수 있는 화면에 렌더링됩니다.  

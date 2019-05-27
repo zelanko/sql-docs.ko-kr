@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7063448da86c97a7e3ff88899a9488915a055c71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62875027"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010364"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
   FILESTREAM BLOB 데이터를 읽거나 쓰기 위해 SqlOpenFilestream()을 사용하여 Win32 파일 핸들을 여는 애플리케이션은 공통된 트랜잭션에서 관리되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과의 충돌 오류가 발생할 수 있습니다. 여기에는 실행 시간이 오래 걸리는 MARS 쿼리 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이 포함됩니다. 이러한 유형의 충돌을 방지하도록 애플리케이션을 신중하게 디자인해야 합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -19,12 +18,12 @@ ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265989"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109696"
 ---
 # <a name="control-report-distribution"></a>보고서 배포 제어
   전자 메일 및 파일 공유 배포와 관련된 보안 위험을 줄이도록 보고서 서버를 구성할 수 있습니다.  

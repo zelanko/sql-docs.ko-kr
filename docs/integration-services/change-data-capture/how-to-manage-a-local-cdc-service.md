@@ -11,14 +11,18 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4272bc60b461c8757d50c6867966fd905447be3a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c546b5b1935c15f2a597821aefe7b0298e86a413
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290250"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728761"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리하는 방법에 대해 설명합니다.  
   
 ### <a name="to-manage-a-specific-cdc-service"></a>특정 CDC Service를 관리 하려면  

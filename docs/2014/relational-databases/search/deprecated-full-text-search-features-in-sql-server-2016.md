@@ -11,15 +11,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a49d7db68fe32d9794e89db66020d7f90555508
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218224"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011395"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 전체 텍스트 검색 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 전체 텍스트 검색 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  

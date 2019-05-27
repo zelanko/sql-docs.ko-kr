@@ -42,14 +42,18 @@ ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b9f8b3c7a4a4b6b2abf8cd0711ac0e6cec259c6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277452"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725802"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
   
  이 항목에서는 다양한 데이터 흐름 변환의 사용자 지정 속성을 나열하고 설명합니다. 대부분의 데이터 흐름 개체에 공통되는 속성에 대한 자세한 내용은 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
@@ -184,7 +188,7 @@ ms.locfileid: "58277452"
   
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. .<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SourceInputColumnLineageId|정수|출력 열의 원본인 입력 열의 **LineageID** 입니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  

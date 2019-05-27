@@ -27,7 +27,7 @@ ms.locfileid: "63262064"
 > [!IMPORTANT]  
 >  데이터베이스 관리자 또는 서버 관리자만 명시적으로 **Lock** 명령을 실행할 수 있습니다.  
   
- 다른 명령을 실행하면 **Lock** 데이터베이스에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 개체 참조를 포함해야 합니다. 데이터베이스의 데이터 또는 메타데이터를 읽는 작업(예: [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 명령을 실행하는 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드 또는 [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 메서드)을 수행하면 데이터베이스에서 암시적으로 공유 잠금이 실행됩니다.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 개체의 데이터 또는 메타데이터 변경을 커밋하는 트랜잭션(예: **Execute** 명령을 실행하는 [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) 메서드)을 실행하면 데이터베이스에서 암시적으로 배타적 잠금이 실행됩니다.  
+ 다른 명령을 실행하면 **Lock** 데이터베이스에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 개체 참조를 포함해야 합니다. 데이터베이스의 데이터 또는 메타데이터를 읽는 작업(예: [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 명령을 실행하는 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드 또는 [Statement](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 메서드)을 수행하면 데이터베이스에서 암시적으로 공유 잠금이 실행됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 개체의 데이터 또는 메타데이터 변경을 커밋하는 트랜잭션(예: **Execute** 명령을 실행하는 [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) 메서드)을 실행하면 데이터베이스에서 암시적으로 배타적 잠금이 실행됩니다.  
   
 ## <a name="unlocking-objects"></a>개체 잠금 해제  
  **Unlock** 명령은 현재 활성 트랜잭션 컨텍스트 내에서 설정된 잠금을 해제합니다.  

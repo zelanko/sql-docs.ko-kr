@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222087"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723807"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사하는 간단한 방법입니다. 이 개요에서는 마법사에서 원본 및 대상으로 사용할 수 있는 데이터 원본과 마법사를 실행하는 데 필요한 권한에 대해 설명합니다.
 
@@ -47,7 +51,7 @@ ms.locfileid: "58222087"
  
 | 데이터 원본 | 추가 파일을 다운로드해야 하나요? |
 |-------------|-----------------------------------------|
-|**엔터프라이즈 데이터베이스**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 및 기타|SQL Server 또는 SSDT(SQL Server Data Tools)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 필요한 파일을 설치합니다. 그러나 SSDT는 Oracle 또는 IBM DB2와 같은 다른 엔터프라이즈 데이터베이스에 연결하는 데 필요한 모든 파일을 설치하지 않습니다.<br/><br/>엔터프라이즈 데이터베이스에 연결하려면 일반적으로 다음 두 가지 항목이 있어야 합니다.<br/><br/>1. **클라이언트 소프트웨어** - 엔터프라이즈 데이터베이스 시스템용으로 클라이언트 소프트웨어가 이미 설치된 경우 일반적으로 연결해야 합니다. 클라이언트 소프트웨어를 설치하지 않은 경우 데이터베이스 관리자에게 사용이 허가된 복사본 설치 방법을 문의하세요.<br/><br/>2. **드라이버 또는 공급자** - Microsoft는 Oracle에 연결할 드라이버와 공급자를 설치합니다. IBM DB2에 연결하려면 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)에서 Microsoft SQL Server용 Microsoft® OLEDB Provider for DB2 v5.0을 가져옵니다.<br/><br/>자세한 내용은 [SQL Server 데이터 원본에 연결](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) 또는 [Oracle 데이터 원본에 연결](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
+|**엔터프라이즈 데이터베이스**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 및 기타|SQL Server 또는 SSDT(SQL Server Data Tools)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 필요한 파일을 설치합니다. 그러나 SSDT는 Oracle 또는 IBM DB2와 같은 다른 엔터프라이즈 데이터베이스에 연결하는 데 필요한 모든 파일을 설치하지 않습니다.<br/><br/>엔터프라이즈 데이터베이스에 연결하려면 일반적으로 다음 두 가지 항목이 있어야 합니다.<br/><br/>1. **클라이언트 소프트웨어** - 엔터프라이즈 데이터베이스 시스템용으로 클라이언트 소프트웨어가 이미 설치된 경우 일반적으로 연결해야 합니다. 클라이언트 소프트웨어를 설치하지 않은 경우 데이터베이스 관리자에게 사용이 허가된 복사본 설치 방법을 문의하세요.<br/><br/>2. **드라이버 또는 공급자** - Microsoft는 Oracle에 연결할 드라이버와 공급자를 설치합니다. IBM DB2에 연결하려면 [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676)에서 Microsoft SQL Server용 MicrosoftÂ® OLEDB Provider for DB2 v5.0을 가져옵니다.<br/><br/>자세한 내용은 [SQL Server 데이터 원본에 연결](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) 또는 [Oracle 데이터 원본에 연결](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**텍스트 파일**(플랫 파일)|추가 파일이 필요 없습니다.<br/><br/>자세한 내용은 [플랫 파일 데이터 원본에 연결](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**Microsoft Excel 및 Microsoft Access 파일**|Microsoft Office는 데이터 원본으로 Excel 및 Access 파일에 연결해야 하는 모든 파일을 설치하지 않습니다. [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920) 다운로드를 가져옵니다.<br/><br/>자세한 내용은 [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) 또는 [Access 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)을 참조하세요.|
 |**Azure 데이터 원본**<br/>현재 Azure Blob Storage만 해당합니다.|SQL Server Data Tools는 Azure Blob Storage에 연결하는 데 필요한 파일을 데이터 원본으로 설치하지 않습니다. 다운로드 [Azure용 Microsoft SQL Server 2016 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=49492)을 가져옵니다.<br/><br/>자세한 내용은 [Azure Blob Storage에 연결](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)을 참조하세요.|

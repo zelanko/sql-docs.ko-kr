@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206329"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718283"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out 마스터 서비스 및 Scale Out 작업자 서비스 사이의 통신이 포함됩니다. 경우에 따라 구성 실수, 액세스 권한 부족 및 기타 이유로 인해 통신이 끊어질 수 있습니다. 이 문서는 Scale Out 구성 문제를 해결하는 데 도움이 됩니다.
 
@@ -120,7 +124,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 *"System.ServiceModel.Security.MessageSecurityException: HTTP 요청은 클라이언트 인증 스키마 '익명'으로 사용할 수 없습니다."*
 
-*"System.Net.WebException: 원격 서버에서 (403) 사용할 수 없습니다."* 오류를 반환합니다.
+*"System.Net.WebException: 원격 서버에서 다음과 같은 오류를 반환했습니다. (403) 사용할 수 없습니다."* 오류를 반환합니다.
 
 ### <a name="solution"></a>해결 방법
 1.  인증서가 아직 설치되지 않은 경우 Scale Out 마스터 노드에서 로컬 컴퓨터의 루트 인증서 저장소에 Scale Out 작업자 인증서를 설치하고 Worker Scale 작업자 서비스를 다시 시작합니다.

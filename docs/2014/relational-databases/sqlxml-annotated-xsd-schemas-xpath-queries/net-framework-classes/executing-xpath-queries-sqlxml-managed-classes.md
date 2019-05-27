@@ -1,9 +1,8 @@
 ---
 title: XPath 쿼리 실행 (SQLXML 관리 되는 클래스) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -17,16 +16,14 @@ ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee2ef2f2af40d3d053fb632dd0e4625fc35aefe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1175b26436e3af9794057ec14eba35675209cf84
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127659"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010873"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath 쿼리 실행(SQLXML 관리되는 클래스)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 예에서는 매핑 스키마에 대해 XPath 쿼리를 실행하는 방법을 보여 줍니다.  
   
  다음 스키마를 참조하십시오.  

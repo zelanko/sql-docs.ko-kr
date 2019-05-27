@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 60bcbca88f2d75e062a45fc21103ece8631f9503
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508728"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821359"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52508728"
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  고유한 코드 페이지를 사용하는 다른 사이트의 사용자와 파일을 공유하는 경우에는 파일을 읽을 때 오류가 발생하지 않도록 적절한 유니코드 코드 페이지로 파일을 저장해야 합니다. 또한 UNIX나 Macintosh용으로 파일을 저장할 경우에는 적절한 문서 형식으로 파일을 저장해야 합니다. **파일** 메뉴의 **저장**단추 옆에 있는 아래쪽 화살표에서 **다른 이름으로 저장** , **인코딩하여 저장** 을 클릭한 다음 **줄 끝** 에서 **Unix** 또는 **Macintosh**를 선택합니다.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  코드 편집기에서 수행하는 작업에는 로그인하는 데 사용된 인증 계정에 부여된 사용 권한이 적용됩니다. 예를 들어 Windows 인증을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 열 경우 Windows 로그인 계정에 액세스 권한이 없는 개체를 참조하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 없습니다.  
   
 ## <a name="how-to-open-editors"></a>방법: 편집기 열기  

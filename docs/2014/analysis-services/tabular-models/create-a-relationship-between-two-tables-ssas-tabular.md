@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.managereldb.f1
@@ -14,12 +13,12 @@ ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28e28e6b2e7d65d5b66d95d626fbbbde2cbb94a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067535"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>두 테이블 간에 관계 만들기(SSAS 테이블 형식)
   데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)를 참조하세요.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.reportaction.f1
@@ -13,12 +12,12 @@ ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748385"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070302"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>보고서 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에 있는 **보고 동작 폼 편집기** 창을 사용하여 **작업 구성 도우미** 창에서 선택한 보고 작업을 수정할 수 있습니다.  

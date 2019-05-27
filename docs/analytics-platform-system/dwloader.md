@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157622"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175039"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
 **dwloader** 는 기존 테이블에 테이블 행을 대량 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가할 수 있습니다 (*추가 모드* 하거나 *fastappend 모드*) 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*), 모든 또는 삭제 행 로드 하기 전에 기존 및 빈 테이블에 모든 행을 삽입 한 다음 (*모드를 다시 로드*).  
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -156,7 +157,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 대상 테이블에 대해 세 부분으로 이루어진 이름입니다.  
   
 * *-I***source_data_location*  
@@ -174,7 +175,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   원본 데이터 위치는 네트워크 경로 또는 로컬 경로 로드 서버의 디렉터리를 수 있습니다.  
   
--   디렉터리의 모든 파일을 지정 하려면 뒤에 디렉터리 경로 입력 합니다 * 와일드 카드 문자입니다.  로더는 원본 데이터 위치에 있는 모든 하위 디렉터리에서 파일을 로드 하지 않습니다... 디렉터리는 gzip 파일에 있는 경우 로더 오류입니다.  
+-   디렉터리의 모든 파일을 지정 하려면 뒤에 디렉터리 경로 입력 합니다 * 와일드 카드 문자입니다.  로더는 원본 데이터 위치에 있는 모든 하위 디렉터리에서 파일을 로드 하지 않습니다. 디렉터리는 gzip 파일에 있는 경우 로더 오류입니다.  
   
 -   일부 파일을 디렉터리에 지정 하려면 문자 조합을 사용 하 여 및 * 와일드 카드입니다.  
   
@@ -219,7 +220,7 @@ ASCII 파일에 대 한 Null 구분 기호를 연속적으로 배치 하 여 표
 데이터 파일에서 로드할 데이터에 대 한 문자 인코딩 형식을 지정 합니다. 옵션 (기본값) ASCII, UTF8, UTF16, 또는 UTF16BE, 여기서 UTF16 약간 endian 이며 UTF16BE big endian 됩니다. 이러한 옵션은 대/소문자 구분 합니다.  
   
 **-t** *field_delimiter*  
-행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호에는 이러한 ASCII 이스케이프 문자 또는 16 진수 ASCII 값 중 하나 이상을입니다...  
+행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호는 ASCII 이스케이프 문자 또는 ASCII 16 진수 값이 하나 이상입니다.  
   
 |이름|이스케이프 문자|16 진수 문자|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ dym
 2010 년 3 월 4 일에 대 한 입력된 파일 예제: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* 은 사용자 지정 날짜 형식 (예를 들어, MM/dd/yyyy) 이전 버전과 호환성만 포함 합니다. dwloader는 사용자 지정 날짜 형식을 enfoce 하지를 않습니다. 대신를 사용자 지정 날짜 형식으로 지정 하면 **dwloader** ymd, ydm, mdy, myd, dym, 나 dmy의 해당 설정으로 변환 됩니다.  
+*custom_date_format* 은 사용자 지정 날짜 형식 (예를 들어, MM/dd/yyyy) 이전 버전과 호환성만 포함 합니다. dwloader는 사용자 지정 날짜 형식을 적용 하지 않습니다. 대신를 사용자 지정 날짜 형식으로 지정 하면 **dwloader** ymd, ydm, mdy, myd, dym, 나 dmy의 해당 설정으로 변환 됩니다.  
   
-예를 들어,-D MM/dd/yyyy를 지정 하면 모든 날짜를 월을 사용 하 여 먼저 입력 한 일 및 연도 (mdy) 다음 dwloader 필요 합니다. 2 개의 문자 월, 2 자리 일 및 사용자 지정 날짜 형식으로 지정 된 대로 4 자리 연도 적용 하지 않습니다. 날짜 형식은-D MM/dd/yyyy 하는 경우 입력된 파일에서 날짜 서식을 지정할 수는 방법의 몇 가지 예는 다음과 같습니다. 2013/01/02, Jan.02.2013, 2013 년 1 월 2  
+예를 들어,-D MM/dd/yyyy를 지정 하면 모든 날짜를 월을 사용 하 여 먼저 입력 한 일 및 연도 (mdy) 다음 dwloader 필요 합니다. 문자를 2 월, 2 자리 일 및 사용자 지정 날짜 형식으로 지정 된 대로 4 자리 연도는 적용 하지 않습니다. 날짜 형식은-D MM/dd/yyyy 하는 경우 입력된 파일에서 날짜 서식을 지정할 수는 방법의 몇 가지 예는 다음과 같습니다. 2013/01/02, Jan.02.2013, 2013 년 1 월 2  
   
 보다 포괄적인 서식 지정 정보를 참조 하세요 [데이터 형식 변환 규칙 dwloader](dwloader-data-type-conversion-rules.md)합니다.  
   
@@ -481,7 +482,10 @@ Char, nchar, varchar 및 nvarchar 필드의 왼쪽 및 오른쪽에서 공백 �
 대상 어플라이언스에 신뢰할 수 있는 기관에서 유효한 SQL Server PDW 인증서를 확인 합니다. 데이터 되 고 있지 않습니다을 보장 하는 데 사용할 공격자에 의해 하이재킹 하 고 권한이 없는 위치로 전송 합니다. 인증서 어플라이언스에 이미 설치 되어 있어야 합니다. 인증서를 설치 하는 지원 되는 유일한 방법은 Configuration Manager 도구를 사용 하 여 설치 하도록 어플라이언스 관리자입니다. 어플라이언스 관리자에 문의 하는 경우 알 수 없는 어플라이언스 설치 된 신뢰할 수 있는 인증서에 있는지 여부.  
   
 **-se**  
-빈 파일 로드를 건너뜁니다. 이 또한 압축을 푸는 작업 빈 gzip 파일을 건너뜁니다.  
+빈 파일 로드를 건너뜁니다. 이 또한 압축을 푸는 작업 빈 gzip 파일을 건너뜁니다.
+
+**-l**  
+CU7.4 업데이트를 사용 하 여 사용 가능한 최대 행의에서 길이 (바이트) 로드할 수 있는 지정 합니다. 유효한 값은 32768 33554432 사이의 정수입니다. 클라이언트와 서버에서 더 많은 메모리를 할당 하는이 처럼 큰 행 (32KB 보다 큼)를 로드 하려면 필요한 경우에 사용 합니다.
   
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 다른 정수 값 (실패)  
@@ -542,7 +546,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
 -   **upsert** -Upsert 준비 테이블로 데이터를 로드 한 후 최종 테이블에 준비 테이블에서 병합 작업을 수행 합니다. Upsert 최종 테이블에 배타적 잠금이 필요 하지 않습니다. Upsert를 사용 하는 경우 성능이 달라질 수 있습니다. 사용자 환경에서 동작을 테스트 합니다.  
   
 ### <a name="locking-behavior"></a>잠금 동작  
-**추가 모드 잠금**  
+**모드 잠금 추가**  
   
 추가 트랜잭션 안전한 것만 (-m 인수를 사용 하 여) 다중 트랜잭션 모드에서 실행할 수 있습니다. 따라서 추가 (-m 인수 사용) 하지 않고 트랜잭션 작업으로 사용 해야 합니다. 그러나 최종 INSERT SELECT 작업 동안 트랜잭션 모드는 다중 트랜잭션 모드를 보다 현재 약 6 배 느립니다.  
   
@@ -600,7 +604,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-다음 스크립트 코드 조각을 dwloader를 사용 하 여 DimAccount 하 고 DimCurrency 테이블에 데이터를 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하 던 서버 것 *< appliance_name >*`-SQLCTL01`합니다.  
+다음 스크립트 코드 조각을 dwloader를 사용 하 여 DimAccount 하 고 DimCurrency 테이블에 데이터를 로드 합니다. 이 스크립트는 이더넷 주소를 사용 합니다. InfiniBand를 사용 하 던 서버 것 *< appliance_name >* `-SQLCTL01`합니다.  
   
 ```  
 set server=10.193.63.134  

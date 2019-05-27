@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -16,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165151"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109349"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
   이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  

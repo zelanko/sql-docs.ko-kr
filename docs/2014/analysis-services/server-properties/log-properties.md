@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
@@ -54,12 +53,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746875"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068915"
 ---
 # <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  

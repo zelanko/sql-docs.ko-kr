@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073168"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
   솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 스토리지를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  

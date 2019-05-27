@@ -11,14 +11,18 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a12faf8abe604adac73af56586b40338c5aa48cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae98170e3c6628afc75934cece345bbbfbc22267
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277492"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728639"
 ---
 # <a name="oracle-credentials-for-running-script"></a>스크립트 실행을 위한 Oracle 자격 증명
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC Designer 콘솔에서 Oracle 보완 로깅 스크립트를 실행하면 스크립트를 실행 중인 Oracle 사용자의 자격 증명을 묻는 메시지가 표시됩니다. 이 스크립트를 실행하려면 캡처할 모든 테이블에 대한 ALTER TABLE 권한과 DBA_LOG_GROUPS 뷰에 대한 SELECT 권한이 Oracle 사용자에게 있어야 합니다.  
   
 ## <a name="task-list"></a>작업 목록  

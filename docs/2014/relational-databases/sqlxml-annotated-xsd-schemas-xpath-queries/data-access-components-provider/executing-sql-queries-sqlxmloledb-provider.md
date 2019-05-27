@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing SQL queries
 - SQL queries [SQLXML]
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d6c6ce6b2876ac713ad8b71131685e7791f5747
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 029ba9e05a422648d75487e85f367b3b4f698ebd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209515"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013183"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리 실행(SQLXMLOLEDB 공급자)
   이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  

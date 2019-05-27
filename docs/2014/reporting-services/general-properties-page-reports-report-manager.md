@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260814"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109097"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>일반 속성 페이지, 보고서(보고서 관리자)
   보고서의 일반 속성 페이지를 사용하여 보고서 정의의 이름을 바꾸거나 보고서 정의를 이동, 삭제 또는 대체할 수 있을 뿐만 아니라 링크된 보고서도 만들 수 있습니다. 보고서를 만들거나 수정한 사람 및 내용이 변경된 시간에 대한 자세한 내용이 페이지 맨 위에 표시됩니다.  

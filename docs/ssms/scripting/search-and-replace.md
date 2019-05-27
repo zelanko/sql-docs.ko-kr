@@ -25,20 +25,20 @@ helpviewer_keywords:
 - match whole word [SQL Server]
 - searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d84304f1ba307a55273ddd24aa11686cbd9743e1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 869262f20b50e23a8e59f4a318fd70d73c339db9
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643682"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821952"
 ---
 # <a name="search-and-replace"></a>찾기 및 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 및 바꾸기** 는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기**또는 **파일에서 바꾸기**의 네 가지 선택 사항을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  
+  텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 바꾸기**는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기** 및 **파일에서 바꾸기**의 네 가지 선택 항목을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  
   
  텍스트를 검색하고 바꿀 경우에는 다음 사항을 살펴 보십시오.  
   

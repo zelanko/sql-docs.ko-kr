@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63232711"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012172"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
   부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 지원 XML을 사용 하 여 데이터를 `xml` 데이터 형식입니다. 이 항목에서는 SQLXML 4.0에서 `xml` 데이터 형식의 인스턴스를 인식하고 이러한 인스턴스에 대한 지원을 구현하는 방법에 대해 설명합니다.  

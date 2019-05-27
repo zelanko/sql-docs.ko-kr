@@ -23,14 +23,18 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274378"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728267"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
   
  플랫 파일 연결 관리자는 하나의 파일만 액세스할 수 있습니다. 파일을 여러 개 참조하려면 플랫 파일 연결 관리자 대신 다중 플랫 파일 연결 관리자를 사용하십시오. 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)을 참조하세요.  

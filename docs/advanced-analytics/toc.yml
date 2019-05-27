@@ -1,6 +1,6 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server ML 및 프로그래밍 확장 설명서
+- name: SQL Server Machine Learning Services 설명서
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
 - name: 'Machine Learning 확장(R, Python)'
   items:
@@ -12,18 +12,6 @@
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 독립 실행형 서버
       href: ../advanced-analytics/r/r-server-standalone.md
-- name: Java 확장
-  items:
-    - name: SQL에서 Java 코드 실행
-      href: ../advanced-analytics/java/extension-java.md
-    - name: SQL에서 Java를 호출하는 방법
-      href: ../advanced-analytics/java/howto-call-java-from-sql.md
-    - name: Java 샘플
-      href: ../advanced-analytics/java/java-first-sample.md
-    - name: Java용 SDK
-      href: ../advanced-analytics/java/java-sdk.md
-    - name: Java 및 SQL 데이터 형식
-      href: ../advanced-analytics/java/java-sql-datatypes.md
 - name: 설치
   items:
     - name: SQL Server 2019의 차이점

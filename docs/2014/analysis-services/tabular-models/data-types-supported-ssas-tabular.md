@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067283"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>지원되는 데이터 형식(SSAS 테이블 형식)
   이 문서에서는 테이블 형식 모델에서 사용할 수 있는 데이터 형식에 대해 설명하고 DAX(Data Analysis Expressions) 수식에서 데이터를 계산하거나 사용할 때 암시적으로 수행되는 데이터 형식 변환에 대해 설명합니다.  

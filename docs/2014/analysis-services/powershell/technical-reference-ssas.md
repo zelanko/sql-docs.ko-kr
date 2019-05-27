@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, technical reference
@@ -15,12 +14,12 @@ ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea1514b8b4e029537958e74fcdf20497b1e22d00
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748894"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070842"
 ---
 # <a name="technical-reference-ssas"></a>기술 참조(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하고 관리하는 데 대한 도구, 언어 및 PowerShell 참조 설명서를 찾습니다.  

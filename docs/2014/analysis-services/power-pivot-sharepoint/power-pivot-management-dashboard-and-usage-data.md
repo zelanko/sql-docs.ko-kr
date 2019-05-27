@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748905"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071115"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용 데이터
   PowerPivot 관리 대시보드는 SharePoint 중앙 관리의 미리 정의된 보고서 및 웹 파트 컬렉션으로 이를 통해 SharePoint용 SQL Server PowerPivot 배포를 관리할 수 있습니다. 관리 대시보드는 서버 상태, 통합 문서 작업 및 데이터 새로 고침과 관련된 정보를 제공합니다. 대시보드는 SharePoint 사용 데이터 컬렉션의 데이터를 사용합니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61e0cc160e8e2881e7c2832956358424c24d97dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5e93d3e46dcad5331b765fbfa440297c34bbb98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063468"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108759"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
   한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 다른 서버 모드로 업그레이드하거나 변환할 수 없습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 사용되는 데이터베이스 스키마가 다르기 때문에 모드 간에 보고서 서버 데이터베이스를 복사할 수 없습니다. 한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션할 수 있습니다. 사용하는 도구는 원본 서버 및 대상 서버에 맞게 구성된 보고서 서버 모드의 유형에 따라 달라집니다.  

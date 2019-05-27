@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4332e19287b551341bb9851cf488ccb0b34aa5a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071027"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: PowerPivot 데이터
   Excel 서비스는 SharePoint의 PowerPivot 서버 인스턴스에 연결할 수 없는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  

@@ -15,15 +15,19 @@ ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 329d50bd54556f41bf053b63ffdaa294ab4515f8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273378"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727787"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
-  **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 계산할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 컴퓨팅할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 컴퓨팅할 수 있습니다.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   

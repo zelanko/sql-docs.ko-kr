@@ -13,14 +13,18 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49c4e75641056db17faabcc937ee1ec76fd470d5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280337"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728985"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름을 완료한 후 다음 태스크는 변경 데이터를 검색하는 테이블 반환 함수를 만드는 것입니다. 첫 번째 증분 로드 전에 이 함수를 한 번만 만들면 됩니다.  
   
 > [!NOTE]  
@@ -211,7 +215,7 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블의 업데이트 작업에서 두 개의 서로 다른 행을 수정하면 변경 테이블에는 모두 동일한 **__$start_lsn** 값이 있는 4개의 행(이전 값과 새 값 두 개씩 포함)이 포함됩니다.|  
 |**__$seqval**|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|**__$operation**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
+|**__$operation**|**ssNoversion**|변경과 연관된 DML(데이터 조작 언어) 작업입니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(업데이트 작업 전의 값)<br /><br /> 4 = 업데이트(업데이트 작업 후의 값)|  
 |**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다. 변경된 열을 확인해야 하는 경우 이 값을 검토할 수 있습니다.|  
 |**\<captured source table columns>**|다양함|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 열이 원래 지정되어 있지 않은 경우 원본 테이블의 모든 열이 반환됩니다.|  
   

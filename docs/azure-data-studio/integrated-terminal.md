@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239373"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010947"
 ---
 # <a name="integrated-terminal"></a>통합된 터미널
 
@@ -94,21 +94,21 @@ ms.locfileid: "63239373"
 
 통합된 터미널 내에서 빠르게 탐색할 키보드 바로 가기는 다음과 같습니다.
 
-Key|Command
----|---
-**Ctrl +'**| 통합된 터미널을 표시
-**Ctrl + Shift +'**| 새 터미널 만들기
-**Ctrl+Up**|위로 스크롤
-**Ctrl+Down**|아래로 스크롤하여
-**Ctrl+PageUp**|위로 페이지 스크롤
-**Ctrl+PageDown**|아래로 페이지 스크롤
-**Ctrl+Home**|맨 위로 스크롤
-**Ctrl+End**|맨 아래로 스크롤
-**Ctrl+K**|터미널을 선택 취소
+|Key|Command|  
+|---|---|  
+|**Ctrl+\`**|통합된 터미널을 표시|  
+|**Ctrl+Shift+\`**|새 터미널 만들기|  
+|**Ctrl+Up**|위로 스크롤|  
+|**Ctrl+Down**|아래로 스크롤하여|  
+|**Ctrl+PageUp**|위로 페이지 스크롤|  
+|**Ctrl+PageDown**|아래로 페이지 스크롤|  
+|**Ctrl+Home**|맨 위로 스크롤|  
+|**Ctrl+End**|맨 아래로 스크롤|  
+|**Ctrl+K**|터미널을 선택 취소|  
 
 다른 터미널 명령을 제공 되며 기본 바로 가기에 바인딩할 수 있습니다.
 
-다음 창이 여기에 포함됩니다.
+구현되지 않은 것은 다음과 같습니다.
 
 * `workbench.action.terminal.focus`: 터미널을 집중 합니다. 설정/해제와 같은 이지만 표시 된 경우 숨기 거 나, 대신 터미널 중점을 둡니다.
 * `workbench.action.terminal.focusNext`: 다음 터미널 인스턴스 중점을 둡니다.

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7192fda17360ec473956332db03ed3b4feab5bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717460"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013343"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
   XML 대량 로드는 XML 입력 데이터를 처리하고 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 적절한 테이블로 사용할 수 있도록 레코드를 준비합니다. XML 대량 로드의 로직은 새 레코드를 생성할 시기, 레코드 필드로 복사할 자식 요소나 특성 값, 레코드가 완성되어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 삽입할 수 있도록 보낼 준비가 끝나는 시기를 결정합니다.  
@@ -218,7 +218,7 @@ ms.locfileid: "62717460"
 ## <a name="exceptions-to-the-record-generation-rule"></a>레코드 생성 규칙의 예외  
  노드가 IDREF 또는 IDREFS 형식인 경우 XML 대량 로드는 범위가 시작될 때 노드에 대한 레코드를 생성하지 않습니다. 따라서 스키마의 특정 위치에 레코드의 완전한 설명이 존재해야 합니다. IDREFS 형식이 무시되는 것처럼 `dt:type="nmtokens"` 주석이 무시됩니다.  
   
- 예를 들어 다음 XSD 스키마를 설명 하는  **\<고객 >** 및  **\<주문 >** 요소.  **\<고객 >** 요소에 포함 된 **OrderList** IDREFS 유형의 특성. `<sql:relationship>` 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정합니다.  
+ 예를 들어 다음 XSD 스키마를 설명 하는  **\<고객 >** 및  **\<주문 >** 요소. **\<고객 >** 요소에 포함 된 **OrderList** IDREFS 유형의 특성. `<sql:relationship>` 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정합니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -259,7 +259,7 @@ ms.locfileid: "62717460"
 </xsd:schema>  
 ```  
   
- 대량 로드에서 IDREFS 유형의 노드를 무시 하면 레코드를 생성 하지 않습니다 때의 **OrderList** 특성 노드가 범위를 입력 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<주문 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다.  **\<주문 >** 요소는 CustOrder 테이블에 레코드를 작성 하는 데 필요한 모든 특성을 설명 합니다.  
+ 대량 로드에서 IDREFS 유형의 노드를 무시 하면 레코드를 생성 하지 않습니다 때의 **OrderList** 특성 노드가 범위를 입력 합니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에 지정 하는  **\<주문 >** 요소를 사용 하면 XML 대량 로드는 Orders 테이블에 주문 레코드를 추가 합니다. **\<주문 >** 요소는 CustOrder 테이블에 레코드를 작성 하는 데 필요한 모든 특성을 설명 합니다.  
   
  되도록 해야는 **CustomerID** 및 **OrderID** 값에  **\<고객 >** 의 값과 일치 하는 요소는  **\<주문 >** 요소. 참조 무결성을 유지하는 책임은 사용자에게 있습니다.  
   

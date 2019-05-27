@@ -13,14 +13,18 @@ ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0281dfb4471fd28eb08c0900f2a087b731139d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b9ea9d63d2303a66e56ab38774845cee73c125a4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280704"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728928"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   새 인스턴스 마법사를 시작하면 CDC 데이터베이스 만들기 페이지가 열립니다. CDC 데이터베이스 만들기 페이지를 사용하여 새 CDC 인스턴스에 대한 정보를 제공하고 변경 데이터베이스를 새로 만들 수 있습니다.  
   
  새로 만든 CDC 데이터베이스는 SQL Server CDC에 사용할 수 있도록 설정되며 이를 위해서는 `sysadmin` 고정 서버 역할의 멤버인 로그인이 필요합니다.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLXML, about SQLXML
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61464b771b0829dce2a60b3201c8846cf2f9bd0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63295128"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012229"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 프로그래밍 개념
   SQLXML 3.0은 웹 릴리스로 제공되어 추가 클라이언트 쪽 XML 기능과 주석이 추가된 XSD 스키마, XML 대량 로드, 웹 서비스(SOAP) 지원, Updategram 등 기존 기능에 대한 향상된 기능을 제공했습니다.  

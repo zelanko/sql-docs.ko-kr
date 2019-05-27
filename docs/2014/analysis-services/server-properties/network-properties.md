@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LingerTimeout property
@@ -36,12 +35,12 @@ ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 882b5fc60020423e19f68fda40273b7c944bd4f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746715"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068883"
 ---
 # <a name="network-properties"></a>네트워크 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -90,7 +89,7 @@ ms.locfileid: "62746715"
  `EnableCompression`  
  요청에 대해 압축이 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
-## <a name="responses"></a>응답  
+## <a name="responses"></a>Responses  
  `CompressionLevel`  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - queries [SQLXML], ADO
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5593d0c582d034be4e7add8f69449e99a6316f9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233084"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012147"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
   SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  

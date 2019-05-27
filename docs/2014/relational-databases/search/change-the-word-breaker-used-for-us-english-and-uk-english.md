@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 66515d57cada938abe9241d89116cb16beaf431e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192269"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012753"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 영어용 단어 분리기 및 형태소 분석기의 새 버전(버전 14.0.4999.1038)을 설치하여 이전 버전(버전 12.0.6828.0)의 해당 구성 요소를 대체합니다. 새 구성 요소의 변경된 동작에 대한 자세한 내용은 [전체 텍스트 검색의 동작 변경](full-text-search.md)을 참조하세요. 이 항목에서는 이러한 새 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다. 클러스터 설치의 경우 이러한 변경은 모든 주 노드 및 패시브 노드에서 수행해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48192269"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>현재 버전의 미국 영어 단어 분리기를 이전 버전으로 전환하려면  
   
-1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+1.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 2.  다음 단계에 따라 LCID 1033의 이전 미국 영어 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48192269"
   
     4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll**로 업데이트합니다.  
   
-3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu** 노드로 이동합니다.  
+3.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu** 노드로 이동합니다.  
   
 4.  **WBreakerClass** 키 값을 **{188D6CC5-CB03-4C01-912E-47D21295D77E}** 로 업데이트합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48192269"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>현재 버전의 영국 영어 단어 분리기에서 이전 버전으로 전환하려면  
   
-1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+1.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 2.  다음 단계에 따라 LCID 2057의 이전 영국 영어 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48192269"
   
     4.  해당 키 값의 (기본값) 데이터를 **infosoft.dll**로 업데이트합니다.  
   
-3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
+3.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   
 4.  **WBreakerClass** 키 값을 **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** 으로 업데이트합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48192269"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>이전 버전의 미국 영어 단어 분리기에서 현재 버전으로 전환하려면  
   
-1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+1.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 2.  다음 키가 없으면 다음 단계에 따라 LCID 1033의 현재 미국 영어 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48192269"
   
     4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
   
-3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
+3.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   
 4.  **WBreakerClass** 키 값을 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 로 업데이트합니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48192269"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>이전 버전의 영국 영어 단어 분리기에서 현재 버전으로 전환하려면  
   
-1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+1.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 2.  다음 키가 없으면 다음 단계에 따라 LCID 2057의 현재 영국 영어 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48192269"
   
     4.  해당 키 값의 (기본값) 데이터를 **MsWb7.dll**로 업데이트합니다.  
   
-3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
+3.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** 노드로 이동합니다.  
   
 4.  **WBreakerClass** 키 값을 **{9faed859-0b30-4434-ae65-412e14a16fb8}** 로 업데이트합니다.  
   

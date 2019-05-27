@@ -9,17 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63243774"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175048"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 Microsoft Analytics Platform System (APS)에 대 한 최신 어플라이언스 업데이트의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## <a name="aps-cu74"></a>APS CU7.4
+릴리스 날짜-2019 년 5 월
+
+### <a name="loading-large-rows-with-dwloader"></a>Dwloader 사용 하 여 대용량 행의 로드
+AP CU7.4에서 시작 하며, 고객에 게 새 dwloader 32KB (32,768 바이트) 보다 큰 경우에 테이블에 행을 로드 하는 데 할 수 됩니다. 새 dwloader 32KB 보다 큰 행을 로드 하려면 32768 및 33554432 (메가바이트) 사이의 정수 값을 사용 하는-l 스위치를 지원 합니다. 이 스위치는 클라이언트와 서버에서 더 많은 메모리를 할당 하 고 로드 느려질 수 있습니다 (32KB 보다 큼) 큰 행을 로드 하는 경우에이 옵션을 사용 합니다. 새 dwloader를 다운로드할 수 있습니다 [다운로드 사이트](https://www.microsoft.com/download/details.aspx?id=57472)합니다.  
+
+### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 및 3.1 지원 PolyBase 사용 하 여
+AP에서 PolyBase는 HDP 3.0 및 3.1이이 업데이트를 사용 하 여 이제 지원합니다. HDP 3.x 버전에 대 한 옵션 7을 사용 합니다. 자세한 내용은 [PolyBase 연결](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) 페이지입니다.
+
+### <a name="utf16-file-support-with-polybase"></a>PolyBase 사용 하 여 UTF16 파일 지원
+PolyBase는 이제 UTF16 (LE) 인코딩에 있는 구분 기호로 분리 된 텍스트 파일 읽기 지원 합니다. 참조 [외부 파일 형식 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) 설정 세부 정보에 대 한 합니다. 
+
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
 릴리스 날짜-2018 년 12 월

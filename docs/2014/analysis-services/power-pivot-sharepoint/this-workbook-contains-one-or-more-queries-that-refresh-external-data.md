@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25f4faa1aec81d940677c85c11be6f45f1e94de5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749036"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070965"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>이 통합 문서에는 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함되어 있습니다.
   PowerPivot 데이터를 포함하는 Excel 통합 문서의 경우 Excel Services는 연결 정보가 검색되면 이 경고를 표시하고 이 통합 문서에 대해 쿼리를 사용할지 여부를 묻는 메시지를 표시합니다.  

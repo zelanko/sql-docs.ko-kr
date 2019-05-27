@@ -11,14 +11,18 @@ ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2ed03eb751b0b048fee4737d312f381f655b72b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273236"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713754"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  
   
 > **참고!** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. 중요한 정보를 보호하려면 ACL(액세스 제어 목록)을 통해 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  

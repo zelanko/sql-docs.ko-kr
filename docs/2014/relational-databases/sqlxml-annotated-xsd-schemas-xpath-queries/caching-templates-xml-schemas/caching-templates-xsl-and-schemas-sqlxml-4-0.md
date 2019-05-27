@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - memory [SQLXML]
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86777a00c7382ce9a1b8d67f06a6cd222f983a11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 82b943a170c42010b650033841f6612338d99119
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856528"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013246"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>템플릿, XSL 및 스키마 캐싱(SQLXML 4.0)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 성능 개선을 위해 템플릿, XSL 및 스키마 캐싱을 지원합니다.  

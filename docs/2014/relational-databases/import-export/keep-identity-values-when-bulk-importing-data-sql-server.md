@@ -11,18 +11,18 @@ helpviewer_keywords:
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064588"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011913"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 ID 값이 들어 있는 데이터 파일을 대량으로 가져옵니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 ID 값이 들어 있는 데이터 파일을 대량으로 가져옵니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
   
  데이터 파일에 테이블의 ID 열에 대한 값이 없으면 서식 파일을 사용하여 데이터를 가져올 때 테이블의 ID 열을 건너뛰어야 함을 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 열에 고유 값을 할당합니다.  
   

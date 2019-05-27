@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145998"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011467"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
   전체 텍스트 카탈로그는 파일 그룹에 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 가리키는 논리적인 개념입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48145998"
   
 1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 전체 텍스트 카탈로그를 만들려는 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **새 전체 텍스트 카탈로그**를 선택합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48145998"
   
   
 ##  <a name="props"></a> 전체 텍스트 카탈로그의 속성 보기  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 인덱싱에 관련 된 다양 한 속성의 값을 가져오려면 FULLTEXTCATALOGPROPERTY와 같은 함수를 사용할 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
+ FULLTEXTCATALOGPROPERTY와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 전체 텍스트 인덱싱에 관련된 다양한 속성의 값을 얻을 수 있습니다. 이 정보는 전체 텍스트 검색을 관리하고 이러한 검색에서 발생하는 문제를 해결하는 데 유용합니다.  
   
  다음 표에서는 전체 텍스트 카탈로그에 관련된 속성을 나열합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48145998"
   
 1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
   
 3.  다시 작성하려는 전체 텍스트 카탈로그의 이름을 마우스 오른쪽 단추로 클릭하고 **다시 작성**을 선택합니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48145998"
   
 1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **모두 다시 작성**을 선택합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48145998"
   
 1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 제거할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
   
 3.  제거할 전체 텍스트 카탈로그를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 선택합니다.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQLXMLOLEDB Provider, samples
 - ClientSideXML property
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abf009296c72c298b77e563f5de5482d298ac2df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67a5486816f5af652e111372c9cb492ba3cdb3c4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127758"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012947"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
   이 섹션의 항목에서는 SQLXMLOLEDB 공급자 고유 속성의 사용 방법을 보여 주는 ADO 예제 응용 프로그램에 대해 설명합니다.  

@@ -7,15 +7,15 @@ ms.technology: filestream
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877220"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010345"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일 및 문서를 저장하는 데 사용할 수 있는 옵션을 설명하고 비교합니다.  

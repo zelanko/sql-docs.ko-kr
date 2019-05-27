@@ -13,14 +13,18 @@ ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fcea03fa8a1493fbbe233810765a9853988f6c1e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b02eb586db5bc18ffa96c8a24037d48fbe4695a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272296"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728919"
 ---
 # <a name="connect-to-oracle"></a>Oracle에 연결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC 인스턴스에 사용되는 테이블을 처음으로 추가하거나 편집하는 경우 Oracle 데이터베이스에 연결하라는 메시지가 표시됩니다. 캡처할 테이블의 스키마에 액세스할 수 있는 Oracle 사용자의 자격 증명을 입력해야 합니다. 이 대화 상자에 다음을 입력합니다.  
   
  **인증**  

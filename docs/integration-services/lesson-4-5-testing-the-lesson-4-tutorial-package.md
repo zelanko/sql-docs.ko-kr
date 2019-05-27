@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280957"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721513"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>4-5단원: 4단원 패키지 테스트
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 런타임 시 손상된 파일인 **Currency_BAD.txt**는 Currency Key Lookup 변환에서 일치 항목을 생성하지 못합니다. Currency Key Lookup의 오류 출력을 구성하여 실패한 행을 새 실패한 행 대상으로 리디렉션했으므로 해당 구성 요소가 실패하지 않고 패키지가 성공적으로 실행됩니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 실패한 모든 오류 행을 **ErrorOutput.txt**에 기록합니다.  
   

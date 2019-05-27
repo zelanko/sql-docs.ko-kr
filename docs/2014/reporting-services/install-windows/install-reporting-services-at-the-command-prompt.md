@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ec74b3d16830eff3c78a3b74e07bc017287defb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc1e5ae5d17d45b937a5dd44ab3ea6fe5f8620eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064620"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108776"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Reporting Services SharePoint 모드 및 기본 모드의 명령 프롬프트 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 에 대 한 전체 설명은 모든 SQL Server 구성 요소에 대 한 사용 가능한 명령줄 옵션을 참조 하세요 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.  

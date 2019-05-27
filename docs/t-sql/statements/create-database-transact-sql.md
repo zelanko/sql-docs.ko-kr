@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222147"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771477"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -271,7 +271,7 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 장치에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+  이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
 
 FOR ATTACH [ WITH \< attach_database_option > ]     
 기존 운영 체제 파일 세트를 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
@@ -358,7 +358,7 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 운영 체제(물리적) 파일 이름을 지정합니다.
 
 **'** *os_file_name* **'**     
-파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(스토리지 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 장치에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.
+파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(저장 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 디바이스에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.
 
 파일에 UNC 경로가 지정되면 SIZE, MAXSIZE 및 FILEGROWTH 매개 변수를 설정할 수 있습니다.
 
@@ -990,49 +990,49 @@ DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 
 
 **vCore 기반 모델**
 
-**범용 서비스 계층 - 4세대 계산 플랫폼(1부)**
+**범용 서비스 계층 - 4세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|
 
-**범용 서비스 계층 - 4세대 계산 플랫폼(2부)**
+**범용 서비스 계층 - 4세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |최대 데이터 크기(GB)|1536|3072|3072|3072|4096|4096|
 
-**범용 서비스 계층 - 5세대 계산 플랫폼(1부)**
+**범용 서비스 계층 - 5세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**범용 서비스 계층 - 5세대 계산 플랫폼(2부)**
+**범용 서비스 계층 - 5세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |최대 데이터 크기(GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼(1부)**
+**중요 비즈니스용 서비스 계층 - 4세대 컴퓨팅 플랫폼(1부)**
 
 |성능 수준|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
-**중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼(2부)**
+**중요 비즈니스용 서비스 계층 - 4세대 컴퓨팅 플랫폼(2부)**
 
 |성능 수준|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
-**중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼(1부)**
+**중요 비즈니스용 서비스 계층 - 5세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼(2부)**
+**중요 비즈니스용 서비스 계층 - 5세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
@@ -1042,7 +1042,7 @@ vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본�
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 
-- EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 500 MB로 설정됩니다.
+- EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 250MB로 설정됩니다.
 - MAXSIZE 또는 EDITION이 모두 지정되지 않았으면 EDITION이 Standard(S0)로 설정되고, MAXSIZE는 250GB로 설정됩니다.
 
 SERVICE_OBJECTIVE     
@@ -1409,7 +1409,7 @@ AUTOGROW가 OFF이면 크기가 자동으로 증가하지 않습니다. [!INCLUD
 AUTOGROW는 모든 크기에 대해 ON이거나 OFF입니다. 예를 들어 *log_size*에 대해 AUTOGROW를 ON으로 설정하는 것이 가능하지 않지만 *replicated_size*에 대해서는 ON으로 설정하지 않습니다.
 
 *replicated_size* [ GB ]      
-양수입니다. *각 계산 노드에서* 복제된 테이블과 해당 데이터에 할당된 총 공간에 대한 크기(정수 또는 10진 기가바이트로)를 설정합니다. 최소 및 최대 *replicated_size* 요구 사항은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "최소 및 최대 값"를 참조합니다.
+양수입니다. *각 컴퓨팅 노드에서* 복제된 테이블과 해당 데이터에 할당된 총 공간에 대한 크기(정수 또는 10진 기가바이트로)를 설정합니다. 최소 및 최대 *replicated_size* 요구 사항은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 "최소 및 최대 값"를 참조합니다.
 
 AUTOGROW가 ON인 경우 복제된 테이블이 이 제한을 초과해 성장하도록 허용됩니다.
 
@@ -1454,8 +1454,8 @@ GO
 데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 컴퓨팅 노드*에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
 
 - *replicated_table_size* 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- (*distributed_table_size* / 계산 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
-- (*log_size* / 계산 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
+- (*distributed_table_size* / 컴퓨팅 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
+- (*log_size* / 컴퓨팅 노드 수) 크기의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그입니다.
 
 ## <a name="locking"></a>잠금
 DATABASE 개체에 대한 공유 잠금을 사용합니다.

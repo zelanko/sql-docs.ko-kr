@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스의 복구 모델 보기 또는 변경(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753519"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560067"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50753519"
   
   *복구 모델* 은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다. **model** 데이터베이스는 새 데이터베이스의 기본 복구 모델을 설정합니다.  
   
-  [복구 모델](recovery-models-sql-server.md)에 대한 자세한 내용은 [SQL Server 복구 모델](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 의 동료들이 제공한 [SQL Server 복구 모델](https://www.mssqltips.com/)을 참조하세요.
+  자세한 설명을 확인하려면 [복구 모델](recovery-models-sql-server.md)을 참조하세요.
   
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
@@ -103,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 권장 사항: 복구 모델을 변경한 후  
+##  <a name="FollowUp"></a>권장 사항: 복구 모델을 변경한 후  
   
 -   **전체 및 대량 로그 복구 모델 간에 전환한 후**  
   
@@ -117,7 +117,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   전체 복구 모델이나 대량 로그 복구 모델로 전환한 후 즉시 전체 또는 차등 데이터베이스 백업을 수행하여 로그 체인을 시작합니다.  
   
-        >**참고:** 전체 로그 복구 모델이나 대량 로그된 복구 모델로의 전환은 첫 번째 데이터 백업 후에만 적용됩니다.  
+        >**참고:** 전체 로그 복구 모델이나 대량 로그 복구 모델로의 전환은 첫 번째 데이터 백업 후에만 적용됩니다.  
   
     -   정기적인 로그 백업을 예약하고 해당 일정에 따라 복원 계획을 업데이트합니다.  
   

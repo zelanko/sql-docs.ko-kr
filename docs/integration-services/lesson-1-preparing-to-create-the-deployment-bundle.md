@@ -11,14 +11,18 @@ ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69d125ec70ea297edc4e02b9a2ee4b034a88a2c3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 196647a2c4f6dc872ec1aba7bb91d24c8809113c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289569"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722683"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>1단원: 배포 번들 작성 준비
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 단원에서는 자습서를 지원하는 작업 폴더 및 환경 변수를 만들고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 여러 패키지와 지원 파일을 프로젝트에 추가하고 패키지에서 구성을 구현합니다.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 프로젝트 단위로 배포합니다. 따라서 배포 번들을 만드는 첫 번째 단계에서는 모든 패키지와 패키지 종속 파일을 하나의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 수집해야 합니다. 배포된 패키지에 다른 정보를 포함하면 도움이 되는 경우가 많습니다. 예를 들어 이 패키지 그룹에 대한 기본 설명서를 제공하는 추가 정보 파일을 프로젝트에 추가합니다.  

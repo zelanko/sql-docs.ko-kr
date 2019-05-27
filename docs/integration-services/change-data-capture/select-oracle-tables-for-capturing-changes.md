@@ -13,14 +13,18 @@ ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09a47653441bf4ac0ac7491a80aa9a92baa6f27b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273304"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728537"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>변경 내용을 캡처할 Oracle 테이블 선택
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 대화 상자를 사용하여 CDC 인스턴스에 포함되는 테이블을 선택할 수 있습니다. 선택된 테이블은 새 인스턴스 마법사의 **테이블 및 열 선택** 페이지의 목록에 추가됩니다. 이 대화 상자에서 다음과 같은 작업을 수행할 수 있습니다.  
   
  기본적으로 이 대화 상자의 테이블 목록에는 테이블이 포함되어 있지 않습니다. 확인란 열의 맨 위에 있는 확인란을 선택하여 모든 테이블을 선택하거나 특정 테이블을 검색할 수 있습니다.  

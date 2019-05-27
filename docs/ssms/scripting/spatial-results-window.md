@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422114f2a753327f34b105c4c6893b7c3f8d3c2b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3dc51511120b05c8f4a720a911da6c2b6480fb9d
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643737"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821948"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "51643737"
 > [!NOTE]  
 >  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **공간 열 선택**  
  쿼리 결과의 공간 열 중에서 보려는 공간 열을 지정합니다. 열은 한 번에 하나씩만 선택할 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51643737"
  쿼리로 점만 반환된 경우 이 옵션을 사용할 수 없습니다.  
   
  **투영 선택**  
- 등장방형(Equirectangular), 메르카토르(Mercator), 로빈슨(Robinson) 또는 본느(Bonne) 투영 모드 중 하나로 지리 데이터를 표시합니다.  
+ Equirectangular, Mercator, Robinson 또는 Bonne 투영 모드 중 하나로 지리 데이터를 표시합니다.  
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   

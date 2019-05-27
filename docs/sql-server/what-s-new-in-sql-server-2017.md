@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306051"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729439"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다. Linux의 SQL Server에 대한 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)(Linux 기반 SQL Server 설명서)을 참조하세요.
 
-[![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [SQL Server 2017 릴리스 다운로드 - 2017년 10월:](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [SQL Server 2017 릴리스 다운로드 - 2017년 10월](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > 아래 변경 내용 외에도 누적 업데이트는 GA 릴리스 이후 정기적으로 릴리스됩니다. 이러한 누적 업데이트는 다양한 향상된 기능 및 수정 사항을 제공합니다. 최신 CU 릴리스에 대한 자세한 내용은 [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)를 참조하세요.
@@ -107,10 +107,10 @@ R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이
 
 SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다.
 
-- **revoscalepy** - RevoScaleR에 해당하는 이 Pythonic 항목에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
+- **revoscalepy** - RevoScaleR에 해당하는 이 Pythonic 항목에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 컴퓨팅 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
 - **microsoftml** - Python 바인딩을 사용하는 이 첨단 기계 학습 알고리즘 및 변환 패키지에는 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 최적화된 선형 및 로지스틱 회귀 알고리즘이 포함되어 있습니다. 이미지 추출 또는 감정 분석에 사용할 수 있는 ResNet 모델을 기반으로 미리 학습된 모델도 가져옵니다.
 - **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
-- **SQL Server 계산 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
+- **SQL Server 컴퓨팅 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
 - **네이티브 점수 매기기** - Transact-SQL의 PREDICT 함수는 R의 설치 여부와 관계없이 SQL Server 2017의 모든 인스턴스에서 점수를 매기는 데 사용할 수 있습니다. 지원되는 RevoScaleR 및 revoscalepy 알고리즘 하나를 사용하여 모델을 학습한 후 새로운 압축 이진 형식으로 저장하기만 하면 됩니다.
 - **패키지 관리** - T-SQL은 이제 DBA가 R 패키지를 좀 더 효과적으로 관리할 수 있도록 CREATE EXTERNAL LIBRARY 문을 지원합니다. 역할을 사용하여 개인 또는 공유 패키지 액세스를 제어하고, 데이터베이스에 R 패키지를 저장하여 다른 사용자와 공유합니다.
 - **성능 향상** - 저장 프로시저 `sp_execute_external_script`는 columnstore 데이터에 대한 일괄 처리 모드 실행을 지원하도록 최적화되었습니다.

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792265"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011482"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 쿼리는 동의어 사전을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *동의어 사전* 은 특정 언어에 대한 동의어 집합을 정의하는데, 시스템 관리자는 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 동의어 사전 검색은 모든 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 쿼리와 FORMSOF THESAURUS 절을 지정하는 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 쿼리에 대해 수행됩니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "52792265"
 ##  <a name="location"></a> 동의어 사전 파일의 위치  
  동의어 사전 파일의 기본 위치는 다음과 같습니다.  
   
- *< SQL_Server_data_files_path >* \MSSQL12 합니다. MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  이 기본 위치에는 다음 파일이 포함되어 있습니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52792265"
   
      동의어 사전 파일의 기본 파일 이름은 다음 형식을 사용합니다.  
   
-     'ts' + \<3 자 언어 약어 > + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      지정된 언어에 대한 동의어 사전 파일의 이름은 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev> 값에 지정됩니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52792265"
     </replacement>  
     ```  
   
-     를 갖는  
+     및  
   
     ```  
     <replacement>  

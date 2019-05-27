@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853574"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626683"
 ---
 # <a name="reserved-keywords-transact-sql"></a>예약어(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스를 정의, 조작 및 액세스할 때 예약된 키워드를 사용합니다. 예약된 키워드는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문과 일괄 처리를 구문 분석하고 이해하는 데 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문법의 일부입니다. 구문상으로는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예약된 키워드를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트에서 식별자와 개체 이름으로 사용할 수 있지만 구분 기호로 분리된 식별자를 사용한 경우에만 가능합니다.  
   
- 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 SQL Data Warehouse의 예약 키워드가 나와 있습니다.  
+ 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Azure SQL Data Warehouse의 예약 키워드가 나와 있습니다.  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853574"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-다음 표에는 **SQL Data Warehouse**에만 사용되는 예약 키워드가 나와 있습니다.
+다음 표에는 **Azure SQL Data Warehouse**에만 사용되는 예약 키워드가 나와 있습니다.
 
 |||
 |-|-|
-|**Label**||
+|**LABEL**||
   
  또한 ISO 표준에서도 예약된 키워드 목록을 정의합니다. ISO 예약된 키워드를 개체 이름과 식별자에 사용하지 마십시오. 다음 표에 있는 ODBC 예약된 키워드 목록은 ISO 예약된 키워드 목록과 같습니다.  
   

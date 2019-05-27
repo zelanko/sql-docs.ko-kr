@@ -14,15 +14,15 @@ helpviewer_keywords:
 - providers [SQLXML]
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b5c08e9387517f737ab7003729a281e5594bc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 51369c321b8463c009027664e555a059522e1d23
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239709"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014348"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 데이터 액세스 구성 요소
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스에 XML 데이터를 삽입하고 검색할 수 있는 다음 3개의 데이터 공급자가 포함되어 있습니다.  

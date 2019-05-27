@@ -11,14 +11,18 @@ ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 687515d64bb4b8fd9f49ac894a944453f33defc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 997f0cf8793b0a809db39abd2b8d484529151950
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277532"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728954"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>삭제를 위해 SQL Server에 연결
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   MSXDBCDC 데이터베이스에 대해 쓰기 권한이 포함된 데이터베이스 역할(예: **db_owner** 역할)이 없는 로그인이 Oracle CDC 인스턴스를 삭제하려고 시도하면 SQL Server에 연결 대화 상자가 표시됩니다.  
   
  이 대화 상자에서 **db_owner** 데이터베이스 역할과 같이 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있는 로그인의 자격 증명을 입력하여 Oracle CDC 인스턴스를 삭제해야 합니다.  

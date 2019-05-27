@@ -1,7 +1,7 @@
 ---
 title: '자습서: SSMS(SQL Server Management Studio) | Microsoft 문서'
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800977"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620518"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 등 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
+SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 구성, 모니터링 및 Azure SQL Database, Azure SQL Database 관리형 인스턴스, Azure SQL Data Warehouse의 그래픽 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 제공합니다. 또한 데이터베이스 등 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
 
@@ -41,9 +41,9 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
   
 실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 자습서를 통해 SSMS 내에서 사용 가능한 다양한 기능을 익힐 수 있습니다.  이러한 자습서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.  
 
-자습서에서 다루는 내용은 다음과 같습니다. 
+자습서에서 다루는 내용은 다음과 같습니다.
 
-  
+
 - [자습서: SSMS를 사용하여 SQL Server 연결 및 쿼리](connect-query-sql-server.md)
 
     이 자습서에서는 SQL Server 인스턴스에 연결하는 방법을 알아봅니다. 또한 새 데이터베이스를 만든 다음, 쿼리하는 몇 가지 기본 T-SQL(Transact-SQL) 명령을 알아봅니다. 

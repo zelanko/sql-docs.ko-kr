@@ -11,14 +11,18 @@ ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274550"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726830"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  
   
 ### <a name="to-extract-data-using-an-odbc-source"></a>ODBC 원본을 사용하여 데이터를 추출하려면  

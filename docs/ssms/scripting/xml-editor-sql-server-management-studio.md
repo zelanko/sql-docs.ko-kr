@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adf261e9abf18bce685a98a55c1128c1a121eba4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eda7c83e982bbf6c006ac9a6c470b116009420ea
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644146"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821554"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,10 +83,10 @@ ms.locfileid: "51644146"
 ## <a name="data-view"></a>데이터 뷰  
  데이터 뷰는 .xml 파일을 수정하는 데 사용할 수 있는 데이터 표를 제공합니다. 데이터 뷰에서는 XML 파일의 내용만 편집할 수 있으며 태그와 구조는 편집할 수 없습니다.  
   
- 데이터 뷰에는 **데이터 테이블** 및 **데이터**의 두 가지 별도 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
+ 데이터 뷰에는 **데이터 테이블**과 **데이터**의 두 가지 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
   
 > [!NOTE]  
->  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 구조화된 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 "이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다"라는 메시지가 표시됩니다.  
+>  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 정형 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 “이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다”라는 메시지가 표시됩니다.  
   
  데이터 뷰에서는 다음 작업을 수행할 수 있습니다.  
   

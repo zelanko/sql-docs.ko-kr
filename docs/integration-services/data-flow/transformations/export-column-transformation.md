@@ -22,14 +22,18 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289800"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726120"
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
   
 ## <a name="append-and-truncate-options"></a>추가 및 잘림 옵션  
@@ -58,7 +62,7 @@ ms.locfileid: "58289800"
     > [!NOTE]  
     >  기존 파일에 데이터를 추가하지 않으며 데이터 형식이 DT_NTEXT인 경우에만 BOM이 기록됩니다.  
   
- 이 변환은 입력 열의 쌍을 사용합니다. 두 열 중 하나에는 파일 이름이 있고 다른 열에는 데이터가 포함되어 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
+ 이 변형은 입력 열의 쌍을 사용합니다. 두 열 중 하나에는 파일 이름이 있고 다른 열에는 데이터가 포함되어 있습니다. 데이터 집합의 각 행에서 서로 다른 파일을 지정할 수 있습니다. 변환이 행을 처리하면 지정한 파일에 데이터가 삽입됩니다. 런타임 시 파일이 존재하지 않을 경우 이 변환은 새로 파일을 만든 후 데이터를 해당 파일에 씁니다. 기록될 데이터 형식은 DT_TEXT, DT_NTEXT 또는 DT_IMAGE여야 합니다. 자세한 내용은 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   

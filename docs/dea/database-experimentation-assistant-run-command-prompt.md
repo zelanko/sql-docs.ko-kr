@@ -11,14 +11,14 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
-ms.reviewer: douglasl
+ms.reviewer: mathoma
 manager: craigg
-ms.openlocfilehash: e98863dcdd7f0cac2534f73c8c99b1d38e7b81b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e18cbe09ec9394ffb3c57c5ffcffc788278cc374
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273925"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011585"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>명령 프롬프트에서 데이터베이스 실험 도우미 실행
 
@@ -47,7 +47,7 @@ ms.locfileid: "63273925"
     
     b.  실행 `Set @durationInMins=0` 추적 캡처는 지정된 된 시간 후 자동으로 중지 하지 않도록 합니다.
     
-    다.  추적 파일 당 최대 파일 크기를 설정 하려면 실행 `Set @maxfilesize`합니다. 권장된 크기는 mb 단위로 200입니다.
+    c.  추적 파일 당 최대 파일 크기를 설정 하려면 실행 `Set @maxfilesize`합니다. 권장된 크기는 mb 단위로 200입니다.
     
     d.  편집 `@Tracefile` 추적 파일의 고유 이름을 설정 하도록 합니다.
     

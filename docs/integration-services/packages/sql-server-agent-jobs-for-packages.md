@@ -16,14 +16,18 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c7e17cd8d09e85395eaaa5d32f2ceb979a984d1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282498"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719875"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
  
 > [!NOTE]
@@ -126,7 +130,7 @@ ms.locfileid: "58282498"
 
       프록시에서 사용되는 자격 증명 로그인, SQL Server 에이전트를 실행하는 계정 및 SQL Server 서비스를 실행하는 계정에는 다음 권한이 필요합니다. 로컬 보안 정책 특성: %SYSTEMROOT%\Temp에 대한 프로세스 수준 토큰 제어 바꾸기 
 
-보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업이 실패했습니다.  클라이언트에 필수 권한이 없습니다.
+보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업에 실패했습니다.  클라이언트에 필수 권한이 없습니다.
      
   
     > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
@@ -162,7 +166,7 @@ ms.locfileid: "58282498"
     ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 파일을 저장합니다.|  
     ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
   
-     **패키지 원본**:  SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
+     **패키지 원본**:  SQL Server, SSIS 패키지 저장소 또는 파일 시스템  
   
      패키지에 설정하는 대부분의 옵션이 SQL Server, SSIS 패키지 저장소 또는 파일 시스템에 저장되며 **dtexec** 명령 프롬프트 유틸리티의 명령줄 옵션에 해당합니다. 유틸리티와 명령줄 옵션에 대한 자세한 내용은 [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   

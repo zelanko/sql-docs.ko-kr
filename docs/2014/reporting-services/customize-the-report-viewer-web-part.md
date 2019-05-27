@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,12 +14,12 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109534"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
   보고서 뷰어 웹 파트를 사용하여 SharePoint 통합용으로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 표시할 수 있는 보고서에는 보고서 정의 파일(.rdl)과 보고서 작성기 보고서가 있습니다. 보고서는 자동으로 보고서 뷰어 웹 파트의 새 페이지에서 열리지만 특정 보고서가 항상 해당 페이지에 표시되게 하려면 기존 웹 페이지 또는 사이트에 보고서 뷰어 웹 파트를 추가할 수도 있습니다.  

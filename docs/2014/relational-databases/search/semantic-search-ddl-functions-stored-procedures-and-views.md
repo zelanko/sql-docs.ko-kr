@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 76ced95f53b50c0fc0402051cff35329d39ce9f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237783"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011041"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계 의미 체계 검색을 지원하는 Transact-SQL 문 및 데이터베이스 개체를 나열합니다.  

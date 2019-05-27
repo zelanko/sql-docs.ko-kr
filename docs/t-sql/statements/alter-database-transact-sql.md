@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203071"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560150"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>인수
 
-*database_name*      
-수정할 데이터베이스의 이름입니다.
+*database_name* 수정할 데이터베이스의 이름입니다.
 
-CURRENT     
-현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
+CURRENT 현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
 ## <a name="remarks"></a>Remarks
 데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL 데이터 웨어하우스
 
-데이터베이스의 이름, 최대 크기 또는 서비스 목표를 수정합니다.
+Azure SQL Data Warehouse에서 'ALTER DATABASE'는 데이터베이스의 이름, 최대 크기 또는 서비스 목표를 수정합니다.
+
+ALTER DATABASE 구문은 설명할 항목이 많기 때문에 여러 아티클로 구분하여 설명됩니다.
+
+[ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md) ALTER DATABASE의 SET 옵션을 사용하여 데이터베이스의 특성을 변경하기 위한 구문 및 관련 정보를 제공합니다.
 
 ## <a name="syntax"></a>구문
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>인수
 
-*database_name*     
-수정할 데이터베이스의 이름을 지정합니다.
+*database_name* 수정할 데이터베이스의 이름을 지정합니다.
 
-MODIFY NAME = *new_database_name*    
-데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
+MODIFY NAME = *new_database_name* 데이터베이스의 이름을 지정된 이름 *new_database_name*으로 바꿉니다.
 
-MAXSIZE    
-기본값은 245,760GB(240TB)입니다.
+MAXSIZE 기본값은 245,760GB(240TB)입니다.
 
 **적용 대상:** Compute Gen1에 최적화됨
 
@@ -835,17 +838,16 @@ MAXSIZE
 
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터된 columnstore 인덱스의 비클러스터된 인덱스에 저장된 데이터는 MAXSIZE 보다 커질 수 없습니다. columnstore 형식으로 압축된 데이터에는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
 
-SERVICE_OBJECTIVE      
-성능 수준을 지정합니다. SQL Data Warehouse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
+SERVICE_OBJECTIVE 성능 수준을 지정합니다. SQL Data Warehouse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
 다음과 같은 사용 권한이 필요합니다.
 
 - 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
-- `dbmanager` 데이터 베이스 역할의 멤버
+- `dbmanager` 데이터 베이스 역할의 구성원
 
-데이터베이스의 소유자가 `dbmanager` 역할의 멤버가 아니면 데이터베이스를 변경할 수 있습니다.
+데이터베이스의 소유자가 `dbmanager` 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 

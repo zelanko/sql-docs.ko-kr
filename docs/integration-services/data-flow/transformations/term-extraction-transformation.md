@@ -29,14 +29,18 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282577"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725811"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
   
  용어 추출 변환을 사용하면 데이터 집합의 내용을 확인할 수 있습니다. 예를 들어 전자 메일 메시지가 포함된 텍스트는 제품에 대한 유용한 피드백을 제공할 수 있으므로 용어 추출 변환을 사용하여 메시지의 주요 내용을 추출하고 고객 의견을 분석할 수 있습니다.  

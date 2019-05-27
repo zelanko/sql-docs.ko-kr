@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280897"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722428"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>2-1단원 - 배포 유틸리티 작성
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
   
 배포 유틸리티를 작성할 수 있으려면 Deployment Tutorial 프로젝트의 속성을 수정해야 합니다. **Deployment Tutorial 속성 페이지** 대화 상자를 사용하여 이러한 속성을 구성합니다. 이 대화 상자에서 배포 중에 구성을 업데이트하는 기능을 설정하고 빌드 프로세스에서 배포 유틸리티를 생성하도록 지정해야 합니다. 속성을 설정한 후에 프로젝트를 작성합니다.  
@@ -49,7 +53,7 @@ ms.locfileid: "58280897"
   
 4.  출력 창에서 다음 정보를 확인합니다.  
   
-    빌드 시작: SQL Integration Services 프로젝트: 증분...  
+    빌드 시작: SQL Integration Services 프로젝트: 증분 ...  
   
     배포 유틸리티를 만드는 중...  
   

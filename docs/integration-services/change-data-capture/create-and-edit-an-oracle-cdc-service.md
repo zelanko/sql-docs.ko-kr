@@ -13,14 +13,18 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7b7db8c28670c4ac411bb2e618f7051d9639fc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270388"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728941"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Service 구성 콘솔에서 새 Oracle CDC Windows 서비스를 만들고 편집합니다.  
   
  새 Oracle CDC Windows 서비스를 만들려면 왼쪽 창에서 **로컬 CDC Service** 를 선택한 다음 **동작** 창에서 **새 서비스** 를 클릭합니다. **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스**를 선택할 수도 있습니다. 새 Oracle CDC Windows 서비스 대화 상자가 열립니다.  

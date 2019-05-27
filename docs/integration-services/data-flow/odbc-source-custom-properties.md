@@ -11,14 +11,18 @@ ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830fee8fa07901f104891b27348aa99959057406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5094f1fc42715dfed74aee022d8ebe2bd36d8b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282427"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726611"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   다음 표에서는 ODBC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
   
 |속성 이름|데이터 형식|설명|  

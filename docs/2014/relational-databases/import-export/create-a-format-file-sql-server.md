@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140599"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012055"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 대량 가져오기를 수행하거나 테이블에서 데이터를 대량 내보내기를 수행할 때는 서식 파일을 사용하여 다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어 프로그램에서 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - filters [full-text search]
 - word breakers [full-text search]
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3ae427f9f8d3391d8a8fcd0bff06a6ea3b97044c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237801"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010928"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
   시스템에 단어 분리기 또는 필터를 설치하거나 제거한 후 이러한 변경이 자동적으로 서버 인스턴스에 적용되지는 않습니다. 이 항목에서는 현재 등록되어 있는 단어 분리기 또는 필터를 보는 방법과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 새로 설치한 단어 분리기 및 필터를 등록하는 방법에 대해 설명합니다.  

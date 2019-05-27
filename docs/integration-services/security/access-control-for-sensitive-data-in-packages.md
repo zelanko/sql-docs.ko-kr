@@ -24,14 +24,18 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f250c7b2dcaaaf86384ac4af592c423a9077ffd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee831e325d7291548e9d6e4ae266cabcb2607a46
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281587"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718251"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터를 보호하기 위해 중요한 데이터만 보호하거나 패키지의 모든 데이터를 보호하는 패키지 수준을 설정할 수 있습니다. 또한 패키지 데이터를 암호 또는 사용자 키로 암호화하거나 데이터베이스를 사용하여 암호화할 수도 있습니다. 패키지 보호 수준은 반드시 정적이지 않으며 패키지의 수명 주기 동안 변경됩니다. 즉, 개발 과정에서 설정하는 보호 수준과 배포 과정에서 설정하는 보호 수준이 서로 다른 경우가 자주 있습니다.  
   
 > [!NOTE]  

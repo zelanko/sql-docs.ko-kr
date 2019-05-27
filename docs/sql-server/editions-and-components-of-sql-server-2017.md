@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788100"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560114"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |Always On 가용성 그룹<sup>3</sup>|예|아니오|아니오|아니오|아니오|
 |기본 가용성 그룹<sup>4</sup>|아니오|예|아니오|아니오|아니오|
 |온라인 페이지 및 파일 복원|예|아니오|아니오|아니오|아니오|
-|온라인 인덱싱|예|아니오|아니오|아니오|아니오|
+|온라인 인덱스 만들기 및 다시 작성|예|아니오|아니오|아니오|아니오|
 |다시 시작 가능한 온라인 인덱스 다시 작성|예|아니오|아니오|아니오|아니오|
 |온라인 스키마 변경|예|아니오|아니오|아니오|아니오|
 |빠른 복구|예|아니오|아니오|아니오|아니오|

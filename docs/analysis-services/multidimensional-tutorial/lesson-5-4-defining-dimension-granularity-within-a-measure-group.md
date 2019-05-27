@@ -133,7 +133,7 @@ ms.locfileid: "65404085"
   
 6.  **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-7.   **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+7.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 8.  **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "65404085"
   
 13. **중간 차원** 목록에서 **Employee**를 선택합니다.  
   
-14.  **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
+14. **참조 차원 특성** 목록에서 **Sales Territory Region**을 선택합니다.  
   
 15. **중간 차원 특성** 목록에서 **Sales Territory Key**를 선택합니다. Sales Territory Region 특성의 키 열은 SalesTerritoryKey 열입니다.  
   

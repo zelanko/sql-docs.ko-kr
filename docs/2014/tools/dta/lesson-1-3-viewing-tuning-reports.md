@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173643"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110148"
 ---
 # <a name="viewing-tuning-reports"></a>튜닝 보고서 보기
   이 단원의 이전 연습에서 MySession 튜닝 세션의 결과로 생성된 데이터베이스 엔진 튜닝 관리자 구성에서 데이터베이스 개체를 만들거나 삭제하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보았습니다. MySession 튜닝 세션은 [Tuning a Workload](lesson-1-1-tuning-a-workload.md)에서 만들었습니다.  
@@ -47,6 +46,6 @@ ms.locfileid: "48173643"
  이제 MySession 튜닝 세션에 대한 데이터베이스 엔진 튜닝 관리자 GUI의 **보고서** 탭을 탐색했습니다. 이와 같은 단계를 사용하여 EvaluateMySession 튜닝 세션에 대해 생성된 보고서를 탐색할 수 있습니다. **세션 모니터** 창에서 **EvaluateMySession** 을 두 번 클릭하여 시작합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [3단원: dta 명령 프롬프트 유틸리티 사용](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [3단원: Dta 명령 프롬프트 유틸리티를 사용 하 여](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

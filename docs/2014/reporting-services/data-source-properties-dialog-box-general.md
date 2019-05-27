@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
@@ -14,12 +13,12 @@ ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7db7aa857e695e35dee5125cdfed1effe3dd1852
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f918d6583f01473e061792406821b13a4856cea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164739"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109483"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>데이터 원본 속성 대화 상자, 일반
   **데이터 원본 속성** 대화 상자의 **일반** 을 선택하여 보고서의 데이터 원본에 대한 연결 정보를 표시하고 수정할 수 있습니다.  

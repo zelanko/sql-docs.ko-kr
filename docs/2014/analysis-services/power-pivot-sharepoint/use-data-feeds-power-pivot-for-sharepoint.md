@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748989"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070911"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 데이터 스트림입니다. PowerPivot for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 PowerPivot 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  

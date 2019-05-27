@@ -24,14 +24,18 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1ca89542cfdeebd9993b86a049c0190e12d16887
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657887"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727110"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
   
 ## <a name="configuring-the-data-flow"></a>데이터 흐름 구성  

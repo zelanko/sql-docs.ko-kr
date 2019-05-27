@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071455"
 ---
 # <a name="delete-powerpivot-gallery"></a>PowerPivot 갤러리 삭제
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.  

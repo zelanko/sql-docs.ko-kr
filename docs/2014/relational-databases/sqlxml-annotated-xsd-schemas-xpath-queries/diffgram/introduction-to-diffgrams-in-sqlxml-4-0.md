@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127718"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013021"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
   이 항목에서는 DiffGrams에 대해 간략하게 소개합니다.  

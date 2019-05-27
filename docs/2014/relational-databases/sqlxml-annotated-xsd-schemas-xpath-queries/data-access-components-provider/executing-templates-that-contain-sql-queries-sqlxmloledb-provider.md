@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9405bbb1eb8737b38c1e9214713b5447f1917d7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856517"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013121"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
   이 예제에서는 ClientSideXML SQLXMLOLEDB 공급자별 속성의 사용을 보여 줍니다. 이 클라이언트 쪽 ADO 예제 응용 프로그램에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
