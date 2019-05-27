@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HIDDEN_NODE_RATIO parameter
@@ -29,12 +28,12 @@ ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51551dd92ee0cca193abd88041e4ad7cc183718a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733823"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083855"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론* 으로 구성된 *다중 계층 퍼셉트론*신경망( *역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  

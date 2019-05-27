@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
@@ -18,12 +17,12 @@ ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281738"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063197"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
   XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
@@ -82,10 +81,10 @@ ms.locfileid: "63281738"
 ## <a name="data-view"></a>데이터 뷰  
  데이터 뷰는 .xml 파일을 수정하는 데 사용할 수 있는 데이터 표를 제공합니다. 데이터 뷰에서는 XML 파일의 내용만 편집할 수 있으며 태그와 구조는 편집할 수 없습니다.  
   
- 데이터 뷰에서 두 개의 별도 영역이 있습니다. **데이터 테이블** 하 고 **데이터**입니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
+ 데이터 뷰에는 **데이터 테이블**과 **데이터**의 두 가지 영역이 있습니다. **데이터 테이블** 영역은 XML 파일에 정의되어 있는 관계를 중첩된 순서(바깥쪽에서부터 안쪽으로)대로 보여 주는 목록입니다. **데이터** 영역은 데이터 테이블 영역에서 선택한 내용에 따라 해당 데이터를 표시하는 데이터 표입니다.  
   
 > [!NOTE]  
->  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. 하지만 XML 것은 올바른 형식의 구조화 된 데이터가 아닌 경우 데이터 전환 하려고 보기는에 다음 메시지가 표시: "이이 문서는 올바르지만 해당 구조가 포함 데이터 뷰를 표시할 수 없습니다."  
+>  새로 만든 XML 파일에는 데이터가 들어 있지 않으므로 데이터 뷰에서 표시할 수 없습니다. 이외에도 일부 XML 문서에서는 데이터 뷰를 실행할 수 없습니다. XML의 형식이 올바르더라도 정형 데이터가 아닌 경우 데이터 뷰로 전환하려고 하면 “이 XML 문서는 형식이 올바르지만 데이터 뷰에서 표시할 수 없는 구조를 포함하고 있습니다”라는 메시지가 표시됩니다.  
   
  데이터 뷰에서는 다음 작업을 수행할 수 있습니다.  
   

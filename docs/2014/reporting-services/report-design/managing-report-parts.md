@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209279"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105584"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   부터는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 파트는 보고서 서버에 게시 하 고 적절 한 권한이 있는 경우 다른 사용자가 다른 보고서에서 다시 사용할 수 있습니다.  

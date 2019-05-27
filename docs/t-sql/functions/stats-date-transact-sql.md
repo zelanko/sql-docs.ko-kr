@@ -19,16 +19,16 @@ helpviewer_keywords:
 - last time statistics updated
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2755508185aa7c6bd5ddad4f628728ae8bcae71e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f313706aba43b939e267cee8b79deee2b8b80bc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782251"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947678"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ STATS_DATE ( object_id , stats_id )
  
  통계가 인덱스에 대응하면 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 카탈로그 뷰의 *stats_id* 값은 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 동일합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버이어야 하거나, 테이블이나 인덱싱된 뷰의 메타데이터를 볼 수 있는 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -129,7 +129,7 @@ WHERE s.object_id = OBJECT_ID('dbo.DimCustomer')
 GO    
 ```  
   
-### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>3. 테이블의 모든 통계에 대한 마지막 업데이트 날짜 보기  
+### <a name="c-view-the-date-of-the-last-update-for-all-statistics-on-a-table"></a>C. 테이블의 모든 통계에 대한 마지막 업데이트 날짜 보기  
  이 예에서는 DimCustomer 테이블의 각 통계 개체가 마지막으로 업데이트된 날짜를 반환합니다.  
   
 ```sql  

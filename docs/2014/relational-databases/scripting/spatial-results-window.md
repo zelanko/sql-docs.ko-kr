@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278708"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063795"
 ---
 # <a name="spatial-results-window"></a>공간 데이터 결과 창
   **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63278708"
  쿼리로 점만 반환된 경우 이 옵션을 사용할 수 없습니다.  
   
  **투영 선택**  
- 프로젝션 4 개 중 하나로 지리 데이터를 표시 합니다. 등 장방형, Mercator, Robinson 또는 Bonne 합니다.  
+ Equirectangular, Mercator, Robinson 또는 Bonne 투영 모드 중 하나로 지리 데이터를 표시합니다.  
   
  기하 도형 데이터에 대해서는 이 옵션을 사용할 수 없습니다.  
   

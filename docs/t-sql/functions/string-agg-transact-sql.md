@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83040a96a96e34e71864a967ecb9ab06632c1376
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518518"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947532"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ FROM Person.Person;
 |--- |
 |John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
-### <a name="c-generate-comma-separated-values"></a>3. 쉼표로 구분된 값 생성 
+### <a name="c-generate-comma-separated-values"></a>C. 쉼표로 구분된 값 생성 
 ```sql   
 SELECT 
 STRING_AGG(CONCAT(FirstName, ' ', LastName, ' (', ModifiedDate, ')'), CHAR(13)) 
@@ -127,7 +127,7 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
 
-### <a name="d-return-news-articles-with-related-tags"></a>4. 뉴스 기사 및 관련 태그 반환 
+### <a name="d-return-news-articles-with-related-tags"></a>D. 뉴스 기사 및 관련 태그 반환 
 기사와 태그가 다른 테이블로 구분됩니다. 개발자들은 각 기사당 관련 태그가 모두 포함된 하나의 행을 반환하려고 합니다. 다음 쿼리를 사용합니다. 
 ```sql
 SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
@@ -145,7 +145,7 @@ GROUP BY a.articleId, title;
 |176 |New highway expected to reduce congestion |NULL |
 |177 |Dogs continue to be more popular than cats |polls,animals| 
 
-### <a name="e-generate-list-of-emails-per-towns"></a>5. 도시별 이메일 목록 생성
+### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 다음 쿼리는 직원의 이메일 주소를 찾고 도시별로 그룹화합니다. 
 ```sql
 SELECT town, STRING_AGG (email, ';') AS emails 
@@ -162,7 +162,7 @@ GROUP BY town;
 
 이메일 열에 반환된 이메일은 특정 도시에서 근무하는 사람들에게 이메일을 전송하는 데 직접 사용할 수 있습니다. 
 
-### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>6. 도시별 이메일 정렬 목록 생성   
+### <a name="f-generate-a-sorted-list-of-emails-per-towns"></a>F. 도시별 이메일 정렬 목록 생성   
 다음 쿼리는 이전 예와 유사한 방식으로 직원의 이메일 주소를 찾고 도시별로 그룹화한 다음, 이메일을 사전순으로 정렬합니다.   
 ```sql
 SELECT town, 

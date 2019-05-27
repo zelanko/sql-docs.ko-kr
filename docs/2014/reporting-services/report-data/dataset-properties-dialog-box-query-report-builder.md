@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10024"
@@ -13,12 +12,12 @@ ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8a74bac81874eaeeecd9b9abcdcbfee27e07909c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cde36fba94293e8f79660399cd4ee35158f671d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696571"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107345"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>데이터 세트 속성 대화 상자, 쿼리(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **쿼리** 를 선택하여 보고서 서버에서 공유 데이터 집합을 선택하거나 포함된 데이터 집합을 만들 수 있습니다. 포함된 데이터 세트의 경우 데이터 원본을 선택하고 쿼리를 작성해야 합니다.  

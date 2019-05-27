@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9621a7ed2f7e1dcc26a46a71d59e4febac974d38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2f79f8bf9a1d0ff01ba97d29662fab026d4adcd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722446"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084465"
 ---
 # <a name="export-and-import-data-mining-objects"></a>데이터 마이닝 개체 내보내기 및 가져오기
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 솔루션 백업, 복원 및 마이그레이션 기능 이외에도 SQL Server 데이터 마이닝을 통해 DMX(Data Mining Extensions)를 사용하여 서로 다른 서버 간에 데이터 마이닝 구조 및 모델을 빠르게 전송할 수 있습니다.  

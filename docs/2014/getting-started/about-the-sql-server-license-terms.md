@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088628"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server 사용 조건 정보
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일에 기록 됩니다. % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ or % Programfiles(x86)% % \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License 용어\\합니다.  

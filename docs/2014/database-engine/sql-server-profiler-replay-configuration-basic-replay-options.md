@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
@@ -15,12 +14,12 @@ ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089714"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server 프로파일러 - 재생 구성(기본 재생 옵션)
   **재생 구성** 대화 상자에서 **기본 재생 옵션** 페이지를 사용하여 추적 파일 또는 테이블을 재생하는 방법을 지정할 수 있습니다.  

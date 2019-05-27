@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - collation configuration, SQL Server
@@ -15,12 +14,12 @@ ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092287"
 ---
 # <a name="server-configuration---collation"></a>서버 구성 - 데이터 정렬
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 - 데이터 정렬 페이지에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정렬하기 위해 사용하는 데이터 정렬 설정을 수정할 수 있습니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치나 다른 컴퓨터의 데이터 정렬 설정과 일치하는 옵션을 선택하십시오.  

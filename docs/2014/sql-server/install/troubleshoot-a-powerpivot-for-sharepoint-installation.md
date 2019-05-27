@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 471bfe1a93e76630e6699a2ff07fcf5c6bddc913
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267887"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091778"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 문제 해결
   예상한 페이지 및 기능 대신 오류가 발생할 경우 다음을 수행합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.choosehowtoimpdata.f1
@@ -13,12 +12,12 @@ ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de6a4bf18a6502eba733fd48728e846ba8d1d20f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681160"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088135"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>데이터를 가져오는 방법 선택(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 선택된 데이터 원본으로부터 데이터를 가져오는 방법을 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

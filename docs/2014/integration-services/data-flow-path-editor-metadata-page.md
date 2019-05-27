@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
@@ -15,12 +14,12 @@ ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c58b3bffe2873cd412be0639ae9006252a4443e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059986"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>데이터 흐름 경로 편집기(메타데이터 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  

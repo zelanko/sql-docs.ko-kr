@@ -16,15 +16,15 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b296737ecc7d9988365a9ad7abed8b2ee7abf61c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698521"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943556"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "51698521"
  데이터 형식이 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환이 가능해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 현재 *partition_function_name*에 참여하는 분할 열의 이름일 수도 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  $PARTITION은 1과 파티션 함수의 파티션 개수 사이에 속하는 **int** 값을 반환합니다.  
@@ -88,7 +88,7 @@ ORDER BY Partition ;
 GO  
 ```  
   
-### <a name="c-returning-all-rows-from-one-partition-of-a-partitioned-table-or-index"></a>3. 분할된 테이블이나 인덱스의 특정 파티션에서 모든 행 반환  
+### <a name="c-returning-all-rows-from-one-partition-of-a-partitioned-table-or-index"></a>C. 분할된 테이블이나 인덱스의 특정 파티션에서 모든 행 반환  
  다음 예에서는 `5` 테이블의 파티션 `TransactionHistory`에 있는 모든 행을 반환합니다.  
   
 > [!NOTE]  

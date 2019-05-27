@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - system tables [SQL Server], replication
@@ -18,12 +17,12 @@ ms.assetid: 8a5e74be-4992-4f17-b20c-c3dce8f49329
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473184"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093640"
 ---
 # <a name="other-replication-upgrade-issues"></a>기타 복제 업그레이드 문제
   이 항목에서는 업그레이드 관리자가 보고하지 않는 몇 가지 업그레이드 문제에 대해 설명합니다.  

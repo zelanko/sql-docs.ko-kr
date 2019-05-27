@@ -20,15 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 840b1ae9924e2b582ee726f917e31a2922d84c18
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702571"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948438"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>텍스트 및 이미지 함수 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
  확인할 텍스트 포인터입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  포인터가 유효하면 1, 유효하지 않으면 0을 반환합니다. **text** 열에 대한 식별자에는 테이블 이름이 포함되어야 합니다. 유효한 텍스트 포인터가 없으면 UPDATETEXT, WRITETEXT 또는 READTEXT를 사용할 수 없습니다.  
@@ -67,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |함수 또는 문|설명|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|**text** 및 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
-|DATALENGTH **(**_expression_**)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|**text** 및 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
+|DATALENGTH **(** _expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
   
 ## <a name="examples"></a>예  

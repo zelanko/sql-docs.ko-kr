@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc3aec9795bd8d002602020e97d061b358ad55c9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1d46915d40388ee5e899a94a80d64ff0ae3361bd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506854"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945869"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ CERTENCODED ( cert_id )
 ## <a name="remarks"></a>Remarks  
 **CERTENCODED** 및 **CERTPRIVATEKEY**를 함께 사용하여 이진 형태로 인증서의 다른 부분을 반환합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **CERTENCODED**는 누구나 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  

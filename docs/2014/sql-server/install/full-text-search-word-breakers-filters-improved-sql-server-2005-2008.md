@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
@@ -14,12 +13,12 @@ ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63130469"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094987"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005와 SQL Server 2008에서는 전체 텍스트 Search 단어 분리기와 필터가 크게 향상되었습니다.
   단어 분리기와 필터가 대폭 변경되었습니다. 언어 범위와 안정성을 포함하여 단어 분리기의 기능이 추가로 개선되었습니다.  

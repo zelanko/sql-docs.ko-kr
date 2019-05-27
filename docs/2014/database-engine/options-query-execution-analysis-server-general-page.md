@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.AnalysisServer.AnalysisServicesExecutionGeneral
@@ -13,12 +12,12 @@ ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774766"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089420"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>옵션 (쿼리 실행-Analysis Server-일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **쿼리 실행** 에서 **분석 서버** 폴더를 확장한 다음 **일반**을 클릭합니다.  

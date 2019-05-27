@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6381c9bcf919c012e215be13285cb2b096db281e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d3f1a5e021eb564e4570e9f115e40329edcdd9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195312"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094016"
 ---
 # <a name="license-terms"></a>사용 조건
   사용 조건 페이지를 사용하여 이 릴리스의 사용 조건에 동의할 수 있습니다.  

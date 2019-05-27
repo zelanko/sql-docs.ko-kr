@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
@@ -16,12 +15,12 @@ ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731738"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081586"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 문서화(Excel용 데이터 마이닝 추가 기능)
   ![문서 모델 단추, 데이터 마이닝 리본의](media/dmc-docmodel.gif "데이터 마이닝 리본, 모델 문서화 단추")  

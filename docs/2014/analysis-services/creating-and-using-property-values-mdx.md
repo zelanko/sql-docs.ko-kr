@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -16,12 +15,12 @@ ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086686"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>속성 값 만들기 및 사용(MDX)
   MDX는 차원, 수준, 멤버 및 셀에 대한 기본 및 사용자 정의 속성을 지원합니다. 기본 속성은 개별 셀에 대해 고유한 이름과 캡션은 물론, 서식과 글꼴 크기를 제공합니다. 반면, 사용자 정의 속성은 거의 모든 종류의 특성을 멤버에 추가로 제공할 수 있습니다.  

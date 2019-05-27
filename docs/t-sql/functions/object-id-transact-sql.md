@@ -23,16 +23,16 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f514bd7b5f18fba37ba8159ee4fe1804b5d8b8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02ad3631a37600b3b3a18af38b90a805fe00af5c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722451"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944032"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  스키마 범위 개체 형식입니다. *object_type*은 **varchar** 또는 **nvarchar**입니다. *object_type*이 **varchar**인 경우 암시적으로 **nvarchar**로 변환됩니다. 개체 형식의 목록은 [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)의 **type** 열을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
  공간 인덱스의 경우 OBJECT_ID는 NULL을 반환합니다.  
@@ -98,7 +98,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>3. OBJECT_ID 사용하여 시스템 함수 매개 변수의 값을 지정  
+### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. OBJECT_ID 사용하여 시스템 함수 매개 변수의 값을 지정  
  다음 예제에서는 [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 정보를 반환합니다.  
   
 > [!IMPORTANT]  
@@ -126,7 +126,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D: 지정한 개체에 대한 개체 ID 반환  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D: 지정한 개체의 개체 ID 반환  
  다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 `FactFinance` 테이블에 관한 개체 ID를 반환합니다.  
   
 ```  

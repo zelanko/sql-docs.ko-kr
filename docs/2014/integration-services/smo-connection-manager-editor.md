@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smoconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a9fca0d602f54d6bab7f21c57838a50212dfd5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62878223"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055602"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
   **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  

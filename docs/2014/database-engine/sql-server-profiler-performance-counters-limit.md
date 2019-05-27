@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.performancecounterlimit.f1
@@ -15,12 +14,12 @@ ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74ac3839567366c429c64e0139f8e86793aa942a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e64c5cc39ed8634ef2ec74f8680c84f7b66b98f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773447"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088817"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>SQL Server 프로파일러 - 성능 카운터 제한
   성능 카운터 제한 대화 상자를 사용하여 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적과 상관 관계를 지정할 시스템 모니터 성능 로그 파일의 정보를 제한할 수 있습니다. 이 대화 상자를 사용하여 상관 관계를 지정하는 데 사용하도록 표시할 카운터를 선택할 수 있습니다.  

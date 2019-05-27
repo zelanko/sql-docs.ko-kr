@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - command line setup [Reporting Services]
@@ -21,12 +20,12 @@ ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 899b202de247a28e4a842c313c32a8b4f57417df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011613"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093654"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>기타 Reporting Services 업그레이드 문제
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 업그레이드할 때 발생할 수 있는 문제에 대해 설명합니다. **이러한 문제는 업그레이드 관리자가 검색 되지 않습니다.** 자세한 내용은 참조 하세요. [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  

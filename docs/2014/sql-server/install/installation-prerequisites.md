@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - installation prerequisites, Setup
@@ -16,17 +15,17 @@ ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 010f9ef7cfd46acb0b3245601af93cf150313227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171033"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094344"
 ---
 # <a name="installation-prerequisites"></a>필수 구성 요소 설치
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 성공적으로 설치하려면 설치 컴퓨터에 다음 소프트웨어 구성 요소가 있어야 합니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 성공적으로 설치하려면 설치 컴퓨터에 다음 소프트웨어 구성 요소가 있어야 합니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에 의해 설치됩니다.  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모든 버전에 대 한 버전 4.0 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 4.0의 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 지원 파일  
   

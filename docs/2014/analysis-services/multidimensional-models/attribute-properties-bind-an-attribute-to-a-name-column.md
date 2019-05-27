@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701760"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077399"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>이름 열로 특성 바인딩
   이 절차에서는 차원 디자이너의 **특성** 창과 **개체 바인딩** 대화 상자를 사용하여 수동으로 이름 열에 특성을 바인딩하는 방법에 대해 설명합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
@@ -16,12 +15,12 @@ ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fe4d4baf37cc681844ee7180896409d07608edf
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093991"
 ---
 # <a name="migrate-scripts-to-vsta"></a>VSTA로 스크립트 마이그레이션
   업그레이드 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 패키지를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 모든 스크립트 태스크 또는 스크립트 구성 요소를로 마이그레이션합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용하는 스크립팅 환경입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 위한 스크립팅 환경인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 응용 프로그램 (VSA).  

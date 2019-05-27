@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62671041"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088321"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>계산 속성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 계산 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 선택한 큐브에 대해 큐브 디자이너의 **계산** 탭에서 정의한 계산의 표시 폴더 및 연결된 측정값 그룹 속성을 보거나 편집할 수 있습니다. 큐브 디자이너의 **계산** 탭에 있는 **도구 모음** 창에서 **계산 속성** 을 클릭하여 **계산 속성** 대화 상자를 표시할 수 있습니다.  

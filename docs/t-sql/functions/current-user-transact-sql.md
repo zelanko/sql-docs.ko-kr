@@ -19,16 +19,16 @@ helpviewer_keywords:
 - CURRENT_USER
 - users [SQL Server], names
 ms.assetid: 29248949-325b-4063-9f55-5a445fb35c6e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a21adcc5d53bb3685de95f9916487fce486ca104
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: d5d3ec1ee3518c4d9f0b66100fff421a5827b353
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826068"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947893"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ order_id    cust_id     order_date           order_amt    order_person
 (1 row(s) affected)
 ```
   
-### <a name="c-using-currentuser-from-an-impersonated-context"></a>3. 가장된 컨텍스트에서 CURRENT_USER 사용  
+### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. 가장된 컨텍스트에서 CURRENT_USER 사용  
 이 예에서 사용자 `Wanida`는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하여 사용자 'Arnalfo'로 가장합니다.
   
 ```sql

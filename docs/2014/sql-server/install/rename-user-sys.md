@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sys user names [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855318"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092856"
 ---
 # <a name="rename-user-sys"></a>sys 사용자 이름을 바꿉니다.
   업그레이드 관리자가 데이터베이스에서 **sys** 사용자 이름을 검색했습니다. 이 이름은 예약되어 있습니다. 업그레이드하기 전에 사용자 이름을 바꾸십시오. 사용자 이름을 바꾸지 않으면 업그레이드 후 데이터베이스가 주의 대상 상태가 되며 온라인 상태가 될 때까지 데이터베이스를 사용할 수 없습니다.  

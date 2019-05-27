@@ -21,16 +21,16 @@ helpviewer_keywords:
 - database objects [SQL Server]
 - names [SQL Server], database objects
 ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1226ac3a530dbd4df3ce213a34f302c227fade21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f27628a944c8df1d27bf05f9eb5fbade28aa30b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782464"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948989"
 ---
 # <a name="objectname-transact-sql"></a>OBJECT_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 OBJECT_NAME과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ANY 권한이 필요합니다. 데이터베이스 ID를 지정하려면 데이터베이스에 대해 CONNECT 권한도 필요합니다. 그렇지 않으면 게스트 계정을 설정해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
@@ -119,7 +119,7 @@ WHERE st.objectid IS NOT NULL;
 GO  
 ```  
   
-### <a name="c-returning-three-part-object-names"></a>3. 세 부분으로 된 개체 이름 반환  
+### <a name="c-returning-three-part-object-names"></a>C. 세 부분으로 된 개체 이름 반환  
  다음 예에서는 모든 데이터베이스의 모든 개체에 대해 `sys.dm_db_index_operational_stats` 동적 관리 뷰의 모든 다른 열과 함께 데이터베이스, 스키마 및 개체 이름을 반환합니다.  
   
 ```  
@@ -135,7 +135,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>4. WHERE 절에서 OBJECT_NAME 사용  
+### <a name="d-using-objectname-in-a-where-clause"></a>D. WHERE 절에서 OBJECT_NAME 사용  
  다음 예에서는 `sys.objects` 문의 `OBJECT_NAME` 절에서 `WHERE`으로 지정한 개체에 대한 열을 `SELECT` 카탈로그 뷰에서 반환합니다. (개체 번호(아래 예에서 274100017)는 달라집니다.  이 예를 테스트하려면 각자의데이터베이스에서 `SELECT name, object_id FROM sys.objects;`를 실행하여 유효한 개체 번호를 조회하세요.)  
   
 ```  

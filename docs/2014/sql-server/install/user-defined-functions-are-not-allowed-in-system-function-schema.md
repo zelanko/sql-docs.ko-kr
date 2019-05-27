@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - system functions [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506207"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091327"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema에서 사용자 정의 함수가 허용되지 않습니다.
   업그레이드 관리자가 문서화 되지 않은 사용자가 소유한 사용자 정의 함수 **system_function_schema**합니다. 이 사용자를 지정해서는 사용자 정의 시스템 함수를 만들 수 없습니다. **system_function_schema** 존재 하지 않는 사용자 이름 및이 이름의 연결 된 사용자 ID (UID = 4)에 예약 되어 합니다 **sys** 스키마 있으며 내부 에서만 사용 하도록 제한 됩니다.  

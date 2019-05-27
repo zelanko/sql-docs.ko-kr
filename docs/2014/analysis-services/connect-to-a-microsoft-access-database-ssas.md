@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connaccessdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36c3f4a6219e615fe2cf11e718bd1ef47869f85a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680138"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087295"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Microsoft Access 데이터베이스에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 Microsoft Access 데이터베이스에 연결하기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

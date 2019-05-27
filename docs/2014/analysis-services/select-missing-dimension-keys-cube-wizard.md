@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.missingdimkeyselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec9597bdac9afbbb9d6fc4d19bbfd5cd96f72a70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747302"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069399"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>누락 차원 키 선택(큐브 마법사)
   새 차원에 해당 기본 테이블에 대해 정의된 키가 없으면 **누락 차원 키 선택** 페이지를 사용하여 키 열을 선택할 수 있습니다.  

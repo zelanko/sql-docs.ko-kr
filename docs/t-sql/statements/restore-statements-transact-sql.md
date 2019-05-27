@@ -37,16 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e1e25d8d5709f409f504d85f7917b85c1e6f3886
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828173"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947048"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -428,14 +428,14 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 
 ## <a name="security"></a>보안
 
-백업 작업은 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 그러나 암호로 보호된 미디어는 BACKUP 문의 FORMAT 옵션으로 덮어쓸 수 있습니다.
+필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 그러나 암호로 보호된 미디어는 BACKUP 문의 FORMAT 옵션으로 덮어쓸 수 있습니다.
 
 > [!IMPORTANT]
 > 이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.
 > [!NOTE]
 > Microsoft Azure Blob Storage로 SQL Server 백업 및 복원 관련 정보는 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 
 복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.
 
@@ -781,7 +781,7 @@ FROM URL
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 스토리지 URL을 사용하여 자격 증명을 조회하고 백업 장치를 읽는 데 필요한 정보를 찾습니다.
+전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
 
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함).
 
@@ -810,7 +810,7 @@ RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경
 
 암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 RESTORE를 실행하려면 사용자에게 CREATE DATABASE 권한이 있어야 합니다.
 
@@ -935,7 +935,7 @@ RESTORE HEADERONLY 한 명의 사용자 데이터베이스 백업에 대한 헤�
 
 RESTORE HEADERONLY 결과는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과 뒤에 패턴화됩니다. 결과에는 50개 이상의 열이 있으며 모두 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY 결과의 열에 대한 설명은 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)를 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 **CREATE ANY DATABASE** 권한이 필요합니다.
 

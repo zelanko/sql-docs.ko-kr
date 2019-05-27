@@ -18,16 +18,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - starting point of expression in character string
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802290"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947078"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 검색이 시작되는 **integer** 또는 **bigint** 식입니다. *start_location*이 지정되지 않았거나 음수 값 또는 0 값이면, *expressionToSearch*의 시작 부분에서 검색이 시작됩니다.
   
 ## <a name="return-types"></a>반환 형식
-*expressionToSearch*의 데이터 형식이 **nvarchar(max)**, **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
+*expressionToSearch*의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
 ## <a name="remarks"></a>Remarks  
 *expressionToFind* 또는 *expressionToSearch* 식에 유니코드 데이터 형식(**nchar** 또는 **nvarchar**)이 있고 다른 식에는 이러한 형식이 없으면, CHARINDEX 함수에서 다른 식을 유니코드 데이터 형식으로 변환합니다. CHARINDEX는 **image**, **ntext** 및 **text** 데이터 형식으로 사용할 수 없습니다.
@@ -66,7 +66,7 @@ CHARINDEX는 입력 데이터 정렬을 기반으로 하는 비교를 수행합�
   
 반환된 시작 위치는 0이 아닌 1부터 시작합니다.
   
-0x0000(**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 CHARINDEX에 포함할 수 없습니다.
+0x0000(**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 CHARINDEX에 포함할 수 없습니다.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
 SC 데이터 정렬을 사용하는 경우 *start_location*과 반환 값 둘 다 서로게이트 쌍을 둘이 아닌 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.

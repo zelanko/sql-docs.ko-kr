@@ -1,24 +1,23 @@
 ---
-title: '단원 13: Excel에서 분석 | Microsoft Docs'
+title: '13단원: Excel에서 분석 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729449"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079186"
 ---
-# <a name="lesson-13-analyze-in-excel"></a>단원 13: 도구 모음
+# <a name="lesson-13-analyze-in-excel"></a>13단원: 도구 모음
   이 단원에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 Excel에서 분석 기능을 사용하여 Microsoft Excel을 열고, 모델 작업 영역에 자동으로 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 자동으로 추가합니다. Excel에서 분석 기능을 사용하면 모델을 배포하기 전에 모델 디자인의 효율성을 빠르고 손쉽게 테스트해 볼 수 있습니다. 이 단원에서는 데이터 분석을 수행하지 않습니다. 이 단원의 목표는 모델 작성자가 모델 디자인을 테스트하는 데 사용할 수 있는 도구를 익히도록 하는 것입니다. 모델 작성자를 위한 Excel에서 분석 기능을 사용하는 것과 달리 최종 사용자는 Excel 또는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]와 같은 클라이언트 보고 애플리케이션을 사용하여 배포된 모델 데이터에 연결하고 해당 데이터를 검색합니다.  
   
  이 단원을 완료하려면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]가 설치되어 있는 컴퓨터에 Excel이 설치되어 있어야 합니다. 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)을 참조하세요.  

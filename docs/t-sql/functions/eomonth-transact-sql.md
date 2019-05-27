@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - EOMONTH function
 ms.assetid: 1d060d8e-3297-4244-afef-57df2f8f92e2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fc6663d9a30e97cc80482827b4ceaca3db1553d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7fd4ca761d87df2a98a8c88ab0848ddff2e4faa
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716791"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948848"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -91,7 +91,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>3. month_to_add 매개 변수를 사용하거나 사용하지 않는 EOMONTH  
+### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. month_to_add 매개 변수를 사용하거나 사용하지 않는 EOMONTH  
   
 참고: 이러한 결과 집합에 표시된 값은 실행 날짜를 반환합니다.
         

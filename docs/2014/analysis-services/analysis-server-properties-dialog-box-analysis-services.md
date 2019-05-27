@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -16,12 +15,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062617"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **Analysis Server 속성** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  
@@ -84,7 +83,7 @@ ms.locfileid: "62636782"
   
      이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다.  
   
--   **일본어가 나 구분** 하는 데 사용 되며 두 가지 유형의 일본어가 나 문자를 구분 하는 관련 된 언어 또는 알파벳에 대해 제공 된 사전 규칙을 기준으로 데이터를 비교 합니다. 히라가나와 가타카나를 제공 합니다.  
+-   **일본어가 나 구분** 하는 데 사용 되며 두 가지 유형의 일본어가 나 문자를 구분 하는 관련 된 언어 또는 알파벳에 대해 제공 된 사전 규칙을 기준으로 데이터를 비교 합니다. 히라가나 및 가타가나.  
   
      이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 히라가나 문자와 가타카나 문자가 동일한 것으로 간주합니다.  
   

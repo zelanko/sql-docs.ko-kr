@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b537f8413ca460d8eb1991bdd71f1a73ac9ceba1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126924"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092514"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>복원 암호화 키(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 중요한 데이터를 보호합니다. 암호화된 데이터에 대한 지속적인 액세스를 보장하려면 서비스 계정이 변경된 경우, 또는 계획된 마이그레이션에 따라 암호화 키를 복원해야 하는 경우에 대비하여 암호화 키 백업을 만들어야 합니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용해서 키를 복원하는 방법에 대해 설명합니다.  

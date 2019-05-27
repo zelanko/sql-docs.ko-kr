@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
@@ -15,12 +14,12 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1dc17f3f7e1b58c871a6a1efead6338f4f0c3243
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067639"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090507"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense 구성(SQL Server Management Studio)
   대부분의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 기본적으로 설정되어 있습니다. IntelliSense 옵션을 해제하고 대신에 메뉴 명령이나 키 입력 조합을 통해 호출할 수 있습니다.  

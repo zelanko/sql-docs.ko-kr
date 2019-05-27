@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Designer
@@ -13,12 +12,12 @@ ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081774"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>차원 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 차원에 포함된 데이터를 찾아보고 특성, 계층, 수준, 특성 관계, 번역 등을 포함하여 기존 차원의 다양한 속성을 수정할 수 있습니다.  

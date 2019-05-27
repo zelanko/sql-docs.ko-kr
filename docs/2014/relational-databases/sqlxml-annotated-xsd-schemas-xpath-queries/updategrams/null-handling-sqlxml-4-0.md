@@ -12,15 +12,15 @@ helpviewer_keywords:
 - nullvalue attribute
 - null values [SQLXML]
 ms.assetid: 5e11eebb-d94e-4ce6-a6d0-870225706bc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59110e6686307e9555355fb72fefdbf6099bbc69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11f7ca96ca65ae23202b84030140e0eaef945de2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060112"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014685"
 ---
 # <a name="null-handling-sqlxml-40"></a>NULL 처리(SQLXML 4.0)
   XML 구문에서는 NULL을 부재로 해석합니다. (예를 들어, 특성 또는 요소 값이 NULL 이면 해당 특성이 나 요소가 없는 XML 문서에서.) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML은 `updg:nullvalue` 특성을 사용 하면 요소 또는 특성 값에 NULL을 지정 합니다.  

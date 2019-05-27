@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
@@ -13,12 +12,12 @@ ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088182"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>차트 탭(마이닝 모델 뷰어)
   **차트** 창을 사용하여 예측 값과 함께 시계열 모델의 학습에 사용되는 기록 데이터를 표시할 수 있습니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다. 미래 예측은 점선으로 나타납니다.  

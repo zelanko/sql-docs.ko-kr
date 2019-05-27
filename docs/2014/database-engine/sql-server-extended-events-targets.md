@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
@@ -14,12 +13,12 @@ ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7be4c1cc392516ffaf6d1e36fc10b93b517d772
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62842518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088866"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 대상은 이벤트 소비자입니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  

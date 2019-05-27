@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10426"
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ee42f145440c553422c2fac7f90a441ea00d9cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155196"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107730"
 ---
 # <a name="report-builder-f1-help"></a>보고서 작성기 F1 도움말
   이 섹션에서는 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대 한 도움말을 포함합니다. 또한 대화 상자에서 도움말 단추를 클릭 하거나 F1 키를 누르거나 도움말을 열 수 있습니다.  

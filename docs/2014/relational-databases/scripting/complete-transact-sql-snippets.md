@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], completing snippets
@@ -15,12 +14,12 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e1e6438128398b0210da20f68efcd88bb2f6eec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 103b8c23dba7119dde28a8d6e87b963400eaf0c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092573"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090592"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL 코드 조각 완성
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 조각을 스크립트에 삽입한 후 코드 조각의 내용을 편집하여 완전한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 만들 수 있습니다.  

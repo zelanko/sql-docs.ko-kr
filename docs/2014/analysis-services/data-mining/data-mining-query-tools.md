@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
@@ -19,12 +18,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084976"
 ---
 # <a name="data-mining-query-interfaces"></a>데이터 마이닝 쿼리 인터페이스
   데이터 마이닝 쿼리는 DMX(Data Mining Extensions) 언어를 기반으로 합니다. 분류, 위험 분석, 권장 사항 생성 및 선형 회귀를 포함한 모든 예측 및 모델링 태스크에 DMX를 사용합니다. 또한 모델을 처리할 때 생성된 패턴과 통계를 검색할 수 있습니다.  

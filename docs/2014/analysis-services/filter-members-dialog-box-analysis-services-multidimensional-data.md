@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.filtermembers.f1
@@ -15,12 +14,12 @@ ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c8ec7fa93dd583b0f79de00f70451eef24976dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731280"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081161"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>멤버 필터 대화 상자(Analysis Services - 다차원 데이터)
   **의** 멤버 필터 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하면 **차원 디자이너** 의 **브라우저**탭에서 차원을 찾아보는 동안 현재 수준에 대한 값 열 값, 키 열 값, 멤버 고유 이름, 멤버 이름 또는 멤버 캡션별로 차원 멤버를 필터링할 수 있습니다.  

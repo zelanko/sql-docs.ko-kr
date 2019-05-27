@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2d849a4ce57397e2031b9d347c3e9f7577035fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539080"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094286"
 ---
 # <a name="installation-type"></a>설치 유형
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 설치 유형 페이지에서 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치할지, 아니면 기존 인스턴스에 기능을 추가할지 지정할 수 있습니다.  

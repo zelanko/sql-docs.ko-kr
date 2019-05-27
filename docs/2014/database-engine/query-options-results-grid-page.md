@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
@@ -13,12 +12,12 @@ ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089013"
 ---
 # <a name="query-options-results-grid-page"></a>쿼리 옵션 결과(표 형태 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다.  
