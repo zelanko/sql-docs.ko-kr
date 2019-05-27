@@ -30,7 +30,7 @@ ms.locfileid: "65479360"
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
   
--   특성이 변경 내용 추적 그룹 안에 있어야 합니다. 자세한 내용은 [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
+-   특성이 변경 내용 추적 그룹 안에 있어야 합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>특성 값 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만들려면  
   

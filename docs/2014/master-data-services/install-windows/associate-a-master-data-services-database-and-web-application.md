@@ -48,7 +48,7 @@ ms.locfileid: "65482969"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에 대한 프로그래밍 방식의 액세스는 웹 응용 프로그램을 만들 때 자동으로 설정됩니다. 개발자가 서비스 메타데이터에 액세스하여 프로그래밍 방식의 액세스를 위한 프록시 클래스를 쉽게 생성할 수 있도록 하려면 메타데이터 게시를 사용하도록 설정합니다. 자세한 내용은 [Create Master Data Manager Web Service Proxy Classes](../develop/create-master-data-manager-web-service-proxy-classes.md)를 참조하세요.  
+-   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에 대한 프로그래밍 방식의 액세스는 웹 응용 프로그램을 만들 때 자동으로 설정됩니다. 개발자가 서비스 메타데이터에 액세스하여 프로그래밍 방식의 액세스를 위한 프록시 클래스를 쉽게 생성할 수 있도록 하려면 메타데이터 게시를 사용하도록 설정합니다. 자세한 내용은 [만들 마스터 데이터 관리자 웹 서비스 프록시 클래스](../develop/create-master-data-manager-web-service-proxy-classes.md)합니다.  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 사용자 및 그룹을 추가합니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 대한 액세스 권한이 사용자나 그룹에 부여되지 않은 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 시스템 관리자 자격 증명을 사용하여 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 열어야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../administrators-master-data-services.md) 및 [사용자 및 그룹&#40;Master Data Services&#41;](../users-and-groups-master-data-services.md)을 참조하세요.  
   

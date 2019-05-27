@@ -51,7 +51,7 @@ ms.locfileid: "65485993"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 대한 연결을 만듭니다.|[MDS 리포지토리에 연결&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|MDS 데이터를 Excel로 로드합니다.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|MDS 데이터를 Excel로 로드합니다.|[Master Data Services에서 Excel로 데이터 내보내기](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
