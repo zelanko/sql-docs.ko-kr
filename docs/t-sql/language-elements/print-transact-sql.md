@@ -20,16 +20,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705801"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980420"
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ PRINT msg_str | @local_variable | string_expr
  문자열 또는 유니코드 문자열 상수입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.  
   
  **@** *local_variable*  
- 유효한 문자 데이터 형식의 변수입니다. **@**_local\_variable_은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
+ 유효한 문자 데이터 형식의 변수입니다. **@** _local\_variable_은 **char**, **nchar**, **varchar** 또는 **nvarchar**이거나 이러한 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
   
  *string_expr*  
  문자열을 반환하는 식입니다. 연결된 리터럴 값, 함수 및 변수를 포함할 수 있습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
@@ -101,7 +101,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-conditionally-executing-print"></a>3. 조건에 따라 실행되는 PRINT 문  
+### <a name="c-conditionally-executing-print"></a>C. 조건에 따라 실행되는 PRINT 문  
  다음 예에서는 `PRINT` 문을 사용하여 조건에 따라 메시지를 반환합니다.  
   
 ```  

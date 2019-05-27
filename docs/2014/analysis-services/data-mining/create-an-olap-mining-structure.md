@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1864bd14a3822269594773afa8b01fe36723f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722750"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085246"
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP 마이닝 구조 만들기
   OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  

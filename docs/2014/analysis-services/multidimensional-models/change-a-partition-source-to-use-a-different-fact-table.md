@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f81cca9c4f7be1e0a94b9947432d1e7534994e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94ab489420b4661cea27b942c39dff91a219a38d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726847"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076708"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>다른 팩트 테이블을 사용하도록 파티션 원본 변경
   큐브에 대한 파티션을 만들 때 다양한 팩트 테이블을 사용하도록 선택할 수 있습니다. 이러한 테이블은 단일 데이터 원본 뷰, 여러 개의 데이터 원본 뷰 또는 여러 개의 데이터 원본에서 가져온 테이블일 수 있습니다. 데이터 원본 뷰에는 둘 이상의 데이터 원본에서 가져온 여러 테이블이 포함될 수도 있습니다.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa99cc5549d463b48b8eff8989df312abf5d4f0f
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 54483ab73390be5f35a30951b7b093ed1766018c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736811"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980407"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  리소스 관리자(resource governor)를 재구성하는 경우 [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)의 RECONFIGURE 옵션을 참조하세요.    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>사용 권한    
  RECONFIGURE 권한은 기본적으로 ALTER SETTINGS 권한의 피부여자로 설정됩니다. **sysadmin** 및 **serveradmin** 고정 서버 역할이 암시적으로 이 권한을 보유합니다.    
     
 ## <a name="examples"></a>예    

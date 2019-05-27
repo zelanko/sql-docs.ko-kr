@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], usage setting
@@ -14,12 +13,12 @@ ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f2ab9f98018e421bd14012af7d8bd1cb5da3a71c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077171"
 ---
 # <a name="set-usage-property"></a>Usage 속성 설정
   **에서 액세스하는 차원 디자이너의** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 특성 사용법을 설정할 수 있습니다.  

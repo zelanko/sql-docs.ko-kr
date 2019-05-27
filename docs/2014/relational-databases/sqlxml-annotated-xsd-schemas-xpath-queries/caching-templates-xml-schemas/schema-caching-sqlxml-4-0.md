@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - schemas [SQLXML]
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a9b4eced3cb4e02e2053a90edd701bda3139358
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ca536125be481766e41c3665dd313d483160ae0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209632"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013282"
 ---
 # <a name="schema-caching-sqlxml-40"></a>스키마 캐싱(SQLXML 4.0)
   Microsoft SQL Server 2000 웹 릴리스 1, Microsoft SQLXML 2.0 및 SQLXML 3.0에 대 한 xml에서 병렬 설치를 모든 버전에서 다음 레지스트리 키를 사용 하 여 캐시 스키마를 명시적으로 제어할 수 있습니다.  

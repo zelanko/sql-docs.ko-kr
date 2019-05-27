@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874864"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010286"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "62874864"
   
 -   자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름  
   
-###  <a name="HowToCreate"></a> 어떻게: FileTable 만들기  
+###  <a name="HowToCreate"></a> 방법: FileTable 만들기  
  **Transact-SQL을 사용하여 FileTable 만들기**  
  **AS FileTable** 옵션이 포함된 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
@@ -107,7 +107,7 @@ GO
   
  시스템 정의 제약 조건을 포함하여 ALTER TABLE 문을 사용하여 FileTable 네임스페이스를 사용하거나 사용하지 않도록 설정하는 방법은 [FileTable 관리](manage-filetables.md)를 참조하세요.  
   
-###  <a name="HowToChange"></a> 어떻게: FileTable의 디렉터리 변경  
+###  <a name="HowToChange"></a> 방법: FileTable의 디렉터리 변경  
  **Transact-SQL을 사용하여 FileTable의 디렉터리 변경**  
  ALTER TABLE 문을 호출하고 **FILETABLE_DIRECTORY** SET 옵션에 유효한 새 값을 제공합니다.  
   

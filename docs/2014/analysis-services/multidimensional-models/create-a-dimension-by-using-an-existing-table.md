@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -16,12 +15,12 @@ ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076415"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>기존 테이블을 사용하여 차원 만들기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  

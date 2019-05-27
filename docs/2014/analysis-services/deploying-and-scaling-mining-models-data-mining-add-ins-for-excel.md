@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - manage
@@ -13,12 +12,12 @@ ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081924"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 배포 및 확장(Excel용 데이터 마이닝 추가 기능)
   도구를 **모델 사용법** 하 고 **관리** 그룹을 관리 하 고 기존 마이닝 모델을 찾아보기 위해 제공 됩니다. 이러한 도구를 사용 하 여 인스턴스에 저장 된 모든 모델을 볼 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 뿐 아니라 추가 기능을 사용 하 여 생성 합니다.  

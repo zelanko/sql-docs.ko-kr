@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], attributes
@@ -15,12 +14,12 @@ ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da3a03fa8b7762705295870714f8128dfa9cd339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077434"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>키 열에 특성 바인딩
   이 절차에서는 차원에서 특성의 `Name` 속성 설정을 변경하는 방법에 대해 설명합니다.  

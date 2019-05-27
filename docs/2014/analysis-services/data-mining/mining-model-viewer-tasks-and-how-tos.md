@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
@@ -18,12 +17,12 @@ ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733411"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083478"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>마이닝 모델 뷰어 태스크 및 방법
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 데이터 마이닝 디자이너에는 마이닝 모델 탐색에 사용할 수 있는 여러 도구가 있습니다. 다음 항목에서는 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭 사용과 관련하여 태스크를 수행하는 방법에 대한 단계별 지침을 제공합니다.  

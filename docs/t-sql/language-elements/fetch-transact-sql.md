@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 68d27a88ec604de05f8165f6c251982e53914794
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586216"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982311"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ FETCH
   
  `@@FETCH_STATUS` 함수는 마지막 `FETCH` 문의 상태를 보고합니다. sp_describe_cursor에 의해 반환되는 커서의 fetch_status 열에도 동일한 정보가 기록됩니다. 해당 데이터에 대해 어떠한 작업을 수행하려고 시도하기 전에 반드시 이 상태 정보를 사용하여 `FETCH` 문에서 반환되는 데이터의 유효성을 확인해야 합니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `FETCH` 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="examples"></a>예  
@@ -169,7 +169,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-### <a name="c-declaring-a-scroll-cursor-and-using-the-other-fetch-options"></a>3. SCROLL 커서 선언 및 기타 FETCH 옵션 사용  
+### <a name="c-declaring-a-scroll-cursor-and-using-the-other-fetch-options"></a>C. SCROLL 커서 선언 및 기타 FETCH 옵션 사용  
  다음 예에서는 `SCROLL` 커서를 만들어 `LAST`, `PRIOR`, `RELATIVE` 및 `ABSOLUTE` 옵션 전체에 스크롤 기능을 허용하는 방법을 보여 줍니다.  
   
 ```sql  

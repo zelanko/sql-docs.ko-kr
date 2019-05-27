@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
@@ -22,12 +21,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701782"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077024"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703614"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079907"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>테이블 형식 모드에서 Analysis Services 설치
   새로운 테이블 형식 모델링 기능을 사용하기 위해 Analysis Services를 설치하는 경우 모델 유형을 지원하는 서버 모드에서 Analysis Services를 설치해야 합니다. 서버 모드는 테이블 형식이고 설치 동안 구성됩니다.  
@@ -63,6 +62,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스의 서버 모드 확인](../determine-the-server-mode-of-an-analysis-services-instance.md)   
  [메모리 내 또는 테이블 형식 모델 데이터베이스에 대 한 DirectQuery 액세스 구성](../../tabular-models/enable-directquery-mode-in-ssms.md)   
- [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../../tabular-models/tabular-models-ssas.md)  
+ [테이블 형식 모델링(SSAS 테이블 형식)](../../tabular-models/tabular-models-ssas.md)  
   
   

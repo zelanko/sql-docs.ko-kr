@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
@@ -13,12 +12,12 @@ ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081655"
 ---
 # <a name="dimension-wizard-f1-help"></a>차원 마법사 F1 도움말
    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 데이터베이스 차원을 만들 수 있습니다. 데이터베이스 차원을 만든 후 차원 디자이너를 사용하여 속성을 수정할 수 있습니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  

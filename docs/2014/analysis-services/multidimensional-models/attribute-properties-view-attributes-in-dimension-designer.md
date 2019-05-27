@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying attributes
@@ -15,12 +14,12 @@ ms.assetid: 855bef07-b72d-4ce3-bf02-de77abeee71a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec86d5e7a910b7fb17397b1601fcc912b46c4d7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727531"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077124"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>차원 디자이너에서 특성 보기
   특성은 차원 개체에 대해 생성됩니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 디자이너를 사용하여 특성을 보고 구성할 수 있습니다. 차원 디자이너의 **차원 구조** 탭에 있는 **특성** 창에 차원에 포함된 특성이 나열됩니다. 이 창에서 특성을 추가하거나 제거하고 구성할 수 있습니다. 또한 새 계층에서 수준으로 사용하거나 기존 계층에 수준으로 추가할 특성을 선택할 수도 있습니다.  

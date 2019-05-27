@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
@@ -15,12 +14,12 @@ ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726038"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075097"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>큐브, 파티션 및 차원 처리에 대한 오류 구성(SSAS - 다차원)
   큐브, 파티션 또는 차원 개체의 오류 구성 속성에 따라 처리 중에 데이터 무결성 오류가 발생하는 경우 서버가 응답하는 방법이 결정됩니다. 일반적으로 키 열의 중복 키, 누락된 키 및 Null 값에 의해 이러한 오류가 트리거되며, 오류의 원인이 되는 레코드가 데이터베이스에 추가되지 않지만 다음에 발생하는 작업을 결정하는 속성을 설정할 수 있습니다. 기본적으로 처리가 중지됩니다. 그러나 큐브를 개발하는 중에 오류가 발생하는 경우 가져온 데이터로 큐브 동작을 테스트할 수 있도록 처리를 계속할 수 있습니다(가져온 데이터가 완전하지 않은 경우 포함).  

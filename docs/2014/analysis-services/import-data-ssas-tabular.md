@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730382"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080623"
 ---
 # <a name="import-data-ssas-tabular"></a>데이터 가져오기(SSAS 테이블 형식)
   다양한 원본의 데이터를 테이블 형식 모델로 가져올 수 있습니다. 이 섹션의 항목에서는 데이터 가져오기 마법사를 사용하여 데이터를 가져올 모델 프로젝트에 연결하고 가져올 데이터를 선택하는 방법에 대해 설명합니다.  

@@ -1,23 +1,28 @@
 ---
 title: 보기 및 예측 쿼리의 결과 저장 합니다. | Microsoft Docs
-ms.date: 05/08/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: data-mining
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- viewing prediction query results
+- displaying prediction query results
+- Mining Model Prediction [Analysis Services], viewing results
+ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0273919410b5b182b535b805922ec39cdd82d6e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733741"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082709"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>예측 쿼리 결과 보기 및 저장
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   예측 쿼리 작성기를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 쿼리를 정의한 후에는 쿼리를 실행하고 쿼리 결과 보기로 전환하여 해당 결과를 확인할 수 있습니다.  
   
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 정의하는 모든 데이터 원본의 테이블에 예측 쿼리 결과를 저장할 수 있습니다. 새 테이블을 만들거나 기존 테이블에 쿼리 결과를 저장할 수 있습니다. 기존 테이블에 결과를 저장할 경우 테이블에 현재 저장되어 있는 데이터를 덮어쓰도록 선택할 수 있습니다. 덮어쓰도록 선택하지 않으면 테이블의 기존 데이터에 쿼리 결과가 추가됩니다.  

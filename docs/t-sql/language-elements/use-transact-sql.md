@@ -18,16 +18,16 @@ helpviewer_keywords:
 - context changes [SQL Server]
 - modifying database context
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f81016057c9c92f782b81243117d3f0dbe519f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f12eff6e67392fd433a6b563876912730b9de279
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741981"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980172"
 ---
 # <a name="use-transact-sql"></a>USE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -54,7 +54,7 @@ USE { database_name }
   
  USE는 컴파일과 실행 시간에 모두 실행되고 효력이 즉시 나타납니다. 따라서 USE 문 다음에 일괄적으로 나타나는 문은 지정된 데이터베이스에서 실행됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대상 데이터베이스에 대한 CONNECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

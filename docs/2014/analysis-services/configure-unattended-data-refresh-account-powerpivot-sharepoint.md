@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680564"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087416"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 무인 데이터 새로 고침 계정 구성(SharePoint용 PowerPivot)
   PowerPivot 무인 데이터 새로 고침 계정은 SharePoint 팜에서 PowerPivot 데이터 새로 고침 작업을 실행할 용도로 지정된 계정입니다. 설정한 구성 합니다 **사용 된 데이터 새로 고침 계정 관리자가 구성한** 데이터 새로 고침 일정 페이지 (아래 참조)에서 옵션입니다. 데이터 새로 고침을 예약한 통합 문서 만든 이가 PowerPivot 무인 데이터 새로 고침 계정을 사용하여 데이터 새로 고침 작업을 실행하려는 경우 이 옵션을 선택할 수 있습니다. 데이터 새로 고침 일정에서 자격 증명 옵션을 보는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731958"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081069"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>일반(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio에서 **파티션 속성** 대화 상자의 **일반** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 있는 큐브에 대해 측정값 그룹 내 파티션의 일반 속성을 설정할 수 있습니다.  

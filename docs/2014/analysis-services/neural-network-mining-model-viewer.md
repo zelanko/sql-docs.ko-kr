@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
@@ -13,12 +12,12 @@ ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62744240"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072314"
 ---
 # <a name="neural-network-mining-model-viewer"></a>신경망(마이닝 모델 뷰어)
   **신경망** 뷰어를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 로지스틱 회귀 알고리즘을 기반으로 하는 마이닝 모델을 탐색할 수 있습니다.  

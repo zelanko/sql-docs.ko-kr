@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic attribute creation
@@ -14,12 +13,12 @@ ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10c0a014cb83b8384fd7d742073140eb0e018237
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727117"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077313"
 ---
 # <a name="define-a-new-attribute-automatically"></a>자동으로 새 특성 정의
   차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  

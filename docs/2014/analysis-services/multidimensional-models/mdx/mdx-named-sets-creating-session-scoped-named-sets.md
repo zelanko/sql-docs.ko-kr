@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
@@ -14,12 +13,12 @@ ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699577"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074053"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>세션 범위 명명된 집합 만들기(MDX)
   MDX 세션에서 사용할 수 있는 명명된 집합을 만들려면 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 문을 사용하세요. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
@@ -15,12 +14,12 @@ ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 954159ba298b47c1a10a5e7baef1cff523dcc4b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706044"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086233"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>마이닝 구조에 열 추가
   데이터 마이닝 마법사에서 마이닝 구조를 정의한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 데이터 마이닝 디자이너를 사용하여 마이닝 구조에 열을 추가할 수 있습니다. 마이닝 구조 정의에 사용된 데이터 원본 뷰에 있는 열을 모두 추가할 수 있습니다.  

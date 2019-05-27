@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801637"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982533"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  이 커서를 통한 업데이트를 방지합니다. `UPDATE` 또는 `DELETE` 문의 `WHERE CURRENT OF` 절에서 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  커서 내에서 업데이트할 수 있는 열을 정의합니다. OF <column_name> [, <... n>]이 지정된 경우 나열된 열만 수정이 가능합니다. 열 목록 없이 `UPDATE`를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ OPTIMISTIC
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 *select_statement*의 절이 요청된 커서 유형의 기능과 충돌할 경우 커서를 다른 유형으로 암시적으로 변환합니다. 자세한 내용은 암시적 커서 변환을 참조하세요.  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 커서 내에서 업데이트할 수 있는 열을 정의합니다. `OF <column_name> [, <... n>]`이 제공된 경우 나열된 열만 수정이 가능합니다. `READ_ONLY` 동시성 옵션이 지정되지 않은 경우 열 목록 없이 `UPDATE`를 지정하면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
@@ -166,7 +166,7 @@ FOR UPDATE [OF *column_name* [**,**...*n*]]
   
  변수는 커서를 선언하는 *select_statement*의 일부로 사용될 수 있습니다. 커서가 선언된 후에는 커서 변수 값이 변경되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `DECLARE CURSOR` 권한은 커서에 사용된 보기, 테이블, 열에 대한 `SELECT` 권한이 있는 모든 사용자에게 기본적으로 부여됩니다.
  
 ## <a name="limitations-and-restrictions"></a>제한 사항

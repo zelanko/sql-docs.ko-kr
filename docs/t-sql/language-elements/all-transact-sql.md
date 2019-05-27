@@ -16,15 +16,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 - ALL (Transact-SQL)
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff274ae7251fdf60d6f92680f076d2e60f9eb37b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305491"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983229"
 ---
 # <a name="all-transact-sql"></a>ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 모든 쌍(_scalar_expression_**,**_x)_ 에 대해 지정된 비교 값이 TRUE일 경우 TRUE를 반환합니다. 여기서 *x*는 단일 열 집합의 값입니다. 그렇지 않으면 FALSE를 반환합니다.  
+ 모든 쌍(_scalar_expression_ **,** _x)_ 에 대해 지정된 비교 값이 TRUE일 경우 TRUE를 반환합니다. 여기서 *x*는 단일 열 집합의 값입니다. 그렇지 않으면 FALSE를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
  ALL의 경우 하위 쿼리에 의해 반환된 모든 값을 정확하게 비교하려면 *scalar_expression*이 필요합니다. 예를 들어 하위 쿼리에서 값 2와 3을 반환할 경우 *scalar_expression* <= ALL (하위 쿼리)은 2의 *scalar_expression*에 대해 TRUE로 계산됩니다. 하위 쿼리에서 값 2와 3을 반환할 경우에는 하위 쿼리 값(값 3)의 일부가 식의 조건을 만족하지 않으므로 *scalar_expression* = ALL(하위 쿼리)은 FALSE로 계산됩니다.  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - bitwise operators
 - bit manipulations
 ms.assetid: 2b994cf5-2daa-438a-b8c7-4bd8d451ac8d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98e3ffaa281ed723a5e455979fd6cb14d5d5953d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99a195bba8a81aeb9f962732365f79ee07516ab
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614391"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981300"
 ---
 # <a name="bitwise-operators-transact-sql"></a>비트 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47614391"
 |------------------|-------------------|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** 또는 **tinyint**|  
 |[bit](../../t-sql/data-types/bit-transact-sql.md)|**int**, **smallint**, **tinyint** 또는 **bit**|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** 또는 **varbinary**|  
+|[ssNoversion](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** 또는 **varbinary**|  
 |[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** 또는 **varbinary**|  
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** 또는 **varbinary**|  
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** 또는 **tinyint**|  

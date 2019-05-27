@@ -13,15 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711714"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011884"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
   전체 복구 모델을 사용하는 데이터베이스의 경우 대량 가져오기로 수행되는 모든 행 삽입 작업이 트랜잭션 로그에 기록됩니다. 전체 복구 모델을 사용할 경우 많은 양의 데이터를 가져오면 트랜잭션 로그가 빨리 채워질 수 있습니다. 이와 달리 단순 복구 모델 또는 대량 로그 복구 모델에서 대량 가져오기 작업의 로깅을 최소화하면 대량 가져오기 작업에 의해 로그 공간이 채워질 가능성이 줄어듭니다. 또한 최소 로깅은 전체 로깅보다 효율적입니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62711714"
 > [!NOTE]  
 >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
   
 -   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

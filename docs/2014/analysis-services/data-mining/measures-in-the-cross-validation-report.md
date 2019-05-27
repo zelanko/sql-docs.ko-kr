@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - root mean square error [data mining]
@@ -17,12 +16,12 @@ ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df327dbf712e82100ea0edb3c2943ade9d6e1b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721925"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084154"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
   교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  

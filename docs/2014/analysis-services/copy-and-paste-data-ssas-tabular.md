@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086965"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>데이터 복사 및 붙여넣기(SSAS 테이블 형식)
   외부 애플리케이션에서 테이블 형식의 데이터를 복사하여 모델 디자이너의 신규 또는 기존 테이블에 붙여넣을 수 있습니다. Excel 또는 Word에서 복사한 데이터와 같은 클립보드에서 붙여넣는 데이터는 HTML 형식이어야 합니다. 모델 디자이너는 데이터 형식을 자동으로 감지하여 붙여넣은 데이터에 적용합니다. 사용자가 직접 열의 데이터 형식이나 서식을 수정할 수도 있습니다.  

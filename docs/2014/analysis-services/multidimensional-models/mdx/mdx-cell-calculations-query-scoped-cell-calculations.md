@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
@@ -14,12 +13,12 @@ ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074418"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>쿼리 범위 셀 계산 만들기(MDX)
   MDX에서 `WITH` 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. `WITH` 키워드는 다음 구문을 가집니다.  

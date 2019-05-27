@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.selexistconn.f1
@@ -13,12 +12,12 @@ ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731572"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081448"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>기존 데이터 원본 연결 편집(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 기존 데이터 원본 연결의 속성을 편집하는 방법에 대해 설명합니다.  

@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154728"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981458"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 구문 표기 규칙(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "56154728"
 |&#124;(세로 막대)|대괄호 또는 중괄호 내에서 구문 항목을 구분합니다. 항목 중 하나만 사용할 수 있습니다.|  
 |`[ ]`(대괄호)|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |{}(중괄호)|필수 구문 항목입니다. 중괄호는 입력하지 않습니다.|  
-|[**,**..._n_]|앞의 항목이 _n_ 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
+|[ **,** ..._n_]|앞의 항목이 _n_ 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
 |[..._n_]|앞의 항목이 _n_ 번 반복될 수 있음을 나타냅니다. 각 항목은 공백으로 구분됩니다.|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자입니다. 이 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 대부분의 문에 세미콜론이 필요하지 않지만 이후 버전에서는 필요합니다.|  
 |\<label> ::=|구문 블록의 이름입니다. 이 규칙을 사용하여 문에서 한 곳 이상 사용할 수 있는 긴 구문의 섹션 또는 구문 단위를 그룹화하고 레이블을 지정합니다. 구문 블록이 사용될 수 있는 각 위치는 갈매기 기호로 묶인 레이블(\<label>)로 표시됩니다.<br /><br /> 집합은 식 모음(예: \<grouping set>)이고, 목록은 집합 모음(예: \<composite element list>)입니다.|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230950"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981598"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>결과 값  
- 모든 쌍(_scalar_expression_**,**_x_)에 대해 지정된 비교 값이 TRUE일 경우 SOME이나 ANY는 **TRUE**를 반환하고 그렇지 않으면 **FALSE**를 반환합니다. 여기서 *x*는 단일 열 세트의 값입니다.  
+ 모든 쌍(_scalar_expression_ **,** _x_)에 대해 지정된 비교 값이 TRUE일 경우 SOME이나 ANY는 **TRUE**를 반환하고 그렇지 않으면 **FALSE**를 반환합니다. 여기서 *x*는 단일 열 세트의 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  SOME의 경우 하위 쿼리에서 반환한 하나 이상의 값을 정확하게 비교하려면 *scalar_expression*이 필요합니다. 하위 쿼리에서 반환한 모든 값을 정확하게 비교하기 위해 *scalar_expression*이 필요한 문에 대한 자세한 내용은 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)을 참조하세요. 예를 들어 하위 쿼리에서 값 2와 3을 반환할 경우 *scalar_expression* = SOME(하위 쿼리)은 2의 *scalar_express*에 대해 TRUE로 계산됩니다. 하위 쿼리에서 값 2와 3을 반환할 경우에는 하위 쿼리 값(값 3)의 일부가 식의 조건을 만족하지 않으므로 *scalar_expression* = ALL(하위 쿼리)은 FALSE로 계산됩니다.  

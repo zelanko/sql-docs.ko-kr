@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872043"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983150"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 데이터베이스 엔진 기능의 주요 변경
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,13 @@ ms.locfileid: "58872043"
   
 -   `sys.fn_virtualfilestats`의 *TimeStamp* 열은 **int**에서 **bigint** 데이터 형식으로 확장되었습니다.  
 
--   MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 호환성 수준 130에서 사용할 수 없습니다. MD2, MD4, MD5, SHA 또는 SHA1 해시 알고리즘은 **사용하지 않는 것이 좋지만**, 데이터베이스 호환성 수준을 130보다 낮은 값으로 설정하면 사용할 수 있습니다.  
-
 -   데이터베이스 호환성 수준 130에서 **datetime** 과 **datetime2** 데이터 형식 간 암시적 변환은 밀리초의 소수 부분을 고려하여 정확도가 향상되므로 다르게 변환된 값을 생성합니다. datetime과 datetime2 데이터 형식이 혼합된 비교 시나리오가 있을 때마다 datetime2 데이터 형식으로 명시적 캐스트를 사용합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.
 
 -   데이터베이스 호환성 수준이 130 미만이면 특정 숫자 및 날짜/시간 데이터 형식 간에 암시적 변환을 수행하는 작업은 정확도가 향상되므로 다르게 변환된 값이 생성될 수 있습니다. 여기에는 `DATEDIFF` 및 `ROUND`와 같은 계산이 필요한 함수 사용이 포함됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4010261)를 참조하세요.
 
 ## <a name="previous-versions"></a> 이전 버전  
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 일부 이전 버전의 호환성이 손상되는 변경에 대한 자세한 내용은 “SQL Server 2014 데이터베이스 엔진 기능의 호환성이 손상되는 변경”을 참조하세요.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 일부 이전 버전의 호환성이 손상되는 변경에 대한 자세한 내용은 [SQL Server 2014 데이터베이스 엔진 기능의 호환성이 손상되는 변경](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)을 참조하세요.
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>이전 버전의 SQL Server에 대해 보관된 설명서
 

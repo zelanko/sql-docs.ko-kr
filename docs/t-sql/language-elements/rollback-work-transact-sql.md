@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rolling back transactions, ROLLBACK WORK
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1bce048d3504fdf5d2367bacc1aa45d8699d2b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10a10b92a18566ca7a9ffaa8d5a4a80d69f3420b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821805"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980303"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ ROLLBACK [ WORK ]
   
  트랜잭션을 중첩할 경우 ROLLBACK WORK는 항상 가장 바깥쪽 BEGIN TRANSACTION 문으로 롤백하고 @@TRANCOUNT 시스템 함수를 0으로 감소시킵니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ROLLBACK WORK 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [SAVE TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)  

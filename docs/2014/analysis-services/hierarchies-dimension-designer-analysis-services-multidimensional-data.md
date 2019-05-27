@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730717"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080785"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>계층(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **계층** 창을 사용하여 현재 선택한 차원의 계층과 수준을 관리할 수 있습니다. 자세한 내용은 [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)를 참조하세요.  

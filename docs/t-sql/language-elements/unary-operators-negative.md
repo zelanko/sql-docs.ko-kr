@@ -16,16 +16,16 @@ helpviewer_keywords:
 - negative operator (-)
 - negative values
 ms.assetid: d6c14d14-d379-403b-82db-c197ad58c896
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7a859083f4d9b5aa4a21d3a0815a79f01f09454
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ab4143facc0549a52cc271212d273fdf9c906e7b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542497"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981421"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ VariableValue NegativeValue
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-returning-the-negative-of-a-positive-constant"></a>3. 양의 상수의 음수 반환  
+### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 양의 상수의 음수 반환  
  다음 예제에서는 양의 상수의 음수를 반환합니다.  
   
 ```  
@@ -121,7 +121,7 @@ SELECT TOP (1) - 17 FROM DimEmployee;
 -17  
 ```  
   
-### <a name="d-returning-the-positive-of-a-negative-constant"></a>4. 음의 상수의 양수 반환  
+### <a name="d-returning-the-positive-of-a-negative-constant"></a>D. 음의 상수의 양수 반환  
  다음 예제에서는 음의 상수의 양수를 반환합니다.  
   
 ```  
@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 17  
 ```  
   
-### <a name="e-returning-the-negative-of-a-column"></a>5. 열의 음수 반환  
+### <a name="e-returning-the-negative-of-a-column"></a>E. 열의 음수 반환  
  다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
   
 ```  

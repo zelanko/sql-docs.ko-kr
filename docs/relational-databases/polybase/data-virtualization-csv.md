@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512960"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993937"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV 파일과 함께 외부 테이블 마법사 사용
 
@@ -26,15 +26,14 @@ ms.locfileid: "58512960"
 CTP 2.4부터 데이터 풀 및 스토리지 풀 외부 데이터 원본은 더 이상 빅 데이터 클러스터에 기본적으로 생성되지 않습니다. 마법사를 사용하기 전에 다음 Transact-SQL 쿼리를 사용하여 대상 데이터베이스에 기본 **SqlStoragePool** 외부 데이터 원본을 만듭니다. 먼저 쿼리의 컨텍스트를 대상 데이터베이스로 변경해야 합니다.
 
 ```sql
-IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+  -- Create default data sources for SQL Big Data Cluster
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+      CREATE EXTERNAL DATA SOURCE SqlDataPool
+      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-  END
+      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>외부 테이블 마법사 시작

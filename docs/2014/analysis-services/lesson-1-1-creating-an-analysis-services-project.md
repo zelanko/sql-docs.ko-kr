@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730267"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079357"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services 프로젝트 만들기
   다음 작업을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 프로젝트 `Analysis Services Tutorial`기반으로 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿. *프로젝트* 는 관련된 개체의 모음입니다. 프로젝트는 솔루션 내에 있으며 솔루션은 하나 이상의 프로젝트를 포함합니다. 자세한 내용은 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)를 참조하세요.  

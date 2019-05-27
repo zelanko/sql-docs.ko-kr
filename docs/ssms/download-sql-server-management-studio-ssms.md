@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: f5769ea232a554e8dffab197cdb7ac5b09968413
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102814"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993927"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,15 +105,11 @@ SSMS 18.0(GA)은 최신 버전의 SQL Server Management Studio입니다. 18.X �
 
 - **SSIS Integration Runtime 만들기 마법사**는 고객 계정이 둘 이상의 테넌트에 속해 있는 경우에만 하나의 테넌트에서 SQL 데이터베이스를 표시합니다.
 
-## <a name="previous-releases"></a>이전 릴리스
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
 
 [이전 SQL Server Management Studio 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
-## <a name="feedback"></a>피드백
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
-
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
 ## <a name="see-also"></a>참고 항목
 
@@ -123,5 +119,3 @@ SSMS 18.0(GA)은 최신 버전의 SQL Server Management Studio입니다. 18.X �
 - [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-의견 또는 제안 사항이 있거나 문제를 보고하려는 경우 SSMS 팀에 연락하는 가장 좋은 방법은 [UserVoice](https://aka.ms/sqlfeedback)를 사용하는 것입니다.

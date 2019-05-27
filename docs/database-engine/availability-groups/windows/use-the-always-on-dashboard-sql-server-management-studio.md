@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120200"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982798"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120200"
 -   동기화 모드 및 상태    
 -   로그 복원 시간  
   
-##  <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>사전 요구 사항  
  가용성 그룹의 주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
-### <a name="security"></a>보안  
-  
-#### <a name="permissions"></a>Permissions  
+ 
+### <a name="permissions"></a>사용 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Always On 대시보드를 시작하려면  
@@ -56,7 +54,7 @@ ms.locfileid: "49120200"
   
 2.  **Always On 고가용성** 노드를 확장하고 **가용성 그룹** 노드를 마우스 오른쪽 단추로 클릭한 다음 **대시보드 표시**를 클릭합니다.  
   
-###  <a name="change-always-on-dashboard-options"></a>Always On 대시보드 옵션 변경  
+##  <a name="change-always-on-dashboard-options"></a>Always On 대시보드 옵션 변경  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**옵션** 대화 상자를 사용하여 자동 정의된 Always On 정책 자동 새로 고침 및 사용을 위한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 대시보드 동작을 구성할 수 있습니다.  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
@@ -216,8 +214,7 @@ ms.locfileid: "49120200"
     -   보조 데이터베이스의 경우 데이터베이스에서 연결 문제로 인해 로그 동기화를 시작하지 않았거나 데이터베이스가 일시 중지되었거나, 시작 중에 전환 상태를 진행하고 있거나 역할 전환 중임을 나타냅니다.  
   
 -   **동기화 중**:
--   
-     주 복제본에서:   
+- 주 복제본에서:   
     - 주 데이터베이스에서 이 데이터베이스가 보조 데이터베이스의 검색 요청을 받을 준비가 되었음을 나타냅니다.  
     - 보조 복제본에서 해당 보조 데이터베이스에 대해 진행 중인 활성 데이터 이동이 있음을 나타냅니다. 
   

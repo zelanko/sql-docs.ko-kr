@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
@@ -13,12 +12,12 @@ ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1cf11c572860815f46e6d20a0cf1a4b82399a93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081367"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>오류 구성(마이닝 구조 대화 상자)(Analysis Services - 다차원 데이터)
   **SQL Server Management Studio** 의 **마이닝 구조 속성** 대화 상자에 있는 **오류 구성** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 마이닝 구조에 대한 오류 구성 속성을 설정할 수 있습니다.  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - marked transactions [SQL Server], SAVE TRANSACTION statement
 - duplicate savepoints
 ms.assetid: b953c3f1-f96d-42f1-95a2-30e314292b35
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b3785f3237c2b30cd7d4d4d267a058324604319
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.openlocfilehash: 873a02649eea5fb709f7c61b3c16c4a8141c08ce
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951605"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980285"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
 > [!IMPORTANT]  
 >  savepoint_name을 지정하는 ROLLBACK TRANSACTION 문은 에스컬레이션과 변환을 제외하고 저장점을 초과하여 획득한 모든 잠금을 해제합니다. 이러한 잠금은 해제되지 않으며 이전 잠금 모드로 다시 변환되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

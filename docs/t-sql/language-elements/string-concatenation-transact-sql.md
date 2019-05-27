@@ -18,16 +18,16 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a23f24cc0ad15ab217f328a1a2dd42737e7c6b57
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 7f7449741ac1c29595700c116118598a1b9cedf4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991796"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981627"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+(문자열 연결)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +106,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="c-using-multiple-string-concatenation"></a>3. 여러 문자열의 연결  
+### <a name="c-using-multiple-string-concatenation"></a>C. 여러 문자열의 연결  
  다음 예에서는 여러 개의 문자열을 하나의 긴 문자열로 연결하여 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에 부사장들의 성과 첫 번째 이니셜을 표시합니다. 성 뒤에는 쉼표, 그리고 첫 번째 이니셜 뒤에는 마침표가 추가됩니다.  
   
 ```sql  

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca4028645821b2110cf9026fe8d76724dd9b56a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d14dae215076616b89daf494b6b08dbad2cf826
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790591"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982312"
 ---
 # <a name="exists-transact-sql"></a>EXISTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,7 +113,7 @@ Willis                                             Johnson
 (3 row(s) affected)
  ```  
   
-### <a name="c-comparing-queries-by-using-exists-and--any"></a>3. EXISTS 및 = ANY를 사용하여 쿼리 비교  
+### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. EXISTS 및 = ANY를 사용하여 쿼리 비교  
  다음 예에서는 공급업체와 이름이 동일한 상점을 찾는 두 개의 쿼리를 보여 줍니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `=``ANY`를 사용합니다.  
   
 ```  
@@ -141,7 +141,7 @@ WHERE s.Name = ANY
 GO  
 ```  
   
-### <a name="d-comparing-queries-by-using-exists-and-in"></a>4. EXISTS 및 IN을 사용하여 쿼리 비교  
+### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. EXISTS 및 IN을 사용하여 쿼리 비교  
  다음 예에서는 `P`로 시작되는 부서의 직원을 찾는 쿼리를 보여 줍니다.  
   
 ```  
@@ -178,7 +178,7 @@ WHERE edh.DepartmentID IN
 GO  
 ```  
   
-### <a name="e-using-not-exists"></a>5. NOT EXISTS 사용  
+### <a name="e-using-not-exists"></a>E. NOT EXISTS 사용  
  NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예에서는 이름이 `P`로 시작되는 부서에 속하지 않는 직원을 찾습니다.  
   
 ```  
@@ -299,7 +299,7 @@ Peng                           Wu                             Quality Assurance 
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-using-exists"></a>6. EXISTS 사용  
+### <a name="f-using-exists"></a>F. EXISTS 사용  
  다음 예제에서는 `ProspectiveBuyer` 테이블의 행이 `DimCustomer` 테이블의 행과 일치하는지 여부를 식별합니다. 쿼리는 두 테이블의 `LastName` 및 `BirthDate` 값이 모두 일치하는 경우에만 행을 반환합니다.  
   
 ```  
@@ -313,7 +313,7 @@ WHERE EXISTS
     WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
 ```  
   
-### <a name="g-using-not-exists"></a>7. NOT EXISTS 사용  
+### <a name="g-using-not-exists"></a>G. NOT EXISTS 사용  
  NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `LastName` 및 `BirthDate`가 `ProspectiveBuyers` 테이블의 모든 항목에 일치하지 않는 행을 `DimCustomer` 테이블에서 찾습니다.  
   
 ```  

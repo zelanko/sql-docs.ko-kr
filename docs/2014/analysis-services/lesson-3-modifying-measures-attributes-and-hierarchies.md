@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729359"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078777"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
   처음 큐브를 정의한 후에는 큐브를 보다 유용하고 친숙하게 사용할 수 있습니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  

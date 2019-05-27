@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - granularity attribute
@@ -14,12 +13,12 @@ ms.assetid: 840280d8-20c3-46c0-99ea-62479469c36b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0f8c491696ea0ee8c8f8b613fa15110ffb7df69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c13fecba6b36a5a3ac6ac0c37f94416b612c69f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699920"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075748"
 ---
 # <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>일반 관계 및 일반 관계 속성 정의
   새 큐브 차원이나 새 측정값 그룹을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 일반 관계가 존재하는지 확인한 후 차원 용도 설정을 `Regular`로 지정하려고 합니다. 큐브 디자이너의 **차원 용도** 탭에서 일반 차원 관계를 보거나 편집할 수 있습니다.  

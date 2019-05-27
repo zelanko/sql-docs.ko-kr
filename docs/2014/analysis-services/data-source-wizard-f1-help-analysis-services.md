@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Source Wizard
@@ -13,12 +12,12 @@ ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b0e292589a669155e8dc51da942cf1eca012537
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732814"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082453"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>데이터 원본 마법사 F1 도움말(Analysis Services)
   데이터 원본 마법사를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 비즈니스 인텔리전스 프로젝트에 사용할 데이터 원본을 만듭니다.  

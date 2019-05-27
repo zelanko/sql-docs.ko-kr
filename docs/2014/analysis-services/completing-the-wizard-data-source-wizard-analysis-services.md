@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.completion.f1
@@ -13,12 +12,12 @@ ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680586"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087666"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>마법사 완료(데이터 원본 마법사)(Analysis Services)
   마법사의 **마법사 완료** 페이지를 사용하여 연결 문자열을 검토하고 새 데이터 원본의 이름을 지정할 수 있습니다.  

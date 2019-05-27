@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
@@ -17,12 +16,12 @@ ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 010b9b18be2264add14bc5242ced6a57ed8fdcca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085107"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
   데이터 마이닝 디자이너는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 사용하는 기본 환경입니다. 기존 마이닝 구조를 선택하거나 데이터 마이닝 마법사를 사용하여 새 마이닝 구조 및 마이닝 모델을 만들면 데이터 마이닝 디자이너에 액세스할 수 있습니다. 데이터 마이닝 디자이너를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  

@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720589"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012333"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS(SQL Server Integration Services) 실행
 
@@ -51,11 +51,11 @@ SSMS(SQL Server Management Studio)에서 SSIS 카탈로그 데이터베이스인
 
 Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 모든 환경에서 다음의 저장 프로시저를 호출하여 패키지를 실행할 수 있습니다.
 
-1. **[catalog].[create_execution]**. 자세한 내용은 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)를 참조하세요.
+1. **[catalog].[create_execution]** . 자세한 내용은 [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)를 참조하세요.
 
-2. **[catalog].[set_execution_parameter_value]**. 자세한 내용은 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)를 참조하세요.
+2. **[catalog].[set_execution_parameter_value]** . 자세한 내용은 [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)를 참조하세요.
 
-3. **[catalog].[start_execution]**. 자세한 내용은 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)를 참조하세요.
+3. **[catalog].[start_execution]** . 자세한 내용은 [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)를 참조하세요.
 
 자세한 내용은 다음 예제를 참조하세요.
 

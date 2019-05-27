@@ -20,16 +20,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15af126a7fd76a38fc9cffa218d4a77fc5da3e0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e6bead506a9e7b84aba4f5ec2cee1668e6483e1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602821"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982154"
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ test_expression [ NOT ] IN
  *subquery*  
  하나의 열로 구성된 결과 집합을 갖는 하위 쿼리입니다. 이 열은 *test_expression*과 데이터 형식이 같아야 합니다.  
   
- *expression*[ **,**... *n* ]  
+ *expression*[ **,** ... *n* ]  
  일치 여부를 검사할 식의 목록입니다. 모든 식은 *test_expression*과 형식이 같아야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
@@ -155,7 +155,7 @@ Tete         Mensa-Annan
 (3 row(s) affected)  
 ```  
   
-### <a name="c-using-not-in-with-a-subquery"></a>3. 하위 쿼리와 함께 NOT IN 사용  
+### <a name="c-using-not-in-with-a-subquery"></a>C. 하위 쿼리와 함께 NOT IN 사용  
  다음 예에서는 할당량이 $250,000 이하인 영업 사원을 찾습니다. `NOT IN`은 값 목록의 항목과 일치하지 않는 영업 사원을 찾습니다.  
   
 ```  
@@ -174,7 +174,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>4. IN 및 NOT IN 사용  
+### <a name="d-using-in-and-not-in"></a>D. IN 및 NOT IN 사용  
  다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `FactInternetSales` 테이블에서 찾습니다.  
   
 ```  
@@ -195,7 +195,7 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>5. 식 목록과 함께 IN 사용  
+### <a name="e-using-in-with-an-expression-list"></a>E. 식 목록과 함께 IN 사용  
  다음 예제에서는 이름이 `Mike` 또는 `Michael`인 직원을 위한 `DimEmployee` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
   
 ```  

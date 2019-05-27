@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4024ffd9bee842173998fed81c9bbf80152fa530
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126803"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011521"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48126803"
   
 2.  **데이터베이스**를 확장한 다음 전체 텍스트 중지 목록을 만들려는 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장한 다음 **전체 텍스트 중지 목록**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **스토리지**를 확장한 다음 **전체 텍스트 중지 목록**을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  **새 전체 텍스트 중지 목록**을 선택합니다.  
   
@@ -138,13 +138,13 @@ ms.locfileid: "48126803"
   
 2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장한 다음 **전체 텍스트 중지 목록**을 선택합니다.  
+3.  **스토리지**를 확장한 다음 **전체 텍스트 중지 목록**을 선택합니다.  
   
 4.  변경할 속성이 있는 중지 목록을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
 5.  [전체 텍스트 중지 목록 속성](../../database-engine/full-text-stoplist-properties.md) 대화 상자에서 다음을 수행합니다.  
   
-    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제**또는 **중지 목록 지우기**동작 중 하나를 선택합니다.  
+    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제** 또는 **중지 목록 지우기** 동작 중 하나를 선택합니다.  
   
     2.  선택한 동작에 대해 **중지 단어** 입력란이 활성화되면 단일 중지 단어를 입력합니다. 이 중지 단어는 고유해야 합니다. 즉, 선택한 언어의 이 중지 목록에 이미 있는 중지 단어는 입력할 수 없습니다.  
   

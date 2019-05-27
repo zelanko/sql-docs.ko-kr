@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deleting cursor references
 - removing cursor references
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b189c99b2a225161eaa675e749464245cd830538
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: fb66fd1627907d0e9d26f3524835f5ad126c2b57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586206"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982520"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ GO
   
 커서 변수는 명시적으로 할당 해제할 필요가 없으며 범위를 벗어나면 암시적으로 할당 해제됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `DEALLOCATE` 권한은 기본적으로 모든 유효한 사용자에게 부여됩니다.  
   
 ## <a name="examples"></a>예  

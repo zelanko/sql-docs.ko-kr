@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, cluster
@@ -17,12 +16,12 @@ ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087909"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>클러스터 다이어그램 연습(데이터 마이닝 추가 기능)
   클러스터링 모델을 만든 후 Visio를 사용 하 여 가져올 수 있습니다 합니다 **클러스터** 셰이프 및 사용자 지정 레이아웃을 개선 하 고 계속 합니다. 합니다 **Visio 용 데이터 마이닝 셰이프** 데이터 마이닝 다이어그램을 사용 하 여 작업에 대 한 다음 사용자 지정 컨트롤을 포함 합니다.  

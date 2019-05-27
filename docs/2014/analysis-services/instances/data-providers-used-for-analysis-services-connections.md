@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731133"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080095"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 연결에 사용되는 데이터 공급자
   Analysis Services는 서버 및 데이터 액세스를 위해 세 가지 데이터 공급자를 제공합니다. Analysis Services에 연결하는 모든 애플리케이션은 이러한 공급자 중 하나를 사용하여 서버 및 데이터 액세스를 수행합니다. 그중에서 ADOMD.NET 및 AMO(Analysis Services Management Objects) 공급자는 관리되는 데이터 공급자이며, Analysis Services OLE DB 공급자(MSOLAP DLL)는 네이티브 데이터 공급자입니다.  

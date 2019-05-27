@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], attributes
@@ -14,12 +13,12 @@ ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075193"
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  

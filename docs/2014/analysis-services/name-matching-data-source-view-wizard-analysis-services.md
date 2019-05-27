@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
@@ -13,12 +12,12 @@ ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743645"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072402"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>이름 일치(데이터 원본 뷰 마법사)(Analysis Services)
   **이름 일치** 페이지를 사용하여 스키마의 데이터 원본 뷰에 대해 선택한 테이블과 해당 스키마의 다른 테이블 간의 관계를 감지하는 데 사용할 조건을 선택할 수 있습니다. 테이블 간에 물리적 외래 키 관계가 없으면 이 기준이 관련 테이블을 식별하고 데이터 원본 뷰에 추가하는 데 도움이 됩니다. 이름 일치로 식별된 논리적 관계도 데이터 원본 뷰에 추가됩니다.  

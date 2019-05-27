@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -17,12 +16,12 @@ ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7035fb90d9cc84743fc484e020efd6a19a217a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b80cfeae2957753cfe96d54dcbe0052e19db741
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074473"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 내용(MDX)
   `FORMAT_STRING` 셀 속성 값은 `VALUE` 셀 속성을 `FORMATTED_VALUE` 셀 속성에 따라 형식을 지정하여 결정됩니다. `FORMAT_STRING` 셀 속성은 문자열 및 숫자 원시 값을 모두 처리할 수 있으며 값에 형식 지정 식을 적용하여 `FORMATTED_VALUE` 셀 속성에 사용할 형식 지정된 값을 반환합니다. 다음 표에서는 문자열 및 숫자 값을 처리하는 구문 및 형식 지정 문자에 대해 설명합니다.  

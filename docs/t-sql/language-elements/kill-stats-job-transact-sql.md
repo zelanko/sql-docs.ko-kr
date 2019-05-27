@@ -20,15 +20,15 @@ helpviewer_keywords:
 - KILL STATS JOB statement
 - statistics update jobs [SQL Server]
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd7b4165ae08bee50d8e236c91458927798c0954
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2a2a034348df16f7ea1f326d78322f578953757
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845061"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982138"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ KILL STATS JOB job_id
 ## <a name="remarks"></a>Remarks  
  job_id는 KILL 문의 다른 형식에 사용되는 session_id 또는 작업 단위와 관련이 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 sys.dm_exec_background_job_queue 동적 관리 뷰에서 정보를 액세스할 수 있는 VIEW SERVER STATE 권한이 있어야 합니다.  
   
  KILL STATS JOB 권한은 sysadmin과 processadmin 고정 데이터베이스 역할의 멤버에게 기본적으로 부여되며 위임할 수 없습니다.  
