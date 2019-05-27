@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b3971c156dc20d7f24f73009f1920cf10a06631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e532985c10c5fd53e4f041a2c72b675efc9d8794
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638357"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945079"
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

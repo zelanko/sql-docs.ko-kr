@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.f1
@@ -13,12 +12,12 @@ ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bfff87c2b1e37b238d2f5a46581f3da8ceb2f3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055982"
 ---
 # <a name="select-script-component-type"></a>스크립트 구성 요소 유형 선택
   **스크립트 구성 요소 유형 선택** 대화 상자를 사용하여 원본, 변환 또는 대상으로 사용하도록 미리 구성된 스크립트 변환 생성 여부를 지정할 수 있습니다.  

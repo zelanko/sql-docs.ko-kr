@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IDs [SQL Server], modules
 - module object identifiers [SQL Server]
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 32a67fb7c0d98322f67fe9bb72c2104bf82bc886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa443bae7a8268cb8d19f35ded23ecb6fa251668
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668771"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943324"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47668771"
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `@@PROCID` 함수에서 입력 매개 변수로 `OBJECT_NAME`를 사용하여 `RAISERROR` 메시지에 있는 저장 프로시저의 이름을 반환합니다.  

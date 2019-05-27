@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc69475a26bde2045c06429462b5de306c4f932f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62893248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058363"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  

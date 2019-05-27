@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36584cce341bdbe0e13b917cbe1bcc47469d0deb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078665"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>부모-자식 계층의 부모 특성 속성 정의
   부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  

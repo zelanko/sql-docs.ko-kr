@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8914ebe397d6e38b95673cef264e537ec820a31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055821"
 ---
 # <a name="set-fast-parse"></a>빠른 구문 분석 설정
   빠른 구문 분석을 사용하는 원본 또는 변환의 각 열에는 빠른 구문 분석 속성을 설정해야 합니다. 이 속성을 설정하려면 플랫 파일 원본 및 데이터 변환의 고급 편집기를 사용합니다.  

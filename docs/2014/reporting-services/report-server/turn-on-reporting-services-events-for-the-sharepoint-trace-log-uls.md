@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b292805f0cf24a220223adc3a1996b3e5effe54c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255523"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103155"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서버는 SharePoint ULS(통합 로깅 서비스) 추적 로그에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 이벤트를 기록할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 관련 범주는 SharePoint 중앙 관리의 모니터링 페이지에서 사용할 수 있습니다.  

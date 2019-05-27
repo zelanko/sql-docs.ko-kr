@@ -19,16 +19,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875217"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943501"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용하는 경우 반환 값은 *식* 매개 변수에 있는 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
- 0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
+ 0x0000 (**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   

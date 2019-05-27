@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69885ad9affb87ea160231fa6f6d42d0fef7ea6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095869"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>데이터베이스 엔진 구성 - 계정 프로비전
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모드를 설정하고 Windows 사용자 또는 그룹을 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 관리자로 추가할 수 있습니다.  

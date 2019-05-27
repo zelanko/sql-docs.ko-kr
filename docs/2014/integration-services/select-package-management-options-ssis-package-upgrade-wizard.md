@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c1f80374c24ee4db772e30eee389124feafcc79b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766705"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056025"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>패키지 관리 옵션 선택(SSIS 패키지 업그레이드 마법사)
   **패키지 관리 옵션 선택** 페이지를 사용하여 패키지 업그레이드 옵션을 지정할 수 있습니다.  

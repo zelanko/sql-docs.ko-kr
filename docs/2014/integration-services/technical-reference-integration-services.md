@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - technical reference [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7134ae3080a4130a626ff79eb3c2df54745be4d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766376"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055279"
 ---
 # <a name="technical-reference-integration-services"></a>기술 참조(Integration Services)
   도구, 언어 및 프로그래밍 참조 설명서를 찾으려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]합니다.  

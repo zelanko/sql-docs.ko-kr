@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd5affbbd6a7cee83e1b14ae1e0b42952e8f2965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824587"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943502"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |범주|형식|.NET Framework 형식|사용되는 스타일|  
 |--------------|----------|-------------------------|-----------------|  
-|숫자|bigint|Int64|NumberStyles.Number|  
+|숫자|BIGINT|Int64|NumberStyles.Number|  
 |숫자|ssNoversion|Int32|NumberStyles.Number|  
 |숫자|SMALLINT|Int16|NumberStyles.Number|  
 |숫자|TINYINT|Byte|NumberStyles.Number|  
@@ -166,7 +166,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-parse-with-implicit-setting-of-language"></a>3. 언어의 암시적 설정을 포함하는 PARSE  
+### <a name="c-parse-with-implicit-setting-of-language"></a>C. 언어의 암시적 설정을 포함하는 PARSE  
   
 ```  
 -- The English language is mapped to en-US specific culture  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
@@ -13,12 +12,12 @@ ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 24ccf065a393e9534f3f4a3f830f90e3d1d5e5cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084944"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>데이터 마이닝 쿼리 태스크 및 방법
   데이터 마이닝 모델을 사용하려는 경우 쿼리를 만드는 능력이 중요합니다. 이 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 제공된 도구를 사용하여 데이터 마이닝 모델에 대한 쿼리를 만드는 방법의 예를 보여 주는 링크를 제공합니다. 데이터 마이닝 쿼리가 무엇인지 또는 만들 수 있는 다양한 쿼리 유형에 대한 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  

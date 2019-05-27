@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679573"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086598"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>큐브 또는 모델 속성 대화 상자(SSAS)
   **의** 데이터베이스 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 큐브 또는 model 데이터베이스의 속성을 설정할 수 있습니다. **개체 탐색기** 에서 큐브 또는 모델을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 이 대화 상자를 표시할 수 있습니다.  

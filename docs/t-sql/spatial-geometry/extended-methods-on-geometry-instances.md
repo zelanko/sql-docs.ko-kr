@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Extended Methods on Geometry Instances [SQLServer]
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f802814241e8294641329d70c16a75415de79726
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e97fa36ff362889e45c12b50aa011bc6dac45dac
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523379"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938084"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>geometry 인스턴스의 확장 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

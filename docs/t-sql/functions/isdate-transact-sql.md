@@ -28,16 +28,16 @@ helpviewer_keywords:
 - time [SQL Server], validate
 - ISDATE function [SQL Server]
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 277d865ddabacf6bd6f9cd2797b06848f6978f94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682220"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947205"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ISDATE ( expression )
  문자열이거나 문자열로 변환할 수 있는 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이 식은 4,000자 미만이어야 합니다. datetime 및 smalldatetime을 제외하고 날짜 및 시간 데이터 형식은 ISDATE에 대한 인수로 허용되지 않습니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  ISDATE는 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.  
@@ -143,7 +143,7 @@ SET DATEFORMAT mdy;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>3. ISDATE를 사용하여 올바른 datetime 식 테스트  
+### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. ISDATE를 사용하여 올바른 datetime 식 테스트  
  다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  
   
 ```  

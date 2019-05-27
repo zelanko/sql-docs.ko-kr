@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b55e2faeb251f8c3a7ab5220d9716476e66639
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62667589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063632"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 각 창이 연결되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 나타내도록 상태 표시줄을 색으로 구분할 수 있습니다.  
   
 1.  **시작하기 전 주의 사항:**  [상태 표시줄 색](#StatusBarColors)  
   
-2.  **서버 상태 색을 설정 합니다.**  [개체 탐색기](#SetOEServerColor), [서버 등록](#SetRegServerColor)  
+2.  **서버 상태 색을 설정하려면:**  [개체 탐색기](#SetOEServerColor), [등록된 서버](#SetRegServerColor)  
   
-3.  **상태 색을 사용 합니다.**  [서버 색을 사용 하 여 쿼리 편집기를 엽니다](#OpenServerColor), [상태 색을 지정 하는 쿼리 편집기 열기](#OpenSpecColor)  
+3.  **상태 색을 사용하려면:**  [서버 색을 사용하여 쿼리 편집기 열기](#OpenServerColor), [상태 색을 지정하여 쿼리 편집기 열기](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> 상태 표시줄 색  
  **개체 탐색기** 또는 **등록된 서버**에서 상태 표시줄 색을 특정 서버 노드에 연결할 수 있습니다. 색은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결된 서버 노드에 대해서만 지정할 수 있고 다른 SQL Server 기술에 대한 서버 노드에 대해서는 지정할 수 없습니다. 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결할 때마다 사용자 지정 상태 표시줄 색을 지정할 수도 있습니다. 그런 다음 서버 노드에 대해 정의된 상태 색을 사용하거나 해당 편집기 창에 고유한 색을 지정하여 쿼리 편집기 창을 열 수 있습니다.  

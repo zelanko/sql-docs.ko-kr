@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_DEPENDENCY_PROBABILITY parameter
@@ -19,12 +18,12 @@ ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083894"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 알고리즘 기술 참조
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aa5b08a35a2eaf0d82b79145ecacde9d50579ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767305"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057837"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>조회 변환 편집기(일반 페이지)
   조회 변환 편집기 대화 상자의 **일반** 페이지를 사용하여 캐시 모드와 연결 형식을 선택하고 일치하는 항목이 없는 행의 처리 방법을 지정할 수 있습니다.  

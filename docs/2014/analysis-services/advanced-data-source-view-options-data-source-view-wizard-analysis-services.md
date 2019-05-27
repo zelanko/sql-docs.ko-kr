@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635599"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062850"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>고급 데이터 원본 뷰 옵션 대화 상자(데이터 원본 뷰 마법사)(Analysis Services)
   **고급 데이터 원본 뷰 옵션** 대화 상자에서는 데이터 원본 뷰에서 데이터 원본의 스키마 및 관계를 끌어와서 뷰를 작성하는 방법을 추가로 제어할 수 있습니다.  

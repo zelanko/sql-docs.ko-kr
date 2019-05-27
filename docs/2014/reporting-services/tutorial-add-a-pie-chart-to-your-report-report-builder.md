@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648349"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099044"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: (보고서 작성기) 보고서에 원형 차트 추가
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
   원형 차트와 도넛형 차트는 데이터를 전체에 대한 비율로 표시합니다. 원형 차트는 그룹 간의 비교에 가장 일반적으로 사용됩니다. 원형 및 도넛형 차트는 피라미드형 및 깔때기형 차트와 마찬가지로 셰이프 차트라고 하는 차트 그룹으로 이루어집니다. 셰이프 차트에는 축이 없습니다. 셰이프 차트에 숫자 필드를 배치하면 차트에서 각각의 값이 전체 합계에 대해 차지하는 비율이 계산됩니다.  
   
  원형 차트에 데이터 요소가 너무 많으면 데이터 요소 레이블이 복잡해져서 가독성이 떨어질 수 있습니다. 이런 경우에는 꺾은선형 차트를 사용하는 것이 좋습니다. 원형 차트는 데이터를 몇 개의 데이터 요소로 집계한 후에만 사용하는 것이 좋습니다.  

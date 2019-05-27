@@ -18,15 +18,15 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131330"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014455"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
   XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  

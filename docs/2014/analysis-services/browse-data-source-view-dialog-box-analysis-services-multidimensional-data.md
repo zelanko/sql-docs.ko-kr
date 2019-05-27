@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
@@ -16,12 +15,12 @@ ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640173"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064455"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>데이터 원본 뷰 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
   데이터 원본 뷰 찾아보기 대화 상자는 선택한 데이터 원본 뷰를 간단한 그래픽 다이어그램으로 표시합니다. 또한 데이터 원본 뷰의 이름이 대화 상자의 제목으로 표시됩니다.  

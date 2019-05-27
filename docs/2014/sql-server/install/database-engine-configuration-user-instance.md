@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - database engine configuration
@@ -14,12 +13,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162226"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095877"
 ---
 # <a name="database-engine-configuration---user-instance"></a>데이터베이스 엔진 구성 - 사용자 인스턴스
   **사용자 인스턴스** 페이지를 사용하여 관리자 권한 없이 사용자에 대한 개별 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 생성하고 관리자 역할에 사용자를 추가할 수 있습니다.  

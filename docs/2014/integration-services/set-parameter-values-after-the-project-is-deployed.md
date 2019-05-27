@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766516"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055775"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>프로젝트를 배포한 후 매개 변수 값 설정
   카탈로그에 프로젝트를 배포할 때 배포 마법사를 사용하여 서버 기본 매개 변수 값을 설정할 수 있습니다. 프로젝트가 카탈로그에 배포된 후 SSMS(SQL Server Management Studio) 개체 탐색기 또는 Transact-SQL을 사용하여 서버 기본값을 설정할 수 있습니다.  

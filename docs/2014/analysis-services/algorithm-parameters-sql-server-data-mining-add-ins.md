@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
@@ -48,12 +47,12 @@ ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 555a92bf4131ee821fa70065cf02cada87f671ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062594"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>알고리즘 매개 변수(SQL Server 데이터 마이닝 추가 기능)
   Excel용 테이블 분석 도구를 사용하여 데이터 마이닝을 수행하는 경우 데이터 마이닝 알고리즘이나 매개 변수를 구성할 필요가 없습니다. 각 도구에서 데이터를 분석하여 최적의 매개 변수를 자동으로 선택합니다. 그러나 모델을 수정하거나 마이닝 모델을 새로 만들려는 경우 Excel용 데이터 마이닝 클라이언트는 사용자가 지정할 수 있는 몇 가지 옵션을 제공합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.exportpackage.f1
@@ -15,12 +14,12 @@ ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9e8943addabc92906bd0267d951fec5bda2113a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769789"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058906"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  

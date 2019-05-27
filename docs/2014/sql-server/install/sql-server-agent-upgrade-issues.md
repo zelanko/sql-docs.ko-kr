@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server Agent
@@ -14,12 +13,12 @@ ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c58e0cb5b53d2866ff39a5c1352c7884383a0cf
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581940"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092007"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server 에이전트 업그레이드 문제
   다음 항목에서는 업그레이드에 영향을 줄 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 문제에 대해 설명하고 이러한 변화가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

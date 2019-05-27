@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215448"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105271"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

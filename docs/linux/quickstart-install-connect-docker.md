@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: cf53635478dcf697013ec9ccb42dea46c190f08b
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: 774a54ab2fbb0dfe93a338ab3ec2f28bd71fbcdc
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626727"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036919"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
 
@@ -184,19 +184,19 @@ SELECT @@SERVERNAME,
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -249,7 +249,7 @@ SELECT @@SERVERNAME,
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서는 SQL Server 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1433 포트에 노출 됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu** | SQL Server 2019 CTP 2.5 Linux 컨테이너 이미지입니다. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu** | SQL Server 2019 CTP3.0 Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 

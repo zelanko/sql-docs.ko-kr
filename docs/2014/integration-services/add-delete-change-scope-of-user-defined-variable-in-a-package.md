@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
@@ -13,12 +12,12 @@ ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 09f0b1ece44841cb608469cf2087041d20a9bf39
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061991"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경
   다음 절차에서는 **변수** 창을 사용하여 패키지에서 사용자 정의 변수를 추가, 삭제 및 변경하는 방법에 대해 설명합니다.  

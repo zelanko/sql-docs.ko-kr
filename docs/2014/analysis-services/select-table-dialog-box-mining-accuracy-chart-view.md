@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selecttable.f1
@@ -15,12 +14,12 @@ ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747215"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069273"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>테이블 선택 대화 상자(마이닝 정확도 차트 뷰)
   **테이블 선택** 대화 상자를 사용하여 선택한 마이닝 구조에 포함된 마이닝 모델의 정확도를 테스트하는 데 사용할 테이블을 선택할 수 있습니다.  

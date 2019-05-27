@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.odbcconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4489dd45616c1f2f8240f53e6a3bb0c59f459580
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057283"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 연결 관리자 UI 참조
   **ODBC 연결 관리자 구성** 대화 상자를 사용하여 ODBC 데이터 원본에 대한 연결을 추가할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
@@ -15,12 +14,12 @@ ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727970"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077862"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>측정값 그룹 바인딩 대화 상자(Analysis Services - 다차원 데이터)
   **관계 정의** 대화 상자에서 액세스할 수 있는 **측정값 그룹 바인딩** 대화 상자를 사용하여 큐브 차원의 모든 특성에 대해 Null 처리 옵션을 지정할 수 있을 뿐만 아니라 일반 차원 관계에 대해 큐브 차원의 비세분성 특성과 측정값 그룹 열 간의 직접 관계를 생성 및 수정할 수 있습니다.  

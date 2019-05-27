@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da8511361badbdfa1ded7497aaf623fdc35252d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084005"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 세그먼트화 알고리즘입니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  

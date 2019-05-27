@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701321"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946537"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 데이터베이스 함수란?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ SQL 데이터베이스에서 사용할 수 있는 기본 제공 함수의 범주
 |[커서 함수](cursor-functions-transact-sql.md)|커서에 대한 정보를 반환합니다.|  
 |[날짜 및 시간 데이터 형식 및 함수](date-and-time-data-types-and-functions-transact-sql.md)|날짜 및 시간 입력 값에 대한 작업을 수행하며 문자열, 숫자 또는 날짜와 시간 값을 반환합니다.|  
 |[JSON 함수](json-functions-transact-sql.md)|JSON 데이터를 검증, 쿼리 또는 변경합니다.|  
-|[논리 함수](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|논리 연산을 수행합니다.|  
+|[논리 함수](logical-functions-choose-transact-sql.md)|논리 연산을 수행합니다.|  
 |[수치 연산 함수](mathematical-functions-transact-sql.md)|함수에 매개 변수로 제공되는 입력 값을 기반으로 하여 계산 작업을 수행하고 숫자 값을 반환합니다.|  
 |[메타데이터 함수](metadata-functions-transact-sql.md)|데이터베이스와 데이터베이스 개체에 대한 정보를 반환합니다.|  
 |[보안 함수](security-functions-transact-sql.md)|사용자와 역할에 대한 정보를 반환합니다.|  

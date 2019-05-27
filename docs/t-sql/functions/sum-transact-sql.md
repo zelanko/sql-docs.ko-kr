@@ -22,16 +22,16 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a91969bcde67d7f316281c12ab80c85393ed06e3
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 90dc7e15fdbe450eb57642b7a4f7be0bb834c063
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232597"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943260"
 ---
 # <a name="sum-transact-sql"></a>SUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  상수, 열 또는 함수이며 산술, 비트 및 문자열 연산자의 조합입니다. *expression*은 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 작업이 수행되는 논리적 순서를 결정합니다. _order\_by\_clause_는 필수입니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -68,9 +68,9 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 |식 결과|반환 형식|  
 |-----------------------|-----------------|  
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**tinyint**|**ssNoversion**|  
+|**smallint**|**ssNoversion**|  
+|**ssNoversion**|**ssNoversion**|  
 |**bigint**|**bigint**|  
 |**decimal** 범주(p, s)|**decimal(38, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
@@ -181,7 +181,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-a-simple-sum-example"></a>3. 간단한 SUM 예  
+### <a name="c-a-simple-sum-example"></a>C. 간단한 SUM 예  
  다음 예는 2003년 판매된 각 제품의 총 수를 반환합니다.  
   
 ```  
@@ -207,7 +207,7 @@ ProductKey  TotalPerProduct
 225          7956.1500
  ```
   
-### <a name="d-calculating-group-totals-with-more-than-one-column"></a>4. 두 개 이상의 열에 대한 그룹 합계 계산  
+### <a name="d-calculating-group-totals-with-more-than-one-column"></a>D. 두 개 이상의 열에 대한 그룹 합계 계산  
  다음 예에서는 `ListPrice` 테이블에 나열된 각 색에 대한 `StandardCost` 및 `Product`의 합계를 계산합니다.  
   
 ```  

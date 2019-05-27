@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -17,12 +16,12 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102186"
 ---
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.  

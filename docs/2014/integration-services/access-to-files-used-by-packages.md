@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -20,12 +19,12 @@ ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772259"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062184"
 ---
 # <a name="access-to-files-used-by-packages"></a>패키지에서 사용되는 파일 액세스
   패키지 보호 수준은 패키지 외부에 저장된 파일을 보호하지 않습니다. 이러한 파일은 다음과 같습니다.  

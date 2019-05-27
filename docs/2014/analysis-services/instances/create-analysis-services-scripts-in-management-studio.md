@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
@@ -15,12 +14,12 @@ ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080104"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 Analysis Services 개체 및 태스크를 스크립팅하는 데 사용할 수 있는 스크립트 생성 기능, 템플릿 및 편집기가 포함되어 있습니다.  

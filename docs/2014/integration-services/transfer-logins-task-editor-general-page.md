@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 559347a0e092797732a4f3bffe424aac7dfe360f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054957"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>로그인 전송 태스크 편집기(일반 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 로그인 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  

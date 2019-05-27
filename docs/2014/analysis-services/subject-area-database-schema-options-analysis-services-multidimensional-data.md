@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
@@ -13,12 +12,12 @@ ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e608f6ca210f1d86a58b469145a9840f7c25ba2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62758492"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067981"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>주제 영역 데이터베이스 스키마 옵션(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **주제 영역 데이터베이스 스키마 옵션** 페이지를 사용하여 스키마 생성 방법을 제어하고 데이터 유지 방법을 정의할 수 있습니다.  

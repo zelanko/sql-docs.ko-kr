@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0eff54a87d3b38f1cf027d272d75c36d2e15316
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890429"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057708"
 ---
 # <a name="merge-join-transformation-editor"></a>병합 조인 변환 편집기
   **병합 조인 변환 편집기** 대화 상자를 사용하여 조인 유형, 조인 열 및 조인으로 결합된 두 입력을 병합하기 위한 출력 열을 지정할 수 있습니다.  

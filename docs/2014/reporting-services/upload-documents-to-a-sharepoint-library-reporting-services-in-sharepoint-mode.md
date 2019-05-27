@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,12 +14,12 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647629"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098834"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
   SharePoint 라이브러리에 보고서 정의 및 보고서 모델을 업로드할 수 있습니다. 보고서 서버 항목을 업로드하는 경우 라이브러리 또는 라이브러리 내의 폴더를 선택해야 합니다. 보고서 서버 항목을 목록 또는 페이지에 업로드할 수는 없습니다.  

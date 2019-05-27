@@ -20,15 +20,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89cd8bfb5a3098151565252e1a1fe5147c8aa6f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44cb6fa7f32616f7a1616c334c438b7a752546e3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740671"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946059"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ FILE_IDEX ( file_name )
 파일 이름에 대해 파일 ID 값 ‘FILE_IDEX’를 반환하는 **sysname** 형식의 식입니다. 
   
 ## <a name="return-types"></a>반환 형식  
-**int**  
+**ssNoversion**  
   
 오류 발생 시 **NULL**  
   
@@ -96,7 +96,7 @@ File ID
 2  
 ```  
   
-### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>3. 전체 텍스트 카탈로그 파일의 파일 ID 검색  
+### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. 전체 텍스트 카탈로그 파일의 파일 ID 검색  
 이 예에서는 전체 텍스트 파일의 파일 ID를 반환합니다. T-SQL 코드 조각은 `sys.database_files` 카탈로그 뷰에서 논리적 파일 이름을 선택합니다. 여기서 파일 형식은 `4`(전체 텍스트)와 같습니다. 이 코드는 전체 텍스트 카탈로그가 없을 경우 ‘NULL’을 반환합니다.
   
 ```sql  

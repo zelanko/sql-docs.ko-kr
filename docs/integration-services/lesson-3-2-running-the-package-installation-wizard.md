@@ -11,14 +11,18 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290289"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721971"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
   
 패키지 설치 마법사는 패키지를 설치하고 구성하는 단계를 안내합니다. 배포 번들을 복사한 컴퓨터인 대상 컴퓨터의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 패키지를 설치합니다. 또한 패키지가 아닌 파일을 마법사에서 설치하는 C:\DeploymentTutorialInstall 폴더를 만듭니다.  

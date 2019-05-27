@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -18,12 +17,12 @@ ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5333f3d56713d5b37ceabe92e831113a66bc491b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 09a251ad3aaa288c13e4ded43ff1985bdfb10b7c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62698365"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107494"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 대한 DMX(Data Mining Expressions) 쿼리 및 MDX(Multidimensional Expressions) 쿼리를 작성하기 위한 그래픽 쿼리 디자이너를 제공합니다. 이 항목에서는 DMX 쿼리 디자이너에 대해 설명합니다. MDX 쿼리 디자이너에 대한 자세한 내용은 [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md)를 참조하십시오.  

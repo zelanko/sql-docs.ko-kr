@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connectionmanager.f1
@@ -13,12 +12,12 @@ ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a025826262097ef23da8a54bbbefd6781e601f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767165"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057381"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
   **OData 연결 관리자 편집기** 대화 상자를 사용하여 OData 원본에 연결을 추가하거나 기존 연결을 편집할 수 있습니다.  

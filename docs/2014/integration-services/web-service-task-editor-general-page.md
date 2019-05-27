@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877693"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054535"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ffe6718eca0e385941e102801e218acc8680711f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed5486e9f48bc0f0ca5ab4b6af031571f4f3580d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695701"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945943"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 |**IsDefault**|파일 그룹이 기본 파일 그룹입니다.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 잘못된 입력|  
   
 ## <a name="return-types"></a>반환 형식  
-**int**  
+**ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
 *filegroup_name*은 **sys.filegroups** 카탈로그 뷰의 **name** 열과 일치합니다.  

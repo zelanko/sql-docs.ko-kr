@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
@@ -13,12 +12,12 @@ ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dd19b496c82fd8bc302f86de14894dbc7739166f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65484026"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054135"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>시스템 관리자 계정 변경(Master Data Services)
   로 지정 된 사용자 계정을 변경할 수 있습니다는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자입니다.  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OGC Static Geometry Methods [SQL Server]
 ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 39c21f0591b6777afac7c06df03525ccd24c3cbb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b6f5a055861ea2d3f0a7cab91fbab3e01832ffba
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520908"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937470"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 정적 기하 도형 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

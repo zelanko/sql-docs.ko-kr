@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
@@ -15,18 +14,18 @@ ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa795467e603ff8758e76fff6a3cc7fea48e4c87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056972"
 ---
 # <a name="package-configurations-organizer"></a>패키지 구성 도우미
   **패키지 구성 도우미** 대화 상자를 사용하여 패키지 구성을 설정하고, 현재 패키지에 대한 구성 목록을 보고, 구성을 로드해야 하는 기본 순서를 지정할 수 있습니다.  
   
 > [!NOTE]  
->  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
+>  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
  여러 구성에서 동일한 속성을 업데이트하는 경우 구성 목록에서 더 아래에 있는 구성의 값이 목록에서 위에 있는 구성의 값을 대체합니다. 패키지를 실행하면 마지막으로 속성에 로드된 값이 사용됩니다. 또한 패키지가 XML 구성 파일 등의 직접 구성과 환경 변수 등의 간접 구성을 조합해서 사용하는 경우 직접 구성의 위치를 가리키는 간접 구성이 목록에서 더 위에 있어야 합니다.  
   

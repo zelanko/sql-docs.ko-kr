@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpolygonlayerproperties.general.f1
@@ -21,12 +20,12 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104615"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경(보고서 작성기 및 SSRS)
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  

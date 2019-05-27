@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
@@ -21,12 +20,12 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 672946f02c04af329e429db41b35bcfe9c88d3c7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107184"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 디자이너에서 데이터 집합 쿼리를 만드는 데 사용할 수 있는 다양한 쿼리 디자인 도구를 제공합니다. 작업하는 데이터 원본의 유형에 따라 특정 쿼리 디자이너를 사용할 수 있는지 여부가 결정됩니다. 또한 일부 쿼리 디자이너에서는 비주얼 모드로 작업할지 쿼리 언어로 직접 작업할지 선택할 수 있도록 대체 모드를 제공합니다. 이 항목에서는 각 도구를 소개하고 각 도구가 지원하는 데이터 원본 유형에 대해 설명합니다. 이 항목에서 설명하는 도구는 다음과 같습니다.  

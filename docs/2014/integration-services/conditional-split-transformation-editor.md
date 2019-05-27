@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835189"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060891"
 ---
 # <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
   **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  

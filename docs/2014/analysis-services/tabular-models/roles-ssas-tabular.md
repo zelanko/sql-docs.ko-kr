@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756903"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066625"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  

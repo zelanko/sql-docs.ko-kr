@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Expression Builder [Integration Services]
@@ -17,12 +16,12 @@ ms.assetid: 376502e7-8ea5-46a0-8e3b-bbdbe730b698
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b0b6aa04e1e4fd9d578a60a1f821e91b0f02131
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769709"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058903"
 ---
 # <a name="expression-builder-integration-services"></a>식 작성기(Integration Services)
   **식 작성기** 대화 상자는 속성 식에 사용할 식을 작성하기 위한 그래픽 사용자 인터페이스를 제공합니다. **디자이너의 사용자 지정 태스크 대화 상자 및** 의 [!INCLUDE[ssIS](../includes/ssis-md.md)] 속성 **창에서** 식 작성기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자에 액세스할 수 있습니다.  

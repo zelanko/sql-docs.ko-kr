@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801837"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942897"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ ms.locfileid: "56801837"
 
 **캐스트**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **변환**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -181,7 +182,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**3**|불필요한 공백을 유지하고 제한된 내부 DTD 하위 집합 처리를 설정합니다.|  
   
 ## <a name="binary-styles"></a>이진 스타일
-**binary(n)**, **char(n)**, **varbinary(n)** 또는 **varchar(n)** *expression* 식인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
+**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** *expression* 식인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
   
 |값|출력|  
 |---|---|
@@ -221,7 +222,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 ## <a name="output-collation"></a>출력 데이터 정렬  
 CAST 또는 CONVERT 함수가 문자열을 출력하고 문자열 입력을 받으면 출력과 입력은 동일한 데이터 정렬 및 데이터 정렬 레이블을 가집니다. 입력이 문자열이 아닌 경우에는 출력에서 데이터베이스의 기본 데이터 정렬을 사용하며 강제할 수 있는 기본값의 데이터 정렬 레이블을 사용합니다. 자세한 내용은 [데이터 정렬 선행 규칙&#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)을 참조하세요.
   
-출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+출력에 다른 데이터 정렬을 할당하려면 CAST 또는 CONVERT 함수의 결과 식에 COLLATE 절을 적용합니다. 예를 들어
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -284,14 +285,14 @@ Gail        Erickson      Ms.    *
 |보낸 사람|수행할 작업|동작|  
 |---|---|---|
 |**numeric**|**numeric**|반올림|  
-|**numeric**|**int**|잘라내기|  
+|**numeric**|**ssNoversion**|잘라내기|  
 |**numeric**|**money**|반올림|  
-|**money**|**int**|반올림|  
+|**money**|**ssNoversion**|반올림|  
 |**money**|**numeric**|반올림|  
-|**float**|**int**|잘라내기|  
+|**float**|**ssNoversion**|잘라내기|  
 |**float**|**numeric**|반올림<br /><br /> 과학적 표기법을 사용하는 **float** 값을 **decimal** 또는 **numerci**로 변환할 경우 전체 자릿수 값이 17자리로 제한됩니다. 17자리를 넘는 값은 0으로 반올림됩니다.|  
 |**float**|**datetime**|반올림|  
-|**datetime**|**int**|반올림|  
+|**datetime**|**ssNoversion**|반올림|  
   
 예를 들어 10.6496 및 -10.6496을 **int** 또는 **numeric** 형식으로 변환할 경우 잘리거나 반올림될 수 있습니다.
   

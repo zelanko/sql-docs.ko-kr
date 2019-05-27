@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.miningmodel.f1
@@ -15,12 +14,12 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62899916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059930"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>데이터 마이닝 쿼리 태스크 편집기(마이닝 모델 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **마이닝 모델** 탭을 사용하여 사용할 마이닝 구조와 마이닝 모델을 지정할 수 있습니다.  

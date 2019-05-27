@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 91222c11318ffd88a152b24b284bdf8b11ed6d7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209109"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105558"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>차트의 여러 계열(보고서 작성기 및 SSRS)
   차트에 여러 개의 계열이 있는 경우에는 계열을 비교할 최선의 방법을 결정해야 합니다. 각 계열의 상대적인 비율을 표시하려면 누적 차트를 사용할 수 있습니다. 공통 범주(x) 축을 공유하는 두 개의 계열만 비교할 때는 보조 축을 사용합니다. 이 방법은 가격과 볼륨, 수입과 세금 같은 두 개의 관련된 데이터 계열을 표시할 때 유용합니다. 차트를 알아보기 어려울 때는 여러 개의 차트 영역을 사용하여 각 계열을 시각적으로 분리하는 방법을 고려하십시오.  

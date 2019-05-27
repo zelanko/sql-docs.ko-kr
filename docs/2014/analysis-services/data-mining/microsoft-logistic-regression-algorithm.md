@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733751"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083963"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 로지스틱 회귀 알고리즘
   로지스틱 회귀는 이진 결과 모델링에 사용되는 유명한 통계 기법입니다.  

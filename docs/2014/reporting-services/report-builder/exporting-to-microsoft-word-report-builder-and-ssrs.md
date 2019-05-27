@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657969"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107883"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
   Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. 형식은 Office Open XML입니다.  

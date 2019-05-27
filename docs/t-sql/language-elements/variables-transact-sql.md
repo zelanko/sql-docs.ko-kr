@@ -10,16 +10,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63ca67092d534377278e19936b92cb1f8493e9d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0a3bff6159d098ce8a53631e4f4da49f81fba9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663897"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980152"
 ---
 # <a name="variables-transact-sql"></a>변수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -147,7 +147,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-변수에는 또한 선택 목록에서 참조되어 할당된 값이 있을 수 있습니다. 변수가 선택 목록에서 참조되면 이 변수에 스칼라 값이 할당되거나 SELECT 문이 행을 하나만 반환해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+변수에는 또한 선택 목록에서 참조되어 할당된 값이 있을 수 있습니다. 변수가 선택 목록에서 참조되면 이 변수에 스칼라 값이 할당되거나 SELECT 문이 행을 하나만 반환해야 합니다. 예를 들어  
 
 ```sql
 USE AdventureWorks2014;

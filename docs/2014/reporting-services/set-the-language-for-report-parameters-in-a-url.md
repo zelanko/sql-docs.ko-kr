@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - overriding report language settings
@@ -18,12 +17,12 @@ ms.assetid: e1ccf22f-80d6-45bc-aae0-f5f263275092
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46b00567781ac2a87bb2d5ff48eaa9d7cd04058f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8087a181906517bb60d4cd6839eed0681f52a5eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223195"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101329"
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>URL에 보고서 매개 변수 언어 설정
   *rs:ParameterLanguage* URL액세스 매개 변수를 사용하면 날짜, 시간, 통화, 숫자 등의 culture 구분 보고서 매개 변수가 브라우저 언어를 사용하여 해석되는 문제가 완화됩니다. *rs:ParameterLanguage*를 사용하면 URL이 브라우저와 상관없이 해석됩니다. 예를 들어 보고서 서버가 독일어 지역 설정으로 설정되었지만 사용자가 영어-미국으로 설정된 브라우저를 사용하여 URL을 통해 보고서에 액세스한다면 보고서 서버에 전달되는 매개 변수 값이 잘못 해석됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
@@ -13,12 +12,12 @@ ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b3759aeb64524386ed0ac522e47e1de3ff99c18a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f62b8d690e71c8efdfc33c15966758d10a4412af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179043"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063362"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 디버거
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.  
