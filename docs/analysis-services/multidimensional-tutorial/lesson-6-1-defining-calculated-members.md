@@ -58,7 +58,7 @@ ms.locfileid: "65404055"
   
 5.  **계산 도구** 창의 **메타데이터** 탭에서 **계산 식** 창의 **식** 상자로 **Internet Sales-Sales Amount** 를 끌어옵니다.  
   
-6.  **식** 상자에서**+**[Measures].[Internet Sales-Sales Amount] **뒤에 더하기 기호(**)를 입력합니다.  
+6.  **식** 상자에서 **+** [Measures].[Internet Sales-Sales Amount] **뒤에 더하기 기호(**)를 입력합니다.  
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   

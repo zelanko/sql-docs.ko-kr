@@ -64,7 +64,7 @@ ms.locfileid: "66107365"
   
  예를 들어 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 확장 프로그램은 OLEDB-MD입니다.  
   
- 많은 타사 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=51456) 와 타사 사이트에서 다운로드할 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공개 포럼에서 타사 데이터 공급자에 대한 정보를 검색할 수도 있습니다.  
+ 많은 타사 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=51456) 와 타사 사이트에서 다운로드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공개 포럼에서 타사 데이터 공급자에 대한 정보를 검색할 수도 있습니다.  
   
 > [!NOTE]  
 >  표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 제공하는 기능 중 일부를 지원하지 않을 수 있습니다. 또한 일부 OLE DB 데이터 공급자 및 ODBC 드라이버의 경우 보고서를 제작하고 미리 보는 데 사용할 수 있지만 보고서 서버에 게시된 보고서를 지원하지 않을 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet은 보고서 서버에서 지원되지 않습니다. 자세한 내용은 [데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자&#40;SSRS&#41;](data-processing-extensions-and-net-framework-data-providers-ssrs.md)를 참조하세요.  
@@ -184,9 +184,9 @@ ms.locfileid: "66107365"
   
  이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본의 모델도 만들 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본의 모델도 만들 수 있습니다.  
   
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 데이터 처리 확장 프로그램을 사용하려면 보고서에 사용할 데이터 원본의 버전을 기반으로 추가 데이터 공급자 계층을 선택해야 합니다. 특정 데이터 공급자를 선택하지 않으면 기본값이 제공됩니다. **데이터 원본** 또는 **공유 데이터 원본** 대화 상자의 [편집](../data-source-properties-dialog-box-general.md) 단추를 통해 액세스하는 [연결 속성](../shared-data-source-properties-dialog-box-general.md) 대화 상자를 사용하여 특정 데이터 공급자를 선택합니다.  
@@ -203,7 +203,7 @@ ms.locfileid: "66107365"
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ####  <a name="OLEDBAS9"></a> Analysis Services 9.0 용 OLE DB  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 9.0에 연결하려면 the data source type **OLE DB**를 선택한 다음 이름으로 기본 데이터 공급자를 선택합니다. 데이터 처리 확장 프로그램과 데이터 공급자의 이러한 조합은 x86 및 x64 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 9.0에 연결하려면 the data source type **OLE DB**를 선택한 다음 이름으로 기본 데이터 공급자를 선택합니다. 데이터 처리 확장 프로그램과 데이터 공급자의 이러한 조합은 x86 및 x64 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
   
 > [!NOTE]  
 >  이 데이터 처리 확장 프로그램은 서버 집계 및 쿼리 매개 변수를 지원하지 않으며 확장 필드 속성의 자동 매핑 기능을 포함하지 않습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 권장되는 데이터 공급자는 **Microsoft SQL Server Analysis Services**입니다.  

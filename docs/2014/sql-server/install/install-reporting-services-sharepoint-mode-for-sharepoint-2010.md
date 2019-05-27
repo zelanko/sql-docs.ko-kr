@@ -84,7 +84,7 @@ ms.locfileid: "66094527"
   
 8.  **설치 역할** 페이지에서 **SQL Server 기능 설치** 를 클릭합니다.  
   
-      **다음**을 클릭합니다.  
+     **다음**을 클릭합니다.  
   
      ![설치 역할을 위한 SQL Server 기능 설치](../../../2014/sql-server/install/media/rs-setuprole.gif "설치 역할을 위한 SQL Server 기능 설치")  
   
