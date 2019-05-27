@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c27057a5968ac9c415852d7cb934251056af9d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064896"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>추적 템플릿 속성 편집(일반 탭)
   **추적 템플릿 속성** 대화 상자의 **일반** 탭에서 제공하는 다음 옵션을 통해 기존 추적 템플릿을 보거나 편집할 수 있습니다. 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 가리킨 다음 **템플릿 편집**을 클릭합니다.  

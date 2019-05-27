@@ -17,15 +17,15 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff7cd9e82f2e70e39b02f10726acbae657ad670c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3021bfc31b6fe8e5681ca220434f8644b6a4afe9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741201"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945529"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 ## <a name="remarks"></a>Remarks  
 이 함수는 인증서의 개인 키로 데이터의 암호를 해독합니다. 비대칭 키를 사용하는 암호화 변환에는 상당한 리소스가 사용됩니다. 따라서 개발자는 일상적인 사용자 데이터 암호화/암호 해독에 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 및 DECRYPTBYCERT의 사용을 피하는 것이 좋습니다.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 `DECRYPTBYCERT`는 인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

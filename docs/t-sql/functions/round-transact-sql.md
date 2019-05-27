@@ -16,16 +16,16 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b03097182a06515fd820bef96ea4eb1747eaf329
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802047"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947394"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +56,9 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 |식 결과|반환 형식|  
 |-----------------------|-----------------|  
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**tinyint**|**ssNoversion**|  
+|**smallint**|**ssNoversion**|  
+|**ssNoversion**|**ssNoversion**|  
 |**bigint**|**bigint**|  
 |**decimal** 및 **numeric** 범주(p, s)|**decimal(p, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
@@ -78,7 +78,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
-|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>예  
   

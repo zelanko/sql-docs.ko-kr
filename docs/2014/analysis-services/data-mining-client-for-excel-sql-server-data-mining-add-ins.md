@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Client
@@ -15,12 +14,12 @@ ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62692022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086427"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel용 데이터 마이닝 클라이언트(SQL Server 데이터 마이닝 추가 기능)
   Excel용 데이터 마이닝 클라이언트는 데이터 정리부터 모델 작성 및 예측 쿼리에 이르는 일반적인 데이터 마이닝 작업을 수행할 수 있는 도구 집합입니다. Excel 테이블 또는 범위에서 데이터를 사용하거나 외부 데이터 원본에 액세스할 수 있습니다.  

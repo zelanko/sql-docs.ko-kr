@@ -24,16 +24,16 @@ helpviewer_keywords:
 - groups [SQL Server], members
 - members [SQL Server], verifying
 ms.assetid: 77cb68a0-19b7-4fe1-ab17-e5587699631b
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b7da52e047b004fe4be394c72a784dfe3ccec21
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d45b1d74242476da155e387f8ec00f8e4e23278f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391276"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946980"
 ---
 # <a name="ismember-transact-sql"></a>IS_MEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ IS_MEMBER ( { 'group' | 'role' } )
  확인할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할의 이름입니다. *역할*은 **sysname**이며 데이터베이스 고정 역할이나 사용자 정의 역할은 포함할 수 있으나 서버 역할은 포함할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  IS_MEMBER는 다음과 같은 값을 반환합니다.  

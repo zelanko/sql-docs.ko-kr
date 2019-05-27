@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
@@ -13,12 +12,12 @@ ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794284"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065856"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **번역** 탭에 있는 **번역 세부 정보** 창을 사용하여 현재 선택한 큐브의 번역을 정의 및 관리할 수 있습니다.  

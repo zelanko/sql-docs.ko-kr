@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termextraction.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055265"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62926825"
  점수를 용어의 빈도로 지정합니다.  
   
  **TFIDF**  
- 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 용어 빈도 같이 정의 역 문서 빈도 같습니다. 용어 T의 TFIDF = (T의 빈도) * log ((입력의 #rows) / (#rows))  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))  
   
  **빈도 임계값**  
  단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  

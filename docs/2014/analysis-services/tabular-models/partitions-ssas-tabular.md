@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 708b9bdf-8c0b-4476-809a-8f616be23a58
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795500"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066898"
 ---
 # <a name="partitions-ssas-tabular"></a>파티션(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 파티션 대화 상자를 사용하여 만든 파티션은 모델 작업 영역 데이터베이스에 적용됩니다. 모델을 배포하면 모델 작업 영역 데이터베이스에 대해 정의된 파티션이 배포된 model 데이터베이스에 복제됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 model 데이터베이스에 대해 파티션을 추가로 만들고 관리할 수 있습니다.  이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 파티션 관리자 대화 상자를 사용하여 모델 제작 중에 만든 파티션을 설명합니다. 배포된 모델의 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
@@ -45,7 +44,7 @@ ms.locfileid: "62795500"
 ### <a name="partitions-in-a-deployed-model-database"></a>배포된 model 데이터베이스의 파티션  
  모델을 배포하면 배포된 model 데이터베이스에 대한 파티션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 데이터베이스 개체로 나타납니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 모델에 대해 파티션을 만들고 편집, 병합 및 삭제할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포된 모델에 대한 파티션 관리는 이 항목에서 다루지 않습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 태스크  
+##  <a name="bkmk_related_tasks"></a> 관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  

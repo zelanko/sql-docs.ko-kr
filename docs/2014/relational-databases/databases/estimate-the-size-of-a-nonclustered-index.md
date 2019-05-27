@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -20,12 +19,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62871412"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054116"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
   다음 단계에 따라 비클러스터형 인덱스를 저장하는 데 필요한 공간을 예측합니다.  

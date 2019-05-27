@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 461e6d8a2e71b0d2e56bea083597d6c9bd17ccea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4b5061d6840052f74c8c7c15db7f2482e9e31d2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816997"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935897"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47816997"
 |24413|{0} 곡선에 두 개의 겹치는 가장자리가 있으므로 유효하지 않습니다.|  
 |24414|{0} 곡선의 가장자리가 다른 {1} 곡선의 가장자리와 겹치므로 유효하지 않습니다.|  
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
-|24416|ph x="2" /&gt; 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
+|24416|{1} 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
 ## <a name="examples"></a>예  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  

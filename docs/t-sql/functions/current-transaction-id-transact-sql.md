@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - CURRENT_TRANSACTION_ID function
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f348eee57b5df86b437a1ebd6a68544e7b4c7c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d81571dbde882d1ec6b91e2a05933aeb178e19d4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604821"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947918"
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID(Transact_SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ CURRENT_TRANSACTION_ID( )
 ## <a name="return-value"></a>반환 값  
 [sys.dm_tran_current_transaction&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)에서 가져온 현재 세션에서 현재 트랜잭션의 트랜잭션 ID입니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 모든 사용자는 현재 세션의 트랜잭션 ID를 반환할 수 있습니다.
   
 ## <a name="examples"></a>예  

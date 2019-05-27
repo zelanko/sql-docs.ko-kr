@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 55b872b46b5e0007d0651e190f6698ff0cfb50ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056225"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 패키지 예약
   다음 절차에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계를 통해 패키지 실행을 자동화하여 패키지를 실행하는 단계를 제공합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "62766885"
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
-    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: 로 관리 되는 파일 시스템에 추가로 폴더를 지정 하거나 다른 폴더를 지정할 수 있습니다 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대 한 구성 파일을 수정 하 여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]입니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.|  
+    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.|  
     |**파일 시스템**|컴퓨터의 임의 폴더에 저장된 패키지입니다.|  
   
      **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  

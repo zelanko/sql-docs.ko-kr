@@ -17,16 +17,16 @@ helpviewer_keywords:
 - UNICODE function
 - Unicode [SQL Server], UNICODE function
 ms.assetid: 5e3c40b2-8401-4741-9f2a-bae70eaa4da6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
-ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
+ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49636452"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946794"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ UNICODE ( 'ncharacter_expression' )
  **nchar** 또는 **nvarchar** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 UNICODE 함수가 0에서 0xFFFF까지 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 UNICODE가 0에서 0x10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다.  

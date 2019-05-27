@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086827"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>폴링 쿼리 작성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 폴링 쿼리 만들기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **저장소 옵션** 대화 상자의 **알림** 탭에서 폴링 쿼리를 만들 수 있습니다. 폴링 쿼리는 일반적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 테이블 또는 기타 관계형 개체가 변경되었는지 확인하는 데 사용할 수 있는 값을 반환하는 단일 쿼리입니다. **저장소 옵션** 대화 상자 **알림** 탭의 **예약된 폴링** 옵션에 대한 표의 **폴링 쿼리** 열에서 줄임표 단추(**...**)를 클릭하면 **폴링 쿼리 만들기** 대화 상자를 표시할 수 있습니다. **저장소 옵션** 대화 상자의 **알림** 탭에 대한 자세한 내용은 [알림&#40;저장소 옵션 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)을 참조하세요.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - decryption [SQL Server], symmetric keys
 - DECRYPTBYKEY function
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b380312fb848ab1fc706c180e4748ec0204b8422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55999857db6723d883683345aa4ab57d301b2cf4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673231"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945494"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
   
 대칭 암호화 및 암호 해독은 일반적으로 상대적으로 신속하게 작동하고 큰 데이터 볼륨과 관련된 작업에 적합합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 대칭 키는 현재 세션에서 이미 열려 있어야 합니다. 자세한 내용은 [대칭 키 열기&#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)를 참조하세요.  
   
 ## <a name="examples"></a>예  

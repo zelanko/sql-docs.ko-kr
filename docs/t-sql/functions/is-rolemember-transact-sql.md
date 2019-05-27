@@ -17,16 +17,16 @@ helpviewer_keywords:
 - IS_ROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38be2330c039af77dd00d694aac2b59471d12785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc51f5f2d064e5a9cfeeb709cc3649daaaf4c736
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824001"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942781"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +50,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  확인할 데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할의 이름입니다. *database_principal*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 |반환 값|설명|  
 |------------------|-----------------|  
@@ -80,7 +80,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="related-functions"></a>관련 함수  
  현재 사용자가 지정된 Windows 그룹의 멤버인지 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 멤버인지 확인하려면 [IS_MEMBER&#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)를 사용하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 역할의 멤버인지 여부를 확인하려면 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)를 사용하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 역할에 대한 VIEW DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

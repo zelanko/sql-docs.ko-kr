@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.savefileasdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748025"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070046"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>다른 이름으로 파일 저장 대화 상자(Analysis Services - 다차원 데이터)
   **다른 이름으로 파일 저장** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대해 정의된 로그 및 데이터 폴더에서 사용 가능한 파일 목록을 표시합니다. 나열된 파일 중 하나를 선택하거나 필요한 경우 다른 폴더 및 파일을 지정할 수 있습니다. 다음을 수행하여 **다른 이름으로 파일 저장** 대화 상자를 표시할 수 있습니다.  

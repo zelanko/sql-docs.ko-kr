@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - binary constants
@@ -17,12 +16,12 @@ ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c6b49beeea2039bc30081cc7cf054c3d269847a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c7aded5577e28d94f42e108e46bb8a9c3cd6020
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094087"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상에서 큰 상수는 큰 값 유형으로 처리됩니다.
   업그레이드 관리자가 큰 상수를 검색했습니다. 크기가 8,000바이트 이상인 문자열 상수와 이진 상수는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 큰 개체 데이터 형식으로 처리됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 큰 문자, 유니코드 및 이진 상수가 큰 값 유형으로 처리됩니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065536"
 ---
 # <a name="user-interface-reference-analysis-services"></a>사용자 인터페이스 참조(Analysis Services)
   이 섹션에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 대한 도움말 항목이 포함되어 있습니다. 마법사 페이지, 디자이너 및 대화 상자에서 F1 키를 누르거나 **도움말** 을 클릭하여 사용자 인터페이스로부터 이러한 항목을 볼 수도 있습니다.  

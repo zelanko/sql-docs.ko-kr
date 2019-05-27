@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62845963"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089437"
 ---
 # <a name="modify-the-trace-results-view"></a>추적 결과 보기 수정
   이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  

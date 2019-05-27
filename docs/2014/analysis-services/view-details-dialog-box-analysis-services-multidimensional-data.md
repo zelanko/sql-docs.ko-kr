@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.viewdetailsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756119"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065453"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>자세히 보기 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 자세히 보기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 메시지 또는 작업에 대한 자세한 정보를 볼 수 있습니다. 다음을 수행하여 **자세히 보기** 대화 상자를 표시할 수 있습니다.  

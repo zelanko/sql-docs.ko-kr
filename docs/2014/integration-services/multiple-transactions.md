@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], multiple
@@ -14,12 +13,12 @@ ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6c66d64d7dc7117c5903f1eb3ac2e2ad97178af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da0f932acb2ab97204aeb27c9e077c7fae154987
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057394"
 ---
 # <a name="multiple-transactions"></a>여러 트랜잭션
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 내의 관련 없는 트랜잭션을 한 개의 패키지가 포함하는 것이 가능합니다. 중첩 컨테이너 계층 중간의 컨테이너가 트랜잭션을 지원하지 않으면 위 또는 아래에 위치한 컨테이너에서 별도의 트랜잭션을 시작합니다(트랜잭션을 지원하도록 구성된 경우). 트랜잭션은 중첩 컨테이너 계층의 가장 안쪽 태스크부터 순서대로 패키지에 커밋 또는 롤백합니다. 그러나 내부 트랜잭션이 커밋한 후에는 외부 트랜잭션이 중단되더라도 롤백하지 않습니다.  

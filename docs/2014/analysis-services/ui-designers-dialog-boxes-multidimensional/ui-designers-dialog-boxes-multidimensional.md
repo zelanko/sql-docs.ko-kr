@@ -4,18 +4,17 @@ ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04bbad9e68e783f5762cc089b6bf271f2203d174
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c2d10e1b117cf88f74523dad6fcec3cfd3ee871
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793568"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065666"
 ---
 # <a name="ui-designers-and-dialogs-for-multidimensional-analysis"></a>UI 디자이너 및 다차원 분석을 위한 대화 상자
 

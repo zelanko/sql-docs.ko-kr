@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11a5a9332c7fa85fd6407523ffd9c7c48a2c0514
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 38ebc261b8d1c5a2a134de7085c2e6f34a704b34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794582"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066285"
 ---
 # <a name="tabular-modeling-ssas-tabular"></a>테이블 형식 모델링(SSAS 테이블 형식)
   테이블 형식 모델은 Analysis Services의 인 메모리(in-memory) 데이터베이스입니다. 최첨단 비교 알고리즘과 다중 쿼리 프로세서를 사용하는 xVelocity 메모리 내 분석 엔진(VertiPaq)은 Microsoft Excel 및 Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]등의 보고 클라이언트 애플리케이션을 통해 테이블 형식 모델 개체와 데이터에 신속하게 액세스할 수 있게 합니다.  

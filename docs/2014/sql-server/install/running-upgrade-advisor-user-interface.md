@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
@@ -18,12 +17,12 @@ ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63245954"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092453"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>업그레이드 관리자 실행(사용자 인터페이스)
   업그레이드를 계획하는 동안 업그레이드 관리자를 실행하여 로컬 또는 원격 구성 요소를 분석할 수 있습니다. 업그레이드 관리자는 분석되는 각 구성 요소와 인스턴스에 대한 보고서를 생성합니다.  

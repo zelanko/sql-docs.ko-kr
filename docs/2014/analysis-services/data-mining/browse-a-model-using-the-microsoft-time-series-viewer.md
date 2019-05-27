@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], continuous columns
@@ -19,12 +18,12 @@ ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085979"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  

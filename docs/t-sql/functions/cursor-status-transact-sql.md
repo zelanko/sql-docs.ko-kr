@@ -17,15 +17,15 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2543cb82826957ecf596b05adb352fa05d1ab2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d9a981cb1302b8edb1776a5808221eaddd2263b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599974"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943839"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ CURSOR_STATUS
 |1|커서 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|이 변수에 할당된 커서가 열려 있습니다.<br /><br /> 변경 감지 불능 커서와 키 집합 커서의 경우 결과 집합에 최소 한 개의 행이 있습니다.<br /><br /> 동적 커서의 경우 결과 집합에는 0개, 1개 또는 그 이상의 행이 있습니다.|  
 |0|커서 결과 집합이 비어 있습니다.*|이 변수에 할당된 커서는 열려 있지만 결과 집합은 확실히 비어 있습니다.*|  
 |-1|커서가 닫혀 있습니다.|이 변수에 할당된 커서가 닫혀 있습니다.|  
-|-2|이 오류에는 이 작업을 적용할 수 없습니다.|다음 중 하나일 가능성이 있습니다.<br /><br /> 이전에 호출된 프로시저에서 이 OUTPUT 변수에 커서를 할당하지 않았습니다.<br /><br /> 이전에 할당된 프로시저에서 이 OUTPUT 변수로 커서를 할당했지만 프로시저가 완료되었을 때 커서가 닫힌 상태였습니다. 따라서 커서의 할당이 취소되고 호출 프로시저로 반환되지 않습니다.<br /><br /> 선언된 커서 변수에 할당된 커서가 없습니다.|  
+|-2|해당 사항 없음|다음 중 하나일 가능성이 있습니다.<br /><br /> 이전에 호출된 프로시저에서 이 OUTPUT 변수에 커서를 할당하지 않았습니다.<br /><br /> 이전에 할당된 프로시저에서 이 OUTPUT 변수로 커서를 할당했지만 프로시저가 완료되었을 때 커서가 닫힌 상태였습니다. 따라서 커서의 할당이 취소되고 호출 프로시저로 반환되지 않습니다.<br /><br /> 선언된 커서 변수에 할당된 커서가 없습니다.|  
 |-3|지정된 이름의 커서가 없습니다.|지정된 이름의 커서 변수가 없거나 있는 경우에는 아직 커서가 할당되지 않았습니다.|  
   
 *동적 커서는 절대 이 결과를 반환하지 않습니다.

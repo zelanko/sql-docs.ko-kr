@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycolumnusage.f1
@@ -13,12 +12,12 @@ ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746236"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068357"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>마이닝 모델 열 사용법 지정(데이터 마이닝 마법사)
   **마이닝 모델 열 사용법 지정** 페이지를 사용하여 마이닝 모델 열이 사용되는 방법을 지정하고 중첩 테이블을 추가할 수 있습니다.  

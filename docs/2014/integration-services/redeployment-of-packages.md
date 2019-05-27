@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - redeploying packages [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 86806efb-8cf4-4f9d-9824-1152cb4c495c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15d41b9c0e31fe4bfd86349888071721b7493661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14edf3c34278ce89686a390c5b69662753ae653d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056475"
 ---
 # <a name="redeployment-of-packages"></a>패키지 재배포
   프로젝트를 배포한 후 패키지 기능을 업데이트하거나 확장한 다음 업데이트된 패키지를 포함하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 다시 배포해야 할 수 있습니다. 패키지 재배포 과정의 일부로 배포 유틸리티에 포함된 구성 속성을 검토하십시오. 예를 들어 패키지를 재배포한 후 구성을 변경할 수 없도록 하기를 원할 수 있습니다.  

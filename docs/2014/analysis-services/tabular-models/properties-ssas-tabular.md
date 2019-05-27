@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794600"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066713"
 ---
 # <a name="properties-ssas-tabular"></a>속성(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트에는 프로젝트, 모델, 보고 및 배포를 위한 동작을 정의하는 다양한 속성이 있습니다. 속성 설정은 Model.bim 파일에 XML 형식으로 저장되지만, 이 섹션에서 설명하는 모든 속성은 **의** 속성 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창에서 구성할 수 있습니다.  

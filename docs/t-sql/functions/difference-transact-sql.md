@@ -17,16 +17,16 @@ helpviewer_keywords:
 - comparing SOUNDEX values
 - SOUNDEX values
 ms.assetid: c58ca25d-d6ea-48fa-93bb-c9374b0b2a2b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 851ee650ba9647035be491762fa29eb100ffbe92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f337707509f3a62a60903a5a97c42bebc7754468
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772091"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947071"
 ---
 # <a name="difference-transact-sql"></a>DIFFERENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ DIFFERENCE ( character_expression , character_expression )
 문자 데이터의 영숫자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
-**int**  
+**ssNoversion**  
  
 ## <a name="remarks"></a>Remarks  
 `DIFFERENCE`는 서로 다른 두 `SOUNDEX` 값을 비교하고 정수 값을 반환합니다. 이 값은 0에서 4의 척도로 `SOUNDEX` 값이 일치하는 정도를 측정합니다. 0의 값은 SOUNDEX 값 간에 유사성이 없거나 약하다는 것을 나타내며, 4는 강력한 유사성이 있거나 동일하게 일치하는 SOUNDEX 값을 나타냅니다.  

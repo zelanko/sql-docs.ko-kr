@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
@@ -13,12 +12,12 @@ ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8435b0c677f80bf4f26acd4411d90ab63c7473d1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659863"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092267"
 ---
 # <a name="server-configuration---service-accounts"></a>서버 구성 - 서비스 계정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 로그인 계정을 할당할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  

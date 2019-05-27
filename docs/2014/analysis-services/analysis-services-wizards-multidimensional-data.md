@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
@@ -13,12 +12,12 @@ ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643720"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062384"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 마법사(다차원 데이터)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 고 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  

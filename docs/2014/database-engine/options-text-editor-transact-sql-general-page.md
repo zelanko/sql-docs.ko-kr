@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
@@ -15,12 +14,12 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 28559b6037fa6b0e95bb6748f85d3d0cecd2df8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774170"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089167"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>옵션 (텍스트 편집기-Transact-SQL-일반 페이지)
   **일반 옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 편집하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **Transact-SQL** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  

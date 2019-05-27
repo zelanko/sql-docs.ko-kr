@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregation Design Wizard
@@ -13,12 +12,12 @@ ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9323f9b4fa6655fe72ae70457329c4ffc0d5dec2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473571"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062746"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>집계 디자인 마법사 F1 도움말
   집계를 사용하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산된 합계를 검색할 수 있으므로 성능이 향상됩니다.  

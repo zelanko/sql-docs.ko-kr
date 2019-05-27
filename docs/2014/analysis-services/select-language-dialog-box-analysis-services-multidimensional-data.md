@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.languageselection.f1
@@ -17,12 +16,12 @@ ms.assetid: a85a106f-ff47-4b9e-ac62-4942e214df3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbe0f137f029fb364adafd6f3959c7e22984b73f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069506"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>언어 선택 대화 상자(Analysis Services - 다차원 데이터)
   **의** 언어 선택 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 새 번역에 대한 언어를 선택할 수 있습니다. 다음을 수행하여 **언어 선택** 대화 상자를 표시할 수 있습니다.  

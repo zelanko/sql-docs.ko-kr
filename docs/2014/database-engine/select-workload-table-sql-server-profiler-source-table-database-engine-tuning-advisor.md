@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.sourcetable.f1
@@ -16,12 +15,12 @@ ms.assetid: 51185be7-7092-480a-a52c-cf7786c4a0a0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2e277313ac2da5c8a92d69985344d3cc646dbf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62843589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088877"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>SQL Server Profiler - Source Table-Database Engine Tuning Advisor - Select Workload Table
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 및 [!INCLUDE[ssDE](../includes/ssde-md.md)] 튜닝 관리자는 이 대화 상자를 사용하여 테이블을 선택합니다.  

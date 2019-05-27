@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757074"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067076"
 ---
 # <a name="hierarchies-ssas-tabular"></a>계층(SSAS 테이블 형식)
   테이블 형식 모델에서 계층은 테이블에서 두 개 이상의 열 간의 관계를 정의하는 메타데이터입니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  

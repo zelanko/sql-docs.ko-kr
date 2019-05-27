@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844184"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089244"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>옵션(텍스트 편집기 - 모든 언어 - 일반 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 일반 편집 옵션을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **일반**을 클릭합니다.  

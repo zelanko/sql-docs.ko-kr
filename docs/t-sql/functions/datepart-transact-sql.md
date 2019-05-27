@@ -24,16 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802907"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945721"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ DATEPART ( datepart , date )
 *date*의 경우 `DATEPART`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="return-value"></a>반환 값  
 각 *datepart*와 해당 약어는 동일한 값을 반환합니다.
@@ -120,7 +120,7 @@ DATEPART ( datepart , date )
 ## <a name="week-and-weekday-datepart-arguments"></a>week 및 weekday datepart 인수
 **week**(**wk**, **ww**) 또는 **weekday**(**dw**) *datepart*의 경우 `DATEPART` 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)로 설정된 값에 따라 달라집니다.
   
-모든 해의 1월 1일은 **week**_datepart_의 시작 값을 정의합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+모든 해의 1월 1일은 **week**_datepart_의 시작 값을 정의합니다. 예를 들어
 
 DATEPART(**wk**, '1월 1일, *xxx*x') = 1
 

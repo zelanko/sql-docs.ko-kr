@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CATCH block
 - states [SQL Server], error numbers
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07dfe698333e4c8cf8191e5d2a5cd5cd1cecc801
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2510f10db545b2733cb780d903f662b12b30abc4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508489"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946199"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ERROR_STATE ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="return-value"></a>반환 값  
  CATCH 블록 내에서 호출된 경우 CATCH 블록을 실행하도록 만든 오류 메시지의 상태 번호를 반환합니다.  
@@ -103,7 +103,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>3. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
+### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```sql  

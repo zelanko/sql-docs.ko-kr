@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Tools
@@ -13,12 +12,12 @@ ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094427"
 ---
 # <a name="install-sql-server-management-tools"></a>SQL Server 관리 도구 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구에는 다음과 같은 구성 요소가 포함되어 있습니다.  

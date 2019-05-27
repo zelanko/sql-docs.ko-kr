@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6fbf5cbf55b5ad63317b7cadc0db2c7df738712
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63193055"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091478"
 ---
 # <a name="upgrade-how-to-topics"></a>방법 도움말 항목 업그레이드
   이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스를 업그레이드하는 방법에 대해 설명합니다.  

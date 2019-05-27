@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
@@ -14,12 +13,12 @@ ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62758482"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068024"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>스토리지 설정 대화 상자(Analysis Services - 다차원 데이터)
   **의** 저장소 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대해 자동 관리 캐싱, 저장소 및 알림 설정을 지정할 수 있습니다. 다음을 수행하여 **에서** 스토리지 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 표시할 수 있습니다.  

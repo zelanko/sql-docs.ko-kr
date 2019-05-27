@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
@@ -13,12 +12,12 @@ ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773661"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088979"
 ---
 # <a name="query-options-results-text-page"></a>쿼리 옵션 결과(텍스트 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. **파일로 결과 저장** 을 선택한 경우에도 이 페이지의 설정이 적용됩니다.  

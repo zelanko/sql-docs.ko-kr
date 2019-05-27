@@ -17,15 +17,15 @@ helpviewer_keywords:
 - KEY_GUID function
 - GUIDs [SQL Server]
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06ffb5927414cc169863dbe2435fe4221618e5cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b39f2b1898678b06d77c89eed513927d6dfc92b3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799961"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949223"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Key_GUID( 'Key_Name' )
   
  임시 키의 경우 키 이름이 숫자 기호(#)로 시작해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  임시 키는 생성된 세션에서만 사용할 수 있으므로 액세스 권한이 필요 없습니다. 임시 키가 아닌 키에 액세스하려는 호출자는 키에 대한 일부 권한이 필요하며 키에 대한 VIEW 권한이 거부되어서는 안 됩니다.  
   
 ## <a name="examples"></a>예  

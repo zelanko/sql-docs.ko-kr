@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 169ae399522f8de40b8a50dba0b98ccc4ddc57c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794626"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065867"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
   Analysis Services 모델을 개발하고 Analysis Services 인스턴스에서 연결된 데이터베이스를 관리하기 위해 필요한 도구 및 애플리케이션을 찾으세요.  

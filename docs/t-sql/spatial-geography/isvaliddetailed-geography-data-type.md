@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geography
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f6db4d1090d464a7b2783b3494c0b478060faf7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbe4c8cf9f6084282f37353aede357d5086ddc6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698721"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937683"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47698721"
 |24413|{0} 곡선에 두 개의 겹치는 가장자리가 있으므로 유효하지 않습니다.|  
 |24414|{0} 곡선의 가장자리가 다른 {1} 곡선의 가장자리와 겹치므로 유효하지 않습니다.|  
 |24415|일부 다각형이 잘못된 링 구조를 가지므로 유효하지 않습니다.|  
-|24416|ph x="2" /&gt; 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
+|24416|{1} 지점에서 시작하는 {0} 곡선의 가장자리가 대척점이 있는 중복 제거 호이거나 선이므로 유효하지 않습니다.|  
   
 ## <a name="examples"></a>예  
  다음 올바르지 않은 공간 개체의 예에서는 **IsValidDetailed()** 메서드가 동작하는 방법을 보여 줍니다.  

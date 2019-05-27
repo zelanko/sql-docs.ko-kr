@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b2cb7347f38053474b6b6f1e001f9bd9f758f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62758503"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067899"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>테이블 형식 모델 솔루션(SSAS 테이블 형식)
   이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  

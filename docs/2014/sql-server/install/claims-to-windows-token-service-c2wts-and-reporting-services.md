@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
@@ -16,12 +15,12 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e08be032df493913cc6cebf5ae29d583f26c86ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096546"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 SharePoint C2WTS(Windows 토큰 서비스에 대한 클레임)가 필요합니다. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 713fa85a342613f261bb53aa393b8ff1504d256b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ad20bfbec71f08d694a5f6d7d3104538d9e19e93
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328733"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063405"
 ---
 # <a name="threads-window"></a>스레드 창
   **스레드** 창에서는 디버깅 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 세션에서 사용하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 스레드에 대한 정보를 표시합니다. 스레드 정보를 표시하려면 디버그 모드여야 합니다.  

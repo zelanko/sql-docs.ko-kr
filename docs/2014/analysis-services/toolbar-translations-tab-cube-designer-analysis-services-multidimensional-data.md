@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 22a4ca7a-0d43-47eb-8078-eb4b167b6e72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60d17dba32b5787b6dbb4b1c1a8fa47a5b27b2c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 316263c823c371d4c90415d694adcadef26f2030
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756280"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065936"
 ---
 # <a name="toolbar-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(번역 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **번역** 탭에서 일반 작업을 수행할 수 있습니다.  

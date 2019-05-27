@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
@@ -15,12 +14,12 @@ ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62780414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064844"
 ---
 # <a name="event-pairing-target"></a>이벤트 쌍 대상
   이벤트 쌍 대상은 각 이벤트에 있는 하나 이상의 데이터 열을 사용하여 두 이벤트를 연결합니다. 잠금 획득과 잠금 해제 등 많은 이벤트가 쌍을 이루게 됩니다. 이벤트 시퀀스가 쌍을 이루면 두 이벤트는 삭제됩니다. 일치하는 집합을 삭제하면 해제되지 않은 잠금 획득을 쉽게 찾아낼 수 있습니다.  

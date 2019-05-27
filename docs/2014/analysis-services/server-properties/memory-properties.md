@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
@@ -24,12 +23,12 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747465"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068888"
 ---
 # <a name="memory-properties"></a>메모리 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 다음 표에 나열된 서버 메모리 속성을 사용할 수 있습니다. 이 속성 설정에 대한 지침을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하세요.  

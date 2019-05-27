@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756763"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066694"
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
   테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  

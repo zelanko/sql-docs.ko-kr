@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], ADD TARGET argument
@@ -14,12 +13,12 @@ ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 368f019453fe0c8f5fcbef245db3f4b50769a210
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779148"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064799"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기
   이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 사용합니다.  

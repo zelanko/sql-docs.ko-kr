@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794231"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066022"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **차원 용도** 탭에서 큐브 차원 추가 또는 큐브 처리와 같은 일반 동작을 수행할 수 있습니다.  

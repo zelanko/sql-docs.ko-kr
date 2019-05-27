@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
@@ -13,12 +12,12 @@ ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065433"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>경고(데이터베이스 디자이너)(Analysis Services - 다차원 데이터)
   **경고** 탭을 사용하여 규칙을 전역적으로 확인 및 해제하고 해제된 경고의 특정 인스턴스를 확인 및 다시 설정할 수 있습니다. 합니다 **경고** 탭에는 두 개의 표가 표시 됩니다. **디자인 경고 규칙** 하 고 **경고를 해제**합니다.  

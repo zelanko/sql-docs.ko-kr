@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.connecttodatabase.f1
@@ -13,12 +12,12 @@ ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90db2f04d31ce477644cae99c4313de592797a51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680022"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087077"
 ---
 # <a name="connect-to-database-dialog-box"></a>데이터베이스에 연결 대화 상자
   **데이터베이스에 연결** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 연결할 수 있습니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ea28d9e214546930c38d600a27e8df6e971a9f17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806734"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090854"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>2단원. 컨테이너에 정책 만들기 및 SAS(공유 액세스 서명) 키 생성
   이 단원에서는 Blob 컨테이너에서 정책을 만들고 SAS키를 생성하는 방법을 배웁니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62806734"
   
     ```  
   
--   [Azure 스토리지 탐색기](http://azurestorageexplorer.codeplex.com/)등의 타사 Windows Azure 탐색기 도구.  
+-   [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/)등의 타사 Windows Azure 탐색기 도구.  
   
  **다음 단원:**  
   

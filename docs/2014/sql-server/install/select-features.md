@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0badc544-c187-40f9-b0cc-14d6ebec345e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 808588f20a4d94fa3be885ee79853362071f7768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63270089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092371"
 ---
 # <a name="select-features"></a>기능 선택
   기능 선택 페이지를 사용하여 업데이트할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 기능을 선택할 수 있습니다.  

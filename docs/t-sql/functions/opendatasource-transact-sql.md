@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571392"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944884"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  데이터 원본에 액세스하는 데 사용하는 OLE DB 공급자의 PROGID로 등록된 이름입니다. *provider_name*은 기본값이 없는 **char** 데이터 형식입니다.  
   
  *init_string*  
- 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'**_keyword1_=_value_ **;** _keyword2_=_value_**'**  
+ 대상 공급자의 IDataInitialize 인터페이스로 전달되는 연결 문자열입니다. 공급자 문자열 구문은 세미콜론으로 구분된 키워드-값 쌍으로 구분됩니다. 예: **'** _keyword1_=_value_ **;** _keyword2_=_value_ **'**  
   
  공급자에서 지원되는 특정 키워드-값 쌍은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK를 참조하십시오. 이 설명서에서는 기본 구문을 정의합니다. 다음 표에서는 *init_string* 인수에 가장 자주 사용되는 키워드를 나열합니다.  
   
@@ -79,7 +79,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  FROM 절에서 OPENDATASOURCE, OPENQUERY 또는 OPENROWSET에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자가 OPENDATASOURCE를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결 문자열에서 결정됩니다.  
   
 ## <a name="examples"></a>예  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0b8c2dbe2b9129ae52432de1b70079a53a963c27
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979889"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948382"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SELECT SUSER_SID('sa');
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>3. Windows 사용자 이름과 SUSER_SID 사용  
+### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Windows 사용자 이름과 SUSER_SID 사용  
  다음 예에서는 Windows 사용자 `London\Workstation1`에 대한 보안 ID를 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지

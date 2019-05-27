@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication]
@@ -16,12 +15,12 @@ ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76af35f994413ad1e02bcafaaa8499e42fe232c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091409"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>업그레이드하면 메시지 큐를 사용하는 지연 업데이트 구독이 수정됩니다.
   업그레이드 관리자가 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 사용하는 지연 업데이트 구독이 하나 이상 있을 수 있음을 감지했습니다. 복제는 메시지 큐를 더 이상 지원하지 않습니다. 따라서 구독은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐를 사용하도록 수정됩니다.  

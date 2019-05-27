@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 403e9394f23ba0d6ce503dbea3e46ad7f37b9cd9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877596"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054317"
 ---
 # <a name="xml-source-editor-columns-page"></a>XML 원본 편집기(열 페이지)
   **XML 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  

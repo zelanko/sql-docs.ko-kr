@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral
@@ -13,12 +12,12 @@ ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f5588e897c730663540ba2e4aa1fa60bbb3fe13
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774783"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089315"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>옵션 (쿼리 결과-Analysis Server-일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리에 대한 쿼리 결과 창의 기본 동작을 결정할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 선택합니다. **쿼리 결과** 폴더에서 **분석 서버** 하위 폴더를 확장한 다음 **일반**을 선택합니다.  

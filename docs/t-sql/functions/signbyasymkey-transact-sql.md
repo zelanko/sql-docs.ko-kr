@@ -21,15 +21,15 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 - clear text signing
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 76e23056ebb838febcb9f23dd849c0e1666108cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d0710d479c4654549b6ec579102891c94f900e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772121"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947850"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

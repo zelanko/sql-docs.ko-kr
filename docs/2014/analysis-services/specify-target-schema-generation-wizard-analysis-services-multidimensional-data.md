@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
@@ -13,12 +12,12 @@ ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d27db6fab4536a5f703a1f6b7ba7cc6b5405f817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746157"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068248"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>대상 지정(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **대상 지정** 페이지를 사용하여 관계형 스키마가 생성될 데이터 원본 뷰를 식별할 수 있습니다.  

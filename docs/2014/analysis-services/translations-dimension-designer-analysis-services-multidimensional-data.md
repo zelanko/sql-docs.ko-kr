@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
@@ -13,12 +12,12 @@ ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065724"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>번역(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **번역** 탭을 사용하여 차원에 대한 계층 및 특성을 비롯하여 차원에 대한 번역을 정의 및 관리할 수 있습니다.  

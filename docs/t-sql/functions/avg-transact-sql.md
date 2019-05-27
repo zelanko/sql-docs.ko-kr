@@ -19,16 +19,16 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed42e4ace43066db77670e94c4ec37457634f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735481"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945872"
 ---
 # <a name="avg-transact-sql"></a>AVG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DISTINCT
 *expression*  
 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
@@ -62,9 +62,9 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**
   
 |식 결과|반환 형식|  
 |---|---|
-|**tinyint**|**int**|  
-|**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**tinyint**|**ssNoversion**|  
+|**smallint**|**ssNoversion**|  
+|**ssNoversion**|**ssNoversion**|  
 |**bigint**|**bigint**|  
 |**decimal** 범주(p, s)|**decimal(10, 0)** 로 나눈 **decimal(38, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
@@ -129,7 +129,7 @@ NULL        0.00                  1252127.9471
 (11 row(s) affected)  
 ```  
   
-### <a name="c-using-avg-with-distinct"></a>3. AVG 함수에 DISTINCT 사용  
+### <a name="c-using-avg-with-distinct"></a>C. AVG 함수에 DISTINCT 사용  
 이 명령문에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 제품의 평균 정가를 반환합니다. DISTINCT를 사용하여 계산은 고유 값만 고려합니다.
   
 ```sql
@@ -146,7 +146,7 @@ FROM Production.Product;
 (1 row(s) affected)
 ```
   
-### <a name="d-using-avg-without-distinct"></a>4. DISTINCT 없이 AVG 사용  
+### <a name="d-using-avg-without-distinct"></a>D. DISTINCT 없이 AVG 사용  
 DISTINCT를 지정하지 않고 `AVG` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Product` 테이블에서 중복 값을 포함한 모든 제품의 평균 가격을 찾습니다.
   
 ```sql
@@ -163,7 +163,7 @@ FROM Production.Product;
 (1 row(s) affected)
 ```
   
-### <a name="e-using-the-over-clause"></a>5. OVER 절 사용  
+### <a name="e-using-the-over-clause"></a>E. OVER 절 사용  
 다음 예에서는 AVG 함수에 OVER 절을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesPerson` 테이블에서 각 지역에 대한 연간 매출의 이동 평균을 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, AVG 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 평균 매출이 계산된 다음 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.
   
 ```sql

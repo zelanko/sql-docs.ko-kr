@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], development
@@ -14,12 +13,12 @@ ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807438"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064975"
 ---
 # <a name="database-engine-features-and-tasks"></a>데이터베이스 엔진 기능 및 태스크
   해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-작성 하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스입니다.  

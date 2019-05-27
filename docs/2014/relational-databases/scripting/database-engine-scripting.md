@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
@@ -16,12 +15,12 @@ ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2529bc92acf32730b0462edeb7315b60fd046a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10e7b4c7e2972ed797048dbcaedcaaeec4d682d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127440"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090522"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "54127440"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일은 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 대화형으로 코딩됩니다. 이 파일은 나중에 다음 환경 중 하나에서 열 수 있습니다.  
   
--    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 파일을 열 수 있습니다.  
   
 -   사용 된 **-i**_input_file_ 매개 변수를 사용 하 여 파일을 실행 합니다 `sqlcmd` 유틸리티입니다.  
   
@@ -79,6 +78,6 @@ ms.locfileid: "54127440"
   
 ## <a name="see-also"></a>관련 항목  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
- [자습서: TRANSACT-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [자습서: Transact-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

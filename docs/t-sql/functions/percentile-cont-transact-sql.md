@@ -16,16 +16,16 @@ helpviewer_keywords:
 - analytic functions, PERCENTILE_CONT
 - PERCENTILE_CONT function
 ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60a53ba6c75c962e6dba1418b846521689143776
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+ms.openlocfilehash: 1d3273cb476178d147991ae06f230eeea926e9d5
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807503"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943445"
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -46,7 +46,7 @@ PERCENTILE_CONT ( numeric_literal )
  *numeric_literal*  
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
- WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
+ WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
  정렬할 숫자 값 목록을 지정하고 백분위수를 계산합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
   
  OVER **(** \<partition_by_clause> **)**  

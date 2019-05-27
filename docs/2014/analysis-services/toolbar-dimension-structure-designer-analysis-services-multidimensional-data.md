@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066045"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   도구 모음을 사용하여 **차원 디자이너** 의 **차원 구조**페이지에서 일반적인 작업을 수행할 수 있습니다.  

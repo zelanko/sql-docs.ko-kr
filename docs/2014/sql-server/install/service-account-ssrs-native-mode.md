@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
@@ -13,12 +12,12 @@ ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092176"
 ---
 # <a name="service-account-ssrs-native-mode"></a>서비스 계정(SSRS 기본 모드)
   서비스 계정 페이지를 사용하여 보고서 서버 서비스를 실행할 계정을 지정할 수 있습니다. 이 계정은 설치하는 동안 처음에 구성하며 계정 또는 암호를 변경하려는 경우 수정할 수 있습니다. 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션은 이 페이지에서 지정하는 서비스 ID로 모두 실행됩니다.  

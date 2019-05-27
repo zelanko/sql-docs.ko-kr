@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msmqconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767235"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057637"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 연결 관리자 편집기
   **MSMQ 연결 관리자** 대화 상자를 사용하여 MSMQ(메시지 큐)의 경로를 지정할 수 있습니다.  

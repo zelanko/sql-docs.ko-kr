@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10131"
@@ -14,12 +13,12 @@ ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108102"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>자리 표시자 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **자리 표시자 속성** 대화 상자를 사용하여 입력란 내 자리 표시자의 값, 도구 설명 및 태그 옵션을 변경할 수 있습니다.  

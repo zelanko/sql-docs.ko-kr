@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
@@ -14,12 +13,12 @@ ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31a335797ad7a40fda7002b910127bb139af3f1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a050c8eecadec138341ffe2f64a791eb198beebf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756788"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066736"
 ---
 # <a name="project-properties-ssas-tabular"></a>프로젝트 속성(SSAS 테이블 형식)
   이 항목에서는 모델 프로젝트 속성에 대해 설명합니다. 각 테이블 형식 모델 프로젝트에는 배포 옵션 및 배포 서버 속성이 제공되어 프로젝트 및 모델의 배포 방식을 지정할 수 있습니다. 예를 들어 모델이 배포될 서버와 배포될 모델 데이터베이스 이름을 지정할 수 있습니다. 이러한 설정은 모델 작업 영역 데이터베이스에 영향을 주는 모델 속성과 다릅니다. 여기에서 설명하는 프로젝트 속성은 모달 속성 대화 상자에 있습니다. 이 대화 상자는 다른 유형의 속성을 표시하는 데 사용되는 속성 창과 다릅니다. 모달 프로젝트 속성을 표시하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 64744048-205f-4d4d-add8-ff0ca13943f3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c54ea201210b45e4d9f5214dc50bb6a3de05ce5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8498f30b11a9b379d9cad0e98d7a5269fc60752a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756348"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065987"
 ---
 # <a name="toolbar-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **큐브 뷰** 탭에서 일반 작업을 수행할 수 있습니다.  

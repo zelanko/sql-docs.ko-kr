@@ -32,12 +32,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b197330b1acbb32be6793ad57e2b8764cfd6bbc
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7381dbf667c969765a189df469cc94a9e4b0c5a9
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801477"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836192"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ DATEDIFF ( datepart , startdate , enddate )
 *startdate*를 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="return-value"></a>반환 값  
   
@@ -108,7 +108,7 @@ DATEDIFF ( datepart , startdate , enddate )
 *startdate*와 *enddate*가 날짜 데이터 형식이 다르고 한 쪽의 시간 부분 또는 소수 자릿수 초의 전체 자릿수가 다른 쪽보다 많을 경우 `DATEDIFF`는 다른 쪽의 누락된 부분을 0으로 설정합니다.
   
 ## <a name="datepart-boundaries"></a>datepart 범위  
-다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이러한 날짜는 서로 인접하며 1마이르코초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
+다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이 날짜는 서로 인접하며 100나노초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -121,6 +121,7 @@ SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
 ## <a name="remarks"></a>Remarks  

@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979961"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935388"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
-### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>3. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화  
+### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화  
  다음 예에서는 **를 사용하여** geography `CompoundCurve`인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - undocumented system stored procedures [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093108"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>더 이상 사용되지 않는 시스템 저장 프로시저에 대한 참조를 제거합니다.
   업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 더 이상 사용할 수 없는 문서화되지 않은 시스템 저장 프로시저 및 확장 저장 프로시저를 참조하는 문을 발견했습니다. 이러한 개체를 참조하는 문은 실패합니다. 문서화되지 않은 시스템 개체나 API는 이후 릴리스에서 알림 표시 없이 변경되거나 제거될 수 있으므로 사용하지 마십시오.  

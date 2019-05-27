@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066223"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>기술 참조(Excel용 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능에는 프로그래머와 고급 데이터 마이너에게 유용한 기능이 포함되어 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -16,12 +15,12 @@ ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793118"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065499"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>모델 유효성 검사 및 예측용 모델 사용(Excel용 데이터 마이닝 추가 기능)
   모델 테스트 및 유효성 검사는 데이터 마이닝 프로세스에서 중요한 단계입니다. 마이닝 모델을 프로덕션 환경에 배포하기 전에 실제 데이터에 대한 마이닝 모델의 성능을 알아야 합니다.  

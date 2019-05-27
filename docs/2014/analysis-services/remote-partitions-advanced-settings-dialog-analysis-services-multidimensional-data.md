@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
@@ -13,12 +12,12 @@ ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748345"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070376"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>원격 파티션 - 고급 설정 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **원격 파티션 - 고급 설정** 대화 상자를 사용하여 원격 파티션을 유지 관리하는 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 나타내는 데이터 원본의 연결 문자열과 같은 고급 설정을 편집하는 동시에 **데이터베이스 복원** 대화 상자를 사용하여 원격 백업 파일에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스로 원격 파티션을 복원할 수 있습니다. **원격 파티션 - 고급 설정** 대화 상자는 **원격 파티션 복원** 옵션을 선택한 후 원격 파티션에 대한 줄임표 단추( **...** )를 클릭하여**데이터베이스 복원**대화 상자의 **파티션** 페이지에서 표시할 수 있습니다.  

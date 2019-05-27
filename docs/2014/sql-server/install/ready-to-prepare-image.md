@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a19342a0-cd90-4825-aec5-d7c54275cc98
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a580b50d804f4bee259bb9c1b582296087b91c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a276850e7d570f16217e31eabaed17f6d4b6a45
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241281"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093344"
 ---
 # <a name="ready-to-prepare-image"></a>이미지 준비 작업 준비
   **이미지 준비 작업 준비** 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 준비할 기능에 대한 요약 정보를 제공합니다.  
