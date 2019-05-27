@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -24,12 +23,12 @@ ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084028"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
   이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  

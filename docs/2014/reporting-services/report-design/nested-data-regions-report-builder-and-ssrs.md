@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105517"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>중첩된 데이터 영역(보고서 작성기 및 SSRS)
   일반적으로 데이터 요약을 간결하게 표시하거나 데이터를 테이블이나 행렬 이외에 시각적인 방식으로도 표시하려는 경우 차트와 같은 한 데이터 영역을 행렬과 같은 다른 데이터 영역에 중첩할 수 있습니다.  

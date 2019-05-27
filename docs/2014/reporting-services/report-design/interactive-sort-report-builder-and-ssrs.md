@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 02735bafde927ba110de6465c5380987ddb6b5f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209226"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105617"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>대화형 정렬(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하여 사용자가 테이블의 행 또는 행렬의 행 및 열에 대해 오름차순 및 내림차순 사이를 전환하도록 할 수 있습니다. 대화형 정렬의 일반적인 용도는 열 머리글마다 정렬 단추를 추가하는 것입니다. 그러면 사용자는 정렬할 기준이 되는 열을 선택할 수 있습니다.  

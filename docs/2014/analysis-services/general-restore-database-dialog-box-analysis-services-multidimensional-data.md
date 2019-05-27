@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730401"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080951"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>일반(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
   **에서** 데이터베이스 복원 **대화 상자의** 일반 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 때 사용할 백업 파일 및 일반 설정을 지정할 수 있습니다.  

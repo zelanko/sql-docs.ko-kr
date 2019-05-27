@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -16,12 +15,12 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722768"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084734"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  

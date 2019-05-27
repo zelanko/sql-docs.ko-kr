@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering rules [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084406"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
   연결 모델에 필터링을 사용하여 보고자 하는 연결로만 결과를 제한할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  

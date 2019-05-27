@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
@@ -13,12 +12,12 @@ ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728160"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078106"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>수준 및 멤버(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   이 창을 사용하여 현재 선택한 계층 및 언어의 멤버를 찾아볼 수 있습니다. 찾아볼 계층 또는 언어를 선택하려면 **도구 모음** 창의 **계층** 및 **언어** 옵션을 사용합니다. 도구 모음 창에 대 한 자세한 내용은 참조 하세요. [도구 모음 &#40;브라우저 탭, 차원 디자이너&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)합니다.  

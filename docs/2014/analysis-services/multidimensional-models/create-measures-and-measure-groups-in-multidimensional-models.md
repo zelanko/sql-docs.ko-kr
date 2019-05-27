@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services], defining
@@ -13,12 +12,12 @@ ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8f7e9df6417334b814e71664b2a164dd76a9642
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2883a9092f7b84e8dd18954cec631b90a8bbe0e9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726976"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076246"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
   *측정값* 은 합계, 개수, 최소값, 최대값, 평균 또는 사용자가 만드는 사용자 지정 MDX 식과 같은 숫자 데이터 값의 집계입니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.  

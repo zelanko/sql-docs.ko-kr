@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
@@ -13,12 +12,12 @@ ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679875"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086785"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>테스트 집합 만들기(데이터 마이닝 마법사)
   **테스트 집합 만들기** 페이지를 사용하여 학습에 사용할 데이터 양과 테스트 집합으로 사용하기 위해 예약할 양을 지정할 수 있습니다. 마이닝 구조를 만들 때 학습 집합과 테스트 집합으로 데이터를 분리하면 나중에 만드는 마이닝 모델의 정확도를 보다 편리하게 평가할 수 있습니다.  

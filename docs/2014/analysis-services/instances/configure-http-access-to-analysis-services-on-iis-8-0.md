@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730600"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080170"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>IIS(인터넷 정보 서비스) 8.0에서 Analysis Services에 대한 HTTP 액세스 구성
   이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 엔드포인트를 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 애플리케이션 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  

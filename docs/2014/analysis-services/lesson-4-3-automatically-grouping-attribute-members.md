@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029d4bdb21adfccbae5ad692669ab5d42964bfc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729175"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078653"
 ---
 # <a name="automatically-grouping-attribute-members"></a>자동으로 특성 멤버 그룹화
   큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  

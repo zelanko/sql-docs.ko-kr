@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722635"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085144"
 ---
 # <a name="cross-validation-formulas"></a>교차 유효성 검사 수식
   교차 유효성 검사 보고서를 생성하면 마이닝 모델의 유형(모델을 만드는 데 사용된 알고리즘), 예측 가능한 특성의 데이터 형식 및 예측 가능한 특성 값(있는 경우)에 따라 각 모델에 대한 정확도 측정값이 포함됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
@@ -16,12 +15,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740960"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072846"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  

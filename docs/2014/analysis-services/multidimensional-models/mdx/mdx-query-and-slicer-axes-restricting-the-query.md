@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
@@ -16,12 +15,12 @@ ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3413f4da8443df07732e1c6acca5ed6112cb59dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074036"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>쿼리 및 Slicer 축으로 쿼리 제한(MDX)
   MDX(Multidimensional Expressions) SELECT 쿼리를 구성할 때 애플리케이션에서는 일반적으로 큐브를 검토하고 계층 집합을 다음과 같이 두 개의 하위 집합으로 나눕니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729669"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079341"
 ---
 # <a name="defining-a-data-source"></a>데이터 원본 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 일반적으로 프로젝트에 사용할 하나 이상의 데이터 원본을 정의하여 프로젝트 작업을 시작합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  

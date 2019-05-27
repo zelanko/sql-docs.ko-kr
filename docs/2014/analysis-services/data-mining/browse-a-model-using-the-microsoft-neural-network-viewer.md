@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
@@ -18,12 +17,12 @@ ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086062"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Microsoft 신경망 뷰어를 사용하여 모델 찾아보기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신경망 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 개방형 분석 및 탐색에 유용하고 여러 입력 및 출력을 분석할 수 있는 분류 및 회귀 마이닝 모델을 만듭니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)를 참조하십시오.  

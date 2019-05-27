@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98f949d064c866842c49837e5f6058f6f8705689
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103714"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  

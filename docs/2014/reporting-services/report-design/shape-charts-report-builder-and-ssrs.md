@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720241"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104942"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
   세이프 차트에서는 값 데이터를 전체의 백분율로 표시합니다. 셰이프 차트는 집합의 서로 다른 값이 차지하는 비율을 비교하여 표시하는 데 주로 사용됩니다. 범주는 셰이프의 개별 세그먼트로 표현됩니다. 세그먼트의 크기는 값에 따라 결정됩니다. 셰이프 차트는 원형 차트와 비슷하지만 범주를 가장 큰 것부터 가장 작은 것 순으로 정렬한다는 점에서 차이가 있습니다.  

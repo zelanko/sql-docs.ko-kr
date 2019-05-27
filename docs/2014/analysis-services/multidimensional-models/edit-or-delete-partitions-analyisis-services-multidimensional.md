@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
@@ -14,12 +13,12 @@ ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726099"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075148"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
   큐브 파티션은 **에서 큐브 디자이너의** 파티션 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]탭을 사용하여 수정됩니다. **파티션** 탭에서는 큐브에 있는 모든 측정값 그룹의 파티션을 나열합니다. 또한 쓰기 저장(writeback)이 설정된 쓰기 저장 파티션을 나열합니다.  

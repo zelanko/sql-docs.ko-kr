@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
@@ -13,12 +12,12 @@ ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699743"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074255"
 ---
 # <a name="user-defined-member-properties-mdx"></a>사용자 정의 멤버 속성(MDX)
   사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 계층의 `(All)` 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  

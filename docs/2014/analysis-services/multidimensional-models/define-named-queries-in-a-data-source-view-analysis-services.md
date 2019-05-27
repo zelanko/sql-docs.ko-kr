@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - named queries [Analysis Services], creating
@@ -15,12 +14,12 @@ ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726497"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075557"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
   명명된 쿼리는 테이블로 표현된 SQL 식입니다. 명명된 쿼리에 SQL 식을 지정하여 하나 이상의 데이터 원본에 있는 하나 이상의 테이블에서 반환된 행 및 열을 선택할 수 있습니다. 식을 기반으로 한다는 점을 제외하면 명명된 쿼리는 관계 및 행이 있는 데이터 원본 뷰(DSV)의 다른 테이블과 같습니다.  

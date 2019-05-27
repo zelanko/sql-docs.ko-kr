@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353017"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011273"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>전체 텍스트 쿼리 성능 향상
   다음은 전체 텍스트 쿼리 성능 향상에 도움이 될 권장 사항 목록입니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "53353017"
 -   선택적 관계 조건을 포함하는 애플리케이션의 경우 선택적 관계 조건자와 비선택적 전체 텍스트 조건자를 사용하는 쿼리는 쿼리 최적화 프로그램을 사용하도록 작성되었을 때 최상의 성능을 발휘할 수 있습니다. 이렇게 하면 쿼리 최적화 프로그램이 효과적인 쿼리 계획을 생성하기 위해 조건자나 범위 축소 중 어느 것을 이용할지 결정할 수 있습니다. 이러한 방식은 관계형 데이터를 전체 텍스트 데이터로 인덱싱하는 것보다 간단하고 효율적일 때가 많습니다.  
   
 ## <a name="related-resources"></a>관련 리소스  
- [SQL Server 2008 전체 텍스트 검색: 내부 및 향상 내용](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 전체 텍스트 검색: 내부 구조 및 향상 기능](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_fts_memory_buffers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

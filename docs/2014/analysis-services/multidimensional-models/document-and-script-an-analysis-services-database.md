@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML for Analysis, scripts
@@ -18,12 +17,12 @@ ms.assetid: 125044e2-8d36-4733-8743-8bb68ff9aa4e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1a10d27612d127bcc9fcc5ca60f97575f6fc1fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9284073781a91b21d588684b9071e6179a815613
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726027"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075123"
 ---
 # <a name="document-and-script-an-analysis-services-database"></a>Analysis Services 데이터베이스 문서화 및 스크립트
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스가 배포되면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 데이터베이스 또는 데이터베이스에 포함된 개체의 메타데이터를 XMLA(XML for Analysis) 스크립트로 출력할 수 있습니다. 이 스크립트를 새로운 **XMLA 쿼리 편집기** 창, 파일 또는 클립보드로 출력할 수 있습니다. XMLA에 대 한 자세한 내용은 참조 하세요. [Analysis Services Scripting Language &#40;ASSL&#41; 참조](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +18,12 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eb6f1072396b957dc9d4b1e9b7d1089e30c739c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080884"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 다차원에 대한 세계화 시나리오
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 표 형식 데이터 모델과 다차원 데이터 모델 모두에서 다국어 데이터와 메타데이터를 저장 및 조작합니다. 데이터 스토리지는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  

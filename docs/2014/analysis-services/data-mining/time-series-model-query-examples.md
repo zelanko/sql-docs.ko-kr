@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4098a1b5eade3705e10ab609c47454564a18101d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082745"
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  

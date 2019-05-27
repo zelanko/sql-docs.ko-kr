@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - default members
@@ -16,12 +15,12 @@ ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49120d810eac622d75a8d3691654b65b78d0d570
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703773"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077416"
 ---
 # <a name="define-a-default-member"></a>기본 멤버 정의
   특성의 기본 멤버는 쿼리에 특성 계층이 포함되어 있지 않을 때 식을 평가하는 데 사용됩니다. 기본 멤버는 특성 계층이나 특성 계층의 원본이 되는 특성이 포함된 사용자 계층이 쿼리에 포함될 때마다 무시됩니다. 이는 쿼리에 지정된 멤버가 사용되기 때문입니다.  

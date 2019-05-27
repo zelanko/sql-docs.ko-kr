@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -16,12 +15,12 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25ee10bbda10329a3f28171eb0027df9769e9fde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103516"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  

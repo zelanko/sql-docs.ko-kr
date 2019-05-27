@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - All members
@@ -20,12 +19,12 @@ ms.assetid: 0cb35e6f-b10f-483d-b893-78f6ca3979fd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96e7e0cd5377e180630f10bdae6c32e33fcd119b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95e1693333bbc228e16d01646283d41138d0aaf0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076003"
 ---
 # <a name="configure-the-all-level-for-attribute-hierarchies"></a>특성 계층에 대해 (All) 수준 구성
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 (All) 수준은 선택적인 시스템 생성 수준입니다. 이 수준에는 바로 아래 종속되는 수준의 모든 멤버 값의 집계를 값으로 갖는 멤버 하나만 포함됩니다. 이 멤버를 All 멤버라고 합니다. All 멤버는 차원 테이블에 포함되지 않은 시스템 생성 멤버입니다. (All) 수준의 멤버는 계층의 맨 위에 있기 때문에 이 멤버의 값은 해당 계층의 모든 멤버 값을 통합하여 집계한 값입니다. All 멤버는 대개 계층의 기본 멤버 역할을 합니다.  
