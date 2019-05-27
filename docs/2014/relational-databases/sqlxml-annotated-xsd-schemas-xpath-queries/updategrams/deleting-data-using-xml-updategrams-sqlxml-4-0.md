@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294347"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014865"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삭제(SQLXML 4.0)
   레코드 인스턴스가 표시 되는 경우는 updategram 삭제 작업을 나타냅니다는  **\<전에 >** 블록에 해당 레코드가 없는  **\<후 >** 블록입니다. updategram에서 레코드를 삭제 하는 경우에  **\<전에 >** 데이터베이스에서 차단 합니다.  

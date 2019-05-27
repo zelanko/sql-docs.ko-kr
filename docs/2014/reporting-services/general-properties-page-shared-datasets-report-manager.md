@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ed5b54ea07249a69e6f599e53658e8aba10d656
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109072"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>일반 속성 페이지, 공유 데이터 세트(보고서 관리자)
   공유 데이터 세트 페이지를 사용하여 공유 데이터 세트 항목의 속성을 보고 관리할 수 있습니다.  
@@ -71,6 +70,6 @@ ms.locfileid: "63260756"
  [캐시 새로 고침 옵션 &#40;보고서 관리자&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [캐싱 페이지, 공유 데이터 집합 &#40;보고서 관리자&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
  [공유 데이터 세트 관리](report-data/manage-shared-datasets.md)   
- [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](report-server/cache-shared-datasets-ssrs.md)  
+ [공유 데이터 세트 캐시&#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

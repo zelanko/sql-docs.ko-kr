@@ -14,14 +14,18 @@ ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710621"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727930"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 **Azure SQL DW 업로드 태스크**를 사용하면 SSIS 패키지가 파일 시스템이나 Azure Blob Storage에서 Azure SQL DW(Data Warehouse)로 테이블 형식 데이터를 복사할 수 있습니다.
 이 태스크는 [Azure SQL Data Warehouse 로딩 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) 문서에 설명된 대로 PolyBase를 활용하여 성능을 향상합니다.

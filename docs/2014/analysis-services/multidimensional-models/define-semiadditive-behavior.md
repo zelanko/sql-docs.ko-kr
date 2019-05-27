@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
@@ -15,12 +14,12 @@ ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726290"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075534"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
   다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅숏을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 애플리케이션에서 이러한 스냅숏을 찾을 수 있습니다.  

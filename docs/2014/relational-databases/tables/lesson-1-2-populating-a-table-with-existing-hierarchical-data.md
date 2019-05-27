@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110172"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>기존 계층적 데이터로 테이블 채우기
   이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  

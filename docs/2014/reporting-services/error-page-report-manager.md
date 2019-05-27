@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109214"
 ---
 # <a name="error-page-report-manager"></a>오류 페이지(보고서 관리자)
   오류 페이지를 사용하여 오류 상태에 대한 정보를 볼 수 있습니다. 서버 기반 또는 세션 기반 오류가이 페이지에 나타납니다. 특정 페이지 컨트롤과 관련된 유효성 검사 오류는 컨트롤 옆에 인라인으로 표시됩니다.  

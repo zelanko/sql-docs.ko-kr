@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a68a6f66af2f74544f800d7c3786caf4a577d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131632"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014626"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
   이 ASP(Active Server Pages) 응용 프로그램을 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 AdventureWorks 예제 데이터베이스의 Person.Contact 테이블에 있는 고객 정보를 업데이트할 수 있습니다. 이 응용 프로그램에서는 다음 작업을 수행합니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70fa82ad94ed82c7cfbf809556bfde72edb90da6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749107"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070977"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서가 저장된 신뢰할 수 있는 위치에서 외부 데이터 연결을 허용하지 않습니다. PowerPivot 데이터 연결을: PowerPivot 데이터
   Excel 서비스는 포함된 데이터 원본에 연결할 수 없는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  

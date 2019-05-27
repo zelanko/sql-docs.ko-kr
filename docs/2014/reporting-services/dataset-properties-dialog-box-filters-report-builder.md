@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10025"
@@ -13,12 +12,12 @@ ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e72adbe0fe4ee33c6354db975cd917050d6ff392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109376"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>데이터 세트 속성 대화 상자, 필터(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  

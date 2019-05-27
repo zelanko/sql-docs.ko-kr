@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748998"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071044"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint 서버 시작 또는 중지
   PowerPivot 시스템 서비스 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스는 SharePoint 팜에서 통합된 요청 및 데이터 처리를 지원 하기 위해 동일한 로컬 응용 프로그램 서버에서 함께 작동 합니다.  

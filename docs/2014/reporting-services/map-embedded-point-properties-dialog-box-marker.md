@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapembeddedpointlayerproperties.marker.f1
@@ -14,12 +13,12 @@ ms.assetid: 3c5eb1c5-d40a-424f-aa7c-43b112f42dec
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88898800b2d24bcf6af7f421dc3ae6e91f123728
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63279004"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108329"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>지도 포함 점 속성 대화 상자, 표식
   **포함 점 속성** 대화 상자에서 **표식** 을 선택하여 다음 지도 요소의 표식 유형 및 표식 크기 옵션을 변경할 수 있습니다.  

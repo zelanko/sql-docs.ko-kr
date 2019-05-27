@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
@@ -16,12 +15,12 @@ ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ddeafaafd816e226edff764c8e273cde6df4eaad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748457"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070586"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>수익 차트(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 수익 차트 단추](media/dmc-profitchart.gif "데이터 마이닝 리본의 수익 차트 단추")  

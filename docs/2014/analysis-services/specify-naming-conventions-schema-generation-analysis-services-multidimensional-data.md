@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
@@ -13,12 +12,12 @@ ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068348"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>명명 규칙 지정(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **명명 규칙 지정** 페이지를 사용하여 스키마 생성 마법사에서 스키마 개체를 만들 때 사용하는 명명 규칙을 정의할 수 있습니다.  

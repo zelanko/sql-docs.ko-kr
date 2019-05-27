@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144032"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108656"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 제거(보고서 작성기)
   제어판 또는 명령줄에서 독립 실행형 버전의 보고서 작성기를 제거할 수 있습니다. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전 보고서 작성기는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]를 제거해야만 제거할 수 있습니다.  

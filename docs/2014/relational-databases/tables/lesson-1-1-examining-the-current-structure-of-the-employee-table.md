@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
@@ -13,12 +12,12 @@ ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110135"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Employee 테이블의 현재 구조 검사
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 쿼리 한 다음, 합니다 **HumanResources.EmployeeDemo** 테이블을 사용 하지 않고 테이블에서 데이터가 구조화 되는 방식을 검토는 `hierarchyid` 데이터 형식.  

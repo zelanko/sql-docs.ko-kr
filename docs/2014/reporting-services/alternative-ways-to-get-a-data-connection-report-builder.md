@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e98be6ed17cebe6c06033b7230fbbdcdde18dd66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233524"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109994"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
   데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다.  

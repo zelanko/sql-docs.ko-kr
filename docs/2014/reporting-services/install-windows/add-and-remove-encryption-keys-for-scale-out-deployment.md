@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -18,12 +17,12 @@ ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 52ecac095d34882d8f65cdafaa83784aef86e2fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63261544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108920"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>확장 배포의 암호화 키 추가 및 제거(SSRS 구성 관리자)
   여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 스케일 아웃 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행할 수 있습니다. 스케일 아웃 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 스케일 아웃 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  

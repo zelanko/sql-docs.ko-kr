@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
@@ -13,12 +12,12 @@ ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748215"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070178"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>결과 창(마이닝 모델 예측 뷰)
   **결과** 창에서는 예측 쿼리 작성기의 **디자인** 뷰에서 디자인한 데이터 마이닝 예측 쿼리의 결과를 표시합니다. 표의 선택 부분 또는 전체 결과 표를 클립보드에 복사할 수 있습니다.  

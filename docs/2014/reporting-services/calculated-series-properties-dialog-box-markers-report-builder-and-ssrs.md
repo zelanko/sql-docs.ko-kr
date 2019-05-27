@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10153"
@@ -14,12 +13,12 @@ ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266362"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109881"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>계산된 계열 속성 대화 상자, 표식(보고서 작성기 및 SSRS)
   **계산된 계열 속성** 대화 상자에서 **표식** 을 선택하여 계열의 데이터 요소 각각에 대해 표식이 표시되는 방식을 정의할 수 있습니다. 표식은 일부 유형의 차트에만 사용할 수 있습니다. 차트 종류는 마커를 지원합니다. 영역, 막대, 열, 꺾은선형, 극좌표 형 및 분산형입니다. 차트 기능에 대한 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  

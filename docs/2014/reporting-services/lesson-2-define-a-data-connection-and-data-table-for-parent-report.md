@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c6b7e6e38ca10cf23179872ddc3ff4476bc3657d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108502"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
   Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2008 데이터베이스에 대한 연결입니다. AdventureWorks2012 데이터베이스에 연결할 수도 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -15,12 +14,12 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065341"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108636"
 ---
 # <a name="upgrade-a-report-server-database"></a>보고서 서버 데이터베이스 업그레이드
   보고서 서버 데이터베이스는 하나 이상의 보고서 서버 인스턴스를 위한 스토리지를 제공합니다. 보고서 서버 데이터베이스 스키마는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 새 릴리스마다 변경될 수 있으므로 데이터베이스 버전과 사용하는 보고서 서버 인스턴스 버전이 일치해야 합니다. 대부분의 경우 보고서 서버 데이터베이스는 사용자가 특별한 동작을 수행하지 않고도 자동으로 업그레이드할 수 있습니다.  

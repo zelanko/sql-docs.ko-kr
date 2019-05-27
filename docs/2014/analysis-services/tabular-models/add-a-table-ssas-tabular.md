@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757654"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067793"
 ---
 # <a name="add-a-table-ssas-tabular"></a>테이블 추가(SSAS 테이블 형식)
   이 항목에서는 이전에 데이터를 모델로 가져왔던 데이터 원본의 테이블을 추가하는 방법에 대해 설명합니다. 같은 데이터 원본의 테이블을 추가하려면 기존 데이터 원본 연결을 사용합니다. 단일 데이터 원본에서 임의 개수의 테이블을 가져올 때는 항상 단일 연결을 사용하는 것이 좋습니다.  

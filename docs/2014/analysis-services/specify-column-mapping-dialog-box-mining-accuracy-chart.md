@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.coltotablecolmapping.f1
@@ -13,12 +12,12 @@ ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0d0cfd668ae945cd54df11fe6110ce59d088980
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068416"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>열 매핑 지정 대화 상자(마이닝 정확도 차트)
   **열 매핑 지정** 탭을 사용하여 외부 데이터 원본에서 테이블을 선택하고 열을 데이터 마이닝 모델에 매핑할 수 있습니다. 그런 다음 외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트하고 결과를 정확도 차트에 표시할 수 있습니다.  

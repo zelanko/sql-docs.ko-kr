@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - files-only installation [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: bdc74a8f-046c-4aa0-bfbd-4f1711dfb9ce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c76e3e4f1f2e427d8f56c0b832475a22aee6648d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a854de693bce88fcba0de2f1c08e4b0fe296b512
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262282"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108837"
 ---
 # <a name="files-only-installation-reporting-services"></a>파일만 설치(Reporting Services)
   *파일만 설치* 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 프로그램 파일에 대한 폴더 구조 만들기, 디스크로 파일 복사, 로컬 컴퓨터에 보고서 서버 서비스 등록, 서비스 계정 구성, 서비스 계정에 파일 권한 부여 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 공급자 등록 등의 작업을 설치 프로그램에서 수행하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 의미합니다.  

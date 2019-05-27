@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63048970"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110163"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
   이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](lesson-1-1-tuning-a-workload.md)에 대해 만든 MyScript.sql 작업을 사용합니다.  

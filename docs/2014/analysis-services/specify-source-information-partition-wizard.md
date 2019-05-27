@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
@@ -13,12 +12,12 @@ ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746127"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068167"
 ---
 # <a name="specify-source-information-partition-wizard"></a>원본 정보 지정(파티션 마법사)
   **원본 정보 지정** 페이지를 사용하여 파티션이 생성될 측정값 그룹과 파티션에 대한 데이터 원본 뷰를 선택할 수 있을 뿐만 아니라 파티션에 대한 테이블을 필터링할 수 있습니다.  

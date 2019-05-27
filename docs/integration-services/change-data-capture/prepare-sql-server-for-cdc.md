@@ -13,14 +13,18 @@ ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9b0ba6e5a3ee22bb29aac7bedc0be7e5a4619d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8e9266e93a48987d2d00207b52760df033a11c97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283107"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728613"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC를 위한 SQL Server 준비
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC Service에서는 모든 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 MSXDBCDC 데이터베이스가 포함되어야 합니다. CDC Service 구성 콘솔에서 SQL Server 준비 작업을 사용하여 이 데이터베이스를 만듭니다. 이 작업은 이 데이터베이스의 필수 테이블, 저장 프로시저 및 기타 필수 아티팩트를 만들기 위해 실행되는 특수 스크립트를 만듭니다. 이 작업은 각 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 한 번만 수행됩니다.  
   
  MSXDBCDC 데이터베이스에 대한 자세한 내용은 MSXDBCDC 데이터베이스를 참조하십시오.  

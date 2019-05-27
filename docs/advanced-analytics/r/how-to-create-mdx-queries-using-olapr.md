@@ -3,17 +3,17 @@ title: OlapR-SQL Server Machine Learning Services를 사용 하 여 R에서 MDX 
 description: R 언어 스크립트에서 MDX 쿼리를 작성 하려면 SQL Server에서 olapR 패키지 라이브러리를 사용 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65357520"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175282"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR을 사용 하 여 R에서 MDX 쿼리를 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,7 +97,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>olapR에서 제공하는 함수를 사용하여 이 쿼리를 작성하려면
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 qry <- Query()
@@ -113,13 +113,13 @@ result1 <- executeMD(ocs, qry)
 명명된 된 인스턴스를 해야 R에서 제어 문자를 간주 될 수 있는 모든 문자를 이스케이프 합니다.  예를 들어, 다음 연결 문자열 ContosoHQ 이라는 서버의 OLAP01, 인스턴스를 참조 합니다.
 
 ```R
-cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP;"
+cnnstr <- "Data Source=ContosoHQ\\OLAP01; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ```
 
 #### <a name="to-run-this-query-as-a-predefined-mdx-string"></a>미리 정의된 MDX 문자열로 이 쿼리를 실행하려면
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 
 mdx <- "SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, {[Product].[Product Line].[Product Line].MEMBERS} ON ROWS FROM [Analysis Services Tutorial] WHERE [Sales Territory].[Sales Territory Country].[Australia]"
@@ -150,7 +150,7 @@ SELECT {[Measures].[Internet Sales Count], [Measures].[Internet Sales-Sales Amou
 > 최종 결과 **되지** 큐브; True 이면 메타 데이터 작업이 성공 했음을 단순히 나타냅니다. 인수가 유효하지 않을 경우 오류가 발생합니다.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
@@ -168,7 +168,7 @@ explore(ocs)
 큐브 또는 큐브 뷰의 모든 차원을 보려면 큐브 또는 큐브 뷰 이름을 지정합니다.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
 ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
@@ -185,8 +185,8 @@ explore(ocs, "Sales")
 원본을 정의하고 핸들을 만든 후 반환할 큐브, 차원 및 계층을 지정합니다. 반환 결과 접두사로 사용 하는 항목의에서 **->** 이전 멤버의 자식을 나타냅니다.
 
 ```R
-cnnstr <- "Data Source=localhost; Provider=MSOLAP;"
-ocs \<- OlapConnection(cnnstr)
+cnnstr <- "Data Source=localhost; Provider=MSOLAP; initial catalog=Analysis Services Tutorial"
+ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 

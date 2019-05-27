@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069067"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>서버 구성 유틸리티(Excel용 데이터 마이닝 추가 기능)
   Excel 용 데이터 마이닝 추가 기능을 설치할 때 서버 구성 유틸리티도 설치 되어 및 추가 기능을 열면 처음으로 실행 됩니다. 이 항목에서는 유틸리티를 사용 하 여 인스턴스에 연결 하는 방법을 설명 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 데이터 마이닝 모델을 사용 하 여 작업에 사용할 데이터베이스를 설정 합니다.  

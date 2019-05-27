@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 815eff4ba68cb35a5f38b98514cc5359347a42e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdbac1500063accf868d4b538b82ba9f3b5aebb0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237692"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109976"
 ---
 # <a name="atom-device-information-settings"></a>ATOM 디바이스 정보 설정
   Atom 렌더링 확장 프로그램의 디바이스 정보 설정은 사용할 문자 인코딩 및 Atom 피드 이름 전송을 지원합니다.  

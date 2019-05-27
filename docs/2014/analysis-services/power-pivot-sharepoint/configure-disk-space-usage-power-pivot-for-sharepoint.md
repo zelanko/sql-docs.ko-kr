@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743249"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071804"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 PowerPivot)
   SharePoint용 PowerPivot 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 PowerPivot 데이터베이스를 캐시합니다. 메모리에 로드되는 각 PowerPivot 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 PowerPivot에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  

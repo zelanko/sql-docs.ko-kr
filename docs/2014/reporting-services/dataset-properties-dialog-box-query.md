@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10160"
@@ -14,12 +13,12 @@ ms.assetid: 1fa34a4b-7de0-4e92-99fa-bc28a206773f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cbfdf8f29db3fd96132d3e5058fb6d0f1f597f8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109368"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>데이터 세트 속성 대화 상자, 쿼리
   선택 **쿼리** 에 **데이터 집합 속성** 대화 상자의 데이터 원본을 선택 하 고 쿼리를 만듭니다.  

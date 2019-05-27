@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071247"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 데이터 액세스
   이 항목에서는 Sharepoint 라이브러리에 게시되는 PowerPivot 통합 문서에서 데이터를 검색하는 방법을 설명합니다.  

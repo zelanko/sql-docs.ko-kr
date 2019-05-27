@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -15,12 +14,12 @@ ms.assetid: 7e288eee-2d37-485e-a6a0-dbba5e041e26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bca4cac495ab8076c46d1dc2b7da411e46eae5db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 456989b83877b0c94c07f9074719666ebac3a873
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63193204"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110003"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface-report-builder"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   보고서 작성기는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공합니다. 이 창에서는 선택한 큐브에서 멤버를 끌어서 보고서 처리 시에 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
