@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
@@ -13,12 +12,12 @@ ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1fedf055524fa963203f1d0c2b0a64e0fafb6de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266474"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109848"
 ---
 # <a name="choose-the-table-layout"></a>테이블 레이아웃 선택
   보고서 마법사의 테이블 레이아웃 선택 페이지를 사용하여 보고서의 테이블 레이아웃을 선택할 수 있습니다.  

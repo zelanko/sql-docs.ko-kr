@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.mdxbuilderdialof.f1
@@ -15,12 +14,12 @@ ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3121646cbcfee823be71b575349b814fbf36c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728029"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078018"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 작성기( Analysis Services - 다차원 데이터)
   **또는** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] MDX 작성기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 MDX(Multidimensional Expression) 식을 작성할 수 있습니다. 표시할 수 있습니다 합니다 **MDX 작성기** 를 클릭 하 여 대화 상자를 **MDX 편집** 줄임표 단추 (**...** )에 대 한는 **큐브 내용 읽을 수 있습니다** 옵션을 **셀 보안에 따라 셀 내용의 읽을 허용** 옵션을 또는 **읽을 수 있습니다 및 큐브 내용을 작성** 옵션을 **셀 데이터** 페이지 **역할 디자이너**합니다.  

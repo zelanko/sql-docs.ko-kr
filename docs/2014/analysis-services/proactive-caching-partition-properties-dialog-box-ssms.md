@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
@@ -13,12 +12,12 @@ ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070710"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>자동 관리 캐싱(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio에서 **파티션 속성** 대화 상자의 **자동 관리 캐싱** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 내 큐브에 대한 측정값 그룹에 있는 파티션의 저장소 및 자동 관리 캐싱 속성을 설정할 수 있습니다.  

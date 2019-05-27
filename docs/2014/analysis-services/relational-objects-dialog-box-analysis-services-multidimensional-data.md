@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748365"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070350"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>관계형 개체 대화 상자(Analysis Services - 다차원 데이터)
   **의** 관계형 개체 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본에서 자동 관리 캐싱을 설정할 테이블, 뷰 또는 다른 개체를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 스토리지 옵션**대화 상자의**알림 **탭에서** 추적 테이블 지정 **옵션 중 하나에 대한 줄임표 단추(** ... **)를 클릭하면** 에 이 대화 상자가 표시됩니다.  

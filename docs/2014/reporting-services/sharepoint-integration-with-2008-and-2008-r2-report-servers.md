@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d29d41069d5daca25d53477326e864720aa87ca1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223298"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101200"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>2008 및 2008 R2 보고서 서버와 SharePoint 통합
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에서는 SharePoint 모드가 SharePoint 공유 서비스를 기반으로 하는 아키텍처를 도입했습니다. 새 기능에 대한 관리는 **서비스 관리** 및 **관리자 서비스 애플리케이션** 페이지의 SharePoint 중앙 관리에서 완료됩니다. SharePoint 통합에 대한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 이전 아키텍처는 SharePoint 2010 제품의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능에서도 지원되므로 SharePoint 2010을 이전 버전의 보고서 서버와 통합할 수 있습니다.  

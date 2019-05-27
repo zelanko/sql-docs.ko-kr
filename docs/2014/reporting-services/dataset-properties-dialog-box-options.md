@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10130"
@@ -14,12 +13,12 @@ ms.assetid: 95299049-71ba-427f-b723-775cb696243f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109406"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>데이터 세트 속성 대화 상자, 옵션
   선택 **옵션** 에 **집합 속성** 데이터 정렬 옵션 및 쿼리에 대 한 부분합 같은 데이터 옵션을 변경 하려면 대화 상자. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을(를) 참조하세요.  

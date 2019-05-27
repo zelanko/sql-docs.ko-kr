@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
+author: VanMSFT
 ms.author: vanto
+ms.reviewer: aliceku
 manager: craigg
-ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512237"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938192"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>로그인을 복제하는 사용자 만들기  
  암호를 사용하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 같은 이름의 포함된 데이터베이스 사용자를 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에서 연결 시 초기 카탈로그로 포함된 데이터베이스를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에서 연결할 수 없습니다. 이 연결은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 하는 사용자가 아니라 포함된 데이터베이스의 암호가 있는 포함된 데이터베이스 사용자로 평가됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 의도적으로 또는 의도치 않게 서비스가 거부될 수 있습니다.  
   
--   최선의 방법은 **sysadmin** 고정 서버 역할의 멤버가 항상 초기 카탈로그 옵션을 사용하지 않고 연결하는 것입니다. 이렇게 하면 로그인이 master 데이터베이스에 연결되므로 데이터베이스 소유자가 로그인 시도를 잘못 사용할 수 없게 됩니다. 그런 다음 관리자는 **USE**_\<database>_ 문을 사용하여 포함된 데이터베이스로 변경할 수 있습니다. 로그인의 기본 데이터베이스를 포함된 데이터베이스로 설정할 수도 있습니다. 이렇게 하면 **master**로의 로그인이 완료된 다음 포함된 데이터베이스로 이 로그인이 전송됩니다.  
+-   최선의 방법은 **sysadmin** 고정 서버 역할의 멤버가 항상 초기 카탈로그 옵션을 사용하지 않고 연결하는 것입니다. 이렇게 하면 로그인이 master 데이터베이스에 연결되므로 데이터베이스 소유자가 로그인 시도를 잘못 사용할 수 없게 됩니다. 그런 다음 관리자는 **USE** _\<database>_ 문을 사용하여 포함된 데이터베이스로 변경할 수 있습니다. 로그인의 기본 데이터베이스를 포함된 데이터베이스로 설정할 수도 있습니다. 이렇게 하면 **master**로의 로그인이 완료된 다음 포함된 데이터베이스로 이 로그인이 전송됩니다.  
   
 -   최선의 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 이름이 같은, 암호가 있는 포함된 데이터베이스 사용자를 만들지 않는 것입니다.  
   

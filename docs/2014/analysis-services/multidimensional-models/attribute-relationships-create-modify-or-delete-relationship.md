@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], member properties
@@ -14,12 +13,12 @@ ms.assetid: 137b2f40-5dfb-4141-9110-70f961f259cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35e22807ed64cce3bc6f7c186978d4c9ee82c51d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701289"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077088"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>특성 관계 만들기, 수정 또는 삭제
   **에서 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 차원 특성 간의 특성 관계를 만들거나 수정 또는 삭제할 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: Linux에서 SQL Server 컴퓨터 언어 확장 (Java)를 설치 합니다. | Microsoft Docs
+title: Linux에서 SQL Server 언어 확장 (Java)를 설치 합니다. | Microsoft Docs
 description: Red Hat, Ubuntu 및 SUSE에서 SQL Server 언어 확장 (Java)를 설치 하는 방법에 알아봅니다.
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995081"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186810"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux에서 SQL Server 2019 언어 확장 (Java)를 설치 합니다.
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) 이 미리 보기 릴리스의 SQL Server 2019부터 Linux 운영 체제에서 실행 합니다. Java 언어 확장을 설치 하려면이 문서의 단계를 수행 합니다. 
-
 언어 확장은 데이터베이스 엔진에 추가 된 기능입니다. 수 있지만 [데이터베이스 엔진 및 언어 확장을 동시에 설치할](#install-all), 설치 및 구성 요소를 추가 하기 전에 모든 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 구성 하는 것이 좋습니다. 
 
-SQL Server Linux 소스 리포지토리에서 Java 확장에 대 한 패키지 위치는입니다. 데이터베이스 엔진 설치에 대 한 소스 리포지토리를 이미 구성한 경우 실행할 수 있습니다 합니다 **mssql server-확장성 java** 동일한 리포지토리 등록을 사용 하 여 설치 명령이 패키지 있습니다.
+Java 언어 확장을 설치 하려면이 문서의 단계를 수행 합니다.
+
+Java 확장에 대 한 패키지 위치는 SQL Server Linux 소스 리포지토리에 있습니다. 데이터베이스 엔진 설치에 대 한 소스 리포지토리를 이미 구성한 경우 실행할 수 있습니다 합니다 **mssql server-확장성 java** 동일한 리포지토리 등록을 사용 하 여 설치 명령이 패키지 있습니다.
 
 Linux 컨테이너에 대 한 언어 확장도 지원 됩니다. 언어 확장을 사용 하 여 미리 작성된 된 컨테이너를 제공 하지 않습니다 하지만 사용 하 여 SQL Server 컨테이너에서 만들 수 있습니다 [GitHub에서 제공 하는 예제 템플릿을](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)합니다.
 
@@ -84,7 +84,7 @@ ls /opt/microsoft/mssql/bin
 | 패키지 이름 | 에 적용 됩니다. | Description |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 모든 언어 | Java 코드를 실행 하는 데 확장성 프레임 워크입니다. |
-|mssql-server-extensibility-java | 자바 | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
+|mssql-server-extensibility-java | Java | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
 
 <a name="RHEL"></a>
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. 다시 시작 된 `mssql-launchpadd` 다시 서비스 합니다.
 
+7. 언어 확장을 사용 하려면 각 데이터베이스에 대해 외부 언어를 등록 해야 [외부 언어 만들](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)합니다.
+
 ## <a name="verify-installation"></a>설치 확인
 
 Java 기능 통합은 라이브러리를 포함 하지 않지만 실행할 수 있습니다 `grep -r JRE_HOME /etc` JAVA_HOME 환경 변수 만들기를 확인 합니다.
@@ -195,7 +197,7 @@ Java 기능 통합은 라이브러리를 포함 하지 않지만 실행할 수 �
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>SQL Server 및 언어 확장의 전체 설치
 
-설치 하 고 Java 패키지 및 데이터베이스 엔진을 설치 하는 명령에 매개 변수를 추가 하 여 프로시저 하나에서 데이터베이스 엔진 및 Machine Learning 서비스를 구성할 수 있습니다.
+설치 하 고 Java 패키지 및 데이터베이스 엔진을 설치 하는 명령에 매개 변수를 추가 하 여 프로시저 하나에서 데이터베이스 엔진 및 언어 확장을 구성할 수 있습니다.
 
 1. 데이터베이스 엔진 및 언어 확장 기능을 포함 하는 명령줄을 제공 합니다.
 
@@ -235,7 +237,7 @@ Java 기능 통합은 라이브러리를 포함 하지 않지만 실행할 수 �
 
 #### <a name="download-site"></a>다운로드 사이트
 
-패키지를 다운로드할 수 있습니다 [ https://packages.microsoft.com/ ](https://packages.microsoft.com/)합니다. 모든 Java에 대 한 패키지는 데이터베이스 엔진 패키지와 함께 배치 합니다. 
+패키지를 다운로드할 수 있습니다 [ https://packages.microsoft.com/ ](https://packages.microsoft.com/)합니다. Java에 대 한 패키지의 모든 데이터베이스 엔진 패키지를 사용 하 여 함께 배치 됩니다. 
 
 #### <a name="redhat7-paths"></a>RedHat/7 경로
 

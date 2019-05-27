@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134404"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186800"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 어플라이언스 노드에 연결
 이 문서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 여러 가지를 설명 합니다.  
@@ -26,6 +26,9 @@ SQL Server PDW에서 Hadoop 사용 하기 전에 SQL Server PDW에 Java Runtime 
 각 어플라이언스 노드에 직접 액세스는 특정 사용자가 입력 하 고 특정 사용 시나리오에만 합니다. 다음 표에서 각 어플라이언스 노드 및 사용자가 해당 노드로 직접 연결 하는 시나리오를 나열 합니다.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> 제품 팀 이나 AP 고객 지원 팀의 명시적 동의 없이 컨트롤 또는 계산 노드에 대 한 데이터베이스 또는 테이블 설정을 변경 하면 지원 되지 않는 APS 어플라이언스를 해석할 수 있습니다.
   
 |||  
 |-|-|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729956"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080330"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS를 사용하여 Analysis Services 관리 태스크 자동화
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DDL 스크립트, 큐브 및 마이닝 모델 처리 태스크, 데이터 마이닝 쿼리 태스크의 실행을 자동화할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 순차 및 병렬 데이터 처리 작업을 구성하기 위해 연결할 수 있는 제어 흐름 및 유지 관리 태스크의 모음으로 생각할 수 있습니다.  

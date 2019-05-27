@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
@@ -13,12 +12,12 @@ ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c923e2c92e22080f2b640afcec83c147ba3cfb6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646811"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098181"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
   SSL 인증서 바인딩을 제거합니다.  

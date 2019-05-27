@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
@@ -13,12 +12,12 @@ ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748375"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070523"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>쿼리 창(마이닝 모델 예측 뷰)
   **쿼리** 창에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 문을 표시합니다. 문을 수정한 다음 **쿼리 결과 뷰로 전환** 단추를 클릭하여 결과를 반환합니다. 다시 **디자인** 뷰로 전환하면 문에 적용한 변경 내용이 손실됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733643"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083637"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -153,9 +152,9 @@ ms.locfileid: "62733643"
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|Age|471.687717702463|0|0|126.969442359327|7|  
-|Age|234.680904692439|0|0|0|8|  
-|Age|45.4269617936399|0|0|126.969442359327|9|  
+|나이|471.687717702463|0|0|126.969442359327|7|  
+|나이|234.680904692439|0|0|0|8|  
+|나이|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  NODE_DISTRIBUTION 테이블에는 여러 행이 각각 변수별로 그룹화되어 들어 있습니다. 처음 두 개의 행은 값 유형이 항상 1과 3이며 대상 특성을 설명합니다. 그 이후 행은 특정 *회귀 변수*의 수식에 대한 정보를 제공합니다. 회귀 변수는 출력 변수와 선형 관계가 있는 입력 변수입니다. 여러 회귀 변수를 사용할 수 있으며 각 회귀 변수에는 계수(VALUETYPE = 7), 득점(VALUETYPE = 8) 및 통계(VALUETYPE = 9)에 대한 별도의 행이 있습니다. 마지막으로 테이블에는 수식의 절편(VALUETYPE = 11)이 포함된 행이 있습니다.  

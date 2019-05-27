@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266464"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109916"
 ---
 # <a name="cache-refresh-options-report-manager"></a>캐시 새로 고침 옵션(보고서 관리자)
   캐시 새로 고침 옵션 페이지를 사용하여 보고서 또는 공유 데이터 세트의 임시 데이터 복사본과 함께 캐시를 사전 로드하는 일정을 계획할 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 공유 데이터 세트의 경우 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 옵션 페이지에서는 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  

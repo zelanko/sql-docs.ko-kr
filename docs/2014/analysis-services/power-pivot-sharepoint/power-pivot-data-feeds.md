@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data sources [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749247"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071265"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 데이터 피드
   데이터 피드는 요청에 따라 온라인 데이터 원본에서 클라이언트 애플리케이션으로 데이터 스트림을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 피드를 사용하여 Atom 인식 웹 서비스나 애플리케이션의 데이터를 Excel 통합 문서의 PowerPivot 데이터 원본에 추가할 수 있습니다.  

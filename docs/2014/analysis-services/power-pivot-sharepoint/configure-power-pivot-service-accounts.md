@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749834"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071855"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot 서비스 계정 구성
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services(PowerPivot)** 서비스는 응용 프로그램 서버에서 PowerPivot 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  

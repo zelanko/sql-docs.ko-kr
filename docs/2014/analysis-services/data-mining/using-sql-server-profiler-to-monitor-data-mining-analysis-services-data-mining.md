@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
@@ -13,12 +12,12 @@ ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732584"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082697"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
   필요한 권한이 있는 경우 SQL Server 프로파일러를 사용하여 SQL Server Analysis Services 인스턴스에 보낸 요청으로 실행된 데이터 마이닝 작업을 모니터링할 수 있습니다. 데이터 마이닝 작업에는 모델 또는 구조의 처리, 예측 또는 내용 쿼리, 새 모델 또는 구조의 작성 등이 포함될 수 있습니다.  

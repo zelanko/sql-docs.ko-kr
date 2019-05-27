@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -18,12 +17,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 087322555ade5738ae3b4831488b6aa6e62b44a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733779"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083447"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
@@ -141,7 +140,7 @@ ms.locfileid: "62733779"
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](delete-a-mining-model-from-a-mining-structure.md)|  
 |마이닝 모델 열 작업|[마이닝 모델에서 열 제외](exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |모델 속성 변경|[마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 보기 또는 변경](view-or-change-algorithm-parameters.md)|  
-|복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](copy-a-view-of-a-mining-model.md)<br /><br /> [내보내기 & #40; DMX & #41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT&#40;DMX&#41;](/sql/dmx/import-dmx)|  
+|복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](copy-a-view-of-a-mining-model.md)<br /><br /> [내보내기 &#40; DMX &#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT&#40;DMX&#41;](/sql/dmx/import-dmx)|  
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](process-a-mining-model.md)|  
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](create-a-data-mining-dimension.md)|  
   

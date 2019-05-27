@@ -13,14 +13,18 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6964ac46f08a11aac9f3619acf181f11fd78960
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b5d988854d3dcf63b1a6be85d672fb2af31d6620
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274777"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728716"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Designer 콘솔을 사용하여 직접 만든 인스턴스에 대한 정보를 보고 인스턴스 작업을 관리할 수 있습니다.  
   
  왼쪽 창에서 인스턴스의 이름을 클릭하여 인스턴스에 대한 정보를 볼 수 있습니다.  
@@ -73,7 +77,7 @@ ms.locfileid: "58274777"
     |![오류](../../integration-services/change-data-capture/media/error.gif "오류")|**오류**: 다시 시도할 수 없는 오류가 발생하여 Oracle CDC 인스턴스가 실행되지 않습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **잘못 구성됨**: 수동 작업이 필요한 구성 오류가 발생했습니다.<br /><br /> **암호 필요**: Oracle CDC 인스턴스에 대해 암호를 설정하지 않았거나 암호가 올바르지 않습니다.<br /><br /> **예기치 않은 오류**: 복구할 수 없는 다른 모든 오류입니다.|  
     |![확인](../../integration-services/change-data-capture/media/okay.gif "확인")|**실행**: CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **유휴 상태**: 모든 변경 레코드가 처리되어 대상 변경 테이블에 저장되었습니다. 활성 트랜잭션이 더 이상 없습니다.<br /><br /> **처리 중**: 변경 테이블에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
     |![중지](../../integration-services/change-data-capture/media/stop.gif "중지")|**중지**: CDC 인스턴스가 실행되고 있지 않습니다. 중지됨 상태는 CDC 인스턴스가 정상적인 방법으로 중지되었음을 나타냅니다.|  
-    |![일시 중지됨](../../integration-services/change-data-capture/media/paused.gif "일시 중지됨")|**일시 중지됨**: CDC 인스턴스가 실행되고 있지만 다시 실행 가능한 오류로 인해 처리가 일시 중지되었습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **연결 끊김**: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> **스토리지**: 저장소가 꽉 찼습니다. 추가 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다.<br /><br /> **로거**: 로거가 Oracle에 연결되어 있지만 일시적인 문제(예: 필요한 트랜잭션 로그를 사용할 수 없음)로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
+    |![일시 중지됨](../../integration-services/change-data-capture/media/paused.gif "일시 중지됨")|**일시 중지됨**: CDC 인스턴스가 실행되고 있지만 다시 실행 가능한 오류로 인해 처리가 일시 중지되었습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **연결 끊김**: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> **스토리지**: 스토리지가 꽉 찼습니다. 추가 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다.<br /><br /> **로거**: 로거가 Oracle에 연결되어 있지만 일시적인 문제(예: 필요한 트랜잭션 로그를 사용할 수 없음)로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
   
 -   **자세한 상태**: 현재 하위 상태입니다.  
   

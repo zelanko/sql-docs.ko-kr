@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.filterdetails.f1
@@ -13,12 +12,12 @@ ms.assetid: 0280b963-4c5a-4ad1-904b-360b43dfb10a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6de0050da1067146db5040b68d821915fdb20c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7dbd71697e606a0d631a729d3d96d2ac2311899f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731385"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081216"
 ---
 # <a name="filter-details-ssas"></a>필터 세부 정보(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 데이터를 가져오기 위해 지정한 필터를 볼 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
