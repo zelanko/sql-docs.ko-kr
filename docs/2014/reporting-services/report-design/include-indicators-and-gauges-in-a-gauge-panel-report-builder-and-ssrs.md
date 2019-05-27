@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e018b225fc2cf113270b11cb12f2a2de37a1ca86
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105654"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>계기 패널에 표시기 및 계기 포함(보고서 작성기 및 SSRS)
   계기 패널은 하나 이상의 계기 및 표시기가 포함되는 최상위 컨테이너입니다. 표시기는 계기 패널에서 계기에 포함하거나 계기 옆에 배치할 수 있습니다.  

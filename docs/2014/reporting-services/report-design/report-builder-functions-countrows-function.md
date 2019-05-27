@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5967303b875ed7bc2ddaba8d1c77c169d0025d04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216078"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105275"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 함수(보고서 작성기 및 SSRS)
   Null 값을 가진 행을 포함하여 지정된 범위의 행 수를 반환합니다.  

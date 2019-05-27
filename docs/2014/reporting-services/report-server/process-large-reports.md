@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
@@ -17,12 +16,12 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9eebb080589287839db8951bbac1e715585161e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190975"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103617"
 ---
 # <a name="process-large-reports"></a>큰 보고서 처리
   큰 보고서는 제대로 실행될 경우 특수한 처리 문제를 발생시키며 특정 구성을 필요로 합니다. 큰 보고서는 페이지 매김을 지원하도록 구성되지 않은 한 요청 시 실행되도록 하면 안 됩니다.  

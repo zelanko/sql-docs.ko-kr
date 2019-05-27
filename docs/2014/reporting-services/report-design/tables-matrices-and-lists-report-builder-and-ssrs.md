@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
@@ -36,12 +35,12 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948639"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104747"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
   테이블, 행렬 및 목록은 행과 열로 구성되는 셀에 보고서 데이터를 표시하는 데이터 영역입니다. 셀에는 보통 텍스트, 날짜, 숫자 등의 텍스트 데이터가 포함되지만 계기, 차트, 또는 보고서 항목(예: 이미지)도 포함될 수 있습니다. 테이블, 행렬 및 목록을 집합적으로 테이블릭스 데이터 영역이라고 하는 경우가 많습니다.  

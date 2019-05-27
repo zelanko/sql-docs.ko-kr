@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021303"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106626"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가(보고서 작성기 및 SSRS)
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 세트를 사용하는 경우와 같이 데이터 세트 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  

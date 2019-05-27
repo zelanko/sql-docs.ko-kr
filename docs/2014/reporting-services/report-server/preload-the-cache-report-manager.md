@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191080"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103591"
 ---
 # <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 세트에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 세트에 대한 캐시를 미리 로드할 수 있습니다.  

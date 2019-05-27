@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66883f42947ba54205a5f272bb6bbfd5a90376f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020760"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106571"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
   표시 및 계산을 위해 데이터를 특정 값 또는 식 집합에 따라 구성하려는 경우 데이터 영역에 그룹을 추가할 수 있습니다. 그룹에는 그룹에 속한 데이터 세트의 데이터를 구분하는 식과 이름이 있습니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  

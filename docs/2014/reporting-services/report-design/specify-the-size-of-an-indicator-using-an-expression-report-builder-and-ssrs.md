@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a77a96d57a1ea9489697a415e96fb52165b8270f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 862e0f5dbe9ef15c33aad13a7f5480ffb7b07150
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215708"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104854"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS)
   색, 방향 및 모양 외에 크기도 표시기의 시각적 효과를 최대화하는 데 사용할 수 있습니다.  

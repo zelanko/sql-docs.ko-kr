@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10521"
@@ -24,12 +23,12 @@ ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185479"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106102"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  

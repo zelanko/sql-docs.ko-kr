@@ -62,7 +62,7 @@ ms.locfileid: "65404055"
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   
-8.   **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
+8.  **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
   
 9. **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount** 및 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   

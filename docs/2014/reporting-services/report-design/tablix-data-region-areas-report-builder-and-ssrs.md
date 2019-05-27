@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720255"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104718"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>테이블릭스 데이터 영역(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역에는 테이블릭스 셀을 포함하는 4개의 영역(모퉁이, 행 그룹 영역, 열 그룹 영역, 본문)이 있습니다. 각 영역의 셀에는 고유의 기능이 있습니다. 테이블릭스 본문 영역에 셀을 추가하여 세부 데이터 및 그룹화된 데이터를 표시할 수 있습니다. 사용자가 그룹 인스턴스 값을 표시하기 위해 그룹을 만들 때 보고서 작성기 및 보고서 디자이너는 행 그룹 또는 열 그룹 영역에 셀을 추가합니다. 행 그룹 및 열 그룹이 모두 있으면 보고서 작성기 및 보고서 디자이너에서 테이블릭스 모퉁이 셀을 만듭니다.  

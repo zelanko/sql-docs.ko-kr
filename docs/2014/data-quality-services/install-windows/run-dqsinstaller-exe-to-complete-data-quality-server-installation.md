@@ -34,7 +34,7 @@ ms.locfileid: "65480478"
   
     -   **시작 화면**: **시작** 화면에서 **Data Quality 서버 설치 프로그램**을 클릭합니다.  
   
-    -   **시작 메뉴**: 작업 표시줄에서 클릭 **시작**, 가리킨 **프로그램도**, 클릭 **Microsoft SQL Server 2014**합니다.  **Microsoft SQL Server 2014**에서 **Data Quality Services**를 클릭한 다음 **Data Quality 서버 설치 프로그램**을 클릭합니다.  
+    -   **시작 메뉴**: 작업 표시줄에서 클릭 **시작**, 가리킨 **프로그램도**, 클릭 **Microsoft SQL Server 2014**합니다. **Microsoft SQL Server 2014**에서 **Data Quality Services**를 클릭한 다음 **Data Quality 서버 설치 프로그램**을 클릭합니다.  
   
     -   **Windows 탐색기**: DQSInstaller.exe 파일을 찾습니다. SQL Server의 기본 인스턴스를 설치한 경우 DQSInstaller.exe 파일은 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn에 있습니다. DQSInstaller.exe 파일을 두 번 클릭합니다.  
   

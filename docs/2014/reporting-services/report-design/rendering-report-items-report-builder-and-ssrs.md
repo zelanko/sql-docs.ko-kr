@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215418"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105348"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  

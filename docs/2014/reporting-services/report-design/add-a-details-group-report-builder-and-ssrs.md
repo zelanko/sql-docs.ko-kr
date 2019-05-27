@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ef8efba-6d48-4aeb-a3b9-a02ba5a44614
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9e6b467700d816e4b46dfa7ae38f67be32234c7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe6fffc96a816c9b71c003926d6267e8287a1c48
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021103"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106856"
 ---
 # <a name="add-a-details-group-report-builder-and-ssrs"></a>세부 정보 그룹 추가(보고서 작성기 및 SSRS)
   보고서 데이터 세트의 세부 데이터는 그룹 식이 없는 그룹으로 지정됩니다. 행렬에 대한 세부 데이터를 표시하거나, 테이블이나 목록에서 삭제한 세부 데이터를 다시 추가하거나, 추가적인 세부 정보 그룹을 추가하려면 기존 테이블릭스 데이터 영역에 세부 정보 그룹을 추가합니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  

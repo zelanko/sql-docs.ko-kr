@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fa98a53b98fe446152b335b03671619da8341d6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020332"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106078"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
   미리 정의된 색상표를 선택하거나 사용자 지정 색상표를 정의하여 차트의 색상표를 변경할 수 있습니다. 사용자 지정 색상표는 이를 지정한 보고서에 대해서만 적용됩니다.  

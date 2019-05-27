@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8d9838306090cf219fed799c5982481ac3365a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105915"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위(보고서 작성기 및 SSRS)
   식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  

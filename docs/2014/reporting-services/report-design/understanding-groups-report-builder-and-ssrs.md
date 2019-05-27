@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10056"
@@ -14,12 +13,12 @@ ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63305205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104536"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
   보고서 작성기에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 세트의 명명된 데이터 세트입니다. 기본적으로 그룹은 보고서 데이터 세트의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 세트의 서로 다른 뷰를 지정합니다.  

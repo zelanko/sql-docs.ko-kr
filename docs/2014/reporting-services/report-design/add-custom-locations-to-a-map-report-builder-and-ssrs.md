@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
@@ -13,12 +12,12 @@ ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e5961a4d4984a4da5abd788903a05789de862db7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0ca3bf0e120cfe76aa3b58be1ca6a50991b9fb06
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106652"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>지도에 사용자 지정 위치 추가(보고서 작성기 및 SSRS)
   보고서에 지도를 추가한 후 점 위치를 추가할 수 있습니다.  

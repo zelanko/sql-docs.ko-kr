@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - retrieving report data
@@ -16,12 +15,12 @@ ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc39cb2f4e6b5a5e296f623feea213374473e9a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cc94e2945ac50537bd3ee42241909b5dc9c2cef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655009"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107126"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델의 데이터를 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본 및 하나 이상의 보고서 데이터 집합을 정의해야 합니다. 데이터 원본 정의를 만들 때는 클라이언트 컴퓨터에서 데이터 원본에 액세스할 수 있도록 연결 문자열 및 자격 증명을 지정해야 합니다.  

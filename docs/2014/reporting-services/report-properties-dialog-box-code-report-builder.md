@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10081"
@@ -13,12 +12,12 @@ ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40e3bdb096f6e755d65c64d99774cbc0bc606c94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2a4ef9c25607226c3898c10c0ec9ff245de8a18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302402"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104453"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>보고서 속성 대화 상자, 코드(보고서 작성기)
   **보고서 속성** 대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  

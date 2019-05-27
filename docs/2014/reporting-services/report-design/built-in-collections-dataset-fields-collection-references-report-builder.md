@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185818"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106446"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 각 데이터 세트에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 세트 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 세트를 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  

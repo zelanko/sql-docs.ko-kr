@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933580"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104227"
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 애플리케이션의 애플리케이션 도메인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 애플리케이션은 단일 보고 서버 프로세스 내 자체 애플리케이션 도메인에서 실행됩니다. 대부분의 경우 애플리케이션 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 애플리케이션 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  

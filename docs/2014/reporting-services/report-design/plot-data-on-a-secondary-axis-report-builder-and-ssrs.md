@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e52bfb513d27225a6ae13593d2e6a196447c3d0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9bff6ec41cc2437c6083e150eb391470cb5a5ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215673"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105425"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>보조 축에 데이터 표시(보고서 작성기 및 SSRS)
   차트는 기본 및 보조라는 두 가지 축 유형이 있습니다. 보조 축은 공통 범주를 공유하는 두 개의 개별 데이터 범위를 사용하여 두 개의 값 집합을 비교할 때 유용합니다.  

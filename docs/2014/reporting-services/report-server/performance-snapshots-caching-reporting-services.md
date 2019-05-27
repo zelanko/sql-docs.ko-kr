@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b1faef483d62d1e7853e30279d9c789ebb05372
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5fa14ad158d2b937ecd8c7fa706460ec8ee1aca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190966"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103596"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
   보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  

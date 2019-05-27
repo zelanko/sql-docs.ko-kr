@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10156"
@@ -13,12 +12,12 @@ ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 26fbda6dacd20b3ec02061b41a7e1de2f3b2d1ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185727"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106302"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>차트의 3D, 빗면 및 기타 효과(보고서 작성기 및 SSRS)
   3D(3차원) 효과를 사용하여 차트에 깊이를 더하고 시각적 효과를 강화할 수 있습니다. 예를 들어 쪼개진 원형 차트에서 특정 조각을 강조하려는 경우 차트를 돌려 원근감을 변경함으로써 해당 조각이 가장 먼저 보이도록 할 수 있습니다. 차트에 3D 효과를 적용할 경우 모든 그라데이션 색과 해칭 스타일이 해제됩니다.  

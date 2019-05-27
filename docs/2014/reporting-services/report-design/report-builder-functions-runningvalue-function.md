@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5176ddc4f06531dcbfea383362bdd195a215fe84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216172"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105155"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  

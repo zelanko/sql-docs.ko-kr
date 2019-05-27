@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -24,12 +23,12 @@ ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266604"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109935"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  

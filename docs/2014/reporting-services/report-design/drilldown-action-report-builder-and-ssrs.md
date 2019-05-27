@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10249"
@@ -41,12 +40,12 @@ ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fe3d55dc70a606df759c049b7b147820f0e3110
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825314"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105984"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>드릴다운 동작(보고서 작성기 및 SSRS)
   입력란에 더하기 또는 빼기 아이콘을 제공하면 사용자가 항목을 대화식으로 숨기거나 표시할 수 있습니다. 이를 *드릴다운* 동작이라고 합니다. 테이블 또는 행렬에 대해서는 정적 행과 열 또는 그룹과 연결된 행과 열을 표시하거나 숨길 수 있습니다.  

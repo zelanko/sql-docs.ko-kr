@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -18,12 +17,12 @@ ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d155437880f1fb93779a2352bd507ea83de16256
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151589"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104276"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>보고서 서버 데이터베이스 관리(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포는 두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 내부 저장소로 사용합니다. 기본적으로 데이터베이스 이름은 각각 ReportServer와 ReportServerTempdb입니다. ReportServerTempdb는 기본 보고서 서버 데이터베이스로 생성되며 임시 데이터, 세션 정보 및 캐시된 보고서를 저장하는 데 사용됩니다.  

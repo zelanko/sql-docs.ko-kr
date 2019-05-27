@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -14,12 +13,12 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215736"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105457"
 ---
 # <a name="planning-a-report-report-builder"></a>보고서 계획(보고서 작성기)
   보고서 작성기를 사용하여 다양한 종류의 보고서를 만들 수 있습니다. 예를 들어 판매 데이터, 마케팅 및 판매 추세를 요약하거나 자세히 보여 주는 보고서를 만들거나 운영 보고서 또는 대시보드를 만들 수 있습니다. 판매 주문, 제품 카탈로그 또는 양식 편지와 같은 서식 있는 텍스트를 사용한 보고서를 만들 수도 있습니다. 이러한 보고서는 모두 보고서 작성기에 있는 동일한 기본 빌딩 블록을 다르게 조합하여 만듭니다. 보고서를 만들기 전에 먼저 계획을 세우면 보다 유용하고 이해하기 쉬운 보고서를 만들 수 있습니다. 보고서 생성 작업을 시작하기 전에 고려해야 할 사항은 다음과 같습니다.  

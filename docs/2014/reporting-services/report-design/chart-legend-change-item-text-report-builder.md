@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106309"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>범례 항목의 텍스트 변경(보고서 작성기 및 SSRS)
   차트의 값 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우에는 범례가 개별 계열 대신 개별 데이터 요소에 연결됩니다.  

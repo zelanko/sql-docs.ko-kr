@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 737e8ebfd96d98bff9ed144db33189e141dc0cfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63021255"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107764"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 애플리케이션, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  

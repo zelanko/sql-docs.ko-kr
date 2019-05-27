@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
@@ -17,12 +16,12 @@ ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 085294763f9e950070ebe1468f3af1b4b9049aad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ec41aae3ada2281fab9b75517ecf75def517e1be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010699"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104243"
 ---
 # <a name="cache-a-report-report-manager"></a>보고서 캐시(보고서 관리자)
   성능을 향상시키는 한 가지 방법은 보고서의 캐싱 속성을 구성하는 것입니다. 보고서가 캐시되면 렌더링된 보고서의 복사본이 짧은 시간 동안 저장됩니다. 보고서를 요청하는 첫 번째 사용자는 모든 처리가 완료될 때까지 기다려야 보고서를 볼 수 있습니다. 캐싱 기간 내에 보고서를 요청하는 이후 사용자는 처리가 이미 발생했기 때문에 보고서를 바로 볼 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "63010699"
   
 6.  다음 두 캐시 옵션 중에서 하나를 선택하고 만료 시간을 구성합니다.  
   
-    -   캐시 된 복사본이 특정 시간 후에 만료 되도록 구성 하려면 **보고서의 임시 복사본을 캐시 합니다. 보고서 복사본은 다음 분 후에 만료됩니다.** 를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
+    -   캐시된 복사본이 특정 시간 후에 만료되도록 구성하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 분 후에 만료됩니다.** 를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
   
     -   일정에 따라 캐시된 복사본이 만료되도록 구성하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 일정으로 만료됩니다.** 를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료를 제어합니다.  
   

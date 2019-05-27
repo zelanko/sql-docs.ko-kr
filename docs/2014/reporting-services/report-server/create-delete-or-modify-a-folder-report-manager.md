@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -18,12 +17,12 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010737"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103922"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>폴더 만들기, 삭제 또는 수정(보고서 관리자)
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  

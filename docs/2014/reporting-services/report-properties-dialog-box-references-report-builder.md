@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10082"
@@ -13,12 +12,12 @@ ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef34d756629b2e281d02ff4c808b1a7862624886
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104388"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>보고서 속성 대화 상자, 참조(보고서 작성기)
   **보고서 속성** 대화 상자의 **참조** 를 선택하여 보고서 정의의 식에 사용되는 사용자 지정 또는 다른 외부 어셈블리 및 사용자 지정 클래스 인스턴스에 대한 참조를 추가 또는 제거할 수 있습니다. 사용자 지정 어셈블리는 보고서 작성기의 로컬 모드에서 지원되지 않습니다. 사용자 지정 어셈블리를 사용하는 보고서를 제작하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너를 사용하십시오.  

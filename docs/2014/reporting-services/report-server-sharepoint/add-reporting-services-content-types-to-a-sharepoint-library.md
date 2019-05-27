@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -16,12 +15,12 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 566ae0a91dd36d71ab6690e8910f1dd1cfe50043
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306375"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104286"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>웹 페이지에 보고서 뷰어 웹 파트 추가(SharePoint 통합 모드의 Reporting Services)
   보고서 뷰어 웹 파트를 사용하여 SharePoint 통합 모드로 구성된 보고서 서버에서 실행되는 보고서를 볼 수 있습니다. 또한 이 웹 파트를 사용하여 보고서 작성기나 보고서 디자이너에서 만들어 라이브러리에 업로드한 보고서 정의 파일(.rdl)을 표시할 수 있습니다.  

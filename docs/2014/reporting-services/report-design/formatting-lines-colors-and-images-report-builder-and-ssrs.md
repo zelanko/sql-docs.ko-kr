@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
@@ -24,12 +23,12 @@ ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 681ff6b46f692804aef5c7cbbc16e5abe99dbb2d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225049"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105794"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용하면 선, 색, 데이터 영역, 이미지 및 다른 보고서 항목의 서식을 지정할 수 있습니다.  

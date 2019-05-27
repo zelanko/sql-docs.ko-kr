@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6935c6a113aa90d656b6aa91c5fd840856b11774
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c50d242c7528485d5d21aa10f2680094628b484b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224946"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105718"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
   간단히 줄무늬라고도 하는 줄무늬 선은 차트의 배경에 일정한 간격 또는 사용자 지정 간격으로 음영을 적용하는 수평 또는 수직 범위입니다. 다음과 같은 용도에 줄무늬 선을 사용할 수 있습니다.  

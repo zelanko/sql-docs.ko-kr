@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, Report Builder
@@ -15,12 +14,12 @@ ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce13c158cbc6d359a319a816aee9a01decabdc0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104025"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  

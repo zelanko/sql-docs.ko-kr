@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216096"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105257"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 마지막 값을 반환합니다.  

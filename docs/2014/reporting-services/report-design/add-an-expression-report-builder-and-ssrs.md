@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a60ee091-b4ed-41e1-9b6a-032c316cd03f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba7a57ed74370689b5f3a8c907f34774f9c0a846
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 54505266a77c8baee7f39633ebccd0a5ab5708a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206846"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106736"
 ---
 # <a name="add-an-expression-report-builder-and-ssrs"></a>식 추가(보고서 작성기 및 SSRS)
   식은 보고서 항목 속성, 필터, 그룹, 정렬 순서, 연결 문자열 및 매개 변수 값을 정의하기 위해 보고서 전체에서 사용됩니다. 식은 등호(=)로 시작하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성됩니다. 이러한 식은 보고서 처리기에 의해 런타임에 평가됩니다. 보고서 처리기는 평가 결과를 보고서 레이아웃 요소와 결합합니다.  

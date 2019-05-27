@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d0d32084abfb744c2c5f9fdf6f585c7713e3057d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224714"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107207"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 세트 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 공유 데이터 집합은 외부 데이터 원본에 연결되는 공유 데이터 원본에서 데이터를 검색합니다. 공유 데이터 세트를 사용하면 쿼리를 공유하여 여러 보고서에서 일관성 있는 데이터 세트를 제공할 수 있습니다. 데이터 세트 쿼리에는 데이터 세트 매개 변수를 포함할 수 있습니다. 처음 사용할 때 또는 일정을 지정하여 특정 매개 변수 조합에 대해 쿼리 결과를 캐시하도록 공유 데이터 세트를 구성할 수 있습니다. 공유 데이터 세트 캐싱을 보고서 캐싱 및 보고서 데이터 피드와 함께 사용하면 데이터 원본에 대한 액세스를 쉽게 관리할 수 있습니다.  
@@ -94,7 +93,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |보고서의 공유 데이터 세트 인스턴스에 대한 추가 공유 데이터 세트 속성을 지정합니다.|보고서 작성기 보고서 디자이너|[데이터 집합 속성 대화 상자, 쿼리](../dataset-properties-dialog-box-query.md)|  
 |공유 데이터 세트의 다른 공유 데이터 원본에 바인딩합니다.|보고서 관리자|[데이터 원본 선택 페이지&#40;보고서 관리자&#41;](../data-source-selection-page-report-manager.md)|  
 |데이터 세트 매개 변수의 기본값을 확인합니다.|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](../caching-page-shared-datasets-report-manager.md)|  
+|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](../caching-page-shared-datasets-report-manager.md)|  
 |캐시 새로 고침 계획 만들기 또는 편집|보고서 관리자|[캐시 새로 고침 옵션&#40;보고서 관리자&#41;](../cache-refresh-options-report-manager.md)|  
 |공유 데이터 세트 정의 스키마를 봅니다.|보고서 관리자|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 통합 모드에서 보고서 서버와 SharePoint 사이트 간의 공유 데이터 세트 정의 동기화|SharePoint 애플리케이션 페이지|공유 데이터 세트 항목 속성 변경<br /><br /> 캐시 옵션 변경<br /><br /> 공유 데이터 원본 변경|  

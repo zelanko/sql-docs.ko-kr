@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10214"
@@ -52,12 +51,12 @@ ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af164d4db9b6439f0634d113652b95939827b0f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654601"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105854"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>차트 서식 지정(보고서 작성기 및 SSRS)
   차트용 데이터를 정의한 후 차트가 원하는 대로 표시되면 서식을 추가하여 전반적인 차트 모양을 향상시키고 중요한 데이터 요소를 강조 표시할 수 있습니다. 가장 일반적인 서식 지정 옵션은 차트 요소를 마우스 오른쪽 단추로 클릭하여 표시되는 바로 가기 메뉴에서 제공되는 속성 대화 상자에서 수정할 수 있습니다. 각 차트 요소에는 자체 대화 상자가 있습니다. 차트 요소에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)를 참조하세요.  

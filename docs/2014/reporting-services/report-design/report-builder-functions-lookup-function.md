@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215323"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105221"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  

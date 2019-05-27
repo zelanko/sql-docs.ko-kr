@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10014"
@@ -18,12 +17,12 @@ ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d2576b091af63166df0d321e156841745ecbc6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8058052fa1d38485ec3d2f31f53aae8886f077f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720985"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107102"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SAP NetWeaver Business Intelligence 데이터 원본을 위한 MDX(Multidimensional Expression) 쿼리를 작성할 수 있는 그래픽 쿼리 디자이너를 제공합니다. MDX 그래픽 쿼리 디자이너에 두 가지 모드가 있습니다. 디자인 모드와 쿼리 모드입니다. 각 모드는 메타데이터 창을 제공하며 이 창에서는 데이터 원본에 정의된 InfoCube, MultiProvider 또는 웹 사용이 가능한 쿼리에서 멤버를 끌어서 보고서 처리 시 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  

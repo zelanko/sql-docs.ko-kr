@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3aad6f25496384026e2550862b5babaf95bfd39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206330"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106473"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>입력란을 늘리거나 줄이도록 허용(보고서 작성기 및 SSRS)
   기본적으로 입력란은 고정된 크기를 가집니다. 입력란의 내용에 따라 입력란을 확장하거나 축소할 수 있는 옵션을 설정할 수 있습니다. 이러한 옵션은 속성 창의 `CanGrow` 또는 `CanShrink` 속성에 해당합니다.  

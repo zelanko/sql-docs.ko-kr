@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f634c206a2128369d8eee92a6355d26a620c3c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306363"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104305"
 ---
 # <a name="report-sections-dialog-box"></a>보고서 섹션 대화 상자
   보고서 디자이너는 보고서에 하나만 언어 RDL (Report Definition) 포함 되어 있는지 확인 하는 보고서를 열면  **\<구역 >** 요소입니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  

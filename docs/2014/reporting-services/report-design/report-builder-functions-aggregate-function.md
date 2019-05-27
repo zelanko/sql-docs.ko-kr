@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0c58b99b616c07e2144a30a9ea996b135b6f8a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215707"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105337"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Aggregate 함수(보고서 작성기 및 SSRS)
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  

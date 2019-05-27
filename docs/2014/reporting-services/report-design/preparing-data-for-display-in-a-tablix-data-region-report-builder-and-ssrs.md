@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 99bb694ee30a85d0f2cf484dd0c80836d2201a12
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 86418fd892c4f403f1e0207073a28e7933eb4b58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105423"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 표시하기 위한 데이터 준비(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역에는 데이터 세트의 데이터가 표시됩니다. 데이터 세트에 대해 검색된 모든 데이터를 보거나 필터를 만들어 일부 데이터만 볼 수 있습니다. 또한 조건 식을 추가하여 null 값을 채우거나 데이터 세트에 대한 쿼리를 수정하여 기존 열에 대한 정렬 순서를 정의하는 열을 포함할 수도 있습니다.  

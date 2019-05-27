@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - deactivated My Reports folder
@@ -17,12 +16,12 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 08230bedfa4c9e62a890a34db9ac12d99cae589a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103844"
 ---
 # <a name="enable-and-disable-my-reports"></a>내 보고서 설정 및 해제
   내 보고서 기능은 보고서 서버 데이터베이스에 개인 스토리지를 할당하여 해당 사용자가 소유한 보고서를 개인 폴더에 저장할 수 있도록 합니다. 보고서 서버 관리자는 이 기능을 설정 또는 해제하거나 이 작업 영역으로 수행할 수 있는 작업을 제어하는 보안 설정을 수정하여 이 기능의 작동 방식을 변경할 수 있습니다.  

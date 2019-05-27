@@ -1,8 +1,7 @@
 ---
 title: 보고서 기록 페이지 (보고서 관리자) | Microsoft Docs
 ms.prod: sql-server-2014
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -10,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945139"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104477"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
 

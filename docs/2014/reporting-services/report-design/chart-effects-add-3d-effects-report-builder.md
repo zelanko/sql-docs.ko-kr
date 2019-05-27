@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: de398500fb9511ae083277e1c23087a743f3d8e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020624"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106318"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>차트에 3D 효과 추가(보고서 작성기 및 SSRS)
   3D(3차원) 효과를 사용하여 차트에 깊이를 더하고 시각적 효과를 강화할 수 있습니다. 예를 들어 쪼개진 원형 차트에서 특정 조각을 강조하려는 경우 차트를 돌려 원근감을 변경함으로써 해당 조각이 가장 먼저 보이도록 할 수 있습니다. 차트에 3D 효과를 적용할 경우 모든 그라데이션 색과 해칭 스타일이 해제됩니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0dbcb90248761961deb5c932af952a53e3dcbbcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105153"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>StDev 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 표준 편차를 반환합니다.  

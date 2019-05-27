@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bd5201b32342734258a729de9ba474ac6cdf1be9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720641"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107104"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI 연결 형식(SSRS)
   보고서에 SAP NetWeaver® Business Intelligence 외부 데이터 원본의 데이터를 포함하려면 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]유형의 보고서 데이터 원본에 기초하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]의 확장 프로그램을 기반으로 합니다.  

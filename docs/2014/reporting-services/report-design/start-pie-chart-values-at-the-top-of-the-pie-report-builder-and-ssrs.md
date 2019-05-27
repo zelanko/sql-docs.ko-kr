@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0de0501bc62d8aa305f1bcd08e8fe3de5433ff9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2610534159be781e2719034b41276be5f0d7d473
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215209"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104820"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
   기본적으로 원형 차트에서는 데이터 세트의 첫 번째 값이 원형의 위쪽으로부터 90도가 되는 지점에서 시작됩니다. 첫 번째 값이 위쪽에서 시작되게 할 수도 있습니다.  

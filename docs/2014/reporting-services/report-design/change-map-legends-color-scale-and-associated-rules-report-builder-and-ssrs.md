@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.maprulesdistribution.f1
@@ -34,12 +33,12 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f27196d59a8e2dd65fb935c79338ecac7995cf22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63135507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106363"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
   지도에는 지도 범례, 색 눈금 및 거리 눈금이 포함될 수 있습니다. 이러한 지도 부분은 지도에서 데이터 시각화를 해석하는 데 도움이 됩니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 007a4be9ae31ca6588f1381bc6fa0f4c658d2c35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3beb87611f258d0c028b0a02b5d226864314620
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186567"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106032"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
   기본적으로 범주는 범례에 표시되어 각 값을 식별합니다. 범주 레이블을 사용하여 원형 차트에 레이블을 적용했다면 범례에 백분율을 표시하기를 원할 것입니다.  
