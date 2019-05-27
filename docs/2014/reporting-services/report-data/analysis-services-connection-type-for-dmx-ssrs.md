@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -19,12 +18,12 @@ ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80e36518f44b55699289a8691527ee04df72e3f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53a22e87ead90694dea0511be206c50f52663102
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697819"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107511"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 사용하여 데이터 세트를 만들면 올바른 큐브가 검색될 경우 보고서 디자이너에 MDX(Multidimensional Expressions) 쿼리 디자이너가 표시됩니다. 큐브가 검색되지 않지만 데이터 마이닝 모델을 사용할 수 있는 경우에는 보고서 디자이너에 DMX(Data Mining Extension) 쿼리 디자이너가 표시됩니다. MDX와 DMX 디자이너 사이를 전환하려면 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")) 단추를 클릭합니다. DMX 쿼리 디자이너에서는 그래픽 요소를 사용하여 DMX 쿼리를 대화형으로 작성할 수 있습니다. DMX 쿼리 디자이너를 사용하려면 지정한 데이터 원본에는 이미 데이터를 제공하는 데이터 마이닝 모델이 있어야 합니다. 쿼리 결과는 보고서에 사용되는 일반 행 집합으로 변환됩니다.  

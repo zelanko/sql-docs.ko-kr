@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae31e32645c902912b80545f599fd9d187f6b052
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768259"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058335"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>유사 항목 그룹화 변환 편집기(연결 관리자 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **연결 관리자** 탭을 사용하여 기존 연결을 선택하거나 새 연결을 만들 수 있습니다.  

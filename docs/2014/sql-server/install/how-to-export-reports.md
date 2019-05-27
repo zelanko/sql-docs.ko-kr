@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - flat-file report versions [Upgrade Advisor]
@@ -18,12 +17,12 @@ ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294767"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094897"
 ---
 # <a name="how-to-export-reports"></a>방법: Export Reports
   업그레이드 관리자 보고서 뷰어를 사용하여 보고서의 플랫 파일 버전을 내보낼 수 있습니다. 이렇게 하면 스프레드시트나 워드 프로세싱 문서에서 정보를 처리하거나 전자 메일로 정보를 다른 사용자에게 보낼 수 있습니다.  

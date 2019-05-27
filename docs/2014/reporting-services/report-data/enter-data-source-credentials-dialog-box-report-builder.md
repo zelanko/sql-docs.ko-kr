@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10128"
@@ -13,12 +12,12 @@ ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 015548ce55df25d3e0751b697fe046783d084ec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695632"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107314"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>데이터 원본 자격 증명 입력 대화 상자(보고서 작성기)
   **데이터 원본 자격 증명 입력** 대화 상자를 사용하여 데이터 원본에서 데이터를 가져오기 위한 자격 증명을 제공할 수 있습니다.  

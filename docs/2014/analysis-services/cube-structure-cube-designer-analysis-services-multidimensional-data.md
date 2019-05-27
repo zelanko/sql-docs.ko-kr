@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilderview.f1
@@ -13,12 +12,12 @@ ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679688"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086574"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>큐브 구조(큐브 디자이너)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **큐브 디자이너**의 **큐브 구조** 탭을 사용하여 측정값 그룹과 측정값을 생성 및 수정하고, 큐브 차원을 추가하고, 연결된 데이터 원본 뷰에서 큐브에 포함된 개체를 표시할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -16,12 +15,12 @@ ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86392b3851af7a5774b5acb572cfc19c62266ab6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769899"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059460"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 프로젝트 배포
   프로젝트에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 사용하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 환경을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  

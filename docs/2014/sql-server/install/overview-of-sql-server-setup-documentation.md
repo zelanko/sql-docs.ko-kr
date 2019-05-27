@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 284c02898bb0ba51b7e99a2ba259f06d4092a23f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63010946"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093557"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 설치 설명서 개요
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서는 설치 미디어에 포함되어 있거나 온라인으로 볼 수 있습니다.  

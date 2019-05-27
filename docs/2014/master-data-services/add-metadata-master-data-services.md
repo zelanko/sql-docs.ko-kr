@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], adding
@@ -14,12 +13,12 @@ ms.assetid: 74599a76-3fa4-4ac9-9d16-e0a03c15a762
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9990246a597e61a503fbef06d3aeabeb18bdf2e6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 801872affac61572553cbbd2e9648e197e16bb47
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65483781"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054288"
 ---
 # <a name="add-metadata-master-data-services"></a>메타데이터 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], 사용자 정의 메타 데이터를 추가 합니다 **메타 데이터** 모델 개체를 설명 하는 모델입니다.  

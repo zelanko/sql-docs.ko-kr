@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ded5827fa476d6d71839d77fd00f56d69e7cd710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105693"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS)
   보고서에 테이블, 행렬 및 차트 같은 데이터 영역 외에도 이미지, 입력란 및 사각형과 같은 다른 보고서 항목을 사용하여 시각적 효과를 추가하고 핵심 정보를 강조 표시하거나 관련 정보를 제공할 수 있습니다. 또한 보고서 항목의 서식을 변경할 수도 있습니다. 예를 들어 테두리 또는 패딩을 추가하거나 초기 표시 유형 또는 방향을 변경하거나 항목의 정확한 크기와 위치를 지정할 수 있습니다.  

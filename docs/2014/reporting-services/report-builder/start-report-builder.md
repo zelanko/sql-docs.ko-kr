@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
@@ -16,12 +15,12 @@ ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fc123be862320cd35ccf4aec76d8bc9cf7877af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157463"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107597"
 ---
 # <a name="start-report-builder-report-builder"></a>보고서 작성기 시작(보고서 작성기)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 독립 실행형 포함 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sp_helptrigger
@@ -13,12 +12,12 @@ ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ad878072f8139cc95d6dc34c01f5f48835774a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067598"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093734"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
   sp_helptrigger 시스템에서 반환 된 결과 집합의 마지막 열 trigger_schemaias 저장 프로시저입니다.  

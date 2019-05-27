@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926626"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055007"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>작업 전송 태스크 편집기(일반 페이지)
   **작업 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 작업 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 작업 전송 태스크에 대한 자세한 내용은 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)을 참조하십시오.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
@@ -14,12 +13,12 @@ ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282232"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092744"
 ---
 # <a name="replication-upgrade-issues"></a>복제 업그레이드 문제
   다음 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드에 영향을 줄 수 있는 복제 문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

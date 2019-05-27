@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 986813601be89e201978e50b76085752e4f34356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057142"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 대상 편집기(연결 관리자 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 OLE DB 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
@@ -13,12 +12,12 @@ ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcbe13bd63284cdeeba219eb0a0cbcdc4084d4b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060857"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>트랜잭션을 사용하도록 패키지 구성
   트랜잭션을 사용하도록 패키지를 구성할 때는 다음과 같은 두 가지 옵션을 사용할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
@@ -22,12 +21,12 @@ ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 219b2fd0a31fbb5351044d041e3b5a4adbdda022
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ec17b61d0ea5d3f44967b517ea3e60c6b6785c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064184"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48170893"
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 가 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 인스턴스와 같은 컴퓨터에서 실행되는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]디버거를 실행하기 위한 구성 요구 사항이 없습니다. 그러나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 원격 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]디버거를 실행하려면 두 컴퓨터 모두에서 Windows 방화벽의 프로그램 및 포트 규칙을 사용하도록 설정해야 합니다. 이러한 규칙은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 만들 수 있습니다. 원격 디버거 세션을 열려고 하는 동안 오류가 발생하면 다음 방화벽 규칙이 컴퓨터에 정의되어 있는지 확인합니다.  
   
- **고급 보안이 포함된 Windows 방화벽** 응용 프로그램을 사용하여 방화벽 규칙을 관리합니다. [!INCLUDE[win7](../../includes/win7-md.md)] 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]에서 **제어판**, **Windows 방화벽**을 차례로 열고 **고급 설정**을 선택합니다. [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 에서는 **서비스 관리자**를 열고 왼쪽 창에서 **구성** 을 확장한 다음 **고급 보안이 포함된 Windows 방화벽**을 확장할 수도 있습니다.  
+ **고급 보안이 포함된 Windows 방화벽** 애플리케이션을 사용하여 방화벽 규칙을 관리합니다. [!INCLUDE[win7](../../includes/win7-md.md)] 및 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]에서 **제어판**, **Windows 방화벽**을 차례로 열고 **고급 설정**을 선택합니다. [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 에서는 **서비스 관리자**를 열고 왼쪽 창에서 **구성** 을 확장한 다음 **고급 보안이 포함된 Windows 방화벽**을 확장할 수도 있습니다.  
   
 > [!CAUTION]  
 >  Windows 방화벽의 규칙을 사용하도록 설정하면 방화벽에 의해 차단되도록 설계된 컴퓨터가 보안 위협에 노출될 수 있습니다. 원격 디버깅에 대한 규칙을 사용하도록 설정하면 이 항목에 나열된 포트와 프로그램이 차단됩니다.  
@@ -118,7 +117,7 @@ ms.locfileid: "48170893"
   
     9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 엔드포인트 매퍼** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 호스팅하는 응용 프로그램에 대한 프로그램 항목을 추가합니다. 같은 컴퓨터에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 원격 디버깅 세션을 둘 다 열어야 하는 경우 다음과 같이 두 세션 모두에 대한 프로그램 규칙을 추가해야 합니다.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 호스팅하는 애플리케이션에 대한 프로그램 항목을 추가합니다. 같은 컴퓨터에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 원격 디버깅 세션을 둘 다 열어야 하는 경우 다음과 같이 두 세션 모두에 대한 프로그램 규칙을 추가해야 합니다.  
   
     1.  **고급 보안이 포함된 Windows 방화벽**의 왼쪽 창에서 **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 다음 작업 창에서 **새 규칙** 을 선택합니다.  
   

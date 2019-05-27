@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2ec8ac0bbb56282474bde4e399eaf1d32b0e1996
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767345"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057877"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  

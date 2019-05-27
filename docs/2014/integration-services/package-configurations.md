@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
@@ -22,18 +21,18 @@ ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056890"
 ---
 # <a name="package-configurations"></a>패키지 구성
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  
   
 > [!NOTE]  
->  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
+>  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
  구성은 완성된 패키지에 추가하는 속성/값 쌍입니다. 일반적으로 패키지 개발 과정에서 패키지 개체의 패키지 집합 속성을 만든 다음 해당 패키지에 구성을 추가합니다. 패키지가 실행될 때는 구성의 새 속성 값이 사용됩니다. 예를 들어 구성을 사용하여 연결 관리자의 연결 문자열을 변경하거나 변수 값을 업데이트할 수 있습니다.  
   

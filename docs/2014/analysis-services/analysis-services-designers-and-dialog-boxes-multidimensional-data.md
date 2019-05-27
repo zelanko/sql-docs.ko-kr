@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dialog boxes [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 50d634d8-fe29-4d65-a00a-9939dd6870d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f03bd0dbde0070b9c4e4666ca3cceab9ab2af2a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88b11a66ab33d8eebc0c00b0471c1a31d343ed94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473559"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062557"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-multidimensional-data"></a>Analysis Services 디자이너 및 대화 상자(다차원 데이터)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 디자이너 및 대화 상자에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 고 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다.  

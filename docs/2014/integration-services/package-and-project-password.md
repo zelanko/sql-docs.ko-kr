@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packagepassword.f1
@@ -14,12 +13,12 @@ ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056985"
 ---
 # <a name="package-and-project-password"></a>패키지 및 프로젝트 암호
   **패키지 암호** 대화 상자를 사용하여 암호로 암호화된 패키지에 패키지 암호를 제공할 수 있습니다. 패키지에서 **암호로 중요한 데이터 암호화**또는 **암호로 모든 데이터 암호화** 보호 수준을 사용하는 경우 암호를 제공해야 합니다.  

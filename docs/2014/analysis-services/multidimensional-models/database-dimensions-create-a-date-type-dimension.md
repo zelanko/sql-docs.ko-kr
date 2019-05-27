@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3eec8ddf87193eddbafc5a56e8e397c83f142a91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726684"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075935"
 ---
 # <a name="create-a-date-type-dimension"></a>날짜 유형 차원 만들기
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 시간 차원은 년, 반기, 분기, 월, 일 등의 기간을 나타내는 특성이 포함된 차원 유형입니다. 분석 및 보고와 관련하여 시간 차원의 기간은 시간을 기준으로 세분화됩니다. 특성은 계층으로 구성되며 시간 차원 세분성은 주로 기록 데이터에 대한 비즈니스 및 보고 요구 사항에 따라 결정됩니다. 예를 들어 비즈니스 인텔리전스 애플리케이션의 재무 데이터와 영업 데이터에는 대부분 월별 또는 분기별 세분성이 사용됩니다.  

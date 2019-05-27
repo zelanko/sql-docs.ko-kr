@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ad73f9ac85bcc770b9337b5f84282fc7fc3018a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fcb3e8c423e629a33a0c173e3264ee11ee178f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63151475"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104179"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 세트 캐시(SSRS)
   공유 데이터 세트에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 세트 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 세트를 처음 사용할 때 또는 일정을 지정하여 공유 데이터 세트가 캐시되도록 구성할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834355"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060664"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  

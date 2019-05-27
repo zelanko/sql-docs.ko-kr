@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 29e7003beeb5daa331a16c572994b4bb1a6ec6d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 410cb4de6b89052493618404df3e595fd6999936
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62697881"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107574"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>내 보고서 사용(보고서 작성기 및 SSRS)
   기본 모드로 구성된 보고서 서버에서 내 보고서 폴더는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 이와는 달리 내 보고서 폴더는 사용자 관리 작업 영역입니다. 보고서와 폴더를 추가하거나 제거할 수 있으며 사용자 개인 설정을 사용하여 링크된 보고서를 저장할 수 있습니다.  

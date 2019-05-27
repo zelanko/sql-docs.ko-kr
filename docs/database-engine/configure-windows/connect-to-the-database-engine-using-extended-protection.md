@@ -1,7 +1,7 @@
 ---
 title: 확장된 보호를 사용하여 데이터베이스 엔진에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774548"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015004"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774548"
      **허용되는 NTLM SPN** 변수는 서버가 여러 SPN을 사용하는 경우 필요합니다. 클라이언트가 서버에서 사용하지 않는 유효한 SPN을 통해 서버에 연결하려고 시도하면 서비스 바인딩이 실패합니다. 이러한 문제를 방지하기 위해 사용자는 **허용되는 NTLM SPN**을 사용하여 서버를 표시하는 여러 SPN을 지정할 수 있습니다. **허용되는 NTLM SPN** 은 세미콜론으로 구분되는 일련의 SPN입니다. 예를 들어 **MSSQLSvc/ HostName1.Contoso.com** 및 **MSSQLSvc/ HostName2.Contoso.com**SPN을 허용하려면 **허용되는 NTLM SPN** 상자에 **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** 을 입력합니다. 변수의 최대 길이는 2,048자입니다. **허용되는 NTLM SPN** 은 **구성 관리자의** MSSQLSERVER 속성에 대한 프로토콜(고급 탭) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있습니다.  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>데이터베이스 엔진에 대해 확장된 보호 사용  
- **확장된 보호**를 사용하려면 서버와 클라이언트 둘 다에 **확장된 보호**를 지원하는 운영 체제가 설치되어 있어야 하며, 이들 운영 체제에서 **확장된 보호** 를 사용하도록 설정해야 합니다. 운영 체제에 대해 **확장된 보호** 를 사용하도록 설정하는 방법에 대한 자세한 내용은 [인증에 대한 확장된 보호](https://support.microsoft.com/kb/968389)를 참조하십시오.  
+ **확장된 보호**를 사용하려면 서버와 클라이언트 둘 다에 **확장된 보호**를 지원하는 운영 체제가 설치되어 있어야 하며, 이들 운영 체제에서 **확장된 보호** 를 사용하도록 설정해야 합니다. 운영 체제에 대해 **확장된 보호** 를 사용하도록 설정하는 방법에 대한 자세한 내용은 [인증에 대한 확장된 보호](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. 일부 이전 버전**에 대해서는 향후 업데이트에서** 확장된 보호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 제공될 예정입니다. 서버 컴퓨터에서 **확장된 보호** 를 사용하도록 설정한 후에는 다음 단계를 수행하여 **확장된 보호**를 사용하도록 설정합니다.  
   
 1.  **시작** 메뉴에서 **모든 프로그램**을 선택하고 **Microsoft SQL Server** 를 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 네트워크 구성**을 확장한 다음, _\<_InstanceName*>* 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+2.  **SQL Server 네트워크 구성**을 확장한 다음, _\<_InstanceName *>* 에 대한 **프로토콜**을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
   
 3.  채널 바인딩과 서비스 바인딩 둘 다에 대해 **고급** 탭에서 **확장된 보호** 를 적절한 설정으로 지정합니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
@@ -13,12 +12,12 @@ ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729902"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080407"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>함수 삽입 대화 상자(SSAS)
   **함수 삽입** 대화 상자를 사용하면 수식을 작성할 때 사용할 수 있는 함수가 포함된 목록에서 함수를 선택할 수 있습니다. 모델 디자이너에서 이 대화 상자에 액세스하려면 각 테이블 위에 있는 수식 입력줄에서 함수(**fx**) 단추를 클릭합니다. 수식에 사용할 함수를 선택하는 방법은 DAX 소개 및 수식 작성을 참조하십시오.  

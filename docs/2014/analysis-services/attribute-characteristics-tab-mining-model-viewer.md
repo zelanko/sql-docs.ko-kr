@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
@@ -13,12 +12,12 @@ ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 724ac86a4566bac4647e8e7358608c0f5e4ccd85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650714"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063044"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>특성 특징 탭(마이닝 모델 뷰어)
   **특성 특징** 창을 사용하여 Naïve Bayes 모델의 입력 특성과 결과 간의 관계를 탐색할 수 있습니다. 대상 특성의 값을 선택한 다음 결과에 가장 강한 영향을 주는 입력 특성의 목록을 볼 수 있습니다.  

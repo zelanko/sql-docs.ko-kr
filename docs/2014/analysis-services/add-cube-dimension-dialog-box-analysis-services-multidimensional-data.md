@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62626070"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062952"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>큐브 차원 추가 대화 상자(Analysis Services - 다차원 데이터)
   **의** 큐브 차원 추가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터베이스 차원에 대한 참조를 큐브에 추가할 수 있습니다. 다음 중 하나를 수행하여 **큐브 차원 추가** 대화 상자를 표시할 수 있습니다.  

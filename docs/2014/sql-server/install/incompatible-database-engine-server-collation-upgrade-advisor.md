@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 235811baf7339416750a5e3795caae55b0ba70aa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294617"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094749"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>호환되지 않는 데이터베이스 엔진 서버 데이터 정렬(업그레이드 관리자)
   업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 사용 하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  

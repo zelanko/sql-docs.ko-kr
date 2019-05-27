@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4948973576eb0b541892fe84bc86edea1514fe92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cfce32afdb334ecba55f082dce80af580a73178
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877865"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054544"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서 보기
   현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../2014/integration-services/reports-for-the-integration-services-server.md)를 참조하세요.  

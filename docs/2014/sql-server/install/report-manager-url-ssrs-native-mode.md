@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.rsconfigtool.reportmanagervirtualdirectory.f1
@@ -13,12 +12,12 @@ ms.assetid: 45768952-23a6-45a5-b541-e7bf192b4a78
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f5e472f0cb8cb1a2fc8ed9d85b73622617a3a70a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2679abba1e452ec65b43ca16cc90fc7cb244436
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63282044"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092788"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>보고서 관리자 URL(SSRS 기본 모드)
   보고서 관리자 URL 페이지를 사용하여 보고서 관리자에 액세스하는 데 사용되는 URL을 구성하거나 수정할 수 있습니다. 기본적으로 보고서 관리자 URL은 보고서 서버 웹 서비스 URL의 접두사, IP 주소 및 포트를 상속합니다. 보고서 관리자가 동일한 보고서 서버 서비스 내에서 실행되는 웹 서비스에 대한 프런트 엔드 액세스를 제공하기 때문입니다. 서비스 애플리케이션을 격리하고 보고서 관리자를 사용하여 다른 컴퓨터의 보고서 서버 웹 서비스에 액세스하는 경우 보고서 관리자가 다른 인스턴스를 가리키도록 RSReportServer.config 파일을 편집해야 합니다. 원격 보고서 서버에 연결 하는 보고서 관리자를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)합니다.  

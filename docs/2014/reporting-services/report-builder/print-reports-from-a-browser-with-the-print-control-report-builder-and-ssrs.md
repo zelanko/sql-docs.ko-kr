@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020723"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107763"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄(보고서 작성기 및 SSRS)
   보고서를 인쇄하는 데 가장 많이 사용되는 클라이언트 애플리케이션은 브라우저이지만 브라우저 인쇄 기능이 보고서 인쇄에 이상적이지는 않습니다. 브라우저의 인쇄 기능은 웹 페이지 인쇄용으로 개발되었기 때문입니다. 일반적으로 브라우저에서 인쇄하는 페이지에는 웹 페이지의 모든 시각적 요소뿐만 아니라 페이지나 웹 사이트를 식별하는 머리글 및 바닥글 정보가 포함됩니다. 브라우저에서 인쇄하면 현재 창의 내용이 인쇄됩니다. 여러 페이지로 구성된 보고서의 경우 브라우저에서는 첫 페이지만 인쇄됩니다. 보고서 페이지가 인쇄된 페이지보다 크면 첫 페이지도 제대로 인쇄되지 않을 수 있습니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c87a4e25ca0a09620eeb20facf0db54376f9fd4c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65483746"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054268"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>데이터 추가, 업데이트 및 삭제(MDS(Master Data Services))
   데이터를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 모델에 대량으로 추가하고 변경할 수 있습니다.  

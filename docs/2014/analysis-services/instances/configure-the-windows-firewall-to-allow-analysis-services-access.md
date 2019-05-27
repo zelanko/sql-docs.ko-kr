@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c5066a27097bb0919a6d0af0ffa9ad1c53e8624
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac7570550cd256a5c65c82c9585b2baf7713c878
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730376"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080267"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
   네트워크에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 사용할 수 있도록 만드는 데 필수적인 첫 번째 단계는 방화벽에서 포트를 차단 해제해야 할지 여부를 결정하는 것입니다. 대부분 설치의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 연결을 허용하는 하나 이상의 인바운드 방화벽 규칙을 만들어야 합니다.  

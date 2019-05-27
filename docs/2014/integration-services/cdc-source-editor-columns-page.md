@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62836167"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061027"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 원본 편집기(열 페이지)
   **CDC 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

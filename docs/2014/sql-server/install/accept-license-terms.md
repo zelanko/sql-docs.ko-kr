@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - license terms
@@ -16,12 +15,12 @@ ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096836"
 ---
 # <a name="accept-license-terms"></a>사용 조건 동의
   **설치 마법사의** 사용 조건 동의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 사용 조건에 동의할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changedatabase.F1
@@ -16,12 +15,12 @@ ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 50870072259f89af43fc14ee23465f282f4c3e9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096664"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>데이터베이스 변경 마법사(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 새 보고서 서버 데이터베이스를 만들거나 현재 보고서 서버 인스턴스에 사용할 기존 보고서 서버 데이터베이스를 선택하는 단계를 안내하는 데이터베이스 변경 마법사를 제공합니다.  

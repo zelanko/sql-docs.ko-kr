@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d080df993035bc34783bb39991d80d6a8e692618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894506"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058866"
 ---
 # <a name="fast-parse"></a>Fast Parse
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 이러한 루틴은 로캘을 구분하지 않으며 날짜, 시간 및 정수 형식의 하위 집합만 지원합니다.  

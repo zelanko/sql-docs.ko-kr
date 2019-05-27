@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributerelationships.f1
@@ -13,12 +12,12 @@ ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650594"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062267"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성 관계** 목록을 사용하여 특성 관계 다이어그램 내의 특정한 특성 관계를 찾고 해당 관계를 관리할 수 있습니다. 이 창은 특성 관계 다이어그램이 있는 창 바로 아래에 나타납니다.  

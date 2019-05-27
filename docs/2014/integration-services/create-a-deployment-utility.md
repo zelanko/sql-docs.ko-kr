@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
@@ -14,12 +13,12 @@ ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62831926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060225"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   패키지를 배포하는 첫 번째 단계는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 배포 유틸리티를 만드는 것입니다. 배포 유틸리티는 다른 서버로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트의 패키지를 배포하는 데 필요한 파일이 포함된 폴더입니다. 배포 유틸리티는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가 저장된 컴퓨터에 만들어집니다.  

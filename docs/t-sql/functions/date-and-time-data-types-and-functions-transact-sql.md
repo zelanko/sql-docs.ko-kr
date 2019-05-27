@@ -18,18 +18,20 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 168022a77687fd8d655b02e975dbe88fbb0bf685
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803128"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943718"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 이 항목의 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜/시간 데이터 형식 및 함수를 다룹니다.
 -   [날짜 및 시간 데이터 형식](#DateandTimeDataTypes)  
@@ -86,10 +88,10 @@ ms.locfileid: "56803128"
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정한 날짜에서 특정 *datepart*를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|   
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**int**|비결정적|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**ssNoversion**|비결정적|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
   
 ###  <a name="fromParts"></a> 해당 부분에서 날짜 및 시간 값을 반환하는 함수
   
@@ -106,7 +108,7 @@ ms.locfileid: "56803128"
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**int**|결정적|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**ssNoversion**|결정적|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**bigint**|결정적|  
   
 ###  <a name="ModifyDateandTimeValues"></a> 날짜 및 시간 값을 수정하는 함수
@@ -123,17 +125,17 @@ ms.locfileid: "56803128"
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
 |[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|세션에 대한 SET DATEFIRST의 현재 값을 반환합니다.|**tinyint**|비결정적|  
-|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; **@***number_var* }|일주일의 시작 요일을 1부터 7까지의 숫자로 설정합니다.|해당 사항 없음|해당 사항 없음|  
-|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@**_format_var_ }|**datetime** 또는 **smalldatetime** 데이터를 입력할 때 날짜 부분의 순서(월/일/년도)를 설정합니다.|해당 사항 없음|해당 사항 없음|  
+|[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *number* &#124; * *@***number_var* }|일주일의 시작 요일을 1부터 7까지의 숫자로 설정합니다.|해당 사항 없음|해당 사항 없음|  
+|[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *format* &#124; **@** _format_var_ }|**datetime** 또는 **smalldatetime** 데이터를 입력할 때 날짜 부분의 순서(월/일/년도)를 설정합니다.|해당 사항 없음|해당 사항 없음|  
 |[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|현재 사용 중인 언어의 이름을 반환합니다. @@LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줄 수 있습니다.|해당 사항 없음|해당 사항 없음|  
-|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'**_language_**'** &#124; **@***language_var* }|세션 및 시스템 메시지에 대한 언어 환경을 설정합니다. SET LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
-|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'**_language_**'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage**는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
+|[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE { [ N ] **'** _language_ **'** &#124; * *@***language_var* }|세션 및 시스템 메시지에 대한 언어 환경을 설정합니다. SET LANGUAGE는 날짜 또는 시간 함수가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
+|[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [ [ **@language =** ] **'** _language_ **'** ]|지원되는 모든 언어의 날짜 형식에 대한 정보를 반환합니다. **sp_helplanguage**는 날짜 또는 시간 저장 프로시저가 아닙니다. 하지만 언어 설정은 날짜 함수의 출력에 영향을 줍니다.|해당 사항 없음|해당 사항 없음|  
   
 ###  <a name="ValidateDateandTimeValues"></a> 날짜 및 시간 값 유효성 검사 함수
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** 또는 **smalldatetime** 입력 식이 유효한 날짜 또는 시간 값인지 여부를 확인합니다.|**int**|ISDATE는 CONVERT 함수와 함께 사용되고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** 또는 **smalldatetime** 입력 식이 유효한 날짜 또는 시간 값인지 여부를 확인합니다.|**ssNoversion**|ISDATE는 CONVERT 함수와 함께 사용되고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> 날짜 및 시간 관련 토픽 
   

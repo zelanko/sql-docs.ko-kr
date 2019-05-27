@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
@@ -13,12 +12,12 @@ ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2309dd332a66ae724133c4b1d21cbe0dc8684630
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771685"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061122"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 제어 태스크 편집기
   **CDC 제어 태스크 편집기** 대화 상자를 사용하여 CDC 제어 태스크를 구성할 수 있습니다. CDC 제어 태스크 구성에는 CDC 데이터베이스, CDC 태스크 작업 및 상태 관리 정보에 대한 연결을 정의하는 작업이 포함됩니다.  
@@ -38,11 +37,11 @@ ms.locfileid: "62771685"
  **CDC 제어 작업**  
  이 태스크에 대해 실행할 작업을 선택합니다. 모든 작업은 상태를 저장하고 패키지의 다른 구성 요소 간에 전달하는 SSIS 패키지 변수에 저장되는 상태 변수를 사용합니다.  
   
--   **초기 로드 시작 표시**: 이 작업은 스냅숏 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용 됩니다. 이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.  
+-   **초기 로드 시작 표시**: 이 작업은 스냅샷 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용됩니다. 이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.  
   
      **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 시작 표시 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
   
--   **초기 로드 끝 표시**: 이 작업은 스냅숏 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용 됩니다. 이 작업은 초기 로드 패키지의 끝 부분에서 초기 로드 패키지가 원본 테이블 읽기를 완료한 후 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 LSN은 이 작업이 발생한 현재 시간을 기록한 후 CDC 데이터베이스에서 해당 시간 이후에 발생한 변경 내용을 조회하는 `cdc.lsn_time_`매핑 테이블을 쿼리하여 결정됩니다.  
+-   **초기 로드 끝 표시**: 이 작업은 스냅샷 없이 활성 데이터베이스에서 초기 로드를 실행할 때 사용됩니다. 이 작업은 초기 로드 패키지의 끝 부분에서 초기 로드 패키지가 원본 테이블 읽기를 완료한 후 현재 LSN을 원본 데이터베이스에 기록하기 위해 호출됩니다. 이 LSN은 이 작업이 발생한 현재 시간을 기록한 후 CDC 데이터베이스에서 해당 시간 이후에 발생한 변경 내용을 조회하는 `cdc.lsn_time_`매핑 테이블을 쿼리하여 결정됩니다.  
   
      **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 끝 표시 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "62771685"
   
      **CDC(즉, Oracle이 아님)에서 작업할 때** CDC 시작 표시 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
   
--   **처리 범위 가져오기**: 이 작업은 CDC 원본 데이터 흐름을 사용 하는 데이터 흐름을 호출 하기 전에 변경 내용 처리 패키지에서 사용 됩니다. 이 작업은 호출될 때 CDC 원본 데이터 흐름에서 읽는 LSN의 범위를 설정합니다. 범위는 데이터 흐름을 처리하는 동안 CDC 원본에서 사용되는 SSIS 패키지 변수에 저장됩니다.  
+-   **처리 범위 가져오기**: 이 작업은 CDC 원본 데이터 흐름을 사용하는 데이터 흐름을 호출하기 전에 변경 내용 처리 패키지 내에서 사용됩니다. 이 작업은 호출될 때 CDC 원본 데이터 흐름에서 읽는 LSN의 범위를 설정합니다. 범위는 데이터 흐름을 처리하는 동안 CDC 원본에서 사용되는 SSIS 패키지 변수에 저장됩니다.  
   
      저장 가능한 CDC 상태에 대한 자세한 내용은 [상태 변수 정의](data-flow/define-a-state-variable.md)를 참조하세요.  
   
--   **처리된 범위 표시**: 이 작업 실행 (CDC 데이터 흐름이 성공적으로 완료 됨) 후 CDC 실행 중에 완전히 처리 된 마지막 LSN을 기록 하기 위해 CDC 끝에 변경 내용 처리 패키지에서 사용 됩니다. 다음에 `GetProcessingRange` 를 실행하면 이 위치에 따라 다음 처리 범위의 시작 부분이 결정됩니다.  
+-   **처리된 범위 표시**: 이 작업은 CDC 실행의 끝 부분에서 CDC 데이터 흐름이 성공적으로 완료된 후 CDC 실행 중에 완전히 처리된 마지막 LSN을 기록하기 위해 변경 내용 처리 패키지에서 사용됩니다. 다음에 `GetProcessingRange` 를 실행하면 이 위치에 따라 다음 처리 범위의 시작 부분이 결정됩니다.  
   
 -   **CDC 상태 다시 설정**: 이 작업은 현재 CDC 컨텍스트에 연결된 영구 CDC 상태를 다시 설정하는 데 사용됩니다. 이 작업을 실행하면 LSN 타임스탬프 `sys.fn_cdc_get_max_lsn` 테이블의 현재 최대 LSN이 다음 처리 범위의 시작 부분이 됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.  
   

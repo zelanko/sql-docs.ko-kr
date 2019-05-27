@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
@@ -15,12 +14,12 @@ ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650664"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063072"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>특성 데이터 번역 대화 상자(Analysis Services - 다차원 데이터)
   **특성 데이터 번역** 대화 상자를 사용하여 번역 캡션 데이터가 포함된 열을 설정하고 번역된 데이터에 사용할 데이터 정렬 및 정렬 순서를 설정할 수 있습니다. 다음을 수행하여 **특성 데이터 번역** 대화 상자를 표시할 수 있습니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "62650664"
  이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 악센트가 있는 문자와 없는 문자를 동일한 것으로 간주합니다.  
   
  **일본어가 나 구분**  
- 정렬 및 관련 된 언어 또는 알파벳에 대해 제공 된 사전 규칙을 기준으로 데이터를 비교 하 고 두 가지 유형의 일본어가 나 문자를 구분 하려면이 옵션을 선택 합니다. 히라가나와 가타카나를 제공 합니다.  
+ 정렬 및 관련 된 언어 또는 알파벳에 대해 제공 된 사전 규칙을 기준으로 데이터를 비교 하 고 두 가지 유형의 일본어가 나 문자를 구분 하려면이 옵션을 선택 합니다. 히라가나 및 가타가나.  
   
  이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 히라가나와 가타카나 문자를 동일한 것으로 간주합니다.  
   

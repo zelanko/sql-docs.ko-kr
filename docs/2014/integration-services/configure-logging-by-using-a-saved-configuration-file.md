@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
@@ -14,12 +13,12 @@ ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834510"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060591"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>저장된 구성 파일을 사용하여 로깅 구성
   이 절차에서는 이전에 저장된 로깅 구성 파일을 로드하여 패키지 내의 새 컨테이너를 위한 로깅을 구성하는 방법을 설명합니다.  

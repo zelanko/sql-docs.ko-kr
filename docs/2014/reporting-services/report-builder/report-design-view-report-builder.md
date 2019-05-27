@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -22,12 +21,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156466"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107692"
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
   보고서 작성기 창은 보고서 리소스를 쉽게 구성하고 필요한 보고서를 신속하게 작성할 수 있도록 디자인되어 있습니다. 창 가운데에는 디자인 화면이 있고 위쪽에는 리본이 있으며 왼쪽, 아래쪽, 오른쪽에는 보고서 데이터, 그룹화 및 속성 창과 보고서 파트 갤러리가 있습니다. 디자인 화면에서 보고서 항목을 추가하고 구성합니다. 리본에는 기존 메뉴 항목이 사용자가 쉽게 찾아서 사용할 수 있는 범주로 구성되어 있습니다. 창에서는 보고서 리소스를 간편하게 추가, 선택 및 구성할 수 있으며 보고서 항목 속성을 변경할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147443"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063424"
 ---
 # <a name="transact-sql-debugger-information"></a>Transact-SQL 디버거 정보
   디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 여러 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147443"
 -   **디버그** 도구 모음에서 **중단점**을 클릭한 다음 원하는 창을 선택합니다.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 식  
- 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **로컬, 조사식1**, **조사식2**, **조사식3**및 **조사식4**에 표시할 수 있습니다.  
+ 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **지역, 조사식1**, **조사식2**, **조사식3** 및 **조사식4**에 표시할 수 있습니다.  
   
  **지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 변수에 대한 정보가 표시됩니다. **지역** 창에 나열된 식 집합은 디버거가 코드의 서로 다른 부분에서 실행할 때 변경됩니다.  
   

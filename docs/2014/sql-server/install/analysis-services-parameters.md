@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: 52083ddb-d677-49fc-ad59-285743f4921d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d2bfcd8f6cd5f4bf6dcfab196978f43fbb53536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096775"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services 매개 변수
   분석할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 인스턴스를 지정 해야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하 고 해당 인스턴스에 연결 하는 방법에 대 한 정보를 제공 합니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
@@ -15,12 +14,12 @@ ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727926"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077772"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>마이닝 범례 대화 상자(마이닝 모델 뷰어)
   **마이닝 범례** 대화 상자를 사용하여 마이닝 모델 뷰어에서 선택한 노드 또는 항목에 대한 세부 정보를 볼 수 있습니다.  

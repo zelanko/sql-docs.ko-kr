@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - size [SQL Server], fonts
@@ -18,12 +17,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ecba74cbaa5a03ddca94b7bc3a9fdd6dd52be43f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a4f7f2e80afd3f5f879813eeb5e19ce6eaa6e979
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209777"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064178"
 ---
 # <a name="change-font-color-size-and-style"></a>글꼴 색상, 크기 및 스타일 변경
   편집기뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다른 위치에서 텍스트가 표시되는 방법을 사용자 지정할 수 있습니다.  

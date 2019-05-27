@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059364"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>SSIS 서버에서 패키지 실행에 대한 로깅 설정
   이 절차에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 실행할 때 패키지의 로깅 수준을 설정하거나 변경하는 방법에 대해 설명합니다. 패키지를 실행할 때 설정하는 로깅 수준에 따라 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 구성하는 패키지 로깅이 재정의됩니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) 을 참조하세요.  

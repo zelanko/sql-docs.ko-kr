@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 766fca7b-6cef-4ce4-97ee-6854f8034717
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb7b02715e48398c9d12a2c4939a2214426a2036
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23dbdd4449a72737fd0929a4243ed093013ae643
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62653925"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096235"
 ---
 # <a name="complete---prepare-image"></a>완료 - 이미지 준비
   **완료** 페이지를 사용하여 이미지 준비가 완료되었음을 확인할 수 있습니다.  

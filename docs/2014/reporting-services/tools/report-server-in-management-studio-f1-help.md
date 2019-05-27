@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
@@ -13,12 +12,12 @@ ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63200989"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100083"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio의 보고서 서버 F1 도움말
   이 섹션에서는 보고서 서버를 관리하는 데 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 대화 상자에 대한 항목을 제공합니다.  

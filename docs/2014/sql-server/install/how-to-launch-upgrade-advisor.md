@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - launching Upgrade Advisor
@@ -16,12 +15,12 @@ ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63295117"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094911"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>방법: 업그레이드 관리자 시작
   업그레이드 관리자는 업그레이드 관리자 분석 마법사와 업그레이드 관리자 보고서 뷰어를 시작하는 데 사용할 수 있는 중앙 콘솔을 제공합니다. 이 항목에서는 업그레이드 관리자를 시작하는 방법에 대해 설명합니다.  

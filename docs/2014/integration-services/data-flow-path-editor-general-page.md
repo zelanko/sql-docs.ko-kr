@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828363"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059958"
 ---
 # <a name="data-flow-path-editor-general-page"></a>데이터 흐름 경로 편집기(일반 페이지)
   **데이터 흐름 경로 편집기** 대화 상자를 사용하여 경로 속성을 설정하고, 열 메타데이터를 보고, 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

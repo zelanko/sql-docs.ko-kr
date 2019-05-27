@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - EditionName property
@@ -13,12 +12,12 @@ ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b48ae5874146d31552bc940dc3e15eaf80e11883
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83476172dc43e99394dd1c5d5a71f3d835f47f10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022376"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097126"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>EditionName 속성(WMI MSReportServer_Instance)
   사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다. 읽기 전용입니다.  

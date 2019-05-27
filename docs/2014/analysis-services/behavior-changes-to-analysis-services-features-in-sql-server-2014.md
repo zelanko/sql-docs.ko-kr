@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62655841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064343"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 Analysis Services 기능의 동작 변경 내용
   이 항목에서는 다차원, 테이블 형식, 데이터 마이닝 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 배포에 대한 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 의 동작 변경 내용을 설명합니다. 동작 변경 내용은 이전 버전의 SQL Server와 비교해서 현재 버전에서 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  

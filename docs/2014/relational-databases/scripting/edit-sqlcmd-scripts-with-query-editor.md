@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0eaecfdb6e9b3578d1ee4a3bb867c715aa1492e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093263"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064108"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "48093263"
   
 -   스크립트 구문 분석  
   
--   Showplan  
+-   실행 계획  
   
 ## <a name="enable-sqlcmd-scripting-in-query-editor"></a>쿼리 편집기에서 SQLCMD 스크립팅 설정  
  활성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에 대해 SQLCMD 스크립팅을 설정하려면 다음 절차를 사용합니다.  

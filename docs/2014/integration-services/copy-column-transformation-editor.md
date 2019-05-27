@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9340e85bd33dc4843c0bd7d948f51a62ba55d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829137"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060299"
 ---
 # <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
   **열 복사 변환 편집기** 대화 상자를 사용하여 복사할 열을 선택하고 새 출력 열의 이름을 할당할 수 있습니다.  

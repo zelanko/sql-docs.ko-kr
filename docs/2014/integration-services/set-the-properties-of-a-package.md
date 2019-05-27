@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
@@ -17,12 +16,12 @@ ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f105a7f30d2d1c42bfb31f1555bb976745bbbe4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766569"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055796"
 ---
 # <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정
   이 절차에서는 **속성** 창을 사용하여 패키지 속성을 구성하는 방법을 설명합니다.  

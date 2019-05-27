@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
@@ -43,12 +42,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225432"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063987"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
   **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
@@ -193,7 +192,7 @@ ms.locfileid: "63225432"
   
 -   **USE DATABASE 스크립팅** -추가 된 `USE DATABASE` 문을 스크립트에 있습니다. 올바른 데이터베이스에서 데이터베이스 개체를 만들려면 `USE DATABASE` 문을 포함해야 합니다. 스크립트는 다른 데이터베이스에 사용할 경우 선택 **False** 생략 하는 `USE DATABASE` 문입니다. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
   
--   **스크립팅할 데이터 형식** -스크립팅할 항목을 선택 합니다. **데이터만**하십시오 **스키마만**, 또는 둘 다. 기본값은 **스키마만**입니다.  
+-   **스크립팅할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마만**입니다.  
   
  **테이블/뷰 옵션** - 다음 옵션은 테이블 또는 뷰에 대한 스크립트에만 적용됩니다.  
   
@@ -261,7 +260,7 @@ ms.locfileid: "63225432"
   
 11. **스크립트 바인딩** - 게시하기 위해 공급자에 보내는 스크립트에 기본 개체 및 규칙 개체에 대한 바인딩을 포함합니다. 기본값은 **True**입니다. 자세한 내용은 [CREATE DEFAULT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) 및 [CREATE RULE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)을 참조하세요.  
   
-12. **게시할 데이터 유형의** -스크립팅할 항목을 선택 합니다. **데이터만**하십시오 **스키마만**, 또는 둘 다. 기본값은 **스키마 및 데이터**입니다.  
+12. **게시할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마 및 데이터**입니다.  
   
  **게시 옵션** - 웹 호스트 공급 기업에 게시하는 경우 트랜잭션을 사용할지 여부를 지정합니다.  
   

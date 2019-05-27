@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -16,12 +15,12 @@ ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165377"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095219"
 ---
 # <a name="feature-selection"></a>기능 선택
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **기능 선택** 페이지에 있는 확인란을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 구성 요소를 선택할 수 있습니다.  

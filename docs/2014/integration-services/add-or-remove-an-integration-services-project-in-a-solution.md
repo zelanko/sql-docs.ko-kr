@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding projects
@@ -17,12 +16,12 @@ ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2581aaffaeeba033e92cff305f0e9904cfb9a970
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837083"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061837"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>솔루션에서 Integration Services 프로젝트 추가 또는 제거
   다음 절차에서는 솔루션에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 추가 또는 제거하는 방법에 대해 설명합니다.  

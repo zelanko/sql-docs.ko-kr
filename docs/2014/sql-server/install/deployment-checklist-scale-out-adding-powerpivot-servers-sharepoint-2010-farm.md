@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095556"
 ---
-# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 스케일 아웃
+# <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>배포 검사 목록: PowerPivot 서버를 SharePoint 2010 팜에 추가하여 확장
   SharePoint 팜에서 PowerPivot 쿼리 처리 요청이 많을 것으로 예상되는 경우에는 새 쿼리 및 데이터 처리 지원을 원활하게 추가하기 위해 추가 SharePoint용 PowerPivot 인스턴스를 추가할 수 있습니다.  
   
  새 인스턴스를 설치하면 PowerPivot 데이터 쿼리 또는 PowerPivot 데이터 새로 고침 작업 처리를 위한 추가 용량이 제공됩니다. 선택적으로 서버마다 쿼리 또는 데이터 새로 고침 등, 하나의 요청 유형을 처리하도록 구성할 수 있는 선택 항목이 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10437"
@@ -13,12 +12,12 @@ ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8b4fe6e791f84f0949b0657b890c79db99dfbf9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107953"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
   보고서를 실행한 후 Excel이나 PDF 같은 다른 형식으로 보고서를 내보내거나 보고서에서 사용할 수 있는 Atom 규격 데이터 피드를 나열하는 Atom 서비스 문서를 생성하여 보고서를 내보낼 수 있습니다.  

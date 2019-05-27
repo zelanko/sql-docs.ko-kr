@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - unavailable options [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f18f67aaa142ffeedabfd9269940d28d3fc1ce0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a642fbe7dbd866baa01fe9db7163292bfda6db30
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063255"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio) 문제 해결
   다음과 같은 몇몇 경우에서는 IntelliSense 옵션이 제대로 작동하지 않을 수 있습니다.  

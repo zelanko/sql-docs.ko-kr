@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
@@ -13,15 +12,15 @@ ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01caaf26257c06aae8cb7668693fd3ff6b8b5135
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 081b149bc4f7927d17ac18895bc901f133545e9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328753"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063366"
 ---
 # <a name="watch-window"></a>조사식 창
-  **조사식** 창은 선택한 식에 대한 정보를 표시합니다. 조사식 창은 **조사식 1**하십시오 **조사식 2, 조사식 3**, 및 **조사식 4**합니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
+  **조사식** 창은 선택한 식에 대한 정보를 표시합니다. 조사식 창은 **조사식 1**, **조사식 2, 조사식 3** 및 **조사식 4**의 최대 4개의 창으로 구성할 수 있습니다. 식은 **호출 스택** 창에서 선택한 현재 호출 스택 프레임 범위 내에서 평가됩니다. 변수 및 식을 조사하려면 디버그 모드여야 합니다.  
   
 ## <a name="task-list"></a>작업 목록  
  **조사식 창에 액세스하려면**  
@@ -56,7 +55,7 @@ ms.locfileid: "53328753"
  **형식**  
  식의 데이터 형식을 표시합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Transact-SQL 디버거](transact-sql-debugger.md)   
  [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)   
  [지역 창](transact-sql-debugger-locals-window.md)   

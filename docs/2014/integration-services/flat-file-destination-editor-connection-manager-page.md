@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b8deec4f9049d7d677ff809e900e4d5f9d4fa61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058701"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>플랫 파일 대상 편집기(연결 관리자 페이지)
   **플랫 파일 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 사용할 플랫 파일 연결을 선택하고, 덮어쓸 것인지 아니면 기존 대상 파일에 추가할 것인지를 지정할 수 있습니다. 플랫 파일 대상에서는 텍스트 파일에 데이터를 기록합니다. 이 텍스트 파일은 구분 기호로 분리하거나 고정 폭, 구분 기호 있는 고정 폭 또는 왼쪽 정렬 중 하나를 사용할 수 있습니다.  

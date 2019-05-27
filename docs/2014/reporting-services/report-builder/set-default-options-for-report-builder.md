@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10427"
@@ -13,12 +12,12 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107623"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>보고서 작성기 옵션 대화 상자, 설정(보고서 작성기)
   **보고서 작성기** 단추를 클릭한 다음 **옵션** 을 클릭하여 최근 파일 및 연결 표시에 대한 옵션을 설정합니다. 기본 보고서 서버를 변경하고 기본값이 없는 경우 새로 추가할 수도 있습니다.  

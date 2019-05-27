@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5dfafdfee1947bdc02301b505a54cac8776a9dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77162f98496ce2a8632ff025652a19b5af593de7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229713"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063617"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
   [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
@@ -15,12 +14,12 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95062797cdfe8f2ab4bc2f3b8b8bb2735d2d0dcf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096055"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>기본 모드 보고서 서버에 연결
   이 대화 상자에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 로컬 또는 원격 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 인스턴스에 연결할 수 있습니다. 이 도구를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 연결할 수는 없으며 한 번에 하나의 인스턴스에만 연결할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "52395826"
  **연결**  
  지정된 서버와 인스턴스에 연결합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

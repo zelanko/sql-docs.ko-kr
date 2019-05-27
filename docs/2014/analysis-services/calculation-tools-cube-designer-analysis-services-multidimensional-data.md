@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61aed2ac785c628d7a67df39af13aaf0a7c74914
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681121"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088275"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 도구(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **계산 도구** 창을 사용하여 계산에 사용할 수 있는 메타데이터, 함수 및 템플릿을 탐색할 수 있습니다.  

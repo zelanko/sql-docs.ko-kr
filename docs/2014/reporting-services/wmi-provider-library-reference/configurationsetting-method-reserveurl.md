@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
@@ -13,12 +12,12 @@ ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aaae1838f9af2040105e85bd0dd7fdc82ac442d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646449"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098136"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 애플리케이션에 대한 URL 예약을 추가합니다.  

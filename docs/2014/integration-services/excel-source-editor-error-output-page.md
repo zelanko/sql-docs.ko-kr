@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
@@ -15,12 +14,12 @@ ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769579"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059226"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 원본 편집기(오류 출력 페이지)
   **Excel 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactermaptransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 847b05d76559cec2632b519a3b1cd3e0fbdb23ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835136"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060977"
 ---
 # <a name="character-map-transformation-editor"></a>문자표 변환 편집기
   **문자표 변환 편집기** 대화 상자를 사용하여 열 데이터에 적용할 문자열 함수를 선택하고 매핑이 내부 변경인지, 아니면 새 열로 추가되었는지를 지정할 수 있습니다.  

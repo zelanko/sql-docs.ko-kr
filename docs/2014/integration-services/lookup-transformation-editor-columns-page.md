@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63410531bcb0af8a254b2d2a5c6c650423cb9a1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890519"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057902"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  

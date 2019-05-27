@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HOST_ID function
@@ -13,12 +12,12 @@ ms.assetid: 47b4a4ff-3ec8-430c-8bb7-779a36d0e134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 999ff54caedd1eab946f46c8d89e539324c93c27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 429b3b0638f8a9abab8fb2f58fe08d2d58227d58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63199857"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093870"
 ---
 # <a name="modify-indexes-that-depend-on-the-return-type-of-hostid"></a>HOST_ID의 반환 형식에 따라 달라지는 인덱스를 수정합니다.
   HOST_ID 함수는 이제 `char(10)`을 반환합니다.  

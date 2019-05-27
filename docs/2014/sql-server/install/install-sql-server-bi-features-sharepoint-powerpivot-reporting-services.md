@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 436d90b75a5995ac8f455a52ebfffe662b1f9b7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094457"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint와 함께 SQL Server BI 기능 설치(PowerPivot 및 Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 Microsoft SharePoint 팜과 통합되어 SharePoint의 BI(비즈니스 인텔리전스) 기능을 사용할 수 있습니다. 해당하는 기능은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 팜에 대 한 데이터 액세스 합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만들어지고 SharePoint 라이브러리에서 액세스되는 통합 문서를 위한 데이터 엔진입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 SharePoint에 저장한 다음에는 이를 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 대한 데이터 원본으로 사용할 수 있습니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "62473485"
   
      ![설치 역할](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "설치 역할")  
   
-3.  SharePoint 2013의 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 및 환경을 확장할 수 있습니다. **spPowerPivot.msi** 를 다운로드 및 실행하여 서버 쪽 데이터 새로 고침 처리, 공동 작업 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 관리 지원을 추가합니다. 자세한 내용은 [Microsoft® SharePoint용 Microsoft SQL Server 2014 PowerPivot](https://go.microsoft.com/fwlink/?LinkID=324854)을 참조하세요.  
+3.  SharePoint 2013의 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 및 환경을 확장할 수 있습니다. **spPowerPivot.msi** 를 다운로드 및 실행하여 서버 쪽 데이터 새로 고침 처리, 협업 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 관리 지원을 추가합니다. 자세한 내용은 [Microsoft® SharePoint용 Microsoft SQL Server 2014 PowerPivot](https://go.microsoft.com/fwlink/?LinkID=324854)을 참조하세요.  
   
      SharePoint 팜의 각 서버에서 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 설치 패키지 **spPowerPivot.msi** 를 실행하여 올바른 버전의 데이터 공급자가 설치되어 있는지 확인합니다.  
   

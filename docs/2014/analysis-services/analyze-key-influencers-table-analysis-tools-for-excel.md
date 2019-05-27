@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643297"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062257"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>주요 영향 요인 분석(Excel용 테이블 분석 도구)
   ![분석 리본 단추 주요 영향 요인](media/tat-aki.gif "리본 메뉴의 주요 영향 요인 분석 단추")  

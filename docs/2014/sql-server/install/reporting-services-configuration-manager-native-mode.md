@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -16,12 +15,12 @@ ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbd786485915405de36511f5710e3490bdfd8a3f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057591"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092657"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  

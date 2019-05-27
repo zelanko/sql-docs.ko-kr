@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 572c331cb5f9a88ee78cb26544772b126405c02c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06c466eb5e3275818a710a9f9d90c705ed93c957
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732259"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081863"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>범주 검색(Excel용 테이블 분석 도구)
   ![리본 메뉴에서 검색 범주 단추](media/tat-detectcat.gif "리본의 범주 검색 단추")  

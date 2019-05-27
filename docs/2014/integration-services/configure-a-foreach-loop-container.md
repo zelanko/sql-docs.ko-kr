@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Foreach Loop containers
@@ -14,12 +13,12 @@ ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91e098810162c0a0f75b1dccbbd48946f302c068
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834630"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060883"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 구성
   이 절차에서는 열거자 및 컨테이너 수준의 속성 식을 비롯한 Foreach 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  

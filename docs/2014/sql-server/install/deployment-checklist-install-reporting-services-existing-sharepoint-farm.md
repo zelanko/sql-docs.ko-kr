@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e6b4a1fb9726496ac4ae99a08b2e47a9136562
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 66c366bfe8dbf79d2f392627ad018747357e7da4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63195211"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095674"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>배포 검사 목록: 기존 SharePoint 팜에 Reporting Services 설치
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 보고서 서버를 새로운 SharePoint 팜 또는 기존 SharePoint 팜에 설치할 수 있습니다. 이 항목에서는 기존 SharePoint 팜에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치하기 위한 가능한 시나리오와 최선의 구현 방법에 대해 설명합니다.  
