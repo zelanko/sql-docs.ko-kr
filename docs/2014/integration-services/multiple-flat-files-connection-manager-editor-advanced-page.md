@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767285"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057544"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>다중 플랫 파일 연결 관리자 편집기(고급 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 플랫 파일 연결 관리자에서 연결하는 텍스트 파일에 있는 각 열의 데이터 형식 및 구분 기호와 같은 속성을 설정할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62767285"
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 종료됩니다.|  
 |**OutputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 문자 수로 표시됩니다. 데이터 흐름 태스크에서 이 값은 플랫 파일 원본의 출력 열 너비를 설정하는 데 사용됩니다.<br /><br /> 참고: 개체 모델에서 이 속성의 이름은 MaximumWidth입니다.|  
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
-|**TextQualified**|텍스트 한정자를 사용하여 텍스트 데이터를 한정할지 여부를 나타냅니다. 유효한 값은<br /><br /> **True**: 플랫 파일의 텍스트 데이터가 한정 됩니다.<br /><br /> **False**: 플랫 파일의 텍스트 데이터가 한정 되지 않습니다.|  
+|**TextQualified**|텍스트 한정자를 사용하여 텍스트 데이터를 한정할지 여부를 나타냅니다. 유효한 값은<br /><br /> **True**: 플랫 파일의 텍스트 데이터가 한정됩니다.<br /><br /> **False**: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
 |**이름**|열 이름을 지정합니다. 기본값은 열 번호 매기기 목록이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.|  
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.|  
 |**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}** – 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}** – 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}** – 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}** – 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}** – 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}** – 열이 쉼표로 구분됩니다.<br /><br /> **탭{t}** – 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}** – 열이 세로 막대로 구분됩니다.|  

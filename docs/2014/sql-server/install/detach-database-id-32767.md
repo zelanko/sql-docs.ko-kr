@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - database IDs [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: e0826010-8aa4-4ed7-8d32-2bebfeff9a71
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9fc5ca2d3c1d7944342b9902ad0d74ce4bf7a725
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131060"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095569"
 ---
 # <a name="detach-database-id-32767"></a>데이터베이스 ID 32767을 분리합니다.
   업그레이드 관리자가 데이터베이스 ID가 32767인 데이터베이스를 검색했습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 이 데이터베이스 ID가 예약되어 있습니다. 업그레이드하기 전에 데이터베이스를 분리하십시오. 업그레이드 후 데이터베이스를 연결할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746895"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069227"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>원본 큐브 차원 선택(데이터 마이닝 마법사)
   **원본 큐브 차원 선택** 페이지를 사용하여 분석할 사례를 포함하는 큐브의 차원을 선택할 수 있습니다. 예를 들어 인구 통계를 기반으로 하여 고객의 구매 행동을 분석하는 모델을 작성하는 경우 일반적으로 각 고객 및 성별, 위치 또는 수입과 같은 인구 통계를 나타내는 여러 특성에 대해 고유한 레코드를 포함하는 Customer 차원을 선택합니다. 마법사의 뒷부분에서는 이 사례 테이블과 관련된 테이블을 추가할 수 있습니다. 예를 들어 고객이 구매한 제품을 보여 주는 중첩 테이블을 추가할 수 있습니다.  

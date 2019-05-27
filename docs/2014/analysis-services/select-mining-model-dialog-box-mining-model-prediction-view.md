@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.selectminingmodel.f1
@@ -15,12 +14,12 @@ ms.assetid: a9d5c5b0-1beb-49bf-8df5-c659c8e7b390
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7c99a0f7d13b68987a74bb763a0d6b78d457f92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069413"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>마이닝 모델 선택 대화 상자(마이닝 모델 예측 뷰)
   **마이닝 모델 선택** 대화 상자를 사용하여 예측의 기반으로 사용할 마이닝 모델을 선택할 수 있습니다.  

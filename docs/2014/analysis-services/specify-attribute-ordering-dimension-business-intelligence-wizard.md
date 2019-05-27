@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58b35c6bf321dec4f6e190eed14b4aa00acbec8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c15fdcc6d36383f8a1561259e7a876ebea7ba800
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068485"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>특성 순서 지정(차원)(비즈니스 인텔리전스 마법사)
   **특성 순서 지정** 페이지를 사용하여 비즈니스 인텔리전스 마법사에서 해당 차원에 포함된 각 특성의 멤버 정렬 시 사용되는 순서 특성과 순서 조건을 정의할 차원을 선택할 수 있습니다.  

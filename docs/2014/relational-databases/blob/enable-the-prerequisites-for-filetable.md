@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920652"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010173"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
   FileTable을 만들고 사용하기 위한 필수 구성 요소를 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -40,12 +40,12 @@ ms.locfileid: "62920652"
 ##  <a name="BasicsFilestream"></a> 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
  FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 FILESTREAM 기능을 확장합니다. 따라서 FileTable을 만들고 사용하려면 먼저 Windows 수준과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 파일 I/O 액세스를 위해 FILESTREAM을 사용하도록 설정해야 합니다.  
   
-###  <a name="HowToFilestream"></a> 어떻게: 인스턴스 수준에서 FILESTREAM을 사용 하도록 설정  
+###  <a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM 사용  
  FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](enable-and-configure-filestream.md)을 참조하세요.  
   
  `sp_configure`를 호출하여 인스턴스 수준에서 FILESTREAM을 사용하도록 설정하려면 filestream_access_level 옵션을 2로 설정해야 합니다. 자세한 내용은 [FILESTREAM 액세스 수준 서버 구성 옵션](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.  
   
-###  <a name="firewall"></a> 어떻게: 방화벽을 통해 FILESTREAM 허용  
+###  <a name="firewall"></a> 방법: 방화벽을 통해 FILESTREAM 허용  
  방화벽을 통해 FILESTREAM을 허용하는 방법은 [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md)을 참조하세요.  
   
 ##  <a name="filegroup"></a> 데이터베이스 수준에서 FILESTREAM 파일 그룹 제공  
@@ -54,7 +54,7 @@ ms.locfileid: "62920652"
 ##  <a name="BasicsNTAccess"></a> 데이터베이스 수준에서 비트랜잭션 액세스를 사용하도록 설정  
  FileTable을 사용하면 Windows 애플리케이션에서 트랜잭션 없이도 FILESTREAM 데이터에 대한 Windows 파일 핸들을 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 파일에 대해 이 비트랜잭션 액세스를 허용하려면 FileTable을 포함할 각 데이터베이스의 데이터베이스 수준에서 원하는 비트랜잭션 액세스 수준을 지정해야 합니다.  
   
-###  <a name="HowToCheckAccess"></a> 어떻게: 데이터베이스에서 비트랜잭션 액세스 사용 되는지 여부를 확인 합니다.  
+###  <a name="HowToCheckAccess"></a> 방법: 데이터베이스에 비트랜잭션 액세스가 사용하도록 설정되어 있는지 확인  
  카탈로그 뷰 [sys.database_filestream_options&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)를 쿼리하고 **non_transacted_access** 및 **non_transacted_access_desc** 열을 확인합니다.  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> 어떻게: 데이터베이스 수준에서 비트랜잭션 액세스를 사용 하도록 설정  
+###  <a name="HowToNTAccess"></a> 방법: 데이터베이스 수준에서 비트랜잭션 액세스를 사용하도록 설정  
  사용 가능한 비트랜잭션 액세스 수준은 FULL, READ_ONLY 및 OFF입니다.  
   
  **Transact-SQL을 사용하여 비트랜잭션 액세스 수준 지정**  
@@ -89,7 +89,7 @@ GO
   
  FileTable 폴더 계층 구조에서 이 데이터베이스 수준 디렉터리는 인스턴스 수준에서 FILESTREAM에 대해 지정된 공유 이름의 자식이 되고 데이터베이스에 만들어진 FileTable의 부모가 됩니다. 자세한 내용은 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
-###  <a name="HowToDirectory"></a> 어떻게: 데이터베이스 수준에서 Filetable의 디렉터리 지정  
+###  <a name="HowToDirectory"></a> 방법: 데이터베이스 수준에서 FileTable의 디렉터리 지정  
  지정한 이름은 데이터베이스 수준 디렉터리의 인스턴스 전체에서 고유해야 합니다.  
   
  **Transact-SQL을 사용하여 FileTable의 디렉터리 지정**  
@@ -128,7 +128,7 @@ GO
  **SQL Server Management Studio를 사용하여 FileTable의 디렉터리 지정**  
  **데이터베이스 속성** 대화 상자의 **옵션** 페이지에 있는 **FILESTREAM 디렉터리 이름** 필드에서 디렉터리 이름을 지정할 수 있습니다. 이 대화 상자에 대한 자세한 내용은 [데이터베이스 속성&#40;옵션 페이지&#41;](../databases/database-properties-options-page.md)을 참조하세요.  
   
-###  <a name="viewnames"></a> 어떻게: 인스턴스에 대 한 기존 디렉터리 이름 보기  
+###  <a name="viewnames"></a> 방법: 인스턴스에 대한 기존 디렉터리 이름 보기  
  인스턴스의 기존 디렉터리 이름 목록을 보려면 카탈로그 뷰 [sys.database_filestream_options&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)를 쿼리하고 **filestream_database_directory_name** 열을 확인합니다.  
   
 ```sql  

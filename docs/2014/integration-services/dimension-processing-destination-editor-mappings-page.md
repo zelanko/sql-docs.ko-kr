@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
@@ -15,12 +14,12 @@ ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3865407fce809380900408b079a026f3d1eba75d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059405"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>차원 처리 대상 편집기(매핑 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 차원 열에 매핑할 수 있습니다.  

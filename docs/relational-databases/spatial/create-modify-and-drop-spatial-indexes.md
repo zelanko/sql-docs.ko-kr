@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669612"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935476"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51669612"
   
 7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
   
-8.  *\<테이블 이름>***에서 열 선택** 대화 상자에서 해당 확인란을 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  *\<테이블 이름>* **에서 열 선택** 대화 상자에서 해당 확인란을 선택하여 **geometry** 또는 **geography** 형식의 열을 선택합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
   
 9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51669612"
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     **geometry** 형식 열에서 인덱스를 만들 경우 경계 상자의 **(**_X-min_**,**_Y-min_**)** 및 **(**_X-max_**,**_Y-max_**)** 좌표를 지정해야 합니다. **geography** 형식 열의 인덱스의 경우 **지리 표** 공간 분할 구성표를 지정하면 지리 표 공간 분할이 경계 상자를 사용하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다.  
+     **geometry** 형식 열에서 인덱스를 만들 경우 경계 상자의 **(** _X-min_ **,** _Y-min_ **)** 및 **(** _X-max_ **,** _Y-max_ **)** 좌표를 지정해야 합니다. **geography** 형식 열의 인덱스의 경우 **지리 표** 공간 분할 구성표를 지정하면 지리 표 공간 분할이 경계 상자를 사용하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다.  
   
      필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]입니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.characteristics.f1
@@ -13,12 +12,12 @@ ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747272"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069173"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 특징 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 특징** 탭에서는 시퀀스 클러스터를 정의하는 특징의 세부 목록을 제공합니다. 이러한 특징에는 간단한 특성-값 쌍뿐만 아니라 상태 간 전환도 포함될 수 있습니다.  

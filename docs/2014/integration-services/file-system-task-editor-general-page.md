@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894524"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058810"
 ---
 # <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  

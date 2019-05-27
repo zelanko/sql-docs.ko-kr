@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62648628"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098946"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 (보고서 작성기) 만들기
   이 자습서에서는 양식 편지와 유사한 SSRS 자유 형식 보고서를 만드는 방법을 배웁니다. 입력란, 이미지 및 다른 데이터 영역이 있는 양식을 만들기 위해 보고서 항목을 정렬할 수 있습니다.  

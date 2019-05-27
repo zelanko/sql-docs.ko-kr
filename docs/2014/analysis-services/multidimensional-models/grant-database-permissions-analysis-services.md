@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
@@ -14,12 +13,12 @@ ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 335fe6deeb3d89483f5f5adb040b0788891053cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726069"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074945"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  

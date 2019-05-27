@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
@@ -14,12 +13,12 @@ ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c300945fee14b353e5c3be1b42a59440bdbfd4dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109034"
 ---
 # <a name="html-device-information-settings"></a>HTML 디바이스 정보 설정
   다음 표에서는 HTML 형식으로 렌더링하기 위한 디바이스 정보 설정을 보여 줍니다.  

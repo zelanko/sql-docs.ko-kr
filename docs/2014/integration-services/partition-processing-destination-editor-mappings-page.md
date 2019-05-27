@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.mapping.f1
@@ -15,12 +14,12 @@ ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767005"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056696"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>파티션 처리 대상 편집기(매핑 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 파티션 열에 매핑할 수 있습니다.  

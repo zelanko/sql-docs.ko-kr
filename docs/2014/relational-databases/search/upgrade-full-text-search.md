@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363645"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010955"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
@@ -135,9 +135,9 @@ ms.locfileid: "53363645"
   
  **서버 인스턴스의 전체 텍스트 업그레이드 동작을 변경하려면**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: 사용 된 **업그레이드\_옵션** 동작 [sp\_fulltext\_서비스](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)의 **upgrade\_option** 동작을 사용합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 사용 된 **전체 텍스트 업그레이드 옵션** 의 합니다 **서버 속성** 대화 상자. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션**을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
 ##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스의 전체 텍스트 데이터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 방법 중 하나는 전체 데이터베이스 백업을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하는 것입니다.  

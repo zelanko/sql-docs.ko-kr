@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109332"
 ---
 # <a name="dependent-items-page-report-manager"></a>종속 항목 페이지(보고서 관리자)
   종속 항목 페이지를 사용하여 공유 데이터 원본을 참조하는 보고서 및 모델 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 보고서인지 또는 모델인지 구분할 수 있습니다. 이 페이지는 목록 뷰 또는 자세히 보기로 볼 수 있습니다. 각 항목에 대해 보다 자세한 정보를 표시하려면 자세히 보기를 사용합니다. 자세히 보기에서는 추가 페이지 옵션을 사용할 수 있습니다. 이 페이지는 공유 데이터 원본 관리를 지원하기 위해 해당 데이터 원본을 사용하는 보고서 및 모델에 대한 링크, 보고서 또는 모델이 마지막으로 실행 또는 수정된 시점에 대한 메트릭, 그리고 삭제 및 이동 단추를 제공하므로 더 이상 사용되지 않는 보고서 및 모델을 손쉽게 제거하거나 아직 필요한지 여부를 판단할 동안 다른 위치로 이동할 수 있습니다.  

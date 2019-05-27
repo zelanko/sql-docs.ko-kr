@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087454"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 PowerPivot)
   사용하려는 자격 증명을 저장할 대상 응용 프로그램을 Secure Store Service에 만들면 Windows 사용자 계정으로 PowerPivot 데이터 새로 고침 작업을 실행할 수 있습니다. 마찬가지로, 원래 PowerPivot for Excel에서 데이터를 가져오는 데 사용된 것과 다른 데이터베이스 로그인을 제공하려는 경우 해당 자격 증명을 보안 저장소 서비스 대상 응용 프로그램에 매핑한 다음 데이터 새로 고침 일정에서 해당 응용 프로그램을 지정하면 됩니다.  

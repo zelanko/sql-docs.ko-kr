@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - invalid named pipes [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad261d8d7680be7111e79a1b7a7f3291c2139308
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582816"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094188"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>명명된 파이프 이름이 잘못된 이름이면 업그레이드가 중단될 수 있습니다.
   명명된 파이프 프로토콜이 잘못 구성된 경우 업그레이드할 수 없습니다.  

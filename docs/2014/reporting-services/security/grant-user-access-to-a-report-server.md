@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -17,12 +16,12 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101984"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>사용자에게 보고서 서버에 대한 액세스 권한 부여(보고서 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 역할 기반 보안을 사용하여 보고서 서버에 대한 액세스 권한을 사용자에게 부여합니다. 새 보고서 서버 설치에서는 로컬 관리자 그룹의 멤버인 사용자에게만 보고서 서버 내용 및 작업에 대한 사용 권한이 있습니다. 다른 사용자가 보고서 서버를 사용할 수 있게 하려면 태스크 모음을 지정하는 미리 정의된 역할에 사용자 또는 그룹 계정을 매핑하는 역할 할당을 만들어야 합니다.  

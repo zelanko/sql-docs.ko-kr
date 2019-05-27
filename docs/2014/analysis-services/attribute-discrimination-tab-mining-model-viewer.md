@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
@@ -13,12 +12,12 @@ ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f10fdf70b27f2bcea53ce32a1d64dec65e34893
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063129"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>특성 판별 탭(마이닝 모델 뷰어)
   **특성 판별** 탭을 사용하여 입력 특성의 상태를 비교하고 결과 특성과의 관련성을 확인할 수 있습니다. 선택한 두 예측 가능한 특성 간의 가장 큰 차이를 나타내는 특성 값이 먼저 나열됩니다.  

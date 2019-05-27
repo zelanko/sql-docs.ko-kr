@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: b9622c48-3243-4408-a1de-9ba20e32ff70
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d8500dbe5253bddcbd71b4376050c6f3d56cdbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765956"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054275"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 태스크 편집기(일반 페이지)
   **XML 태스크 편집기** 대화 상자의 **일반** 노드를 사용하여 작업 유형을 지정하고 작업을 구성할 수 있습니다.  

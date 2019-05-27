@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63182011"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090815"
 ---
 # <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>4단원: Microsoft Azure Storage에서 데이터베이스 만들기
   이 섹션에서는 Windows Azure의 SQL Server 데이터 파일 기능을 사용하여 데이터베이스를 만드는 방법을 배웁니다. 이 단원 전에 1, 2, 3단원을 완료해야 합니다. 3단원은 4단원 전에 Windows Azure 스토리지 컨테이너에 대한 정보와 관련 정책 이름 및 SAS 키를 SQL Server 자격 증명 저장소에 저장해야 하기 때문에 매우 중요한 단계입니다.  

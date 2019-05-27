@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -23,12 +22,12 @@ ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d37a00e0a4fb71672f3bedcfc0e1651a7c42ce71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158313"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099709"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>배포 및 관리 태스크 스크립팅
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 스크립트를 사용하여 일반적인 설치, 배포 및 관리 태스크를 자동화할 수 있습니다. 보고서 서버를 배포하려면 여러 단계를 수행해야 합니다. 여러 가지 도구와 프로세스를 사용하여 배포를 구성해야 하며 모든 태스크를 자동화하는 데 사용할 수 있는 단일 프로그램이나 방법은 없습니다.  

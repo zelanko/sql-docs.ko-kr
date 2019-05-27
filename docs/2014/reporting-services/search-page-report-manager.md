@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237703"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102258"
 ---
 # <a name="search-page-report-manager"></a>검색 페이지(보고서 관리자)
   검색 결과 페이지를 사용하여 보고서, 링크된 보고서, 보고서 모델, 공유 데이터 원본, 폴더 또는 리소스에 대해 지정한 검색 작업의 결과를 볼 수 있습니다. 검색 결과는 사전순으로 나열됩니다. 유형, 이름 또는 설명을 기준으로 정렬할 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - word completion [IntelliSense]
@@ -16,12 +15,12 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec8603dd46b6ab4a0fe6f3e7539efdcebd876ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bbfa7853e1b12bc31b5676e3b64082a57a3c800a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209560"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064163"
 ---
 # <a name="complete-word-intellisense"></a>단어 자동 완성(IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 단어 자동 완성 옵션은 용어를 고유하게 식별할 수 있을 정도의 문자가 입력된 경우 변수, 명령 또는 함수 이름의 나머지를 입력하는 기능입니다.  

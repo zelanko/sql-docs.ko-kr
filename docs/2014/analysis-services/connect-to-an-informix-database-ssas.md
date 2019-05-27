@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conninformixdb.f1
@@ -13,12 +12,12 @@ ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca54a226097860e563fd439261e8ce1f2690cacd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087156"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>Informix 데이터베이스에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 Informix 데이터베이스에 연결하기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

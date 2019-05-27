@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.speconnstring.f1
@@ -13,12 +12,12 @@ ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe778141f128a05c00d6a51a66394ed5c70fdb0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746693"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068546"
 ---
 # <a name="specify-a-connection-string-ssas"></a>연결 문자열 지정(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

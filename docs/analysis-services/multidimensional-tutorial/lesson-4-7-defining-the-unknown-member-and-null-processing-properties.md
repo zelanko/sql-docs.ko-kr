@@ -148,7 +148,7 @@ ms.locfileid: "65404075"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.   **특성** 창에서 **Subcategory**를 선택합니다.  
+7.  **특성** 창에서 **Subcategory**를 선택합니다.  
   
 8.  속성 창에서 **KeyColumns** 속성을 확장한 후 **DimProductSubcategory.ProductSubcategoryKey (Integer)** 속성을 확장합니다.  
   

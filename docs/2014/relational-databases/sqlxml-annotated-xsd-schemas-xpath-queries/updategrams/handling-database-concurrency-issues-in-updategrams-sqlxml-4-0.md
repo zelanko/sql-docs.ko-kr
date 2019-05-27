@@ -17,15 +17,15 @@ helpviewer_keywords:
 - concurrency [SQLXML]
 - intermediate concurrency protection [SQLXML]
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b561de7d655001e2c62f7c85e57cc7eb098af12d
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060242"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014747"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
   다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. 이러한 스냅숏 값을 포함 하는 Updategrams는  **\<전에 >** 는 updategrams의 블록. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 검사 하면  **\<전에 >** 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값에 대 한 블록.  

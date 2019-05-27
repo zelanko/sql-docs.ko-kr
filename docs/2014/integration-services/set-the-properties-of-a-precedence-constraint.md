@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
@@ -14,12 +13,12 @@ ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888876"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055737"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>선행 제약 조건의 속성 설정
   선행 제약 조건의 속성을 설정하려면 다음 도구 중 하나를 사용하면 됩니다.  

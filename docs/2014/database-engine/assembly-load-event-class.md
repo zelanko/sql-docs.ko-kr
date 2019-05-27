@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a57ec9e8d1cb6b2559622af339b9e8a6a3d7b29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065256"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load 이벤트 클래스
   **Assembly Load** 이벤트 클래스는 어셈블리 로드 요청을 실행할 때 발생합니다.  

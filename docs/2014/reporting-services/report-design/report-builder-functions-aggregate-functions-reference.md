@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f4c61c346452664557396032cb4ea14f89da66c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63216221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105327"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>집계 함수 참조(보고서 작성기 및 SSRS)
   보고서에 집계 값을 포함하려면 식에서 기본 제공 집계 함수를 사용할 수 있습니다. 숫자 필드에 대한 기본 집계 함수는 SUM입니다. 식을 편집하고 다른 기본 제공 집계 함수를 사용하거나 다른 범위를 지정할 수 있습니다. 범위는 계산에 사용할 데이터 집합을 식별합니다.  

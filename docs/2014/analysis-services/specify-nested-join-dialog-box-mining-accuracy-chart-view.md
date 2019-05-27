@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.specifynestedjoin.f1
@@ -15,12 +14,12 @@ ms.assetid: e6dd5c26-d6ba-4fcb-8c03-c012fea760f1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20106b002eba07a3eb9e2877c84dacb9a98b87b1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068315"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>중첩 조인 지정 대화 상자(마이닝 정확도 차트 뷰)
   **중첩 조인 지정** 대화 상자에서는 중첩 테이블과 사례 테이블 간의 관계를 만듭니다. **중첩 조인 지정** 대화 상자를 열려면 중첩 테이블을 선택하고 **조인 수정**을 클릭합니다.  

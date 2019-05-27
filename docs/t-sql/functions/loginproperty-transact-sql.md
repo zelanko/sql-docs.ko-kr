@@ -30,15 +30,15 @@ helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4135760bb80daa7ffebe01b173fdc8e1c4fd1059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616801"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949140"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="remarks"></a>Remarks  
  이 기본 제공 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 암호 정책 설정에 대한 정보를 반환합니다. 속성 이름은 대/소문자를 구분하지 않으므로 속성 이름 **BadPasswordCount**와 **badpasswordcount**는 같습니다. **PasswordHash, PasswordHashAlgorithm** 및 **PasswordLastSetTime** 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 모든 구성에서 사용할 수 있지만 다른 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]에서 실행 중이고 CHECK_POLICY 및 CHECK_EXPIRATION이 모두 설정된 경우에만 사용할 수 있습니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  로그인에 대한 VIEW 권한이 필요합니다. 암호 해시를 요청하는 경우 CONTROL SERVER 권한도 필요합니다.  
   
 ## <a name="examples"></a>예  

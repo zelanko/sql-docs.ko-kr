@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94bcee6d2b1ed9a9ad81bddcb7351ebea51c0449
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62519287"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011872"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)
   이 섹션에서는 대량 내보내기 작업을 계획하는 방법과 관련된 고려 사항 및 대량 가져오기 작업의 요구 사항에 대해 설명합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "62519287"
   
      [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro 또는 Visual FoxPro 테이블 파일(.dbf)이나 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 워크시트 파일(.xls)에서 대량으로 데이터를 가져오려면 앞에서 설명한 제한 사항을 준수하는 CSV 파일로 데이터를 변환해야 합니다. 일반적으로 파일 확장명은 .csv입니다. 그런 다음 .csv 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 가져오기 작업에서 데이터 파일로 사용할 수 있습니다.  
   
-     32비트 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [을 Jet용 OLE DB 공급자와 함께 사용하면 대량 가져오기 최적화를 수행하지 않아도 CSV 데이터를](/sql/t-sql/functions/openrowset-transact-sql) 테이블로 가져올 수 있습니다. Jet에서는 schema.ini 파일에 정의된 스키마를 사용하여 텍스트 파일을 테이블로 처리합니다. schema.ini 파일은 데이터 원본과 동일한 디렉터리에 있습니다.  CSV 데이터의 경우 schema.ini 파일의 매개 변수 중 하나는 "FORMAT=CSVDelimited"입니다. 이 해결 방법을 사용하려면 Jet Test IISAMm의 작동 방식, 즉 연결 문자열 구문, schema.ini 사용법, 레지스트리 설정 옵션 등을 이해해야 합니다.  이에 대한 가장 유용한 정보는 Microsoft Access 도움말 및 KB(기술 자료) 문서에서 제공합니다. 자세한 내용은 [텍스트 데이터 원본 드라이버 초기화](https://go.microsoft.com/fwlink/?LinkId=128503)를 [보안 된 Access 데이터베이스에 연결 된 서버를 사용 하 여 SQL Server 7.0 분산 쿼리를 사용 하는 방법](https://go.microsoft.com/fwlink/?LinkId=128504), [방법: Jet OLE DB 공급자 4.0을 사용 하 여 ISAM 데이터베이스에 연결할](https://go.microsoft.com/fwlink/?LinkId=128505), 및 [Jet 공급자의 텍스트 IIsam을 사용 하 여 구분 기호로 분리 된 텍스트 파일을 여는 방법](https://go.microsoft.com/fwlink/?LinkId=128501)합니다.  
+     32비트 시스템에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [을 Jet용 OLE DB 공급자와 함께 사용하면 대량 가져오기 최적화를 수행하지 않아도 CSV 데이터를](/sql/t-sql/functions/openrowset-transact-sql) 테이블로 가져올 수 있습니다. Jet에서는 schema.ini 파일에 정의된 스키마를 사용하여 텍스트 파일을 테이블로 처리합니다. schema.ini 파일은 데이터 원본과 동일한 디렉터리에 있습니다.  CSV 데이터의 경우 schema.ini 파일의 매개 변수 중 하나는 "FORMAT=CSVDelimited"입니다. 이 해결 방법을 사용하려면 Jet Test IISAMm의 작동 방식, 즉 연결 문자열 구문, schema.ini 사용법, 레지스트리 설정 옵션 등을 이해해야 합니다.  이에 대한 가장 유용한 정보는 Microsoft Access 도움말 및 KB(기술 자료) 문서에서 제공합니다. 자세한 내용은 [텍스트 데이터 원본 드라이버 초기화](https://go.microsoft.com/fwlink/?LinkId=128503), [보안된 액세스 데이터베이스에 연결된 서버에서 SQL Server 7.0 분산 쿼리를 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=128504), [방법: Jet OLE DB 공급자 4.0을 사용하여 ISAM 데이터베이스에 연결](https://go.microsoft.com/fwlink/?LinkId=128505) 및 [Jet 공급자의 Text IIsam을 사용하여 구분된 텍스트 파일을 여는 방법](https://go.microsoft.com/fwlink/?LinkId=128501)을 참조하세요.  
   
  또한 데이터 파일의 데이터를 테이블로 대량으로 가져오려면 다음 요구 사항을 충족해야 합니다.  
   

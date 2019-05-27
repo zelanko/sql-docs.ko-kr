@@ -18,16 +18,16 @@ helpviewer_keywords:
 - row distribution [SQL Server]
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd2d7735bfb19d400edd278a36e8ab3dac81c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f2597386a3beac94ff1cc5d067299f308a255e9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738111"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944066"
 ---
 # <a name="ntile-transact-sql"></a>NTILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +153,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-dividing-rows-into-groups"></a>3. 행을 그룹으로 나누기  
+### <a name="c-dividing-rows-into-groups"></a>C. 행을 그룹으로 나누기  
  다음 예에서는 NTILE 함수를 사용하여 2003년에 할당된 판매 할당량을 기반으로 영업 담당자 집합을 4개의 그룹으로 나눕니다. 행의 총 수를 그룹 수로 나눌 수 없으므로 첫 번째 그룹에는 5개의 행이 있고 나머지 그룹에는 각각 4개의 행이 있습니다.  
   
 ```  
@@ -193,7 +193,7 @@ Jiang             4          544,000.00
 Tsoflias          4          867,000.00
 ```  
   
-### <a name="d-dividing-the-result-set-by-using-partition-by"></a>4. PARTITION BY를 사용하여 결과 집합 나누기  
+### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. PARTITION BY를 사용하여 결과 집합 나누기  
  다음 예에서는 예 1의 코드에 PARTITION BY 인수를 추가합니다. 행은 먼저 `SalesTerritoryCountry`로 분할된 다음, 각 `SalesTerritoryCountry` 내에서 두 그룹으로 나뉩니다. OVER 절의 ORDER BY는 NTILE을 정렬하고, SELECT 문의 ORDER BY는 결과 집합을 정렬합니다.  
   
 ```  

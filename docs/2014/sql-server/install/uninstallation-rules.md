@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 07554612-8cb6-4bd9-adde-956177261ccd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 806c1ecb7cf9363417783c930623a1ce92aee418
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 299a2d82464d83bf57958d6171aca1a4ba93389f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62505852"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091736"
 ---
 # <a name="uninstallation-rules"></a>제거 규칙
   제거 규칙 페이지에서는 설치 작업을 성공적으로 완료할 수 있는지 확인하기 위해 규칙 집합을 실행합니다.  

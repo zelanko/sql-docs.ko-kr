@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - namespaces [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 717852ad4cb5f63ee4ac84820f1af00cfa5f2d22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106944"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 XML 데이터 원본에 대한 데이터 집합을 만들 수 있습니다. 데이터 원본을 정의한 후 데이터 세트에 대한 쿼리를 만듭니다. 데이터 원본이 가리키는 XML 데이터의 형식에 따라 XML `Query`나 요소 경로를 포함하여 데이터 집합 쿼리를 만듭니다. XML `Query` 로 시작 하는  **\<쿼리 >** 태그 및 네임 스페이스와 데이터 원본에 따라 달라 지는 XML 요소를 포함 합니다. 요소 경로는 네임스페이스로부터 독립적이며 기본 XML 데이터에서 사용할 노드 및 노드 특성을 XPath 형식 구문으로 지정합니다. 요소 경로에 대한 자세한 내용은 [XML 보고서 데이터를 위한 요소 경로 구문&#40;SSRS&#41;](report-data-ssrs.md)을 참조하세요.  

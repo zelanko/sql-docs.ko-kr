@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.rowvisibility.f1
@@ -14,12 +13,12 @@ ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f823df1f479cb0be29acb7511e5a87ed20a4afa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe9af16c34fa70bb8fcda0dcaae64a39786e3cd3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63205171"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102412"
 ---
 # <a name="row-visibility-dialog-box"></a>행 표시 유형 대화 상자
   **행 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 행을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 행의 표시 유형을 전환할 수 있습니다.  

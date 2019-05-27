@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
@@ -14,12 +13,12 @@ ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108316"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>지도 색 규칙 대화 상자, 일반
   **색 규칙 속성** 대화 상자에서 **일반** 을 선택하여 이 계층의 지도 요소에 대한 색 옵션을 정의할 수 있습니다. 지도 요소에는 다각형, 선 및 점이 포함됩니다. 공간 데이터 기반의 지도 요소와 데이터 세트 필드 또는 공간 데이터 원본 필드의 분석 데이터 간 관계를 만든 경우 색 규칙을 적용할 수 있습니다.  

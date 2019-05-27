@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
@@ -15,12 +14,12 @@ ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473495"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062607"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>알고리즘 매개 변수 대화 상자(마이닝 모델 뷰)
   **알고리즘 매개 변수** 대화 상자를 사용하여 선택한 모델에 해당하는 알고리즘 매개 변수를 조정할 수 있습니다. 알고리즘 매개 변수를 변경하면 항상 마이닝 모델의 결과가 변경됩니다. 각 매개 변수가 결과에 영향을 미치는 방식은 사용 중인 알고리즘과 데이터에 따라 달라집니다. 자세한 내용은 [마이닝 모델 및 구조 사용자 지정](data-mining/customize-mining-models-and-structure.md)을 참조하세요.  

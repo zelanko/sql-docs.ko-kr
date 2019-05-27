@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277662"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724881"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  
   
  식은 패키지, 태스크, Foreach 루프, For 루프, 시퀀스, Foreach 열거자, 이벤트 처리기, 패키지 또는 프로젝트 수준의 연결 관리자 또는 로그 공급자에 추가할 수 있습니다. 이러한 개체의 읽기/쓰기가 가능한 속성으로 속성 식을 구현할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 또한 데이터 흐름 구성 요소의 일부 사용자 지정 속성에 속성 식을 사용할 수 있습니다. 변수 및 선행 제약 조건은 속성 식을 지원하지 않지만 식을 사용할 수 있는 특수 속성을 포함합니다.  

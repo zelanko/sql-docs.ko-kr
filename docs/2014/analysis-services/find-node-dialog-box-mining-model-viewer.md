@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.findnode.f1
@@ -15,12 +14,12 @@ ms.assetid: 220ebca3-3339-4b32-9770-4293fe8e70a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731515"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081135"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>노드 찾기 대화 상자(마이닝 모델 뷰어)
   모델의 **종속성 네트워크** 탭에서 사용할 수 있는 **노드 찾기** 대화 상자를 사용하여 특정 노드를 찾을 수 있습니다. 이 기능은 많은 노드 또는 항목 집합이 포함된 복잡한 다이어그램에서 유용합니다.  

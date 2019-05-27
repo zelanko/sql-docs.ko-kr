@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ERROR_LINE function
 - CATCH block
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b9c847b6b04aa4ec1a67b89bf3fa6473b91e13bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e6562b656695963868e849a063796ea70c3d097
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515867"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948833"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ERROR_LINE ( )
 ```  
   
 ## <a name="return-type"></a>반환 형식  
-**int**  
+**ssNoversion**  
   
 ## <a name="return-value"></a>반환 값  
 CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.  
@@ -130,7 +130,7 @@ ErrorLine
    
 ```
 
-### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>3. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_LINE 사용  
+### <a name="c-using-errorline-in-a-catch-block-with-other-error-handling-tools"></a>C. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호 및 오류 자체와 관련된 정보를 반환합니다.  
   
 ```  

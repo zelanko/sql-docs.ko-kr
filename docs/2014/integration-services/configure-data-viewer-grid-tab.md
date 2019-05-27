@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.grid.f1
@@ -15,12 +14,12 @@ ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 293624979236d8507d53d86668554041eed76c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 774cba19a7762a41d60fe7cf90d63de275e59b71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62834431"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060663"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>데이터 뷰어 구성(표 탭)
   **데이터 뷰어 구성** 대화 상자의 **표** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 표 형태 차트에서는 데이터 레코드를 표의 행으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  

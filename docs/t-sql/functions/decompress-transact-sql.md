@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d66bede3868b836c47527f51d527ba6b68282e79
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c14596554fd5df79fc967866421d7137ead71872
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168773"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945598"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>인수  
  *expression*  
-**varbinary(**_n_**)**, **varbinary(max)** 또는 **binary(**_n_**)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
+**varbinary(** _n_ **)** , **varbinary(max)** 또는 **binary(** _n_ **)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
 데이터 형식 **varbinary(max)** 의 값입니다. `DECOMPRESS`는 ZIP 알고리즘을 사용하여 입력 인수의 압축을 풉니다. 필요한 경우 사용자가 명시적으로 결과를 대상 유형으로 캐스팅해야 합니다.  

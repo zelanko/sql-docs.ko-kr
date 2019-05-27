@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877725"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713857"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 이 항목에서는 SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다. 또한 SQL Server 2016 시간 프레임 동안 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)에 포함되거나 업데이트된 기능도 포함됩니다.  
 
@@ -284,7 +288,7 @@ ms.locfileid: "64877725"
  Excel 연결 관리자, Excel 원본 및 Excel 대상에서 이제 Excel 2016 데이터 원본에 대한 명시적 지원을 제공합니다.  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 릴리스됨  
- Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016이 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다. 기능 팩의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Microsoft® SQL Server® 2016 기능 팩)을 참조하세요.
+ MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016이 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다. 기능 팩의 구성 요소를 다운로드하려면 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(MicrosoftÂ® SQL ServerÂ® 2016 기능 팩)을 참조하세요.
  
 #### <a name="oracleteradata"></a> Oracle 및 Teradata용 Connectors v4.0 릴리스됨
 Oracle 및 Teradata용 Microsoft Connectors v4.0이 릴리스되었습니다. 커넥터를 다운로드하려면 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)(Oracle 및 Teradata용 Microsoft Connectors v4.0)를 참조하세요.
@@ -345,7 +349,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
  SQL Server 가져오기 및 내보내기 마법사에서 이제 Azure Blob Storage에서 데이터를 가져오고, Azure Blob Storage에 데이터를 저장합니다. 자세한 내용은 [데이터 원본 선택&#40;SQL Server 가져오기 및 내보내기 마법사&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) 및 [대상 선택&#40;SQL Server 가져오기 및 내보내기 마법사&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)을 참조하세요. 
 
 ####  <a name="CDCOracle"></a> Microsoft SQL Server 2016용 Change Data Capture Designer 및 Service for Oracle이 릴리스됨  
- Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity가 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다.  이제 이러한 구성 요소는 클래식 설치에서 Oracle 12c를 지원합니다. 다중 테넌트 설치는 지원되지 않습니다. Feature Pack의 구성 요소를 다운로드하려면 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)을 참조하세요.  
+ Microsoft SQL ServerÂ® 2016용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity가 SQL Server 2016 Feature Pack의 일부로 릴리스되었습니다.  이제 이러한 구성 요소는 클래식 설치에서 Oracle 12c를 지원합니다. 다중 테넌트 설치는 지원되지 않습니다. Feature Pack의 구성 요소를 다운로드하려면 [MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)을 참조하세요.  
   
 ####  <a name="cdc2016"></a> CDC 구성 요소가 SQL Server 2016용으로 업데이트됨  
  CDC(변경 데이터 캡처) 제어 작업, 원본, 분할자 변환 구성 요소가 SQL Server 2016과의 완벽한 호환성을 제공할 수 있도록 업데이트되었습니다. 새로운 기능은 없고 동작에서 변경된 사항도 없습니다.  

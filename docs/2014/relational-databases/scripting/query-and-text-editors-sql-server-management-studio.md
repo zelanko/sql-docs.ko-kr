@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -26,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2f2e0f35f1d910e31bd8f3f93201660fca51c0b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62867162"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063874"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  

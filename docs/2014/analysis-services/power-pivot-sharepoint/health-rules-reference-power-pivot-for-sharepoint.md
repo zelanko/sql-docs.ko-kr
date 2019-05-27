@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 60d8599942db1c7f1ff679d92de496692ed2d58b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749446"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071397"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>상태 규칙 참조(SharePoint용 PowerPivot)
   이 참조 항목에서는 SharePoint용 PowerPivot  설치 시 추가되는 SharePoint  상태 규칙에 대해 설명합니다. 이러한 규칙은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 애플리케이션 또는 연결된 해당 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 구성, 가용성 또는 서버 상태에 대한 문제를 보고하는 데 사용됩니다.  

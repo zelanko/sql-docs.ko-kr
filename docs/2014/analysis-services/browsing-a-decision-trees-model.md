@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064667"
 ---
 # <a name="browsing-a-decision-trees-model"></a>의사 결정 트리 모델 찾아보기
   사용 하 여 분류 모델을 열면 **찾아보기**을 비슷한 대화형 의사 결정 트리 뷰어에 모델이 표시 됩니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 뷰어와 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 뷰어에는 데이터 그룹을 구별하는 조건을 강조 표시하는 그래프로 분류 결과가 표시됩니다. 트리의 개별 하위 집합으로 드릴다운하고 기본 데이터를 검색할 수도 있습니다.  

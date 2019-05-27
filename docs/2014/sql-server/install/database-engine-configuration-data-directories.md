@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b223c3ef9c6b4a8085c6575f827ae5e9e276ad9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bfb62ec0bbd16a2b77e2f05f64d36ef31498a100
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62992321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095896"
 ---
 # <a name="database-engine-configuration---data-directories"></a>데이터베이스 엔진 구성 - 데이터 디렉터리
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로그램 및 데이터 파일의 설치 위치를 지정할 수 있습니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  

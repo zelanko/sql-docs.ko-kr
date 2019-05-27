@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732602"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082843"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>모델 뷰어에서 드릴스루 사용
   모델 유형에 따라 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 브라우저 뷰어에서 드릴스루를 사용하여 마이닝 모델에 사용된 사례를 탐색하거나 마이닝 구조의 추가 열을 볼 수 있습니다. 모델의 패턴은 특정 사례에 직접 연결할 수 없으므로 대부분의 모델 유형에서 드릴스루를 지원하지 않지만 다음 모델 유형에서는 드릴스루를 지원합니다.  

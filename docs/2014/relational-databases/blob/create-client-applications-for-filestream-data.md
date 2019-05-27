@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 017762b9897af951020793fdd02fc34d3209da2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920539"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010177"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 애플리케이션 만들기
   Win32를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓸 수 있습니다. 다음 단계가 필요합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "62920539"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT()](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)는 세션의 현재 트랜잭션을 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다.  
   
--   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 응용 프로그램의 핸들을 사용 하 여 FILESTREAM 데이터를 스트림에 및 핸들을 다음 Win32 Api에 전달할 수 있습니다.: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)합니다 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)를 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)를 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), 또는 [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)합니다. 애플리케이션이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 애플리케이션에서는 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
+-   [OpenSqlFilestream API](access-filestream-data-with-opensqlfilestream.md) 는 Win32 파일 핸들을 얻습니다. 애플리케이션은 이 핸들을 사용하여 FILESTREAM 데이터를 스트리밍한 후 핸들을 다음 Win32 API로 전달할 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 애플리케이션이 핸들을 사용하여 다른 API를 호출할 경우 ERROR_ACCESS_DENIED 오류가 반환됩니다. 애플리케이션에서는 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428)을 사용하여 핸들을 종료해야 합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행됩니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 SQL 데이터 및 FILESTREAM 데이터 간에 일관성을 유지할 수 있습니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62920539"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_get_transaction_context)]  
   
 ###  <a name="handle"></a> Win32 파일 핸들 가져오기  
- Win32 파일 핸들을 가져오려면 OpenSqlFilestream API를 호출합니다. 이 API는 sqlncli.dll 파일에서 내보내집니다. 반환 된 핸들의 다음 Win32 api 전달할 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)합니다 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)를 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)를 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), 또는 [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)합니다. 다음 예에서는 Win32 파일 핸들을 가져오고 이를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓰는 방법을 보여 줍니다.  
+ Win32 파일 핸들을 가져오려면 OpenSqlFilestream API를 호출합니다. 이 API는 sqlncli.dll 파일에서 내보내집니다. 반환된 핸들은 다음 Win32 API 중 하나로 전달될 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426) 또는 [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). 다음 예에서는 Win32 파일 핸들을 가져오고 이를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓰는 방법을 보여 줍니다.  
   
  [!code-csharp[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cs/filestream.cs#fs_cs_readandwriteblob)]  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6c4601553392a2e11bf6ab77063552c2a58e939
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066823"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>파워 뷰 보고 속성(SSAS 테이블 형식)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 데이터 분석가, 비즈니스 의사 결정권자 및 정보 근로자와 같은 비즈니스 사용자에게 직관적인 임시 보고 기능을 제공합니다. 비즈니스 사용자는 PowerPivot 갤러리에 게시된 PowerPivot 통합 문서를 기반으로 하는 테이블 형식 모델 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 만든 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services 인스턴스에 배포된 테이블 형식 모델에서 데이터 뷰를 쉽게 만들고 상호 작용할 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] SharePoint Server 2010 이상에서 실행되는 브라우저 기반 Silverlight 애플리케이션입니다.  

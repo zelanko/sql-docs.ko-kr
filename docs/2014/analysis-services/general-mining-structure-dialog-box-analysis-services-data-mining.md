@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.errorconfig.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730973"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081061"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>일반(마이닝 구조 대화 상자)(Analysis Services - 데이터 마이닝)
   **SQL Server Management Studio** 의 **마이닝 구조 속성** 대화 상자에 있는 **일반** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 마이닝 구조에 대한 일반 속성을 설정할 수 있습니다.  

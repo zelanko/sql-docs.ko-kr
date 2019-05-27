@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
@@ -13,12 +12,12 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d9f59bde50c325f0694cc6cdd9441d80ea61f02
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057959"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092695"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>보고서 서버 상태(SSRS 기본 모드)
   이 페이지를 사용하여 현재 연결된 보고서 서버 인스턴스에 대한 정보를 볼 수 있습니다. 이 페이지는 보고서 서버 구성의 시작 페이지입니다. 추가 페이지에서는 URL, 서비스 계정, 보고서 서버 데이터베이스, 보고서 서버 전자 메일 배달, 스케일 아웃 배포 및 암호화 키를 구성할 수 있습니다.  

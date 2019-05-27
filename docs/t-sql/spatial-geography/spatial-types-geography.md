@@ -15,15 +15,15 @@ helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a91e42ca4103fe854198d1559b88c7934b1117ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70b12b7aaf0dbcc748897768d090cb1c663fb30
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678081"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936233"
 ---
 # <a name="spatial-types---geography"></a>공간 형식 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ SELECT @result = @geog1.STIntersection(@geog2);
 SELECT @result.STAsText();  
 ```  
   
-### <a name="c-using-geography-in-a-computed-column"></a>3. 계산 열에 geography 사용  
+### <a name="c-using-geography-in-a-computed-column"></a>C. 계산 열에 geography 사용  
  다음 예제에서는 **geography** 형식을 사용하여 지속형 계산 열이 있는 테이블을 만듭니다.  
   
 ```  

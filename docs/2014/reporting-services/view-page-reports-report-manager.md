@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647681"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098737"
 ---
 # <a name="view-page-reports-report-manager"></a>보기 페이지, 보고서(보고서 관리자)
   보고서의 보기 페이지를 사용하여 보고서를 볼 수 있습니다. 보고서 관리자에서 보고서를 처음 열면 HTML 형식으로 열립니다. HTML 보고서의 맨 위에는 보고서 도구 모음이 포함되어 있어서 보고서 페이지를 탐색하고 보고서 내에서 검색하거나 보고서를 다른 형식으로 내보내는 작업이 가능합니다. 다음 다이어그램에서는 보고서 도구 모음을 보여 줍니다.  

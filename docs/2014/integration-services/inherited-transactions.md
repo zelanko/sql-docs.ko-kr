@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
@@ -15,12 +14,12 @@ ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aeb90951cea0b50226c2db87e22268822b58b1b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767823"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058060"
 ---
 # <a name="inherited-transactions"></a>상속된 트랜잭션
   패키지 실행 태스크를 사용하면 패키지가 다른 패키지를 실행할 수 있습니다. 패키지 실행 태스크에서 실행하는 패키지인 자식 패키지는 자체의 패키지 트랜잭션을 만들거나 부모 패키지 트랜잭션을 상속할 수 있습니다.  

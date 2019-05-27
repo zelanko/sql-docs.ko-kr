@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -24,12 +23,12 @@ ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734914"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083867"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 예측 가능한 특성의 가능한 각 상태를 사용 하 여 입력된 특성의 가능한 각 상태를 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  

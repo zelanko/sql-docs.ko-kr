@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -16,12 +15,12 @@ ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064676"
 ---
 # <a name="browsing-a-clustering-model"></a>클러스터링 모델 찾아보기
   사용 하 여 클러스터링 모델을 열면 **찾아보기**의 클러스터링 뷰어와 비슷한 대화형 뷰어에서 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 이 뷰어는 만들어진 클러스터를 탐색하고 클러스터의 특징을 이해하는 데 도움이 됩니다. 또한 개별 세그먼트를 다른 세그먼트 또는 모집단과 비교하고 대조할 수도 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - additivity [Analysis Services]
@@ -42,12 +41,12 @@ ms.assetid: e9031078-c4f5-4986-b0c9-4d064b622ab7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726937"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076613"
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
   측정값에는 해당 측정값의 작동 방법을 정의하고 측정값의 표시 방법을 제어하는 데 사용할 수 있는 속성이 있습니다.  

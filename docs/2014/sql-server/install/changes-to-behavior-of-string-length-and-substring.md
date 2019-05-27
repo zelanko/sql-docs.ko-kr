@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0c29b1bd036debc4285f8b0fa0b3cc68bdeb3449
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215290"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096628"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length 및 substring의 동작에 대한 변경 사항
   합니다 [string-length 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) 하 고 [substring 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) 함수를 포함 하는 XML 데이터베이스와 함께 사용할 때 다른 결과 반환할 수 있습니다 서로게이트 문자입니다.  

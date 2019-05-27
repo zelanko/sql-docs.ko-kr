@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836831"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943074"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 절의 *column_expression*입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  GROUPING_ID \<column_expression>은 GROUP BY 목록의 식과 정확하게 일치해야 합니다. 예를 들어 DATEPART(yyyy, \<*column name*>)를 기준으로 그룹화하는 경우에는 GROUPING_ID(DATEPART(yyyy, \<*column name*>))를 사용하고, \<*column name*>를 기준으로 그룹화하는 경우에는 GROUPING_ID(\<*column name*>)를 사용하세요.  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>GROUPING_ID ()와 GROUPING () 비교  
- GROUPING_ID (\<column_expression> [ **,**...*n* ])는 각 출력 행의 열 목록에 있는 각 열에 대해 반환되는 동등 함수인 GROUPING (\<column_expression>)을 0과 1로 구성된 문자열로 입력합니다. GROUPING_ID는 문자열을 밑이 2인 숫자로 해석하고 그에 해당하는 정수를 반환합니다. 예를 들어 다음 문을 살펴보세요: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. 다음 표에서는 GROUPING_ID () 입력 및 출력 값을 보여 줍니다.  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ])는 각 출력 행의 열 목록에 있는 각 열에 대해 반환되는 동등 함수인 GROUPING (\<column_expression>)을 0과 1로 구성된 문자열로 입력합니다. GROUPING_ID는 문자열을 밑이 2인 숫자로 해석하고 그에 해당하는 정수를 반환합니다. 예를 들어 다음 문을 살펴보세요: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. 다음 표에서는 GROUPING_ID () 입력 및 출력 값을 보여 줍니다.  
   
 |집계된 열|GROUPING_ID (a, b, c) 입력 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () 출력|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -236,8 +236,8 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>3. GROUPING_ID ()를 ROLLUP 및 CUBE와 함께 사용하여 그룹화 수준 식별  
- 다음 예제에서의 코드는 `GROUPING()`을 사용하여 `Bit Vector(base-2)` 열을 컴퓨팅하는 방법을 보여 줍니다. `GROUPING_ID()`는 해당 `Integer Equivalent` 열을 계산하는 데 사용됩니다. `GROUPING_ID()` 함수의 열 순서는 `GROUPING()` 함수로 연결되는 열의 순서와 반대입니다.  
+### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. GROUPING_ID ()를 ROLLUP 및 CUBE와 함께 사용하여 그룹화 수준 식별  
+ 다음 예제에서의 코드는 `GROUPING()`을 사용하여 `Bit Vector(base-2)` 열을 계산하는 방법을 보여 줍니다. `GROUPING_ID()`는 해당 `Integer Equivalent` 열을 계산하는 데 사용됩니다. `GROUPING_ID()` 함수의 열 순서는 `GROUPING()` 함수로 연결되는 열의 순서와 반대입니다.  
   
  이 예제에서 `GROUPING_ID()`는 `Grouping Level` 열의 각 행에 대해 그룹화 수준을 식별하는 값을 생성합니다. 그룹화 수준이 1로 시작되는 연속된 정수 목록(0, 1, 2,...*n*)이 아닌 경우도 있습니다.  
   

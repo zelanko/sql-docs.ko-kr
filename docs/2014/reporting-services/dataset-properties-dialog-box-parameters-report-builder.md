@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10023"
@@ -13,12 +12,12 @@ ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164989"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109387"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 집합 속성 대화 상자, 매개 변수(보고서 작성기)
   선택 **매개 변수** 에 **데이터 집합 속성** 대화 상자를 추가, 변경 및 쿼리 매개 변수를 삭제 합니다.  
