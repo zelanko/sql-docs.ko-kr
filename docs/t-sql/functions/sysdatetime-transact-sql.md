@@ -26,16 +26,16 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5a1f24be0dff936bb7b2ab71606b0c2dd704988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 837f3a8760611ced15c5face56080031cd5d911f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658301"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948629"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,7 @@ SELECT CONVERT (date, SYSDATETIME())
 /* All returned 2007-04-30 */  
 ```  
   
-### <a name="c-getting-the-current-system-time"></a>3. 현재 시스템의 시간 가져오기  
+### <a name="c-getting-the-current-system-time"></a>C. 현재 시스템의 시간 가져오기  
   
 ```  
 SELECT CONVERT (time, SYSDATETIME())  
@@ -123,7 +123,7 @@ GETUTCDATE()       20:18:45.3470000
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-getting-the-current-system-date-and-time"></a>4. 현재 시스템의 날짜 및 시간 가져오기  
+### <a name="d-getting-the-current-system-date-and-time"></a>D: 현재 시스템의 날짜 및 시간 가져오기  
   
 ```  
 SELECT SYSDATETIME();  

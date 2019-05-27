@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isenvprop.variables.f1
@@ -16,12 +15,12 @@ ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828726"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060146"
 ---
 # <a name="create-and-map-a-server-environment"></a>서버 환경 만들기 및 매핑
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 프로젝트에 포함된 패키지의 런타임 값을 지정하기 위한 서버 환경을 만듭니다. 그런 다음 특정 패키지, 진입점 패키지 또는 지정된 프로젝트의 모든 패키지에 대한 매개 변수에 환경 변수를 매핑할 수 있습니다. 진입점 패키지는 일반적으로 자식 패키지를 실행하는 부모 패키지입니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.mappings.f1
@@ -15,12 +14,12 @@ ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7f08879e314ac17e47d4bc3eb096a559ff654d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767065"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057087"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 대상 편집기(매핑 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

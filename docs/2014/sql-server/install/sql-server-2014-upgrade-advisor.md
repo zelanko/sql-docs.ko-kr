@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d28a5ca8-ea9f-443f-af4f-b7e77987f8f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63137615"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092047"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 업그레이드 관리자
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 구성을 분석한 다음 업그레이드를 성공적으로 수행하기 위해 해결해야 하는 문제에 대한 보고서를 생성합니다.  

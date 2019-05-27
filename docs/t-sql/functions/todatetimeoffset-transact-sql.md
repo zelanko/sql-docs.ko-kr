@@ -1,7 +1,7 @@
 ---
 title: TODATETIMEOFFSET(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2017
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d2234f6f8d9fa54ccbbae35e1e1dfc7568cc8ff
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 26a8299165eea6a2a8f1b8d69f87dc92f9bf12b6
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206229"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949070"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,30 +66,27 @@ TODATETIMEOFFSET ( expression , time_zone )
 ### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>1. 현재 날짜 및 시간의 표준 시간대 오프셋 변경  
  다음 예에서는 현재 날짜 및 시간의 표준 시간대 오프셋을 표준 시간대 `-07:00`으로 변경합니다.  
   
-```  
+```sql  
 DECLARE @todaysDateTime datetime2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
+-- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
 ### <a name="b-changing-the-time-zone-offset-in-minutes"></a>2. 표준 시간대 오프셋(분) 변경  
  다음 예에서는 현재 표준 시간대를 `-120`분으로 변경합니다.  
   
-```  
-DECLARE @todaysDate datetime2;  
-SET @todaysDate = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDate, -120);  
--- RETURNS 2007-08-30 15:52:37.8770000 -02:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), -120)
+-- RETURNS: 2019-04-22 11:39:21.6986813 -02:00  
 ```  
   
-### <a name="c-adding-a-13-hour-time-zone-offset"></a>3. 13시간 표준 시간대 오프셋 추가  
+### <a name="c-adding-a-13-hour-time-zone-offset"></a>C. 13시간 표준 시간대 오프셋 추가  
  다음 예에서는 날짜 및 시간에 13시간 표준 시간대 오프셋을 추가합니다.  
   
-```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
--- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
+-- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  
   
 ## <a name="see-also"></a>참고 항목  

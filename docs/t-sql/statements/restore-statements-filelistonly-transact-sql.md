@@ -19,16 +19,16 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1a7e8edbe841ddf4ef53f8a6d93dbedc7ca34c36
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: b9480fc29339d0cd33d063c24f19c083804d1ae0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242154"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948368"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,8 +99,8 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|해당 파일이 포함된 파일 그룹이 읽기/쓰기에서 읽기 전용으로 변경된 시점(가장 최근 변경)의 로그 시퀀스 번호입니다.|  
 |ReadWriteLSN|**numeric(25,0)** NULL|해당 파일이 포함된 파일 그룹이 읽기 전용에서 읽기/쓰기로 변경된 시점(가장 최근의 변경)의 로그 시퀀스 번호입니다.|  
 |BackupSizeInBytes|**bigint**|이 파일의 백업의 크기(바이트)입니다.|  
-|SourceBlockSize|**int**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
-|FileGroupID|**int**|파일 그룹의 ID입니다.|  
+|SourceBlockSize|**ssNoversion**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
+|FileGroupID|**ssNoversion**|파일 그룹의 ID입니다.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN**보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|차등 백업의 경우 차등 기반의 고유 식별자입니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
@@ -110,12 +110,12 @@ FROM <backup_device>
 |SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 백업에 포함된 데이터베이스 파일의 Azure 스냅숏에 대한 URL입니다. FILE_SNAPSHOT 백업이 없는 경우 NULL을 반환합니다.|  
   
 ## <a name="security"></a>보안  
- 백업 작업은 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  
+ 필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  
   
 > [!IMPORTANT]  
 >  이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 장치에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  

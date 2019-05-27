@@ -20,16 +20,16 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7511f03f5d502def18bbb17e1dd93f5c13be8252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddd5d9584f71e8a6b1ae9686203463b1eb77f47e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740791"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944681"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 *partition_by_clause*는 `FROM` 절이 생성한 결과 집합을 `COUNT` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. 
 
 ## <a name="return-types"></a>반환 형식
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
 COUNT(\*)는 그룹에 포함된 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.
@@ -117,7 +117,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="c-using-count-with-other-aggregates"></a>3. 다른 집계와 COUNT(\*) 사용  
+### <a name="c-using-count-with-other-aggregates"></a>C. 다른 집계와 COUNT(\*) 사용  
 이 예제에서는 `COUNT(*)`가 `SELECT` 목록의 다른 집계 함수로 작동하는 것을 보여줍니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
   
 ```sql
@@ -136,7 +136,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="d-using-the-over-clause"></a>4. OVER 절 사용  
+### <a name="d-using-the-over-clause"></a>D. OVER 절 사용  
 이 예제에서는 `OVER` 절에서 `MIN`, `MAX`, `AVG` 및 `COUNT` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 `HumanResources.Department` 테이블에서 각 부서에 대해 집계된 값을 반환합니다.
   
 ```sql
@@ -181,7 +181,7 @@ Tool Design                   8.62                  29.8462               23.505
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-count-and-distinct"></a>5. COUNT 및 DISTINCT 사용  
+### <a name="e-using-count-and-distinct"></a>E. COUNT 및 DISTINCT 사용  
 이 예제에서는 특정 회사의 직원이 보유할 수 있는 여러 직함의 수를 반환합니다.
   
 ```sql
@@ -198,7 +198,7 @@ FROM dbo.DimEmployee;
 67
 ```  
   
-### <a name="f-using-count"></a>6. COUNT(\*) 사용  
+### <a name="f-using-count"></a>F. COUNT(\*) 사용  
 이 예제에서는 `dbo.DimEmployee` 테이블에 있는 총 행 수를 반환합니다.
   
 ```sql
@@ -215,7 +215,7 @@ FROM dbo.DimEmployee;
 296
 ```  
   
-### <a name="g-using-count-with-other-aggregates"></a>7. 다른 집계와 COUNT(\*) 사용  
+### <a name="g-using-count-with-other-aggregates"></a>G. 다른 집계와 COUNT(\*) 사용  
 이 예제에서는 `COUNT(*)`를 `SELECT` 목록의 다른 집계 함수와 결합합니다. 그러면 연간 판매 할당량이 $500,000를 초과하는 영업 담당자의 수와 해당 영업 담당자의 평균 영업 할당량을 반환합니다.
   
 ```sql
@@ -235,7 +235,7 @@ TotalCount  Average Sales Quota
 10          683800.0000
 ```
   
-### <a name="h-using-count-with-having"></a>8. HAVING과 함께 COUNT 사용  
+### <a name="h-using-count-with-having"></a>H. HAVING과 함께 COUNT 사용  
 이 예제에서는 `HAVING` 절과 함께 `COUNT`를 사용하여 각각 15명 이상의 직원이 있는 회사의 부서를 반환합니다.
   
 ```sql

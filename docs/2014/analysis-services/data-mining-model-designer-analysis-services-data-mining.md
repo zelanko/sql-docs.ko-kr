@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dataminingeditor.f1
@@ -15,12 +14,12 @@ ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d132d007b54e1677b2300ad3cc285c038b982209
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689580"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086406"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>데이터 마이닝 모델 디자이너(Analysis Services - 데이터 마이닝)
   이 섹션에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 모델 디자이너에 대한 F1 도움말 항목을 제공합니다. 이 디자인 공간을 사용하여 데이터 마이닝 모델을 생성 및 관리하고 관련 작업을 수행할 수 있습니다.  

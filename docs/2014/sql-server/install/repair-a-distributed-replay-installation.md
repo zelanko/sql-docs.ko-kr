@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092955"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Distributed Replay 설치 복구
   Distributed Replay 구성 요소(컨트롤러 또는 서비스)를 복구하면 다음 작업이 수행됩니다.  

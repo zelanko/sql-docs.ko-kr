@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62660192"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088447"
 ---
 # <a name="browsing-a-neural-network-model"></a>신경망 모델 찾아보기
   **찾아보기**를 사용하여 신경망 또는 로지스틱 회귀 모델을 열면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 신경망 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시됩니다. 이 뷰어에서는 상관 관계를 탐색하고 모델 및 기본 데이터의 패턴에 대한 정보를 얻을 수 있습니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
@@ -13,12 +12,12 @@ ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691898"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086139"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
   예측 쿼리를 만들려면 먼저 쿼리의 기반이 될 마이닝 모델을 선택해야 합니다. 현재 프로젝트에 있는 모든 마이닝 모델을 선택할 수 있습니다.  

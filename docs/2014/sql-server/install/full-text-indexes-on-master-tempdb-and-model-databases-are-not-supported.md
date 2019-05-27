@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes
@@ -13,12 +12,12 @@ ms.assetid: f7992965-42c1-4eb8-a7fb-afb38b67c740
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f055640dbdbf4ece491b2d8552c1581b122faed3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 743c7153b034cf5e1267c6a0da1e585845800980
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240624"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095196"
 ---
 # <a name="full-text-indexes-on-master-tempdb-and-model-databases-are-not-supported"></a>master, tempdb 및 model 데이터베이스에서는 전체 텍스트 인덱스가 지원되지 않습니다.
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 데이터베이스에 전체 텍스트 인덱스를 사용할 수 없습니다.  

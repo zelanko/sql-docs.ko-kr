@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 173ca9fbf1fa3e9e2dc9dcb177c45a2ea3849415
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62755951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065323"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>새로운&#39;Analysis Services 및 Business Intelligence 기능
   다차원 모델에 대한 Power View 보고서를 지원하는 추가된 기능을 제외하고 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 이전 릴리스와 달라지지 않았습니다.  

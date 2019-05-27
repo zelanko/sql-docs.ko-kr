@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
@@ -13,12 +12,12 @@ ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069109"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 다이어그램 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 다이어그램** 탭에는 시퀀스 클러스터링 모델에 포함된 모든 클러스터가 그래픽으로 표시됩니다.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.bienhancement.f1
@@ -13,12 +12,12 @@ ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8834e8412cedbd2d97f9b5717f2e7979999a0a06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681200"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088123"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>기능 선택(비즈니스 인텔리전스 마법사)
   **기능 선택** 페이지를 사용하여 큐브 또는 차원에 추가할 비즈니스 인텔리전스 기능을 선택할 수 있습니다.  

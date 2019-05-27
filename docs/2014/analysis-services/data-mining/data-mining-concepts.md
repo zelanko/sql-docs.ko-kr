@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
@@ -25,12 +24,12 @@ ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4217c455433f2fec4ebbe64b77346c54a6d47827
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62723023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085066"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
   데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  

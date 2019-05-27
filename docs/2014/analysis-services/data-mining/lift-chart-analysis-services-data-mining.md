@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -18,12 +17,12 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722291"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084307"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
   A **리프트 차트** 그래픽을 임의 추측에 대해 비교할 때 마이닝 모델을 제공 하는 향상률을 나타냅니다 변화를 측정의 측면에서 *리프트* 점수입니다. 다른 모델 및 데이터 집합의 여러 부분에 대 한 리프트 점수를 비교 하 여 어떤 모델이 가장 좋은지, 및 모델의 예측 적용에서 도움이 되는 데이터 집합의 사례는 비율을 확인할 수 있습니다.  

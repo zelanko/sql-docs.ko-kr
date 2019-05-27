@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 884e7f3928c95584b6a2e675f79a8b88d5fb36bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1e1f86a52ddc441048d25a5ef5d3b8071b96a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727091"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947851"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

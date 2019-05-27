@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090704"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>8단원: Microsoft Azure Storage에 데이터베이스 복원
   이 단원에서는 로컬로 백업 파일을 만들고 Microsoft Azure Storage에 복원하는 방법을 배웁니다. 온-프레미스나 Windows Azure의 가상 컴퓨터에 데이터베이스가 있을 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  

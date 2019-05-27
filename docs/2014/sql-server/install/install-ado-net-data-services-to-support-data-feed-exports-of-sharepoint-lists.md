@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: f32527ae-f623-4e08-adfb-6d3262f5c2ac
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 050bf73a1669ad7f0232a081e1cc3d888d5a4f14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 622d729e0b86a210bbdaaedf29818a49e81ed2ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294478"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094658"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원
   SharePoint 목록의 데이터 피드 내보내기를 수행하려면 ADO.NET Data Services가 필요합니다. 이 구성 요소는 SharePoint 2010의 SharePoint 필수 구성 요소 설치 관리자 프로그램에 포함되어 있지 않으므로 수동으로 설치해야 합니다.  

@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57988799"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947480"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 
@@ -52,7 +52,7 @@ STRING_SPLIT ( string , separator )
  모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *separator*  
- 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)**, **varchar(1)**, **nchar(1)** 또는 **char(1)**)의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
+ 연결된 부분 문자열의 구분 기호로 사용되는 모든 문자 형식(예: **nvarchar(1)** , **varchar(1)** , **nchar(1)** 또는 **char(1)** )의 단일 문자 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 

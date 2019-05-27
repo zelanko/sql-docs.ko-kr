@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -20,12 +19,12 @@ ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679698"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086733"
 ---
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
   데이터 모델링은 데이터 마이닝의 단계를 작성할 수 있는 패턴 및 추세를 적용 하 여 *알고리즘* 데이터입니다. 이러한 패턴을 사용하여 나중에 분석하거나 예측할 수 있습니다.  

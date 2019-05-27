@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - direct system catalog updates [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ebc7288bd7c72ce76df69d11c7a9fb0771764fca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c722d1d40d206ab300b4b6c90fdf6648575c356b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093013"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>시스템 개체를 수정하는 문을 제거합니다.
   업그레이드 관리자가 시스템 카탈로그를 업데이트하는 문을 검색했습니다. 직접 시스템 카탈로그 업데이트가 허용되지 않습니다. SQL 스크립트에서 문서화된 공식 API를 사용하도록 수정합니다.  

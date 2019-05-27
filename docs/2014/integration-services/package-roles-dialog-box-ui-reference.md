@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.packageroles.f1
@@ -15,12 +14,12 @@ ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767075"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056805"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>패키지 역할 대화 상자 UI 참조
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 **패키지 역할** 대화 상자를 통해 패키지에 대한 읽기 권한이 있는 데이터베이스 수준 역할 및 패키지에 대한 쓰기 권한이 있는 데이터베이스 수준 역할을 지정할 수 있습니다. 데이터베이스 수준 역할은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 데이터베이스에 저장된 패키지에만 적용됩니다.  

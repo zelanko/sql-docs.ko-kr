@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729199"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078793"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>4단원: 날짜 테이블로 표시
   2 단원: DimDate 라는 차원 테이블을 가져온 데이터를 추가 합니다. 다음 단원 3에서 DimDate 테이블의 이름을 바꾼: 간단히 Date로 열을 이름을 바꿉니다. 해당 모델에서 이제 이 테이블의 이름은 Date이며 날짜 및 시간 데이터를 포함한다는 점에서 *날짜 테이블*이라고 부를 수도 있습니다.  

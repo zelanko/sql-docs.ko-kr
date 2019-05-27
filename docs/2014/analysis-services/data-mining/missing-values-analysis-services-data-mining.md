@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -18,12 +17,12 @@ ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733354"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083363"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
   *누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  

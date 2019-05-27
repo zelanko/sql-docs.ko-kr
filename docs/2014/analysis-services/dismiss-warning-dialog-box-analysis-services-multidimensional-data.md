@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dismisswarningdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb9ad70b14298c602ca1af3fc60b66bbe5c9af43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731659"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081639"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>경고 해제 대화 상자(Analysis Services - 다차원 데이터)
   **경고 해제** 대화 상자를 사용하여 경고의 특정 인스턴스를 해제할 수 있습니다.  

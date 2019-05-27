@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], column properties
@@ -16,12 +15,12 @@ ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083056"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
   데이터 마이닝 디자이너의 **마이닝 구조** 탭을 사용하여 마이닝 구조 및 마이닝 구조의 관련 열과 중첩 테이블의 속성을 설정하거나 변경할 수 있습니다. 이 탭에서 설정하는 속성은 해당 구조와 연결된 각 마이닝 모델로 전파됩니다.  

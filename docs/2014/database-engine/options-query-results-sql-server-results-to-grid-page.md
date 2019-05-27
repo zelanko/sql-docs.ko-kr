@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
@@ -13,12 +12,12 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844342"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089307"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>옵션 (쿼리 결과-SQL Server-결과 그리드 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션** 을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다. **쿼리 옵션** 대화 상자 왼쪽 창의 **결과**에서 **표**를 클릭합니다.  

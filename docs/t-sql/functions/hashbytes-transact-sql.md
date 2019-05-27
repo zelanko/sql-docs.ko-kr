@@ -16,16 +16,16 @@ helpviewer_keywords:
 - hash input
 - HASHBYTES
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.openlocfilehash: aeb87d4408f1fbe1ba269d8373e8cc648efba55e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429389"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948377"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'**\<algorithm>**'**  
+ **'** \<algorithm> **'**  
  입력 해시에 사용할 해싱 알고리즘을 나타냅니다. 필수 인수이며 기본값은 없습니다. 작은따옴표가 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 SHA2_256 및 SHA2_512 이외의 알고리즘은 사용되지 않습니다.  
   
  **@input**  
@@ -54,7 +54,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  출력은 MD2, MD4 및 MD5의 경우 128비트(16바이트), SHA 및 SHA1의 경우 160비트(20바이트), SHA2_256의 경우 256비트(32바이트) 그리고 SHA2_512의 경우 512비트(64바이트) 알고리즘 표준을 준수합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이하 버전에 허용되는 입력 값은 8000바이트로 제한됩니다.  
   

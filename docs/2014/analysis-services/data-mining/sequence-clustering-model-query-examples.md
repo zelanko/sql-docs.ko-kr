@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732888"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082919"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  

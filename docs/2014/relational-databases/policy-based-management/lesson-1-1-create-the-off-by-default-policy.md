@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73294cfc5d1a7e4b2693615692604ef991421169
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255288"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064300"
 ---
 # <a name="create-the-off-by-default-policy"></a>Off By Default 정책 만들기
   이 태스크에서는 노출 영역 구성 패싯을 기반으로 하는 Mail Off라는 조건을 만듭니다. 그리고 나서 Off By Default라는 정책을 만듭니다.  

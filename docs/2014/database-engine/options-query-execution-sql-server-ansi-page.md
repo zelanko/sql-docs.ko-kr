@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
@@ -13,12 +12,12 @@ ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774971"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089374"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>옵션 (쿼리 실행-SQL Server-ANSI 페이지)
   이러한 ANSI(ISO) 표준 SET 옵션은 사용자 쿼리 실행 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 그러나 이러한 SET 옵션에 ISO 표준을 준수하는 데 필요한 모든 옵션이 포함되지는 않습니다. 이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 ISO 표준에 지정되어 있는 설정의 일부 또는 전부를 사용하여 쿼리를 실행하도록 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션**을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다. **쿼리 옵션** 대화 상자의 **실행**아래에서 **ANSI**를 클릭합니다.  

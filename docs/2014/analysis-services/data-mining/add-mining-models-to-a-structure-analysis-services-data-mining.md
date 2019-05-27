@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689601"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086245"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
   마이닝 구조는 여러 마이닝 모델을 지원하도록 설계되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  

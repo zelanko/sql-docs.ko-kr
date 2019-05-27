@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -13,12 +12,12 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63057561"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092672"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)
   이 섹션에서는 Reporting Services 구성 관리자에 대한 F1 도움말을 제공합니다.  

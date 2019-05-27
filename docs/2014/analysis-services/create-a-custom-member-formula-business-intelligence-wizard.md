@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectacolumn.f1
@@ -13,12 +12,12 @@ ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 116a9c05069d59e3ae458e232f7451be04411794
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087003"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>사용자 지정 멤버 수식 만들기(비즈니스 인텔리전스 마법사)
   사용 된 **사용자 지정 멤버 수식 만들기** 페이지 사용자 지정 멤버 수식 열-열에 대 한 멤버 값을 정의 하는 MDX (Multidimensional Expressions) 문을 포함 하는 지정된 된 차원에서 특성을 연결 하려면 해당 특성입니다.  

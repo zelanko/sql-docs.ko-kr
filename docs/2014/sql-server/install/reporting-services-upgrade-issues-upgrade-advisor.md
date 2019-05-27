@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], upgrade issues
@@ -16,12 +15,12 @@ ms.assetid: d9663f25-98d7-4508-ae3c-55a7277211bd
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de69a25d1689883fdcbce8796d3cdcd30374a8f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753685"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092574"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 업그레이드 문제(업그레이드 관리자)
   다음 항목에 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로 업그레이드에 영향을 줄 수 있는 문제 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

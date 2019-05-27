@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -13,12 +12,12 @@ ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49c8cd84ada68d4ac00b13567528abff72d13847
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1464b55724e4305f2833ddce34e27170c7afd484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207652"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094824"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>방법: 업그레이드 관리자 분석 마법사 실행
   업그레이드 관리자 분석 마법사는 업그레이드 관리자 시작 페이지에서 시작합니다. 이 항목에서는 업그레이드 관리자 분석 마법사를 실행하는 방법에 대해 설명합니다.  

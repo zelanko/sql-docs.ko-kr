@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4538f270007508cea6b90a34388968ed886b4d36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 07eb130323be8fe507e574d5cca85f5105091e1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526140"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949178"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>논리 함수 - CHOOSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ProductCategoryID Expression1
   
 ```  
 
-### <a name="c-choose-in-combination-with-month"></a>3. MONTH와 조합된 CHOOSE
+### <a name="c-choose-in-combination-with-month"></a>C. MONTH와 조합된 CHOOSE
   
  다음 예제에서는 직원이 고용된 시즌을 반환합니다. MONTH 함수는 `HireDate` 열에서 월 값을 반환합니다.  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e1c26b6e934a929fc04316c4640825ab2f1ec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804591"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942903"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ IS_OBJECTSIGNED (
  개체의 SHA 지문입니다. *@thumbprint*는 **varbinart(32)** 형식입니다.  
   
 ## <a name="returned-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  IS_OBJECTSIGNED는 다음과 같은 값을 반환합니다.  
@@ -72,7 +72,7 @@ IS_OBJECTSIGNED (
 |0|개체가 서명되었지만 서명이 유효하지 않습니다.|  
 |1|개체가 서명되었습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서 또는 비대칭 키에 대한 VIEW DEFINITION이 필요합니다.  
   
 ## <a name="examples"></a>예  

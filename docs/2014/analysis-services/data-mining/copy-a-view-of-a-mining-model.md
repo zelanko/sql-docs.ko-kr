@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clipboards [data mining]
@@ -15,12 +14,12 @@ ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62d699d068832e1b3e264a9346d03553b9a05d80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 84abbb855673183910099f0a34d70702d34da7fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085595"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>마이닝 모델의 뷰 복사
   **데이터 마이닝 디자이너의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에서는 마이닝 모델 유형마다 별도의 뷰어가 사용됩니다. 이 중 몇몇 뷰어에는 내용을 클립보드로 복사하고 문서나 이미지 조작 소프트웨어에 붙여넣을 수 있는 구성 요소가 있습니다. 다음 구성 요소에서 이 기능을 사용할 수 있습니다.  

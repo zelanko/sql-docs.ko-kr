@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b98fa9765a40d3eb9c05852e9c20c05c4bb818a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62856322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092916"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>UDT를 제거 합니다&#39;s의 예약 된 ORDPATH 데이터 형식의 이름을 딴
   업그레이드 관리자가 `ORDPATH` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다.  

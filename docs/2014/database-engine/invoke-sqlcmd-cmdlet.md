@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], Invoke-Sqlcmd
@@ -16,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774597"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064712"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd**는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery 언어로 된 문과 **sqlcmd** 유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6452ae04f35c81f6ef7beb9d379ad55a056d2021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c82a43c833db36e77eae93a1fe529736e4b4fa4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664071"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945510"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOASYMKEY`는 `OPEN SYMMETRIC KEY`와 `DECRYPTBYKEY` 모두의 기능을 결합합니다. 단일 작업에서 먼저 대칭 키를 해독한 다음, 해당 키를 사용하여 암호화된 텍스트를 해독합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 대칭 키에 대한 `VIEW DEFINITION` 권한 및 비대칭 키에 대한 `CONTROL` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예

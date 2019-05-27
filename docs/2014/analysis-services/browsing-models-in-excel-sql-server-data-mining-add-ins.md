@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -15,12 +14,12 @@ ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a58acd7eab11302e1963f5b456cefd81a57e2f4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 961b32e84d41e021fbad185189981adb90ba44b8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62664287"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088457"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>Excel에서 모델 찾아보기(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 모델 찾아보기 단추](media/dmc-browse.gif "데이터 마이닝 리본의 모델 찾아보기 단추")  

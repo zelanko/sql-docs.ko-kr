@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vswildcardsbuilder
@@ -17,12 +16,12 @@ ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f86985f75446399803e4cac6ed7d883d1c7e1921
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c5c3efcef4eade7c6ad2b5a5d52a1fa26a4c4ffd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63136233"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090236"
 ---
 # <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  

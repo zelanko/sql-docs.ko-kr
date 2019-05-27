@@ -17,16 +17,16 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 4ee40f9b7632a388cb9b0889f40ee510c39ba34b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513913"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946491"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,7 +57,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 비교할 수 없는 데이터 형식을 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
 `CHECKSUM`은 인수 목록에 대해 체크섬이라고 하는 해시 값을 계산합니다. 이 해시 값을 사용하여 해시 인덱스를 작성합니다. `CHECKSUM` 함수가 열 인수인 경우 결과는 해시 인덱스이며 인덱스는 계산된 `CHECKSUM` 값을 통해 작성됩니다. 이 결과는 열에 대한 등가 검색에 사용할 수 있습니다.

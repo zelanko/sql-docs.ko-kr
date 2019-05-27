@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - slice cubes [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731345"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081144"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>마이닝 구조에 대한 원본 큐브 필터링
   다차원 모델 (OLAP 큐브)에서 데이터를 기반으로 하는 마이닝 구조를 만들 수 있습니다 *조각* 마이닝 구조의 기반이 되는 큐브. 조각화하면 마이닝 모델 학습에 사용되는 데이터에 대한 일종의 필터로 데이터 하위 집합을 만들 수 있습니다.  

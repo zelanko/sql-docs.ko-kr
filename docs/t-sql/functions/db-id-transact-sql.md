@@ -20,16 +20,16 @@ helpviewer_keywords:
 - displaying database ID numbers
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbed32d3dd346589f78b499efdabc85dd7ee0633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a34790fec91c183531ff875f94839f45de1cf9cc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733441"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945644"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,12 +49,12 @@ DB_ID ( [ 'database_name' ] )
 데이터베이스 ID 번호 `DB_ID`가 반환하는 데이터베이스의 이름입니다. `DB_ID`에 대한 호출이 *database_name*을 생략하는 경우 `DB_ID`는 현재 데이터베이스의 ID를 반환합니다.
   
 ## <a name="return-types"></a>반환 형식
-**int**
+**ssNoversion**
 
 ## <a name="remarks"></a>Remarks
 `DB_ID`는 Azure SQL Database에서 현재 데이터베이스의 데이터베이스 식별자를 반환하는 데만 사용할 수 있습니다. 지정된 데이터베이스 이름이 현재 데이터베이스가 아닌 경우 NULL이 반환됩니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 `DB_ID`의 호출자가 특정 비**마스터** 또는 비**tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases**에 나타납니다.
   
 > [!IMPORTANT]  
@@ -78,7 +78,7 @@ SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];
 GO  
 ```  
   
-### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>3. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
+### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
 이 예에서는 `DB_ID`를 사용하여 시스템 함수 `sys.dm_db_index_operational_stats`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
   
 ```sql
@@ -103,14 +103,14 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-return-the-id-of-the-current-database"></a>4. 현재 데이터베이스의 ID 반환  
+### <a name="d-return-the-id-of-the-current-database"></a>D. 현재 데이터베이스의 ID 반환  
 이 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
 SELECT DB_ID();  
 ```  
   
-### <a name="e-return-the-id-of-a-named-database"></a>5. 명명된 데이터베이스의 ID를 반환합니다.  
+### <a name="e-return-the-id-of-a-named-database"></a>E. 명명된 데이터베이스의 ID를 반환합니다.  
 이 예에서는 AdventureWorksDW2012 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql

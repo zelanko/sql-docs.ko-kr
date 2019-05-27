@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -17,12 +16,12 @@ ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 100bac6834825af1e22658279d26be02c30f3f39
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8843131bfefd3d11e1f3b5509c2375235f8bf2f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349259"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094618"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>다차원 및 데이터 마이닝 모드에서 Analysis Services 설치
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원은 사용할 수 있습니다를 설치할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 *다차원 모드*합니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  

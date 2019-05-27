@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7f4417b2-0efb-4361-a79e-fa56e43ee054
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56430aacb7055f3d8ffa531d157ad3c4f65c0b4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730103"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079662"
 ---
 # <a name="post-install-configuration-analysis-services"></a>설치 후 구성(Analysis Services)
   Analysis Services를 설치한 후 추가 구성을 수행하여 서버가 완전히 작동하고 일반 용도로 사용 가능하도록 설정해야 합니다. 이 섹션에서는 설치를 완료하는 추가 태스크를 소개합니다. 연결 요구 사항에 따라 인증을 구성해야 할 수도 있습니다( [Analysis Services에 연결](connect-to-analysis-services.md)참조).  

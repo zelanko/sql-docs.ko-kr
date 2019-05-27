@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680616"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087705"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>마법사 완료(데이터 마이닝 마법사)
   **마법사 완료** 페이지를 사용하여 마법사 완료 시에 만들어지는 마이닝 구조를 검토할 수 있습니다. 마이닝 구조의 이름을 설정할 수도 있습니다.  

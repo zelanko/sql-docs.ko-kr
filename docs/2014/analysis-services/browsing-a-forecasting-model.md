@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62640282"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088485"
 ---
 # <a name="browsing-a-forecasting-model"></a>예측 모델 찾아보기
   사용 하 여 예측 모델을 열면 **찾아보기**에서 시간 시계열 모델 뷰어와 비슷한 대화형 뷰어에서 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 이 뷰어에서는 추세를 살펴보고, 계열을 비교하고, 예측을 만들고, 모델 및 기본 데이터에 대한 정보를 확인할 수 있습니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62913541"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094582"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>구성 파일을 사용하여 Distributed Replay 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 사용자 입력 및 시스템 기본값을 기반으로 구성 파일을 생성할 수 있습니다. 관리 도구를 설치하도록 지정한 경우 이 구성 파일을 사용하여 세 가지 Distributed Replay 구성 요소(관리 도구, Distributed Replay Controller 및 Distributed Replay Client)를 배포할 수 있습니다. 구성 파일을 사용하면 Distributed Replay 구성 요소를 설치, 복구 및 다시 설치할 수 있습니다.  

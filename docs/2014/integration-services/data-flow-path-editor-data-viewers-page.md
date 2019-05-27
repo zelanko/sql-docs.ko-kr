@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.visualizers.f1
@@ -15,12 +14,12 @@ ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cc83f8c1aa545be505247317b0b047394fca26f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828503"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060077"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>데이터 흐름 경로 편집기(데이터 뷰어 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

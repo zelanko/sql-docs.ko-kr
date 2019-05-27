@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], relational
@@ -15,12 +14,12 @@ ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715370"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085385"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>새 관계형 마이닝 구조 만들기
   데이터 마이닝 마법사를 사용하여 관계형 데이터베이스 또는 기타 원본의 데이터로 새 마이닝 구조를 만든 후 해당 구조와 모든 관련 모델을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장할 수 있습니다.  

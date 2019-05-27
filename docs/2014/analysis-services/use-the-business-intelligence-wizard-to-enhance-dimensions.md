@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793362"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065505"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>비즈니스 인텔리전스 마법사를 사용하여 차원 향상
   차원 및 차원 개체 속성을 직접 수정하는 것 외에 비즈니스 인텔리전스 마법사를 사용하여 차원을 구성하고 향상시킬 수도 있습니다.  

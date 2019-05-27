@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374845"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095001"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>SharePoint 2010 팜에서 SQL Server BI 기능을 사용하기 위한 지침
   이 항목에서는 사용 중인 소프트웨어의 버전에 따라 사용 가능한 기능을 요약하여 보여 줍니다. 또한 특정 SQL Server 기능을 사용하는 데 필요한 SharePoint 2010 설치 요구 사항에 대해서도 설명합니다. SharePoint 2013으로 관련 된 정보를 참조 하세요 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)합니다.  
@@ -39,15 +38,15 @@ ms.locfileid: "53374845"
   
 -   Reporting Services에는 SharePoint 제품용 추가 기능이 포함되어 있습니다. 해당 추가 기능 및 보고서 서버에 대해 지원되는 구성은 여기에 표시된 것보다 더 세분되어 있습니다. 자세한 내용은 [지원 되는 SharePoint 및 Reporting Services 서버 및 추가 &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)합니다.  
   
--   SharePoint 개발자 도구는 SharePoint 독립 실행형 구성만 지원합니다.  자세한 내용은 SharePoint 설명서 [SharePoint 솔루션 개발을 위한 요구 사항](https://msdn.microsoft.com/library/ee231582.aspx)합니다.  
+-   SharePoint 개발자 도구는 SharePoint 독립 실행형 구성만 지원합니다.  자세한 내용은 SharePoint 설명서를 참조 하세요. [SharePoint 솔루션 개발을 위한 요구 사항](https://msdn.microsoft.com/library/ee231582.aspx)합니다.  
   
 ##  <a name="bkmk_vers"></a> SharePoint 버전 및 BI 기능 지원  
  일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence 기능은 SharePoint 제품의 특정 버전에서만 지원됩니다.  
   
 |지원되는 기능|SharePoint 제품|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 참조하세요.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
-|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 을 참조하세요.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]의 기능 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition|  
+|일반 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 보기 및 SharePoint와 기능 통합|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard 및 Enterprise Editions<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|  
   
  자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
   
@@ -66,9 +65,9 @@ ms.locfileid: "53374845"
 > [!NOTE]  
 >  기존 팜에서 다음 중 하나를 사용 해야 합니다 **추가** SharePoint SP1을 완료 하는 단계 업그레이드 합니다. 자세한 내용은 [Office 2010 SP1 및 SharePoint 2010 SP1을 설치할 때의 알려진 문제](https://support.microsoft.com/kb/2532126) 하 고 [설명의 SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **SharePoint 제품 구성 마법사:** 마법사를 실행하여 SP1 업그레이드 및 구성을 완료합니다.  
+-   **SharePoint 제품 구성 마법사:** SP1 업그레이드 및 구성을 완료 하려면 마법사를 실행 합니다.  
   
--   **Psconfig 사용 하 여 업그레이드를 완료 합니다.** `psconfig -upgrade` 명령을 실행하여 SP1 업그레이드 완료  
+-   **Psconfig 사용 하 여 업그레이드를 완료 합니다.** 명령을 실행 하 여 `psconfig -upgrade` SP1 업그레이드를 완료 하려면  
   
  자세한 내용은의 "업그레이드" 섹션을 참조 하세요 [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) 고 [리소스 센터: SharePoint 2010 제품에 대 한 업데이트](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   
@@ -104,7 +103,7 @@ ms.locfileid: "53374845"
   
  ![GMNI_SetupUI_DoNotConfigureMOSS](../../../2014/sql-server/install/media/gmni-setupui-donotconfiguremoss.gif "GMNI_SetupUI_DoNotConfigureMOSS")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [설치 및 SharePoint Server 2010 배포](https://technet.microsoft.com/sharepoint/ee518643.aspx)   
  [(SharePoint Server 2010)는 3 계층 팜용 여러 서버](https://go.microsoft.com/fwlink/?linkID=219834)  
   

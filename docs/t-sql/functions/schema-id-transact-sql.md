@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IDs [SQL Server], schemas
 - default schema IDs
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c84ce46439a131fe7699819928da46d138449923
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eefc84ea48372824ecec0617513262998bcc5ad1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661561"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945351"
 ---
 # <a name="schemaid-transact-sql"></a>SCHEMA_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ SCHEMA_ID ( [ schema_name ] )
 |*schema_name*|스키마 이름입니다. *schema_name*은 **sysname**입니다. *schema_name*을 지정하지 않으면 SCHEMA_ID는 호출자의 기본 스키마 ID를 반환합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
  *schema_name*이 유효한 스키마가 아닌 경우 NULL이 반환됩니다.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b845d0ab12447580bb27be43f0d776eac98ee7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088267"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 도구(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **계산 도구** 창을 사용하여 KPI(핵심 성과 지표)에 사용할 수 있는 메타데이터, 함수 및 템플릿을 탐색할 수 있습니다.  

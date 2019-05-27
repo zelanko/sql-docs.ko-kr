@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
@@ -17,12 +16,12 @@ ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e203b75918cad416d97ab7a226f360c1203d69d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837385"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061904"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>제어 흐름에 열거 추가
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에 파일 및 개체를 열거하는 루핑 구성을 간단하게 포함시킬 수 있는 제어 흐름 요소인 Foreach 루프 컨테이너가 포함됩니다. 자세한 내용은 [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)을 참조하십시오.  
