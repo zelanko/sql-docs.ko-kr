@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Installation
@@ -16,12 +15,12 @@ ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093257"
 ---
 # <a name="ready-to-install"></a>설치 준비 완료
   설치 준비 완료 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설치하거나 변경할 기능을 요약해서 보여 줍니다.  

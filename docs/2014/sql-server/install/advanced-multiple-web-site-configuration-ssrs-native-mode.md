@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
@@ -13,12 +12,12 @@ ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63226007"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096825"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>고급 다중 웹 사이트 구성(SSRS 암호 모드)
   이 대화 상자에서는 보고서 서버 또는 보고서 관리자에 액세스할 때 사용되는 URL을 만들고 관리할 수 있습니다. **고급 다중 웹 사이트 구성** 대화 상자는 호스트 헤더 이름을 포함하는 사용자 지정 URL, 추가 URL을 만들거나 IP 주소를 IPv4 또는 IPv6 형식으로 지정하는 데 사용됩니다.  

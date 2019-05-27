@@ -1,18 +1,18 @@
 ---
 title: SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/01/2018
-ms.openlocfilehash: 1b46c6cec15f3a229892116758fe7f147f24c9ac
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185039"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936549"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
@@ -13,12 +12,12 @@ ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db573e1a070b110ff0f5224a6d079f3fe7c377ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f9416fb4117b811c17cd2aefd7794622154f6f3d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214958"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096697"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>백업 암호화 키(SSRS 기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 암호화 키를 사용하여 보고서 서버 데이터베이스에 저장된 중요한 데이터를 보호합니다. 암호화된 연결 문자열 및 자격 증명에 계속 액세스하려 이 키를 백업해야 합니다. 보고서 서버 데이터베이스를 다른 컴퓨터로 이동하거나 보고서 서버 서비스 계정의 사용자 이름 또는 암호를 변경할 경우 이 키의 복사본을 백업해야 합니다. 두 작업을 수행하려면 이전에 만든 백업 복사본에서 키를 복원해야 합니다.  

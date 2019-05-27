@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
@@ -16,12 +15,12 @@ ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255116"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102986"
 ---
 # <a name="report-wizard-help"></a>보고서 마법사 도움말
   이 섹션에서는 보고서 마법사에 대한 F1 도움말을 설명합니다. 보고서 마법사에서는 테이블 형식 보고서 및 행렬 보고서 생성 프로세스를 자동화합니다. 다음 표에서는 이 섹션에서 다루는 항목에 대해 설명합니다.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164319"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109177"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>다른 파일 형식으로 보고서 내보내기(보고서 작성기 및 SSRS)
   보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보면서 CSV, 이미지, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)] 또는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 같은 다른 파일 형식으로 보고서를 렌더링할 수도 있고, 보고서 서버에서 보고서를 보면서 보고서를 렌더링할 수도 있습니다. 보고서를 특정 형식으로 렌더링하면 보고서를 보고서 서버에 게시하지 않고서 보고서를 다른 파일 형식으로 즉시 저장하려는 경우나 보고서를 읽는 사람에게 특정 형식으로 배달된 보고서의 디자인이 어떤 모양일지 미리 확인하려는 경우에 도움이 됩니다. 보고서 서버에서 보고서를 렌더링하면 구독을 설정하려는 경우나 전자 메일을 통해 보고서를 배달하려는 경우 또는 보고서 서버에서 사용할 수 있도록 보고서를 저장하려는 경우에 도움이 됩니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  

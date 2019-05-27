@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
@@ -13,12 +12,12 @@ ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087097"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>원본 데이터에 연결(Excel용 데이터 마이닝 클라이언트)
   이 항목에서는 데이터 마이닝 모델 저장 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 저장된 외부 데이터 액세스용 연결을 만들고 사용하는 방법에 대해 설명합니다.  

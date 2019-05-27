@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e1aa9411fbc11becf8e7b159c27ef609e38083b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094546"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>SharePoint 2010용 PowerPivot 설치
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 SharePoint 2010 팜에서 PowerPivot 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다. 조직에서 클라이언트 응용 프로그램인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010을 사용하여 분석 데이터가 포함된 통합 문서를 만드는 경우 서버 환경에서 이러한 데이터에 액세스하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 있어야 합니다. 이 항목에서는 기본 설치 과정을 안내하고 PowerPivot 구성에 도움이 되는 추가 항목에 대한 링크를 제공합니다.  

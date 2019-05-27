@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asprocessingtask.general.f1
@@ -15,12 +14,12 @@ ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820fa0e277f2f1643c6d44d95f09a4d48546a4ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061448"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 처리 태스크 편집기(일반 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크를 명명 및 설명할 수 있습니다.  

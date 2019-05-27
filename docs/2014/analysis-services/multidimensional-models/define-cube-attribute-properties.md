@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - cubes [Analysis Services], defining
@@ -13,12 +12,12 @@ ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e84c49055a1fdb5b11487ab17af19762f86686c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a6c5cb8c8ca0492edf9798f972b458054ae5b58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075734"
 ---
 # <a name="define-cube-attribute-properties"></a>큐브 특성 속성 정의
   큐브 특성 속성을 사용하면 같은 데이터베이스 차원을 기반으로 하는 큐브 차원의 차원 특성에 고유한 설정을 지정할 수 있습니다. 다음 표에서는 큐브 특성의 속성에 대해 설명합니다.  

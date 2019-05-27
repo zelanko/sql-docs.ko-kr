@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 0003102d607cac065a1168e0c5544a8db2163249
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743178"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943335"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ POWER ( float_expression , y )
 |----------|-----------|  
 |**float**, **real**|**float**|
 |**10진수(*p*, *s*)**|**10진수(38, *s*)**|
-|**int**, **smallint**, **tinyint**|**int**|
+|**int**, **smallint**, **tinyint**|**ssNoversion**|
 |**bigint**|**bigint**|
 |**money**, **smallmoney**|**money**|
 |**bit**, **char**, **nchar**, **varchar**, **nvarchar**|**float**|
@@ -105,7 +105,7 @@ FloatResult            IntegerResult IntegerResult Decimal1Result Decimal2Result
 7.88860905221012E-31   0             0             0.0            0.00           0.00  
 ```  
   
-### <a name="c-using-power"></a>3. POWER 사용  
+### <a name="c-using-power"></a>C. POWER 사용  
  다음 예에서는 `POWER`에 대한 `2` 결과를 반환합니다.  
   
 ```  
@@ -149,7 +149,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4. POWER를 사용하여 숫자의 세제곱 반환  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER를 사용하여 숫자의 세제곱 반환  
  다음 예에서는 `2.0`의 세제곱에 대한 `POWER` 결과를 반환합니다.  
   
 ```  

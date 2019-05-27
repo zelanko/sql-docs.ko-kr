@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
@@ -15,12 +14,12 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065237"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>테이블 대화 상자 (Analysis Services-다차원 데이터)를 추가 / 제거 합니다.
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **테이블 추가/제거** 대화 상자를 사용하여 데이터 원본의 테이블을 데이터 원본 뷰에서 추가 또는 제거할 수 있습니다. 다음을 수행하여 **테이블 추가/제거** 대화 상자를 표시할 수 있습니다.  

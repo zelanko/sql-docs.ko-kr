@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728718"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078616"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>특성 계층 숨기기 및 비활성화
   기본적으로 특성 계층은 차원의 모든 특성에 대해 만들어지며 각 계층을 팩트 데이터 차원 지정에 사용할 수 있습니다. 이 계층은 계층의 모든 멤버를 포함하는 “All” 수준 및 세부 수준으로 구성됩니다. 이미 설명한 대로 특성을 사용자 정의 계층으로 구성하여 큐브에 탐색 경로를 제공할 수 있습니다. 경우에 따라서는 일부 특성과 계층을 비활성화하거나 숨길 수 있습니다. 예를 들어 주민 등록 번호, 급여, 생년월일 및 로그인 정보와 같은 일부 특성은 사용자가 큐브 정보의 차원을 지정하는 데 사용하는 특성이 아닙니다. 일반적으로 이 정보는 특정 특성 멤버의 세부 사항으로만 표시됩니다. 이러한 특성 계층을 숨기고 특정 특성의 멤버 속성으로만 특성을 표시할 수 있습니다. 또한 고객 이름, 우편 번호 등의 다른 특성 멤버가 특성 계층을 통해 따로 표시되지 않고 사용자 계층을 통해 표시될 경우에만 이러한 특성 멤버를 표시할 수도 있습니다. 그 이유 중 하나는 특성 계층에 있는 고유한 멤버의 개수 때문입니다. 마지막으로 처리 성능을 향상시키기 위해 사용자가 탐색에 사용하지 않는 특성 계층을 비활성화해야 합니다.  

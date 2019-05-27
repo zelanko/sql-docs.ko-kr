@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 91c43f58-5771-4d33-a54d-0e802d2f5cba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4bff4422d255359c575956768d40c53ef0e39cb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce2fcfe65c3b674f89b3174fd1e88421a7bdb853
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185909"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106542"
 ---
 # <a name="add-or-remove-margins-from-a-chart-report-builder-and-ssrs"></a>차트에서 여백 추가 또는 제거(보고서 작성기 및 SSRS)
   세로 막대형 및 분산형 차트 종류의 경우 X축의 끝에 자동으로 양쪽 여백이 추가되고, 가로 막대형 차트 종류의 경우 y축의 끝에 자동으로 양쪽 여백이 추가됩니다. 다른 모든 차트 종류에서는 양쪽 여백이 추가되지 않습니다. 여백의 크기는 변경할 수 없습니다.  

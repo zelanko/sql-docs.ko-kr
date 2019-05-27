@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
@@ -17,12 +16,12 @@ ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889299"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056262"
 ---
 # <a name="save-a-package-to-the-file-system"></a>파일 시스템에 패키지 저장
   이 절차에서는 기존 패키지를 파일 시스템에 .dtsx 파일로 저장하는 방법에 대해 설명합니다.  

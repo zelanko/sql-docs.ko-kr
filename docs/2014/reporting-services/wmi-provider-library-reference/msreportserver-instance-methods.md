@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Methods
@@ -19,12 +18,12 @@ ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9a5fbc3725a5c25e257216e74a88f0b54d471bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa6810718b62a93d8d3dfbd8d13f1618f5b2aa3c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020104"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097227"
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance 메서드
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  

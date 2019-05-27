@@ -17,15 +17,15 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782371"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943279"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>인수  
  **'** *clear_text_password* **'**  
- 암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**( **nvarchar(128)**)입니다.  
+ 암호화되지 않은 암호입니다. *clear_text_password*는 **sysname**( **nvarchar(128)** )입니다.  
   
  *password_hash*  
  암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)** 입니다.  
@@ -57,7 +57,7 @@ PWDCOMPARE ( 'clear_text_password'
 >  이 매개 변수는 이전 버전과의 호환성을 위해 제공되지만 지금 암호 해시 BLOB이 해당 버전 설명을 포함하고 있으므로 무시됩니다. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
  *clear_text_password*의 해시가 *password_hash* 매개 변수와 일치하면 1을, 그렇지 않으면 0을 반환합니다.  
   
@@ -66,7 +66,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  **PWDCOMPARE**는 포함된 데이터베이스 사용자 암호와 함께 사용할 수 없습니다. 동등한 포함된 데이터베이스가 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  PWDENCRYPT는 누구나 사용할 수 있습니다.  
   
  sys.sql_logins의 password_hash 열을 검사하려면 CONTROL SERVER 권한이 있어야 합니다.  

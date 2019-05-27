@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdefinition.f1
@@ -13,12 +12,12 @@ ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069212"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>정의 방법 선택(데이터 마이닝 마법사)
   **정의 방법 선택** 페이지를 사용하여 새 마이닝 모델을 만드는 데 사용할 원본을 선택할 수 있습니다. 큐브를 기반으로 하는 마이닝 구조에는 관계형 데이터 원본을 기반으로 하는 마이닝 구조와는 다른 구성 단계가 필요하기 때문에 사용자가 선택하는 내용에 마법사의 단계가 달라집니다.  

@@ -13,14 +13,18 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281867"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725756"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
@@ -55,7 +59,7 @@ ms.locfileid: "58281867"
   
 5.  도구 상자에서 **데이터 흐름 디자이너** 로 **원본 구성 요소** 를 끌어 와 데이터 원본에서 데이터를 추출하도록 구성합니다.  
   
-    1.  연습을 위해 **Employee** 테이블이 포함된  **TestDB**라는 테스트 데이터베이스를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
+    1.  연습을 위해 **TestDB** 테스트 데이터베이스 (**Employee** 포함)를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
   
     2.  **ID** 를 기본 키로 설정합니다.  
   

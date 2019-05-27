@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2aa1133b9e23ea8f2174f73e9d8bf4a34ff0c824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b2c6e28a8c328bd1e38cee2f4cad74802a981aa9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131206"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095637"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>배포 검사 목록: Reporting Services, Power View 및 SharePoint용 PowerPivot
   동일한 SharePoint 팜에서 이러한 BI 기능을 설치 하려면 다음 검사 목록을 사용 합니다. PowerPivot for SharePoint에서 보고서 작성기 및 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]합니다. 이 검사 목록에서는 특정 설치 순서를 권장하지만 실제로는 어떠한 순서로도 이 기능을 설치할 수 있습니다. 이 검사 목록에서는 다음 제품 또는 기능이 설치되어 있다고 가정합니다.  

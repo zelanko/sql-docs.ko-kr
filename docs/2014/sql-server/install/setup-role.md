@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092227"
 ---
 # <a name="setup-role"></a>설치 역할
   이 페이지를 통해 기능 선택 페이지를 사용하여 개별 기능을 선택할지 설치 역할을 사용하여 설치할지 지정할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "53352841"
   
  SharePoint 팜에서 데이터베이스를 호스팅해야 하는 경우 필요에 따라 설치에 관계형 데이터베이스 엔진 인스턴스를 추가할 수 있습니다. 팜이 이미 구성되어 있는 경우 이 옵션을 건너뛸 수 있습니다.  
   
- 설치가 완료되면 PowerPivot 구성 도구, PowerShell cmdlet 또는 SharePoint 2010 중앙 관리 중 하나를 사용하여 소프트웨어를 구성해야 합니다. 이전 릴리스와 달리 설치 프로그램에서는 더 이상 PowerPivot 설치에 대한 구성 작업을 수행하지 않습니다.  
+ 설치가 완료 된 후 다음 방법 중 하나를 사용 하 여 소프트웨어를 구성 해야 합니다. PowerPivot 구성 도구, PowerShell cmdlet 또는 SharePoint 2010 중앙 관리 합니다. 이전 릴리스와 달리 설치 프로그램에서는 더 이상 PowerPivot 설치에 대한 구성 작업을 수행하지 않습니다.  
   
  역할 기반 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 클라이언트 응용 프로그램이 포함되어 있지 않습니다. 클라이언트 애플리케이션은 별도로 설치됩니다.  
   

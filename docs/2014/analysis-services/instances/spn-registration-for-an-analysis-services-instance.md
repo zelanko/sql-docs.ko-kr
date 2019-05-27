@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729788"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079566"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  

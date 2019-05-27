@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c4128993-2333-48c7-84b1-e51cdcea393d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 255d805d9fa7a36203f6791da3b01d93174d4268
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828705"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060236"
 ---
 # <a name="create-a-user-defined-role"></a>사용자 정의 역할 만들기
     

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647046"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098699"
 ---
 # <a name="view-page-resources-report-manager"></a>보기 페이지, 리소스(보고서 관리자)
   리소스의 보기 페이지를 사용하여 리소스를 볼 수 있습니다. 리소스는 보고서 서버에서 저장 및 관리되는 항목이지만 보고서 서버에서 처리되지는 않습니다. 보고서 서버는 보고서와 모델을 처리합니다. 보고서 서버에서 처리하지 않는 임의의 문서, 이미지 또는 기타 파일을 저장하려는 경우에 리소스를 사용할 수 있습니다. 대부분의 이미지 파일(예: JPG, GIF 및 PNG 파일)은 보고서 관리자의 보기 페이지에서 볼 수 있습니다. 다른 리소스는 별도의 애플리케이션 창에서 열립니다.  

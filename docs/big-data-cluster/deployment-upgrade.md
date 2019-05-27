@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993972"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015193"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 업그레이드 하는 방법
 
@@ -45,10 +45,10 @@ ms.locfileid: "65993972"
    pip3 uninstall mssqlctl
    ```
 
-   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.4` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
+   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.5` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. 최신 버전의 설치 **mssqlctl**합니다. 다음 명령을 설치할 **mssqlctl** CTP 3.0.
@@ -56,13 +56,13 @@ ms.locfileid: "65993972"
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

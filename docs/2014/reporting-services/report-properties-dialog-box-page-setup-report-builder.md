@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10080"
@@ -13,12 +12,12 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306556"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104364"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>보고서 속성 대화 상자, 페이지 설정(보고서 작성기)
   선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  

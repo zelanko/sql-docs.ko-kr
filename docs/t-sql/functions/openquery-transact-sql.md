@@ -20,15 +20,15 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f89a979716e944a4fff4f6d3021a34c7a51973aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fd7377f622d5d986ddb7b665f4f920365d5189f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768531"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944900"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>Remarks  
  OPENQUERY는 변수를 인수로 받아들이지 않습니다.  
   
- OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ OPENQUERY는 연결된 서버에서 확장 저장 프로시저를 실행하는 데 사용할 수 없습니다. 그러나 확장 저장 프로시저는 네 부분으로 된 이름을 사용하여 연결된 서버에서 실행할 수 있습니다. 예를 들어  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -61,7 +61,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
  FROM 절에서 OPENDATASOURCE, OPENQUERY 또는 OPENROWSET에 대한 모든 호출은 두 호출에 동일한 인수가 제공되는 경우에도 업데이트의 대상으로 사용되는 함수에 대한 호출과는 개별적이고 독립적으로 평가됩니다. 특히 이러한 호출 중 하나의 결과에 적용되는 필터 또는 조인 조건은 다른 호출의 결과에 영향을 미치지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자가 OPENQUERY를 실행할 수 있습니다. 원격 서버 연결에 사용되는 사용 권한은 연결된 서버에 대해 정의된 설정에서 가져옵니다.  
   
 ## <a name="examples"></a>예  
@@ -82,14 +82,14 @@ INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')
 VALUES ('NewTitle');  
 ```  
   
-### <a name="c-executing-a-delete-pass-through-query"></a>3. DELETE 통과 쿼리 실행  
+### <a name="c-executing-a-delete-pass-through-query"></a>C. DELETE 통과 쿼리 실행  
  다음 예에서는 `DELETE` 통과 쿼리를 사용하여 예 3에서 삽입된 행을 삭제합니다.  
   
 ```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
-### <a name="d-executing-a-select-pass-through-query"></a>4. SELECT 통과 쿼리 실행  
+### <a name="d-executing-a-select-pass-through-query"></a>D. SELECT 통과 쿼리 실행  
  다음 예에서는 `SELECT` 통과 쿼리를 사용하여 예 3에서 삽입된 행을 선택합니다.  
   
 ```sql  

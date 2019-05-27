@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnectionmanager.f1
@@ -15,12 +14,12 @@ ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058815"
 ---
 # <a name="file-connection-manager-editor"></a>파일 연결 관리자 편집기
   **파일 연결 관리자 편집기** 대화 상자를 사용하여 파일이나 폴더에 연결할 때 사용할 속성을 지정할 수 있습니다.  

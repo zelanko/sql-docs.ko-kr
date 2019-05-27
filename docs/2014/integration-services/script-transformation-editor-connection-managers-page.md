@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
@@ -15,12 +14,12 @@ ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d83a1a0c8cc9493b2c0703824d7ec02bd840d91
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889246"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056196"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>스크립트 변환 편집기(연결 관리자 페이지)
   **스크립트 변환 편집기** 의 **연결 관리자** 를 사용하여 스크립트에서 사용할 연결을 지정할 수 있습니다.  

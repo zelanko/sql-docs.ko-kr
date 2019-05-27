@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SendUsingSMTPServer
@@ -19,12 +18,12 @@ ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db9ed11f79ccb21a7317b6c1b59c8dc012aed299
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62646152"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66097515"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 전자 메일 구성에 있는 `SendUsing` 요소가 `true`로 설정되어 있는지 여부를 지정합니다.  

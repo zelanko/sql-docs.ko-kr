@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DATABASE_PRINCIPAL_ID function
 - IDs [SQL Server], principals
 ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1f7a6e3c5d0ef72858dae615485a9ccfb76568a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b65c8f0ed4679bcbf35d1e61483346647130ff3
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670021"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943810"
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 보안 주체를 나타내는 **sysname** 형식의 식입니다. *principal_name*을 생략하면 `DATABASE_PRINCIPAL_ID`가 현재 사용자의 ID를 반환합니다. `DATABASE_PRINCIPAL_ID`에는 괄호가 필요합니다.
   
 ## <a name="return-types"></a>반환 형식
-**int**  
+**ssNoversion**  
 데이터베이스 보안 주체가 없는 경우 NULL입니다.
   
 ## <a name="remarks"></a>Remarks  

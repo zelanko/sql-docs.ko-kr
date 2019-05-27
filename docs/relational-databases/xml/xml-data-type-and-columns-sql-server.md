@@ -1,7 +1,7 @@
 ---
 title: XML 데이터 형식 및 열(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511580"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836156"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "58511580"
   
  네이티브 XML 스토리지는 구조 범위가 포함된 XML 문서가 있거나 관계형 구조로 매핑하기 어려운 여러 스키마 또는 복잡한 스키마에 해당하는 XML 문서가 있는 경우에 유용합니다.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: XML 데이터 형식을 사용하여 XML 데이터 모델링  
  각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 따라서 \<section>은 재귀적 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
   
  XML 문서에 적합한 스토리지 모델은 **xml** 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  
@@ -175,6 +176,8 @@ ms.locfileid: "58511580"
 -   ISNULL, COALESCE 및 DATALENGTH 이외의 기본 제공 스칼라 함수에 대한 매개 변수로 사용할 수 없습니다.  
   
 -   인덱스에서 키 열로 사용할 수 없습니다. 하지만 클러스터형 인덱스의 데이터로 포함되거나 비클러스터형 인덱스를 만든 경우 INCLUDE 키워드를 사용하여 비클러스터형 인덱스에 명시적으로 추가할 수 있습니다.  
+
+- XML 요소는 최대 128 수준까지 중첩될 수 있습니다.
   
 ## <a name="see-also"></a>참고 항목  
  [XML 문서 대량 가져오기 및 내보내기 예제&#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

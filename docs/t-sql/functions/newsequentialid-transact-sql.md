@@ -16,15 +16,15 @@ helpviewer_keywords:
 - NEWSEQUENTIALID function
 - GUIDs [SQL Server]
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 19c9caf543f7db84cbf71f76832176118d262f60
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698281"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944178"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ NEWSEQUENTIALID ( )
  **uniqueidentifier**  
   
 ## <a name="remarks"></a>Remarks  
- NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ NEWSEQUENTIALID()는 **uniqueidentifier** 형식의 테이블 열에서 DEFAULT 제약 조건과 함께만 사용할 수 있습니다. 예를 들어  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   

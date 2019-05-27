@@ -19,16 +19,16 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9f7c1cd947befda6674a7b75a50509919848e1f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802777"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948787"
 ---
 # <a name="replace-transact-sql"></a>REPLACE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +63,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## <a name="remarks"></a>Remarks  
  REPLACE는 입력의 데이터 정렬을 기반으로 비교를 수행합니다. 지정된 데이터 정렬에서 비교를 수행하려면 [COLLATE](~/t-sql/statements/collations.md)를 사용하여 입력에 명시적 데이터 정렬을 적용할 수 있습니다.  
   
- 0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 REPLACE에 포함할 수 없습니다.  
+ 0x0000 (**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 REPLACE에 포함할 수 없습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `cde`의 `abcdefghi` 문자열을 `xxx`로 대체합니다.  

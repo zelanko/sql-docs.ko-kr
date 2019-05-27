@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adddtsconnection.f1
@@ -15,12 +14,12 @@ ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62771969"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061814"
 ---
 # <a name="add-ssis-connection-manager"></a>SSIS 연결 관리자 추가
   **SSIS 연결 관리자 추가** 대화 상자를 사용하여 패키지에 추가할 연결 형식을 선택할 수 있습니다.  

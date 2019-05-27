@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
@@ -22,12 +21,12 @@ ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890276"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056833"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>패키지 설치 마법사 UI 참조
   **패키지 설치 마법사** 를 사용하여 프로젝트에 포함된 패키지 및 기타 파일과 모든 패키지 종속 파일을 포함한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 배포할 수 있습니다.  
@@ -152,7 +151,7 @@ ms.locfileid: "62890276"
  **SSIS 패키지** 대화 상자에서 폴더를 선택하려면 찾아보기(...)를 클릭합니다. 그러나 이 대화 상자에서는 기본 폴더를 선택할 수 없습니다. 기본 폴더를 사용하려면 입력란에 "/"를 입력해야 합니다.  
   
 > [!NOTE]  
->  유효한 패키지 경로 입력 하지 않으면 다음 오류 메시지가 나타납니다. "하나 이상의 인수가 잘못 되었습니다."  
+>  유효한 패키지 경로를 입력하지 않으면 "인수 중 하나가 올바르지 않습니다"라는 오류 메시지가 나타납니다.  
   
  **암호화에 서버 스토리지 사용**  
  패키지를 보호하기 위해 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 보안 기능을 사용하려면 선택합니다.  

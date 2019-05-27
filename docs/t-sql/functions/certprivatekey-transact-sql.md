@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f58f6859c57a16f5715d8a0f54c30775277b0c8d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071827"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948831"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ CERTPRIVATEKEY
 ## <a name="remarks"></a>Remarks  
 **CERTENCODED** 및 **CERTPRIVATEKEY**를 함께 사용하여 이진 형태로 인증서의 다른 부분을 반환합니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **CERTPRIVATEKEY**는 누구나 사용할 수 있습니다.
   
 ## <a name="examples"></a>예  

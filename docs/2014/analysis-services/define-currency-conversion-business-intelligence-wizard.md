@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.existingscriptpage.f1
@@ -13,12 +12,12 @@ ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7cca289615e94cd4ccfbcee038e002c33700be8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732315"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082146"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>통화 변환 정의(비즈니스 인텔리전스 마법사)
   **통화 변환 정의** 페이지를 사용하여 비즈니스 인텔리전스 마법사에서 생성된 통화 변환 기능이 포함된 MDX(Multidimensional Expressions) 스크립트를 검토할 수 있습니다. 그런 다음 마법사에서 생성된 이 MDX 스크립트를 사용하여 큐브의 MDX 스크립트에 이전에 정의한 통화 변환 기능을 덮어쓰거나 추가할 수 있습니다.  

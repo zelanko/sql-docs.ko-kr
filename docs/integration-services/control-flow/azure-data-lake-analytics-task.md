@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: d8812b5cdaaf2271a0071d798ddd530266ebc8a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728025"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014923"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -60,14 +60,14 @@ U-SQL 구성에는 다음 두 가지 설정이 있습니다. **SourceType** 및 
 |SourceType|동적 옵션|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|옵션 상자에서 직접 제출할 U-SQL 쿼리를 입력하거나 [찾아보기] 단추(...)를 선택하여 **U-SQL 쿼리 입력** 대화 상자에 U-SQL 쿼리를 입력합니다.|  
-|**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...**>을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.|  
-|**SourceType = Variable**|기존 변수를 선택하거나 \<**새 변수...**>를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
+|**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...** >을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.|  
+|**SourceType = Variable**|기존 변수를 선택하거나 \<**새 변수...** >를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
 
 
 ### <a name="job-configuration"></a>작업 구성
 작업 구성은 U-SQL 작업 제출 속성을 지정합니다.
 
-- **AzureDataLakeAnalyticsConnection:** U-SQL 스크립트가 제출되는 Data Lake Analytics 계정을 지정합니다. 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 만들려면 <**새 연결...**>을 선택합니다. 관련 내용은 [Azure Data Lake Analytics 연결 관리자](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)를 참조하세요.
+- **AzureDataLakeAnalyticsConnection:** U-SQL 스크립트가 제출되는 Data Lake Analytics 계정을 지정합니다. 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 만들려면 <**새 연결...** >을 선택합니다. 관련 내용은 [Azure Data Lake Analytics 연결 관리자](../../integration-services/connection-manager/azure-data-lake-analytics-connection-manager.md)를 참조하세요.
 
 - **JobName:** U-SQL 작업의 이름을 지정합니다. 
 - **AnalyticsUnits:** U-SQL 작업의 분석 단위 수를 지정합니다.
@@ -86,7 +86,7 @@ U-SQL 구성에는 다음 두 가지 설정이 있습니다. **SourceType** 및 
 
 **Azure Data Lake Analytics 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 U-SQL 스크립트의 매개 변수(U-SQL 변수)에 매핑합니다.
 
-- **변수 이름:** **추가**를 선택하여 매개 변수 매핑을 추가한 후 목록에서 시스템 또는 사용자 정의 변수를 선택합니다. 또는 <**새 변수...**>를 선택하여 **변수 추가** 대화 상자에서 새 변수를 추가할 수 있습니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+- **변수 이름:** **추가**를 선택하여 매개 변수 매핑을 추가한 후 목록에서 시스템 또는 사용자 정의 변수를 선택합니다. 또는 <**새 변수...** >를 선택하여 **변수 추가** 대화 상자에서 새 변수를 추가할 수 있습니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
 
 - **매개 변수 이름:** U-SQL 스크립트에 매개 변수/변수 이름을 제공합니다. 매개 변수 이름이 \@Param1과 같이 \@ 기호로 시작하는지 확인합니다. 
 

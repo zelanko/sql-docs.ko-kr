@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
@@ -13,12 +12,12 @@ ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6677fad3df1d1f99e2f78257ea85551f8ae8db3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057335"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  

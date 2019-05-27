@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
@@ -14,12 +13,12 @@ ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d20fc0c1257d467f2115095b19c4d1b05c37cebb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20c37fac040290a057bc03cbeb27cc43246efec2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255017"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102909"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 기능 및 태스크(SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기반 콘텐츠는 보고서 및 보고서 기능, 보고서 서버 기능 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제품 기능별로 구성됩니다.  

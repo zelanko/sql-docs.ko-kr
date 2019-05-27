@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.diagramorganizerpane.f1
@@ -18,12 +17,12 @@ ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b127b3dac76663e77b7ce0fa4faa76a91628ccc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743659"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072377"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
   데이터 원본 뷰(DSV) 다이어그램은 DSV 개체를 시각적으로 표현합니다. 다이어그램에서 대화형 작업을 통해 특정 개체를 추가, 숨기기, 삭제 또는 수정할 수 있습니다. 한 DSV에서 개체의 특정 하위 집합에 초점을 맞춘 다이어그램을 여러 개 만들 수도 있습니다.  

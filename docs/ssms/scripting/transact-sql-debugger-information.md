@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643850"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821838"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL 디버거 - 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51643850"
 -   **디버그** 도구 모음에서 **중단점**을 클릭한 다음 원하는 창을 선택합니다.  
   
 ## <a name="transact-sql-expressions"></a>Transact-SQL 식  
- 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **로컬, 조사식1**, **조사식2**, **조사식3**및 **조사식4**에 표시할 수 있습니다.  
+ 식은 변수 또는 매개 변수와 같은 단일 스칼라 값으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. 왼쪽 디버거 창에서는 식에 현재 할당된 데이터 값을 최대 5개의 탭 또는 창인 **지역, 조사식1**, **조사식2**, **조사식3** 및 **조사식4**에 표시할 수 있습니다.  
   
  **지역** 창에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거의 현재 범위에 있는 지역 변수에 대한 정보가 표시됩니다. **지역** 창에 나열된 식 집합은 디버거가 코드의 서로 다른 부분에서 실행할 때 변경됩니다.  
   

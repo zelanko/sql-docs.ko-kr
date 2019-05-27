@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
@@ -13,12 +12,12 @@ ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889259"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056015"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>패키지 선택(SSIS 패키지 업그레이드 마법사)
   **패키지 선택** 페이지를 사용하여 업그레이드할 패키지를 선택할 수 있습니다. 이 페이지에는 마법사의 **원본 위치 선택** 페이지에서 지정한 위치에 저장된 패키지가 나열됩니다.  

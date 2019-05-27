@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10170"
@@ -14,12 +13,12 @@ ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8a5c2dec966586c2245eadeaca42ca432d31204e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696979"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107336"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>데이터 세트 속성 대화 상자, 필터
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  

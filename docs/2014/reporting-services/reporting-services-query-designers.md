@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4f622d5963ae9da107aba9d6674e804b0c859da
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935899"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102879"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 쿼리 디자이너
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서의 각 데이터 원본 유형에 대 한 쿼리를 빌드할 수 있도록 그래픽 및 텍스트 기반 쿼리 디자이너를 제공 합니다.  

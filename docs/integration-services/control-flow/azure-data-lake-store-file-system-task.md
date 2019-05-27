@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,18 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 02bbe8ec412c87b9a849f210d4a909eeecf7b5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d07bedb102ee004c78d727afcf99320d12d68a4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800041"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014892"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure Data Lake Store 파일 시스템 태스크를 통해 사용자는 [ADLS(Azure Data Lake Store)](https://azure.microsoft.com/services/data-lake-store/)에서 다양한 파일 시스템 작업을 수행할 수 있습니다.
 
@@ -32,7 +36,7 @@ Azure Data Lake Store 파일 시스템 태스크는 [Azure용 SSIS(SQL Server In
 
 **작업** 속성은 수행할 파일 시스템 작업을 지정합니다. 다음 작업 중 하나를 선택합니다.
 
-- **CopyToADLS:** ADLS에 파일을 업로드합니다.
+- **CopyToADLS:** 파일을 ADLS에 업로드합니다.
 - **CopyFromADLS:** ADLS에서 파일을 다운로드합니다.
 
 ## <a name="configure-the-properties-for-the-operation"></a>작업에 대한 속성 구성

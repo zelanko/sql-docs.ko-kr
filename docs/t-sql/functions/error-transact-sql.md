@@ -17,16 +17,16 @@ helpviewer_keywords:
 - errors [SQL Server], Transact-SQL
 - error numbers [SQL Server]
 ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: 842ffc62248cce0df516c927f41185f549281dd9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359300"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946122"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ ELSE
 GO  
 ```  
   
-### <a name="c-using-error-with-rowcount"></a>3. @@ERROR와 @@ROWCOUNT 함께 사용  
+### <a name="c-using-error-with-rowcount"></a>C. @@ERROR와 @@ROWCOUNT 함께 사용  
  다음 예에서는 `@@ERROR`를 `@@ROWCOUNT`와 함께 사용하여 `UPDATE` 문 작업의 유효성을 검사합니다. `@@ERROR`의 값을 확인하여 오류 표시가 있는지 검사하고 `@@ROWCOUNT`를 사용하여 업데이트가 테이블의 행에 제대로 적용되었는지 확인합니다.  
   
 ```sql  
