@@ -1,6 +1,6 @@
 ---
 title: 기본 모드 보고서 서버에 대한 사용 권한 부여 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579830"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175637"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에 대한 사용 권한 부여
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 권한 부여 및 인증 하위 시스템을 통해 보고서 서버에서 작업을 수행하거나 항목에 액세스할 수 있는 사용자를 지정합니다. 역할 기반 권한 부여는 사용자 또는 그룹이 수행할 수 있는 동작을 역할별로 분류합니다. 인증은 기본 제공 Windows 인증이나 사용자가 제공하는 사용자 지정 인증 모듈을 기반으로 합니다. 이러한 인증 유형 중 하나에 미리 정의된 역할이나 사용자 지정 역할을 사용할 수 있습니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579830"
   
 2.  보고서 서버에 대한 액세스 권한이 필요한 사용자 및 그룹과 필요한 수준을 확인합니다. **브라우저** 역할이나 **보고서 작성기** 역할에 대부분의 사용자를 할당해야 합니다. **게시자** 역할에는 소수의 사용자를 할당하고 **내용 관리자**에는 극소수의 사용자만 할당해야 합니다.  
   
-3.  보고서 관리자를 사용하여 홈 폴더(보고서 서버 폴더 계층의 최상위 폴더)에 대한 액세스 권한을 필요로 하는 각 사용자 또는 그룹에 대해 역할을 할당합니다.  
+3.  웹 포털을 사용하여 홈 폴더(보고서 서버 폴더 계층의 최상위 폴더)에 대한 액세스 권한을 필요로 하는 각 사용자 또는 그룹에 대해 역할을 할당합니다.  
   
-4.  보고서 관리자에 있는 사이트 설정 페이지의 사이트 수준에서 미리 정의된 **시스템 사용자** 및 **시스템 관리자**역할을 사용하여 각 사용자 및 그룹에 대한 시스템 수준 역할 할당을 만듭니다.  
+4.  웹 포털에 있는 사이트 설정 페이지의 사이트 수준에서 미리 정의된 **시스템 사용자** 및 **시스템 관리자**역할을 사용하여 각 사용자 및 그룹에 대한 시스템 수준 역할 할당을 만듭니다.  
   
 5.  특정 폴더, 보고서 및 기타 항목에 대한 추가 역할 할당을 필요한 만큼 만듭니다. 역할 할당을 너무 많이 만들지는 마십시오. 너무 많이 만들면 각 사용자에 대한 여러 권한 수준을 추적하기 어려워지게 됩니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "65579830"
 |도구|태스크|  
 |----------|-----------|  
 |Management Studio - 역할 정의를 확인, 수정, 작성 및 삭제하는 데 사용됩니다.|[역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|보고서 관리자 - 사용자 및 그룹을 역할에 할당하는 데 사용됩니다.|[사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|웹 포털 - 사용자 및 그룹을 역할에 할당하는 데 사용됩니다.|[보고서 서버에 사용자 액세스 권한 부여](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [역할 할당 수정 또는 삭제](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   

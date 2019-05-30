@@ -12,12 +12,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a63bf2bcad0c5d20f0d37727796746f68708d16f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012055"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265157"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 대량 가져오기를 수행하거나 테이블에서 데이터를 대량 내보내기를 수행할 때는 서식 파일을 사용하여 다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어 프로그램에서 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "66012055"
 ## <a name="creating-a-non-xml-format-file"></a>비 XML 서식 파일 만들기  
  **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다. **format** 옵션에는 다음과 같이 **-f** 옵션도 필요합니다.  
   
- **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** NUL **-f**_format_file_name_  
   
 > [!NOTE]  
 >  비 XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .fmt를 사용하는 것이 좋습니다(예: MyTable.fmt).  

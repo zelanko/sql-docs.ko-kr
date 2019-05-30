@@ -227,6 +227,12 @@
               href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Azure BLOB 스토리지
               href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+        - name: 빠른 시작
+          items:
+            - name: 백업 및 복원
+              href: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+            - name: Azure Blob Storage에
+              href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
         - name: 방법
           items:
             - name: Azure에 백업
@@ -10125,8 +10131,6 @@
               href: ../relational-databases/lesson-1-connecting-to-the-database-engine.md
             - name: '2단원: 다른 컴퓨터에서 연결'
               href: ../relational-databases/lesson-2-connecting-from-another-computer.md
-        - name: Azure Blob Storage Service로 백업 및 복원
-          href: ../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
         - name: 인증서로 저장 프로시저 서명
           href: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
         - name: 소유권 체인 및 컨텍스트 전환
@@ -16504,8 +16508,6 @@
                   href: ../t-sql/queries/table-value-constructor-transact-sql.md
                 - name: 맨 위로 이동
                   href: ../t-sql/queries/top-transact-sql.md
-                - name: UPDATE
-                  href: ../t-sql/queries/update-transact-sql.md
                 - name: UPDATETEXT
                   href: ../t-sql/queries/updatetext-transact-sql.md
                 - name: WITH common_table_expression
@@ -16578,6 +16580,8 @@
                   href: ../t-sql/statements/insert-transact-sql.md
                 - name: INSERT(SQL Graph)
                   href: ../t-sql/statements/insert-sql-graph.md
+                - name: UPDATE
+                  href: ../t-sql/queries/update-transact-sql.md
                 - name: MERGE
                   href: ../t-sql/statements/merge-transact-sql.md
                 - name: RENAME

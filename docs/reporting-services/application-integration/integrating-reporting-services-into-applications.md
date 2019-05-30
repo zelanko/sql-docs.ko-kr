@@ -1,19 +1,19 @@
 ---
 title: 애플리케이션에 Reporting Services 통합 | Microsoft Docs
-ms.date: 09/18/2018
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bce7e59a66701e519a4f2bc5706bfbec5f88eba2
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
-ms.translationtype: HT
+ms.openlocfilehash: 64f4e77a943f1d71fc7655a4a1d36dffafe7afcf
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331473"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175140"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>애플리케이션에 Reporting Services 통합
 
@@ -28,7 +28,7 @@ ms.locfileid: "56331473"
   
 ## <a name="report-server-web-service"></a>보고서 서버 웹 서비스
 
- 보고서 서버 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 개발하기 위한 기본 인터페이스입니다. 보고서 카탈로그를 관리할 코드를 개발하든 아니면 보고서를 지원되는 형식으로 렌더링하는 코드를 개발하는 경우이든 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하는 데 필요한 모든 방법을 제공합니다. 이러한 애플리케이션의 예는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함되어 있는 보고서 관리자로서 여기서는 웹 서비스를 사용하여 보고서 서버 데이터베이스를 관리합니다.  
+ 보고서 서버 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 개발하기 위한 기본 인터페이스입니다. 보고서 카탈로그를 관리할 코드를 개발하든 아니면 보고서를 지원되는 형식으로 렌더링하는 코드를 개발하는 경우이든 웹 서비스는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하는 데 필요한 모든 방법을 제공합니다. 이러한 애플리케이션의 예는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함되어 있는 웹 포털로서 여기서는 웹 서비스를 사용하여 보고서 서버 데이터베이스를 관리합니다.  
   
 ## <a name="report-viewer-controls-for-visual-studio"></a>Visual Studio용 보고서 뷰어 컨트롤
 

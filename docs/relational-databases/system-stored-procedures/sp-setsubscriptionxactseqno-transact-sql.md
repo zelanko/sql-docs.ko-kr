@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534655"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270164"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  문제 해결 도중 구독자의 배포 에이전트에 의해 적용될 다음 트랜잭션의 LSN(로그 시퀀스 번호)을 지정하는 데 사용되며 에이전트에서 실패한 트랜잭션을 건너뛸 수 있게 해줍니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. SQL Server 이외 게시자에 대해서는 지원되지 않습니다.  
+  문제를 해결 하는 동안 다음 트랜잭션에서 제공 하려면 배포 에이전트 수 있도록 로그 시퀀스 번호 (LSN)를 사용 하 여 마지막으로 배달 된 트랜잭션을 지정 하는 데 사용 합니다. 다시 시작 되 면 배포 에이전트가 트랜잭션 (LSN)이 워터이 마크 보다 큰 캐시에서 반환 배포 데이터베이스 (msrepl_commands). 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. SQL Server 이외 게시자에 대해서는 지원되지 않습니다.  
   
 > [!CAUTION]  
 >  이 저장 프로시저를 잘못 사용하거나 잘못된 LSN 값을 지정하면 배포 에이전트에서 구독자에 이미 적용된 변경 사항이 취소되거나 나머지 모든 변경 사항을 건너뛸 수 있습니다.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_setsubscriptionxactseqno**합니다.  
   
-  
+## <a name="see-more"></a>자세히 보기
+
+[블로그: 트랜잭션을 건너뛸 하는 방법](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

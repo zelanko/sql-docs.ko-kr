@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 802634ff8a62134433185913fd1fd3374df1680a
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634167"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265578"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성
 
@@ -35,221 +35,221 @@ Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일
 
 ## <a name="instructions"></a>Instructions
 
-1.  FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다.
-
-2.  Mssql 사용자에 대 한 정보를 가져옵니다.
-
-    ```bash
+1. FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다.
+   
+1. Mssql 사용자에 대 한 정보를 가져옵니다.
+   
+   ```bash
     sudo id mssql
-    ```
-    
-    Uid, gid, 그룹과 note 합니다. 
-
-3. `sudo smbclient -L //NameOrIP/ShareName -U User`을 실행합니다.
-
-    \<NameOrIP > DNS 이름 또는 SMB 공유를 호스팅하는 서버의 IP 주소입니다.
-
-    \<공유 이름 >은 SMB 공유의 이름입니다. 
-
-4. 시스템 데이터베이스 또는 기본 데이터 위치에 저장 된 다음이 단계를 수행 합니다. 그렇지 않으면 5 단계로 건너뜁니다. 
-
-   *    SQL Server에서 작업 하는 서버에서 중지 되었는지 확인 합니다.
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    Superuser를 완벽 하 게 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    sudo -i
-    ```
-
-   *    Mssql 사용자 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    su mssql
-    ```
-
-   *    SQL Server 데이터를 저장 하 고 로그 파일을 임시 디렉터리를 만듭니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    <TempDir> 폴더의 이름이입니다. 다음 예제에서는 /var/opt/mssql/tmp 라는 폴더를 만듭니다.
-
-    ```bash
-    mkdir /var/opt/mssql/tmp
-    ```
-
-   *    SQL Server 데이터 및 로그 파일을 임시 디렉터리에 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir > 이전 단계에서 폴더의 이름입니다.
-    
-   *    파일 디렉터리 인지 확인 합니다.
-
-    ```bash
-    ls <TempDir>
-    ```
-
-    \<TempDir > d 단계에 있는 폴더의 이름입니다.
-    
-   *    기존 SQL Server 데이터 디렉터리에서 파일을 삭제 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
- 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
-
-   *    파일이 삭제 되었는지 확인 합니다. 
-
-    ```bash
-    ls /var/opt/mssql/data
-    ```
- 
-   *    루트 사용자로 다시 전환 하려면 exit를 입력 합니다.
-
-   *    SQL Server 데이터 폴더에 SMB 공유를 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다. 이 예제에서는 Windows Server 기반 SMB 3.0 공유에 연결 하기 위한 구문을 보여 줍니다.
-
-    ```bash
-    Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
-    ```
-
-    \<서버 이름 >은 SMB 공유를 사용 하 여 서버의 이름
-    
-    \<공유 이름 >은 공유의 이름
-
-    \<사용자 이름 >은 공유에 액세스 하는 사용자의 이름
-
-    \<암호 > 사용자에 대 한 암호
-
-    \<도메인 >은 Active Directory의 이름
-
-    \<mssqlUID > mssql 사용자 UID가 
- 
-    \<mssqlGID > mssql 사용자의 GID는
- 
-   *    스위치 없이 탑재를 실행 하 여 탑재 되었는지 확인 합니다.
-
-    ```bash
-    mount
-    ```
- 
-   *    Mssql 사용자로 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    su mssql
-    ```
-
-   *    임시 디렉터리 /var/opt/mssql/data에서 파일을 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    cp /var/opt/mssql/tmp/* /var/opt/mssql/data
-    ```
-
-   *    파일 위치에 있는지 확인 합니다.
-
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-   *    종료 되지 않고 mssql를 입력 합니다. 
-
-   *    종료 되지 않고 루트를 입력 합니다.
-
-   *    SQL Server를 시작 합니다. 모든 항목이 올바르게 복사 되었는지 하 고 적용 하는 보안 올바르게 SQL Server 해야 표시 시작 합니다.
-
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ```
- 
-   *    추가로 테스트할 세밀 하 게 사용 권한을 확인 하는 데이터베이스를 만듭니다. 다음 예제에서는 TRANSACT-SQL; SSMS를 사용할 수 있습니다.
-
-    ![10_testcreatedb][2] 
-  
-   *    SQL Server를 중지 하 고 종료 하는 것이 것을 확인 합니다. 추가 하거나 다른 디스크를 테스트 하려는 경우 수행를 종료 하지 않은 SQL Server 될 때까지 이러한 추가 테스트 합니다.
-
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    완료 하는 경우에 공유를 마운트 해제 합니다. 그렇지 않은 경우 모든 디스크를 테스트/추가 완료 한 후 분리.
-
-    ```bash
-    sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
-    ```
-
-    \<IPAddressOrServerName >은 IP 주소 또는 SMB 호스트의 이름
-
-    \<공유 이름 >은 공유의 이름
-    
-    \<FolderMountedIn >은 SMB 탑재 되어 있는 폴더의 이름
-
-5.  사용자 데이터베이스 백업 등의 시스템 데이터베이스 이외의 항목에 대 한 다음이 단계를 수행 합니다. 기본 위치를 사용 하는 경우만 14 단계를 건너뜁니다.
-    
-   *    Superuser를 스위치입니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
-
-    ```bash
-    sudo -i
-    ```
-    
-   *    SQL Server에서 사용 될 폴더를 만듭니다. 
-
-    ```bash
-    mkdir <FolderName>
-    ```
-
-    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
-
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
-
-   *    SQL Server 데이터 폴더에 SMB 공유를 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다. 이 예제에서는 Samba 기반 SMB 3.0 공유에 연결 하기 위한 구문을 보여 줍니다.
-
-    ```bash
-    Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
-    ```
-
-    \<서버 이름 >은 SMB 공유를 사용 하 여 서버의 이름
-
-    \<공유 이름 >은 공유의 이름
-
-    \<폴더 이름 >은 마지막 단계에서 만든 폴더의 이름  
-
-    \<사용자 이름 >은 공유에 액세스 하는 사용자의 이름
-
-    \<암호 > 사용자에 대 한 암호
-
-    \<mssqlUID > mssql 사용자 UID가
-
-    \<mssqlGID > mssql 사용자의 GID 됩니다.
- 
-   * 스위치 없이 탑재를 실행 하 여 탑재 되었는지 확인 합니다.
- 
-   * Superuser를 더 이상 exit를 입력 합니다.
-
-   * 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. 다음 예제에서는 sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트 전환, OS 수준에 있는 파일과 다음 임시 위치를 삭제를 확인 합니다. SSMS를 사용할 수 있습니다.
- 
-   * 공유 마운트 해제 
-
-    ```bash
-    sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
-    ```
-    
-    \<IPAddressOrServerName >은 IP 주소 또는 SMB 호스트의 이름
- 
-    \<공유 이름 >은 공유의 이름
- 
-    \<FolderMountedIn > SMB 탑재 되어 있는 폴더의 이름입니다.
- 
-6.  다른 노드에 대 한 단계를 반복 합니다.
+   ```
+   
+   Uid, gid, 그룹과 note 합니다. 
+   
+1. `sudo smbclient -L //NameOrIP/ShareName -U User`을 실행합니다.
+   
+   \<NameOrIP > DNS 이름 또는 SMB 공유를 호스팅하는 서버의 IP 주소입니다.
+   
+   \<공유 이름 >은 SMB 공유의 이름입니다. 
+   
+1. 시스템 데이터베이스 또는 기본 데이터 위치에 저장 된 다음이 단계를 수행 합니다. 그렇지 않으면 5 단계로 건너뜁니다. 
+   
+   1. SQL Server에서 작업 하는 서버에서 중지 되었는지 확인 합니다.
+      ```bash
+      sudo systemctl stop mssql-server
+      sudo systemctl status mssql-server
+      ```
+      
+   1. Superuser를 완벽 하 게 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      sudo -i
+      ```
+      
+   1. Mssql 사용자 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      su mssql
+      ```
+      
+   1. SQL Server 데이터를 저장 하 고 로그 파일을 임시 디렉터리를 만듭니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      mkdir <TempDir>
+      ```
+      
+      \<TempDir > 폴더의 이름입니다. 다음 예제에서는 /var/opt/mssql/tmp 라는 폴더를 만듭니다.
+      
+      ```bash
+      mkdir /var/opt/mssql/tmp
+      ```
+      
+   1. SQL Server 데이터 및 로그 파일을 임시 디렉터리에 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      cp /var/opt/mssql/data/* <TempDir>
+      ```
+      
+      \<TempDir > 이전 단계에서 폴더의 이름입니다.
+      
+   1. 파일 디렉터리 인지 확인 합니다.
+      
+      ```bash
+      ls <TempDir>
+      ```
+      
+      \<TempDir > d 단계에 있는 폴더의 이름입니다.
+      
+   1. 기존 SQL Server 데이터 디렉터리에서 파일을 삭제 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      rm - f /var/opt/mssql/data/*
+      ```
+      
+   1. 파일이 삭제 되었는지 확인 합니다. 
+      
+      ```bash
+      ls /var/opt/mssql/data
+      ```
+      
+   1. 루트 사용자로 다시 전환 하려면 exit를 입력 합니다.
+      
+   1. SQL Server 데이터 폴더에 SMB 공유를 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다. 이 예제에서는 Windows Server 기반 SMB 3.0 공유에 연결 하기 위한 구문을 보여 줍니다.
+      
+      ```bash
+      Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
+      ```
+      
+      \<서버 이름 >은 SMB 공유를 사용 하 여 서버의 이름
+      
+      \<공유 이름 >은 공유의 이름
+      
+      \<사용자 이름 >은 공유에 액세스 하는 사용자의 이름
+      
+      \<암호 > 사용자에 대 한 암호
+      
+      \<도메인 >은 Active Directory의 이름
+      
+      \<mssqlUID > mssql 사용자 UID가 
+      
+      \<mssqlGID > mssql 사용자의 GID는
+      
+   1. 스위치 없이 탑재를 실행 하 여 탑재 되었는지 확인 합니다.
+      
+      ```bash
+      mount
+      ```
+      
+   1. Mssql 사용자로 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      su mssql
+      ```
+      
+   1. 임시 디렉터리 /var/opt/mssql/data에서 파일을 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      cp /var/opt/mssql/tmp/* /var/opt/mssql/data
+      ```
+      
+   1. 파일 위치에 있는지 확인 합니다.
+      
+      ```bash
+      ls /var/opt/mssql/data
+      ```
+      
+   1. 종료 되지 않고 mssql를 입력 합니다. 
+      
+   1. 종료 되지 않고 루트를 입력 합니다.
+   
+   1. SQL Server를 시작 합니다. 모든 항목이 올바르게 복사 되었는지 하 고 적용 하는 보안 올바르게 SQL Server 해야 표시 시작 합니다.
+      
+      ```bash
+      sudo systemctl start mssql-server
+      sudo systemctl status mssql-server
+      ```
+      
+   1. 추가로 테스트할 세밀 하 게 사용 권한을 확인 하는 데이터베이스를 만듭니다. 다음 예제에서는 TRANSACT-SQL; SSMS를 사용할 수 있습니다.
+      
+      ![10_testcreatedb][2] 
+      
+   1. SQL Server를 중지 하 고 종료 하는 것이 것을 확인 합니다. 추가 하거나 다른 디스크를 테스트 하려는 경우 수행를 종료 하지 않은 SQL Server 될 때까지 이러한 추가 테스트 합니다.
+      
+      ```bash
+      sudo systemctl stop mssql-server
+      sudo systemctl status mssql-server
+      ```
+      
+   1. 완료 하는 경우에 공유를 마운트 해제 합니다. 그렇지 않은 경우 모든 디스크를 테스트/추가 완료 한 후 분리.
+      
+      ```bash
+      sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
+      ```
+      
+      \<IPAddressOrServerName >은 IP 주소 또는 SMB 호스트의 이름
+      
+      \<공유 이름 >은 공유의 이름
+      
+      \<FolderMountedIn >은 SMB 탑재 되어 있는 폴더의 이름
+      
+5. 사용자 데이터베이스 백업 등의 시스템 데이터베이스 이외의 항목에 대 한 다음이 단계를 수행 합니다. 기본 위치를 사용 하는 경우만 14 단계를 건너뜁니다.
+   
+   1. Superuser를 스위치입니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+      
+      ```bash
+      sudo -i
+      ```
+      
+   1. SQL Server에서 사용 될 폴더를 만듭니다. 
+      
+      ```bash
+      mkdir <FolderName>
+      ```
+      
+      \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 다음 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
+      
+      ```bash
+      mkdir /var/opt/mssql/userdata
+      ```
+      
+   1. SQL Server 데이터 폴더에 SMB 공유를 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다. 이 예제에서는 Samba 기반 SMB 3.0 공유에 연결 하기 위한 구문을 보여 줍니다.
+      
+      ```bash
+      Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
+      ```
+      
+      \<서버 이름 >은 SMB 공유를 사용 하 여 서버의 이름
+      
+      \<공유 이름 >은 공유의 이름
+      
+      \<폴더 이름 >은 마지막 단계에서 만든 폴더의 이름  
+      
+      \<사용자 이름 >은 공유에 액세스 하는 사용자의 이름
+      
+      \<암호 > 사용자에 대 한 암호
+      
+      \<mssqlUID > mssql 사용자 UID가
+      
+      \<mssqlGID > mssql 사용자의 GID 됩니다.
+      
+   1. 스위치 없이 탑재를 실행 하 여 탑재 되었는지 확인 합니다.
+   
+   1. Superuser를 더 이상 exit를 입력 합니다.
+   
+   1. 를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. 다음 예제에서는 sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트 전환, OS 수준에 있는 파일과 다음 임시 위치를 삭제를 확인 합니다. SSMS를 사용할 수 있습니다.
+   
+   1. 공유 마운트 해제 
+      
+      ```bash
+      sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
+      ```
+      
+      \<IPAddressOrServerName >은 IP 주소 또는 SMB 호스트의 이름
+      
+      \<공유 이름 >은 공유의 이름
+      
+      \<FolderMountedIn > SMB 탑재 되어 있는 폴더의 이름입니다.
+   
+1. 다른 노드에 대 한 단계를 반복 합니다.
 
 이제 FCI를 구성할 준비가 되었습니다.
 

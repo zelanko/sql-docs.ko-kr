@@ -1,6 +1,6 @@
 ---
 title: 보고서 캐시(SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580446"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175583"
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
   보고서 서버는 처리된 보고서의 복사본을 캐시했다가 사용자가 보고서를 열면 해당 복사본을 반환할 수 있습니다. 사용자는 보고서가 실행된 날짜와 시간을 통해서만 보고서가 캐시된 복사본인지 여부를 알 수 있습니다. 보고서의 날짜 또는 시간이 현재가 아니고 보고서가 스냅숏이 아니라면 캐시에서 가져온 보고서입니다.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580446"
   
  사용자가 지정한 매개 변수 값이 캐시된 보고서를 만드는 데 사용된 값과 다른 경우 등 어떤 이유에서든 캐시된 인스턴스에서 보고서를 렌더링할 수 없으면 보고서 서버에서 보고서를 다시 실행합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [캐시 사전 로드&#40;보고서 관리자&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [캐시 미리 로드](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
  [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

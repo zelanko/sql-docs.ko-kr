@@ -1,7 +1,7 @@
 ---
 title: sys.dm_sql_referenced_entities (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 05/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,17 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7494577b9af11f8000fd2676dd56ee3b8c960756
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213462"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354403"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지정된 참조 엔터티 정의에서 이름별로 참조되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환합니다. 하나의 사용자 정의 엔터티가 호출 될 때 두 엔터티 간의 종속성이 만들어집니다.는 *엔터티를 참조*, 라는 다른 사용자 정의 엔터티의 영구 SQL 식에서 이름별으로 표시 된 *엔터티를 참조 하* . 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
+지정한 참조 엔터티의 정의에 이름으로 참조 되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 하나의 사용자 정의 엔터티가 호출 될 때 두 엔터티 간의 종속성이 만들어집니다.는 *엔터티를 참조*, 라는 다른 사용자 정의 엔터티의 영구 SQL 식에서 이름별으로 표시 된 *엔터티를 참조 하* . 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
   
  이러한 동적 관리 함수를 사용하면 지정된 참조 엔터티에 의해 참조되는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -48,14 +49,13 @@ ms.locfileid: "53213462"
 -   XML 스키마 컬렉션  
   
 -   파티션 함수  
-  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
-  
+
 ## <a name="syntax"></a>구문  
   
 ```  
 sys.dm_sql_referenced_entities (  
-    ' [ schema_name. ] referencing_entity_name ' , ' <referencing_class> ' )  
+    ' [ schema_name. ] referencing_entity_name ' ,
+    ' <referencing_class> ' )  
   
 <referencing_class> ::=  
 {  
@@ -66,12 +66,12 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *schema_name*합니다. ] *referencing_entity_name*  
+ [ *schema_name*. ] *referencing_entity_name*  
  참조 엔터티의 이름입니다. *schema_name* 참조 클래스는 개체 때 필요 합니다.  
   
  *schema_name.referencing_entity_name* 됩니다 **nvarchar(517)** 합니다.  
   
- *< Referencing_class >* :: = {개체 | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  지정된 참조 엔터티의 클래스입니다. 각 문에는 하나의 클래스만 지정할 수 있습니다.  
   
  *< referencing_class >* 됩니다 **nvarchar(60)** 합니다.  
@@ -92,13 +92,14 @@ sys.dm_sql_referenced_entities (
 |referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하며 따라서 엔터티 ID 확인은 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 EXECUTE 문 내에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수인 경우 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다. 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
 |is_ambiguous|**bit**|대 한 참조가 모호 하며 런타임에 사용자 정의 함수, 사용자 정의 형식 (UDT) 또는 형식의 열에 대 한 xquery 참조로 확인할 수 나타냅니다 **xml**합니다. 예를 들어 저장 프로시저에 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 정의된 경우 `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 사용자 정의 함수 또는 열 UDT(사용자 정의 형식) 메서드에 대한 참조가 모호합니다.<br /><br /> 0 = 참조가 분명하거나 함수가 호출될 때 엔터티를 성공적으로 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
-|is_selected|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 또는 열이 선택됩니다.|  
-|is_updated|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 또는 열이 수정됩니다.|  
-|is_select_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
-|is_all_columns_found|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체에 대한 모든 열 종속성을 찾을 수 있습니다.<br /><br /> 0 = 개체에 대한 열 종속성을 찾을 수 없습니다.|
-|is_insert_all|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 개체 (개체 수준에만 해당) 열 목록 없이 INSERT 문에서 사용 됩니다.|  
-|is_incomplete|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br /> 1 = 개체 또는 열에 바인딩 오류가 잘못 되었습니다.|
-  
+|is_selected|**bit**|1 = 개체 또는 열이 선택됩니다.|  
+|is_updated|**bit**|1 = 개체 또는 열이 수정됩니다.|  
+|is_select_all|**bit**|1 = 개체가 SELECT * 절에서 사용됩니다(개체 수준만 해당).|  
+|is_all_columns_found|**bit**|1 = 개체에 대한 모든 열 종속성을 찾을 수 있습니다.<br /><br /> 0 = 개체에 대한 열 종속성을 찾을 수 없습니다.|
+|is_insert_all|**bit**|1 = 개체 (개체 수준에만 해당) 열 목록 없이 INSERT 문에서 사용 됩니다.<br /><br />이 열은 SQL Server 2016에 추가 되었습니다.|  
+|is_incomplete|**bit**|1 = 개체 또는 열에 바인딩 오류가 잘못 되었습니다.<br /><br />이 열은 SQL Server 2016 SP2에 추가 되었습니다.|
+| &nbsp; | &nbsp; | &nbsp; |
+
 ## <a name="exceptions"></a>예외  
  다음과 같은 경우 빈 결과 집합을 반환합니다.  
   
@@ -137,7 +138,8 @@ sys.dm_sql_referenced_entities (
 |형식(별칭 및 CLR 사용자 정의 형식)|아니요|사용자 계정 컨트롤|  
 |XML 스키마 컬렉션|아니요|사용자 계정 컨트롤|  
 |파티션 함수|아니요|사용자 계정 컨트롤|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
@@ -147,43 +149,65 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1. 데이터베이스 수준 DDL 트리거에 의해 참조되는 엔터티 반환  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1. 데이터베이스 수준 DDL 트리거에 의해 참조 되는 엔터티 반환  
  다음 예에서는 데이터베이스 수준 DDL 트리거 `ddlDatabaseTriggerLog`에 의해 참조되는 엔터티(테이블 및 열)를 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc  
-FROM sys.dm_sql_referenced_entities ('ddlDatabaseTriggerLog', 'DATABASE_DDL_TRIGGER');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc
+    FROM
+        sys.dm_sql_referenced_entities (
+            'ddlDatabaseTriggerLog',
+            'DATABASE_DDL_TRIGGER')
+;
 GO  
 ```  
   
-### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>2. 개체에 의해 참조되는 엔터티 반환  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>2. 개체에 의해 참조 되는 엔터티 반환  
  다음 예에서는 사용자 정의 함수 `dbo.ufnGetContactInformation`에 의해 참조되는 엔터티를 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
 GO  
-SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
-    referenced_minor_id, referenced_class_desc, is_caller_dependent, is_ambiguous  
-FROM sys.dm_sql_referenced_entities ('dbo.ufnGetContactInformation', 'OBJECT');  
+SELECT
+        referenced_schema_name,
+        referenced_entity_name,
+        referenced_minor_name,
+        referenced_minor_id,
+        referenced_class_desc,
+        is_caller_dependent,
+        is_ambiguous
+    FROM
+        sys.dm_sql_referenced_entities (
+            'dbo.ufnGetContactInformation',
+            'OBJECT')
+;
 GO  
 ```  
   
-### <a name="c-returning-column-dependencies"></a>3. 열 종속성 반환  
+### <a name="c-return-column-dependencies"></a>3. 열 종속성 반환  
  다음 예에서는 `Table1` 열과 `c` 열의 합계로 정의되는 계산 열 `a`가 포함된 `b` 테이블을 만듭니다. 그런 다음 `sys.dm_sql_referenced_entities` 뷰를 호출합니다. 이 뷰는 계산 열에 정의된 각 열마다 하나씩 두 개의 행을 반환합니다.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
 GO  
-SELECT referenced_schema_name AS schema_name,  
-    referenced_entity_name AS table_name,  
-    referenced_minor_name AS referenced_column,  
-    COALESCE(COL_NAME(OBJECT_ID(N'dbo.Table1'),referencing_minor_id), 'N/A') AS referencing_column_name  
-FROM sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT');  
+SELECT
+        referenced_schema_name AS schema_name,  
+        referenced_entity_name AS table_name,  
+        referenced_minor_name  AS referenced_column,  
+        COALESCE(
+            COL_NAME(OBJECT_ID(N'dbo.Table1'),
+            referencing_minor_id),
+            'N/A') AS referencing_column_name  
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Table1', 'OBJECT')
+;
 GO
 
 -- Remove the table.  
@@ -193,7 +217,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  schema_name table_name referenced_column referencing_column  
  ----------- ---------- ----------------- ------------------  
  dbo         Table1     a                 c  
@@ -204,10 +228,7 @@ GO
  다음 예에서는 `Table1`을 삭제하고 `Table2` 및 저장 프로시저 `Proc1`을 만듭니다. 이 프로시저는 `Table2` 및 존재하지 않는 테이블 `Table1`을 참조합니다. 저장 프로시저가 참조 엔터티로 지정되어 `sys.dm_sql_referenced_entities` 뷰가 실행됩니다. 결과 집합에는 `Table1`에 대한 행 하나와 `Table2`에 대한 행 세 개가 표시됩니다. `Table1`이 없기 때문에 열 종속성을 확인할 수 없고 오류 2020이 반환됩니다. `is_all_columns_found` 열은 `Table1`에 대해 검색할 수 없는 열이 있음을 나타내는 0을 반환합니다.  
   
 ```sql  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
-    DROP TABLE dbo.Table1;  
+DROP TABLE IF EXISTS dbo.Table1;
 GO  
 CREATE TABLE dbo.Table2 (c1 int, c2 int);  
 GO  
@@ -215,15 +236,19 @@ CREATE PROCEDURE dbo.Proc1 AS
     SELECT a, b, c FROM Table1;  
     SELECT c1, c2 FROM Table2;  
 GO  
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name AS referenced_column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS referenced_column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1  
@@ -231,29 +256,43 @@ GO
  935674381     Table2       C2                      1  
  NULL          Table1       NULL                    0  
 
- Msg 2020, Level 16, State 1, Line 1The dependencies reported for entity "dbo.Proc1" might not include references to all columns. This is either because the entity references an object that does not exist or because of an error in one or more statements in the entity.  Before rerunning the query, ensure that there are no errors in the entity and that all objects referenced by the entity exist.
+Msg 2020, Level 16, State 1, Line 1
+The dependencies reported for entity "dbo.Proc1" might not include
+  references to all columns. This is either because the entity
+  references an object that does not exist or because of an error
+  in one or more statements in the entity.  Before rerunning the
+  query, ensure that there are no errors in the entity and that
+  all objects referenced by the entity exist.
  ```
   
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>5. 동적 종속성 유지 관리 설명  
- 다음 예에서는 예 4를 확장하여 종속성이 동적으로 유지 관리되고 있음을 보여 줍니다. 먼저 예 4에서 삭제한 `Table1`을 다시 만듭니다. 그러면 저장 프로시저가 참조 엔터티로 지정되어 `sys.dm_sql_referenced_entities`가 다시 실행됩니다. 결과 집합은 저장 프로시저에 정의된 테이블 및 해당 열이 모두 반환되었음을 보여 줍니다. 또한 `is_all_columns_found` 열은 모든 개체 및 열에 대해 1을 반환합니다.  
-  
+
+이 예제 E 예제 D 실행 된 것을 가정 합니다. 예제 E를 보여 줍니다 종속성 동적으로 유지 됩니다. 이 예제에서는 다음 작업을 수행합니다.
+
+1. 다시 만듭니다 `Table1`, 예제 d에서 삭제
+2. 그런 다음 실행 `sys.dm_sql_referenced_entities` 저장된 프로시저가 참조 엔터티로 지정을 사용 하 여 다시 실행 됩니다.
+
+결과 집합에서는 테이블 및 저장된 프로시저에 정의 된 해당 열을 모두 반환 됩니다. 또한 `is_all_columns_found` 열은 모든 개체 및 열에 대해 1을 반환합니다.
+
 ```sql  
-USE AdventureWorks2012;  
-GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
 GO   
-SELECT referenced_id, referenced_entity_name AS table_name, referenced_minor_name as column_name, is_all_columns_found  
-FROM sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');  
+SELECT
+        referenced_id,
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_all_columns_found
+    FROM
+        sys.dm_sql_referenced_entities ('dbo.Proc1', 'OBJECT');
 GO  
 DROP TABLE Table1, Table2;  
 DROP PROC Proc1;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  referenced_id table_name   referenced_column_name  is_all_columns_found  
  ------------- ------------ ----------------------- --------------------  
  935674381     Table2       NULL                    1 
@@ -267,18 +306,24 @@ GO
  
 ### <a name="f-returning-object-or-column-usage"></a>6. 개체 또는 열 사용법 반환  
  다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 절차는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기준으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장된 프로시저 `upsLogError` 에 정의 된... 실행 오류를 캡처하려면 블록을 CATCH 합니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
-  
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
-  
+
 ```sql  
-SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
-FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
-  
+USE AdventureWorks2012;
+GO
+SELECT
+        referenced_entity_name AS table_name,
+        referenced_minor_name  AS column_name,
+        is_selected,  is_updated,  is_select_all
+    FROM
+        sys.dm_sql_referenced_entities(
+            'HumanResources.uspUpdateEmployeePersonalInfo',
+            'OBJECT')
+;
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+ ```console
  table_name    column_name         is_selected is_updated is_select_all  
  ------------- ------------------- ----------- ---------- -------------  
  uspLogError   NULL                0           0          0  

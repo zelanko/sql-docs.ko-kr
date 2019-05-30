@@ -1,7 +1,7 @@
 ---
 title: Service Broker 관리 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,22 +13,23 @@ ms.assetid: b29d7432-d1e5-4bb6-b544-57b3a9430f95
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5f300776f7dfdaa09eaae6bda301d707816155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: a1854d91b2438cad44535ae3efded150a7cc189e
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814691"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265461"
 ---
 # <a name="managing-service-broker"></a>Service Broker 관리
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Smo에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체에 포함 됩니다 합니다 **Microsoft.SqlServer.Management.Smo.Broker** 네임 스페이스는 Microsoft.SqlServer.Smo.dll에 대 한 참조가 필요 합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  SMO에서 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체는 **Microsoft.SqlServer.Management.Smo.Broker** 네임스페이스에 있기 때문에 Microsoft.SqlServer.Smo.dll에 대한 참조가 필요합니다. 클래스 정보를 지원하려면 Microsoft.SqlServer.ServiceBrokerEnum.dll에 대한 참조도 필요합니다.  
   
  SMO는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 구현에 대한 프로그래밍 방식 관리(DDL)를 허용하는 일련의 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 개체를 제공합니다. 프로그래밍 방식 관리에는 메시지 유형, 계약, 큐 및 서비스를 정의하는 작업이 포함됩니다. SMO는 데이터 조작용 도구가 아니라 관리 도구이므로 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 메시지를 보내고 받는 것은 지원하지 않습니다.  
   
- SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> 개체는 최상위 클래스이고 이 클래스 아래에 모든 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 기능이 포함됩니다. 분산 메시징 응용 프로그램에 참여하는 각 데이터베이스에 대해서는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)]를 구현해야 합니다. 따라서 <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식이 됩니다.  
+ SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Database.ServiceBroker%2A> 개체는 최상위 클래스이고 이 클래스 아래에 모든 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 기능이 포함됩니다. 분산 메시징 애플리케이션에 참여하는 각 데이터베이스에 대해서는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 를 구현해야 합니다. 따라서 <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식이 됩니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker> 개체는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 구현을 정의하는 데 사용되는 다음 개체의 컬렉션을 포함합니다.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "47814691"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding> 개체는 [!INCLUDE[ssSB](../../../includes/sssb-md.md)]가 원격 서비스와의 통신 시 사용하는 보안 및 인증 설정을 나타냅니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 개체는 서비스 및 서비스가 정의된 데이터베이스에 대한 위치 정보가 포함된 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 경로를 나타냅니다. 메시지를 배달하려면 경로가 있어야 합니다. 각 데이터베이스에는 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 위치로 지정하는 경로가 기본적으로 포함되어 있습니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute> 개체는 서비스 및 서비스가 정의된 데이터베이스에 대한 위치 정보가 포함된 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 경로를 나타냅니다. 메시지를 배달하려면 경로가 있어야 합니다. 각 데이터베이스에는 현재 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 위치로 지정하는 경로가 기본적으로 포함되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   

@@ -5,18 +5,18 @@ description: 이 빠른 시작에는 SQL Server 2017 또는 SQL Server 2019 Ubun
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/16/2018
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 5d1294c9219fd14d5e1de363069e25a9bc144a6b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803098"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265359"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: SQL Server를 설치 하 고 Ubuntu에서 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "56803098"
 ::: moniker-end
 
 > [!TIP]
-> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 만약 [무인](sql-server-linux-setup.md#unattended) 또는 [오프라인](sql-server-linux-setup.md#offline) 설치 절차에 관심이 있는 경우는, [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조합니다.
+> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 참조 무인 또는 오프 라인 설치 절차에 관심이 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md)합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 사용 하 여 Ubuntu 16.04 컴퓨터가 있어야 **2GB 이상의** 메모리입니다.
 
-사용자 컴퓨터에서 Ubuntu를 설치 하려면로 이동 [ https://www.ubuntu.com/download/server ](https://www.ubuntu.com/download/server)합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
+Ubuntu 16.04를 자신의 컴퓨터에 설치 하려면로 이동 [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/)합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
 
 > [!NOTE]
 > 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다. 
@@ -97,7 +97,7 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
 5. 구성 작업이 완료되면 서비스가 실행되고 있는지 확인합니다.
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. 원격으로 연결하려면 방화벽에서 SQL Server TCP 포트(기본값 1433)를 열어야 할 수도 있습니다.
@@ -143,7 +143,7 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
 5. 구성 작업이 완료되면 서비스가 실행되고 있는지 확인합니다.
 
    ```bash
-   systemctl status mssql-server
+   systemctl status mssql-server --no-pager
    ```
 
 6. 원격으로 연결하려면 방화벽에서 SQL Server TCP 포트(기본값 1433)를 열어야 할 수도 있습니다.

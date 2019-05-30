@@ -1,21 +1,22 @@
 ---
-title: Linux의 SQL Server 명령줄 도구를 설치 합니다. | Microsoft Docs
+title: Linux의 SQL Server 명령줄 도구를 설치 합니다.
+titleSuffix: SQL Server
 description: 이 문서에서는 Linux의 SQL Server 도구를 설치 하는 방법을 설명 합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
+ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801757"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265399"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 및 bcp을 Linux의 SQL Server 명령줄 도구 설치
 
@@ -203,25 +204,21 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-다음 표에서 최신 도구 패키지의 위치를 제공합니다.
+1. 먼저 찾아서 복사 합니다 **mssql 도구** Linux 배포에 대 한 패키지:
 
-| 도구 패키지 | 버전 | 다운로드 |
-|-----|-----|-----|
-| Red Hat RPM 도구 패키지 | 14.0.5.0-1 | [mssql 도구 RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| SLES RPM 도구 패키지 | 14.0.5.0-1 | [mssql 도구 RPM 패키지](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian 패키지 도구 | 14.0.5.0-1 | [mssql 도구 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian 패키지 도구 | 14.0.5.0-1 | [mssql 도구 Debian 패키지](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/mssql-tools/mssql-tools_14.0.5.0-1_amd64.deb) |
+   | Linux 배포 | **mssql 도구** 패키지 위치 |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
 
-이러한 패키지에 따라 달라 집니다 **msodbcsql**를 먼저 설치 해야 합니다. 합니다 **msodbcsql** 패키지 있습니다 종속성 중 하나에서 **unixODBC-개발자** (RPM) 또는 **unixodbc-dev** (Debian). 위치를 **msodbcsql** 패키지는 다음 표에 나열 됩니다.
+1. 또한 찾아서 복사 합니다 **msodbcsql** 종속성이 있는 패키지를 합니다. 합니다 **msodbcsql** 패키지 있습니다 종속성 중 하나에서 **unixODBC-개발자** (Red Hat 및 SLES) 또는 **unixodbc-dev** (Ubuntu). 위치를 **msodbcsql** 패키지는 다음 표에 나열 됩니다.
 
-| msodbcsql package | 버전 | 다운로드 |
-|-----|-----|-----|
-| Red Hat RPM msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| SLES RPM msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql RPM 패키지](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
-| Ubuntu 16.04 Debian msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-| Ubuntu 16.10 Debian msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql Debian 패키지](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/msodbcsql_13.1.6.0-1_amd64.deb) |
-
-이러한 패키지를 수동으로 설치 하려면 다음 단계를 사용 합니다.
+   | Linux 배포 | ODBC 패키지 위치 |
+   |---|---|
+   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
+   | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
 1. **Linux 컴퓨터에 다운로드 한 패키지를 이동**합니다. Linux 컴퓨터에 패키지를 이동 하는 한 가지 방법은 된 다른 컴퓨터를 사용 하 여 패키지를 다운로드 하는 경우는 **scp** 명령입니다.
 
@@ -229,17 +226,17 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
 
     | 플랫폼 | 패키지 설치 명령 |
     |-----|-----|
-    | Red Hat | `sudo yum localinstall msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo yum localinstall mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
-    | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
+    | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
+    | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
+    | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
 1. **누락 된 종속성 해결**: 이 시점에서 종속성 누락 있을 수 있습니다. 그렇지 않은 경우이 단계를 건너뛸 수 있습니다. 일부 경우에서 찾습니다 하 고 이러한 종속성을 설치할 수동으로 해야 합니다.
 
     RPM 패키지의 경우 다음 명령 사용 하 여 필요한 종속성을 검사할 수 있습니다.
 
     ```bash
-    rpm -qpR msodbcsql-13.1.6.0-1.x86_64.rpm
-    rpm -qpR mssql-tools-14.0.5.0-1.x86_64.rpm
+    rpm -qpR msodbcsql-<version>.rpm
+    rpm -qpR mssql-tools-<version>.rpm
     ```
 
     Debian 패키지에 대 한 이러한 종속성을 포함 하는 승인 된 저장소에 액세스할 수 있는 경우 가장 쉬운 해결 방법은 사용 하는 것은 **apt get** 명령:
@@ -254,8 +251,8 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
     이 Debian 패키지에 대해 작동 하지 않는 경우에 다음 명령 사용 하 여 필요한 종속성을 검사할 수 있습니다.
 
     ```bash
-    dpkg -I msodbcsql_13.1.6.0-1_amd64.deb | grep "Depends:"
-    dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
+    dpkg -I msodbcsql_<version>_amd64.deb | grep "Depends:"
+    dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
 ## <a name="next-steps"></a>다음 단계
