@@ -15,12 +15,12 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7db5c3542186c81d33678b9e458495232e9622d5
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 3db06df1676a82e65375483c914671384dd2d3c1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570826"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981193"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |호환성 수준|버전 100([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])에서 업그레이드합니다.|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 더 이상 [지원](https://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
 |데이터베이스 개체|트리거에서 결과 집합을 반환하는 기능|없음|트리거에서 결과 반환|12|  
 |암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|  
+|해시 알고리즘|MD2, MD4, MD5, SHA 및 SHA1 사용은 더 이상 사용되지 않습니다.|대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다.|사용되지 않는 해시 알고리즘|없음|  
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |원격 서버|\@\@remserver|연결된 서버를 사용하여 원격 서버를 대체합니다.|없음|없음|  
 |원격 서버|SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -66,8 +67,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |호환성 수준|데이터베이스 호환성 수준 110 및 120|이후 릴리스로 데이터베이스 및 애플리케이션을 업그레이드하도록 계획합니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 110<br /><br /> 데이터베이스 호환성 수준 120||  
 |XML|인라인 XDR 스키마 생성|XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다.|XMLDATA|181|  
 |Backup 및 Restore 메서드|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
-|Backup 및 Restore 메서드|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
-|Backup 및 Restore 메서드|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
+|백업 및 복원|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|백업 및 복원|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |데이터 정렬|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|없음 이러한 데이터 정렬은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |데이터 정렬|힌디어<br /><br /> 마케도니아어|이러한 데이터 정렬은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 이상에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다. 대신 Macedonian_FYROM_90 및 Indic_General_90을 사용하십시오.|힌디어<br /><br /> 마케도니아어|190<br /><br /> 193|  
 |데이터 정렬|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
@@ -75,8 +76,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |데이터 형식|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |데이터 형식|**timestamp** 데이터 형식에 대한 **rowversion** 구문|**rowversion** 데이터 형식 구문|timestamp|158|  
 |데이터 형식|Null 값을 **timestamp** 열에 삽입하는 기능|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
-|데이터 형식|'text in row' 테이블 옵션|**varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|Text in row 테이블 옵션|9|  
-|데이터 형식|데이터 형식:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.|데이터 형식: **text**, **ntext** 또는 **image**|4|  
+|데이터 형식|'text in row' 테이블 옵션|**varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|Text in row 테이블 옵션|9|  
+|데이터 형식|데이터 형식:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.|데이터 형식: **text**, **ntext** 또는 **image**|4|  
 |데이터베이스 관리|sp_attach_db<br /><br /> sp_attach_single_file_db|FOR ATTACH 옵션을 사용하는 CREATE DATABASE 문. 하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성하려면 FOR ATTACH_REBUILD_LOG 옵션을 사용합니다.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |데이터베이스 개체|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 및 ALTER TABLE의 DEFAULT 키워드|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |데이터베이스 개체|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 및 ALTER TABLE의 CHECK 키워드|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -96,7 +97,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |확장 저장 프로시저 프로그래밍|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|대신 CLR 통합을 사용하십시오.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |확장 저장 프로시저|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|CREATE LOGIN 사용<br /><br /> SERVERPROPERTY의 DROP LOGIN IsIntegratedSecurityOnly 인수 사용|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |함수|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|해시 알고리즘|MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 호환성 수준 130에서 사용할 수 없습니다.|SHA2_256 또는 SHA2_512를 사용합니다.|사용되지 않는 해시 알고리즘||  
 |고가용성|데이터베이스 미러링|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 현재 사용 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]을 지원하지 않는 경우에는 로그 전달을 사용하십시오.|DATABASE_MIRRORING|267|  
 |인덱스 옵션|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |인덱스 옵션|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문|현재 구문을 사용하도록 문을 다시 작성해야 합니다.|INDEX_OPTION|33|  
@@ -162,8 +162,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용|없음|간접 TVF 힌트|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 구문:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |기타|DB-Library<br /><br /> C 언어용 Embedded SQL|[!INCLUDE[ssDE](../includes/ssde-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.|없음|없음|  
-|Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.|SQL Server 프로파일러|없음|  
-|Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server 프로파일러|없음|  
+|도구|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.|SQL Server Profiler|없음|  
+|도구|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|없음|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace 네임 스페이스(SQL Server 추적 및 재생 개체용 API 포함)|추적 구성: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 추적 읽기: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 추적 재생: 없음|||  
 |SQL 추적 저장 프로시저, 함수 및 카탈로그 뷰|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|
 |Set 옵션|**SET ROWCOUNT** , **INSERT**및 **UPDATE**문에 대한 **DELETE**|TOP 키워드|SET ROWCOUNT|109|  

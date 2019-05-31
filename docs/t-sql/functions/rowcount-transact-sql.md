@@ -19,15 +19,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: e00d4a4c91aeda1cb53731f9e3808a895d79194c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805709"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945389"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54805709"
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 다음과 같은 방법으로 @@ROWCOUNT의 값을 설정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "54805709"
   
 -   @@ROWCOUNT을 0으로 다시 설정하지만 클라이언트에게 값을 반환하지 않습니다.  
   
- 단순한 할당을 수행하는 문은 항상 @@ROWCOUNT 값을 1로 설정합니다. 클라이언트에게 행은 보내지지 않습니다. 이러한 문의 예로는 SET @*local_variable*, RETURN, READTEXT가 있고 SELECT GETDATE() 또는 SELECT **'***제네릭 텍스트***'** 와 같이 쿼리 문이 없이 선택합니다.  
+ 단순한 할당을 수행하는 문은 항상 @@ROWCOUNT 값을 1로 설정합니다. 클라이언트에게 행은 보내지지 않습니다. 이러한 명령문의 예는 다음과 같습니다. SET @*local_variable*, RETURN, READTEXT가 있고 SELECT GETDATE() 또는 SELECT **'***제네릭 텍스트***'** 와 같이 쿼리 문이 없이 선택합니다.  
   
  쿼리에서 할당을 수행하거나 쿼리에 RETURN을 사용하는 문은 @@ROWCOUNT 값을 쿼리의 영향을 받거나 쿼리가 읽은 행 수로 설정합니다. 예: SELECT @*local_variable* = c1 FROM t1  
   

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52b121f7b56032856d2c844c230b915069bf69ef
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c03708b7cb59bf4fce03a1c2c2d8e73b10466451
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980379"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935508"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "53980379"
 ###  <a name="gml"></a> GML 텍스트 입력으로부터 지리 인스턴스 구성  
  **geography** 데이터 형식은 **geography** 인스턴스의 XML 표현인 GML에서 **geography** 인스턴스를 생성하는 메서드를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
- Geography Markup Language에 대한 자세한 내용은 OGC [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
+ Geography Markup Language에 대한 자세한 내용은 OGC 사양: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
  **GML 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [GeomFromGML&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

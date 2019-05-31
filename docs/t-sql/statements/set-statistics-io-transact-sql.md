@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760126"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983081"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ SET STATISTICS IO { ON | OFF }
 |**논리적 읽기 수**|데이터 캐시에서 읽은 페이지 수입니다.|  
 |**물리적 읽기 수**|디스크에서 읽은 페이지 수입니다.|  
 |**미리 읽기 수**|쿼리에 대해 캐시에 넣어진 페이지 수입니다.|  
-|**LOB 논리적 읽기 수**|데이터 캐시에서 읽은 **text**, **ntext**, **image** 또는 큰 값 유형(**varchar(max)**, **nvarchar(max)**, **varbinary(max)**)의 페이지 수입니다.|  
-|**LOB 물리적 읽기 수**|디스크에서 읽은 **text**, **ntext**, **image** 또는 큰 값 유형의 페이지 수입니다.|  
-|**LOB 미리 읽기 수**|쿼리에 대해 캐시에 배치된 **text**, **ntext**, **image** 또는 큰 값 유형의 페이지 수입니다.|  
-  
- SET STATISTICS IO 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
-  
+|**LOB 논리적 읽기 수**|데이터 캐시에서 읽은 페이지 수입니다. **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 columnstore 인덱스 페이지가 포함됩니다.|  
+|**LOB 물리적 읽기 수**|디스크에서 읽은 페이지 수입니다. **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 columnstore 인덱스 페이지가 포함됩니다.|  
+|**LOB 미리 읽기 수**|쿼리에 대해 캐시에 넣어진 페이지 수입니다. **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 columnstore 인덱스 페이지가 포함됩니다.|
+
+ SET STATISTICS IO 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.
+
 > [!NOTE]  
->  Transact-SQL 문이 LOB 열을 검색할 때 일부 LOB 검색 작업에 대해서는 LOB 트리를 여러 번 이동해야 할 수 있습니다. 이 경우 SET STATISTICS IO에서 예상 논리적 읽기 수보다 많이 보고할 수 있습니다.  
-  
-## <a name="permissions"></a>Permissions  
+> Transact-SQL 문이 LOB 열을 검색할 때 일부 LOB 검색 작업에 대해서는 LOB 트리를 여러 번 이동해야 할 수 있습니다. 이 경우 SET STATISTICS IO에서 예상 논리적 읽기 수보다 많이 보고할 수 있습니다.
+
+## <a name="permissions"></a>사용 권한  
  SET STATISTICS IO 옵션을 사용하려면 사용자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한은 필요하지 않습니다.  
   
 ## <a name="examples"></a>예  

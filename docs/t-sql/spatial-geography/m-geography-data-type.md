@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - M method
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9be06ef22018256fd0df0840af055cdfacd04ee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87ca41dc0b2b00db06acedb78c7196f92274180a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741191"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937653"
 ---
 # <a name="m-geography-data-type"></a>M(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47741191"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** 인스턴스가 **지점**이 아닌 경우 및 해당 값이 설정되지 않은 모든 **Point** 인스턴스의 경우 이 속성의 값은 Null입니다.  

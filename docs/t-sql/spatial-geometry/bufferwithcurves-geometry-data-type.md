@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9adca69b9f275fae20eef2b5bb9f619c034556c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654221"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936164"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
   
-### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>3. 빈 GeometryCollection을 반환하고 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 빈 GeometryCollection을 반환하고 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 *distance* 매개 변수가 -2와 같을 때 생기는 결과를 보여 줍니다.  
   
 ```
@@ -102,7 +102,7 @@ SQL Server 반환 형식: **geometry**
   
  이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY`를 반환합니다.  
   
-### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>4. 매개 변수 값 = 0인 BufferWithCurves() 호출  
+### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 매개 변수 값 = 0인 BufferWithCurves() 호출  
  다음 예에서는 호출 **geometry** 인스턴스의 복사본을 반환합니다.  
   
 ```
@@ -110,7 +110,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(0).ToString();
  ```  
   
-### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>5. 매우 작고 0이 아닌 매개 변수 값으로 BufferWithCurves() 호출  
+### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 매우 작고 0이 아닌 매개 변수 값으로 BufferWithCurves() 호출  
  다음 예에서도 호출 **geometry** 인스턴스의 복사본을 반환합니다.  
   
 ```
@@ -119,7 +119,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(@distance).ToString();
  ```  
   
-### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>6. 매개 변수 값 > 0인 BufferWithCurves() 호출  
+### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. 매개 변수 값 > 0인 BufferWithCurves() 호출  
  다음 예에서는 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ```
@@ -127,7 +127,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(2).ToString();
  ```  
   
-### <a name="g-passing-a-valid-string-parameter"></a>7. 올바른 문자열 매개 변수 전달  
+### <a name="g-passing-a-valid-string-parameter"></a>G. 올바른 문자열 매개 변수 전달  
  다음 예에서는 앞에서 설명한 것과 동일하지만 문자열 매개 변수가 메서드에 전달되는 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ```
@@ -135,7 +135,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves('2').ToString();
  ```  
   
-### <a name="h-passing-an-invalid-string-parameter"></a>8. 잘못된 문자열 매개 변수 전달  
+### <a name="h-passing-an-invalid-string-parameter"></a>H. 잘못된 문자열 매개 변수 전달  
  다음 예에서는 오류가 발생합니다.  
   
 ```

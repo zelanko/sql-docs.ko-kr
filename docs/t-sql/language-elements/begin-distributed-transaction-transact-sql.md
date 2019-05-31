@@ -24,15 +24,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 866b1e7f94645fb9336ce75e48afa8f8fb437895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5866bee12907bbcd9765639fe6a54b94698b0a9c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746772"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980573"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션에 포함된 세션은 분산 트랜잭션에 명시적으로 참여하도록 다른 세션에 전달할 수 있는 트랜잭션 개체를 얻을 수 없습니다. 원격 서버가 트랜잭션에 참여하는 유일한 방법은 원격 저장 프로시저 호출이나 분산 쿼리의 대상이 되는 것입니다.  
   
- 로컬 트랜잭션에서 분산 쿼리를 실행하면 대상 OLE DB 데이터 원본이 ITransactionLocal을 지원할 경우 해당 트랜잭션이 자동으로 분산 트랜잭션으로 승격됩니다.  대상 OLE DB 데이터 원본이 ITransactionLocal을 지원하지 않을 경우 분산 쿼리에서 읽기 전용 작업만 허용됩니다.  
+ 로컬 트랜잭션에서 분산 쿼리를 실행하면 대상 OLE DB 데이터 원본이 ITransactionLocal을 지원할 경우 해당 트랜잭션이 자동으로 분산 트랜잭션으로 승격됩니다. 대상 OLE DB 데이터 원본이 ITransactionLocal을 지원하지 않을 경우 분산 쿼리에서 읽기 전용 작업만 허용됩니다.  
   
  분산 트랜잭션에 이미 참여한 세션은 원격 서버를 참조하는 원격 저장 프로시저 호출을 수행합니다.  
   
- **sp_configure remote proc trans** 옵션은 로컬 트랜잭션에서 원격 저장 프로시저를 호출하면 자동으로 로컬 트랜잭션이 MS DTC에서 관리되는 분산 트랜잭션으로 승격되도록 할지를 제어합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS를 사용하여 **sp_configure remote proc trans**에서 설정한 인스턴스 기본값을 무시할 수 있습니다. 이 옵션을 on으로 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며  COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. **sp_configure remote proc trans** 옵션이 ON인 경우 BEGIN TRANSACTION 대신 BEGIN DISTRIBUTED TRANSACTION을 실행하도록 응용 프로그램을 다시 작성할 필요 없이 로컬 트랜잭션의 원격 저장 프로시저 호출이 분산 트랜잭션의 일부로 자동 보호됩니다.  
+ **sp_configure remote proc trans** 옵션은 로컬 트랜잭션에서 원격 저장 프로시저를 호출하면 자동으로 로컬 트랜잭션이 MS DTC에서 관리되는 분산 트랜잭션으로 승격되도록 할지를 제어합니다. 연결 수준의 SET 옵션 REMOTE_PROC_TRANSACTIONS를 사용하여 **sp_configure remote proc trans**에서 설정한 인스턴스 기본값을 무시할 수 있습니다. 이 옵션을 설정하면 원격 저장 프로시저 호출에 의해 로컬 트랜잭션이 분산 트랜잭션으로 승격됩니다. MS DTC 트랜잭션을 만든 연결은 트랜잭션 주관자가 되며 COMMIT TRANSACTION은 MS DTC 통합 커밋을 시작합니다. **sp_configure remote proc trans** 옵션이 ON인 경우 BEGIN TRANSACTION 대신 BEGIN DISTRIBUTED TRANSACTION을 실행하도록 애플리케이션을 다시 작성할 필요 없이 로컬 트랜잭션의 원격 저장 프로시저 호출이 분산 트랜잭션의 일부로 자동 보호됩니다.  
   
  분산 트랜잭션 환경 및 프로세스에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator 설명서를 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [BEGIN TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [COMMIT TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
+ [COMMIT TransactION&#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   
  [ROLLBACK TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   

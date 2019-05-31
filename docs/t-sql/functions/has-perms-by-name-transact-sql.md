@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169213"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947959"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  *securable_class*  
  사용 권한을 테스트한 보안 개체 클래스의 이름입니다. *securable_class*는 **nvarchar(60)** 형식의 스칼라 식입니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA**, **USER** 중 하나로 설정해야 합니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 securable_class 인수는 **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** 또는 **USER** 중 하나로 설정되어야 합니다.  
   
  *permission*  
  확인할 사용 권한 이름을 나타내는 **sysname** 형식의 Null이 아닌 스칼라 식입니다. 기본값은 없습니다. 사용 권한 이름 ANY는 와일드카드입니다.  
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 이름을 나타내는 **sysname** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[**_sub name_**]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'**_sub name_**'** 을 사용하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 하위 보안 개체에 **'[** _sub name_ **]'** 형식의 대괄호를 사용할 수 없습니다. 대신 **'** _sub name_ **'** 을 사용하세요.  
   
  *sub-securable_class*  
  사용 권한이 테스트되는 대상 보안 개체 하위 엔터티의 클래스를 나타내는 **nvarchar(60)** 형식의 선택적 스칼라 식입니다. 기본값은 NULL입니다.  
@@ -69,7 +69,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 sub-securable_class 인수는 securable_class 인수가 **OBJECT**로 설정된 경우에만 유효합니다. securable_class 인수가 **OBJECT**로 설정된 경우 sub-securable_class 인수는 **COLUMN**으로 설정해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
  쿼리가 실패하면 NULL을 반환합니다.  
   
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  사용되는 데이터 정렬은 다음과 같습니다.  
   
--   현재 데이터베이스 데이터 정렬: 스키마에 포함되지 않은 보안 개체를 포함하는 데이터베이스 수준 보안 개체, 한 부분 또는 두 부분으로 된 스키마 범위 보안 개체, 세 부분으로 된 이름을 사용할 경우 대상 데이터베이스  
+-   현재 데이터베이스 데이터 정렬: 스키마에 포함되지 않은 보안 개체를 포함하는 데이터베이스 수준 보안 개체, 한 부분 또는 두 부분으로 구성된 스키마 범위 보안 개체, 세 부분으로 구성된 이름을 사용할 경우 대상 데이터베이스.  
   
--   master 데이터베이스 데이터 정렬: 서버 수준 보안 개체  
+-   master 데이터베이스 데이터 정렬: 서버 수준 보안 개체.  
   
 -   열 수준 확인에는 'ANY'를 사용할 수 없습니다. 적절한 사용 권한을 지정해야 합니다.  
   
@@ -120,13 +120,13 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  
 ```  
   
-### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>3. 현재 데이터베이스에서 사용 권한이 있는지 확인  
+### <a name="c-do-i-have-any-permissions-in-the-current-database"></a>C. 현재 데이터베이스에서 사용 권한이 있는지 확인  
   
 ```  
 SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'ANY');  
 ```  
   
-### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>4. 현재 데이터베이스에서 Pd 데이터베이스 보안 주체에 부여된 사용 권한 확인  
+### <a name="d-does-database-principal-pd-have-any-permission-in-the-current-database"></a>D. 현재 데이터베이스에서 Pd 데이터베이스 보안 주체에 부여된 사용 권한 확인  
  `Pd` 보안 주체에 대한 IMPERSONATE 권한이 호출자에게 있다고 가정합니다.  
   
 ```  
@@ -138,7 +138,7 @@ REVERT;
 GO  
 ```  
   
-### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>5. S 스키마에서 프로시저와 테이블을 만들 수 있는지 확인  
+### <a name="e-can-i-create-procedures-and-tables-in-schema-s"></a>E. S 스키마에서 프로시저와 테이블을 만들 수 있는지 확인  
  다음 예에는 `ALTER`에 대한 `S` 권한과 데이터베이스에 대한 `CREATE PROCEDURE` 권한이 필요합니다. 테이블의 경우에도 비슷합니다.  
   
 ```  
@@ -148,7 +148,7 @@ SELECT HAS_PERMS_BY_NAME(db_name(), 'DATABASE', 'CREATE PROCEDURE')
     HAS_PERMS_BY_NAME('S', 'SCHEMA', 'ALTER') AS _can_create_tables;  
 ```  
   
-### <a name="f-which-tables-do-i-have-select-permission-on"></a>6. 어떤 테이블에 대해 SELECT 권한이 있는지 확인  
+### <a name="f-which-tables-do-i-have-select-permission-on"></a>F. 어떤 테이블에 대해 SELECT 권한이 있는지 확인  
   
 ```  
 SELECT HAS_PERMS_BY_NAME  
@@ -156,7 +156,7 @@ SELECT HAS_PERMS_BY_NAME
     'OBJECT', 'SELECT') AS have_select, * FROM sys.tables  
 ```  
   
-### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>7. AdventureWorks2012의 SalesPerson 테이블에 대한 INSERT 권한이 있는지 확인  
+### <a name="g-do-i-have-insert-permission-on-the-salesperson-table-in-adventureworks2012"></a>G. AdventureWorks2012의 SalesPerson 테이블에 대한 INSERT 권한이 있는지 확인  
  다음 예에서는 `AdventureWorks2012`가 현재 데이터베이스 컨텍스트이고 두 부분으로 된 이름을 사용한다고 가정합니다.  
   
 ```  
@@ -170,7 +170,7 @@ SELECT HAS_PERMS_BY_NAME('AdventureWorks2012.Sales.SalesPerson',
     'OBJECT', 'INSERT');  
 ```  
   
-### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>8. T 테이블의 어떤 열에 대해 SELECT 권한이 있는지 확인  
+### <a name="h-which-columns-of-table-t-do-i-have-select-permission-on"></a>H. T 테이블의 어떤 열에 대해 SELECT 권한이 있는지 확인  
   
 ```  
 SELECT name AS column_name,   

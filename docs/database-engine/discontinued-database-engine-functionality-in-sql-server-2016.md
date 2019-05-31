@@ -34,12 +34,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb9338a5951f480baa052aff771f3d149282f18a
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: e69f6fe697516588c46f51c52560c037ac6fcbce
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350077"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981153"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,16 @@ ms.locfileid: "51350077"
   
 ## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 는 64비트 응용 프로그램입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.  
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 는 64비트 애플리케이션입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.  
   
--   호환성 수준 90이 중단되었습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
+- 호환성 수준 90이 중단되었습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
 
--   ActiveX 하위 시스템이 중단되었습니다. 명령줄 또는 PowerShell 스크립트를 대신 사용 합니다.
+- ActiveX 하위 시스템이 중단되었습니다. 명령줄 또는 PowerShell 스크립트를 대신 사용 합니다.
   
 ## <a name="previous-versions"></a>이전 버전  
   
--   [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [SQL Server 2012에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
--   [SQL Server 2008에서 지원되지 않는 데이터베이스 엔진 기능](discontinued-database-engine-functionality-in-sql-server-2016.md))  
-  
+- [SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능](http://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 이후에는 지원되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 복제에서 사용되지 않는 기능](../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  

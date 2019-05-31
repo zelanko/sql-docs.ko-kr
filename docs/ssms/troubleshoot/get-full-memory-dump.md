@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822511"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983124"
 ---
 # <a name="get-full-memory-dump"></a>전체 메모리 덤프 가져오기
 
@@ -88,6 +88,15 @@ SSMS에서 OutOfMemoryException 문제를 해결하기 위한 진단 정보를 �
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. 폴더를 압축합니다.
+
+## <a name="share-the-information"></a>정보 공유
+
+1. SSMS 팀과 정보를 공유하려면 https://aka.ms/sqlfeedback에 문제를 기록합니다.
+
+2. 그런 다음, 수집된 메모리 덤프 파일을 파일이 수집될 수 있는 OneDrive(또는 이와 동등한)에 공유합니다.
+
+    > [!Important]
+    > 메모리 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

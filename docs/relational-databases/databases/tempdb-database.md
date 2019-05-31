@@ -2,7 +2,7 @@
 title: tempdb 데이터베이스 | Microsoft 문서
 description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다.
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265370"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994237"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -158,7 +158,7 @@ ms.locfileid: "56265370"
 - 데이터베이스를 OFFLINE으로 설정
 - 데이터베이스나 주 파일 그룹을 READ_ONLY로 설정
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 모든 사용자가 tempdb에 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. tempdb 연결 권한을 취소하여 사용자가 tempdb를 사용하지 못하도록 할 수 있지만 일부 일상적인 작업에서 tempdb를 사용해야 하므로 권장하지 않습니다.  
 
@@ -215,6 +215,43 @@ tempdb 데이터베이스를 고속 I/O 하위 시스템에 배치합니다. 직
 tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를 참조하세요.
 
 [TEMPDB – 파일, 추적 플래그 및 업데이트](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터
+
+tempdb 메타데이터 경합은 역사적으로 SQL Server에서 실행하는 많은 워크로드의 확장성에 대한 병목 현상이었습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+이 구성 변경이 적용되려면 서비스를 다시 시작해야 합니다.
+
+이 구현에는 주의해야 하는 다음과 같은 몇 가지 제한 사항이 있습니다.
+
+1. 기능 설정 및 해제가 동적으로 이루어지지 않습니다. tempdb의 구조를 변경해야 하는 고유한 사항 때문에 이 기능을 설정하거나 해제하려면 다시 시작해야 합니다.
+2. 단일 트랜잭션이 둘 이상의 데이터베이스에서 메모리 최적화 테이블에 액세스할 수 없습니다.  즉, 사용자 데이터베이스에 메모리 최적화 테이블을 포함하는 트랜잭션은 동일한 트랜잭션에서 tempdb 시스템 보기에 액세스할 수 없습니다.  사용자 데이터베이스의 메모리 최적화 테이블과 동일한 트랜잭션에서 temp 시스템 보기에 액세스를 시도하면 다음과 같은 오류가 발생합니다.
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    예:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. 메모리 최적화 테이블에 대한 쿼리는 잠금 및 분리 힌트를 지원하지 않으므로 메모리 최적화 tempdb 카탈로그 보기에 대한 쿼리는 잠금 및 분리 힌트를 유지하지 않습니다. SQL Server의 다른 시스템 카탈로그 보기와 마찬가지로 시스템 보기에 대한 모든 트랜잭션은 READ COMMITTED(또는 이 경우 READ COMMITTED SNAPSHOT) 분리 내에 있습니다.
+4. 메모리 최적화 tempdb 메타데이터가 활성화된 경우 임시 테이블에 대한 columnstore 인덱스에 일부 문제가 있을 수 있습니다. 이 미리 보기 릴리스에서는 메모리 최적화 tempdb 메타데이터를 사용하는 경우 임시 테이블에 대한 columnstore 인덱스를 사용하지 않는 것이 좋습니다.
+
+> [!NOTE] 
+> 이 제한 사항은 tempdb 시스템 보기를 참조하는 경우에만 적용되며 원하는 경우 사용자 데이터베이스의 메모리 최적화 테이블을 액세스할 때 동일한 트랜잭션에서 임시 테이블을 만들 수 있습니다.
+
+다음 T-SQL 명령을 사용하여 tempdb가 메모리 최적화인지 여부를 확인할 수 있습니다.
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 tempdb 용량 계획
 

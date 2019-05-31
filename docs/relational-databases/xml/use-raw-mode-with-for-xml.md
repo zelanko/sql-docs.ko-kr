@@ -19,16 +19,18 @@ ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 40d39287c4dfbbe4fdc70ea7f15ea429a98113b7
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175015"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있는 XML 요소 또는 선택적으로 제공된 요소 이름으로 변환합니다. 기본적으로 행 집합에서 NULL이 아닌 각 열 값은 \<row> 요소의 특성으로 매핑됩니다. ELEMENTS 지시어가 FOR XML 절에 추가된 경우 각 열 값은 \<row> 요소의 하위 요소로 매핑됩니다. ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 xsi:nil=`"`true`"`특성이 있는 요소로 매핑할 수 있습니다.  
+
+RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있는 XML 요소 또는 선택적으로 제공된 요소 이름으로 변환합니다. 기본적으로 행 집합에서 NULL이 아닌 각 열 값은 \<row> 요소의 특성으로 매핑됩니다. ELEMENTS 지시어가 FOR XML 절에 추가된 경우 각 열 값은 \<row> 요소의 하위 요소로 매핑됩니다. ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 `xsi:nil="true"` 특성이 있는 요소로 매핑할 수 있습니다.
   
  결과 XML에 대한 스키마를 요청할 수 있습니다. XMLDATA 옵션을 지정하면 인라인 XDR 스키마가 반환됩니다. XMLSCHEMA 옵션을 지정하면 인라인 XSD 스키마가 반환됩니다. 스키마는 데이터 시작 부분에 표시됩니다. 결국 모든 최상위 요소에 대해 스키마 네임스페이스 참조가 반복됩니다.  
   
@@ -56,7 +58,7 @@ ms.locfileid: "58510180"
  [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)   
- [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
+ [SELECT(Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
+ [FOR XML(SQL Server)](../../relational-databases/xml/for-xml-sql-server.md)
   
   

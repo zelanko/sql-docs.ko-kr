@@ -1,7 +1,7 @@
 ---
 title: GRANT Database Permissions(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828403"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993481"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
 
@@ -104,7 +104,7 @@ Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> 일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
+> 일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.
 
 데이터베이스는 사용 권한 계층에서 해당 데이터베이스의 부모인 서버에 포함된 보안 개체입니다. 다음 표에는 데이터베이스에 대해 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.
 
@@ -175,6 +175,7 @@ Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 |Delete|CONTROL|CONTROL SERVER|
 |CREATE 문을 실행하기 전에|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -189,7 +190,7 @@ Windows 그룹으로 매핑된 데이터베이스 사용자를 지정합니다.
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.
 

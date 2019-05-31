@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c8be3a1568e45f62e393ce07f5fd174d5e3949ef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64568345"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064466"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -71,8 +71,8 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
     | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -173,6 +173,8 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
 > [!NOTE]
 > 데이터베이스 호환성 수준 130 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+>
+> SQL Server 2017(14.x)에서만 INTERLEAVED_EXECUTION_TVF 옵션에 **DISABLE**_INTERLEAVED_EXECUTION_TVF의 이전 이름이 있었습니다.
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 

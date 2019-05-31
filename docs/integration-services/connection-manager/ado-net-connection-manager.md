@@ -1,7 +1,7 @@
 ---
 title: ADO.NET 연결 관리자 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b4078c1b6bea837ae7f5f9b1ffc9529076660059
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
+ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728418"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66221170"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
 
@@ -87,6 +87,74 @@ ms.locfileid: "65728418"
  **Delete**  
  연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
   
+### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 리소스 인증을 위한 관리 ID
+[Azure Data Factory의 Azure-SSIS 통합 런타임](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)에 대해 SSIS 패키지를 실행하는 경우 Azure SQL Database(또는 Managed Instance) 인증을 위해 데이터 팩터리와 연결된 [관리 ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)를 사용할 수 있습니다. 지정된 팩터리는 이 ID를 사용하여 데이터베이스에 액세스하고 해당 데이터베이스에 대해 데이터를 복사할 수 있습니다.
+
+Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
+
+1. **Azure AD에 그룹을 만듭니다.** 관리 ID를 그룹의 멤버로 만듭니다.
+    
+   1. [Azure Portal에서 데이터 팩터리 관리 ID를 찾습니다](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity). 데이터 팩터리의 **속성**으로 이동합니다. **관리 ID 개체 ID**를 복사합니다.
+    
+   1. [Azure AD PowerShell](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2) 모듈을 설치합니다. `Connect-AzureAD` 명령을 사용하여 로그인합니다. 다음 명령을 실행하여 그룹을 만들고 관리 ID를 멤버로 추가합니다.
+      ```powershell
+      $Group = New-AzureADGroup -DisplayName "<your group name>" -MailEnabled $false -SecurityEnabled $true -MailNickName "NotSet"
+      Add-AzureAdGroupMember -ObjectId $Group.ObjectId -RefObjectId "<your data factory managed identity object ID>"
+      ```
+    
+1. 아직 수행하지 않은 경우 Azure Portal에서 Azure SQL Server에 대해 **[Azure Active Directory 관리자를 프로비저닝](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server)** 합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 3단계 및 4단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
+
+1. Azure AD 그룹에 대해 **[포함된 데이터베이스 사용자를 만듭니다](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities)** . ALTER ANY USER 이상의 사용 권한을 가진 Azure AD ID를 통해 SSMS와 같은 도구를 사용하여 데이터를 복사하려는 데이터베이스에 연결합니다. 다음 T-SQL을 실행합니다. 
+    
+    ```sql
+    CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
+    ```
+
+1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 **Azure AD에 필요한 사용 권한을 부여**합니다. 예를 들어 다음 코드를 실행합니다.
+
+    ```sql
+    ALTER ROLE [role name] ADD MEMBER [your AAD group name];
+    ```
+
+Azure SQL Database Managed Instance에 대해 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
+    
+1. 아직 수행하지 않은 경우 Azure Portal에서 관리형 인스턴스에 대해 **[Azure Active Directory 관리자를 프로비저닝](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** 합니다. Azure AD 관리자는 Azure AD 사용자 또는 Azure AD 그룹이 될 수 있습니다. 관리 ID를 가진 그룹에 관리자 역할을 부여하는 경우 2단계~5단계를 건너뛰세요. 관리자는 데이터베이스에 대한 전체 액세스 권한을 가집니다.
+
+1. **[Azure Portal에서 데이터 팩터리 관리 ID를 찾습니다](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . 데이터 팩터리의 **속성**으로 이동합니다. **관리 ID 애플리케이션 ID**(**관리 ID 개체 ID**가 아닌)를 복사합니다.
+
+1. **데이터 팩터리 관리 ID를 이진 형식으로 변환합니다**. SQL/Active Directory 관리자 계정을 통해 SSMS와 같은 도구를 사용하여 관리형 인스턴스의 **마스터** 데이터베이스에 연결합니다. **마스터** 데이터베이스에 대해 다음 T-SQL을 실행하여 관리 ID 애플리케이션 ID를 이진 형식으로 가져옵니다.
+    
+    ```sql
+    DECLARE @applicationId uniqueidentifier = '{your managed identity application ID}'
+    select CAST(@applicationId AS varbinary)
+    ```
+
+1. Azure SQL Database Managed Instance에서 **데이터 팩터리 관리 ID를 사용자로 추가**합니다. **마스터** 데이터베이스에 대해 다음 T-SQL을 실행합니다.
+    
+    ```sql
+    CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
+    ```
+
+1. **데이터 팩터리 관리 ID에 필요한 사용 권한을 부여합니다**. 데이터를 복사할 데이터베이스에 대해 다음 T-SQL을 실행합니다.
+
+    ```sql
+    CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
+    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ```
+
+끝으로, ADO.NET 연결 관리자에 대해 **관리 ID 인증을 구성**합니다. 이 작업을 수행하는 두 가지 옵션이 있습니다.
+    
+1. 디자인 타임에 구성합니다. SSIS 디자이너에서 ADO.NET 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 **속성 창**을 엽니다. 속성 **ConnectUsingManagedIdentity**를 **True**로 업데이트합니다.
+    > [!NOTE]
+    >  현재 연결 관리자 속성 **ConnectUsingManagedIdentity**는 SSIS Designer 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server에서 SSIS 패키지를 실행하는 경우 적용되지 않습니다(관리 ID 인증이 작동하지 않음).
+    
+1. 런타임에 구성합니다. [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) 또는 [Azure Data Factory SSIS 패키지 작업 실행](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)을 통해 패키지를 실행하는 경우 ADO.NET 연결 관리자를 찾아 해당 속성 **ConnectUsingManagedIdentity**를 **True**로 설정합니다.
+    > [!NOTE]
+    >  Azure-SSIS 통합 런타임에서 ADO.NET 연결 관리자에 미리 구성된 모든 다른 인증 방법(예: 통합 인증, 암호)은 관리 ID 인증을 사용하여 데이터베이스 연결을 설정하는 데 사용되는 경우 **재정의**됩니다.
+
+> [!NOTE]
+>  기존 패키지에서 관리 ID 인증을 구성하려면 새 연결 관리자 속성 **ConnectUsingManagedIdentity**가 SSIS 프로젝트의 모든 ADO.NET 연결 관리자에 자동으로 추가되도록 적어도 [최신 SSIS 디자이너](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)를 한 번 이상 사용하여 SSIS 프로젝트를 다시 빌드하고 해당 SSIS 프로젝트를 Azure-SSIS 통합 런타임에 다시 배포해야 합니다.
+
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

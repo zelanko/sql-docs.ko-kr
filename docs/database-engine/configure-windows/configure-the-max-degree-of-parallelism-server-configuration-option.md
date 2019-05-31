@@ -17,17 +17,17 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e2261b8bf307d7d735957d52006b5b0f75ae0cc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65570808"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936362"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] MAXDOP(max degree of parallelism) [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 최적 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] MAXDOP(max degree of parallelism) [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 최적 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

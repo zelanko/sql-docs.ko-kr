@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull method (geography)
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6f44a22b200eba0948ceb1bd036d51ceff884442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c823f686909be54890b3c1686da615233c3e9da2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666861"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937133"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47666861"
  SELECT @g.STConvexHull().ToString();
  ```  
   
-### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>3. 비볼록 Polygon 인스턴스의 볼록 집합 찾기  
+### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>C. 비볼록 Polygon 인스턴스의 볼록 집합 찾기  
  다음 예에서는 `STConvexHull()`을 사용하여 비볼록 `Polygon` 인스턴스의 볼록 집합을 찾습니다.  
   
 ```  
@@ -73,7 +73,7 @@ ms.locfileid: "47666861"
  SELECT @g.STConvexHull().ToString();  
 ```  
   
-### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>4. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
+### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
  다음 예에서는 봉투 각도가 90도보다 큰 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572826"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981762"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>인수  
 **@** _local_variable_  
-**cursor**, **text**, **ntext**, **image** 또는 **table**을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호(**@**)로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다.  
+**cursor**, **text**, **ntext**, **image** 또는 **table**을 제외한 모든 형식의 변수 이름입니다. 변수 이름은 기호( **@** )로 시작해야 합니다. 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다.  
   
 *property_name*  
 사용자 정의 형식의 속성입니다.  
@@ -80,9 +80,9 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 CLR(공용 언어 런타임) 사용자 정의 형식의 이름입니다.  
   
 `{ . | :: }`  
-CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
+CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표( **.** )를 사용합니다. 정적 메서드의 경우 두 개의 콜론( **::** )을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
-_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 하나 이상의 인수를 사용하여 한 형식의 인스턴스 상태를 수정하는 사용자 정의 형식 메서드입니다. 정적 메서드는 공용이어야 합니다.  
   
 **@** _SQLCLR_local_variable_  
@@ -167,14 +167,14 @@ READ ONLY
 이 커서를 통해 업데이트할 수 없습니다. UPDATE 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다. 이 키워드는 READ와 ONLY 사이에 밑줄 대신 공백이 있어 앞의 READ_ONLY와는 다른 키워드입니다.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [**,**...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
+커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [ **,** ...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
 변수를 선언하면 이 변수는 NULL로 초기화됩니다. SET 문을 사용하여 NULL이 아닌 값을 선언된 변수에 할당할 수 있습니다. 변수에 값을 할당한 SET 문은 단일 값을 반환합니다. 여러 변수를 초기화할 때는 지역 변수마다 별도의 SET 문을 사용합니다.  
   
 변수는 식에서만 사용할 수 있으며 개체 이름이나 키워드 대신 사용할 수 없습니다. 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 생성하려면 EXECUTE를 실행합니다.  
   
-SET **@**_cursor_variable_ 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없습니다. SET **@**_cursor_variable_ = CURSOR... 구문을 사용하면, 커서가 로컬 커서 데이터베이스 옵션의 기본 설정에 따라 GLOBAL 또는 LOCAL로 만들어집니다.  
+SET **@** _cursor_variable_ 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없습니다. SET **@** _cursor_variable_ = CURSOR... 구문을 사용하면, 커서가 로컬 커서 데이터베이스 옵션의 기본 설정에 따라 GLOBAL 또는 LOCAL로 만들어집니다.  
   
 전역 커서를 참조하는 경우에도 커서 변수는 항상 지역 변수입니다. 커서 변수가 전역 커서를 참조하면 전역 커서 참조 및 로컬 커서 참조를 모두 가지게 됩니다. 자세한 내용은 예 3을 참조하세요.  
   
@@ -184,8 +184,8 @@ SET **@**_cursor_variable_ 구문 규칙에는 LOCAL 및 GLOBAL 키워드가 없
   
 값을 연결하려면, 즉 집계 값을 계산하려면 SELECT 문에 변수를 사용하지 마세요. 사용할 경우 예기치 않은 쿼리 결과가 발생할 수 있습니다. SELECT 목록의 모든 식(할당 포함)이 각 출력 행에 대해 정확히 한 번씩 실행되는 것은 아니기 때문입니다. 자세한 내용은 [이 KB 문서](https://support.microsoft.com/kb/287515)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
-public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@**_local_variable_을 사용할 수 있습니다.  
+## <a name="permissions"></a>사용 권한  
+public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@** _local_variable_을 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   

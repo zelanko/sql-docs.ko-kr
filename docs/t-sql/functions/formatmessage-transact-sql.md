@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212372"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948999"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,9 +60,9 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>Remarks  
  FORMATMESSAGE는 RAISERROR 문과 유사하게 메시지의 자리 표시자 변수를 제공된 매개 변수 값으로 대체하여 메시지를 편집합니다. 오류 메시지에서 허용되는 자리 표시자와 편집 프로세스에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)를 참조하세요.  
   
- FORMATMESSAGE는 사용자의 현재 언어로 된 메시지를 찾습니다. 메시지의 해당 언어 버전이 없으면 미국 영어를 사용합니다.  
+ FORMATMESSAGE는 사용자의 현재 언어로 된 메시지를 찾습니다. 지역화된 버전의 메시지가 없는 경우 미국 영어 버전이 사용됩니다.  
   
- 해당 언어 메시지의 경우 제공된 매개 변수 값이 반드시 미국 영어 버전의 매개 변수 자리 표시자와 일치해야 합니다. 즉, 해당 언어 버전의 매개 변수 1은 미국 영어 버전의 매개 변수 1과, 매개 변수 2는 매개 변수 2와 일치하는 방식으로 모두 일치해야 합니다.  
+ 지역화된 메시지의 경우 제공된 매개 변수 값은 미국 영어 버전의 매개 변수 자리 표시자와 일치해야 합니다. 즉, 지역화된 버전의 매개 변수 1은 미국 영어 버전의 매개 변수 1과 일치해야 하며 매개 변수 2는 매개 변수 2와 일치해야 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -78,7 +78,7 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>2. 메시지 문자열 사용 예  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  다음 예는 입력으로 문자열을 사용합니다.  
   
@@ -88,7 +88,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
   
  반환 값: `This is the first variable and this is the second variable.`  
   
-### <a name="c-additional-message-string-formatting-examples"></a>3. 추가 메시지 문자열 서식 지정 예  
+### <a name="c-additional-message-string-formatting-examples"></a>C. 추가 메시지 문자열 서식 지정 예  
  다음 예는 다양한 서식 지정 옵션을 보여줍니다.  
   
 ```  

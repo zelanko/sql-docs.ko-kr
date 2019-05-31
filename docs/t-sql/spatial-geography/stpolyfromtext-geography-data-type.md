@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 02232606ccfba5c03793dd6a3bff515efd0c8e6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 347411d840e2019a2a0553340ebf5b821455deea
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744511"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936080"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  CLR 반환 형식: **SqlGeography**  
   
- OGC 형식: **Polygon**  
+ OGC 형식: **다각형**  
   
 ## <a name="remarks"></a>Remarks  
  이 메서드는 입력이 잘못된 경우 **FormatException**을 throw합니다.  

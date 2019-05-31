@@ -17,16 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical variance
 - VARP function [Transact-SQL]
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baba76098349cecb4d33e50b4b6b25c4599df235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc8f0325fdf5eef51a9c9e1a7c929c6f0b535784
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839591"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946299"
 ---
 # <a name="varp-transact-sql"></a>VARP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  _partition\_by\_clause_는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. _order\_by\_clause_는 작업이 수행되는 논리적 순서를 결정합니다. _order\_by\_clause_는 필수입니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
@@ -68,7 +68,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-varp"></a>1. VARP 사용하기  
+### <a name="a-using-varp"></a>A: VARP 사용  
  다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 분산을 반환하는 예입니다.  
   
 ```  
@@ -79,7 +79,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-varp"></a>2. VARP 사용하기  
+### <a name="b-using-varp"></a>B: VARP 사용  
  다음 예에서는 `dbo.FactSalesQuota` 테이블의 판매 할당량 값의 `VARP`를 반환합니다. 첫 번째 열은 모든 고유 값의 분산을 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 분산을 포함합니다.  
   
 ```  
@@ -97,7 +97,7 @@ Distinct_Values   All_Values
 158146830494.18   157788848582.94
 ```  
   
-### <a name="c-using-varp-with-over"></a>3. OVER와 함께 VARP 사용하기  
+### <a name="c-using-varp-with-over"></a>C. OVER와 함께 VARP 사용하기  
  다음 예에서는 한 해의 각 분기에 대한 판매 할당량 값 중 `VARP`를 반환합니다. OVER 절에서 ORDER BY는 통계적 분산과 SELECT 문의 ORDER BY를 결과 집합으로 정렬합니다.  
   
 ```  

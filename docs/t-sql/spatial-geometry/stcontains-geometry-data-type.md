@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STContains (geometry Data Type)
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4fcc9902bba9658fbe1cb106aa138c5aa27b7edb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d43badf62c4fe5aeeb88ac1f81ce9d010c7fc8c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844871"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939052"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

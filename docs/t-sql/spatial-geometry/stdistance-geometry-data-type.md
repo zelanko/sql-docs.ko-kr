@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDistance (geometry Data Type)
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a983ca188da201bf18e407eaf3a84328a7abf29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47caf3acbbdfd663dcfc507279a4b41ce134ad01
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596053"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938974"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

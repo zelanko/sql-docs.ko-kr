@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100898"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948961"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:**  스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
+|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:**  스키마 소유자가 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
 |TableDeleteTrigger|Table|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableDeleteTriggerCount|Table|테이블에 지정된 개수의 DELETE 트리거가 있습니다.<br /><br /> >0 = DELETE 트리거의 수입니다.|  
 |TableFullTextMergeStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블에 현재 병합 중인 전체 텍스트 인덱스가 있는지를 나타냅니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없거나 병합 중인 전체 텍스트 인덱스가 없습니다.<br /><br /> 1 = 전체 텍스트 인덱스가 병합 중입니다.|  
@@ -147,19 +147,19 @@ OBJECTPROPERTY ( id , property )
 |TableHasUpdateTrigger|Table|개체에 UPDATE 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableHasVarDecimalStorageFormat|Table|테이블을 **vardecimal** 스토리지 형식에 사용할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Table|테이블에 INSERT 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
-|TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수|  
+|TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수.|  
 |TableIsFake|Table|실제 테이블이 아닙니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 요청이 있을 때 내부적으로 구체화됩니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsLockedOnBulkLoad|Table|**bcp** 또는 BULK INSERT 작업으로 인해 테이블이 잠깁니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableIsMemoryOptimized|Table|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블이 메모리 액세스에 최적화된 테이블임<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**<br /><br /> 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.|  
 |TableIsPinned|Table|테이블이 데이터 캐시에 보유되도록 고정됩니다.<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서는 이 기능이 지원되지 않습니다.|  
 |TableTextInRowLimit|Table|text in row에 최대 바이트가 허용됩니다.<br /><br /> text in row 옵션을 설정하지 않으면 0입니다.|  
-|TableUpdateTrigger|Table|테이블에 UPDATE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID|  
-|TableUpdateTriggerCount|Table|테이블에 지정된 개수의 UPDATE 트리거가 있습니다.<br /><br /> > 0 = UPDATE 트리거의 수|  
+|TableUpdateTrigger|Table|테이블에 UPDATE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
+|TableUpdateTriggerCount|Table|테이블에 지정된 개수의 UPDATE 트리거가 있습니다.<br /><br /> > 0 = UPDATE 트리거의 수.|  
 |TableHasColumnSet|Table|테이블에 열 집합이 있습니다.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|  
 |TableTemporalType|Table|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 형식을 지정합니다.<br /><br /> 0 = 비임시 테이블<br /><br /> 1 = 시스템 버전 테이블에 대한 기록 테이블<br /><br /> 2 = 시스템 버전 임시 테이블|  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

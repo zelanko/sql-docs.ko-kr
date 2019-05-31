@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525728"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944123"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **NEXT VALUE FOR**...없이 **ORDER BY** 절을 사용하는 명령문에서 사용할 경우 **OVER**(**ORDER BY**...)를 사용할 경우  
   
--   **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML** 절에서 사용할 경우  
+-   다음 절에서 다음을 수행합니다. **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** 또는 **FOR XML**.  
   
 -   **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** 또는  **NULLIF**를 사용하는 조건식에서 사용할 경우  
   
@@ -152,7 +152,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  시퀀스 개체 또는 시퀀스의 스키마에 대한 **UPDATE** 권한이 필요합니다. 사용 권한을 부여하는 방법에 대한 예는 이 항목의 뒷부분에 나오는 예 7을 참조하십시오.  
   
 ### <a name="ownership-chaining"></a>소유권 체인  
@@ -216,7 +216,7 @@ SELECT @myvar1 AS myvar1, @myvar2 AS myvar2, @myvar3 AS myvar3 ;
 GO  
 ```  
   
-### <a name="c-using-a-sequence-with-a-ranking-window-function"></a>3. 순위 창 함수에 시퀀스 사용  
+### <a name="c-using-a-sequence-with-a-ranking-window-function"></a>C. 순위 창 함수에 시퀀스 사용  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -228,7 +228,7 @@ FROM Person.Contact ;
 GO  
 ```  
   
-### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>4. 기본 제약 조건 정의에 NEXT VALUE FOR 함수 사용  
+### <a name="d-using-the-next-value-for-function-in-the-definition-of-a-default-constraint"></a>D. 기본 제약 조건 정의에 NEXT VALUE FOR 함수 사용  
  기본 제약 조건 정의에 **NEXT VALUE FOR** 함수를 사용할 수 있습니다. **CREATE TABLE** 문에서 **NEXT VALUE FOR**를 사용하는 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)의 예 C를 참조하세요. 다음 예에서는 `ALTER TABLE`을 사용하여 현재 테이블에 기본값으로 시퀀스를 추가합니다.  
   
 ```  
@@ -260,7 +260,7 @@ SELECT * FROM Test.MyTable;
 GO  
 ```  
   
-### <a name="e-using-the-next-value-for-function-in-an-insert-statement"></a>5. INSERT 문에 NEXT VALUE FOR 함수 사용  
+### <a name="e-using-the-next-value-for-function-in-an-insert-statement"></a>E. INSERT 문에 NEXT VALUE FOR 함수 사용  
  다음 예에서는 `TestTable`이라는 테이블을 만든 다음 `NEXT VALUE FOR` 함수를 사용하여 행을 삽입합니다.  
   
 ```  
@@ -278,7 +278,7 @@ GO
   
 ```  
   
-### <a name="e-using-the-next-value-for-function-with-select--into"></a>5. SELECT... INTO에서 NEXT VALUE FOR 함수 사용 INTO  
+### <a name="e-using-the-next-value-for-function-with-select--into"></a>E. SELECT... INTO에서 NEXT VALUE FOR 함수 사용 INTO  
  다음 예에서는 `SELECT ... INTO` 문을 사용하여 `Production.NewLocation`이라는 테이블을 만든 다음 `NEXT VALUE FOR` 함수를 사용하여 각 행의 번호를 매깁니다.  
   
 ```  
@@ -294,7 +294,7 @@ SELECT * FROM Production.NewLocation ;
 GO  
 ```  
   
-### <a name="f-granting-permission-to-execute-next-value-for"></a>6. NEXT VALUE FOR 실행 권한 부여  
+### <a name="f-granting-permission-to-execute-next-value-for"></a>F. NEXT VALUE FOR 실행 권한 부여  
  다음 예에서는 `AdventureWorks\Larry`라는 사용자에게 `Test.CounterSeq` 시퀀스를 사용하여 `NEXT VALUE FOR`를 실행할 수 있는 **UPDATE** 권한을 부여합니다.  
   
 ```  

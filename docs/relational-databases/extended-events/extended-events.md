@@ -1,7 +1,7 @@
 ---
 title: XEvents 개요 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df39a9a3992fb424bf0f50b2d60548ce0e55ade7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477668"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175672"
 ---
 # <a name="extended-events-overview"></a>확장 이벤트 개요
 
@@ -111,5 +111,4 @@ ms.locfileid: "58477668"
  [데이터 계층 애플리케이션 모니터링](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [확장 이벤트 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [확장 이벤트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+ [XELite: XEL 파일 또는 라이브 SQL 스트림에서 XEvents를 읽을 수 있는 플랫폼 간 라이브러리](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), 2019년 5월에 릴리스됨.  

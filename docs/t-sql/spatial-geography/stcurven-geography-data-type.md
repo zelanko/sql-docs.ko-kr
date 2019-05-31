@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geography)
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c9807fd2d9a447ba9d791b590eed6daf0cde60b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56adf5a1cfb41b3a8efb10e278109a6d10659e7d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747671"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937086"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47747671"
   
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
-### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>3. 세 개의 CircularString이 포함된 CompoundCurve에 STCurveN() 사용  
+### <a name="c-using-stcurven-on-a-compoundcurve-containing-three-circularstrings"></a>C. 세 개의 CircularString이 포함된 CompoundCurve에 STCurveN() 사용  
  다음 예제에서는 별도의 **CircularString** 인스턴스 세 개를 이전 예와 동일한 곡선 시퀀스로 조합하는 **CompoundCurve** 인스턴스를 사용합니다.  
   
 ```
@@ -100,7 +100,7 @@ ms.locfileid: "47747671"
   
  `STCurveN()`은 사용되는 WKT(Well-Known Text) 형식과 관계없이 같은 결과를 반환합니다.  
   
-### <a name="d-testing-for-validity-before-calling-stcurve"></a>4. STCurve()를 호출하기 전에 유효성 테스트  
+### <a name="d-testing-for-validity-before-calling-stcurve"></a>D. STCurve()를 호출하기 전에 유효성 테스트  
  다음 예제에서는 STCurveN() 메서드를 호출하기 전에 *n*이 유효한지 확인하는 방법을 보여 줍니다.  
   
 ```

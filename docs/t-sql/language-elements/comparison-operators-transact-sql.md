@@ -18,15 +18,15 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32310359f0ecd72349a5ebf3a4f0abcc1a72f5bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49b8dbf08dc6611666f90d4127260e49761b7fdb
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653391"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982617"
 ---
 # <a name="comparison-operators-transact-sql"></a>비교 연산자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47653391"
 |[\!>(보다 크지 않음)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|보다 크지 않음(ISO 표준이 아님)|  
   
 ## <a name="boolean-data-type"></a>부울 데이터 형식  
- 비교 연산자의 결과는 **Boolean** 데이터 형식입니다. TRUE, FALSE 및 UNKNOWN의 세 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
+ 비교 연산자의 결과는 **Boolean** 데이터 형식입니다. 이 결과에는 TRUE, FALSE 및 UNKNOWN이라는 세 가지 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
   
  **Boolean** 데이터 형식은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
   

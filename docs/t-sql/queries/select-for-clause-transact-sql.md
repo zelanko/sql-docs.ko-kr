@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 866afe80cb6c93260b43eb3150b12df78ad813e5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9052c8192f7ea9e8fb7155a027344742a443a1b3
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334770"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175710"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 
@@ -179,7 +179,7 @@ JSON
  XML  
  쿼리 결과를 XML 문서로 반환하도록 지정합니다. XML 모드는 RAW, AUTO, EXPLICIT 중 하나로 지정해야 합니다. FOR XML 데이터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 자세한 내용은 [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
   
- RAW [ **('**_ElementName_**')** ]  
+ RAW [ **('** _ElementName_ **')** ]  
  쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML 출력은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.
   
  AUTO  
@@ -210,20 +210,23 @@ _원치 않는 줄 바꿈을 표시 안 함:_ SSMS(SQL Server Management Studio)
 
 <!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
 
- XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
+ XMLSCHEMA [ **('** _TargetNameSpaceURI_ **')** ]  
  인라인 XSD 스키마를 반환합니다. 이 지시어를 지정할 때 스키마에 지정된 네임스페이스를 반환하는 대상 네임스페이스 URI를 필요에 따라 지정할 수 있습니다. 자세한 내용은 [인라인 XSD 스키마 생성](../../relational-databases/xml/generate-an-inline-xsd-schema.md)을 참조하세요.  
   
  ELEMENTS  
  열을 하위 요소로 반환하도록 지정합니다. 그렇지 않은 경우에는 XML 특성에 매핑됩니다. 이 옵션은 RAW, AUTO 및 PATH 모드에서만 지원됩니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
   
  XSINIL  
- **True**로 설정된 **xsi:nil** 특성이 있는 요소가 NULL 열 값에 대해 생성되도록 지정합니다. 이 옵션은 ELEMENTS 지시어에만 지정할 수 있습니다. 자세한 내용은 [XSINIL 매개 변수를 사용하여 NULL 값 요소 생성](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)을 참조하세요.  
+ **True**로 설정된 **xsi:nil** 특성이 있는 요소가 NULL 열 값에 대해 생성되도록 지정합니다. 이 옵션은 ELEMENTS 지시어에만 지정할 수 있습니다. 참조 항목:
+
+- [XSINIL 매개 변수를 사용하여 NULL 값에 대한 요소를 생성합니다](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md).
+- [SELECT 문에 대한 FOR XML](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  Null 열 값에서는 해당 XML 요소가 XML 결과에 추가되지 않음을 나타냅니다. 이 옵션은 ELEMENTS에만 지정하세요.  
   
- PATH [ **('**_ElementName_**')** ]  
- 결과 집합의 각 행에 대해 \<row> 요소 래퍼를 생성합니다. 필요에 따라 \<row> 요소 래퍼에 대한 요소 이름을 지정할 수 있습니다. FOR XML PATH(**''**)와 같은 빈 문자열이 지정된 경우 래퍼 요소가 생성되지 않습니다. EXPLICIT 지시어를 사용하여 작성된 쿼리 대신 PATH를 사용하는 것이 더 간단한 방법일 수 있습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)을 참조하세요.  
+ PATH [ **('** _ElementName_ **')** ]  
+ 결과 집합의 각 행에 대해 \<row> 요소 래퍼를 생성합니다. 필요에 따라 \<row> 요소 래퍼에 대한 요소 이름을 지정할 수 있습니다. FOR XML PATH( **''** )와 같은 빈 문자열이 지정된 경우 래퍼 요소가 생성되지 않습니다. EXPLICIT 지시어를 사용하여 작성된 쿼리 대신 PATH를 사용하는 것이 더 간단한 방법일 수 있습니다. 자세한 내용은 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)을 참조하세요.  
   
  BINARY BASE64  
  쿼리에서 이진 데이터를 이진 base64 인코드 형식으로 반환하도록 지정합니다. RAW 및 EXPLICIT 모드를 사용하여 이진 데이터를 검색하는 경우 이 옵션을 지정해야 합니다. 이 값은 AUTO 모드에서 기본값입니다.  
@@ -231,7 +234,7 @@ _원치 않는 줄 바꿈을 표시 안 함:_ SSMS(SQL Server Management Studio)
  TYPE  
  쿼리가 결과를 **xml** 형식으로 반환하도록 지정합니다. 자세한 내용은 [TYPE Directive in FOR XML Queries](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 참조하세요.  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  단일 최상위 요소가 결과 XML에 추가되도록 지정합니다. 필요에 따라 생성할 루트 요소 이름을 지정할 수 있습니다. 선택 사항인 루트 이름을 지정하지 않으면 기본 \<root> 요소가 추가됩니다.  
   
  자세한 내용은 [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)을 참조하세요.  
@@ -267,7 +270,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  **FOR JSON** 절과 함께 **INCLUDE_NULL_VALUES** 옵션을 지정하여 JSON 출력에 null 값을 포함합니다. 이 옵션을 지정하지 않은 경우 쿼리 결과의 NULL 값에 대해서는 출력에 JSON 속성을 포함하지 않습니다. 자세한 내용 및 예제는 [INCLUDE_NULL_VALUES 옵션을 사용하여 JSON 출력에 Null 값 포함&#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)을 참조하세요.  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  단일 최상위 요소를 JSON 출력에 추가하려면 **FOR JSON** 절을 사용하여 **ROOT** 옵션을 지정합니다. **ROOT** 옵션을 지정하지 않은 경우 JSON 출력에는 루트 요소가 없습니다. 자세한 내용 및 예제는 [ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가&#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
  WITHOUT_ARRAY_WRAPPER  

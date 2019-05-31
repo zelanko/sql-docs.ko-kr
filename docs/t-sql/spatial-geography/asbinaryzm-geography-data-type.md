@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AsBinaryZM, geography
 - AsBinaryZM
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 045068e39fdfd5ed4a5e875f4be55a9c5385b1ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6a177857e7bbef619466ff67b9ba05c7e4c1775
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825421"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937277"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

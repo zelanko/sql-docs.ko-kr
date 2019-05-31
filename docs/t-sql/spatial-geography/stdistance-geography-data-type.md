@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 7a1b5a95b5123186ce76a4d8b7c9dde7044fe827
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ae6354623f67003c56c99783e1916b71a80ea3f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688466"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937052"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570796"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993465"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -186,7 +196,7 @@ SQL  Server  데이터베이스 엔진 리소스 DLL이 SQL  Server  인스턴�
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-HADR CLUSTER CONTEXT **=** { **‘**_remote\_windows\_cluster_**’** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **‘** _remote\_windows\_cluster_ **’** | LOCAL }  
 서버 인스턴스의 HADR 클러스터 컨텍스트를 지정된 WSFC(Windows Server 장애 조치(Failover) 클러스터)로 전환합니다. *HADR 클러스터 컨텍스트*는 서버 인스턴스에서 호스팅하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC를 결정합니다. 새 WSFC에서 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 또는 상위 버전 인스턴스로 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션을 수행하는 동안에만 SET HADR CLUSTER CONTEXT 옵션을 사용합니다.  
   
 HADR 클러스터 컨텍스트는 로컬 WSFC에서 원격 WSFC로 전환한 다음, 다시 원격 WSFC에서 로컬 WSFC로만 전환할 수 있습니다. HADR 클러스터 컨텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 복제본을 호스트하지 않을 때만 원격 클러스터로 전환할 수 있습니다.  
@@ -245,14 +255,35 @@ OFF
 > 4) SQL Server 에이전트 인스턴스를 시작합니다.  
   
 **추가 정보:** SQL Server 서비스가 다시 시작되기 전에 SET SOFTNUMA 명령으로 ALTER SERVER CONFIGURATION을 실행하는 경우 SQL Server 에이전트 서비스가 중지되면, SOFTNUMA 설정을 ALTER SERVER CONFIGURATION 이전의 상태로 되돌리는 T-SQL RECONFIGURE 명령이 실행됩니다. 
-  
+
+**\<memory_optimized> ::=**
+
+**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상
+
+ON <br>
+[IMDB](../../relational-databases/in-memory-database.md) 기능군의 일부인 모든 인스턴스 수준 기능을 사용합니다. 이는 현재 [메모리 최적화 tempdb 메타데이터](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) 및 [하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)을 포함합니다. 적용하려면 다시 시작해야 합니다.
+
+OFF <br>
+IMDB 기능군의 일부인 모든 인스턴스 수준 기능을 사용하지 않습니다. 적용하려면 다시 시작해야 합니다.
+
+TEMPDB_METADATA = ON | OFF <br>
+메모리 최적화 tempdb 메타데이터만 사용하거나 사용하지 않습니다. 적용하려면 다시 시작해야 합니다. 
+
+RESOURCE_POOL='resource_pool_name' <br>
+TEMPDB_METADATA = ON과 결합할 경우 tempdb에 사용해야 하는 사용자 정의 리소스 풀을 지정합니다. 지정하지 않은 경우 tempdb는 기본 풀을 사용합니다. 풀이 이미 존재해야 합니다. 서비스가 다시 시작될 때 풀이 사용할 수 없는 경우 tempdb는 기본 풀을 사용합니다.
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+인스턴스 수준에서 하이브리드 버퍼 풀을 사용하거나 사용하지 않습니다. 적용하려면 다시 시작해야 합니다.
+
+
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 이 문은 별도로 명시하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 필요가 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터 리소스를 다시 시작할 필요가 없습니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
 이 문은 DDL 트리거를 지원하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 프로세스 선호도에 대해 ALTER  SETTINGS  권한이 필요하고, 진단 로그 및 장애 조치(failover)  클러스터 속성 옵션에 대해 ALTER  SETTINGS  및 VIEW  SERVER  STATE  권한이 필요하며,  HADR  클러스터 컨텍스트 옵션에 대해 CONTROL  SERVER  권한이 필요합니다.  
   
 버퍼 풀 확장 옵션을 위해서는 ALTER SERVER STATE 권한이 필요합니다.  
@@ -267,12 +298,14 @@ OFF
 |[진단 로그 옵션 설정](#Diagnostic)|ON  • OFF  • PATH  • MAX_SIZE|  
 |[장애 조치(failover) 클러스터 속성 설정](#Failover)|HealthCheckTimeout|  
 |[가용성 복제본의 클러스터 컨텍스트 변경](#ChangeClusterContextExample)|**'** *windows_cluster* **'**|  
-|[버퍼 풀 확장 설정](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[버퍼 풀 확장 설정](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[IMDB 옵션 설정](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> 프로세스 선호도 설정  
 이 섹션의 예에서는 CPU  및 NUMA  노드에 대한 프로세스 선호도를 설정하는 방법을 보여 줍니다. 이 예에서는 서버에 각각 16  NUMA  노드를 가진 4개 그룹으로 정렬된 256개의 CPU가 포함되어 있다고 가정합니다. 모든 NUMA 노드 또는 CPU에는 스레드가 할당되지 않습니다.  
   
--   그룹 0: 0~3개의 NUMA  노드,  0~63개의 CPU  
+-   그룹 0: 0~3개의 NUMA 노드, 0~63개의 CPU  
 -   그룹 1: 4~7개의 NUMA 노드, 64~127개의 CPU  
 -   그룹 2: 8~12개의 NUMA 노드, 128~191개의 CPU  
 -   그룹 3: 13~16개의 NUMA 노드, 192~255개의 CPU  
@@ -404,7 +437,37 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
+
+### <a name="MemoryOptimized"></a>IMDB 옵션 설정
+
+**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>1. 기본 옵션으로 모든 IMDB 기능 사용
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>2. 기본 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. 사용자 정의 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. 하이브리드 버퍼 풀 사용
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
 ## <a name="see-also"></a>참고 항목  
 [Soft-NUMA&#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [서버 인스턴스의 HADR 클러스터 컨텍스트 변경&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geometry Data Type)
 ms.assetid: 1d4cf35a-ca89-4aa4-ae30-e61a0ff18b53
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6625ea3cbd43996eda702832774220c35646f1ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd51f436a5899722cc759ef79c5ead212f345bf6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621111"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935695"
 ---
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47621111"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>1. 두 Polygon 인스턴스 간의 대칭 차이 계산  
- 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 컴퓨팅합니다.  
+ 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 계산합니다.  
   
 ```  
 DECLARE @g geometry;  
@@ -71,7 +71,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @h.STSymDifference(@g).ToString();
  ```  
   
-## <a name="c-using-stsymdifference-on-curvepolygon-instance-with-an-inscribed-polygon-instance"></a>3. CurvePolygon 인스턴스의 STSymDifference()를 내접된 Polygon 인스턴스와 함께 사용  
+## <a name="c-using-stsymdifference-on-curvepolygon-instance-with-an-inscribed-polygon-instance"></a>C. CurvePolygon 인스턴스의 STSymDifference()를 내접된 Polygon 인스턴스와 함께 사용  
  다음 예에서는 비교할 두 인스턴스 간의 대칭 차이를 나타내는 내부 `CurvePolygon` 링과 함께 `Polygon` 인스턴스를 반환합니다.  
   
 ```

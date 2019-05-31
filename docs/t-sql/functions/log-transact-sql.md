@@ -17,16 +17,16 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70bfded9597cd7e0d8d8f54ecc3fa636e2d41d3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24bc60e00fa628a0c984302a4d91c806eab09b4b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704906"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949158"
 ---
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ LOG ( float_expression )
   
  자연 로그는 밑이 **e**인 로그입니다. 여기서 **e**는 대략 2.718281828과 같은 무리 상수입니다.  
   
- 한 수의 지수에 대한 자연 로그는 그 수 자체입니다. LOG( EXP( *n* ) ) = *n*. 한 수의 자연 로그에 대한 지수는 그 수 자체입니다. EXP( LOG( *n* ) ) = *n*.  
+ 한 수의 지수에 대한 자연 로그는 그 수 자체입니다. LOG( EXP( *n* ) ) = *n*. 마찬가지로 한 수의 자연 로그에 대한 지수는 그 수 자체입니다. EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>예  
   
@@ -106,7 +106,7 @@ SELECT LOG (EXP (10));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-logarithm-for-a-number"></a>3. 수의 로그를 계산합니다.  
+### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 수의 로그를 계산합니다.  
  다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  

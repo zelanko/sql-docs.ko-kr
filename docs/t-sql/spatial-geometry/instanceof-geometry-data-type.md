@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - InstanceOf (geometry Data Type)
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d093331425443a0879d5f59f5a2d03fdebcb2abd
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 82cc52338771862b580c193353db0bb98453b458
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425758"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939112"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -11,12 +11,12 @@ ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa46bcdb1a5136864b2633ae3be732a4cbc45d9f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 00cda57e3656bb41031f79647c3e4829dcab4858
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729014"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198161"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Attunity Oracle CDC Service
 
@@ -26,7 +26,7 @@ ms.locfileid: "65729014"
   Oracle CDC Service는 Oracle 트랜잭션 로그를 검색하고 관련 Oracle 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 캡처하는 Windows 서비스입니다. Oracle에서 캡처한 변경 내용이 저장되는 SQL 변경 테이블은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 기능에서 사용하는 변경 테이블과 같은 유형입니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 변경 내용을 사용하는 것만큼 쉽게 이 변경 내용을 사용할 수 있습니다.  
   
 ## <a name="installation"></a>설치  
- Microsoft SQL ServerÂ® 2016용 MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
+ Microsoft SQL Server 2016용 Microsoft Change Data Capture Designer and Service for Oracle by Attunity는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
  캡처되는 원본 Oracle 데이터베이스와 대상 CDC 데이터베이스가 위치하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스할 수 있는 지원되는 Windows 컴퓨터에 Oracle CDC Service를 설치할 수 있습니다. CDC Service는 Oracle 데이터베이스와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 로컬 설치가 필요 없으며 지원되는 클라이언트만 있으면 됩니다. 필요한 데이터베이스 구성 요소를 설치하는 위치에 대한 자세한 내용은 이 항목의 **데이터베이스 필수 구성 요소** 를 참조하십시오.  
   

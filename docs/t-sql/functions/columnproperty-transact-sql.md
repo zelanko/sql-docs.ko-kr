@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6211f2b47aebc2c4087cc2ed4fe5b068a8686292
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980549"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943979"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ COLUMNPROPERTY ( id , column , property )
 |**UsesAnsiTrim**|테이블을 만들 때 ANSI_PADDING이 ON으로 설정되었습니다. 이 속성은 **char** 또는 **varchar** 형식의 열 또는 매개 변수에만 적용됩니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = 잘못된 입력|  
   
 ## <a name="return-types"></a>반환 형식
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
 오류가 발생하거나 호출자에게 개체를 볼 수 있는 권한이 없으면 NULL을 반환합니다.

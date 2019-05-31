@@ -20,15 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df4a8ef1624d1f4244d96192bf4cb8486c92dd3d
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ffcb2612d84a7cd29044062ab264d6b40e3dfd64
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242216"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943711"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 문 - REWINDONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  복원 작업에 사용할 논리적 또는 물리적 백업 장치를 지정합니다.  
   
- { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
- 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수(**@**_logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수(**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ { *logical_backup_device_name* |  **@** _logical\_backup\_device\_name\_var_ }  
+ 데이터베이스가 복원되는 **sp_addumpdevice**에서 만든 백업 디바이스의 논리적 이름입니다. 이 논리적 이름은 식별자에 대한 규칙을 따라야 합니다. 변수( **@** _logical\_backup\_device\_name\_var_)로 제공한 경우 백업 디바이스 이름은 문자열 상수( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 장치 유형은 전체 경로와 파일 이름을 포함한 장치의 실제 이름인 DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 또는 TAPE = '\\\\.\TAPE0'으로 지정해야 합니다. 변수(**@**_physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수(**@**_physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
+ {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
+ 지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 디바이스 유형은 디바이스의 실제 이름(예:전체 경로 및 파일 이름)인 DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' 또는 TAPE = '\\\\.\TAPE0'으로 지정해야 합니다. 변수( **@** _physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
  네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름 사용에 대한 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
@@ -94,7 +94,7 @@ FROM <backup_device> [ ,...n ]
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  모든 사용자가 RESTORE REWINDONLY를 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

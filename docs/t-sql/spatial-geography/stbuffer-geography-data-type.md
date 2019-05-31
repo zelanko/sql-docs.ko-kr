@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geography Data Type)
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 55316e61b2690e56949e7fff3fe209e9b02fa0aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 72e7f25c0bdc3ba77e90e8d9384537948efe4b3f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979309"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937155"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

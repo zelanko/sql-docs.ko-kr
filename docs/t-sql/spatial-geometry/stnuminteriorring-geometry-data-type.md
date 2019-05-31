@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumInteriorRing (geometry Data Type)
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0d2a1d1b8cea6a02b16b98edf57e3c92278599f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd2a5e5e4f973cb476a36cb7fee6ca7d0924965b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753849"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938447"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

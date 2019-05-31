@@ -17,16 +17,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670241"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944718"
 ---
 # <a name="right-transact-sql"></a>RIGHT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-right-with-a-column"></a>1. 열에서 RIGHT 사용  
+### <a name="a-using-right-with-a-column"></a>A: 열에서 RIGHT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 각 사람의 이름에서 이 가장 오른쪽 다섯 문자를 반환합니다.  
   
 ```  
@@ -107,7 +107,7 @@ rello
 lters
  ```  
   
-### <a name="c-using-right-with-a-character-string"></a>3. 문자열에서 RIGHT 사용  
+### <a name="c-using-right-with-a-character-string"></a>C. 문자열에서 RIGHT 사용  
  다음 예는 `RIGHT`를 사용하여 `abcdefg` 문자열의 가장 오른쪽 두 문자를 반환합니다.  
   
 ```  

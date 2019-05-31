@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSrid method
 ms.assetid: 6b04f5a7-2e69-4d34-901e-b61ba6ca9c14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 20c59a05c19d55406e27043602d979b2db681729
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96a8577d621b9cc8b22e0f3b334b1d9831fdcad7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712141"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939158"
 ---
 # <a name="stsrid-geography-data-type"></a>STSrid(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47712141"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **int**  
   
- CLR 형식: **SqlInt32**  
+ CLR 유형: **SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  이 속성은 수정할 수 있습니다.  
@@ -63,6 +63,6 @@ SELECT @g.STSrid;
   
 ## <a name="see-also"></a>참고 항목  
  [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Spatial Reference Identifier &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)   
+ [Spatial Reference Identifier &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

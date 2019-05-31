@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711184"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938165"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -55,7 +55,7 @@ Always Encrypted는 다음 다이어그램에 설명된 것처럼 보안 Enclave
 > [!IMPORTANT]
 > [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 리치 계산은 몇 가지 성능 최적화가 보류 중이며, 제한된 기능을 포함하고(인덱싱 없음 등), 현재 기본적으로 사용하지 않도록 설정되어 있습니다. 리치 계산을 사용하도록 설정하려면 [리치 계산 사용](configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
 
-[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 보안 Enclave를 사용한 Always Encrypted는 Windows의 [VBS(가상화 기반 보안)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 보안 메모리 Enclave(가상 보안 모드 또는 VSM Enclave라고도 함)를 사용합니다.
+[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에서 보안 Enclave를 사용한 Always Encrypted는 Windows의 [VBS(가상화 기반 보안)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) 보안 메모리 Enclave(가상 보안 모드 또는 VSM Enclave라고도 함)를 사용합니다.
 
 ## <a name="secure-enclave-attestation"></a>보안 Enclave 증명
 
@@ -143,4 +143,4 @@ Enclave 사용 열은 Enclave 사용 열 암호화 키로 암호화한 데이터
 
 ## <a name="next-steps"></a>Next Steps
 
-- 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용해 보세요. [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작하기](../tutorial-getting-started-with-always-encrypted-enclaves.md)를 참조하세요.
+- 테스트 환경을 설정하고 SSMS에서 보안 enclave를 사용하여 Always Encrypted 기능을 사용해 보세요 - [자습서: SSMS를 사용하여 보안 enclave로 Always Encrypted 시작](../tutorial-getting-started-with-always-encrypted-enclaves.md)을 참조하세요.

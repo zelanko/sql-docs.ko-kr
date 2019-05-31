@@ -16,22 +16,22 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1d5542501325fb84b31c0133aaa04aa0097c077b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698388"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937827"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geography** 인스턴스를 생성합니다.
   
-GML에 대한 자세한 내용은 [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
+GML에 대한 자세한 내용은 다음 Open Geospatial Consortium Specifications를 참조하세요. [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.
   

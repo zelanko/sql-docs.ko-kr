@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531098"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944809"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -149,11 +149,11 @@ OPENROWSET
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  
   
  오류 파일은 명령이 실행될 때 생성됩니다. 파일이 이미 있으면 오류가 발생합니다. 또한 확장명이 .ERROR.txt인 제어 파일이 생성됩니다. 이 파일은 오류 파일의 각 행을 참조하여 오류를 진단합니다. 오류를 해결한 후에는 데이터를 로드할 수 있습니다.  
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 `error_file_path`는 Azure Blob Storage에 있을 수 있습니다. 
 
 'errorfile_data_source_name'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 스토리지 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
   
  FIRSTROW =*first_row*  
@@ -192,7 +192,7 @@ OPENROWSET
   
  데이터 파일의 실제 행이 지정된 순서에 따라 정렬되지 않거나 UNIQUE 힌트를 지정했는데 중복된 키가 있는 경우 오류가 반환됩니다.  
   
- ORDER를 사용하는 경우 열 별칭이 필요합니다. 열 별칭 목록은 BULK 절에서 액세스되는 파생 테이블을 참조해야 합니다. ORDER 절에 지정된 열 이름은 이 열 별칭 목록을 참조합니다. 큰 값 유형(**varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml**) 및 LOB(Large Object) 형식(**text**, **ntext** 및 **image**) 열은 지정할 수 없습니다.  
+ ORDER를 사용하는 경우 열 별칭이 필요합니다. 열 별칭 목록은 BULK 절에서 액세스되는 파생 테이블을 참조해야 합니다. ORDER 절에 지정된 열 이름은 이 열 별칭 목록을 참조합니다. 큰 값 유형(**varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml**) 및 LOB(Large Object) 형식(**text**, **ntext** 및 **image**) 열은 지정할 수 없습니다.  
   
  SINGLE_BLOB  
  *data_file*의 내용을 **varbinary(max)** 형식의 단일 행 및 단일 열로 된 행 집합으로 반환합니다.  
@@ -209,21 +209,21 @@ OPENROWSET
 ### <a name="input-file-format-options"></a>입력 파일 형식 옵션
   
 FORMAT **=** 'CSV'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준을 준수하는 쉼표로 구분된 값 파일을 지정합니다.
 
  FORMATFILE ='*format_file_path*'  
- 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XML 및 비 XML 서식 파일 유형을 지원합니다.  
+ 서식 파일의 전체 경로를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 두 가지 유형의 형식 파일을 지원합니다. XML 및 비 XML.  
   
  서식 파일은 결과 집합에서 열 유형을 정의하는 데 필요합니다. 단, SINGLE_CLOB, SINGLE_BLOB 또는 SINGLE_NCLOB를 지정한 경우에는 서식 파일이 필요하지 않습니다.  
   
  서식 파일에 대한 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 format_file_path는 Azure Blob Storage에 있을 수 있습니다. 예제는 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요.
 
 FIELDQUOTE **=** 'field_quote'   
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
+**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하지 않으면 [RFC 4180](https://tools.ietf.org/html/rfc4180) 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다.
 
   
@@ -232,7 +232,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
   
  원격 OLE DB 데이터 원본에 액세스할 때 트러스트된 연결의 로그인 ID는 클라이언트가 쿼리 중인 서버에 연결되어 있는 서버에서 자동으로 위임되지 않습니다. 이 경우 인증 위임을 구성해야 합니다.  
   
- OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 _catalog_ 및 _schema_에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 _schema_**.**_object_형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는_catalog_**.**_schema_**.**_object_ 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
+ OLE DB 공급자가 지정된 데이터 원본에서 여러 카탈로그와 스키마를 지원하는 경우에는 카탈로그 이름과 스키마 이름이 필요합니다. OLE DB 공급자가 카탈로그와 스키마를 지원하지 않는 경우에는 _catalog_ 및 _schema_에 대한 값을 생략할 수 있습니다. 공급자가 스키마 이름만 지원하는 경우에는 _schema_ **.** _object_형식의 두 부분으로 된 이름을 반드시 지정해야 합니다. 공급자가 카탈로그 이름만 지원하는 경우에는_catalog_ **.** _schema_ **.** _object_ 형식의 세 부분으로 된 이름을 반드시 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 통과 쿼리의 경우 세 부분으로 된 이름을 반드시 지정해야 합니다. 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요.  
   
  `OPENROWSET`는 변수를 인수로 받아들이지 않습니다.  
   
@@ -265,7 +265,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
 > `OPENROWSET`을 사용할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장을 처리하는 방법을 이해하는 것이 중요합니다. 보안 고려 사항에 대한 자세한 내용은 [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터 대량 가져오기  
- OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8000바이트를 초과하는 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.  
+ OPENROWSET(BULK...)은 지정되지 않은 경우 SQLCHAR, SQLNCHAR 또는 SQLBINARY 데이터의 최대 길이가 8000바이트를 초과하지 않는다고 가정합니다. 가져올 데이터가 8000바이트를 초과하는 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 개체가 포함된 LOB 데이터 필드에 있는 경우 데이터 필드의 최대 길이를 정의하는 XML 서식 파일을 사용해야 합니다. 최대 길이를 지정하려면 서식 파일을 편집하고 MAX_LENGTH 특성을 선언합니다.  
   
 > [!NOTE]  
 > 자동으로 생성된 서식 파일은 LOB 필드의 길이 또는 최대 길이를 지정하지 않습니다. 그러나 직접 서식 파일을 편집하고 길이 또는 최대 길이를 지정할 수 있습니다.  
@@ -279,7 +279,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
 |SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `OPENROWSET` 권한은 OLE DB 공급자에게 전달되는 사용자 이름의 사용 권한에 의해 결정됩니다. `BULK` 옵션을 사용하려면 `ADMINISTER BULK OPERATIONS` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -311,7 +311,7 @@ GO
 > [!IMPORTANT]
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
   
-### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>3. INNER JOIN에서 OPENROWSET 및 다른 테이블 사용  
+### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. INNER JOIN에서 OPENROWSET 및 다른 테이블 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` 데이터베이스의 로컬 인스턴스에 있는 `Customers` 테이블과 해당 컴퓨터에 저장되어 있는 Access `Northwind` 데이터베이스의 `Orders` 테이블에서 모든 데이터를 선택합니다.  
   
 > [!NOTE]  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects (geometry Data Type)
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 595fd7d26ea0fb7e8a2b9ecd7c76030032dc1185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c983b7424b7b0674b7e20074665c6adf47bd71de
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751751"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938802"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

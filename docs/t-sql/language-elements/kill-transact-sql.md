@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265270"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982143"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +123,7 @@ KILL _session ID_|_UOW_ WITH STATUSONLY 문이 실행되기 전에 세션 ID 또
 
 같은 KILL _session ID_|_UOW_ 문을 WITH STATUSONLY 옵션 없이 반복하면 동일한 상태 보고를 가져올 수 있습니다. 그러나 이 방법으로 옵션을 반복하지 않는 것이 좋습니다. KILL _session ID_ 문을 반복하면, 새 KILL 문이 실행되기 전에 롤백이 완료되고 세션 ID가 새 작업에 다시 할당되는 경우 새 프로세스가 중지될 수 있습니다. WITH STATUSONLY를 지정하여 새 프로세스가 중지되지 않도록 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** ALTER ANY CONNECTION 권한이 필요합니다. ALTER ANY CONNECTION은 sysadmin 또는 processadmin 고정 서버 역할의 멤버에 포함되어 있습니다.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** KILL DATABASE CONNECTION 권한이 필요합니다. 서버 수준 보안 주체 로그인에 KILL DATABASE CONNECTION이 있습니다.  

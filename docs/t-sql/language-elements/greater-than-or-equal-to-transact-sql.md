@@ -21,16 +21,16 @@ helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f946a30bf575ab9217a1f97f07d2b8c21580d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618551"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982279"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;=(크거나 같음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ expression >= expression
 ## <a name="remarks"></a>Remarks  
  Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크거나 같으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다.  
   
- =(등가)  비교 연산자와 달리 두 NULL  값에 대한 >=  비교의 결과는 ANSI_NULLS  설정에 따라 달라지지 않습니다.  
+ =(등가) 비교 연산자와 달리 두 NULL 값에 대한 >= 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
 ## <a name="examples"></a>예  
   

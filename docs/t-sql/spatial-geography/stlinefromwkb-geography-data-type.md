@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromWKB method
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6e3b4dd5e3a583858dde75208e17487de248f8aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97fba0d360b6be5d8b9d2c79c88fa945209a22b4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663811"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936669"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

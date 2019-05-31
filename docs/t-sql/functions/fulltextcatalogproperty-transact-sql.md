@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662797"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948976"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ _property_
 |**LogSize**|이전 버전과의 호환성을 위해서만 지원됩니다. 항상 0을 반환합니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] 검색 서비스 전체 텍스트 카탈로그와 연결된 오류 로그의 결합된 집합 크기(바이트)입니다.|  
 |**MergeStatus**|마스터 병합의 진행 여부를 나타냅니다.<br /><br /> 0 = 마스터 병합이 진행되고 있지 않습니다.<br /><br /> 1 = 마스터 병합이 진행되고 있습니다.|  
 |**PopulateCompletionAge**|마지막 전체 텍스트 인덱스 채우기가 완료된 시간과 01/01/1990 00:00:00 사이의 차이(초)입니다.<br /><br /> 전체 탐색 및 증분 탐색에 대해서만 업데이트됩니다. 채우기가 발생하지 않은 경우 0을 반환합니다.|  
-|**PopulateStatus**|0 = 유휴 상태<br /><br /> 1 = 전체 채우기 진행 중<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 정체됨<br /><br /> 4 = 복구 중<br /><br /> 5 = 종료<br /><br /> 6 = 증분 채우기 진행 중<br /><br /> 7 = 인덱스 작성 중<br /><br /> 8 = 디스크가 꽉 참 일시 중지됨<br /><br /> 9 = 변경 내용 추적 중|  
+|**PopulateStatus**|0 = 유휴 상태<br /><br /> 1 = 전체 채우기 진행 중<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 정체됨<br /><br /> 4 = 복구 중<br /><br /> 5 = 종료<br /><br /> 6 = 증분 채우기 진행 중<br /><br /> 7 = 인덱스 작성 중<br /><br /> 8 = 디스크가 꽉 참. 일시 중지됨<br /><br /> 9 = 변경 내용 추적 중|  
 |**UniqueKeyCount**|전체 텍스트 카탈로그에서 고유 키 번호입니다.|  
 |**ImportStatus**|전체 텍스트 카탈로그를 가져올 것인지 여부를 나타냅니다.<br /><br /> 0 = 전체 텍스트 카탈로그를 가져오지 않습니다.<br /><br /> 1 = 전체 텍스트 카탈로그를 가져옵니다.|  
   
 ## <a name="return-types"></a>반환 형식  
-**int**  
+**ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
 오류가 발생하거나 호출자에게 개체를 볼 수 있는 권한이 없으면 NULL을 반환합니다.  

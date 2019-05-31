@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsEmpty (geometry Data Type)
 ms.assetid: dcbd6ae1-5d63-485f-9d58-28bfd504524e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 62419df0c6d0768924f841e2b06ec21eda1ee5e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0d9cb2311c4392015c02f72d4720c7b21be6115
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667171"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938792"
 ---
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

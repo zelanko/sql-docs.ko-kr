@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IsNull (geometry Data Type)
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4b861d170316dbc9d66c7f8e7954910438031f1b
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 7c890af16b4c83ad80529501dab79c71527f208b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935924"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "55513803"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **bit**  
   
- CLR 형식: **SqlBoolean**  
+ CLR 유형: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  `IsNull`을 사용하여 **geometry** 인스턴스가 Null인지 여부를 테스트할 수 있습니다. `IsNull`은 인스턴스가 Null이 아니면 0을 반환하고, Null이면 Null을 반환합니다.  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - data types [SQL Server], status information
 - TYPEPROPERTY function
 ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfd001d10f7f0fd165bd797e84af9a57034676a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 796de66b6fdce95be5fe235219208a504cc8095e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799421"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946831"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,13 +51,13 @@ TYPEPROPERTY (type , property)
 |속성|설명|반환 값|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|데이터 형식이 Null 값을 허용합니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
-|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 반드시 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
+|**OwnerId**|형식의 소유자입니다.<br /><br /> 참고: 스키마 소유자가 형식 소유자일 필요는 없습니다.|Null이 아닌 경우 = 형식 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 형식이거나 형식 ID가 유효하지 않습니다.|  
 |**정밀도**|데이터 형식의 전체 자릿수입니다.|자릿수 또는 문자 수입니다.<br /><br /> -1 = **xml** 또는 큰 값 데이터 형식<br /><br /> NULL = 데이터 형식을 찾지 못함.|  
 |**소수 자릿수**|데이터 형식의 소수 자릿수입니다.|데이터 형식의 소수 자릿수입니다.<br /><br /> NULL = 데이터 형식이 **numeric**이 아니거나 데이터 형식을 찾지 못함.|  
 |**UsesAnsiTrim**|데이터 형식을 만들 때 ANSI 패딩 설정을 ON으로 설정했습니다.|1 = True<br /><br /> 0 = False<br /><br /> NULL = 데이터 형식을 찾을 수 없거나 이진 또는 문자열 데이터 형식이 아님.|  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

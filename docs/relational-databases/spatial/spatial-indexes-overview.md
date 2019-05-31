@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 619f32c1a12e5a00a553cb41434dcf4802020c1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659762"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939211"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51659762"
   
  예를 들어 수준-1 표의 셀 15에 꼭 맞는 팔각형을 보여 주는 위의 그림을 검토해 봅니다. 그림에서는 팔각형을 수준-2의 셀 9개로 나누어서 셀 15가 공간 분할되었습니다. 이 그림에서는 개체당 셀 수 제한을 9개 이상으로 가정합니다. 개체당 셀 수 제한이 8개 이하라면 셀 15는 공간 분할되지 않고 해당 셀 15만 개체의 개수로 계산됩니다.  
   
- 기본적으로 대부분의 공간 인덱스에 대해 공간과 자릿수 간의 적절한 균형을 이루는 개체당 셀 수 제한은 개체당 셀 16개입니다. 그러나 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 CELLS_PER_OBJECT**=**_n_ 절을 지원합니다. 이 절을 사용하면 1과 8192 사이를 포함하는 개체당 셀 수 제한을 지정할 수 있습니다.  
+ 기본적으로 대부분의 공간 인덱스에 대해 공간과 자릿수 간의 적절한 균형을 이루는 개체당 셀 수 제한은 개체당 셀 16개입니다. 그러나 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 CELLS_PER_OBJECT **=** _n_ 절을 지원합니다. 이 절을 사용하면 1과 8192 사이를 포함하는 개체당 셀 수 제한을 지정할 수 있습니다.  
   
 > [!NOTE]  
 >  공간 인덱스의 **cells_per_object** 설정은 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 카탈로그 뷰에서 볼 수 있습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "51659762"
 >  [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
   
 ##### <a name="the-bounding-box"></a>경계 상자  
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자는 **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 라는 4개의 좌표로 정의되며 공간 인덱스의 속성으로 저장됩니다. 이러한 좌표는 다음을 나타냅니다.  
   
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "51659762"
 > [!NOTE]  
 >  이러한 좌표는 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 BOUNDING_BOX 절에서 지정됩니다.  
   
- **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 좌표에 따라 경계 상자의 배치 및 차원이 결정됩니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
+ **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 좌표에 따라 경계 상자의 배치 및 차원이 결정됩니다. 경계 상자 외부의 공간은 번호가 0으로 매겨진 단일 셀로 처리됩니다.  
   
  공간 인덱스는 경계 상자 내부의 공간을 분해합니다. 표 계층 구조 수준-1 표가 경계 상자를 채웁니다. 표 계층 구조에서 기하학적 개체를 배치하기 위해 공간 인덱스에서는 개체 좌표와 경계 상자 좌표를 비교합니다.  
   
- 다음 그림에서는 경계 상자의 **(**_x-min_**,**_y-min_**)** 및 **(**_x-max_**,**_y-max_**)** 좌표로 정의되는 지점을 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
+ 다음 그림에서는 경계 상자의 **(** _x-min_ **,** _y-min_ **)** 및 **(** _x-max_ **,** _y-max_ **)** 좌표로 정의되는 지점을 보여 줍니다. 표 계층 구조의 최상위 수준이 4x4 표로 표시됩니다. 이해하기 쉽도록 하위 수준은 생략되었습니다. 경계 상자 외부의 공간은 0으로 표시됩니다. 'A' 개체는 부분적으로 상자 밖으로 뻗어 있고 'B' 개체는 완전히 셀 0의 상자 바깥쪽에 있습니다.  
   
  ![좌표 및 셀 0을 보여 주는 경계 상자](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Bounding box showing coordinates and cell 0.")  
   
@@ -182,7 +182,7 @@ ms.locfileid: "51659762"
 ##  <a name="methods"></a> 공간 인덱스에서 지원되는 메서드  
   
 ###  <a name="geometry"></a> 공간 인덱스에서 지원되는 기하 도형 메서드  
- 공간 인덱스는 특정 조건에서 STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin()과 같은 집합 지향 geometry 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 공간 인덱스는 특정 조건에서 다음과 같은 집합 지향 geometry 메서드를 지원합니다. STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -207,7 +207,7 @@ ms.locfileid: "51659762"
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 공간 인덱스에서 지원되는 지리 메서드  
- 특정 조건에서 공간 인덱스는 STIntersects(),STEquals() 및 STDistance()와 같은 집합 지향 지리 메서드를 지원합니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 특정 조건에서 공간 인덱스는 다음과 같은 집합 지향 지리 메서드를 지원합니다. STIntersects(),STEquals() 및 STDistance(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

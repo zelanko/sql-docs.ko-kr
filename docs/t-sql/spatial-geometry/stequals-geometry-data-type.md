@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 174e69a9756b1d55832b56e6b4bbd7f216f9e59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8be1233035f643b40db334aa905504a3dee62bd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660331"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938954"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

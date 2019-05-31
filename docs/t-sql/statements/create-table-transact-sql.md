@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503732"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036899"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -380,23 +380,23 @@ AS FileTable
 PERSISTED    
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 계산된 값을 테이블에 물리적으로 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트하도록 지정합니다. 계산 열을 `PERSISTED`로 표시하면 결정적이지만 정확하지는 않은 계산 열에 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요. 분할된 테이블의 분할 열로 사용되는 모든 계산 열은 명시적으로 `PERSISTED`로 표시되어야 합니다. `PERSISTED`를 지정할 때 *computed_column_expression*은 결정적이어야 합니다.
 
-ON { *partition_scheme* | *filegroup* | **"default"** }     
+ON { *partition_scheme* | *filegroup* |  **"default"** }     
 테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme*을 지정하면 해당 테이블은 *partition_scheme*에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup*을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 저장 메커니즘은 곧이어 변경할 수 없습니다.
 
-ON {*partition_scheme* | *filegroup* | **"default"**}은 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. `PRIMARY KEY` 또는 `UNIQUE` 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. `CLUSTERED`를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
+ON {*partition_scheme* | *filegroup* |  **"default"** }은 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. `PRIMARY KEY` 또는 `UNIQUE` 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. `CLUSTERED`를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
 
 > [!NOTE]
 > 이 컨텍스트에서 *default*는 키워드가 아닙니다. 기본 파일 그룹에 대한 식별자이며 ON **"default"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. **"default"** 를 지정하면 현재 세션의 `QUOTED_IDENTIFIER` 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
 >
 > 분할된 테이블을 만든 후에는 테이블의 `LOCK_ESCALATION` 옵션을 `AUTO`로 설정하는 것이 좋습니다. 이렇게 하면 테이블 수준이 아닌 파티션(HoBT) 수준으로 잠금이 에스컬레이션되도록 하여 동시성을 향상시킬 수 있습니다. 자세한 내용은 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.
 
-TEXTIMAGE_ON { *filegroup*| **"default"** }    
-지정된 파일 그룹에 **text**, **ntext**, **image**, **xml**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 CLR 사용자 정의 형식 열(기하 도형 및 지리 포함)이 저장되어 있음을 나타냅니다.
+TEXTIMAGE_ON { *filegroup*|  **"default"** }    
+지정된 파일 그룹에 **text**, **ntext**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 CLR 사용자 정의 형식 열(기하 도형 및 지리 포함)이 저장되어 있음을 나타냅니다.
 
 테이블에 큰 값 열이 없는 경우에는 `TEXTIMAGE_ON`이 허용되지 않습니다. *partition_scheme*을 지정하면 `TEXTIMAGE_ON`을 지정할 수 없습니다. **"default"** 를 지정하거나 `TEXTIMAGE_ON`을 전혀 지정하지 않으면 큰 값 열이 기본 파일 그룹에 저장됩니다. `CREATE TABLE`에 지정된 큰 값 열 데이터의 스토리지는 나중에 변경할 수 없습니다.
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8,000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 스토리지 공간에 저장됩니다. 0이 기본값입니다.
+> Varchar(max), nvarchar(max), varbinary(max), xml 및 큰 UDT 값은 레코드에 맞는 한 최대 8,000바이트까지 데이터 행에 직접 저장됩니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 스토리지 공간에 저장됩니다. 0은 모든 값이 데이터 행에 직접 저장됨을 나타내는 기본값입니다.
 >
 > `TEXTIMAGE_ON`은 "LOB 스토리지 공간"의 위치만 변경하며, 데이터가 행 내부에 저장되는 경우 아무 영향도 주지 않습니다. sp_tableoption의 large value types out of row 옵션을 사용하여 전체 LOB 값을 행 외부에 저장합니다.
 >
@@ -422,7 +422,7 @@ ON 및 `TEXTIMAGE_ON`과 마찬가지로 `FILESTREAM_ON`에 대해 `CREATE TABLE
 
 관련 FILESTREAM 항목은 [BLOB(Binary Large Object) - Blob 데이터](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.
 
-[ _type\_schema\_name_**.** ] *type_name*     
+[ _type\_schema\_name_ **.** ] *type_name*     
 열의 데이터 형식과 열이 속한 스키마를 지정합니다. 디스크 기반 테이블의 데이터 형식은 다음 중 하나일 수 있습니다.
 
 - 시스템 데이터 형식
@@ -481,7 +481,7 @@ GENERATED ALWAYS AS ROW { START | END } [ HIDDEN ] [ NOT NULL ]
 
 시스템이 지정된 `datetime2` 열을 사용하여 레코드가 유효한 시작 시간 또는 레코드가 유효한 종료 시간을 기록하도록 지정합니다. 열은 `NOT NULL`로 정의되어야 합니다. 이들을 `NULL`로 지정하려고 하면 시스템에서 오류가 throw됩니다. 기간 열에 NOT NULL을 명시적으로 지정하지 않으면 시스템은 기본적으로 해당 열을 `NOT NULL`로 정의합니다. `PERIOD FOR SYSTEM_TIME` 및 `WITH SYSTEM_VERSIONING = ON` 인수를 이 인수와 함께 사용하여 테이블에서 시스템 버전 관리를 활성화합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
-기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM**_`<table>`_ 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.
+기간 열 한 개 또는 두 개를 모두 **HIDDEN** 플래그로 표시하여 **SELECT \* FROM** _`<table>`_ 이 이러한 열에 대해 값을 반환하지 않도록 해당 열을 암시적으로 숨길 수 있습니다. 기본적으로 기간 열은 숨겨지지 않습니다. 사용하려면 임시 테이블을 직접 참조하는 모든 쿼리에 숨겨진 열을 명시적으로 포함해야 합니다. 기존 기간 열의 **HIDDEN** 특성을 변경하려면 **PERIOD**를 삭제하고 다른 숨겨진 플래그를 사용하여 다시 만들어야 합니다.
 
 INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -500,7 +500,7 @@ INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )
 
 비클러스터형 columnstore 인덱스는 클러스터형 columnstore 인덱스로 저장 및 관리됩니다. 이는 열이 제한될 수 있고 테이블에 보조 인덱스로 존재하기 때문에 비클러스터형 columnstore 인덱스라고 부릅니다.
 
-ON _파티션\_구성표\_이름_**(**_열\_이름_**)**    
+ON _파티션\_구성표\_이름_ **(** _열\_이름_ **)**     
 분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.
 
 > [!NOTE]
@@ -516,7 +516,7 @@ ON _파티션\_구성표\_이름_**(**_열\_이름_**)**
 ON *filegroup_name*    
 주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.
 
-ON **"default"**    
+ON **"default"**     
 기본 파일 그룹에 지정된 인덱스를 만듭니다.
 
 이 컨텍스트에서 default는 키워드가 아닙니다. 기본 파일 그룹에 대한 식별자이며 ON **"default"** 또는 ON **[default]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 `QUOTED_IDENTIFIER` 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.
@@ -621,10 +621,10 @@ PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클러스터형 또는 비클�
 FOREIGN KEY REFERENCES       
 열에 있는 데이터에 대한 참조 무결성을 제공하는 제약 조건입니다. FOREIGN KEY 제약 조건을 지정하려면 열의 각 값이 참조된 테이블의 참조된 해당 열에 있어야 합니다. FOREIGN KEY 제약 조건은 참조되는 테이블의 PRIMARY KEY 또는 UNIQUE 제약 조건 열이나 참조되는 테이블의 UNIQUE INDEX에서 참조되는 열만 참조할 수 있습니다. 계산 열의 외래 키 또한 PERSISTED로 표시되어야 합니다.
 
-[ _schema\_name_**.**] *referenced_table_name*]      
+[ _schema\_name_ **.** ] *referenced_table_name*]      
 FOREIGN KEY 제약 조건이 참조하는 테이블과 그 테이블이 속한 스키마의 이름입니다.
 
-**(** *ref_column* [ **,**... *n* ] **)** FOREIGN KEY 제약 조건이 참조하는 테이블의 열 또는 열 목록입니다.
+**(** *ref_column* [ **,** ... *n* ] **)** FOREIGN KEY 제약 조건이 참조하는 테이블의 열 또는 열 목록입니다.
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }         
 행이 참조 관계를 가지고 참조된 행이 부모 테이블에서 삭제될 경우에 테이블의 행에 수행될 동작을 지정합니다. 기본값은 NO ACTION입니다.
@@ -691,13 +691,13 @@ TRUE 또는 FALSE를 반환하는 논리 식입니다. 별칭 데이터 형식�
 *partition_scheme_name*     
 분할된 테이블의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표의 이름입니다. 파티션 구성표는 데이터베이스 내에 있어야 합니다.
 
-[ _partition\_column\_name_**.** ]      
+[ _partition\_column\_name_ **.** ]      
 분할된 테이블의 분할 기준 열을 지정합니다. 열은 *partition_scheme_name*에서 사용하는 파티션 함수에 지정된 열과 데이터 형식, 길이 및 전체 자릿수에서 일치해야 합니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다.
 
 > [!IMPORTANT]
 > 분할된 테이블 및 ALTER TABLE...SWITCH 작업의 원본이나 대상인 분할되지 않은 테이블의 분할 열에 NOT NULL을 지정하는 것이 좋습니다. 이렇게 하면 분할 열의 CHECK 제약 조건에서 Null 값을 확인하지 않아도 됩니다.
 
-WITH FILLFACTOR **=**_fillfactor_     
+WITH FILLFACTOR **=** _fillfactor_     
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 인덱스 데이터를 저장하는 데 사용하는 각 인덱스 페이지를 채우는 방법을 지정합니다. 사용자가 지정한 *fillfactor* 값은 1에서 100 사이일 수 있습니다. 값을 지정하지 않으면 기본값 0이 사용됩니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.
 
 > [!IMPORTANT]
@@ -750,7 +750,7 @@ COLUMNSTORE_ARCHIVE
 
 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**      
+ON PARTITIONS **(** { `<partition_number_expression>` | [ **,** ...*n* ] **)**       
 DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할되지 않은 경우 `ON PARTITIONS` 인수를 사용하면 오류가 발생합니다. `ON PARTITIONS` 절이 제공되지 않으면 `DATA_COMPRESSION` 옵션이 분할된 테이블의 모든 파티션에 적용됩니다.
 
 *partition_number_expression*은 다음과 같은 방법으로 지정할 수 있습니다.
@@ -778,7 +778,7 @@ WITH
 PAD_INDEX = { ON | **OFF** }     
 ON이면 FILLFACTOR로 지정한 사용 가능한 공간의 비율을 인덱스의 중간 수준 페이지에 적용합니다. OFF이거나 FILLFACTOR 값을 지정하지 않으면 중간 페이지의 키 집합을 고려하여 인덱스가 가질 수 있는 최대 크기의 행을 최소한 하나만큼 저장할 공간을 남기고 용량 한계에 가깝게 중간 수준 페이지를 채웁니다. 기본값은 OFF입니다.
 
-FILLFACTOR **=**_fillfactor_     
+FILLFACTOR **=** _fillfactor_     
 인덱스를 만들거나 변경할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. 채우기 비율 값 0과 100은 모든 면에서 동일합니다.
 
 IGNORE_DUP_KEY = { ON | **OFF** }    
@@ -1287,7 +1287,7 @@ CREATE TABLE dbo.mytable
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>11. 사용자 정의 형식의 열을 기반으로 계산 열 만들기
-다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)**`utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 계산합니다.
+다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)** `utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 계산합니다.
 
 ```sql
 CREATE TABLE UDTypeTable

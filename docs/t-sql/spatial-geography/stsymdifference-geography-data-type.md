@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STSymDifference (geography Data Type)
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9767a72fea55abb732da9351c3a9c7fb242e5447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc735e71a286d5caca14c7e54b4ea8128feeda2b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825851"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939132"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47825851"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>1. 두 Polygon 사이의 대칭 차이 계산  
- 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 컴퓨팅합니다.  
+ 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 계산합니다.  
   
 ```  
 DECLARE @g geography;  

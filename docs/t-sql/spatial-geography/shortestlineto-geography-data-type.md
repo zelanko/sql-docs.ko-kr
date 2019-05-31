@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c495bd27ef5464b0fa56b94513c24eeb4641240e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c136de737c3cd3eec886ff2e5ce470ab4d67296e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689211"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936272"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

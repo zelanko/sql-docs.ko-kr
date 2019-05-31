@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Null (geometry Data Type)
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5559bc5736b5370f361796607e95e45ebbccea35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf081a6f1bac088c4a7539d4efd367f3bb7fade
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766788"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937494"
 ---
 # <a name="null-geometry-data-type"></a>Null(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Null
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **geometry**  
   
- CLR 형식: **SqlGeometry**  
+ CLR 유형: **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   

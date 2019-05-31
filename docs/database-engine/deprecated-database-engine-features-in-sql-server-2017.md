@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.openlocfilehash: 2308cc29c0cbbee8b72177e573d51239c9f8f5de
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480329"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981163"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Backup 및 Restore 메서드|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD는 계속 사용되지 않습니다. BACKUP { DATABASE &#124; LOG } WITH PASSWORD 및 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD는 더 이상 사용되지 않습니다.|없음|BACKUP DATABASE 또는 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |호환성 수준|버전 100([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])에서 업그레이드합니다.|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 더 이상 [지원](https://aka.ms/sqllifecycle)되지 않을 경우 연결된 데이터베이스 호환성 수준이 사용되지 않는 것으로 표시됩니다. 하지만 업그레이드를 더욱 용이하게 할 수 있도록 지원되는 데이터베이스 호환성 수준에서 인증된 애플리케이션을 최대한 오래 계속 지원할 예정입니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
 |데이터베이스 개체|트리거에서 결과 집합을 반환하는 기능|없음|트리거에서 결과 반환|12|  
-|암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|  
+|암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|    
+|해시 알고리즘|MD2, MD4, MD5, SHA 및 SHA1 사용은 더 이상 사용되지 않습니다.|대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다.|사용되지 않는 해시 알고리즘|없음|  
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
 |원격 서버|\@\@remserver|연결된 서버를 사용하여 원격 서버를 대체합니다.|없음|없음|  
 |원격 서버|SET REMOTE_PROC_TRANSACTIONS|연결된 서버를 사용하여 원격 서버를 대체합니다.|SET REMOTE_PROC_TRANSACTIONS|110|  
@@ -78,8 +79,8 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |데이터 형식|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |데이터 형식|**timestamp** 데이터 형식에 대한 **rowversion** 구문|**rowversion** 데이터 형식 구문|timestamp|158|  
 |데이터 형식|Null 값을 **timestamp** 열에 삽입하는 기능|대신 DEFAULT를 사용합니다.|TIMESTAMP 열에 대한 INSERT NULL|179|  
-|데이터 형식|'text in row' 테이블 옵션|**varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|Text in row 테이블 옵션|9|  
-|데이터 형식|데이터 형식:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.|데이터 형식: **text**, **ntext** 또는 **image**|4|  
+|데이터 형식|'text in row' 테이블 옵션|**varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|Text in row 테이블 옵션|9|  
+|데이터 형식|데이터 형식:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.|데이터 형식: **text**, **ntext** 또는 **image**|4|  
 |데이터베이스 관리|sp_attach_db<br /><br /> sp_attach_single_file_db|FOR ATTACH 옵션을 사용하는 CREATE DATABASE 문. 하나 이상의 로그 파일에 새 위치가 있는 경우 여러 로그 파일을 다시 작성하려면 FOR ATTACH_REBUILD_LOG 옵션을 사용합니다.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |데이터베이스 개체|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE 및 ALTER TABLE의 DEFAULT 키워드|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |데이터베이스 개체|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE 및 ALTER TABLE의 CHECK 키워드|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -99,7 +100,6 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |확장 저장 프로시저 프로그래밍|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|대신 CLR 통합을 사용하십시오.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |확장 저장 프로시저|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|CREATE LOGIN 사용<br /><br /> SERVERPROPERTY의 DROP LOGIN IsIntegratedSecurityOnly 인수 사용|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginConfig|44<br /><br /> 45<br /><br /> 59|  
 |함수|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|해시 알고리즘|MD2, MD4, MD5, SHA 및 SHA1 알고리즘. 사용할 수 없습니다.|SHA2_256 또는 SHA2_512를 사용합니다.|사용되지 않는 해시 알고리즘||  
 |고가용성|데이터베이스 미러링|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> 현재 사용 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전이 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]을 지원하지 않는 경우에는 로그 전달을 사용하십시오.|DATABASE_MIRRORING|267|  
 |인덱스 옵션|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |인덱스 옵션|옵션 주위에 괄호가 없는 CREATE TABLE, ALTER TABLE 또는 CREATE INDEX 구문|현재 구문을 사용하도록 문을 다시 작성해야 합니다.|INDEX_OPTION|33|  
@@ -134,7 +134,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |서버 구성 옵션|c2 audit 옵션<br /><br /> default trace enabled 옵션|[common criteria compliance enabled 서버 구성 옵션](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 클래스|**Microsoft.SQLServer. Management.Smo.Information** 클래스<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** 클래스<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** 클래스<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** 속성|**Microsoft.SqlServer.  Management.Smo.Server** 클래스<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** 클래스<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** 클래스<br /><br /> 없음|없음|없음|  
 |SQL Server 에이전트|**Net Send** 알림<br /><br /> 호출기 알림|전자 메일 알림<br /><br /> 전자 메일 알림 |없음|없음|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|다음과 솔루션 탐색기 통합 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||없음|없음|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 솔루션 탐색기 통합||없음|없음|  
 |시스템 저장 프로시저|sp_db_increased_partitions|없음 증가 파티션에 대한 지원은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 기본적으로 사용할 수 있습니다.|sp_db_increased_partitions|253|  
 |시스템 테이블|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|호환성 뷰입니다. 자세한 내용은 [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)를 참조하세요.<br /><br /> **중요:** 호환성 뷰는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 도입된 기능의 메타데이터를 제공하지 않습니다. 애플리케이션에서 카탈로그 뷰를 사용하도록 업그레이드하는 것이 좋습니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 없음<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |시스템 테이블|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|없음|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  

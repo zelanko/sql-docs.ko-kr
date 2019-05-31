@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641511"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943434"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  사용 권한 정보를 반환할 열의 선택적 이름입니다. 이 열은 *objectid*로 지정한 테이블에서 유효한 열 이름이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  PERMISSIONS는 현재 사용자가 문을 실행하거나 다른 사용자에게 사용 권한을 부여할 수 있는 권한이 있는지 여부를 확인하는 데 사용할 수 있습니다.  
@@ -133,7 +133,7 @@ ELSE
    PRINT 'ERROR: The current user cannot insert data into Person.Address.';  
 ```  
   
-### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>3. 부여할 수 있는 권한과 함께 PERMISSIONS 함수 사용  
+### <a name="c-using-the-permissions-function-with-grantable-permissions"></a>C. 부여할 수 있는 권한과 함께 PERMISSIONS 함수 사용  
  다음 예에서는 현재 사용자가 `Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 INSERT 권한을 다른 사용자에게 부여할 수 있는지 여부를 확인합니다.  
   
 ```  

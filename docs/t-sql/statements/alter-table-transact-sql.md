@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2019
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: c15cff20feb4fd3f9ef5057babaad884de022975
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502859"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943298"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
 
@@ -450,8 +450,8 @@ ALTER COLUMN - 명명된 열을 변경하도록 지정합니다.
 
 **text**, **ntextntext** 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.
 
-- **text**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로
-- **ntext**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로
+- **text**에서 **varchar(max)** , **nvarchar(max)** 또는 **xml**로
+- **ntext**에서 **varchar(max)** , **nvarchar(max)** 또는 **xml**로
 - **image**에서 **varbinary(max)** 로
 
 데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 **nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.
@@ -469,7 +469,7 @@ Always Encrypted를 보안 Enclave와 함께 사용하는 경우 열을 보호�
 
 *column_name* 변경, 추가 또는 삭제할 열의 이름입니다. *column_name* 최댓값은 128자입니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **timestamp** 데이터 형식 열에 대해 *column_name*을 지정하지 않으면 **timestamp**가 이름으로 사용됩니다.
 
-[ _type\_schema\_name_**.** ] _type\_name_ 변경된 열의 새 데이터 형식 또는 추가된 열의 데이터 형식입니다. 분할된 테이블의 기존 열에 *type_name*을 지정할 수 없습니다. *type_name*은 다음 형식 중 하나일 수 있습니다.
+[ _type\_schema\_name_ **.** ] _type\_name_ 변경된 열의 새 데이터 형식 또는 추가된 열의 데이터 형식입니다. 분할된 테이블의 기존 열에 *type_name*을 지정할 수 없습니다. *type_name*은 다음 형식 중 하나일 수 있습니다.
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식을 기반으로 하는 별칭 데이터 형식. CREATE TYPE 문으로 별칭 데이터 형식을 만든 다음, 테이블 정의에서 사용할 수 있습니다.
@@ -673,7 +673,7 @@ OFF - 인덱스 작업 중에 테이블 잠금이 적용됩니다. 클러스터�
 > [!NOTE]
 > 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** } **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **"** default **"** } **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 이동할 위치를 지정합니다. 테이블이 새 위치로 이동됩니다. 이 옵션은 클러스터형 인덱스를 만드는 제약 조건에만 적용됩니다.
 
@@ -698,12 +698,12 @@ ALL - 테이블의 모든 트리거를 설정하거나 해제하도록 지정합
 
 변경 내용 추적을 설정하려면 테이블에 기본 키가 있어야 합니다.
 
-WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
+WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)** 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 업데이트된 변경 내용 추적 열을 추적하는지 여부를 지정합니다. 기본값은 OFF입니다.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ] **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 다음 방법 중 하나를 사용하여 데이터 블록을 전환합니다.
 
@@ -727,7 +727,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 및 버전 V12 이전의 SQL Database용으로 빌드된 비클러스터형 columnstore 인덱스는 읽기 전용 형식입니다. 비클러스터형 columnstore 인덱스는 PARTITION 작업을 실행하기 전 최신 형식(업데이트 가능)으로 다시 빌드해야 합니다.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)** 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 `FILESTREAM`을 지원하지 않습니다.
 
 FILESTREAM 데이터가 저장되는 위치를 지정합니다.
@@ -746,11 +746,11 @@ SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . h
 
 테이블의 시스템 버전 관리를 사용 중지하거나 사용합니다. 시스템은 테이블의 시스템 버전 관리를 활성화하기 위해 시스템 버전 관리에 대한 데이터 형식, Null 허용 여부, 기본 키 제약 요구 사항이 충족되었는지 여부를 검증합니다. HISTORY_TABLE 인수를 사용하지 않는 경우 시스템에서 현재 테이블의 스키마와 일치하는 새 기록 테이블을 생성하고, 두 테이블 간에 링크를 만들고, 시스템이 기록 테이블의 현재 테이블에서 각 레코드의 기록을 기록할 수 있도록 합니다. 이 기록 테이블의 이름은 `MSSQL_TemporalHistoryFor<primary_table_object_id>`가 됩니다. HISTORY_TABLE 인수를 사용하여 기존 기록 테이블에 대한 링크를 만들고 해당 테이블을 사용하면 현재 테이블과 지정된 테이블 간에 링크가 생성됩니다. 기존 기록 테이블에 대한 링크를 만드는 경우 데이터 일관성 검사를 수행하도록 선택할 수 있습니다. 이 데이터 일관성 확인을 통해 기존 레코드가 겹치지 않도록 합니다. 기본값은 데이터 일관성 검사를 실행하는 것입니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
-HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+HISTORY_RETENTION_PERIOD = { **INFINITE** | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS} } **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 temporal 테이블의 기록 데이터에 대한 유한 또는 무한 보존을 지정합니다. 생략할 경우 무한 보존이 가정됩니다.
 
-SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)**
+SET **(** LOCK_ESCALATION = { AUTO | TABLE | DISABLE } **)** 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 테이블에 대해 허용되는 잠금 에스컬레이션 방법을 지정합니다.
@@ -895,7 +895,7 @@ MAX_DURATION = *time* [**MINUTES** ] **적용 대상**: [!INCLUDE[ssNoVersion](.
 
 DDL 명령을 실행할 때 **SWITCH** 또는 온라인 인덱스 다시 작성 잠금이 낮은 우선 순위로 대기하는 시간(분 단위로 지정된 정수 값)입니다. 작업이 **MAX_DURATION** 시간 동안 차단되면 **ABORT_AFTER_WAIT** 작업 중 하나가 실행됩니다. **MAX_DURATION** 시간은 항상 분 단위이며 단어 **MINUTES**는 생략할 수 있습니다.
 
-ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ] **적용 대상:**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ] **적용 대상:** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 NONE - 보통(일반) 우선순위로 잠금을 계속 대기합니다.
 
@@ -929,7 +929,7 @@ ALTER TABLE에 지정하는 변경 내용은 즉시 구현됩니다. 변경할 �
 
 기존 행은 메타데이터에 저장된 값을 참조하는 반면, 기본값은 새로 삽입되는 행에 대한 새 행에 저장되고 열에 대한 다른 값을 지정하지 않습니다. 메타데이터에 저장된 기본값은 행이 업데이트될 때(UPDATE 문에 실제 행이 지정되어 있지 않는 경우에도 동일) 또는 테이블이나 클러스터형 인덱스를 다시 작성하는 경우 기존 행으로 이동됩니다.
 
-**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** 형식 또는 CLR UDTS의 열은 온라인 작업에 추가할 수 없습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.
+**varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** 형식 또는 CLR UDTS의 열은 온라인 작업에 추가할 수 없습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.
 
 ## <a name="parallel-plan-execution"></a>병렬 계획 실행
 

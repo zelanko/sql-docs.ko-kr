@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241564"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947094"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE Statements - LABELONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -81,16 +81,16 @@ FROM <backup_device>
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|미디어의 이름입니다.|  
 |**MediaSetId**|**uniqueidentifier**|미디어 세트의 고유 ID입니다.|  
-|**FamilyCount**|**int**|미디어 세트에서 미디어 패밀리의 번호입니다.|  
-|**FamilySequenceNumber**|**int**|해당 패밀리의 시퀀스 번호입니다.|  
+|**FamilyCount**|**ssNoversion**|미디어 세트에서 미디어 패밀리의 번호입니다.|  
+|**FamilySequenceNumber**|**ssNoversion**|해당 패밀리의 시퀀스 번호입니다.|  
 |**MediaFamilyId**|**uniqueidentifier**|미디어 패밀리의 고유 ID입니다.|  
-|**MediaSequenceNumber**|**int**|미디어 패밀리에 있는 해당 미디어의 시퀀스 번호입니다.|  
+|**MediaSequenceNumber**|**ssNoversion**|미디어 패밀리에 있는 해당 미디어의 시퀀스 번호입니다.|  
 |**MediaLabelPresent**|**tinyint**|미디어 설명에 다음이 포함되는지 여부입니다.<br /><br /> **1** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format 미디어 레이블<br /><br /> **0** = 미디어 설명|  
 |**MediaDescription**|**nvarchar(255)**|자유 형식 텍스트로 된 미디어 설명 또는 Tape Format 미디어 레이블입니다.|  
 |**SoftwareName**|**nvarchar(128)**|미디어 레이블을 기록하는 백업 소프트웨어의 이름입니다.|  
-|**SoftwareVendorId**|**int**|백업을 기록하는 소프트웨어 공급업체의 고유 공급업체 ID입니다.|  
+|**SoftwareVendorId**|**ssNoversion**|백업을 기록하는 소프트웨어 공급업체의 고유 공급업체 ID입니다.|  
 |**MediaDate**|**datetime**|레이블을 작성한 날짜와 시간입니다.|  
-|**Mirror_Count**|**int**|세트에 있는 미러 수(1-4)입니다.<br /><br /> 참고: 한 세트에 있는 다른 미러에 대해 기록된 레이블은 모두 동일합니다.|  
+|**Mirror_Count**|**ssNoversion**|세트에 있는 미러 수(1-4)입니다.<br /><br /> 참고: 한 집합에 있는 다른 미러에 대해 기록된 레이블은 모두 동일합니다.|  
 |**IsCompressed**|**bit**|백업의 압축 여부:<br /><br /> 0 = 압축되지 않음<br /><br /> 1 = 압축됨|  
   
 > [!NOTE]  
@@ -105,7 +105,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 백업 세트나 백업 디바이스에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

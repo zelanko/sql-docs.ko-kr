@@ -1,7 +1,7 @@
 ---
 title: SQL Server 확장 이벤트의 대상 데이터 고급 보기 | Microsoft 문서
 ms.custom: ''
-ms.date: 10/04/2016
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478168"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198342"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 
@@ -42,7 +42,7 @@ ms.locfileid: "58478168"
 
 이 문서에서는 또한 SSMS의 가장 최신 릴리스를 설치했다고 가정합니다. 설치 도움말은 다음을 참조하세요.
 
-- [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)
+- [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 
@@ -133,7 +133,7 @@ SSMS UI의 탭 모음으로 .XEL 파일을 끌어서 놓을 수도 있습니다.
 
 **개체 탐색기** 창에서 노드를 확장한 다음 마우스 오른쪽 단추로 클릭합니다.
 
-- **관리** > **확장 이벤트** > **세션** > *[your-session]* > *[your-target-node]* > **대상 데이터 보기**
+- **관리** > **확장 이벤트** > **세션** >  *[your-session]*  >  *[your-target-node]*  > **대상 데이터 보기**
 
 
 대상 데이터가 SSMS의 탭 창에 표시됩니다. 다음 스크린샷에서 이 단계를 보여 줍니다.
@@ -153,7 +153,7 @@ SSMS UI의 탭 모음으로 .XEL 파일을 끌어서 놓을 수도 있습니다.
 이벤트 세션이 현재 활성 상태인 경우 이벤트 데이터를 대상에서 받은 상태대로 실시간으로 감시하고 싶을 수 있습니다.
 
 
-- **관리** > **확장 이벤트** > **세션** > *[your-session]* > **라이브 데이터 감시**
+- **관리** > **확장 이벤트** > **세션** >  *[your-session]*  > **라이브 데이터 감시**
 
 
 ![세션 > 라이브 데이터 감시](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ SSMS UI의 탭 모음으로 .XEL 파일을 끌어서 놓을 수도 있습니다.
 
 데이터 표시가 업데이트되는 간격을 지정할 수 있습니다. 다음에서 **최대 디스패치 대기 시간** 을 참조하세요.
 
-- **확장 이벤트** > **세션** > *[your-session]* > **속성** > **고급** > **최대 디스패치 대기 시간**
+- **확장 이벤트** > **세션** >  *[your-session]*  > **속성** > **고급** > **최대 디스패치 대기 시간**
 
 
 
@@ -318,4 +318,6 @@ SSMS 표시 필터는 다음과 같습니다.
 
 ![하나의 노드에 대한 속성 목록이 있는 쿼리 계획](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
+## <a name="see-also"></a>관련 항목:
 
+[XELite: XEL 파일 또는 라이브 SQL 스트림에서 XEvents를 읽을 수 있는 플랫폼 간 라이브러리](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), 2019년 5월에 릴리스됨.

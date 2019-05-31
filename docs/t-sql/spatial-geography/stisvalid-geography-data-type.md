@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsValid method (geography)
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cceede70a5458abe72d6659312d897d7b68bb086
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62ba3dc8bc64b346ee0818bc4eb6a8b7bb6db088
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774981"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936762"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47774981"
 ## <a name="remarks"></a>Remarks  
  **geography** 인스턴스의 OGC 형식은 [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md)을 호출하여 확인할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 올바른 **geography** 인스턴스만 생성하지만 잘못된 인스턴스도 저장하고 검색할 수 있도록 합니다. 잘못된 인스턴스의 동일한 점 집합을 나타내는 올바른 인스턴스는 `MakeValid()` 메서드를 사용하여 검색할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 올바른 **geography** 인스턴스만 생성하지만 잘못된 인스턴스의 스토리지 및 검색을 허용합니다. 잘못된 인스턴스의 동일한 점 집합을 나타내는 올바른 인스턴스는 `MakeValid()` 메서드를 사용하여 검색할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `geography` 인스턴스를 만들고 `STIsValid()`를 사용하여 인스턴스가 올바른지 테스트합니다.  

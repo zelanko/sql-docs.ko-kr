@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b4c8b0a123f2c4151a55813f0fd1025421e3eda3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6744060b9ef3a6500c68d772645f12ecf8f2909
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755301"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935592"
 ---
 # <a name="sty-geometry-data-type"></a>STY(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47755301"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **float**  
   
- CLR 형식: **SqlDouble**  
+ CLR 유형: **SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** 인스턴스가 점인 경우 이 속성의 값은 Null입니다. 이 속성은 읽기 전용입니다.  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbccdecdb504af75e4130d78c92b6e80673dd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612741"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981562"
 ---
 # <a name="--subtraction-transact-sql"></a>-(빼기)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C. SELECT 문에서 빼기 사용  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C: SELECT 문에서 빼기 사용  
  다음 예는 `dimEmployee` 테이블에서 기본 급여가 가장 높은 직원과 세율이 가장 낮은 직원 간의 기본 급여 차이를 계산합니다.  
   
 ```  

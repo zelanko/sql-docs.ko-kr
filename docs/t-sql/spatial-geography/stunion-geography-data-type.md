@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d47e5a70a784ba7946b7f6548dee1e8a6ccfff26
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979759"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935757"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53979759"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-union-of-two-polygons"></a>1. 두 Polygon의 통합 계산  
- 다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 컴퓨팅합니다.  
+ 다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 계산합니다.  
   
 ```  
 DECLARE @g geography;  
@@ -80,7 +80,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>3. CurvePolygon과 삼각 구멍을 결합하여 삼각 구멍을 생성합니다.  
+### <a name="c-producing-a-triagonal-hole-from-a-union-of-a-curvepolygon-and-a-triagonal-hole"></a>C. CurvePolygon과 삼각 구멍을 결합하여 삼각 구멍을 생성합니다.  
  다음 예에서는 `CurvePolygon`을 `Polygon` 인스턴스와 합하여 삼각 구멍을 만듭니다.  
   
 ```

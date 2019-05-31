@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561496"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948750"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL)
 
@@ -37,9 +37,11 @@ SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
 ## <a name="remarks"></a>Remarks  
+
+> [!Note]
+> 이 기능이 모든 지역에 롤아웃되는 동안 인스턴스에 배포된 버전과 최신 [Azure SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0)에서 기능 가용성을 확인합니다.
   
-이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-)에 새 called is_result_set_caching_on 열이 추가되었습니다.  
+이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest)에 새 called is_result_set_caching_on 열이 추가되었습니다.  
 
 **ON**은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
 

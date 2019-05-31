@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull (geometry Data Type)
 ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a97b0f6fc8ad1264c146efd3dd0de9751788093e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d022e7710c41797edb7bfaef7442610e0724b68
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690251"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939075"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

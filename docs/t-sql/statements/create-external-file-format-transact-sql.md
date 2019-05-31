@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161648"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175032"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -119,7 +119,7 @@ WITH (
 
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다. 
+   -   DELIMITEDTEXT 필드 종결자라고도 하는 열 구분 기호가 있는 텍스트 형식을 만듭니다.
   
  FIELD_TERMINATOR = *field_terminator*  
 구분 기호로 분리된 텍스트 파일에만 적용됩니다. 필드 종결자는 구분 기호로 분리된 텍스트 파일의 각 필드(열)의 끝을 표시하는 하나 이상의 문자를 지정합니다. 기본값은 파이프 문자 ꞌ|ꞌ입니다. 지원 보장을 위해 하나 이상의 ASCII 문자를 사용하는 것이 좋습니다.
@@ -193,7 +193,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 |date|DATE_FORMAT = 'yyyy-MMM-dd'|연도, 월, 일. 월을 3M으로 지정하면 입력 값은 Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov 또는 Dec 문자열 중 하나입니다.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초를 포함합니다.|  
 |datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초와, AM, am, PM, 또는 pm을 포함합니다.|  
-|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초와, 입력 파일에 `{+&#124;-}HH:ss`로 입력한 시간대 오프셋을 포함합니다.  예를 들어, 일광절약시간이 적용되지 않은 로스엔젤레스는 UTC보다 8시간 늦으므로 입력 파일에서 -08:00 값으로 로스엔젤레스의 시간대를 지정합니다.|  
+|DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-23시간, 00-59분, 00-59초, 7자리 밀리초와, 입력 파일에 `{+&#124;-}HH:ss`로 입력한 시간대 오프셋을 포함합니다. 예를 들어, 일광절약시간이 적용되지 않은 로스엔젤레스는 UTC보다 8시간 늦으므로 입력 파일에서 -08:00 값으로 로스엔젤레스의 시간대를 지정합니다.|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|이 날짜 형식은 연도, 월, 일 외에도 00-11시간, 00-59분, 00-59초, 7자리 밀리초, (AM, am, PM, 또는 pm) 및 시간대 오프셋을 포함합니다. 이전 행의 설명을 참조하세요.|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|날짜 값이 없고 00-23시간, 00-59분, 00-59초만 있습니다.|  
   
@@ -236,7 +236,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   열이 숫자 열로 정의되었으면 0 10진수 열은 지원되지 않으며 오류가 발생합니다.
   
--   열이 문자열이면 빈 문자열 "" 
+-   열이 문자열이면 빈 문자열 ""
   
 -   열이 날짜 열이면 1900-01-01
   
@@ -244,7 +244,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
  모든 누락 값을 NULL로 저장합니다. 구분 기호로 분리된 텍스트 파일에서 NULL이라는 단어를 사용하여 저장된 모든 NULL 값은 문자열 'NULL'로 가져옵니다.
   
    Encoding = {'UTF8' | 'UTF16'}  
- Azure SQL Data Warehouse에서 PolyBase은 UTF8 및 UTF16-LE로 인코딩된 구분 기호로 분리된 텍스트 파일을 읽을 수 있습니다. SQL Server 및 PDW에서는 PolyBase가 UTF16 인코딩 파일 읽기를 지원하지 않습니다.
+ Azure SQL Data Warehouse 및 PDW(APS CU7.4)에서 PolyBase는 UTF8 및 UTF16-LE로 인코딩된 구분 기호로 분리된 텍스트 파일을 읽을 수 있습니다. SQL Server에서는 PolyBase가 UTF16 인코딩 파일 읽기를 지원하지 않습니다.
   
  DATA_COMPRESSION = *data_compression_method*  
  외부 파일의 데이터에 대한 데이터 압축 메서드를 지정합니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 데이터가 기본값입니다.

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,34 +9,78 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775484"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198188"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능을 요약하고 있습니다. 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능을 요약하고 있습니다.
 
 이 문서에서는 각 릴리스의 기능을 요약하고 각 기능에 대한 자세한 정보를 제공합니다. [세부 정보](#details) 섹션은 핵심 설명서에서 사용할 수 없는 기능에 대한 기술 정보를 제공합니다. 이 문서의 다른 섹션에서는 이 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 지금까지 릴리스된 모든 기능에 대한 세부 정보를 제공합니다.
 
 자세한 내용 및 알려진 문제에 대해서는 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
-**체험하기[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]**
-
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101)에서 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 다운로드하여 Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)합니다.
-- [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
-- [도커에서 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 실행합니다](../linux/quickstart-install-connect-docker.md).
-
 **[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 통해 최상의 환경에 맞는 [최신 도구](#tools)를 사용해 보세요.**
 
-## <a name="ctp-25-april-2019"></a>CTP 2.5 2019년 4월
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019년 5월
 
-CTP(커뮤니티 기술 미리 보기) 2.5는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. 이 릴리스에는 버그를 수정하고, 보안을 개선하고, 성능을 최적화하는 이전 CTP 릴리스의 개선 사항이 포함됩니다. 또한 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5에서 추가되었거나 향상된 기능은 다음과 같습니다.
+CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. 이 릴리스에는 버그를 수정하고, 보안을 개선하고, 성능을 최적화하는 이전 CTP 릴리스의 개선 사항이 포함됩니다.
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+지원에서 제외된 특정 기능은 [릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
+
+또한 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0에서 추가되었거나 향상된 기능은 다음과 같습니다.
+
+### <a name="big-data-clusters"></a>빅 데이터 클러스터
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+| **mssqlctl** 업데이트 | 여러 **mssqlctl** [명령 및 매개 변수가 업데이트되었습니다](../big-data-cluster/reference-mssqlctl.md). 예를 들어 **mssqlctl login** 명령은 이제 컨트롤러 사용자 이름 및 엔드포인트를 대상으로 하도록 업데이트되었습니다. |
+| 스트리지 향상 | 로그 및 데이터에 대해 서로 다른 스토리지 구성을 지원합니다. 또한 빅 데이터 클러스터에 대한 영구적 볼륨 클레임 수가 감소했습니다. |
+| 여러 컴퓨팅 풀 인스턴스 | 여러 컴퓨팅 풀 인스턴스를 지원합니다. |
+| 새 풀 동작 및 기능 | 컴퓨팅 풀은 이제 **ROUND_ROBIN** 배포에서만 스토리지 풀 및 데이터 풀 작업에 대해 기본적으로 사용됩니다. 데이터 풀은 새로운 **REPLICATED** 배포 형식을 사용할 수 있습니다. 즉, 모든 데이터 풀 인스턴스에 동일한 데이터가 존재할 수 있습니다. |
+| 외부 테이블 개선 | HADOOP 데이터 원본 형식의 외부 테이블은 이제 최대 1 MB 크기의 행 읽기를 지원합니다. 외부 테이블(ODBC, 스토리지 풀, 데이터 풀)은 이제 SQL Server 테이블만큼 폭이 넓은 행을 지원합니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>데이터베이스 엔진
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|외부 언어 등록|새로운 DDL `CREATE EXTERNAL LANGUAGE`는 SQL Server에서 Java와 같은 외부 언어를 등록합니다. [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)를 참조하세요. |
+|Java에 대해 지원되는 데이터 형식 증가|[Java 데이터 형식](../language-extensions/how-to/java-to-sql-data-types.md)을 참조하세요.|
+|쿼리 저장소에 대한 캡처 정책 사용자 지정|사용하도록 설정된 경우 특정 서버의 데이터 컬렉션을 정밀 조정하기 위해 새로운 쿼리 저장소 캡처 정책 설정 아래에서 추가 쿼리 저장소 구성을 사용할 수 있습니다. 자세한 내용은 [ALTER DATABASE SET 옵션](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.|
+|[메모리 내 데이터베이스](../relational-databases/in-memory-database.md)는 하이브리드 버퍼 풀에 새로운 DDL 구문을 추가합니다. <sup>2</sup>|[하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 사용하여 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다.|
+|새로운 메모리 내 데이터베이스 기능인 메모리 최적화 tempdb 메타데이터가 추가되었습니다.|[메모리 최적화 tempdb 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
+|연결된 서버는 UTF-8 문자 인코딩을 지원합니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
+|`sys.dm_exec_query_plan_stats`는 쿼리 계획에 대해 병렬 처리 수준 및 메모리 부여에 관한 더 많은 정보를 반환합니다. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> 이는 옵트인 기능이며 [추적 플래그](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다.
+>
+><sup>2</sup> 하이브리드 버퍼 풀을 사용하기 위해 추적 플래그가 더 이상 필요하지 않습니다.
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]는 Azure SQL Database 관리형 인스턴스 데이터베이스를 지원합니다.| 관리형 인스턴스에서 [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]를 호스팅합니다. [[!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb)을 참조하세요.
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|계산 그룹을 포함하는 테이블 형식 모델에 대해 MDX 쿼리를 지원합니다. |이 릴리스에서는 [계산 그룹](#calc-ctp24)에 적용되던 이전의 제한 사항을 제거합니다. |
+|계산 그룹을 사용하여 측정값 서식을 동적으로 지정합니다. |이 기능을 사용하면 [계산 그룹](#calc-ctp24)을 포함하는 측정값에 대한 형식 문자열을 조건부로 변경할 수 있습니다. 예를 들어 통화 변환을 통해 서로 다른 외국 통화 형식을 사용하여 측정값을 표시할 수 있습니다.|
+
+## <a name="ctp-25-april-2019"></a>CTP 2.5 2019년 4월
 
 ### <a name="big-data-clusters"></a>빅 데이터 클러스터
 
@@ -125,7 +169,7 @@ CTP(커뮤니티 기술 미리 보기) 2.5는 [!INCLUDE[sql-server-2019](../incl
 |쿼리 저장소 계획에서 빠른 전달 및 정적 커서에 대한 지원을 강제 적용합니다.|[계획에서 빠른 전달 및 정적 커서에 대한 강제 적용 지원](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일을 줄였습니다. |[워크로드에 대한 재컴파일 감소](../relational-databases/tables/tables.md#ctp23) |
 |향상된 간접 검사점 확장성. |[향상된 간접 검사점 확장성](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|UTF-8 지원: BIN2 데이터 정렬(`UTF8_BIN2`)로 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2 데이터 정렬(`UTF8_BIN2`)로 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
 |그래프 데이터베이스의 에지 제약 조건에 대한 계단식 삭제 작업을 정의합니다. |[에지 제약 조건](../relational-databases/tables/graph-edge-constraints.md) |
 |새 데이터베이스 범위 구성으로 `LIGHTWEIGHT_QUERY_PROFILING`을 활성화 또는 비활성화합니다. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |
@@ -276,7 +320,7 @@ CTP(커뮤니티 기술 미리 보기) 2.5는 [!INCLUDE[sql-server-2019](../incl
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md)는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 빅 데이터 클러스터를 연결하고 관리합니다. |[Azure Data Studio란?](../azure-data-studio/what-is.md)|
 |SQL Server 빅 데이터 클러스터를 사용하는 시나리오를 지원합니다. |[SQL Server 2019 확장(미리 보기)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SSMS(SQL Server Management Studio) 18.0(미리 보기)**](../ssms/sql-server-management-studio-ssms.md): [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 지원합니다.| |
+|[**SSMS(SQL Server Management Studio) 18.0(미리 보기)** ](../ssms/sql-server-management-studio-ssms.md): [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 지원합니다.| |
 |보안 Enclave를 사용한 Always Encrypted 지원 |[보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -549,7 +593,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 #### <a id="programmability"></a> Java 언어 프로그래밍 기능 확장(CTP 2.0)
 
-- **Java 언어 확장(미리 보기)**: Java 언어 확장을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 Java 코드를 실행합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 이 확장은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 'Machine Learning Services(데이터베이스 내)' 기능을 추가할 때 설치됩니다.
+- **Java 언어 확장(미리 보기)** : Java 언어 확장을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 Java 코드를 실행합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 이 확장은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 'Machine Learning Services(데이터베이스 내)' 기능을 추가할 때 설치됩니다.
 
 #### <a id="sqlgraph"></a> SQL 그래프 기능(CTP 2.3)
 
@@ -660,14 +704,14 @@ FROM sys.dm_exec_requests AS d
 
 ### <a id="sqllinux"></a> Linux의 SQL Server
 
-- **Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹(CTP 2.2)**: Kubernetes는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컨테이너를 오케스트레이션하여 SQL Server Always On 가용성 그룹이 있는 일련의 고가용성 데이터베이스를 제공할 수 있습니다. Kubernetes 연산자는 **mssql-server 컨테이너** 및 상태 모니터가 있는 컨테이너를 포함하는 StatefulSet을 배포합니다.
+- **Kubernetes를 사용하는 Docker 컨테이너의 Always On 가용성 그룹(CTP 2.2)** : Kubernetes는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컨테이너를 오케스트레이션하여 SQL Server Always On 가용성 그룹이 있는 일련의 고가용성 데이터베이스를 제공할 수 있습니다. Kubernetes 연산자는 **mssql-server 컨테이너** 및 상태 모니터가 있는 컨테이너를 포함하는 StatefulSet을 배포합니다.
 
-- **새 컨테이너 레지스트리(CTP 2.1)**: 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]뿐만 아니라 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 대한 모든 컨테이너 이미지가 Microsoft Container Registry에 있습니다. Microsoft Container Registry는 Microsoft 제품 컨테이너의 배포를 위한 공식 컨테이너 레지스트리입니다. 이제 인증된 RHEL 기반 이미지도 게시됩니다.
+- **새 컨테이너 레지스트리(CTP 2.1)** : 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]뿐만 아니라 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]에 대한 모든 컨테이너 이미지가 Microsoft Container Registry에 있습니다. Microsoft Container Registry는 Microsoft 제품 컨테이너의 배포를 위한 공식 컨테이너 레지스트리입니다. 이제 인증된 RHEL 기반 이미지도 게시됩니다.
 
   - Microsoft Container Registry: `mcr.microsoft.com/mssql/server:vNext-CTP2.0`
   - 인증된 RHEL 기반 컨테이너 이미지: `mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0`
 
-- **복제 지원(CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 Linux에서 SQL Server 복제를 지원합니다. SQL 에이전트를 사용하는 Linux 가상 머신은 게시자, 배포자 또는 구독자일 수 있습니다. 
+- **복제 지원(CTP 2.0)** : [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 Linux에서 SQL Server 복제를 지원합니다. SQL 에이전트를 사용하는 Linux 가상 머신은 게시자, 배포자 또는 구독자일 수 있습니다. 
 
   다음 유형의 게시를 만듭니다.
   - 트랜잭션
@@ -676,19 +720,19 @@ FROM sys.dm_exec_requests AS d
 
   복제 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 구성하거나 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 만듭니다.
 
-- **MSDTC(Microsoft Distributed Transaction Coordinator) 지원(CTP 2.0)**: Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 MSDTC를 지원합니다. 자세한 내용은 [Linux에서 MSDTC를 구성하는 방법](../linux/sql-server-linux-configure-msdtc.md)을 참조하세요.
+- **MSDTC(Microsoft Distributed Transaction Coordinator) 지원(CTP 2.0)** : Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 MSDTC를 지원합니다. 자세한 내용은 [Linux에서 MSDTC를 구성하는 방법](../linux/sql-server-linux-configure-msdtc.md)을 참조하세요.
 
-- **타사 AD 공급 기업에 대한 OpenLDAP 지원(CTP 2.0)**: Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 타사 공급 기업이 Active Directory에 가입할 수 있도록 하는 OpenLDAP를 지원합니다.
+- **타사 AD 공급 기업에 대한 OpenLDAP 지원(CTP 2.0)** : Linux의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 타사 공급 기업이 Active Directory에 가입할 수 있도록 하는 OpenLDAP를 지원합니다.
 
-- **Linux의 Machine Learning(CTP 2.0)**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services(데이터베이스 내)는 이제 Linux에서 지원됩니다. 지원에는 `sp_execute_external_script` 저장 프로시저가 포함됩니다. Machine Learning Services를 Linux에 설치하는 방법에 대한 지침은 [Linux에 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R 및 Python 지원 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
+- **Linux의 Machine Learning(CTP 2.0)** : [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services(데이터베이스 내)는 이제 Linux에서 지원됩니다. 지원에는 `sp_execute_external_script` 저장 프로시저가 포함됩니다. Machine Learning Services를 Linux에 설치하는 방법에 대한 지침은 [Linux에 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Machine Learning Services R 및 Python 지원 설치](../linux/sql-server-linux-setup-machine-learning.md)를 참조하세요.
 
 ### <a id="mds"></a> Master Data Services 
 
-- **Silverlight 컨트롤을 HTML로 대체(CTP 2.0)**: MDS(Master Data Services) 포털은 더 이상 Silverlight를 사용하지 않습니다. 이전의 모든 Silverlight 구성 요소가 HTML 컨트롤로 바뀌었습니다.
+- **Silverlight 컨트롤을 HTML로 대체(CTP 2.0)** : MDS(Master Data Services) 포털은 더 이상 Silverlight를 사용하지 않습니다. 이전의 모든 Silverlight 구성 요소가 HTML 컨트롤로 바뀌었습니다.
 
 ### <a id="security"></a>보안
 
-- **SQL Server 구성 관리자의 인증서 관리(CTP 2.0)**: SSL/TLS 인증서는 SQL Server 인스턴스에 대한 액세스를 보호하기 위해 널리 사용됩니다. 이제 인증서 관리는 SQL Server 구성 관리자에 통합되어 다음과 같은 일반적인 작업을 간소화합니다.
+- **SQL Server 구성 관리자의 인증서 관리(CTP 2.0)** : SSL/TLS 인증서는 SQL Server 인스턴스에 대한 액세스를 보호하기 위해 널리 사용됩니다. 이제 인증서 관리는 SQL Server 구성 관리자에 통합되어 다음과 같은 일반적인 작업을 간소화합니다.
 
   - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 설치된 인증서 보기 및 유효성 검사 
   - 만료가 가까워지는 인증서 보기
@@ -723,7 +767,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > Azure Data Studio의 향상된 최신 기능은 [Azure Data Studio 릴리스 정보](../azure-data-studio/release-notes-azure-data-studio.md)를 참조하세요.
 
-- [**SSMS(SQL Server Management Studio) 18.0(미리 보기)**](../ssms/sql-server-management-studio-ssms.md): [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 지원합니다.
+- [**SSMS(SQL Server Management Studio) 18.0(미리 보기)** ](../ssms/sql-server-management-studio-ssms.md): [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 지원합니다.
 
   - SSMS에서 Azure Data Studio를 시작합니다. (CTP 2.3)
   - 보안 Enclave를 사용한 Always Encrypted 지원 (CTP 2.0)

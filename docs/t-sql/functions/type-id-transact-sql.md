@@ -18,16 +18,16 @@ helpviewer_keywords:
 - type IDs [SQL Server]
 - data types [SQL Server], IDs
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f822fc5dc4a115b5277c33c6578b0870137bbdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658111"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946908"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ TYPE_ID ( [ schema_name ] type_name )
  데이터 형식의 이름입니다. *type_name*은 **nvarchar** 형식입니다. *type_name*은 시스템 또는 사용자 정의 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
@@ -87,7 +87,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>3. 시스템 데이터 형식의 TYPE ID 찾기  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C: 시스템 데이터 형식의 TYPE ID 찾기  
  다음 예에서는 `TYPE ID` 시스템 데이터 형식의 `datetime`를 반환합니다.  
   
 ```  

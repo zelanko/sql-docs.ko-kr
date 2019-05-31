@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromWKB (geometry Data Type)
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b14ba9d9110add0e9ffd6c9ba3ecb64239b1c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626935"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938583"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

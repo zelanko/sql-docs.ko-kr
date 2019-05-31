@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c511fd82dfdbe8d61faa2b19052c5d9478a4016c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3db903d9d586da5a73356aea1d68b4b6ecbb2b5e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620712"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936096"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

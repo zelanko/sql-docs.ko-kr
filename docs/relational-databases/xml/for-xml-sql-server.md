@@ -1,7 +1,7 @@
 ---
 title: FOR XML(SQL Server) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/03/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d21557ca1157c8331ce9a5175619097b962d13f2
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.openlocfilehash: f0cc7033845f55a6df33a58d7b100c8a59926821
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429329"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175101"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.
+SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. FOR XML은 대입문에서도 사용할 수 있습니다.
 
 FOR XML 절에서 다음 모드 중 하나를 지정합니다.
 
@@ -69,7 +69,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## <a name="the-for-xml-clause-and-server-names"></a>FOR XML 절 및 서버 이름
@@ -88,7 +88,7 @@ SELECT TOP 1 LastName
 
 **로컬 서버**: &nbsp; `ServerName`이 로컬 서버인 경우 쿼리는 다음 텍스트를 반환합니다.
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -96,7 +96,7 @@ SELECT TOP 1 LastName
 
 **네트워크 서버**: &nbsp; `ServerName`이 네트워크 서버인 경우 쿼리는 다음 텍스트를 반환합니다.
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -112,7 +112,7 @@ SELECT TOP 1 LastName
 
 이제 명확한 쿼리가 다음 텍스트를 반환합니다.
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 

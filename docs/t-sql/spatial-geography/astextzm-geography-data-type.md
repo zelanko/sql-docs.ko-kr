@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM method
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f8a147ff48d0436c51519532af3485e0bde11ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b4d5e834faa455eeb62e67f396447d44a176f55
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713021"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936381"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: 설치 마법사 도움말 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/21/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: c5aa429284ae8eec9c47e752b918be7fae723a9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 06a8b0b4a3e692ca1eaef89e8e7114b41bf650a1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029124"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993794"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,19 +97,17 @@ ms.locfileid: "56029124"
   
  같은 인스턴스 이름을 공유하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 다음 조건을 충족해야 합니다.  
   
--   **같은 버전**  
-  
--   **같은 에디션**  
-  
--   **같은 언어 설정**  
-  
--   **같은 클러스터형 상태**  
-  
-    > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 클러스터 인식형이 아닙니다.  
-  
+-   **같은 버전**   
+-   **같은 에디션**    
+-   **같은 언어 설정**    
+-   **같은 클러스터형 상태**    
 -   **같은 운영 체제**  
   
+  
+    > [!NOTE]  
+    > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 클러스터 인식형이 아닙니다.  
+
+
 ## <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services 구성 - 계정 프로비전
   이 페이지를 사용하여 서버 모드를 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 제한 없이 액세스해야 하는 사용자나 서비스에 관리 권한을 부여할 수 있습니다. 설치 마법사에서는 로컬 Windows Group BUILTIN\Administrators를 설치할 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할에 자동으로 추가하지 않습니다. 로컬 Administrators 그룹을 서버 관리자 역할에 추가하려면 해당 그룹을 명시적으로 지정해야 합니다.  
   
@@ -159,63 +157,7 @@ ms.locfileid: "56029124"
 ### <a name="see-also"></a>참고 항목  
  디렉터리, 파일 위치 및 인스턴스 ID 명명에 대한 자세한 내용은 [SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치](file-locations-for-default-and-named-instances-of-sql-server.md)를 참조하세요.  
   
-## <a name="database-engine-configuration---data-directories"></a>데이터베이스 엔진 구성 - 데이터 디렉터리
-  이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로그램 및 데이터 파일의 설치 위치를 지정할 수 있습니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  
-  
- SMB 파일 공유를 디렉터리로 지정하려면 지원되는 UNC 경로를 수동으로 입력해야 합니다. SMB 파일 공유를 찾아볼 수는 없습니다. SMB 파일 공유에 지원되는 UNC 경로 형식은 \\\Servername\ShareName\\....입니다.  
-  
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 독립 실행형 인스턴스에 대한 지원되는 스토리지 유형 및 기본 디렉터리를 보여 줍니다.  
-  
-### <a name="uielement-list"></a>UIElement 목록  
-  
-|설명|지원되는 스토리지 유형|기본 디렉터리|권장 사항|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|데이터 루트 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
-|사용자 데이터베이스 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
-|사용자 데이터베이스 로그 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
-|백업 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|데이터 손실을 방지할 수 있도록 적절한 권한을 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 위한 사용자 계정에 백업 디렉터리에 대한 적절한 쓰기 권한이 있는지 확인하십시오. 백업 디렉터리에는 매핑된 드라이브를 사용할 수 없습니다.|  
-  
- *공유 디스크가 지원되기는 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스에는 사용하지 않는 것이 좋습니다.  
-  
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 장애 조치(failover) 클러스터 인스턴스에 대한 지원되는 스토리지 유형 및 기본 디렉터리를 보여 줍니다.  
-  
-|설명|지원되는 스토리지 유형|기본 디렉터리|권장 사항|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|데이터 루트 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
-|사용자 데이터베이스 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
-|사용자 데이터베이스 로그 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
-|백업 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|데이터 손실을 방지할 수 있도록 적절한 권한을 설정하고 SQL Server 서비스를 위한 사용자 계정에 백업 디렉터리에 대한 적절한 쓰기 권한이 있는지 확인하십시오. 백업 디렉터리에는 매핑된 드라이브를 사용할 수 없습니다.|  
-  
-### <a name="security-considerations"></a>보안 고려 사항  
- 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.  
-  
- SMB 파일 서버에는 다음과 같은 권장 사항이 적용됩니다.  
-  
--   SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정은 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더에 대해 FULL CONTROL NTFS 권한이 있어야 합니다.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 SMB 파일 서버에 대한 SeSecurityPrivilege 권한이 부여되어야 합니다. 이 권한을 부여하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 정책에 추가합니다. 이 설정은 **로컬 보안 정책** 콘솔의 **로컬 정책** 에 있는 **사용자 권한 지정** 섹션에서 사용할 수 있습니다.  
-  
-### <a name="notes"></a>참고  
-  
--   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경할 수 없으며 새 기능의 위치를 지정할 수도 없습니다.  
-  
--   기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소도 별도의 디렉터리에 설치해야 합니다.  
-  
--   다음과 같은 위치에는 프로그램 파일 및 데이터 파일을 설치할 수 없습니다.  
-  
-    -   이동식 디스크 드라이브  
-  
-    -   압축 파일 시스템  
-  
-    -   시스템 파일이 있는 디렉터리  
-  
-    -   장애 조치(failover) 클러스터 인스턴스의 매핑된 네트워크 드라이브  
-  
-### <a name="see-also"></a>참고 항목  
+
 ### <a name="analysis-services-configuration---data-directories"></a>Analysis Services 구성 - 데이터 디렉터리
   다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비전되는 SQLServerMSASUser$\<instance> 보안 그룹의 멤버와 로컬 관리자에게 부여됩니다.  
   
@@ -252,28 +194,8 @@ ms.locfileid: "56029124"
     
  [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
-## <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
-  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여** 을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
   
-### <a name="uielement-list"></a>UIElement 목록  
- **Transact-SQL 액세스에 FILESTREAM 사용**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
-  
- **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**  
- Win32 스트리밍 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다.  
-  
- **Windows 공유 이름**  
- FILESTREAM 데이터가 저장될 Windows 공유의 이름을 입력하려면 이 컨트롤을 사용합니다.  
-  
- **원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스를 가질 수 있도록 허용**  
- 원격 클라이언트가 이 서버의 이 FILESTREAM 데이터에 액세스할 수 있도록 허용하려면 이 컨트롤을 선택합니다.  
-  
-### <a name="see-also"></a>참고 항목  
- [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-
-  
-## <a name="database-engine-configuration---server-configuration"></a>데이터베이스 엔진 구성 - 서버 구성
+## <a name="serverconfig"></a> 데이터베이스 엔진 구성 - 서버 구성
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 모드를 설정하고 Windows 사용자 또는 그룹을 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 관리자로 추가할 수 있습니다.  
   
 ### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 실행 고려 사항  
@@ -322,42 +244,88 @@ ms.locfileid: "56029124"
  **강력한 암호 지침**  
  강력한 암호는 쉽게 추측할 수 없으며 컴퓨터 프로그램을 사용하여 해킹하기도 어렵습니다. 강력한 암호에는 다음을 비롯한 금지된 조건 및 용어를 사용할 수 없습니다.  
   
--   빈 조건 또는 NULL 조건  
-  
--   "Password"  
-  
--   "Admin"  
-  
--   "Administrator"  
-  
--   "sa"  
-  
+-   빈 조건 또는 NULL 조건    
+-   "Password"    
+-   "Admin"    
+-   "Administrator"    
+-   "sa"    
 -   "sysadmin"  
-  
+-   
  강력한 암호에는 설치 컴퓨터와 관련된 다음 용어를 사용할 수 없습니다.  
   
--   컴퓨터에 현재 로그온한 사용자의 이름  
-  
+-   컴퓨터에 현재 로그온한 사용자의 이름    
 -   컴퓨터 이름  
   
  강력한 암호는 8자 이상이어야 하며 다음의 네 가지 조건 중 세 가지 이상을 만족해야 합니다.  
   
--   대문자를 포함해야 합니다.  
-  
+-   대문자를 포함해야 합니다.   
 -   소문자를 포함해야 합니다.  
-  
--   숫자를 포함해야 합니다.  
-  
+-   숫자를 포함해야 합니다.    
 -   #, % 또는 ^과 같은 비영숫자를 포함해야 합니다.  
   
  이 페이지에 입력하는 암호는 강력한 암호 정책 요구 사항을 만족해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 자동화가 있으면 암호가 강력한 암호 정책 요구 사항을 만족하는지 확인하십시오.  
   
 ### <a name="related-content"></a>관련 내용  
  Windows 인증과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 중 어느 것을 선택할지 알아보려면 [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
-  
+ 
+ 
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 실행할 계정을 선택하는 방법에 대한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.
+ 
+## <a name ="datadir"></a> 데이터베이스 엔진 구성 - 데이터 디렉터리
+  이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로그램 및 데이터 파일의 설치 위치를 지정할 수 있습니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  
   
-## <a name="database-engine-configuration---tempdb"></a>데이터베이스 엔진 구성 - TempDB
+ SMB 파일 공유를 디렉터리로 지정하려면 지원되는 UNC 경로를 수동으로 입력해야 합니다. SMB 파일 공유를 찾아볼 수는 없습니다. SMB 파일 공유에 지원되는 UNC 경로 형식은 \\\Servername\ShareName\\....입니다.  
+  
+### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 독립 실행형 인스턴스에 대한 지원되는 스토리지 유형 및 기본 디렉터리를 보여 줍니다.  
+  
+### <a name="uielement-list"></a>UIElement 목록  
+  
+|설명|지원되는 스토리지 유형|기본 디렉터리|권장 사항|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|데이터 루트 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지* |C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
+|사용자 데이터베이스 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
+|사용자 데이터베이스 로그 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
+|백업 디렉터리|로컬 디스크, SMB 파일 서버, 공유 스토리지*|C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|데이터 손실을 방지할 수 있도록 적절한 권한을 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 위한 사용자 계정에 백업 디렉터리에 대한 적절한 쓰기 권한이 있는지 확인하십시오. 백업 디렉터리에는 매핑된 드라이브를 사용할 수 없습니다.|  
+  
+ *공유 디스크가 지원되기는 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스에는 사용하지 않는 것이 좋습니다.  
+  
+### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 장애 조치(failover) 클러스터 인스턴스  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 장애 조치(failover) 클러스터 인스턴스에 대한 지원되는 스토리지 유형 및 기본 디렉터리를 보여 줍니다.  
+  
+|설명|지원되는 스토리지 유형|기본 디렉터리|권장 사항|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|데이터 루트 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.|  
+|사용자 데이터베이스 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.|  
+|사용자 데이터베이스 로그 디렉터리|공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
+|백업 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|데이터 손실을 방지할 수 있도록 적절한 권한을 설정하고 SQL Server 서비스를 위한 사용자 계정에 백업 디렉터리에 대한 적절한 쓰기 권한이 있는지 확인하십시오. 백업 디렉터리에는 매핑된 드라이브를 사용할 수 없습니다.|  
+  
+### <a name="security-considerations"></a>보안 고려 사항  
+ 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.  
+  
+ SMB 파일 서버에는 다음과 같은 권장 사항이 적용됩니다.  
+  
+-   SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정은 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더에 대해 FULL CONTROL NTFS 권한이 있어야 합니다.  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 SMB 파일 서버에 대한 SeSecurityPrivilege 권한이 부여되어야 합니다. 이 권한을 부여하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 정책에 추가합니다. 이 설정은 **로컬 보안 정책** 콘솔의 **로컬 정책** 에 있는 **사용자 권한 지정** 섹션에서 사용할 수 있습니다.  
+  
+### <a name="notes"></a>참고  
+  
+-   기존 설치에 기능을 추가할 경우 이전에 설치한 기능의 위치를 변경할 수 없으며 새 기능의 위치를 지정할 수도 없습니다.  
+  
+-   기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소도 별도의 디렉터리에 설치해야 합니다.  
+  
+-   다음과 같은 위치에는 프로그램 파일 및 데이터 파일을 설치할 수 없습니다.  
+  
+    -   이동식 디스크 드라이브    
+    -   압축 파일 시스템   
+    -   시스템 파일이 있는 디렉터리    
+    -   장애 조치(failover) 클러스터 인스턴스의 매핑된 네트워크 드라이브  
+  
+ 
+## <a name="a-nametempdba-database-engine-configuration---tempdb"></a><a name="tempdb"><a/> 데이터베이스 엔진 구성 - TempDB
   이 페이지를 사용하여 **tempdb** 데이터와 로그 파일의 크기, 위치, 증가 설정 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]의 파일 수를 지정합니다. 설치 유형에 따라 지원되는 스토리지에 로컬 디스크, 공유 스토리지 또는 SMB 파일 서버가 포함될 수 있습니다.  
   
  SMB 파일 공유를 디렉터리로 지정하려면 지원되는 UNC 경로를 수동으로 입력해야 합니다. SMB 파일 공유를 찾아볼 수는 없습니다. SMB 파일 공유에 지원되는 UNC 경로 형식은 \\\Servername\ShareName\\....입니다.  
@@ -377,8 +345,8 @@ ms.locfileid: "56029124"
   
 |설명|지원되는 스토리지 유형|기본 디렉터리|권장 사항|  
 |-----------------|----------------------------|-----------------------|---------------------|  
-|**tempdb** 데이터 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.<br /><br /> 지정된 디렉터리(여러 파일이 지정된 경우 여러 디렉터리)가 모든 클러스터 노드에 대해 유효한지 확인합니다. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.|  
-|**tempdb** 로그 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁:  **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.<br /><br /> 지정한 디렉터리가 모든 클러스터 노드에 유효한지 확인하십시오. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.<br /><br /> 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
+|**tempdb** 데이터 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 구성 과정 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리에 대한 ACL을 구성하고 상속을 해제합니다.<br /><br /> 지정된 디렉터리(여러 파일이 지정된 경우 여러 디렉터리)가 모든 클러스터 노드에 대해 유효한지 확인합니다. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.|  
+|**tempdb** 로그 디렉터리|로컬 디스크, 공유 스토리지, SMB 파일 서버|\<드라이브:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> 팁: **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있는 경우 기본값은 첫 번째 공유 디스크입니다. **클러스터 디스크 선택** 페이지에 공유 디스크가 선택되어 있지 않은 경우 이 필드는 기본적으로 비어 있습니다.|사용자 데이터 디렉터리에 대한 모범 지침은 작업 및 성능 요구 사항에 따라 달라집니다.<br /><br /> 지정한 디렉터리가 모든 클러스터 노드에 유효한지 확인하십시오. 장애 조치(Failover) 중에 장애 조치(Failover) 대상 노드에서 **tempdb** 디렉터리를 사용할 수 없으면 SQL Server 리소스가 온라인이 될 수 없습니다.<br /><br /> 로그 디렉터리에 적절한 공간이 있는지 확인하십시오.|  
   
 ### <a name="uielement-list"></a>UIElement 목록  
  작업 및 요구 사항에 따라 **tempdb** 설정을 구성합니다. 다음 설정은 **tempdb** 데이터 파일에 적용됩니다.  
@@ -426,9 +394,42 @@ ms.locfileid: "56029124"
   
 -   기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 내의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소도 별도의 디렉터리에 설치해야 합니다.  
   
-### <a name="see-also"></a>참고 항목  
+### <a name="see-also"></a>관련 항목:  
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkID=206571)  
+
+<!--
+The MaxDOP setting only applies to SQL Server 2019 and greater
+-->
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="database-engine-configuration---maxdop"></a>데이터베이스 엔진 구성 - MaxDOP
+MaxDOP(최대 병렬 처리 수준)는 단일 명령문이 활용할 수 있는 최대 프로세서 수를 결정합니다. SQL Server 2019는 설치 중 이 옵션 구성을 소개하고 코어 수에 따라 서버에 권장되는 MaxDOP 설정을 자동으로 검색합니다. 기본 최댓값은 8입니다.  
+
+여기에서 이 설정을 수동으로 구성할 수 있으며, 설치 후 이 설정을 수정할 수 있습니다. 자세한 내용은 [최대 병렬 처리 수준](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
+::: moniker-end
+
+
+## <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
+  이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여** 을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
+  
+### <a name="uielement-list"></a>UIElement 목록  
+ **Transact-SQL 액세스에 FILESTREAM 사용**  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
+  
+ **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**  
+ Win32 스트리밍 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다.  
+  
+ **Windows 공유 이름**  
+ FILESTREAM 데이터가 저장될 Windows 공유의 이름을 입력하려면 이 컨트롤을 사용합니다.  
+  
+ **원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스를 가질 수 있도록 허용**  
+ 원격 클라이언트가 이 서버의 이 FILESTREAM 데이터에 액세스할 수 있도록 허용하려면 이 컨트롤을 선택합니다.  
+  
+### <a name="see-also"></a>관련 항목:  
+ [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)   
+ [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+
 
 ## <a name="database-engine-configuration---user-instance"></a>데이터베이스 엔진 구성 - 사용자 인스턴스
 **사용자 인스턴스** 페이지를 사용하여 관리자 권한 없이 사용자에 대한 개별 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 생성하고 관리자 역할에 사용자를 추가할 수 있습니다.  

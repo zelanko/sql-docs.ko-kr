@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8b4dd80bdc3930f396703db04fb7d4282a9535f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742141"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936645"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

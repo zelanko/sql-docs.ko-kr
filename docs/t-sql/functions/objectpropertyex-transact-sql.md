@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bad16e6907cc256dbc3312cca33267a04c7714c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28581b5468557c19b44381a2527b76830f04216b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733968"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948946"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsUniqueCnst|임의의 스키마 범위 개체|UNIQUE 제약 조건입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsUserTable|Table|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
-|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 반드시 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 개체 형식이거나 개체 ID가 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:** 스키마 소유자가 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.<br /><br /> NULL = 지원되지 않는 개체 형식이거나 개체 ID가 잘못되었습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |SchemaId|임의의 스키마 범위 개체|개체와 관련된 스키마의 ID입니다.<br /><br /> Null이 아닌 경우 = 개체의 스키마 ID입니다.<br /><br /> 기본 데이터 형식: **int**|  
 |SystemDataAccess|함수, 뷰|개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 시스템 데이터, 시스템 카탈로그 또는 가상 시스템 테이블에 액세스합니다.<br /><br /> 0 = 없음<br /><br /> 1 = 읽기<br /><br /> 기본 데이터 형식: **int**|  
 |TableDeleteTrigger|Table|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.<br /><br /> 기본 데이터 형식: **int**|  
@@ -126,8 +126,8 @@ OBJECTPROPERTYEX ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 백그라운드 업데이트 인덱스(변경 내용 자동 추적)가 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextCatalogId|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0이 아닌 값 = 전체 텍스트 인덱싱된 테이블의 행을 식별하는 고유 인덱스와 연결된 전체 텍스트 카탈로그 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFullTextChangeTrackingOn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 전체 텍스트 변경 내용 추적이 활성화되었습니다.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> 기본 데이터 형식: **int**|  
-|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> > 0 = 다음 중 하나(A 또는 B)입니다. A) 전체, 증분 또는 수동 변경 내용 추적 채우기를 시작한 이래 삽입 또는 업데이트 작업으로 처리된 문서의 수, B) 백그라운드 업데이트 인덱스 채우기를 사용한 변경 내용 추적이 활성화된 이래 삽입 또는 업데이트 작업으로 처리된 행의 수, 변경된 전체 텍스트 인덱스 스키마, 다시 작성된 전체 텍스트 카탈로그 또는 다시 시작된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 등.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> **Note** 이 속성은 모니터링하지 않으며 삭제된 행을 세지 않습니다.|  
-|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 검색이 인덱싱되지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B)입니다. A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기를 시작한 이래 인덱싱되지 않은 문서의 수, B) 백그라운드 업데이트 인덱스를 사용한 변경 내용 추적의 경우 채우기를 시작하거나 채우기를 다시 시작한 이래 인덱싱되지 않은 행의 수. 이러한 결과는 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등으로 인해 나타날 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|TableFulltextDocsProcessed|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱싱이 시작된 이후에 처리된 행의 수입니다. 전체 텍스트 검색을 위해 인덱싱 중인 테이블에서 한 행의 모든 열은 인덱싱할 한 문서의 일부로 간주됩니다.<br /><br /> 0 = 활성 탐색 또는 전체 텍스트 인덱싱이 완료되지 않았습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 또는 수동 변경 내용 추적 채우기를 시작한 이래 삽입 또는 업데이트 작업으로 처리된 문서의 수, B) 백그라운드 업데이트 인덱스 채우기를 사용한 변경 내용 추적이 활성화된 이래 삽입 또는 업데이트 작업으로 처리된 행의 수, 변경된 전체 텍스트 인덱스 스키마, 다시 작성된 전체 텍스트 카탈로그 또는 다시 시작된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 등.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**<br /><br /> **Note** 이 속성은 모니터링하지 않으며 삭제된 행을 세지 않습니다.|  
+|TableFulltextFailCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 검색이 인덱싱되지 않은 행의 수입니다.<br /><br /> 0 = 채우기가 완료되었습니다.<br /><br /> >0 = 다음 중 하나(A 또는 B): A) 전체, 증분 및 수동 업데이트 변경 내용 추적 채우기를 시작한 이래 인덱싱되지 않은 문서의 수, B) 백그라운드 업데이트 인덱스를 사용한 변경 내용 추적의 경우 채우기를 시작하거나 채우기를 다시 시작한 이래 인덱싱되지 않은 행의 수. 이러한 결과는 스키마 변경, 카탈로그 다시 작성, 서버 다시 시작 등으로 인해 나타날 수 있습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextItemCount|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Null이 아닌 경우 = 전체 텍스트가 인덱싱된 행의 수입니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextKeyColumn|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 전체 텍스트 인덱스와 의미 체계 인덱스 정의의 일부인 단일 열의 고유 인덱스와 관련된 열의 ID입니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
 |TableFulltextPendingChanges|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 처리할 보류 중인 변경 내용 추적 항목의 수입니다.<br /><br /> 0 = 변경 내용 추적이 활성화되지 않았습니다.<br /><br /> NULL = 테이블에 전체 텍스트 인덱스가 없습니다.<br /><br /> 기본 데이터 형식: **int**|  
@@ -152,14 +152,14 @@ OBJECTPROPERTYEX ( id , property )
 |TableHasUpdateTrigger|Table|개체에 Update 트리거가 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |TableHasVarDecimalStorageFormat|Table|테이블을 **vardecimal** 스토리지 형식에 사용할 수 있습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |TableInsertTrigger|Table|테이블에 INSERT 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.<br /><br /> 기본 데이터 형식: **int**|  
-|TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수<br /><br /> 기본 데이터 형식: **int**|  
+|TableInsertTriggerCount|Table|테이블에 지정된 개수의 INSERT 트리거가 있습니다.<br /><br /> >0 = INSERT 트리거의 수.<br /><br /> 기본 데이터 형식: **int**|  
 |TableIsFake|Table|실제 테이블이 아닙니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 요청이 있을 때 내부적으로 구체화됩니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |TableIsLockedOnBulkLoad|Table|**bcp** 또는 BULK INSERT 작업으로 인해 테이블이 잠겼습니다.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**|  
 |TableIsMemoryOptimized|Table|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블이 메모리 액세스에 최적화된 테이블임<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 기본 데이터 형식: **int**<br /><br /> 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.|  
 |TableIsPinned|Table|테이블이 데이터 캐시에 보유되도록 고정됩니다.<br /><br /> 0 = False<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 이 기능을 지원하지 않습니다.|  
-|TableTextInRowLimit|Table|테이블에 text in row 옵션이 설정되어 있습니다.<br /><br /> > 0 = text in row에 사용 가능한 최대 바이트 수입니다.<br /><br /> 0 = text in row 옵션이 설정되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**|  
-|TableUpdateTrigger|Table|테이블에 UPDATE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID<br /><br /> 기본 데이터 형식: **int**|  
-|TableUpdateTriggerCount|Table|테이블에 지정된 개수의 UPDATE 트리거가 있습니다.<br /><br /> > 0 = UPDATE 트리거의 수<br /><br /> 기본 데이터 형식: **int**|  
+|TableTextInRowLimit|Table|테이블에 text in row 옵션이 설정되어 있습니다.<br /><br /> > 0 = 행의 텍스트에 허용되는 최대 바이트.<br /><br /> 0 = text in row 옵션이 설정되지 않았습니다.<br /><br /> 기본 데이터 형식: **int**|  
+|TableUpdateTrigger|Table|테이블에 UPDATE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.<br /><br /> 기본 데이터 형식: **int**|  
+|TableUpdateTriggerCount|Table|테이블에 지정된 개수의 UPDATE 트리거가 있습니다.<br /><br /> > 0 = UPDATE 트리거의 수.<br /><br /> 기본 데이터 형식: **int**|  
 |UserDataAccess|함수, 뷰|개체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 사용자 데이터 및 사용자 테이블에 액세스할 수 있음을 나타냅니다.<br /><br /> 1 = 읽기<br /><br /> 0 = 없음<br /><br /> 기본 데이터 형식: **int**|  
 |TableHasColumnSet|Table|테이블에 열 집합이 있습니다.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.|  
 |카디널리티|테이블(시스템 또는 사용자 정의), 뷰 또는 인덱스|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 지정한 개체의 행 수입니다.|  
@@ -222,7 +222,7 @@ GO
   
 ```  
   
-### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>3. FOREIGN KEY 제약 조건이 있는 테이블 찾기  
+### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>C. FOREIGN KEY 제약 조건이 있는 테이블 찾기  
  다음 예에서는 `TableHasForeignKey` 속성을 사용하여 FOREIGN KEY 제약 조건이 있는 모든 테이블을 반환합니다.  
   
 ```  
@@ -238,7 +238,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>4. 기본 개체 형식 찾기  
+### <a name="d-finding-the-base-type-of-an-object"></a>D: 기본 개체 형식 찾기  
  다음 예에서는 기본 `dbo.DimReseller` 개체 형식을 반환합니다.  
   
 ```  

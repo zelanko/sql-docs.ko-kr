@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641024"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982352"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -363,7 +363,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
  `AS { LOGIN | USER } = ' name '` 절을 사용하여 동적 문의 실행 컨텍스트를 전환할 수 있습니다. 컨텍스트 전환이 `EXECUTE ('string') AS <context_specification>`으로 지정된 경우 컨텍스트 전환 기간은 실행될 쿼리의 범위로 제한됩니다.  
   
 ###  <a name="_user"></a>사용자 또는 로그인 이름 지정  
- `AS { LOGIN | USER } = ' name '`에 지정된 사용자 또는 로그인 이름은 각각 sys.database_principals 또는 sys.server_principals에서 보안 주체로 존재해야 합니다. 그렇지 않으면 문이 실행되지 않습니다.  또한 보안 주체에 IMPERSONATE 권한을 부여해야 합니다. 호출자가 데이터베이스 소유자가 아니거나 sysadmin 고정 서버 역할의 멤버가 아니라면 사용자가 Windows 그룹 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 또는 인스턴스에 액세스하는 경우에도 반드시 보안 주체가 존재해야 합니다. 예를 들어 다음과 같은 조건을 가정해 보세요.  
+ `AS { LOGIN | USER } = ' name '`에 지정된 사용자 또는 로그인 이름은 각각 sys.database_principals 또는 sys.server_principals에서 보안 주체로 존재해야 합니다. 그렇지 않으면 문이 실행되지 않습니다. 또한 보안 주체에 IMPERSONATE 권한을 부여해야 합니다. 호출자가 데이터베이스 소유자가 아니거나 sysadmin 고정 서버 역할의 멤버가 아니라면 사용자가 Windows 그룹 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스 또는 인스턴스에 액세스하는 경우에도 반드시 보안 주체가 존재해야 합니다. 예를 들어 다음과 같은 조건을 가정해 보세요.  
   
 -   CompanyDomain\SQLUsers 그룹에 Sales 데이터베이스에 대한 액세스 권한이 있습니다.  
   
@@ -374,7 +374,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>최선의 구현 방법  
  문이나 모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 수준 권한만 있어도 되는 경우에는 서버 수준 권한이 있는 로그인 이름을 지정하지 마세요. 마찬가지로 데이터베이스 소유자 권한이 필요한 경우가 아니라면 데이터베이스 소유자 계정을 지정하지 마세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  EXECUTE 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 필요합니다. 예를 들어 문자열에 INSERT 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다.  
   
  모듈에 대한 EXECUTE 권한은 기본적으로 모듈 소유자에게 부여되며 모듈 소유자는 이 권한을 다른 사용자에게 이전할 수 있습니다. 문자열을 실행하는 모듈이 실행될 때는 모듈을 만든 사용자의 컨텍스트가 아니라 모듈을 실행하는 사용자의 컨텍스트에서 사용 권한 검사가 수행됩니다. 그러나 동일한 사용자가 호출 모듈과 호출되는 모듈을 모두 소유하는 경우 두 번째 모듈에 대해서는 EXECUTE 권한 검사가 수행되지 않습니다.  
@@ -427,7 +427,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>3. 변수와 함께 EXECUTE 'tsql_string' 사용  
+### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. 변수와 함께 EXECUTE 'tsql_string' 사용  
  다음 예에서는 `EXECUTE`가 변수가 포함된 동적으로 작성된 문자열을 처리하는 방법을 보여 줍니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 사용자 정의 테이블의 목록을 유지하는 `tables_cursor` 커서를 만든 다음 해당 목록을 사용하여 테이블의 모든 인덱스를 다시 작성합니다.  
   
 ```  
@@ -453,7 +453,7 @@ GO
   
 ```  
   
-### <a name="d-using-execute-with-a-remote-stored-procedure"></a>4. 원격 저장 프로시저와 함께 EXECUTE 사용  
+### <a name="d-using-execute-with-a-remote-stored-procedure"></a>D. 원격 저장 프로시저와 함께 EXECUTE 사용  
  다음 예에서는 `uspGetEmployeeManagers` 원격 서버에서 `SQLSERVER1` 저장 프로시저를 실행하고 성공이나 실패를 나타내는 반환 상태를 `@retstat`에 저장합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -463,7 +463,7 @@ DECLARE @retstat int;
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
   
-### <a name="e-using-execute-with-a-stored-procedure-variable"></a>5. 저장 프로시저 변수와 함께 EXECUTE 사용  
+### <a name="e-using-execute-with-a-stored-procedure-variable"></a>E. 저장 프로시저 변수와 함께 EXECUTE 사용  
  다음 예에서는 저장 프로시저 이름을 나타내는 변수를 만듭니다.  
   
 ```sql  
@@ -473,7 +473,7 @@ EXEC @proc_name;
   
 ```  
   
-### <a name="f-using-execute-with-default"></a>6. DEFAULT와 함께 EXECUTE 사용  
+### <a name="f-using-execute-with-default"></a>F. DEFAULT와 함께 EXECUTE 사용  
  다음 예에서는 첫 번째 및 세 번째 매개 변수에 대한 기본값으로 저장 프로시저를 만듭니다. 프로시저가 실행될 때 호출에 값이 전달되지 않거나 기본값이 지정되는 경우 이러한 기본값은 첫 번째 및 세 번째 매개 변수용으로 삽입됩니다. `DEFAULT` 키워드를 사용할 수 있는 여러 가지 방법이 있습니다.  
   
 ```  
@@ -512,7 +512,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>7. AT linked_server_name과 함께 EXECUTE 사용  
+### <a name="g-using-execute-with-at-linkedservername"></a>G. AT linked_server_name과 함께 EXECUTE 사용  
  다음 예에서는 원격 서버에 명령 문자열을 전달하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스를 가리키는 `SeattleSales` 연결된 서버를 만든 다음 이 연결된 서버에 대해 DDL 문(`CREATE TABLE`)을 실행합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -525,7 +525,7 @@ EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl
 GO  
 ```  
   
-### <a name="h-using-execute-with-recompile"></a>8. EXECUTE WITH RECOMPILE 사용  
+### <a name="h-using-execute-with-recompile"></a>H. EXECUTE WITH RECOMPILE 사용  
  다음 예에서는 `Proc_Test_Defaults` 저장 프로시저를 실행하고 모듈을 실행한 후 새 쿼리 계획을 컴파일하고 사용한 다음, 삭제하도록 합니다.  
   
 ```  
@@ -544,7 +544,7 @@ PRINT @returnstatus;
 GO  
 ```  
   
-### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>10. EXECUTE를 사용하여 연결된 서버의 Oracle 데이터베이스 쿼리  
+### <a name="j-using-execute-to-query-an-oracle-database-on-a-linked-server"></a>J. EXECUTE를 사용하여 연결된 서버의 Oracle 데이터베이스 쿼리  
  다음 예에서는 원격 Oracle 서버에서 몇 가지 `SELECT` 문을 실행합니다. 먼저 Oracle 서버를 연결된 서버로 추가한 다음 연결된 서버 로그인을 만듭니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지

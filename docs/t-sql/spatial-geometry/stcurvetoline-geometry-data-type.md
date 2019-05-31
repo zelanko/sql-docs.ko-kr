@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d657869e71b93d5cb5d915ab15b2751c88e6eacf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689421"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939022"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47689421"
  SELECT @g.STGeometryType();
  ```  
   
-### <a name="c-using-a-circularstring-instance"></a>3. CircularString 인스턴스 사용  
+### <a name="c-using-a-circularstring-instance"></a>C. CircularString 인스턴스 사용  
  다음 예의 **SELECT** 문은 **CircularString** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **LineString** 인스턴스를 반환합니다. 또한 이 **SELECT** 문은 거의 같은 두 인스턴스의 길이를 비교합니다.  마지막으로 두 번째 **SELECT** 문이 각 인스턴스의 점 개수를 반환합니다.  **CircularString** 인스턴스에 대해서는 점을 5개만 반환하지만 **LineString** 인스턴스에 대해서는 65개를 반환합니다.  
   
 ```
@@ -86,7 +86,7 @@ ms.locfileid: "47689421"
  SELECT @g1.STNumPoints(), @g2.STNumPoints();
  ```  
   
-### <a name="d-using-a-curvepolygon-instance"></a>4. CurvePolygon 인스턴스 사용  
+### <a name="d-using-a-curvepolygon-instance"></a>D. CurvePolygon 인스턴스 사용  
  다음 예의 **SELECT** 문은 **CurvePolygon** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **다각형** 인스턴스를 반환합니다.  
   
 ```

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - blank characters [SQL Server]
 - trailing blanks
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c11bcd447a0361b02bbdffc946fffa3feb11b3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5106ba613c5130350e80abe024ecfafbca572d5
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807125"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945468"
 ---
 # <a name="rtrim-transact-sql"></a>RTRIM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>2. 간단한 예  
+### <a name="b-simple-example"></a>B: 간단한 예  
  다음 예에서는 `RTRIM`을 사용하여 후행 공백을 제거하는 방법을 보여 줍니다. 여기에서는 해당 공백이 제거되었음을 보여 주기 위해 첫 번째 문자열에 다른 문자열이 연결되어 있습니다.  
   
 ```  
@@ -75,7 +75,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
   
 `Four spaces are after the period in this sentence.Next string.`  
 
-### <a name="c-using-rtrim-with-a-variable"></a>3. 변수에 RTRIM 사용  
+### <a name="c-using-rtrim-with-a-variable"></a>C. 변수에 RTRIM 사용  
  다음 예에서는 `RTRIM`을 사용하여 문자 변수에서 후행 공백을 제거하는 방법을 보여 줍니다.  
   
 ```  

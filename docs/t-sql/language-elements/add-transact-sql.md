@@ -21,16 +21,16 @@ helpviewer_keywords:
 - plus sign (+)
 - add operator (+)
 ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c975a469075d27f28cddb279b0f9ca2408166b53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaa8a0a03137600379e24bd93f7017f896bb0048
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698261"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980620"
 ---
 # <a name="-addition-transact-sql"></a>+(더하기)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +92,7 @@ Start Date                  Add Date
 (1 row(s) affected)
  ```  
   
-### <a name="c-adding-character-and-integer-data-types"></a>3. 문자와 정수 데이터 형식 더하기  
+### <a name="c-adding-character-and-integer-data-types"></a>C. 문자와 정수 데이터 형식 더하기  
  다음 예에서는 문자 데이터 형식을 **int**로 변환하여 **int** 데이터 형식 값과 문자 값을 더합니다. **char** 문자열에 유효하지 않은 문자가 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류를 반환합니다.  
   
 ```  

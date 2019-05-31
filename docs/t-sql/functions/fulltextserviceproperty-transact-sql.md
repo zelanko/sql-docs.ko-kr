@@ -18,15 +18,15 @@ helpviewer_keywords:
 - services [SQL Server], full-text search properties
 - test
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fbdc84168ea3c0878924033347ca0c0fff3e514
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5f411b829f55473c71cbdbcbfc91ebf52ebef80e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206162"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946582"
 ---
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ FULLTEXTSERVICEPROPERTY ('property')
 |**VerifySignature**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Search 서비스가 서명된 이진 파일만 로드할지 여부를 지정합니다. 기본적으로 트러스트된 서명된 이진 파일만 로드됩니다.<br /><br /> 0 = 이진 파일의 서명 여부를 확인하지 않습니다.<br /><br /> 1 = 트러스트된 서명된 바이너리만 로드하는지 확인합니다.|  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="examples"></a>예  
  다음 예에서는 서명된 이진 파일만 로드할지 여부를 확인하고 반환 값은 이 확인이 발생하지 않음을 나타냅니다.  

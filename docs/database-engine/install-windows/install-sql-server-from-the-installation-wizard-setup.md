@@ -1,7 +1,7 @@
 ---
 title: 설치 마법사에서 SQL Server 2016 설치(설치 프로그램) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 949da90bae05be748c42c4a1468ba4dcea58b790
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dfe56c7b445353950529603ec2195e90457c35c9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535711"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993675"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -64,13 +64,29 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
 
 3.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션을 선택합니다. 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
   
-     계속하려면 **다음**을 클릭합니다.  
+     계속하려면 **다음**을 클릭합니다.
 
+<!--
+The following item is for SQL Server 2019 or greater
+-->
+  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하는 경우 **사용 조건에 동의 및 [개인정보처리방침](https://privacy.microsoft.com/privacystatement)** 확인란을 선택한 후, **다음**을 클릭합니다.  
+
+::: moniker-end
+
+<!--
+The following item is for SQL Server 2016-2017
+-->
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 4.  사용 조건 페이지에서 사용권 계약을 검토하고 동의하면 **동의함** 확인란을 선택한 다음 **다음**을 클릭합니다.  
 
+::: moniker-end
+
   >[!NOTE]
-  > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)를 참조하세요. 
-  
+  > SQL Server에서는 설치 환경 정보뿐만 아니라 기타 사용 현황 및 성능 데이터를 Microsoft의 제품 개선에 도움을 주기 위해 전송합니다. SQL Server 데이터 처리 및 개인 정보 제어에 대해 자세히 알아보려면 [개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server를 구성하여 Microsoft에 피드백 보내기](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)를 참조하세요.
+
 5.  전역 규칙 창에서 규칙 오류가 없는 경우 설치 절차는 제품 업데이트 창으로 자동으로 진행됩니다.  
   
 6.  다음에 Control Panel\All Control Panel Items\Windows Update\Change 설정에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 업데이트 확인란을 선택하지 않으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 업데이트 페이지가 나타납니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 업데이트 페이지에서 확인란을 선택하면 Windows Update를 검색하는 경우 최신 업데이트를 포함하도록 컴퓨터 설정이 변경됩니다.  
@@ -85,7 +101,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
   
 11. **기능 선택** 페이지에서 설치할 구성 요소를 선택합니다. 예를 들어 SQL Server 데이터베이스 엔진의 새 인스턴스를 설치하려면 **데이터베이스 엔진 서비스**를 확인합니다.
 
-    기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
+    기능 이름을 선택하면 **기능 설명** 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)의 버전 및 구성 요소를 참조하세요.
   
      선택한 기능의 필수 구성 요소가 **선택한 기능의 필수 구성 요소** 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -116,7 +132,7 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
   
      설치의 나머지 부분에 대한 워크플로는 설치에 대해 지정한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
-14. 서버 구성 - 서비스 계정 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
+14. 서버 구성 - 서비스 계정 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  구성 설정에 대한 자세한 내용은 [설치 마법사 도움말](../../sql-server/install/instance-configuration.md#serverconfig)을 참조하세요.
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 서비스 계정을 개별적으로 구성하여 각 서비스에 대해 최소한의 권한만 제공할 것을 권장합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 태스크를 완료하는 데 필요한 최소한의 권한만 부여할 수 있습니다. 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)를 참조하세요.  
   
@@ -130,37 +146,42 @@ Microsoft는 SQL Server에서 필수 조건으로 설치되는 Microsoft VC++ 20
   
      서버 구성 - 데이터 정렬 페이지를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본이 아닌 데이터 정렬을 지정합니다. 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-15. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 – 서버 구성 페이지를 사용하여 다음을 지정합니다.  
+15. **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 – 서버 구성** 탭을 사용하여 다음을 지정합니다.  
   
     -   보안 모드 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 인증(Windows 인증 또는 혼합 모드 인증)을 선택합니다. 혼합 모드 인증을 선택할 경우 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정에 강력한 암호를 제공해야 합니다.  
   
-         디바이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](../../sql-server/install/instance-configuration.md#database-engine-configuration---server-configuration)을 참조하세요.  
+       디바이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성공적으로 연결되면 Windows 인증 및 혼합 모드에 모두 동일한 보안 메커니즘이 적용됩니다. 자세한 내용은 [데이터베이스 엔진 구성 - 서버 구성](../../sql-server/install/instance-configuration.md#serverconfig)을 참조하세요.
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 시스템 관리자를 한 명 이상 지정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가**를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다.  
   
-     [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 – 데이터 디렉터리** 탭을 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
   
     > [!IMPORTANT]  
     > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
   
-     자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories)를 참조하세요.  
+     자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리](../../sql-server/install/instance-configuration.md#datadir)를 참조하세요. 
+
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - TempDB** 탭을 사용하여 파일 크기, 파일 수, 기본이 아닌 설치 디렉터리 및 TempDB에 대한 파일 증가 설정을 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - TempDB](../../sql-server/install/instance-configuration.md#tempdb)를 참조하세요.  
+
+     ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - MaxDOP**을 사용하여 최대 병렬 처리 수준을 지정합니다. 이 설정은 실행 중에 단일 명령문을 사용할 수 있는 프로세서 수를 결정하며, 권장 값은 설치 중에 자동으로 계산됩니다. 자세한 내용은 [최대 병렬 처리 수준 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)을 참조하세요.
+     ::: moniker-end
+
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM** 탭을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 FILESTREAM을 설정합니다. 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream)을 참조하세요.  
   
-     [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - FILESTREAM 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정합니다. 자세한 내용은 [데이터베이스 엔진 구성 - Filestream](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream)을 참조하세요.  
-  
-     [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - TempDB 페이지를 사용하여 파일 크기, 파일 수, 기본이 아닌 설치 디렉터리 및 TempDB에 대한 파일 증가 설정을 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - TempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb)를 참조하세요.  
   
 16. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 서버 모드와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 관리자 권한을 갖는 사용자 또는 계정을 지정합니다. 서버 모드에 따라 해당 서버에서 사용되는 메모리 및 스토리지 하위 시스템이 결정됩니다. 각 솔루션 유형은 서로 다른 서버 모드로 실행됩니다. 서버에서 다차원 큐브 데이터베이스를 실행하려면 기본 옵션인 다차원 및 데이터 마이닝 서버 모드를 선택합니다. 관리자 권한의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 시스템 관리자를 한 명 이상 지정해야 합니다. SQL Server 설치 프로그램을 실행하는 계정을 추가하려면 **현재 사용자 추가(Add Current User)** 를 클릭합니다. 시스템 관리자 목록에 계정을 추가하거나 목록의 계정을 제거하려면 **추가** 또는 **제거**를 클릭한 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 관리자 권한을 가질 사용자, 그룹 또는 컴퓨터 목록을 편집합니다. 서버 모드 및 관리자 권한에 대한 자세한 내용은 [Analysis Services 구성 - 계정 프로비전](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning)을 참조하세요.  
 
-   목록 편집을 마쳤으면 **확인**을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.
+    목록 편집을 마쳤으면 **확인**을 클릭합니다. 구성 대화 상자에서 관리자 목록을 확인합니다. 목록 구성을 완료했으면 **다음**을 클릭합니다.
+
+    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
    
-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 - 데이터 디렉터리 페이지를 사용하여 기본이 아닌 설치 디렉터리를 지정합니다. 기본 디렉터리에 설치하려면 **다음**을 클릭합니다.  
+    > [!IMPORTANT]  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 INSTANCEDIR과 SQLUSERDBDIR에 대해 동일한 디렉터리 경로를 지정한 경우 권한 누락으로 인해 SQL Server 에이전트 및 전체 텍스트 검색이 시작되지 않습니다.  
+    >  
+    > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
    
-   > [!IMPORTANT]  
-   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 INSTANCEDIR과 SQLUSERDBDIR에 대해 동일한 디렉터리 경로를 지정한 경우 권한 누락으로 인해 SQL Server 에이전트 및 전체 텍스트 검색이 시작되지 않습니다.  
-   >  
-   > 기본이 아닌 설치 디렉터리를 지정하는 경우 설치 폴더가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 고유한지 확인해야 합니다. 이 대화 상자의 어떠한 디렉터리도 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 디렉터리와 공유되지 않아야 합니다.  
-   
-   자세한 내용은 [Analysis Services 구성 - 데이터 디렉터리](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories)를 참조하세요.  
+    자세한 내용은 [Analysis Services 구성 - 데이터 디렉터리](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories)를 참조하세요.  
    
 17. Distributed Replay Controller 구성 페이지를 사용하여 Distributed Replay Controller 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다. 관리 권한이 있는 사용자는 Distributed Replay Controller 서비스에 무제한으로 액세스할 수 있습니다.  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints method
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aaa1556f32bf7b04040327df178da9b7e7a9d2f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762651"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935741"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ DECLARE @g geography = 'GEOMETRYCOLLECTION(CIRCULARSTRING(-122.358 47.653, -122.
 SELECT @g.STNumPoints();  
 ```  
   
-### <a name="c-returning-the-number-of-points-in-a-compoundcurve"></a>3. CompoundCurve에 있는 점의 개수 반환  
+### <a name="c-returning-the-number-of-points-in-a-compoundcurve"></a>C. CompoundCurve에 있는 점의 개수 반환  
  다음 예에서는 CompoundCurve 인스턴스에 있는 점의 개수를 반환합니다. STNumPoints()가 세그먼트 사이의 연결 점을 한 번만 세므로 쿼리는 6이 아닌 5를 반환합니다.  
   
 ```

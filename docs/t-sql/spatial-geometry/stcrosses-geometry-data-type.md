@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCrosses (geometry Data Type)
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 54f96265aabdbdd491cf2a0b49a0c8a67df999ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7588d3a335785dd80a5b41cd17734b207852faae
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741780"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939043"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection method
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d1433cbbeb94c3027d8007914a67c113b42a0165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ee84ab21082193c50486f775a22caec4e0dbb4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777011"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936825"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47777011"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>1. Polygon 및 LineString의 교집합 계산  
- 다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 컴퓨팅합니다.  
+ 다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 계산합니다.  
   
 ```  
 DECLARE @g geography;  
@@ -79,7 +79,7 @@ SET @h = geography::STGeomFromText('CURVEPOLYGON(CIRCULARSTRING(-122.351 47.656,
 SELECT @g.STIntersection(@h).ToString();  
 ```  
   
-### <a name="c-computing-the-symmetric-difference-with-fullglobe"></a>3. FullGlobe와의 대칭 차이 계산  
+### <a name="c-computing-the-symmetric-difference-with-fullglobe"></a>C. FullGlobe와의 대칭 차이 계산  
  다음 예에서는 `Polygon`와 `FullGlobe`의 대칭 차이를 비교합니다.  
   
 ```  

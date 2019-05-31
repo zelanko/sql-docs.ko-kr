@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1bd0fd55824edfde8f3216516f9e93a7ec385baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a780172818bd41fa3cff4804437b4d26ad8c95c5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767091"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937742"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47767091"
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식: **bit**  
   
- CLR 형식: **SqlBoolean**  
+ CLR 유형: **SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  `IsNull`을 사용하여 **geography** 인스턴스가 Null인지 여부를 테스트할 수 있습니다. 이 속성은 인스턴스가 Null이 아니면 0을 반환하고 인스턴스가 Null이면 Null을 반환하므로 결과가 다소 혼동스러울 수 있습니다.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695801"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937321"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47695801"
  SELECT @g.BufferWithCurves(-1).ToString()
  ```  
   
-### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>3. 빈 GeometryCollection을 반환하고 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. 빈 GeometryCollection을 반환하고 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 *distance* 매개 변수가 -2와 같을 때 생기는 결과를 보여 줍니다.  
   
  ```sql
@@ -98,7 +98,7 @@ ms.locfileid: "47695801"
   
  이 **SELECT** 문은 `GEOMETRYCOLLECTION EMPTY`를 반환합니다.  
   
-### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>4. 매개 변수 값 = 0인 BufferWithCurves() 호출  
+### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. 매개 변수 값 = 0인 BufferWithCurves() 호출  
  다음 예에서는 호출 **geography** 인스턴스의 복사본을 반환합니다.  
 
  ```sql
@@ -106,7 +106,7 @@ ms.locfileid: "47695801"
  SELECT @g.BufferWithCurves(0).ToString();
  ```  
   
-### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>5. 매우 작고 0이 아닌 매개 변수 값으로 BufferWithCurves() 호출  
+### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. 매우 작고 0이 아닌 매개 변수 값으로 BufferWithCurves() 호출  
  다음 예에서도 호출 **geography** 인스턴스의 복사본을 반환합니다.  
 
  ```sql
@@ -115,14 +115,14 @@ ms.locfileid: "47695801"
  SELECT @g.BufferWithCurves(@distance).ToString();
  ```  
   
-### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>6. 매개 변수 값 > 0인 BufferWithCurves() 호출  
+### <a name="f-calling-bufferwithcurves-with-a-parameter-value--0"></a>F. 매개 변수 값 > 0인 BufferWithCurves() 호출  
  다음 예에서는 `CurvePolygon` 인스턴스를 반환합니다.  
 
  ```sql
  DECLARE @g geography= 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
  SELECT @g.BufferWithCurves(2).ToString();
  ```  
-### <a name="g-passing-a-valid-string-parameter"></a>7. 올바른 문자열 매개 변수 전달  
+### <a name="g-passing-a-valid-string-parameter"></a>G. 올바른 문자열 매개 변수 전달  
  다음 예에서는 앞에서 설명한 것과 동일하지만 문자열 매개 변수가 메서드에 전달되는 `CurvePolygon` 인스턴스를 반환합니다.  
 
  ```sql
@@ -130,7 +130,7 @@ ms.locfileid: "47695801"
  SELECT @g.BufferWithCurves('2').ToString();
 ```  
   
-### <a name="h-passing-an-invalid-string-parameter"></a>8. 잘못된 문자열 매개 변수 전달  
+### <a name="h-passing-an-invalid-string-parameter"></a>H. 잘못된 문자열 매개 변수 전달  
  다음 예에서는 오류가 발생합니다.  
 
  ```sql

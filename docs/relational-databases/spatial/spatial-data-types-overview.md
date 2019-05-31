@@ -12,16 +12,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fea754e936831833fd81ff9a50079c31b5938f6
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 57d0a1467495dc20c0508adbba6f44a6164193da
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979609"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939222"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53979609"
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-그림에 표시된 대로 **geometry** 및 **geography** 데이터 형식 중 인스턴스화할 수 있는 10개의 형식은 **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**및 **GeometryCollection**입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식으로 **FullGlobe**이 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.  
+그림에 표시된 대로 **geometry** 및 **geography** 데이터 형식 중 인스턴스화할 수 있는 10개의 형식은 **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**및 **GeometryCollection**입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식인 **FullGlobe**이 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.  
 
 geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.  
 
@@ -88,7 +88,7 @@ OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 원호 세그먼트  
-인스턴스화할 수 있는 세 가지 형식, **CircularString**, **CompoundCurve** 및 **CurvePolygon**을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
+인스턴스화할 수 있는 세 가지 형식인 **CircularString**, **CompoundCurve** 및 **CurvePolygon**을 사용할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.  
 
 그림 A와 B에서는 일반적인 원호 세그먼트를 보여 줍니다. 세 개의 각 점이 원의 둘레에 어떻게 놓이는지 확인하십시오.  
 

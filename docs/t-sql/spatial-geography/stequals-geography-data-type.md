@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEquals method
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: dceff73f5af775f6785db8b922d719e005d65a21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e12465bf75cb6619e837ba55eaca09231cc4b5e8
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605531"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936962"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

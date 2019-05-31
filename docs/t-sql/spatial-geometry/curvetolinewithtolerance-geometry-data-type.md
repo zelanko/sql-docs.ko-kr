@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geometry)
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5d265392606722f621d6a10e9d649340824596ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824511"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938134"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "47824511"
  SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
  ```  
   
-### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>3. 여러 LineString을 포함하는 MultiLineString 인스턴스에 메서드 사용  
+### <a name="c-using-the-method-on-a-multilinestring-instance-containing-multiple-linestrings"></a>C. 여러 LineString을 포함하는 MultiLineString 인스턴스에 메서드 사용  
  다음 예에서는 `MultiLineString` 인스턴스를 둘 이상 포함하는 `LineString` 인스턴스에서 반환되는 결과를 보여 줍니다.  
   
 ```
@@ -99,7 +99,7 @@ ms.locfileid: "47824511"
  SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
  ```  
   
-### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>4. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
+### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
  다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
   
 ```
@@ -107,7 +107,7 @@ ms.locfileid: "47824511"
  SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
  ```  
   
-### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>5. GeometryCollection 인스턴스에 메서드 사용  
+### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. GeometryCollection 인스턴스에 메서드 사용  
  다음 예에서는 2차원 `CurveToLineWithTolerance()` 인스턴스와 1차원 `GeometryCollection` 인스턴스가 포함된 `CurvePolygon`에서 `CircularString`를 호출합니다. `CurveToLineWithTolerance()`는 원호 세그먼트 유형을 둘 다 선분 유형으로 변환하여 `GeometryCollection` 유형으로 반환합니다.  
   
 ```

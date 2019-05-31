@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783531"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937639"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47783531"
  잘못된 공간 인스턴스가 적도를 교차하고 EnvelopeAngle() = 180인 경우 **FullGlobe** 인스턴스가 반환됩니다. `MakeValid()`**geography** 데이터 형식 메서드는 유효한 인스턴스가 반환되지만 결과의 정확성이 보장되지 않는 경우에 가장 적합합니다.  
   
 > [!NOTE]  
->  유효하지 않은 개체가 데이터베이스에 저장될 수 있습니다. 잘못된 인스턴스(STIsValid()에서 False를 반환하는 인스턴스)에서 실행될 수 있는 메서드는 유효성을 검사하거나 내보내기를 허용하는 메서드로서, STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() 및 AsGml()이 해당합니다.  
+>  유효하지 않은 개체가 데이터베이스에 저장될 수 있습니다. 잘못된 인스턴스(STIsValid()에서 False를 반환하는 인스턴스)에서 실행될 수 있는 메서드는 유효성을 검사하거나 내보내기를 허용하는 메서드입니다. STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() 및 AsGml().  
   
  이 메서드는 정확하지 않습니다.  
   

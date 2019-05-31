@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8e4f4c40b4607a354f6ef1c29bf3c7f1dc448f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7bbaf25715275b14deda0f2a510b40934c6f33e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727807"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938377"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
