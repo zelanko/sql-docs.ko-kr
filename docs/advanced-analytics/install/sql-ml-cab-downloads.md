@@ -3,17 +3,17 @@ title: SQL Server 누적 업데이트-SQL Server Machine Learning에 대 한 CAB
 description: R 및 Python CAB 패키지에는 SQL Server 2017의 Machine Learning Services 및 SQL Server 2016 R Services에 대 한 다운로드 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/01/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745354"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403235"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>인스턴스가 SQL Server 데이터베이스 내 분석의 누적 업데이트에 대 한 CAB 다운로드
 
@@ -36,7 +36,7 @@ CAB 파일은 역방향 시간 순서로 나열 됩니다. CAB 파일을 다운�
 
 |릴리스  |구성 요소 | 다운로드 링크  | 해결 된 문제 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |

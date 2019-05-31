@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243587"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413344"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server Linux 호스트는 Active Directory 도메인에 가입
 
@@ -139,7 +139,7 @@ ping contoso.com
 
 SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 단계를 사용 합니다.
 
-1. 사용 하 여 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) AD 도메인에 호스트 컴퓨터를 가입 합니다. 둘 다를 먼저 설치 해야 합니다 **realmd** 및 Linux 배포판의 패키지 관리자를 사용 하 여 SQL Server 호스트 컴퓨터에서 Kerberos 클라이언트 패키지:
+1. 사용 하 여 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) AD 도메인에 호스트 컴퓨터를 가입 합니다. 둘 다를 먼저 설치 해야 합니다 **realmd** 및 Linux 배포판의 패키지 관리자를 사용 하 여 SQL Server 호스트 컴퓨터에서 Kerberos 클라이언트 패키지:
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 �
 
    SQL Server 사용자 계정 및 그룹 보안 식별자 (Sid)에 매핑하기 위한 SSSD 및 NSS를 사용 합니다. SSSD 구성 하 고 SQL server 로그인을 만들려면 AD 성공적으로 실행 해야 합니다. **realmd** 일반적으로이 위해 자동으로 경우도 있지만 도메인에 가입 하는 과정에서 변경 해야 할 개별적으로 합니다.
 
-   자세한 내용은 참조 하는 방법 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   자세한 내용은 참조 하는 방법 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. 도메인에서 사용자에 대 한 정보를 수집할 이제 수 및 해당 사용자로 Kerberos 티켓을 얻을 수 있습니다는 확인 합니다. 다음 예제에서는 **id**를 [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), 및 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 이 대 한 명령입니다.
 

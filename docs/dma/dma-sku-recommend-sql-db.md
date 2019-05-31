@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106107"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413634"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 오른쪽 Azure SQL Database/관리 인스턴스 SKU를 식별 합니다.
 
@@ -41,7 +41,7 @@ Azure SQL 데이터베이스 SKU 권장 사항을 확인 하 고 해당 단일 �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 최신 버전 다운로드 및 설치 [DMA](https://aka.sm/get-dma)합니다. 이전 버전의 도구를 이미 있는 경우 연 DMA를 업그레이드 하 라는 메시지가 나타납니다.
+- 최신 버전 다운로드 및 설치 [DMA](https://aka.ms/get-dma)합니다. 이전 버전의 도구를 이미 있는 경우 연 DMA를 업그레이드 하 라는 메시지가 나타납니다.
 - 컴퓨터에 있는지 확인 하십시오 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 모든 스크립트를 실행 하는 데 필요한 나중 또는 합니다. PowerShell 버전을 컴퓨터에 설치 되어 findoug에 대 한 자세한 문서를 참조 [다운로드 하 여 Windows PowerShell 5.1 설치](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)합니다.
 - 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 문서 참조 [Azure PowerShell 모듈을 설치](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)합니다.
 - 확인 하는 PowerShell 파일 **SkuRecommendationDataCollectionScript.ps1**, DMA 폴더에 설치 되는 성능 카운터를 수집 하는 데 필요한 합니다.

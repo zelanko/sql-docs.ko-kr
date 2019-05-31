@@ -17,12 +17,12 @@ ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816602"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403231"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>텍스트 파일에 대한 SQLGetInfo 반환 값
 다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "62816602"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (따옴표 다시)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (따옴표 다시)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ ms.locfileid: "62816602"
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"TEXT"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  

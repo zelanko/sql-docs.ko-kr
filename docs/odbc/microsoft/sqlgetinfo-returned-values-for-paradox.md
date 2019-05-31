@@ -17,12 +17,12 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06cfce6ca1afb23f0257c64c5acdd8695cac68b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3bdeddbd8e2b94fe28f3086c7d2f4a96318cc8ab
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267848"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403216"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox에 대한 SQLGetInfo 반환 값
 다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  
@@ -112,7 +112,7 @@ ms.locfileid: "63267848"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (따옴표 다시)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (따옴표 다시)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ ms.locfileid: "63267848"
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"PARADOX"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  
