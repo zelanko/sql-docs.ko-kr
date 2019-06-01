@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489722"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429038"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489722"
   
 5.  설치할 **Master Data Services add-in for Excel** (32 비트 또는 64 비트 버전에 따라 컴퓨터에 있는 excel)에서 [여기](https://www.microsoft.com/download/details.aspx?id=29064)합니다. 컴퓨터에 설치 된 Excel 버전을 찾으려면 실행 **Excel**, 클릭 **파일** 메뉴 표시줄에 클릭 **도움말** 오른쪽 창에서 버전을 확인 합니다. Excel 추가 기능 설치 하기 전에 Visual Studio 2010 Tools for Office Runtime 설치 해야 하는 참고 합니다.  
   
-6.  (선택 사항) 사용 하 여 계정을 만듭니다 [Windows Azure Marketplace](https://datamarket.azure.com/)합니다. 이 자습서의 작업 중 하나 필요 합니다는 **Azure Marketplace** (원래 이름은 **데이터 마켓**) 계정. 필요에 따라 이 작업을 건너뛰고 다음 작업을 진행할 수 있습니다.  
+6.  (선택 사항) 사용 하 여 계정을 만듭니다 [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/)합니다. 이 자습서의 작업 중 하나 필요 합니다는 **Azure Marketplace** (원래 이름은 **데이터 마켓**) 계정. 필요에 따라 이 작업을 건너뛰고 다음 작업을 진행할 수 있습니다.  
   
-7.  Suppliers.xls 파일을 다운로드 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=271504)합니다.  
+7.  Suppliers.xls 파일을 다운로드 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=50426)합니다.  
   
 8.  DQS 정리를 사용 하는 경우에 일치 하는 결과 Excel 파일로 내보낼 수를 허용 하지 않습니다 **64 비트 버전의 Excel**합니다. 이 문제는 알려진 문제입니다. 이 문제를 해결하려면 다음을 수행하십시오.  
   

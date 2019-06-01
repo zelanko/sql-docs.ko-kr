@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506022"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454763"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>R 및 Python을 사용 하 여 Azure 가상 머신에 SQL Server Machine Learning Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "62506022"
 
 서버를 호출 하는 클라이언트는 기계 학습 솔루션의 일부로 ODBC 쿼리를 실행 해야는 예상 되는 경우 실행 패드는 원격 클라이언트 대신 ODBC 호출을 수행할 수 있는지 확인 해야 합니다. 
 
-이 작업을 하려면 실행 패드에서 사용되는 SQL 작업자 계정이 인스턴스에 로그인하도록 허용해야 합니다. 자세한 내용은 [SQLRUserGroup을 데이터베이스 사용자로 추가](../security/add-sqlrusergroup-to-database.md)합니다.
+이 작업을 하려면 실행 패드에서 사용되는 SQL 작업자 계정이 인스턴스에 로그인하도록 허용해야 합니다. 자세한 내용은 [SQLRUserGroup을 데이터베이스 사용자로 추가](../security/create-a-login-for-sqlrusergroup.md)합니다.
 
 <a name="network"></a>
 

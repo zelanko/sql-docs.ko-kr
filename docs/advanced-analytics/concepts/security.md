@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596574"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454540"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 프레임 워크에 대 한 보안 개요
 
@@ -71,7 +71,7 @@ SQL Server에서 해당 스크립트를 실행 하려는 고 예를 들어, 로�
 
 ## <a name="services-used-in-external-processing-launchpad"></a>외부 처리 (실행 패드)에 사용 된 서비스
 
-하나의 새 NT 서비스를 추가 하는 확장성 프레임 워크를 [서비스 목록을](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) SQL Server 설치에서: [**SQL Server 실행 패드 (MSSSQLSERVER)**](extensibility-framework.md#launchpad)합니다.
+하나의 새 NT 서비스를 추가 하는 확장성 프레임 워크를 [서비스 목록을](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) SQL Server 설치에서: [**SQL Server 실행 패드 (MSSSQLSERVER)** ](extensibility-framework.md#launchpad)합니다.
 
 데이터베이스 엔진이 별도 프로세스로 R 또는 Python 세션을 인스턴스화하기 위해 SQL Server 실행 패드 서비스를 사용 합니다. 낮은 권한 계정을; 프로세스 실행 SQL Server, 자체 실행 패드 및 저장된 프로시저 또는 호스트 쿼리가 실행 되는 사용자 id에서 고유 합니다. 낮은 권한 계정으로 별도 프로세스에서 스크립트를 실행 중인 R 및 Python에서 SQL Server에 대 한 보안 및 격리 모델의 기반이 됩니다.
 
@@ -111,7 +111,7 @@ SQL Server에 의해 구현 된 대로 AppContainers는는 내부 메커니즘�
 
 SQL Server에서 중요 한 리소스를 보호 하려면 정의할 수 있습니다 필요에 따라는 ACL (액세스 제어 목록)에 대 한 액세스를 거부 하는 **SQLRUserGroup**합니다. 반대로, SQL Server 자체 외에도 호스트 컴퓨터에 있는 로컬 데이터 리소스에 대 한 사용 권한을 부여 될 수 있습니다. 
 
-설계상 **SQLRUserGroup** 데이터베이스 로그인 또는 모든 데이터에 권한이 없습니다. 특정 상황에서는 연결을 허용 하도록 루프 백, 특히 경우 신뢰할 수 있는 Windows id를 호출 하는 사용자 로그인을 만드는 데는 것이 좋습니다. 이 기능은 이라고 [ *묵시적된 인증*](#implied-authentication)합니다. 자세한 내용은 [SQLRUserGroup을 데이터베이스 사용자로 추가](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)합니다.
+설계상 **SQLRUserGroup** 데이터베이스 로그인 또는 모든 데이터에 권한이 없습니다. 특정 상황에서는 연결을 허용 하도록 루프 백, 특히 경우 신뢰할 수 있는 Windows id를 호출 하는 사용자 로그인을 만드는 데는 것이 좋습니다. 이 기능은 이라고 [ *묵시적된 인증*](#implied-authentication)합니다. 자세한 내용은 [SQLRUserGroup을 데이터베이스 사용자로 추가](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)합니다.
 
 ## <a name="identity-mapping"></a>Id 매핑
 
@@ -127,7 +127,7 @@ SQL Server에서 중요 한 리소스를 보호 하려면 정의할 수 있습�
 
 신뢰할 수 있는 연결은 추가 구성만 사용 하 여 R 및 Python 스크립트에서 작동 합니다. 확장성 아키텍처에 R 및 Python 프로세스는 부모 로부터 사용 권한을 상속 하는 작업자 계정으로 실행 **SQLRUserGroup**합니다. 연결 문자열을 지정 하는 경우 `Trusted_Connection=True`, SQL Server에 기본적으로 알 수 없는 연결 요청을 작업자 계정의 id를 표시 됩니다.
 
-연결을 신뢰할 수 있는, 성공적인 수에 대 한 데이터베이스 로그인을 만들어야 합니다 **SQLRUserGroup**합니다. 이렇게 한 다음, 모든 트러스트 된 연결에서의 모든 멤버가 **SQLRUserGroup** SQL Server에 대 한 로그인 권한이 있습니다. 단계별 지침은 [데이터베이스 로그인에 대 한 SQLRUserGroup 추가](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)합니다.
+연결을 신뢰할 수 있는, 성공적인 수에 대 한 데이터베이스 로그인을 만들어야 합니다 **SQLRUserGroup**합니다. 이렇게 한 다음, 모든 트러스트 된 연결에서의 모든 멤버가 **SQLRUserGroup** SQL Server에 대 한 로그인 권한이 있습니다. 단계별 지침은 [데이터베이스 로그인에 대 한 SQLRUserGroup 추가](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)합니다.
 
 트러스트 된 연결의 연결 요청을 가장 널리 사용 되는 구성 않습니다. 연결을 지정 하는 R 또는 Python 스크립트를 더 많이 ODBC 데이터 원본에 연결 되는 경우 SQL 로그인을 완전히 지정 된 사용자 이름 및 암호 사용 수 있습니다.
 
@@ -153,4 +153,4 @@ SQL Server에서 중요 한 리소스를 보호 하려면 정의할 수 있습�
 
 이 문서에서는 구성 요소 배웠습니다 및 보안 아키텍처의 상호 작용 모델에는 기본 제공 되는 [확장성 프레임 워크](../../advanced-analytics/concepts/extensibility-framework.md)합니다. 이 문서에서 다루는 주요 사항을 실행 패드, SQLRUserGroup 및 작업자 계정의 목적은 R 및 Python 사용자 id 작업자 계정에 매핑되는 방식을 프로세스 격리를 포함 합니다. 
 
-다음 단계에 대 한 지침을 검토 하세요 [권한 부여](../../advanced-analytics/security/user-permission.md)합니다. Windows 인증을 사용 하는 서버에 대 한도 검토 해야 [데이터베이스 로그인에 대 한 SQLRUserGroup 추가](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) 에 추가 구성이 필요한 경우에 대해 알아봅니다.
+다음 단계에 대 한 지침을 검토 하세요 [권한 부여](../../advanced-analytics/security/user-permission.md)합니다. Windows 인증을 사용 하는 서버에 대 한도 검토 해야 [데이터베이스 로그인에 대 한 SQLRUserGroup 추가](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) 에 추가 구성이 필요한 경우에 대해 알아봅니다.

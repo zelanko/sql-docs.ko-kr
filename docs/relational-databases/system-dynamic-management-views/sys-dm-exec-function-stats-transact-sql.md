@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013198"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428956"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,6 +68,10 @@ ms.locfileid: "63013198"
 |**last_elapsed_time**|**bigint**|이 함수의 가장 최근에 완료 된 실행을 위해 마이크로초에서 경과 시간입니다.|  
 |**min_elapsed_time**|**bigint**|최소 경과 시간 (마이크로초)에 대 한이 함수의 실행을 완료 합니다.|  
 |**max_elapsed_time**|**bigint**|최대 경과 시간 (마이크로초)에 대 한이 함수의 실행을 완료 합니다.|  
+|**total_page_server_reads**|**bigint**|컴파일된 이후 실행 될 때가이 함수에서 수행 하는 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
+|**last_physical_reads**|**bigint**|마지막으로 함수 실행을 수행 하는 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
+|**min_physical_reads**|**bigint**|이 함수에서 단일 실행 중 수행한 원격 페이지 서버의 최소 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
+|**max_physical_reads**|**bigint**|이 함수에서 단일 실행 중 수행한 원격 페이지 서버의 최대 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
 

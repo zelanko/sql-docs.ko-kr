@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450032"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454729"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
 
-## <a name="may-2019"></a>2019 년 5 월
+## <a name="may-2019"></a>2019년 5월
 
 2019 년 5 월 8 일 &nbsp;  /  &nbsp; 버전: 1.7.0 
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450032"
 
 | 변경 | 설명 |
 | :----- | :------ |
-| 추가 **SQL Server 용 관리 팩** 확장 팩입니다. | 이 쉽게 SQL Server 관리자와 관련 된 확장을 설치 합니다. 다음을 포함합니다.<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| 추가 **SQL Server 용 관리 팩** 확장 팩입니다. | 이 쉽게 SQL Server 관리자와 관련 된 확장을 설치 합니다. 다음을 포함합니다.<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | 추가 필터링 Profiler 확장에서 이벤트 지원을 확장 합니다. | &nbsp; |
 | 추가 T-SQL 결과 XML로 저장할 수 있는 XML 기능으로 저장 합니다. | &nbsp; |
 | 추가 된 데이터 계층 응용 프로그램 마법사 개선 사항입니다. | &bull; &nbsp; 추가 스크립트 생성 단추<br/>&bull; &nbsp; 배포 중 경고 데이터가 손실 될 수 있도록 추가 보기입니다. |
@@ -281,7 +281,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 - [문제 #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) Excel 데이터의 첫 번째 행만 저장 하는 대로 저장
 - [문제 #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Ubuntu 16.04를 컨테이너에는 SQL에 연결할 수 없습니다.
 
-## <a name="july-2018"></a>2018년 7월
+## <a name="july-2018"></a>2018 년 7 월
 
 2018 년 7 월 19 일 &nbsp;  /  &nbsp; 버전: 0.31.4 &nbsp;  /  &nbsp; 공개 미리 보기
 

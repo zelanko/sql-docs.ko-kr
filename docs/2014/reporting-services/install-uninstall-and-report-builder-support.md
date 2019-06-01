@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108945"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454603"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>설치, 제거 및 보고서 작성기 지원
   보고서 작성기는 보고서, 보고서 파트 및 공유 데이터 세트를 만들고 업데이트하고 공유하는 데 사용하는 보고서 작성 도구입니다. 보고서 작성기는 독립 실행형 버전 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]버전으로 사용할 수 있습니다. 독립 실행형 버전은 사용자나 관리자가 컴퓨터에 설치합니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전은 자동으로 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 와 함께 설치되고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트나 보고서 관리자에서 컴퓨터로 다운로드됩니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "66108945"
   
  하지만 추가 구성을 통해 보고서 작성기 사용자가 보고서 서버를 사용할 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] URL을 신뢰할 수 있는 사이트에 추가할 수 있습니다. 기본적으로 Windows Vista, Windows Server 2008 및 Windows 7에서 Internet Explorer 7.0 이상은 보호 모드로 실행됩니다. 보호 모드는 같은 컴퓨터에서 실행되는 높은 수준의 프로세스에 브라우저 요청이 도달하지 못하도록 차단하는 기능입니다. 이 URL을 신뢰할 수 있는 사이트에 추가하면 보고서 서버 애플리케이션에 대한 보호 모드를 해제할 수 있습니다. 이 변경을 수행하려면 관리자 권한이 있어야 합니다.  
   
- 구성에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 참조 하세요 [Reporting Services 구성 관리자 &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) 에 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) msdn.microsoft.com에서.  
+ 구성에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 참조 하세요 [Reporting Services 구성 관리자 &#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) 에 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) msdn.microsoft.com에서.  
   
   
 ##  <a name="SampleDatabases"></a> SQL Server 예제 데이터베이스  

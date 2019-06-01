@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 0be8727541a74bc80ab19265b94cf2408330b1e6
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161600"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454481"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 데이터베이스에 이진 형식으로 저장 된 모델을 학습 하는 컴퓨터의 구성 된 지정된 된 입력에 대 한 예측된 값을 생성 합니다.
 
-R 및 Python 기계 학습 모델에서 거의 실시간으로 점수 매기기를 제공 합니다. `sp_rxPredict` 저장 프로시저에 대 한 래퍼를 제공 합니다 `rxPredict` R 함수 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), 및 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) 에서Python함수[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 하 고 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)합니다. 이 c + +에서 기록 되 고 작업을 점수 매기기에 맞게 최적화 됩니다.
+R 및 Python 기계 학습 모델에서 거의 실시간으로 점수 매기기를 제공 합니다. `sp_rxPredict` 저장 프로시저에 대 한 래퍼를 제공 합니다 `rxPredict` R 함수 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) 및 [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), 및 [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) 에서Python함수[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) 하 고 [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)합니다. 작성 된 C++ 작업을 점수 매기기에 맞게 최적화 되어 있습니다.
 
 직렬화 되 고 대상 데이터베이스 엔진 인스턴스에서 이진 형식으로 저장 되 면 R 또는 Python을 사용 하 여 모델을 만들어야, 있지만 사용할 수는 데이터베이스 엔진 인스턴스에서 R 또는 Python 통합이 설치 되지 않은 경우에 합니다. 자세한 내용은 [sp_rxPredict를 사용 하 여 실시간 점수 매기기](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)합니다.
 
@@ -114,7 +114,7 @@ sp_rxPredict  ( @model, @input )
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
-  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-referencee/microsoftml/categorical-hash)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>지원 되지 않는 모델 유형
 

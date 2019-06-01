@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072357"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429020"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ ms.locfileid: "58072357"
 |**min_spills**|**bigint**|이 쿼리는 단일 실행 중 유출 된 적이 있는 페이지의 최소 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|이 쿼리는 단일 실행 중 유출 된 적이 있는 페이지의 최대 수입니다.<br /><br /> **적용 대상**: 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|컴파일된 이후 실행 될 때이 계획 수행 된 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL DB 대규모 |  
+|**last_page_server_reads**|**bigint**|마지막으로 계획 된 실행을 수행 하는 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB 대규모 |  
+|**min_page_server_reads**|**bigint**|이 계획에서 단일 실행 중 수행한 원격 페이지 서버의 최소 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL DB 대규모 |  
+|**max_page_server_reads**|**bigint**|이 계획에서 단일 실행 중 수행한 원격 페이지 서버의 최대 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL DB 대규모 |  
 > [!NOTE]
 > <sup>1</sup> 고유 하 게 컴파일된 저장된 프로시저에 대 한 통계 컬렉션을 사용 하면 작업자 시간이 밀리초 단위로 수집 됩니다. 쿼리 1 밀리초 미만이 실행 하는 경우 값은 0이 됩니다.  
   

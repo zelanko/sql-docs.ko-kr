@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577933"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454711"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>빠른 시작: SQL Server에 Python이 있는지 확인 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을
 
 먼저 설치 문제를 배제 합니다. 설치 후 구성은 외부 코드 라이브러리를 사용 하도록 설정 하려면 필요 합니다. 참조 [SQL Server 2017 Machine Learning 서비스 설치](../install/sql-machine-learning-services-windows-install.md)합니다. 마찬가지로, 실행 패드 서비스가 실행 중인지 확인 합니다.
 
-Windows 사용자 그룹을 추가 해야 `SQLRUserGroup` 실행 패드에 Python 및 SQL Server 간의 통신을 제공할 수 있는지 확인 하는 인스턴스 로그인으로 합니다. (동일한 그룹에는 모두 R 및 Python 코드 실행 합니다.) 자세한 내용은 [암시적된 인증 사용](../security/add-sqlrusergroup-to-database.md)합니다.
+Windows 사용자 그룹을 추가 해야 `SQLRUserGroup` 실행 패드에 Python 및 SQL Server 간의 통신을 제공할 수 있는지 확인 하는 인스턴스 로그인으로 합니다. (동일한 그룹에는 모두 R 및 Python 코드 실행 합니다.) 자세한 내용은 [SQLRUserGroup에 대 한 로그인을 만들려면](../security/create-a-login-for-sqlrusergroup.md)합니다.
 
 또한 비활성화 된 네트워크 프로토콜을 사용 하도록 설정 하거나 SQL Server는 외부 클라이언트와 통신할 수 있도록 방화벽을 열기 해야 합니다. 자세한 내용은 [설치 문제 해결](../common-issues-external-script-execution.md)합니다.
 

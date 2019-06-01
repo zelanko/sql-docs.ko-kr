@@ -10,12 +10,12 @@ ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c29b1bd036debc4285f8b0fa0b3cc68bdeb3449
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66096628"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428840"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length 및 substring의 동작에 대한 변경 사항
   합니다 [string-length 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) 하 고 [substring 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) 함수를 포함 하는 XML 데이터베이스와 함께 사용할 때 다른 결과 반환할 수 있습니다 서로게이트 문자입니다.  
@@ -27,6 +27,6 @@ ms.locfileid: "66096628"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   
