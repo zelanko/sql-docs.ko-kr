@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Azure SQL DW 업로드 태스크
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: 유연한 파일 작업
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: 데이터베이스 백업 태스크
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: 대량 삽입 태스크
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Azure Data Lake Store 대상
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: 유연한 파일 원본
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: 유연한 파일 대상
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: CDC 흐름 구성 요소
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
