@@ -19,19 +19,20 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3520ff79f3bc79107966024a8c28b80ee8b47507
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 39a5341aaf32e37fe7c7cec3bde436cd0c5ba9d2
+ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775462"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376177"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
+::: moniker range="= sql-server-2016 || = sql-server-2017 || >= aps-pdw-2016 || = azure-sqldw-latest"
 
 PolyBase를 통해 SQL Server 2016 인스턴스는 Hadoop에서 데이터를 읽는 Transact-SQL 쿼리를 처리할 수 있습니다. 동일한 쿼리는 SQL Server의 관계형 테이블에 액세스할 수도 있습니다. 또한 PolyBase는 동일한 쿼리가 Hadoop과 SQL Server의 데이터를 조인할 수 있도록 합니다. SQL Server에서 [외부 테이블](../../t-sql/statements/create-external-table-transact-sql.md) 또는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)은 Hadoop에 대한 연결을 제공합니다.
 
@@ -97,20 +98,23 @@ PolyBase를 사용할 경우 SQL Server에서 다음 시나리오가 가능합�
 
 - **컴퓨팅 리소스 크기 조정.** 쿼리 성능을 향상시키기 위해 SQL Server [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 사용할 수 있습니다. 이를 통해 Hadoop 노드와 SQL Server 인스턴스 간에 병렬 데이터 전송이 가능하며 외부 데이터에서 작동하기 위한 컴퓨팅 리소스를 추가합니다.
 
+<!--SQL Server 2016/2017-->
+::: moniker range="=sql-server-2016||=sql-server-2017"
+
 ## <a name="next-steps"></a>다음 단계
 
 PolyBase를 사용하기 전에 [PolyBase 기능을 설치](polybase-installation.md)해야 합니다. 그런 다음, 데이터 원본에 따라 다음 구성 가이드를 참조하세요.
-
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
 
+## <a name="next-steps"></a>다음 단계
+
+PolyBase를 사용하기 전에 [PolyBase 기능을 설치](polybase-installation.md)해야 합니다. 그런 다음, 데이터 원본에 따라 다음 구성 가이드를 참조하세요.
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)

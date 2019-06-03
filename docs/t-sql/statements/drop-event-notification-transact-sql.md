@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DROP EVENT NOTIFICATION statement
 - removing event notifications
 ms.assetid: 0ffd8f47-4ea3-4238-9e73-c318df710cf7
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 492ea717df3722e09b42e31cc8acf579658f082b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852662f66b3989cfec15392218346d792be8b835
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839721"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270220"
 ---
 # <a name="drop-event-notification-transact-sql"></a>DROP EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
 ## <a name="remarks"></a>Remarks  
  트랜잭션 내에서 이벤트 알림이 발생하고 같은 트랜잭션 내에서 삭제되는 경우 이벤트 알림 인스턴스가 전달된 다음 이벤트 알림이 삭제됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 수준 범위의 이벤트 알림을 삭제하려면 사용자는 최소한 해당 이벤트 알림의 소유자이거나 현재 데이터베이스에서 ALTER ANY DATABASE EVENT NOTIFICATION 권한을 가지고 있어야 합니다.  
   
  서버 수준 범위의 이벤트 알림을 삭제하려면 사용자는 최소한 해당 이벤트 알림의 소유자이거나 현재 서버에서 ALTER ANY EVENT NOTIFICATION 권한을 가지고 있어야 합니다.  
