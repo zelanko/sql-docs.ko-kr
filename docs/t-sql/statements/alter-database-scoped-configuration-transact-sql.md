@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c8be3a1568e45f62e393ce07f5fd174d5e3949ef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66064466"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270165"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -296,6 +296,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스와 탄력적 풀을 사용하면 SQL Database 서버의 개별 사용자 데이터베이스에서 이 옵션을 설정할 수 있습니다.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스에서 이 옵션은 `TempDB`에 설정되며 개별 사용자 데이터베이스의 설정은 영향을 미치지 않습니다.
+
+<a name="lqp"></a>
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 

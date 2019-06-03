@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store 대상 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da23e2b0bdda3c99babe18d500edace9d18f9ca4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: d934cafef262f5c07b5eeac95d65abd776d8bb35
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727201"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403033"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 대상
 
@@ -47,3 +47,27 @@ ms.locfileid: "65727201"
        파일 형식이 ORC인 경우 올바른 플랫폼에 JRE(Java Runtime Environment)를 설치해야 합니다.
   
 3.  연결 정보를 지정한 다음 **열** 페이지로 전환하여 SSI 데이터 흐름에 대해 원본 열을 대상 열에 매핑합니다.  
+
+## <a name="prerequisite-for-orc-file-format"></a>ORC 파일 형식의 필수 구성 요소
+Java는 ORC 파일 형식을 사용해야 합니다.
+Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치해야 합니다.
+다음과 같은 Java 빌드가 테스트되었습니다.
+
+- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Zulu OpenJDK 설치
+1. zip 패키지를 다운로드하여 추출합니다.
+2. 명령 프롬프트에서 `sysdm.cpl`을 실행합니다.
+3. **고급** 탭에서 **환경 변수**를 선택합니다.
+4. **시스템 변수** 섹션 아래에서 **새로 만들기**를 선택합니다.
+5. **변수 이름**에 대해 `JAVA_HOME`을 입력합니다.
+6. **디렉터리 찾아보기**를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
+   그런 다음, **확인**을 선택하면 **변수 값**이 자동으로 채워집니다.
+7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
+8. **확인**을 선택하여 **환경 변수** 대화 상자를 닫습니다.
+9. **확인**을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle Java SE Runtime Environment 설치
+1. exe 설치 관리자를 다운로드하여 실행합니다.
+2. 설치 관리자 지침에 따라 설치를 완료합니다.

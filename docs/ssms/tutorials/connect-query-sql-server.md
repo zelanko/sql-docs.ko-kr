@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+Title: '자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리'
 description: SQL Server Management Studio를 사용하고 기본 T-SQL 쿼리를 실행하여 SQL Server 인스턴스에 연결하는 방법에 대한 자습서입니다.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,12 +11,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 21f6d4c689a30dc60fc103f7e881ae5499baafa8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 034e0663065003a47245ad71b602ec8bfb256df3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802499"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454461"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>자습서: SQL Server Management Studio를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
@@ -68,7 +68,7 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
 - SQL Azure DB에 연결 - 이 경우 msftestserver.database.windows.net: ![SQL Azure DB에 연결](media/connect-query-sql-server/connect-sql-azure.png)
 
   >[!NOTE]
-  > 이 자습서의 앞 부분에서 *Windows 인증*을 사용하여 온-프레미스 SQL Server에 연결했지만 SQL Azure DB에는 이러한 방법이 지원되지 않습니다. 따라서 이 이미지는 SQL 인증을 사용하여 SQL Azure DB에 연결하는 방법을 보여 줍니다. 자세한 내용은 [SQL 온-프레미스 인증](../../relational-databases/security/choose-an-authentication-mode.md) 및 [SQL Azure 인증](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access)을 참조하세요. 
+  > 이 자습서의 앞 부분에서 *Windows 인증*을 사용하여 온-프레미스 SQL Server에 연결했지만 SQL Azure DB에는 이러한 방법이 지원되지 않습니다. 따라서 이 이미지는 SQL 인증을 사용하여 SQL Azure DB에 연결하는 방법을 보여 줍니다. 자세한 내용은 [SQL 온-프레미스 인증](../../relational-databases/security/choose-an-authentication-mode.md) 및 [SQL Azure 인증](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)을 참조하세요. 
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
 다음을 수행하여 TutorialDB라는 데이터베이스를 만듭니다. 

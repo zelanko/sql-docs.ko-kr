@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392856"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270148"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,9 +123,9 @@ ON SERVER
 |*event_session_name*|기존 이벤트 세션의 이름입니다.|  
 |STATE = START &#124; STOP|이벤트 세션을 시작 또는 중지합니다. 이 인수는 ALTER EVENT SESSION이 이벤트 세션 개체에 적용되는 경우에만 사용할 수 있습니다.|  
 |ADD EVENT \<event_specifier>|\<event_specifier>로 식별되는 이벤트를 이벤트 세션과 연결합니다.|
-|[*event_module_guid*]*.event_package_name.event_name*|이벤트 패키지에 있는 이벤트의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *event_name*은 이벤트 개체입니다.<br /><br /> 이벤트는 sys.dm_xe_objects 뷰에 object_type 'event'로 표시됩니다.|  
+|[*event_module_guid*] *.event_package_name.event_name*|이벤트 패키지에 있는 이벤트의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *event_name*은 이벤트 개체입니다.<br /><br /> 이벤트는 sys.dm_xe_objects 뷰에 object_type 'event'로 표시됩니다.|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|이벤트의 사용자 지정 가능한 특성을 지정합니다. 사용자 지정 가능한 특성은 sys.dm_xe_object_columns 뷰에 column_type 'customizable' 및 object_name = *event_name*으로 표시됩니다.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *action_name*은 동작 개체입니다.<br /><br /> 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|이벤트 세션과 연결할 동작입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 동작 개체가 포함된 패키지입니다.<br />-   *action_name*은 동작 개체입니다.<br /><br /> 동작은 sys.dm_xe_objects 뷰에 object_type 'action'으로 표시됩니다.|  
 |WHERE \<predicate_expression>|이벤트 처리 여부를 확인하는 데 사용할 조건자 식을 지정합니다. \<predicate_expression>이 true일 경우 이벤트가 세션에 대한 동작과 대상에 의해 추가로 처리됩니다. \<predicate_expression>이 false일 경우 세션에 대한 동작과 대상에 의해 이벤트가 처리되기 전에 세션을 통해 이벤트가 삭제됩니다. 조건자 식은 3000자로 제한되며 문자열 인수를 제한합니다.|
 |*event_field_name*|조건자 원본을 식별하는 이벤트 필드의 이름입니다.|  
 |[event_module_guid].event_package_name.predicate_source_name|전역 조건자 원본의 이름입니다. 여기서 각 매개 변수의 의미는 다음과 같습니다.<br /><br /> -   *event_module_guid*는 이벤트가 포함된 모듈의 GUID입니다.<br />-   *event_package_name*은 조건자 개체가 포함된 패키지입니다.<br />-   *predicate_source_name*은 sys.dm_xe_objects 뷰에서 object_type 'pred_source'로 정의됩니다.|  
@@ -145,7 +145,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
  `ADD` 및 `DROP` 인수는 같은 명령문에 동시에 사용할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

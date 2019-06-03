@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872313"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413615"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58872313"
 
 #### <a name="try-it-out"></a>사용해보기
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을 다운로드하려면 **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![다운로드](../analysis-services/media/download.png "다운로드")로 이동하세요.
+- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을 다운로드하려면 **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![다운로드](../analysis-services/media/download.png "다운로드")로 이동하세요.
 
 - Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.
 
@@ -444,7 +444,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 ### <a name="upgrade-advisor"></a>업그레이드 관리자
 SQL Server 2016 업그레이드 관리자 Preview는 이전 버전의 사용자가 SQL Server 데이터베이스에 대해 업그레이드 규칙 집합을 실행하여 주요 변경 내용, 동작 변경 내용 및 더 이상 사용되지 않는 기능을 파악하고 스트레치 데이터베이스 등의 새로운 기능을 적용할 때 도움을 제공할 수 있게 하는 독립 실행형 도구입니다.
 
- [여기](https://www.microsoft.com/download/details.aspx?id=48119) 에서 업그레이드 관리자 Preview를 다운로드하거나, 웹 플랫폼 설치 관리자를 사용하여 설치할 수 있습니다.
+ [여기](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) 에서 업그레이드 관리자 Preview를 다운로드하거나, 웹 플랫폼 설치 관리자를 사용하여 설치할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)

@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820805"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454772"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
 
-스크립트 생성 및 게시 마법사 사용에 대한 자세한 자습서는 [자습서: 스크립트 생성 마법사](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)를 참조하세요.
+스크립트 생성 및 게시 마법사 사용에 대한 자세한 자습서는 [자습서: 스크립트 생성 마법사](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)를 참조하세요.
 
 
   
@@ -126,7 +126,7 @@ ms.locfileid: "65820805"
 
   ![저장](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **파일에 저장** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추(**…**)를 클릭합니다. 이름이 같은 파일이 이미 있을 경우 해당 파일을 바꾸려면 **기존 파일 덮어쓰기** 확인란을 선택합니다. 스크립트 생성 방식을 지정하려면 **단일 파일** 또는 **개체당 단일 파일** 을 클릭합니다. 또한 스크립트에 사용할 텍스트 유형을 지정하려면 **유니코드 텍스트** 또는 **ANSI 텍스트** 를 클릭합니다.  
+-   **파일에 저장** - 스크립트를 하나 이상의 .sql 파일로 저장합니다. 파일의 이름과 위치를 지정하려면 찾아보기 단추( **…** )를 클릭합니다. 이름이 같은 파일이 이미 있을 경우 해당 파일을 바꾸려면 **기존 파일 덮어쓰기** 확인란을 선택합니다. 스크립트 생성 방식을 지정하려면 **단일 파일** 또는 **개체당 단일 파일** 을 클릭합니다. 또한 스크립트에 사용할 텍스트 유형을 지정하려면 **유니코드 텍스트** 또는 **ANSI 텍스트** 를 클릭합니다.  
   
 -   **클립보드에 저장** - Transact-SQL 스크립트를 클립보드에 저장합니다.  
   
