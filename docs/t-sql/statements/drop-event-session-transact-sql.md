@@ -16,15 +16,15 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - DROP EVENT SESSION statement
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1edffab8e94c9ee171b3be4203d08b23df83452
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6ae8c9e09e62cee4b9234a3dd9f1867b9142d4db
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404448"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270175"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ON SERVER
 ## <a name="remarks"></a>Remarks  
  이벤트 세션을 삭제하면 대상 및 세션 매개 변수와 같은 모든 구성 정보가 완전히 제거됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `ALTER ANY EVENT SESSION` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
