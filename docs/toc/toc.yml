@@ -1,5 +1,7 @@
 - name: 시작
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: 이전 버전 2014-2005
+  href: ../toc/previous-versions-sql-server.md
 - name: 개요
   items:
     - name: SQL Server의 새 기능
@@ -7951,47 +7953,47 @@
               href: ../relational-databases/security/authentication-access/create-a-credential.md
         - name: 암호화
           items:
-            - name: 알고리즘 선택
-              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: TDE 문제 해결
               href: ../relational-databases/security/encryption/troubleshoot-tde.md
-            - name: 보안 Enclave를 사용한 Always Encrypted 구성
-              href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+            - name: Always Encrypted 구성
               items:
-                - name: SQL Server Management Studio
+                - name: 보안 Enclave를 사용한 Always Encrypted 구성
+                  href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+                - name: SQL Server Management Studio를 사용하여 구성
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell
+                - name: PowerShell을 사용하여 구성
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                  items:
+                    - name: Always Encrypted 키 구성
+                      href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                    - name: Always Encrypted 키 순환
+                      href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                    - name: 열 암호화 구성
+                      href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 열 마스터 키 만들기 및 저장
                   href: ../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: 키 구성
-                  href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                - name: 키 회전
-                  href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                - name: 열 암호화 구성
-                  href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: 중요한 데이터 마이그레이션
                   href: ../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: .NET Framework를 사용하여 애플리케이션 개발
                   href: ../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-                - name: TDE로 보호되는 데이터베이스 이동
-                  href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-                - name: EKM를 사용하여 TDE 활성화
-                  href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
-                - name: 서비스 마스터 키 백업
-                  href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
-                - name: 서비스 마스터 키 복원
-                  href: ../relational-databases/security/encryption/restore-the-service-master-key.md
-                - name: 데이터베이스 마스터 키 만들기
-                  href: ../relational-databases/security/encryption/create-a-database-master-key.md
-                - name: 데이터베이스 마스터 키 백업
-                  href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
-                - name: 데이터베이스 마스터 키 복원
-                  href: ../relational-databases/security/encryption/restore-a-database-master-key.md
-                - name: 두 서버에서 동일한 대칭 키 만들기
-                  href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
-                - name: 데이터 열 암호화
-                  href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
+            - name: TDE로 보호되는 데이터베이스 이동
+              href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
+            - name: EKM를 사용하여 TDE 활성화
+              href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 서비스 마스터 키 백업
+              href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
+            - name: 서비스 마스터 키 복원
+              href: ../relational-databases/security/encryption/restore-the-service-master-key.md
+            - name: 데이터베이스 마스터 키 만들기
+              href: ../relational-databases/security/encryption/create-a-database-master-key.md
+            - name: 데이터베이스 마스터 키 백업
+              href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
+            - name: 데이터베이스 마스터 키 복원
+              href: ../relational-databases/security/encryption/restore-a-database-master-key.md
+            - name: 두 서버에서 동일한 대칭 키 만들기
+              href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
+            - name: 데이터 열 암호화
+              href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Azure SQL Database 보호
           items:
             - name: 암호화를 사용하여 SQL Server 커넥터
@@ -8065,6 +8067,8 @@
         - name: 암호화
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
+            - name: 알고리즘 선택
+              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: 계층
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: TDE(투명한 데이터 암호화)
@@ -8088,8 +8092,6 @@
             - name: 암호화 키
               href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
-                - name: 서비스 마스터 키
-                  href: ../relational-databases/security/encryption/service-master-key.md
                 - name: EKM(확장 가능 키 관리)
                   href: ../relational-databases/security/encryption/extensible-key-management-ekm.md
                 - name: Azure Key Vault를 사용한 EKM
@@ -16533,7 +16535,7 @@
                   href: ../t-sql/queries/select-order-by-clause-transact-sql.md
                 - name: SELECT - OVER 절
                   href: ../t-sql/queries/select-over-clause-transact-sql.md
-            - name: FROM
+            - name: 'FROM plus JOIN, APPLY, PIVOT'
               href: ../t-sql/queries/from-transact-sql.md
               items:
                 - name: FROM - PIVOT 및 UNPIVOT 사용
