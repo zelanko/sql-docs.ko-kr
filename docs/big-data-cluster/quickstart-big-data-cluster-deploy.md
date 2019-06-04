@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993400"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462798"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -87,7 +87,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **컨트롤러 사용자** | 컨트롤러 사용자의 사용자 이름 (기본값: **관리자**). |
 
    > [!IMPORTANT]
-   > 기본값 **Standard_L8s** 모든 Azure 지역에서 인해 컴퓨터 크기를 사용할 수 있습니다. 다른 컴퓨터 크기 선택 않으면, 클러스터의 노드에서 연결할 수 있는 디스크의 총 24 보다 크거나 같은 경우 인지 확인 합니다. 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터는 24 영구적 볼륨 클레임을 필요합니다. 예를 들어 합니다 [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 이 컴퓨터 크기의 단일 노드를 사용 하 여 빅 데이터 클러스터를 평가할 수 있도록 컴퓨터 크기에 32 개의 연결 된 디스크를 지원 합니다.
+   > 기본값 **Standard_L8s** 모든 Azure 지역에서 인해 컴퓨터 크기를 사용할 수 있습니다. 다른 컴퓨터 크기 선택 않으면, 클러스터의 노드에서 연결할 수 있는 디스크의 총 24 보다 크거나 같은 경우 인지 확인 합니다. 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터는 24 영구적 볼륨 클레임을 필요합니다. 예를 들어 합니다 [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) 이 컴퓨터 크기의 단일 노드를 사용 하 여 빅 데이터 클러스터를 평가할 수 있도록 컴퓨터 크기에 32 개의 연결 된 디스크를 지원 합니다.
 
    > [!NOTE]
    > `sa` 계정은 설치 중에 생성 되는 SQL Server 마스터 인스턴스에서 시스템 관리자입니다. 배포를 만든 후 합니다 `MSSQL_SA_PASSWORD` 실행 하 여 환경 변수를 검색할 수 `echo $MSSQL_SA_PASSWORD` 마스터 인스턴스 컨테이너에 있습니다. 보안상의 이유로 변경에 `sa` 마스터 인스턴스 배포 후에 암호입니다. 자세한 내용은 [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.openlocfilehash: 01fb7962a5be08f40fe1c790b335c24d34979a2a
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454763"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462557"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>R 및 Python을 사용 하 여 Azure 가상 머신에 SQL Server Machine Learning Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "66454763"
  
 단계별 지침은 [Azure portal에서 Windows SQL Server 가상 컴퓨터를 프로 비전 하는 방법을](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)합니다.
 
-합니다 [구성할 SQL server 설정](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings) 단계에 기계 학습을 추가한 것입니다.
+합니다 [구성할 SQL server 설정](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) 단계에 기계 학습을 추가한 것입니다.
 
 <a name="firewall"></a>
 

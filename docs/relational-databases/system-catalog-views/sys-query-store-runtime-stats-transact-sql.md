@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980049"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462731"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980049"
 |**last_log_bytes_used**|**bigint**|마지막 집계 간격 내에서 쿼리 계획을 실행 하 여 사용 하는 데이터베이스 로그 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
 |**min_log_bytes_used**|**bigint**|최소 집계 간격 내에서 쿼리 계획을 사용 하는 데이터베이스 로그 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
 |**max_log_bytes_used**|**bigint**|최대 집계 간격 내에서 쿼리 계획을 사용 하는 데이터베이스 로그 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
-|**stdev_log_bytes_used**|**float**|표준 편차 집계 간격 내에서 쿼리 계획을 사용 하는 데이터베이스 로그 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
+|**stdev_log_bytes_used**|**float**|표준 편차 집계 간격 내에서 쿼리 계획을 사용 하는 데이터베이스 로그 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**avg_page_server_io_reads**|**float**|집계 간격 내에서 쿼리 계획에 대 한 페이지의 평균 server IO 읽기 수입니다. (8KB 페이지 읽기 수로 표현 됨).<br><br/>**참고:** 적용 대상: Azure SQL Database 대규모</br> Azure SQL Data Warehouse, Azure SQL DB, MI (비 대규모) 항상 0을 반환 합니다.|
+|**last_page_server_io_reads**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 마지막 페이지 서버 IO 수를 읽습니다. (8KB 페이지 읽기 수로 표현 됨).<br><br/>**참고:** 적용 대상: Azure SQL Database 대규모 </br> Azure SQL Data Warehouse, Azure SQL DB, MI (비 대규모) 항상 0을 반환 합니다.|
+|**min_page_server_io_reads**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 페이지의 최소 서버 IO 읽기 수입니다. (8KB 페이지 읽기 수로 표현 됨).<br><br/>**참고:** 적용 대상: Azure SQL Database 대규모 </br> Azure SQL Data Warehouse, Azure SQL DB, MI (비 대규모) 항상 0을 반환 합니다.|
+|**max_page_server_io_reads**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 최대 페이지 서버 IO 읽기 수입니다. (8KB 페이지 읽기 수로 표현 됨).<br><br/>**참고:** 적용 대상: Azure SQL Database 대규모 </br> Azure SQL Data Warehouse, Azure SQL DB, MI (비 대규모) 항상 0을 반환 합니다.|
+|**stdev_page_server_io_reads**|**float**|페이지 서버 IO 수가 집계 간격 내에서 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표현 됨).<br><br/>**참고:** 적용 대상: Azure SQL Database 대규모 </br> Azure SQL Data Warehouse, Azure SQL DB, MI (비 대규모) 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **VIEW DATABASE STATE** 권한.  

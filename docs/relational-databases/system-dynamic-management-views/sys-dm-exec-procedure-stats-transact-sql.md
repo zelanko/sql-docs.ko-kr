@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013410"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462668"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013410"
 |**min_spills**|**bigint**|이 저장된 프로시저는 단일 실행 하는 동안 엎지른 적이 페이지의 최소 수입니다.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|단일 실행 중이 저장 프로시저는 최대 매수 할 엎지른.<br /><br /> **적용 대상**: 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|이 배포에 있는 노드에 대 한 식별자입니다.<br /><br />**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|컴파일된 이후 실행 될 때가 저장된 프로시저를 수행한 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상**: Azure SQL Database 대규모|  
+|**last_page_server_reads**|**bigint**|마지막으로 저장된 프로시저 실행을 수행 하는 페이지 서버 읽기 수 있습니다.<br /><br /> **적용 대상**: Azure SQL Database 대규모|  
+|**min_page_server_reads**|**bigint**|페이지 서버의 최소 수를 단일 실행 중이 저장된 프로시저가 수행한 적이 있는지를 읽습니다.<br /><br /> **적용 대상**: Azure SQL Database 대규모|  
+|**max_page_server_reads**|**bigint**|페이지 서버의 최대 수는 단일 실행 중이 저장된 프로시저가 수행한 적이 있는지를 읽습니다.<br /><br /> **적용 대상**: Azure SQL Database 대규모|  
   
  <sup>1</sup> 고유 하 게 컴파일된 저장된 프로시저에 대 한 통계 컬렉션을 사용 하면 작업자 시간이 밀리초 단위로 수집 됩니다. 쿼리가 밀리초 미만 단위로 실행되는 경우 값은 0이 됩니다.  
   
