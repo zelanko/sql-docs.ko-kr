@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494415"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500364"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   작업에 단계를 추가합니다.  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494415"
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -67,11 +67,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @step_id = ] step_id` 작업 단계에 대 한 시퀀스 id. 단계에서 식별 번호 시작 **1** 및 간격 없이 증가 합니다. 기존 시퀀스에 단계를 삽입하는 경우에는 시퀀스 번호가 자동으로 조정됩니다. 경우에 값을 제공 됩니다 *step_id* 지정 하지 않으면. *step_id*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계에 대 한 시퀀스 id. 단계에서 식별 번호 시작 **1** 및 간격 없이 증가 합니다. 기존 시퀀스에 단계를 삽입하는 경우에는 시퀀스 번호가 자동으로 조정됩니다. 경우에 값을 제공 됩니다 *step_id* 지정 하지 않으면. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @step_name = ] 'step_name'` 단계의 이름입니다. *step_name*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @step_name = ] 'step_name'` 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @subsystem = ] 'subsystem'` 사용 하는 하위 시스템을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 되도록 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @subsystem = ] 'subsystem'` 사용 하는 하위 시스템을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 되도록 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell 스크립트|  
 |'**TSQL**' (기본값)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문|  
   
-`[ @command = ] 'command'` 실행할 명령을 **SQLServerAgent** 서비스를 통해 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)**, 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
+`[ @command = ] 'command'` 실행할 명령을 **SQLServerAgent** 서비스를 통해 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)** , 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
   
 > [!IMPORTANT]  
 >  작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -98,15 +98,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  이러한 토큰 및 새 토큰 구문을 사용 하 여 작업 단계 업데이트에 대 한 자세한 내용은 참조 하세요. [작업 단계에서 토큰을 사용 하 여](../../ssms/agent/use-tokens-in-job-steps.md)입니다.  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *매개 변수* 됩니다 **ntext**, 기본값은 NULL입니다.  
   
-`[ @cmdexec_success_code = ] code` 반환 된 값을 **CmdExec** 나타내는 하위 시스템 명령 *명령* 성공적으로 실행 합니다. *코드*됩니다 **int**, 기본값은 **0**합니다.  
+`[ @cmdexec_success_code = ] code` 반환 된 값을 **CmdExec** 나타내는 하위 시스템 명령 *명령* 성공적으로 실행 합니다. *코드* 됩니다 **int**, 기본값은 **0**합니다.  
   
-`[ @on_success_action = ] success_action` 단계가 성공 하는 경우 수행할 동작입니다. *success_action*됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @on_success_action = ] success_action` 단계가 성공 하는 경우 수행할 동작입니다. *success_action* 됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|설명(동작)|  
 |-----------|----------------------------|  
@@ -115,9 +115,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|다음 단계로 이동|  
 |**4**|단계로 이동 *on_success_step_id*|  
   
-`[ @on_success_step_id = ] success_step_id` 단계가 성공할 경우에 실행할이 작업 단계의 ID 및 *success_action*됩니다 **4**합니다. *success_step_id*됩니다 **int**, 기본값은 **0**합니다.  
+`[ @on_success_step_id = ] success_step_id` 단계가 성공할 경우에 실행할이 작업 단계의 ID 및 *success_action* 됩니다 **4**합니다. *success_step_id* 됩니다 **int**, 기본값은 **0**합니다.  
   
-`[ @on_fail_action = ] fail_action` 단계가 실패 하는 경우 수행할 동작입니다. *fail_action*됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @on_fail_action = ] fail_action` 단계가 실패 하는 경우 수행할 동작입니다. *fail_action* 됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|설명(동작)|  
 |-----------|----------------------------|  
@@ -126,21 +126,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|다음 단계로 이동|  
 |**4**|단계로 이동 *on_fail_step_id*|  
   
-`[ @on_fail_step_id = ] fail_step_id` 단계가 실패 하는 경우에 실행할이 작업 단계의 ID 및 *fail_action*됩니다 **4**합니다. *fail_step_id*됩니다 **int**, 기본값은 **0**합니다.  
+`[ @on_fail_step_id = ] fail_step_id` 단계가 실패 하는 경우에 실행할이 작업 단계의 ID 및 *fail_action* 됩니다 **4**합니다. *fail_step_id* 됩니다 **int**, 기본값은 **0**합니다.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버*됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar(30)** , 기본값은 NULL입니다.  
   
 `[ @database_name = ] 'database'` 실행할 데이터베이스의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *데이터베이스* 는 **sysname**, 기본값은 NULL이 있는 경우를 사용 하 여를 **마스터** 데이터베이스가 사용 됩니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. ActiveX 작업 단계의 합니다 *데이터베이스* 단계를 사용 하는 스크립트 언어의 이름입니다.  
   
 `[ @database_user_name = ] 'user'` 실행할 때 사용할 사용자 계정의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *사용자* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *사용자* 에서 NULL 이면 작업 소유자의 사용자 컨텍스트에서 단계 실행 *데이터베이스*합니다.  SQL Server 에이전트는 작업 소유자가 SQL Server sysadmin인 경우에만 이 매개 변수를 포함합니다. 작업 소유자가 SQL Server sysadmin일 경우 지정한 Transact-SQL 단계가 지정한 SQL Server 사용자 이름의 컨텍스트에서 실행됩니다. 작업 소유자가 SQL Server sysadmin, 경우 TRANSACT-SQL 단계가 항상 해당이 작업을 소유한 로그인의 컨텍스트에서 실행 되 고 @database_user_name 매개 변수는 무시 합니다.  
   
-`[ @retry_attempts = ] retry_attempts` 다시 시도 횟수는이 단계가 실패 하면를 사용 하려고 합니다. *retry_attempts*됩니다 **int**, 기본값은 **0**, 재시도 하지 않음을 나타내는입니다.  
+`[ @retry_attempts = ] retry_attempts` 다시 시도 횟수는이 단계가 실패 하면를 사용 하려고 합니다. *retry_attempts* 됩니다 **int**, 기본값은 **0**, 재시도 하지 않음을 나타내는입니다.  
   
-`[ @retry_interval = ] retry_interval` 재시도 간격 (분) 시간의 양입니다. *retry_interval*됩니다 **int**, 기본값은 **0**, 나타내는 **0**-분 간격입니다.  
+`[ @retry_interval = ] retry_interval` 재시도 간격 (분) 시간의 양입니다. *retry_interval* 됩니다 **int**, 기본값은 **0**, 나타내는 **0**-분 간격입니다.  
   
 `[ @os_run_priority = ] run_priority` 예약 되어 있습니다.  
   
-`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name*됩니다 **nvarchar (200)**, 기본값은 NULL입니다. *file_name*아래에 나열 된 토큰 중 하나 이상을 포함할 수 있습니다 *명령*입니다. 실행 명령에만이 매개 변수는 유효 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하위 시스템입니다.  
+`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)** , 기본값은 NULL입니다. *file_name* 아래에 나열 된 토큰 중 하나 이상을 포함할 수 있습니다 *명령*입니다. 실행 명령에만이 매개 변수는 유효 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하위 시스템입니다.  
   
 `[ @flags = ] flags` 동작을 제어 하는 옵션이입니다. *플래그* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  이 예에서는 `Weekly Sales Data Backup` 작업이 이미 있다고 가정합니다.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  
