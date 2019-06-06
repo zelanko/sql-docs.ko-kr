@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6295e4499a6f6f25f9111497012f2e9f1d6dc421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7bcd9d42ef214d7b1a2a40d2f00eeba85f9399b7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704628"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>직접 실행 및 일괄 처리 모드에서 AddNew 사용
 동작 합니다 **AddNew** 메서드의 업데이트 모드에 따라 달라 집니다 합니다 **레코드 집합** 개체를 전달 하는지 여부를 *FieldList* 및 *값*인수.  

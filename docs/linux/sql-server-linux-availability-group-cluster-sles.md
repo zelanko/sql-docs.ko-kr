@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658097"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705600"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -123,7 +122,7 @@ Linux 서버에서 가용성 그룹을 구성 하 고 그런 다음 클러스터
 
    b. 멀티 캐스트 주소를 입력 합니다. 스크립트는 기본적으로 사용할 수 있는 임의 주소를 제안 합니다. 
 
-   다. 멀티 캐스트 포트를 입력 합니다. 스크립트는 기본적으로 5405을 제안합니다. 
+   c. 멀티 캐스트 포트를 입력 합니다. 스크립트는 기본적으로 5405을 제안합니다. 
 
    d. 구성 하려면 `SBD ()`, SBD에 사용 하려는 차단 장치 파티션에 영구 경로 입력 합니다. 경로 클러스터의 모든 노드 간에 일치 해야 합니다. 
    마지막으로 스크립트 1 개 노드 클러스터를 온라인 상태로 전환 하 고 Hawk2 웹 관리 인터페이스를 사용 하도록 설정 하려면 Pacemaker 서비스를 시작 됩니다. Hawk2에 사용할 URL은 화면에 표시 됩니다. 

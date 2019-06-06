@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 78e6ed78e8c61a9ce14e30f0eb286d55da0e63b9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910822"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700750"
 ---
 # <a name="receiving-multiple-recordsets"></a>다중 레코드 집합 수신
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 지 원하는 여러 반환 **Recordset** 여러 SQL 문이 포함 된 단일 명령에 대 한 개체 하나 **레코드 집합**당 SQL 문입니다. 순서를 **레코드 집합**명령 텍스트에서 SQL 문을 배치 되는 순서를 따릅니다이 반환 됩니다.  

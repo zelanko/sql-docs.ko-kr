@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e8f0d245da2bde9763a1b940f8253d4c81fe903
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2cebf67ac23b6fb6ea0c75b874e6edfff0953c18
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288286"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706670"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append 메서드 예제(VB)
 다음 코드에는 새 인덱스를 만드는 방법을 보여 줍니다. 인덱스는 테이블의 두 열 켜져 있습니다.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802932"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702656"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등 수*입니다.*  
@@ -53,7 +53,7 @@ ms.locfileid: "62802932"
   
  2.7 이상 ADO를 사용 하 여 절대 URL에는 컨텍스트를 정의할 수도 있습니다. 예를 들어 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 절대 URL을 사용 하 여 개체를 열을 **연결** URL에서 지정 된 리소스를 나타내는 개체가 암시적으로 만들어집니다.  
   
- 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다 합니다 *ActiveConnection* 의 매개 변수를 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL 값으로 지정할 수도 있습니다는 "URL**=**" 키워드를 **연결** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드  *ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
+ 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다 합니다 *ActiveConnection* 의 매개 변수를 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL 값으로 지정할 수도 있습니다는 "URL **=** " 키워드를 **연결** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드  *ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
   
  열어 컨텍스트를 정의할 수도 있습니다는 **레코드** 또는 **Recordset** 이미 있기 때문에 이러한 개체는 암시적 또는 명시적으로 선언 된 디렉터리를 나타내는 개체 **연결**  컨텍스트를 지정 하는 개체입니다.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 공급자가 제공한 URL 구성표  
  정규화 된 URL의 앞부분입니다 합니다 *구성표* URL의 나머지 부분에 의해 식별 되는 리소스에 액세스 하는 데 사용 되는 합니다. HTTP (Hypertext Transfer Protocol) 및 FTP (파일 전송 프로토콜)을 예로 들 수 있습니다.  
   
- ADO는 자신의 URL 구성표를 인식 하는 OLE DB 공급자를 지원 합니다. 예를 들어 합니다 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* "게시" Windows 2000 파일에 액세스 하는 기존 HTTP 체계를 인식 합니다.  
+ ADO는 자신의 URL 구성표를 인식 하는 OLE DB 공급자를 지원 합니다. 예를 들어 합니다 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* "게시" Windows 2000 파일에 액세스 하는 기존 HTTP 체계를 인식 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

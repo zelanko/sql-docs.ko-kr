@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75638344b249274e8e4a7b637330c1c6806b0c86
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161470"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702152"
 ---
 # <a name="intervening-shape-compute-clauses"></a>중간에 셰이프 COMPUTE 절
 다음 예제와 같이 매개 변수가 있는 모양 명령에서 부모와 자식 간에 하나 이상의 COMPUTE 절을 포함 하는 것이 유효 합니다.  

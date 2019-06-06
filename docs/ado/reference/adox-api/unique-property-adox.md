@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6069d7891e7f21dcd24cfbf4f5392912e8bc8ad8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d126bcd26a74c091193bcff14154a34188b4a5d8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705659"
 ---
 # <a name="unique-property-adox"></a>Unique 속성(ADOX)
 인덱스 키를 고유 해야 하는지 여부를 나타냅니다.  

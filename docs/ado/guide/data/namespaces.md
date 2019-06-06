@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0e04ffd13183462b0d2a5e68ebc177b8b342b570
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126885"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701858"
 ---
 # <a name="namespaces"></a>네임스페이스
 ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  

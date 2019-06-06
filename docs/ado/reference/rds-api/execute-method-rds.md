@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 618c02f2b63746c0b8e5dfe00f4a231db3dc66f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5c0fa79bdf5acc89b7d884afa604ab08e926d9e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606243"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707709"
 ---
 # <a name="execute-method-rds"></a>Execute 메서드(RDS)
 요청을 실행 하 고 2.5 이상 ado에서 사용에 대 한 ADO 레코드 집합을 만듭니다.  

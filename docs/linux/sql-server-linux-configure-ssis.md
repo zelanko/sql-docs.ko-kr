@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 11162ea7bcb9ba0027d51376cef9c6a2fbd0cc11
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: fa00ec33039cd4a6e601321604ae60bd125fec7e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66009894"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705563"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Conf ssis를 사용 하 여 Linux에서 SQL Server Integration Services 구성
 

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f273509d8080a3f02a624e77001bb14569730ddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5ffb6fd01ebd565921a23a42c2ea0c2eced20a0b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184137"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707930"
 ---
 # <a name="clustered-property-adox"></a>Clustered 속성(ADOX)
 인덱스가 클러스터형 인지 여부를 나타냅니다.  

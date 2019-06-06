@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: dc0d846c77e2f5f237955a9ce437ea39b51d2cb2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028098"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694982"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Filter 및 RecordCount 속성 예제 (JScript)
 이 예제에서는 **Recordset** Northwind 데이터베이스 및 다음 사용 하 여 회사 테이블에는 [필터](../../../ado/reference/ado-api/filter-property.md) 문자로 시작 CompanyName 필드 해당 위치에 표시 되는 레코드를 제한 하는 속성 4. 잘라내기 하 고 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여으로 저장 **붙여 넣고 FilterJS.asp**합니다.  

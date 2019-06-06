@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 41b72647af357bc73eb3e9a2f8c3063f2275f6a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63217719"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707183"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 개체는 명령을 실행 하거나 데이터를 검색 하는 데이터 원본에 연결 하는 개방 인지 여부를 지정 합니다.  

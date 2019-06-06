@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 910977912a23ee48f740afccdb58c6f82801f2a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d29618fbacfbd4ba3becd222ef8a063e59e2cc70
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028118"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697837"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드(ADO)
 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 컬렉션의 자식을 나타내는 행이 있는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  

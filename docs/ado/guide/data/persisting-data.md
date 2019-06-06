@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0f2d47229b7383c11740ca3d7a20ad8e420931a5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63130202"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700478"
 ---
 # <a name="persisting-data"></a>데이터 유지
 (예: 랩톱), 이식 가능한 컴퓨팅 연결 및 연결이 끊긴 상태에서 실행할 수 있는 응용 프로그램에 대 한 필요 하 게 되었습니다. ADO는 개발자에 게 클라이언트 커서를 저장 하는 기능을 제공 하 여이 대 한 지원을 추가 했습니다 **레코드 집합** 디스크를 나중에 다시 로드 합니다.  

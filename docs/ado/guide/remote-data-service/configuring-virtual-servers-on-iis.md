@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 16130f9e96dfc70ef464e3ff48301c9f71c0bb06
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214882"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704339"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>IIS에서 가상 서버 구성
 인터넷 정보 서비스 4.0의 가상 서버를 만들 때 다음 두 가지 추가 단계를 RDS를 사용 하도록 가상 서버를 구성 하기 위해 필요 합니다.  

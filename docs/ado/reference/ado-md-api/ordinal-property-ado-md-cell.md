@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae4b9a3c623fdcb22d7665e4242ce2f58397b2a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c4a40c59ad222c943cefe089ffaddd53f2cec25a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281924"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708818"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal 속성(ADO MD Cell)
 고유 하 게 식별 하는 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 셀 집합 내의 위치를 기준으로 합니다.  

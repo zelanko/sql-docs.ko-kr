@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027931"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694758"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 에 대 한 트랜잭션 격리 수준을 지정 된 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 596eaa30b1a46c93db26da976f997b2a0beae8aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0b9ff1d51d762ea50a81f5542b88dd83e767060b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706139"
 ---
 # <a name="precision-property-adox"></a>Precision 속성(ADOX)
 데이터 값의 최대 전체 자릿수를 나타내는 합니다 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다.  

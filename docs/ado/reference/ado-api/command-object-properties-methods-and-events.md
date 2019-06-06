@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a569800d132e95668c728f10226c2f8820757921
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242754"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695819"
 ---
 # <a name="command-object-properties-methods-and-events"></a>명령 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

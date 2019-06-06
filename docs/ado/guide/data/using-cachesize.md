@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d0b6a1b83b09d504f8f3394a32ee10d556fcd18c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184901"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699732"
 ---
 # <a name="using-cachesize"></a>CacheSize 사용
 사용 된 **CacheSize** 공급자에서 로컬 메모리에 한 번에 검색할 레코드 수를 제어 하는 속성입니다. 예를 들어 경우는 **CacheSize** 가 10 이면 처음 연 후 합니다 **레코드 집합** 로컬 메모리로 처음 10 개의 레코드를 검색 하는 공급자 개체입니다. 여기저기로 이동 하면 합니다 **레코드 집합** 개체 공급자는 로컬 메모리 버퍼에서 데이터를 반환 합니다. 캐시에 있는 마지막 레코드를 통과 하는 즉시 캐시로 다음 10 개의 레코드를 데이터 원본에서 검색 공급자입니다.  

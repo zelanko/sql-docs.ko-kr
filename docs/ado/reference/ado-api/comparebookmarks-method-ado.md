@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e0c0e9e2debfc33d8bb51d4797215155247f3a7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315981"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698664"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 메서드(ADO)
 두 개의 책갈피를 비교 하 여 상대 값 표시를 반환 합니다.  

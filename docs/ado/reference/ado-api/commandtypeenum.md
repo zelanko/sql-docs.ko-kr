@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316276"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695972"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 명령 인수를 해석 하는 방법을 지정 합니다.  

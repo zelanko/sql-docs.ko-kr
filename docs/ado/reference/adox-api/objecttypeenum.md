@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4239cd2e62db43b4316bad5edbf989f29709213a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710272"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706238"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한 또는 소유권을 설정 하는 데이터베이스 개체의 형식을 지정 합니다.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f6ee8724454a8871f6642f5d812584ccffd9385
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 17f279af526a9e1f5b2c8deff4b4092e7949c5ea
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242386"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707270"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 속성(ADO)
 에 대 한 공급자 관련 오류 코드를 나타냅니다.는 주어진 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  

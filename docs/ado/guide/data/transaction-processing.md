@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472192"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704816"
 ---
-# <a name="transaction-processing"></a>트랜잭션 처리 
+# <a name="transaction-processing"></a>트랜잭션 처리
 A *트랜잭션* 일련의 연결을 통해 실행 하는 데이터 액세스 작업의 시작과 끝을 구분 합니다. 데이터 원본의 트랜잭션 기능에 따라 합니다 **연결** 개체도 트랜잭션을 만들고 관리할 수 있습니다. 예를 들어, Microsoft OLE DB Provider for SQL Server를 사용 하 여 Microsoft SQL Server에서 데이터베이스 액세스를 실행 하면 명령에 대 한 여러 중첩 된 트랜잭션을 만들 수 있습니다.  
   
  트랜잭션의 작업에서 결과 데이터 원본에 변경 내용을 함께 성공적으로 또는 전혀 수행 되도록 하는 ADO.  

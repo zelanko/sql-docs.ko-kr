@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d7137d67c14cd435ffe814a3bfbf0e42a7be976
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280399"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700429"
 ---
 # <a name="reshaping"></a>다시 셰이핑
 A **레코드 집합** 생성 셰이프 절로 명령을 할당할 수 있습니다는 *별칭* (일반적으로 사용 하 여 AS 키워드) 이름입니다. 별칭을 모양의 **레코드 집합** 완전히 다른 명령에서 참조할 수 있습니다. 재사용할 수, 또는 *변형*, 이전에 모양의 **레코드 집합** 새 셰이프 명령에서입니다. 이 기능을 지원 하려면 ADO에는 속성을 제공 [이름은 변형](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)합니다.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ac0174a223571e29973ad854f9350a6e60f1de9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e4b7b7a97af9059e944d2d2d9e7d19afedf4234d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248286"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696418"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드(ADO)
 큰 텍스트 또는 이진 데이터에 데이터 추가 [필드](../../../ado/reference/ado-api/field-object.md), 또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  

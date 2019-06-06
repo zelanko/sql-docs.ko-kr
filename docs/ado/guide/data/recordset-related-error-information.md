@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef5f6cc4a262cecc81a8dd72f2d3e3f6a7e2fded
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63187796"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700417"
 ---
 # <a name="recordset-related-error-information"></a>레코드 집합 관련 오류 정보
 일괄 처리 하는 동안는 **상태** 의 속성을 **레코드 집합** 개체에서 개별 레코드에 대 한 정보를 제공 합니다 **레코드 집합**합니다. 일괄 처리 업데이트를 수행 하기 전에 **상태** 의 속성을 **레코드 집합** 추가, 변경 및 삭제 된 레코드에 대 한 정보를 반영 합니다. 후 **UpdateBatch** 호출한 다음에 **상태** 속성 작업의 성공 여부를 나타냅니다. 레코드를 이동 하면를 **레코드 집합**의 값을 **상태** 현재 레코드의 상태를 설명 하는 속성 변경.

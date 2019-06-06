@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248895"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696640"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계가에 표시 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "63248895"
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   

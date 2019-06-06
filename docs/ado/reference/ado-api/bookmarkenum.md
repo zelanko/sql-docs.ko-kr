@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8cb55701446d9a532cf57cccbba0aa1f11be416a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e2b83c403d9798a8009556bf9fe21a0be0a5a0da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63050494"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696318"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 작업을 시작할 위치를 나타내는 책갈피를 지정 합니다.  

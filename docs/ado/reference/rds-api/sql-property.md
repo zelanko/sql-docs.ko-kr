@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba032adaa8b6412b9390de644504cae6c55c74f9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315835"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697711"
 ---
 # <a name="sql-property"></a>SQL 속성
 검색에 사용 되는 쿼리 문자열을 나타내고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

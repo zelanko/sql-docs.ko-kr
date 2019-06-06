@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 097286f14de4dead4490c322615a6405c157f118
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e3f94b2f0491aac23687d425d2e9d93e975dab19
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140257"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695467"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete 메서드(ADO 필드 컬렉션)
 개체를 삭제 합니다 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션입니다.  

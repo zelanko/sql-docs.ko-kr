@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309213"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698512"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
 복사 나타내는 엔터티를 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치로 합니다.  

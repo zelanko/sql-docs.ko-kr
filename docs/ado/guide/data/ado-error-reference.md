@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 05be5b1b9f3b23971017c74b5a6491f20ce4e49e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063079"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702788"
 ---
 # <a name="ado-errors"></a>ADO 오류
 합니다 **ErrorValueEnum** 상수 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 된 상수의 전체 목록은 참조 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션에서는 몇 가지 흥미로운 오류 검사를 하면 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 일부 특정 한 상황에 설명 합니다. 모두를 **ErrorValueEnum** 상수 및 짧은 양의 10 진수 나열 됩니다.

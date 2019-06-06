@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9e26930db786b986fd1f4ba633e2cc5953f3df3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 19fc6e61a10e1a92f0f674a23d00f1e1b06a596c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910456"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701692"
 ---
 # <a name="records-and-streams"></a>레코드 및 스트림
 ADO는 현재 제공 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 관계형 데이터베이스와 같은 데이터 원본에 있는 정보에 액세스 하는 기본 수단으로는 개체입니다. 그러나 일부 공급자를 지원 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체로 대체 또는 보조 개체는 공급자에서 데이터를 조작할 수 있습니다. 에 대 한 **레코드** 동작 공급자의 설명서를 참조 하세요.  

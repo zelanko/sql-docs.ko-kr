@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5902adad5f9f419b553e4b73c976ae64a4e129f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161490"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700880"
 ---
 # <a name="internet-publishing-scenario"></a>인터넷 게시 시나리오
 이 코드 예제에는 Microsoft OLE DB provider for Internet Publishing ADO를 사용 하는 방법을 보여 줍니다. 이 시나리오를 사용 하는 Visual Basic 응용 프로그램을 만듭니다 **Recordset**를 **레코드**, 및 **Stream** 사용 하 여 게시 된 리소스의 내용을 표시 하는 개체 인터넷 공급자를 게시 합니다.  

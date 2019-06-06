@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9ffc34dd95ac2f5ef6e26e796c4c05cd91b28ae0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063089"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700393"
 ---
 # <a name="sample-recordset-for-examining-data"></a>데이터를 검사하기 위한 샘플 레코드 집합
 먼저 살펴보겠습니다 합니다 **레코드 집합** Microsoft SQL Server의 기본 Northwind 샘플 데이터에 대 한 실행에서 다음 SQL 쿼리를 사용 하 여 반환 된 개체입니다.  

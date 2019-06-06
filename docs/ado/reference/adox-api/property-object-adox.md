@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2502dcdab170102f526aa1ea0fe67235e6bf3048
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f07d14d30f3fd87be8fc61552716a931ed86d68
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281909"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705956"
 ---
 # <a name="property-object-adox"></a>속성 개체(ADOX)
 ADOX 개체의 특성을 나타냅니다.  

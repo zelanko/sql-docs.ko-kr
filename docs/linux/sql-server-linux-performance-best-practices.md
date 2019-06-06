@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 8dc3cafb54fe91709bd3ee078dfeeb1dc5e3d649
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106264"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705162"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침
 
@@ -28,7 +27,7 @@ ms.locfileid: "65106264"
 
 응용 프로그램에 대 한 최상의 성능을 위해 Linux에서 SQL Server를 설치한 후 다음 구성 작업을 수행 하는 것이 좋습니다.
 
-### <a name="best-practices"></a>최선의 구현 방법
+### <a name="best-practices"></a>모범 사례
 
 - **노드 및/또는 Cpu에 대 한 프로세스 선호도 사용 합니다.**
 

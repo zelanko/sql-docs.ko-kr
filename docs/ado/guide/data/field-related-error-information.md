@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161562"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702015"
 ---
 # <a name="field-related-error-information"></a>필드 관련 오류 정보
 경우는 오류는 필드에 직접 연관 됩니다 예를 들어, 데이터를 사용할 수 없는 경우 또는-필드에 대 한 잘못 된 경우 검색할 수 있습니다 문제의 원인에 대 한 자세한 내용은 검사 하 여 합니다 **필드** 개체의 **상태**  속성입니다. 이 속성 문제에 대 한 특정 정보를 제공 하도록 향상 되었습니다. 따라서 예를 들어 호출 하 여 **UpdateBatch** 실패 하면 문제의 원인을 검사 하 여 확인할 수 있습니다 합니다 **상태** 속성을 **필드** 는 영향을 받는 각 기록 합니다. 속성의 값 중 하나가 포함 됩니다는 **FieldStatusEnum** 상수입니다. 다음 표에서 관심 있는 특정 오류가 발생 하면 해당 값을 포함 합니다.  

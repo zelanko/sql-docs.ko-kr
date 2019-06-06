@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15d64d7b25abe5f67ba00e207f8f46c820aacd4a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bf58d779c90394606a8e10411da837481ede6c66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161764"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702026"
 ---
 # <a name="getting-data"></a>데이터 가져오기
 [ADO 기본 사항](../../../ado/guide/data/ado-fundamentals.md), 및 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 예제 ADO 응용 프로그램을 만드는 데 관련 된 네 가지 기본 작업을 특히 도입: 데이터 가져오기, 데이터를 검사, 데이터, 편집 및 데이터를 업데이트 합니다. 이 섹션에서는 시작 데이터를 더 자세히 설명 합니다.  

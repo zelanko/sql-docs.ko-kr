@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9df3fd695e9bf281133dabf436e5e8b5de7e0b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5cecd58998e84b608c5bece462bf58d7f376e237
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309152"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698630"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 지정 여부를 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 연결 (동기적으로) 한 후 또는 그 이전에 반환 해야 (비동기).  

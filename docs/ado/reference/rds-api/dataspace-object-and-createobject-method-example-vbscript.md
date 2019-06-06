@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 91effd466592c8217d23e96b60ef144797d48b40
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134427"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707732"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 개체 및 CreateObject 메서드 예제(VBScript)
 > [!IMPORTANT]

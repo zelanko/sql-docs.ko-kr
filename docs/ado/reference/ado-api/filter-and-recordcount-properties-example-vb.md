@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0fbb20e623c37528285b8c1dd248ad24217cb2bc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028101"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697818"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 및 RecordCount 속성 예제(VB)
 이 예제에서는 열기를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 게시자 테이블에는 ***Pubs*** 데이터베이스입니다. 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 특정 국가/지역에서 해당 게시자에 표시 되는 레코드의 수를 제한 하는 속성입니다. 합니다 **RecordCount** 속성 필터링 및 필터링 되지 않은 레코드 집합 간의 차이 표시 하는 데 사용 됩니다.  

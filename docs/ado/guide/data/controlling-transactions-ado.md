@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0006957b75d89c6c8ae3455508cc122682cb2d05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472659"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702150"
 ---
 # <a name="controlling-transactions-ado"></a>트랜잭션 제어(ADO)
 ADO에서는 트랜잭션 처리를 활용 하 여 연결을 지원 합니다 **BeginTrans**, **CommitTrans**, 및 **RollbackTrans** 메서드를  **연결** 개체입니다. ADO에서 트랜잭션 처리를 구현 하는 일반적인 개념은 다음 간단한 코드 조각에 나와 있습니다.  

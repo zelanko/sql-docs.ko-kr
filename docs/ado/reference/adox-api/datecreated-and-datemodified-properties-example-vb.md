@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59a54320cd3b1a90e832b474d5308086f018cc38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7c70b07365a61962b7dec009f7100f8070196430
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281668"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706905"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated 및 DateModified 속성 예제(VB)
 이 예제에서는 합니다 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) 하 고 [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) 새로 추가 하 여 속성 [열](../../../ado/reference/adox-api/column-object-adox.md) 기존 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 및 새로 만들 **테이블**합니다. DateOutput 절차는이 예제를 실행 하려면 필요 합니다.  

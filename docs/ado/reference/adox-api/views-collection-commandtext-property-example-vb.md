@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13dc0a46daa2636dc56cf84f91ad8d014c4a3bdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 01ddcb116c4253c2ab56548af2b9cf136b9e28de
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281363"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697213"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>보기 컬렉션, CommandText 속성 예제(VB)
 다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 뷰의 텍스트를 업데이트 하는 속성입니다.  

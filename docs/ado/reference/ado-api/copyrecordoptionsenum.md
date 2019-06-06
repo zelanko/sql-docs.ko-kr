@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe0b12053b9ac7203253e81fa3300d2e4109a129
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a944d3f82940d9364312fb8033ec8b8937b0c49c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308894"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695766"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 동작을 지정 합니다 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) 메서드.  

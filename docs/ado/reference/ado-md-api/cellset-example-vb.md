@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c637d3bcb56a3e2b5e581b3348271f50adb9fd7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d98c465bdf3890cde10a405b7f2d139330fe9c05
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469358"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709509"
 ---
 # <a name="cellset-example-vb"></a>Cellset 예제(VB)
 이 Visual Basic 프로젝트에는 ADO MD를 사용 하 여 큐브 데이터에 액세스 하는 기본 사항을 보여줍니다. 열 및 행 헤더에 대 한 멤버 캡션을 표시 한 다음 서식이 지정 된 값은 셀 집합 내의 특정 셀을 표시 합니다.  

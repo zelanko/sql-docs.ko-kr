@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955812"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704137"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
-사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 네 가지 섹션 유형은 리터럴 문자열에 표시 됩니다 **연결**, **sql**합니다 **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본, 사용자가 지정한 식별자를 또는 nothing입니다.  
+사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 ( **[]** ) 형식 및 매개 변수를 포함 합니다. 네 가지 섹션 유형은 리터럴 문자열에 표시 됩니다 **연결**, **sql**합니다 **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본, 사용자가 지정한 식별자를 또는 nothing입니다.  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
@@ -55,7 +55,7 @@ identifier
   
  특정 섹션은 다음 상황에서 사용 됩니다.  
   
--   **연결** 클라이언트의 값 부분 연결 문자열 키워드 섹션은 "**데이터 원본 =**_값_"를 일치 하는 **연결** 섹션 식별자*합니다.*  
+-   **연결** 클라이언트의 값 부분 연결 문자열 키워드 섹션은 "**데이터 원본 =** _값_"를 일치 하는 **연결** 섹션 식별자*합니다.*  
   
 -   **sql** 섹션 클라이언트 명령 문자열을 일치 하는 문자열을 포함 하는 경우 사용 되는 **sql** 섹션 식별자입니다.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9db18a572fc82b05e75fb7bb286afb572fe500fd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929891"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704245"
 ---
 # <a name="registering-a-custom-business-object"></a>사용자 지정 비즈니스 개체 등록
 이 절차에 설명 된 대로 비즈니스 개체의 ProgID (.dll 또는.exe)에 사용자 지정 비즈니스 개체를 통해 웹 서버를 성공적으로 시작 하려면 레지스트리에 입력 해야 합니다. 이 RDS 기능은 권한 있는 실행 파일만 실행 하 여 웹 서버의 보안을 보호 합니다.  

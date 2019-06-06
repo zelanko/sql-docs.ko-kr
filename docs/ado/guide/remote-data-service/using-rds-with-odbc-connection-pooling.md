@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 14f06b98896a63f8e19ce22fb9cd1eb5b181f481
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955759"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699252"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>ODBC 연결 풀링에서 RDS 사용
 ODBC 데이터 소스를 사용 하는 경우의 연결 풀링 옵션에서 인터넷 정보 서비스 (IIS)를 사용 하 여 클라이언트 부하의 처리 성능을 향상 시킬 수 있습니다. 연결 풀링은 자주 사용 되는 연결에서 열려 있는 상태를 유지 관리 연결에 대 한 리소스에 대 한 관리자입니다.  

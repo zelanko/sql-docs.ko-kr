@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.custom: sql-linux
-ms.openlocfilehash: 3643e66e190ec1b45961f36af471498a56924cb0
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265382"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705541"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio 코드를 사용 하 여 TRANSACT-SQL 스크립트 만들기 및 실행
 

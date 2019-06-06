@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161638"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700771"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에 이벤트 처리기를 제어 하는 상태 매개 변수입니다. 전체 이벤트의 경우이 매개 변수는 이벤트를 생성 하는 작업의 성공 여부를 나타내는 사용 됩니다. 가장 완전 이벤트 발생 하는 모든 오류 및 하나 이상의 개체 매개 변수는 작업을 수행 하는 데 ADO 개체를 참조 하는 방법에 대 한 정보를 제공 하는 오류 매개 변수를 수도 있습니다. 예를 들어 합니다 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 이벤트에 대 한 개체 매개 변수를 포함 합니다 **명령**, **레코드 집합**, 및 **연결** 개체 이벤트와 연결 합니다. 다음 Microsoft® Visual Basic® 예에서 pCommand, pRecordset, 및 나타내는 pConnection 개체를 볼 수는 **명령**, **Recordset**, 및 **연결** 에서 사용 되는 개체를 **Execute** 메서드.  

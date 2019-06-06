@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1474eeb0ac4df68b72406379f5edaada5cc83dbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ee346a4f73a959f42b4b74967a6f08338775c144
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183901"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703368"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
 ADO 지정 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들거나 프로시저를 실행 하는 데 사용할 수 있습니다.  

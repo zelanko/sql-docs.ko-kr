@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864519"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702776"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic for Applications로 ADO 사용하기
 Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO 프로젝트를 설정하고 ADO 코드를 작성하는 작업은 거의 비슷합니다. 이 항목에서는 Visual Basic 및 Visual Basic for Applications에서 ADO를 사용하는 방법 및 차이점에 대한 유의 사항을 다룹니다.

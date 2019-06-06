@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9de69478469a6bd177d12beab96e199b4720f3f5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308741"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695488"
 ---
 # <a name="datamember-property"></a>DataMember 속성
 검색 되는 데이터 멤버의 이름을 나타냅니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 참조 하는 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성입니다.  

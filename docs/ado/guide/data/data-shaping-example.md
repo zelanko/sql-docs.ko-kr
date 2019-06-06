@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5690b104cea4cf29cb51c77d8dc8554dd5a31d50
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472560"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701106"
 ---
 # <a name="data-shaping-example"></a>데이터 셰이핑 예제
 다음 데이터 셰이핑 명령 계층을 구축 하는 방법을 보여 줍니다 **레코드 집합** 에서 **고객** 하 고 **주문** Northwind 데이터베이스의 테이블입니다.  

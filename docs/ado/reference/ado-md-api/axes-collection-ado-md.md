@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb700997165ceeb6d300f6332c9e758706c0fbc1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f30d7fed3748e954410272d8c1a019194c335ea1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062601"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709950"
 ---
 # <a name="axes-collection-ado-md"></a>Axes 컬렉션(ADO MD)
 포함 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 셀 집합을 정의 하는 개체입니다.  

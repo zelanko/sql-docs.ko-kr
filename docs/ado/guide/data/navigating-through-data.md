@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 77c9434fd92b8b3c30addce7967c4965d07cbb38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63126859"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701929"
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
 **레코드 집합** 결과 데이터 집합을 탐색 하려면 다양 한 속성과 메서드를 지원 합니다. 샘플을 사용 하 여 몇 가지 시나리오를 안내 하 여이 기능을 살펴봅니다 **레코드 집합** 개체입니다.  

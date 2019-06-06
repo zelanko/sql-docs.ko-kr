@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 272b953a39a9ccbb01d94acc59d374304bda3ad0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fab7baf1771ad0600f4c1a0a8cac931f0adcc0a4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140181"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695423"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete 메서드(ADO 레코드 집합)
 현재 레코드 또는 레코드 그룹을 삭제합니다.  

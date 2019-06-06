@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e61ce5aa6ed5cc5ad07d51b93cef0b62b3feeef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7ba5c845320311298a2b1162451c601372fd257d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281230"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697000"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Views 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

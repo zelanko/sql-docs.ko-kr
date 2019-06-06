@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efdbd68bf464fea3a0d59396380b082eb66375b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c87862f97a1fc00d625542c177d85e11d0a7ad45
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156578"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699278"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 속성(ADO)
 현재 레코드가 있는 페이지를 나타냅니다.  

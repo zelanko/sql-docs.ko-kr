@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184817"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704430"
 ---
 # <a name="xml-security-considerations"></a>XML 보안 고려 사항
 ADO 저장 및 열기 메서드를 레코드 집합 개체에서 Internet Explorer에서 실행을 안전 하 게 작업을 고려 하지 않습니다. 따라서 응용 프로그램 또는 브라우저에서 호스트 되는 컨트롤에서 실행 되는 스크립트 코드에서 이러한 메서드를 사용 하면 브라우저의 보안 구성을 해당 동작에 영향을 미칩니다.  

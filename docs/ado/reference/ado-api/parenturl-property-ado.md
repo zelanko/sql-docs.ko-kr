@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e67ac30883a7665368f6f46045ff61d9375b8cd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 65704cea2a396e0f03de4bbcdc9f031f4c9af583
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027864"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703470"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
 부모를 가리키는 절대 URL 문자열을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 현재 **레코드** 개체입니다.  

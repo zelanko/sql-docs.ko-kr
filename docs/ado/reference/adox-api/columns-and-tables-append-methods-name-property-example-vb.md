@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8fafc8b9e9d3043fb84e0a7d7155dc3d61445ffa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183958"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707821"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns 및 Tables Append 메서드, Name 속성 예제 (VB)
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  

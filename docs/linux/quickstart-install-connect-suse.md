@@ -8,15 +8,14 @@ manager: craigg
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f5c0bb63ce7d188a2587d1a44d863a14308da273
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579473"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713580"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -47,7 +46,7 @@ SUSE Linux Enterprise Server 자신의 컴퓨터에 설치 하려면로 이동 [
 CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 다음 단계를 수행 하기 전에 이전 리포지토리를 먼저 제거 해야 합니다. 자세한 내용은 [SQL Server 2017 및 2019에 대해 Linux 구성 리포지토리](sql-server-linux-change-repo.md)합니다.
 
 > [!NOTE]
-> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다. 
+> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다.
 
 다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하십시오.
 

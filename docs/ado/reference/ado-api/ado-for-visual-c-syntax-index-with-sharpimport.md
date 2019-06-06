@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 987dbf95c4db08d5ac88d56dbd7097b8a45afe77
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249126"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696642"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>시각적 개체에 대 한 ADO C++ #import 구문 인덱스
 이 인덱스를 기준으로 Microsoft Visual ADO 언어 참조에 대 한 상호 참조는 C++ 하며 **#import** 지시문입니다.  

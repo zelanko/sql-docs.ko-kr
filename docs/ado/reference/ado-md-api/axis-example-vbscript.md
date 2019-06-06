@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f9c16ccd42dbd1ef1e375cdc98fbcd155b8dc07b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469990"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709816"
 ---
 # <a name="axis-example-vbscript"></a>Axis 예제(VBScript)
 Active Server Page이 MDX 쿼리 문자열에서 OLAP 데이터를 표시 하 고 HTML 테이블 구조를 결과 집합을 씁니다.  

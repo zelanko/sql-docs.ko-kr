@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062879"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706642"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>업데이트 보내기: UpdateBatch 메서드
 다음 코드는 adLockBatchOptimistic 및 adUseClient에 CursorLocation LockType 속성을 설정 하 여 일괄 처리 모드에서 레코드 집합을 엽니다. 두 개의 새 레코드를 추가 및 원래 값이 저장 된 기존 레코드의 필드 값을 변경 하 고 변경 내용을 다시 데이터 원본에 보낼 UpdateBatch 호출.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 516e6a95ba98f1b8d66ddf9f417460ef2a6b7dc0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: edc451ae2075a22c106f4e2395836e7d508a7808
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028030"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694790"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 이벤트(ADO)
 **InfoMessage** 중에 경고가 발생할 때마다 이벤트 라고는 **ConnectionEvent** 작업 합니다.  

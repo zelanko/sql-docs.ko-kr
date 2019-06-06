@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dfdb60f9a394fa4d11e9b66ffb1f4b205881293
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fef3eac34a624925401eeac2fd82b2f34eaa3a1f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156291"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704048"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성(ADO)
 나타냅니다 합니다 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만든 연결 된 개체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67dc3f6bb82799382fa2b65754b3645dd735acab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e6d558b64095a4071687ed8edd62d54985015c5d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214815"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699484"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>충분한 TempDB 공간 확인
 처리 하는 동안 오류가 발생 하면 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) Microsoft SQL Server 6.5에서 공간을 처리 해야 하는 개체는 TempDB의 크기를 늘리려면 해야 할 수 있습니다. (일부 쿼리는 임시 처리 공간이 필요; ORDER BY 절을 사용 하 여 쿼리를 정렬 해야 하는 예를 들어의 합니다 **레코드 집합**, 몇 가지 임시 공간이 필요 합니다.)  

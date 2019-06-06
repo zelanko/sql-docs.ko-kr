@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472550"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702140"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션을 업데이트, 삽입 또는 삭제를 보류 중인 함께 행 집합의 데이터를 정의합니다. 데이터 섹션 0 개 이상의 행을 포함할 수 있습니다. 행이 스키마에 정의 되어 있는 행 집합의 데이터를 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터가 없는 열을 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소는 해당 구문이 스키마 섹션에 정의 되지 않은 경우 자동으로 무시 됩니다.  

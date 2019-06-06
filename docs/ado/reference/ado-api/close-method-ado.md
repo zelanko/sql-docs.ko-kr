@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f43e59ed38dfde8091cb851f75a133c60874a6af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e692e8853417abae386ac151eca4b49f11b12f02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302503"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698993"
 ---
 # <a name="close-method-ado"></a>Close 메서드(ADO)
 열려 있는 개체와 모든 종속 개체를 닫습니다.  

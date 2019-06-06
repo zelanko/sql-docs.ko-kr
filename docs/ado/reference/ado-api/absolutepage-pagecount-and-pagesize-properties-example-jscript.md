@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b9778802fc45bd650ce0cc7f3e340fddbef6ab43
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156307"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704087"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, PageSize 속성 예제 (JScript)
 이 예제에서는 AbsolutePage, PageCount, PageSize 속성을 보여 줍니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **AbsolutePageJS.asp**합니다.  

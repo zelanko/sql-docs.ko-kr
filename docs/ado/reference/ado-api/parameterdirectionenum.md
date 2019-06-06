@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f62d2119764466cabb542d26849712d733453ba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314828"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703270"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 지정 여부는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 는 입력된 매개 변수, 출력 매개 변수, 두 입력은 출력 매개 변수 또는 저장된 프로시저에서 반환 값 및.  

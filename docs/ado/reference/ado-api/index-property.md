@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027967"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694797"
 ---
 # <a name="index-property"></a>Index 속성
 적용에 대 한 현재 인덱스의 이름을 나타내는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "63027967"
   
  인덱스를 설정할 수 있는 경우 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성은 **adLockPessimistic** 하거나 **adLockOptimistic**, 다음 암시적 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 작업이 수행 됩니다. 이 현재 및 영향을 받는 그룹을 해제합니다. 기존 필터가 해제 되 고 다시 정렬된 된 첫 번째 행을 현재 행 위치가 변경 됩니다 **레코드 집합**합니다.  
   
- 합니다 **인덱스** 속성은 함께에서 사용 합니다 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드. 기본 공급자를 지원 하지 않는 경우는 **인덱스** 속성 이므로 **Seek** 메서드를 사용 하는 것이 좋습니다는 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 메서드 대신 합니다. 확인 여부를 합니다 **레코드 집합** 개체가 사용 하 여 인덱스를 지원 합니다 [지원](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** 메서드.  
+ 합니다 **인덱스** 속성은 함께에서 사용 합니다 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드. 기본 공급자를 지원 하지 않는 경우는 **인덱스** 속성 이므로 **Seek** 메서드를 사용 하는 것이 좋습니다는 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 메서드 대신 합니다. 확인 여부를 합니다 **레코드 집합** 개체가 사용 하 여 인덱스를 지원 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** 메서드.  
   
  기본 제공 **인덱스** 동적와 관련이 없는 속성 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 모두 인덱스를 사용 하 여 처리 되지만 합니다.  
   

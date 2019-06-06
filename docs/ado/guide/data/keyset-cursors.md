@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161635"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702092"
 ---
 # <a name="keyset-cursors"></a>키 집합 커서
 키 집합 커서는 정적 및 동적 커서 간에 기능 변경 내용을 검색 하는 기능 제공 합니다. 정적 커서처럼 항상 결과 집합의 멤버 자격과 순서에 대한 변경 내용을 검색하지는 못합니다. 동적 커서처럼 결과 집합의 행 값에 대한 변경 내용을 검색합니다.  

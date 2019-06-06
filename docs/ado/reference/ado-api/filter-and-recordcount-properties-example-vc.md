@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631252"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694979"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter 및 RecordCount 속성 예제 (VC + +)
 이 예제에서는 합니다 [필터](../../../ado/reference/ado-api/filter-property.md) 속성을 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기존에 적용 된 지정 된 조건에 따라 **레코드 집합**합니다. 사용 된 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) 의 두 레코드의 수를 표시 하는 속성 **레코드 집합**합니다. FilterField 함수는이 절차를 실행 하려면 필요 합니다.  

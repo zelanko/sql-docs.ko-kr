@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4a39f93e6b98595270e46d5a6f9b54b35098cb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 152186c0bb1c2fb75197a920e06e0b6bb96dadd0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710347"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703320"
 ---
 # <a name="parameter-object"></a>Parameter 개체
 매개 변수 또는 연결 된 인수를 나타내는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 매개 변수가 있는 쿼리 또는 저장된 프로시저를 기반으로 개체입니다.  

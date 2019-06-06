@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910467"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700446"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열, 해당 소스에서 현재 열려 있는 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 개방적이 고와 함께에서 상대 URL 또는 절대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -79,4 +79,4 @@ ms.locfileid: "62910467"
   
 ## <a name="see-also"></a>관련 항목  
  [레코드 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

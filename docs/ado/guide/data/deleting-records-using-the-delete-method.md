@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b4798e2658bf23edaf7cd04fb819e26de2a55cc9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472385"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700822"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Delete 메서드를 사용하여 레코드 삭제
 사용 하는 **삭제** 메서드는 현재 레코드 또는 레코드의 그룹을 표시를 **레코드 집합** 개체를 삭제 합니다. 경우는 **레코드 집합** 개체 수 없도록 레코드 삭제 오류가 발생 합니다. 즉시 업데이트 모드에 있는 경우 삭제는 데이터베이스에 즉시 발생 합니다. 호출한 후 레코드를 편집 모드로 유지 됩니다 (으로 인해 데이터베이스 무결성 위반, 예를 들어) 레코드를 성공적으로 삭제할 수 없으면, **업데이트 합니다.** 이 사용 하 여 업데이트를 취소 해야 하는 것을 의미 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 현재 레코드를 이동 하기 전에 (예를 들어,를 사용 하 여 [닫기](../../../ado/reference/ado-api/close-method-ado.md)합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md), 또는 [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

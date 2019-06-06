@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248817"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696577"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업에 의해 영향을 받는 레코드를 지정 합니다.  

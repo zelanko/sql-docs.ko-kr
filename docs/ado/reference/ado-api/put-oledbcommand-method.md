@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3dc19da014bc0909e44180ff4176adf1902694b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0c9901adcc29d09290bc3144e3fae7efd3ef44ba
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278947"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702864"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand 메서드
 이 메서드는 아무 작업도 수행 하 고 항상 S_OK를 반환 합니다.  

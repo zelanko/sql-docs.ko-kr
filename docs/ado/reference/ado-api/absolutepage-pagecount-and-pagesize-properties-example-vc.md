@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 16d2c544da0da068d54fd3d7561b5cfad87eaa60
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155201"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704219"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, PageSize 속성 예제 (VC + +)
 이 예제에서는 합니다 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)를 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성 이름을 표시에서 날짜를 고용 하는 ***직원*** 테이블, 한 번에 5 개 레코드입니다.  
