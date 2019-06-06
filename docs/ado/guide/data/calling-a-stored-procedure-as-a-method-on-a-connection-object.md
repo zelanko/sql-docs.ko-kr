@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f60c8d460ae2a7b103f0c8c13e81c5aed3708c58
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472804"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718534"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
 연결 열기 네이티브 메서드인 것 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 64ac7dae1a5760ff18f1a109a031bd00bb30eb1c
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228056"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718651"
 ---
 # <a name="types-of-locks"></a>잠금 형식
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

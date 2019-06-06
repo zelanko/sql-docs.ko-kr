@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248836"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718170"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 합니다 **ADORecordConstruction**인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드** OLE DB 개체 **행** 개체 c에서 /C++ 응용 프로그램입니다.  
