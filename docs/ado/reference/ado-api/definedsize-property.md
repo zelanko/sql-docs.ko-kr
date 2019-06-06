@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4267776593637a01aef38a218f7272261fd1d448
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b80838ce47bdb74878efb2918fd79b057abce216
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140169"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718476"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
 데이터 용량을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  

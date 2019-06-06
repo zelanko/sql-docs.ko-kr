@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e35b5c2939c01fa0e8a10995ebcc620eae66fe56
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710197"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718724"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
 보류 중인 변경 내용을 로컬로 캐시 된 및 업데이트할 수 있는 전송 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 에 지정 된 데이터 원본에는 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성.  

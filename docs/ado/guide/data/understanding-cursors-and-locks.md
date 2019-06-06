@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1a828bbbc42638cddaec609fc101b4cf70f7e356
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228108"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718639"
 ---
 # <a name="understanding-cursors-and-locks"></a>커서 및 잠금 이해
 응용 프로그램의 데이터 액세스 요구 사항에 대 한 가장 효율적인 커서 유형을 선택할 수 있도록 커서의 작동 방법을 이해 하는 것이 반드시 합니다. 최적화 않은 경우 보다 커서 구성 매우 느려질 데이터 액세스 작업을 만들 수 있습니다.  

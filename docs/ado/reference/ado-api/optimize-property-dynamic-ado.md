@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0b73e699141e598115f9ce178b74d10cbf22b0f5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240040"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719157"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
 인덱스를 만들어야 하는지 여부를 지정 된 [필드](../../../ado/reference/ado-api/field-object.md)합니다.  

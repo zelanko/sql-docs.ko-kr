@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 49a3c276aa17d8f2bd7f48296eeecb69ad91d04d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184849"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718371"
 ---
 # <a name="xml-persistence-format"></a>XML 지속성 형식
 ADO 유지 XML 스트림에 대 한 utf-8 인코딩을 사용 합니다.  

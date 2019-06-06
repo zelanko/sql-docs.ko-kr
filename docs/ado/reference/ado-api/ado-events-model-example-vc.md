@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248976"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718563"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
 시각적 개체 C++ 의 섹션 [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 만든 환경 내에서 이벤트 모델 인스턴스화의 특정 예제는 **#import** 지시문입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "63248976"
   
 -   합니다 **#import** 지시문을 해결 **typedef**의 메서드 서명 데이터 형식 및 한정자가 기본 양식에 합니다.  
   
--   덮어써야 하는 순수 가상 메서드는 모두에서 앞에 "**raw_**"입니다.  
+-   덮어써야 하는 순수 가상 메서드는 모두에서 앞에 "**raw_** "입니다.  
   
  일부 코드를 단순히 코딩 스타일을 반영 합니다.  
   

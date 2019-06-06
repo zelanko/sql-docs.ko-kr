@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1b74505591b2f883b6cc7541a89c485435d5bab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fa1b38ae8789a00eccadb61cedf0fb133396f11e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472365"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718451"
 ---
 # <a name="data-shaping"></a>데이터 셰이핑
 이 섹션에서는 다음 항목을 다룹니다.  

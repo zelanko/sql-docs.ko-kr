@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911372"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718682"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류를 반환 됩니다. 이 오류를 받게 되 면 확인 합니다 **오류** 활성 컬렉션 **연결** 발생 한 문제를 설명 하는 하나 이상의 오류를 포함 하는 개체입니다.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 744ae9a9541b5c73d579e097f375b4141e771fce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59234b24d7a3e07c1d6500c41dd0ec2a16f95ee1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184868"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718381"
 ---
 # <a name="what-is-a-lock"></a>잠금이란?
 잠금은 사용 되는 DBMS 다중 사용자 환경에서 행에 액세스를 제한 하는 프로세스입니다. 행 또는 열을 단독으로 잠긴 경우 잠금이 해제 될 때까지 잠긴된 데이터에 액세스 하려면 다른 사용자에 게 허용 되지 않습니다. 이렇게 하면 두 명의 사용자가 행의 동일한 열에 동시에 업데이트 수 없습니다.  

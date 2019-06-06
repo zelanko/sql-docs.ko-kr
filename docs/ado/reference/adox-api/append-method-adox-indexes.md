@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7190fa68b8204e6b1cfea68a6571e07fd78a9bbc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206262"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718960"
 ---
 # <a name="append-method-adox-indexes"></a>Append 메서드(ADOX 인덱스)
 새로 추가 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 [인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md) 컬렉션입니다.  

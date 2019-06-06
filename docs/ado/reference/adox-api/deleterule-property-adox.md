@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a5aefd37b70df88ada887e173dc1cc1f7d8ec4d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 19024aecd7061b1e1fdb66d766f3dfa704cd245c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63297994"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718893"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 속성(ADOX)
 기본 키 삭제 될 때 수행 되는 작업을 나타냅니다.  

@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 265b274a76e1cf88b5d039a1296090e4fa4c6324
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718566"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM용 Visual C++ 구문 인덱스에 대한 ADO
 이 인덱스를 기준으로 Microsoft Visual ADO 언어 참조에 대 한 상호 참조는 C++입니다.  
   
- 사용 하는 경우는 **#import** 응용 프로그램에서 지시문, 헤더 파일을 생성할 됩니다 수 있는 Microsoft Visual Basic을 사용 하 여 것과 비슷한 구문을 사용 합니다. 폼의 속성 이름을 **get_**_PropertyName_ 하 고 **put_**_PropertyName_ 같이간단하게선언된것처럼처리할수있습니다 *PropertyName*합니다. 다음 함수 대신 데이터 멤버와 같은 속성을 처리할 수 있습니다.  
+ 사용 하는 경우는 **#import** 응용 프로그램에서 지시문, 헤더 파일을 생성할 됩니다 수 있는 Microsoft Visual Basic을 사용 하 여 것과 비슷한 구문을 사용 합니다. 폼의 속성 이름을 **get_** _PropertyName_ 하 고 **put_** _PropertyName_ 같이간단하게선언된것처럼처리할수있습니다 *PropertyName*합니다. 다음 함수 대신 데이터 멤버와 같은 속성을 처리할 수 있습니다.  
   
  모든 메서드, 속성 및 이벤트는 반환 하는 함수는 **HRESULT**, 테스트를 함수가 성공적으로 실행 되었는지 확인할 수 있는 합니다.  
   

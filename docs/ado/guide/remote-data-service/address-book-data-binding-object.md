@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214837"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718622"
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램이 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 응용 프로그램의 HTML 클라이언트 페이지에서 데이터를 SQL Server 데이터베이스에서 시각적 개체 (이 경우 DHTML 테이블)에 바인딩되는 개체입니다. 이벤트 구동 VBScript 프로그램 논리를 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  

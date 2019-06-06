@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c27dfd012f87d730999e0e03a5a8b96d97b3d7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 959d7c51a636045f806de3f6f58e14e1964a2f71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028270"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719239"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>필드 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

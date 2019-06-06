@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f5f58ff2f38ff80d90750901b8943efc00f389c6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184212"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718948"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
 새로 만듭니다 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  

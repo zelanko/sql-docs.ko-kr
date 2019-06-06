@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d92a7d12f7ea0f60bcd6ea7f89e105962785b2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 46f354620fce014191c982dd3a4be02b32e87dee
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308322"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718988"
 ---
 # <a name="adox-code-examples"></a>ADOX 코드 예제
 ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 109b7ff83e6b3f722560dae0a034c4bf37da137f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63253186"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719271"
 ---
 # <a name="errors-collection-ado"></a>Errors 컬렉션(ADO)
 모든 포함 된 [오류](../../../ado/reference/ado-api/error-object.md) 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.  
@@ -48,4 +48,4 @@ ms.locfileid: "63253186"
   
 ## <a name="see-also"></a>관련 항목  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc9dc5f19dacfb6fbdab8c2e0dd8278cbc4b97b3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63275898"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719280"
 ---
 # <a name="error-object"></a>Error 개체
 공급자와 관련 된 단일 작업에 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.  
@@ -62,4 +62,4 @@ ms.locfileid: "63275898"
  [설명, HelpContext, HelpFile, NativeError, 번호, 원본 및 SQLState 속성 예제 (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Errors 컬렉션 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

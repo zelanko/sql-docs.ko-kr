@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542233"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719392"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 
@@ -359,7 +358,7 @@ sudo systemctl restart mssql-server
 
     b.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용 하는 점을 제외 하 고 끝점와 비슷합니다.
 
-    다.  각 URL을 선택 하 고 맨 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 끌기 누른 합니다.
+    c.  각 URL을 선택 하 고 맨 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 끌기 누른 합니다.
 
 12. **다음**을 클릭합니다.
 

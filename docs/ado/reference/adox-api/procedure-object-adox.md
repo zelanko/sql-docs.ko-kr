@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2c275322fbe65585e100907f25009d2d3e6e0d0f
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62709514"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718845"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
 저장된 프로시저를 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 **프로시저** 개체 추가, 삭제 또는 수정 저장된 프로시저에 사용할 수 있습니다.  

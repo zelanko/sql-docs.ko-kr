@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d5886c692bd42d4d5c8021a5953de02003044175
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062351"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719112"
 ---
 # <a name="resync-method-example-vb"></a>Resync 메서드 예제(VB)
 이 예제에서는 합니다 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터 새로 고침 하는 방법.  

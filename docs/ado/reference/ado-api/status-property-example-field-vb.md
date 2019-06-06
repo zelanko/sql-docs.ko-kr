@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caf016190e585aa64ee24f81fdcc0c18a4dab93f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 12ae39b965678a47053d3d312c750f7bd87bd7d1
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027587"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719047"
 ---
 # <a name="status-property-example-field-vb"></a>Status 속성 예제(필드)(VB)
 다음 예제에서는 사용 하 여 읽기/쓰기 폴더에서 문서를 열고 합니다 [인터넷 게시 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체를 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 처음으로 설정 됩니다 **adFieldPendingInsert**, 로업데이트될**adFieldOk**합니다.  
