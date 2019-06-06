@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: afe8ff8c788a740ca98eca385146ecc71b6e1e95
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222488"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704398"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 A *cellset* 다차원 데이터에 대 한 쿼리의 결과입니다. 축, 일반적으로 최대 네 개의 축 및 일반적으로 2 또는 3의 컬렉션인 이루어져 있습니다. *축* 찾기 또는 큐브의 특정 값을 필터링 하는 데 사용 되는 하나 이상의 차원에서 멤버의 컬렉션입니다.  

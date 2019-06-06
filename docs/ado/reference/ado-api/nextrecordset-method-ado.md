@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 33cc979e0a3af9b684899cf7563573fd6ac8dadd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242420"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707272"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 지웁니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 다음을 반환 **레코드 집합** 일련의 명령을 통해 이동 하 여 합니다.  

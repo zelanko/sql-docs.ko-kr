@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29180fdaf90d7c9c43441f897820be69a9c009a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 68d12c7e41f58c5cb2d7a4e237b4385d5ccf7382
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239840"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696310"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize 속성 예제(VB)
 이 예제에서는 합니다 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 작업에 대 한 성능 차이 표시 하는 속성 30 개의 레코드가 캐시 하지 않고 사용 하 여 수행 합니다.  
