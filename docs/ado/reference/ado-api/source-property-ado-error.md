@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 89a4597cc846db1bb3bb2fac0a79ec8c2090d9d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315173"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711148"
 ---
 # <a name="source-property-ado-error"></a>Source 속성(ADO 오류)
 개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6e555f00964ae6bdc7eb91a8701f2447d91b37d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472867"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702408"
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류 방지는 적어도 오류 처리 만큼 중요 합니다. 이 최종 섹션에서는 응용 프로그램 오류가 발생할 가능성이 적습니다 확인 하기 위해 취할 수 예방 조치의 짧은 목록을 포함 합니다.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09ba18e3680579c7a09e4f51f3bfe3e083dda697
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7b5fb32f567dcfffb6112e843b53cb99a3b106bc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140200"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697894"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트(ADO)
 **FetchComplete** 긴 비동기 작업의 모든 레코드에 검색 된 후 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).  

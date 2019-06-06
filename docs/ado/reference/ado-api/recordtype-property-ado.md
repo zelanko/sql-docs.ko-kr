@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb43252689893d875701d747dff1640eb0862651
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c68a8d5664002651271026e9448c40c4100afc4e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033425"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711782"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 속성(ADO)
 유형을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  

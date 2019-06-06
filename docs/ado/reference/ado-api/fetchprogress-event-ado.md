@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258973"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698087"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 및(ADO)
 합니다 **FetchProgress**이벤트에 현재으로 가져온 보다 많은 행을 보고 하려면 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

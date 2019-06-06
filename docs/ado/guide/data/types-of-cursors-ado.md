@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 717229c9645384477b89e67b569c15179e9f3bc5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472315"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704911"
 ---
 # <a name="types-of-cursors-ado"></a>커서 형식(ADO)
 일반적으로 응용 프로그램에서는 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 향상 된 기능 (정방향 전용, 읽기 전용, 정적, 스크롤, 버퍼링 되지 않은) 각 추가 커서 특징을 가격-클라이언트 메모리, 네트워크 부하 또는 성능을 있습니다. 대부분의 경우 기본 커서 옵션 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  

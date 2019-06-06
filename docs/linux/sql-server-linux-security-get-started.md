@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211742"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705209"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -148,12 +147,12 @@ WITH (STATE = ON);
 Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
 
 ```    
-사용자로 실행 = 'SalesPerson280';   
-선택 * Sales.SalesOrderHeader;에서    
+EXECUTE AS USER = 'SalesPerson280';   
+SELECT * FROM Sales.SalesOrderHeader;    
 되돌리기; 
  
-사용자로 실행 = 'Manager';   
-선택 * Sales.SalesOrderHeader;에서   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
 되돌리기;   
 ```
  
@@ -173,7 +172,7 @@ Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` c
  
 ```
 사용 하 여 AdventureWorks2014; 이동 ALTER TABLE Person.EmailAddress     ALTER 열 EmailAddress    
-와 마스크 추가 (함수 = ' email()');
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
@@ -182,7 +181,7 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 사용자 TestUser 만들 로그인 없이   
 권한 부여 선택 ON Person.EmailAddress TestUser; 하려면    
  
-사용자로 실행 = 'TestUser';   
+EXECUTE AS USER = 'TestUser';   
 선택 EmailAddressID, EmailAddress Person.EmailAddress;에서       
 되돌리기;    
 ```
@@ -224,16 +223,16 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-암호로 암호화 마스터 키 만들기 = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
 만들 인증서 MyServerCert SUBJECT = '내 데이터베이스 암호화 키 인증서';  
 GO  
 
-사용 하 여 AdventureWorks2014;   이동
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-= AES_256 알고리즘을 사용 하 여  
+WITH ALGORITHM = AES_256  
 서버 인증서 MyServerCert; 암호화  
 GO
   
@@ -265,10 +264,10 @@ The following example creates a certificate, and then creates a backup protected
   압축  
   ENCRYPTION   
    (  
-   알고리즘 AES_256, =  
+   ALGORITHM = AES_256,  
    서버 인증서 BackupEncryptCert =  
    ),  
-  통계 = 10  
+  STATS = 10  
 GO  
 ```
 

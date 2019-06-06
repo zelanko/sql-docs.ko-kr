@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66deae3833a738075259928855881f87b64ef0dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6cfc8cf9a618851e3e53b35d54fa1a989ce9c785
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028120"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697950"
 ---
 # <a name="flush-method-ado"></a>Flush 메서드(ADO)
 내용을 강제로 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 는 기본 개체를 ADO 버퍼에에서 남아 있는 **Stream** 연결 합니다.  

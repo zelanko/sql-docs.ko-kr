@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2604fdc39789be2e0c86cc7d2cbc6491d55ba1ff
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161652"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701955"
 ---
 # <a name="named-commands"></a>명명된 명령
 [만들기 및 실행 하는 간단한 명령을](../../../ado/guide/data/creating-and-executing-a-simple-command.md) 명령을 실행 하는 방법을 보여 줍니다. 다른 방법이 있습니다: 명명 된 명령을 하 고 그런 다음이 명령에서 직접 명명 된 호출 수를 **연결** 개체 (에 할당 된를 **ActiveConnection** 속성은 **명령** 개체). 명령 이름에 이름을 할당 의미는 **이름** 의 속성을 **명령** 개체. 예:  

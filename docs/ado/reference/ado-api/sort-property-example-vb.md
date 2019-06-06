@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 537ca70a2741cb1226602af5406529eaa281fcd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314786"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711218"
 ---
 # <a name="sort-property-example-vb"></a>Sort 속성 예제(VB)
 이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 ***Pubs*** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  

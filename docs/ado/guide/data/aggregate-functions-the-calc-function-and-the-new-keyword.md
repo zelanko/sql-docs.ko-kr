@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063099"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702429"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정은 다음 함수를 지원 합니다. 작업을 수행할 열이 포함 된 장 할당 이름은 합니다 *장-별칭*합니다.  

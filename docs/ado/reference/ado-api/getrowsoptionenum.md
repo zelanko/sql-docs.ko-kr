@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20c2f0027d82f55d1a8fc9bc58cf3331b92da116
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 31693cb3635a226bdc7bdde767ce5bd781e525e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028010"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694814"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 검색할 레코드 수를 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c77bece1b2ab67cc361f7445240e1a2b1190587
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 366e1a5812b4d8152e5c8965d3059e3a6b2ca1cb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704199"
 ---
 # <a name="running-the-address-book-sql-script"></a>주소록 SQL 스크립트 실행
 > [!IMPORTANT]

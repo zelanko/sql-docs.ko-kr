@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239997"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707109"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open 메서드 (ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 메서드 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

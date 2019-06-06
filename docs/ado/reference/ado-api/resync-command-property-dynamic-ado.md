@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63061940"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711669"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
 사용자가 제공한 명령 문자열을 지정 합니다 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성입니다.  

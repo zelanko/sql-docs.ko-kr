@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062849"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704900"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 모양의 열의 정의 데이터 셰이핑 **Recordset**, 열 및는 방식을 나타내는 엔터티 간의 관계를 **레코드 집합** 데이터로 채워집니다.  

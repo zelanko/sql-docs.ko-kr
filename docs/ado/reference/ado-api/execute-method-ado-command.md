@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184801"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697927"
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드(ADO 명령)
 쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 합니다 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다.  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Remarks  
  사용 하 여를 **Execute** 메서드를 **명령** 개체에 지정 된 쿼리를 실행 합니다 **CommandText** 속성 또는 **CommandStream** 개체의 속성입니다.  
   
- 결과가 반환 됩니다는 **레코드 집합** (기본적으로) 또는 이진 정보 스트림으로. 이진 스트림에 가져오려면 지정 **adExecuteStream** 에서 *옵션*를 설정 하 여 입력 스트림을 **Command.Properties ("출력 Stream")**. ADO **Stream** 결과 받을 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림이 없습니다 호출 하기 전에 지정 된 경우 **Execute** 사용 하 여 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 공급자 다릅니다.  
+ 결과가 반환 됩니다는 **레코드 집합** (기본적으로) 또는 이진 정보 스트림으로. 이진 스트림에 가져오려면 지정 **adExecuteStream** 에서 *옵션*를 설정 하 여 입력 스트림을 **Command.Properties ("출력 Stream")** . ADO **Stream** 결과 받을 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림이 없습니다 호출 하기 전에 지정 된 경우 **Execute** 사용 하 여 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 공급자 다릅니다.  
   
  공급자가 반환 하는 경우 명령을 아닙니다 (예를 들어 SQL 업데이트 쿼리) 결과를 반환 **아무** 옵션으로 긴 **adExecuteNoRecords** 지정; 그렇지 않으면 반환을 실행는 닫힌 **레코드 집합**합니다. 일부 응용 프로그램 언어가 없으면 반환 값이 무시 하면 **레코드 집합** 이 필요 합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723201"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713159"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용 하 여 Linux의 SQL Server 관리
 
@@ -62,7 +61,7 @@ SQL Server에서 작업할 때 항상 최신 버전의 SQL Server Management Stu
    | **서버 유형** | 기본값은 데이터베이스 엔진입니다. 이 값을 변경 하지 마십시오. |
    | **서버 이름** | 대상 Linux SQL Server 컴퓨터의 IP 주소 이름을 입력 합니다. |
    | **인증** | Linux의 SQL Server를 사용 하 여 **SQL Server 인증**합니다. |
-   | **로그인** | 서버의 데이터베이스에 액세스할 수 있는 사용자의 이름을 입력 (예를 들어 기본값 **SA** 설치 중에 만든 계정). |
+   | **Login** | 서버의 데이터베이스에 액세스할 수 있는 사용자의 이름을 입력 (예를 들어 기본값 **SA** 설치 중에 만든 계정). |
    | **암호** | 지정된 된 사용자에 대 한 암호를 입력 (에 대 한 합니다 **SA** 계정을 만든이 설치 하는 동안). |
 
     ![SQL Server Management Studio: SQL Database 서버에 연결](./media/sql-server-linux-manage-ssms/connect.png)
@@ -93,7 +92,7 @@ SQL Server에서 작업할 때 항상 최신 버전의 SQL Server Management Stu
 
 1. 클릭 합니다 **Execute** 단추 쿼리를 실행 하 고 결과 확인 합니다.
 
-   ![성공했습니다. SQL Database 서버에 연결: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![명령 실행 성공 SQL Database 서버에 연결 합니다. SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 TRANSACT-SQL 쿼리를 사용 하 여 모든 관리 작업 거의 할 수 있지만 SSMS는 그래픽 도구를 SQL Server를 관리 하기가입니다. 다음 섹션에서는 그래픽 사용자 인터페이스를 사용 하 여 몇 가지 예제를 제공 합니다.
 
@@ -136,7 +135,7 @@ TRANSACT-SQL 쿼리를 사용 하 여 모든 관리 작업 거의 할 수 있지
 - 개요
 - 프로세스
 - 리소스 대기
-- 데이터 파일 I/O
+- Data File I/O
 - 비용이 드는 최근 쿼리
 - 비용이 드는 활성 쿼리
 

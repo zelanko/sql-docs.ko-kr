@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41eb6c43a0ddd7e9babf948bbb6135694deadc40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b1798959907e68bb654ef83ec0610ff793e00c4e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469582"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709798"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog 개체 속성, 메서드 및 이벤트(ADO MD)
 ## <a name="propertiescollections"></a>속성/컬렉션  

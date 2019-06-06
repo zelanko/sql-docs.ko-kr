@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf21d0f932708b23978bb36db5c800358a6fa90
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e9fb54ab264b6f1a247407d5bfdecdbdf6c4dc16
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311916"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712059"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>읽기, ReadText, Write 및 WriteText 메서드 예제 (VB)
 이 예제에는 두 텍스트 입력란의 내용을 읽는 방법을 보여 줍니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 및 이진 **Stream**합니다. 다른 속성 및 표시 된 메서드를 포함 [위치](../../../ado/reference/ado-api/position-property-ado.md)를 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md)에 [Charset](../../../ado/reference/ado-api/charset-property-ado.md), 및 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  

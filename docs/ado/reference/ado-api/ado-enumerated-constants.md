@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a13adf7aa1a769f6e63f9686938cb801cd6383fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249060"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696727"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 돕기 위해 ADO 열거 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADO 릴리스마다에서 변경 될 수 있습니다. 코드는 실제 값이 아니라, 각 열거형된 상수 이름을 의존 합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "63249060"
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   

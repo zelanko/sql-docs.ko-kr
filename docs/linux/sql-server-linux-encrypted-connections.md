@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826088"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705663"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 연결 암호화
 
@@ -131,7 +130,7 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
 
 ## <a name="common-connection-errors"></a>일반적인 연결 오류  
 
-|오류 메시지입니다. |Fix |
+|오류 메시지 |Fix |
 |--- |--- |
 |인증서 체인을 신뢰할 수 없는 기관에서 발급 되었습니다.  |이 오류는 클라이언트가 TLS 핸드셰이크 중 SQL Server에서 제공 하는 인증서의 서명을 확인할 수 없을 때 발생 합니다. 클라이언트 중 하나를 신뢰 하는지 확인 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증서를 직접 또는 SQL Server 인증서를 서명 하는 CA입니다. |
 |대상 사용자 이름이 올바르지 않습니다.  |SQL Server의 인증서의 일반 이름 필드는 클라이언트의 연결 문자열에서 지정한 서버 이름이 일치 하는지 확인 합니다. |  

@@ -8,14 +8,13 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: 7aaaf8166799f0703abba939fefa9844d469d22c
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: e72c027f9426376ab79f29067385d2c4a8910a9b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506450"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713539"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux에 대 한 SQL Server 설치 스크립트를 무인된
 

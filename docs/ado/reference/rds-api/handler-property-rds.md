@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276447"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712463"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타내는 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수를 *처리기*합니다.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  기본 처리기의 이름은 **MSDFMAP 합니다. 처리기**, 기본 매개 변수는 명명 된 사용자 지정 파일 및 **MSDFMAP 합니다. INI**합니다. 이 속성을 사용 하 여 서버 관리자가 만든 대체 사용자 지정 파일을 호출 합니다.  
   
- 설정에 대 한 대체는 **처리기** 속성 처리기 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 =** _handlerName, parameter1, parameter2;..._".  
+ 설정에 대 한 대체는 **처리기** 속성 처리기 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 =** _handlerName, parameter1, parameter2;..._ ".  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

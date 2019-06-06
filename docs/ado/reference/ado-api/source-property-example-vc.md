@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9d235195b9a20c5212f24f971c80be290f95c60c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740320"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711247"
 ---
 # <a name="source-property-example-vc"></a>Source 속성 예제(VC++)
 이 예제에서는 합니다 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다른 데이터 원본을 기반으로 개체입니다.  

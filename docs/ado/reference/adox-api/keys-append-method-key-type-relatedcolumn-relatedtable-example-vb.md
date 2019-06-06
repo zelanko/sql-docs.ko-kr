@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2bb7a08ab3159fa63024c7bc761c8ccec2563a78
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281652"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706464"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)
 다음 코드에 라는 두 개의 기존 테이블 간에 새 외래 키 관계를 만드는 방법을 보여 줍니다 **고객이** 하 고 **주문**합니다.  

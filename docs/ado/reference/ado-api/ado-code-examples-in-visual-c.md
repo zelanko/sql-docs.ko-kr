@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249015"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696888"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 Microsoft 시각적 개체에 쓸 때 이벤트를 사용 하는 방법을 알아보려면 C++입니다.  
@@ -149,4 +149,4 @@ ms.locfileid: "63249015"
 ## <a name="see-also"></a>관련 항목  
  [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

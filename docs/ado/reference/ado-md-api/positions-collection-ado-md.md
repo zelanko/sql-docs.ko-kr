@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cef615f2009809cb84d62b284d2c08167b6ba86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: aa5c6dc2517a05fb25ccdb2ab7f5cd58976ac4e6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033205"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708756"
 ---
 # <a name="positions-collection-ado-md"></a>Positions 컬렉션(ADO MD)
 포함 된 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 축의 점을 정의 하는 개체입니다.  

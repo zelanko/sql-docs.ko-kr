@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 39130be0e6be31700f70002726f3aaf674aa4c82
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472837"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700922"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 일괄 처리 모드에 적용 되는 경우는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형을 커서 위치에 따라 사용할 수 없는 경우 예를 들어 비관적 잠금 유형에 사용할 수 없는 경우는 **CursorLocation** 로 설정 된 **adUseClient**합니다. 반대로, 커서 위치는 서버의 경우 공급자를 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140361"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695961"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 연결 하는 데 사용 하는 정보를 나타냅니다.  
@@ -68,4 +68,4 @@ ms.locfileid: "63140361"
 ## <a name="see-also"></a>관련 항목  
  [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

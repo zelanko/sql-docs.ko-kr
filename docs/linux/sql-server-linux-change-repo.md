@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444238"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713339"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
@@ -51,7 +50,7 @@ Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 
 
 두 가지 유형인 각 배포 리포지토리는 두는 것이 반드시 합니다.
 
-- **누적 업데이트 (CU)**: CU (누적 업데이트) 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함합니다. 누적 업데이트 등 SQL Server 2017의 버전에 적용 됩니다. 이러한 일반 주기로 릴리스됩니다.
+- **누적 업데이트 (CU)** : CU (누적 업데이트) 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함합니다. 누적 업데이트 등 SQL Server 2017의 버전에 적용 됩니다. 이러한 일반 주기로 릴리스됩니다.
 
 - **GDR**: GDR 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및만 중요 한 수정 사항 및 보안 업데이트 패키지를 포함합니다. 이러한 업데이트는 다음 CU 릴리스에 추가 됩니다.
 

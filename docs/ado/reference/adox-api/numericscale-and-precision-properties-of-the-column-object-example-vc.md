@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9728a5c0ea70e4b5a3da1e5c10a35dc0d29bd23d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710378"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706360"
 ---
 # <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Column 개체의 NumericScale 및 Precision 속성 예제(VC++)
 이 예제에서는 합니다 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체. 이 코드에 대 한 해당 값을 표시 합니다 **Order Details** 목차를 *Northwind* 데이터베이스.  

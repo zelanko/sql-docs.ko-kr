@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9819567ebe48a7654ee7a90f516ba14c8062bdcf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 59bfebe5885d0f18811b6b6c8df0f12634ed316f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027862"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703242"
 ---
 # <a name="precision-property-ado"></a>Precision 속성(ADO)
 숫자 값에 대 한 전체 자릿수를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 숫자 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  

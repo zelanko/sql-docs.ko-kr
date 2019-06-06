@@ -7,21 +7,20 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670883"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705819"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 응용 프로그램 개발을 시작 하는 방법
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-연결 하 고 다양 한 C#, Java, Node.js, PHP, Python, Ruby, c + +와 같은 프로그래밍 언어에서에서 Linux의 SQL Server를 사용 하는 응용 프로그램을 만들 수 있습니다. 또한 인기 있는 웹 프레임 워크 및 개체 관계형 매핑 (ORM) 프레임 워크를 사용할 수 있습니다.
+연결 하 고 같은 다양 한 프로그래밍 언어에서에서 Linux의 SQL Server를 사용 하는 응용 프로그램을 만들 수 있습니다 C#, Java, Node.js, PHP, Python, Ruby 및 C++합니다. 또한 인기 있는 웹 프레임 워크 및 개체 관계형 매핑 (ORM) 프레임 워크를 사용할 수 있습니다.
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -76,7 +75,7 @@ ms.locfileid: "51670883"
 
 시작하려면 다음 빠른 시작 자습서 중 하나를 참고하여 SQL Server on Linux를 설치합니다.
 
-- [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)

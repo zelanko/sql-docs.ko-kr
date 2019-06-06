@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00ab80a10b2c7c411cee0fb6061467d67cfbd4a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9e4804b5cbdec4008e1c967b81620ea96eead924
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740363"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711318"
 ---
 # <a name="sqlstate-property"></a>SQLState 속성
 SQL 상태를 나타냅니다는 주어진 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  

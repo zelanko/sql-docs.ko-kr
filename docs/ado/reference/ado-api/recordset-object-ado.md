@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240816"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711936"
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체(ADO)
 기본 테이블 또는 실행 된 명령의 결과 레코드의 전체 집합을 나타냅니다. 언제 든 지 합니다 **레코드 집합** 개체를 현재 레코드로 집합 내에서 단일 레코드만 가리킵니다.  
@@ -81,4 +81,4 @@ Debug.Print objRs(0)              '  the Value of Item(0).
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [필드 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

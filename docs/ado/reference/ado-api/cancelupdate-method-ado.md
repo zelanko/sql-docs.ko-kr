@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b53fa2e9d69b39218d846b57070b78ae230d81cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241167"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698819"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate 메서드(ADO)
 현재 또는 새 행에 대 한 모든 변경 내용을 취소를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 호출 하기 전에 [업데이트 ](../../../ado/reference/ado-api/update-method.md) 메서드.  

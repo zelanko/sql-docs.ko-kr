@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2cfba2b659ed03f67d94c2c80812d7712e481f50
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931412"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704488"
 ---
 # <a name="rds-programming-model-with-objects"></a>개체에서 RDS 프로그래밍 모델
 RDS의 목표는 액세스 하 고 IIS와 같은 매개 자를 통해 데이터 원본을 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 작업 순서를 지정 합니다. 개체 모델에 있는 메서드 및 속성의 프로그래밍 모델에 영향을 줄 개체를 지정 합니다.  

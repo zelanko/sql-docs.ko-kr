@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812154"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713140"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux의 SQL Server bcp 사용 하 여 데이터 대량 복사
 
@@ -81,7 +80,7 @@ cat ~/test_data.txt
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>원본 데이터 파일에서 데이터 가져오기
-복사 하 고 터미널 창에서 다음 명령을 붙여넣습니다. 이 명령은 `bcp` 로컬 SQL Server 인스턴스에 연결 하려면 (**localhost**) 및 데이터 파일에서 데이터 가져오기 (**~/test_data.txt**) 테이블로 (**TestEmployees** ) 데이터베이스에서 (**BcpSampleDB**). 사용자 이름으로 바꿔야 하 고 `<your_password>` 명령을 실행 하기 전에 필요에 따라 합니다.
+복사 하 고 터미널 창에서 다음 명령을 붙여넣습니다. 이 명령은 `bcp` 로컬 SQL Server 인스턴스에 연결 하려면 (**localhost**) 및 데이터 파일에서 데이터 가져오기 ( **~/test_data.txt**) 테이블로 (**TestEmployees** ) 데이터베이스에서 (**BcpSampleDB**). 사용자 이름으로 바꿔야 하 고 `<your_password>` 명령을 실행 하기 전에 필요에 따라 합니다.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142972"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702612"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
 ADO API 참조는 ADO API (응용 프로그래밍 인터페이스)을 Microsoft Visual Basic과 유사한 구문을 사용 하 여의 기능을 설명 합니다. 독자는 모든 사용자, ADO 프로그래머에 게 Visual Basic의 경우 시각적 개체와 같은 다양 한 언어를 사용 하는 C++ (하거나 사용 하지 않고 합니다 **#import** 지시문), 및 Visual J++ (사용 하 여 ADO/WFC 클래스 패키지).  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 컴파일러는 적절 한 생성 **가져옵니다**_-_ 를 **배치**-, 또는 **PutRef**_속성_ 호출 선언 되는 대체 구문 및 속성 되 여부에 따라 읽거나 작성 합니다.  
+ 컴파일러는 적절 한 생성 **가져옵니다** _-_ 를 **배치**-, 또는 **PutRef**_속성_ 호출 선언 되는 대체 구문 및 속성 되 여부에 따라 읽거나 작성 합니다.  
   
  **__declspec**  컴파일러 지시문만 선언할 수 있습니다 **가져올**, **배치**, 또는 **가져오기** 및 **배치** 함수에 대 한 대체 구문. 읽기 전용 작업 하나만 **가져올** 선언; 하나만 쓰기 전용 작업을 **배치** 선언; 작업은 둘 다 읽고 쓰는 둘 다 **가져오기** 및 **배치** 선언 합니다.  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 예를 들어, 필드에 값을 할당 한 **레코드 집합** 라는 개체  **_rs_** 에서 파생 된 합니다 **작성자** 목차를 **pubs** 데이터베이스입니다. 사용 된 **Item()** 세 번째 액세스할 속성을 **필드** 의 **레코드 집합** 개체 **필드** 컬렉션 (컬렉션에서 인덱스가 만들어집니다 0입니다. 세 번째 필드는 가정  **_au\_fname_**). 호출을 **value ()** 메서드는 **필드** 문자열 값을 할당 하는 개체입니다.  
+ 예를 들어, 필드에 값을 할당 한 **레코드 집합** 라는 개체  **_rs_** 에서 파생 된 합니다 **작성자** 목차를 **pubs** 데이터베이스입니다. 사용 된 **Item()** 세 번째 액세스할 속성을 **필드** 의 **레코드 집합** 개체 **필드** 컬렉션 (컬렉션에서 인덱스가 만들어집니다 0입니다. 세 번째 필드는 가정  **_au\_fname_** ). 호출을 **value ()** 메서드는 **필드** 문자열 값을 할당 하는 개체입니다.  
   
  이 표현 될 수 있습니다 Visual Basic의 다음 네 가지 방법 (마지막으로 두 가지 양식은 Visual Basic에 고유한; 다른 언어에 해당 하는 없는):  
   

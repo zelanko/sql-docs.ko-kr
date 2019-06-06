@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d98e6d27de571bc799cc8442fbe6ef9debc0beaa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63181106"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695250"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 레코드의 편집 상태를 지정합니다.  

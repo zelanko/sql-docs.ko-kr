@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 319d63b5faead9a01588ef50482e20f5fb179ca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a40ecbd61bc6cb98996fd08ad0ac264a48024ca9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033365"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708707"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal 속성(ADO MD Position)
 고유 하 게 식별 하는 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 축을 따라 합니다.  

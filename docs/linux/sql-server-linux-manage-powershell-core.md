@@ -4,18 +4,17 @@ description: 이 문서에서는 Linux의 SQL Server를 사용 하 여 PowerShel
 ms.date: 04/22/2019
 ms.reviewer: jroth
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: craigg
-ms.openlocfilehash: 17858877efbb3f421f95b19e4b2eb66bfde5dbb4
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: 242e3ab70d41df4d774400034f361b31289d97c9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265342"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713148"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용 하 여 Linux에서 SQL Server 관리
 

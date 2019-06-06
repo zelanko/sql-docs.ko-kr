@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308296"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708430"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 ADOX 열거 상수는 디버깅을 돕기 위해 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADOX 릴리스마다에서 변경 될 수 있습니다. 코드는 실제 값이 아니라, 열거형된 상수 이름을 의존 합니다.  

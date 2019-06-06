@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 155e1e810309ee4efa40badac55ca749a4329182
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062929"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702332"
 ---
 # <a name="ado-fundamentals"></a>ADO 기본 사항
 ADO는 프로그래밍 방식으로 액세스, 편집 및 다양 한 OLE DB 시스템 인터페이스를 통해 데이터 원본에서 데이터 업데이트에 대 한 개발자에 게 강력 하 고 논리 개체 모델을 제공 합니다. ADO의 가장 일반적인 사용법은 테이블 또는 테이블에서 관계형 데이터베이스를 쿼리, 검색, 응용 프로그램에서 결과 표시 및 아마도 수 하 고 데이터 변경 내용을 저장 하는 것입니다. 다른 작업은 다음과 같습니다.  

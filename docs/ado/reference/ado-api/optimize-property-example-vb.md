@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 673d1508db939e1b689dca03e2cdf390fc075e65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ea988ca1274ad8487270483f7a449f77651beb12
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240031"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707096"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 속성 예제(VB)
 이 예제에서는 합니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 동적 **최적화** 속성입니다. 합니다 ***zip*** 필드를 ***작성자*** 테이블에 ***Pubs*** 데이터베이스 인덱싱되지 않은 합니다. 설정 합니다 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 ***zip*** 필드의 성능을 향상 시키는 인덱스를 작성 하려면 ADO 권한을 부여는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  

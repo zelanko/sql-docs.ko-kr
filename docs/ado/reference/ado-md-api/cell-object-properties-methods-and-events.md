@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4126da6345f3b446851c722700236418707731ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bdef0576c6994caff2ceb9561f349454f2ea8344
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469572"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709828"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

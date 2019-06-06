@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1c6894a19c39df171dea3b621773daf31971895f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134405"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704262"
 ---
 # <a name="minimizing-log-file-space-usage"></a>로그 파일 공간 사용 최소화
 로그 파일을 신속 하 게 채울 수 있습니다 (따라서 중단 되는 서버)는 작업량이 많은 SQL Server 데이터베이스에 없는 경우. 로그 파일을 설정할 수 있습니다 **검사점 Truncate** 현저 하 게 늘릴 데이터베이스에 대 한 로그 파일의 수명입니다.  

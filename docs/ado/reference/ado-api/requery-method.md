@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 433f5d279e638e3ccdf7ba3a7bb2590f80b04a6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e82d3fd364eef739d352aaa881b0fb18f2db35aa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062371"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711651"
 ---
 # <a name="requery-method"></a>Requery 메서드
 데이터를 업데이트 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.  

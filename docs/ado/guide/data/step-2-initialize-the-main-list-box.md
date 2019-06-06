@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0df631ccaa9cd3a6177cb4e4e8e63c65286ad361
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062799"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700367"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화
 전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입 합니다.  

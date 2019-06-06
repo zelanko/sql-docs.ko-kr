@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f256597bca47a6453dbefa21c528cf57fd245bdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cfea2f0ded82fb08b25f0227bb73090f61bf47a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642922"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710481"
 ---
 # <a name="version-property-example-vb"></a>Version 속성 예제(VB)
 이 예제에서는 합니다 [버전](../../../ado/reference/ado-api/version-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  

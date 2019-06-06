@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05b2ab826fd5afe9b91b3dcfb314af176b1cb9da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a090ec4cfd06846f78259b84b0bd35f4a198933a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240092"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712008"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>레코드 (Visual C++ #import 구문 인덱스)
 ## <a name="methods"></a>메서드  

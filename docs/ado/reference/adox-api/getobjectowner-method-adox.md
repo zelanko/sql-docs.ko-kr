@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: a3b5ab8c21ee02f646bf4b8e4f4941fafd6edfde
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63464720"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712122"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 메서드(ADOX)
 에 있는 개체의 소유자를 반환 합니다는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 571c63e0b8e06c08fb066c3bb6b2d42a019895e5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642514"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710038"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
 합니다 **WillExecute** 이벤트 연결에서 보류 중인 명령이 실행 되기 전에 호출 됩니다.  

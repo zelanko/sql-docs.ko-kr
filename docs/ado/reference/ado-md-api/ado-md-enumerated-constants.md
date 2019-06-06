@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6018cc0d5b4c74e15cf39c5b57e71ce57d1a39ec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206313"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709872"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 열거 상수
 디버깅을 돕기 위해 ADO MD 열거 상수에는 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADO MD 릴리스마다에서 변경 될 수 있습니다. 코드는 실제 값이 아니라, 열거형된 상수 이름을 의존 합니다.  

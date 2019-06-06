@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288295"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706672"
 ---
 # <a name="groups-collection-adox"></a>Groups 컬렉션(ADOX)
 모든 포함 저장 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 카탈로그 또는 사용자의 개체입니다.  

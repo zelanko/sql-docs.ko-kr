@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 25c6a4de3de053400a8891ff53e04314211a7f31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910871"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710696"
 ---
 # <a name="supports-method-example-vc"></a>Supports 메서드 예제(VC++)
 이 예제에서는 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 함수는이 예제를 실행 하려면 필요 합니다.  

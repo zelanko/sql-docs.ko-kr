@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5feb29337ccd0ee79cd1b6f98187cc6fdb52a942
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214771"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699536"
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
 **userlist** 관련 된 섹션의 **연결** 의 동일한 영역 *식별자* 매개 변수입니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "63214771"
 ## <a name="syntax"></a>구문  
  사용자 액세스 항목을 폼입니다.  
   
- _userName_ **=**   
+ _userName_ **=**    
  **_accessRights_**  
   
 |부분|설명|  

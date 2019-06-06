@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796001"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713417"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Linux의 가용성 그룹에 대해 항상 작동
 
@@ -77,13 +76,13 @@ ms.locfileid: "47796001"
 
    가용성 그룹 클러스터 유형이 경우 `NONE`수동으로 장애 조치 합니다. 다음 단계를 순서대로 수행하세요.
 
-      1. 다음 명령은 보조 주 복제본을 설정합니다. 대체 `AG1` 가용성 그룹의 이름입니다. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 TRANSACT-SQL 명령을 실행 합니다.
+      a. 다음 명령은 보조 주 복제본을 설정합니다. 대체 `AG1` 가용성 그룹의 이름입니다. 주 복제본을 호스팅하는 SQL Server 인스턴스에서 TRANSACT-SQL 명령을 실행 합니다.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      2. 다음 명령은 주 동기 보조 복제본을 설정합니다. 동기 보조 복제본을 호스팅하는 인스턴스에 SQL Server 대상 인스턴스에서 다음 TRANSACT-SQL 명령을 실행 합니다.
+      b. 다음 명령은 주 동기 보조 복제본을 설정합니다. 동기 보조 복제본을 호스팅하는 인스턴스에 SQL Server 대상 인스턴스에서 다음 TRANSACT-SQL 명령을 실행 합니다.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef2e02ec156aeed69089a585d743e16e592eb95f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642897"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710159"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
 합니다 **WillChangeRecord** 이벤트에서 하나 이상의 레코드 (행) 하기 전에 호출 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 변경 합니다. 합니다 **RecordChangeComplete** 후 이벤트를 호출 하거나 더 많은 레코드를 변경 합니다.  

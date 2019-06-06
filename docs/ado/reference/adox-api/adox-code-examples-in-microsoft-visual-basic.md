@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4394c0d5859584c553f9a6894c62a3bb37c94797
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308780"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708477"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic의 ADOX 코드 예제
 이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  

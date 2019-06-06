@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1b3a94fddf1ac439096e2e0106fb2becb79249c7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315215"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711341"
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
 이진 내용을 저장 한 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 파일로.  

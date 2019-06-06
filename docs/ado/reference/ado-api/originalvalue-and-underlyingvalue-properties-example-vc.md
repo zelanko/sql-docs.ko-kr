@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4c299416eeed65fcefbb0eaad750ed356d803bf3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239942"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706997"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
 이 예제에서는 합니다 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 중에 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리 업데이트 합니다.  

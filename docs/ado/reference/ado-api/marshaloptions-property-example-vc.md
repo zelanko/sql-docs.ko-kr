@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1deb00db88eecae2322a81cdbee8d1e48275b165
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864004"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707686"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 속성 예제(VC++)
 이 예제에서는 합니다 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성에 지정할 행 server-모든 행 또는 수정 된 행만 다시 전송 됩니다.  

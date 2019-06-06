@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f031323cf862840ef775875e1de1b868288256a9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 71392b2d5de785df22ec1cf758a12675a0058e45
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566532"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705577"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker에서 SQL Server를 사용 하 여 분산된 트랜잭션을 사용 하는 방법
 

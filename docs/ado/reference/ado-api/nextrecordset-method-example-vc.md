@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6c4b3846c2402287660ffd106074b8e7429ce1c0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242706"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707212"
 ---
 # <a name="nextrecordset-method-example-vc"></a>NextRecordset 메서드 예제(VC++)
 이 예제에서는 합니다 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 3 개의 별도 이루어진 복합 명령문을 사용 하는 레코드 집합의 데이터를 보는 방법 **선택** 문입니다.  

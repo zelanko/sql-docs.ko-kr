@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ed1c7a9f1ed86359eef75fdaf13c9e40d838f3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c5ca84c5759523bf17c4e047b22cafbd48dce547
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642437"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710068"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 및 RecordsetChangeComplete 이벤트(ADO)
 **WillChangeRecordset** 보류 중인 작업을 변경 하기 전에 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md). 합니다 **RecordsetChangeComplete** 이벤트 후에 호출 됩니다 합니다 **레코드 집합** 변경 되었습니다.  

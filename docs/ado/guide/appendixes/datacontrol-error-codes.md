@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fe2a6cc350291ac2304e2f00825bef76e37e75cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719760"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701279"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 개체 오류 코드
 다음 표에서 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 오류 코드 개체입니다. 낮은 2 바이트의 양의 10 진수 변환, 전체 오류 코드 및 16 진수 값은 음수 10 진수 변환 표시 됩니다.

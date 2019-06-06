@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 93e377fc187968b031438ccd896e29b7ebff4144
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231356"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713199"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 고가용성
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ac7ee6c1f996294c1f8aa353719deb11d698e47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 084faa615253c58d7b41214f9abfb4d3c8880bac
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308225"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712608"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
 비동기 실행 사용 되는지 여부를 나타냅니다.  

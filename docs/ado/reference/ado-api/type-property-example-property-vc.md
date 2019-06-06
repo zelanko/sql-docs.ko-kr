@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 538fcdf67654ad509e826fcfaaf141fb4f8e32ec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910868"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710613"
 ---
 # <a name="type-property-example-property-vc"></a>Type 속성 예제(속성)(VC++)
 이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다. 같은 이름 및 컬렉션의 형식을 나열 하는 유틸리티의 모델 이기 [속성](../../../ado/reference/ado-api/properties-collection-ado.md)를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등입니다.  

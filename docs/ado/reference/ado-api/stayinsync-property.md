@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 98a0cc1df12f905cd0d22d05b162983742d0f355
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743129"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710782"
 ---
 # <a name="stayinsync-property"></a>StayInSync 속성
 계층적 나타냅니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 하는지 여부, 기본 자식 레코드에 대 한 참조 (즉, 합니다 *장*) 부모 행 위치를 변경 하는 경우의 변경 내용입니다.  

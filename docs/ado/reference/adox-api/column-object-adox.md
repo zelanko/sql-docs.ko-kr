@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 890fd41c919e0911eef0257ae21fbcea72129249
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7dcec7e665fec8ea1eb1e1dff8d08bb59ee92133
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183981"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708017"
 ---
 # <a name="column-object-adox"></a>열 개체(ADOX)
 테이블, 인덱스 또는 키에서 열을 나타냅니다.  

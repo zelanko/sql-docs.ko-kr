@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f3506070a55b852292067ec89ee24ee11417d6da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281565"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705778"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 속성 예제(VB)
 이 예제에서는 [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md) 에 추가 된는 [열](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md). 코드의 국가 열에 오름차순 인덱스를 추가 합니다 **직원** 테이블, 레코드를 표시 합니다. 코드의 국가 열에 내림차순 인덱스를 추가 하는 다음의 **직원** 테이블 및 레코드를 다시 표시 됩니다. 오름차순 및 내림차순 인덱스 간의 차이점 표시 됩니다.  

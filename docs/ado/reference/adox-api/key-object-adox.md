@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7365b3ac33f215840a112089523f23e88697a433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6dbbb81d53755032725ad71ff9bbf49b9beb2f1c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706479"
 ---
 # <a name="key-object-adox"></a>키 개체(ADOX)
 데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.  

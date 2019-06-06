@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74e6deb0caba88e6bbcf2897dcfa4aaaa22f04d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8483a908e31b9e4554c5594ecc5bbf186bbef88f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028240"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695036"
 ---
 # <a name="fields-collection-ado"></a>Fields 컬렉션(ADO)
 모든 포함 된 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체.  

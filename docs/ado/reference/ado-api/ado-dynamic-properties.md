@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249047"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696870"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
 동적 속성에 추가할 수 있습니다는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션의 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 원본이 두 데이터 공급자와 같은 합니다 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  
@@ -41,7 +41,7 @@ ms.locfileid: "63249047"
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   

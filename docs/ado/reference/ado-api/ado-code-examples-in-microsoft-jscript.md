@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08dbea83f84a1b4606d48a79c80b8b6ef082d023
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065056"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697030"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript의 ADO 코드 예제
 ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
@@ -60,4 +60,4 @@ ADO 메서드, 속성 및 JScript로 작성할 때 이벤트를 사용 하는 �
  [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [시각적 개체의 ADO 코드 예제C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

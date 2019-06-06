@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4676f1d0a9d96779303898631164101bbdc4201d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b864f480542c7ff649bf9b830ba445517dafb91b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065411"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698896"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 속성(ADO)
 필드의 값 (바이트)의 실제 길이 나타냅니다.  

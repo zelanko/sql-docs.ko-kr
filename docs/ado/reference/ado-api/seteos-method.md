@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 027468926d444b25e60ede18bbfb26ff7cedf729
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314743"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711402"
 ---
 # <a name="seteos-method"></a>SetEOS 메서드
 스트림의 끝에 있는 위치를 설정 합니다.  

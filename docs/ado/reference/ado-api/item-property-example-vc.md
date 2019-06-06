@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4b3014c9fa1eccd6b1efa04987293e464111e14d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864435"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697577"
 ---
 # <a name="item-property-example-vc"></a>Item 속성 예제(VC++)
 이 예제에서는 하는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성 컬렉션의 멤버에 액세스 합니다. 예제 열립니다는 ***작성자*** 목차 합니다 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  

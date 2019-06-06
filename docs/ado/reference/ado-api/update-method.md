@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e48185f0524a920d52092540f5e3ed6d8546edfe
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042239"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710502"
 ---
 # <a name="update-method"></a>Update 메서드
 현재 행에 수행한 변경 내용 저장을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: 7135d6582ea6d09c6f1b0ab3842c69d3d60d4fc9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63459337"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711419"
 ---
 # <a name="seekenum"></a>SeekEnum
 유형을 지정 [Seek](../../../ado/reference/ado-api/seek-method.md) 실행 합니다.  

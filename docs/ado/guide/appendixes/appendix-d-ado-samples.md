@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0299d3ca7ab96b8e054a6fd8ddc99d9ce4ed0139
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719776"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702819"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK에서에서 ADO 샘플
 Windows SDK에는 ADO 및 RDS 코드의 사용을 보여주는 몇 가지 예제 응용 프로그램이 있습니다. 이러한 예제를 통해 ADO와 RDS를 사용하는 방법을 배울 수 있습니다. 그러나 프로덕션 서버에 배포하는 것에는 유의하기 바랍니다.

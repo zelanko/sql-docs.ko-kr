@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9dbc6e9e78fc08be2bba08d0fbeb897496a2058b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864076"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694937"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 기록에 배치 하는 잠금 유형을 지정 합니다.  

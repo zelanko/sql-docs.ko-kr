@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a707ddc2fdf7d3c651cc383de758de0bef9a54a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 60f66b1ff2fa7ad7424342da6b92e7d44d0e6444
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62630659"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712708"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 속성(RDS)
 필터 값에 사용할 계산 연산자를 나타냅니다.  

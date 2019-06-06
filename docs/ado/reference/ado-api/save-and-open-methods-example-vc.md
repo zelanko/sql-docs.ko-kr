@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 021a20ba3aa151181d3ce26a5a1fd3cef621984c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314823"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711401"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save 및 Open 메서드 예제 (VC + +)
 이러한 세 가지 예를 보여 줍니다 하는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 하 고 **오픈** 메서드를 함께 사용할 수 있습니다.  

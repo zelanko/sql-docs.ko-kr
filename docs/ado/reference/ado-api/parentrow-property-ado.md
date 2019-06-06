@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 180ab01d28cb5c6f7715480459eeb12ab6ea81be
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027873"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703287"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 속성(ADO)
 OLE DB의 컨테이너를 설정 **행** 에서 개체를 **ADORecordConstruction** 개체를 부모 행의 ADO에 켜져 있도록 **레코드** 개체입니다.  

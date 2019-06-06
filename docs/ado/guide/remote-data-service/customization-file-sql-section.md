@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214760"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704310"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 합니다 **sql** 섹션 클라이언트 명령 문자열을 대체 하는 새 SQL 문자열을 포함할 수 있습니다. 섹션에서 SQL 문자열이 없을 경우 섹션 무시 됩니다.  
@@ -43,7 +43,7 @@ SQL = " "
 ## <a name="syntax"></a>구문  
  SQL 문자열 항목을 대체 폼입니다.  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
 |부분|설명|  

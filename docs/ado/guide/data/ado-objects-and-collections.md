@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 62616ecebb8fa7795462c7e22437aabebb56bcaa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062919"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700960"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체 및 컬렉션 4 개 구성 됩니다.  

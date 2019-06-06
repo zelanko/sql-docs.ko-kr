@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fdd88251e3d41954dcee6ed3c88612941688cbbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134417"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707770"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl 개체(RDS)
 데이터 쿼리에 바인딩하여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 표시할 하나 이상의 컨트롤 (예: 텍스트 상자, 표 형태 컨트롤 또는 콤보 상자)에 **레코드 집합** 웹 페이지에서 데이터.  

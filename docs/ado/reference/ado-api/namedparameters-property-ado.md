@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c63fb598630a30fd2616722146bb6737f17b82b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ce517f4ba3f2fc4a80932024a8fe51ac285cdb7d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242409"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707301"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 속성(ADO)
 매개 변수 이름 공급자에 전달할지 여부를 나타냅니다.  

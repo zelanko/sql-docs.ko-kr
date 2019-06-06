@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d1f4f5ce302c6f9e3e28b037c838d452f771114
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 53fadcddd49ebf68949da0a7dca3cb37da0b5d93
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206338"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708609"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Null 값을 사용 하 여 레코드는 인덱싱되어 있는지 여부를 지정 합니다.  

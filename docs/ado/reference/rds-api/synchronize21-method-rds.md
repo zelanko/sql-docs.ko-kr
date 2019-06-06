@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1d731738938eab5732dcbfa86c0d624ae7941ed5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155230"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697258"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드(RDS)
 ADO 2.1 사용에 대 한 연결 문자열에서 지정 된 데이터베이스를 사용 하 여 지정 된 레코드 집합을 동기화 합니다.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70ef6dc82f4830f7394cb586e36a22075151b061
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5a5e52b89765003da69f9bf7e0b691bd654616c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63288832"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706653"
 ---
 # <a name="index-object-properties-methods-and-events"></a>인덱스 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

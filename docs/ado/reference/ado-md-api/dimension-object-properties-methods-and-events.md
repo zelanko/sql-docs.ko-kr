@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c161898599cadd5e31a45720cbace26243ea7ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 858a42d7d4523bfcba3d7ecc64828bc8ebeda581
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709302"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

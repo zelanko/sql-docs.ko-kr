@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 450a3f88b58048bf3167997fffec242f9a3b9351
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308708"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695668"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset 메서드 예제(VB)
 만들 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 열 정보를 지정 합니다. 데이터를 삽입할 수 있습니다 합니다 **레코드 집합** 개체; 기본 행 집합 버퍼를 삽입 합니다.  

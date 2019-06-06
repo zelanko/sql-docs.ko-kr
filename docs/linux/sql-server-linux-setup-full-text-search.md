@@ -1,21 +1,20 @@
 ---
 title: Linux에서 SQL Server 전체 텍스트 검색 설치 | Microsoft Docs
-description: 이 문서에서는 Linux의 SQL Server 전체 텍스트 검색을 설치 하는 방법을 설명 합니다.
+description: 이 문서에서는 Linux에 SQL Server 전체 텍스트 검색을 설치하는 방법을 설명합니다.
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809741"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705051"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
 
@@ -32,7 +31,7 @@ ms.locfileid: "47809741"
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
-## <a name="RHEL">RHEL 설치</a>
+## <a name="RHEL">RHEL에 설치</a>
 
 다음 명령을 사용 하 여 설치 합니다 **mssql-서버-fts** Red Hat Enterprise Linux에서. 
 
@@ -47,7 +46,7 @@ sudo yum check-update
 sudo yum update mssql-server-fts
 ```
 
-오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 다음 문서에서 설명한 동일한 오프 라인 설치 단계를 사용 하 여 [Install SQL Server](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
 ## <a name="ubuntu">Ubuntu에 설치</a>
 
@@ -65,9 +64,9 @@ sudo apt-get update
 sudo apt-get install -y mssql-server-fts 
 ```
 
-오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 다음 문서에서 설명한 동일한 오프 라인 설치 단계를 사용 하 여 [Install SQL Server](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
-## <a name="SLES">SLES의 설치</a>
+## <a name="SLES">SLES에 설치</a>
 
 다음 명령을 사용 하 여 설치 합니다 **mssql-서버-fts** SUSE Linux Enterprise server입니다. 
 
@@ -82,7 +81,7 @@ sudo zypper refresh
 sudo zypper update mssql-server-fts
 ```
 
-오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 다음 문서에서 설명한 동일한 오프 라인 설치 단계를 사용 하 여 [Install SQL Server](sql-server-linux-setup.md#offline)합니다.
+오프 라인 설치에 필요한 경우 찾습니다에서 전체 텍스트 검색 패키지 다운로드 합니다 [릴리스](sql-server-linux-release-notes.md)합니다. 그런 다음, [SQL Server 설치](sql-server-linux-setup.md#offline) 문서에 설명된 것과 동일한 오프라인 설치 단계를 사용합니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
@@ -92,15 +91,15 @@ sudo zypper update mssql-server-fts
 |---|---|
 | 중립 | 0 |
 | 아랍어 | 1025 |
-| 벵골어(인도) | 1093 |
+| 벵골어 (인도) | 1093 |
 | Bokmål | 1044 |
 | 브라질어 | 1046 |
 | 영어(영국) | 2057 |
 | 불가리아어 | 1026 |
 | 카탈로니아어 | 1027 |
 | 중국어(홍콩 특별 행정구, 중국) | 3076 |
-| 중국어(마카오 특별 행정구) | 5124 |
-| 중국어(싱가포르) | 4100 |
+| 중국어 (마카오 특별 행정구) | 5124 |
+| 중국어 (싱가포르) | 4100 |
 | 크로아티아어 | 1050 |
 | 체코어 | 1029 |
 | 덴마크어 | 1030 |
@@ -110,7 +109,7 @@ sudo zypper update mssql-server-fts
 | 독일어 | 1031 |
 | 그리스어 | 1032 |
 | 구자라트어 | 1095 |
-| Hebrew | 1037 |
+| 히브리어 | 1037 |
 | 힌디어 | 1081 |
 | 아이슬란드어 | 1039 |
 | 인도네시아어 | 1057 |
@@ -177,7 +176,7 @@ sudo zypper update mssql-server-fts
 |.def | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dic | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.dos | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|로 | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
+|.dsp | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.dsw | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ext | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.faq | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
@@ -209,7 +208,7 @@ sudo zypper update mssql-server-fts
 |.lgn | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.log | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.lst | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
-|. m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
+|.m3u | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
 |.mak | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.mk | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.odc | E0CA5340-4534-11CF-B952-00AA0051FE20 | 12.0.6828.0 |

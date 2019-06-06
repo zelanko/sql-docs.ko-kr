@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 23eba215622c423c69119308420a66bf60c4e2fd
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225799"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709298"
 ---
 # <a name="description-property-ado-md"></a>Description 속성(ADO MD)
 현재 개체의 텍스트 설명을 반환 합니다.  

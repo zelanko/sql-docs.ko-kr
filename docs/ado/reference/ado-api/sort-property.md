@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 092eb49216874a59e4bcba09431fcc01dc3679a4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314674"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711152"
 ---
 # <a name="sort-property"></a>Sort 속성
 하나 이상의 필드 이름을 나타냅니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 정렬 되어 각 필드를 오름차순 또는 내림차순으로 정렬 되는지 합니다.  

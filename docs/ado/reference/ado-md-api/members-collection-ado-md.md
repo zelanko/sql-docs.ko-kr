@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 541e1098dfd18210e7c07a0718ecd3add758c8a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e7f2221f511d48acc68c379dce72e7708819b1aa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659566"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709040"
 ---
 # <a name="members-collection-ado-md"></a>Members 컬렉션(ADO MD)
 포함 된 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 수준 또는 축 따라 위치에서 개체입니다.  

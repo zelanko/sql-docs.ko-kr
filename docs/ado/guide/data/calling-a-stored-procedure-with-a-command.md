@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35c1fce22e700ddd7ca2e738449a7b8b4ce4a63a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 4763939e3eccd0bf4783df87141619cbc0fb011c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472742"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702331"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령을 사용하여 저장 프로시저 호출
 저장된 프로시저를 호출 하는 명령을 사용할 수 있습니다. 이 항목의 끝에 있는 코드 샘플에서는 CustOrdersOrders 다음과 같이 정의 되어 있는 호출 Northwind 샘플 데이터베이스에 저장된 프로시저를 가리킵니다.  

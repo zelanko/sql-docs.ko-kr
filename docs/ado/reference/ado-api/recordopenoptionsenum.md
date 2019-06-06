@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c0ed637d8e77ef7fc152f994da81db010fa80900
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240341"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712155"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 열기에 대 한 옵션을 지정 하는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다. 이러한 값을 사용 하 여 결합할 수 있습니다 또는 합니다.  

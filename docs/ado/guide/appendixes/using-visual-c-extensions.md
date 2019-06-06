@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702908"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스

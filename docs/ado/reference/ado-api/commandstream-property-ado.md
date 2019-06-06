@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1048e8d243bd19d86d60c3c4f92e4e4b9d137a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef6830a02fc7e82d88645e2380d0fc5239793bfc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267275"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695804"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 속성(ADO)
 에 대 한 입력으로 사용 되는 스트림을 나타내며를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

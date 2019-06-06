@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64b54acb2334aa09c5d4c2fde421f1dca9f8f3c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d693ccbeb06860cd4633a933e80b9ccbe6526a8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472395"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702230"
 ---
 # <a name="data-shaping-overview"></a>데이터 셰이핑 개요
 *데이터 셰이핑* 쿼리에서 두 개 이상의 논리 엔터티 간의 계층 관계를 수립을 의미 합니다. 하나의 레코드 간의 부모-자식 관계에서 계층을 볼 수 있습니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), 및 하나 이상의 레코드 (장 라고도 함) 다른 **레코드 집합**합니다. 부모-자식 관계에서는 부모 **Recordset** 자식을 포함 **레코드 집합**합니다. 계층적 관계의 예는 고객과 주문입니다. 데이터베이스의 모든 고객에 대 한 0 개 이상의 주문이 있을 수 있습니다. 계층 관계를 재귀 손자 레코드는 자식 레코드에 중첩 될 수 있습니다 수 있습니다. 원칙적으로 계층적 레코드를 임의 깊이까지 중첩할 수 있습니다. 실제로 ADO 제한 512 최대 재귀 **레코드 집합**s입니다.  

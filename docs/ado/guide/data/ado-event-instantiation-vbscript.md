@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3adca277be5bf3e4a9e1ab28cfb21957373f5fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 92015d55d35264205270a4c7d575be7cb048fabc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062979"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700992"
 ---
 # <a name="ado-event-instantiation-vbscript"></a>ADO 이벤트 인스턴스: VBScript
 Microsoft Visual Basic Scripting Edition ADO 이벤트를 지원 하지 않습니다.

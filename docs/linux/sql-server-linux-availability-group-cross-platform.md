@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 01/31/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6160010d02482f9ffd4ed1a4306ae064607b7d75
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 520866e80cd3526d7c039cd98e08f5cc8fc52798
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947577"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713388"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>구성 SQL Server Always On 가용성 그룹에서 Windows 및 Linux (플랫폼 간)
 

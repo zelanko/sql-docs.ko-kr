@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9313c8ea70fdb7de07efe27b520de41b13c33b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3f89a9f6854c229faabef9054a6a0bee6119ff38
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294337"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709021"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth 속성(ADO MD)
 계층 구조의 루트 사이의 수준 수가 표시와 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  

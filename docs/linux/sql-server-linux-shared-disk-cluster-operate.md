@@ -1,21 +1,20 @@
 ---
 title: Linux의 SQL Server 장애 조치 클러스터 인스턴스-작동 | Microsoft Docs
-description: ''
+description: 이 문서에서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)를 운영 하는 방법을 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982816"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712915"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -23,7 +22,7 @@ ms.locfileid: "65982816"
 
 이 문서에서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)를 운영 하는 방법을 설명 합니다. Linux의 SQL Server FCI를 만들지 않은 경우 [구성 장애 조치 클러스터 인스턴스-Linux의 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)합니다. 
 
-## <a name="failover"></a> 장애 조치 
+## <a name="failover"></a>장애 조치
 
 Fci에 대 한 장애 조치는 Windows Server 장애 조치 클러스터 (WSFC)와 비슷합니다. 일종의 오류가 발생 하는 FCI를 호스팅하는 클러스터 노드의 하는 경우 FCI 자동으로 장애 조치를 다른 노드로 합니다. WSFC와 달리 Pacemaker FCI에 대 한 새 호스트 되는 노드를 선택 하도록 기본 설정된 소유자를 설정 하 방법이 있습니다.
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248866"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696629"
 ---
 # <a name="ado-properties"></a>ADO 속성
 
@@ -102,7 +102,7 @@ ms.locfileid: "63248866"
  [ADO 컬렉션](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO 열거 상수](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO 이벤트](../../../ado/reference/ado-api/ado-events.md)   
  [ADO 메서드](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   

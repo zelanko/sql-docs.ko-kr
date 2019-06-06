@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94a539fb2ba3285bd8bb5c3668879695598725a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 52e58cb358a28169a11b16e2c4d9f64ba4745bad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140102"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695481"
 ---
 # <a name="dataspace-ado---wfc-syntax"></a>데이터스페이스(ADO - WFC 구문)
 합니다 **createObject** 메서드는 **DataSpace** 클라이언트 응용 프로그램 요청을 처리 하는 데 두 비즈니스 개체를 지정 하는 클래스 (*progid*) 및 통신 프로토콜 및 서버 (*연결*). **createObject** 반환 된 [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) 서버를 나타내는 개체입니다.  

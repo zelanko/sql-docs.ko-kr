@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d57767cb50382f676aec2e11eaef77a8cdab9a87
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63275888"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711002"
 ---
 # <a name="status-property-ado-recordset"></a>Status 속성(ADO 레코드 집합)
 일괄 처리 업데이트와 관련 하 여 현재 레코드 또는 다른 대량 작업의 상태를 나타냅니다.  

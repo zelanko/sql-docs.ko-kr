@@ -1,6 +1,5 @@
 ---
 title: SQL Server 2017의 버전 및 지원하는 기능 ~ Linux | Microsoft Docs
-ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -27,12 +26,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533557"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713178"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017에서 버전 및 지원하는 기능
 

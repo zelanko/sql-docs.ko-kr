@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 829b8df79c726e047576de0e845f2e3f5543352f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d860f67bcea2d8ff6cdfabf08f7d4dc76d82eec6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298328"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712109"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions 및 SetPermissions 메서드 예제(VC++)
 이 예제에서는 합니다 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 하 고 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드. 다음 코드를 관리자로 Orders 테이블에 전체 액세스를 제공합니다.  

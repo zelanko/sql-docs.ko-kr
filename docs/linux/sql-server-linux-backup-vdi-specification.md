@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: d1b002df5c526c4b888bac1b203b54af4e21a3e0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044979"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713463"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI 클라이언트 SDK 사양
 
@@ -26,7 +25,7 @@ ms.locfileid: "55044979"
 - Windows 공유 메모리는 POSIX 공유 메모리를 됩니다.
 - Windows 세마포 POSIX 세마포 수 있습니다.
 - HRESULT 및 DWORD과 같은 Windows 종류를 정수로 변경 됩니다.
-- COM 인터페이스 제거 되 고 c + + 클래스의 쌍으로 바뀝니다.
+- COM 인터페이스 제거 되며 쌍을 사용 하 여 대체 C++ 클래스입니다.
 - Linux의 SQL Server 인스턴스 이름에 대 한 참조가 제거 되었습니다 하므로 명명 된 인스턴스를 지원 하지 않습니다. 
 - 공유 라이브러리 libsqlvdi.so /opt/mssql/lib/libsqlvdi.so 설치에서 구현 됩니다.
 

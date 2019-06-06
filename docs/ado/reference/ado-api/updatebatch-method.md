@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63040819"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710420"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
 모든 보류 중인 일괄 처리 업데이트를 디스크에 씁니다.  

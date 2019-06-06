@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3f0929cc55fcf529e14ec17912f0a474f6e2257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5c3a1e66be521a08ef94719cffff813206ce965e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311876"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706733"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 및 Users Append, ChangePassword 메서드 예제(VC++)
 이 예제에서는 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드의 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 뿐만 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 메서드의 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 새 추가하여[그룹](../../../ado/reference/adox-api/group-object-adox.md) 및 새 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 시스템입니다. 새 **그룹** 에 추가 되는 **그룹** 새 컬렉션 **사용자**합니다. 따라서 새 **사용자** 에 추가 되는 **그룹**합니다. 또한 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 지정 하는 합니다 **사용자** 암호.  

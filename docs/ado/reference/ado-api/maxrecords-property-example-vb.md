@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c687f2b7a11dba37c05412c03cf14da4a3daa543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 51f277aa6a1d757b6796b885dee913c3c41c3288
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863875"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707567"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 속성 예제(VB)
 이 예제에서는 합니다 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 10 개의 가장 비싼 책 제목을 포함 하는 ***제목*** 테이블.  

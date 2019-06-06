@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8af816b36ee3138c7742447ccba6b20c14860dff
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184897"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704588"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>데이터 셰이핑의 Visual Basic 예제
 ```  

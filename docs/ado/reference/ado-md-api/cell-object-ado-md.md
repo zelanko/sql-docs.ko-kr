@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62469488"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709791"
 ---
 # <a name="cell-object-ado-md"></a>Cell 개체(ADO MD)
 셀 집합에 포함 된 축 좌표의 교집합에서 데이터를 나타냅니다.  

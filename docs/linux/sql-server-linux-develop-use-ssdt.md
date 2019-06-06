@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.custom: sql-linux
-ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
-ms.translationtype: HT
+ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "52750365"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713283"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux의 SQL Server에 대 한 데이터베이스를 만들려면
 
@@ -27,7 +26,7 @@ SQL Server Data Tools (SSDT)는 Linux의 SQL Server에 대 한 강력한 개발 
 
 1. Windows 컴퓨터에 Visual Studio를 이미 설치 되지 않은 경우 [다운로드 하 여 Visual Studio를 설치 합니다.]합니다. Visual Studio Community edition은 학생에 대 한 무료, 완전 한 기능의 IDE를 Visual Studio 라이선스가 없는 경우 오픈 소스 및 개인 개발자.
 
-2. Visual Studio 설치 중 선택 **사용자 지정** 에 대 한 합니다 **설치 유형을 선택** 옵션입니다.  **다음**을 클릭합니다.
+2. Visual Studio 설치 중 선택 **사용자 지정** 에 대 한 합니다 **설치 유형을 선택** 옵션입니다. **다음**을 클릭합니다.
 
 3. 선택 **Microsoft SQL Server Data Tools**하십시오 **Git에 대 한 Windows**, 및 **Visual Studio 용 GitHub 확장** 기능 선택 목록에서.
 
