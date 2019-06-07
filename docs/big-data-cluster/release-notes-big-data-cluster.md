@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014987"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744157"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -33,11 +33,11 @@ ms.locfileid: "66014987"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| **mssqlctl** updates | 몇 가지 **mssqlctl** [명령 및 매개 변수 업데이트](../big-data-cluster/reference-mssqlctl.md)합니다. 이에 대 한 업데이트를 포함 합니다 **mssqlctl 로그인** 이제 컨트롤러 사용자 이름 및 끝점을 대상으로 하는 명령입니다. |
-| 저장소 기능 향상 | 로그 및 데이터에 대 한 다양 한 저장소 구성 지원 합니다. 또한 빅 데이터 클러스터에 대 한 영구적 볼륨 클레임 수가 감소 했습니다. |
-| 여러 계산 풀 인스턴스 | 여러 계산 풀 인스턴스를 지원 합니다. |
-| 새 풀의 동작 및 기능 | 계산 풀 이제는 기본적으로 저장소 풀 및 데이터 풀 작업에 **ROUND_ROBIN** 만 배포 합니다. 데이터 풀 이제 사용할 수 있습니다 새 new **복제 된** 데이터 풀 인스턴스를 모두에 동일한 데이터가 있는지 즉 분포 유형입니다. |
-| 외부 테이블 개선 사항 | 외부 HADOOP 데이터 원본 테이블 읽기를 지원 최대 1MB 크기에 행이 이제를 입력 합니다. 외부 테이블 (ODBC, 저장소 풀 데이터 풀) 이제 지원 행을 SQL Server 테이블 너비입니다. |
+| **mssqlctl** 업데이트 | 여러 **mssqlctl** [명령 및 매개 변수가 업데이트되었습니다](../big-data-cluster/reference-mssqlctl.md). 예를 들어 **mssqlctl login** 명령은 이제 컨트롤러 사용자 이름 및 엔드포인트를 대상으로 하도록 업데이트되었습니다. |
+| 스트리지 향상 | 로그 및 데이터에 대해 서로 다른 스토리지 구성을 지원합니다. 또한 빅 데이터 클러스터에 대한 영구적 볼륨 클레임 수가 감소했습니다. |
+| 여러 컴퓨팅 풀 인스턴스 | 여러 컴퓨팅 풀 인스턴스를 지원합니다. |
+| 새 풀 동작 및 기능 | 컴퓨팅 풀은 이제 **ROUND_ROBIN** 배포에서만 스토리지 풀 및 데이터 풀 작업에 대해 기본적으로 사용됩니다. 데이터 풀은 새로운 **REPLICATED** 배포 형식을 사용할 수 있습니다. 즉, 모든 데이터 풀 인스턴스에 동일한 데이터가 존재할 수 있습니다. |
+| 외부 테이블 개선 | HADOOP 데이터 원본 형식의 외부 테이블은 이제 최대 1 MB 크기의 행 읽기를 지원합니다. 외부 테이블(ODBC, 스토리지 풀, 데이터 풀)은 이제 SQL Server 테이블만큼 폭이 넓은 행을 지원합니다. |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -497,7 +497,7 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
 클러스터 관리 포털에서 마스터 SQL Server 인스턴스에 대 한 끝점을 표시 하지 않습니다. 마스터 인스턴스에 대 한 IP 주소 및 포트를 찾으려면 다음 사용 **kubectl** 명령:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>외부 테이블

@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994059"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743990"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 
@@ -37,14 +37,17 @@ Azure Data Studio를 사용 하 여 빅 데이터 클러스터에 연결 하려�
 1. 명령줄에서 다음 명령 사용 하 여 마스터 인스턴스 IP를 찾습니다.
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 빅 데이터 클러스터 이름 기본값으로 **mssql 클러스터** 배포 구성 파일의 이름을 사용자 지정 하지 않으면. 자세한 내용은 [빅 데이터 클러스터에 대 한 배포 설정을 구성](deployment-custom-configuration.md#clustername)합니다.
 
 1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.
 
 1. **연결 유형**를 선택 **Microsoft SQL Server**합니다.
 
-1. SQL Server 마스터 인스턴스의 IP 주소를 입력 **서버 이름** (예: **\<IP 주소\>31433,**).
+1. SQL Server 마스터 인스턴스의 IP 주소를 입력 **서버 이름** (예: **\<IP 주소\>31433,** ).
 
 1. SQL 로그인을 입력 **사용자 이름** 하 고 **암호**합니다.
 

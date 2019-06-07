@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462798"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744204"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -82,7 +82,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **Azure 지역** | 새 AKS 클러스터에 대 한 Azure 지역 (기본 **westus**). |
    | **컴퓨터 크기** | 합니다 [컴퓨터 크기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) AKS 클러스터의 노드에 대해 사용 하도록 (기본 **Standard_L8s**). |
    | **작업자 노드** | AKS 클러스터의 작업자 노드 수 (기본 **1**). |
-   | **클러스터 이름** | AKS 클러스터와 빅 데이터 클러스터의 이름입니다. 소문자 영숫자 문자만 및 공백 없이 클러스터의 이름 이어야 합니다. (기본값 **sqlbigdata**). |
+   | **클러스터 이름** | AKS 클러스터와 빅 데이터 클러스터의 이름입니다. 소문자 영숫자 문자만 및 공백 없이 빅 데이터 클러스터의 이름 이어야 합니다. (기본값 **sqlbigdata**). |
    | **암호** | 컨트롤러, HDFS/Spark 게이트웨이 및 마스터 인스턴스를 실행 하는 것에 대 한 암호 (기본 **MySQLBigData2019**). |
    | **컨트롤러 사용자** | 컨트롤러 사용자의 사용자 이름 (기본값: **관리자**). |
 
@@ -118,7 +118,7 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
 
 ## <a name="inspect-the-cluster"></a>클러스터를 검사 합니다.
 
-배포 하는 동안 언제 든 상태 및 실행 빅 데이터 클러스터에 대 한 세부 정보를 검사할 kubectl 또는 클러스터 관리 포털을 사용할 수 있습니다.
+배포 하는 동안 언제 든 사용할 수 있습니다 **kubectl** 또는 **mssqlctl** 의 상태 및 실행 빅 데이터 클러스터에 대 한 세부 정보를 검사 합니다.
 
 ### <a name="use-kubectl"></a>Kubectl 사용
 
@@ -127,42 +127,32 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
 1. 전체 클러스터의 상태 요약을 가져오려면 다음 명령을 실행 합니다.
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 빅 데이터 클러스터 이름을 변경 하지 않은 스크립트를 기본값으로 **sqlbigdata**합니다.
 
 1. Kubernetes 서비스 및 해당 내부 및 외부 끝점은 다음을 사용 하 여 검사할 **kubectl** 명령:
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. 또한 다음 명령 사용 하 여 kubernetes pod의 상태를 검사할 수 있습니다.
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. 다음 명령 사용 하 여 특정 pod에 대 한 자세한 정보를 확인 합니다.
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > 모니터링 및 배포 문제를 해결 하는 방법에 대 한 자세한 내용은 참조 하세요. [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결](cluster-troubleshooting-commands.md)합니다.
-
-### <a name="use-the-cluster-administration-portal"></a>클러스터 관리 포털 사용
-
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `mgmtproxy-svc-external` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
-
-IP 주소를 가져올 수는 **mgmtproxy svc 외부** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> CTP 3.0에서는 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 

@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1bc5c5d8377b93a3e0101f1160444a207b5881cd
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d585f1f1245457aa9051f25bca696cf4495d93ed
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618120"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743920"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -95,14 +95,14 @@ Azure SQL Database에 대 한 통계를 풀 하는 리소스의 마지막 30 분
 |**avg_data_io_percent**|decimal(5,2)|풀 한도에 따른 백분율로 평균 I/O 활용률입니다.|
 |**avg_log_write_percent**|decimal(5,2)|평균 쓰기 리소스 사용률 풀 한도의 백분율입니다.|
 |**avg_storage_percent**|decimal(5,2)|풀의 저장소 한도의 백분율로 평균 저장소 사용률입니다.|
-|**avg_allocated_storage_percent**|decimal(5,2)|탄력적 풀에 있는 모든 데이터베이스에 의해 할당 되는 데이터 공간의 비율입니다. 이 탄력적 풀의 최대 크기 데이터에 할당 하는 데이터 공간의 비율입니다. 자세한 내용은 다음을 참조하십시오. SQL db에서 파일 공간 관리|
+|**avg_allocated_storage_percent**|decimal(5,2)|탄력적 풀에 있는 모든 데이터베이스에 의해 할당 되는 데이터 공간의 비율입니다. 이 탄력적 풀의 최대 크기 데이터에 할당 하는 데이터 공간의 비율입니다. 자세한 내용은 참조 하십시오. SQL db에서 파일 공간 관리|
 |**max_worker_percent**|decimal(5,2)|풀 한도에 따른 백분율로 최대 동시 작업자 (요청).|
 |**max_session_percent**|decimal(5,2)|풀 한도에 따른 백분율로 최대 동시 세션|
 |||
 
 ## <a name="permissions"></a>사용 권한
 
-이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.
+이 보기에는 VIEW SERVER STATE 권한이 필요합니다.
 
 ## <a name="remarks"></a>Remarks
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993990"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743935"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -92,8 +92,10 @@ CTP 2.5 부터는 대부분의 빅 데이터 클러스터 설정은 JSON 배포 
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> 이 예제에서는 암호와 같은 기본 구성에 포함 되지 않는 모든 설정에 대 한 라는 메시지가 표시 됩니다. Docker 정보를 SQL Server 2019의 일부로 microsoft에 제공 되는 참고 [Early Adoption Program](https://aka.ms/eapsignup)합니다.
+이 시나리오에서는 암호와 같은 기본 구성에 포함 되지 않는 모든 설정에 대 한 라는 메시지가 표시 됩니다. Docker 정보를 SQL Server 2019의 일부로 microsoft에 제공 되는 참고 [Early Adoption Program](https://aka.ms/eapsignup)합니다.
+
+> [!IMPORTANT]
+> 빅 데이터 클러스터의 기본 이름은 **mssql 클러스터**합니다. 이 실행 하기 위해 알아야 합니다 **kubectl** 명령을 사용 하 여 Kubernetes 네임 스페이스를 지정 하는 `-n` 매개 변수입니다.
 
 ## <a id="customconfig"></a> 사용자 지정 구성
 
@@ -220,8 +222,11 @@ URL을 확인 합니다 **포털 끝점** 다음 섹션에서 사용 하기 위�
 1. 배포 후 다음의 외부 IP 출력을 보면 컨트롤러 끝점의 IP 주소를 찾으려면 **kubectl** 명령:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > 사용 하 여 배포 하는 동안 기본 이름을 변경 하지 않은, 경우 `-n mssql-cluster` 이전 명령에서. **mssql 클러스터** 빅 데이터 클러스터에 대 한 기본 이름입니다.
 
 1. 사용 하 여 빅 데이터 클러스터에 로그인 **mssqlctl 로그인**합니다. 설정 된 **-컨트롤러 끝점** 컨트롤러 끝점의 외부 IP 주소 매개 변수입니다.
 
@@ -267,7 +272,7 @@ minikube ip
 플랫폼에 관계 없이 실행 하는 Kubernetes 클러스터에서 클러스터에 대해 실행 명령 다음에 배포 된 모든 서비스 끝점을 가져오려면:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> 클러스터에 연결

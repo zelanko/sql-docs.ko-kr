@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454729"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749150"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="june-2019"></a>2019 년 6 월
+
+2019 년 6 월 6 일 &nbsp;  /  &nbsp; 버전: 1.8.0 
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| 중앙 관리 서버 (CMS) 확장의 릴리스 | 중앙 관리 서버에는 하나 이상의 중앙 관리 서버 그룹으로 구성 된 SQL server 인스턴스 목록을 저장 합니다. 사용자는 자신의 기존 CMS 서버에 연결 하 고 추가 서버를 제거 하는 등 해당 서버를 관리할 수 있습니다. 자세한 내용은 읽어보세요 [여기](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Windows에 대 한 데이터베이스 관리 도구 확장의 릴리스 | 이 확장에 두 Azure 데이터 Studio에서 SQL Server Management Studio에서 자주 사용 하는 환경을 시작합니다. 사용자 수 많은 다른 개체 (예: 데이터베이스, 테이블, 열, 뷰 등)을 마우스 오른쪽 단추로 클릭 하 고 속성을 해당 개체에 대 한 SSMS 속성 대화 상자를 선택 합니다. 또한 사용자 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 잘 알려진 SSMS 스크립트 생성 마법사를 시작 하려면 스크립트 생성을 선택할 수 있습니다. 
+| 스키마 비교 개선 | &bull; &nbsp; 추가 제외/포함 옵션 <br/>&bull; &nbsp; 생성 후 스크립트 열립니다 스크립트를 생성 합니다. <br/>&bull; &nbsp; 이중 스크롤 막대를 제거합니다.  <br/>&bull; &nbsp; 서식 및 레이아웃 개선 <br/>&bull; &nbsp; 전체 변경 내용을 확인할 수 있습니다 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| 사용자 탭으로 이동된 Messages 섹션 | SQL 쿼리를 실행 하는 사용자가 결과 및 메시지 누적된 패널에 있었습니다. 이제 SSMS에서 같은 패널에 별도 탭에는 합니다. |
+| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 사용자가 이제 노트북에서 자신의 Python 3 또는 Anaconda 설치를 사용 하도록 선택할 수 있습니다. <br/>&bull; &nbsp; 여러 안정성 + 맞춤/완료 픽스 &bull; &nbsp; 개선의 전체 목록을 보려면 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Visual Studio Code 1.34 병합을 해제할 수 있습니다. | 향상 된 최신 버전을 찾을 수 있습니다 [여기](https://code.visualstudio.com/updates/v1_34) |
+| 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)합니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+- Windows에 대 한 데이터베이스 관리 도구 확장
+    - 연결이 끊어진된 서버 노드에서 속성을 시작할 수 없습니다.
+    - Azure 서버에 대 한 속성을 시작할 수 없습니다.
+    - 일부 개체에 속성 대화 상자
+    - 대화 상자를 시작 하는 데 시간이 오래 걸릴
+    - 일부 유형의 연결 (예: AAD)를 사용 하 여 서버를 시작 하는 오류
+- 전자 필기장
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) 시스템 Python Notebook을 사용 하는 작업을 할 수 있습니다.
+- 스키마 비교
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) 스키마 비교 작업에는 아무 작업도 수행 하지는 기본 취소 상황에 맞는 메뉴 표시
 
 ## <a name="may-2019"></a>2019년 5월
 
@@ -32,8 +61,8 @@ ms.locfileid: "66454729"
 | :----- | :------ |
 | 스키마 비교 확장 릴리스 | 스키마 비교는 SQL Server 데이터 도구 (SSDT)에서 잘 알려진 기능 및 해당 기본 사용 사례 이며를 비교 하 여 데이터베이스 및.dacpac 파일 간의 차이점을 시각화할 수 있도록 동일한 작업을 실행 합니다. |
 | 작업 보기 출력 창으로 이동 | 사용자가 출력 창에서 작업 보기에서 백업, 복원 및 스키마 비교 등의 장기 실행 작업의 상태를 볼 수 있습니다.
-| 추가 시작 페이지 | &bull; &nbsp; 일반적인 작업에 대 한 링크 같은 새 쿼리를 새 파일을 새 노트북 <br/>&bull; &nbsp; 설명서 및 Github에 대 한 링크 |
-| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 메모 및 테이블에 대 한 더 나은 지원을 비롯 하 여 markdown 렌더링 향상 된 기능 <br/>&bull; &nbsp; 도구 모음 유용성 개선 <br/>&bull; &nbsp; 더 이상 신뢰할 수 있는 notebook에 대 한 markdown 링크 Cmd/Ctrl + 클릭 하며 직접 클릭할 수 있습니다. <br/>&bull; &nbsp; Notebook을 닫고 동시에 여러 notebook을 시작할 때 오류를 줄이고 후 Jupyter 프로세스 정리의 향상 된 기능 <br/>&bull; &nbsp; 동일한 데이터베이스에 대해 2 notebook을 실행 하는 경우 향상 된 SQL notebook 연결 오류 발생 하지 않습니다. <br/>&bull; &nbsp; 자동 스크롤 현재 실행 중인 셀으로 셀 실행 도구 모음에서 단추를 클릭 하면 notebook의 향상 된 기능 <br/>&bull; &nbsp; 일반 안정성 및 성능 향상 |
+| 추가 시작 페이지 | &bull; &nbsp; 일반적인 작업에 대 한 링크 같은 새 쿼리를 새 파일을 새 노트북 <br/>&bull; &nbsp; 설명서 및 GitHub에 대 한 링크 |
+| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 메모 및 테이블에 대 한 더 나은 지원을 비롯 하 여 markdown 렌더링 향상 된 기능 <br/>&bull; &nbsp; 도구 모음 유용성 개선 <br/>&bull; &nbsp; 더 이상 신뢰할 수 있는 notebook에 대 한 markdown 링크 Cmd/Ctrl + 클릭 하며 직접 클릭할 수 있습니다. <br/>&bull; &nbsp; Notebook을 닫고 동시에 여러 notebook을 시작할 때 오류를 줄이고 후 Jupyter 프로세스 정리의 향상 된 기능 <br/>&bull; &nbsp; 동일한 데이터베이스에 대해 2 notebook을 실행 하는 경우 향상 된 SQL notebook 연결 오류 발생 하지 않습니다. <br/>&bull; &nbsp; 도구 모음에서 셀 실행 단추를 클릭 하면 현재 실행 중인 셀에 노트북 자동 스크롤의 향상 된 기능 <br/>&bull; &nbsp; 일반 안정성 및 성능 향상 |
 | 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1)합니다. |
 | &nbsp; | &nbsp; |
 
@@ -226,7 +255,7 @@ Azure Data Studio (이전의 SQL Operations Studio)의 일반 공급 릴리스 �
 
 자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), 및 [릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다.
 
-## <a name="august-2018"></a>2018 년 8 월
+## <a name="august-2018"></a>2018년 8월
 
 2018 년 8 월 30 일 &nbsp;  /  &nbsp; 버전: 0.32.8 &nbsp;  /  &nbsp; 공개 미리 보기
 

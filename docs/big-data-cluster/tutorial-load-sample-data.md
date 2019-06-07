@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473519"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743834"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -71,7 +71,7 @@ ms.locfileid: "63473519"
    | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
-   > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**).
+   > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-big-data-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**). 클러스터의 기본 이름은 **mssql 클러스터**합니다.
 
 1. 부트스트랩 스크립트를 실행 합니다.
 
@@ -107,7 +107,7 @@ ms.locfileid: "63473519"
    | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
-   > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**).
+   > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-big-data-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**). 클러스터의 기본 이름은 **mssql 클러스터**합니다.
 
 1. 부트스트랩 스크립트를 실행 합니다.
 
