@@ -382,6 +382,8 @@
               items:
                 - name: 측정값 만들기 및 관리
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: 계산 그룹
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: KPI
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
@@ -1403,7 +1405,7 @@
           href: ../analysis-services/instances/connect-to-analysis-services.md
         - name: 클라이언트 애플리케이션에서 연결
           href: ../analysis-services/instances/connect-from-client-applications-analysis-services.md
-        - name: '연결 문자열 속성 '
+        - name: 연결 문자열 속성
           href: ../analysis-services/instances/connection-string-properties-analysis-services.md
         - name: 인증 방법
           href: ../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md
