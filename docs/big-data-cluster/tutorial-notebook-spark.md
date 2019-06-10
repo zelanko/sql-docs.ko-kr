@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 자습서에서는 실행을 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 샘플 Spark 노트북을 로드할 수 있습니다 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994151"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770869"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 notebook 실행
 
