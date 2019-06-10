@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 빅 데이터 클러스터에 샘플 데이터를 로드 하는 방법을 보여 줍니다. 샘플 데이터를 SQL Server 마스터 인스턴스에 관계형 데이터를 포함합니다. 저장소 풀의 HDFS 데이터도 포함 합니다. 이 데이터는이 단원의 다른 자습서를 지원합니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743834"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770830"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
