@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 7f0532ad3d9822e3418a3642dd2109761187a2bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489193"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776046"
 ---
 # <a name="monitor-dqs-activities"></a>DQS 작업 모니터링
 

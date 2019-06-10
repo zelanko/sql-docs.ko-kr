@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 077a3ae072c8a9f680162de5eb1813c15b1e7199
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c21cab43211e168802e8acd94d4664124182b2de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309303"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798050"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server 에이전트 확장 (미리 보기)
 

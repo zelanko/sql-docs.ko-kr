@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015117"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794444"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 재생
 
@@ -65,7 +65,7 @@ ms.locfileid: "66015117"
 ### <a name="replay-a-trace"></a>추적 재생
 
 1.  **추적 파일 이름이**: 추적 파일 이름을 입력 합니다.
-1.  **최대 파일 크기 (MB)**: 추적 파일 롤오버 크기 값을 입력 합니다. 기본값은 200mb입니다. 사용자 지정 값을 입력할 수 있습니다.
+1.  **최대 파일 크기 (MB)** : 추적 파일 롤오버 크기 값을 입력 합니다. 기본값은 200mb입니다. 사용자 지정 값을 입력할 수 있습니다.
 1.  **재생 추적 출력을 저장할 경로를**: 출력.trc 파일에 대 한 경로 입력 합니다.
 1.  **SQL Server 인스턴스 이름을**:  추적 재생에 SQL Server 인스턴스의 이름을 입력 합니다.
 1.  **시작**을 선택합니다.

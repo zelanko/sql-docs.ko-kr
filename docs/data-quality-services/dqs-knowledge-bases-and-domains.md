@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e8be0b2c07a846c2ff52f548e364eb0a536028
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 201b9aee27b8a9e267c51588b5178c7c2c6394b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796649"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 기술 자료 및 도메인
 

@@ -4,19 +4,19 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 끝점 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32c0506a3394ac6ac62745901f908ba1fb725ec2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 66928c2201e1fb2b568838a77d115e1549abcfe3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995141"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779326"
 ---
-# <a name="mssqlctl-cluster-endpoint"></a>mssqlctl 클러스터 끝점
+# <a name="mssqlctl-cluster-endpoint"></a>mssqlctl 클러스터 엔드포인트
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

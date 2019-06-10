@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 13a2805109787b96fd416422bb3f44dbbf512b17
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 1ec0c02863422565edd8a35ddc39bc653f778b2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487518"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776647"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs 파일로 기술 자료 내보내기
 
