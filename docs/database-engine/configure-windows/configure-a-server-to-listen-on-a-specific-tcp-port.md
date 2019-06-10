@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132803"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799513"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>특정 TCP 포트에서 수신 대기하도록 서버 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "54132803"
   
 5.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-6.  세부 정보 창에서 **SQL Server(**\<인스턴스 이름>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
+6.  세부 정보 창에서 **SQL Server(** \<인스턴스 이름> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 중지하고 다시 시작합니다.  
   
 ## <a name="connecting"></a>Connecting  
 특정 포트에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 후에 특정 포트를 통해 클라이언트 애플리케이션과 연결하는 세 가지 방법은 다음과 같습니다.  

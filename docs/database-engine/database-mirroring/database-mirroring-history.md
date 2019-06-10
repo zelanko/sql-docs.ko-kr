@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f1fe2b0079d761a0fc599377ee82714227cdb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a20b27bd5a3c8b22171bf61ef6ebfda2725c5fc0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724321"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774689"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47724321"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **서버 인스턴스**  
  기록이 보고되고 있는 서버 인스턴스의 이름입니다.  
   

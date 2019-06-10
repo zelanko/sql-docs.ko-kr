@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9067825db57574385e925d28e1b7badf049831df
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: c4f56ac8334be617e800c388158074f801f4aa98
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480219"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777710"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>DQS 데이터베이스 분리 및 연결
 
@@ -46,7 +46,7 @@ ms.locfileid: "65480219"
 -   DQS에서 실행 중인 작업을 종료하거나 실행 중인 프로세스를 중지하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="Detach"></a> DQS 데이터베이스 분리  
- SQL Server Management Studio를 사용하여 DQS 데이터베이스를 분리하는 경우 분리된 파일은 컴퓨터에 남아 있으므로 동일한 SQL Server 인스턴스에 다시 연결되거나 다른 서버로 이동하여 거기에서 연결될 수 있습니다. DQS 데이터베이스 파일은 대개 Data Quality Services 컴퓨터의 다음 위치: C:\Program Files\Microsoft SQL Server\MSSQL13.*<Instance_Name>* \MSSQL\DATA 위치에서 사용할 수 있습니다.  
+ SQL Server Management Studio를 사용하여 DQS 데이터베이스를 분리하는 경우 분리된 파일은 컴퓨터에 남아 있으므로 동일한 SQL Server 인스턴스에 다시 연결되거나 다른 서버로 이동하여 거기에서 연결될 수 있습니다. DQS 데이터베이스 파일은 대개 Data Quality Services 컴퓨터의 다음 위치: C:\Program Files\Microsoft SQL Server\MSSQL13. *<Instance_Name>* \MSSQL\DATA 위치에서 사용할 수 있습니다.  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   

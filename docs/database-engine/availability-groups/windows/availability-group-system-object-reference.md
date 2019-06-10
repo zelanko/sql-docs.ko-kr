@@ -8,14 +8,14 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2014||=sqlallproducts-allversions'
-ms.openlocfilehash: 805e2944d1485ed3242185aa1fcfbbef4bdcdb98
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 8eff161c24275ee86938bf5d57bbe39473ac19cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533403"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800160"
 ---
 # <a name="always-on-availability-group-system-object-reference"></a>Always On 가용성 그룹 시스템 개체 참조
 

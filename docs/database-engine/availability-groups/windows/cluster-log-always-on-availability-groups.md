@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1d025a77cace9d8bbcdd746c2e6a193f23efd34d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772593"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 CLUSTER.LOG 생성 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

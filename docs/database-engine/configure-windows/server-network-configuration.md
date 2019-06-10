@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 2166549274f323894e7ba36b9495c56184745557
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600283"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771896"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "51600283"
  동적 포트에 대해 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용한 포트는 시작할 때마다 변경될 수 있습니다. 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용한 포트를 열어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 특정 포트를 사용하도록 구성되므로 서버에 대한 통신을 허용하도록 방화벽을 구성할 수 있습니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 ### <a name="changing-a-named-pipe"></a>명명된 파이프 변경  
- 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$*\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
+ 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
   
 ## <a name="force-encryption"></a>암호화 적용  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 응용 프로그램과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 애플리케이션과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 ## <a name="extended-protection-for-authentication"></a>인증에 대한 확장된 보호  
  확장된 보호를 지원하는 운영 체제에서는 채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 기능을 사용할 수 있습니다. 자세한 내용은 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)을 참조하세요.  

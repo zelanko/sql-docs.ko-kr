@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cd913ea6cdae597058f55574ca6600459d7bd55
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 13560a2f2e610b90fcce1e37b0d5cae8e1c20057
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602273"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803557"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>일부 가용성 복제본에 정상 상태의 역할이 없음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

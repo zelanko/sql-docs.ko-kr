@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+manager: jroth
+ms.openlocfilehash: 5a77e2382b95bffff43c6a404baef44f09b41395
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450091"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803462"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

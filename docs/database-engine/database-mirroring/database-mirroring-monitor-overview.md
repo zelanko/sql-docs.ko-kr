@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 6e92c372d4e71401e101b4f915bf4c6807cf0064
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126353"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795557"
 ---
 # <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "54126353"
   
 -   각 파트너의 마지막으로 알려진 역할(주 서버 또는 미러 서버)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 미러링을 모니터링하려면 서버 인스턴스의 **msdb** 데이터베이스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor** 의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다.  
   
  서버 인스턴스에서 **dbm_monitor** 의 멤버인 경우에만 해당 서버 인스턴스에서 제한된 사용 권한을 갖게 됩니다. 사용자는 최신 상태 행만 볼 수 있습니다. **dbm_monitor** 권한을 사용하여 서버 인스턴스에 연결할 경우 데이터베이스 미러링 모니터는 사용자에게 제한된 사용 권한이 있다는 것을 알립니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "54126353"
  *<PRINCIPAL_SERVER>*  
  현재 주 서버 인스턴스인 파트너의 이름입니다. 이름의 형식은 다음과 같습니다.  
   
- *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- 여기서 *<SYSTEM_NAME>* 은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 _<SYSTEM_NAME>_**\\**_<instance_name>_ 으로 표시됩니다.  
+ 여기서 *<SYSTEM_NAME>* 은 서버 인스턴스가 있는 시스템의 이름입니다. 기본이 아닌 서버 인스턴스의 경우에도 인스턴스 이름이 _<SYSTEM_NAME>_ **\\** _<instance_name>_ 으로 표시됩니다.  
   
  *<MIRROR_SERVER>*  
  현재 미러 서버 인스턴스인 파트너의 이름입니다. 형식은 주 서버와 동일합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "54126353"
   
  시스템 관리자는 **경고** 탭 페이지를 선택하여 데이터베이스에 대한 현재의 경고 구성을 볼 수 있습니다. 관리자는 이 페이지에서 **경고 임계값 설정** 대화 상자를 실행하여 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
- 세부 정보 창에서 탭 위의 배너에는 모니터가 상태 정보를 마지막으로 새로 고친 시간이 **마지막 새로 고침:**_\<date>\<time>_ 으로 표시됩니다. 일반적으로 데이터베이스 미러링 모니터는 서로 다른 시간에 주 서버 인스턴스 및 미러 서버 인스턴스에서 상태 정보를 검색합니다. 이러한 두 새로 고침 시간 중에서 이전 시간이 표시됩니다.  
+ 세부 정보 창에서 탭 위의 배너에는 모니터가 상태 정보를 마지막으로 새로 고친 시간이 **마지막 새로 고침:** _\<date>\<time>_ 으로 표시됩니다. 일반적으로 데이터베이스 미러링 모니터는 서로 다른 시간에 주 서버 인스턴스 및 미러 서버 인스턴스에서 상태 정보를 검색합니다. 이러한 두 새로 고침 시간 중에서 이전 시간이 표시됩니다.  
   
 ## <a name="action-menu"></a>동작 메뉴  
  **동작** 메뉴에는 항상 다음 명령이 포함됩니다.  

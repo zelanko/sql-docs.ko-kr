@@ -5,17 +5,17 @@ description: 이 문서에는 HDFS에 계층화 (미리 보기)는 SQL Server 20
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2a00c248b75612525194ffd4074f1c176eefbee
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743891"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782140"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 ADLS Gen2 하는 방법
 

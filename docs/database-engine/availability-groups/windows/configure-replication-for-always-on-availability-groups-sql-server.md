@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367241"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793614"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 Always On 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
-  
-1.  [데이터베이스 게시 및 구독 구성](#step1)  
-  
-2.  [Always On 가용성 그룹을 구성합니다.](#step2)  
-  
-3.  [복제에 대해 모든 보조 복제본 호스트가 구성되었는지 확인](#step3)  
-  
-4.  [보조 복제본 호스트를 복제 게시자로 구성](#step4)  
-  
-5.  [원래 게시자를 가용성 그룹 수신기 이름으로 리디렉션](#step5)  
-  
-6.  [유효성 검사 저장 프로시저를 실행하여 구성 확인](#step6)  
-  
-7.  [원래 게시자를 복제 모니터에 추가](#step7)  
-  
- 1단계와 2단계는 순서를 바꿔서 수행할 수도 있습니다.  
   
 ##  <a name="step1"></a> 1. 데이터베이스 게시 및 구독 구성  
  **배포자 구성**  
@@ -228,22 +212,22 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Always On 가용성 그룹에 대한 필수 구성 사항, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹: 상호 운용성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL  Server  복제](../../../relational-databases/replication/sql-server-replication.md)  
+ [SQL Server 복제](../../../relational-databases/replication/sql-server-replication.md)  
   
   

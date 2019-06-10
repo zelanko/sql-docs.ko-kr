@@ -14,46 +14,27 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49c2c6e7f607717ed9639e11d9513f486b5585ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d1cb8408c01dd02528f80cf44b0516e0d12000b2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207642"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796612"
 ---
 # <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Always On 가용성 그룹 내 복제본에 대한 세션 제한 시간 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 복제본의 세션 제한 시간을 구성하는 방법에 대해 설명합니다. 세션 제한 시간은 가용성 복제본이 연결이 실패한 것으로 간주되기 전에 연결된 복제본에서 ping 응답을 받기 위해 기다리는 최대 시간(초)을 제어하는 복제본 속성입니다. 기본적으로 복제본은 ping 응답을 받기 위해 10초 동안 기다립니다. 이 복제본 속성은 지정된 보조 복제본과 가용성 그룹의 주 복제본 사이의 연결에만 적용됩니다. 세션 제한 시간에 대한 자세한 내용은 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [권장 사항](#Recommendations)  
-  
-     [보안](#Security)  
-  
--   **세션 제한 시간을 변경하려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+   
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+##  <a name="Recommendations"></a> 권장 사항  
  제한 시간을 10초 이상으로 유지하는 것이 좋습니다. 10초 미만의 값을 설정하면 로드가 많은 시스템에서 PING을 누락하여 잘못된 실패를 선언할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+## <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

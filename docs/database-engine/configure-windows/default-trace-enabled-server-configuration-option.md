@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1322d668-44f4-469e-8fd6-e0d02a81c8f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6feb0ba5881dc327ecefc23db5d6ed3276ed593d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f4d21984f0e91cba610d89c4a4f71c3abf25ea07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599384"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767931"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

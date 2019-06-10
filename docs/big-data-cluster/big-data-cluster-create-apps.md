@@ -5,18 +5,18 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 �
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6c8f4aea32ba409a00dd1d8f3fb5487e2a4a9d90
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: aa95621178b26becd5985fd60b7b2d3588607d17
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743973"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801873"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 

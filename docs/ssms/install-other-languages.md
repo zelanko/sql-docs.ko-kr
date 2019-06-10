@@ -1,8 +1,6 @@
 ---
 title: SSMS(SQL Server Management Studio)의 영어가 아닌 언어 버전 설치 | Microsoft Docs
 description: 영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
-ms.custom: ''
-ms.date: 04/25/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,14 +8,16 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bcc4080d3ee25f22f0bd574258f3be26c331c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.custom: ''
+ms.date: 04/25/2019
+ms.openlocfilehash: 43b7135881d6c4b7917725771426a1180e5ab7e1
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65093765"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500270"
 ---
-# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치 
+# <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
 
 SSMS는 여러 언어로 사용할 수 있지만 시스템 로캘이 SSMS 언어와 일치하지 않을 경우 SSMS 설치 관리자는 컴퓨터에서 설치를 차단합니다.
 

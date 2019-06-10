@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1b183c1284be0258fa4bc67fe08748f6c672a59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3d57f24173a91c80d613c29fc83a2e3b3a05f829
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767332"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772237"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

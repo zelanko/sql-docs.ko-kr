@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7860afbb60d0911c61c479bb19e2b39c5b1e75e9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8f9b16bf035d2666eb3f6237a6a04aa49dd8a0fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606573"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775824"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>SCM 서비스 - 사용된 계정의 암호 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "51606573"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호를 변경하려면 [암호 만료](https://msdn.microsoft.com/library/9831b194-9ad5-47b0-8009-59c7aef4319b)를 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 설정을 변경하도록 디자인 되고 권한이 부여된 도구입니다. Windows 서비스 제어 관리자( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.msc **) 애플리케이션을 사용하여**서비스를 변경하면 일부 필수 설정은 변경되지 않으며 서비스가 제대로 작동하지 않을 수 있습니다. 그러나 클러스터형 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 액티브 노드의 암호를 변경한 후에는 서비스 제어 관리자를 사용하여 패시브 노드의 암호를 변경해야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  서비스에 사용되는 암호를 변경하려면 컴퓨터의 관리자여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server 구성 관리자 사용  
@@ -48,7 +48,7 @@ ms.locfileid: "51606573"
 1.  **시작** 단추를 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 응용 프로그램으로 표시되지 않습니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 최신 버전의 Windows에서 애플리케이션으로 표시되지 않습니다.  
     >   
     >  -   **Windows 10**:  
     >          [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **시작 페이지**에 SQLServerManager13.msc를 입력합니다( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 경우 13을 더 작은 수로 바꿉니다. SQLServerManager13.msc를 클릭하면 구성 관리자가 열립니다. 구성 관리자를 시작 페이지나 작업 표시줄에 고정하려면 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭한 다음 **파일 위치 열기**를 클릭합니다. Windows 파일 탐색기에서 SQLServerManager13.msc를 마우스 오른쪽 단추로 클릭하고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 클릭합니다.  
@@ -57,9 +57,9 @@ ms.locfileid: "51606573"
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server(**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server(** \<instancename> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server(**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server(** \<instancename> **) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하지 않아도 암호가 즉시 적용됩니다.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "51606573"
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server 에이전트 (**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server 에이전트 (** \<instancename> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server 에이전트 (**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server 에이전트 (** \<instancename> **) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   
      독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하지 않아도 암호가 즉시 적용됩니다. 클러스터형 인스턴스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 오프라인 상태로 만들 수 있으므로 다시 시작해야 합니다.  
   

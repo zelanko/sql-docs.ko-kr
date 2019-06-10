@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+manager: jroth
+ms.openlocfilehash: 4c0fd20a264223fe5a85864bd1a8b2331664eac0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241861"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783697"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 보조 복제본 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "59241861"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **복제본을 추가하려면**  
   
-1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리를 변경(**cd**)합니다.  
+1.  주 복제본을 호스트하는 서버 인스턴스로 디렉터리(**cd**)를 변경합니다.  
   
 2.  **New-SqlAvailabilityReplica** cmdlet을 사용합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "59241861"
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> 후속 작업: 보조 복제본을 추가한 후  
  기존 가용성 그룹에 대한 복제본을 추가하려면 다음 단계를 수행해야 합니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "59241861"
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [BACKUP_PRIORITY](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
+ [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   

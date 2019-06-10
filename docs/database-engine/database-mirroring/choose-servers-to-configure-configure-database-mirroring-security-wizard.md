@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8489e910defaa7d5f27c36aea2425dc1bec39a03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 31c9ce74c6638925b1a91ab6d63abb8c759324cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609421"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774962"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>구성할 서버 선택(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47609421"
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **주 서버 인스턴스**  
  주 서버에 대한 보안을 구성하려면 선택합니다.  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 63215e0746f5f2cea679213ba275d40d6102c930
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef39e9a8b86d348383537ec6786c08361b60df59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623691"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774777"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47623691"
   
  ![로그 전달 및 데이터베이스 미러링](../../database-engine/database-mirroring/media/logshipping-and-dbm-automatic-failover.gif "로그 전달 및 데이터베이스 미러링")  
   
- 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향  
  원격 모니터링 인스턴스에 로그 전달이 사용될 때 로그 전달 세션과 데이터베이스 미러링을 함께 사용하면 모니터 테이블의 정보에 영향을 줍니다. 기본 서버에 대한 정보는 주/기본 서버에서 구성된 정보와 각 보조 서버에서 구성된 모니터 정보가 결합된 것입니다.  

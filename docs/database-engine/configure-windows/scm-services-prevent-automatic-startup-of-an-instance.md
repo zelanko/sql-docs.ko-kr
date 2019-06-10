@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: c2116101f7e9b0ab51cf3e7c5e4066f0e55a0d1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590286"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771874"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>SCM 서비스 - 인스턴스 자동 시작 방지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "53590286"
   
 3.  세부 정보 창에서 **MSSQLServer**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<**_인스턴스 이름_**> 속성** 대화 상자에 있는 **서비스** 탭의 **일반** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
+4.  **SQL Server \<** _인스턴스 이름_ **> 속성** 대화 상자에 있는 **서비스** 탭의 **일반** 상자에서 **시작 모드**의 값을 **수동**으로 설정합니다.  
   
-5.  **확인**을 클릭하여 **SQL Server \<**_instancename_**> 속성** 대화 상자를 닫은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
+5.  **확인**을 클릭하여 **SQL Server \<** _instancename_ **> 속성** 대화 상자를 닫은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

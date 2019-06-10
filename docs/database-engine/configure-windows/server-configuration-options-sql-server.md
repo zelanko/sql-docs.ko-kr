@@ -29,13 +29,13 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dde0a65630c5c8c543cd2f6fe9edfa0063d8dc04
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 4fa7c613c98b01ecda5e535928c7e381beef8aa6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671399"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775717"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "59671399"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+(*\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + (*\<프로세서 수>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 1024, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 최대 2048을 설정하는 것이 좋습니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|0<br /><br /> 0을 선택하면 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (256+( *\<프로세서 수>* -4) * 8) 수식을 사용하고, 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 (512 + ( *\<프로세서 수>* - 4) * 8) 수식을 사용하여 프로세서 수에 따라 최대 작업자 스레드 수가 자동으로 구성됩니다. **참고:** 32비트 운영 체제에서 제공되었던 마지막 버전은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]입니다.|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  

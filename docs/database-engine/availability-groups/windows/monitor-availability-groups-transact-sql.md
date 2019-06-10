@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209432"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779165"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,27 +32,8 @@ ms.locfileid: "53209432"
 > [!TIP]  
 >  ID 열로 뷰를 조인하여 한 번의 쿼리로 여러 뷰에서 정보를 반환할 수 있습니다.  
   
- **항목 내용:**  
   
--   [사용 권한](#Permissions)  
-  
--   **Transact-SQL을 사용하여 모니터링할 대상:**  
-  
-     [서버 인스턴스의 Always On 가용성 그룹 기능](#AoAgFeatureOnSI)  
-  
-     [WSFC 클러스터의 가용성 그룹](#WSFC)  
-  
-     [가용성 그룹](#AvGroups)  
-  
-     [가용성 복제본](#AvReplicas)  
-  
-     [가용성 데이터베이스](#AvDbs)  
-  
-     [가용성 그룹 수신기](#AGlisteners)  
-  
--   [관련 작업](#RelatedTasks)  
-  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 카탈로그 뷰를 사용하려면 서버 인스턴스에 대한 모든 정의 보기 권한이 필요합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 동적 관리 뷰를 사용하려면 서버에 대한 서버 상태 보기 권한이 필요합니다.  
   
 ##  <a name="AoAgFeatureOnSI"></a> 서버 인스턴스의 Always On 가용성 그룹 모니터링 기능  
@@ -189,7 +170,7 @@ ms.locfileid: "53209432"
 >  주 복제본 위치는 가용성 그룹의 권한이 있는 원본입니다.  
   
 > [!NOTE]  
->  가용성 데이터베이스의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 성능 카운터( **SQLServer:Database Replica** 성능 개체)에 대한 자세한 내용은 [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)을 참조하세요. 또한 가용성 데이터베이스에서 트랜잭션 로그 작업을 모니터링하려면 **SQLServer:Databases** 성능 개체: **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec** 및 **Log Pool Requests/sec** 카운터를 사용합니다. 자세한 내용은 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)을 참조하세요.  
+>  가용성 데이터베이스의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 성능 카운터( **SQLServer:Database Replica** 성능 개체)에 대한 자세한 내용은 [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)을 참조하세요. 또한 가용성 데이터베이스에서 트랜잭션 로그 작업을 모니터링하려면 **SQLServer:Databases** 성능 개체: **Log Flush Write Time (ms)** , **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec** 및 **Log Pool Requests/sec** 카운터를 사용합니다. 자세한 내용은 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)을 참조하세요.  
   
 ##  <a name="AGlisteners"></a> 가용성 그룹 수신기 모니터링  
  WSFC 클러스터의 서브넷에서 가용성 그룹 수신기를 모니터링하려면 다음 뷰를 사용합니다.  

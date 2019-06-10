@@ -10,19 +10,19 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b7e44d2a4e9d5e368b9232706ab53e1fd8ad6eac
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 7945dd9b6ed8ffada7defa2808f6bbe482dec9c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416514"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794869"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 스토리지를 사용하여 SQL Server 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작해서 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작해서 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 스토리지 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
   
 > [!NOTE]  
 >  Filestream이 현재 SMB 파일 공유에서 지원되지 않습니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "52416514"
      도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 \<*domain_name*>\\<*computer_name*>\*$* 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 SMB 파일 공유를 저장소 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 SMB 파일 공유를 스토리지 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
     >   
     >  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. \<*domain_name*>\\<*computer_name*>\*$* 형식으로 컴퓨터 계정을 프로비전합니다.  
   

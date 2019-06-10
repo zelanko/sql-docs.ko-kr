@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 상태 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 76838876dba8fc52ba8a4c92f9e428d61140bc21
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 4d85164f1e66f603067b4502e5a103c0abe9befa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995061"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779361"
 ---
 # <a name="mssqlctl-cluster-status"></a>mssqlctl 클러스터 상태
 

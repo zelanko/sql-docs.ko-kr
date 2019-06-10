@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 688339a6f598ed43e6128f7b40be9d1ec91dc8c8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 0b85c75d024edd1e7e53eee08e21683aa7412bbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131224"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775736"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 서비스 - 서버 시작 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 시작될 때마다 사용할 시작 옵션을 구성하는 방법에 대해 설명합니다. 시작 옵션 목록에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ### <a name="limitations-and-restrictions"></a>제한 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 시작 매개 변수를 레지스트리에 씁니다. 이러한 매개 변수는 다음에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 시작할 때 적용됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54131224"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  레지스트리에서 관련 항목을 변경할 수 있는 사용자만 서버 시작 옵션을 구성할 수 있습니다. 해당되는 사용자는 다음과 같습니다.  
   
 -   로컬 Administrators 그룹의 멤버  
@@ -63,7 +63,7 @@ ms.locfileid: "54131224"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  오른쪽 창에서 **SQL Server(**_<instance_name>_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  오른쪽 창에서 **SQL Server(** _<instance_name>_ **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **시작 매개 변수** 탭의 **시작 매개 변수 지정** 상자에 매개 변수를 입력하고 **추가**를 클릭합니다.  
   

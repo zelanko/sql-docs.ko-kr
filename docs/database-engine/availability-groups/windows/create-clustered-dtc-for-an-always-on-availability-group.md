@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 92a75d72a280d3d9e329f38a661a65f9c491cb3b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069779"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793481"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 클러스터형 DTC 리소스 만들기
 

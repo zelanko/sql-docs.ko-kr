@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: dbfa8c5acd998fed28546baf8b16af09d3abae07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545389"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787707"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

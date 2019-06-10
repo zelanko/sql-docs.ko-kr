@@ -4,19 +4,19 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 저장소 풀 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2db7bf6da35056f86b5220adeb65adcbad7b0221
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 7b954c68eb18e04ea504735257e58214cefa3d4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995021"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779380"
 ---
-# <a name="mssqlctl-cluster-storage-pool"></a>mssqlctl 클러스터 저장소 풀
+# <a name="mssqlctl-cluster-storage-pool"></a>mssqlctl 클러스터 스토리지 풀
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

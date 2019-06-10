@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 40350310858415cd7e5451bbd2f99e9d00ddbf4a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211232"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793564"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>기존 보조 복제본 연결 페이지 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

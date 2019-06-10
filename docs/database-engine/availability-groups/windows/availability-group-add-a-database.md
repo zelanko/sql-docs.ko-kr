@@ -14,28 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 262a4538774d2827d60367d1d96a12fb15e2d0f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860444"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789428"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 데이터베이스 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 Always On 가용성 그룹에 데이터베이스를 추가하는 방법을 설명합니다.  
   
--   **시작하기 전 주의 사항:**  
-  
-     [필수 구성 요소 및 제한 사항](#prerequisites-and-restrictions)    
-     [사용 권한](#Permissions)    
--   **가용성 그룹에 데이터베이스를 추가하려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)    
-     [Transact-SQL](#TsqlProcedure)    
-     [PowerShell](#PowerShellProcedure)  
-  
+
   
 ## <a name="prerequisites-and-restrictions"></a>사전 요구 사항 및 제한 사항  
   
@@ -43,8 +34,7 @@ ms.locfileid: "58860444"
   
 -   데이터베이스는 주 복제본을 호스팅하는 서버 인스턴스에 있어야 하며 가용성 데이터베이스에 대한 사전 요구 사항과 제한 사항을 준수해야 합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
-##  <a name="Security"></a> 보안  
-  
+ 
 ##  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   

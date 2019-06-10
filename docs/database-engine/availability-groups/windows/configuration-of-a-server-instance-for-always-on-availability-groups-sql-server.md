@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86082ab7b584e2aa0cccce1165617a574ca9b080
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 65feba8f50d4f293e97f9443c0ff006bf40b5029
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973453"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772620"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>SQL Server 인스턴스에 대해 Always On 가용성 그룹 기능 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +28,7 @@ ms.locfileid: "57973453"
   
 > [!IMPORTANT]  
 >  WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]필수 구성 사항 및 제한 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
-  
- **항목 내용:**  
-  
--   [용어 및 정의](#TermsAndDefinitions)  
-  
--   [Always On 가용성 그룹을 지원하도록 서버 인스턴스를 구성하려면](#ConfigSI)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
-  
+   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  [Always On 가용성 그룹](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다.  
@@ -100,7 +90,7 @@ ms.locfileid: "57973453"
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Always On 가용성 그룹: 상호 운용성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
  [장애 조치(failover) 클러스터링 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

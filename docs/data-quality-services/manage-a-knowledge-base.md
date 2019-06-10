@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9cfa9f3770c0a9ce5b5ac6ae176a33f92d9b79c9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f23bdacdb3ddef9bd87187a5e7c3c9cc1b54d2af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488308"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776196"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779519"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794112"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 

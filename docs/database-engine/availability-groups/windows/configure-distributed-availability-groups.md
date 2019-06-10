@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566562"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793739"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>분산 Always On 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

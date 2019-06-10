@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395485"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772154"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Windows 인증은 사용자를 SQL Server에 인증하는 데 사용하는 기본 인증 방법입니다. Windows 인증을 사용하는 클라이언트는 NTLM이나 Kerberos를 사용하여 인증됩니다. Active Directory 환경에서는 항상 Kerberos 인증이 먼저 시도됩니다. 명명된 파이프를 사용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 클라이언트에는 Kerberos 인증을 사용할 수 없습니다.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스를 시작하면 서비스가 SPN(서비스 사용자 이름)을 등록하려고 합니다. SQL Server를 시작하는 계정에 Active Directory Domain Services에 SPN을 등록할 권한이 없으면 이 호출이 실패하고 애플리케이션 이벤트 로그와 SQL Server 오류 로그에 경고 메시지가 기록됩니다. SPN을 등록하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 로컬 시스템(권장되지 않음) 또는 NETWORK SERVICE와 같은 기본 제공 계정이나 도메인 관리자 계정과 같은 SPN 등록 권한이 있는 계정으로 실행되고 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가  [!INCLUDE[win7](../../includes/win7-md.md)] 또는  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 운영 체제에서 실행 중인 경우 가상 계정이나 MSA(관리 서비스 계정)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행할 수 있습니다. 가상 계정 및 MSA 모두 SPN을 등록할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행되고 있지 않으면 시작할 때 SPN이 등록되지 않으므로 도메인 관리자가 SPN을 수동으로 등록해야 합니다.  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **명명된 인스턴스**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]**, 여기서:  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** , 여기서:  
   
     -   **MSSQLSvc** 는 등록할 서비스입니다.  
   
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **기본 인스턴스**  
   
--   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, 여기서:  
+-   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>** , 여기서:  
   
     -   **MSSQLSvc** 는 등록할 서비스입니다.  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > SPN에 TCP 포트가 포함되는 TCP/IP 연결의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Kerberos 인증을 사용하여 연결하는 사용자를 위해 TCP 프로토콜을 사용하도록 설정해야 합니다. 
 
 ##  <a name="Auto"></a> SPN 자동 등록  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>*:*\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 SPN을 등록하려고 하고, 인스턴스가 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 SPN의 등록을 취소하려고 합니다. TCP/IP 연결의 경우 SPN은 *MSSQLSvc/\<FQDN>* : *\<tcpport>* 형식으로 등록됩니다. 명명된 인스턴스와 기본 인스턴스는 모두 *MSSQLSvc*로 등록되며, *\<tcpport>* 값을 사용하여 구분합니다.  
   
- Kerberos를 지원하는 다른 연결의 경우 SPN은 명명된 인스턴스에 대해 *MSSQLSvc/\<FQDN>*/*\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
+ Kerberos를 지원하는 다른 연결의 경우 SPN은 명명된 인스턴스에 대해 *MSSQLSvc/\<FQDN>* / *\<instancename>* 형식으로 등록됩니다. 기본 인스턴스는 *MSSQLSvc/\<FQDN>* 형식으로 등록됩니다.  
   
  서비스 계정에 이러한 동작을 수행하는 데 필요한 권한이 없는 경우에는 수동으로 SPN을 등록하거나 등록 취소해야 합니다.  
   

@@ -23,20 +23,20 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334460"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719434"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   조인 힌트는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 쿼리 최적화 프로그램이 두 테이블 간의 조인 전략을 강제 적용하도록 지정합니다. 조인 및 조인 구문에 대한 자세한 내용은 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 일반적으로 쿼리에 대해 최적의 실행 계획을 선택하므로 \<join_hint>를 포함한 힌트는 숙련된 개발자나 데이터베이스 관리자가 마지막 수단으로만 사용하는 것이 좋습니다.
+> [!CAUTION]  
+>  일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리에 대해 최상의 실행 계획을 선택하므로 숙련된 개발자 및 데이터베이스 관리자가 마지막 방법으로만 힌트를 사용하는 것이 좋습니다.
   
  **적용 대상:**  
   

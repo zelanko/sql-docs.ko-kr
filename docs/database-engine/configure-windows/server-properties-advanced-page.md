@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c11918f1f6c0d57b799e78cf2d653c9c445673fa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619511"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771775"
 ---
 # <a name="server-properties---advanced-page"></a>서버 속성 - 고급 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47619511"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 연결, 복원 또는 복사하면 데이터베이스를 바로 사용할 수 있으며 해당 데이터베이스가 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
  **최대 텍스트 복제 크기**  
- 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 복제된 열 또는 캡처된 열에 추가할 수 있는 **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**및 **image** 데이터의 최대 크기(바이트)를 지정합니다. 설정을 변경하면 즉시 적용됩니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
+ 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 복제된 열 또는 캡처된 열에 추가할 수 있는 **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **xml**및 **image** 데이터의 최대 크기(바이트)를 지정합니다. 설정을 변경하면 즉시 적용됩니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
   
  **시작 프로시저 검색**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 저장 프로시저의 자동 실행을 검색하도록 지정합니다. 이 옵션을 **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 정의된 자동 실행 저장 프로시저를 모두 검색하여 실행합니다. **False** (기본값)로 설정하면 검색을 수행하지 않습니다. 자세한 내용은 [scan for startup procs 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)을 참조하세요.  

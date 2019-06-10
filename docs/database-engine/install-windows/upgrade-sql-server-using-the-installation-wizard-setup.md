@@ -13,13 +13,13 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 9deb380eb4c92b283afac6f1bdcbe3c85c98beb1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533974"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794734"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)
 

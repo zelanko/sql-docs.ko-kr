@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfebc4164264e2deeb02ab5f8e9f8b8b6ef64655
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753913"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795209"
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47753913"
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
  *SYSTEM***\\***INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47753913"
 -   *server_instance_name***에 연결됨**  
   
     > [!NOTE]  
-    >  **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 이 상태는 *server_instance_name***에 연결됨****(제한된 사용 권한)** 입니다.  
+    >  **sysadmin** 고정 서버 역할의 멤버가 아닌 경우 이 상태는 *server_instance_name***에 연결됨** **(제한된 사용 권한)** 입니다.  
   
  각 파트너 서버 인스턴스의 이름이 별도의 *서버 인스턴스 및 서버 인스턴스의 연결 상태* 필드에 표시됩니다. 모니터 실행이 시작되면 맨 위 필드에 주 서버가 나열됩니다.  
   

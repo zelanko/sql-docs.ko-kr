@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8126cd6d7dba1f8cfab856d4e7b76288581e7f87
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8ee125ffe39eb6af2034d9a88c95efa3a1a8fcf1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209312"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800676"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>동적 관리 뷰 및 시스템 카탈로그 뷰(Always On 가용성 그룹)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135773"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775773"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 서비스 - 다른 컴퓨터에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "54135773"
   
 8.  **스냅인 추가/제거** 창에서 **확인**을 클릭합니다.  
   
-9. **컴퓨터 관리 (**_\<컴퓨터 이름&gt;_**)** 와 **서비스 및 애플리케이션**을 펼칩니다.  
+9. **컴퓨터 관리 (** _\<컴퓨터 이름&gt;_ **)** 와 **서비스 및 애플리케이션**을 펼칩니다.  
   
 10. **SQL Server 구성 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **여기에서 창 새로 만들기**를 클릭합니다.  
   

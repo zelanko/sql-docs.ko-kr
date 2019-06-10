@@ -15,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 07470283d3f6028fae4b6435d6134813601009e0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 735822224ef24dc609ca0f84c3265e89f1f63240
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012874"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462610"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Azure Data Lake Analytics 연결 관리자
 
@@ -45,7 +45,7 @@ Data Lake Analytics 연결 관리자는 [Azure용 SSIS(SQL Server Integration Se
    1. **Azure AD 사용자 ID** 인증 옵션을 선택하는 경우:
    
       i. **사용자 이름** 및 **암호** 필드에 값을 제공합니다.    
-      ii. 연결을 테스트하려면 **연결 테스트**를 선택합니다. 사용자 또는 테넌트 관리자가 SSIS를 Data Lake Analytics 계정에 액세스할 수 있도록 이전에 동의하지 않은 경우 메시지가 표시되면 **동의**를 선택합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)을 참조하세요.
+      ii. 연결을 테스트하려면 **연결 테스트**를 선택합니다. 사용자 또는 테넌트 관리자가 SSIS를 Data Lake Analytics 계정에 액세스할 수 있도록 이전에 동의하지 않은 경우 메시지가 표시되면 **동의**를 선택합니다. 이 동의 환경에 대한 자세한 내용은 [Azure Active Directory와 애플리케이션 통합](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad)을 참조하세요.
     
    > [!NOTE] 
    > **Azure AD 사용자 ID** 인증 옵션을 선택하는 경우 다단계 인증과 Microsoft 계정 인증이 지원되지 않습니다.

@@ -8,13 +8,13 @@ ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 628dc461454a72e7f18e70b53f4134f507169fe5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f0676a65fbc30d58e81b4e7a56d6a78756b72040
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623872"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781024"
 ---
 # <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

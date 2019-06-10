@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429339"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767722"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

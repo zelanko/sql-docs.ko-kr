@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
-ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
+ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798099"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 

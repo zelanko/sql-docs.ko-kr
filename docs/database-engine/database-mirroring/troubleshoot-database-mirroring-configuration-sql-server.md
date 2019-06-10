@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 714481541ee0060759aff3533add80d04ceebc8b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795115"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>데이터베이스 미러링 구성 문제 해결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54257188"
 |[네트워크 액세스](#NetworkAccess)|각 서버 인스턴스에서 TCP를 통해 다른 서버 인스턴스의 포트에 액세스할 수 있어야 한다는 요구 사항에 대해 설명합니다.|  
 |[미러 데이터베이스 준비](#MirrorDbPrep)|미러링이 시작될 수 있도록 미러 데이터베이스를 준비하기 위한 요구 사항을 요약합니다.|  
 |[파일 생성 작업 실패](#FailedCreateFileOp)|파일 생성 작업이 실패할 경우의 대처 방법에 대해 설명합니다.|  
-|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 문의 필요한 순서에 대해 설명합니다.|  
+|[Transact-SQL을 사용하여 미러링 시작](#StartDbm)|ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 문의 필요한 순서에 대해 설명합니다.|  
 |[데이터베이스 간 트랜잭션](#CrossDbTxns)|자동 장애 조치(Failover)를 사용할 경우 미결 트랜잭션이 자동으로 잘못 해결될 수 있습니다. 이러한 이유로 데이터베이스 미러링은 데이터베이스 간 트랜잭션을 지원하지 않습니다.|  
   
 ##  <a name="Accounts"></a> 계정  
@@ -144,7 +144,7 @@ ms.locfileid: "54257188"
  자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) 또는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
 ##  <a name="StartDbm"></a> Transact-SQL을 사용하여 미러링 시작  
- ALTER DATABASE *database_name* SET PARTNER **='**_partner_server_**'** 문을 실행하는 순서는 매우 중요합니다.  
+ ALTER DATABASE *database_name* SET PARTNER **='** _partner_server_ **'** 문을 실행하는 순서는 매우 중요합니다.  
   
 1.  미러 서버에서 첫 번째 문을 실행해야 합니다. 이 문을 실행할 때는 미러 서버에서 다른 서버 인스턴스에 연결하지 않고 대신 주 서버가 미러 서버에 접속할 때까지 기다리도록 해당 데이터베이스에 지시합니다.  
   

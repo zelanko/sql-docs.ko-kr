@@ -12,33 +12,20 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b7bca3c8d49950fa58dc128192c817f0def36ee2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506552"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803527"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 Transact-SQL 문
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 배포와 지정된 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스의 생성 및 관리를 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 문을 소개합니다.  
   
- **항목 내용:**  
-  
--   [CREATE ENDPOINT](#CreateEndpoint)  
-  
--   [CREATE AVAILABILITY GROUP](#CreateAG)  
-  
--   [ALTER AVAILABILITY GROUP](#AlterAG)  
-  
--   [ALTER DATABASE SET HADR 옵션](#AlterDb)  
-  
--   [DROP AVAILABILITY GROUP](#DropAG)  
-  
--   [AVAILABILITY GROUP TRANSACT-SQL 문에 대한 제한 사항](#Restrictions)  
-  
+ 
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md)은 데이터베이스 미러링 엔드포인트를 만듭니다(서버 인스턴스에 없는 경우). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링을 배포할 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다.  
   

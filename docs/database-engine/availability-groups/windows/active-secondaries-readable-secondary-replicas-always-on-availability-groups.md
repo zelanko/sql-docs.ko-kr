@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e64c26d781bc7200540f6482185cc71e6214c64b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206272"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783711"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ ms.locfileid: "53206272"
 -   접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 따라서 주 데이터베이스에서 통계를 만들 때 이 접미사를 사용할 수 없습니다. 자세한 내용은 [Statistics](../../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
   
 ##  <a name="bkmk_AccessInMemTables"></a> 보조 복제본에서 메모리 최적화 테이블 액세스  
- 보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 보조 복제본의 메모리 액세스에 최적화된 테이블에 사용할 수 있는 트랜잭션 격리 수준은 주 복제본의 경우와 동일합니다. 세션 수준 격리 수준을 READ COMMITTED로 설정하고 데이터베이스 수준 옵션 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하는 것이 좋습니다. 예를 들어  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  

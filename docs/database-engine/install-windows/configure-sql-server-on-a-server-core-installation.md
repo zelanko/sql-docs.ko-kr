@@ -13,13 +13,13 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9aa75a4d0ca9b66c37cb57ee603d513c6912b751
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209072"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794965"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
 
@@ -110,7 +110,7 @@ Net 서비스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
 5. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**를 두 번 클릭합니다.  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스**를 클릭하고, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**(\<인스턴스 이름>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<인스턴스 이름>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 관리자**에서 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스**를 클릭하고, **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<인스턴스 이름>)를 마우스 오른쪽 단추로 클릭한 다음 [속성]을 클릭합니다. 여기서 \<인스턴스 이름>은 Always On 가용성 그룹을 사용하도록 설정하려는 로컬 서버 인스턴스의 이름입니다.  
   
 7. **AlwaysOn 고가용성** 탭을 선택합니다.  
   

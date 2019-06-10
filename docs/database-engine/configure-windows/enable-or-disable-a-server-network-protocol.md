@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d41ee42e17dc8f501749599e56ab31e01ba6f85d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 55b104222d746e3d10641ecf61b7059e519f0717
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803250"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "53591737"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.  
   
-2.  콘솔 창에서 _\<인스턴스 이름>_**에 대한 프로토콜**을 클릭합니다.  
+2.  콘솔 창에서 _\<인스턴스 이름>_ **에 대한 프로토콜**을 클릭합니다.  
   
 3.  세부 정보 창에서 변경할 프로토콜을 마우스 오른쪽 단추로 클릭한 다음 **사용** 또는 **사용 안 함**을 클릭합니다.  
   
 4.  콘솔 창에서 **SQL Server 서비스**를 클릭합니다.  
   
-5.  세부 정보 창에서 **SQL Server(**_\<인스턴스 이름>_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
+5.  세부 정보 창에서 **SQL Server(** _\<인스턴스 이름>_ **)** 를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지하고 다시 시작합니다.  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell 사용  
   

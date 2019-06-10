@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832085"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799254"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 보조 데이터베이스 준비
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "55832085"
 ###  <a name="Security"></a> 보안  
  데이터베이스를 백업하면 [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md) 이 OFF로 설정됩니다. 따라서 새로 복원된 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
  복원할 데이터베이스가 서버 인스턴스에 없으면 RESTORE 문에 CREATE DATABASE 권한이 있어야 합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)를 통해 복원할 수 없습니다.  

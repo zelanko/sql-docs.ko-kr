@@ -15,13 +15,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 0a2942ac69ba5ed6d381c6377b08b551be94f589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 879d98b00c4728d9a93ea34e08e2fd98964f4e13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711571"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794796"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017에 지원되는 버전 및 에디션 업그레이드
 
@@ -121,7 +121,7 @@ ms.locfileid: "47711571"
   
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] 큐브를 백업하고 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에 복원합니다.  
   
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]로 업그레이드하는 경우 데이터베이스 호환성 수준이 90에서 100으로 변경됩니다. ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서 데이터베이스 호환성 수준에 유효한 값은 100, 110, 120, 130 및 140입니다.) [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서는 호환성 수준 변경이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 미칠 수 있는 영향에 대해 설명합니다.  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]로 업그레이드하는 경우 데이터베이스 호환성 수준이 90에서 100으로 변경됩니다. ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서 데이터베이스 호환성 수준에 유효한 값은 100, 110, 120, 130 및 140입니다.) [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서는 호환성 수준 변경이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 미칠 수 있는 영향에 대해 설명합니다.  
   
 위의 목록에 지정되지 않은 모든 시나리오는 지원되지 않습니다. 여기에는 다음이 포함되지만 이에 제한되지 않습니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "47711571"
   
  \*[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Express with Tools 및 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Express with Advanced Services에도 적용됩니다.  
   
- **[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
+ ** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 장애 조치(failover) 클러스터의 버전 변경은 제한됩니다. 다음과 같은 시나리오는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 장애 조치(Failover) 클러스터에서 지원되지 않습니다.  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Enterprise를 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] Developer, Standard 또는 Evaluation으로 변경  
   

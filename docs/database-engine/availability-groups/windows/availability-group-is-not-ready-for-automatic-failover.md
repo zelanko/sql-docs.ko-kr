@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2951f586d252d058d7de542160f8b103b6a79bef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 2107137f9b50a289e056042446c2d763f0b7cd23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210112"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800133"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않았습니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

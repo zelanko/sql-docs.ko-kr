@@ -14,13 +14,13 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: ba80e05e88811e0f6ceb2171250e623150c59f7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 1d5cc341dfdf35bafdd8cca63e5b7fd330890551
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537857"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795040"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>SQL Server 인스턴스에 기능 추가(설치 프로그램)
 
@@ -34,7 +34,7 @@ ms.locfileid: "52537857"
  계속하기 전에 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md) 문서를 검토합니다.  
   
 > [!NOTE]  
->  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
+>  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 기능을 추가할 경우 기존 사용 보고서 설정이 새로 추가된 기능에 적용됩니다. 이러한 설정을 변경하려면 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 도구** 메뉴의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**오류 및 사용 보고** 도구를 사용합니다.  

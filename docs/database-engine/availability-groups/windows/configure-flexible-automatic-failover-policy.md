@@ -14,41 +14,26 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f710800d3ee7cbbb7a1fadef330289c26afe0d56
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126583"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793749"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 유연한 자동 장애 조치(failover) 정책 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹에 대해 유연한 장애 조치(failover) 정책을 구성하는 방법을 설명합니다. 유연한 장애 조치(failover) 정책을 통해 가용성 그룹에 대해 자동 장애 조치를 수행해야 하는 상태를 세부적으로 제어할 수 있습니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
-  
--   **시작하기 전 주의 사항:**  
-  
-     [자동 장애 조치에 대한 제한 사항](#Limitations)  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 유연한 장애 조치(failover) 정책을 구성하려면:**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+ 
     > [!NOTE]  
-    >  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 통해서는 가용성 그룹의 유연한 장애 조치(failover) 정책을 구성할 수 없습니다.  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Limitations"></a> 자동 장애 조치에 대한 제한 사항  
+ 
+## <a name="Limitations"></a> 자동 장애 조치에 대한 제한 사항  
   
 -   자동 장애 조치가 발생하려면 현재 주 복제본과 하나의 보조 복제본을 자동 장애 조치를 사용하는 동기-커밋 가용성 모드용으로 구성하고 보조 복제본을 주 복제본과 동기화해야 합니다.  
   
@@ -56,15 +41,13 @@ ms.locfileid: "54126583"
   
 -   가용성 그룹이 해당 WSFC 오류 임계값을 초과하면 WSFC 클러스터가 가용성 그룹에 대해 자동 장애 조치를 시도하지 않습니다. 또한 클러스터 관리자가 실패한 리소스 그룹을 수동으로 온라인 상태로 만들거나 데이터베이스 관리자가 가용성 그룹의 수동 장애 조치를 수행할 때까지 가용성 그룹의 WSFC 리소스 그룹이 실패한 상태로 유지됩니다. *WSFC 오류 임계값* 은 특정 기간 동안 가용성 그룹에 대해 지원되는 최대 오류 수로 정의됩니다. 기본 기간은 6시간이며, 이 기간 동안의 최대 오류 수에 대한 기본값은 *n*-1입니다. 여기서 *n* 은 WSFC 노드의 수입니다. 지정된 가용성 그룹에 대한 오류-임계값 값을 변경하려면 WSFC 장애 조치(Failover) 관리자 콘솔을 사용하세요.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
+   
+##  <a name="Permissions"></a> 사용 권한  
   
-###  <a name="Security"></a> 보안  
-  
-####  <a name="Permissions"></a> Permissions  
-  
-|태스크|Permissions|  
+|태스크|사용 권한|  
 |----------|-----------------|  
 |새로운 가용성 그룹에 대해 유연한 장애 조치(failover) 정책을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |기존 가용성 그룹의 정책을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  

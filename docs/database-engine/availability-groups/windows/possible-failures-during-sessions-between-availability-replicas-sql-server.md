@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 83db89086fe8370669600610695737c940f3468e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 832e77fc3e18ad9529a06078a66dc4e00ec7684e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211562"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798182"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"가용성 복제본 간의 연결 실패에 대한 가능한 원인 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

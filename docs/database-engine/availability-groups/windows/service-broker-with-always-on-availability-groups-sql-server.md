@@ -12,24 +12,19 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607113"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787842"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
- **항목 내용:**  
-  
--   [가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항](#ReceiveRemoteMessages)  
-  
--   [가용성 그룹의 원격 서비스에 메시지를 보내기 위한 요구 사항](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> 가용성 그룹의 서비스가 원격 메시지를 받기 위한 요구 사항  
   
@@ -120,7 +115,7 @@ ms.locfileid: "51607113"
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

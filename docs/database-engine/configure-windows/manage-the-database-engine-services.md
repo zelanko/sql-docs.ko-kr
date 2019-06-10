@@ -24,20 +24,20 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1e00098ec51f33dd89429d0c2af949391c707826
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a02c65cef27f9601ae7e4ae4f1c292f2673e5f6c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756971"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772364"
 ---
 # <a name="manage-the-database-engine-services"></a>데이터베이스 엔진 서비스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 운영 체제에서 서비스로 실행됩니다. 서비스는 시스템 백그라운드에서 실행되는 일종의 애플리케이션입니다. 서비스는 일반적으로 웹 지원, 이벤트 로깅 또는 파일 지원 등 운영 체제의 중요한 기능을 제공합니다. 서비스는 컴퓨터 바탕 화면에 사용자 인터페이스를 표시하지 않고 실행할 수 있습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 여러 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 서비스로 실행됩니다. 이러한 서비스는 일반적으로 운영 체제를 시작할 때 함께 시작되지만 설치 시 지정된 설정에 따라 달라질 수 있으며 일부 서비스는 기본적으로 시작되지 않습니다. 이 섹션에서는 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 관리에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로그인하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작, 중지, 일시 중지, 재개 및 다시 시작하는 방법에 대해 알아야 합니다. 로그인한 후에 서버 관리 또는 데이터베이스 쿼리와 같은 태스크를 수행할 수 있습니다.  
   
 ## <a name="using-the-sql-server-service"></a>SQL Server 서비스 사용  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스를 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작한 후 사용자는 서버에 새 연결을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 로컬 또는 원격에서 서비스로 시작 및 중지될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 기본 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)로, 명명된 인스턴스인 경우 MSSQL$*\<instancename>* 으로 참조됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스를 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작한 후 사용자는 서버에 새 연결을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 로컬 또는 원격에서 서비스로 시작 및 중지될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 기본 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)로, 명명된 인스턴스인 경우 MSSQL$ *\<instancename>* 으로 참조됩니다.  
   
 ## <a name="using-sql-server-configuration-manager"></a>SQL Server 구성 관리자 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하면 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지, 시작 또는 일시 중지할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "47756971"
   
  **Windows 8을 사용하여 SQL Server 구성 관리자에 액세스하려면**  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 Windows 8.0을 실행할 때 응용 프로그램으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **앱** 의 **검색**창에서 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우), **SQLServerManager11.msc** ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 경우) 또는 **SQLServerManager10.msc** ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 경우)를 입력한 다음 **Enter**키를 누릅니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 Windows 8.0을 실행할 때 애플리케이션으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **앱** 의 **검색**창에서 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우), **SQLServerManager11.msc** ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 경우) 또는 **SQLServerManager10.msc** ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 경우)를 입력한 다음 **Enter**키를 누릅니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
