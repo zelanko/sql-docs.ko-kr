@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c7ed2edb5eb62b6182b53859877b7f5d9b5b453
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 15d5b766d9ffd89f735b7c06f012caf467c34e57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589667"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794274"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>엔드포인트 URL 지정 - 가용성 복제본 추가 또는 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,18 +29,11 @@ ms.locfileid: "53589667"
 > [!NOTE]  
 >  "엔드포인트 URL"이라는 용어는 데이터베이스 미러링 사용자 인터페이스 및 설명서에서 사용하는 "서버 네트워크 주소"라는 용어와 동의어입니다.  
   
--   [엔드포인트 URL의 구문](#SyntaxOfURL)  
-  
--   [시스템의 정규화된 도메인 이름 찾기](#Finding_FQDN)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
  엔드포인트 URL의 구문은 다음 형식을 사용합니다.  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  여기서  
   
@@ -48,15 +41,15 @@ ms.locfileid: "53589667"
   
     -   WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드는 같은 도메인에 있으므로 컴퓨터 시스템의 이름(예: `SYSTEM46`)을 사용할 수 있습니다.  
   
-    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다(예: **[**_<IPv6_address>_**]**).  
+    -   IP 주소를 사용하려면 환경에서 고유한 주소여야 합니다. 정적인 경우에만 IP 주소를 사용하는 것이 좋습니다. IP 주소는 IP 버전 4(IPv4) 또는 IP 버전 6(IPv6)일 수 있습니다. IPv6 주소는 대괄호로 묶어야 합니다(예: **[** _<IPv6_address>_ **]** ).  
   
          시스템의 IP 주소를 확인하려면 Windows 명령 프롬프트에서 **ipconfig** 명령을 입력합니다.  
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         _computer_name_ **)을 사용할 수 있습니다.** _domain_segment_[...**.**_domain_segment_]  
+         _computer_name_ **)을 사용할 수 있습니다.** _domain_segment_[... **.** _domain_segment_]  
   
-         여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[...**.**_domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
+         여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[... **.** _domain_segment_]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
@@ -88,7 +81,7 @@ ms.locfileid: "53589667"
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
   
-#### <a name="c-using-ipv4"></a>3. IPv4 사용  
+#### <a name="c-using-ipv4"></a>C. IPv4 사용  
  다음 엔드포인트 URL은 IPv4 주소 `10.193.9.134` 및 포트 `7023`을 지정합니다.  
   
  `TCP://10.193.9.134:7023`  
@@ -127,11 +120,11 @@ ms.locfileid: "53589667"
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 #40;Transact-SQL &#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
     -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

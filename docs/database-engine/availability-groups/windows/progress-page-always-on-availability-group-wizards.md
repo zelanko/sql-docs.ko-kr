@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147af9a2eecfe58cfc329fd8ce22b0452e21c59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7701002d1e293e8c92be9226c7a483d79ac59758
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210497"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801058"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>진행률 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

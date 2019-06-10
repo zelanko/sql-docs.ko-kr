@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5b8e4848f42cbca03bb47c6cac2400068e54765
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772633"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

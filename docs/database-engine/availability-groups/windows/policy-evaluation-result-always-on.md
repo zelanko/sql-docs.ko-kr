@@ -13,25 +13,19 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 23c32528e590b0484082cd74429cdf472907fba1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201932"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798197"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>정책 평가 결과 페이지(Always On 대시보드)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Always On 대시보드의 **정책 평가 결과** 페이지를 사용하여 현재 정책 문제를 확인할 수 있습니다.  
-  
- **항목 내용:**  
-  
--   [대화 상자 옵션](#Options)  
-  
--   [관련 작업](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> 대화 상자 옵션  
  **검색된 문제**  
  검색된 각 문제에 대한 행을 표시합니다. 특정 문제와 연결된 아이콘은 다음과 같이 해당 문제의 심각도를 시각적으로 표시합니다.  

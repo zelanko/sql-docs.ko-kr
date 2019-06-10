@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7261b155c8dffa1d39a9e4354e03fb0cc7a8d1ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214724"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798161"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,15 +29,6 @@ ms.locfileid: "53214724"
 > [!NOTE]  
 >  가용성 그룹에서 읽기 가능한 주 데이터베이스 또는 보조 데이터베이스를 로그 전달 주 데이터베이스로 구성할 수 있습니다.  
   
- **항목 내용:**  
-  
--   [가용성 그룹 사전 요구 사항](#AGPrereqsRealAddress)  
-  
--   [로그 전달 사전 요구 사항](#LogShipPrereqs)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="AGPrereqsRealAddress"></a> 가용성 그룹 사전 요구 사항  
  가용성 그룹의 주 복제본에서 백업 작업이 실행되도록 허용하려면 다음 Always On 가용성 그룹 백업 설정을 사용합니다.  
@@ -110,7 +101,7 @@ ms.locfileid: "53214724"
   
      [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 고객 자문 팀 백서](https://sqlcat.com/)  
+     [SQL Server 고객 자문 팀 백서](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

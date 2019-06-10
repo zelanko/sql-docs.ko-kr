@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6fe633cf0dbeb64988c041b91b4e55ec3bd532cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee3fcfb29de3f029c8229e0092ee31c8a8faa007
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703141"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795391"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47703141"
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **미러 서버 인스턴스**  
  **데이터베이스 속성** 대화 상자의 **미러링** 페이지에서 미러 서버 인스턴스가 이미 지정되어 있으면 해당 인스턴스가 표시됩니다. 자세한 내용은 [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)을 참조하세요.  
   

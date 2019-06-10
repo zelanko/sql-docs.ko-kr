@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ab82bbc42ba6dc031a6187f728d4b451e41c3702
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a56193f453781bf25dc34079c9845a7d0566f820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480448"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785701"
 ---
 # <a name="create-a-knowledge-base"></a>기술 자료 만들기
 

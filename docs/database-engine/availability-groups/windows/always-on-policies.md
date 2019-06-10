@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d049d012c9447eeb79cd2d64435d37223540adb5
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+manager: jroth
+ms.openlocfilehash: 2f8fb49b90a0da28a4961806c7ace46bcb10f5db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044609"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789451"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>그룹 정책을 사용하여 Always On 가용성 그룹의 상태 평가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

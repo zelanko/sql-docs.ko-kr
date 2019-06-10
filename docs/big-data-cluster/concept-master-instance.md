@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 SQL Server 마스터 인스턴스를 설명 합니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6c3a9a425d5de55e7018c9e33b37a8e3d1a8e1c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860684"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783083"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 마스터 인스턴스란 무엇 인가요?
 

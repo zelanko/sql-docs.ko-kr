@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1862d8a-5f82-4647-a280-3e588b82a6dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1703e24458e21bf267c4b33ce458e7fedbead1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: f9df88d021ffa6aebbc30f3a733ece3b395ac102
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207762"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789592"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>가용성 그룹에 대한 SQL Server 리소스 DLL 상태 진단 로그
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

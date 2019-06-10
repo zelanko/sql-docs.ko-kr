@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421190"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462507"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "55421190"
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 스토리지 제한 검토
+- [가격 책정 계층](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)에 대한 메모리 내 OLTP 스토리지 제한 검토
 - [메모리 내 OLTP 스토리지 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
@@ -214,9 +214,9 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 #### <a name="hash-indexes"></a>해시 인덱스
 
-해시 인덱스는 '**=**' 연산자를 사용하여 정확한 해당 기본 키 값으로 하나의 특정 행에 액세스하는 가장 빠른 형식일 수 있습니다.
+해시 인덱스는 ' **=** ' 연산자를 사용하여 정확한 해당 기본 키 값으로 하나의 특정 행에 액세스하는 가장 빠른 형식일 수 있습니다.
 
-- '**!=**', '**>**' 또는 '**BETWEEN**'과 같은 부정확한 연산자를 해시 인덱스와 함께 사용할 경우 성능이 저하됩니다.
+- ' **!=** ', ' **>** ' 또는 '**BETWEEN**'과 같은 부정확한 연산자를 해시 인덱스와 함께 사용할 경우 성능이 저하됩니다.
 
 - 해시 인덱스는 키 값 중복 비율이 너무 높은 경우에는 최선의 선택이 아닐 수도 있습니다.
 

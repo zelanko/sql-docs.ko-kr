@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1591a4d23221526159a5ff9577997b199fd7f99c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd28758b2f5cb0c5e98ea8b24784369386e7bdce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799537"
 ---
 # <a name="client-network-configuration"></a>클라이언트 네트워크 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47597727"
   
  가장 간단한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 동일한 시스템에 있을 수 있습니다. 그러나 대개 클라이언트는 네트워크를 통해 하나 이상의 원격 서버에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 클라이언트/서버 아키텍처를 사용하여 네트워크 상의 여러 클라이언트 및 서버를 원활하게 관리할 수 있습니다. 대부분의 상황에서는 기본 클라이언트 구성으로 충분합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에는 다음과 같은 다양한 유형의 응용 프로그램이 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트에는 다음과 같은 다양한 유형의 애플리케이션이 있습니다.  
   
 -   OLE DB 소비자  
   
@@ -44,10 +44,10 @@ ms.locfileid: "47597727"
   
 -   DB-Library 클라이언트  
   
-     이러한 응용 프로그램에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB-Library를 사용하는 클라이언트 응용 프로그램에 대한 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 기능으로 제한됩니다.  
+     이러한 애플리케이션에는 DB-Library에 기록된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**isql** 명령 프롬프트 유틸리티 및 클라이언트가 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB-Library를 사용하는 클라이언트 애플리케이션에 대한 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 기능으로 제한됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 응용 프로그램과의 연결을 계속 지원하지만 이들 API를 사용하는 응용 프로그램에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 OLE DB, ODBC 등의 API를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이러한 응용 프로그램을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.  
+>  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 애플리케이션과의 연결을 계속 지원하지만 이들 API를 사용하는 애플리케이션에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 애플리케이션과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 애플리케이션을 개발하지 마십시오. 기존의 애플리케이션을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 OLE DB, ODBC 등의 API를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 이러한 애플리케이션을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 애플리케이션을 실행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.  
   
  애플리케이션의 유형에 관계없이 클라이언트 관리는 주로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서버 구성 요소와의 연결 구성으로 이루어집니다. 사용자 측의 요구 사항에 따라 클라이언트 관리 범위는 서버 컴퓨터의 이름 입력과 같은 간단한 작업부터 여러 가지 다중 서버 환경을 수용하기 위한 사용자 지정 구성 항목의 라이브러리 작성에까지 이릅니다.  
   

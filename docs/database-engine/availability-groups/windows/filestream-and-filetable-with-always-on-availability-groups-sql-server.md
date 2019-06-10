@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214864"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800775"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 가용성 그룹과 함께 FILESTREAM 및 FileTable 사용
 
@@ -32,16 +32,6 @@ ms.locfileid: "53214864"
  모든 FILESTREAM 기능이 지원됩니다. 장애 조치(Failover) 이후 FILESTREAM 데이터는 읽기 가능한 두 보조 복제본 및 새로운 주 복제본에서 액세스할 수 있습니다.  
   
  FileTable 기능은 부분적으로 지원됩니다. 장애 조치(Failover) 이후 FileTable 데이터는 주 복제본에서 액세스할 수 있지만 FileTable 데이터를 읽기 가능한 보조 복제본에서는 액세스할 수 없습니다.  
-  
- **항목 내용:**  
-  
--   [필수 구성 요소](#Prerequisites)  
-  
--   [FILESTREAM 및 FileTable 액세스를 위한 VNN(가상 네트워크 이름) 사용](#vnn)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
   
