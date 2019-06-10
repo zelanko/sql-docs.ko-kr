@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6834e3dd223f8b27a8c038e58f0e4121a670b9c3
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487450"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776472"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -85,7 +85,7 @@ ms.locfileid: "65487450"
   
     -   DQInitDQS_MAIN 저장 프로시저는 master 데이터베이스에 만들어집니다.  
   
-    -   DQS_install.log 파일은 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL13.*<instance_name>* \MSSQL\Log 폴더에 만들어집니다. 이 파일에는 DQSInstaller.exe 파일을 실행할 때 수행되는 동작에 대한 정보가 포함됩니다.  
+    -   DQS_install.log 파일은 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL13. *<instance_name>* \MSSQL\Log 폴더에 만들어집니다. 이 파일에는 DQSInstaller.exe 파일을 실행할 때 수행되는 동작에 대한 정보가 포함됩니다.  
   
     -   MDS(Master Data Services) 데이터베이스가 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]와 같은 SQL Server 인스턴스에 있는 경우 MDS(Master Data Services) 로그인에 매핑된 사용자가 만들어지고 DQS_MAIN 데이터베이스의 dqs_administrator 역할이 부여됩니다.  
   
