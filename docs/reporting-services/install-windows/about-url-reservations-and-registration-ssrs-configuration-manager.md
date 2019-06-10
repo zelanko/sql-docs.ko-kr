@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814116"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454509"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 애플리케이션의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 애플리케이션에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 애플리케이션을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "51814116"
 >  HTTP.SYS는 네트워크 요청을 수신한 다음 이를 요청 큐로 라우팅하는 운영 체제 구성 요소입니다. 이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]릴리스에서 HTTP.SYS는 보고서 서버 웹 서비스와 보고서 관리자에 대한 요청 큐를 설정하고 유지 관리합니다. 인터넷 정보 서비스(IIS)는 더 이상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 호스팅하거나 액세스하는 데 사용되지 않습니다. HTTP.SYS 기능에 대한 자세한 내용은 MSDN의 [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) 를 참조하세요.  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services에서의 URL  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서는 URL을 통해 다음 도구, 응용 프로그램 및 항목에 액세스할 수 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서는 URL을 통해 다음 도구, 애플리케이션 및 항목에 액세스할 수 있습니다.  
   
 -   보고서 서버 웹 서비스  
   
@@ -47,7 +47,7 @@ ms.locfileid: "51814116"
 ##  <a name="URLreservation"></a> URL 예약 및 등록  
  URL 예약은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에 액세스할 때 사용할 수 있는 URL을 정의합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 HTTP.SYS에 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 URL을 한 개 이상 예약한 다음 서비스가 시작될 때 이를 등록합니다. URL에 매개 변수를 추가하면 웹 서비스를 통해 보고서를 열 수 있습니다. 예약 및 등록은 HTTP.SYS에서 제공합니다. 자세한 내용은 MSDN의 [네임스페이스 예약, 등록 및 라우팅(Namespace Reservations, Registration, and Routing)](https://go.microsoft.com/fwlink/?LinkId=92653) 을 참조하세요.  
   
- *URL 예약* 은 웹 응용 프로그램에 대한 URL 엔드포인트가 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
+ *URL 예약* 은 웹 애플리케이션에 대한 URL 엔드포인트가 HTTP.SYS에 생성되고 저장되는 프로세스입니다. HTTP.SYS는 컴퓨터에 정의된 모든 URL 예약의 공용 리포지토리로서 고유한 URL 예약을 보장하는 일반 규칙 집합을 정의합니다.  
   
  *URL 등록* 은 서비스가 시작될 때 발생합니다. 그러면 요청 큐가 생성되고 HTTP.SYS에서는 요청을 요청 큐로 라우팅합니다. URL 엔드포인트는 URL 엔드포인트로 전달되는 요청이 큐에 추가되기 전에 등록되어야 합니다. 보고서 서버 서비스가 시작되면 설정된 모든 애플리케이션용으로 예약된 URL이 모두 등록됩니다. 즉 등록이 발생하려면 웹 서비스가 설정되어 있어야 합니다. 정책 기반 관리의 Reporting Services 패싯에 대한 노출 영역 구성에서 **WebServiceAndHTTPAccessEnabled** 속성을 **False** 로 설정한 경우에는 서비스가 시작될 때 웹 서비스의 URL이 등록되지 않습니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "51814116"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치할 경우 설치 프로그램이 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에 대한 URL을 예약합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 URL 예약을 정의하는 경우 이러한 기본값을 그대로 사용할 수도 있습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 를 설치하거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 명명된 인스턴스로 설치할 경우 기본 URL에 인스턴스 이름이 포함됩니다.  
   
 > [!IMPORTANT]  
->  밑줄 문자(**_**)가 인스턴스 문자로 사용됩니다.  
+>  밑줄 문자( **_** )가 인스턴스 문자로 사용됩니다.  
   
  URL 예약에는 포트 번호가 포함됩니다. , 및 운영 체제에서는  
   
@@ -90,10 +90,9 @@ ms.locfileid: "51814116"
 |SQL Server Express|웹 포털|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL에 대한 인증 및 서비스 ID  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약은 보고서 서버 서비스의 서비스 계정을 지정합니다. 서비스가 실행되는 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션용으로 생성된 모든 URL에 사용됩니다. 보고서 서버 인스턴스의 서비스 ID는 RSReportServer.config 파일에 저장됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약은 URL 예약의 계정을 표시합니다. 가상 서비스 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션용으로 생성된 모든 URL에 사용됩니다.
   
- 서비스 계정에는 기본값이 없습니다. 그러나 설치 중 서비스 계정을 지정해야 하며 서버를 파일만 모드에서 설치한 경우라도 서비스 계정은 RSReportServer.config의 **URLReservation** 에 지정되어 있습니다. 서비스 계정으로 유효한 값은 도메인 사용자 계정, **LocalSystem**또는 **NetworkService**입니다.  
-  
+ 
  기본 보안이 **RSWindowsNegotiate**이므로 익명 액세스는 허용되지 않습니다. 인트라넷 액세스의 경우 보고서 서버 URL에 네트워크 컴퓨터 이름이 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 인터넷 연결용으로 구성하려는 경우 다른 설정을 사용해야 합니다. 인증에 대한 자세한 내용은 [온라인 설명서의](../../reporting-services/security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ##  <a name="URLlocalAdmin"></a> 로컬 관리 URL  

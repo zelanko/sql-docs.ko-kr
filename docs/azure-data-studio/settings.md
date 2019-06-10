@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312837"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798071"
 ---
 # <a name="modify-user-and-workspace-settings"></a>사용자 및 작업 영역 설정 수정
 
@@ -31,7 +31,7 @@ ms.locfileid: "63312837"
 
 메뉴 명령 **파일** > **기본 설정** > **설정** (**코드**  >  **기본 설정** > **설정** Mac에서) 사용자 및 작업 영역 설정을 구성 하려면 진입점을 제공 합니다. 기본 설정 목록으로 제공 됩니다. 적절 한 변경 하려는 모든 설정을 복사 `settings.json` 파일입니다. 오른쪽에 있는 탭을 통해 사용자와 작업 영역 설정 파일 간에 빠르게 전환할 수 있습니다.
 
-사용자 및 작업 영역 설정을 열 수도 있습니다는 **명령 팔레트** (**Ctrl + Shift + P**) 사용 하 여 **기본 설정: 사용자 설정 열기** 고 **기본 설정: 작업 영역 설정을 엽니다** 바로 가기 키를 사용 하거나 (**Ctrl +,**).
+사용자 및 작업 영역 설정을 열 수도 있습니다는 **명령 팔레트** (**Ctrl + Shift + P**) 사용 하 여 **기본 설정: 사용자 설정 열기** 고 **기본 설정: 작업 영역 설정을 엽니다** 바로 가기 키를 사용 하거나 (**Ctrl +,** ).
 
 다음 예제에서는 편집기에서 줄 번호를 사용 하지 않도록 설정 하 고 자동으로 들여쓰기 됩니다 코드 줄을 구성 합니다.
 
