@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7eac30ff1391ba5c56099cf7c59fa89b1368f115
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 605a2564bff66a3cf8de4c8c8abb92b101e5b2d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105876"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762029"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 #### <a name="parameters"></a>매개 변수
 $*statement*: SQL 문이 포함된 문자열입니다.
 
-*key_pair*: 특성 이름 및 값이 포함된 배열입니다. 자세한 내용은 주의 섹션을 참조하세요.
+*key_pair*: 특성 이름 및 값이 포함된 배열입니다. 자세한 내용은 주의 섹션을 참조하십시오.
 
 ## <a name="return-value"></a>반환 값
 성공하면 PDOStatement 개체를 반환합니다. 실패하면 `PDO::ATTR_ERRMODE` 값에 따라 PDOException 개체 또는 false를 반환합니다.
