@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 531dc66411fc6d63751497a34b96417e9e51c9b1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: ef9a9a2ed3d91c3ce870580f35f09f069e9ef04a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486443"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793815"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
 
