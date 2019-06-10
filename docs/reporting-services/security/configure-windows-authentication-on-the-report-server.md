@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571151"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499942"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "65571151"
   
 -   도메인 사용자 계정으로 실행되는 보고서 서버 서비스의 SPN을 등록합니다. 자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)을 참조하세요.  
   
--   서비스 계정이 네트워크 서비스와 같은 기본 제공 계정으로 실행되도록 변경합니다. 기본 제공 계정은 컴퓨터를 네트워크에 조인할 때 정의한 Host SPN에 HTTP SPN을 매핑합니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)를 참조하세요.  
+-   서비스 계정이 네트워크 서비스와 같은 기본 제공 계정으로 실행되도록 변경합니다. 기본 제공 계정은 컴퓨터를 네트워크에 조인할 때 정의한 Host SPN에 HTTP SPN을 매핑합니다. 자세한 내용은 [서비스 계정 구성&#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.
   
 -   NTLM을 사용합니다. NTLM은 Kerberos 인증이 실패하는 경우에도 일반적으로 작동합니다. NTLM을 사용하려면 RSReportServer.config 파일에서 **RSWindowsNegotiate** 를 제거하고 **RSWindowsNTLM** 만 지정되어 있는지 확인합니다. 이 방법을 선택하는 경우 보고서 서버 서비스의 SPN을 정의하지 않아도 해당 서비스의 도메인 사용자 계정을 계속 사용할 수 있습니다.  
   

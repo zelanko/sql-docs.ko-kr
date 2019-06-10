@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e75f732fc44ee339cb3d9d47518627f264cb8cc
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671339"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778144"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대한 릴리스 정보
 
@@ -44,7 +44,7 @@ ms.locfileid: "59671339"
 > 
 > 7.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하는 것이 좋습니다. 자세한 내용은 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 및 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)의 릴리스 정보를 참조하세요.
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory MSI(관리 서비스 ID) 인증
+### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory MSI(관리 서비스 ID)  인증
 
 | MSI 변경 | 세부 정보 |
 | :--------- | :------ |
@@ -73,15 +73,15 @@ ms.locfileid: "59671339"
 | ADAL4J 변경 | 세부 정보 |
 | :------------ | :------ |
 | ADAL4J에 대한 Maven 종속성을 버전 1.6.3으로 업데이트했습니다. | &nbsp; |
-| ‘AutoRest용 Java 클라이언트 런타임’을 Maven 종속성 버전 1.6.5로 도입합니다. | &nbsp; |
+| ‘AutoRest용 Java 클라이언트 런타임’을  Maven 종속성 버전 1.6.5로 도입합니다. | &nbsp; |
 | 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Java용 Microsoft Azure Key Vault SDK 버전 1.2.0 업데이트
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Java용 Microsoft Azure Key Vault SDK  버전 1.2.0 업데이트
 
 | Key Vault SDK 변경 | 세부 정보 |
 | :------------------- | :------ |
-| ‘Java용 Microsoft Azure Key Vault SDK’에 대한 Maven 종속성을 버전 1.2.0으로 업데이트했습니다. | &nbsp; |
+| ‘Java용 Microsoft Azure Key Vault SDK’에 대한  Maven 종속성을 버전 1.2.0으로 업데이트했습니다. | &nbsp; |
 | _Key Vault WebKey용 Microsoft Azure SDK_를 Maven 종속성(버전 1.2.0.)을 소개합니다. | &nbsp; |
 | 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
