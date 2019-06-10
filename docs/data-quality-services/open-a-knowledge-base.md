@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 166367941aceee3c06edd9df1300ea7b9182290b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 9644bf7d055bef0f087562ff75591fbc90ddf486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488252"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776062"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
 
@@ -81,7 +81,7 @@ ms.locfileid: "65488252"
 ##  <a name="State"></a> 기술 자료의 상태  
  상태 필드는 기술 자료에 대한 현재 작업 단계를 나타냅니다. 기술 자료를 열면 해당 단계에서 기술 자료가 열립니다.  
   
--   **\<Empty>**: 도메인 관리 작업에서 **게시**를 클릭하고 **예 – 기술 자료를 게시하고 종료합니다**를 클릭하여 기술 자료를 게시한 경우 상태 필드가 비어 있습니다.  
+-   **\<Empty>** : 도메인 관리 작업에서 **게시**를 클릭하고 **예 – 기술 자료를 게시하고 종료합니다**를 클릭하여 기술 자료를 게시한 경우 상태 필드가 비어 있습니다.  
   
 -   **작업 중**: 도메인 관리 작업에서 **게시**를 클릭하고 **아니요 - 기술 자료에 대한 작업을 저장하고 종료합니다**를 클릭하여 기술 자료에 대한 작업 내용이 저장되었습니다.  
   

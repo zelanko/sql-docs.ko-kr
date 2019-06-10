@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b12f9e95163df4a090ddfb2e4061930438947802
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 50a46b004a14358e7832edb16d57f11783a683a2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487515"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776346"
 ---
 # <a name="grant-dqs-roles-to-users"></a>사용자에게 DQS 역할 부여
 

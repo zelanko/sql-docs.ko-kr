@@ -4,18 +4,18 @@ titleSuffix: SQL Server 2019 big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램 배포를 설명 합니다.
 author: jterh
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a6ba9caed2b01abc50e16e34d1a13413af2d0ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283716"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801860"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 응용 프로그램 배포 란?
 
@@ -64,7 +64,7 @@ RESTful 웹 서비스를 사용 하 여 실행 될 응용 프로그램에 대 �
 
 만들기 및 SQL Server 빅 데이터 클러스터에 응용 프로그램을 실행 하는 방법에 대 한 자세한 내용은 다음을 참조 합니다.
 
-- [Mssqlctl를 사용 하 여 응용 프로그램 배포](big-data-cluster-create-apps.md)
+- [mssqlctl를 사용하여 애플리케이션 배포](big-data-cluster-create-apps.md)
 - [앱 배포 확장을 사용 하 여 응용 프로그램 배포](app-deployment-extension.md)
 - [빅 데이터 클러스터에 응용 프로그램 사용](big-data-cluster-consume-apps.md)
 

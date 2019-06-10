@@ -10,13 +10,13 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312668"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798040"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 사용 하는 방법
 

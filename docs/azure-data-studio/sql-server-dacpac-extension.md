@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309243"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797990"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 확장(미리 보기)
 

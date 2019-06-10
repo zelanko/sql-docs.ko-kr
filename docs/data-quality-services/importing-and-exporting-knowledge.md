@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bc5010ce0f0f6e096e5b1007c7ca7e25d4c23406
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 11c494e07a18e9d5593620d8fba130f0ced86508
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487463"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776450"
 ---
 # <a name="importing-and-exporting-knowledge"></a>기술 자료 가져오기 및 내보내기
 

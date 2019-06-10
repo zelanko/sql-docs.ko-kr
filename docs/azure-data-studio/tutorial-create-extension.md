@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: craigg
-ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63309491"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797962"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>자습서: Azure Data Studio 확장 만들기
 

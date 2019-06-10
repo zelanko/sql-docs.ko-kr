@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2dfb025f5083048ecd58a8f67551c1b538201fb9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 3437885e5d6a4e31c88f1e4bcb2229ef15844944
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487776"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801374"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
 
