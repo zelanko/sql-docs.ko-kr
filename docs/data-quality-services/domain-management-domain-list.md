@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0dc6047dcbcc0fa6d5100f9aaed10a7efa24818b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f6a0d727f2a862191422d155d0bf1aac04958383
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487692"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769115"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
 
