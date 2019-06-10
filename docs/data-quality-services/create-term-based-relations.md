@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5ea236bb633c2d37b1c0299bea90cc047e9c16c6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a3a6393ff2f2ed5317e63fe0d8979c9b5ddda2ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480431"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785490"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
 

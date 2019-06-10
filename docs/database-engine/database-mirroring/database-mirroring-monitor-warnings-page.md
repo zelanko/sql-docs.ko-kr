@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 01a523c57399bb5d4a2ebf5a5d866bac3cb39e1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126133"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795533"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54126133"
  자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
 ## <a name="remarks"></a>Remarks  
- 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 _<SYSTEM_NAME>_**에 연결되지 않음** 또는 _<SYSTEM_NAME>_**\\**_<instance_name>_**에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
+ 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 _<SYSTEM_NAME>_ **에 연결되지 않음** 또는 _<SYSTEM_NAME>_ **\\** _<instance_name>_ **에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
   
  정보를 사용할 수 있는 경우 각 경고의 셀에 지정된 임계값과 측정 단위 또는 **사용 안 함**이 표시됩니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54126133"
 |**보내지 않은 가장 오래된 트랜잭션 기간이 임계값을 초과하는 경우 경고**|보내지 않은 가장 오래된 트랜잭션|32044|  
 |**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|미러 커밋 오버헤드|32045|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  전체 액세스 권한의 경우 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **sysadmin** 멤버만 주요 성능 메트릭에 대해 경고 임계값을 구성하고 볼 수 있습니다.  
   
  **dbm_monitor** 역할의 멤버 자격을 사용하면 **경고** 페이지에서 최신 상태 행만 볼 수 있습니다.  

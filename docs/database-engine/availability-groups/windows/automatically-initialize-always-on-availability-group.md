@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207532"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789399"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+주 복제본에서 `sys.dm_hadr_automatic_seeding` 을 쿼리하여 자동 시드 프로세스의 상태를 확인합니다. 뷰는 각 시드 프로세스당 한 행을 반환합니다. 예를 들어
 
 ```sql
 SELECT start_time, 
@@ -238,7 +238,7 @@ GO
 
 **자동 시드 중 모니터링**
 
-현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+현재 실행 중인 자동 시드 프로세스를 위해 `sys.dm_hadr_physical_seeding_stats` 를 쿼리합니다. 뷰는 각 데이터베이스에 대해 하나의 행을 반환합니다. 예를 들어
 
 ```sql
 SELECT local_database_name, 

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff376317473875f9e6d2183f381ceba52c43bfc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2b962821437013f6aa086d472e284ed0fef21138
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612541"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799562"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>c2 audit mode 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47612541"
 > [!IMPORTANT]  
 >  C2 Audit Mode를 사용하면 로그 파일에 많은 양의 이벤트 정보가 저장되어 파일의 크기가 빠르게 커집니다. 로그 파일이 저장되는 데이터 디렉터리의 공간이 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 종료됩니다. 감사가 자동으로 시작되도록 설정되어 있으면 감사 프로세스를 생략하도록 하는 **-f** 플래그를 사용하여 인스턴스를 다시 시작하거나 감사 로그를 저장할 수 있는 디스크 공간을 추가로 확보해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="example"></a>예제  

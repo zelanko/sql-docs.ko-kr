@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 984a3c50ac691df3759edc161baabc533bd9456f
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 74097057702ad32a803c440d92b0ed7c8f855880
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993339"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779415"
 ---
 # <a name="mssqlctl-cluster-config"></a>mssqlctl 클러스터 구성
 

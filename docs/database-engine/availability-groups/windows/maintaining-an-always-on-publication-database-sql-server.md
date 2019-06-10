@@ -13,26 +13,18 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+manager: jroth
+ms.openlocfilehash: 557bd9828979a4f2e0913e827b05f3805e9b4ef9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799270"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 일부로 복제된 게시자 데이터베이스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 Always On 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  
-  
- **항목 내용:**  
-  
--   [가용성 그룹에서 게시된 데이터베이스 유지 관리](#MaintainPublDb)  
-  
--   [가용성 그룹에서 게시된 데이터베이스 제거](#RemovePublDb)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> 가용성 그룹에서 게시된 데이터베이스 유지 관리  
  Always On 게시 데이터베이스를 유지 관리하는 작업은 표준 게시 데이터베이스를 유지 관리하는 작업과 기본적으로 동일하지만 다음 사항을 고려해야 합니다.  

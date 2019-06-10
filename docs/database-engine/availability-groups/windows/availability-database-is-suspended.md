@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6746eb6dc024db06a63de972befd7305f64a85c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 4760bd036c4946ee8fe0b924043ab6188c009576
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212032"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789422"
 ---
 # <a name="availability-database-is-suspended-for-an-availability-group"></a>가용성 그룹에 대해 가용성 데이터베이스가 일시 중단됩니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

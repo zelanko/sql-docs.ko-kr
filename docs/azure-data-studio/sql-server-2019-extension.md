@@ -10,13 +10,13 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 37d2a5aa07c02540b57bbbf70f49279dce9d388a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+manager: jroth
+ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65779260"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798055"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 

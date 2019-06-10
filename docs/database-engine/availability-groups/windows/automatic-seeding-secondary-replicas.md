@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306170"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789443"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹의 보조 복제본을 초기화합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 복제본을 초기화하는 유일한 방법은 백업, 복사 및 복원을 사용하는 것입니다. SQL Server 2016에서는 보조 복제본을 초기화하는 *자동 시드* 기능을 새로 도입했습니다. 자동 시드는 VDI를 사용하여 구성된 엔드포인트를 사용하는 가용성 그룹의 각 데이터베이스에 대한 보조 복제본으로 백업을 스트리밍하기 위해 로그 스트림 전송을 사용합니다. 새로운 이 기능은 가용성 그룹을 처음 만드는 중에 또는 데이터베이스를 추가할 때 사용할 수 있습니다. 자동 시드는 Always On 가용성 그룹을 지원하는 모든 버전의 SQL Server에 포함되어 있으며, 기존 가용성 그룹과 [분산 가용성 그룹](distributed-availability-groups.md) 모두에서 사용할 수 있습니다.
 
-## <a name="considerations"></a>고려 사항
+## <a name="security"></a>보안
 
-자동 시드를 사용할 때 고려해야 할 사항은 다음과 같습니다.
+보안 권한은 초기화되는 복제 유형에 따라 다릅니다.
 
-* [주 복제본에 대한 성능 및 트랜잭션 로그 영향](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [디스크 레이아웃](#disklayout)
-* [보안](#security)
+* 기존 가용성 그룹의 경우 보조 복제본이 가용성 그룹에 가입될 때 해당 보조 복제본의 가용성 그룹에 권한을 부여해야 합니다. Transact SQL에서 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE` 명령을 사용합니다.
+* 만들고 있는 복제본의 데이터베이스가 두 번째 가용성 그룹의 주 복제본에 있는 분산 가용성 그룹의 경우 이미 주 복제본이므로 추가 권한이 필요하지 않습니다.
+* 분산 가용성 그룹의 두 번째 가용성 그룹에 있는 보조 복제본의 경우 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` 명령을 사용해야 합니다. 이 보조 복제본은 두 번째 가용성 그룹의 주 복제본에서 시드됩니다.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>주 복제본에 대한 성능 및 트랜잭션 로그 영향
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>주 복제본에 대한 성능 및 트랜잭션 로그 영향
 
 자동 시드는 데이터베이스 크기, 네트워크 속도 및 주 복제본과 보조 복제본 간의 거리에 따라 보조 복제본을 초기화하는 데 적합하지 않을 수도 있습니다. 예를 들어 다음과 같은 조건이 있습니다.
 
@@ -49,7 +48,7 @@ SQL Server 2012 및 2014에서 SQL Server Always On 가용성 그룹의 보조 �
 
 압축은 자동 시드에 사용할 수 있지만 기본적으로 사용되지 않습니다. 압축을 사용하면 네트워크 대역폭을 줄이고 프로세스 속도를 높이지만 추가적인 프로세서 오버헤드가 있습니다. 자동 시드 중에 압축을 사용하려면 9567 추적 플래그를 사용하도록 설정합니다([가용성 그룹에 대한 압축 성능 조정](tune-compression-for-availability-group.md) 참조).
 
-### <a name = "disklayout"></a> 디스크 레이아웃
+## <a name = "disklayout"></a> 디스크 레이아웃
 
 SQL Server 2016 및 이전 버전에서 자동 시드로 데이터베이스가 만들어진 폴더는 이미 존재해야 하며 주 복제본의 경로와 동일해야 합니다. 
 
@@ -66,7 +65,7 @@ SQL Server 2017에서는 가용성 그룹에 참여하는 모든 복제본에서
 
 주 및 보조 복제본 데이터 위치가 인스턴스 기본 경로가 아닌 시나리오는 이 변경 사항에 영향을 받지 않습니다. 보조 복제본 파일 경로가 주 복제본 파일 경로와 일치하기 위한 요구 사항은 동일합니다.
 
-|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>파일 위치 |보조 인스턴스</br> 파일 위치 
+|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>파일 위치|보조 인스턴스</br> 파일 위치
 |:------|:------|:------|:------
 |c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
 |c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
@@ -74,20 +73,13 @@ SQL Server 2017에서는 가용성 그룹에 참여하는 모든 복제본에서
 
 주 및 보조 복제본에서 기본 경로와 기본이 아닌 경로가 혼합된 경우 SQL Server 2017은 이전 릴리스와 다르게 작동합니다. 다음 표에서는 SQL Server 2017의 동작을 보여줍니다.
 
-|주 인스턴스</br>기본 데이터 경로 |보조 인스턴스</br>기본 데이터 경로 |주 인스턴스</br>파일 위치  |SQL Server 2016 </br>보조 인스턴스</br>파일 위치  |SQL Server 2017 </br>보조 인스턴스</br>파일 위치 
+|주 인스턴스</br>기본 데이터 경로 |보조 인스턴스</br>기본 데이터 경로 |주 인스턴스</br>파일 위치 |SQL Server 2016 </br>보조 인스턴스</br>파일 위치 |SQL Server 2017 </br>보조 인스턴스</br>파일 위치
 |:------|:------|:------|:------|:------
 |c:\\data\\ |d:\\data\\ |c:\\data\\ |c:\\data\\ |d:\\data\\ 
 |c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |c:\\data\\group1\\ |d:\\data\\group1\\
 
 SQL Server 2016 및 이전 버전의 동작으로 되돌리려면 추적 플래그 9571을 설정합니다. 추적 플래그를 설정하는 방법에 대한 자세한 정보는 [DBCC TRACEON(Transact SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)을 참조하세요.
 
-### <a name="security"></a>보안
-
-보안 권한은 초기화되는 복제 유형에 따라 다릅니다.
-
-* 기존 가용성 그룹의 경우 보조 복제본이 가용성 그룹에 가입될 때 해당 보조 복제본의 가용성 그룹에 권한을 부여해야 합니다. Transact SQL에서 `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE` 명령을 사용합니다.
-* 만들고 있는 복제본의 데이터베이스가 두 번째 가용성 그룹의 주 복제본에 있는 분산 가용성 그룹의 경우 이미 주 복제본이므로 추가 권한이 필요하지 않습니다.
-* 분산 가용성 그룹의 두 번째 가용성 그룹에 있는 보조 복제본의 경우 `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` 명령을 사용해야 합니다. 이 보조 복제본은 두 번째 가용성 그룹의 주 복제본에서 시드됩니다.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>자동 시드로 가용성 그룹 만들기
 
@@ -160,7 +152,7 @@ Transact-SQL 또는 SSMS(SQL Server Management Studio) 버전 17 이상에서 �
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>복제본의 시드 모드 변경
 
-가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+가용성 그룹을 만든 후에 복제본의 시드 모드를 변경하여 자동 시드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 가용성 그룹을 만든 후에 자동 시드를 사용하도록 설정하면 백업, 복사 및 복원으로 가용성 그룹을 만들었을 때 자동 시드를 사용하여 이 가용성 그룹에 데이터베이스를 추가할 수 있습니다. 예를 들어
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
