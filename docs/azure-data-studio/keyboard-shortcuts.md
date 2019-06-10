@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 9ce8b817a704e6bae6d56a47b49f78fd1c17a2d3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104750"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800239"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>바로 가기 키 [!INCLUDE[name-sos](../includes/name-sos.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "65104750"
 
 모든 현재 정의 된 바로 가기 키를 보려면:
 
-엽니다는 **바로 가기 키** 편집기는 **파일** 메뉴: **파일** > **기본 설정** > **키보드 단축키** (**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **기본 설정** > **바로 가기 키** Mac에서).
+엽니다는 **바로 가기 키** 편집기는 **파일** 메뉴: **파일** > **기본 설정** > **키보드 단축키** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **기본 설정** > **바로 가기 키** Mac에서).
 
 현재 키 바인딩, 표시 하는 것 외에도 합니다 **바로 가기 키** 편집기 바로 가기 키를 정의 되지 않은 사용 가능한 명령을 나열 합니다. 합니다 **바로 가기 키** 편집기를 사용 하면 손쉽게 변경, 제거, 다시 설정 및 새 키 바인딩을 정의할 수 있습니다.  
 

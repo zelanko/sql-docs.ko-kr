@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결 및 모니터링에 대 한 유용한 명령을 제공 합니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994087"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800742"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -242,9 +242,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 다음 오류가 발생 하면: *포트 8001에서 수신 대기할 수 없습니다. 모든 수신기는 다음 오류와 함께 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류가 수신 tcp4 127.0.0.1:8001: > 바인딩: 각 소켓 주소 (프로토콜/네트워크 주소/포트) 하나만 사용은 일반적으로 허용 됩니다. 수신기를 만들 수 없습니다. 오류 tcp6 수신: 주소 [[:: 1]]: 8001: 포트에서 누락 > 오류를 해결 합니다. 요청 된 포트에서 수신 대기할 없습니다: [{8001 9090}]*, 사용자가 시작 하지 대시보드에 이미 다른 창에서 있는지 확인 합니다.
+> 다음 오류가 발생 하면: *포트 8001에서 수신 대기할 수 없습니다. 모든 수신기는 다음 오류와 함께 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류가 수신 tcp4 127.0.0.1:8001: > 바인딩: 각 소켓 주소 (프로토콜/네트워크 주소/포트) 하나만 사용은 일반적으로 허용 됩니다. 수신기를 만들 수 없습니다. 오류 tcp6 수신: 주소 [[:: 1]]: 8001: 포트에서 누락 > 오류를 해결 합니다. 요청 된 포트에서 수신 대기할 없습니다: [{8001 9090}]* , 사용자가 시작 하지 대시보드에 이미 다른 창에서 있는지 확인 합니다.
 
-브라우저에서 대시보드를 시작, AKS 클러스터에서 기본적으로 사용 되는 RBAC로 인해 권한 경고가 표시 될 수 있습니다 및 대시보드에 사용 되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없는 경우 (예를 들어  *pod는 사용할 수 없음: 사용자 "시스템: serviceaccount:kube-시스템: kubernetes-대시보드" "default" 네임 스페이스의 pod를 나열할 수 없습니다.*). 에 필요한 권한을 부여 하려면 다음 명령을 실행 `kubernetes-dashboard`, 고 대시보드를 다시 시작 합니다.
+브라우저에서 대시보드를 시작, AKS 클러스터에서 기본적으로 사용 되는 RBAC로 인해 권한 경고가 표시 될 수 있습니다 및 대시보드에 사용 되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없는 경우 (예를 들어  *pod는 사용할 수 없음: 사용자 "시스템: serviceaccount:kube-시스템: kubernetes-대시보드" "default" 네임 스페이스의 pod를 나열할 수 없습니다.* ). 에 필요한 권한을 부여 하려면 다음 명령을 실행 `kubernetes-dashboard`, 고 대시보드를 다시 시작 합니다.
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 저장소 풀을 설명 합니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7ff8b16ec5f1ea0d1df401cee9657eb8d564863a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860574"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782989"
 ---
 # <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>저장소 풀 (SQL Server 빅 데이터 클러스터) 란?
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ea719c85026c110329092a5dd243e84a1e1ef78c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488237"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788009"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
 
@@ -51,7 +51,7 @@ ms.locfileid: "65488237"
   
 3.  **프로젝트 열기** 화면에서 다음 방법 중 하나로 Integration Services 프로젝트를 식별할 수 있습니다.  
   
-    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 이름 지정 용어를 사용 하 여 나열 됩니다. "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." 명명 용어를 사용하여 나열됩니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
+    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 이름 지정 용어를 사용 하 여 나열 됩니다. "Package.DQS Cleansing_ *\<DATE>\<TIME>* _{GUID}." 명명 용어를 사용하여 나열됩니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
   
     2.  **프로젝트 형식**: Integration Services 프로젝트는 **프로젝트 열기** 화면에서 **SSIS**라는 프로젝트 형식을 가집니다.  
   

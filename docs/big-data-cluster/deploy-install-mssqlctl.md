@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 관리 mssqlctl 도구를 설치 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32beeaf5ee7dd12b4efb4792ab5e1c489868705e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: e7ca0cec461a7eee36d7bfe22fbdc4e2e0c3cc61
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994022"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797896"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 

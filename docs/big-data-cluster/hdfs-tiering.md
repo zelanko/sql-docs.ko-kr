@@ -5,17 +5,17 @@ description: 이 문서에는 HDFS에 계층화 (미리 보기)는 SQL Server 20
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccafa7914d09971e33d60fc9d25c7b812983aa98
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775012"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782113"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 계층화 하는 HDFS 구성
 

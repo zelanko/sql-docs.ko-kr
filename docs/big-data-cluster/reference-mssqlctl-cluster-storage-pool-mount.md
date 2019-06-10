@@ -4,19 +4,19 @@ titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 저장소 풀 마운트 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c527a203b9a8a902f02368c291a37da4c38ccd31
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: eb527779cd844064bcabccc91f5356676e06f004
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995031"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779308"
 ---
-# <a name="mssqlctl-cluster-storage-pool-mount"></a>mssqlctl 클러스터 저장소 풀 마운트
+# <a name="mssqlctl-cluster-storage-pool-mount"></a>mssqlctl 클러스터 스토리지 풀 마운트
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

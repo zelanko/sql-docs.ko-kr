@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 63641dd5b9d9a1e53d68f3be2ae4d5a57cfc1db6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: da99a24ab6729e78220aeed3d18819e7b075603f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015112"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794436"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 분석 보고서 보기
 

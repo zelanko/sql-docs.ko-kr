@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5badf157aa97f107663793ac129462f177e5c312
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e7eb9b10ce427d1da46a225f532fba9cdaa8fa6c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487842"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801425"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 

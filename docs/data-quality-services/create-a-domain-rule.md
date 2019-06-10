@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a81b217b00ead3f9c26915f19c540e1225a198c2
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 82a7b33a201a21d488ea2cef4b15b7609af47de8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486353"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785779"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
 
