@@ -10,13 +10,13 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 41103374bdef2d292bfd5c3e22e3fab093309f42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ad2f10d767bc71cfdf3fc3e26cfe7a65354ea5b9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794791"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>실패한 SQL Server 설치 복구
 

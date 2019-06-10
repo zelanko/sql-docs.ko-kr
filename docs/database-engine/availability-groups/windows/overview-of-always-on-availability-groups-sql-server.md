@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9730b8883b947ccd33de2ec4151e02e4ffac62e1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 031b9f1771a478910112706e47e94f5249ac9954
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974342"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798225"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

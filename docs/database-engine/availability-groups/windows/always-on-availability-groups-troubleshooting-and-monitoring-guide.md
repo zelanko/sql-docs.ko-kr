@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: a1b25ea57ef34ebe8dd0c098695a0b59b6f87472
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215622"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789636"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 가용성 그룹 문제 해결 및 모니터링 가이드
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -32,7 +32,7 @@ ms.locfileid: "53215622"
 |[Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuration|가용성 그룹에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. 가용성 그룹을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.|  
 |[실패한 파일 추가 작업 문제 해결&#40;Always On 가용성 그룹&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuration|파일 추가 작업으로 인해 보조 데이터베이스가 일시 중단되고 NOT SYNCHRONIZING 상태가 되었습니다.|  
 |[다중 서브넷 환경에서 가용성 그룹 수신기에 연결할 수 없음](https://support.microsoft.com/kb/2792139/en-us)|클라이언트 연결|가용성 그룹 수신기를 구성한 후 수신기를 ping하거나 애플리케이션에서 연결할 수 없습니다.|  
-|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)|장애 조치 |자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
+|[실패 자동 장애 조치(failover) 문제 해결](https://support.microsoft.com/kb/2833707)|장애 조치|자동 장애 조치(failover)가 성공적으로 완료되지 않았습니다.|  
 |[문제 해결: 가용성 그룹 초과 RTO](troubleshoot-availability-group-exceeded-rto.md)|성능|데이터 손실 없이 자동 장애 조치(failover) 또는 계획된 수동 장애 조치 후 장애 조치 시간이 RTO를 초과합니다. 또는 동기 커밋 보조 복제본(예: 자동 장애 조치(failover) 파트너)의 장애 조치 시간을 예측할 때 RTO 초과를 발견할 수 있습니다.|  
 |[문제 해결: 가용성 그룹 초과 RPO](troubleshoot-availability-group-exceeded-rpo.md)|성능|강제 수동 장애 조치(failover)를 수행한 후 데이터 손실이 RPO보다 많습니다. 또는 비동기 커밋 보조 복제본의 잠재적 데이터 손실을 계산할 때 RPO 초과를 발견합니다.|  
 |[문제 해결: 보조 복제본에 반영되지 않은 주 복제본의 변경 내용](troubleshoot-primary-changes-not-reflected-on-secondary.md)|성능|클라이언트 애플리케이션에서 주 복제본에 대한 업데이트를 성공적으로 완료하지만 보조 복제본 쿼리는 변경 내용이 반영되지 않았음을 보여줍니다.|  

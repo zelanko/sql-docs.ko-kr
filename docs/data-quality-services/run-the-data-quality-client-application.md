@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8df64b4dc6f703751ef68ea72a8bcf9238a365fc
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: b34e3fa7ba8bafd88ed9da4a237d624ebc45cad1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487866"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801423"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 
@@ -40,7 +40,7 @@ ms.locfileid: "65487866"
 ##  <a name="Run"></a> Data Quality 클라이언트 실행  
  설치된 컴퓨터에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 실행하려면 다음과 같이 진행합니다.  
   
-1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 다음 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, **Data Quality Services**, **Data Quality 클라이언트**를 차례로 클릭합니다.  
+1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 다음 **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** , **Data Quality Services**, **Data Quality 클라이언트**를 차례로 클릭합니다.  
   
 2.  **서버에 연결** 대화 상자에서  
   

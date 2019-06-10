@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 알려진된 문제를 설명 합니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d3967da74969556cd96483d4a9c3afa3135fa342
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779221"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 

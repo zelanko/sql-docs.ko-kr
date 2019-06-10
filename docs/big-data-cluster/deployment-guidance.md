@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743935"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782246"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 

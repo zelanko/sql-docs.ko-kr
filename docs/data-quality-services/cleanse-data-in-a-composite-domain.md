@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0668e22c751d8cfe37987e0454e6f9ad1ecd476d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: e6bf8b95fc0d039054b407b12d70c737dce214ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65480384"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802190"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
@@ -58,7 +58,7 @@ ms.locfileid: "65480384"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 다음 메시지가 표시됩니다. 규칙 '*\<도메인 간 규칙 이름>*'에 의해 수정되었습니다 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
+ 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 다음 메시지가 표시됩니다. 규칙 ' *\<도메인 간 규칙 이름>* '에 의해 수정되었습니다 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
   
 > [!NOTE]  
 >  선언적 도메인 간 규칙은 참조 데이터 서비스에 연결된 복합 도메인에 대해 작동하지 않습니다.  

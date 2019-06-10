@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 659d5a18ecce49c6d0f1db169b0be453797ae8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 204617360c30dd4ea7201c86486af2483482fa08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738431"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799475"
 ---
 # <a name="configure-client-protocols"></a>클라이언트 프로토콜 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 애플리케이션이 사용하는 클라이언트 프로토콜을 구성하는 방법에 대해 설명합니다. Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TCP/IP 네트워크 프로토콜 및 명명된 파이프 프로토콜을 통한 클라이언트 통신을 지원합니다. 클라이언트가 동일 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 있는 경우 공유 메모리 프로토콜도 사용할 수 있습니다. 일반적으로 프로토콜을 선택하는 방법에는 3가지가 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 프로토콜 순서를 설정하여 모든 클라이언트 응용 프로그램이 동일한 네트워크 프로토콜을 사용하도록 구성하십시오.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에 프로토콜 순서를 설정하여 모든 클라이언트 애플리케이션이 동일한 네트워크 프로토콜을 사용하도록 구성하십시오.  
   
 -   별칭을 만들어 단일 클라이언트 애플리케이션이 다른 네트워크 프로토콜을 사용하도록 구성하십시오. 자세한 내용은 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   

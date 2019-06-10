@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c34b00785b0639be6f645d164c2896cffe08c98c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f719ef6777dc86d9e815a837732dcc045b2599ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486506"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793784"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
 

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff7bb0be3ecc9ef02e38994bebda675c016ef8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 281306cece913e4386a1ca6059b738c9fa20e058
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847711"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780140"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>유효성 검사 페이지(Always On 가용성 그룹 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  
     
   이 도움말 항목에서는 **유효성 검사** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지를 사용하여 사용자 환경에서 마법사의 이전 페이지에서 선택한 모든 구성 항목을 지원하는지 확인할 수 있습니다.  
   

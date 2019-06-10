@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203772"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798219"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203772"
   
 > [!NOTE]  
 >  PowerShell cmdlet은 작업을 시작하여 완료할 수 있습니다. 이것이 원하는 작업(예: 가용성 그룹 장애 조치)이 완료되었음을 나타내는 것은 아닙니다. 작업 시퀀스를 스크립팅하는 경우 작업 상태를 확인하고 작업이 완료되는 동안 기다려야 할 수 있습니다.  
-  
- 이 항목에서는 다음 태스크 집합에 대한 cmdlet에 대해 설명합니다.  
-  
--   [Always On 가용성 그룹에 대한 서버 인스턴스 구성](#ConfiguringServerInstance)  
-  
--   [데이터베이스 및 트랜잭션 로그 백업 및 복원](#BnRcmdlets)  
-  
--   [가용성 그룹 만들기 및 관리](#DeployManageAGs)  
-  
--   [가용성 그룹 수신기 만들기 및 관리](#AGlisteners)  
-  
--   [가용성 복제본 만들기 및 관리](#DeployManageARs)  
-  
--   [가용성 데이터베이스 추가 및 관리](#DeployManageDbs)  
-  
--   [가용성 그룹 상태 모니터링](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  cmdlet을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 태스크를 수행하는 방법을 설명하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 온라인 설명서의 항목 목록은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)의 "관련 태스크" 섹션을 참조하세요.  

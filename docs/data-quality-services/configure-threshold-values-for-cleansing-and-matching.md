@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: af1623d3fe6aa5f3784994a68b72c411c3a19f7d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 6c89f673f7fae82c451021724c07db8b66239e32
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486393"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793870"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>정리 및 일치에 대한 임계값 구성
 

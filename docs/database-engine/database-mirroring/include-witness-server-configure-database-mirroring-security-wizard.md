@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02781455ba687d9c88b73c55df1f15124edee832
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4e6918227b7aa76bac8dfed8d9eb8845da93cb0b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758011"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795423"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 포함(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47758011"
   
 -   [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **예**  
  보안 구성에 미러링 모니터 서버 인스턴스를 포함하려면 클릭합니다. 주 서버 인스턴스에서 장애가 발생한 경우에 미러링 서버 인스턴스에 대한 자동 장애 조치(failover)가 있는 보호 우선 모드에서는 미러링 모니터 서버가 필요합니다.  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc6d99faaf68c64bd54f4b10ff729b6d2381d9ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48dbf8caf5a38e228d6c11e6b5917693adc24176
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852121"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795406"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>데이터베이스 미러링 세션 수동 장애 조치(failover)(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

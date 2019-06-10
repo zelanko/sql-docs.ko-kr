@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: facadcb68e579797235c038b9669cea6f95dbce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb6646d96991785b7c94a48ad4601fdcc6e35b60
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736491"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799544"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5a4257b8ef9977f3673e961855c7dc48b9abb064
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: d1dbd724cca4025d34b673e3181ff7be3fdb9c89
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487331"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776604"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
 

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612891"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795258"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "47612891"
   
 ||성능 우선|미러링 모니터 서버가 없는 보안 우선 모드|미러링 모니터 서버가 있는 보안 우선 모드|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|자동 장애 조치(automatic failover)|아니오|아니오|사용자 계정 컨트롤|  
-|수동 장애 조치(manual failover)|아니오|예|사용자 계정 컨트롤|  
-|강제 서비스|사용자 계정 컨트롤|예|아니오|  
+|자동 장애 조치(automatic failover)|아니오|아니오|예|  
+|수동 장애 조치(manual failover)|아니오|예|예|  
+|강제 서비스|예|예|아니오|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
@@ -314,7 +314,7 @@ ms.locfileid: "47612891"
   
 ## <a name="see-also"></a>참고 항목  
  [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [데이터베이스 미러링 중에 발생 가능한 오류](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

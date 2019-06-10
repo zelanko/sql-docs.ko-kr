@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Spark에서 SQL Server에 읽기 및 쓰기를 MSSQL Spark 커넥터를 사용 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994185"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770936"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>읽기 및 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 기록 하는 방법
 

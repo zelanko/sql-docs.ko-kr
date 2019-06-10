@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8fe968185f05c7a48415e5e158a20f4dc61b28c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798074"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>Azure Data Studio (미리 보기)에 대 한 sandDance
 Azure Data Studio에는 이제에서 작업 하는.csv 및.tsv 파일에 대 한 빠른 시각화를 만드는 방법을 제공 합니다. SQL Server 2019 빅 데이터 클러스터에 로컬 파일 또는 파일 HDFS에 포함 됩니다. 이 확장 빠른 데이터를 확인 하 고 진행 상황을 이해 하도록 하려는 경우 유용 합니다. 데이터의 전체 시각화를 생성할 수 있는 Microsoft Research에서 SandDance 라는 기술을 사용 합니다.

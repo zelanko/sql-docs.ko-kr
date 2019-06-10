@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ead50c19fa0729f136ed2806bcb4030cc7e3b852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f75d66d6966a365a7b343a2e3c21427807a3acab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770241"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794572"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

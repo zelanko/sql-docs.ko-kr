@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6f1ff26d20e549d3bba46409a3a85cee326e1d35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e8d038947ac511d9b271fc5b4e07ffabcc47cc96
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215732"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795070"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>미러링 모니터 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53215732"
   
 -   이 서버 인스턴스에 대한 수신기 포트가 없으면 **포트** 입력란에 포트 번호 5022가 표시됩니다. 7022와 같은 사용 가능한 임의의 포트 번호를 입력할 수 있습니다.  
   
--   미러링 엔드포인트가 있으면 해당 엔드포인트의 포트 번호가 표시됩니다. 포트를 변경해야 하는 경우 ALTER ENDPOINT 문을 사용합니다. 자세한 내용은 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
+-   미러링 엔드포인트가 있으면 해당 엔드포인트의 포트 번호가 표시됩니다. 포트를 변경해야 하는 경우 ALTER ENDPOINT 문을 사용합니다. 자세한 내용은 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)을 참조하세요.  
   
     > [!NOTE]  
     >  포트 번호는 반드시 지정해야 합니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "53215732"
  암호화를 사용하지 않으려면 이 확인란의 선택을 취소합니다. 암호화를 다시 사용하려면 확인란을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)  

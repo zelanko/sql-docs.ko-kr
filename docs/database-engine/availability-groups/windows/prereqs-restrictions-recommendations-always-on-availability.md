@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042442"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798149"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042442"
 > [!IMPORTANT]  
 >  또한 시스템이 가용성 그룹에 연결되도록 올바르게 구성되었는지 확인합니다. 자세한 내용은 [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)을 참조하세요.  
   
-###  <a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
+##  <a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
   
 -   **동등한 시스템:**  지정된 가용성 그룹의 경우 모든 가용성 복제본은 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행해야 합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042442"
   
 3.  **Get-ClusterResource** cmdlet을 사용하여 네트워크 이름 리소스를 찾은 다음에 아래와 같이 **Set-ClusterParameter** cmdlet을 사용하여 **HostRecordTTL** 값을 설정합니다.  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource “ *\<NetworkResourceName>* ” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      다음 PowerShell 예제에서는 `SQL Network Name (SQL35)`라는 네트워크 이름 리소스에 대해 HostRecordTTL을 300초로 설정합니다.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "59042442"
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스는 Always On 가용성 그룹에 참여하기 위해 동일한 버전의 SQL Server를 실행해야 합니다.|[SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017)의 버전 및 지원되는 기능|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬을 사용해야 합니다.|[서버 데이터 정렬 설정 또는 변경](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅할 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하도록 설정합니다. 특정 컴퓨터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 설치에서 지원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 인스턴스를 개수에 관계없이 사용하도록 설정할 수 있습니다.|[Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* 중요 \*\*</b> WSFC를 삭제하고 다시 만드는 경우 원본 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 사용하도록 설정한 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 해제한 다음 다시 사용하도록 설정해야 합니다.|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 이 엔드포인트는 서버 인스턴스의 미러링 모니터 서버 및 데이터베이스 미러링 파트너와 모든 가용성 복제본에서 공유합니다.<br /><br /> 가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않는 경우, [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (또는 [가용성 그룹에 복제본 추가 마법사](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.<br /><br /> <br /><br /> <b>\*\* 보안 정보 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 전송 보안은 데이터베이스 미러링의 경우와 동일합니다.|[데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 이 엔드포인트는 서버 인스턴스의 미러링 모니터 서버 및 데이터베이스 미러링 파트너와 모든 가용성 복제본에서 공유합니다.<br /><br /> 가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않는 경우, [새 가용성 그룹 마법사](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (또는 [가용성 그룹에 복제본 추가 마법사](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.<br /><br /> <br /><br /> <b>\*\* 보안 정보 \*\*</b> [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 전송 보안은 데이터베이스 미러링의 경우와 동일합니다.|[데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|포함된 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에서 **contained database authentication** 서버 옵션이 **1** 로 설정되어 있는지 확인합니다.|[contained database authentication 서버 구성 옵션](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [서버 구성 옵션&#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
@@ -182,7 +182,7 @@ ms.locfileid: "59042442"
 |태스크|아티클|  
 |----------|-----------|  
 |데이터베이스 미러링 엔드포인트가 있는지 여부 확인|[sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)|  
-|데이터베이스 미러링 엔드포인트 만들기(없는 경우)|[Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
+|데이터베이스 미러링 엔드포인트 만들기(없는 경우)|[Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 &#40;Transact-SQL &#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
 |가용성 그룹 활성화|[Always On 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
 ###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 480975d4bbcf0ec33a51509e2ca10b633cd8aef7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65104917"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782514"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
