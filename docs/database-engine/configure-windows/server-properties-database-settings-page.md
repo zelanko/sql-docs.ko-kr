@@ -10,15 +10,15 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: 13d4bb3e4e61d195d4997f46bb1d343b02c36efc
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: bf30a65cf0390c5b8400fe7a390520e4bdb29994
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198305"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771773"
 ---
 # <a name="server-properties---database-settings-page"></a>서버 속성 - 데이터베이스 설정 페이지
 

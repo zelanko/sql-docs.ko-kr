@@ -9,13 +9,13 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 7a39657a1bc1bfd9909a4c31a028ce4fa7816553
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+manager: jroth
+ms.openlocfilehash: 30ff977bf931ef5e51b64d0ce4120842cb32f2e4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454752"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794893"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 설치
 
