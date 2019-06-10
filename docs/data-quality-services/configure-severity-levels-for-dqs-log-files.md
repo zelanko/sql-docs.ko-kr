@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8a6b2b6313a0e4292d1860e8102218d2cc8b24e0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486449"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802140"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
 
@@ -58,7 +58,7 @@ ms.locfileid: "65486449"
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **구성**을 클릭합니다.  
   
-3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**, **기술 자료 검색**, **정리 프로젝트(예: RDS)**, **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
+3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**, **기술 자료 검색**, **정리 프로젝트(예: RDS)** , **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
   
 4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 다음 중 하나를 선택할 수 있습니다. **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
   

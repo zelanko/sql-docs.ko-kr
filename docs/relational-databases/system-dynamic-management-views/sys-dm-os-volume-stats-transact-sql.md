@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_volume_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2017
+ms.date: 06/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,15 +19,15 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802566"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정된 데이터베이스와 파일이 저장된 운영 체제 볼륨(디렉터리)에 대한 정보를 반환합니다. 이 동적 관리 함수를 사용하여 물리적 디스크 드라이브의 특성을 확인하거나 디렉터리에 대한 사용 가능한 공간 정보를 반환할 수 있습니다.  
   
@@ -68,14 +68,14 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
- VIEW SERVER STATE 권한이 필요합니다.  
+ 필요한 `VIEW SERVER STATE` 권한.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>1. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
-```  
+```sql  
 SELECT f.database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.master_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);
 ### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>2. 현재 데이터베이스에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 현재 데이터베이스의 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
-```  
+```sql  
 SELECT database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.database_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  

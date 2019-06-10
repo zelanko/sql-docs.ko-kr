@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c72476208a751e5e17768acfb5aabfb79b71583
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0c56f5c2386f06c6ae35269dc62f82431ce0936b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486378"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802183"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
 

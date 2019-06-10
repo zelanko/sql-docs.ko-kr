@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cd52ca3c4cfc7081b7edfcb279205999c42ad479
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: b00e90174c865ac06e934cc1a89914ff3deef76c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486419"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802198"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 

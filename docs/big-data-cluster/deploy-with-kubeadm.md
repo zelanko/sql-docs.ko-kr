@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 여러 Ubuntu 16.04의 Kubernetes 또는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 18.04 컴퓨터 (물리적 또는 가상)를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488270"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803071"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성
 
