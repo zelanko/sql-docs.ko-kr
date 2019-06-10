@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 45cd72d4383b0bae756b7b8f59502c981dfd6622
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 8f5cf6696b66504357279ab45432b4439894e4ca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015131"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794464"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>데이터베이스 실험 도우미를 사용 하 여 시작
 
@@ -129,7 +129,7 @@ SQL Server의 두 번째 단계는 대상 서버에 캡처된 추적 파일을 �
 - **향상 된**:  쿼리 실행 대상 1 보다 대상 2에 더 합니다.
 - **성능 저하**: 쿼리 실행 대상 1 보다 대상 2에 더 합니다.
 - **동일한**: 차이가 없는 통계 쿼리에 대 한 대상 1-2 대상입니다.
-- **계산할 수 없습니다.**: 통계 분석 쿼리에 대 한 샘플 크기를 너무 작습니다. A / B 테스트 분석, 비활성화 사용 하려면 각 대상에서 30 개 이상의 실행 하도록 동일한 쿼리 합니다.
+- **계산할 수 없습니다.** : 통계 분석 쿼리에 대 한 샘플 크기를 너무 작습니다. A / B 테스트 분석, 비활성화 사용 하려면 각 대상에서 30 개 이상의 실행 하도록 동일한 쿼리 합니다.
 - **오류**: 대상 중 하나에서 한 번 이상 오류 발생 하는 쿼리.
 
 ![원형 차트](./media/database-experimentation-assistant-get-started/dea-get-started-piechart.png)

@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015144"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794475"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 분석 보고서 만들기
 
@@ -36,7 +36,7 @@ ms.locfileid: "66015144"
 
 입력 하거나 다음 정보를 선택 합니다.
 
-- **보고서 이름을**: 보고서의 이름을 입력 합니다. 보고서 이름이 사용 됩니다 모두 A 및 B 데이터베이스입니다. 예: *A (또는 B)* + *보고서 이름* + *고유 식별자*합니다. 
+- **보고서 이름을**: 보고서의 이름을 입력 합니다. 보고서 이름이 사용 됩니다 모두 A 및 B 데이터베이스입니다. 예: *A (또는 B)*  + *보고서 이름* + *고유 식별자*합니다. 
 - **서버 이름**: 에 포함 하려는 서버 컴퓨터의 이름을 입력 B 및 분석 데이터베이스입니다.
 - **SQL Server 인스턴스 이름을**: 보고서에 사용할 SQL Server 인스턴스의 이름을 입력 합니다.
 - **원본 서버에 대 한 추적**: SQL Server (2008 R2) 첫 번째 추적 (.trc) 파일을 입력 합니다.

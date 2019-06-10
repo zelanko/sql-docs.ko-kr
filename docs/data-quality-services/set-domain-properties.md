@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54672f4c5ccda6951d4c9496032a00896e790a8d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 731181af3d9e5bda7d73f5b56179069e85353857
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487810"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801410"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 

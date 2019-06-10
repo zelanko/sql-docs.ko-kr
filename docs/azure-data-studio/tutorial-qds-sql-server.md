@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089677"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797927"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플
 
@@ -129,7 +129,7 @@ ms.locfileid: "65089677"
 
 ## <a name="view-insight-details-for-more-information"></a>자세한 내용은 insight 세부 정보 보기
 
-1. insight 위젯에 대 한 추가 정보를 보려면 줄임표를 클릭 합니다. (**...** ) 선택 하 고 오른쪽 위에 있는 **세부 정보 표시**합니다.
+1. insight 위젯에 대 한 추가 정보를 보려면 줄임표를 클릭 합니다. ( **...** ) 선택 하 고 오른쪽 위에 있는 **세부 정보 표시**합니다.
 2. 항목을 선택 하는 항목에 대 한 자세한 세부 정보를 표시 하려면 **차트 데이터** 목록입니다.
 
    ![세부 정보 대화 상자 정보](./media/tutorial-qds-sql-server/insight-details-dialog.png)
