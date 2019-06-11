@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629515"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822965"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>SQL 사용 하 여 숫자 데이터를 검색할\_숫자\_구조체
 
@@ -35,7 +35,7 @@ ms.locfileid: "62629515"
 SQL\_숫자\_구조체 sqltypes.h 헤더 파일에 다음과 같이 정의 됩니다.
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Microsoft는 어떤 종류의 보증, 표현 된, 명시적 또는 묵시적된 보증을 특정 목적에의 적합성에 제한 되지 않음 않고 "있는 그대로"이 코드 샘플을 제공 합니다.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>중간 결과:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 조정 된 정수 little endian 모드에서 변환을 구현 하는 코드입니다. 이 기능을 구현 하는 응용 프로그램 개발자가 합니다. 다음 코드 예제는 여러 가지 방법 중 하나일 뿐입니다.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ SQL에 대 한 이전 정보\_숫자\_구조체는 다음 제품 버전에 적�
 이 프로그램을 실행 하려면 사용할 ODBC 드라이버는 ODBC 3.0 기능을 지원 해야 합니다.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

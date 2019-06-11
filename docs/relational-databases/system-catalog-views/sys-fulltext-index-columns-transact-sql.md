@@ -18,19 +18,20 @@ helpviewer_keywords:
 - sys.fulltext_index_columns catalog view
 - full-text indexes [SQL Server], properties
 ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
-aauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00e3776a4bc3f712665744062de9de01f35eca89
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.openlocfilehash: c695997906aeb5c3d5181cc8683f8401adb5df17
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64945566"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822938"
 ---
 # <a name="sysfulltextindexcolumns-transact-sql"></a>sys.fulltext_index_columns(Transact SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   전체 텍스트 인덱스의 일부인 각 열에 대한 행을 포함합니다.    

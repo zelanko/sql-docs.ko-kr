@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grant_login_to_proxy
 ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8dfacac19be656187925e8646a60fc3014f94d42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+author: VanMSFT
+manager: jrothj
+ms.openlocfilehash: 81aeb41fdf7c8c17d5035347d384e7175bbd891b
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656808"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822672"
 ---
 # <a name="spgrantlogintoproxy-transact-sql"></a>sp_grant_login_to_proxy(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   프록시에 보안 주체 액세스 권한을 부여합니다.  
@@ -35,7 +37,6 @@ ms.locfileid: "62656808"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_grant_login_to_proxy   
      { [ @login_name = ] 'login_name'   
      | [ @fixed_server_role = ] 'fixed_server_role'   
@@ -44,15 +45,15 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login_name = ] 'login_name'` 에 대 한 액세스를 부여할 로그인 이름입니다. 합니다 *login_name* 됩니다 **nvarchar(256)**, 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name**합니다 **@fixed_server_role**, 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
+`[ @login_name = ] 'login_name'` 에 대 한 액세스를 부여할 로그인 이름입니다. 합니다 *login_name* 됩니다 **nvarchar(256)** , 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name** 합니다 **@fixed_server_role** , 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` 고정된 서버 역할에 대 한 액세스를 부여입니다. 합니다 *fixed_server_role* 됩니다 **nvarchar(256)**, 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name**합니다 **@fixed_server_role**, 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
+`[ @fixed_server_role = ] 'fixed_server_role'` 고정된 서버 역할에 대 한 액세스를 부여입니다. 합니다 *fixed_server_role* 됩니다 **nvarchar(256)** , 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name** 합니다 **@fixed_server_role** , 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
   
-`[ @msdb_role = ] 'msdb_role'` 데이터베이스 역할에는 **msdb** 데이터베이스 액세스 권한을 부여 합니다. 합니다 *msdb_role* 됩니다 **nvarchar(256)**, 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name**합니다 **@fixed_server_role**, 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
+`[ @msdb_role = ] 'msdb_role'` 데이터베이스 역할에는 **msdb** 데이터베이스 액세스 권한을 부여 합니다. 합니다 *msdb_role* 됩니다 **nvarchar(256)** , 기본값은 NULL 사용 하 여 합니다. 중 하나 **@login_name** 합니다 **@fixed_server_role** , 또는 **@msdb_role** 지정 해야 합니다 저장된 프로시저가 실패 합니다.  
   
 `[ @proxy_id = ] id` 에 대 한 액세스 권한을 부여할 프록시의 식별자입니다. 합니다 *id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나 **@proxy_id** 하거나 **@proxy_name** 지정 해야 저장된 프로시저가 실패 합니다.  
   
-`[ @proxy_name = ] 'proxy_name'` 에 대 한 액세스 권한을 부여할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **nvarchar(256)**, 기본값은 NULL 사용 하 여 합니다. 중 하나 **@proxy_id** 하거나 **@proxy_name** 지정 해야 저장된 프로시저가 실패 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 에 대 한 액세스 권한을 부여할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **nvarchar(256)** , 기본값은 NULL 사용 하 여 합니다. 중 하나 **@proxy_id** 하거나 **@proxy_name** 지정 해야 저장된 프로시저가 실패 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -66,7 +67,7 @@ sp_grant_login_to_proxy
 ## <a name="examples"></a>예  
  다음 예제에서는 로그인 `adventure-works\terrid` 프록시를 사용 하도록 `Catalog application proxy`합니다.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 테이블 형식 모델에 계산 그룹 | Microsoft Docs
-ms.date: 06/05/2019
+ms.date: 06/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58e845965bb9cd4eeba46ad30193c79b436da569
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719866"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822695"
 ---
 # <a name="calculation-groups-preview"></a>계산 그룹 (미리 보기)
  
-[!INCLUDE[ssas-appliesto-sql2019](../../includes/ssas-appliesto-sql2019.md)]
+[!INCLUDE[ssas-appliesto-sql2019-aas](../../includes/ssas-appliesto-sql2019-aas.md)]
 
-일반 측정값 식으로 그룹화 하 여 계산 그룹 중복 측정값의 수를 크게 줄일 수 있습니다 *계산 항목*합니다. SQL Server Analysis Services 2019 테이블 형식 모델에서 1470 및 더 높은 계산 그룹이 지원 됩니다 [호환성 수준](compatibility-level-for-tabular-models-in-analysis-services.md)합니다. 1470 호환성 수준의 모델은 현재 **미리 보기**합니다.  
+일반 측정값 식으로 그룹화 하 여 계산 그룹 중복 측정값의 수를 크게 줄일 수 있습니다 *계산 항목*합니다. 계산 그룹은 Azure Analysis Services에서 지원 및 SQL Server Analysis Services 2019 테이블 형식 모델 이상으로 1470 [호환성 수준](compatibility-level-for-tabular-models-in-analysis-services.md)합니다. 1470 호환성 수준의 모델은 현재 **미리 보기**합니다.  
 
 이 문서에서는 다음에 대해 설명합니다. 
 

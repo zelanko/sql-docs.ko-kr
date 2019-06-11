@@ -15,16 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - sp_grant_proxy_to_subsystem
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
+author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+manager: jroth
+ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528135"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822626"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   하위 시스템에 프록시 액세스 권한을 부여합니다.  
@@ -34,7 +36,6 @@ ms.locfileid: "58528135"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_grant_proxy_to_subsystem  
      { [ @proxy_id = ] proxy_id | [ @proxy_name = ] 'proxy_name' },  
      { [ @subsystem_id = ] subsystem_id | [ @subsystem_name = ] 'subsystem_name' }  
@@ -60,6 +61,7 @@ sp_grant_proxy_to_subsystem
 |**10**|Analysis Services 명령|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
+| &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'` 에 대 한 액세스를 부여할 하위 시스템의 이름입니다. 합니다 **subsystem_name** 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
@@ -76,6 +78,7 @@ sp_grant_proxy_to_subsystem
 |**ANALYSISCOMMAND**|Analysis Services 명령|  
 |**Dts**|SSIS 패키지 실행|  
 |**PowerShell**|PowerShell 스크립트|  
+| &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Remarks  
  하위 시스템에 프록시 액세스 권한을 부여해도 프록시에 지정된 보안 주체의 권한은 변경되지 않습니다.  
@@ -88,7 +91,7 @@ sp_grant_proxy_to_subsystem
 ### <a name="a-granting-access-to-a-subsystem-by-id"></a>1. 하위 시스템에 ID별로 액세스 권한 부여  
  다음 예에서는 ActiveX 스크립팅 하위 시스템에 프록시 `Catalog application proxy` 액세스 권한을 부여합니다.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -101,7 +104,7 @@ GO
 ### <a name="b-granting-access-to-a-subsystem-by-name"></a>2. 하위 시스템에 이름별로 액세스 권한 부여  
  다음 예에서는 SSIS 패키지 실행 하위 시스템에 프록시 `Catalog application proxy` 액세스 권한을 부여합니다.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

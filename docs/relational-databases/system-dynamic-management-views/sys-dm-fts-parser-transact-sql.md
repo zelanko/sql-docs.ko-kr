@@ -16,18 +16,19 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-auauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944236"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822359"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   적용 한 후 최종 토큰화 결과 반환 합니다를 지정 [단어 분리기](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [동의어 사전](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), 및 [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) 쿼리 문자열 입력을 조합 합니다. 토큰화 결과는 지정된 쿼리 문자열에 대한 전체 텍스트 엔진의 출력과 같습니다.  
@@ -37,7 +38,6 @@ ms.locfileid: "65944236"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -136,7 +136,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  악센트 구분은 사용하지 않습니다.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -147,7 +147,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  악센트 구분은 사용하지 않습니다.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -158,7 +158,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  이 예에서는 프랑스어의 LCID인 `1036`과 사용자 정의 중지 목록의 ID인 `5`를 지정하고 악센트 구분을 사용합니다.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

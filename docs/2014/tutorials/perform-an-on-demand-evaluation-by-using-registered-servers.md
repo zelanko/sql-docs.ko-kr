@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030794"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822373"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>등록된 서버를 사용하여 요청 시 평가 수행
+
   등록된 서버를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 대해 최선의 구현 방법 정책의 요청 시 평가를 수행할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버를 사용할 수 있습니다.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030794"
   
     -   특정 서버 또는 서버 그룹에 대해 정책을 평가 하려면 확장 **로컬 서버 그룹** 또는 중앙 관리 서버 이름, 서버 또는 서버 그룹에 대해 정책을 평가 하 고 클릭 하려는 마우스 오른쪽 단추로 클릭 **정책을 평가**합니다.  
   
-4.  에 **정책 평가** 대화 상자에서 다음을 **원본** 상자에서 줄임표 (**...** ) 단추입니다.  
+4.  에 **정책 평가** 대화 상자에서 다음을 **원본** 상자에서 줄임표 ( **...** ) 단추입니다.  
   
 5.  에 **원본 선택** 대화 상자에서 선택할 수 있습니다 **파일** 또는 **Server** 를 평가할 정책 파일의 원본으로 합니다. 클릭 하면 **Server**, 로컬 또는 원격 서버에서 정책 기반 관리에 이전에 가져온 모든 최선의 구현 방법 정책의 요청 시 평가 수행할 수 있습니다. 이 자습서에서는 클릭 **파일**, 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
     1.  클릭 **파일**합니다.  
   
-    2.  옆에 **파일**, 줄임표 (**...** ) 단추입니다.  
+    2.  옆에 **파일**, 줄임표 ( **...** ) 단추입니다.  
   
     3.  평가 하 고 클릭 한 다음에 하나 이상의.xml 정책 파일 선택 **열려**합니다.  
   

@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535585"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822633"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   보안 주체와 프록시 간 연결을 나열합니다.  
@@ -34,7 +36,6 @@ ms.locfileid: "58535585"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체, 로그인, 서버 역할 또는 **msdb** 프록시를 나열할 데이터베이스 역할. 이름은 **nvarchar(256)**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체, 로그인, 서버 역할 또는 **msdb** 프록시를 나열할 데이터베이스 역할. 이름은 **nvarchar(256)** , 기본값은 NULL입니다.  
   
 `[ @proxy_id = ] id` 정보를 나열할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|프록시 이름입니다.|  
 |**name**|**sysname**|연결할 보안 주체의 이름입니다.|  
 |**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정된 시스템 역할<br /><br /> **2** 데이터베이스 역할에 = **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Remarks  
  매개 변수 없이 제공 하는 경우 **sp_enum_login_for_proxy** 모든 프록시에 대 한 인스턴스의 모든 로그인에 대 한 정보를 나열 합니다.  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>1. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 로그인과 프록시 간에 설정된 모든 사용 권한을 나열합니다.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>2. 특정 로그인에 대한 프록시 나열  
  다음 예에서는 `terrid` 로그인이 액세스할 수 있는 프록시를 나열합니다.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

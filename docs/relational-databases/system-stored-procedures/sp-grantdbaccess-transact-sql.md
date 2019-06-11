@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 285f1c5f2ab868bbf21db80e68ebbf5d71100f14
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636447"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822616"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 데이터베이스 사용자를 추가합니다.  
@@ -37,7 +39,6 @@ ms.locfileid: "62636447"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_grantdbaccess [ @loginame = ] 'login'  
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
@@ -61,7 +62,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="examples"></a>예  
  다음 예제에서는 `CREATE USER` Windows 로그인에 대 한 데이터베이스 사용자를 추가 하려면 `Edmonds\LolanSo` 현재 데이터베이스에 있습니다. 새 사용자의 이름은 `Lolan`입니다. 데이터베이스 사용자를 만드는 경우 기본적으로 이 방법이 사용됩니다.  
   
-```  
+```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  

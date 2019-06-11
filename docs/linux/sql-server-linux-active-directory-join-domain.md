@@ -3,19 +3,19 @@ title: Active Directory에는 Linux에서 SQL 서버 연결
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66413344"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822521"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server Linux 호스트는 Active Directory 도메인에 가입
 
@@ -171,7 +171,7 @@ SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 �
 
    다음 표에서 일부 받을 수 있는 오류 메시지 및 해결 하는 방법과 권장 사항을 나열 합니다.
 
-   | 오류 메시지입니다. | 권장 |
+   | 오류 메시지 | 권장 |
    |---|---|
    | `Necessary packages are not installed` | Linux 배포판의 패키지 관리자를 사용 하 여 영역 조인 명령을 다시 실행 하기 전에 해당 패키지를 설치 합니다. |
    | `Insufficient permissions to join the domain` | 도메인 관리자를 사용 하 여 Linux 컴퓨터를 도메인에 가입 하면 충분 한 권한이 있는지 확인 합니다. |

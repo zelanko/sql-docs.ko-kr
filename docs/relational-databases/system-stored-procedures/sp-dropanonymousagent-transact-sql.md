@@ -14,15 +14,17 @@ helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 2128e980384561a128eb4c2683043190f27a84b2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537885"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822216"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   배포자의 복제 모니터링을 위한 익명 에이전트를 게시자에서 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자에서 실행됩니다.  
@@ -32,7 +34,6 @@ ms.locfileid: "58537885"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   
