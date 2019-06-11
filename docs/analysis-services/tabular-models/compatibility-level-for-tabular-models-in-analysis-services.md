@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 테이블 형식 모델에 호환성 수준 | Microsoft Docs
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175127"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826824"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  합니다 *호환성 수준* Analysis Services 엔진의 릴리스 관련 동작을 가리킵니다. 예를 들어 DirectQuery 및 테이블 형식 개체 메타 데이터는 호환성 수준에 따라 서로 다른 구현을 갖습니다. 일반에 서버에서 지 원하는 최신 호환성 수준을 선택 해야 합니다.
+  합니다 *호환성 수준* 기능 및 기능 향상 된 기능 모두 Analysis Services 엔진 및 테이블 형식 모델 메타 데이터를 가리킵니다. 일반에 서버에서 지 원하는 최신 호환성 수준을 선택 해야 합니다. 
 
   **최신 지원 되는 호환성 수준은 1400입니다.** 
   
 1400 호환성 수준에서 주요 기능은 다음과 같습니다.
 
 *  TOM Api 및 TMSL 스크립트에 대 한 지원 사용 하 여 데이터 연결 및 테이블 형식 모델로 가져오기에 대 한 새로운 인프라. 이 통해 Azure Blob 저장소와 같은 추가 데이터 원본에 대 한 지원. 추가 데이터 원본을 사용할 수는 향후 업데이트를 포함 합니다.
-*  데이터 변환 및 SSDT에서 데이터 가져오기 및 M 식을 사용 하 여 데이터 매시업 기능.
-*  이제 측정값을 상세 데이터로 드릴 다운 하는 Microsoft Excel과 같은 BI 도구를 사용 하도록 설정 집계 된 보고서에서 DAX 식 사용 하 여 정보 행 속성을 지원 합니다. 예를 들어 최종 사용자가 지역 및 월에 대 한 총 판매액을 볼 때 관련 된 주문 세부 정보를 볼 수 있습니다. 
+*  데이터 변환 및 SQL Server 데이터 도구 (SSDT)에서 데이터 가져오기 및 M 식을 사용 하 여 데이터 매시업 기능.
+*  이제 BI를 사용 하도록 설정 하는 DAX 식 사용 하 여 정보 행 속성까지 아래로 드릴 Microsoft Excel 같은 도구 지원 자세한 집계 된 보고서에서 데이터를 측정 합니다. 예를 들어, 지역 및 월에 대 한 총 판매액을 보면 관련 된 주문 세부 정보를 볼 수 있습니다. 
 *  그 안의 데이터 외에도 테이블 및 열 이름에 대 한 개체 수준 보안입니다.
 *  비정형된 계층 구조에 대 한 향상 된 지원입니다.
 *  성능 및 향상 된 기능을 모니터링 합니다.
@@ -35,6 +35,8 @@ ms.locfileid: "66175127"
   
 ## <a name="supported-compatibility-levels-by-version"></a>버전에서 지원 되는 호환성 수준
   
+호환성 수준이 더 낮으면 지에 대 한 이전 버전과 호환성. 
+
 |||  
 |-|-|- 
 |**호환성 수준**|**서버 버전**| 
@@ -44,7 +46,7 @@ ms.locfileid: "66175127"
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\* 호환성 수준 1100 및 1103은 SQL Server 2017에서 사용 되지 않습니다.
+\* 1100 및 1103 호환성 수준에는 SQL Server 2017 이상 사용 되지 않습니다.
   
 ## <a name="set-compatibility-level"></a>호환성 수준 설정 
  새 테이블 형식 모델 프로젝트를 SQL Server 데이터 도구 (SSDT)를 만들 때의 호환성 수준을 지정할 수 있습니다 합니다 **테이블 형식 모델 디자이너** 대화 합니다. 
