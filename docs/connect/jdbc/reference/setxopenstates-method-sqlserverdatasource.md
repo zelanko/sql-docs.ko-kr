@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65fde7feacb27f8c3b7fb2d809de4f75bc7e899c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 43876cf7cdb829a8fc35862b6e9ec628f6f8b03f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695871"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773133"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>setXopenStates 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

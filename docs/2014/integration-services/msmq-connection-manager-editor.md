@@ -27,7 +27,7 @@ ms.locfileid: "66057637"
  MSMQ 연결 관리자에 대한 자세한 내용은 [MSMQ Connection Manager](connection-manager/msmq-connection-manager.md)를 참조하십시오.  
   
 > [!NOTE]  
->  MSMQ 연결 관리자는 로컬 공개 큐, 로컬 개인 큐 및 원격 공개 큐를 지원합니다. 원격 개인 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기](control-flow/script-task.md)를 참조하십시오.  
+>  MSMQ 연결 관리자는 로컬 퍼블릭 큐, 로컬 프라이빗 큐 및 원격 퍼블릭 큐를 지원합니다. 원격 프라이빗 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [Sending to a Remote Private Message Queue with the Script Task](control-flow/script-task.md)를 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **이름**  
@@ -42,7 +42,7 @@ ms.locfileid: "66057637"
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
 |Public|\<컴퓨터 이름>\\<큐 이름\>|  
-|Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   

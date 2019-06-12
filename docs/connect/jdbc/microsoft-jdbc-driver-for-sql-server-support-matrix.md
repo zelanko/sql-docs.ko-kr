@@ -54,7 +54,7 @@ ms.locfileid: "66781456"
   
 ## <a name="sql-version-compatibility"></a>SQL 버전 호환성  
   
-|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance(비공개 미리 보기 확장)|  
+|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance(프라이빗 미리 보기 확장)|  
 |-|-|-|-|-|-|-|-|-|-|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  

@@ -53,7 +53,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  서명될 데이터가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
  **'** *password* **'**  
- 인증서 개인 키를 암호화할 때 사용한 암호입니다. *암호*는 **nvarchar(128)** 입니다.  
+ 인증서 프라이빗 키를 암호화할 때 사용한 암호입니다. *암호*는 **nvarchar(128)** 입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  최대 크기가 8,000바이트인 **varbinary**입니다.  

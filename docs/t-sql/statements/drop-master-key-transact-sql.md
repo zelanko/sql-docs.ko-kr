@@ -49,7 +49,7 @@ DROP MASTER KEY
  이 문에는 인수가 필요하지 않습니다.  
   
 ## <a name="remarks"></a>Remarks  
- 데이터베이스의 개인 키가 마스터 키로 보호되면 삭제가 실패합니다.  
+ 데이터베이스의 프라이빗 키가 마스터 키로 보호되면 삭제가 실패합니다.  
   
 ## <a name="permissions"></a>Permissions  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  

@@ -12,7 +12,7 @@ ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
 ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/11/2019
 ms.locfileid: "56038344"
@@ -47,7 +47,7 @@ ms.locfileid: "56038344"
   
 2.  컨테이너 이름을 입력합니다. 지정한 컨테이너 이름을 적어 둡니다. 이 정보는 3, 4단원에서 T-SQL 문의 URL(백업 파일 경로)에 사용됩니다.  
   
-3.  **액세스 형식**에서 개인을 선택합니다. 백업 파일을 보호하기 위한 개인 컨테이너를 만드는 것이 좋습니다.  
+3.  **액세스 형식**에서 개인을 선택합니다. 백업 파일을 보호하기 위한 프라이빗 컨테이너를 만드는 것이 좋습니다.  
   
      ![새 blob 컨테이너 만들기](../../2014/tutorials/media/backuptocloud-newblobcontainer.gif "새 blob 컨테이너 만들기")  
   

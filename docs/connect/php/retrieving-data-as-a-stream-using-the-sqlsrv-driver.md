@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe04b5fbe8d5bd0ab16ca81fc503ac72ff7a1966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d5d1d7e62709af773ca251a389c8cfaa4981ce58
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787403"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797050"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV 드라이버를 사용하여 스트림으로 데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

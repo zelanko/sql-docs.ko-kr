@@ -20,13 +20,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: b188649e138dddfc7dd4fd9fe974d6ccf28cc904
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744423"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777959"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>SQL Server 헤더 및 라이브러리 파일용 OLE DB 드라이버 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "56744423"
  SQL Server 용 OLE DB 드라이버를 사용 하는 OLE DB 응용 프로그램 msoledbsql.h 참조 해야 합니다. MDAC(SQLOLEDB)와 SQL Server용 OLE DB 드라이버를 모두 사용하는 애플리케이션은 sqloledb.h 및 msoledbsql.h를 모두 참조할 수 있지만 sqloledb.h를 먼저 참조해야 합니다.  
   
 ## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>SQL Server 헤더 파일에 대 한 OLE DB 드라이버를 사용 하 여  
- SQL Server 헤더 파일에 대 한 OLE DB 드라이버를 사용 하려면 사용 해야 합니다는 **포함** C/c + + 프로그래밍 코드 내에 있는 문의 합니다. 다음 섹션에서는 OLE DB 응용 프로그램에서 작업을 수행 하는 방법에 설명 합니다.  
+ SQL Server 헤더 파일에 대 한 OLE DB 드라이버를 사용 하려면 사용 해야 합니다는 **포함** 문 내에 C /C++ 프로그래밍 코드입니다. 다음 섹션에서는 OLE DB 응용 프로그램에서 작업을 수행 하는 방법에 설명 합니다.  
   
 > [!NOTE]  
->  OLE DB 드라이버 SQL Server 헤더 및 라이브러리 파일에 대 한 Visual Studio c + + 2012를 사용 하 여 컴파일된 이상에 가능 합니다.  
+>  OLE DB Driver for SQL Server 헤더 및 라이브러리 파일을 다시 컴파일된 Visual Studio를 사용 하 여 C++ 2012 이상 버전.  
   
 ### <a name="ole-db"></a>OLE DB  
  사용 하려면 OLE DB 드라이버 프로그래밍 코드의 다음 줄을 사용 하 여 OLE DB 응용 프로그램에서 SQL Server 헤더 파일:  

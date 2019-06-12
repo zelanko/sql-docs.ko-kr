@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21bb0bc1abe1a2a77af2d06bc6659312c0313581
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306101"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413469"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 순환
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 > 아래 표에서 *일반 텍스트 키/키 저장소 액세스*=**예** 인 단계(일반 텍스트 키 또는 키 저장소에 액세스하는 단계)를 실행하기 전에 데이터베이스를 호스트하는 컴퓨터와 다른 보안 컴퓨터에서 PowerShell 환경이 실행하는지 확인합니다. 자세한 내용은 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
 
 
-### <a name="part-1-dba"></a>1단계: DBA
+### <a name="part-1-dba"></a>1부: DBA
 
 DBA가 순환할 열 마스터 키 및 현재 열 마스터 키와 연결된 영향을 받는 열 암호화 키에 대한 메타데이터를 검색합니다. DBA는 이 모든 정보를 보안 관리자와 공유합니다.
 
@@ -122,7 +122,7 @@ DBA가 순환할 열 마스터 키 및 현재 열 마스터 키와 연결된 영
 |2단계. 키 저장소에 새 열 마스터 키를 만듭니다.<br><br>**참고:** SqlServer 모듈은 이 단계를 지원하지 않습니다. 명령줄에서 이 태스크를 수행하려면 키 저장소의 유형에 관련된 도구를 사용해야 합니다.|[열 마스터 키 만들기 및 저장(Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 예 | 아니오
 |3단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니오 | 아니오
 |4단계. **이전** 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. |New-SqlColumnMasterKeySettings| 아니오 | 아니오
-|5단계. **새** 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 개체를 만들려면 키 저장소에 관련된 cmdlet을 사용해야 합니다. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 아니오 | 아니오
+|5단계. **새** 열 마스터 키의 위치에 대한 정보가 포함된 SqlColumnMasterKeySettings 개체를 만듭니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 개체를 만들려면 키 저장소에 관련된 cmdlet을 사용해야 합니다. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| 아니오 | 아니오
 |6단계. 이전(현재) 열 마스터 키 또는 새 열 마스터 키가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증합니다. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | 예 | 아니오
 |7단계. 이전 열 마스터 키로 현재 보호된 열 암호화 키의 값을 각각 새 열 마스터 키로 다시 암호화합니다. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**참고:** 이 cmdlet을 호출할 때 다시 암호화할 열 암호화 키의 값과 함께 이전 열 마스터 키와 새 열 마스터 키 둘 다의 SqlColumnMasterKeySettings 개체를 전달합니다.|예|아니오
 |8단계. 열 마스터 키의 위치(열 마스터 키의 공급자 이름 및 키 경로)와 열 암호화 키의 새로 암호화된 값 집합을 DBA와 공유합니다.| 다음 예를 참조하십시오. | 아니오 | 아니오
@@ -152,7 +152,7 @@ DBA가 새 열 마스터 키에 대한 메타데이터를 만들고 영향을 �
 
 아래 스크립트는 Windows 인증서 저장소의 인증서인 새 열 마스터 키를 생성하고 기존(현재) 열 마스터 키를 순환하여 새 열 마스터 키로 대체하는 종단 간 예제입니다. 스크립트에서는 대상 데이터베이스에 일부 열 암호화 키를 암호화하는 열 마스터 키 CMK1(순환됨)이 들어 있다고 가정합니다.
 
-1단계: DBA
+1부: DBA
 
 ```
 # Import the SqlServer module.

@@ -96,7 +96,7 @@ ALTER SERVICE MASTER KEY
   
  REGENERATE 구는 서비스 마스터 키를 다시 생성합니다. 서비스 마스터 키가 다시 생성되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 키로 암호화된 모든 키의 암호를 해독한 다음 새로운 서비스 마스터 키로 키를 암호화합니다. 이 작업은 리소스 소비가 많습니다. 키가 손상된 경우가 아니면 이 작업은 사용량이 낮은 기간 동안에만 수행하도록 예약해야 합니다. 암호 해독 중 하나가 실패하면 전체 문이 실패합니다.  
   
- FORCE 옵션을 사용하면 프로세스에서 현재 마스터 키를 검색할 수 없거나 키로 암호화된 모든 개인 키의 암호를 해독할 수 없는 경우에도 키 다시 생성 프로세스가 계속됩니다. 키를 다시 생성하지 못하고 [RESTORE SERVICE MASTER KEY](../../t-sql/statements/restore-service-master-key-transact-sql.md) 문을 사용하여 서비스 마스터 키를 복원할 수 없는 경우에만 FORCE를 사용합니다.  
+ FORCE 옵션을 사용하면 프로세스에서 현재 마스터 키를 검색할 수 없거나 키로 암호화된 모든 프라이빗 키의 암호를 해독할 수 없는 경우에도 키 다시 생성 프로세스가 계속됩니다. 키를 다시 생성하지 못하고 [RESTORE SERVICE MASTER KEY](../../t-sql/statements/restore-service-master-key-transact-sql.md) 문을 사용하여 서비스 마스터 키를 복원할 수 없는 경우에만 FORCE를 사용합니다.  
   
 > [!CAUTION]  
 >  서비스 마스터 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호화 계층의 루트입니다. 서비스 마스터 키는 트리에 있는 모든 다른 키와 암호를 직접 또는 간접적으로 보호합니다. 강제 다시 생성 중에 종속된 키의 암호를 해독할 수 없는 경우 키가 보호하는 데이터가 손실됩니다.  

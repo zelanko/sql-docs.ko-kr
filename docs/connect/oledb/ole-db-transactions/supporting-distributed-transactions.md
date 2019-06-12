@@ -18,13 +18,13 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 058c7755468551ff94da7e7b8eb9d1993d92a07a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621961"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766122"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -144,6 +144,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [의](../../oledb/ole-db-transactions/transactions.md)  
+ [트랜잭션](../../oledb/ole-db-transactions/transactions.md)  
   
   

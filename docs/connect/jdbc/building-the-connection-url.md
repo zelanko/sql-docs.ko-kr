@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+manager: jroth
+ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159111"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770265"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "52159111"
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   **jdbc:sqlserver://**(필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
+-   **jdbc:sqlserver://** (필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
   
 -   **serverName**(옵션)은 연결할 서버의 주소입니다. 이는 DNS나 IP 주소일 수도 있고 로컬 컴퓨터인 경우 localhost나 127.0.0.1일 수도 있습니다. 연결 URL에 지정하지 않은 경우 속성 컬렉션에 서버 이름을 지정해야 합니다.  
   
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>명명된 다중 SQL Server 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 한 서버에 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버당 여러 개의 데이터베이스 인스턴스를 설치할 수 있습니다. 각 인스턴스는 특정 이름으로 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 명명된 인스턴스의 포트 번호를 지정하거나(기본 설정) 인스턴스 이름을 JDBC URL 속성 또는 **datasource** 속성으로 지정합니다. 인스턴스 이름이나 포트 번호 속성을 지정하지 않으면 기본 인스턴스에 대한 연결이 설정됩니다. 다음 예를 참조하십시오.  
   
  포트 번호를 사용하려면 다음을 수행합니다.  
   
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 파일은 다음 위치에 설치되어 있습니다.  
   
- \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \auth\  
+ \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \samples  
   
  지 원하는 운영 체제에 대 한 합니다 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 참조 하세요 [Kerberos 통합 인증을 사용 하려면 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 에 추가 된 기능에 대 한 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 응용 프로그램에 연결할 수 있도록를 유형 4 Kerberos 통합된 인증을 사용 하는 데이터베이스입니다.  
   

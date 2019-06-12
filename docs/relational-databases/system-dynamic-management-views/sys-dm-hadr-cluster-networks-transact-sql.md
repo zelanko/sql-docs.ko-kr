@@ -23,7 +23,7 @@ ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7b48507e59fa77cc0e6e47b4874cd1c010cd36cb
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47746211"
@@ -45,7 +45,7 @@ ms.locfileid: "47746211"
 |**network_subnet_ipv4_mask**|**nvarchar(45)**|IP 주소가 속한 서브넷을 지정하는 네트워크 서브넷 마스크입니다. **network_subnet_ipv4_mask** 의 WITH DHCP 절에서 DHCP < network_subnet_option > 옵션을 지정 하는 [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) 하거나 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.<br /><br /> NULL = IPv6 서브넷.|  
 ||||  
 |**network_subnet_prefix_length**|**int**|컴퓨터가 속한 서브넷을 지정하는 네트워크 IP 접두사 길이입니다.|  
-|**is_public**|**bit**|WSFC 클러스터에서 개인 네트워크인지 공용 네트워크인지 여부를 나타내며 다음 중 하나입니다.<br /><br /> 0 = 개인<br /><br /> 1 = 공용|  
+|**is_public**|**bit**|WSFC 클러스터에서 프라이빗 네트워크인지 퍼블릭 네트워크인지 여부를 나타내며 다음 중 하나입니다.<br /><br /> 0 = 프라이빗<br /><br /> 1 = 공용|  
 |**is_ipv4**|**bit**|서브넷의 유형이며 다음 중 하나입니다.<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
   
 ## <a name="security"></a>보안  

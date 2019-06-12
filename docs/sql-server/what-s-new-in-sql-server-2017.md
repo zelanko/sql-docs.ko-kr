@@ -112,7 +112,7 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 - **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
 - **SQL Server 컴퓨팅 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
 - **네이티브 점수 매기기** - Transact-SQL의 PREDICT 함수는 R의 설치 여부와 관계없이 SQL Server 2017의 모든 인스턴스에서 점수를 매기는 데 사용할 수 있습니다. 지원되는 RevoScaleR 및 revoscalepy 알고리즘 하나를 사용하여 모델을 학습한 후 새로운 압축 이진 형식으로 저장하기만 하면 됩니다.
-- **패키지 관리** - T-SQL은 이제 DBA가 R 패키지를 좀 더 효과적으로 관리할 수 있도록 CREATE EXTERNAL LIBRARY 문을 지원합니다. 역할을 사용하여 개인 또는 공유 패키지 액세스를 제어하고, 데이터베이스에 R 패키지를 저장하여 다른 사용자와 공유합니다.
+- **패키지 관리** - T-SQL은 이제 DBA가 R 패키지를 좀 더 효과적으로 관리할 수 있도록 CREATE EXTERNAL LIBRARY 문을 지원합니다. 역할을 사용하여 프라이빗 또는 공유 패키지 액세스를 제어하고, 데이터베이스에 R 패키지를 저장하여 다른 사용자와 공유합니다.
 - **성능 향상** - 저장 프로시저 `sp_execute_external_script`는 columnstore 데이터에 대한 일괄 처리 모드 실행을 지원하도록 최적화되었습니다.
 
 

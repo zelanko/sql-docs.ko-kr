@@ -79,7 +79,7 @@ ms.locfileid: "65102036"
   
 -   OnExecute 메서드를 재정의합니다.  
   
--   전용 도우미 메서드를 몇 개 추가합니다.  
+-   프라이빗 도우미 메서드를 몇 개 추가합니다.  
   
 -   결과 어셈블리를 빌드합니다.  
   
@@ -525,7 +525,7 @@ ms.locfileid: "65102036"
   
 1.  Visual Studio에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 "다시 빌드"를 선택합니다. 그러면 프로젝트가 다시 빌드되고 모델 통계가 생성되며, 해당 결과가 빌드 출력에 포함되고 ModelStatistics.xml에 저장됩니다. xml 파일을 보려면 솔루션 탐색기에서 "모든 파일 표시"를 선택해야 할 수 있습니다.  
   
-2.  Visual Studio 명령 프롬프트 열기: **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio <Visual Studio Version>**, **Visual Studio Tools**, **Visual Studio 명령 프롬프트(<Visual Studio Version>)** 를 차례로 클릭합니다.  
+2.  Visual Studio 명령 프롬프트 열기: **시작** 메뉴에서 **모든 프로그램**, **Microsoft Visual Studio <Visual Studio Version>** , **Visual Studio Tools**, **Visual Studio 명령 프롬프트(<Visual Studio Version>)** 를 차례로 클릭합니다.  
   
 3.  명령 프롬프트에서 SQL 프로젝트가 있는 폴더로 이동합니다.  
   

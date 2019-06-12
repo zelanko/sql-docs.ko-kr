@@ -74,7 +74,7 @@ ms.locfileid: "66054048"
   
 -   VM을 만드는 데 Windows Azure VM 또는 갤러리 이미지를 사용할 계획이면 SQL Server 클라우드 어댑터를 구성하고 실행해야 합니다.  
   
--   전용 포트 11435를 사용하여 Windows Azure 게이트웨이에 있는 SQL Server 클라우드 어댑터에 대한 열린 엔드포인트를 구성해야 합니다.  
+-   프라이빗 포트 11435를 사용하여 Windows Azure 게이트웨이에 있는 SQL Server 클라우드 어댑터에 대한 열린 엔드포인트를 구성해야 합니다.  
   
  또한 기존 Windows Azure VM에 데이터베이스를 배포할 계획인 경우에도 다음 정보를 제공할 수 있어야 합니다.  
   

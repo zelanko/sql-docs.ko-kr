@@ -63,7 +63,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  서명 정보는 sys.crypt_properties 카탈로그 뷰에 표시됩니다.  
   
 ## <a name="permissions"></a>Permissions  
- 개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 개인 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
+ 개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResourcesDP`저장된 프로시저에서`HumanResources.uspUpdateEmployeeLogin` 인증서의 서명을 제거합니다.  

@@ -39,7 +39,7 @@ ms.locfileid: "63049740"
 |**class_desc**|**nvarchar(60)**|속성이 존재하는 항목의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|속성이 존재하는 항목의 ID입니다. 이 ID는 해당 클래스에 따라 해석됩니다.|  
 |**thumbprint**|**varbinary(32)**|사용된 인증서 또는 비대칭 키의 SHA-1 해시입니다.|  
-|**crypt_type**|**char(4)**|암호화 유형입니다.<br /><br /> SPVC = 인증서 개인 키를 사용한 암호화<br /><br /> SPVA = 비대칭 개인 키를 사용한 암호화<br /><br /> CPVC = 인증서 개인 키를 사용한 카운터 서명<br /><br /> CPVA = 비대칭 키를 사용한 카운터 서명|  
+|**crypt_type**|**char(4)**|암호화 유형입니다.<br /><br /> SPVC = 인증서 프라이빗 키를 사용한 암호화<br /><br /> SPVA = 비대칭 프라이빗 키를 사용한 암호화<br /><br /> CPVC = 인증서 프라이빗 키를 사용한 카운터 서명<br /><br /> CPVA = 비대칭 키를 사용한 카운터 서명|  
 |**crypt_type_desc**|**nvarchar(60)**|암호화 유형에 대한 설명입니다.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|부호 있는 비트 또는 암호화된 비트입니다.|  
   

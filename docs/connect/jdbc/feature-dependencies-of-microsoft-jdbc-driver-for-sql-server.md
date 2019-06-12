@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c96a896e6d42172400b4a326abdc99824c6ac52
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 8316978e0122fe800dbd5af592b2ed57506873b6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670921"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781949"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver의 기능 종속성
 
@@ -118,9 +118,9 @@ ms.locfileid: "59670921"
 - JDBC Driver 버전 6.2.2 - 종속성 버전: Adal4j(버전 1.4.0) 및 해당 종속성
 - JDBC Driver 버전 6.0.0 - 종속성 버전: Adal4j(버전 1.3.0) 및 해당 종속성 이 버전의 드라이버에서는 Windows 운영 체제의 _ActiveDirectoryIntegrated_ 인증 모드만 사용하여 연결하고 sqljdbc_auth.dll 및 SQL Server용 Active Directory 인증 라이브러리(ADALSQL.DLL)를 사용하여 연결할 수 있습니다.
 
-드라이버 버전 6.4.0부터는 애플리케이션에서 Windows 운영 체제의 ADALSQL.DLL을 사용하지 않아도 됩니다. ‘Windows가 아닌 운영 체제’의 경우 드라이버에서 ActiveDirectoryIntegrated 인증을 사용하려면 Kerberos 티켓이 필요합니다. Kerberos를 사용하여 Active Directory에 연결하는 방법에 대한 자세한 내용은 [Set Kerberos ticket on Windows, Linux, and Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)(Windows, Linux 및 Mac에서 Kerberos 티켓 설정)을 참조하세요.
+드라이버 버전 6.4.0부터는 애플리케이션에서 Windows 운영 체제의 ADALSQL.DLL을 사용하지 않아도 됩니다. ‘Windows가 아닌 운영 체제’의 경우  드라이버에서 ActiveDirectoryIntegrated 인증을 사용하려면 Kerberos 티켓이 필요합니다. Kerberos를 사용하여 Active Directory에 연결하는 방법에 대한 자세한 내용은 [Set Kerberos ticket on Windows, Linux, and Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)(Windows, Linux 및 Mac에서 Kerberos 티켓 설정)을 참조하세요.
 
-‘Windows 운영 체제’의 경우 드라이버는 기본적으로 sqljdbc_auth.dll을 찾고 Kerberos 티켓 설정이나 Azure 라이브러리 종속성이 필요하지 않습니다. sqljdbc_auth.dll을 사용할 수 없으면 드라이버는 다른 운영 체제에서처럼 Active Directory에 인증하기 위해 Kerberos 티켓을 찾습니다.
+‘Windows 운영 체제’의 경우  드라이버는 기본적으로 sqljdbc_auth.dll을 찾고 Kerberos 티켓 설정이나 Azure 라이브러리 종속성이 필요하지 않습니다. sqljdbc_auth.dll을 사용할 수 없으면 드라이버는 다른 운영 체제에서처럼 Active Directory에 인증하기 위해 Kerberos 티켓을 찾습니다.
 
 이 기능을 사용하는 [애플리케이션 예제](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)를 다운로드할 수 있습니다.
 

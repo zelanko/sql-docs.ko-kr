@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 21daadd4301444b75f80961949396741f0ad04e8
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574011"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500218"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
 
@@ -47,7 +47,7 @@ ms.locfileid: "65574011"
 |119|Error|활성화|보고서 서버<br /><br /> 일정 예약 및 배달 프로세서|*\<Source>* 에 보고서 서버 데이터베이스의 내용에 대한 액세스 권한이 부여되지 않았습니다.|  
 |120|Error|활성화|보고서 서버|대칭 키를 해독할 수 없습니다. 서비스가 실행되는 계정이 변경된 것 같습니다. 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
 |121|Error|시작/종료|보고서 서버|RPC(원격 프로시저 호출) 서비스를 시작하지 못했습니다.|  
-|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대한 자세한 내용은 [전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.|  
+|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대 한 자세한 내용은 참조 하세요. [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)합니다.|  
 |123|경고|로깅|보고서 서버<br /><br /> 보고서 관리자|보고서 서버에서 추적 로그에 쓰지 못했습니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |124|정보|활성화|보고서 서버|보고서 서버 서비스가 활성화되었습니다. 자세한 내용은 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.|  
 |125|정보|활성화|보고서 서버|데이터 암호화에 사용된 키를 추출했습니다. 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  

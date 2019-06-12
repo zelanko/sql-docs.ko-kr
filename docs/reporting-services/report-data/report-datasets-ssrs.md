@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571380"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500302"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 세트(SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "65571380"
   
      ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&amp;#40;보고서 작성기 및 SSRS&amp;#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
+ 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md) 및 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)을 참조하세요.  
   
  종속되는 데이터 세트를 포함하는 보고서 파트를 추가하여 보고서에 데이터 세트를 추가할 수도 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65571380"
 -   포함된 데이터 원본을 기반으로 하는 포함된 데이터 세트를 추가합니다.  
   
 > [!NOTE]  
->  보고서 서버에서 공유 항목은 개별적으로 또는 해당 항목이 게시된 폴더의 사용 권한을 상속하여 보호됩니다. 자신이 저장하는 공유 데이터 세트에 다른 사용자가 액세스할 수 있도록 설정하려면 사용 권한이 부여되는 방식을 이해해야 합니다. 자세한 내용은 [보안&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/security-report-builder.md) 또는 [공유 데이터 세트 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
+>  보고서 서버에서 공유 항목은 개별적으로 또는 해당 항목이 게시된 폴더의 사용 권한을 상속하여 보호됩니다. 자신이 저장하는 공유 데이터 세트에 다른 사용자가 액세스할 수 있도록 설정하려면 사용 권한이 부여되는 방식을 이해해야 합니다. 자세한 내용은 [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md) 또는 [공유 데이터 세트 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
   
  보고서에 데이터를 추가한 후에는 데이터 영역을 사용해 보고서 페이지에서 데이터를 구성하고, 보고서 파트를 수정한 다음 해당 변경 내용을 다른 사람과 공유하고, 사용자가 보고서에 표시되는 데이터를 제한 또는 정렬할 수 있도록 설정할 수 있습니다. 자세한 내용은 다음 관련 항목을 참조하십시오.  
   
@@ -92,23 +92,23 @@ ms.locfileid: "65571380"
   
  쿼리 디자이너에서는 쿼리를 실행해 예제 데이터를 보고 쿼리 명령 구문의 유효성을 검사할 수 있습니다. 결과 집합의 열 이름이 보고서 데이터 창에 표시되는 필드 이름이 됩니다. 결과 집합은 단일 행 및 열 집합이어야 하며 각 데이터 행에는 같은 수의 값이 있어야 합니다. 단일 쿼리에 여러 결과 집합이 있을 수는 없습니다. 열 수가 일정하지 않으며 각 행에 대해 생성되는 데이터 값 수가 다를 수 있는 비정형 계층은 지원되지 않습니다.  
   
- 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) 및 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](specify-credential-and-connection-information-for-report-data-sources.md) 하 고 [데이터 연결, 데이터 원본 및 연결 문자열 &#40;보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
+ 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](query-design-tools-ssrs.md)를 참조하세요.  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
- [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
  [관계형 쿼리 디자이너에서 쿼리 작성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
  [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
@@ -120,13 +120,13 @@ ms.locfileid: "65571380"
 ##  <a name="Section"></a> 섹션 내용  
  [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
- [보고서 작성기에 자격 증명 지정](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)  
   
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
- [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   
 ## <a name="see-also"></a>참고 항목  

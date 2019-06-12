@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 385770b4b9cd009e5f88d708a0c7b68cb6517e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e993fcae5d75fb126bfa6a9a352263b7f3a19ad
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666161"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779835"
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>getDouble 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a17c786ec882db00c2a399878f5160573088aec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97de855dd6f80b044ec8a72d30a3041aa5990705
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647669"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764720"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>setBinaryStream 메서드(int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public final void setAsciiStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *된*  
+ *parameterIndex*  
   
  매개 변수 번호를 나타내는 **int**입니다.  
   
@@ -47,7 +47,7 @@ public final void setAsciiStream(int parameterIndex,
  이 setBinaryStream 메서드는 java.sql.PreparedStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setBinaryStream 메서드(SQLServerPreparedStatement)](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
+ [setBinaryStream 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

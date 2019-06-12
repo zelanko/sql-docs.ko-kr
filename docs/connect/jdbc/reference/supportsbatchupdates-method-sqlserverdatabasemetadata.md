@@ -1,5 +1,5 @@
 ---
-title: supportsBatchUpdates 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: supportsOuterJoins 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06252f149adc2e86fee1458f3dc8092c697c75f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f7ffdc84d40f68b1f1697357a892fb2d136be2e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745691"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766532"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>supportsBatchUpdates 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

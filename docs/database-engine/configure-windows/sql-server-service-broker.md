@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154658"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775405"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 메시징 및 큐 애플리케이션에 대한 기본 지원을 제공합니다. 이러한 지원을 통해 개발자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소를 사용하여 서로 다른 데이터베이스 간에 통신하는 복잡한 애플리케이션을 쉽게 만들 수 있습니다. 개발자는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용하여 신뢰할 수 있는 분산 애플리케이션을 간단하게 작성할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)의 메시징 및 큐에 대한 기본 지원을 제공합니다. 개발자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소를 사용하여 서로 다른 데이터베이스 간에 통신하는 복잡한 애플리케이션을 쉽게 만들고, 안정적인 분산형 애플리케이션을 빌드할 수 있습니다.  
   
- [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용하는 애플리케이션 개발자는 복잡한 통신 및 메시징 내부 사항을 프로그래밍하지 않고도 데이터 작업을 여러 데이터베이스에 분산시킬 수 있습니다. 이렇게 하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 대화 컨텍스트에서 통신 경로를 처리하므로 개발 및 테스트 작업이 줄어들 뿐만 아니라 성능이 향상됩니다. 예를 들어, 웹 사이트를 지원하는 프런트 엔드 데이터베이스는 정보를 기록하고 프로세스를 많이 사용하는 태스크를 백 엔드 데이터베이스의 큐로 보낼 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 모든 태스크가 트랜잭션 컨텍스트에서 관리되도록 하여 안정성과 기술 일관성을 유지합니다.  
+## <a name="when-to-use-service-broker"></a>Service Broker를 사용하는 경우
+
+ Service Broker 구성 요소를 사용하여 기본 데이터베이스 내 비동기 메시지 처리 기능을 구현합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용하는 애플리케이션 개발자는 복잡한 통신 및 메시징 내부 사항을 프로그래밍하지 않고도 데이터 작업을 여러 데이터베이스에 분산시킬 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화 컨텍스트에서 통신 경로를 처리하므로 Service Broker를 통해 개발 및 테스트 작업이 줄어들 뿐만 아니라 성능이 향상됩니다. 예를 들어, 웹 사이트를 지원하는 프런트 엔드 데이터베이스는 정보를 기록하고 프로세스를 많이 사용하는 태스크를 백 엔드 데이터베이스의 큐로 보낼 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 모든 태스크가 트랜잭션 컨텍스트에서 관리되도록 하여 안정성과 기술 일관성을 유지합니다.  
   
+## <a name="overview"></a>개요
+
+  Service Broker는 기본 데이터베이스 내 서비스 지향 애플리케이션을 만들 수 있는 메시지 배달 프레임워크입니다. 테이블에서 지속적으로 데이터를 읽고 쿼리 수명 주기 중에 처리하는 클래식 쿼리 처리 기능과 달리, 서비스 지향 애플리케이션에는 메시지를 교환하는 데이터베이스 서비스가 있습니다. 모든 서비스에는 메시지가 처리될 때까지 배치되는 큐가 있습니다.
+  
+![Service Broker](media/service-broker.png)
+  
+  Transact-SQL `RECEIVE` 명령을 사용하거나 메시지가 큐에 도달할 때마다 호출되는 활성화 프로시저를 통해 큐의 메시지를 가져올 수 있습니다.
+  
+### <a name="creating-services"></a>서비스 만들기
+ 
+  데이터베이스 서비스는 [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact SQL 문으로 만듭니다. 서비스는 [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) 문을 사용하여 만든 메시지 큐에 연결할 수 있습니다.
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>메시지 보내기
+  
+  메시지는 [SEND](../../t-sql/statements/send-transact-sql.md) Transact SQL 문을 사용한 서비스 간의 대화를 통해 보내집니다. 대화는 `BEGIN DIALOG` Transact SQL 문을 통해 서비스 간에 수립된 통신 채널입니다. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   메시지는 `ExpenssesService`에 전송되고 `dbo.ExpenseQueue`에 배치됩니다. 이 큐에 연결된 활성화 프로시저가 없으므로 메시지는 누군가 읽을 때까지 큐에 남아 있습니다.
+
+### <a name="processing-messages"></a>메시지 처리
+
+   큐에 배치된 메시지는 표준 `SELECT` 쿼리를 사용하여 선택할 수 있습니다. `SELECT` 문은 큐를 수정하거나 메시지를 제거하지 않습니다. 큐에서 메시지를 읽고 끌어오려면 [RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL 문을 사용합니다.
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  큐에서 모든 메시지를 처리한 후에는 [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact SQL 문을 사용하여 대화를 종료해야 합니다.
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Service Broker 설명서의 위치  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 에 대한 참조 설명서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설명서에 포함되어 있습니다. 이 참조 설명서는 다음과 같은 섹션으로 구성됩니다.  
   

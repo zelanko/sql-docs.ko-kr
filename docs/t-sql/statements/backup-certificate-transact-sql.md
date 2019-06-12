@@ -76,32 +76,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  TO FILE = '*path_to_file*'  
  인증서를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일 이름만 지정한 경우 파일은 인스턴스의 기본 사용자 데이터 폴더([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐수도 있음)에 저장됩니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 만든 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
 
- WITH PRIVATE KEY 인증서의 개인 키를 파일에 저장되도록 지정합니다. 이 절은 옵션입니다.
+ WITH PRIVATE KEY 인증서의 프라이빗 키를 파일에 저장되도록 지정합니다. 이 절은 옵션입니다.
 
  FILE = '*path_to_private_key_file*'  
- 개인 키를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일 이름만 지정한 경우 파일은 인스턴스의 기본 사용자 데이터 폴더([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐수도 있음)에 저장됩니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 만든 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
+ 프라이빗 키를 저장할 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. 이 경로는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일 이름만 지정한 경우 파일은 인스턴스의 기본 사용자 데이터 폴더([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 폴더일 수도 있고 아닐수도 있음)에 저장됩니다. SQL Server Express LocalDB의 경우 인스턴스의 기본 사용자 데이터 폴더는 인스턴스를 만든 계정의 `%USERPROFILE%` 환경 변수에 의해 지정된 경로입니다.  
 
  ENCRYPTION BY PASSWORD = '*encryption_password*'  
- 키를 백업 파일에 작성하기 전에 개인 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다.  
+ 키를 백업 파일에 작성하기 전에 프라이빗 키를 암호화하는 데 사용되는 암호입니다. 이 암호의 복잡성을 확인해야 합니다.  
   
  DECRYPTION BY PASSWORD = '*decryption_password*'  
- 키를 백업하기 전에 개인 키의 암호를 해독하는 데 사용되는 암호입니다. 이 인수는 인증서가 마스터 키로 암호화된 경우에는 필요하지 않습니다. 
+ 키를 백업하기 전에 프라이빗 키의 암호를 해독하는 데 사용되는 암호입니다. 이 인수는 인증서가 마스터 키로 암호화된 경우에는 필요하지 않습니다. 
   
 ## <a name="remarks"></a>Remarks  
- 개인 키가 데이터베이스에 있는 암호로 암호화된 경우 암호 해독 암호를 지정해야 합니다.  
+ 프라이빗 키가 데이터베이스에 있는 암호로 암호화된 경우 암호 해독 암호를 지정해야 합니다.  
   
- 개인 키를 파일로 백업할 때는 암호화가 필요합니다. 파일의 개인 키를 보호하는 데 사용되는 암호는 데이터베이스에 있는 인증서의 개인 키를 암호화하는 데 사용되는 암호와 다릅니다.  
+ 프라이빗 키를 파일로 백업할 때는 암호화가 필요합니다. 파일의 프라이빗 키를 보호하는 데 사용되는 암호는 데이터베이스에 있는 인증서의 프라이빗 키를 암호화하는 데 사용되는 암호와 다릅니다.  
 
- 개인 키는 PVK 파일 형식으로 저장됩니다.
+ 프라이빗 키는 PVK 파일 형식으로 저장됩니다.
 
- 캐인 키의 유무와 관계없이 백업된 인증서를 복원하려면 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 문을 사용합니다.
+ 프라이빗 키의 유무와 관계없이 백업된 인증서를 복원하려면 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 문을 사용합니다.
  
- 데이터베이스의 기존 인증서에 개인 키를 복원하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) 문을 사용합니다.
+ 데이터베이스의 기존 인증서에 프라이빗 키를 복원하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) 문을 사용합니다.
  
  백업을 수행할 때 파일은 SQL Server 인스턴스의 서비스 계정에 대한 ACL이 됩니다. 다른 계정으로 실행하는 서버로 인증서를 복원해야 할 경우 새 계정에서 읽을 수 있도록 파일에 대한 권한을 조정해야 합니다. 
   
 ## <a name="permissions"></a>사용 권한  
- 인증서에 대한 CONTROL 권한이 필요하고 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다. 인증서의 공개 부분만 백업하는 경우 이 명령을 사용하려면 인증서에 대한 일부 권한이 필요하고 호출자가 인증서에 대해 VIEW 권한이 거부되지 않아야 합니다.  
+ 인증서에 대한 CONTROL 권한이 필요하고 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다. 인증서의 공개 부분만 백업하는 경우 이 명령을 사용하려면 인증서에 대한 일부 권한이 필요하고 호출자가 인증서에 대해 VIEW 권한이 거부되지 않아야 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -113,8 +113,8 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>2. 인증서와 개인 키 내보내기  
- 다음 예에서는 백업된 인증서의 개인 키가 암호 `997jkhUbhk$w4ez0876hKHJH5gh`를 사용하여 암호화됩니다.  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>2. 인증서와 프라이빗 키 내보내기  
+ 다음 예에서는 백업된 인증서의 프라이빗 키가 암호 `997jkhUbhk$w4ez0876hKHJH5gh`를 사용하여 암호화됩니다.  
   
 ```  
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert'  
@@ -123,8 +123,8 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert'
 GO  
 ```  
   
-### <a name="c-exporting-a-certificate-that-has-an-encrypted-private-key"></a>C. 개인 키가 암호화된 인증서 내보내기  
- 다음 예에서 인증서의 개인 키가 데이터베이스에서 암호화됩니다. 개인 키는 암호 `9875t6#6rfid7vble7r`로 암호화되어야 합니다. 인증서가 백업 파일에 저장될 때 개인 키는 암호 `9n34khUbhk$w4ecJH5gh`로 암호화됩니다.  
+### <a name="c-exporting-a-certificate-that-has-an-encrypted-private-key"></a>C. 프라이빗 키가 암호화된 인증서 내보내기  
+ 다음 예에서 인증서의 프라이빗 키가 데이터베이스에서 암호화됩니다. 프라이빗 키는 암호 `9875t6#6rfid7vble7r`로 암호화되어야 합니다. 인증서가 백업 파일에 저장될 때 프라이빗 키는 암호 `9n34khUbhk$w4ecJH5gh`로 암호화됩니다.  
   
 ```  
 BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'   

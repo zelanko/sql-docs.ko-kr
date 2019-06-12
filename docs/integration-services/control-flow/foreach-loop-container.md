@@ -1,7 +1,7 @@
 ---
 title: Foreach 루프 컨테이너 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727713"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403045"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
 
@@ -68,6 +68,8 @@ ms.locfileid: "65727713"
 -   Azure Storage의 blob 컨테이너에 blob를 열거하는 Foreach Azure Blob 열거자입니다.  
 
 -   Azure Data Lake Store의 디렉터리에 파일을 열거하는 Foreach ADLS 파일 열거자입니다.
+
+-   Azure Data Lake Store Gen2의 디렉터리에 파일을 열거하는 Foreach Data Lake Storage Gen2 파일 열거자입니다.
   
  다음 다이어그램에서는 파일 시스템 태스크가 있는 Foreach 루프 컨테이너를 보여 줍니다. Foreach 루프는 Foreach File 열거자를 사용하며 파일 시스템 태스크는 파일을 복사하도록 구성되어 있습니다. 열거자가 지정한 폴더에 4개 파일이 들어 있으면 루프가 4번 반복되어 4개 파일이 복사됩니다.  
   
@@ -98,6 +100,7 @@ ms.locfileid: "65727713"
 |Foreach HDFS File 열거자|열거할 폴더 및 파일, 검색된 파일의 파일 이름 형식 및 하위 폴더 포함 여부 지정|  
 |Foreach Azure Blob|컨테이너 blob을 열거할 수 있는 Azure blob 컨테이너를 지정합니다.|  
 |Foreach ADLS 파일|열거할 파일을 포함하는 Azure Data Lake Store 디렉터리를 지정합니다.|
+|Foreach Data Lake Storage Gen2 파일|열거할 파일을 포함하는 Azure Data Lake Storage Gen2 디렉터리를 다른 옵션과 함께 지정합니다.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 제어 흐름에 열거 추가
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에 파일 및 개체를 열거하는 루핑 구성을 간단하게 포함시킬 수 있는 제어 흐름 요소인 Foreach 루프 컨테이너가 포함됩니다. 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)을 참조하십시오.  
@@ -215,6 +218,7 @@ ms.locfileid: "65727713"
 |**Foreach HDFS File 열거자**|지정된 HDFS 위치에 있는 HDFS 파일을 열거합니다. 이 값을 선택하면 **Foreach HDFS File 열거자**섹션에 동적 옵션이 표시됩니다.|  
 |**Foreach Azure Blob 열거자**|지정된 Blob 위치에 있는 Blob 파일을 열거합니다. 이 값을 선택하면 **Foreach Azure Blob 열거자**섹션에 동적 옵션이 표시됩니다.|  
 |**Foreach ADLS File 열거자**|지정된 Data Lake Store 디렉터리에서 파일을 열거합니다. 이 값을 선택하면 **Foreach ADLS File 열거자**섹션에 동적 옵션이 표시됩니다.|
+|**Foreach Data Lake Storage Gen2 파일 열거자**|지정된 Data Lake Storage Gen2 디렉터리에서 파일을 열거합니다. 이 값을 선택하면 **Foreach Data Lake Storage Gen2 파일 열거자** 섹션에 동적 옵션이 표시됩니다.|
   
  **식**  
  기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(...)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
@@ -291,7 +295,7 @@ ms.locfileid: "65727713"
  변수에 저장된 ADO 또는 ADO.NET 개체의 행이나 테이블을 열거하는 데 Foreach ADO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 변수에 데이터 세트를 기록하는 스크립트 태스크를 포함하는 경우 Foreach ADO 열거자를 사용하여 데이터 세트의 행을 열거할 수 있습니다. 변수가 ADO.NET 데이터 세트를 포함하는 경우 여러 테이블의 행을 열거하거나 테이블을 열거하도록 열거자를 구성할 수 있습니다.  
   
  **ADO 개체 원본 변수**  
- 목록에서 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
 > [!NOTE]  
 >  변수에 Object 데이터 형식이 있어야 합니다. 그렇지 않으면 오류가 발생합니다.  
@@ -311,7 +315,7 @@ ms.locfileid: "65727713"
  지정한 데이터 원본에 대한 스키마를 열거하는 데 Foreach ADO.NET 스키마 행 집합 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 **AdventureWorks** 데이터베이스의 열과 같은 스키마를 열거하고 SQL 실행 태스크를 사용하여 스키마 사용 권한을 가져올 수 있습니다.  
   
  **대량 삽입 태스크 편집기**  
- 목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
+ 목록에서 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 ADO.NET 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
@@ -330,7 +334,7 @@ ms.locfileid: "65727713"
  지정한 변수의 열거 가능한 개체를 열거하는 데 Foreach From Variable 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 쿼리를 실행하여 변수에 결과를 저장하는 SQL 실행 태스크를 포함하는 경우 Foreach From Variable 열거자를 사용하여 쿼리 결과를 열거할 수 있습니다.  
   
  **변수**  
- 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -353,11 +357,11 @@ ms.locfileid: "65727713"
  **DocumentSource**  
  **DocumentSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표(...) 단추를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -383,11 +387,11 @@ ms.locfileid: "65727713"
  **OuterXPathString**  
  **OuterXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -406,11 +410,11 @@ ms.locfileid: "65727713"
  **InnerXPathString**  
  **InnerXPathStringSourceType**을 **직접 입력**으로 설정한 경우 XPath 문자열을 입력합니다.  
   
- **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -418,7 +422,7 @@ ms.locfileid: "65727713"
  SMO(SQL Server Management Objects) 개체를 열거하는 데 Foreach SMO 열거자를 사용할 수 있습니다. 예를 들어 Foreach 루프가 SQL 실행 태스크를 포함하는 경우 Foreach SMO 열거자를 사용하여 **AdventureWorks** 데이터베이스의 테이블을 열거하고 각 테이블의 행 수를 계산하는 쿼리를 실행할 수 있습니다.  
   
  **대량 삽입 태스크 편집기**  
- 기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  관련 항목: [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -470,6 +474,9 @@ ms.locfileid: "65727713"
  **Blob 디렉터리**  
  열거할 Blob 파일을 포함하는 Blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다.  
   
+ **재귀적 검색**  
+ 하위 디렉터리 안에서 재귀적으로 검색할 것인지 여부를 지정합니다.
+
  **Blob 이름 필터**  
  특정 이름 패턴의 파일을 열거하려면 이름 필터를 지정합니다. 예를 들어 `MySheet*.xls\*`는 MySheet001.xls 및 MySheetABC.xlsx와 같은 파일을 포함합니다.  
   
@@ -490,6 +497,18 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
   
 **SearchRecursively**  
 지정된 디렉터리 내에서 재귀적으로 검색할 것인지 지정합니다.  
+
+####  <a name="ForeachBlobFsFile"></a> 열거자 = Foreach Data Lake Storage Gen2 파일 열거자 
+**Foreach Data Lake Storage Gen2 파일 열거자**를 사용하면 SSIS 패키지가 Azure Data Lake Store Gen2에 파일을 열거할 수 있습니다.
+
+**AzureStorageConnection**  
+기존 Azure Storage Connection Manager를 지정하거나, Data Lake Storage Gen2 서비스를 참조하는 새 항목을 만듭니다.
+
+**FolderPath**  
+파일을 열거할 폴더의 경로를 지정합니다.
+
+**SearchRecursively**  
+지정된 폴더 내에서 재귀적으로 검색할 것인지 지정합니다.  
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>변수 매핑 페이지 - Foreach 루프 편집기
  **Foreach 루프 편집기** 대화 상자의 **변수 매핑** 페이지를 사용하여 변수를 컬렉션 값에 매핑할 수 있습니다. 변수 값은 루프가 반복될 때마다 컬렉션 값으로 업데이트됩니다.  

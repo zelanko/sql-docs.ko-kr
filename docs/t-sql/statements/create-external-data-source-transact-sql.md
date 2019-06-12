@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.openlocfilehash: 864c7b2da5b6b04f1c017997c3d1ecba31375b43
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65536246"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265159"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -70,20 +70,20 @@ WITH
 
 외부 데이터 원본에 대한 연결 프로토콜 및 경로를 제공합니다.
 
-| 외부 데이터 원본        | 위치 접두사 | 위치 경로                                         | 제품 / 서비스별로 지원되는 위치    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera 또는 Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server(2016+), PDW                     |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server(2016+), PDW, SQL DW             |
-| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
-| Azure Data Lake Store Gen 2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server(2019+)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server(2019+)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server(2019+)                          |
-| MongoDB 또는 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server(2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server(2019+) - Windows에만           |
-| 대량 작업             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server(2017+), SQL DB                  |
-| 탄력적 쿼리(분할)       | 필수 아님    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
-| 탄력적 쿼리(원격)      | 필수 아님    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
+| 외부 데이터 원본        | 위치 접두사 | 위치 경로                                         | 제품 / 서비스별로 지원되는 위치 |
+| --------------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera 또는 Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server(2016+), PDW                  |
+| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server(2016+), PDW, SQL DW          |
+| Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                   |
+| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                   |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server(2019+)                       |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server(2019+)                       |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server(2019+)                       |
+| MongoDB 또는 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server(2019+)                       |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server(2019+) - Windows에만        |
+| 대량 작업             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server(2017+), SQL DB               |
+| 탄력적 쿼리(분할)       | 필수 아님    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                   |
+| 탄력적 쿼리(원격)      | 필수 아님    | `<remote_server_name>.database.windows.net`           | SQL DB                                   |
 
 위치 경로:
 
@@ -134,7 +134,7 @@ WITH
   - 로드해야 하는 파일에 대해 적어도 읽기 권한이 있어야 합니다(예: `srt=o&sp=r`).
   - 유효한 만료 기간을 사용합니다(모든 날짜는 UTC 시간임).
 
-`SHARED ACCESS SIGNATURE` 및 `TYPE` = `BLOB_STORAGE`와 함께 `CREDENTIAL`을 사용하는 예제는 [대량 작업을 실행하고 Azure Blob Storage에서 SQL Database로 데이터를 검색하기 위한 외부 데이터 원본 만들기](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)를 참조하세요.
+`SHARED ACCESS SIGNATURE` 및 `TYPE` = `BLOB_STORAGE`와 함께 `CREDENTIAL`을 사용하는 예제는 [대량 작업을 실행하고 Azure Blob Storage에서 SQL Database로 데이터를 검색하기 위한 외부 데이터 원본 만들기](#k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)를 참조하세요.
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.
 
@@ -173,7 +173,7 @@ Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니�
 | 7                   | 8050                          |
 
 지원되는 Hadoop 버전의 전체 목록은 [PolyBase 연결 구성(Transact-SQL)][connectivity_pb]을 참조하세요.
-  
+
 > [!IMPORTANT]  
 > 외부 데이터 원본을 만들 때 RESOURCE_MANAGER_LOCATION 값의 유효성이 검사되지 않습니다. 잘못된 값을 입력하면 제공된 값을 확인할 수 없으므로 푸시 다운을 시도할 때마다 실행 시 쿼리 오류가 발생할 수 있습니다.
 
@@ -183,10 +183,10 @@ Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니�
 
 `TYPE`이 `RDBMS` 또는 `SHARD_MAP_MANAGER`로 설정된 경우 이 인수를 구성합니다.
 
-| TYPE              | DATABASE_NAME의 값                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | DATABASE_NAME의 값                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS             | `LOCATION`을 사용하여 제공된 서버의 원격 데이터베이스 이름 |
-| SHARD_MAP_MANAGER | 분할된 맵 관리자로 작동하는 데이터베이스의 이름                 |
+| SHARD_MAP_MANAGER | 분할된 맵 관리자로 작동하는 데이터베이스의 이름      |
 
 `TYPE` = `RDBMS`에서 외부 데이터 원본을 만드는 방법을 보여주는 예제는 [RDBMS 외부 데이터 원본 만들기](#g-create-an-rdbms-external-data-source)를 참조하세요.
 
@@ -248,7 +248,7 @@ MongoDB와 같은 다른 데이터 원본에 대한 추가 예제는 [MongoDB에
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>2. Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hortonworks 또는 Cloudera Hadoop 클러스터를 참조하는 외부 데이터 원본을 만들려면 머신 이름 또는 Hadoop `Namenode` 및 포트의 IP 주소를 지정합니다. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -261,7 +261,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>C. 푸시 다운이 활성화된 상태에서 Hadoop를 참조하는 외부 데이터 원본 만들기
 
 `RESOURCE_MANAGER_LOCATION` 옵션을 지정하여 PolyBase 쿼리에 대한 Hadoop 계산 푸시 다운을 활성화합니다. 활성화되면 PolyBase는 쿼리 계산을 Hadoop에 푸시해야 하는지 여부를 결정하기 위해 비용 기반 결정을 내립니다.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -275,7 +275,7 @@ WITH
 ### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. Kerberos 보안 Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hadoop 클러스터가 Kerberos 보안 방식인지 확인하려면 Hadoop core-site.xml에서 hadoop.security.authentication 속성의 값을 확인합니다. Kerberos 보안 Hadoop 클러스터를 확인하려면 Kerberos 사용자 이름과 암호를 포함한 데이터베이스 범위 자격 증명을 지정해야 합니다. 데이터베이스 범위 자격 증명 비밀을 암호화하는 데에는 데이터베이스 마스터 키가 사용됩니다.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
@@ -439,12 +439,36 @@ WITH
 [;]
 ```
 
+### <a name="j-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2-or-azure-blob-storage-with-managed-identities"></a>J. ADLS(Azure Data Lake Store) Gen 2 또는 관리 ID 포함 Azure Blob Storage를 참조하는 외부 데이터 원본 만들기
+
+데이터베이스 범위 자격 증명을 만들기 전에 SQL Server에 대한 등록 및 RBAC 액세스 구성에 대한 [지침](https://docs.microsoft.com/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)을 따릅니다.  
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- There is no need to specify SECRET because this mechanism uses Managed Identity under the covers.
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+     IDENTITY   = 'Managed Service Identity'
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
+```
+
 ## <a name="examples-bulk-operations"></a>예: 대량 작업
 
 > [!NOTE]
-> 대량 작업을 위해 외부 데이터 원본을 구성할 때 `LOCATION` URL 끝에 추적 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 배치하지 마세요.
+> 대량 작업을 위해 외부 데이터 원본을 구성할 때 `LOCATION` URL 끝에 추적 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 배치하지 마세요.
 
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
+### <a name="k-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>11. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
 
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.
 [BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]을 사용하여 대량 작업에 대한 다음 데이터 원본을 사용합니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.

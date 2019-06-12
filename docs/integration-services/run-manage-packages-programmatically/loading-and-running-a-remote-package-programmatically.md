@@ -334,7 +334,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>웹 서비스 테스트  
- 다음 예제 콘솔 응용 프로그램에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 전용 열거형을 만들어 실행 결과를 보고합니다.  
+ 다음 예제 콘솔 응용 프로그램에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>콘솔 응용 프로그램을 만들어 웹 서비스를 테스트하려면  
   
@@ -344,7 +344,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
   
 3.  웹 서비스 프로젝트에 대한 웹 참조를 추가합니다. 필요할 경우 예제 코드에서 웹 서비스 프록시 개체에 지정한 이름에 대한 변수 선언을 조정합니다.  
   
-4.  기본 루틴 및 전용 열거형에 대한 예제 코드를 코드에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
+4.  기본 루틴 및 프라이빗 열거형에 대한 예제 코드를 코드에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   
 5.  LaunchPackage 메서드를 호출하는 코드 줄을 편집하여 기존 패키지를 가리키는 입력 인수에 올바른 값을 지정합니다. 예를 들어 package1.dtsx가 서버의 C:\My Packages에 저장되어 있는 경우 `sourceType` 값으로 "file"을 전달하고, `sourceLocation` 값으로 "C:\My Packages"를 전달하고, `packageName` 값으로 "package1"(확장명 없음)을 전달합니다.  
   

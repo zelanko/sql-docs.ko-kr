@@ -1,7 +1,7 @@
 ---
 title: Windows 서비스 계정 및 권한 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,13 +50,13 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d73e48726c0c119b99f6703b57235fbc2332e4e7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802419"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803284"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ ms.locfileid: "56802419"
   
 -   <a name="MSA"></a> **Managed Service Accounts**  
   
-     MSA(관리 서비스 계정)는 도메인 컨트롤러에서 만들어지고 관리되는 도메인 유형입니다. 관리 서비스 계정은 단일 멤버 컴퓨터에서 서비스를 실행하는 데 사용할 수 있도록 할당됩니다. 암호는 도메인 컨트롤러에서 자동으로 관리됩니다. 사용자는 MSA를 사용하여 컴퓨터에 로그인할 수 없지만 컴퓨터는 MSA를 사용하여 Windows 서비스를 시작할 수 있습니다. MSA는 SPN(서비스 사용자 이름)을 Active Directory에 등록할 수 있는 기능이 있습니다. MSA는 **$** 접미사를 사용하여 이름이 지정됩니다(예: **DOMAIN\ACCOUNTNAME$**). MSA를 지정할 때는 암호를 비워 둡니다. MSA는 단일 컴퓨터에 할당되기 때문에 Windows 클러스터의 다른 노드에서 사용할 수 없습니다.  
+     MSA(관리 서비스 계정)는 도메인 컨트롤러에서 만들어지고 관리되는 도메인 유형입니다. 관리 서비스 계정은 단일 멤버 컴퓨터에서 서비스를 실행하는 데 사용할 수 있도록 할당됩니다. 암호는 도메인 컨트롤러에서 자동으로 관리됩니다. 사용자는 MSA를 사용하여 컴퓨터에 로그인할 수 없지만 컴퓨터는 MSA를 사용하여 Windows 서비스를 시작할 수 있습니다. MSA에는 servicePrincipalName 읽기 및 쓰기 권한이 있을 때 Active Directory 안에서 SPN(서비스 사용자 이름)을 등록하는 기능이 있습니다. MSA는 **$** 접미사를 사용하여 이름이 지정됩니다(예: **DOMAIN\ACCOUNTNAME$** ). MSA를 지정할 때는 암호를 비워 둡니다. MSA는 단일 컴퓨터에 할당되기 때문에 Windows 클러스터의 다른 노드에서 사용할 수 없습니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대해 MSA를 사용할 수 있으려면 먼저 도메인 관리자가 Active Directory에서 MSA를 만들어야 합니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "56802419"
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 서비스 계정에 기본값을 사용하는 경우 인스턴스 이름을 서비스 이름으로 사용하는 가상 계정이 **NT SERVICE\\**_\<SERVICENAME>_ 형식으로 사용됩니다. 가상 계정으로 실행되는 서비스는 *<domain_name>*__\\__*<computer_name>*__$__ 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  
+    (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 서비스 계정에 기본값을 사용하는 경우 인스턴스 이름을 서비스 이름으로 사용하는 가상 계정이 **NT SERVICE\\** _\<SERVICENAME>_ 형식으로 사용됩니다. 가상 계정으로 실행되는 서비스는 *<domain_name>* __\\__ *<computer_name>* __$__ 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.  
   
     > [!NOTE]  
     >  가상 계정은 클러스터의 각 노드에서 SID가 동일하지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 대해 사용할 수 없습니다.  
@@ -269,14 +269,14 @@ ms.locfileid: "56802419"
   
 ###  <a name="Serv_SID"></a> 서비스 구성 및 액세스 제어
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$**_\<InstanceName>_ 일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$** _\<InstanceName>_ 일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.
   
 > [!NOTE]  
 >  Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.
   
  대부분의 구성 요소에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서비스별 계정에 대한 ACL을 직접 구성하므로 리소스 ACL 프로세스를 반복할 필요 없이 서비스 계정 변경을 수행할 수 있습니다.
   
- [!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$**_computer_name_**$**_instance_name* 형식의 이름으로 만들어집니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.
+ [!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$** _computer_name_ **$** _instance_name* 형식의 이름으로 만들어집니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 대한 로컬 Windows 그룹을 만듭니다. 이러한 서비스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 로컬 Windows 그룹에 대한 ACL을 구성합니다.  
   
@@ -290,19 +290,19 @@ ms.locfileid: "56802419"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$**_ComputerName_**$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$**_ComputerName_**$**_PowerPivot_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\ReportServer$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\ReportServer$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스 및 명명된 인스턴스: **NT SERVICE\MsDtsServer130**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 애플리케이션 이벤트 로그에 기록할 수 있는 권한<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **인증 후 클라이언트 가장** (SeImpersonatePrivilege)|  
-|**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$**_InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
-|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser**_$ComputerName_. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
+|**전체 텍스트 검색:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\MSSQLFDLauncher**. 명명된 인스턴스: **NT Service\ MSSQLFDLauncher$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)|  
+|**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **SQLServer2005SQLBrowserUser** _$ComputerName_. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 또는 명명된 인스턴스: **NT Service\SQLWriter**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기에는 명명된 인스턴스에 대한 개별 프로세스가 없습니다.)|SQLWriter 기록기 서비스는 모든 필수 사용 권한이 있는 LOCAL SYSTEM 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 이 서비스에 대한 사용 권한을 검사하거나 부여하지 않습니다.| 
   |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**PolyBase 엔진 및 DMS**| **서비스로 로그온** (SeServiceLogonRight)  |   
 |**실행 패드:**|**서비스로 로그온** (SeServiceLogonRight) <br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br />**트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br />**프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|     
 |**R Services:** **SQLRUserGroup**(SQL 2016 및 2017)  |**로컬 로그온 허용** |   
-|**Machine Learning** '**모든 애플리케이션 패키지’ [AppContainer]**(SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
+|**Machine Learning** '**모든 애플리케이션 패키지’ [AppContainer]** (SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
 
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 인스턴스에서 사용할 수 없습니다.  
   
@@ -400,7 +400,7 @@ ms.locfileid: "56802419"
 
 기본 제공 계정 또는 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 일부 액세스 제어 권한을 부여해야 할 수도 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설정하는 추가 ACL을 보여 줍니다.  
   
-|요구 구성 요소|계정|리소스|Permissions|  
+|요구 구성 요소|계정|리소스|사용 권한|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|성능 로그 사용자|Instid\MSSQL\binn|폴더 내용 보기|  
 ||성능 모니터 사용자|Instid\MSSQL\binn|폴더 내용 보기|  
@@ -436,7 +436,7 @@ ms.locfileid: "56802419"
  데이터베이스가 네트워크 설치된 경우 서비스 계정은 사용자의 파일 위치 및 tempdb 데이터베이스에 대한 액세스 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 네트워크 공유에 대한 액세스 권한을 프로비전할 수 없습니다. 설치 프로그램을 실행하려면 먼저 사용자가 서비스 계정의 tempdb 위치에 대한 액세스 권한을 프로비전해야 합니다. 데이터베이스를 만들기 전에 사용자가 먼저 사용자 데이터베이스 위치에 대한 액세스 권한을 프로비전해야 합니다.  
   
 > [!NOTE]  
->  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. _<domain_name>_**\\**_<computer_name>_**$** 형식으로 시스템 계정을 프로비전합니다.  
+>  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 시스템 계정을 프로비전합니다.  
   
 ###  <a name="Review_additional_considerations"></a> 추가 고려 사항 검토  
 
@@ -453,7 +453,7 @@ ms.locfileid: "56802419"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대해 Windows 인증을 활성화하고 필요한 기본 구성, 즉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin 그룹의 구성원인지 확인합니다.  
   
 ###  <a name="Registry"></a> 레지스트리 권한  
- 인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 **HKLM\Software\Microsoft\Microsoft SQL Server\\**_<Instance_ID>_ 아래에 생성됩니다. 예를 들면 다음과 같습니다.  
+ 인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 **HKLM\Software\Microsoft\Microsoft SQL Server\\** _<Instance_ID>_ 아래에 생성됩니다. 예를 들면 다음과 같습니다.  
   
 -   **HKLM\Software\Microsoft\Microsoft SQL Server\MSSQL13.MyInstance**  
   
@@ -566,7 +566,7 @@ WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssd
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 그룹에 프로비전된 상태로 유지됩니다.  
   
-    -   서비스의 로컬 Windows 그룹은 이름이 **SQLServer2005MSSQLUser$**_<computer_name>_**$**_<instance_name>_ 에서 **SQLServerMSSQLUser$**_<computer_name>_**$**_<instance_name>_ 으로 바뀝니다. 마이그레이션된 데이터베이스의 파일 위치에는 로컬 Windows 그룹에 대한 ACE(액세스 제어 항목)가 포함됩니다. 새 데이터베이스의 파일 위치에는 서비스별 SID에 대한 ACE가 포함됩니다.  
+    -   서비스의 로컬 Windows 그룹은 이름이 **SQLServer2005MSSQLUser$** _<computer_name>_ **$** _<instance_name>_ 에서 **SQLServerMSSQLUser$** _<computer_name>_ **$** _<instance_name>_ 으로 바뀝니다. 마이그레이션된 데이터베이스의 파일 위치에는 로컬 Windows 그룹에 대한 ACE(액세스 제어 항목)가 포함됩니다. 새 데이터베이스의 파일 위치에는 서비스별 SID에 대한 ACE가 포함됩니다.  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]로부터 업그레이드하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 서비스별 SID에 대한 ACE를 보존합니다.  
   
@@ -604,7 +604,7 @@ WMI(Windows Management Instrumentation)에서 [!INCLUDE[ssDE](../../includes/ssd
   
  <a name="Network_Service"></a> **네트워크 서비스 계정**  
   
- 네트워크 서비스 계정은 리소스 및 개체에 대한 액세스 권한 수준이 Users 그룹 멤버보다 높은 기본 제공 계정입니다. 네트워크 서비스 계정으로 실행되는 서비스는 _<domain_name>_**\\**_<computer_name>_**$** 형식으로 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다. 계정의 실제 이름은 **NT AUTHORITY\NETWORK SERVICE**입니다.  
+ 네트워크 서비스 계정은 리소스 및 개체에 대한 액세스 권한 수준이 Users 그룹 멤버보다 높은 기본 제공 계정입니다. 네트워크 서비스 계정으로 실행되는 서비스는 _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다. 계정의 실제 이름은 **NT AUTHORITY\NETWORK SERVICE**입니다.  
   
 <a name="Local_System"></a> **로컬 시스템 계정**  
   

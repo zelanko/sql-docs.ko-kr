@@ -59,7 +59,7 @@ ms.locfileid: "62768480"
  Excel 파일의 워크시트를 나열하고 특정 워크시트가 있는지 확인합니다.  
   
  [스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기](../extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)  
- 메시지를 원격 개인 메시지 큐로 보냅니다.  
+ 메시지를 원격 프라이빗 메시지 큐로 보냅니다.  
   
 ### <a name="other-examples"></a>기타 예  
  다음 항목에도 스크립트 태스크에 사용할 수 있는 코드 예가 포함되어 있습니다.  

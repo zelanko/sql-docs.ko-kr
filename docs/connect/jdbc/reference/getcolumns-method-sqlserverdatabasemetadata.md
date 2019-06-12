@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733651"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763384"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|열 이름입니다.|  
 |DATA_TYPE|**smallint**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
+|COLUMN_SIZE|**ssNoversion**|열의 전체 자릿수입니다.|  
 |BUFFER_LENGTH|**smallint**|데이터의 전송 크기입니다.|  
 |DECIMAL_DIGITS|**smallint**|열의 소수 자릿수입니다.|  
 |NUM_PREC_RADIX|**smallint**|열의 기수입니다.|  
@@ -83,19 +83,19 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_DEF|**String**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|설명자의 TYPE 필드에 표시되는 SQL 데이터 형식의 값입니다. 이 열은 datetime 및 SQL-92 interval 데이터 형식을 제외하고는 DATA_TYPE 열과 동일합니다. 이 열은 항상 값을 반환합니다.|  
 |SQL_DATETIME_SUB|**smallint**|datetime 및 SQL-92 interval 데이터 형식에 대한 하위 형식 코드입니다. 이 열은 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|CHAR_OCTET_LENGTH|**int**|열의 최대 바이트 수입니다.|  
-|ORDINAL_POSITION|**int**|테이블 내의 열 인덱스입니다.|  
+|CHAR_OCTET_LENGTH|**ssNoversion**|열의 최대 바이트 수입니다.|  
+|ORDINAL_POSITION|**ssNoversion**|테이블 내의 열 인덱스입니다.|  
 |IS_NULLABLE|**String**|열에 null 값을 사용할 수 있는지 여부를 나타냅니다.|  
 |SS_IS_SPARSE|**smallint**|열이 스파스 열이면 1 값을 갖고, 그렇지 않으면 0.<sup>1</sup> 값을 갖습니다.|  
-|SS_IS_COLUMN_SET|**smallint**|열이 스파스 column_set 열이면 1 값을 갖고, 그렇지 않으면 0 값을 갖습니다. <sup>1.</sup>|  
-|SS_IS_COMPUTED|**smallint**|TABLE_TYPE의 열이 계산된 열인지 여부를 나타냅니다. <sup>1.</sup>|  
-|IS_AUTOINCREMENT|**String**|열이 자동 증분되면 "YES"이고, 열이 자동 증분되지 않으면 "NO"입니다. 열의 자동 증분 여부를 드라이버에서 확인할 수 없는 경우에는 ""(빈 문자열)입니다. <sup>1.</sup>|  
-|SS_UDT_CATALOG_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름입니다. <sup>1.</sup>|  
-|SS_UDT_SCHEMA_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 스키마의 이름입니다. <sup>1.</sup>|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|정규화된 이름의 UDT(사용자 정의 형식)입니다. <sup>1.</sup>|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다. <sup>1.</sup>|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1.</sup>|  
-|SS_XML_SCHEMACOLLECTION_NAME|**String**|XML 스키마 컬렉션의 이름입니다. 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1.</sup>|  
+|SS_IS_COLUMN_SET|**smallint**|열이 스파스 column_set 열이면 1 값을 갖고, 그렇지 않으면 0 값을 갖습니다. <sup>1</sup>|  
+|SS_IS_COMPUTED|**smallint**|TABLE_TYPE의 열이 계산된 열인지 여부를 나타냅니다. <sup>1</sup>|  
+|IS_AUTOINCREMENT|**String**|열이 자동 증분되면 "YES"이고, 열이 자동 증분되지 않으면 "NO"입니다. 열의 자동 증분 여부를 드라이버에서 확인할 수 없는 경우에는 ""(빈 문자열)입니다. <sup>1</sup>|  
+|SS_UDT_CATALOG_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름입니다. <sup>1</sup>|  
+|SS_UDT_SCHEMA_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 스키마의 이름입니다. <sup>1</sup>|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|정규화된 이름의 UDT(사용자 정의 형식)입니다. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1</sup>|  
+|SS_XML_SCHEMACOLLECTION_NAME|**String**|XML 스키마 컬렉션의 이름입니다. 이름을 찾을 수 없는 경우 이 변수는 빈 문자열입니다. <sup>1</sup>|  
 |SS_DATA_TYPE|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.<br /><br /> **참고** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 반환하는 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 “데이터 형식(Transact-SQL)”을 참조하십시오.|  
   
  (1) 이 열은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 연결하고 있는 경우에는 표시되지 않습니다.  

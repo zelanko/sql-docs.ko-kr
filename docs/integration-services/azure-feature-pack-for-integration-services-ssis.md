@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS)에 대한 Azure 기능 팩 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729407"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403164"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -72,6 +72,8 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
 
     -   [Azure SQL DW 업로드 태스크](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Flexible File 태스크](../integration-services/control-flow/flexible-file-task.md)
+
 -   데이터 흐름 구성 요소
 
     -   [Azure Blob 원본](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 
     
     -   [Azure Data Lake Store 대상](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 및 Azure Data Lake Store 파일 열거자를 참조하세요. [Foreach 루프 컨테이너](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)를 참조하세요.
+    -   [Flexible File 원본](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Flexible File 대상](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Azure Blob, Azure Data Lake Store 및 Data Lake Storage Gen2 파일 열거자 [Foreach 루프 컨테이너](../integration-services/control-flow/foreach-loop-container.md)를 참조하세요.
 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
  Azure 커넥터를 사용하여 다음과 같은 빅 데이터 처리 작업을 완료합니다.

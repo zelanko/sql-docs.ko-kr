@@ -81,7 +81,7 @@ ms.locfileid: "65719848"
 >  dtexec의 **/CheckPointing on** 옵션은 패키지의 **SaveCheckpoints** 속성을 **True**로 설정하고 **CheckpointUsage** 속성을 Always로 설정하는 것과 같습니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
 ## <a name="securing-checkpoint-files"></a>검사점 파일 보안 설정  
- 패키지 수준 보호에는 검사점 파일 보호가 포함되지 않으므로 이러한 파일에 대해 보안을 별도로 설정해야 합니다. 검사점 데이터는 파일 시스템에만 저장할 수 있으므로 운영 체제의 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일에는 현재 변수 값을 비롯하여 패키지 상태에 대한 정보가 들어 있으므로 검사점 파일에 대해 보안을 설정하는 것은 중요합니다. 예를 들어 변수에 전화 번호와 같은 개인 데이터 행이 여러 개 있는 레코드 집합이 포함될 수 있습니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
+ 패키지 수준 보호에는 검사점 파일 보호가 포함되지 않으므로 이러한 파일에 대해 보안을 별도로 설정해야 합니다. 검사점 데이터는 파일 시스템에만 저장할 수 있으므로 운영 체제의 ACL(액세스 제어 목록)을 사용하여 파일 저장 위치 또는 폴더를 보호해야 합니다. 검사점 파일에는 현재 변수 값을 비롯하여 패키지 상태에 대한 정보가 들어 있으므로 검사점 파일에 대해 보안을 설정하는 것은 중요합니다. 예를 들어 변수에 전화 번호와 같은 프라이빗 데이터 행이 여러 개 있는 레코드 집합이 포함될 수 있습니다. 자세한 내용은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
 
 ## <a name="configure-checkpoints-for-restarting-a-failed-package"></a>실패한 패키지를 다시 시작하는 검사점 구성
   검사점에 적용되는 속성을 설정하여 전체 패키지를 다시 실행하는 대신 장애 지점에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 다시 시작하도록 구성합니다.  

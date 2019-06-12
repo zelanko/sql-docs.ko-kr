@@ -59,10 +59,10 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 인증서의 이름입니다.  
   
  WITH PASSWORD ='*password*'  
- 인증서의 개인 키나 비대칭 키의 암호를 해독하는 데 필요한 암호입니다. 이 절은 개인 키가 데이터베이스 마스터 키로 보호되지 않는 경우에만 필요합니다.  
+ 인증서의 프라이빗 키나 비대칭 키의 암호를 해독하는 데 필요한 암호입니다. 이 절은 프라이빗 키가 데이터베이스 마스터 키로 보호되지 않는 경우에만 필요합니다.  
   
  SIGNATURE =*signed_blob*  
- 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 개인 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob*은 16진수 형식의 BLOB 자체입니다.  
+ 모듈의 서명된 BLOB(Binary Large Object)를 지정합니다. 이 절은 프라이빗 키를 포함하지 않고 모듈을 제공하려는 경우 유용합니다. 이 절을 사용할 때는 모듈, 서명 및 공개 키만 있으면 서명된 BLOB(Binary Large Object)을 데이터베이스에 추가할 수 있습니다. *signed_blob*은 16진수 형식의 BLOB 자체입니다.  
   
  ASYMMETRIC KEY *Asym_Key_Name*  
  저장 프로시저, 함수, 어셈블리 또는 트리거에 서명하거나 연대 서명하는 데 사용할 비대칭 키의 이름입니다.  
@@ -100,7 +100,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 그러나 ProcSelectT1ForAlice에 서명하는 데 사용된 것과 같은 인증서로 procSelectT1에 연대 서명을 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 체인 전체에 대해 서명을 유지하며 T1에 대한 액세스를 허용합니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
   
 ## <a name="permissions"></a>Permissions  
- 개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 개인 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
+ 개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   

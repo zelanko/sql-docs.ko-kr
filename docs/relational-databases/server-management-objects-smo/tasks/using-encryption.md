@@ -23,7 +23,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94a9adc1a6c68391fbfb455ca89d2d46a97320a9
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47836995"
@@ -35,7 +35,7 @@ ms.locfileid: "47836995"
   
  데이터베이스 마스터 키가 나타내는 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 속성 데이터베이스 마스터 키가 서비스 마스터 키로 암호화 여부를 나타냅니다. 데이터베이스 마스터 키가 변경될 때마다 master 데이터베이스의 암호화된 복사본이 자동으로 업데이트됩니다.  
   
- 서비스 키 암호화를 사용 하 여 삭제할 수 있기를 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드 및 암호를 사용 하 여 데이터베이스 마스터 키를 암호화 합니다. 이 경우 보안 구성된 개인 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
+ 서비스 키 암호화를 사용 하 여 삭제할 수 있기를 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드 및 암호를 사용 하 여 데이터베이스 마스터 키를 암호화 합니다. 이 경우 보안 구성된 프라이빗 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
   
  데이터베이스 인스턴스에 연결 중인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 데이터베이스 마스터 키에 대 한 암호를 입력 하거나 실행을 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 데이터베이스 마스터 키의 암호화 되지 않은 복사본을 사용 가능 서비스를 사용 하 여 암호화 하는 방법 마스터 키입니다. 데이터베이스 마스터 키를 명시적으로 열어야 하는 상황을 피하려면 이 단계를 수행하는 것이 좋습니다.  
   

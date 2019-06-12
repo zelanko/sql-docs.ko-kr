@@ -42,7 +42,7 @@ ms.locfileid: "63047195"
 |**debug**|**bit**|1 = 로드된 모듈의 디버그 버전입니다.|  
 |**patched**|**bit**|1 = 모듈이 패치되었습니다.|  
 |**prerelease**|**bit**|1 = 로드된 모듈의 시험판 버전입니다.|  
-|**private_build**|**bit**|1 = 로드된 모듈의 개인 빌드입니다.|  
+|**private_build**|**bit**|1 = 로드된 모듈의 프라이빗 빌드입니다.|  
 |**special_build**|**bit**|1 = 로드된 모듈의 특수 빌드입니다.|  
 |**language**|**int**|모듈 버전 정보의 언어입니다.|  
 |**company**|**nvarchar(256)**|모듈을 만든 회사의 이름입니다.|  

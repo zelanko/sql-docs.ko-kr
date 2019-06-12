@@ -61,7 +61,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  데이터베이스 마스터 키를 데이터베이스에 로드한 다음 암호화하는 데 사용되는 암호를 지정합니다.  
   
  FORCE  
- 현재 데이터베이스 마스터 키가 열려 있지 않거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 이 키로 암호화된 일부 개인 키의 암호를 해독할 수 없는 경우에도 RESTORE 프로세스가 계속되도록 지정합니다.  
+ 현재 데이터베이스 마스터 키가 열려 있지 않거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 이 키로 암호화된 일부 프라이빗 키의 암호를 해독할 수 없는 경우에도 RESTORE 프로세스가 계속되도록 지정합니다.  
   
 ## <a name="remarks"></a>Remarks  
  마스터 키가 복원되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 현재 사용 중인 마스터 키로 암호화된 모든 키의 암호를 해독한 다음 복원된 마스터 키를 사용하여 이러한 키를 암호화합니다. 이 리소스를 많이 사용하는 작업은 사용량이 낮은 기간 동안에만 수행하도록 예약해야 합니다. 현재 데이터베이스 마스터 키가 열려 있지 않거나 열 수 없는 경우 또는 이 키를 사용하여 암호화된 일부 키의 암호를 해독할 수 없는 경우 복원 작업이 실패합니다.  

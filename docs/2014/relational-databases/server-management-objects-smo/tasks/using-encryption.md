@@ -31,7 +31,7 @@ ms.locfileid: "63213491"
   
  데이터베이스 마스터 키는 <xref:Microsoft.SqlServer.Management.Smo.MasterKey> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> 속성은 데이터베이스 마스터 키가 서비스 마스터 키로 암호화되는지 여부를 나타냅니다. 데이터베이스 마스터 키가 변경될 때마다 master 데이터베이스의 암호화된 복사본이 자동으로 업데이트됩니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드를 사용하여 서비스 키 암호화를 삭제하고 암호를 사용하여 데이터베이스 암호화 키를 암호화할 수 있습니다. 이 경우 보안 구성된 개인 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.MasterKey.DropServiceKeyEncryption%2A> 메서드를 사용하여 서비스 키 암호화를 삭제하고 암호를 사용하여 데이터베이스 암호화 키를 암호화할 수 있습니다. 이 경우 보안 구성된 프라이빗 키에 액세스하기 전에 데이터베이스 마스터 키를 명시적으로 열어야 합니다.  
   
  데이터베이스가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결되어 있으면 데이터베이스 마스터 키에 대한 암호를 제공하거나 <xref:Microsoft.SqlServer.Management.Smo.MasterKey.AddServiceKeyEncryption%2A> 메서드를 실행하여 서비스 마스터 키와 함께 암호화에 사용되는 데이터베이스 마스터 키의 암호화되지 않은 복사본을 만들어야 합니다. 데이터베이스 마스터 키를 명시적으로 열어야 하는 상황을 피하려면 이 단계를 수행하는 것이 좋습니다.  
   

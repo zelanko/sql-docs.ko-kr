@@ -77,7 +77,7 @@ End Class
   
  사용자 지정 사용자 인터페이스를 구현하면 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 해당 구성 요소가 편집될 때 구성 요소 개발자가 구성 요소를 보다 효율적으로 제어할 수 있습니다. 예를 들어 구성 요소에서는 구성 요소가 처음 데이터 흐름 태스크에 추가될 때 호출되는 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 메서드에 코드를 추가하고, 구성 요소의 초기 구성을 사용자에게 안내해 주는 마법사를 표시할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스를 만든 후에는 사용자와 구성 요소의 상호 작용에 응답하기 위한 코드를 추가해야 합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 제공하며, <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드보다 먼저 호출됩니다. 이 참조는 전용 멤버 변수에 저장되어 이후 구성 요소의 메타데이터를 수정하는 데 사용되어야 합니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> 인터페이스를 구현하는 클래스를 만든 후에는 사용자와 구성 요소의 상호 작용에 응답하기 위한 코드를 추가해야 합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드는 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스를 제공하며, <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드보다 먼저 호출됩니다. 이 참조는 프라이빗 멤버 변수에 저장되어 이후 구성 요소의 메타데이터를 수정하는 데 사용되어야 합니다.  
   
 ## <a name="modifying-a-component-and-persisting-changes"></a>구성 요소 수정 및 변경 내용 지속  
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스는 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드에 대한 매개 변수로 제공됩니다. 이 참조는 사용자 인터페이스에 의해 멤버 변수에 캐시된 다음 사용자와 사용자 인터페이스의 상호 작용에 대한 응답으로 구성 요소를 수정하는 데 사용되어야 합니다.  

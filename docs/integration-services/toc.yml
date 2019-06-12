@@ -1256,7 +1256,7 @@
       href: ../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md
     - name: 스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
       href: ../integration-services/extending-packages-scripting-task-examples/sending-an-html-mail-message-with-the-script-task.md
-    - name: 스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기
+    - name: 스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기
       href: ../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md
     - name: 스크립트 태스크를 사용한 Excel 파일 작업
       href: ../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md

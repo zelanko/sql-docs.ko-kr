@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 08bdce27a5894cdbdba0122ec33a98c94f244ea3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017919"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454723"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
   
 ## <a name="how-do-i-query-temporal-data"></a>임시 데이터를 쿼리하는 방법  
- **SELECT** 문 **FROM**_\<table\>_ 절은 5개의 temporal 특정 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
+ **SELECT** 문 **FROM** _\<table\>_ 절은 5개의 temporal 특정 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -149,7 +149,7 @@ SELECT * FROM Employee
 |**ALL**|모든 행|현재 테이블 및 기록 테이블에 속하는 행의 합집합을 반환합니다.|  
   
 > [!NOTE]  
->  필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM**_\<table\>_ 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
+>  필요한 경우 이러한 기간 열을 명시적으로 참조하지 않는 쿼리에서 이러한 열이 반환되지 않도록 이러한 기간 열을 숨길 수 있습니다(**SELECT \* FROM** _\<table\>_ 시나리오). 숨겨진 열을 반환하려면 쿼리에서 숨겨진 열을 명시적으로 참조하기만 하면 됩니다. 마찬가지로 **INSERT** 및 **BULK INSERT** 문은 이러한 새 기간 열이 존재하지 않은 것처럼 계속되며, 열 값이 자동으로 채워집니다. **HIDDEN** 절 사용에 대한 자세한 내용은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

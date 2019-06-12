@@ -53,7 +53,7 @@ ms.locfileid: "62922189"
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  백업을 암호화하기 위한 사전 요구 사항은 다음과 같습니다.  
   
-1.  **Master 데이터베이스용 데이터베이스 마스터 키를 만듭니다.** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 개인 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
+1.  **Master 데이터베이스용 데이터베이스 마스터 키를 만듭니다.** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 프라이빗 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
   
 2.  백업 암호화에 사용할 인증서나 비대칭 키를 만듭니다. 인증서를 만드는 방법은 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)를 참조하세요. 비대칭 키를 만드는 방법은 [CREATE ASYMMETRIC KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)를 참조하세요.  
   

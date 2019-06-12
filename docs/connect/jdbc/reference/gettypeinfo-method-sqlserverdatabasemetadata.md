@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682721"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788631"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public java.sql.ResultSet getTypeInfo()
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
-|PRECISION|**int**|총 유효 자릿수입니다.|  
+|PRECISION|**ssNoversion**|총 유효 자릿수입니다.|  
 |LITERAL_PREFIX|**String**|상수 앞에 사용되는 문자 또는 문자열입니다.|  
 |LITERAL_SUFFIX|**String**|상수 끝에 사용되는 문자 또는 문자열입니다.|  
 |CREATE_PARAMS|**String**|데이터 형식의 생성 매개 변수에 대한 설명입니다.|  
@@ -63,9 +63,9 @@ public java.sql.ResultSet getTypeInfo()
 |LOCAL_TYPE_NAME|**String**|데이터 형식의 지역화된 이름입니다.|  
 |MINIMUM_SCALE|**short**|소수점 이하의 최대 자릿수입니다.|  
 |MAXIMUM_SCALE|**short**|소수점 이하의 최소 자릿수입니다.|  
-|SQL_DATA_TYPE|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|SQL_DATETIME_SUB|**int**|JDBC 드라이버에서는 지원되지 않습니다.|  
-|NUM_PREC_RADIX|**int**|열이 보유할 수 있는 최대 수를 계산하는 데 필요한 비트 수 또는 자릿수입니다.|  
+|SQL_DATA_TYPE|**ssNoversion**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|SQL_DATETIME_SUB|**ssNoversion**|JDBC 드라이버에서는 지원되지 않습니다.|  
+|NUM_PREC_RADIX|**ssNoversion**|열이 보유할 수 있는 최대 수를 계산하는 데 필요한 비트 수 또는 자릿수입니다.|  
 |INTERVAL_PRECISION|**smallint**|전체 자릿수를 유도하는 간격의 값입니다.|  
 |USERTYPE|**smallint**|**systypes** 테이블의 **usertype** 값입니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하세요.|  
   

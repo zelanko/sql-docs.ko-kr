@@ -43,11 +43,11 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 새 인스턴스를 만듭니다. `SqlLocalDB` 버전을 사용 하 여 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 으로 지정 된 바이너리  *\<인스턴스 버전 >* 인수입니다. 버전 번호는 하나 이상의 숫자를 포함하는 숫자 형식으로 지정됩니다. 부 버전 번호(서비스 팩)는 선택 사항입니다. 예를 들어 다음 두 개의 버전 번호가 둘 다 허용 합니다. 11.0 또는 11.0.1186 합니다. 지정된 버전을 컴퓨터에 설치해야 합니다. 버전의 버전 번호는 기본적으로 지정 하지 않으면는 `SqlLocalDB` 유틸리티입니다. **–s**를 추가하여 **LocalDB**의 새 인스턴스를 시작합니다.  
   
  [ **share** | **h** ]  
- 지정한 공유 이름을 사용하여 지정한 개인 **LocalDB** 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.  
+ 지정한 공유 이름을 사용하여 지정한 프라이빗 **LocalDB** 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.  
   
  [ **unshared** | **u** ]  
  **LocalDB**의 지정된 공유 인스턴스의 공유를 중지합니다.  
@@ -55,10 +55,10 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 삭제합니다.  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 시작합니다. 성공하면 문이 **LocalDB**의 명명된 파이프 주소를 반환합니다.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**의 지정된 인스턴스를 중지합니다. 추가 **-i** 사용 하 여 인스턴스 종료를 요청 합니다 `NOWAIT` 옵션입니다. **–k**를 추가하면 인스턴스 프로세스에 연결하지 않고 해당 프로세스를 중지합니다.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  

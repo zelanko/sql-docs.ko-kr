@@ -13,13 +13,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f596056d830ae3fa3462095e5a17a112c8f641f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759261"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766869"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 생성자 (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public SQLServerException(java.lang.String errText,
   
  오류의 상태를 포함 하는 문자열입니다.
  
- *오류 번호*  
+ *errNum*  
   
  예외에 대 한 오류 코드를 포함 하는 int입니다.
  

@@ -10,20 +10,20 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2e4951665996143a56acf55fb0f90e24d3ba3e4c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: dd9db627fcf79114c010cc33c2552886fb7a6dc2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602683"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777924"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 SQL Server용 OLE DB 드라이버와 데이터 액세스 추적([Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 응용 프로그램 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 SQL Server용 OLE DB 드라이버와 데이터 액세스 추적([Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 애플리케이션 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
   
  확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 참조하십시오. 
 

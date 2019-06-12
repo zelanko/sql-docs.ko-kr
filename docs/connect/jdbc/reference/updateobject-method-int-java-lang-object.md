@@ -1,5 +1,5 @@
 ---
-title: updateObject 메서드 (int, java.lang.Object) | Microsoft Docs
+title: setObject 메서드(int, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e02962f257116a32cfb14112b2f51c5c643cd252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 99a6b4c7ba565b9a77400f3ccb4e887367030a7a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784191"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778206"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>updateObject 메서드(int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateObject 메서드는 java.sql.ResultSet 인터페이스의 updateObject 메서드에 의해 지정 됩니다.  
+ 이 updateShort 메서드는 java.sql.ResultSet 인터페이스의 updateShort 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateObject 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

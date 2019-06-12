@@ -1,7 +1,7 @@
 ---
 title: '빠른 시작: SQL Server의 확장 이벤트 | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/10/2016
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478238"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354577"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -411,7 +411,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 확장 이벤트의 효과적인 사용에 대한 많은 시나리오를 제공합니다. 다음 문서는 쿼리 중 발생한 잠금과 관련된 예제 시나리오를 제공합니다.
 
 
-다음 문서에서는 잠금 평가에 대한 이벤트 세션 시나리오에 대해 설명합니다. 또한 이 문서에서는 **@dbid**사용 및 동적 `EXECUTE (@YourSqlString)`사용에 대한 고급 기술도 보여 줍니다.
+다음 문서에서는 잠금 평가에 대한 이벤트 세션 시나리오에 대해 설명합니다. 또한 이 문서에서는 **@dbid** 사용 및 동적 `EXECUTE (@YourSqlString)`사용에 대한 고급 기술도 보여 줍니다.
 
 - [가장 많은 잠금이 발생한 개체 찾기](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 이 시나리오에서는 사용자에게 표시하기 전에 원시 이벤트 데이터를 처리하는 대상 package0.histogram을 사용합니다.
@@ -553,10 +553,11 @@ SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 �
     - CREATE EVENT SESSION 절
     - SSMS UI 컨트롤
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>코드 예제는 Azure SQL Database와 다를 수 있음
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>부록: 사용 권한 소유자를 미리 확인하기 위한 SELECT
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> 부록: 사용 권한 소유자를 미리 확인하기 위한 SELECT
 
 이 문서에 언급된 사용 권한은 다음과 같습니다.
 

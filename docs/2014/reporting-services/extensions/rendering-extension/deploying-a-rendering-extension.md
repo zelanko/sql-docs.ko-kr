@@ -38,7 +38,7 @@ ms.locfileid: "63298595"
  자세한 내용은 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
 ## <a name="deploying-the-extension-to-the-report-server"></a>보고서 서버에 확장 프로그램 배포  
- 보고서 서버에서는 보고서를 다른 형식으로 내보내기 위해 렌더링 확장 프로그램을 사용합니다. 렌더링 확장 프로그램 어셈블리를 전용 어셈블리 형태로 보고서 서버에 배포해야 합니다. 또한 보고서 서버 구성 파일 rsreportserver.config에서 항목을 만들어야 합니다.  
+ 보고서 서버에서는 보고서를 다른 형식으로 내보내기 위해 렌더링 확장 프로그램을 사용합니다. 렌더링 확장 프로그램 어셈블리를 프라이빗 어셈블리 형태로 보고서 서버에 배포해야 합니다. 또한 보고서 서버 구성 파일 rsreportserver.config에서 항목을 만들어야 합니다.  
   
 ### <a name="to-deploy-the-assembly"></a>어셈블리를 배포하려면  
   

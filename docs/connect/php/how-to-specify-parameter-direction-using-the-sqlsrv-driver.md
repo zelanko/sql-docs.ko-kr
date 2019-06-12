@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33613a90ee21069b2ef7d2f9908ed13bd4f040e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642371"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799675"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

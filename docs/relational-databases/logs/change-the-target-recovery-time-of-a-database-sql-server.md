@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b8c8588c9fe1aeb5768f27ea57b35f5ce2303bdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f47d33179fb382472def9950a928be137e1f6583
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132113"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354386"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "54132113"
   
 -   **대상 복구 시간을 변경하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure) 또는 [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항 
   
@@ -38,7 +38,7 @@ ms.locfileid: "54132113"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -46,7 +46,7 @@ ms.locfileid: "54132113"
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  변경할 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 클릭합니다.  
+2.  **데이터베이스** 컨테이너를 펼친 다음, 변경할 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 클릭합니다.  
   
 3.  **데이터베이스 속성** 대화 상자에서 **옵션** 페이지를 클릭합니다.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "54132113"
   
 1.  데이터베이스가 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
-2.  다음 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)문을 다음과 같이 사용합니다.  
+2.  다음 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 문을 다음과 같이 사용합니다.  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 0(이전 버전 기본값)보다 큰 경우 충돌 시 지정된 데이터베이스에 대한 복구 시간의 상한을 지정합니다.  

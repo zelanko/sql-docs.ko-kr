@@ -13,7 +13,7 @@ ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
 ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872013"
@@ -78,7 +78,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | BCP API에 대한 Always Encrypted 지원. | &nbsp; |
 | 새 연결 문자열 특성 `UseFMTOnly`. | 임시 테이블이 필요한 특별한 경우 드라이버에서 구형 메타데이터를 사용하도록 합니다. |
-| Azure SQL Managed Instance 지원. | 비공개 미리 보기 확장.<br/><br/>[Managed Instance를 사용하는 경우 차이점(ODBC 버전 17)](#diffs-managed-instance-17)에 대한 다음 목록을 참조하세요. |
+| Azure SQL Managed Instance 지원. | 프라이빗 미리 보기 확장.<br/><br/>[Managed Instance를 사용하는 경우 차이점(ODBC 버전 17)](#diffs-managed-instance-17)에 대한 다음 목록을 참조하세요. |
 | &nbsp; | &nbsp; |
 
 | 종속성 변경 | 세부 정보 |
@@ -88,7 +88,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 ### <a name="diffs-managed-instance-17"></a> Managed Instance를 사용하는 경우 차이점(ODBC 버전 17)
 
-이 버전의 ODBC는 Azure SQL Managed Instance 지원(비공개 미리 보기 확장)을 포함합니다. Managed Instance를 사용하는 경우 차이점에 대한 다음 설명 목록을 참조하세요.
+이 버전의 ODBC는 Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장)을 포함합니다. Managed Instance를 사용하는 경우 차이점에 대한 다음 설명 목록을 참조하세요.
 
 > [!NOTE]
 > Managed Instance를 사용하는 경우 여러 가지 차이점이 있습니다.

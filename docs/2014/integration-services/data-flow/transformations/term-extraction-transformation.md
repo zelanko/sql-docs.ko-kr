@@ -57,7 +57,7 @@ ms.locfileid: "62899936"
   
  참조 테이블은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Access 데이터베이스의 테이블이어야 합니다. 용어 추출 변환은 별개의 OLE DB 연결을 사용하여 참조 테이블에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
- 용어 추출 변환은 완전히 사전 캐시된 모드에서 작동합니다. 용어 추출 변환은 런타임에 참조 테이블로부터 제외 용어를 읽고 변환 입력 행을 처리하기 전에 이를 전용 메모리에 저장합니다.  
+ 용어 추출 변환은 완전히 사전 캐시된 모드에서 작동합니다. 용어 추출 변환은 런타임에 참조 테이블로부터 제외 용어를 읽고 변환 입력 행을 처리하기 전에 이를 프라이빗 메모리에 저장합니다.  
   
 ## <a name="extraction-of-terms-from-text"></a>텍스트에서 용어 추출  
  텍스트에서 용어를 추출하기 위해 용어 추출 변환은 다음과 같은 태스크를 수행합니다.  

@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124583"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413445"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  다음 인수는 TCP 프로토콜 옵션에만 적용됩니다.  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  Service Broker TCP/IP 프로토콜을 통한 연결을 수신하는 포트 번호를 지정합니다. 규칙에 따라 4022가 사용되지만 1024와 32767 사이의 모든 번호를 사용할 수 있습니다.  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  엔드포인트가 수신하는 IP 주소를 지정합니다. 기본값은 ALL입니다. 이는 수신기가 모든 유효한 IP 주소에 대한 연결을 허용함을 의미합니다.  
   
  정규화된 도메인 이름(`ALTER DATABASE SET PARTNER = partner_IP_address` 또는 `ALTER DATABASE SET WITNESS = witness_IP_address`) 대신 IP 주소를 사용하여 데이터베이스 미러링을 구성하는 경우 미러링 엔드포인트를 만들 때 `LISTENER_IP =IP_address` 대신 `LISTENER_IP=ALL`를 지정해야 합니다.  
@@ -175,7 +175,7 @@ FOR DATABASE_MIRRORING (
  인증 방법(NTLM 또는 KERBEROS)을 지정한 경우 항상 해당 방법이 인증 프로토콜로 사용됩니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다.  
   
  CERTIFICATE *certificate_name*  
- 엔드포인트가 *certificate_name*에 지정된 인증서를 사용하여 인증용 ID를 설정하고 연결을 인증하도록 지정합니다. 먼 엔드포인트에는 지정된 인증서의 개인 키와 일치하는 공개 키를 가진 인증서가 있어야 합니다.  
+ 엔드포인트가 *certificate_name*에 지정된 인증서를 사용하여 인증용 ID를 설정하고 연결을 인증하도록 지정합니다. 먼 엔드포인트에는 지정된 인증서의 프라이빗 키와 일치하는 퍼블릭 키를 가진 인증서가 있어야 합니다.  
   
  WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Windows 인증을 사용하여 엔드포인트가 연결을 시도하고 이 시도가 실패하면 지정한 인증서를 사용하여 연결을 시도하도록 지정합니다.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  다른 위치에 있는 서비스에 대한 메시지를 무시합니다. 기본값입니다.  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  엔드포인트가 전달할 메시지를 저장할 때 사용할 수 있는 최대 저장 크기(MB)를 지정합니다.  
   
  **DATABASE_MIRRORING 옵션**  
@@ -268,15 +268,15 @@ FOR DATABASE_MIRRORING (
   
 -   엔드포인트에 대한 CONNECT 권한이 부여된 사용자 또는 그룹  
   
-## <a name="permissions"></a>Permissions  
- CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+## <a name="permissions"></a>사용 권한  
+ CREATE ENDPOINT 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
   
 ### <a name="creating-a-database-mirroring-endpoint"></a>데이터베이스 미러링 엔드포인트 만들기  
  다음 예에서는 데이터베이스 미러링 엔드포인트를 만듭니다. 사용할 수 있는 포트 번호라면 어떤 것이라도 관계 없으나 여기서는 엔드포인트가 `7022` 포트 번호를 사용합니다. 엔드포인트는 Kerberos만을 사용하는 Windows 인증을 사용하도록 구성됩니다. `ENCRYPTION` 옵션은 암호화되거나 암호화되지 않은 데이터를 모두 지원하기 위해 기본값이 아닌 `SUPPORTED`로 구성됩니다. 엔드포인트는 파트너와 미러링 모니터 역할을 모두 지원하도록 구성됩니다.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>특정 IPv4 주소 및 포트를 가리키는 새 엔드포인트 만들기
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>특정 IPv6 주소 및 포트를 가리키는 새 엔드포인트 만들기
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>관련 항목:  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

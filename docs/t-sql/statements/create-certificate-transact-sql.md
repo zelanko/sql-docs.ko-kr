@@ -124,17 +124,17 @@ CREATE CERTIFICATE certificate_name
  인증서를 포함하는 DER 인코딩 파일에 대해 파일 이름을 포함한 전체 경로를 지정합니다. EXECUTABLE 옵션을 사용한 경우 파일은 인증서로 서명된 DLL입니다. *path_to_file*은 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
 
 > [!IMPORTANT]
-> Azure SQL Database는 파일에서 인증서 생성 또는 개인 키 파일 사용을 지원하지 않습니다.
+> Azure SQL Database는 파일에서 인증서 생성 또는 프라이빗 키 파일 사용을 지원하지 않습니다.
   
  BINARY =*asn_encoded_certificate*  
  이진 상수로 지정된 ASN 인코딩 인증서 바이트.  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  WITH PRIVATE KEY  
- 인증서의 개인 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 어셈블리에서 인증서를 만들 때 유효하지 않습니다. 어셈블리에서 생성된 인증서의 개인 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
+ 인증서의 프라이빗 키가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되도록 지정합니다. 이 절은 어셈블리에서 인증서를 만들 때 유효하지 않습니다. 어셈블리에서 생성된 인증서의 프라이빗 키를 로드하려면 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)를 사용합니다.  
   
  FILE ='*path_to_private_key*'  
- 개인 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. *path_to_private_key*는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
+ 프라이빗 키에 대해 파일 이름을 포함하여 전체 경로를 지정합니다. *path_to_private_key*는 로컬 경로 또는 네트워크 위치에 대한 UNC 경로일 수 있습니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 액세스됩니다. 이 계정에는 필요한 파일 시스템 사용 권한이 있어야 합니다.  
   
 > [!IMPORTANT]  
 >  이 옵션은 포함된 데이터베이스 또는 Azure SQL Database에서 사용할 수 없습니다.  
@@ -142,13 +142,13 @@ CREATE CERTIFICATE certificate_name
  BINARY =*private_key_bits*  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 이진 상수로 지정되는 개인 키 비트입니다. 이러한 비트는 암호화된 형식일 수 있습니다. 암호화된 경우 사용자는 해독 암호를 입력해야 합니다. 이 암호에 대해서는 암호 정책 확인이 수행되지 않습니다. 개인 키 비트는 PVK 파일 형식이어야 합니다.  
+ 이진 상수로 지정되는 프라이빗 키 비트입니다. 이러한 비트는 암호화된 형식일 수 있습니다. 암호화된 경우 사용자는 해독 암호를 입력해야 합니다. 이 암호에 대해서는 암호 정책 확인이 수행되지 않습니다. 프라이빗 키 비트는 PVK 파일 형식이어야 합니다.  
   
  DECRYPTION BY PASSWORD ='*key_password*'  
- 파일에서 검색한 개인 키의 암호를 해독하는 데 필요한 암호를 지정합니다. 개인 키가 Null 암호로 보호되는 경우 이 절은 선택 사항입니다. 암호 보호 없이 개인 키를 파일에 저장하는 것은 권장되지 않습니다. 암호가 필요하지만 지정된 암호가 없으면 문이 실패합니다.  
+ 파일에서 검색한 프라이빗 키의 암호를 해독하는 데 필요한 암호를 지정합니다. 프라이빗 키가 Null 암호로 보호되는 경우 이 절은 선택 사항입니다. 암호 보호 없이 프라이빗 키를 파일에 저장하는 것은 권장되지 않습니다. 암호가 필요하지만 지정된 암호가 없으면 문이 실패합니다.  
   
  ENCRYPTION BY PASSWORD ='*password*'  
- 개인 키를 암호화하는 데 사용할 암호를 지정합니다. 암호로 인증서를 암호화하려는 경우에만 이 옵션을 사용합니다. 이 절을 생략하면 개인 키가 데이터베이스 마스터 키로 암호화됩니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
+ 프라이빗 키를 암호화하는 데 사용할 암호를 지정합니다. 암호로 인증서를 암호화하려는 경우에만 이 옵션을 사용합니다. 이 절을 생략하면 프라이빗 키가 데이터베이스 마스터 키로 암호화됩니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
  SUBJECT ='*certificate_subject_name*'  
  *제목*이란 단어는 X.509 표준에 정의된 것과 같이 인증서의 메타데이터에 있는 필드를 나타냅니다. 제목은 64자를 초과할 수 없으며 이 제한은 Linux에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 적용됩니다. Windows에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 제목은 최대 128자까지 지정할 수 있습니다. 128자를 초과하는 제목은 카탈로그에 저장될 때 잘리지만 인증서가 포함된 BLOB(Binary Large Object)에는 전체 제목 이름이 포함됩니다.  
@@ -165,19 +165,19 @@ CREATE CERTIFICATE certificate_name
 ## <a name="remarks"></a>Remarks  
  인증서는 X.509 표준을 따르고 X.509 V1 필드를 지원하는 데이터베이스 수준의 보안 개체입니다. CREATE CERTIFICATE는 파일, 이진 상수 또는 어셈블리에서 인증서를 로드할 수 있습니다. 이 문은 또한 키 쌍을 생성하고 자체 서명된 인증서를 만들 수 있습니다.  
   
- 개인 키는 암호화된 형식으로 \< = 2500 바이트여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 개인 키는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 1024 비트 길이이고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 2048 비트 길이입니다. 외부 원본으로부터 가져온 개인 키의 최소 길이는 384비트이고 최대 길이는 4,096비트입니다. 가져온 개인 키의 길이는 64비트의 정수 배수여야 합니다. TDE에 사용되는 인증서의 개인 키 크기는 3456비트로 제한됩니다.  
+ 프라이빗 키는 암호화된 형식으로 \< = 2500 바이트여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 개인 키는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 1024 비트 길이이고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]으로 시작하는 2048 비트 길이입니다. 외부 원본으로부터 가져온 프라이빗 키의 최소 길이는 384비트이고 최대 길이는 4,096비트입니다. 가져온 프라이빗 키의 길이는 64비트의 정수 배수여야 합니다. TDE에 사용되는 인증서의 프라이빗 키 크기는 3456비트로 제한됩니다.  
   
  인증서의 전체 일련 번호가 저장되지만 처음 16 바이트만 sys.certificates 카탈로그 뷰에 나타납니다.  
   
  인증서의 전체 발급자 필드가 저장되지만 sys.certificates 카탈로그 뷰의 처음 884 바이트만 저장됩니다.  
   
- 개인 키는 *certificate_name*으로 지정한 공개 키와 일치해야 합니다.  
+ 프라이빗 키는 *certificate_name*으로 지정한 퍼블릭 키와 일치해야 합니다.  
   
- 컨테이너로부터 인증서를 만들 때 개인 키 로드는 선택 사항입니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 자체 서명된 인증서를 생성할 때 항상 개인 키가 생성됩니다. 기본적으로 개인 키는 데이터베이스 마스터 키를 사용하여 암호화됩니다. 데이터베이스 마스터 키가 없고 지정된 암호가 없으면 문이 실패합니다.  
+ 컨테이너로부터 인증서를 만들 때 프라이빗 키 로드는 선택 사항입니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 자체 서명된 인증서를 생성할 때 항상 프라이빗 키가 생성됩니다. 기본적으로 프라이빗 키는 데이터베이스 마스터 키를 사용하여 암호화됩니다. 데이터베이스 마스터 키가 없고 지정된 암호가 없으면 문이 실패합니다.  
   
- 개인 키가 데이터베이스 마스터 키로 암호화되는 경우 ENCRYPTION BY PASSWORD 옵션이 필요하지 않습니다. 이 옵션은 개인 키가 암호로 암호화되는 경우에만 사용합니다. 지정된 암호가 없으면 인증서의 개인 키가 데이터베이스 마스터 키를 사용하여 암호화됩니다. 데이터베이스 마스터 키를 열 수 없는 경우 이 절을 생략하면 오류가 발생합니다.  
+ 프라이빗 키가 데이터베이스 마스터 키로 암호화되는 경우 ENCRYPTION BY PASSWORD 옵션이 필요하지 않습니다. 이 옵션은 프라이빗 키가 암호로 암호화되는 경우에만 사용합니다. 지정된 암호가 없으면 인증서의 프라이빗 키가 데이터베이스 마스터 키를 사용하여 암호화됩니다. 데이터베이스 마스터 키를 열 수 없는 경우 이 절을 생략하면 오류가 발생합니다.  
   
- 데이터베이스 마스터 키를 사용하여 개인 키를 암호화한 경우에는 해독 암호를 지정할 필요가 없습니다.  
+ 데이터베이스 마스터 키를 사용하여 프라이빗 키를 암호화한 경우에는 해독 암호를 지정할 필요가 없습니다.  
   
 > [!NOTE]  
 >  암호화 및 서명에 대한 기본 제공 함수는 인증서의 만료 날짜를 검사하지 않습니다. 이러한 함수의 사용자는 인증서 만료에 대한 검사 시기를 결정해야 합니다.  
@@ -190,7 +190,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-self-signed-certificate"></a>1. 자체 서명된 인증서 만들기  
- 다음 예에서는 `Shipping04`라는 인증서를 만듭니다. 이 인증서의 개인 키는 암호를 사용하여 보호됩니다.  
+ 다음 예에서는 `Shipping04`라는 인증서를 만듭니다. 이 인증서의 프라이빗 키는 암호를 사용하여 보호됩니다.  
   
 ```  
 CREATE CERTIFICATE Shipping04   

@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: d29e39a10b71a58878a7a8bcb00ffd274f253b50
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944809"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413575"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -413,8 +413,17 @@ SELECT * FROM OPENROWSET(
    SINGLE_CLOB) AS DATA;
 ```
 
+```sql
+select *
+from openrowset('MSDASQL'
+                ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
+                ,'select * from E:\Tlog\TerritoryData.csv') 
+;
+```
+
 > [!IMPORTANT]
-> Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
+> - ODBC 드라이버는 64비트여야 합니다. Windows에서 [OBDC 데이터 원본](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)의 **드라이버** 탭을 열어 이를 확인합니다. sqlservr.exe의 64비트 버전에서 작동하지 않은 32비트 `Microsoft Text Driver (*.txt, *.csv)`가 있습니다. 
+> - Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9. Azure Blob 스토리지에 저장된 파일에서 데이터에 액세스   

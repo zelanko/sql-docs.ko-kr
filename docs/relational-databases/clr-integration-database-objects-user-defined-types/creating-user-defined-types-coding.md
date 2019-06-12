@@ -33,7 +33,7 @@ ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
 ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/15/2018
 ms.locfileid: "51661563"
@@ -96,7 +96,7 @@ public struct Point : INullable
  합니다 **get ()** 메서드의 **IsNull** 어떤 방식으로든에서 특별 하 게 처리 되었습니다. 경우는 **지점** 변수 **@p** 는 **Null**, 다음 **@p.IsNull** 는 기본적으로 "NULL"로 평가 하지 않습니다: "1". 때문에 이것이 합니다 **SqlMethod(OnNullCall)** 특성을 **IsNull get ()** 메서드 기본값은 false. 개체 이므로 **Null**경우 속성은 요청한 개체가 역직렬화 되지 않고, 메서드를 호출 하지 않으면 기본값은 "NULL"이 반환 됩니다.  
   
 ### <a name="example"></a>예제  
- 다음 예에서 `is_Null` 변수는 전용이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. 라는 정적 속성이 UDT에 있어야 **Null** UDT의 null 값 인스턴스를 반환 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  
+ 다음 예에서 `is_Null` 변수는 프라이빗이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. 라는 정적 속성이 UDT에 있어야 **Null** UDT의 null 값 인스턴스를 반환 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  
   
 ```vb  
 Private is_Null As Boolean  

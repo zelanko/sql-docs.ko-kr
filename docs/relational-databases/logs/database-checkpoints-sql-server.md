@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c40f251759959f86d360bf495b8b405a831c5e6d
+ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775385"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376143"
 ---
 # <a name="database-checkpoints-sql-server"></a>데이터베이스 검사점(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "64775385"
   
 |속성|[!INCLUDE[tsql](../../includes/tsql-md.md)] 인터페이스|설명|  
 |----------|----------------------------------|-----------------|  
-|자동|EXEC sp_configure **'** 복구 간격 **',**_초'_**'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
-|간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
+|자동|EXEC sp_configure **'** 복구 간격 **',** _초'_ **'**|**recovery interval** 서버 구성 옵션에 제안된 최대 제한 시간에 맞게 백그라운드에서 자동으로 실행됩니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 50밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 이를 감지하는지에 따라 제한됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
+|간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 기본값은 1분입니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)을(를) 참조하세요.|  
 |수동|CHECKPOINT[*checkpoint_duration*]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)을(를) 참조하세요.|  
 |내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅숏 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "64775385"
 |target_recovery_time|'recovery interval'|사용되는 검사점 유형|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|대상 복구 간격이 1분인 자동 검사점|  
-|0|>0|대상 복구 간격이 **sp_configure 복구 간격** 옵션의 사용자 정의 설정에 의해 지정되는 자동 검사점|  
+|0|>0|대상 복구 간격이 **sp_configure 'recovery interval'** 옵션의 사용자 정의 설정에 의해 지정되는 자동 검사점|  
 |>0|해당 사항 없음|대상 복구 간격이 TARGET_RECOVERY_TIME 설정에 의해 초 단위로 결정되는 간접 검사점|  
   
 ##  <a name="AutomaticChkpt"></a> 자동 검사점  
@@ -80,7 +80,7 @@ ms.locfileid: "64775385"
 시스템 충돌이 발생한 후 특정 데이터베이스를 복구하는 데 필요한 시간은 충돌 시 더티 상태였던 페이지를 다시 실행하는 데 필요한 임의 I/O의 양에 따라 크게 달라집니다. 따라서 **recovery interval** 설정은 안정적이지 않으며 정확한 복구 기간을 결정할 수 없습니다. 또한 자동 검사점이 진행 중일 때는 데이터에 대한 일반적인 I/O 작업이 예측할 수 없게 상당히 늘어납니다.  
    
 ###  <a name="PerformanceImpact"></a> 복구 간격이 복구 성능에 미치는 영향  
-짧은 트랜잭션을 사용하는 OLTP(온라인 트랜잭션 처리) 시스템의 경우 **복구 간격** 은 복구 시간을 결정하는 기본 요소입니다. 그러나 **복구 간격** 옵션은 장기 실행 트랜잭션의 실행을 취소하는 데 필요한 시간에는 영향을 주지 않습니다. 장기 실행 트랜잭션이 있는 데이터베이스를 복구하는 데는 **복구 간격** 옵션에 지정된 것보다 오랜 시간이 걸릴 수 있습니다. 
+짧은 트랜잭션을 사용하는 OLTP(온라인 트랜잭션 처리) 시스템의 경우 **복구 간격** 은 복구 시간을 결정하는 기본 요소입니다. 그러나 **복구 간격** 옵션은 장기 실행 트랜잭션의 실행을 취소하는 데 필요한 시간에는 영향을 주지 않습니다. 장기 실행 트랜잭션이 있는 데이터베이스를 복구하는 데는 **복구 간격** 설정에서 지정한 것보다 오랜 시간이 걸릴 수 있습니다. 
  
 예를 들어 서버 인스턴스가 비활성화되기 전에 장기 실행 트랜잭션에서 업데이트를 수행하는 데 2시간이 걸렸었다면 장기 실행 트랜잭션을 복구하기 위한 실제 복구 시간은 **복구 간격** 값보다 훨씬 길어집니다. 장기 실행 트랜잭션이 복구 시간에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "64775385"
   
 -   데이터베이스를 백업한 경우  
   
--   DBCC CHECK를 위해 명시적으로 또는 내부적으로 데이터베이스 스냅숏이 생성된 경우  
+-   DBCC CHECKDB를 위해 명시적으로 또는 내부적으로 데이터베이스 스냅샷이 생성된 경우  
   
 -   데이터베이스를 종료해야 하는 작업을 수행한 경우. AUTO_CLOSE가 ON이고 데이터베이스에 대한 마지막 사용자 연결이 닫힌 경우 또는 데이터베이스를 다시 시작해야 하는 데이터베이스 옵션 변경을 수행한 경우를 예로 들 수 있습니다.  
   

@@ -81,7 +81,7 @@ ms.locfileid: "66108858"
   
          `netstat -a -n -p tcp`  
   
-    -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](https://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 전용 포트(49152 - 65535) 간의 차이를 검토합니다.  
+    -   Microsoft 고객 지원 문서 [TCP/IP 포트 할당에 대한 정보](https://support.microsoft.com/kb/174904)에서 TCP 포트 할당 및 잘 알려진 포트(0 - 1023), 등록된 포트(1024 - 49151), 동적 또는 프라이빗 포트(49152 - 65535) 간의 차이를 검토합니다.  
   
     -   Windows 방화벽을 사용하고 있는 경우 포트를 열어야 합니다. 자세한 내용은 [Configure a Firewall for Report Server Access](../report-server/configure-a-firewall-for-report-server-access.md)를 참조하세요.  
   

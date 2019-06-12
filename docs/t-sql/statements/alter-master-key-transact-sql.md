@@ -105,7 +105,7 @@ REGENERATE 옵션은 데이터베이스 마스터 키와 이 키가 보호하는
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY](../../t-sql/statements/alter-service-master-key-transact-sql.md)를 참조하세요.
 
-FORCE 옵션을 사용할 경우에는 마스터 키를 사용할 수 없거나 서버에서 모든 암호화된 개인 키의 암호를 해독할 수 없는 경우에도 키 다시 만들기 작업이 계속됩니다. 마스터 키를 열 수 없으면 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 문을 사용하여 백업에서 마스터 키를 복원합니다. 마스터 키를 검색할 수 없거나 암호 해독에 실패한 경우에만 FORCE 옵션을 사용합니다. 검색할 수 없는 키로만 암호화된 정보는 손실됩니다.
+FORCE 옵션을 사용할 경우에는 마스터 키를 사용할 수 없거나 서버에서 모든 암호화된 프라이빗 키의 암호를 해독할 수 없는 경우에도 키 다시 만들기 작업이 계속됩니다. 마스터 키를 열 수 없으면 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 문을 사용하여 백업에서 마스터 키를 복원합니다. 마스터 키를 검색할 수 없거나 암호 해독에 실패한 경우에만 FORCE 옵션을 사용합니다. 검색할 수 없는 키로만 암호화된 정보는 손실됩니다.
 
 DROP ENCRYPTION BY SERVICE MASTER KEY 옵션은 서비스 마스터 키로 데이터베이스 마스터 키에 대한 암호화를 제거합니다.
 

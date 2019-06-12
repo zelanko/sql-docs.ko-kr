@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bfa493c4-fe07-449b-b4d0-384e1a1fce48
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2a7b550814a0d980380916eb59be31560a8fda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8690984c3795bb07497a3d255d85766930c1ab07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737041"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773885"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>getString 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,7 +1,7 @@
 ---
 title: 두 서버에서 동일한 대칭 키 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997565"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428828"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53997565"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY SYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION이 지정된 경우 데이터베이스 사용자에 대한 IMPERSONATE 권한 또는 애플리케이션 역할에 대한 ALTER 권한이 필요합니다. 인증서 또는 비대칭 키를 통한 암호화의 경우에는 해당 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 대칭 키를 소유할 수 있습니다. 그룹 및 역할은 대칭 키를 소유할 수 없습니다.  
   
 ## <a name="using-transact-sql"></a>Transact-SQL 사용  
@@ -90,9 +90,23 @@ ms.locfileid: "53997565"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- 자세한 내용은 다음 항목을 참조하세요.  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>SQL Server 2017 CU2의 암호화 변경 내용
+
+SQL Server 2016에서는 암호화 작업에 SHA1 해시 알고리즘을 사용합니다. SQL Server 2017부터 SHA2를 대신 사용합니다. 즉, 추가 단계는 SQL Server 2016에서 암호화된 항목을 SQL Server 2017에서 암호 해독하기 위해 추가적인 단계가 필요할 수 있습니다. 추가 단계는 다음과 같습니다.
+
+- SQL Server 2017이 최소 누적 업데이트 2(CU2)로 업데이트되었는지 확인합니다.
+  - 중요한 세부 정보는 [SQL Server 2017용 누적 업데이트 2(CU2)](https://support.microsoft.com/help/4052574)를 참조하세요.
+- CU2를 설치한 후 SQL Server 2017에서 추적 플래그 4631을 켭니다. `DBCC TRACEON(4631, -1);`
+  - 추적 플래그 4631은 SQL Sewrver 2017의 새로운 기능입니다. SQL Server 2017에서 마스터 키, 인증서 또는 대칭 키를 만들려면 먼저 추적 플래그 4631이 전역적으로 `ON`이어야 합니다. 이를 통해 만들어진 항목이 SQL Server 2016 및 그 이전 버전과 상호 운용할 수 있게 됩니다.
+
+자세한 지침은 다음을 참조하세요.
+
+- [수정: SQL Server 2017이 동일한 대칭 키를 사용하여 이전 SQL Server 버전에서 암호화된 데이터를 암호 해독할 수 없음](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [SQL Server 2017과 다른 SQL Server 버전 간에 동일한 대칭 키가 작동하지 않음](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>참조 항목
+
 -   [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

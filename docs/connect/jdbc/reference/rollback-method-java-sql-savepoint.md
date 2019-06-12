@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 255f8ff45c4f904fc3fe0b0c864c188acd3adbf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f5d3aff96e90dd5de4e283697084ab0614d12f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650051"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765523"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback 메서드(java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

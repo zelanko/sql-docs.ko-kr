@@ -52,7 +52,7 @@ sp_enumdsn
 ## <a name="remarks"></a>Remarks  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에는 사용자 컨텍스트가 있습니다. 사용자 컨텍스트는 사용자에 대한 ODBC 데이터 원본의 정의를 포함하는 레지스트리 항목의 집합입니다. 사용자 컨텍스트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행 중인 사용자 이름에 의해 제공됩니다.  
   
- 예를 들어 서버가 시스템 계정 사용자 컨텍스트로 실행 중인 경우 반환된 DSN(데이터 원본 이름)은 모두 시스템 계정과 연결된 시스템 DSN입니다. 서버가 개인 사용자 계정으로 실행 중인 경우에는 해당 사용자의 개인 계정에 대해 정의된 DSN만 반환됩니다.  
+ 예를 들어 서버가 시스템 계정 사용자 컨텍스트로 실행 중인 경우 반환된 DSN(데이터 원본 이름)은 모두 시스템 계정과 연결된 시스템 DSN입니다. 서버가 프라이빗 사용자 계정으로 실행 중인 경우에는 해당 사용자의 프라이빗 계정에 대해 정의된 DSN만 반환됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_enumdsn**합니다.  

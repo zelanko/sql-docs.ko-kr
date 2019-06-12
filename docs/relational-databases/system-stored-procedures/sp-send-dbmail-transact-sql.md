@@ -21,7 +21,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58528306"
@@ -66,11 +66,11 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="arguments"></a>인수  
 `[ @profile_name = ] 'profile_name'` 메시지를 보내는 프로필의 이름이입니다. *profile_name* 형식의 **sysname**, 기본값은 NULL입니다. 합니다 *profile_name* 기존 데이터베이스 메일 프로필의 이름 이어야 합니다. 없는 경우 *profile_name* 를 지정 하면 **sp_send_dbmail** 현재 사용자에 대 한 기본 개인 프로필을 사용 합니다. 사용자는 기본 개인 프로필이 없는 경우 **sp_send_dbmail** 의 기본 공개 프로필을 사용 합니다 **msdb** 데이터베이스입니다. 사용자 기본 개인 프로필이 없고 데이터베이스에 대 한 기본 공개 프로필이 있으면 **@profile_name** 지정 해야 합니다.  
   
-`[ @recipients = ] 'recipients'` 메시지를 보낼 전자 메일 주소의 세미콜론으로 구분 된 목록이입니다. 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @recipients = ] 'recipients'` 메시지를 보낼 전자 메일 주소의 세미콜론으로 구분 된 목록이입니다. 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients** 를 **@copy_recipients** , 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
-`[ @copy_recipients = ] 'copy_recipients'` 메시지를 탄소 복사할 세미콜론으로 구분 된 목록을 전자 메일 주소 이며 복사 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @copy_recipients = ] 'copy_recipients'` 메시지를 탄소 복사할 세미콜론으로 구분 된 목록을 전자 메일 주소 이며 복사 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients** 를 **@copy_recipients** , 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
-`[ @blind_copy_recipients = ] 'blind_copy_recipients'` 세미콜론으로 구분 된 목록을 전자 메일 주소를 숨은 참조에 포함할 메시지를 됩니다. 숨은 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` 세미콜론으로 구분 된 목록을 전자 메일 주소를 숨은 참조에 포함할 메시지를 됩니다. 숨은 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients** 를 **@copy_recipients** , 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
 `[ @from_address = ] 'from_address'` 값은 '보낸 사람 전자 메일 메시지의 주소'. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
   
@@ -78,9 +78,9 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @subject = ] 'subject'` 전자 메일 메시지의 제목입니다. 형식의 제목은 **nvarchar(255)** 합니다. 제목을 지정하지 않으면 기본값은 'SQL Server Message'입니다.  
   
-`[ @body = ] 'body'` 전자 메일 메시지의 본문이입니다. 메시지 본문 형식입니다 **nvarchar (max)**, 기본값은 NULL입니다.  
+`[ @body = ] 'body'` 전자 메일 메시지의 본문이입니다. 메시지 본문 형식입니다 **nvarchar (max)** , 기본값은 NULL입니다.  
   
-`[ @body_format = ] 'body_format'` 메시지 본문의 형식이입니다. 매개 변수는 형식 **varchar(20)"**, 기본값은 NULL입니다. 이 매개 변수를 지정할 경우 나가는 메시지의 헤더가 보내져 메시지 본문이 지정된 형식임을 나타냅니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+`[ @body_format = ] 'body_format'` 메시지 본문의 형식이입니다. 매개 변수는 형식 **varchar(20)"** , 기본값은 NULL입니다. 이 매개 변수를 지정할 경우 나가는 메시지의 헤더가 보내져 메시지 본문이 지정된 형식임을 나타냅니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   TEXT  
   
@@ -104,7 +104,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Personal  
   
--   Private  
+-   프라이빗  
   
 -   Confidential  
   
@@ -112,7 +112,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @file_attachments = ] 'file_attachments'` 전자 메일 메시지에 첨부할 파일 이름의 세미콜론으로 구분 된 목록이입니다. 목록의 파일은 절대 경로로 지정해야 합니다. 첨부 파일 목록에 유형임 **nvarchar (max)** 합니다. 기본적으로 데이터베이스 메일의 첨부 파일은 파일당 1MB로 제한됩니다.  
   
-`[ @query = ] 'query'` 쿼리가 실행 됩니다. 쿼리 결과를 파일로 첨부할 수도 있고 전자 메일 메시지의 본문에 포함할 수도 있습니다. 쿼리는 유형이 **nvarchar (max)**, 유효한 포함 될 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 쿼리는 별도 세션에서 스크립트 호출 하므로 지역 변수에서 실행 됩니다 **sp_send_dbmail** 를 쿼리에 사용할 수 없습니다.  
+`[ @query = ] 'query'` 쿼리가 실행 됩니다. 쿼리 결과를 파일로 첨부할 수도 있고 전자 메일 메시지의 본문에 포함할 수도 있습니다. 쿼리는 유형이 **nvarchar (max)** , 유효한 포함 될 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 쿼리는 별도 세션에서 스크립트 호출 하므로 지역 변수에서 실행 됩니다 **sp_send_dbmail** 를 쿼리에 사용할 수 없습니다.  
   
 `[ @execute_query_database = ] 'execute_query_database'` 데이터베이스 컨텍스트가 저장된 프로시저는 쿼리를 실행 합니다. 이 매개 변수는 형식 **sysname**, 현재 데이터베이스의 기본값입니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
@@ -120,7 +120,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  쿼리 결과의 내용을 후 전자 메일 메시지의 본문에 포함 된 값이 0 이면 합니다 **@body** 매개 변수입니다. 값이 1이면 결과가 첨부 파일로 반환됩니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
-`[ @query_attachment_filename = ] query_attachment_filename` 첨부 된 쿼리 결과 집합에 사용할 파일 이름을 지정 합니다. *query_attachment_filename* 유형의 **nvarchar(255)**, 기본값은 NULL입니다. 이 매개 변수는 무시 하면 *attach_query_result* 은 0입니다. 때 *attach_query_result* 은 1이 고이 매개 변수는 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.  
+`[ @query_attachment_filename = ] query_attachment_filename` 첨부 된 쿼리 결과 집합에 사용할 파일 이름을 지정 합니다. *query_attachment_filename* 유형의 **nvarchar(255)** , 기본값은 NULL입니다. 이 매개 변수는 무시 하면 *attach_query_result* 은 0입니다. 때 *attach_query_result* 은 1이 고이 매개 변수는 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.  
   
 `[ @query_result_header = ] query_result_header` 쿼리 결과 열 머리글을 포함 하는지 여부를 지정 합니다. Query_result_header 값은 형식의 **비트**합니다. 값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다. 이 매개 변수의 기본값은 **1**합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
  
@@ -164,17 +164,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  **sysmail_stop_sp** 외부 프로그램이 사용 하는 Service Broker 개체를 중지 하 여 데이터베이스 메일을 중지 합니다. **sp_send_dbmail** 데이터베이스 메일 사용이 중지 되 면 메일을 계속 수락 **sysmail_stop_sp**합니다. 데이터베이스 메일을 시작 하려면 사용 하 여 **sysmail_start_sp**합니다.  
   
- 때 **@profile** 지정 하지 않으면 **sp_send_dbmail** 기본 프로필을 사용 합니다. 전자 메일 메시지를 보내는 사용자에게 기본 개인 프로필이 있을 경우 이 프로필이 사용됩니다. 사용자가 기본 개인 프로필이 없을 **sp_send_dbmail** 의 기본 공개 프로필을 사용 합니다. 사용자에 대 한 기본 개인 프로필이 없 및 기본 공개 프로필이 없을 경우 **sp_send_dbmail** 오류를 반환 합니다.  
+ 때 **@profile** 지정 하지 않으면 **sp_send_dbmail** 기본 프로필을 사용 합니다. 전자 메일 메시지를 보내는 사용자에게 기본 프라이빗 프로필이 있을 경우 이 프로필이 사용됩니다. 사용자가 기본 개인 프로필이 없을 **sp_send_dbmail** 의 기본 공개 프로필을 사용 합니다. 사용자에 대 한 기본 개인 프로필이 없 및 기본 공개 프로필이 없을 경우 **sp_send_dbmail** 오류를 반환 합니다.  
   
- **sp_send_dbmail** 없는 콘텐츠를 사용 하 여 전자 메일 메시지를 지원 하지 않습니다. 전자 메일 메시지를 보내려면 중 하나 이상을 지정 해야 합니다 있습니다 **@body**합니다 **@query**를 **@file_attachments**, 또는 **@subject**. 그렇지 않으면 **sp_send_dbmail** 오류를 반환 합니다.  
+ **sp_send_dbmail** 없는 콘텐츠를 사용 하 여 전자 메일 메시지를 지원 하지 않습니다. 전자 메일 메시지를 보내려면 중 하나 이상을 지정 해야 합니다 있습니다 **@body** 합니다 **@query** 를 **@file_attachments** , 또는 **@subject** . 그렇지 않으면 **sp_send_dbmail** 오류를 반환 합니다.  
   
- 데이터베이스 메일에서는 현재 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 보안 컨텍스트를 사용하여 파일에 대한 액세스를 제어합니다. 인증 된 사용자 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용 하 여 파일을 연결할 수 없습니다 **@file_attachments**합니다. Windows에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 원격 컴퓨터에서 다른 원격 컴퓨터로 자격 증명을 제공할 수 없습니다. 그러므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터가 아닌 컴퓨터에서 명령을 실행할 경우 데이터베이스 메일은 네트워크 공유 위치에서 파일을 첨부할 수 없습니다.  
+ 데이터베이스 메일에서는 현재 사용자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 보안 컨텍스트를 사용하여 파일에 대한 액세스를 제어합니다. 인증 된 사용자 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 사용 하 여 파일을 연결할 수 없습니다 **@file_attachments** 합니다. Windows에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 원격 컴퓨터에서 다른 원격 컴퓨터로 자격 증명을 제공할 수 없습니다. 그러므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터가 아닌 컴퓨터에서 명령을 실행할 경우 데이터베이스 메일은 네트워크 공유 위치에서 파일을 첨부할 수 없습니다.  
   
  둘 다 **@query** 하 고 **@file_attachments** 지정 된 파일을 찾을 수 없습니다, 쿼리가 계속 실행 하며 전자 메일 전송 되지 않습니다.  
   
  쿼리를 지정한 경우 결과 집합의 서식은 인라인 텍스트로 지정됩니다. 결과 내 이진 데이터는 16진수 형식으로 전송됩니다.  
   
- 매개 변수 **@recipients**합니다 **@copy_recipients**, 및 **@blind_copy_recipients** 전자 메일 주소의 세미콜론으로 구분 된 목록입니다. 이러한 매개 변수 중 하나 이상을 지정 해야 합니다 또는 **sp_send_dbmail** 오류를 반환 합니다.  
+ 매개 변수 **@recipients** 합니다 **@copy_recipients** , 및 **@blind_copy_recipients** 전자 메일 주소의 세미콜론으로 구분 된 목록입니다. 이러한 매개 변수 중 하나 이상을 지정 해야 합니다 또는 **sp_send_dbmail** 오류를 반환 합니다.  
   
  실행할 때 **sp_send_dbmail** 트랜잭션 컨텍스트를 데이터베이스 메일을 시작 하지 않고 암시적 트랜잭션을 커밋하고 있습니다. 실행할 때 **sp_send_dbmail** 에서 기존 트랜잭션 내에서 데이터베이스 메일은 사용자 커밋 또는 모든 변경 내용이 롤백됩니다. 내부 트랜잭션은 시작되지 않습니다.  
   

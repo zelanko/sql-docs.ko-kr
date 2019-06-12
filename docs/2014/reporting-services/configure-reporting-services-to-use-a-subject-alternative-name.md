@@ -26,7 +26,7 @@ ms.locfileid: "66109737"
   
  이 지침은 보고 서비스 URL과 웹 서비스 URL에 적용됩니다.  
   
- SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
+ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라이빗 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com 과 같습니다.  
   

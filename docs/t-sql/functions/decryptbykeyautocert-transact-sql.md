@@ -47,7 +47,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 대칭 키 암호화에 사용되는 인증서의 ID입니다. *cert_ID*는 **int** 데이터 형식을 갖습니다.  
   
 *cert_password*  
-인증서의 개인 키를 암호화하는 데 사용되는 암호입니다. 데이터베이스 마스터 키가 비대칭 개인 키를 보호하는 경우 `NULL` 값을 가질 수 있습니다. *cert_password*는 **nvarchar** 데이터 형식을 갖습니다.  
+인증서의 프라이빗 키를 암호화하는 데 사용되는 암호입니다. 데이터베이스 마스터 키가 비대칭 프라이빗 키를 보호하는 경우 `NULL` 값을 가질 수 있습니다. *cert_password*는 **nvarchar** 데이터 형식을 갖습니다.  
 
 '*ciphertext*'  
 키로 암호화된 데이터 문자열입니다. *ciphertext*는 **varbinary** 데이터 형식을 갖습니다.  
@@ -59,13 +59,13 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
   
 @add_authenticator  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. 데이터 암호화 프로세스 동안 [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)로 전달된 값과 일치해야 합니다. *@add_authenticator* 는 **int** 데이터 형식을 갖습니다.  
   
 *authenticator*  
 인증자의 생성에 대한 기준으로 사용되는 데이터입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
   
 @authenticator  
-인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자가 생성하는 데이터를 포함하는 변수입니다. [ENCRYPTBYKEY(Transact-SQL)](./encryptbykey-transact-sql.md)에 제공된 값과 일치해야 합니다. *@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
   
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  

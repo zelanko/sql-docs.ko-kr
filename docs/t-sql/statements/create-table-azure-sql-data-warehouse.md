@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574882"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413335"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65574882"
 
 ## <a name="syntax"></a>구문
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>순서가 지정된 클러스터형 columnstore 인덱스 옵션(미리 보기)
 
-클러스터형 columnstore 인덱스는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  COMPUND 키는 ORDER 사양의 기본값입니다.  정렬 순서는 항상 오름차순입니다. ORDER 절이 지정되지 않은 경우 columnstore가 정렬되지 않습니다.
+클러스터형 columnstore 인덱스는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  COMPUND 키는 ORDER 사양의 기본값입니다.  정렬 순서는 항상 오름차순입니다. ORDER 절이 지정되지 않은 경우 columnstore가 정렬되지 않습니다. 주문 프로세스로 인해 주문 클러스터형 열 저장소 인덱스가 있는 테이블은 비주문 클러스터형 열 저장소 인덱스보다 데이터 로드 시간이 더 길어질 수 있습니다. 데이터를 로드하는 동안 tempdb 공간이 더 필요한 경우 삽입당 데이터 크기를 줄일 수 있습니다.
 
 미리 보기 중 이 쿼리를 실행하여 ORDER가 설정된 이 열을 확인할 수 있습니다.  ORDER에서 여러 열이 지정된 경우 이 정보와 열 서수를 제공하기 위해 카탈로그 뷰가 나중에 제공됩니다.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   

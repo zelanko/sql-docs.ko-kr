@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581070"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499883"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>보고서 및 구독 처리 해제 또는 일시 중지
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 구독 처리를 해제하거나 일시 중지하는 데 사용할 수 있는 몇 가지 방법이 있습니다. 이 문서에는 구독을 해제하는 방법에서부터 데이터 원본 연결을 중단하는 방법이 포함되어 있습니다. 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 모든 방법을 사용할 수는 없습니다. 다음 테이블에는 가능한 방법과 지원되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드가 요약되어 있습니다.  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 라이브러리(SharePoint 통합 모드 보고서 서버와 통합된 SharePoint 사이트에서만 사용 가능)  
   
- 전자 메일 배달을 사용하려면 먼저 구성해야 합니다. 구성하지 않으면 사용할 수 없습니다. 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+ 전자 메일 배달을 사용하려면 먼저 구성해야 합니다. 구성하지 않으면 사용할 수 없습니다. 자세한 내용은 [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)합니다.  
   
- 특정 확장 프로그램을 해제하려면 **RSReportServer.config** 파일에서 해당 확장 프로그램 항목을 제거합니다. 자세한 내용은 [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md) 및 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+ 특정 확장 프로그램을 해제하려면 **RSReportServer.config** 파일에서 해당 확장 프로그램 항목을 제거합니다. 자세한 내용은 [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md) 하 고 [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)합니다.  
   
  배달 확장 프로그램을 제거한 후에는 보고서 관리자나 SharePoint 사이트에서 더 이상 사용할 수 없습니다. 배달 확장 프로그램을 제거하면 비활성 구독이 생성될 수 있습니다. 확장 프로그램을 제거하기 전에 구독이 다른 배달 확장 프로그램을 사용하도록 구성하거나 구독을 삭제하십시오.  
   

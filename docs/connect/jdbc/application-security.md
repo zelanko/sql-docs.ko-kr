@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42cf0e2a39a4a08ceab94e5391d3c926fb5751ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 832cb6991ad095ba13226f80408fbd919db00623
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775761"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770442"
 ---
 # <a name="application-security"></a>애플리케이션 보안
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용할 때는 응용 프로그램의 보안을 확보하기 위해 미리 주의를 기울여야 합니다. 다음 섹션에서는 응용 프로그램의 보안을 확보하기 위해 수행할 수 있는 단계에 관한 정보를 제공합니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용할 때는 애플리케이션의 보안을 확보하기 위해 미리 주의를 기울여야 합니다. 다음 섹션에서는 응용 프로그램의 보안을 확보하기 위해 수행할 수 있는 단계에 관한 정보를 제공합니다.  
   
 ## <a name="using-java-policy-permissions"></a>Java 정책 권한 사용  
  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용할 때는 JDBC 드라이버에서 요구하는 필수 Java 정책 권한을 지정해야 합니다. JRE(Java Runtime Environment)는 런타임에 사용하여 스레드가 리소스에 액세스할 수 있는지 여부를 확인할 수 있는 다양한 보안 모델을 제공합니다. 이러한 액세스는 보안 정책 파일을 통해 제어할 수 있습니다. 또한 이 정책 파일은 배포자와 컨테이너의 sysadmin을 통해 관리되지만 이 항목에 나열된 권한은 JDBC 드라이버의 기능에 영향을 주는 권한입니다.  
@@ -65,6 +65,6 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
  SSL 지원을 사용하여 IPSec 외에 추가 수준의 보호 기능을 제공할 수 있습니다. SSL을 사용하는 방법에 대한 자세한 내용은 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

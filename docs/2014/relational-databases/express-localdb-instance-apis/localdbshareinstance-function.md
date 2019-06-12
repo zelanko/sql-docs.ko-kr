@@ -44,7 +44,7 @@ HRESULT LocalDBShareInstance(
  [입력] 인스턴스 소유자의 SID입니다.  
   
  *pInstancePrivateName*  
- [입력] 공유할 LocalDB 인스턴스의 전용 이름입니다.  
+ [입력] 공유할 LocalDB 인스턴스의 프라이빗 이름입니다.  
   
  *pInstanceSharedName*  
  [입력] 공유할 LocalDB 인스턴스의 공유 이름입니다.  

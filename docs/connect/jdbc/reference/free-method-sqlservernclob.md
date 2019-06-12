@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ff46e669-a719-4dad-8b1a-3a6478175d41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36a12f54d6447e1cc33b204ce03bf99cc51c0fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 190ca60df1dc1376188eea2584b351b31d4db642
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736867"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798992"
 ---
 # <a name="free-method-sqlservernclob"></a>free 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

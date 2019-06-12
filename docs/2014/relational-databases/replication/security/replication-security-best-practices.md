@@ -27,7 +27,7 @@ ms.locfileid: "63268669"
   
  다음 정보는 모든 환경에서의 복제와 관련이 있습니다.  
   
--   VPN(가상 사설망), SSL(Secure Sockets Layer) 또는 IPSEC(IP 보안)과 같은 산업 표준 방법을 사용하여 복제 토폴로지의 컴퓨터 간 연결을 암호화합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요. VPN 및 SSL을 사용하여 인터넷에서 데이터를 복제하는 방법은 [Securing Replication Over the Internet](securing-replication-over-the-internet.md)을 참조하십시오.  
+-   VPN(가상 프라이빗 네트워크), SSL(Secure Sockets Layer) 또는 IPSEC(IP 보안)과 같은 산업 표준 방법을 사용하여 복제 토폴로지의 컴퓨터 간 연결을 암호화합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요. VPN 및 SSL을 사용하여 인터넷에서 데이터를 복제하는 방법은 [Securing Replication Over the Internet](securing-replication-over-the-internet.md)을 참조하십시오.  
   
      SSL을 사용하여 복제 토폴로지에서 컴퓨터 간의 연결 보안을 유지하는 경우 각 복제 에이전트의 **-EncryptionLevel** 매개 변수 값을 **1** 또는 **2** 로 지정합니다(값 **2** 가 권장됨). 값 **1** 을 지정하면 암호화가 사용되지만 에이전트에서 SSL 서버 인증서가 신뢰할 수 있는 발급자에 의해 서명된 것인지 확인하지는 않습니다. 값 **2** 를 지정하면 인증서가 확인됩니다. 에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   

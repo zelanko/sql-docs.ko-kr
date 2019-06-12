@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580131"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413639"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER INDEX { index_name | ALL }
   
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 table_or_view_name이 #로 시작하는 경우 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]은 세 부분으로 구성된 이름 형식 database_name.[schema_name].table_or_view_name을 지원합니다.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  동일한 열, 인덱스 유형, 고유성 특성 및 정렬 순서를 사용하여 인덱스가 다시 작성되도록 지정합니다. 이 절은 [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)와 동일합니다. REBUILD는 비활성 인덱스를 활성화합니다. ALL 키워드를 지정하지 않으면 클러스터형 인덱스를 다시 작성해도 관련 비클러스터형 인덱스는 다시 작성되지 않습니다. 인덱스 옵션을 지정하지 않으면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)에 저장된 기존 인덱스 옵션 값이 적용됩니다. **sys.indexes**에 값이 저장되지 않은 인덱스 옵션의 경우에는 옵션의 인수 정의에 표시된 기본값이 적용됩니다.  
   
  ALL을 지정한 경우 기본 테이블이 힙이면 다시 작성 작업을 수행해도 테이블에는 아무 영향이 없습니다. 테이블에 연결된 비클러스터형 인덱스는 모두 다시 작성됩니다.  
@@ -248,7 +248,7 @@ PARTITION
   
  다시 작성하거나 다시 구성할 분할된 인덱스의 파티션 번호입니다. *partition_number*는 변수를 참조할 수 있는 상수 식입니다. 여기에는 사용자 정의 형식 변수 또는 함수와 사용자 정의 함수가 포함될 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 참조할 수 없습니다. *partition_number*를 지정하지 않으면 해당 문이 실패합니다.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +309,7 @@ COMPRESS_ALL_ROW_GROUPS는 열린(OPEN) 또는 닫힌(CLOSED) 델타 rowgroup을
   
 -   OFF는 모든 닫힌(CLOSED) rowgroup을 columnstore에 강제 적용합니다.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  인덱스를 다시 작성하거나 다시 구성하지 않고 인덱스 옵션을 지정합니다. 비활성 인덱스에는 SET을 지정할 수 없습니다.  
   
 PAD_INDEX  =  {  ON  |  OFF  }  
@@ -529,7 +529,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -663,7 +663,7 @@ ONLINE, MAXDOP 및 SORT_IN_TEMPDB에 대한 값은 시스템 카탈로그에 저
   
 1. 다시 작성이 진행되는 동안 실제 미디어에 columnstore 인덱스의 사본을 두 개 저장할 공간이 필요합니다. 다시 작성 작업이 끝나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원래 클러스터형 columnstore 인덱스를 삭제합니다.
 
-1. 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 ALTER INDEX REBUILD가 데이터를 다시 정렬합니다.  
+1. 순서가 지정된 클러스터형 columnstore 인덱스를 통한 Azure SQL Data Warehouse 테이블의 경우 ALTER INDEX REBUILD가 데이터를 다시 정렬합니다. 다시 빌드 작업 중에 tempdb를 모니터합니다. tempdb 공간이 더 필요하면 데이터 웨어하우스를 통해 강화할 수 있습니다. 인덱스 다시 빌드가 완료되면 다시 크기를 줄입니다.
   
 ## <a name="reorganizing-indexes"></a> 인덱스 다시 구성
 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요.  

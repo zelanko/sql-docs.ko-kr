@@ -25,7 +25,7 @@ ms.locfileid: "63250387"
 # <a name="replication-over-the-internet"></a>인터넷을 통한 복제
   인터넷으로 데이터를 복제하면 연결이 끊긴 원격 사용자가 필요할 때 인터넷 연결을 사용해서 데이터에 액세스할 수 있습니다. 다음을 사용하여 인터넷을 통해 데이터를 복제합니다.  
   
--   VPN(가상 사설망). 자세한 내용은 [VPN을 사용하여 인터넷을 통해 데이터 게시](publish-data-over-the-internet-using-vpn.md)를 참조하세요.  
+-   VPN(가상 프라이빗 네트워크). 자세한 내용은 [VPN을 사용하여 인터넷을 통해 데이터 게시](publish-data-over-the-internet-using-vpn.md)를 참조하세요.  
   
 -   병합 복제를 위한 웹 동기화 옵션. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)를 참조하세요.  
   

@@ -76,7 +76,7 @@ ms.locfileid: "65801359"
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 해당 변수를 추가할 수 있습니다.  
   
- 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆의 줄임표(**…**) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 여러 개의 변수를 선택할 수도 있습니다.  
+ 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆의 줄임표( **…** ) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 여러 개의 변수를 선택할 수도 있습니다.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "65801359"
   
 2.  **FinishOutputs** 메서드: 이 메서드는 기본적으로 비어 있습니다. 출력을 완료하는 데 필요한 처리를 수행하려면 **ScriptMain**에서 이 메서드를 재정의합니다.  
   
-3.  전용 **MarkOutputsAsFinished** 메서드: 이 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 메서드를 호출하여 출력이 끝났음을 데이터 흐름 엔진에 알립니다. 따라서 개발자가 작성하는 코드에서 **SetEndOfRowset**을 명시적으로 호출할 필요가 없습니다.  
+3.  프라이빗 **MarkOutputsAsFinished** 메서드: 이 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 메서드를 호출하여 출력이 끝났음을 데이터 흐름 엔진에 알립니다. 따라서 개발자가 작성하는 코드에서 **SetEndOfRowset**을 명시적으로 호출할 필요가 없습니다.  
   
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성  
  사용자 지정 원본 구성 요소 만들기를 마치기 위해 **ScriptMain** 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.  

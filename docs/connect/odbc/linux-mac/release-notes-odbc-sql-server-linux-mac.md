@@ -12,7 +12,7 @@ ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
 ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/05/2019
 ms.locfileid: "59042900"
@@ -80,7 +80,7 @@ BCP API에 대한 Always Encrypted 지원
 
 새 연결 문자열 속성 UseFMTOnly는 임시 테이블이 필요한 특별한 경우 드라이버에서 구형 메타데이터를 사용하게 합니다.
 
-Azure SQL Managed Instance 지원(비공개 미리 보기 확장). 
+Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장). 
 > [!NOTE]
 > Managed Instance를 사용하는 경우 여러 가지 차이점이 있습니다.
 > -   FILESTREAM이 지원되지 않음 
@@ -108,7 +108,7 @@ Azure SQL Managed Instance 지원(비공개 미리 보기 확장).
 
 이제 Microsoft ODBC Driver 13.0 for SQL Server, SQL Server 2014 및 SQL Server 2016도 지원됩니다.  
 
-**지원되는 새 배포.**:
+**지원되는 새 배포.** :
 
 이제 Ubuntu가 Red Hat 및 SUSE와 함께 지원됩니다. 각 플랫폼에는 설치 및 구성을 용이하게 해주기 위한 플랫폼 관련 패키지(RPM 또는 DEB)가 있습니다.  설치 지침은 [드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)를 참조하세요.
 

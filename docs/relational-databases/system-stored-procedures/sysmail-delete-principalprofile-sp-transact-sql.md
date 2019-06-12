@@ -20,7 +20,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
 ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
 ms.locfileid: "58527785"
@@ -28,7 +28,7 @@ ms.locfileid: "58527785"
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  공개 또는 개인 데이터베이스 메일 프로필을 사용하는 데이터베이스 사용자 또는 역할의 사용 권한을 제거합니다.  
+  퍼블릭 또는 프라이빗 데이터베이스 메일 프로필을 사용하는 데이터베이스 사용자 또는 역할의 사용 권한을 제거합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ## <a name="remarks"></a>Remarks  
  공개 프로필을 개인 프로필로 되도록 제공 **'public'** 주체 이름 또는 **0** 보안 주체 id에 대 한 합니다.  
   
- 사용자의 기본 개인 프로필이나 기본 공개 프로필에 대한 사용 권한을 제거할 때는 주의해야 합니다. 사용할 수 있으면 기본 프로필이 없을 **sp_send_dbmail** 인수로 프로필 이름이 필요 합니다. 따라서 기본 프로필을 제거 발생할 수 있습니다에 대 한 호출 **sp_send_dbmail** 실패 합니다. 자세한 내용은 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)합니다.  
+ 사용자의 기본 프라이빗 프로필이나 기본 퍼블릭 프로필에 대한 사용 권한을 제거할 때는 주의해야 합니다. 사용할 수 있으면 기본 프로필이 없을 **sp_send_dbmail** 인수로 프로필 이름이 필요 합니다. 따라서 기본 프로필을 제거 발생할 수 있습니다에 대 한 호출 **sp_send_dbmail** 실패 합니다. 자세한 내용은 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)합니다.  
   
  저장된 프로시저 **sysmail_delete_principalprofile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
   

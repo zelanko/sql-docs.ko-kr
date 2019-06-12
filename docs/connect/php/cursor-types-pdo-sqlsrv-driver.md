@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa270574d55d50e3b2d8653273027e9d5f133766
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 357bf9be35cbb976e1f35e07dc0489e9f2dc00a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65099735"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796214"
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>커서 형식(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

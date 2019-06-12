@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 프로젝트 항목의 제공 내용  
  ComponentWrapper 프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 파생된 **UserComponent**라는 클래스가 있습니다. 사용자 지정 코드를 작성하는 위치인 **ScriptMain** 클래스는 **UserComponent**에서 파생됩니다. **UserComponent** 클래스에는 다음과 같은 메서드가 있습니다.  
   
--   **ProcessInput** 메서드의 재정의된 구현 - 데이터 흐름 엔진에서 런타임에 **PreExecute** 메서드 다음으로 호출하는 메서드이며 여러 번 호출될 수 있습니다. **ProcessInput**은 **\<inputbuffer>_ProcessInput** 메서드로 처리를 넘깁니다. 다음으로 **ProcessInput** 메서드는 입력 버퍼의 끝을 확인하고, 버퍼의 끝에 도달하면 재정의 가능한 **FinishOutputs** 메서드 및 전용 **MarkOutputsAsFinished** 메서드를 호출합니다. 그런 다음 **MarkOutputsAsFinished** 메서드는 마지막 출력 버퍼에서 **SetEndOfRowset**을 호출합니다.  
+-   **ProcessInput** 메서드의 재정의된 구현 - 데이터 흐름 엔진에서 런타임에 **PreExecute** 메서드 다음으로 호출하는 메서드이며 여러 번 호출될 수 있습니다. **ProcessInput**은 **\<inputbuffer>_ProcessInput** 메서드로 처리를 넘깁니다. 다음으로 **ProcessInput** 메서드는 입력 버퍼의 끝을 확인하고, 버퍼의 끝에 도달하면 재정의 가능한 **FinishOutputs** 메서드 및 프라이빗 **MarkOutputsAsFinished** 메서드를 호출합니다. 그런 다음 **MarkOutputsAsFinished** 메서드는 마지막 출력 버퍼에서 **SetEndOfRowset**을 호출합니다.  
   
 -   **\<inputbuffer>_ProcessInput** 메서드의 재정의 가능한 구현 - 이 기본 구현은 단순히 각 입력 행을 반복하며 **\<inputbuffer>_ProcessInputRow**를 호출합니다.  
   
@@ -163,7 +163,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 프로젝트 항목의 제공 내용  
  ComponentWrapper 프로젝트 항목에는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 파생된 **UserComponent**라는 클래스가 있습니다. 사용자 지정 코드를 작성하는 위치인 **ScriptMain** 클래스는 **UserComponent**에서 파생됩니다. **UserComponent** 클래스에는 다음과 같은 메서드가 있습니다.  
   
--   **PrimeOutput** 메서드의 재정의된 구현 - 데이터 흐름 엔진에서 런타임에 이 메서드를 **ProcessInput**보다 먼저 호출하며 한 번만 호출됩니다. **PrimeOutput**은 **CreateNewOutputRows** 메서드로 처리를 넘깁니다. 그런 다음 구성 요소가 원본인 경우, 즉 구성 요소에 입력이 없는 경우 **PrimeOutput**은 재정의 가능한 **FinishOutputs** 메서드 및 전용 **MarkOutputsAsFinished** 메서드를 호출합니다. **MarkOutputsAsFinished** 메서드는 마지막 출력 버퍼에서 **SetEndOfRowset**을 호출합니다.  
+-   **PrimeOutput** 메서드의 재정의된 구현 - 데이터 흐름 엔진에서 런타임에 이 메서드를 **ProcessInput**보다 먼저 호출하며 한 번만 호출됩니다. **PrimeOutput**은 **CreateNewOutputRows** 메서드로 처리를 넘깁니다. 그런 다음 구성 요소가 원본인 경우, 즉 구성 요소에 입력이 없는 경우 **PrimeOutput**은 재정의 가능한 **FinishOutputs** 메서드 및 프라이빗 **MarkOutputsAsFinished** 메서드를 호출합니다. **MarkOutputsAsFinished** 메서드는 마지막 출력 버퍼에서 **SetEndOfRowset**을 호출합니다.  
   
 -   **CreateNewOutputRows** 메서드의 재정의 가능한 구현 - 기본 구현은 비어 있습니다. 이 메서드는 일반적으로 사용자 지정 데이터 처리 코드를 작성하기 위해 재정의하는 메서드입니다.  
   

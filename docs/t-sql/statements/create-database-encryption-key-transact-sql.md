@@ -96,7 +96,7 @@ Dbo(데이터베이스 소유자)가 변경될 경우 데이터베이스 암호�
 ## <a name="examples"></a>예  
 TDE를 사용하는 추가 예제를 보려면 [투명한 데이터 암호화 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), [EKM을 사용하여 SQL Server에서 TDE를 사용하도록 설정](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md) 및 [Azure Key Vault를 사용한 확장 가능 키 관리 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
-다음 예에서는 `AES_256` 알고리즘을 사용하여 데이터베이스 암호화 키를 만들고 `MyServerCert`라는 인증서로 개인 키를 보호합니다.  
+다음 예에서는 `AES_256` 알고리즘을 사용하여 데이터베이스 암호화 키를 만들고 `MyServerCert`라는 인증서로 프라이빗 키를 보호합니다.  
   
 ```  
 USE AdventureWorks2012;  

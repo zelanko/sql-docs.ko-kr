@@ -18,7 +18,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 255d268a179e06959ad852534d7df0c567cc5a25
 ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2018
 ms.locfileid: "51570384"
@@ -45,7 +45,7 @@ HRESULT LocalDBShareInstance(
  [입력] 인스턴스 소유자의 SID입니다.  
   
  *pInstancePrivateName*  
- [입력] 공유할 LocalDB 인스턴스의 전용 이름입니다.  
+ [입력] 공유할 LocalDB 인스턴스의 프라이빗 이름입니다.  
   
  *pInstanceSharedName*  
  [입력] 공유할 LocalDB 인스턴스의 공유 이름입니다.  

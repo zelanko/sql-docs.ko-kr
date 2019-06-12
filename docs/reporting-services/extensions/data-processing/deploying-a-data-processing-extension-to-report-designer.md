@@ -19,7 +19,7 @@ ms.lasthandoff: 10/01/2018
 ms.locfileid: "47818691"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>보고서 디자이너에 데이터 처리 확장 프로그램 배포
-  보고서 디자이너에서는 보고서를 디자인하는 동안 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 디자이너에 전용 어셈블리로 배포해야 합니다. 또한 보고서 디자이너 구성 파일인 RSReportDesigner.config에서 항목을 만들어야 합니다.  
+  보고서 디자이너에서는 보고서를 디자인하는 동안 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 디자이너에 프라이빗 어셈블리로 배포해야 합니다. 또한 보고서 디자이너 구성 파일인 RSReportDesigner.config에서 항목을 만들어야 합니다.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>데이터 처리 확장 프로그램 어셈블리를 배포하려면  
   

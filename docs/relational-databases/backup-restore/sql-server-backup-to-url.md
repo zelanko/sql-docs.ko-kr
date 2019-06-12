@@ -47,7 +47,7 @@ ms.locfileid: "59582836"
 ###  <a name="security"></a> 보안  
  다음은 Microsoft Azure Blob Storage 서비스로 백업하거나 복원하는 경우 보안 고려 사항과 요구 사항입니다.  
   
--   Microsoft Azure Blob Storage 서비스의 컨테이너를 만들 때 액세스 권한을 **개인**으로 설정하는 것이 좋습니다. 액세스 권한을 개인으로 설정하면 사용자나 계정에 대한 액세스 시 필요한 정보를 제공해야 Windows Azure 계정 인증을 받을 수 있도록 제한됩니다.  
+-   Microsoft Azure Blob Storage 서비스의 컨테이너를 만들 때 액세스 권한을 **프라이빗**으로 설정하는 것이 좋습니다. 액세스 권한을 프라이빗으로 설정하면 사용자나 계정에 대한 액세스 시 필요한 정보를 제공해야 Windows Azure 계정 인증을 받을 수 있도록 제한됩니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Microsoft Azure 계정 이름 및 액세스 키 인증 또는 공유 액세스 서명 및 액세스 토큰을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 저장해야 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Microsoft Azure 계정 인증을 받는 데 사용됩니다.  

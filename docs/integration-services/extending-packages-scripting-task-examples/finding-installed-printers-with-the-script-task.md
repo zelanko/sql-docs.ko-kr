@@ -40,7 +40,7 @@ ms.locfileid: "65724327"
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
 ## <a name="description"></a>설명  
- 다음 예에서는 서버에 설치된 프린터 중 미국에서 사용하는 Legal 크기 용지를 지원하는 프린터를 찾습니다. 지원되는 용지 크기를 확인하는 코드는 전용 함수에 캡슐화되어 있습니다. 각 프린터에 대한 설정을 확인할 때 스크립트의 진행률을 추적할 수 있도록 스크립트에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 사용하여 Legal 크기 용지를 사용하는 프린터에 대한 정보 메시지를 발생시키거나 Legal 크기 용지를 사용하지 않는 프린터에 대해 경고를 발생시킵니다. 이러한 메시지는 디자이너에서 패키지를 실행할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) IDE의 **출력** 창에 나타납니다.  
+ 다음 예에서는 서버에 설치된 프린터 중 미국에서 사용하는 Legal 크기 용지를 지원하는 프린터를 찾습니다. 지원되는 용지 크기를 확인하는 코드는 프라이빗 함수에 캡슐화되어 있습니다. 각 프린터에 대한 설정을 확인할 때 스크립트의 진행률을 추적할 수 있도록 스크립트에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 사용하여 Legal 크기 용지를 사용하는 프린터에 대한 정보 메시지를 발생시키거나 Legal 크기 용지를 사용하지 않는 프린터에 대해 경고를 발생시킵니다. 이러한 메시지는 디자이너에서 패키지를 실행할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] VSTA(Tools for Applications) IDE의 **출력** 창에 나타납니다.  
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   

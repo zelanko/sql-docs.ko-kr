@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b94c20b6f01941b2b45ccd09988f49d4a33912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 87221173fc919244eca5a9df153ac1975f6d12ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639751"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767163"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.lang.String getDriverName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getDriverName 메서드는 java.sql.DatabaseMetaData 인터페이스의 getDriverName 메서드에 의해 지정 됩니다.  
+ 이 getUserName 메서드는 java.sql.DatabaseMetaData 인터페이스의 getUserName 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

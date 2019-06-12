@@ -1,7 +1,7 @@
 ---
 title: Azure Blob 업로드 태스크 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3f35e1178af11111cdbdd00d1cbdba51660c098
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: b65a6d6616d844f01ffdb245a81daba04c88dddd
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728034"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403250"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 업로드 태스크
 
@@ -33,15 +33,13 @@ SSIS 패키지는 **Azure Blob 업로드 태스크**를 통해 Azure Blob Storag
  **Azure Blob 업로드 태스크**는 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.
   
  다음 표에서는 이 대화 상자의 필드에 대해 설명합니다.  
-  
-|||  
-|-|-|  
+
 |**필드**|**설명**|  
+|---|---|  
 |AzureStorageConnection|기존 Azure Storage 연결 관리자를 지정하거나 Blob 파일이 호스트되는 위치를 가리키는 Azure Storage 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.|  
 |BlobContainer|blob으로 업로드된 파일을 포함하는 blob 컨테이너의 이름을 지정합니다.|  
 |BlobDirectory|업로드한 파일이 블록 blob으로 저장되는 blob 디렉터리를 지정합니다. Blob 디렉터리는 가상 계층 구조입니다. 이미 있는 Blob은 업로드한 Blob으로 바뀝니다.|  
 |LocalDirectory|업로드할 파일이 포함된 로컬 디렉터리를 지정합니다.|  
+|SearchRecursively|하위 디렉터리 안에서 재귀적으로 검색할 것인지 여부를 지정합니다.|  
 |FileName|이름 필터를 지정하여 지정된 이름 패턴의 파일을 선택합니다. 예를 들어 `MySheet*.xls\*`는 `MySheet001.xls` 및 `MySheetABC.xlsx`와 같은 파일을 포함합니다.|  
 |TimeRangeFrom/TimeRangeTo|시간 범위 필터를 지정합니다. **TimeRangeFrom**에서 **TimeRangeTo** 사이에 수정된 파일이 포함됩니다.|  
-  
-  

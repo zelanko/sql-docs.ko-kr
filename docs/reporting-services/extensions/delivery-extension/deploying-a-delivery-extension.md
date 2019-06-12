@@ -40,7 +40,7 @@ ms.locfileid: "47768701"
  RSReportServer.config 파일에 대한 자세한 내용은 [Reporting Services 구성 파일](../../../reporting-services/report-server/reporting-services-configuration-files.md)을 참조하세요.  
   
 ## <a name="deploying-the-extension-to-the-report-server"></a>보고서 서버에 확장 프로그램 배포  
- 보고서 서버에서는 알림이나 보고서의 처리 및 배달을 위해 배달 확장 프로그램을 사용합니다. 배달 확장 프로그램 어셈블리를 전용 어셈블리 형태로 보고서 서버에 배포해야 합니다. 또한 보고서 서버 구성 파일 RSReportServer.config에서 항목을 만들어야 합니다.  
+ 보고서 서버에서는 알림이나 보고서의 처리 및 배달을 위해 배달 확장 프로그램을 사용합니다. 배달 확장 프로그램 어셈블리를 프라이빗 어셈블리 형태로 보고서 서버에 배포해야 합니다. 또한 보고서 서버 구성 파일 RSReportServer.config에서 항목을 만들어야 합니다.  
   
 #### <a name="to-deploy-a-deliver-extension-assembly-to-a-report-server"></a>보고서 서버에 배달 확장 프로그램 어셈블리를 배포하려면  
   

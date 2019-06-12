@@ -168,7 +168,7 @@ ms.locfileid: "62892661"
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지 XML에서 XML 서명 봉투를 확인하지 "%2"입니다. 이 오류는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 XML DOM 개체에서 XML 원본을 가져오지 "%2"입니다. 이 오류는 IXMLDOMDocument::get_xml이 실패할 때 발생합니다.|  
 |0xC0014030|-1073659856|DTS_E_PACKAGEVERIFICATIONFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지의 암호화 서명을 확인하지 "%2"입니다. 이 오류는 서명 확인 작업이 실패할 때 발생합니다.|  
-|0xC0014031|-1073659855|DTS_E_GETKEYFROMCERTFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 지정된 인증서와 연결된 암호화 키 쌍을 얻지 "%2"입니다. 발급된 인증서에 대한 키 쌍이 있는지 확인하십시오. 이 오류는 일반적으로 개인 키가 없는 인증서를 사용하여 문서에 서명하려고 할 때 발생합니다.|  
+|0xC0014031|-1073659855|DTS_E_GETKEYFROMCERTFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 지정된 인증서와 연결된 암호화 키 쌍을 얻지 "%2"입니다. 발급된 인증서에 대한 키 쌍이 있는지 확인하십시오. 이 오류는 일반적으로 프라이빗 키가 없는 인증서를 사용하여 문서에 서명하려고 할 때 발생합니다.|  
 |0xC0014032|-1073659854|DTS_E_INVALIDSIGNATURE|디지털 서명이 잘못되었습니다. 패키지 내용이 수정되었습니다.|  
 |0xC0014033|-1073659853|DTS_E_UNTRUSTEDSIGNATURE|디지털 서명이 유효하지만 서명자를 신뢰할 수 없으므로 신뢰성을 보증할 수 없습니다.|  
 |0xC0014034|-1073659852|DTS_E_TRANSACTIONENLISTNOTSUPPORTED|연결이 분산 트랜잭션 참여를 지원하지 않습니다.|  
@@ -1141,8 +1141,8 @@ ms.locfileid: "62892661"
 |0xC0048012|-1073446894|DTS_E_CANTCREATEVIEWBUFFER|데이터 흐름 태스크 엔진이 버퍼 %3!d에 대해 %2!d! 유형 대신에 %1!d! 유형의 뷰 버퍼를 만들지 못했습니다.|  
 |0xC0048013|-1073446893|DTS_E_UNUSABLETEMPORARYPATH|버퍼 관리자가 경로 "%1"에서 임시 파일을 만들 수 없습니다. 이 경로는 임시 스토리지용으로 다시 사용되지 않습니다.|  
 |0xC0048014|-1073446892|DTS_E_DIRECTTONONERROROUTPUT|버퍼 관리자가 오류 출력으로 등록되지 않은 출력에 오류 행을 밀어넣으려고 했습니다. IsErrorOut 속성이 TRUE로 설정되지 않은 출력에서 DirectErrorRow가 호출되었습니다.|  
-|0xC0048015|-1073446891|DTS_E_BUFFERISPRIVATE|전용 버퍼에서 버퍼 메서드가 호출되었지만 전용 버퍼는 이 작업을 지원하지 않습니다.|  
-|0xC0048016|-1073446890|DTS_E_BUFFERISFLAT|전용 모드 버퍼는 이 작업을 지원하지 않습니다.|  
+|0xC0048015|-1073446891|DTS_E_BUFFERISPRIVATE|프라이빗 버퍼에서 버퍼 메서드가 호출되었지만 프라이빗 버퍼는 이 작업을 지원하지 않습니다.|  
+|0xC0048016|-1073446890|DTS_E_BUFFERISFLAT|프라이빗 모드 버퍼는 이 작업을 지원하지 않습니다.|  
 |0xC0048017|-1073446889|DTS_E_BUFFERISPRIMEOUTPUT|PrimeOutput에 전달된 버퍼에서 이 작업을 호출할 수 없습니다. PrimeOutput 중에 버퍼 메서드가 호출되었지만 PrimeOutput 중에는 이 호출이 허용되지 않습니다.|  
 |0xC0048018|-1073446888|DTS_E_BUFFERISPROCESSINPUT|ProcessInput에 전달된 버퍼에서 이 작업을 호출할 수 없습니다. ProcessInput 중에 버퍼 메서드가 호출되었지만 ProcessInput 중에는 이 호출이 허용되지 않습니다.|  
 |0xC0048019|-1073446887|DTS_E_BUFFERGETTEMPFILENAME|버퍼 관리자가 임시 파일 이름을 가져올 수 없습니다.|  

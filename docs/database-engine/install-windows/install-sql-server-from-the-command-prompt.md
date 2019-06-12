@@ -84,13 +84,13 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993697"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794957"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -213,7 +213,7 @@ ms.locfileid: "65993697"
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **선택 사항**|엔진 서비스 계정의 암호를 지정합니다.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **선택 사항**|PolyBase 엔진 서비스의 시작 모드를 지정합니다. Automatic(기본값), Disabled 및 Manual.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **선택 사항**|PolyBase 서비스용 6개 이상의 포트로 포트 범위를 지정합니다. 예:<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 지원되는 값: **True**, **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **선택 사항**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스가 PolyBase 규모 확장 계산 그룹의 일부로 사용될지를 지정합니다. 헤드 노드를 포함하는 PolyBase 스케일 아웃 계산 그룹을 구성할 경우 이 옵션을 사용합니다. 지원되는 값: **True**, **False**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|SQL Server 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q 또는 /QUIET<br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다. /Q 매개 변수는 /QS 매개 변수의 입력을 재정의합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/QS 또는 /QUIETSIMPLE <br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
@@ -276,7 +276,7 @@ ms.locfileid: "65993697"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
 |Python/Machine Learning Services(데이터베이스 내)|MPYCACHEDIRECTORY|나중에 사용하도록 예약되어 있습니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
-|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
+|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 

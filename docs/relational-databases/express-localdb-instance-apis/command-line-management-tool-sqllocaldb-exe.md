@@ -15,7 +15,7 @@ ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e97cd1d95196b838585148e240cb8cf50a47a041
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47683231"
@@ -36,7 +36,7 @@ ms.locfileid: "47683231"
 |`delete\|d "instance name"`|지정한 이름의 LocalDB 인스턴스를 삭제합니다.|  
 |`start\|s "instance name"`|지정한 이름으로 LocalDB 인스턴스를 시작합니다.|  
 |`stop\|p "instance name" [-i\|-k]`|현재 쿼리의 실행을 완료한 후 지정한 이름의 LocalDB 인스턴스를 중지합니다.<br /><br /> -i는 NOWAIT 옵션을 사용하여 LocalDB 인스턴스 종료를 요청합니다.<br /><br /> -k는 프로세스와 접촉하지 않고 LocalDB 인스턴스 프로세스를 중지합니다.|  
-|`share\|h ["owner SID or account"] "private name" "shared name"`|지정한 공유 이름을 사용하여 지정한 개인 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.|  
+|`share\|h ["owner SID or account"] "private name" "shared name"`|지정한 공유 이름을 사용하여 지정한 프라이빗 인스턴스를 공유합니다. 사용자 SID 또는 계정 이름을 생략하면 기본값으로 현재 사용자가 사용됩니다.|  
 |`unshare\|u "shared name"`|지정한 공유 LocalDB 인스턴스의 공유를 취소합니다.|  
 |`info\|i`|현재 사용자가 소유하고 있는 모든 기존 LocalDB 인스턴스와 모든 공유 LocalDB 인스턴스를 나열합니다.|  
 |`info\|i "instance name"`|지정한 LocalDB 인스턴스에 대한 정보를 인쇄합니다.|  

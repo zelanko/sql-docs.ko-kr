@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983ba238c0c5d5a0e355f49af734a72ae946ee79
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980399"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413424"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ip4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+        'ip4_address', 'pv4_mask'  
       | 'ipv6_address'  
      }  
   
@@ -228,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  WSFC 노드 및 서버 인스턴스의 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
- ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  현재 REPLICA ON 절에서 정의 중인 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [데이터베이스 미러링 엔드포인트](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)에 대한 URL 경로를 지정합니다.  
   
  ENDPOINT_URL 절은 필수입니다. 자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  엔드포인트 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -316,10 +316,10 @@ CREATE AVAILABILITY GROUP group_name
   
  자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
   
- 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'**).  
+ 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'** ).  
   
  복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법에 대한 자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx)을 참조하세요.  
   
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이것이 기본 동작입니다.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
+ READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } 보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
 -   모든 연결 또는 읽기 전용 연결을 허용하도록 구성되어야 합니다(위에서 SECONDARY_ROLE 옵션의 ALLOW_CONNECTIONS 인수 참조).  
   
@@ -366,18 +366,18 @@ CREATE AVAILABILITY GROUP group_name
  세션 제한 시간에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
  AVAILABILITY GROUP ON  
- 분산형 가용성 그룹을 구성하는 두 개의 가용성 그룹을 지정합니다. 각 가용성 그룹은 자체 WSFC(Windows Server 장애 조치(Failover) 클러스터)의 일부입니다. 분산형 가용성 그룹을 만들면 현재 SQL Server 인스턴스의 가용성 그룹이 주 가용성 그룹이 됩니다. 두 번째 가용성 그룹이 보조 가용성 그룹이 됩니다.  
+ 분산형 가용성 그룹을 구성하는 두 개의 가용성 그룹을 지정합니다  . 각 가용성 그룹은 자체 WSFC(Windows Server 장애 조치(Failover) 클러스터)의 일부입니다. 분산형 가용성 그룹을 만들면 현재 SQL Server 인스턴스의 가용성 그룹이 주 가용성 그룹이 됩니다. 두 번째 가용성 그룹이 보조 가용성 그룹이 됩니다.  
   
  보조 가용성 그룹을 분산형 가용성 그룹에 조인해야 합니다. 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
  \<ag_name> 분산 가용성 그룹의 절반을 구성하는 가용성 그룹의 이름을 지정합니다.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  가용성 그룹과 연결된 수신기에 대한 URL 경로를 지정합니다.  
   
  LISTENER 절은 필수입니다.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  가용성 그룹과 연결된 수신기에 대한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  수동 시드(기본값)를 지정합니다. 이 메서드를 사용하면 주 복제본에서 데이터베이스의 백업을 만들고 보조 가용성 그룹의 복제본에서 해당 백업을 수동으로 복원해야 합니다.  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** 이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. LISTENER는 선택적 인수입니다.  
+ LISTENER **‘** _dns\_name_ **’(** \<listener_option\> **)** 이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. LISTENER는 선택적 인수입니다.  
   
 > [!IMPORTANT]
 >  첫 번째 수신기를 만들기 전에 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 읽는 것이 좋습니다.  
@@ -436,27 +436,27 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER는 다음 \<listener_option> 옵션 중 하나를 사용합니다. 
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  가용성 그룹 수신기가 DHCP(동적 호스트 구성 프로토콜)를 사용할지 여부를 지정합니다.  필요할 경우 ON 절을 사용하여 이 수신기를 만들 네트워크를 식별합니다. DHCP는 가용성 그룹의 복제본을 호스팅하는 모든 서버 인스턴스에 사용되는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
 >  프로덕션 환경에서는 DHCP를 사용하지 않는 것이 좋습니다. 중단 시간이 있고 DHCP IP 임대가 만료되는 경우 수신기 DNS 이름과 연결되고 클라이언트 연결에 영향을 주는 새 DHCP 네트워크 IP 주소를 등록하기 위해 추가 시간이 필요합니다. 그러나 가용성 그룹의 기본 기능을 확인하고 애플리케이션과 통합하기 위해 DHCP를 개발 및 테스트 환경에 설정하는 것은 좋습니다.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ip4_address*  
  가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 주소를 지정합니다. `10.120.19.155`)을 입력합니다.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  가용성 그룹 수신기에 대해 네 부분으로 된 IPv4 마스크를 지정합니다. `255.255.254.0`)을 입력합니다.  
   
  *ipv6_address*  
@@ -476,7 +476,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -575,7 +575,7 @@ GO
  [DROP AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   
  [Always On 가용성 그룹 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치&amp;#40;SQL Server&amp;#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
 

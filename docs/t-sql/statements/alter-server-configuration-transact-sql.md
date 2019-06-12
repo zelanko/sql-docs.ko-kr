@@ -166,7 +166,7 @@ MAX_FILES  =  {  'max_file_count'  |  DEFAULT  }
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
 FAILOVER  CLUSTER  PROPERTY  
-SQL  Server  리소스의 개인 장애 조치(failover)  클러스터 속성을 수정합니다.  
+SQL  Server  리소스의 프라이빗 장애 조치(failover)  클러스터 속성을 수정합니다.  
   
 VERBOSE  LOGGING  =  {  'logging_detail'  |  DEFAULT  }  
 SQL  Server  장애 조치(failover)  클러스터링에 대한 로깅 수준을 설정합니다. 이 속성을 설정하여 오류 로그에 문제 해결을 위한 자세한 정보를 추가할 수 있습니다.  

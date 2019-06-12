@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, additional resources
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4b5b45a0f4844575e136703fe240132d7a8496cb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a35699360e9ca40d8ac0fdc7649be5c70d3df10d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605943"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796030"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51605943"
 
   SQL Server용 OLE DB 드라이버 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
- [데이터 액세스 및 저장소 개발자 센터](https://go.microsoft.com/fwlink?linkid=4173)  
+ [데이터 액세스 및 스토리지 개발자 센터](https://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 SQL Server용 OLE DB 드라이버 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
  [데이터 액세스 블로그](https://go.microsoft.com/fwlink/?LinkId=48617)  

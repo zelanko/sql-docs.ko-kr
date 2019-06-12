@@ -54,13 +54,13 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  열려는 대칭 키의 이름입니다.  
   
  CERTIFICATE *certificate_name*  
- 대칭 키 해독에 사용할 개인 키를 가지고 있는 인증서의 이름입니다.  
+ 대칭 키 해독에 사용할 프라이빗 키를 가지고 있는 인증서의 이름입니다.  
   
  ASYMMETRIC KEY *asym_key_name*  
- 대칭 키 해독에 사용할 개인 키를 가지고 있는 비대칭 키의 이름입니다.  
+ 대칭 키 해독에 사용할 프라이빗 키를 가지고 있는 비대칭 키의 이름입니다.  
   
  WITH PASSWORD ='*password*'  
- 인증서나 비대칭 키의 개인 키를 암호화하는 데 사용된 암호입니다.  
+ 인증서나 비대칭 키의 프라이빗 키를 암호화하는 데 사용된 암호입니다.  
   
  SYMMETRIC KEY *decrypting_key_name*  
  열려는 대칭 키를 해독하는 데 사용할 대칭 키의 이름입니다.  
@@ -91,7 +91,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
 ## <a name="examples"></a>예  
   
 ### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>1. 인증서를 사용하여 대칭 키 열기  
- 다음 예에서는 `SymKeyMarketing3` 대칭 키를 열고 `MarketingCert9` 인증서의 개인 키를 사용하여 해독합니다.  
+ 다음 예에서는 `SymKeyMarketing3` 대칭 키를 열고 `MarketingCert9` 인증서의 프라이빗 키를 사용하여 해독합니다.  
   
 ```  
 USE AdventureWorks2012;  

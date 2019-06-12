@@ -114,7 +114,7 @@ ALTER ASSEMBLY assembly_name
   
  자세한 내용은 [Implementing Assemblies](../../relational-databases/clr-integration/assemblies-implementing.md)를 참조하세요.  
   
- [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  어셈블리와 관련된 특정 파일이나 모든 파일을 데이터베이스에서 제거합니다. ADD FILE이 뒤따를 경우 DROP FILE이 먼저 실행됩니다. 이 기능을 사용하여 같은 파일 이름의 파일을 대체할 수 있습니다.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ ALTER ASSEMBLY assembly_name
   
 -   새 공용 메서드를 추가하는 경우  
   
--   전용 메서드를 어떤 방식으로든 수정하는 경우  
+-   프라이빗 메서드를 어떤 방식으로든 수정하는 경우  
   
  데이터 멤버 또는 기본 클래스를 비롯하여 기본적으로 직렬화된 사용자 정의 형식에 포함된 필드는 ALTER ASSEMBLY를 사용하여 변경할 수 없습니다. 다른 모든 변경은 지원되지 않습니다.  
   

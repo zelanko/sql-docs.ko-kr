@@ -95,7 +95,7 @@ public struct Point : INullable
  `get()`의 `IsNull` 메서드는 어떤 방식으로든 특별하게 처리되지 않습니다. `Point` 변수 `@p`가 `Null`이면 기본적으로 `@p.IsNull`은 "1"이 아니라 "NULL"이 됩니다. 이는 `SqlMethod(OnNullCall)` 메서드의 `IsNull get()` 특성이 기본적으로 false로 설정되어 있기 때문입니다. 개체가 `Null`이므로 속성이 요청될 때 개체가 역직렬화되지 않고 메서드가 호출되지 않으며 기본값 "NULL"이 반환됩니다.  
   
 ### <a name="example"></a>예제  
- 다음 예에서 `is_Null` 변수는 전용이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. 또한 UDT의 Null 값 인스턴스를 반환하는 `Null`이라는 정적 속성이 UDT에 있어야 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  
+ 다음 예에서 `is_Null` 변수는 프라이빗이며 UDT 인스턴스에 대해 Null 상태를 포함합니다. 코드에서 `is_Null`에 적합한 값을 유지해야 합니다. 또한 UDT의 Null 값 인스턴스를 반환하는 `Null`이라는 정적 속성이 UDT에 있어야 합니다. 이렇게 하면 인스턴스가 데이터베이스에서 실제로 Null인 경우 UDT에서 Null 값을 반환할 수 있습니다.  
   
 ```vb  
 Private is_Null As Boolean  

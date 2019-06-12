@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524482"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778088"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>MDAC에서 SQL Server용 OLE DB 드라이버로 애플리케이션 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52524482"
 
 -   SQL Server용 OLE DB 드라이버는 TABLE_TYPE이 SYNONYM으로 설정된 TABLES 및 TABLE_INFO 스키마 행 집합에 동의어를 반환합니다.  
 
--   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전의 클라이언트에는 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** 또는 다른 큰 개체 유형의 반환 값을 반환할 수 없습니다. 반환 값으로 이러한 형식을 사용 하려는 경우에 SQL Server 용 OLE DB 드라이버를 사용 해야 합니다.  
+-   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전 버전의 클라이언트에는 데이터 형식 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** 또는 다른 큰 개체 유형의 반환 값을 반환할 수 없습니다. 반환 값으로 이러한 형식을 사용 하려는 경우에 SQL Server 용 OLE DB 드라이버를 사용 해야 합니다.  
 
 -   MDAC를 사용하면 수동 및 암시적 트랜잭션을 시작할 때 다음 명령문을 실행할 수 있지만 SQL Server용 OLE DB 드라이버에서는 실행할 수 없습니다. 자동 커밋 모드로 이러한 문을 실행해야 합니다.  
 
@@ -91,7 +91,7 @@ ms.locfileid: "52524482"
 
 -   MDAC 응용 프로그램이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하면 다음 그림과 같이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 데이터 형식이 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 호환 데이터 형식으로 나타납니다.  
 
-    |SQL Server 2005 형식|SQL Server 2000 형식|  
+    |SQL Server 2005 형식|SQL Server 2005 형식|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -111,4 +111,4 @@ ms.locfileid: "52524482"
  모두 OLE DB Driver for SQL Server 및 MDAC 지원 커밋된 읽기 트랜잭션 격리 행 버전 관리 하지만 OLE DB 드라이버를 사용 하 여 SQL Server에서 지 원하는 스냅숏 트랜잭션 격리에 대 한 합니다. 프로그래밍 측면에서 행 버전 관리를 사용한 커밋된 읽기 트랜잭션 격리는 커밋된 읽기 트랜잭션과 동일합니다.  
 
 ## <a name="see-also"></a>참고 항목  
- [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

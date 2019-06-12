@@ -30,7 +30,7 @@ ms.locfileid: "65945529"
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이 함수는 인증서의 개인 키를 사용하여 암호화된 데이터의 암호를 해독합니다.  
+이 함수는 인증서의 프라이빗 키를 사용하여 암호화된 데이터의 암호를 해독합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,22 +53,22 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 인증서로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다.  
   
  *cert_password*  
-인증서의 개인 키를 암호화하는 데 사용되는 암호입니다. *cert_password*는 유니코드 데이터 형식을 가져야 합니다.  
+인증서의 프라이빗 키를 암호화하는 데 사용되는 암호입니다. *cert_password*는 유니코드 데이터 형식을 가져야 합니다.  
   
  @cert_password  
-인증서의 개인 키를 암호화하는 데 사용되는 암호를 포함하는 **nchar** 또는 **nvarchar** 형식의 변수입니다. *@cert_password*는 유니코드 데이터 형식을 가져야 합니다.  
+인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 포함하는 **nchar** 또는 **nvarchar** 형식의 변수입니다. *@cert_password* 는 유니코드 데이터 형식을 가져야 합니다.  
 
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
 ## <a name="remarks"></a>Remarks  
-이 함수는 인증서의 개인 키로 데이터의 암호를 해독합니다. 비대칭 키를 사용하는 암호화 변환에는 상당한 리소스가 사용됩니다. 따라서 개발자는 일상적인 사용자 데이터 암호화/암호 해독에 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 및 DECRYPTBYCERT의 사용을 피하는 것이 좋습니다.  
+이 함수는 인증서의 프라이빗 키로 데이터의 암호를 해독합니다. 비대칭 키를 사용하는 암호화 변환에는 상당한 리소스가 사용됩니다. 따라서 개발자는 일상적인 사용자 데이터 암호화/암호 해독에 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 및 DECRYPTBYCERT의 사용을 피하는 것이 좋습니다.  
 
 ## <a name="permissions"></a>사용 권한  
 `DECRYPTBYCERT`는 인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-이 예제는 인증서 `JanainaCert02`로 원래 암호화된 데이터로 표시되는 `[AdventureWorks2012].[ProtectedData04]`에서 행을 선택합니다. 예제는 먼저 인증서 `pGFD4bb925DGvbd2439587y`의 암호로 인증서 `JanainaCert02`의 개인 키를 암호 해독합니다. 그런 다음, 예제에서는 이 개인 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
+이 예제는 인증서 `JanainaCert02`로 원래 암호화된 데이터로 표시되는 `[AdventureWorks2012].[ProtectedData04]`에서 행을 선택합니다. 예제는 먼저 인증서 `pGFD4bb925DGvbd2439587y`의 암호로 인증서 `JanainaCert02`의 프라이빗 키를 암호 해독합니다. 그런 다음, 예제에서는 이 프라이빗 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

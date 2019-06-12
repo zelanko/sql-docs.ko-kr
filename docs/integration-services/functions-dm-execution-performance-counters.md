@@ -52,8 +52,8 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Buffers in use|모든 데이터 흐름 구성 요소 및 데이터 흐름 엔진이 사용 중인 모든 유형의 버퍼 개체 수입니다.|  
 |Buffers Spooled|디스크에 쓴 버퍼 수입니다.|  
 |Flat buffer memory|모든 플랫 버퍼에서 사용되는 메모리의 양(바이트)입니다. 플랫 버퍼는 구성 요소가 데이터 저장에 사용하는 메모리 블록입니다.|  
-|Flat buffers in use|데이터 흐름 엔진이 사용하는 플랫 버퍼 수입니다. 모든 플랫 버퍼는 전용 버퍼입니다.|  
-|Private buffer memory|모든 전용 버퍼에서 사용되는 메모리의 양입니다. 전용 버퍼는 변환 작업에서 임시 작업용으로 사용하는 버퍼입니다.<br /><br /> 데이터 흐름 엔진이 데이터 흐름을 지원하기 위해 만드는 버퍼는 전용 버퍼가 아닙니다.|  
+|Flat buffers in use|데이터 흐름 엔진이 사용하는 플랫 버퍼 수입니다. 모든 플랫 버퍼는 프라이빗 버퍼입니다.|  
+|Private buffer memory|모든 프라이빗 버퍼에서 사용되는 메모리의 양입니다. 프라이빗 버퍼는 변환 작업에서 임시 작업용으로 사용하는 버퍼입니다.<br /><br /> 데이터 흐름 엔진이 데이터 흐름을 지원하기 위해 만드는 버퍼는 프라이빗 버퍼가 아닙니다.|  
 |Private buffers in use|변환 작업에서 임시 작업용으로 사용하는 버퍼 수입니다.|  
 |Rows read|실행 준비가 된 총 행 수입니다.|  
 |Rows written|실행에서 쓰여진 총 행 수입니다.|  

@@ -22,7 +22,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 570bcf178bb433184dd01d05430192f2cf4e95a9
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47603031"
@@ -51,7 +51,7 @@ ms.locfileid: "47603031"
   
  메타데이터는 동시에 여러 번 호출할 수 있습니다. ODBC 카탈로그 API 구현을 기반으로 하는 시스템 카탈로그 프로시저는 ODBC 드라이버가 정적 서버 커서를 사용하는 동안 호출할 수 있습니다. 이렇게 하면 응용 프로그램에서 ODBC 카탈로그 함수에 대한 여러 호출을 동시에 처리할 수 있습니다.  
   
- 응용 프로그램에서 특정 메타데이터 집합을 두 번 이상 사용하는 경우 이러한 메타데이터 집합을 처음으로 가져올 때 전용 변수에 해당 정보가 캐시되는 이점을 얻을 수 있습니다. 이는 나중에 드라이버를 강제로 서버에 왕복하게 하는 ODBC 카탈로그 함수가 동일한 정보에 대해 호출되지 않도록 합니다.  
+ 응용 프로그램에서 특정 메타데이터 집합을 두 번 이상 사용하는 경우 이러한 메타데이터 집합을 처음으로 가져올 때 프라이빗 변수에 해당 정보가 캐시되는 이점을 얻을 수 있습니다. 이는 나중에 드라이버를 강제로 서버에 왕복하게 하는 ODBC 카탈로그 함수가 동일한 정보에 대해 호출되지 않도록 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [결과 처리 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  

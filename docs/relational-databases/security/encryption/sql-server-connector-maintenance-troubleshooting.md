@@ -159,7 +159,7 @@ ms.locfileid: "59241381"
 ### <a name="on-azure-key-vault"></a>Azure 주요 자격 증명 모음에서  
   
 **Azure 주요 자격 증명 모음에서 키 작업은 어떻게 작동하나요?**  
- 주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure Key Vault 서비스 내에서 수행되며, 서비스 보안에 의해 보호됩니다.  
+ 주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 퍼블릭 부분만 자격 증명 모음을 떠나고 프라이빗 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure Key Vault 서비스 내에서 수행되며, 서비스 보안에 의해 보호됩니다.  
   
  **키 URI는 무엇인가요?**  
  Azure 주요 자격 증명 모음의 모든 키에는 애플리케이션에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "59241381"
 
 **SQL Server 커넥터에서 액세스해야 하는 엔드포인트는 무엇인가요?** 커넥터는 허용 목록에 포함되어야 하는 두 개의 엔드포인트와 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 각 구성 단계에 대해 필요한 최소 권한 수준은 무엇인가요?**  
  sysadmin 고정 서버 역할이 있는 멤버로 구성 단계를 모두 수행할 수는 있지만 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서는 사용할 권한을 최소화하는 것이 권장됩니다. 다음 목록에서는 각 작업에 대한 최소 권한 수준을 정의합니다.  

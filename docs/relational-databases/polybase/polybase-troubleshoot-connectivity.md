@@ -44,9 +44,9 @@ Kerberos가 Hadoop 클러스터에서 구성되면 각 Hadoop 보안 리소스�
 
 PolyBase에서 Kerberos 보안 리소스에 대해 인증이 요청되면 다음과 같은 4번 왕복 핸드셰이크가 수행됩니다.
 
-1. SQL Server가 KDC에 연결하고 사용자의 TGT를 가져옵니다. TGT는 KDC 개인 키를 사용하여 암호화됩니다.
+1. SQL Server가 KDC에 연결하고 사용자의 TGT를 가져옵니다. TGT는 KDC 프라이빗 키를 사용하여 암호화됩니다.
 1. SQL Server는 Hadoop 보안 리소스인 HDFS를 호출하고 ST가 필요한 SPN을 결정합니다.
-1. SQL Server는 KDC로 돌아가고, TGT를 다시 전달하고, ST를 요청하여 해당하는 특정 보안 리소스에 액세스합니다. ST는 보안 서비스의 개인 키를 사용하여 암호화됩니다.
+1. SQL Server는 KDC로 돌아가고, TGT를 다시 전달하고, ST를 요청하여 해당하는 특정 보안 리소스에 액세스합니다. ST는 보안 서비스의 프라이빗 키를 사용하여 암호화됩니다.
 1. SQL Server가 ST를 Hadoop에 전달하고 인증되어 해당 서비스에 대해 세션이 만들어집니다.
 
 ![](./media/polybase-sqlserver.png)
@@ -100,10 +100,10 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 | 인수 | 설명|
 | --- | --- |
-| Name Node Address | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
-| Name Node Port | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
-| Service Principal | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
-| Service Password | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
+| Name Node Address  | 이름 노드의 IP 또는 FQDN입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다.|
+| Name Node Port  | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
+| Service Principal  | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
+| Service Password  | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
 | *원격 HDFS 파일 경로(선택 사항) * | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
 
 ## <a name="example"></a>예제
@@ -214,7 +214,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 
 ### <a name="mit-kdc"></a>MIT KDC  
 
-관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs**를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 개인 키를 사용하여 암호화됩니다.  
+관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs**를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 프라이빗 키를 사용하여 암호화됩니다.  
 
 [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)를 사용하여 KDC에서 로컬로 관리자 자격 증명을 확인하는 것도 좋습니다. 예제 사용량은 `kinit identity@MYREALM.COM`입니다. 암호를 묻는 메시지가 표시되면 ID가 있는 것입니다.  
 KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 SQL Server 컴퓨터 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ**로 표시됩니다.

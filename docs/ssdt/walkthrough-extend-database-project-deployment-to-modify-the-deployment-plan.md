@@ -50,7 +50,7 @@ ms.locfileid: "65099548"
   
 -   [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 메서드를 재정의합니다.  
   
--   전용 도우미 메서드를 추가합니다.  
+-   프라이빗 도우미 메서드를 추가합니다.  
   
 -   결과 어셈블리를 빌드합니다.  
   
