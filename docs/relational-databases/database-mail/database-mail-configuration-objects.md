@@ -80,7 +80,7 @@ ms.locfileid: "51558960"
   
 -   전자 메일 서버의 이름  
   
--   전자 메일 서버의 유형.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이는 항상 SMTP(Simple Mail Transfer Protocol)입니다.  
+-   전자 메일 서버의 유형. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이는 항상 SMTP(Simple Mail Transfer Protocol)입니다.  
   
 -   전자 메일 서버의 포트 번호  
   
@@ -100,11 +100,11 @@ ms.locfileid: "51558960"
   
  또한 프로필을 사용하면 데이터베이스 관리자가 전자 메일 액세스를 제어할 수 있습니다. 데이터베이스 메일을 보내려면 **DatabaseMailUserRole** 의 멤버 자격이 필요합니다. 프로필이 있으면 관리자는 메일을 보내는 사람과 사용되는 계정을 유연하게 제어할 수 있습니다.  
   
- 프로필은 공개 또는 개인 프로필일 수 있습니다.  
+ 프로필은 퍼블릭 또는 프라이빗 프로필일 수 있습니다.  
   
  **공개 프로필** 은 **msdb** 데이터베이스에 있는 **DatabaseMailUserRole** 데이터베이스 역할의 모든 멤버에 대해 사용할 수 있습니다. 공개 프로필이 있으면 **DatabaseMailUserRole** 역할의 모든 멤버는 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
   
- **개인 프로필** 은 **msdb** 데이터베이스의 보안 주체에 대해 정의됩니다. 지정된 데이터베이스 사용자, 역할 및 **sysadmin** 고정 서버 역할의 멤버만 개인 프로필을 사용하여 메일을 보낼 수 있습니다. 기본적으로 프로필은 개인 프로필이며 **sysadmin** 고정 서버 역할의 멤버에게만 액세스를 허용합니다. 개인 프로필을 사용할 수 있도록 하려면 **sysadmin** 이 사용자에게 프로필 사용 권한을 부여해야 합니다. 또한 **sp_send_dbmail** 저장 프로시저에 대한 EXECUTE 권한은 **DatabaseMailUserRole**멤버에게만 부여됩니다. 사용자가 메일 메시지를 보내려면 시스템 관리자가 해당 사용자를 **DatabaseMailUserRole** 데이터베이스 역할에 추가해야 합니다.  
+ **개인 프로필** 은 **msdb** 데이터베이스의 보안 주체에 대해 정의됩니다. 지정된 데이터베이스 사용자, 역할 및 **sysadmin** 고정 서버 역할의 멤버만 개인 프로필을 사용하여 메일을 보낼 수 있습니다. 기본적으로 프로필은 프라이빗 프로필이며 **sysadmin** 고정 서버 역할의 멤버에게만 액세스를 허용합니다. 프라이빗 프로필을 사용할 수 있도록 하려면 **sysadmin** 이 사용자에게 프로필 사용 권한을 부여해야 합니다. 또한 **sp_send_dbmail** 저장 프로시저에 대한 EXECUTE 권한은 **DatabaseMailUserRole**멤버에게만 부여됩니다. 사용자가 메일 메시지를 보내려면 시스템 관리자가 해당 사용자를 **DatabaseMailUserRole** 데이터베이스 역할에 추가해야 합니다.  
   
  프로필을 사용하면 전자 메일 서버에 연결할 수 없거나 전자 메일 서버가 메시지를 처리할 수 없는 경우 안정성이 향상됩니다. 프로필의 계정마다 시퀀스 번호가 있습니다. 시퀀스 번호는 데이터베이스 메일에서 프로필의 계정을 사용하는 순서를 결정합니다. 데이터베이스 메일은 메시지를 성공적으로 보낸 마지막 계정을 새 전자 메일 메시지에 사용합니다. 그러나 아직 보낸 메시지가 없는 경우에는 시퀀스 번호가 가장 낮은 계정을 사용합니다. 해당 계정이 실패하면 데이터베이스 메일에서는 시퀀스 번호가 다음으로 높은 계정을 사용하여 메시지가 성공적으로 전송될 때까지 또는 시퀀스 번호가 가장 높은 계정이 실패할 때까지 작업을 계속합니다. 시퀀스 번호가 가장 높은 계정이 실패하면 데이터베이스 메일은 **sysmail_configure_sp** 의 **AccountRetryDelay**매개 변수에서 구성한 기간 동안 메일을 보내려는 시도를 일시 중지했다가 가장 낮은 시퀀스 번호에서 시작하여 다시 메일을 보내려는 시도를 시작합니다. **sysmail_configure_sp** 의 **AccountRetryAttempts**매개 변수를 사용하여 외부 메일 프로세스가 지정한 프로필의 각 계정을 사용하여 전자 메일 메시지를 보내려고 시도하는 횟수를 구성합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "51558960"
 |속성|설명|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|데이터베이스 보안 주체에 대해 데이터베이스 메일 프로필을 사용할 수 있는 권한을 부여합니다.|  
-|[sysmail_delete_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|공개 또는 개인 데이터베이스 메일 프로필을 사용할 수 있는 데이터베이스 보안 주체에 대한 사용 권한을 제거합니다.|  
+|[sysmail_delete_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|퍼블릭 또는 프라이빗 데이터베이스 메일 프로필을 사용할 수 있는 데이터베이스 보안 주체에 대한 사용 권한을 제거합니다.|  
 |[sysmail_help_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|지정한 데이터베이스 사용자에 대한 데이터베이스 메일 프로필 정보를 나열합니다|  
 |[sysmail_update_principalprofile_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|지정한 데이터베이스 사용자에 대한 사용 권한 정보를 업데이트합니다.|  
   

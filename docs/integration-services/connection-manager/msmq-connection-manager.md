@@ -30,7 +30,7 @@ ms.locfileid: "65728207"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
+  MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
   
  패키지에 MSMQ 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 MSMQ 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하며, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다. 연결 관리자의 **ConnectionManagerType** 속성이 **MSMQ**로 설정됩니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65728207"
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
 |공개|\<컴퓨터 이름>\\<큐 이름\>|  
-|Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  마침표(.)를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65728207"
  MSMQ 연결 관리자에 대한 자세한 내용은 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)를 참조하십시오.  
   
 > [!NOTE]  
->  MSMQ 연결 관리자는 로컬 공개 큐, 로컬 개인 큐 및 원격 공개 큐를 지원합니다. 원격 개인 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)를 참조하십시오.  
+>  MSMQ 연결 관리자는 로컬 퍼블릭 큐, 로컬 프라이빗 큐 및 원격 퍼블릭 큐를 지원합니다. 원격 프라이빗 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)를 참조하십시오.  
   
 ### <a name="options"></a>옵션  
  **이름**  
@@ -77,7 +77,7 @@ ms.locfileid: "65728207"
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
 |공개|\<컴퓨터 이름>\\<큐 이름\>|  
-|Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   

@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
 ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2018
 ms.locfileid: "52811155"
@@ -61,27 +61,27 @@ ms.locfileid: "52811155"
   
 -   **기능:** 원격 서버 관리 도구 / 역할 관리 도구  
   
--   새 포리스트를 만들고 도메인에 컴퓨터를 가입하도록 Active Directory를 구성합니다. 다른 컴퓨터를 개인 도메인에 추가하기 전에 클라이언트 컴퓨터 DNS를 DC의 IP 주소로 구성해야 합니다. DC 컴퓨터에서 `ipconfig /all` 을 실행하여 다음 단계를 위해 IPv4 및 IPv6 주소를 가져옵니다.  
+-   새 포리스트를 만들고 도메인에 컴퓨터를 가입하도록 Active Directory를 구성합니다. 다른 컴퓨터를 프라이빗 도메인에 추가하기 전에 클라이언트 컴퓨터 DNS를 DC의 IP 주소로 구성해야 합니다. DC 컴퓨터에서 `ipconfig /all` 을 실행하여 다음 단계를 위해 IPv4 및 IPv6 주소를 가져옵니다.  
   
 -   IPv4 및 IPv6 주소를 둘 다 구성하는 것이 좋습니다. Windows 제어판에서 이 작업을 수행할 수 있습니다.  
   
-    1.   **네트워크 및 공유 센터**를 클릭합니다.  
+    1.  **네트워크 및 공유 센터**를 클릭합니다.  
   
     2.  이더넷 연결을 클릭합니다.  
   
-    3.   **속성**을 클릭합니다.  
+    3.  **속성**을 클릭합니다.  
   
-    4.   **인터넷 프로토콜 버전 6(TCP/IPv6)** 을 클릭합니다.  
+    4.  **인터넷 프로토콜 버전 6(TCP/IPv6)** 을 클릭합니다.  
   
-    5.   **속성**을 클릭합니다.  
+    5.  **속성**을 클릭합니다.  
   
-    6.   **다음 DNS 서버 주소 사용**을 클릭합니다.  
+    6.  **다음 DNS 서버 주소 사용**을 클릭합니다.  
   
     7.  Ipconfig 명령에서 IP 주소를 입력합니다.  
   
     8.  **고급** 단추를 클릭한 다음 **DNS** 탭을 클릭하고 DNS 접미사가 올바른지 확인합니다.  
   
-    9.  **다음 DNS 접미사 추가**를 클릭합니다.  
+    9. **다음 DNS 접미사 추가**를 클릭합니다.  
   
     10. IPv4에 대해 단계를 반복합니다.  
   

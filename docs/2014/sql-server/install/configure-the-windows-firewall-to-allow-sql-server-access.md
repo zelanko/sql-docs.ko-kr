@@ -203,7 +203,7 @@ ms.locfileid: "63058109"
   
 |시나리오|포트|주석|  
 |--------------|----------|--------------|  
-|Windows Management Instrumentation<br /><br /> WMI에 대한 자세한 내용은 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)을 참조하세요.|WMI는 공유 서비스 호스트의 일부로 실행되며 포트는 DCOM을 통해 할당됩니다. WMI는 TCP 포트 135를 사용 중일 수 있습니다.<br /><br />  [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 WMI를 사용하여 서비스를 나열하고 관리합니다. 미리 구성된 규칙 그룹 **WMI(Windows Management Instrumentation)** 를 사용하는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
+|Windows Management Instrumentation<br /><br /> WMI에 대한 자세한 내용은 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)을 참조하세요.|WMI는 공유 서비스 호스트의 일부로 실행되며 포트는 DCOM을 통해 할당됩니다. WMI는 TCP 포트 135를 사용 중일 수 있습니다.<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 WMI를 사용하여 서비스를 나열하고 관리합니다. 미리 구성된 규칙 그룹 **WMI(Windows Management Instrumentation)** 를 사용하는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator(MS DTC)|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|애플리케이션에서 분산 트랜잭션을 사용하는 경우 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 트래픽이 개별 MS DTC 인스턴스 간에, 그리고 MS DTC와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등의 리소스 관리자 간에 전달될 수 있도록 방화벽을 구성해야 합니다. 미리 구성된 **Distributed Transaction Coordinator** 규칙 그룹을 사용하는 것이 좋습니다.<br /><br /> 별도의 리소스 그룹에 있는 전체 클러스터에 단일 공유 MS DTC가 구성된 경우 방화벽에 sqlservr.exe를 예외로 추가해야 합니다.|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 찾아보기 단추를 클릭하면 UDP를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 연결됩니다. 자세한 내용은 [SQL Server Browser 서비스&#40;데이터베이스 엔진 및 SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)를 참조하세요.|UDP 포트 1434|UDP는 연결 없는 프로토콜입니다.<br /><br /> 방화벽에는 브로드캐스트(또는 멀티캐스트) UDP 요청에 대한 유니캐스트 응답과 관련하여 방화벽의 동작을 제어하는 [INetFwProfile 인터페이스의 UnicastResponsesToMulticastBroadcastDisabled 속성](https://go.microsoft.com/fwlink/?LinkId=118371) 이라는 설정이 포함됩니다.  여기에는 두 가지 동작이 있습니다.<br /><br /> 설정이 TRUE이면 브로드캐스트에 대한 유니캐스트 응답이 허용되지 않습니다. 서비스 열거는 실패합니다.<br /><br /> 설정이 FALSE(기본값)이면 유니캐스트 응답이 3초 동안 허용됩니다. 이 시간 길이는 구성할 수 없습니다. 혼잡하거나 지연 시간이 긴 네트워크 또는 부하가 높은 서버의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 열거하려고 시도하면 부분적인 목록만 반환되어 사용자에게 잘못된 정보를 줄 수 있습니다.|  
 |IPsec 트래픽|UDP 포트 500 및 UDP 포트 4500|도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 예외 목록에 UDP 포트 4500 및 UDP 포트 500도 추가해야 합니다. IPsec은 Windows 방화벽 스냅인의 **새 인바운드 규칙 마법사** 를 사용하는 옵션입니다. 자세한 내용은 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.|  
@@ -238,13 +238,13 @@ ms.locfileid: "63058109"
   
 -   공용. 도메인 네트워크 이외의 모든 네트워크는 처음에 공용 네트워크로 분류됩니다. 인터넷에 직접 연결되는 네트워크 또는 공항 및 커피숍과 같이 공개된 위치에 있는 네트워크는 공용으로 유지해야 합니다.  
   
--   전용. 사용자 또는 애플리케이션에 의해 전용 네트워크로 식별되는 네트워크입니다. 트러스트된 네트워크만 전용 네트워크로 식별되어야 합니다. 홈 네트워크 또는 소규모 기업 네트워크를 전용 네트워크로 식별하는 경우가 많습니다.  
+-   프라이빗. 사용자 또는 애플리케이션에 의해 프라이빗 네트워크로 식별되는 네트워크입니다. 트러스트된 네트워크만 프라이빗 네트워크로 식별되어야 합니다. 홈 네트워크 또는 소규모 기업 네트워크를 프라이빗 네트워크로 식별하는 경우가 많습니다.  
   
  관리자는 서로 다른 방화벽 정책이 포함된 각 프로필을 사용하여 각 네트워크 위치 유형에 대한 프로필을 만들 수 있습니다. 항상 하나의 프로필만 적용됩니다. 프로필 순서는 다음과 같이 적용됩니다.  
   
 1.  컴퓨터가 멤버로 속해 있는 도메인에 대한 도메인 컨트롤러에 모든 인터페이스가 인증될 경우 도메인 프로필이 적용됩니다.  
   
-2.  모든 인터페이스가 도메인 컨트롤러에 인증되거나 전용 네트워크 위치로 분류되는 네트워크에 연결된 경우 전용 프로필이 적용됩니다.  
+2.  모든 인터페이스가 도메인 컨트롤러에 인증되거나 프라이빗 네트워크 위치로 분류되는 네트워크에 연결된 경우 프라이빗 프로필이 적용됩니다.  
   
 3.  그렇지 않으면 공용 프로필이 적용됩니다.  
   
