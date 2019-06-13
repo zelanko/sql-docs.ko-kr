@@ -18,20 +18,24 @@ helpviewer_keywords:
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b17e6b799bf3ff35b441286fd1205ca5382b207
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.author: jroth
+manager: craigg
+monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 93d36f922d3cd66cd8b617afbdb3e9bf80d79e22
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65836188"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744158"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
+> [!div class="nextstepaction"]
+> [SQL Docs 허브 페이지에 대한 피드백을 공유하세요!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
+
+::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
 ::: moniker-end
 
@@ -52,6 +56,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |[SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 릴리스 정보](../sql-server/sql-server-ver15-release-notes.md)        |
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ![info_tip](../sql-server/media/info-tip.png) SQL Server **2014** 설명서는 [여기](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)에서 사용할 수 있습니다.
 ::: moniker-end
@@ -61,6 +66,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)     | [SQL Server 2019 릴리스 정보](../sql-server/sql-server-ver15-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -69,6 +75,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 > [!NOTE]
 > 이제 SQL Server 2019 미리 보기를 사용할 수 있습니다. 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)을 참조하세요.
@@ -79,6 +86,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |새로운 기능  | 릴리스 정보  |
 |---------|---------|
 |[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)        |
+| &nbsp; | &nbsp; |
 
 ::: moniker-end
 
@@ -140,9 +148,13 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 - [SQL Server 2016에 대한 AdventureWorks 예제 데이터베이스 및 스크립트](https://docs.microsoft.com/sql/samples/sql-samples-where-are) 
 - [GitHub의 SQL Server 예제](https://github.com/Microsoft/sql-server-samples)
 
-## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005
+## <a name="previous-versions-gm66"></a> SQL Server 2014, 2012, 2008, 2005 이전 버전
 
 [!INCLUDE[previous-versions](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
+<!--
+The following includes/ files contain their own H2 headers.
+-->
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

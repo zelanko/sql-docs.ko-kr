@@ -15,18 +15,20 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559396"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506609"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 전자 메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 애플리케이션에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)에서 이메일 메시지를 보내는 엔터프라이즈 솔루션입니다. 데이터베이스 메일을 사용하여 데이터베이스 애플리케이션에서 전자 메일 메시지를 사용자에게 보낼 수 있습니다. 메시지에는 쿼리 결과와 네트워크상의 리소스 파일이 포함될 수 있습니다.  
   
-  
+> [!NOTE] 
+> 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)에서 사용할 수 있으나 Azure SQL 데이터베이스 싱글톤 및 탄력적 풀에서는 사용할 수 없습니다. 
+
 ##  <a name="Benefits"></a> 데이터베이스 메일 사용의 이점  
  데이터베이스 메일은 안정성, 확장성, 보안 및 지원 가능성을 고려하여 디자인되었습니다.  
   
@@ -42,23 +44,23 @@ ms.locfileid: "51559396"
   
 ### <a name="scalability"></a>확장성  
   
--   백그라운드 배달: 데이터베이스 메일은 백그라운드(비동기) 배달 기능을 제공합니다. **sp_send_dbmail** 을 호출하여 메시지를 보낼 때 데이터베이스 메일은 요청을 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐에 추가합니다. 저장 프로시저가 즉시 반환됩니다. 외부 전자 메일 구성 요소는 요청을 받아 전자 메일을 배달합니다.  
+-   백그라운드 배달: 데이터베이스 메일은 백그라운드 또는 비동기 배달을 제공합니다. **sp_send_dbmail** 을 호출하여 메시지를 보낼 때 데이터베이스 메일은 요청을 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐에 추가합니다. 저장 프로시저가 즉시 반환됩니다. 외부 전자 메일 구성 요소는 요청을 받아 전자 메일을 배달합니다.  
   
--   여러 프로필: 데이터베이스 메일을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 여러 프로필을 만들 수 있습니다. 필요에 따라 메시지를 보낼 때 데이터베이스 메일이 사용하는 프로필을 선택할 수 있습니다.  
+-   여러 프로필: 데이터베이스 메일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 여러 프로필을 만들 수 있습니다. 필요에 따라 메시지를 보낼 때 데이터베이스 메일이 사용하는 프로필을 선택할 수 있습니다.  
   
--   여러 계정: 각 프로필에 여러 개의 장애 조치(failover) 계정을 포함할 수 있습니다. 여러 개의 전자 메일 서버를 통해 전자 메일을 배포할 때 서로 다른 계정으로 다양한 프로필을 구성할 수 있습니다.  
+-   여러 계정: 각 프로필에는 여러 개의 장애 조치 계정이 있을 수 있습니다. 여러 개의 전자 메일 서버를 통해 전자 메일을 배포할 때 서로 다른 계정으로 다양한 프로필을 구성할 수 있습니다.  
   
--   64비트 호환성: 데이터베이스 메일은 64비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치에서 완전하게 지원됩니다.  
+-   64비트 호환성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64비트를 설치하면 데이터베이스 메일이 완전하게 지원됩니다.  
   
 ### <a name="security"></a>보안  
   
--   기본적으로 해제됨: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 노출 영역을 줄이기 위해 데이터베이스 메일 저장 프로시저는 기본적으로 사용할 수 없도록 설정되어 있습니다.  
+-   기본적으로 해제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 노출 영역을 줄이기 위해 데이터베이스 메일 저장 프로시저는 기본적으로 사용할 수 없도록 설정되어 있습니다.  
   
 -   메일 보안:데이터베이스 메일을 보내려면 **msdb** 데이터베이스에서 **DatabaseMailUserRole** 데이터베이스 역할의 멤버여야 합니다.  
   
--   프로필 보안: 데이터베이스 메일은 메일 프로필에 대해 보안을 적용합니다. 데이터베이스 메일 프로필에 액세스할 수 있는 **msdb** 데이터베이스 사용자나 그룹을 선택합니다. **msdb**의 특정 사용자나 모든 사용자에게 액세스 권한을 부여할 수 있습니다. 개인 프로필은 지정된 목록의 사용자만 액세스할 수 있도록 제한되어 있습니다. 공개 프로필은 데이터베이스의 모든 사용자가 사용할 수 있습니다.  
+-   프로필 보안: 데이터베이스 메일은 메일 프로필에 대해 보안을 강제 적용합니다. 데이터베이스 메일 프로필에 액세스할 수 있는 **msdb** 데이터베이스 사용자나 그룹을 선택합니다. **msdb**의 특정 사용자나 모든 사용자에게 액세스 권한을 부여할 수 있습니다. 프라이빗 프로필은 지정된 목록의 사용자만 액세스할 수 있도록 제한되어 있습니다. 공개 프로필은 데이터베이스의 모든 사용자가 사용할 수 있습니다.  
   
--   첨부 파일 크기 관리자: 데이터베이스 메일은 첨부 파일 크기에 대해 구성 가능한 제한을 적용합니다. [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 저장 프로시저를 사용하여 이 제한을 변경할 수 있습니다.  
+-   첨부 파일 크기 관리자: 데이터베이스 메일은 첨부 파일 크기에 대해 구성 가능한 제한을 강제 적용합니다. [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) 저장 프로시저를 사용하여 이 제한을 변경할 수 있습니다.  
   
 -   금지할 파일 확장명: 데이터베이스 메일은 금지할 파일 확장명 목록을 유지 관리합니다. 사용자는 목록에 표시된 확장명의 파일을 첨부할 수 없습니다. sysmail_configure_sp를 사용하여 이 목록을 변경할 수 있습니다.  
   
@@ -66,13 +68,13 @@ ms.locfileid: "51559396"
   
 ### <a name="supportability"></a>지원 가능성  
   
--   통합 구성: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]내에서 메일 계정에 대한 정보를 유지 관리합니다. 외부 클라이언트 애플리케이션에서 메일 프로필을 관리할 필요가 없습니다. 데이터베이스 메일 구성 마법사는 데이터베이스 메일을 구성할 수 있는 편리한 인터페이스를 제공합니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 메일 구성을 생성하고 유지 관리할 수 있습니다.  
+-   통합된 구성: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 내에 이메일 계정에 대한 정보를 유지 관리합니다. 외부 클라이언트 애플리케이션에서 메일 프로필을 관리할 필요가 없습니다. 데이터베이스 메일 구성 마법사는 데이터베이스 메일을 구성할 수 있는 편리한 인터페이스를 제공합니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 메일 구성을 생성하고 유지 관리할 수 있습니다.  
   
 -   로깅. 데이터베이스 메일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft Windows 애플리케이션 이벤트 로그 및 **msdb** 데이터베이스의 테이블에 메일 작업을 기록합니다.  
   
--   감사: 데이터베이스 메일은 보낸 메시지와 첨부 파일의 복사본을 **msdb** 데이터베이스에 보관합니다. 데이터베이스 메일 사용을 쉽게 감사하고 보존된 메시지를 검토할 수 있습니다.  
+-   감사: 데이터베이스 메일은 **msdb** 데이터베이스에 보낸 메시지와 첨부 파일의 복사본을 보존합니다. 데이터베이스 메일 사용을 쉽게 감사하고 보존된 메시지를 검토할 수 있습니다.  
   
--   HTML 지원: 데이터베이스 메일을 사용하면 HTML 형식의 전자 메일을 보낼 수 있습니다.  
+-   HTML 지원: 데이터베이스 메일을 사용하면 HTML 형식의 이메일 메시지를 보낼 수 있습니다.  
   
   
 ##  <a name="VisualElement"></a> 데이터베이스 메일 아키텍처  
@@ -114,7 +116,7 @@ ms.locfileid: "51559396"
 -   데이터베이스 백업이나 복제 이벤트와 같이 예약된 태스크가 성공하거나 실패했을 경우. 예를 들어 처리하는 동안 오류가 발생했을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 메일을 사용하여 월말에 운영자에게 알릴 수 있습니다.  
   
   
-##  <a name="RelatedContent"></a> 데이터베이스 메일 구성 요소 항목  
+##  <a name="RelatedContent"></a> 참고 항목  
   
 -   [데이터베이스 메일 구성 개체](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

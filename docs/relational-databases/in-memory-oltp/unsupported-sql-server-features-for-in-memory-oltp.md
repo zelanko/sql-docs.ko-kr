@@ -1,7 +1,7 @@
 ---
 title: 메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254967"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506586"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "54254967"
 |연결된 서버|메모리 최적화 테이블과 같은 쿼리 또는 트랜잭션에서는 연결된 서버에 액세스할 수 없습니다. 자세한 내용은 [연결된 서버&#40;데이터베이스 엔진&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)를 참조하세요.|  
 |대량 로깅|데이터베이스의 복구 모델에 관계없이 메모리 최적화 영구 테이블에 대한 모든 작업은 항상 모두 기록됩니다.|  
 |최소 로깅|최소 로깅은 메모리 최적화 테이블에 대해 지원되지 않습니다. 최소 로깅에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.|  
-|변경 내용 추적|변경 내용 추적은 메모리 내 OLTP 개체가 포함된 데이터베이스에서 사용할 수 있습니다. 그러나 메모리 최적화 테이블의 변경 내용은 추적되지 않습니다.|  
+|변경 내용 추적|변경 내용 추적은 In-Memory OLTP 개체가 포함된 데이터베이스에서는 사용할 수 없습니다. |
 | DDL 트리거 | 메모리 내 OLTP 테이블 또는 고유하게 컴파일된 모듈에서는 데이터베이스 수준 및 서버 수준 DDL 트리거가 모두 지원되지 않습니다. |  
-| CDC(변경 데이터 캡처) | 내부적으로 CDC는 DROP TABLE에 대해 DDL 트리거를 사용하므로 메모리 최적화 테이블을 포함하는 데이터베이스에서는 CDC를 사용할 수 없습니다. |  
+| CDC(변경 데이터 캡처) | SQL Server 2017 CU15 이상은 메모리 최적화 테이블이 있는 데이터베이스에서의 CDC 사용을 지원합니다. 이는 데이터베이스와 데이터베이스의 모든 디스크상의 테이블에만 적용됩니다. 이전 SQL Server 버전의 경우 내부적으로 CDC는 DROP TABLE에 대해 DDL 트리거를 사용하므로 메모리 최적화 테이블을 포함하는 데이터베이스에서는 CDC를 사용할 수 없습니다. |  
 | 파이버 모드 | 메모리 최적화 테이블에서는 파이버 모드가 지원되지 않습니다.<br /><br />파이버 모드가 활성인 경우 메모리 최적화 파일 그룹이 포함된 데이터베이스를 만들 수 없고, 메모리 최적화 파일 그룹을 기존 데이터베이스에 추가할 수도 없습니다.<br /><br />메모리 최적화 파일 그룹이 포함된 데이터베이스가 있는 경우 파이버 모드를 활성화할 수 있습니다. 하지만 파이버 모드를 사용하려면 서버를 다시 시작해야 합니다. 이러한 상황에서는 메모리 최적화 파일 그룹이 포함된 데이터베이스가 복구되지 않습니다. 그리고 메모리 최적화 파일 그룹이 있는 데이터베이스를 사용하려면 파이버 모드를 사용하지 않도록 설정하라는 오류 메시지가 표시됩니다.<br /><br />파이버 모드가 활성이면 메모리 최적화 파일 그룹이 포함된 데이터베이스를 연결하거나 복원하는 작업이 실패합니다. 데이터베이스는 주의 대상으로 표시됩니다.<br /><br />자세한 내용은 [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)을 참조하세요. |  
 |Service Broker 제한|고유하게 컴파일된 저장 프로시저에서 큐에 액세스할 수 없습니다.<br /><br /> 메모리 최적화 테이블에 액세스하는 트랜잭션에서 원격 데이터베이스에 있는 큐에 액세스할 수 없습니다.|  
 |구독자에서 복제|구독자에서는 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 구독자로 복제](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.|  

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198188"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810288"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -53,12 +53,14 @@ CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../incl
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
+|SQL Server 언어 확장 - [Java 언어 확장](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|[Microsoft SQL Server용 Java에 대한 Microsoft 확장성 SDK](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server)는 현재 오픈 소스로 [GitHub에서 제공합니다](https://github.com/microsoft/sql-server-language-extensions).|
 |외부 언어 등록|새로운 DDL `CREATE EXTERNAL LANGUAGE`는 SQL Server에서 Java와 같은 외부 언어를 등록합니다. [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md)를 참조하세요. |
 |Java에 대해 지원되는 데이터 형식 증가|[Java 데이터 형식](../language-extensions/how-to/java-to-sql-data-types.md)을 참조하세요.|
 |쿼리 저장소에 대한 캡처 정책 사용자 지정|사용하도록 설정된 경우 특정 서버의 데이터 컬렉션을 정밀 조정하기 위해 새로운 쿼리 저장소 캡처 정책 설정 아래에서 추가 쿼리 저장소 구성을 사용할 수 있습니다. 자세한 내용은 [ALTER DATABASE SET 옵션](../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.|
 |[메모리 내 데이터베이스](../relational-databases/in-memory-database.md)는 하이브리드 버퍼 풀에 새로운 DDL 구문을 추가합니다. <sup>2</sup>|[하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 사용하여 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다.|
 |새로운 메모리 내 데이터베이스 기능인 메모리 최적화 tempdb 메타데이터가 추가되었습니다.|[메모리 최적화 tempdb 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
 |연결된 서버는 UTF-8 문자 인코딩을 지원합니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
+|SQL Server 설치에는 문서화된 지침을 따르는 MaxDOP 권장 사항이 포함되어 있습니다. |[max degree of parallelism 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats`는 쿼리 계획에 대해 병렬 처리 수준 및 메모리 부여에 관한 더 많은 정보를 반환합니다. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../incl
 |향상된 간접 검사점 확장성. |[향상된 간접 검사점 확장성](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |BIN2 데이터 정렬(`UTF8_BIN2`)로 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
 |그래프 데이터베이스의 에지 제약 조건에 대한 계단식 삭제 작업을 정의합니다. |[에지 제약 조건](../relational-databases/tables/graph-edge-constraints.md) |
-|새 데이터베이스 범위 구성으로 `LIGHTWEIGHT_QUERY_PROFILING`을 활성화 또는 비활성화합니다. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|새 데이터베이스 범위 구성으로 `LIGHTWEIGHT_QUERY_PROFILING`을 활성화 또는 비활성화합니다. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>도구
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> [공개 미리 보기 도중 요청에 따라 이 기능이 기본적으로 설정되어 있는](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period) Azure SQL DB에서는 이 구문을 이용할 필요가 없습니다. 사용하도록 설정한 후 기능이 기본적으로 사용하도록 설정됩니다.
+> [공개 미리 보기 도중 요청에 따라 이 기능이 기본적으로 설정되어 있는](/azure/sql-database/sql-database-accelerated-database-recovery) Azure SQL DB에서는 이 구문을 이용할 필요가 없습니다. 사용하도록 설정한 후 기능이 기본적으로 사용하도록 설정됩니다.
 
 대규모 트랜잭션이 발생할 수 있는 중요한 데이터베이스가 있는 경우 미리 보기 동안에 이 기능을 실험해 보세요. 그리고 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀 ](<https://aka.ms/sqlfeedback>)에 피드백도 제공해 주세요.
 

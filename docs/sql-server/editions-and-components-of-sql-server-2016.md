@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016의 버전 및 지원하는 기능 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/29/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
+- CPSA
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12b7a440b8f100ff383deda7ad5c1dbc4c8a4578
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cb908e8ff5af27e58fa97da1ce6b6626c8ed91db
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658437"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701617"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-이 항목에서는 SQL Server 버전에서 지원하는 기능에 대해 자세히 설명합니다.  지금은 SQL Server 2017의 버전에서 지원하는 기능에 대해 변경된 내용이 없습니다.  
+이 항목에서는 SQL Server 버전에서 지원하는 기능에 대해 자세히 설명합니다. 지금은 SQL Server 2017의 버전에서 지원하는 기능에 대해 변경된 내용이 없습니다.  
   
 설치 요구 사항은 사용자의 애플리케이션 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
@@ -59,7 +60,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
     
 > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
 > 
-> ![Azure 가상 머신 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2016으로 가상 머신을 스핀업](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
+> ![Azure 가상 머신 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된 SQL Server 2016으로 가상 머신을 스핀업](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp2-ws2016)**   
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 버전  
  다음 표에서는 이러한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에 대해 설명합니다. 
@@ -75,7 +76,8 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>인터넷 서버에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  인터넷 정보 서비스(IIS)를 실행하는 서버와 같은 인터넷 서버에는 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다. 클라이언트 도구에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 연결하는 애플리케이션이 사용하는 클라이언트 연결 구성 요소가 포함됩니다.  
   
-> **참고:**  IIS를 실행하는 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 설치할 수 있지만 이러한 설치는 일반적으로 단일 서버 컴퓨터를 사용하는 소규모 웹 사이트에서만 수행됩니다. 대부분의 웹 사이트에서는 한 대의 서버나 서버 클러스터에 중간 계층 IIS 시스템이 있고 별도의 서버나 서버 페더레이션에 데이터베이스가 있습니다.  
+> [!NOTE]
+> IIS를 실행하는 컴퓨터에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 설치할 수 있지만 이러한 설치는 일반적으로 단일 서버 컴퓨터를 사용하는 소규모 웹 사이트에서만 수행됩니다. 대부분의 웹 사이트에서는 한 대의 서버나 서버 클러스터에 중간 계층 IIS 시스템이 있고 별도의 서버나 서버 페더레이션에 데이터베이스가 있습니다.  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>클라이언트/서버 애플리케이션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 직접 연결되는 클라이언트/서버 애플리케이션 실행 컴퓨터에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]클라이언트 구성 요소만 설치하면 됩니다. 데이터베이스 서버의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 관리하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 애플리케이션을 개발하려는 경우에는 클라이언트 구성 요소를 설치하는 것도 좋은 방법입니다.  
@@ -98,7 +100,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 |관리 도구|설명|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.<br /><br /> 를 다운로드하여 설치합니다 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] SQL Server Management Studio 다운로드  [에서](https://msdn.microsoft.com/library/mt238290.aspx)|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.<br /><br /> 를 다운로드하여 설치합니다 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] SQL Server Management Studio 다운로드  [에서](https://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스, 서버 프로토콜, 클라이언트 프로토콜 및 클라이언트 별칭에 대한 기본 구성 관리 작업을 수행할 수 있습니다.|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 모니터링하기 위한 그래픽 사용자 인터페이스를 제공합니다.|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] 튜닝 관리자|[!INCLUDE[ssDE](../includes/ssde-md.md)] 튜닝 관리자는 최적의 인덱스, 인덱싱된 뷰 및 파티션 집합을 만드는 데 도움을 줍니다.|  
@@ -112,7 +114,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 **Developer 및 Evaluation Edition**  
 Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표에서 SQL Server Enterprise Edition에 대해 나열된 기능을 참조하세요.
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1용 Developer Edition에 추가된 기능 목록은 [SQL Server 2016 SP1 버전](https://aka.ms/uw6cw4)을 참조하세요.  
+
 
 Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)에 대해 클라이언트 1개만 계속 지원합니다. 
   
@@ -131,7 +133,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
 <sup>1</sup> Server + CAL(클라이언트 액세스 라이선스) 기반 라이선스가 포함된 엔터프라이즈 버전(새 계약에 사용할 수 없음)은 SQL Server 인스턴스마다 최대 20개의 코어로 제한됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
-<sup>2</sup> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 적용됩니다. 
+<sup>2</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환 
 
 ##  <a name="RDBMSHA"></a> RDBMS High Availability  
   
@@ -159,7 +161,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 
 <sup>2</sup> 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.  
 
-<sup>3</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1에 적용됩니다.
+<sup>3</sup> 적용 대상: [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환 
   
 ##  <a name="RDBMSSP"></a> RDBMS Scalability and Performance  
   
@@ -175,16 +177,16 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |관리|예|아니오|아니오|아니오|아니오|  
 |분할된 테이블 병렬 처리|예|아니오|아니오|아니오|아니오|
 |여러 Filestream 컨테이너|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니요 <sup>4</sup>|아니오|아니오|아니오|
+|NUMA 인식 큰 페이지 메모리 및 버퍼 배열 할당|예|아니요 <sup>4</sup>|아니오|아니오|아니오|
 |Buffer Pool Extension|예|예|아니오|아니오|아니오|
-|IO 리소스 관리|예|아니오|아니오|아니오|아니오|
+|I/O 리소스 거버런스|예|아니오|아니오|아니오|아니오|
 |미리 읽기|예|아니오|아니오|아니오|아니오|
 |고급 검색|예|아니오|아니오|아니오|아니오|
 |지연된 내구성|예|예|예|예|예|
 
 <sup>1</sup> 메모리 내 OLTP 데이터 크기 및 Columnstore 세그먼트 캐시는 크기 조정 제한 섹션에서 버전별로 지정된 메모리 양으로 제한됩니다. 최대 병렬 처리 수준도 제한됩니다. 인덱스 작성에 대한 DOP(병렬 처리 수준)는 Standard Edition의 경우 2DOP, Web 및 Express Edition의 경우 1DOP로 제한됩니다. 디스크 기반 테이블과 메모리 최적화 테이블에서 생성된 columnstore 인덱스가 해당합니다.
 
-<sup>2</sup> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 적용됩니다. 
+<sup>2</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환.  
 
 <sup>3</sup> 이 기능은 LocalDB 설치 옵션에 포함되지 않습니다.
 
@@ -204,7 +206,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |포함된 데이터베이스|예|예|예|예|예| 
 |백업을 위한 암호화|예|예|아니오|아니오|아니오|  
 
-<sup>1</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1에 적용됩니다.  
+<sup>1</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환      
+
 ##  <a name="Replication"></a> Replication  
   
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express|   
@@ -264,7 +267,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
  <sup>1</sup> 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
  
-<sup>2</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1에 적용됩니다. 
+<sup>2</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환      
   
 ##  <a name="DevTools"></a> Development Tools  
   
@@ -302,7 +305,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 
 <sup>1</sup> 여러 컴퓨팅 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
 
-<sup>2</sup> [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 2016 SP1에 적용됩니다.
+<sup>2</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환     
   
 ## <a name="IS"></a> Integration Services
 
@@ -324,7 +327,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |분할된 테이블 및 인덱스의 병렬 쿼리 처리|예|아니오|아니오|아니오|아니오|   
 |글로벌 일괄 집계|예|아니오|아니오|아니오|아니오| 
 
-<sup>1</sup> [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1에 적용됩니다.  
+<sup>1</sup> 적용 대상: [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, 버전 간 CPSA(공통 프로그래밍 노출 영역) 만들기의 일환     
+
 ##  <a name="SSAS"></a> Analysis Services  
   
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 
@@ -379,7 +383,6 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 > [![SSMS 다운로드](../analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) 최신 버전의 **[SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**      
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server에 대한 제품 사양](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

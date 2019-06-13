@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a13bc9ae6b49d4623c405a2501f2e7574f79aba
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198325"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785121"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -210,7 +210,7 @@ SET
     | MAX_STORAGE_SIZE_MB = number
     | INTERVAL_LENGTH_MINUTES = number
     | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
-    | QUERY_CAPTURE_MODE = { ALL | AUTO | NONE }
+    | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
     | MAX_PLANS_PER_QUERY = number
     | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
     | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
@@ -218,10 +218,10 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    EXECUTION_COUNT = number
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
-    | TOTAL_EXECUTION_CPU_TIME_MS = number
-    | STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | TOTAL_EXECUTION_CPU_TIME_MS = number      
 }
 
 <recovery_option> ::=
@@ -361,7 +361,7 @@ sys.databases 카탈로그 뷰의 is_auto_shrink_on 열을 검사하여 이 옵�
 
 <a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
 ON         
-쿼리에서 통계를 사용하거나 통계가 최신 정보가 아닌 경우 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
+쿼리에서 통계를 사용하거나 통계가 최신 정보가 아닌 경우 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음, 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
 
 쿼리 최적화 프로그램은 쿼리를 컴파일하고 캐시된 쿼리 계획을 실행하기 전에 최신 정보가 아닌 통계가 있는지 확인합니다. 쿼리 최적화 프로그램은 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 이 정보를 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.
 
@@ -540,7 +540,7 @@ EMERGENCY
 데이터베이스가 READ_ONLY로 표시되고 로깅이 비활성화되며 sysadmin 고정 서버 역할의 멤버로 액세스가 제한됩니다. EMERGENCY는 주로 문제 해결을 위해 사용됩니다. 예를 들어 손상된 로그 파일로 인해 주의 대상으로 표시된 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다. 이 설정을 사용하면 시스템 관리자가 읽기 전용으로 데이터베이스에 액세스할 수 있습니다. sysadmin 고정 서버 역할의 멤버만 데이터베이스를 EMERGENCY 상태로 설정할 수 있습니다.
 
 > [!NOTE]
-> **사용 권한:** 데이터베이스를 오프라인 또는 응급 상태로 변경하려면 주제 데이터베이스에 대한 ALTER DATABASE 권한이 필요합니다. 데이터베이스를 오프라인 상태에서 온라인 상태로 전환하려면 서버 수준 ALTER ANY DATABASE 권한이 필요합니다.
+> **권한:** 데이터베이스를 오프라인 또는 응급 상태로 변경하려면 주제 데이터베이스에 대한 `ALTER DATABASE` 권한이 필요합니다. 데이터베이스를 오프라인 상태에서 온라인 상태로 전환하려면 서버 수준 `ALTER ANY DATABASE` 권한이 필요합니다.
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 state 및 state_desc 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 Status 속성을 검사하여 상태를 확인할 수도 있습니다. 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)을 참조하세요.
 
@@ -1221,7 +1221,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-options-on-a-database"></a>1. 데이터베이스 옵션 설정
+### <a name="a-setting-options-on-a-database"></a>1\. 데이터베이스 옵션 설정
 
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 대해 복구 모델 및 데이터 페이지 확인 옵션을 설정합니다.
 
@@ -1234,7 +1234,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>2. 데이터베이스를 READ_ONLY로 설정
+### <a name="b-setting-the-database-to-readonly"></a>2\. 데이터베이스를 READ_ONLY로 설정
 
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
@@ -1368,8 +1368,9 @@ SET QUERY_STORE = ON
       WAIT_STATS_CAPTURE_MODE = ON,
       QUERY_CAPTURE_MODE = CUSTOM,
       QUERY_CAPTURE_POLICY = (
-        EXECUTION_COUNT = 30
-        TOTAL_COMPILE_CPU_TIME_MS = 1000
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
         TOTAL_EXECUTION_CPU_TIME_MS = 100 
       )
     );
@@ -1541,26 +1542,34 @@ SET
 
 ## <a name="arguments"></a>인수
 
-*database_name* 수정할 데이터베이스의 이름입니다.
+*database_name*         
+수정할 데이터베이스의 이름입니다.
 
-CURRENT `CURRENT`는 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
+CURRENT         
+`CURRENT`는 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
 
 **\<auto_option> ::=**
 
 자동 옵션을 제어합니다.
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF } ON 쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
 
 기본값은 ON입니다. 대부분의 데이터베이스의 경우 기본 설정을 사용하는 것이 좋습니다.
 
-OFF 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 쿼리 조건자의 단일 열에 대한 통계를 생성하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
+OFF         
+쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 쿼리 조건자의 단일 열에 대한 통계를 생성하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
 
 sys.databases 카탈로그 뷰의 is_auto_create_stats_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAutoCreateStatistics 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 자세한 내용은 [통계 ](../../relational-databases/statistics/statistics.md)의 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-INCREMENTAL = ON | OFF AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 이 설정은 증분 통계가 지원될 때마다 자동으로 생성된 통계를 증분으로 만듭니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
+INCREMENTAL = ON | OFF         
+AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 이 설정은 증분 통계가 지원될 때마다 자동으로 생성된 통계를 증분으로 만듭니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON 데이터베이스 파일이 정기적으로 축소됩니다.
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+데이터베이스 파일이 주기적인 축소의 후보가 됩니다.
 
 데이터 파일과 로그 파일 모두 자동으로 축소될 수 있습니다. AUTO_SHRINK는 데이터베이스를 단순 복구 모델로 설정하거나 로그를 백업하는 경우에만 트랜잭션 로그의 크기를 줄입니다. 이 옵션이 OFF로 설정되면 사용되지 않는 공간을 정기적으로 검사하는 동안 데이터베이스 파일을 자동으로 축소하지 않습니다.
 
@@ -1571,14 +1580,17 @@ AUTO_SHRINK 옵션은 파일에서 사용되지 않는 공간이 25% 이상일 �
 
 읽기 전용 데이터베이스는 축소할 수 없습니다.
 
-OFF 사용되지 않는 공간을 정기적으로 검사하는 동안에는 데이터베이스 파일을 자동으로 축소하지 않습니다.
+OFF         
+사용되지 않는 공간을 정기적으로 검사하는 동안에는 데이터베이스 파일을 자동으로 축소하지 않습니다.
 
 sys.databases 카탈로그 뷰의 is_auto_shrink_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAutoShrink 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 > [!NOTE]
 > 포함된 데이터베이스에서는 AUTO_SHRINK 옵션을 사용할 수 없습니다.
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF } ON - 쿼리에서 통계를 사용하거나 통계가 최신이 아닐 때 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+쿼리에서 통계를 사용하거나 통계가 최신 정보가 아닌 경우 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
 
 쿼리 최적화 프로그램은 쿼리를 컴파일하고 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 이 정보를 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.
 
@@ -1588,19 +1600,23 @@ AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 생성된 통계, 쿼리 �
 
 AUTO_UPDATE_STATISTICS_ASYNC 옵션을 사용하여 통계를 동기적으로 업데이트할지 또는 비동기적으로 업데이트할지를 지정합니다.
 
-OFF 쿼리에서 통계를 사용할 때 쿼리 최적화 프로그램에서 통계를 업데이트하지 않도록 지정합니다. 통계가 최신이 아니게 된 경우에도 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
+OFF         
+쿼리에서 통계를 사용하는 경우 쿼리 최적화 프로그램에서 통계를 업데이트하지 않도록 지정합니다. 통계가 최신이 아니게 된 경우에도 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
 
 sys.databases 카탈로그 뷰의 is_auto_update_stats_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX함수의 IsAutoUpdateStatistics 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 자세한 내용은 [통계 ](../../relational-databases/statistics/statistics.md)의 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } ON AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 비동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다리지 않습니다.
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 비동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다리지 않습니다.
 
 이 옵션을 ON으로 설정해도 AUTO_UPDATE_STATISTICS가 ON으로 설정되어 있지 않으면 영향을 주지 않습니다.
 
 기본적으로 AUTO_UPDATE_STATISTICS_ASYNC 옵션은 OFF로 설정되므로 쿼리 최적화 프로그램은 통계를 동기적으로 업데이트합니다.
 
-OFF AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다립니다.
+OFF         
+AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다립니다.
 
 이 옵션을 OFF로 설정해도 AUTO_UPDATE_STATISTICS가 ON으로 설정되어 있지 않으면 영향을 주지 않습니다.
 
@@ -1608,50 +1624,70 @@ sys.databases 카탈로그 뷰의 is_auto_update_stats_async_on 열을 검사하
 
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)에 대한 자동 옵션을 제어합니다.
 
-AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 자동 조정 값을 자동으로 설정하면 자동 튜닝에 대해 Azure 구성 기본값을 적용합니다.
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM }         
+AUTO         
+자동 튜닝 값을 AUTO로 설정하면 자동 튜닝에 대해 Azure 구성 기본값을 적용합니다.
 
-INHERIT INHERIT 값을 사용하면 부모 서버에서 기본 구성을 상속합니다. 부모 서버에서 자동 튜닝 구성을 사용자 지정하고 이러한 서버의 모든 데이터베이스가 이러한 사용자 지정 설정을 상속하려는 경우 특히 유용합니다. 상속이 작동하기 위해 FORCE_LAST_GOOD_PLAN, CREATE_INDEX 및 DROP_INDEX라는 세 가지 개별 튜닝 옵션을 데이터베이스에서 기본값으로 설정해야 합니다.
+INHERIT         
+INHERIT 값을 사용하면 부모 서버에서 기본 구성이 상속됩니다. 부모 서버에서 자동 튜닝 구성을 사용자 지정하고 이러한 서버의 모든 데이터베이스가 이러한 사용자 지정 설정을 상속하려는 경우 특히 유용합니다. 상속이 작동하기 위해 FORCE_LAST_GOOD_PLAN, CREATE_INDEX 및 DROP_INDEX라는 세 가지 개별 튜닝 옵션을 데이터베이스에서 기본값으로 설정해야 합니다.
 
-CUSTOM CUSTOM 값을 사용하여 데이터베이스에서 사용할 수 있는 자동 튜닝 옵션 각각을 수동으로 사용자 지정 구성해야 합니다.
+CUSTOM         
+CUSTOM 값을 사용하여 데이터베이스에서 사용할 수 있는 각 자동 튜닝 옵션을 수동으로 사용자 지정을 구성해야 합니다.
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `CREATE_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
-CREATE_INDEX = { DEFAULT | ON | OFF } DEFALT 서버에서 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
+CREATE_INDEX = { DEFAULT | ON | OFF }         
+DEFALT         
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
 
-ON 사용하도록 설정하면 누락된 인덱스는 데이터베이스에서 자동으로 생성됩니다. 인덱스 생성을 수행하여 워크로드의 성능이 향상되었는지 확인합니다. 이렇게 만든 인덱스가 더 이상 워크로드 성능을 향상시키지 않으면 자동으로 되돌려집니다. 자동으로 생성된 인덱스는 시스템 생성 인덱스로 플래그가 지정됩니다.
+ON         
+사용하도록 설정하면 누락된 인덱스는 데이터베이스에서 자동으로 생성됩니다. 인덱스 생성을 수행하여 워크로드의 성능이 향상되었는지 확인합니다. 이렇게 만든 인덱스가 더 이상 워크로드 성능을 향상시키지 않으면 자동으로 되돌려집니다. 자동으로 생성된 인덱스는 시스템 생성 인덱스로 플래그가 지정됩니다.
 
-OFF - 데이터베이스에서 누락된 인덱스를 자동으로 생성하지 않습니다.
+OFF         
+데이터베이스에서 누락된 인덱스를 자동으로 생성하지 않습니다.
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 인덱스 관리 `DROP_INDEX` 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
-DROP_INDEX = { DEFAULT | ON | OFF } DEFAULT - 서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
+DROP_INDEX = { DEFAULT | ON | OFF }         
+DEFAULT         
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
 
-ON 성능 워크로드에 대한 중복 인덱스 또는 더 이상 유용하지 않은 인덱스를 자동으로 삭제합니다.
+ON         
+성능 워크로드에 대한 중복 인덱스 또는 더 이상 유용하지 않은 인덱스를 자동으로 삭제합니다.
 
-OFF - 데이터베이스에서 누락된 인덱스를 자동으로 삭제하지 않습니다.
+OFF         
+데이터베이스에서 누락된 인덱스를 자동으로 삭제하지 않습니다.
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)의 자동 계획 수정 `FORCE_LAST_GOOD_PLAN` 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
-FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } DEFAULT 서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }         
+DEFAULT         
+서버의 기본 설정을 상속합니다. 이 경우에 개별 자동 조정 기능을 사용하거나 사용하지 않도록 설정하는 옵션은 서버 수준에서 정의됩니다.
 
-ON [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 *읽기/쓰기* 모드가 아닌 경우 문은 실패합니다.
+ON         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 *읽기/쓰기* 모드가 아닌 경우 문은 실패합니다.
 
-OFF [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
+OFF         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
 
-**\<change_tracking_option> ::=**
+**\<change_tracking_option> ::=**         
 
 변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.
 
-ON 데이터베이스에 변경 내용 추적을 사용하도록 설정합니다. 변경 내용 추적을 설정하면 AUTO CLEANUP 및 CHANGE RETENTION 옵션도 설정할 수 있습니다.
+ON         
+데이터베이스에 변경 내용 추적을 설정합니다. 변경 내용 추적을 설정하면 AUTO CLEANUP 및 CHANGE RETENTION 옵션도 설정할 수 있습니다.
 
-AUTO_CLEANUP = { ON | OFF } ON 지정된 보존 기간 후에 변경 내용 추적 정보가 자동으로 제거됩니다.
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+지정된 보존 기간 후에 변경 내용 추적 정보가 자동으로 제거됩니다.
 
-OFF 변경 내용 추적 데이터가 데이터베이스에서 제거되지 않습니다.
+OFF         
+변경 내용 추적 데이터가 데이터베이스에서 제거되지 않습니다.
 
 CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } 데이터베이스에 변경 내용 추적 정보를 보존하는 최소 기간을 지정합니다. 데이터는 AUTO_CLEANUP 값이 ON일 때만 제거됩니다.
 
@@ -1659,123 +1695,158 @@ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } 데이터베이�
 
 기본 보존 기간은 2일입니다. 최소 보존 기간은 1분입니다. 기본 보존 형식은 일입니다.
 
-OFF 데이터베이스에서 변경 내용 추적을 사용하지 않도록 설정합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
+OFF         
+데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
 **\<cursor_option> ::=**
 
 커서 옵션을 제어합니다.
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF } ON 트랜잭션을 커밋하거나 롤백할 때 열려 있는 커서가 모두 닫힙니다.
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+트랜잭션을 커밋하거나 롤백할 때 열려 있는 커서가 모두 닫힙니다.
 
-OFF 트랜잭션 커밋 시에는 커서가 그대로 열려 있으나 트랜잭션 롤백 시에는 INSENSITIVE 또는 STATIC으로 정의된 것을 제외한 모든 커서가 닫힙니다.
+OFF         
+트랜잭션 커밋 시에는 커서가 그대로 열려 있으나 트랜잭션 롤백 시에는 INSENSITIVE 또는 STATIC으로 정의된 것을 제외한 모든 커서가 닫힙니다.
 
 SET 문을 사용하여 설정한 연결 수준 설정은 CURSOR_CLOSE_ON_COMMIT의 기본 데이터베이스 설정보다 우선적으로 적용됩니다. ODBC 및 OLE DB 클라이언트는 기본적으로 세션의 CURSOR_CLOSE_ON_COMMIT을 OFF로 설정하여 연결 수준 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)을 참조하세요.
 
-이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_cursor_close_on_commit_on 열 또는 DATABASEPROPERTYEX 함수의 IsCloseCursorsOnCommitEnabled 속성을 검사하여 확인할 수 있습니다. 커서는 연결이 끊어질 때만 암시적으로 할당이 취소됩니다. 자세한 내용은 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
+이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_cursor_close_on_commit_on 열 또는 DATABASEPROPERTYEX 함수의 `IsCloseCursorsOnCommitEnabled` 속성을 검사하여 확인할 수 있습니다. 커서는 연결이 끊어질 때만 암시적으로 할당이 취소됩니다. 자세한 내용은 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 데이터베이스 암호화 상태를 제어합니다.
 
-ENCRYPTION {ON | OFF} 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
+ENCRYPTION {ON | OFF}         
+데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
 
 데이터베이스 수준에서 암호화를 사용할 수 있으면 모든 파일 그룹이 암호화됩니다. 새로운 파일 그룹은 암호화된 속성을 상속합니다. 데이터베이스의 파일 그룹이 **READ ONLY**로 설정되면 데이터베이스 암호화 작업이 실패합니다.
 
 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하면 데이터베이스의 암호화 상태를 확인할 수 있습니다.
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 데이터베이스에 대한 업데이트 허용 여부를 제어합니다.
 
-READ_ONLY 사용자는 데이터베이스에서 데이터를 읽을 수 있지만 수정은 할 수 없습니다.
+READ_ONLY         
+사용자는 데이터베이스에서 데이터를 읽을 수 있지만 수정할 수는 없습니다.
 
 > [!NOTE]
 >쿼리 성능을 향상시키려면 데이터베이스를 READ_ONLY로 설정하기 전에 통계를 업데이트하십시오. 데이터베이스를 READ_ONLY로 설정한 후에 추가 통계가 필요한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 tempdb에 통계를 만듭니다. 읽기 전용 데이터베이스의 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
 
-READ_WRITE 데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니다.
+READ_WRITE         
+데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니다.
 
 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.
 
 > [!NOTE]
 > [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 연결된 데이터베이스에서 SET { READ_ONLY | READ_WRITE }는 해제됩니다.
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 데이터베이스에 대한 사용자 액세스를 제어합니다.
 
-RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER         
+RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
 
-MULTI_USER 데이터베이스에 연결할 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
+MULTI_USER         
+데이터베이스에 연결할 수 있는 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 user_access 열 또는 DATABASEPROPERTYEX 함수의 UserAccess 속성을 검사하여 확인할 수 있습니다.
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
-DISABLED SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+DISABLED         
+SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
-ALLOWED SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
+ALLOWED         
+SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
 
-FORCED SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+FORCED         
+SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 매개 변수화 옵션을 제어합니다.
 
-PARAMETERIZATION { SIMPLE | FORCED } SIMPLE 쿼리가 데이터베이스의 기본 동작을 기반으로 매개 변수화됩니다.
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+데이터베이스의 기본 동작에 따라 쿼리를 매개 변수화합니다.
 
-FORCED [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스의 모든 쿼리를 매개 변수화합니다.
+FORCED         
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 모든 쿼리를 매개 변수화합니다.
 
-이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 is_parameterization_forced 열을 검사하여 확인할 수 있습니다.
+이 옵션의 현재 설정은 `sys.databases` 카탈로그 뷰의 `is_parameterization_forced` 열을 검사하여 확인할 수 있습니다.
 
 **\<query_store_options> ::=**
 
-ON | OFF | CLEAR [ ALL ] 이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.
+ON | OFF | CLEAR [ ALL ]         
+이 데이터베이스에서 쿼리 저장소를 사용하는지 여부를 제어하고 쿼리 저장소의 내용 제거도 제어합니다.
 
-ON 쿼리 저장소를 사용하도록 설정합니다.
+ON         
+쿼리 저장소를 사용하도록 설정합니다.
 
-OFF 쿼리 저장소를 사용하지 않도록 설정합니다. 이것은 기본값입니다.
+OFF         
+쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.
 
-CLEAR 쿼리 저장소의 내용을 제거합니다.
+CLEAR         
+쿼리 저장소의 내용을 제거합니다.
 
-OPERATION_MODE 쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
+OPERATION_MODE         
+쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
 
-CLEANUP_POLICY 쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
+CLEANUP_POLICY         
+쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
 
-DATA_FLUSH_INTERVAL_SECONDS 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
+DATA_FLUSH_INTERVAL_SECONDS         
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
 
-MAX_STORAGE_SIZE_MB 쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
+MAX_STORAGE_SIZE_MB         
+쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
 
-INTERVAL_LENGTH_MINUTES 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
+INTERVAL_LENGTH_MINUTES         
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
 
-SIZE_BASED_CLEANUP_MODE 총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.
+SIZE_BASED_CLEANUP_MODE         
+총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.
 
-OFF 크기 기반 정리는 자동으로 활성화되지 않습니다.
+OFF         
+크기 기반 정리는 자동으로 활성화되지 않습니다.
 
-AUTO 크기 기반 정리는 디스크의 크기가 **max_storage_size_mb**의 90%에 도달하면 자동으로 활성화됩니다. 크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. **max_storage_size_mb**가 약 80%가 되면 멈춥니다. 이것은 기본 구성 값입니다.
+AUTO         
+크기 기반 정리는 디스크의 크기가 **max_storage_size_mb**의 90%에 도달하면 자동으로 활성화됩니다. 크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. **max_storage_size_mb**가 약 80%가 되면 멈춥니다. 이것은 기본 구성 값입니다.
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE 현재 활성 쿼리 캡처 모드를 지정합니다.
+QUERY_CAPTURE_MODE         
+현재 활성 쿼리 캡처 모드를 지정합니다.
 
-ALL 모든 쿼리가 캡처됩니다. 이것은 기본 구성 값입니다.
+ALL         
+모든 쿼리가 캡처됩니다. 이것은 기본 구성 값입니다.
 
-AUTO 실행 수 및 리소스 소비에 기반하여 관련 쿼리를 캡처합니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 기본 구성 값입니다.
+AUTO         
+실행 수 및 리소스 소비에 기반하여 관련 쿼리를 캡처합니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 기본 구성 값입니다.
 
-NONE 새 쿼리 캡처를 중지합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
+없음         
+새 쿼리 캡처를 중지합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
 
 QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
 
-MAX_PLANS_PER_QUERY 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
+max_plans_per_query         
+각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 트랜잭션 격리 수준을 결정합니다.
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF } ON 데이터베이스 수준에서 스냅숏 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
 
-OFF 데이터베이스 수준에서 스냅숏 옵션을 끕니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
+OFF         
+데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
 
 ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅숏 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
 
@@ -1789,9 +1860,12 @@ master 및 msdb 데이터베이스에 대해 이 옵션은 기본적으로 ON입
 
 이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 snapshot_isolation_state 열을 검사하여 확인할 수 있습니다.
 
-READ_COMMITTED_SNAPSHOT { ON | OFF } ON 데이터베이스 수준에서 커밋된 읽기 스냅숏 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
 
-OFF 데이터베이스 수준에서 커밋된 읽기 스냅숏 옵션을 끕니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
+OFF         
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 해제합니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
 
 READ_COMMITTED_SNAPSHOT을 ON 또는 OFF로 설정하려면 ALTER DATABASE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 상태의 연결이 없어야 합니다. 그러나 데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다. 데이터베이스가 OFFLINE인 경우 이 옵션의 상태를 변경할 수 없습니다.
 
@@ -1802,29 +1876,33 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 is_read_committed_snapshot_on 열을 검사하여 확인할 수 있습니다.
 
 > [!WARNING]
->**DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
+> `DURABILITY = SCHEMA_ONLY`를 사용해서 테이블을 만들었고 **READ_COMMITTED_SNAPSHOT**이 이후에 `ALTER DATABASE`를 사용해서 변경된 경우, 테이블의 데이터가 손실됩니다.
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
 
-ON 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
-
-OFF - 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
+OFF         
+메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
 
 데이터베이스가 OFFLINE인 경우 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT의 상태를 변경할 수 없습니다.
 
-이 옵션은 기본적으로 OFF입니다.
+기본값은 OFF입니다.
 
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 **is_memory_optimized_elevate_to_snapshot_on** 열을 검사하여 확인할 수 있습니다.
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 ANSI 호환 옵션을 데이터베이스 수준에서 제어합니다.
 
-ANSI_NULL_DEFAULT { ON | OFF } CREATE TABLE 또는 ALTER TABLE 문에서 Null 허용 여부가 명시적으로 정의되어 있지 않은 열 또는 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)에 대한 기본값(NULL 또는 NOT NULL)을 결정합니다. 제약 조건이 정의된 열은 이 설정이 무엇이든 관계없이 제약 조건 규칙을 따릅니다.
+ANSI_NULL_DEFAULT { ON | OFF }         
+CREATE TABLE 또는 ALTER TABLE 문에서 Null 허용 여부가 명시적으로 정의되어 있지 않은 열 또는 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)에 대한 기본값(NULL 또는 NOT NULL)을 결정합니다. 제약 조건이 정의된 열은 이 설정이 무엇이든 관계없이 제약 조건 규칙을 따릅니다.
 
-ON 기본값이 NULL입니다.
+ON         
+기본값은 NULL입니다.
 
-OFF 기본값은 NULL이 아닙니다.
+OFF         
+기본값이 NOT NULL입니다.
 
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_NULL_DEFAULT에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 세션의 ANSI_NULL_DEFAULT를 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)을 참조하세요.
 
@@ -1832,9 +1910,12 @@ ANSI 호환성을 위해 ANSI_NULL_DEFAULT 데이터베이스 옵션을 ON으로
 
 sys.databases 카탈로그 뷰의 is_ansi_null_default_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiNullDefault 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_NULLS { ON | OFF } ON Null 값에 대한 모든 비교가 UNKNOWN으로 평가됩니다.
+ANSI_NULLS { ON | OFF }         
+ON         
+Null 값에 대한 모든 비교는 UNKNOWN으로 평가됩니다.
 
-OFF Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.
+OFF         
+Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.
@@ -1845,9 +1926,12 @@ OFF Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경�
 
 sys.databases 카탈로그 뷰의 is_ansi_nulls_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiNullsEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_PADDING { ON | OFF } ON 문자열을 동일한 길이만큼 채운 후에 변환합니다. 문자열을 동일한 길이만큼 채운 후에 **varchar** 또는 **nvarchar** 데이터 형식에 대해 삽입합니다.
+ANSI_PADDING { ON | OFF }         
+ON         
+변환하기 전에 문자열이 동일한 길이만큼 채워집니다. 문자열을 동일한 길이만큼 채운 후에 **varchar** 또는 **nvarchar** 데이터 형식에 대해 삽입합니다.
 
-OFF - 문자 값의 후행 공백을 **varchar** 또는 **nvarchar** 열에 삽입합니다. 또한 **varbinary** 열에 삽입된 이진 값에서 후행 0을 유지합니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.
+OFF         
+문자 값의 후행 공백을 **varchar** 또는 **nvarchar** 열에 삽입합니다. 또한 **varbinary** 열에 삽입된 이진 값에서 후행 0을 유지합니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.
 
 OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.
 
@@ -1860,9 +1944,12 @@ ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(_n_)** 및 **b
 
 sys.databases 카탈로그 뷰의 is_ansi_padding_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiPaddingEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_WARNINGS { ON | OFF } ON “0으로 나누기” 등의 조건이 발생할 때 오류 또는 경고가 발생합니다. 집계 함수에 Null 값이 나타나는 경우에도 오류 또는 경고가 발생합니다.
+ANSI_WARNINGS { ON | OFF }         
+ON         
+0으로 나누기 등의 조건이 발생할 때 오류 또는 경고가 발생합니다. 집계 함수에 Null 값이 나타나는 경우에도 오류 또는 경고가 발생합니다.
 
-OFF 0으로 나누기와 같은 상황이 발생해도 아무런 경고도 발생하지 않으며 Null 값이 반환됩니다.
+OFF         
+0으로 나누기와 같은 조건이 발생해도 아무런 경고도 발생하지 않으며 Null 값이 반환됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경하는 경우 SET ANSI_WARNINGS를 ON으로 설정해야 합니다.
 
@@ -1870,19 +1957,26 @@ OFF 0으로 나누기와 같은 상황이 발생해도 아무런 경고도 발�
 
 sys.databases 카탈로그 뷰의 is_ansi_warnings_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiWarningsEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ARITHABORT { ON | OFF } ON을 지정하면 쿼리 실행 중 오버플로 오류나 0으로 나누기 오류가 발생할 경우 쿼리가 종료됩니다.
+ARITHABORT { ON | OFF }         
+ON         
+쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다.
 
-OFF 해당 오류 중 하나가 발생하면 경고 메시지가 표시됩니다. 경고 메시지가 표시되더라도 오류가 발생하지 않으면 쿼리, 일괄 처리 또는 트랜잭션이 계속 진행됩니다.
+OFF         
+해당 오류 중 하나가 발생하면 경고 메시지가 표시됩니다. 경고 메시지가 표시되더라도 오류가 발생하지 않으면 쿼리, 일괄 처리 또는 트랜잭션이 계속 진행됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET ARITHABORT를 ON으로 설정해야 합니다.
 
-  sys.databases 카탈로그 뷰의 is_arithabort_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsArithmeticAbortEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
+  sys.databases 카탈로그 뷰의 is_arithabort_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 `IsArithmeticAbortEnabled` 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF } ON 피연산자 중 하나가 NULL일 경우 연결 작업의 결과는 NULL입니다. 예를 들어 문자열 "This is"와 NULL을 연결하면 결과는 "This is"가 아니라 NULL이 됩니다.
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+피연산자 중 하나가 NULL인 경우 연결 연산의 결과는 NULL입니다. 예를 들어 문자열 "This is"와 NULL을 연결하면 결과는 "This is"가 아니라 NULL이 됩니다.
 
-OFF Null 값은 빈 문자열로 처리됩니다.
+OFF         
+Null 값은 빈 문자 문자열로 취급됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET CONCAT_NULL_YIELDS_NULL은 반드시 ON으로 설정되어야 합니다.
 
@@ -1893,11 +1987,14 @@ SET 문을 사용하여 설정한 연결 수준의 설정은 CONCAT_NULL_YIELDS_
 
 sys.databases 카탈로그 뷰의 is_concat_null_yields_null_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsNullConcat 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-QUOTED_IDENTIFIER { ON | OFF } ON 구분 식별자를 묶을 때 큰따옴표를 사용할 수 있습니다.
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+큰따옴표는 구분 식별자를 묶을 때 사용할 수 있습니다.
 
 큰따옴표로 구분되는 모든 문자열은 개체 식별자로 해석됩니다. 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 허용되지 않는 문자를 포함할 수 있습니다. 작은따옴표(')가 리터럴 문자열의 일부로 포함되면 큰따옴표(")로 나타낼 수 있습니다.
 
-OFF 식별자는 따옴표 안에 있을 수 없으며 식별자에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 규칙을 따라야 합니다. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
+OFF         
+식별자는 따옴표 안에 있을 수 없으며 식별자에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 규칙을 따라야 합니다. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 식별자를 대괄호([ ])로 구분할 수 있습니다. 대괄호로 묶은 식별자는 QUOTED_IDENTIFIER의 설정이 무엇이든 관계없이 항상 사용할 수 있습니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.
 
@@ -1907,47 +2004,59 @@ SET 문을 사용하여 설정한 연결 수준의 설정은 QUOTED_IDENTIFIER�
 
   sys.databases 카탈로그 뷰의 is_quoted_identifier_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsQuotedIdentifiersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-NUMERIC_ROUNDABORT { ON | OFF } ON SET 식에서 전체 자릿수가 손실되면 오류가 발생합니다.
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+식에서 전체 자릿수가 손실되면 오류가 발생합니다.
 
+OFF         
 OFF 전체 자릿수가 손실되어도 오류 메시지가 생성되지 않으며 결과를 저장하는 열 또는 변수의 전체 자릿수로 결과가 반올림됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 NUMERIC_ROUNDABORT는 OFF로 설정되어야 합니다.
 
 sys.databases 카탈로그 뷰의 is_numeric_roundabort_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsNumericRoundAbortEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-RECURSIVE_TRIGGERS { ON | OFF } ON AFTER 트리거의 재귀 실행이 허용됩니다.
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+AFTER 트리거의 재귀적 실행이 허용됩니다.
 
-OFF - sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
+OFF         
+sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 > [!NOTE]
->RECURSIVE_TRIGGERS가 OFF로 설정되면 직접 재귀만 금지됩니다. 간접 재귀를 사용하지 않도록 하려면 nested triggers 서버 옵션을 0으로 설정해야 합니다.
+> RECURSIVE_TRIGGERS가 OFF로 설정되면 직접 재귀만 금지됩니다. 간접 재귀를 사용하지 않도록 하려면 nested triggers 서버 옵션을 0으로 설정해야 합니다.
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열 또는 DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 확인할 수 있습니다.
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* 충돌이 발생할 경우 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
 
-SECONDS *target_recovery_time* 이 초 단위로 표시됨을 나타냅니다.
+SECONDS         
+*target_recovery_time* 이 초 단위로 표현됨을 나타냅니다.
 
-MINUTES *target_recovery_time* 이 분 단위로 표시됨을 나타냅니다.
+MINUTES         
+*target_recovery_time* 이 분 단위로 표현됨을 나타냅니다.
 
 간접 검사점에 대한 자세한 내용은 [데이터베이스 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.
 
-**WITH \<termination> ::=**
+**WITH \<termination> ::=**         
 
 데이터베이스가 다른 상태로 바뀔 때 완료되지 않은 트랜잭션을 롤백할 시점을 지정합니다. termination 절을 생략하면 데이터베이스에 잠금이 있는 경우 ALTER DATABASE 문이 무기한 대기합니다. termination 절은 SET 절 다음에 한 번만 지정할 수 있습니다.
 
 > [!NOTE]
 > 모든 데이터베이스 옵션에서 WITH \<termination> 절을 사용하는 것은 아닙니다. 자세한 내용은 이 문서에 있는 “주의” 섹션의 “[옵션 설정](#SettingOptions)” 아래에 있는 표를 참조하세요.
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE 지정한 시간(초)이 경과한 후 롤백할 것인지 또는 즉시 롤백할 것인지를 지정합니다.
+ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
+지정한 시간(초)이 경과한 후 롤백할 것인지 아니면 즉시 롤백할 것인지를 지정합니다.
 
-NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우에 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
+NO_WAIT         
+요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
 
-## <a name="SettingOptions"></a> 옵션 설정
+## <a name="SettingOptions"></a> 옵션 설정         
 
 데이터베이스 옵션에 대한 현재 설정을 검색하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)를 사용합니다.
 
@@ -1976,8 +2085,7 @@ NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완�
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-readonly"></a>1. 데이터베이스를 READ_ONLY로 설정
-
+### <a name="a-setting-the-database-to-readonly"></a>1\. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -1995,8 +2103,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2. 데이터베이스에서 스냅숏 격리 활성화
-
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅숏 격리 활성화
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2013,7 +2120,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.
@@ -2209,26 +2315,35 @@ SET
 
 ## <a name="arguments"></a>인수
 
-*database_name* 수정할 데이터베이스의 이름입니다.
+*database_name*         
+수정할 데이터베이스의 이름입니다.
 
-CURRENT `CURRENT`는 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
+CURRENT         
+`CURRENT`는 현재 데이터베이스에서 작업을 실행합니다. 모든 컨텍스트의 모든 옵션에서 `CURRENT`가 지원되는 것은 아닙니다. `CURRENT`가 실패할 경우 데이터베이스 이름을 지정해야 합니다.
 
-**\<auto_option> ::=**
+**\<auto_option> ::=**         
 
 자동 옵션을 제어합니다.
-<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF } ON 쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
+
+<a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { ON | OFF }         
+ON         
+쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
 
 기본값은 ON입니다. 대부분의 데이터베이스의 경우 기본 설정을 사용하는 것이 좋습니다.
 
-OFF 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 쿼리 조건자의 단일 열에 대한 통계를 생성하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
+OFF         
+쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 쿼리 조건자의 단일 열에 대한 통계를 생성하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
 
 sys.databases 카탈로그 뷰의 is_auto_create_stats_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAutoCreateStatistics 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 자세한 내용은 [통계 ](../../relational-databases/statistics/statistics.md)의 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-INCREMENTAL = ON | OFF AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 이 설정은 증분 통계가 지원될 때마다 자동으로 생성된 통계를 증분으로 만듭니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
+INCREMENTAL = ON | OFF         
+AUTO_CREATE_STATISTICS를 ON으로 설정하고 INCREMENTAL을 ON으로 설정합니다. 이 설정은 증분 통계가 지원될 때마다 자동으로 생성된 통계를 증분으로 만듭니다. 기본값은 OFF입니다. 자세한 내용은 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.
 
-<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF } ON 데이터베이스 파일이 정기적으로 축소됩니다.
+<a name="auto_shrink"></a> AUTO_SHRINK { ON | OFF }         
+ON         
+데이터베이스 파일이 주기적인 축소의 후보가 됩니다.
 
 데이터 파일과 로그 파일 모두 자동으로 축소될 수 있습니다. AUTO_SHRINK는 데이터베이스를 단순 복구 모델로 설정하거나 로그를 백업하는 경우에만 트랜잭션 로그의 크기를 줄입니다. 이 옵션이 OFF로 설정되면 사용되지 않는 공간을 정기적으로 검사하는 동안 데이터베이스 파일을 자동으로 축소하지 않습니다.
 
@@ -2239,14 +2354,17 @@ AUTO_SHRINK 옵션은 파일에서 사용되지 않는 공간이 25% 이상일 �
 
 읽기 전용 데이터베이스는 축소할 수 없습니다.
 
-OFF 사용되지 않는 공간을 정기적으로 검사하는 동안에는 데이터베이스 파일을 자동으로 축소하지 않습니다.
+OFF         
+사용되지 않는 공간을 정기적으로 검사하는 동안에는 데이터베이스 파일을 자동으로 축소하지 않습니다.
 
 sys.databases 카탈로그 뷰의 is_auto_shrink_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAutoShrink 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 > [!NOTE]
 > 포함된 데이터베이스에서는 AUTO_SHRINK 옵션을 사용할 수 없습니다.
 
-<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF } ON - 쿼리에서 통계를 사용하거나 통계가 최신이 아닐 때 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
+<a name="auto_update_statistics"></a> AUTO_UPDATE_STATISTICS { ON | OFF }         
+ON         
+쿼리에서 통계를 사용하거나 통계가 최신 정보가 아닌 경우 쿼리 최적화 프로그램에서 통계를 업데이트하도록 지정합니다. 삽입, 업데이트, 삭제 또는 병합 작업을 통해 테이블이나 인덱싱된 뷰의 데이터 분포가 변경되면 통계 내용이 더 이상 최신이 아니게 됩니다. 쿼리 최적화 프로그램은 마지막 통계 업데이트 이후 데이터 수정 개수를 계산한 다음 이 수를 임계값과 비교하여 통계가 최신이 아니게 된 시점을 결정합니다. 임계값은 테이블 또는 인덱싱된 뷰의 행 수를 기준으로 합니다.
 
 쿼리 최적화 프로그램은 쿼리를 컴파일하고 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 이 정보를 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.
 
@@ -2256,19 +2374,23 @@ AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 생성된 통계, 쿼리 �
 
 AUTO_UPDATE_STATISTICS_ASYNC 옵션을 사용하여 통계를 동기적으로 업데이트할지 또는 비동기적으로 업데이트할지를 지정합니다.
 
-OFF 쿼리에서 통계를 사용할 때 쿼리 최적화 프로그램에서 통계를 업데이트하지 않도록 지정합니다. 통계가 최신이 아니게 된 경우에도 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
+OFF         
+쿼리에서 통계를 사용하는 경우 쿼리 최적화 프로그램에서 통계를 업데이트하지 않도록 지정합니다. 통계가 최신이 아니게 된 경우에도 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
 
 sys.databases 카탈로그 뷰의 is_auto_update_stats_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX함수의 IsAutoUpdateStatistics 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 자세한 내용은 [통계 ](../../relational-databases/statistics/statistics.md)의 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } ON AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 비동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다리지 않습니다.
+<a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }         
+ON         
+AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 비동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다리지 않습니다.
 
 이 옵션을 ON으로 설정해도 AUTO_UPDATE_STATISTICS가 ON으로 설정되어 있지 않으면 영향을 주지 않습니다.
 
 기본적으로 AUTO_UPDATE_STATISTICS_ASYNC 옵션은 OFF로 설정되므로 쿼리 최적화 프로그램은 통계를 동기적으로 업데이트합니다.
 
-OFF AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다립니다.
+OFF         
+AUTO_UPDATE_STATISTICS 옵션에 대한 통계 업데이트를 동기로 지정합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 통계 업데이트가 완료될 때까지 기다립니다.
 
 이 옵션을 OFF로 설정해도 AUTO_UPDATE_STATISTICS가 ON으로 설정되어 있지 않으면 영향을 주지 않습니다.
 
@@ -2276,144 +2398,188 @@ sys.databases 카탈로그 뷰의 is_auto_update_stats_async_on 열을 검사하
 
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=** 
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.
 
-FORCE_LAST_GOOD_PLAN = { ON | OFF } ON [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 *읽기/쓰기* 모드가 아닌 경우 문은 실패합니다.
-OFF [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
+FORCE_LAST_GOOD_PLAN = { ON | OFF }         
+ON         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 새 SQL 계획이 성능 저하를 일으키는 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리에 마지막으로 성공한 계획을 자동으로 강제로 적용합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 강제 계획을 통해 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 쿼리의 쿼리 성능을 지속적으로 모니터링합니다. 성능이 향상되면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 마지막으로 성공한 계획을 계속 사용합니다. 성능 향상이 검색되지 않으면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 새 SQL 계획을 생성합니다. 쿼리 저장소가 사용하도록 설정되지 않았거나 *읽기/쓰기* 모드가 아닌 경우 문은 실패합니다. 
+
+OFF         
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
 
 **\<change_tracking_option> ::=**
 
 변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.
 
-ON 데이터베이스에 변경 내용 추적을 사용하도록 설정합니다. 변경 내용 추적을 설정하면 AUTO CLEANUP 및 CHANGE RETENTION 옵션도 설정할 수 있습니다.
+ON         
+데이터베이스에 변경 내용 추적을 설정합니다. 변경 내용 추적을 설정하면 AUTO CLEANUP 및 CHANGE RETENTION 옵션도 설정할 수 있습니다.
 
-AUTO_CLEANUP = { ON | OFF } ON 지정된 보존 기간 후에 변경 내용 추적 정보가 자동으로 제거됩니다.
+AUTO_CLEANUP = { ON | OFF }         
+ON         
+지정된 보존 기간 후에 변경 내용 추적 정보가 자동으로 제거됩니다.
 
-OFF 변경 내용 추적 데이터가 데이터베이스에서 제거되지 않습니다.
+OFF         
+변경 내용 추적 데이터가 데이터베이스에서 제거되지 않습니다.
 
-CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES } 데이터베이스에 변경 내용 추적 정보를 보존하는 최소 기간을 지정합니다. 데이터는 AUTO_CLEANUP 값이 ON일 때만 제거됩니다.
+CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }         
+데이터베이스에 변경 내용 추적 정보를 보존하는 최소 기간을 지정합니다. 데이터는 AUTO_CLEANUP 값이 ON일 때만 제거됩니다.
 
 *retention_period*는 보존 기간의 숫자 부분을 지정하는 정수입니다.
 
 기본 보존 기간은 2일입니다. 최소 보존 기간은 1분입니다. 기본 보존 형식은 일입니다.
 
-OFF 데이터베이스에서 변경 내용 추적을 사용하지 않도록 설정합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
+OFF         
+데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
-**\<cursor_option> ::=**
+**\<cursor_option> ::=**         
 
 커서 옵션을 제어합니다.
 
-CURSOR_CLOSE_ON_COMMIT { ON | OFF } ON 트랜잭션을 커밋하거나 롤백할 때 열려 있는 커서가 모두 닫힙니다.
+CURSOR_CLOSE_ON_COMMIT { ON | OFF }         
+ON         
+트랜잭션을 커밋하거나 롤백할 때 열려 있는 커서가 모두 닫힙니다.
 
-OFF 트랜잭션 커밋 시에는 커서가 그대로 열려 있으나 트랜잭션 롤백 시에는 INSENSITIVE 또는 STATIC으로 정의된 것을 제외한 모든 커서가 닫힙니다.
+OFF         
+트랜잭션 커밋 시에는 커서가 그대로 열려 있으나 트랜잭션 롤백 시에는 INSENSITIVE 또는 STATIC으로 정의된 것을 제외한 모든 커서가 닫힙니다.
 
 SET 문을 사용하여 설정한 연결 수준 설정은 CURSOR_CLOSE_ON_COMMIT의 기본 데이터베이스 설정보다 우선적으로 적용됩니다. ODBC 및 OLE DB 클라이언트는 기본적으로 세션의 CURSOR_CLOSE_ON_COMMIT을 OFF로 설정하여 연결 수준 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)을 참조하세요.
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_cursor_close_on_commit_on 열 또는 DATABASEPROPERTYEX 함수의 IsCloseCursorsOnCommitEnabled 속성을 검사하여 확인할 수 있습니다. 커서는 연결이 끊어질 때만 암시적으로 할당이 취소됩니다. 자세한 내용은 [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
 
-**\<db_encryption_option> ::=**
+**\<db_encryption_option> ::=**         
 
 데이터베이스 암호화 상태를 제어합니다.
 
-ENCRYPTION {ON | OFF} 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
+ENCRYPTION { ON | OFF }         
+데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
 
 데이터베이스 수준에서 암호화를 사용할 수 있으면 모든 파일 그룹이 암호화됩니다. 새로운 파일 그룹은 암호화된 속성을 상속합니다. 데이터베이스의 파일 그룹이 **READ ONLY**로 설정되면 데이터베이스 암호화 작업이 실패합니다.
 
 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하면 데이터베이스의 암호화 상태를 확인할 수 있습니다.
 
-**\<db_update_option> ::=**
+**\<db_update_option> ::=**         
 
 데이터베이스에 대한 업데이트 허용 여부를 제어합니다.
 
-READ_ONLY 사용자는 데이터베이스에서 데이터를 읽을 수 있지만 수정은 할 수 없습니다.
+READ_ONLY         
+사용자는 데이터베이스에서 데이터를 읽을 수 있지만 수정할 수는 없습니다.
 
 > [!NOTE]
->쿼리 성능을 향상시키려면 데이터베이스를 READ_ONLY로 설정하기 전에 통계를 업데이트하십시오. 데이터베이스를 READ_ONLY로 설정한 후에 추가 통계가 필요한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 tempdb에 통계를 만듭니다. 읽기 전용 데이터베이스의 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
+> 쿼리 성능을 향상시키려면 데이터베이스를 READ_ONLY로 설정하기 전에 통계를 업데이트하십시오. 데이터베이스를 READ_ONLY로 설정한 후에 추가 통계가 필요한 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 tempdb에 통계를 만듭니다. 읽기 전용 데이터베이스의 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.
 
-READ_WRITE 데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니다.
+READ_WRITE         
+데이터베이스에서 읽기와 쓰기 작업을 할 수 있습니다.
 
 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다.
 
-**\<db_user_access_option> ::=**
+**\<db_user_access_option> ::=**         
 
 데이터베이스에 대한 사용자 액세스를 제어합니다.
 
-RESTRICTED_USER RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
+RESTRICTED_USER         
+RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 데이터베이스에 대한 모든 연결은 ALTER DATABASE 문의 termination 절에 지정된 시간대에 끊어집니다. 데이터베이스가 RESTRICTED_USER 상태로 바뀐 후 자격이 없는 사용자의 연결 시도는 거부됩니다. SQL Database 관리되는 인스턴스를 사용하여 **RESTRICTED_USER**를 수정할 수 없습니다.
 
-MULTI_USER 데이터베이스에 연결할 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
+MULTI_USER         
+데이터베이스에 연결할 수 있는 적절한 권한이 있는 모든 사용자의 연결을 허용합니다.
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 user_access 열 또는 DATABASEPROPERTYEX 함수의 UserAccess 속성을 검사하여 확인할 수 있습니다.
 
-**\<delayed_durability_option> ::=**
+**\<delayed_durability_option> ::=**         
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
 
-DISABLED SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+DISABLED         
+SET DISABLED 다음의 모든 트랜잭션은 완전한 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
-ALLOWED SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
+ALLOWED         
+SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션에 따라 완전한 내구성이 있거나 지연된 내구성이 있습니다.
 
-FORCED SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
+FORCED         
+SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
-**\<PARAMETERIZATION_option> ::=**
+**\<PARAMETERIZATION_option> ::=**         
 
 매개 변수화 옵션을 제어합니다.
 
-PARAMETERIZATION { SIMPLE | FORCED } SIMPLE 쿼리가 데이터베이스의 기본 동작을 기반으로 매개 변수화됩니다.
+PARAMETERIZATION { SIMPLE | FORCED }         
+SIMPLE         
+데이터베이스의 기본 동작에 따라 쿼리를 매개 변수화합니다.
 
-FORCED [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스의 모든 쿼리를 매개 변수화합니다.
+FORCED         
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 모든 쿼리를 매개 변수화합니다.
 
 이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 is_parameterization_forced 열을 검사하여 확인할 수 있습니다.
 
-**\<query_store_options> ::=**
+**\<query_store_options> ::=**         
 
-ON | OFF | CLEAR [ ALL ] 이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.
+ON | OFF | CLEAR [ ALL ]         
+이 데이터베이스에서 쿼리 저장소를 사용하는지 여부를 제어하고 쿼리 저장소의 내용 제거도 제어합니다.
 
-ON 쿼리 저장소를 사용하도록 설정합니다.
+ON         
+쿼리 저장소를 사용하도록 설정합니다.
 
-OFF 쿼리 저장소를 사용하지 않도록 설정합니다. 이것은 기본값입니다.
+OFF         
+쿼리 저장소를 사용하지 않도록 합니다. 이것은 기본값입니다.
 
-CLEAR 쿼리 저장소의 내용을 제거합니다.
+CLEAR         
+쿼리 저장소의 내용을 제거합니다.
 
-OPERATION_MODE 쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
+OPERATION_MODE         
+쿼리 저장소의 작업 모드를 설명합니다. 유효한 값은 READ_ONLY 및 READ_WRITE입니다. READ_WRITE 모드에서 쿼리 저장소는  쿼리 계획 및 런타임 실행 통계 정보를 수집하고 유지합니다. READ_ONLY 모드에서는 쿼리 저장소에서 정보를 읽을 수 있지만 새 정보는 추가되지 않습니다. 쿼리 저장소의 최대 할당 공간이 최대값에 도달하면 쿼리 저장소는 작업 모드를 READ_ONLY로 변경합니다.
 
-CLEANUP_POLICY 쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
+CLEANUP_POLICY         
+쿼리 저장소의 데이터 보존 정책을 설명합니다. STALE_QUERY_THRESHOLD_DAYS는 쿼리에 대한 정보가 쿼리 저장소에 보존되는 일 수를 결정합니다. STALE_QUERY_THRESHOLD_DAYS는 **bigint** 형식입니다.
 
-DATA_FLUSH_INTERVAL_SECONDS 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
+DATA_FLUSH_INTERVAL_SECONDS         
+쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 비동기 전송이 발생하는 빈도는 DATA_FLUSH_INTERVAL_SECONDS 인수를 사용하여 구성됩니다. DATA_FLUSH_INTERVAL_SECONDS는 **bigint** 형식입니다.
 
-MAX_STORAGE_SIZE_MB 쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
+MAX_STORAGE_SIZE_MB         
+쿼리 저장소에 할당되는 공간을 결정합니다. MAX_STORAGE_SIZE_MB는 **bigint** 형식입니다.
 
-INTERVAL_LENGTH_MINUTES 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
+INTERVAL_LENGTH_MINUTES         
+런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 시간 창을 통해 집계됩니다. 고정된 시간 창은 INTERVAL_LENGTH_MINUTES 인수를 사용하여 구성됩니다. INTERVAL_LENGTH_MINUTES는 **bigint** 형식입니다.
 
-SIZE_BASED_CLEANUP_MODE 총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.
+SIZE_BASED_CLEANUP_MODE         
+총 데이터 양이 최대 크기에 가까워지면 정리가 자동으로 활성화될지 여부를 제어합니다.
 
-OFF 크기 기반 정리는 자동으로 활성화되지 않습니다.
+OFF         
+크기 기반 정리는 자동으로 활성화되지 않습니다.
 
-AUTO 크기 기반 정리는 디스크의 크기가 **max_storage_size_mb**의 90%에 도달하면 자동으로 활성화됩니다. 크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. **max_storage_size_mb**가 약 80%가 되면 멈춥니다. 이것은 기본 구성 값입니다.
+AUTO         
+크기 기반 정리는 디스크의 크기가 **max_storage_size_mb**의 90%에 도달하면 자동으로 활성화됩니다. 크기 기반 정리는 가장 저렴하고 가장 오래된 쿼리를 먼저 제거합니다. **max_storage_size_mb**가 약 80%가 되면 멈춥니다. 이것은 기본 구성 값입니다.
 
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
-QUERY_CAPTURE_MODE 현재 활성 쿼리 캡처 모드를 지정합니다.
+QUERY_CAPTURE_MODE         
+현재 활성 쿼리 캡처 모드를 지정합니다.
 
-ALL 모든 쿼리가 캡처됩니다. 이것은 기본 구성 값입니다.
+ALL         
+모든 쿼리가 캡처됩니다. 이것은 기본 구성 값입니다.
 
-AUTO 실행 수 및 리소스 소비에 기반하여 관련 쿼리를 캡처합니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 기본 구성 값입니다.
+AUTO         
+실행 수 및 리소스 소비에 기반하여 관련 쿼리를 캡처합니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]의 기본 구성 값입니다.
 
-NONE 새 쿼리 캡처를 중지합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
+없음         
+새 쿼리 캡처를 중지합니다. Query Store는 이미 캡처된 쿼리에 대한 컴파일 및 런타임 통계를 계속 수집합니다. 중요한 쿼리 캡처를 놓칠 수 있으므로 이 구성은 주의해서 사용해야 합니다.
 
 QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
 
-MAX_PLANS_PER_QUERY 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
+max_plans_per_query         
+각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.
 
-**\<snapshot_option> ::=**
+**\<snapshot_option> ::=**         
 
 트랜잭션 격리 수준을 결정합니다.
 
-ALLOW_SNAPSHOT_ISOLATION { ON | OFF } ON 데이터베이스 수준에서 스냅숏 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
+ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
+ON         
+데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
 
-OFF 데이터베이스 수준에서 스냅숏 옵션을 끕니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
+OFF         
+데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
 
 ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅숏 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
 
@@ -2427,9 +2593,12 @@ master 및 msdb 데이터베이스에 대해 이 옵션은 기본적으로 ON입
 
 이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 snapshot_isolation_state 열을 검사하여 확인할 수 있습니다.
 
-READ_COMMITTED_SNAPSHOT { ON | OFF } ON 데이터베이스 수준에서 커밋된 읽기 스냅숏 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
+READ_COMMITTED_SNAPSHOT { ON | OFF }         
+ON         
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
 
-OFF 데이터베이스 수준에서 커밋된 읽기 스냅숏 옵션을 끕니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
+OFF         
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 해제합니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
 
 READ_COMMITTED_SNAPSHOT을 ON 또는 OFF로 설정하려면 ALTER DATABASE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 상태의 연결이 없어야 합니다. 그러나 데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다. 데이터베이스가 OFFLINE인 경우 이 옵션의 상태를 변경할 수 없습니다.
 
@@ -2442,27 +2611,31 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 > [!WARNING]
 >**DURABILITY = SCHEMA_ONLY**를 사용하여 테이블이 만들어지고 그 후에 **READ_COMMITTED_SNAPSHOT**이 **ALTER DATABASE**를 사용하여 변경되면 테이블의 데이터는 손실됩니다.
 
-MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
+MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
+ON         
+트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
 
-ON 트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
-
-OFF - 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
+OFF         
+메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
 
 데이터베이스가 OFFLINE인 경우 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT의 상태를 변경할 수 없습니다.
 
-이 옵션은 기본적으로 OFF입니다.
+기본값은 OFF입니다.
 
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰에서 **is_memory_optimized_elevate_to_snapshot_on** 열을 검사하여 확인할 수 있습니다.
 
-**\<sql_option> ::=**
+**\<sql_option> ::=**         
 
 ANSI 호환 옵션을 데이터베이스 수준에서 제어합니다.
 
-ANSI_NULL_DEFAULT { ON | OFF } CREATE TABLE 또는 ALTER TABLE 문에서 Null 허용 여부가 명시적으로 정의되어 있지 않은 열 또는 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)에 대한 기본값(NULL 또는 NOT NULL)을 결정합니다. 제약 조건이 정의된 열은 이 설정이 무엇이든 관계없이 제약 조건 규칙을 따릅니다.
+ANSI_NULL_DEFAULT { ON | OFF }         
+CREATE TABLE 또는 ALTER TABLE 문에서 Null 허용 여부가 명시적으로 정의되어 있지 않은 열 또는 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)에 대한 기본값(NULL 또는 NOT NULL)을 결정합니다. 제약 조건이 정의된 열은 이 설정이 무엇이든 관계없이 제약 조건 규칙을 따릅니다.
 
-ON 기본값이 NULL입니다.
+ON         
+기본값은 NULL입니다.
 
-OFF 기본값은 NULL이 아닙니다.
+OFF         
+기본값이 NOT NULL입니다.
 
 SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_NULL_DEFAULT에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 세션의 ANSI_NULL_DEFAULT를 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하면 클라이언트에서 문을 실행합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md)을 참조하세요.
 
@@ -2470,9 +2643,12 @@ ANSI 호환성을 위해 ANSI_NULL_DEFAULT 데이터베이스 옵션을 ON으로
 
 sys.databases 카탈로그 뷰의 is_ansi_null_default_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiNullDefault 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_NULLS { ON | OFF } ON Null 값에 대한 모든 비교가 UNKNOWN으로 평가됩니다.
+ANSI_NULLS { ON | OFF }         
+ON         
+Null 값에 대한 모든 비교는 UNKNOWN으로 평가됩니다.
 
-OFF Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.
+OFF         
+Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경우 TRUE로 평가됩니다.
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_NULLS가 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.
@@ -2483,9 +2659,12 @@ OFF Null 값에 대한 비-UNICODE 값 비교는 두 값이 모두 NULL인 경�
 
 sys.databases 카탈로그 뷰의 is_ansi_nulls_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiNullsEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_PADDING { ON | OFF } ON 문자열을 동일한 길이만큼 채운 후에 변환합니다. 문자열을 동일한 길이만큼 채운 후에 **varchar** 또는 **nvarchar** 데이터 형식에 대해 삽입합니다.
+ANSI_PADDING { ON | OFF }         
+ON         
+변환하기 전에 문자열이 동일한 길이만큼 채워집니다. 문자열을 동일한 길이만큼 채운 후에 **varchar** 또는 **nvarchar** 데이터 형식에 대해 삽입합니다.
 
-OFF - 문자 값의 후행 공백을 **varchar** 또는 **nvarchar** 열에 삽입합니다. 또한 **varbinary** 열에 삽입된 이진 값에서 후행 0을 유지합니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.
+OFF         
+문자 값의 후행 공백을 **varchar** 또는 **nvarchar** 열에 삽입합니다. 또한 **varbinary** 열에 삽입된 이진 값에서 후행 0을 유지합니다. 값은 열의 크기만큼 오른쪽에 공백으로 채워집니다.
 
 OFF로 지정하면 이 설정은 새 열의 정의에만 영향을 줍니다.
 
@@ -2498,9 +2677,12 @@ ANSI_PADDING을 ON으로 설정하면 Null을 허용하는 **char(_n_)** 및 **b
 
 sys.databases 카탈로그 뷰의 is_ansi_padding_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiPaddingEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ANSI_WARNINGS { ON | OFF } ON “0으로 나누기” 등의 조건이 발생할 때 오류 또는 경고가 발생합니다. 집계 함수에 Null 값이 나타나는 경우에도 오류 또는 경고가 발생합니다.
+ANSI_WARNINGS { ON | OFF }         
+ON         
+0으로 나누기 등의 조건이 발생할 때 오류 또는 경고가 발생합니다. 집계 함수에 Null 값이 나타나는 경우에도 오류 또는 경고가 발생합니다.
 
-OFF 0으로 나누기와 같은 상황이 발생해도 아무런 경고도 발생하지 않으며 Null 값이 반환됩니다.
+OFF         
+0으로 나누기와 같은 조건이 발생해도 아무런 경고도 발생하지 않으며 Null 값이 반환됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경하는 경우 SET ANSI_WARNINGS를 ON으로 설정해야 합니다.
 
@@ -2508,19 +2690,26 @@ OFF 0으로 나누기와 같은 상황이 발생해도 아무런 경고도 발�
 
 sys.databases 카탈로그 뷰의 is_ansi_warnings_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAnsiWarningsEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-ARITHABORT { ON | OFF } ON을 지정하면 쿼리 실행 중 오버플로 오류나 0으로 나누기 오류가 발생할 경우 쿼리가 종료됩니다.
+ARITHABORT { ON | OFF }         
+ON         
+쿼리 실행 중 오버플로 또는 0으로 나누기 오류가 발생하면 쿼리를 종료합니다.
 
-OFF 해당 오류 중 하나가 발생하면 경고 메시지가 표시됩니다. 경고 메시지가 표시되더라도 오류가 발생하지 않으면 쿼리, 일괄 처리 또는 트랜잭션이 계속 진행됩니다.
+OFF         
+해당 오류 중 하나가 발생하면 경고 메시지가 표시됩니다. 경고 메시지가 표시되더라도 오류가 발생하지 않으면 쿼리, 일괄 처리 또는 트랜잭션이 계속 진행됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET ARITHABORT를 ON으로 설정해야 합니다.
 
   sys.databases 카탈로그 뷰의 is_arithabort_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsArithmeticAbortEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
+COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }         
+자세한 내용은 [ALTER DATABASE 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
-CONCAT_NULL_YIELDS_NULL { ON | OFF } ON 피연산자 중 하나가 NULL일 경우 연결 작업의 결과는 NULL입니다. 예를 들어 문자열 "This is"와 NULL을 연결하면 결과는 "This is"가 아니라 NULL이 됩니다.
+CONCAT_NULL_YIELDS_NULL { ON | OFF }         
+ON         
+피연산자 중 하나가 NULL인 경우 연결 연산의 결과는 NULL입니다. 예를 들어 문자열 "This is"와 NULL을 연결하면 결과는 "This is"가 아니라 NULL이 됩니다.
 
-OFF Null 값은 빈 문자열로 처리됩니다.
+OFF         
+Null 값은 빈 문자 문자열로 취급됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 SET CONCAT_NULL_YIELDS_NULL은 반드시 ON으로 설정되어야 합니다.
 
@@ -2531,11 +2720,14 @@ SET 문을 사용하여 설정한 연결 수준의 설정은 CONCAT_NULL_YIELDS_
 
 sys.databases 카탈로그 뷰의 is_concat_null_yields_null_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsNullConcat 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-QUOTED_IDENTIFIER { ON | OFF } ON 구분 식별자를 묶을 때 큰따옴표를 사용할 수 있습니다.
+QUOTED_IDENTIFIER { ON | OFF }         
+ON         
+큰따옴표는 구분 식별자를 묶을 때 사용할 수 있습니다.
 
 큰따옴표로 구분되는 모든 문자열은 개체 식별자로 해석됩니다. 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 허용되지 않는 문자를 포함할 수 있습니다. 작은따옴표(')가 리터럴 문자열의 일부로 포함되면 큰따옴표(")로 나타낼 수 있습니다.
 
-OFF 식별자는 따옴표 안에 있을 수 없으며 식별자에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 규칙을 따라야 합니다. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
+OFF         
+식별자는 따옴표 안에 있을 수 없으며 식별자에 대한 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 규칙을 따라야 합니다. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 식별자를 대괄호([ ])로 구분할 수 있습니다. 대괄호로 묶은 식별자는 QUOTED_IDENTIFIER의 설정이 무엇이든 관계없이 항상 사용할 수 있습니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.
 
@@ -2545,41 +2737,52 @@ SET 문을 사용하여 설정한 연결 수준의 설정은 QUOTED_IDENTIFIER�
 
   sys.databases 카탈로그 뷰의 is_quoted_identifier_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsQuotedIdentifiersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-NUMERIC_ROUNDABORT { ON | OFF } ON SET 식에서 전체 자릿수가 손실되면 오류가 발생합니다.
+NUMERIC_ROUNDABORT { ON | OFF }         
+ON         
+식에서 전체 자릿수가 손실되면 오류가 발생합니다.
 
+OFF         
 OFF 전체 자릿수가 손실되어도 오류 메시지가 생성되지 않으며 결과를 저장하는 열 또는 변수의 전체 자릿수로 결과가 반올림됩니다.
 
 계산 열 또는 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때 NUMERIC_ROUNDABORT는 OFF로 설정되어야 합니다.
 
 sys.databases 카탈로그 뷰의 is_numeric_roundabort_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsNumericRoundAbortEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-RECURSIVE_TRIGGERS { ON | OFF } ON AFTER 트리거의 재귀 실행이 허용됩니다.
+RECURSIVE_TRIGGERS { ON | OFF }         
+ON         
+AFTER 트리거의 재귀적 실행이 허용됩니다.
 
-OFF - sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
+OFF         
+sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 상태를 확인할 수도 있습니다.
 
 > [!NOTE]
 > RECURSIVE_TRIGGERS가 OFF로 설정되면 직접 재귀만 금지됩니다. 간접 재귀를 사용하지 않도록 하려면 nested triggers 서버 옵션을 0으로 설정해야 합니다.
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열 또는 DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 확인할 수 있습니다.
 
-**\<target_recovery_time_option> ::=**
+**\<target_recovery_time_option> ::=**         
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES } *target_recovery_time* 충돌이 발생할 경우 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+*target_recovery_time*         
+충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
 
-SECONDS *target_recovery_time* 이 초 단위로 표시됨을 나타냅니다.
+SECONDS         
+*target_recovery_time* 이 초 단위로 표현됨을 나타냅니다.
 
-MINUTES *target_recovery_time* 이 분 단위로 표시됨을 나타냅니다.
+MINUTES         
+*target_recovery_time* 이 분 단위로 표현됨을 나타냅니다.
 
 간접 검사점에 대한 자세한 내용은 [데이터베이스 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.
 
-ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE 지정한 시간(초)이 경과한 후 롤백할 것인지 또는 즉시 롤백할 것인지를 지정합니다.
+ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
+지정한 시간(초)이 경과한 후 롤백할 것인지 아니면 즉시 롤백할 것인지를 지정합니다.
 
-NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우에 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
+NO_WAIT         
+요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
 
-## <a name="SettingOptions"></a> 옵션 설정
-
+## <a name="SettingOptions"></a> 옵션 설정         
 데이터베이스 옵션에 대한 현재 설정을 검색하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)를 사용합니다.
 
 데이터베이스 옵션을 설정하면 수정 사항이 즉시 반영됩니다.
@@ -2588,8 +2791,7 @@ NO_WAIT 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완�
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-readonly"></a>1. 데이터베이스를 READ_ONLY로 설정
-
+### <a name="a-setting-the-database-to-readonly"></a>1\. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2607,8 +2809,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2. 데이터베이스에서 스냅숏 격리 활성화
-
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅숏 격리 활성화
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2625,7 +2826,6 @@ SELECT name, snapshot_isolation_state,
 FROM sys.databases
 WHERE name = N'AdventureWorks2012';
 GO
-
 ```
 
 결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.
@@ -2635,7 +2835,6 @@ GO
 |AdventureWorks2012 |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>C. 변경 내용 추적 설정, 수정 및 해제
-
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 변경 내용 추적을 설정하고 보존 기간을 `2` 일로 설정합니다.
 
 ```sql
@@ -2659,7 +2858,6 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>D. 쿼리 저장소를 사용하도록 설정
-
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
 
 ```sql
@@ -2730,14 +2928,14 @@ RESULT_SET_CACHING { ON | OFF}
 **권한** 다음과 같은 사용 권한이 필요합니다.
 
 - 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
-- dbmanager 데이터베이스 역할의 구성원.
+- `dbmanager` 데이터 베이스 역할의 멤버
 
 데이터베이스의 소유자가 dbmanager 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
 
 > [!Note]
 > 이 기능이 모든 Azure 지역에 롤아웃되는 동안 인스턴스에 배포된 버전과 최신 [Azure SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0)에서 기능 가용성을 확인합니다.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Gen2용 미리 보기) 이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Azure SQL Data Warehouse Gen2용 미리 보기) 이 명령은 마스터 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
 
 ON은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
 
@@ -2771,7 +2969,7 @@ SET RESULT_SET_CACHING OFF;
 ### <a name="check-result-set-caching-setting-for-a-database"></a>데이터베이스의 결과 집합 캐싱 설정 확인
 
 ```sql
-SELECT name, is_result_set_caching  
+SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
@@ -2803,7 +3001,7 @@ If
 FROM sys.dm_pdw_request_steps  
 WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
 SELECT 1 as is_cache_hit  
-ELSE 
+ELSE
 SELECT 0 as is_cache_hit;
 ```
 
@@ -2815,7 +3013,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
