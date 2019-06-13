@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583226"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033397"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>빠른 시작: 입력 및 SQL Server에서 Python을 사용 하 여 출력 처리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 기본값에 살펴보겠습니다 sp_execute_external_script의 입력 및 출력 변수: `InputDataSet` 고 `OutputDataSet`입니다.
 
-1. R 스크립트에 대 한 입력으로 테이블에서 데이터를 가져올 수 있습니다. 다음 문을 실행 합니다. 테이블에서 데이터를 가져오고, R 런타임을 통해 왕복 하며 열 이름의 값을 반환 합니다 *NewColName*합니다.
+1. Python 스크립트에 대 한 입력으로 테이블에서 데이터를 가져올 수 있습니다. 다음 문을 실행 합니다. 테이블에서 데이터를 가져오고, Python 런타임을 통해 왕복 하며 열 이름의 값을 반환 합니다 *NewColName*합니다.
 
-    쿼리에서 반환 되는 데이터를 데이터 프레임으로 SQL Database로 데이터를 반환 하는 R 런타임에 전달 됩니다. WITH RESULT SETS 절을 SQL Database에 대 한 반환된 된 데이터 테이블의 스키마를 정의 합니다.
+    쿼리에 의해 반환 되는 데이터를 pandas 데이터 프레임으로 SQL Database로 데이터를 반환 하는 Python 런타임에 전달 됩니다. WITH RESULT SETS 절을 SQL Database에 대 한 반환된 된 데이터 테이블의 스키마를 정의 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ SELECT * FROM PythonTestData
 
     ![테이블에서 데이터를 반환 하는 Python 스크립트의 출력](./media/python-output-pythontestdata.png)
 
-2. 입력 또는 출력 변수의 이름을 변경해 보겠습니다. 위의 스크립트 사용 기본 입력 및 출력 변수 이름 _InputDataSet_ 하 고 _OutputDataSet_합니다. 연결 된 입력된 데이터를 정의 하 _InputDatSet_를 사용 합니다 *@input_data_1* 변수.
+2. 입력 또는 출력 변수의 이름을 변경해 보겠습니다. 위의 스크립트 사용 기본 입력 및 출력 변수 이름 _InputDataSet_ 하 고 _OutputDataSet_합니다. 연결 된 입력된 데이터를 정의 하 _InputDataSet_를 사용 합니다 *@input_data_1* 변수.
 
     이 스크립트를 저장된 프로시저의 출력 및 입력된 변수 이름이 변경 되었습니다 *SQL_out* 하 고 *SQL_in*:
 
