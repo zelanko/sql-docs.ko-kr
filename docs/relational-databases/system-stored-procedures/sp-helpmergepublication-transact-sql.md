@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660804"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication**=** ] **'**_publication_**'**  
- 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 **%**, 현재 데이터베이스의 모든 병합 게시에 대 한 정보를 반환 하는 합니다.  
+ [ @publication **=** ] **'** _publication_ **'**  
+ 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 **%** , 현재 데이터베이스의 모든 병합 게시에 대 한 정보를 반환 하는 합니다.  
   
- [ @found**=** ] **'***found***'** OUTPUT  
+ [ @found **=** ] **'***found***'** OUTPUT  
  행을 반환하는지 여부를 나타내는 플래그입니다. *찾을*됩니다 **int** 및 기본값은 NULL 사용 하 여 출력 매개 변수를 합니다. **1** 은 게시를 찾았음을 나타냅니다. **0** 게시를 찾지 못했음을 나타냅니다.  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  게시 ID 번호입니다. *publication_id* 됩니다 **uniqueidentifier** 및 기본값은 NULL 사용 하 여 출력 매개 변수를 합니다.  
   
- [ @reserved**=**] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *예약* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다.  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *예약* 됩니다 **nvarchar(20)** , 기본값은 NULL입니다.  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  

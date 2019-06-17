@@ -24,10 +24,10 @@ ms.author: pelopes
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed1ebf610eafe5c882b2e19ed70129e0cac432fb
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944370"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document(Transact-SQL)
@@ -116,7 +116,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>1. 문서 수준의 전체 텍스트 인덱스 내용 표시  
+### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>1\. 문서 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에 문서 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
   
 > [!NOTE]  

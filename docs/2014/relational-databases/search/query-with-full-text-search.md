@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011107"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
@@ -52,7 +52,7 @@ ms.locfileid: "66011107"
   
 ### <a name="examples"></a>예  
   
-#### <a name="a-using-contains-with-simpleterm"></a>1. <simple_term>에 CONTAINS 사용  
+#### <a name="a-using-contains-with-simpleterm"></a>1\. <simple_term>에 CONTAINS 사용  
  다음 예에서는 가격이 `$80.99`이고 `"Mountain"`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
 ```  
@@ -66,7 +66,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>2. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
+#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>2\. FREETEXT를 사용하여 지정된 문자 값을 포함하는 단어 검색  
  다음 예에서는 vital, safety, components와 관련된 단어를 포함하는 문서를 모두 검색합니다.  
   
 ```  
@@ -107,7 +107,7 @@ GO
   
 ### <a name="examples"></a>예  
   
-#### <a name="a-using-containstable"></a>1. CONTAINSTABLE 사용  
+#### <a name="a-using-containstable"></a>1\. CONTAINSTABLE 사용  
  다음 예에서는 **Description** 열에서 "light" 또는 "lightweight"라는 단어 근처에 "aluminum"이라는 단어가 포함된 모든 제품의 설명 ID와 설명을 반환합니다. 등급 값이 2 이상인 행만 반환됩니다.  
   
 ```  
@@ -129,7 +129,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### <a name="b-using-freetexttable"></a>2. FREETEXTTABLE 사용  
+#### <a name="b-using-freetexttable"></a>2\. FREETEXTTABLE 사용  
  다음 예에서는 순위가 높은 행을 먼저 반환하고 SELECT 목록에 각 행의 순위를 추가하도록 FREETEXTTABLE 쿼리를 확장합니다. 쿼리를 지정 하려면 임을 알아야 **ProductDescriptionID** 에 대 한 고유 키 열을 `ProductDescription` 테이블입니다.  
   
 ```  

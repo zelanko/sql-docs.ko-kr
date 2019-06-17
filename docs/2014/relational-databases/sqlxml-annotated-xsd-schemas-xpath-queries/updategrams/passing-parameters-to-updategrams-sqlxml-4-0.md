@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014730"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "66014730"
   
 -   이 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>1. Updategram에 매개 변수 전달  
+### <a name="a-passing-parameters-to-an-updategram"></a>1\. Updategram에 매개 변수 전달  
  이 예에서 Updategram은 HumanResources.Shift 테이블에 있는 직원의 성을 변경합니다. Updategram은 두 개의 매개 변수가 전달 됩니다. 고유 하 게 근무조를 식별 하 고 이름에 사용 되는 ShiftID  
   
 ```  
@@ -71,7 +71,7 @@ ms.locfileid: "66014730"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>2. NULL을 매개 변수 값으로 Updategram에 전달  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>2\. NULL을 매개 변수 값으로 Updategram에 전달  
  Updategram을 실행하면 NULL로 설정할 매개 변수에 "isnull" 값이 할당됩니다. Updategram은 "isnulll" 매개 변수 값을 NULL로 변환하고 적절하게 처리합니다.  
   
  다음 Updategram에서는 직원 직함을 NULL로 설정합니다.  

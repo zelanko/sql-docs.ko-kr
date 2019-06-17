@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807475"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>데이터베이스 미러링 및 로그 전달(SQL Server)
@@ -65,7 +65,7 @@ ms.locfileid: "62807475"
   
  ![로그 전달 및 데이터베이스 미러링](../media/logshipping-and-dbm-automatic-failover.gif "로그 전달 및 데이터베이스 미러링")  
   
- 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. .  
+ 미러링 장애 조치 후에 보조 서버에서 정의된 기본 서버 이름은 변경되지 않습니다. 을 선택합니다.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>원격 모니터링 인스턴스에서 데이터베이스 미러링의 영향  
  원격 모니터링 인스턴스에 로그 전달이 사용될 때 로그 전달 세션과 데이터베이스 미러링을 함께 사용하면 모니터 테이블의 정보에 영향을 줍니다. 기본 서버에 대한 정보는 주/기본 서버에서 구성된 정보와 각 보조 서버에서 구성된 모니터 정보가 결합된 것입니다.  

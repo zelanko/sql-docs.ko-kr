@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010364"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
@@ -38,7 +38,7 @@ ms.locfileid: "66010364"
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 FILESTREAM Win32 액세스 권한이 충돌을 발생시키는 방법을 보여 줍니다.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>1. 쓰기 권한으로 FILESTREAM BLOB 열기  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>1\. 쓰기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 쓰기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -61,7 +61,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>2. 읽기 권한으로 FILESTREAM BLOB 열기  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>2\. 읽기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 읽기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -79,7 +79,7 @@ CloseHandle(dstHandle);
 //SELECT statements will be allowed.  
 ```  
   
-### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>3. 여러 FILESTREAM BLOB 파일 열기 및 닫기  
+### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>3\. 여러 FILESTREAM BLOB 파일 열기 및 닫기  
  여러 파일이 열린 경우 가장 제한적인 규칙이 사용됩니다. 다음 예에서는 두 파일을 엽니다. 첫 번째 파일은 읽기 권한으로 열리고 두 번째 파일은 쓰기 권한으로 열립니다. 두 번째 파일이 열리기 전까지 DML 문은 거부됩니다.  
   
 ```  
@@ -110,7 +110,7 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### <a name="d-failing-to-close-a-cursor"></a>4. 커서 닫기 실패  
+### <a name="d-failing-to-close-a-cursor"></a>4\. 커서 닫기 실패  
  다음 예에서는 닫히지 않은 문 커서가 `OpenSqlFilestream()` 에서 쓰기 권한으로 BLOB를 열지 못하게 하는 방법을 보여 줍니다.  
   
 ```  
