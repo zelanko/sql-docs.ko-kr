@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084383"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드 찾기
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 모델의 종속성 네트워크에 노드가 너무 많아 관심 있는 데이터를 찾기 어려울 수 있습니다. 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 모델의 종속성 네트워크에 노드가 너무 많아 관심 있는 데이터를 찾기 어려울 수 있습니다. 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드를 찾으려면  
   

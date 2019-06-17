@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047189"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "63047189"
 |**cache_address**|**varbinary(8)**|클럭과 연관된 캐시의 주소입니다. Null을 허용하지 않습니다.|  
 |**name**|**nvarchar(256)**|캐시의 이름입니다. Null을 허용하지 않습니다.|  
 |**type**|**nvarchar(60)**|캐시 저장소의 유형입니다. 유형이 같은 캐시가 여러 개 있을 수 있습니다. Null을 허용하지 않습니다.|  
-|**clock_hand**|**nvarchar(60)**|포인터의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> External<br /><br /> 내부<br /><br /> Null을 허용하지 않습니다.|  
+|**clock_hand**|**nvarchar(60)**|포인터의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> 외부<br /><br /> 내부<br /><br /> Null을 허용하지 않습니다.|  
 |**clock_status**|**nvarchar(60)**|클럭의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> Suspended<br /><br /> 실행 중<br /><br /> Null을 허용하지 않습니다.|  
 |**rounds_count**|**bigint**|항목을 제거하기 위해 캐시를 통해 이루어진 스윕 횟수입니다. Null을 허용하지 않습니다.|  
 |**removed_all_rounds_count**|**bigint**|모든 스윕을 통해 제거된 항목 수입니다. Null을 허용하지 않습니다.|  

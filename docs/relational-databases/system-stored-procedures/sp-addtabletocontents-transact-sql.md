@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049732"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents(Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` 테이블 소유자의 이름이입니다. *owner_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @filter_clause = ] 'filter_clause'` 새로 로드 된 데이터 행을 병합 추적 테이블에 추가 해야 할지 제어 하는 필터 절을 지정 합니다. *filter_clause* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. 하는 경우 *filter_clause* 됩니다 **null**, 모든 대량 로드 된 행이 추가 됩니다.  
+`[ @filter_clause = ] 'filter_clause'` 새로 로드 된 데이터 행을 병합 추적 테이블에 추가 해야 할지 제어 하는 필터 절을 지정 합니다. *filter_clause* 됩니다 **nvarchar(4000)** , 기본값은 NULL입니다. 하는 경우 *filter_clause* 됩니다 **null**, 모든 대량 로드 된 행이 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

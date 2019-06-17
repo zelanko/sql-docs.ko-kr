@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013273"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
@@ -110,7 +110,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>1. 테이블에 XML 대량 로드  
+## <a name="a-bulk-loading-xml-in-a-table"></a>1\. 테이블에 XML 대량 로드  
  인스턴스에 대 한 연결을 설정 하는이 예제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ConnectionString 속성 (MyServer)에 지정 된 합니다. 또한이 예제에서는 ErrorLogFile 속성을 지정합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. Execute 메서드 매개 변수로 매핑 스키마 파일 (SampleSchema.xml)와 XML 데이터 파일 (SampleXMLData.xml)에 확인 합니다. 대량 로드를 실행할 때, Cust 테이블에서 만든 **tempdb** 데이터베이스에 XML 데이터 파일의 내용을 기반으로 하는 새 레코드가 포함 됩니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
@@ -198,7 +198,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>2. 여러 테이블에 XML 데이터 대량 로드  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>2\. 여러 테이블에 XML 데이터 대량 로드  
  이 예제에서는 XML 문서 이루어져 있습니다 합니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다.  
   
 ```  
@@ -330,7 +330,7 @@ CustOrder(OrderID, CustomerID)
 </Schema>  
 ```  
   
-## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>3. 스키마의 체인 관계를 사용하여 XML 대량 로드  
+## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>3\. 스키마의 체인 관계를 사용하여 XML 대량 로드  
  이 예에서는 XML 대량 로드에서 매핑 스키마에 지정된 M:N 관계를 사용하여 M:N 관계를 나타내는 테이블에 데이터를 로드하는 방법을 보여 줍니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
@@ -433,7 +433,7 @@ CustOrder(OrderID, CustomerID)
   
 5.  VBScript 코드를 실행합니다. XML 대량 로드가 Ord 및 Product 테이블에 XML 문서를 로드합니다.  
   
-## <a name="d-bulk-loading-in-identity-type-columns"></a>4. ID 유형 열에 대량 로드  
+## <a name="d-bulk-loading-in-identity-type-columns"></a>4\. ID 유형 열에 대량 로드  
  이 예에서는 대량 로드에서 ID 유형 열이 처리되는 방법을 보여 줍니다. 이 예에서 데이터는 3개의 테이블(Ord, Product 및 OrderDetail)에 대량 로드됩니다.  
   
  이러한 테이블에는 다음이 적용됩니다.  
@@ -557,7 +557,7 @@ OrderDetail (OrderID, ProductID)
   
 5.  VBScript 코드를 실행합니다. XML 대량 로드에서 해당 테이블에 데이터를 로드합니다.  
   
-## <a name="e-generating-table-schemas-before-bulk-loading"></a>5. 대량 로드 전에 테이블 스키마 생성  
+## <a name="e-generating-table-schemas-before-bulk-loading"></a>5\. 대량 로드 전에 테이블 스키마 생성  
  XML 대량 로드는 대량 로드 전에 테이블이 존재하지 않는 경우 필요에 따라 이러한 테이블을 만들 수 있습니다. SQLXMLBulkLoad 개체의 SchemaGen 속성을 TRUE로이 설정 합니다. 또한 필요에 따라 기존 테이블을 삭제 하 고 다시 만들도록 SGDropTables 속성을 TRUE로 설정 하는 XML 대량 로드를 요청할 수 있습니다. 다음 VBScript 예에서는 이러한 속성의 사용 방법을 보여 줍니다.  
   
  또한 이 예에서는 두 개의 추가 속성을 TRUE로 설정합니다.  
@@ -593,7 +593,7 @@ Set objBL = Nothing
   
 4.  VBScript 코드를 실행합니다. XML 대량 로드에서 제공된 매핑 스키마를 기반으로 필요한 테이블을 만들고 이 테이블에 데이터를 대량 로드합니다.  
   
-## <a name="f-bulk-loading-from-a-stream"></a>6. 스트림에서 대량 로드  
+## <a name="f-bulk-loading-from-a-stream"></a>6\. 스트림에서 대량 로드  
  XML 대량 로드 개체 모델의 Execute 메서드는 두 매개 변수를 사용 합니다. 첫 번째 매개 변수는 매핑 스키마 파일입니다. 두 번째 매개 변수는 데이터베이스에 로드될 XML 데이터를 제공합니다. 두 가지 방법으로 XML 데이터를 XML 대량 로드의 Execute 메서드에 전달할 수 있습니다.  
   
 -   파일 이름을 매개 변수로 지정합니다.  
@@ -807,7 +807,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="g-bulk-loading-in-overflow-columns"></a>7. 오버플로 열에 대량 로드  
+## <a name="g-bulk-loading-in-overflow-columns"></a>7\. 오버플로 열에 대량 로드  
  매핑 스키마가 `sql:overflow-field` 주석을 사용하여 오버플로 열을 지정하는 경우 XML 대량 로드는 원본 문서에서 사용되지 않은 모든 데이터를 이 열에 복사합니다.  
   
  다음 XSD 스키마를 고려해 보십시오.  
@@ -951,7 +951,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>8. 트랜잭션 모드에서 임시 파일에 대한 파일 경로 지정  
+## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>8\. 트랜잭션 모드에서 임시 파일에 대한 파일 경로 지정  
  트랜잭션 모드에서 대량 로드 하는 경우 (즉, 트랜잭션 속성이 설정 된 경우 true)도 설정 해야 TempFilePath 속성이 다음 조건 중 하나가 true 인 경우:  
   
 -   원격 서버에 대량 로드하는 경우  
@@ -1085,7 +1085,7 @@ set objBL=Nothing
 </Schema>  
 ```  
   
-## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>9. ConnectionCommand 속성으로 기존 데이터베이스 연결 사용  
+## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>9\. ConnectionCommand 속성으로 기존 데이터베이스 연결 사용  
  기존 ADO 연결을 사용하여 XML을 대량 로드할 수 있습니다. 이 방법은 XML 대량 로드 외에도 많은 작업이 데이터 원본에 대해 수행되는 경우 유용합니다.  
   
  ConnectionCommand 속성을 사용 하면 ADO 명령 개체를 사용 하 여 기존 ADO 연결을 사용할 수 있습니다. 다음 Visual Basic 예에서 확인할 수 있습니다.  
@@ -1242,7 +1242,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="j-bulk-loading-in-xml-data-type-columns"></a>10. xml 데이터 형식 열에 대량 로드  
+## <a name="j-bulk-loading-in-xml-data-type-columns"></a>10\. xml 데이터 형식 열에 대량 로드  
  매핑 스키마 지정 하는 경우는 [xml 데이터 형식](/sql/t-sql/xml/xml-transact-sql) 를 사용 하 여 열을 `sql:datatype="xml"` 주석, XML 대량 로드는 원본 문서에서를이 열에 매핑된 필드에 대 한 XML 자식 요소를 복사할 수 있습니다.  
   
  AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 테이블에서의 CatalogDescription 필드 `xml` 데이터 형식에 매핑되는  **\<Desc >** 요소를 사용 하 여는 `sql:field` 및 `sql:datatype="xml"` 주석.  

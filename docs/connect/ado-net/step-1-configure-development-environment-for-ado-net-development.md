@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75d2e123831a3a5d0db3e780634c6d9c7d996844
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a3aebe9cd16901581d5fdba8cd3d8302c5af30ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606493"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770756"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>1단계: ADO.NET 개발을 위한 개발 환경 구성
 

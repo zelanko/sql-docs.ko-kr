@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c2739e301baf843f61c62e72e7ce7520d0445b73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721261"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>동기화 중 스크립트 실행(복제 Transact-SQL 프로그래밍)
@@ -32,7 +32,7 @@ ms.locfileid: "62721261"
   
 2.  게시에 대한 스냅숏 에이전트가 액세스할 수 있는 위치에 스크립트 파일을 저장합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. **@publication**, **@scriptfile**에 2단계에서 만든 전체 UNC 경로를 포함하는 스크립트 파일의 이름, **@skiperror**에 다음 값 중 하나를 지정합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addscriptexec&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql)를 실행합니다. **@publication** , **@scriptfile** 에 2단계에서 만든 전체 UNC 경로를 포함하는 스크립트 파일의 이름, **@skiperror** 에 다음 값 중 하나를 지정합니다.  
   
     -   **0** - 오류가 발생하면 스크립트 실행이 중지됩니다.  
   

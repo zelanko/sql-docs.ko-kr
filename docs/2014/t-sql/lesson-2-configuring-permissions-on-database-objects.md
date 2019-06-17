@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642582"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>2단원: 데이터베이스 개체의 사용 권한 구성
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>2단원: 데이터베이스 개체에 대한 사용 권한 구성
   데이터베이스에 대한 액세스 권한을 사용자에게 부여하는 작업은 3개의 단계로 구성됩니다. 먼저 로그인을 만듭니다. 로그인을 사용하여 사용자는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에 연결할 수 있습니다. 그런 다음 지정된 데이터베이스에서 로그인을 사용자로 구성합니다. 마지막으로 데이터베이스 개체에 대한 사용 권한을 사용자에게 부여합니다. 이 단원에서는 이러한 3개의 단계와 뷰 및 저장 프로시저를 개체로 만드는 방법을 보여 줍니다.  
   
  이 단원에서는 다음 항목을 다룹니다.  

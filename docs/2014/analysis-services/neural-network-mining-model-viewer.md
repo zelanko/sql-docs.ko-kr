@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072314"
 ---
 # <a name="neural-network-mining-model-viewer"></a>신경망(마이닝 모델 뷰어)
@@ -39,7 +39,7 @@ ms.locfileid: "66072314"
   
 |값|Description|  
 |-----------|-----------------|  
-|**특성**|목록에서 입력 특성을 선택합니다. 기본적으로 선택 영역을 두면  **\<모든 >**, 차트에는 예측 가능한 특성에 대 한 영향 순으로 순위가 지정 된 모든 입력된 특성의 목록을 보여 줍니다.|  
+|**특성**|목록에서 입력 특성을 선택합니다. 기본적으로 선택 영역을 두면  **\<모든 >** , 차트에는 예측 가능한 특성에 대 한 영향 순으로 순위가 지정 된 모든 입력된 특성의 목록을 보여 줍니다.|  
 |**Value**|입력 특성의 값을 선택합니다.|  
   
  **출력**  

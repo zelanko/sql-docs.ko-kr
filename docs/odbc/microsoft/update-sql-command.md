@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632560"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL 명령
@@ -36,7 +36,7 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>인수  
- UPDATE [ *DatabaseName1!*] *TableName1*  
+ UPDATE [ *DatabaseName1!* ] *TableName1*  
  새 값으로 업데이트 되는 레코드 테이블을 지정 합니다.  
   
  *DatabaseName1!* 테이블이 포함 된 데이터 소스를 사용 하 여 지정 된 데이터베이스가 아닌 데이터베이스의 이름을 지정 합니다. 데이터베이스가 현재 없는 경우 테이블을 포함 하는 데이터베이스의 이름을 포함 해야 합니다. 데이터베이스 이름 뒤에 오는 및 테이블 이름 앞에 느낌표 (!) 구분 기호를 포함 합니다.  

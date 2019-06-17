@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b942f78e-7ce1-44ef-923d-a7c3d7c76b83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d513ac4f8ca0e2cbdda575c9e110dcae3b1d45c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0bd0977488c5d70c2288135ece965dea081d2a38
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736171"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764940"
 ---
 # <a name="setauthenticationscheme-sqlserverdatasource"></a>setAuthenticationScheme(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126027"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
@@ -63,7 +63,7 @@ ms.locfileid: "63126027"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 네트워크 이름을 변경한 후는 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 이후 업그레이드 Windows 클러스터 관리자 도구를 사용 하 여 인스턴스 클러스터 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002)합니다.  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 네트워크 이름을 변경한 후는 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 이후 업그레이드 Windows 클러스터 관리자 도구를 사용 하 여 인스턴스 클러스터 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002) 합니다.  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** 확인 및 수행 된 아래의 추가 작업에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:  
   

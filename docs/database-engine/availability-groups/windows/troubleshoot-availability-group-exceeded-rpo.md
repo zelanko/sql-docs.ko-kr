@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408770"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780987"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>문제 해결: 가용성 그룹 초과 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **SQL Server: 데이터베이스 > 로그 플러시 대기 시간**  
   
--   **SQL Server: 데이터베이스 > 로그 플러시 대기 시간/초**  
+-   **SQL Server: 데이터베이스 > 로그 플러시 대기/초**  
   
 -   **SQL Server: 데이터베이스 > 로그 풀 디스크 읽기 횟수/초**  
   

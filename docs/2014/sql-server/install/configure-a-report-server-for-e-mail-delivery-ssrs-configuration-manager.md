@@ -23,16 +23,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 196bfdc78ea29b1d334660a732f087a50ae9c2ee
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096117"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
 
 
-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 전자 메일을 통해 보고서를 배포할 수 있는 전자 메일 배달 확장 프로그램이 있습니다.  전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 전자 메일을 통해 보고서를 배포할 수 있는 전자 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.  
   
  보고서 서버 전자 메일 배달 확장 프로그램은 기본적으로 구성되어 있지 않습니다. 따라서 Reporting Services 구성 관리자를 사용하여 확장 프로그램을 최소한으로 구성해야 합니다. 고급 속성을 설정하려면 `RSReportServer.config` 파일을 편집해야 합니다. 이 확장 프로그램을 사용할 수 있도록 보고서 서버를 구성할 수 없는 경우에는 보고서를 공유 폴더로 배달할 수 있습니다. 자세한 내용은 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)을 참조하세요.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66096117"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션을 하려면: 구성 옵션   
+##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션을 하려면: 구성 옵션  
  **개인 구독 관리** 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.  
   
  도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.  
@@ -161,9 +161,9 @@ ms.locfileid: "66096117"
   
 ##  <a name="bkmk_use_configuration_manager"></a> Reporting Services 구성 관리자를 사용 하 여 보고서 서버 전자 메일을 구성 하려면  
   
-1.   보고서 서버 Windows 서비스에 SMTP 서버에 대한 `Send As` 권한이 있는지 확인합니다.   
+1.  보고서 서버 Windows 서비스에 SMTP 서버에 대한 `Send As` 권한이 있는지 확인합니다.  
   
-2.   Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.   
+2.  Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.  
   
 3.  전자 메일 설정 페이지에서 SMTP 서버의 이름을 입력합니다. 이 값은 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "66096117"
   
 ##  <a name="bkmk_confiugre_remote_SMTP"></a> 보고서 서버에 대 한 원격 SMTP 서비스를 구성 하려면  
   
-1.   보고서 서버 Windows 서비스에 SMTP 서버에 대한 `Send As` 권한이 있는지 확인합니다.   
+1.  보고서 서버 Windows 서비스에 SMTP 서버에 대한 `Send As` 권한이 있는지 확인합니다.  
   
 2.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
@@ -215,15 +215,15 @@ ms.locfileid: "66096117"
   
 9. `<UrlRoot>` 가 보고서 서버 URL 주소로 설정되어 있는지 확인합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   
-10.  배달 섹션에서 `<ReportServerEmail>.`을 찾습니다.   
+10. 배달 섹션에서 `<ReportServerEmail>.`을 찾습니다.  
   
-11.  `<SMTPServer>`에서 이 설정의 모든 값을 지웁니다. 이때 태그는 삭제하지 않습니다.  
+11. `<SMTPServer>`에서 이 설정의 모든 값을 지웁니다. 이때 태그는 삭제하지 않습니다.  
   
-12.  `<SendUsing>` 을 1로 설정합니다. 다른 값으로 설정되어 있으면 보고서 서버에서 로컬 SMTP 서비스를 사용하도록 구성되지 않은 것입니다.  
+12. `<SendUsing>` 을 1로 설정합니다. 다른 값으로 설정되어 있으면 보고서 서버에서 로컬 SMTP 서비스를 사용하도록 구성되지 않은 것입니다.  
   
-13.  `<SMTPServerPickupDirectory>` 를 로컬 드라이브의 폴더로 설정합니다.  
+13. `<SMTPServerPickupDirectory>` 를 로컬 드라이브의 폴더로 설정합니다.  
   
-14.  `<From>` 을 SMTP 서버에서 전자 메일을 보낼 수 있는 권한이 있는 계정으로 설정합니다.  
+14. `<From>` 을 SMTP 서버에서 전자 메일을 보낼 수 있는 권한이 있는 계정으로 설정합니다.  
   
 15. 파일을 저장합니다.  
   

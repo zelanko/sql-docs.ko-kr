@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011174"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
@@ -104,7 +104,7 @@ ms.locfileid: "66011174"
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.Document` 예제 데이터베이스의 `HumanResources.JobCandidate` 또는 `AdventureWorks` 테이블을 사용합니다.  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>1. 전체 채우기를 실행하지 않고 전체 텍스트 인덱스 만들기  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>1\. 전체 채우기를 실행하지 않고 전체 텍스트 인덱스 만들기  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에서 전체 텍스트 인덱스를 만듭니다. 이 예에서는 WITH CHANGE_TRACKING OFF, NO POPULATION을 사용하여 초기 전체 채우기를 지연시킵니다.  
   
 ```  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>2. 테이블에 대해 전체 채우기 실행  
+### <a name="b-running-a-full-population-on-table"></a>2\. 테이블에 대해 전체 채우기 실행  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 전체 채우기를 실행합니다.  
   
 ```  
@@ -131,7 +131,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
   
-### <a name="c-creating-a-full-text-index-with-manual-change-tracking"></a>3. 수동 변경 내용 추적이 있는 전체 텍스트 인덱스 만들기  
+### <a name="c-creating-a-full-text-index-with-manual-change-tracking"></a>3\. 수동 변경 내용 추적이 있는 전체 텍스트 인덱스 만들기  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 수동 채우기가 있는 변경 내용 추적을 사용하는 전체 텍스트 인덱스를 만듭니다.  
   
 ```  
@@ -145,7 +145,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)
 GO  
 ```  
   
-### <a name="d-running-a-manual-population"></a>4. 수동 채우기 실행  
+### <a name="d-running-a-manual-population"></a>4\. 수동 채우기 실행  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에서 변경 내용 추적이 설정된 전체 텍스트 인덱스에 대해 수동 채우기를 실행합니다.  
   
 ```  
@@ -155,7 +155,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;
 GO  
 ```  
   
-### <a name="e-altering-a-full-text-index-to-use-automatic-change-tracking"></a>5. 자동 변경 내용 추적을 사용하도록 전체 텍스트 인덱스 변경  
+### <a name="e-altering-a-full-text-index-to-use-automatic-change-tracking"></a>5\. 자동 변경 내용 추적을 사용하도록 전체 텍스트 인덱스 변경  
  다음 예에서는 자동 채우기와 함께 변경 내용 추적을 사용하도록 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스를 변경합니다.  
   
 ```  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62677024"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server 개체의 정책 기반 관리 패싯 보기
@@ -30,7 +30,7 @@ ms.locfileid: "62677024"
   
 -   **다음을 사용하여 개체의 모든 패싯을 보려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62677024"
   
 1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭한 다음 **패싯**을 클릭합니다.  
   
-2.  **패싯 보기 –**_object_name_ 대화 상자의 **패싯** 목록에서 해당 속성을 보려면 패싯을 선택합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [View Facets Dialog Box](view-facets-dialog-box.md)를 참조하세요.  
+2.  **패싯 보기 –** _object_name_ 대화 상자의 **패싯** 목록에서 해당 속성을 보려면 패싯을 선택합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [View Facets Dialog Box](view-facets-dialog-box.md)를 참조하세요.  
   
 3.  완료되었으면 **확인**을 클릭합니다.  
   

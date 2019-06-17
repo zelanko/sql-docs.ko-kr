@@ -1,7 +1,7 @@
 ---
 title: SET FMTONLY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,21 +23,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15a6d81f064e417726fe7b4efe6987f7b96fa85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbc4cb3569573b8558edcf7335c0515da16d750c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666081"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500550"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-all-md](../../includes/tsql-appliesto-ss-all-md.md)]
 
   클라이언트에 메타데이터만 반환합니다. 쿼리를 실제로 실행하지 않고 응답 형식을 테스트하는 데 사용할 수 있습니다.  
-  
-> [!NOTE]  
->  이 기능은 사용할 수 없습니다. 이 기능은 [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md), [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 및 [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)에 의해 대체됩니다.  
-  
+
+> [!NOTE]
+> 이 기능은 사용할 수 없습니다. 이 기능은 다음 항목으로 대체되었습니다.
+>
+> - [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)
+> - [sp_describe_undeclared_parameters (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)
+> - [sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
@@ -45,50 +51,104 @@ ms.locfileid: "47666081"
 ```  
 SET FMTONLY { ON | OFF }   
 ```  
-  
-## <a name="remarks"></a>Remarks  
- SET FMTONLY 옵션을 ON으로 설정하면 요청으로 인해 어떤 행도 처리되거나 클라이언트에게 보내지지 않습니다.  
-  
- SET FMTONLY 옵션은 실행 시나 런타임에 설정되며 구문 분석 시에는 설정되지 않습니다.  
-  
-## <a name="permissions"></a>Permissions  
+
+## <a name="remarks"></a>Remarks
+
+`FMTONLY`가 `ON`인 경우 데이터 행이 없는 행 집합이 열 이름으로 반환됩니다.
+
+Transact-SQL 일괄 처리를 구문 분석할 때 `SET FMTONLY ON`은 아무 효과가 없습니다. 이 효과는 실행 런타임 동안 발생합니다.
+
+기본값은 `OFF`입니다.
+
+## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
-  
-## <a name="examples"></a>예  
-  
-### <a name="a-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>A: 쿼리를 실제로 실행하지 않고 쿼리에 대한 열 헤더 정보를 보기합니다.  
- 다음 예에서는 `SET FMTONLY` 설정을 `ON`으로 변경하고 `SELECT` 문을 실행합니다. 이렇게 설정하면 문 실행 후 열 정보만 반환되고 데이터 행은 반환되지 않습니다.  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SET FMTONLY ON;  
-GO  
-SELECT *   
-FROM HumanResources.Employee;  
-GO  
-SET FMTONLY OFF;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="b-view-the-column-header-information-for-a-query-without-actually-running-the-query"></a>2. 쿼리를 실제로 실행하지 않고 쿼리에 대한 열 헤더 정보를 보기합니다.  
- 다음 예에서는 쿼리에 대한 열 헤더(메타데이터) 정보만 반환하는 방법을 보여줍니다. 해당 배치는 OFF로 설정된 FMTONLY를 사용해 시작하고 SELECT 문을 실행하기 전에 FMTONLY를 ON으로 변경합니다. 이렇게 설정하면 SELECT 문이 열 헤더만 반환하게 되며 데이터 행은 반환되지 않습니다.  
-  
-```  
--- Uses AdventureWorks  
-  
-BEGIN  
-    SET FMTONLY OFF;  
-    SET DATEFORMAT mdy;  
-    SET FMTONLY ON;  
-    SELECT * FROM dbo.DimCustomer;  
-    SET FMTONLY OFF;  
-END  
-  
-```  
-  
+
+## <a name="examples"></a>예
+
+다음 Transact-SQL 코드 예제에서는 `FMTONLY`를 `ON`으로 설정합니다. 이 설정으로 인해 SQL Server는 선택한 열에 대한 메타데이터 정보만 반환합니다. 특히 열 이름이 반환됩니다. 데이터 행이 반환되지 않습니다.
+
+이 예제에서 저장 프로시저 `prc_gm29`의 테스트 실행은 다음을 반환합니다.
+
+- 여러 행 집합.
+- 해당 `SELECT` 문 중 하나에 있는 여러 테이블의 열입니다.
+
+<!--
+Issue 2246 inspired this code example, and the replacement of the two pre-existing examples. 2019/June/03, GM.
+-->
+
+```sql
+go
+SET NoCount ON;
+
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+CREATE TABLE #tabTemp41
+(
+   KeyInt41        int           not null,
+   Name41          nvarchar(16)  not null,
+   TargetDateTime  datetime      not null  default GetDate()
+);
+
+CREATE TABLE #tabTemp42
+(
+   KeyInt42 int          not null,   -- JOIN-able to KeyInt41.
+   Name42   nvarchar(16) not null
+);
+go
+
+INSERT into #tabTemp41 (KeyInt41, Name41) values (10, 't41-c');
+INSERT into #tabTemp42 (KeyInt42, Name42) values (10, 't42-p');
+go
+
+CREATE PROCEDURE prc_gm29
+AS
+begin
+SELECT * from #tabTemp41;
+SELECT * from #tabTemp42;
+
+SELECT t41.KeyInt41, t41.TargetDateTime, t41.Name41, t42.Name42
+   from
+                 #tabTemp41 as t41
+      INNER JOIN #tabTemp42 as t42 on t42.KeyInt42 = t41.KeyInt41
+end;
+go
+
+SET DATEFORMAT mdy;
+
+SET FMTONLY ON;
+EXECUTE prc_gm29;   -- Returns multiple tables.
+SET FMTONLY OFF;
+go
+DROP PROCEDURE IF EXISTS prc_gm29;
+
+DROP Table IF EXISTS #tabTemp41;
+DROP Table IF EXISTS #tabTemp42;
+go
+
+/****  Actual Output:
+[C:\JunkM\]
+>> osql.exe -S myazuresqldb.database.windows.net -U somebody -P secret -d MyDatabase -i C:\JunkM\Issue-2246-a.SQL 
+
+ KeyInt41    Name41           TargetDateTime
+ ----------- ---------------- -----------------------
+
+ KeyInt42    Name42
+ ----------- ----------------
+
+ KeyInt41    TargetDateTime          Name41           Name42
+ ----------- ----------------------- ---------------- ----------------
+
+
+[C:\JunkM\]
+>>
+****/
+```
+
 ## <a name="see-also"></a>참고 항목  
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

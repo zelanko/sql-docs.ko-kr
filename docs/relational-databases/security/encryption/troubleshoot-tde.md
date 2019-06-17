@@ -14,14 +14,14 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e6d23fb19b756bbf303a06512fecc3a6d29b8090
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097443"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718093"
 ---
-# <a name="transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv-troubleshooting"></a>AKV(Azure Key Vault)에서 고객 관리 키를 사용한 TDE(투명화 데이터 암호화) 문제 해결
+# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>AKV(Azure Key Vault)에서 고객 관리 키를 사용하는 TDE(투명화 데이터 암호화)를 통한 일반적인 오류 및 해결 방법
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 이 항목에는 다음 문제에 대한 정보가 있습니다.  

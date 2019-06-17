@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245663"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
@@ -37,7 +37,7 @@ ms.locfileid: "63245663"
   
 6.  **그룹 또는 사용자 이름** 상자에 그룹 또는 사용자를 추가하고 해당 이름을 선택합니다.  
   
-7.  에 **에 대 한 권한을**_\<사용자나 그룹 >_ 상자에서를 **허용** 열에 대 한를 **원격 으로부터 사용 가능** 권한 서비스 상태를 검색 하는 원격으로 하려는 사용자에 대 한 합니다.  
+7.  에 **에 대 한 권한을** _\<사용자나 그룹 >_ 상자에서를 **허용** 열에 대 한를 **원격 으로부터 사용 가능** 권한 서비스 상태를 검색 하는 원격으로 하려는 사용자에 대 한 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 서비스 시작, 중지 또는 일시 중지](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

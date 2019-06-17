@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091327"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema에서 사용자 정의 함수가 허용되지 않습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "66091327"
   
 4.  에 대 한 참조를 바꿀 **system_function_schema** 사용 하 여 **dbo** 사용자 정의 함수 DDL 문이 포함 된 모든 스크립트에서.  
   
-5.  두 부분으로 된 이름 dbo를 사용 하기 위해 이러한 함수를 호출 하는 스크립트를 수정 **.** _function_name_, 또는 세 부분으로 이루어진 이름을 _database_name_**.** dbo입니다. *function_name*합니다.  
+5.  두 부분으로 된 이름 dbo를 사용 하기 위해 이러한 함수를 호출 하는 스크립트를 수정 **.** _function_name_, 또는 세 부분으로 이루어진 이름을 _database_name_ **.** dbo입니다. *function_name*합니다.  
   
  자세한 내용은 SQL Server 온라인 설명서에서 다음 항목을 참조하십시오.  
   

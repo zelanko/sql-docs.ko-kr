@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63140438"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
@@ -74,7 +74,7 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로시저를 사용할 수는 `cursor` OUTPUT 매개 변수에 데이터 형식입니다. 경우는 `cursor` 데이터 형식을 지정할 매개 변수의 경우 프로시저 정의에서 해당 매개 변수는 VARYING 및 OUTPUT 키워드 모두 지정 해야 합니다. 매개 변수는 output 으로만 지정 될 수 있지만 매개 변수 선언 시 VARYING 키워드가 지정 된, 경우에 데이터 형식 이어야 합니다 `cursor` OUTPUT 키워드도 지정 되어야 합니다.  
   
 > [!NOTE]  
->  `cursor` 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 응용 프로그램 변수에 바인딩할 수 없습니다.  OUTPUT 매개 변수는 응용 프로그램이 프로시저를 실행하기 전에 바인딩되어야 하므로 `cursor` OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다.  이러한 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로컬 `cursor` 변수에 `cursor` OUTPUT 변수가 할당된 경우에만 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
+>  `cursor` 데이터 형식은 OLE DB, ODBC, ADO, DB-Library 등의 데이터베이스 API를 통해 응용 프로그램 변수에 바인딩할 수 없습니다. OUTPUT 매개 변수는 응용 프로그램이 프로시저를 실행하기 전에 바인딩되어야 하므로 `cursor` OUTPUT 매개 변수가 있는 프로시저는 데이터베이스 API에서 호출할 수 없습니다. 이러한 프로시저는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 로컬 `cursor` 변수에 `cursor` OUTPUT 변수가 할당된 경우에만 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 트리거에서 호출할 수 있습니다.  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor Output 매개 변수 규칙  
  프로시저 실행 시 `cursor` Output 매개 변수에는 다음 규칙이 적용됩니다.  

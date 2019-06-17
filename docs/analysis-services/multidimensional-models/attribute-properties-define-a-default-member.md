@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62746635"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>특성 속성 - 기본 멤버 정의
@@ -28,7 +28,7 @@ ms.locfileid: "62746635"
  특성 계층에 대해 지정된 기본 멤버가 없고 특성 계층이 집계 가능한 경우(특성의 **IsAggregatable** 속성이 **True**로 설정된 경우) (All) 멤버가 기본 멤버입니다. 지정된 기본 멤버가 없고 특성 계층이 집계 가능하지 않은 경우(특성의 **IsAggregatable** 속성이 **False**로 설정된 경우)에는 특성 계층의 최상위 수준에서 기본 멤버가 선택됩니다.  
   
 ## <a name="specifying-the-default-member"></a>기본 멤버 지정  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 차원의 모든 특성에는 기본 멤버가 있으며 이 기본 멤버는 특성의 **DefaultMember** 속성을 사용하여 지정할 수 있습니다. 이 설정은 쿼리에 특성이 포함되지 않은 경우 식을 평가하는 데 사용됩니다. 쿼리에서 차원의 계층을 지정하는 경우 계층의 특성에 대한 기본 멤버는 무시됩니다. 쿼리에서 차원의 계층을 지정하지 않는 경우에는 차원 특성에 대한 **DefaultMember** 설정이 적용됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 차원의 모든 특성에는 기본 멤버가 있으며 이 기본 멤버는 특성의 **DefaultMember** 속성을 사용하여 지정할 수 있습니다. 이 설정은 쿼리에 특성이 포함되지 않은 경우 식을 평가하는 데 사용됩니다. 쿼리에서 차원의 계층을 지정하는 경우 계층의 특성에 대한 기본 멤버는 무시됩니다. 쿼리에서 차원의 계층을 지정하지 않는 경우에는 차원 특성에 대한 **DefaultMember** 설정이 적용됩니다.  
   
  특성에 대한 **DefaultMember** 설정이 비어 있고 해당 **IsAggregatable** 속성이 **True**로 설정된 경우 기본 멤버는 All 멤버입니다. **IsAggregatable** 속성이 **False**로 설정된 경우 기본 멤버는 표시되는 첫 번째 수준의 첫 번째 멤버입니다.  
   

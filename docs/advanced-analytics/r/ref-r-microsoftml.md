@@ -3,17 +3,17 @@ title: MicrosoftML R 함수 라이브러리-SQL Server Machine Learning 서비�
 description: SQL Server 2016 R Services 및 R. 사용 하 여 SQL Server 2017 Machine Learning Services에서 MicrosoftML 함수 라이브러리 소개
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641817"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140492"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "62641817"
 
 함수가 **MicrosoftML** 저장된 프로시저에서 캡슐화 하는 R 코드에서 호출할 수 있습니다. 대부분의 개발자는 빌드할 **MicrosoftML** 솔루션을 로컬로 다음 배포 연습으로 저장된 프로시저에 완성 된 R 코드를 마이그레이션합니다.
 
-합니다 **MicrosoftML** R 설치 "-의-기본" SQL Server 2017에서에 대 한 패키지 있습니다. 인스턴스에 대 한 R 구성 요소를 업그레이드 하는 경우에 SQL Server 2016와 함께 사용할 수도: [바인딩을 사용 하 여 SQL Server 인스턴스 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+합니다 **MicrosoftML** R 설치 "-의-기본" SQL Server 2017에서에 대 한 패키지 있습니다. 인스턴스에 대 한 R 구성 요소를 업그레이드 하는 경우에 SQL Server 2016와 함께 사용할 수도: [바인딩을 사용 하 여 SQL Server 인스턴스 업그레이드](../install/upgrade-r-and-python.md)
 
 기본적으로 패키지 로드 되지 않습니다. 첫 번째 단계로, 로드 된 **MicrosoftML** 패키지를 찾은 다음 로드 **RevoScaleR** 원격 계산 컨텍스트 또는 관련 된 연결 또는 데이터 원본 개체를 사용 해야 하는 경우. 그런 다음 필요한 개별 함수를 참조 합니다.
 

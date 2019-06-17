@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099338"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
@@ -31,7 +31,7 @@ ms.locfileid: "66099338"
   
  [차트 문제 해결&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
-## <a name="administrators"></a>관리자  
+## <a name="administrators"></a>Administrators  
  [설치, 제거 및 보고서 작성기 지원](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
  또한의 다음 항목을 참조 합니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 설명서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?linkid=121312):  

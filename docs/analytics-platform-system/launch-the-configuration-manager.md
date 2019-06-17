@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183421"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Configuration Manager 시작
@@ -25,7 +25,7 @@ ms.locfileid: "63183421"
 Analytics Platform System**Configuration Manager** 어플라이언스 도메인 관리자가 실행할 수 있습니다. 이 도구를 실행 하려면 어플라이언스 도메인 관리자에 대 한 암호가 필요 합니다. 참조 추가 AP 관리자를 만들려면 [APS 도메인 관리자를 만듭니다 &#40;AP&#41;](create-an-aps-domain-administrator-aps.md)합니다.  
   
 ## <a name="Accessing"></a>구성 관리자 도구를 시작 합니다.  
-Configuration Manager를 실행 하려면 PDW 제어 노드에 연결 하려면 원격 데스크톱 사용 (**_PDW_region_-CTL01**) 노드와로 로그인 _appliance_domain_ **\Administrator**합니다. 시작할 때 합니다 **Configuration Manager** 프로그램에서 사용 하 여 합니다 **관리자 권한으로 실행** 관리자 자격 증명을 사용 하도록 옵션입니다.  
+Configuration Manager를 실행 하려면 PDW 제어 노드에 연결 하려면 원격 데스크톱 사용 ( **_PDW_region_-CTL01**) 노드와로 로그인 _appliance_domain_ **\Administrator**합니다. 시작할 때 합니다 **Configuration Manager** 프로그램에서 사용 하 여 합니다 **관리자 권한으로 실행** 관리자 자격 증명을 사용 하도록 옵션입니다.  
   
 #### <a name="to-launch-from-a-browser-window"></a>브라우저 창에서 시작 하려면  
   

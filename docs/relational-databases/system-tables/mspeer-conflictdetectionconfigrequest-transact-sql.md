@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5489a2135882415b27bbe5dd7c62c7759a0f71bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026477"
 ---
 # <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "63026477"
 |id|**int**|충돌 구성 요청을 식별합니다. request_id 열에서 [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) 이 값을 사용 합니다.|  
 |publication|**sysname**|충돌 구성 요청이 시작된 게시의 이름입니다.|  
 |sent_date|**datetime**|충돌 구성 요청이 시작된 날짜와 시간입니다.|  
-|timeout|**int**|모든 피어가 충돌 정보를 반환할 때까지 프로시저가 기다려야 하는 시간입니다.|  
+|timeout 제한|**int**|모든 피어가 충돌 정보를 반환할 때까지 프로시저가 기다려야 하는 시간입니다.|  
 |modified_date|**datetime**|단계가 완료된 날짜와 시간입니다.|  
 |progress_phase|**nvarchar(32)**|다음 값 중 하나를 사용하여 현재 처리 단계를 식별합니다.<br /><br /> 시작됨<br /><br /> Exploring topology<br /><br /> Collecting status<br /><br /> Status collected|  
 |phase_timed_out|**bit**|현재 단계가 시간 초과되었는지 여부를 나타냅니다.|  

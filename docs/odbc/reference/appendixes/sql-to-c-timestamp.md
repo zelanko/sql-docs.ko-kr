@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259254"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL에서 C로: timestamp
@@ -51,4 +51,4 @@ Timestamp ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니�
   
  [f] C 데이터 형식에 해당 크기입니다.  
 
-결과 문자열은 타임 스탬프 SQL 데이터 C 문자 데이터를 변환할 때에 "*yyyy*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...*] "형식, 소수 자릿수 초에 대해 최대 9 자리 숫자를 사용할 수 있는 합니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외 하 고 전체 형식으로 사용 되어야 합니다, 타임 스탬프 SQL 데이터 형식의 전체 자릿수에 관계 없이.)
+결과 문자열은 타임 스탬프 SQL 데이터 C 문자 데이터를 변환할 때에 "*yyyy*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...* ] "형식, 소수 자릿수 초에 대해 최대 9 자리 숫자를 사용할 수 있는 합니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외 하 고 전체 형식으로 사용 되어야 합니다, 타임 스탬프 SQL 데이터 형식의 전체 자릿수에 관계 없이.)

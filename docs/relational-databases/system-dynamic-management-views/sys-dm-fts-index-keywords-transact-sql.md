@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944280"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords(Transact-SQL)
@@ -82,7 +82,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-high-level-full-text-index-content"></a>1. 상위 수준의 전체 텍스트 인덱스 내용 표시  
+### <a name="a-displaying-high-level-full-text-index-content"></a>1\. 상위 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 테이블에 상위 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
   
 ```  

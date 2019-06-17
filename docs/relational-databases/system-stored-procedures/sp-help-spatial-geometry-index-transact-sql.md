@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dcdbc24f817ec618b0d89ec8c9a4128bbd604f33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017743"
 ---
 # <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index(Transact-SQL)
@@ -55,7 +55,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  NULL 값이 포함된 속성은 반환 집합에 포함되지 않습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `sp_help_spatial_geometry_index` 공간 인덱스를 조사할 **SIndx_SpatialTable_geometry_col2** 테이블에 정의 된 **geometry_col** 지정 된 쿼리 예제에 대 한 **@qs**. 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
+ 다음 예제에서는 `sp_help_spatial_geometry_index` 공간 인덱스를 조사할 **SIndx_SpatialTable_geometry_col2** 테이블에 정의 된 **geometry_col** 지정 된 쿼리 예제에 대 한 **@qs** . 이 예에서는 지정된 인덱스의 핵심 속성만 반환합니다.  
   
 ```  
 declare @qs geometry  

@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615251"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797781"
 ---
 # <a name="data-source-wizard-screen-3"></a>데이터 원본 마법사 화면 3
 
 기본 데이터베이스, 드라이버에 사용할 다양한 ANSI 옵션 및 미러 서버의 이름을 지정합니다.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 
 ### <a name="change-the-default-database-to"></a>기본 데이터베이스를 다음으로 변경
 
@@ -72,7 +72,7 @@ ANSI_PADDING이 설정되면 **varchar** 값의 후행 공백과 **varbinary** �
 
 ### <a name="transparent-network-ip-resolution"></a>투명 네트워크 IP 확인.
 
-동작을 변경 **다중 서브넷 장애 조치** 장애 조치 중 더 빠르게 다시 연결할 수 있도록 합니다. 참조 [Transparent Network IP Resolution를 사용 하 여](../../../connect/odbc/using-transparent-network-ip-resolution.md) 자세한 내용은 합니다.
+동작을 변경 **다중 서브넷 장애 조치** 장애 조치 중 더 빠르게 다시 연결할 수 있도록 합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](../../../connect/odbc/using-transparent-network-ip-resolution.md)을 참조하세요.
 
 ### <a name="column-encryption"></a>열 암호화.
 

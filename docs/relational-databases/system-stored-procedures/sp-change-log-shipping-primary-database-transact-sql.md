@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994278"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database(Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>인수  
 `[ @database = ] 'database'` 주 서버에서 데이터베이스의 이름이입니다. *primary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @backup_directory = ] 'backup_directory'` 주 서버의 백업 폴더 경로가입니다. *backup_directory* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_directory = ] 'backup_directory'` 주 서버의 백업 폴더 경로가입니다. *backup_directory* 됩니다 **nvarchar(500)** , 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @backup_share = ] 'backup_share'` 주 서버의 백업 디렉터리에 네트워크 경로가입니다. *backup_share* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_share = ] 'backup_share'` 주 서버의 백업 디렉터리에 네트워크 경로가입니다. *backup_share* 됩니다 **nvarchar(500)** , 기본값은 없고 NULL 일 수 없습니다.  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` 시간 (분) 주 서버의 백업 디렉터리에 로그 백업 파일이 보관의 길이입니다. *backup_retention_period* 됩니다 **int**, 기본값은 없고 NULL 일 수 없습니다.  
   

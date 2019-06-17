@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245437"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
@@ -66,7 +66,7 @@ ms.locfileid: "63245437"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  에 **SQL Server 에이전트 속성-**_server_name_ 대화 상자의 **오류 로그** 에 **일반** 페이지에서 선택 합니다 **실행 추적 메시지 포함** 확인란 합니다.  
+3.  에 **SQL Server 에이전트 속성-** _server_name_ 대화 상자의 **오류 로그** 에 **일반** 페이지에서 선택 합니다 **실행 추적 메시지 포함** 확인란 합니다.  
   
 4.  **확인**을 클릭합니다.  
   

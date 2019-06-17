@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860634"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789646"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860634"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Alwayson_health 세션](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [디버깅용 확장 이벤트](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Always On 가용성 그룹 확장 이벤트 참조](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Alwayson_health 세션  
  Alwayson_health 확장 이벤트 세션은 가용성 그룹을 만들 때 자동으로 만들어지며 가용성 그룹 관련 이벤트의 하위 집합을 캡처합니다. 이 세션은 가용성 그룹 문제를 해결하는 동안 빨리 시작하도록 도와 주는 유용하고 편리한 도구로 미리 구성됩니다. 가용성 그룹 만들기 마법사가 해당 마법사에 구성된 모든 참여 가용성 복제본에 대해 세션을 자동으로 시작합니다.  
   
@@ -91,7 +85,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
 |Column|설명|  
 |------------|-----------------|  
 |속성|availability_replica_state_change|  
-|범주|alwayson|  
+|범주|Always On|  
 |채널|Operational|  
   
 #### <a name="event-fields"></a>이벤트 필드  
@@ -122,7 +116,7 @@ GO
 |Column|설명|  
 |------------|-----------------|  
 |속성|availability_group_lease_expired|  
-|범주|alwayson|  
+|범주|Always On|  
 |채널|Operational|  
   
 #### <a name="event-fields"></a>이벤트 필드  
@@ -150,7 +144,7 @@ GO
 |속성|설명|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|범주|alwayson|  
+|범주|Always On|  
 |채널|Analytic|  
   
 #### <a name="event-fields"></a>이벤트 필드  
@@ -250,7 +244,7 @@ GO
 |Column|설명|  
 |------------|-----------------|  
 |속성|data_movement_suspend_resume|  
-|범주|Alwayson|  
+|범주|Always On|  
 |채널|Operational|  
   
 #### <a name="event-fields"></a>이벤트 필드  
@@ -286,14 +280,14 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- CREATE, ALTER 또는 DROP을 포함한 가용성 그룹 DDL(데이터 정의 언어) 명령문이 실행될 때 발생합니다. 이 이벤트의 주 목적은 가용성 복제본에 대한 사용자 작업이 있는 문제를 나타내거나 운영 작업의 시작점을 나타내는 것입니다. 이 이벤트가 발생한 다음, 수동 장애 조치(failover), 강제 장애 조치(failover), 일시 중단된 데이터 이동 또는 다시 시작된 데이터 이동 등과 같은 런타임 문제가 이어집니다.  
+ CREATE, ALTER 또는 DROP을 포함한 가용성 그룹 DDL(데이터 정의 언어) 문이 실행될 때 발생합니다. 이 이벤트의 주 목적은 가용성 복제본에 대한 사용자 작업이 있는 문제를 나타내거나 운영 작업의 시작점을 나타내는 것입니다. 이 이벤트가 발생한 다음, 수동 장애 조치(failover), 강제 장애 조치(failover), 일시 중단된 데이터 이동 또는 다시 시작된 데이터 이동 등과 같은 런타임 문제가 이어집니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
   
 |Column|설명|  
 |------------|-----------------|  
 |속성|alwayson_ddl_execution|  
-|범주|alwayson|  
+|범주|Always On|  
 |채널|Analytic|  
   
 #### <a name="event-fields"></a>이벤트 필드  
@@ -302,7 +296,7 @@ GO
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
-|ddl_action|alwayson_ddl_action|DDL 작업의 유형을 나타냅니다. 생성, 변경 또는 삭제.|  
+|ddl_action|alwayson_ddl_action|DDL 작업의 유형을 나타냅니다. CREATE, ALTER 또는 DROP.|  
 |ddl_phase|ddl_opcode|DDL 작업의 단계를 나타냅니다. BEGIN, COMMIT 또는 ROLLBACK.|  
 |인수를 제거합니다.|unicode_string|실행된 명령문의 텍스트입니다.|  
   
@@ -326,7 +320,7 @@ GO
 |Column|설명|  
 |------------|-----------------|  
 |속성|availability_replica_manager_state_change|  
-|범주|alwayson|  
+|범주|Always On|  
 |채널|Operational|  
   
 #### <a name="event-fields"></a>이벤트 필드  

@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720050"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469656"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720050"
 레거시 패키지 배포 모델에 대한 자세한 내용은 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
 > [!NOTE]  
->  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 배포 모델을 사용하여 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)]은 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 있는 패키지 배포 모델을 소개했습니다.  
+>  프로젝트 배포 모델은 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]에서 소개했습니다. 이 배포 모델을 사용하여 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 없습니다. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)]는 전체 프로젝트를 배포하지 않고 하나 이상의 패키지를 배포할 수 있는 증분 패키지 배포 기능을 도입했습니다.  
 
 > [!NOTE]
 > 이 문서에서는 SSIS 패키지를 일반적으로 배포하는 방법 및 온-프레미스에서 패키지를 배포하는 방법을 설명합니다. 또한 다음 플랫폼으로 SSIS 패키지를 배포할 수도 있습니다.

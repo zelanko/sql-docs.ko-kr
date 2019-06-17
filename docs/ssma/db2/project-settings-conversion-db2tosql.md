@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273015"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
@@ -260,7 +260,7 @@ SSMA는 DB2 TO_CHAR(date, format) sysdb 데이터베이스의 프로시저를 �
   
 -   선택 하는 경우 **함수를 사용 하 여 TO_CHAR_DATE**, SSMA (날짜, 형식) TO_CHAR TO_CHAR_DATE 함수를 사용 하 여 영어의 변환에 변환 합니다.  
   
--   선택 하는 경우 **를 사용 하 여 TO_CHAR_DATE_LS 함수 (NLS 주의)**, SSMA (날짜, 형식) TO_CHAR TO_CHAR_DATE_LS 함수를 사용 하 여 세션 언어의 변환에 대 한 변환  
+-   선택 하는 경우 **를 사용 하 여 TO_CHAR_DATE_LS 함수 (NLS 주의)** , SSMA (날짜, 형식) TO_CHAR TO_CHAR_DATE_LS 함수를 사용 하 여 세션 언어의 변환에 대 한 변환  
   
 변환 모드를 선택 하는 경우는 **모드** SSMA 상자에 다음 설정이 적용 됩니다.  
   
