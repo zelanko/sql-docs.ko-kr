@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62691666"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의
@@ -37,7 +37,7 @@ ms.locfileid: "62691666"
   
 -   **다음을 사용하여 병합 테이블 아티클 간의 논리적 레코드 관계를 정의하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62691666"
   
     -   이 값이 **1**이면 사전 계산 파티션이 이미 사용되고 있는 것입니다.  
   
-    -   이 값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 을 실행합니다. **@property**에 **use_partition_groups** 값을, **@value**에 **true** 값을 지정합니다.  
+    -   이 값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) 을 실행합니다. **@property** 에 **use_partition_groups** 값을, **@value** 에 **true** 값을 지정합니다.  
   
         > [!NOTE]  
         >  게시에서 사전 계산 파티션을 지원하지 않으면 논리적 레코드를 사용할 수 없습니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md) 항목에서 사전 계산 파티션을 사용하기 위한 요구 사항을 참조하세요.  
@@ -100,13 +100,13 @@ ms.locfileid: "62691666"
   
 2.  논리적 레코드를 구성하는 아티클이 없으면 게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 실행합니다. 논리적 레코드에 대해 다음 충돌 감지 및 해결 옵션 중 하나를 지정합니다.  
   
-    -   논리적 레코드의 관련 행 내에서 발생하는 충돌을 감지하여 해결하려면 **@value** 에 **@logical_record_level_conflict_detection** 및 **@logical_record_level_conflict_resolution**을 참조하세요.  
+    -   논리적 레코드의 관련 행 내에서 발생하는 충돌을 감지하여 해결하려면 **@value** 에 **@logical_record_level_conflict_detection** 및 **@logical_record_level_conflict_resolution** 을 참조하세요.  
   
-    -   표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용 하려면 값을 지정 `false` 에 대 한 **@logical_record_level_conflict_detection** 하 고 **@logical_record_level_conflict_resolution**, 기본값입니다.  
+    -   표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용 하려면 값을 지정 `false` 에 대 한 **@logical_record_level_conflict_detection** 하 고 **@logical_record_level_conflict_resolution** , 기본값입니다.  
   
 3.  논리적 레코드를 구성하는 각 아티클에 대해 2단계를 반복합니다. 논리적 레코드의 각 아티클에 대해 동일한 충돌 감지 및 해결 옵션을 사용해야 합니다. 자세한 내용은 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. **@publication**을 지정하고 **@article**에 관계 구성 아티클 중 하나의 이름을, **@join_articlename**에 두 번째 아티클의 이름을, **@filtername**에 관계의 이름을, **@join_filterclause**에 두 아티클 간 관계를 정의하는 절을, **@join_unique_key**에 조인 형식을, **@filter_type**에 다음 값 중 하나를 지정합니다.  
+4.  게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. **@publication** 을 지정하고 **@article** 에 관계 구성 아티클 중 하나의 이름을, **@join_articlename** 에 두 번째 아티클의 이름을, **@filtername** 에 관계의 이름을, **@join_filterclause** 에 두 아티클 간 관계를 정의하는 절을, **@join_unique_key** 에 조인 형식을, **@filter_type** 에 다음 값 중 하나를 지정합니다.  
   
     -   **2** - 논리적 관계를 정의합니다.  
   
@@ -121,15 +121,15 @@ ms.locfileid: "62691666"
   
 1.  논리적 레코드의 관련 행 내에서 발생하는 충돌을 감지하고 해결하려면 다음을 수행합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property**에 **logical_record_level_conflict_detection** 값을, **@value**에 **true** 값을 지정합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property** 에 **logical_record_level_conflict_detection** 값을, **@value** 에 **true** 값을 지정합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property**에 **logical_record_level_conflict_resolution** 값을, **@value**에 **true** 값을 지정합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property** 에 **logical_record_level_conflict_resolution** 값을, **@value** 에 **true** 값을 지정합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
 2.  표준 행 수준 또는 열 수준의 충돌 감지 및 해결을 사용하려면 다음을 수행합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **logical_record_level_conflict_detection** 에 대 한 **@property** 값 `false` 에 대 한 **@value**합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **logical_record_level_conflict_detection** 에 대 한 **@property** 값 `false` 에 대 한 **@value** 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **logical_record_level_conflict_resolution** 에 대 한 **@property** 값 `false` 에 대 한 **@value**합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 **1** 값을 지정합니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **logical_record_level_conflict_resolution** 에 대 한 **@property** 값 `false` 에 대 한 **@value** 합니다. **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 에 **1** 값을 지정합니다.  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>논리적 레코드 관계를 제거하려면  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62691666"
     > [!NOTE]  
     >  이 쿼리는 [sp_helpmergefilter](/sql/relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql)와 동일한 정보를 반환하지만, 이 시스템 저장 프로시저는 조인 필터이기도 한 논리적 레코드 관계에 대한 정보만 반환합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)를 실행합니다. **@publication**을 지정하고 **@article**에 관계 구성 아티클 중 하나의 이름을, **@filtername**에 1단계의 관계 이름을 지정합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)를 실행합니다. **@publication** 을 지정하고 **@article** 에 관계 구성 아티클 중 하나의 이름을, **@filtername** 에 1단계의 관계 이름을 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 기존 게시에 사전 계산 파티션을 사용하고 `SalesOrderHeader` 및 `SalesOrderDetail` 테이블에 대한 두 개의 새 아티클을 구성하는 논리적 레코드를 만듭니다.  

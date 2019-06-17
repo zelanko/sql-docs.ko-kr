@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605393"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775465"
 ---
 # <a name="soft-numa-sql-server"></a>soft-NUMA(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51605393"
 > Hot Add 프로세서는 soft-NUMA에서 지원되지 않습니다.  
   
 ## <a name="automatic-soft-numa"></a>자동 soft-NUMA  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 시작 시 NUMA 노드 또는 소켓당 8개 초과의 실제 코어를 감지할 때마다 soft-NUMA 노드가 기본적으로 자동 생성됩니다. 하이퍼 스레드 프로세서 코어는 노드에서 실제 코어 수를 계산할 때 구별되지 않습니다.  실제 코어 수가 소켓당 8개를 초과하여 감지된 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 코어 8개를 포함하는 이상적인 soft-NUMA 노드를 만들지만 노드당 논리 코어가 5개 또는 최대 9개까지 감소하거나 증가할 수 있습니다. 하드웨어 노드의 크기는 CPU 선호도 마스크에 의해 제한될 수 있습니다. NUMA 노드 수는 지원되는 최대 NUMA 노드 수를 초과할 수 없습니다.  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 시작 시 NUMA 노드 또는 소켓당 8개 초과의 실제 코어를 감지할 때마다 soft-NUMA 노드가 기본적으로 자동 생성됩니다. 하이퍼 스레드 프로세서 코어는 노드에서 실제 코어 수를 계산할 때 구별되지 않습니다.  실제 코어 수가 소켓당 8개를 초과하여 감지된 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 코어 8개를 포함하는 이상적인 soft-NUMA 노드를 만들지만 노드당 논리 코어가 5개 또는 최대 9개까지 감소하거나 증가할 수 있습니다. 하드웨어 노드의 크기는 CPU 선호도 마스크에 의해 제한될 수 있습니다. NUMA 노드 수는 지원되는 최대 NUMA 노드 수를 초과할 수 없습니다.  
   
- `SET SOFTNUMA` 인수가 포함된 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 문을 사용하여 soft-NUMA를 비활성화하거나 다시 활성화할 수 있습니다. 이 설정의 값을 변경하려면 데이터베이스 엔진의 다시 시작을 적용해야 합니다.  
+`SET SOFTNUMA` 인수가 포함된 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 문을 사용하여 soft-NUMA를 비활성화하거나 다시 활성화할 수 있습니다. 이 설정의 값을 변경하려면 데이터베이스 엔진의 다시 시작을 적용해야 합니다.  
   
- 아래 그림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 노드 또는 소켓당 8개를 초과하는 실제 코어를 가진 하드웨어 NUMA 노드를 검색할 때 SQL Server 오류 로그에서 볼 수 있는 soft-NUMA에 관한 정보를 보여줍니다.  
+아래 그림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 노드 또는 소켓당 8개를 초과하는 실제 코어를 가진 하드웨어 NUMA 노드를 검색할 때 SQL Server 오류 로그에서 볼 수 있는 soft-NUMA에 관한 정보를 보여줍니다.  
 
 
 ```
@@ -49,6 +49,9 @@ ms.locfileid: "51605393"
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2부터 추적 플래그 8079를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 자동 소프트 NUMA를 사용하도록 허용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 이 동작은 엔진에서 제어되며, 8079 추적 플래그는 아무 효과가 없습니다. 자세한 내용은 [DBCC TRACEON - 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
 ## <a name="manual-soft-numa"></a>수동 Soft-NUMA  
 soft-NUMA를 사용하도록 수동으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 구성하려면 자동 soft_NUMA를 비활성화하고 레지스트리를 편집하여 노드 구성 선호도 마스크를 추가합니다. 이 방법을 사용할 때 soft-NUMA 마스크는 이진, DWORD(16진수 또는 십진수) 또는 QWORD(16진수 또는 십진수) 레지스트리 항목으로 정의할 수 있습니다. 첫 번째 32개를 초과하는 CPU를 구성하려면 QWORD 또는 BINARY 레지스트리 값을 사용합니다(QWORD 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전에 사용할 수 없음). 레지스트리를 수정한 후 soft-NUMA 구성이 적용되려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 다시 시작해야 합니다.  
@@ -70,7 +73,7 @@ soft-NUMA를 사용하도록 수동으로 [!INCLUDE[ssNoVersion](../../includes/
   
  이제 I/O가 많은 인스턴스 A에는 I/O 스레드 두 개와 지연 기록기 스레드 하나가 있습니다. 프로세서를 많이 사용하는 작업을 수행하는 인스턴스 B에는 I/O 스레드와 지연 기록기 스레드가 각각 하나뿐입니다. 두 인스턴스에 서로 다른 양의 메모리를 할당할 수 있지만 하드웨어 NUMA와 달리 두 인스턴스는 모두 동일한 운영 체제 메모리 블록에서 메모리를 받으며 메모리에서 프로세서로의 선호도가 없습니다.  
   
- 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQLOS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드 수로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방식: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 작업자 및 메모리 노드](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)를 참조하세요.  
+ 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQLOS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드 수로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방법: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 노동자와 메모리 노드](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)를 참조하세요.  
   
 > [!NOTE]
 > **Soft-NUMA** 레지스트리 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드할 때 복사되지 않습니다.  
@@ -128,9 +131,9 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## <a name="metadata"></a>메타데이터  
  다음 DMV를 사용하여 soft-NUMA의 현재 상태 및 구성을 볼 수 있습니다.  
   
--   [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): SOFTNUMA에 대한 현재 값(0 또는 1)을 표시합니다.  
+-   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): SOFTNUMA에 대한 현재 값(0 또는 1)을 표시합니다.  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): *softnuma* 및 *softnuma_desc* 열은 현재 구성 값을 표시합니다.  
+-   [sys.dm_os_sys_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): *softnuma* 및 *softnuma_desc* 열은 현재 구성 값을 표시합니다.  
   
 > [!NOTE]
 > [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 자동 soft-NUMA에 대한 실행 값을 볼 수 있지만 **sp_configure**를 사용하여 해당 값을 변경할 수는 없습니다. `SET SOFTNUMA` 인수가 포함된 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 문을 사용해야 합니다.  

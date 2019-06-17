@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202132"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796641"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202132"
   
  새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션](https://msdn.microsoft.com/library/jj873730.aspx)을 참조하세요.  
   
--   **시작하기 전 주의 사항:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [권장 사항](#Recommendations)  
-  
-     [보안](#Security)  
-  
--   **가용성 복제본의 클러스터 컨텍스트를 전환하려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
-  
--   **후속 작업:**  [가용성 복제본의 클러스터 컨텍스트를 전환한 후](#FollowUp)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
 > [!CAUTION]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 배포의 클러스터 간 마이그레이션 중에만 HADR 클러스터 컨텍스트를 전환합니다.  
   
-###  <a name="Restrictions"></a> 제한 사항  
+##  <a name="Restrictions"></a> 제한 사항  
   
 -   HADR 클러스터 컨텍스트는 로컬 WSFC 클러스터에서 원격 클러스터로 전환한 다음 다시 원격 클러스터에서 로컬 클러스터로만 전환할 수 있습니다. HADR 클러스터 컨텍스트를 원격 클러스터 간에 전환할 수는 없습니다.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202132"
   
 -   원격 HADR 클러스터 컨텍스트는 언제든지 로컬 클러스터로 다시 전환할 수 있습니다. 그러나 서버 인스턴스에서 가용성 복제본을 호스팅하는 동안에는 컨텍스트를 다시 전환할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   HADR 클러스터 컨텍스트를 변경하는 서버 인스턴스에서는 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202132"
   
 -   원격 클러스터에서 로컬 클러스터로 전환하려면 먼저 모든 동기 커밋 복제본을 동기화해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+##  <a name="Recommendations"></a> 권장 사항  
   
 -   전체 도메인 이름을 지정하는 것이 좋습니다. 이는 짧은 이름의 대상 IP 주소를 찾기 위해 ALTER SERVER CONFIGURATION에서 DNS 확인을 사용하기 때문입니다. 경우에 따라 짧은 이름을 사용하면 DNS 검색 순서로 인해 혼동이 생길 수도 있습니다. 예를 들어 `abc` 도메인의 노드(`node1.abc.com`)에서 다음 명령을 실행한다고 가정합니다. 의도한 대상 클러스터는 `CLUS01` 도메인의 `xyz` 클러스터(`clus01.xyz.com`)입니다. 그러나 로컬 도메인 호스트는 이름이 `CLUS01` 인 클러스터(`clus01.abc.com`)도 호스팅합니다.  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202132"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
   
 -   **SQL Server 로그인(SQL Server login)**  
   

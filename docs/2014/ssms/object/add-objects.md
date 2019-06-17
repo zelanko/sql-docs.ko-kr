@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276957"
 ---
 # <a name="add-objects"></a>개체 추가
@@ -29,7 +29,7 @@ ms.locfileid: "63276957"
  **선택한 유형의 모든 개체**  
  기본 목록에 포함할 개체 유형을 지정할 수 있는 **개체 유형 선택** 대화 상자를 엽니다.  
   
- **서버**_\<서버 이름 >_  
+ **서버** _\<서버 이름 >_  
  지정한 서버의 해당 개체를 모두 추가합니다. **로그인 - 신규** 대화 상자와 같은 서버 범위 대화 상자에서 여는 경우에만 나타납니다.  
   
  **스키마에 속하는 모든 개체**  

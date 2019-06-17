@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772233"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -59,25 +59,25 @@ RECONFIGURE
   
 -   옵션 0: Hadoop 연결 사용 안 함  
   
--   옵션 1: Windows Server에서 Hortonworks HDP 1.3  
+-   옵션 1: Windows Server의 Hortonworks HDP 1.3  
   
 -   옵션 1: Azure Blob 스토리지(WASB[S])  
   
--   옵션 2: Linux에서 Hortonworks HDP 1.3  
+-   옵션 2: Linux의 Hortonworks HDP 1.3  
   
 -   옵션 3: Linux에서 Cloudera CDH 4.3  
   
--   옵션 4: Windows Server에서 Hortonworks HDP 2.0  
+-   옵션 4: Windows Server의 Hortonworks HDP 2.0  
   
 -   옵션 4: Azure Blob 스토리지(WASB[S])  
   
--   옵션 5: Linux에서 Hortonworks HDP 2.0  
+-   옵션 5: Linux의 Hortonworks HDP 2.0  
   
--   옵션 6: Linux에서 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
+-   옵션 6: Linux의 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 및 5.13  
   
--   옵션 7: Linux에서 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
+-   옵션 7: Linux의 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0  
   
--   옵션 7: Windows Server에서 Hortonworks 2.1, 2.2 및 2.3  
+-   옵션 7: Windows Server의 Hortonworks 2.1, 2.2 및 2.3  
   
 -   옵션 7: Azure Blob 스토리지(WASB[S])  
   
@@ -95,10 +95,10 @@ RECONFIGURE
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
-|**minimum**|**int**|구성 옵션의 최소값입니다.|  
-|**maximum**|**int**|구성 옵션의 최대값입니다.|  
-|**config_value**|**int**|**sp_configure**를 사용하여 설정된 값입니다.|  
-|**run_value**|**int**|PolyBase에서 사용 중인 현재 값입니다. 이 값은 RECONFIGURE를 실행하여 설정합니다.<br /><br /> **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.<br /><br /> 재구성이 진행 중인 경우 이 실행 값이 정확하기 위해서는 다시 시작해야 할 수 있습니다.|  
+|**minimum**|**ssNoversion**|구성 옵션의 최소값입니다.|  
+|**maximum**|**ssNoversion**|구성 옵션의 최대값입니다.|  
+|**config_value**|**ssNoversion**|**sp_configure**를 사용하여 설정된 값입니다.|  
+|**run_value**|**ssNoversion**|PolyBase에서 사용 중인 현재 값입니다. 이 값은 RECONFIGURE를 실행하여 설정합니다.<br /><br /> **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.<br /><br /> 재구성이 진행 중인 경우 이 실행 값이 정확하기 위해서는 다시 시작해야 할 수 있습니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 RECONFIGURE를 실행한 후 'hadoop connectivity'의 실행 값을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 다시 시작해야 합니다.  
@@ -107,7 +107,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  명시적 또는 암시적 트랜잭션에서는 RECONFIGURE가 허용되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  모든 사용자는 매개 변수 없이 또는 **매개 변수와 함께** sp_configure @configname 를 실행할 수 있습니다.  
   
  구성 값을 변경하거나 RECONFIGURE를 실행하려면 **sysadmin** 고정 서버 역할에 멤버 자격이나 **ALTER SETTINGS** 서버 수준 권한이 필요합니다.  
@@ -129,7 +129,7 @@ EXEC sp_configure;
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   
-### <a name="c-set-hadoop-connectivity"></a>3. Hadoop 연결 설정  
+### <a name="c-set-hadoop-connectivity"></a>C. Hadoop 연결 설정  
  이 예에서는 PolyBase를 옵션 7로 설정합니다. 이 옵션을 사용하면 PolyBase가 Linux 및 Windows Server의 Hortonworks 2.1, 2.2, 2.3과 Azure Blob 스토리지에 외부 테이블을 만들고 사용할 수 있습니다. 예를 들어 SQL에서는 30개의 외부 테이블을 포함할 수 있습니다. 이 중 7개는 Linux의 Hortonworks 2.1에 있는 데이터를 참조하고 4개는 Linux의 Hortonworks 2.2를 참조하며 7개는 Linux의 Hortonworks 2.3을 참조하고 나머지 12개는 Azure Blob 스토리지를 참조합니다.  
   
 ```  

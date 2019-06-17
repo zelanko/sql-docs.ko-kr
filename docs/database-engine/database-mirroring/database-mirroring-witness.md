@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11c66e1ec21787fa263a999e9beaaf0e22646b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 996def514bc87bde79f85bffbb04056bf487764f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646741"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795462"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47646741"
   
 -   미러 서버와 미러링 모니터 서버 및 주 서버와의 연결이 끊어진 경우에는 주 서버의 상태에 관계없이 자동 장애 조치를 수행할 수 없습니다.  
   
- 둘 이상의 서버 인스턴스가 연결되어 있어야 하는 요구 사항을 *쿼럼*이라고 합니다. 쿼럼을 사용하면 한 번에 하나의 파트너만 데이터베이스를 제공할 수 있습니다. 쿼럼 작동 방식과 쿼럼이 세션에 미치는 영향에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)라는 세 번째 서버 인스턴스가 있어야 합니다.  
+ 둘 이상의 서버 인스턴스가 연결되어 있어야 하는 요구 사항을 *쿼럼*이라고 합니다. 쿼럼을 사용하면 한 번에 하나의 파트너만 데이터베이스를 제공할 수 있습니다. 쿼럼 작동 방법과 쿼럼이 세션에 미치는 영향에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 ##  <a name="AddRemoveWitness"></a> 미러링 모니터 서버를 추가하거나 제거하려면  
  **미러링 모니터 서버를 추가하려면**  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013942"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66013942"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>1. 컨테이너 요소를 추가하는 sql:is-constant 지정  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>1\. 컨테이너 요소를 추가하는 sql:is-constant 지정  
  이 주석이 추가 된 XSD 스키마  **\<CustomerOrders >** 지정 하 여 상수 요소로 정의 되는 `sql:is-constant` 특성 값이 1 인. 따라서  **\<CustomerOrders >** 데이터베이스 테이블 또는 열에 매핑되어 있지 않습니다. 이 상수 요소 구성 합니다  **\<순서 >** 자식 요소입니다.  
   
  하지만  **\<CustomerOrders >** 에 매핑되지 않는 경우 데이터베이스 테이블 또는 열을 포함 하는 컨테이너 요소를 결과 XML에 계속 표시 되는  **\<순서 >** 자식 요소입니다.  

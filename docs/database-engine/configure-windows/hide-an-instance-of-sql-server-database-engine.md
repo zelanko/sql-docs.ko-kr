@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d6d01272a88f4a529e55959e12d87dd33c01cd5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 5401e5b731f09de89dedeef8308b7118299fbc9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406190"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785270"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진의 인스턴스 숨기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52406190"
  자세한 내용은 [클라이언트에서 사용할 서버 별칭 만들기 또는 삭제&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)를 참조하세요.  
   
  클러스터된 명명된 인스턴스를 숨기면 **LastConnect** 레지스트리 키(**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트가 아닌 다른 포트가 있는 경우 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하지 못할 수도 있습니다. 클러스터 서비스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없는 경우 다음과 유사한 오류가 표시될 수 있습니다.  
-**Event ID: 1001: Event Name: Failover clustering resource deadlock.**  
+**이벤트 ID: 1001: 이벤트 이름: 장애 조치(failover) 클러스터링 리소스 교착상태.**  
   
 ## <a name="see-also"></a>참고 항목  
  [서버 네트워크 구성](../../database-engine/configure-windows/server-network-configuration.md)   

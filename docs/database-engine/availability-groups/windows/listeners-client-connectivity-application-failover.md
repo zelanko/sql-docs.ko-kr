@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214704"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799303"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 가용성 그룹 수신기에 연결 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
+  이 문서에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
   
 > [!NOTE]  
 >  대부분의 일반 수신기 구성에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 또는 PowerShell cmdlet을 사용하여 첫 번째 가용성 그룹 수신기를 간단히 만들 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [관련 태스크](#RelatedTasks)를 참조하세요.  
   
- **항목 내용:**  
-  
--   [가용성 그룹 수신기](#AGlisteners)  
-  
--   [수신기를 사용하여 주 복제본에 연결](#ConnectToPrimary)  
-  
--   [수신기를 사용하여 읽기 전용 보조 복제본에 연결(읽기 전용 라우팅)](#ConnectToSecondary)  
-  
-    -   [읽기 전용 라우팅에 대한 가용성 복제본을 구성하려면](#ConfigureARsForROR)  
-  
-    -   [읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅](#ReadOnlyAppIntent)  
-  
--   [가용성 그룹 수신기 무시](#BypassAGl)  
-  
--   [장애 조치(Failover) 시 클라이언트 연결 동작](#CCBehaviorOnFailover)  
-  
--   [가용성 그룹 다중 서브넷 장애 조치(Failover) 지원](#SupportAgMultiSubnetFailover)  
-  
--   [가용성 그룹 수신기 및 SSL 인증서](#SSLcertificates)  
-  
--   [가용성 그룹 수신기 및 SPN(서버 보안 주체 이름)](#SPNs)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> 가용성 그룹 수신기  
  가용성 그룹 수신기를 만들어 지정된 가용성 그룹의 데이터베이스에 대한 클라이언트 연결을 제공할 수 있습니다. 가용성 그룹 수신기는 Always On 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 VNN(가상 네트워크 이름)입니다. 클라이언트를 연결할 SQL Server의 실제 인스턴스 이름을 모르더라도 가용성 그룹 수신기를 사용하면 클라이언트를 가용성 복제본에 연결할 수 있습니다.  현재 주 복제본의 현재 위치에 연결하기 위해 클라이언트 연결 문자열을 수정할 필요가 없습니다.  
@@ -67,13 +42,8 @@ ms.locfileid: "53214704"
   
  가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 참조하세요.  
   
- **섹션 내용**  
   
--   [가용성 그룹 수신기 구성](#AGlConfig)  
-  
--   [가용성 그룹 수신기 포트 선택](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> 가용성 그룹 수신기 구성  
+##  <a name="AGlConfig"></a> 가용성 그룹 수신기 구성  
  가용성 그룹 수신기는 다음에 의해 정의됩니다.  
   
  고유 DNS 이름  
@@ -95,7 +65,7 @@ ms.locfileid: "53214704"
   
  혼합 네트워크 구성과 여러 서브넷의 DHCP는 가용성 그룹 수신기에 대해 지원되지 않습니다. 이는 장애 조치(failover)가 발생할 때 동적 IP가 만료되거나 해제되어 전체 고가용성이 위험해질 수 있기 때문입니다.  
   
-###  <a name="SelectListenerPort"></a> 가용성 그룹 수신기 포트 선택  
+##  <a name="SelectListenerPort"></a> 가용성 그룹 수신기 포트 선택  
  가용성 그룹 수신기를 구성할 때 포트를 지정해야 합니다.  클라이언트 연결 문자열을 간소화하기 위해 기본 포트를 1433으로 구성할 수 있습니다. 1433을 사용하는 경우에는 연결 문자열에서 포트 번호를 지정할 필요가 없습니다.   또한 가용성 그룹 수신기마다 별도의 가상 네트워크 이름이 있으므로 단일 WSFC에 구성된 각 가용성 그룹 수신기가 동일한 기본 포트 1433을 참조하도록 구성할 수 있습니다.  
   
  비표준 수신기 포트를 지정할 수도 있지만, 이렇게 할 경우 가용성 그룹 수신기에 연결할 때마다 연결 문자열에서 대상 포트를 명시적으로 지정해야 합니다.  또한 비표준 포트의 경우 방화벽에 대한 열기 권한이 있어야 합니다.  
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   연결 문자열은 가용성 그룹 수신기를 참조하며 들어오는 연결의 애플리케이션 의도는 ODBC 또는 OLEDB 연결 문자열이나 연결 특성 또는 속성에서 **Application Intent=ReadOnly** 키워드를 사용하는 등과 같은 방법으로 읽기 전용으로 설정됩니다. 자세한 내용은 이 섹션 뒷부분에 있는 [읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅](#ReadOnlyAppIntent)을 참조하세요.  
   
-###  <a name="ConfigureARsForROR"></a> 읽기 전용 라우팅에 대한 가용성 복제본을 구성하려면  
+##  <a name="ConfigureARsForROR"></a> 읽기 전용 라우팅에 대한 가용성 복제본을 구성하려면  
  데이터베이스 관리자는 다음과 같이 가용성 복제본을 구성해야 합니다.  
   
 1.  읽기 가능한 보조 복제본으로 구성하려는 각 가용성 복제본에 대해 데이터베이스 관리자는 보조 역할에서만 효과가 있는 다음과 같은 설정을 구성해야 합니다.  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> 읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅  
+##  <a name="ReadOnlyAppIntent"></a> 읽기 전용 애플리케이션 의도 및 읽기 전용 라우팅  
  애플리케이션 의도 연결 문자열 속성은 가용성 그룹 데이터베이스의 읽기/쓰기 또는 읽기 전용 버전에 전달할 클라이언트 애플리케이션의 요청을 나타냅니다. 읽기 전용 라우팅을 사용하려면 가용성 그룹 수신기에 연결할 때 클라이언트가 연결 문자열에 애플리케이션의 읽기 전용 의도를 사용해야 합니다. 읽기 전용 애플리케이션 의도가 없으면 가용성 그룹 수신기에 대한 연결이 주 복제본의 데이터베이스에 전송됩니다.  
   
  애플리케이션 의도 특성은 로그인 중에 클라이언트의 세션에 저장됩니다. 그러면 SQL Server의 인스턴스에서 이 의도를 처리하고 보조 복제본에 있는 대상 데이터베이스의 현재 읽기/쓰기 상태와 가용성 그룹의 구성에 따라 수행할 작업을 결정합니다.  
@@ -171,7 +141,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  보조 복제본이 하나만 있고 사용자 연결을 허용하는 않는 경우 데이터베이스 미러링을 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]로 마이그레이션하는 동안 애플리케이션에서 데이터베이스 미러링 연결 문자열을 지정할 수 있습니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 [가용성 그룹에 데이터베이스 미러링 연결 문자열 사용](#DbmConnectionString)을 참조하세요.  
   
-###  <a name="DbmConnectionString"></a> 가용성 그룹에 데이터베이스 미러링 연결 문자열 사용  
+##  <a name="DbmConnectionString"></a> 가용성 그룹에 데이터베이스 미러링 연결 문자열 사용  
  가용성 그룹에 보조 복제본이 하나만 있고 보조 복제본에 대해 ALLOW_CONNECTIONS = READ_ONLY 또는 ALLOW_CONNECTIONS = NONE으로 구성되어 있으면, 클라이언트에서 데이터베이스 미러링 연결 문자열을 사용하여 주 복제본에 연결할 수 있습니다. 가용성 그룹에 두 개의 가용성 복제본(주 복제본과 보조 복제본)만 포함되도록 제한한 경우 이 방법은 데이터베이스 미러링의 기존 애플리케이션을 가용성 그룹으로 마이그레이션하는 데 유용합니다. 보조 복제본을 더 추가하려면 가용성 그룹의 가용성 그룹 수신기를 만들고 가용성 그룹 수신기 DNS 이름을 사용하도록 애플리케이션을 업데이트해야 합니다.  
   
  데이터베이스 미러링 연결 문자열을 사용할 경우 클라이언트에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client나 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 수 있습니다. 연결하려는 가용성 복제본을 처음에 호스팅할 서버 인스턴스를 식별하려면 클라이언트가 제공하는 연결 문자열에 최소한 하나의 서버 인스턴스 이름, 즉 *초기 파트너 이름*이 있어야 합니다. 필요한 경우 연결 문자열에 다른 서버 인스턴스의 이름, 즉 *장애 조치(failover) 파트너 이름*을 제공하여 초기에 보조 복제본을 호스팅할 서버 인스턴스를 장애 조치(failover) 파트너 이름으로 식별할 수도 있습니다.  

@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822359"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
@@ -129,7 +129,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>1. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
+### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>1\. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기를 사용하여 출력을 반환합니다. 여기서 중지 목록은 사용되지 않습니다.  
   
  `The Microsoft business analysis`  
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>2. 중지 목록 필터링 컨텍스트에서 지정된 단어 분리기의 출력 표시  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>2\. 중지 목록 필터링 컨텍스트에서 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기와 ID가 77인 영어 중지 목록을 사용하여 출력을 반환합니다.  
   
  `"The Microsoft business analysis" OR "MS revenue"`  
@@ -151,7 +151,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
-### <a name="c-displaying-the-output-of-a-string-that-contains-special-characters"></a>3. 특수 문자가 포함된 문자열의 출력 표시  
+### <a name="c-displaying-the-output-of-a-string-that-contains-special-characters"></a>3\. 특수 문자가 포함된 문자열의 출력 표시  
  다음 예에서는 유니코드를 사용하여 아래의 프랑스어 문자열을 구문 분석합니다.  
   
  `français`  

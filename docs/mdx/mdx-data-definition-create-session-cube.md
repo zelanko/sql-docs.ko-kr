@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248191"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 데이터 정의 - CREATE SESSION CUBE
 
 
-  기존 서버 큐브에서 세션 큐브를 만들고 채웁니다. 세션 큐브는 현재 세션 내에서만 볼 수 있고 다른 세션에서 찾아보거나 쿼리할 수 없습니다.  세션 큐브는 세션을 닫을 때 암시적으로 삭제됩니다.  
+  기존 서버 큐브에서 세션 큐브를 만들고 채웁니다. 세션 큐브는 현재 세션 내에서만 볼 수 있고 다른 세션에서 찾아보거나 쿼리할 수 없습니다. 세션 큐브는 세션을 닫을 때 암시적으로 삭제됩니다.  
   
 ## <a name="syntax"></a>구문  
   

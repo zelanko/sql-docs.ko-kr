@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017822"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
@@ -41,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server_name'` 정보를 반환 하는 서버의 이름입니다. *server_name* 은 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server_name = ] 'server_name'` 정보를 반환 하는 서버의 이름입니다. *server_name* 은 **nvarchar(30)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +68,7 @@ sp_help_targetserver
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-all-registered-target-servers"></a>1. 등록된 모든 대상 서버에 대한 정보 나열  
+### <a name="a-listing-information-for-all-registered-target-servers"></a>1\. 등록된 모든 대상 서버에 대한 정보 나열  
  다음 예에서는 등록된 모든 대상 서버에 대한 정보를 나열합니다.  
   
 ```  
@@ -79,7 +79,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>2. 특정 대상 서버에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-target-server"></a>2\. 특정 대상 서버에 대한 정보 나열  
  다음 예에서는 대상 서버 `SEATTLE2`에 대한 정보를 나열합니다.  
   
 ```  

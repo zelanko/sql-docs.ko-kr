@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062517"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
@@ -39,7 +39,7 @@ ms.locfileid: "66062517"
 
 구문 및 예제에 대 한 자세한 내용은 참조 하세요. [Analysis Services PowerShell Reference](/sql/analysis-services/powershell/analysis-services-powershell-reference)합니다.
 
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
  Windows PowerShell 2.0이 설치되어 있어야 합니다. 새 Windows 운영 체제 버전에서는 Windows PowerShell 2.0이 기본적으로 설치됩니다. 자세한 내용은 참조 하세요. [Windows PowerShell 2.0 설치](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -146,7 +146,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> 원격 관리를 사용 하도록 설정  
- 원격 Analysis Services 인스턴스에서 Analysis Services PowerShell을 사용하려면 먼저 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 다음 오류 방화벽 구성 문제를 나타냅니다. "RPC 서버를 사용할 수 없습니다. (HRESULT의 예외: 0x800706BA)".  
+ 원격 Analysis Services 인스턴스에서 Analysis Services PowerShell을 사용하려면 먼저 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 다음 오류 방화벽 구성 문제를 나타냅니다. "RPC 서버를 사용할 수 없습니다. (예외가 발생한 HRESULT: 0x800706BA)".  
   
 1.  로컬 및 원격 컴퓨터 모두에 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 버전의 클라이언트 및 서버 도구가 있는지 확인하십시오.  
   

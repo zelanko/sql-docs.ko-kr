@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638647"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798658"
 ---
 # <a name="using-database-mirroring-jdbc"></a>데이터베이스 미러링(JDBC) 사용
 

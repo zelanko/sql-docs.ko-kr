@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830862"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774724"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>데이터베이스 미러링 및 SQL Server 장애 조치(Failover) 클러스터 인스턴스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830862"
   
  ![클러스터에서의 장애 조치](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "클러스터에서의 장애 조치")  
   
- 미러링 세션에서 3개의 서버 인스턴스는 3개의 고유 클러스터인 **Cluster_A**, **Cluster_B**및 **Cluster_C**에 상주합니다. 각 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스로 실행됩니다. 미러링 세션이 시작되면 미러링 세션에서 **Cluster_A** 의 장애 조치(failover) 클러스터된 인스턴스가 주 서버로, **Cluster_B** 의 장애 조치(failover) 클러스터된 인스턴스는 미러 서버로, **Cluster_C** 의 장애 조치(failover) 클러스터된 인스턴스는 미러링 모니터 서버가 됩니다. 결국 **Cluster_A** 에 활성화되어 있는 노드에 장애가 발생하면 주 서버를 이용할 수 없게 됩니다.  
+ 미러링 세션에서 3개의 서버 인스턴스는 3개의 고유 클러스터인 **Cluster_A**, **Cluster_B** 및 **Cluster_C**에 상주합니다. 각 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터형 인스턴스로 실행됩니다. 미러링 세션이 시작되면 미러링 세션에서 **Cluster_A** 의 장애 조치(failover) 클러스터된 인스턴스가 주 서버로, **Cluster_B** 의 장애 조치(failover) 클러스터된 인스턴스는 미러 서버로, **Cluster_C** 의 장애 조치(failover) 클러스터된 인스턴스는 미러링 모니터 서버가 됩니다. 결국 **Cluster_A** 에 활성화되어 있는 노드에 장애가 발생하면 주 서버를 이용할 수 없게 됩니다.  
   
  클러스터가 장애 조치할 시간을 갖기 전에 미러 서버가 미러링 모니터 서버의 도움을 받아 주 서버의 손실을 감지합니다. 미러 서버는 가능한 한 빨리 해당 데이터베이스를 롤포워드하여 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. **Cluster_A** 가 장애 조치(failover)를 마치면 이전의 주 서버는 이제 미러 서버가 되고 해당 데이터베이스를 **Cluster_B**에 있는 현재의 주 데이터베이스와 동기화합니다.  
   

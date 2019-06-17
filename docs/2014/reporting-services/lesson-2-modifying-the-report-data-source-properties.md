@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108479"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>2단원: 보고서 데이터 원본 속성 수정
@@ -87,11 +87,11 @@ ms.locfileid: "66108479"
     HAVING (ppc.Name = 'Clothing')  
     ```  
   
-4.   **확인**을 클릭합니다.  
+4.  **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_add_reportparameter"></a> 보고서 매개 변수를 추가 하 고 보고서를 다시 게시 하려면  
   
-1.   **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
+1.  **보고서 데이터** 창에서 **새로 만들기** 를 클릭한 후 **매개 변수...** 를 클릭합니다.  
   
 2.  **이름**에서 `OrderNumber`을 입력합니다.  
   

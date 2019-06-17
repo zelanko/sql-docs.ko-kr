@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663914"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 이벤트 클래스
@@ -37,7 +37,7 @@ ms.locfileid: "62663914"
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
 |**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **승인 포함 메시지 전송**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 보냈습니다.<br /><br /> **승인 전송**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 외부로 승인을 보냈습니다.<br /><br /> **승인 포함 메시지 수신**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 받았습니다.<br /><br /> **승인 수신**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 시퀀스 메시지의 외부로 승인을 받았습니다.|21|사용자 계정 컨트롤|  
 |**GUID**|**uniqueidentifier**|대화 상자의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|아니요|  
-|**HonorBrokerPriority**|**정수**|데이터베이스 HONOR_BROKER_PRIORITY 옵션의 현재 값: 0 = 꺼짐, 1 = ON입니다.|32|사용자 계정 컨트롤|  
+|**HonorBrokerPriority**|**정수**|현재 데이터베이스 HONOR_BROKER_PRIORITY 옵션의 값: 0 = OFF, 1 = ON|32|사용자 계정 컨트롤|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |**IntegerData**|**int**|승인이 포함된 메시지의 조각 번호입니다.|25|아니요|  
 |**IntegerData2**|**int**|승인되는 메시지의 조각 번호입니다.|55|아니요|  
@@ -50,7 +50,7 @@ ms.locfileid: "62663914"
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
-|**StarvationElevation**|**int**|대화에 대해 구성 된 우선 순위 보다 우선 순위가 높은 메시지를 보냈습니다. 0 = false, 1 = true입니다.|33|사용자 계정 컨트롤|  
+|**StarvationElevation**|**int**|대화에 대해 구성된 우선 순위보다 우선 순위가 높은 메시지가 전송되었습니다. 0 = false, 1 = true|33|사용자 계정 컨트롤|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니요|  
   
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104186"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
@@ -166,7 +166,7 @@ ms.locfileid: "66104186"
   
  **SSDT를 열 때마다 승격된 권한으로 실행하려면**  
   
-1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 **Visual Studio 용 SQL Server Data Tools**합니다.  **관리자 권한으로 실행**을 클릭합니다.  
+1.  시작 화면에서 입력 `sql server` 마우스 오른쪽 단추로 클릭 **Visual Studio 용 SQL Server Data Tools**합니다. **관리자 권한으로 실행**을 클릭합니다.  
   
      **또는**이전 운영 체제에서 다음을 수행합니다.  
   

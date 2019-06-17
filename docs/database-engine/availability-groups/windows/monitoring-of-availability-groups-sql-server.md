@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cf0478f63ab98bda9bf13a7cc5bad0f98bd1795
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 3a8e5fb1a67059cc92d608e5478be13f610af532
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973122"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782495"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Always On 가용성 그룹을 모니터링하는 도구"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 85dc2bd0bb86362e71aa99ee277f2edaafbb53fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 574045de5626d3f573988b96dd3c40b3d08df03b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534095"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795470"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52534095"
  장애 조치 시간은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다. 미러 서버에서 로그 레코드를 처리하는 방법은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요. 장애 조치 시간을 계산하는 방법은 이 항목의 뒷부분에서 장애 조치 다시 실행 속도 계산을 참조하십시오.  
   
 > [!IMPORTANT]  
->  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어 테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
+>  인덱스 또는 테이블을 만든 후 변경하는 트랜잭션 중에 장애 조치를 수행하면 평소보다 시간이 오래 걸릴 수 있습니다.  예를 들어  테이블에 대한 BEGIN TRANSACTION, CREATE INDEX 및 SELECT INTO 작업 중에 장애 조치를 수행하면 장애 조치 시간이 늘어날 수 있습니다. 이러한 트랜잭션 중에 증가한 장애 조치 시간은 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문으로 트랜잭션이 완료될 때까지 유지됩니다.  
   
 ### <a name="the-redo-queue"></a>Redo Queue  
  데이터베이스를 롤포워드하는 것은 현재 미러 서버에 있는 Redo Queue의 모든 로그 레코드를 적용하는 것입니다. *Redo Queue* 는 미러 서버의 디스크에 기록되었지만 미러 데이터베이스에서 롤포워드되지 않은 로그 레코드로 구성됩니다.  

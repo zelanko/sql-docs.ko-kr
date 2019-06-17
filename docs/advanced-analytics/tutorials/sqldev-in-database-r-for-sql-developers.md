@@ -3,24 +3,24 @@ title: R-SQL Server Machine Learning을 사용 하 여 데이터베이스 내 �
 description: R 프로그래밍 언어 및 코드에서 SQL Server 저장 프로시저 T-SQL 함수를 포함 하는 방법에 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511220"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140756"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL 프로그래머를 위한이 자습서에서는 알아봅니다 R 통합에 대 한 빌드 및 사용 하 여 솔루션을 학습 하는 R 기반 컴퓨터를 배포 하 여는 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. T-SQL, SQL Server Management Studio 및 [Machine Learning 서비스]를 사용 하 여 데이터베이스 엔진 인스턴스를 사용할지 ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원
 
-이 자습서는 워크플로 모델링 하는 데이터에 사용 되는 R 함수를 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 여정 팁의 시간, 보이고, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 하는 모델을 빌드합니다. 
+이 자습서는 워크플로 모델링 하는 데이터에 사용 되는 R 함수를 소개 합니다. 데이터 탐색, 작성 및 학습 이진 분류 모델 및 모델 배포를 포함 하는 단계입니다. 모델 빌드는 여정 팁을 시간, 이동, 거리, 승차 위치에 따라 발생할 가능성이 있는지 여부를 예측 합니다. 
 
 이 자습서에 사용 되는 R 코드를 모두 만들고 Management Studio에서 실행 하는 저장된 프로시저에 래핑됩니다.
 
@@ -55,7 +55,7 @@ Machine learning 솔루션을 구축 하는 과정이 포함 될 수 있는 여�
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) 또는 [사용 하도록 설정 하는 R 사용 하 여 SQL Server 2017 Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R 라이브러리](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [R 라이브러리](../package-management/installed-package-information.md)
 
 + [사용 권한](../security/user-permission.md)
 

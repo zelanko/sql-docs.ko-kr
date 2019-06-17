@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071531"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
@@ -34,7 +34,7 @@ ms.locfileid: "66071531"
   
 -   [극장식 보기 또는 갤러리 보기로 전환](#switch)  
   
-##  <a name="prereq"></a> 필수 구성 요소  
+##  <a name="prereq"></a> 사전 요구 사항  
   
 -   Silverlight가 있어야 합니다. Silverlight는 Microsoft Update를 통해 다운로드하여 설치할 수 있습니다. Silverlight가 없는 브라우저를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 보는 경우 페이지의 링크를 클릭하여 Silverlight를 설치합니다. 설치한 다음에는 브라우저를 닫은 후 다시 열어야 합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66071531"
   
     3.  라이브러리에서 **PowerPivot  갤러리**를 클릭합니다.  
   
-    1.  **SharePoint 2013**: 설정 아이콘을 누릅니다 ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")합니다.  **사이트 콘텐츠**를 클릭합니다.  
+    1.  **SharePoint 2013**: 설정 아이콘을 누릅니다 ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")합니다. **사이트 콘텐츠**를 클릭합니다.  
   
     2.  **앱 추가**를 클릭합니다.  
   

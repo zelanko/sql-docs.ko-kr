@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63057786"
 ---
 # <a name="odbc-glossary"></a>ODBC 용어 설명
 ## <a name="a"></a>변수를 잠그기 위한  
  **액세스 계획**  
- SQL 문을 실행 하려면 데이터베이스 엔진에 의해 생성 된 계획 합니다. 3. 같은 3 세대 언어에서 컴파일된 실행 코드와 동일  
+ SQL 문을 실행 하려면 데이터베이스 엔진에 의해 생성 된 계획 합니다. 3\. 같은 3 세대 언어에서 컴파일된 실행 코드와 동일  
   
  **집계 함수**  
  많이 사용 되는 값의 그룹에서 단일 값을 생성 하는 함수 **GROUP BY** 하 고 **HAVING** 절. 집계 함수는 **AVG**, **개수**를 **최대**, **MIN**, 및 **합계**합니다. 라고도 *집합 함수*합니다. *참고* 스칼라 함수입니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "63057786"
  **cursor**  
  부분 응용 프로그램에 데이터 행을 반환 하는 소프트웨어입니다. 아마도 깜박이 커서 터미널; 컴퓨터의 이름을 딴 해당 커서 화면에 현재 위치를 나타내는, 처럼 결과 집합에서 커서 결과 집합의 현재 위치를 나타냅니다.  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
  **data buffer**  
  데이터를 전달 하는 데 사용 되는 버퍼입니다. 연결 버퍼 된 데이터를 *데이터 길이가 버퍼*합니다.  
   

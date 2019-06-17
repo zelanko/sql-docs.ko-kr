@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: eaf87c38be6e14834bdd0c101287936a599a2606
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787936"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project"></a>데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기 및 삭제
@@ -43,7 +43,7 @@ ms.locfileid: "66787936"
   
 -   자신이 만든 데이터 품질 프로젝트만 잠금을 해제할 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  관리할 데이터 품질 프로젝트가 하나 이상 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

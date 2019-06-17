@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508700"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775333"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52508700"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 단일 사용자 모드로 시작할 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 개체 탐색기의 일부 작업에는 둘 이상의 연결이 필요하므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 개체 탐색기가 실패할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 단일 사용자 모드로 관리하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 쿼리 편집기를 통해서만 연결하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]문을 실행하거나 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 사용하세요.  
   
-**SQLCMD**와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하는 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한할 수 있습니다. 
+**SQLCMD**와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하는 경우 지정한 클라이언트 애플리케이션에 대한 연결 수를 제한할 수 있습니다. 
 
 > [!NOTE]
 > Linux에서 **SQLCMD**는 표시된 대로 대문자로 표시되어야 합니다.
@@ -62,7 +62,7 @@ ms.locfileid: "52508700"
   
 4.  클러스터 관리자 또는 장애 조치(failover) 클러스터 관리 콘솔에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 여전히 오프라인 상태인지 확인합니다.  
   
-5.  이제 SQLCMD -E -S\<servername> 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 필요한 작업을 수행합니다.  
+5.  이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다. SQLCMD -E -S\<servername> 명령을 사용하고 필수 작업을 수행합니다.  
   
 6.  작업이 완료되면 명령 프롬프트를 닫고 클러스터 관리자를 통해 SQL 및 기타 리소스를 다시 온라인 상태로 만듭니다.  
   

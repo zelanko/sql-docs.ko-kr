@@ -10,13 +10,13 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794880"
 ---
 # <a name="install-sql-server-with-sysprep"></a>SysPrep을 사용하여 SQL Server 설치
 
@@ -52,7 +52,7 @@ ms.locfileid: "52513768"
   
 3. Windows 장애 조치(Failover) 클러스터를 만듭니다. 
   
-4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+4. 모든 노드에서 **/ACTION=PrepareFailoverCluster** 를 사용하여 setup.exe를 실행합니다. 예를 들어  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -154,7 +154,7 @@ ms.locfileid: "52513768"
   
 7. **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다. 
   
-     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 컴퓨터에 설치되어 있는 모든 인스턴스가 표시됩니다. 
+     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 머신에 설치되어 있는 모든 인스턴스가 표시됩니다. 
   
 8. 준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다. 
   

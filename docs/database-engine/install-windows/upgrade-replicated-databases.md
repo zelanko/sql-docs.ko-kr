@@ -1,5 +1,5 @@
 ---
-title: 복제된 데이터베이스 업그레이드 | Microsoft Docs
+title: 복제된 데이터베이스 업그레이드 또는 패치 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124613"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794715"
 ---
-# <a name="upgrade-replicated-databases"></a>복제된 데이터베이스 업그레이드
+# <a name="upgrade-or-patch-replicated-databases"></a>복제된 데이터베이스 업그레이드 또는 패치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ SQL Server로의 업그레이드 경로는 배포 패턴에 따라 다릅니다.
 
 복제 토폴로지를 병렬로 업그레이드하기 위해 채택된 일반적인 방법은 전체 토폴로지의 이동과 달리 일부 게시자-구독자 쌍을 새 병렬 새 환경으로 이동하는 것입니다. 이러한 단계별 방법은 가동 중지 시간을 제어하고 복제를 사용하는 비즈니스에 미치는 영향을 어느 정도 최소화할 수 있습니다.  
 
-
-> [!NOTE]  
-> **복제 토폴로지를 SQL 2016으로 업그레이드하는 방법에 대한 자세한 내용은 [SQL Server 2016으로 복제 토폴로지 업그레이드](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/) 블로그 게시물을 참조하세요**. 
+이 문서의 대부분은 SQL Server 버전 업그레이드에 대한 것입니다. 그러나 SQL Server를 서비스 팩 또는 누적 업데이트로 패치할 때도 적절한 업그레이드 프로세스를 사용해야 합니다. 
 
  >[!WARNING]
  > 복제 토폴로지를 업그레이드하는 작업은 다단계 프로세스입니다. 실제 프로덕션 환경에서 업그레이드를 실행하기 전에 테스트 환경에서 복제 토폴로지의 복제본을 업그레이드해 보는 것이 좋습니다. 이렇게 하면 실제 업그레이드 프로세스 중에 많은 비용이 들지 않고 오랫동안 가동 중지하지 않고 원활하게 업그레이드하는 데 필요한 모든 운영 설명서를 바로잡을 수 있습니다. 고객이 복제 토폴로지를 업그레이드하는 동안 프로덕션 환경에 Always On 가용성 그룹 및/또는 SQL Server 장애 조치 클러스터 인스턴스를 사용하면 가동 중지 시간을 크게 줄일 수 있음을 확인했습니다. 또한 업그레이드를 시도하기 전에 MSDB, 마스터, 배포 데이터베이스 및 복제에 참여하는 사용자 데이터베이스를 포함한 모든 데이터베이스의 백업을 수행하는 것이 좋습니다.
