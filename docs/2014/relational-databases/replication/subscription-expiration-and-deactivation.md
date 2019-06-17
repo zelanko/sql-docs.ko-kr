@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630373"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
@@ -61,7 +61,7 @@ ms.locfileid: "62630373"
   
     -   보존 기간에 도달하기 전까지는 복제 작업을 통해 게시 및 구독 데이터베이스의 메타데이터를 정리할 수 없습니다. 보존 기간을 너무 길게 설정하면 복제 성능이 저하될 수 있으므로 주의해야 합니다. 보존 기간 내에 모든 구독자가 정기적으로 동기화될 가능성이 있으면 보존 기간을 낮은 값으로 설정하는 것이 좋습니다.  
   
-    -   **@retention**에 값 0을 지정하여 구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
+    -   **@retention** 에 값 0을 지정하여 구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
   
 -   재게시자의 보존 기간은 원래 게시자에 설정한 보존 기간과 동일하거나 더 낮은 값으로 설정해야 합니다. 또한 모든 게시자와 대체 동기화 파트너에 대해 동일한 게시 보존 값을 사용해야 합니다. 다른 보존 값을 사용하면 데이터가 일치하지 않을 수 있습니다. 게시 보존 값을 변경해야 하는 경우 데이터 일치성을 유지하도록 구독자를 다시 초기화합니다.  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507312"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
@@ -67,7 +67,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  나타냅니다 *statement_text* 의 컨텍스트에서 표시 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 현재 데이터베이스에서 DML 트리거.  
   
  SQL  
- 나타냅니다 *statement_text* 독립 실행형 문 또는 일괄 처리를 전송할 수 있는 컨텍스트에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 임의 메커니즘을 통해. [!INCLUDE[tsql](../../includes/tsql-md.md)] 공용 언어 런타임 (CLR) 개체 또는 확장된 저장된 프로시저 또는 EXEC N을 사용 하 여 제출 된 문에 '*sql_string*', 서버에서 일괄적으로 처리 됩니다 하 고, 따라서로 식별 되어야 합니다 \@ 형식**=** 'SQL'. 쿼리 매개 변수화 힌트 SQL을 지정한 경우 {FORCED | 간단한}에 지정할 수는 \@매개 변수 힌트입니다.  
+ 나타냅니다 *statement_text* 독립 실행형 문 또는 일괄 처리를 전송할 수 있는 컨텍스트에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 임의 메커니즘을 통해. [!INCLUDE[tsql](../../includes/tsql-md.md)] 공용 언어 런타임 (CLR) 개체 또는 확장된 저장된 프로시저 또는 EXEC N을 사용 하 여 제출 된 문에 '*sql_string*', 서버에서 일괄적으로 처리 됩니다 하 고, 따라서로 식별 되어야 합니다 \@ 형식 **=** 'SQL'. 쿼리 매개 변수화 힌트 SQL을 지정한 경우 {FORCED | 간단한}에 지정할 수는 \@매개 변수 힌트입니다.  
   
  TEMPLATE  
  계획 지침에 지정 된 형식으로 매개 변수화 되는 모든 쿼리에 적용 됨을 나타냅니다 *statement_text*합니다. 템플릿이 지정 된 경우 PARAMETERIZATION {FORCED | SIMPLE} 쿼리 힌트에 지정할 수는 \@매개 변수 힌트입니다. TEMPLATE 계획 지침에 대 한 자세한 내용은 참조 하세요. [계획 지침 사용 하 여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)합니다.  
@@ -77,9 +77,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  응용 프로그램에서 전송한 일괄 처리를 일치 하는 계획 지침에 대 한 *batch_tex*t 동일한 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
- [*schema_name*.] *object_name* 의 이름을 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 하는 DML 트리거 *statement_text*. 하는 경우 *schema_name* 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 \@유형 = 'SQL', 값 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 하는 경우 \@유형 = ' 템플릿을 **'**, \@module_or_batch는 NULL 이어야 합니다.  
+ [*schema_name*.] *object_name* 의 이름을 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 하는 DML 트리거 *statement_text*. 하는 경우 *schema_name* 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 \@유형 = 'SQL', 값 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 하는 경우 \@유형 = ' 템플릿을 **'** , \@module_or_batch는 NULL 이어야 합니다.  
   
- [ \@params =] {N'*\@parameter_name data_type* [,*... n* ]' | NULL}  
+ [ \@params =] {N' *\@parameter_name data_type* [, *... n* ]' | NULL}  
  에 포함 된 모든 매개 변수의 정의 지정 합니다 *statement_text*합니다. \@params 인 경우에 다음 중 하나가 true 적용 됩니다.  
   
 -   \@형식 = 'SQL' 또는 'TEMPLATE'. 경우 'TEMPLATE' \@params NULL 이어야 합니다.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@parameter_name data_type* 에 전송 된 것과 정확히 같은 형식에 제공 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_executesql을 사용 하 여 매개 변수화 한 후 내부에서 전송한 또는 합니다. 자세한 내용은 설명 섹션을 참조하세요. 일괄 처리에 매개 변수가 없는 경우 NULL이 지정되어야 합니다. 크기 \@매개 변수는 서버의 사용 가능한 메모리 크기로 제한 됩니다.  
   
- [\@힌트 =] {N'OPTION (*query_hint* [,*... n* ])' | N'*XML_showplan*' | NULL}  
- N'OPTION (*쿼리 힌트* [,*... n* ])  
+ [\@힌트 =] {N'OPTION (*query_hint* [, *... n* ])' | N'*XML_showplan*' | NULL}  
+ N'OPTION (*쿼리 힌트* [, *... n* ])  
  일치 하는 쿼리에 연결할 OPTION 절을 지정 \@stmt. \@힌트 이어야 구문상 SELECT 문의 OPTION 절과 동일 하며 쿼리 힌트의 유효한 시퀀스를 포함할 수 있습니다.  
   
  N'*XML_showplan*'  
@@ -101,7 +101,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  쿼리의 OPTION 절에 지정된 기존 힌트는 쿼리에 적용되지 않음을 나타냅니다. 자세한 내용은 [OPTION 절 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)합니다.  
   
 ## <a name="remarks"></a>Remarks  
- sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 경우  **\@이름 =** 을 지정한 경우  **\@stmt =** 를  **\@유형 =**, 등도 지정 해야 합니다. 마찬가지로, 하는 경우  **\@이름 =** 을 생략 하 고 유일한 매개 변수 값을 제공한 경우 나머지 매개 변수 이름도 생략 해야, 하 고 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+ sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 경우  **\@이름 =** 을 지정한 경우  **\@stmt =** 를  **\@유형 =** , 등도 지정 해야 합니다. 마찬가지로, 하는 경우  **\@이름 =** 을 생략 하 고 유일한 매개 변수 값을 제공한 경우 나머지 매개 변수 이름도 생략 해야, 하 고 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
  같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   
@@ -113,15 +113,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다. 서버를 업그레이드한 후에는 각 데이터베이스의 계획 지침을 원활하게 사용할 수 있는지 확인해야 합니다.  
   
 ## <a name="plan-guide-matching-requirements"></a>계획 지침 일치 요구 사항  
- 지정 하는 계획 지침이 \@형식 = 'SQL' 또는 \@유형 = 'TEMPLATE' 값에 대 한 쿼리를 성공적으로 일치 *batch_text* 하 고  *\@parameter_name data_type* [,*... n* ] 응용 프로그램에서 전송 된 해당 부분과 정확히 같은 형식에 제공 되어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일러가 수신한 것과 정확히 같게 일괄 처리 텍스트를 제공해야 함을 의미합니다. 실제 일괄 처리 및 매개 변수 텍스트를 캡처하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용할 수 있습니다. 자세한 내용은 [만들기 및 테스트 계획 지침을 사용 하 여 SQL Server Profiler](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)합니다.  
+ 지정 하는 계획 지침이 \@형식 = 'SQL' 또는 \@유형 = 'TEMPLATE' 값에 대 한 쿼리를 성공적으로 일치 *batch_text* 하 고  *\@parameter_name data_type* [, *... n* ] 응용 프로그램에서 전송 된 해당 부분과 정확히 같은 형식에 제공 되어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일러가 수신한 것과 정확히 같게 일괄 처리 텍스트를 제공해야 함을 의미합니다. 실제 일괄 처리 및 매개 변수 텍스트를 캡처하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용할 수 있습니다. 자세한 내용은 [만들기 및 테스트 계획 지침을 사용 하 여 SQL Server Profiler](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)합니다.  
   
  때 \@유형 = 'SQL' 및 \@module_or_batch의 값을 NULL로 설정 됩니다 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 즉, 값 *statement_text* 정확히 같은 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값과 일치 *statement_text* 하려면 *batch_text* 하 고  *\@parameter_name data_type* [,*... n* ], 이거나 \@유형 = **'** 개체 ', 내에서 해당 쿼리를 텍스트로 *object_name*, 다음 문자열 요소가 고려 되지 않습니다:  
+ 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값과 일치 *statement_text* 하려면 *batch_text* 하 고  *\@parameter_name data_type* [, *... n* ], 이거나 \@유형 = **'** 개체 ', 내에서 해당 쿼리를 텍스트로 *object_name*, 다음 문자열 요소가 고려 되지 않습니다:  
   
 -   문자열 안에 있는 공백 문자(탭, 공백, 캐리지 리턴 또는 줄 바꿈)  
   
--   주석 (**--** 하거나 **/ \* \* /**).  
+-   주석 ( **--** 하거나 **/ \* \* /** ).  
   
 -   후행 세미콜론  
   
@@ -147,7 +147,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>1. 저장 프로시저에 있는 쿼리에 대해 OBJECT 유형의 계획 지침 만들기  
+### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>1\. 저장 프로시저에 있는 쿼리에 대해 OBJECT 유형의 계획 지침 만들기  
  다음 예에서는 응용 프로그램 기반 저장 프로시저의 컨텍스트에서 실행된 쿼리와 일치하는 계획 지침을 만들고 해당 쿼리에 대해 `OPTIMIZE FOR` 힌트를 적용합니다.  
   
  저장 프로시저는 다음과 같습니다.  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (OPTIMIZE FOR (@Country_region = N''US''))';  
 ```  
   
-### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>2. 독립 실행형 쿼리에 대해 SQL 유형의 계획 지침 만들기  
+### <a name="b-creating-a-plan-guide-of-type-sql-for-a-stand-alone-query"></a>2\. 독립 실행형 쿼리에 대해 SQL 유형의 계획 지침 만들기  
  다음 예에서는 sp_executesql 시스템 저장 프로시저를 사용하는 응용 프로그램에서 전송한 일괄 처리에 있는 쿼리와 일치하는 계획 지침을 만듭니다.  
   
  일괄 처리는 다음과 같습니다.  
@@ -211,7 +211,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (MAXDOP 1)';  
 ```  
   
-### <a name="c-creating-a-plan-guide-of-type-template-for-the-parameterized-form-of-a-query"></a>3. 매개 변수가 있는 쿼리 형식에 대해 TEMPLATE 유형의 계획 지침 만들기  
+### <a name="c-creating-a-plan-guide-of-type-template-for-the-parameterized-form-of-a-query"></a>3\. 매개 변수가 있는 쿼리 형식에 대해 TEMPLATE 유형의 계획 지침 만들기  
  다음 예에서는 지정된 형식으로 매개 변수화되는 쿼리와 일치하는 계획 지침을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 쿼리를 매개 변수화하도록 지정합니다. 다음 두 개의 쿼리는 구문이 같고 상수 리터럴 값만 다릅니다.  
   
 ```  
@@ -264,7 +264,7 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
 > [!IMPORTANT]  
 >  sp_get_query_template에 전달된 `@stmt` 매개 변수에 있는 상수 리터럴 값은 리터럴을 대체하는 변수에 대해 선택한 데이터 형식에 영향을 미칠 수 있습니다. 이는 계획 지침 일치에도 영향을 미칩니다. 둘 이상의 계획 지침을 만들어 서로 다른 매개 변수 값 범위를 처리해야 할 수도 있습니다.  
   
-### <a name="d-creating-a-plan-guide-on-a-query-submitted-by-using-an-api-cursor-request"></a>4. API 커서 요청을 사용하여 전송한 쿼리에 대해 계획 지침 만들기  
+### <a name="d-creating-a-plan-guide-on-a-query-submitted-by-using-an-api-cursor-request"></a>4\. API 커서 요청을 사용하여 전송한 쿼리에 대해 계획 지침 만들기  
  계획 지침을 API 서버 커서 루틴에서 전송된 쿼리에 일치시킬 수 있습니다. 이러한 루틴에는 sp_cursorprepare, sp_cursorprepexec 및 sp_cursoropen이 있습니다. ADO, OLE DB 및 ODBC API를 사용하는 응용 프로그램은 API 서버 커서를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 자주 상호 작용합니다. RPC:Starting 프로파일러 추적 이벤트를 보고 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적에서 API 서버 커서 루틴의 호출을 확인할 수 있습니다.  
   
  계획 지침으로 튜닝하려는 쿼리에 대해 다음 데이터가 RPC:Starting 프로파일러 추적 이벤트에 표시된다고 가정합니다.  
@@ -301,7 +301,7 @@ EXEC sp_create_plan_guide
   
  응용 프로그램에서 수행하는 이 쿼리의 후속 실행은 이 계획 지침의 영향을 받으며 쿼리를 처리하는 데 해시 조인이 사용됩니다.  
   
-### <a name="e-creating-a-plan-guide-by-obtaining-the-xml-showplan-from-a-cached-plan"></a>5. 캐시된 계획에서 XML 실행 계획을 가져와 계획 지침 만들기  
+### <a name="e-creating-a-plan-guide-by-obtaining-the-xml-showplan-from-a-cached-plan"></a>5\. 캐시된 계획에서 XML 실행 계획을 가져와 계획 지침 만들기  
  다음 예에서는 간단한 임시 SQL 문에 대한 계획 지침을 만듭니다. `@hints` 매개 변수에 직접 쿼리에 대한 XML 실행 계획을 지정하여 이 문에 대해 원하는 쿼리 계획을 계획 지침에 제공합니다. 예에서는 먼저 SQL 문을 실행하여 계획 캐시에 계획을 생성합니다. 이 예를 위해 생성된 계획이 원하는 계획이며 추가 쿼리 튜닝이 필요하지 않다고 가정합니다. 쿼리에 대한 XML 실행 계획은 `sys.dm_exec_query_stats`, `sys.dm_exec_sql_text`및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 쿼리하여 가져오고 `@xml_showplan` 변수에 할당됩니다. 그런 다음 `@xml_showplan` 변수는 `sp_create_plan_guide` 매개 변수의 `@hints` 문에 전달됩니다. 또는 [sp_create_plan_guide_from_handle](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md) 저장 프로시저를 사용하여 계획 캐시의 쿼리 계획에서 계획 지침을 만들 수 있습니다.  
   
 ```  

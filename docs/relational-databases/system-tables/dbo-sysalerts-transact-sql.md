@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470891"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts(Transact-SQL)
@@ -67,7 +67,7 @@ ms.locfileid: "62470891"
 |Decimal | BINARY | 의미 |
 |------|------|------|
 |0 |0000 |메시지 없음 |
-|1 |0001 |메일 주소 |
+|1 |0001 |email |
 |2 |0010 |호출기(pager) |
 |3 |0011 |호출기 및 전자 메일 |
 |4 |0100 |Net Send |

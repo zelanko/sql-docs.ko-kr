@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473204"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
@@ -49,7 +49,7 @@ ms.locfileid: "62473204"
   
 4.  편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **작업 속성 -**_job_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
+5.  **작업 속성 -** _job_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   

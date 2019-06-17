@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506060"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "62506060"
 ## <a name="remarks"></a>Remarks  
  sys.dm_os_buffer_descriptors는 리소스 데이터베이스에서 사용 중인 페이지를 반환 합니다. sys.dm_os_buffer_descriptors는 사용 가능한 페이지나 빼앗긴 페이지 또는 읽을 때 오류가 있던 페이지에 대 한 정보를 반환 하지 않습니다.  
   
-|보낸 사람|수행할 작업|위치|관계|  
+|보낸 사람|수행할 작업|켜짐|관계|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|다 대 일|  
@@ -70,7 +70,7 @@ ms.locfileid: "62506060"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>1. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
+### <a name="a-returning-cached-page-count-for-each-database"></a>1\. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
  다음 예에서는 각 데이터베이스에 대해 로드된 페이지 수를 반환합니다.  
   
 ```  
@@ -84,7 +84,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>2. 현재 데이터베이스의 각 개체에 대해 캐시된 페이지 수 반환  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>2\. 현재 데이터베이스의 각 개체에 대해 캐시된 페이지 수 반환  
  다음 예에서는 현재 데이터베이스의 각 개체에 대해 로드된 페이지 수를 반환합니다.  
   
 ```  
