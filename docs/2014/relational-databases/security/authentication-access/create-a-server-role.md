@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011969"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
@@ -36,7 +36,7 @@ ms.locfileid: "63011969"
   
 -   **다음을 사용하여 새 서버 역할을 만듭니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63011969"
   
 3.  **서버 역할** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 서버 역할...** 을 선택합니다.  
   
-4.  에 **새 서버 역할-**_server_role_name_ 대화 상자의 **일반** 페이지에서 새 서버 역할의 이름을 입력 합니다 **서버 역할 이름**상자입니다.  
+4.  에 **새 서버 역할-** _server_role_name_ 대화 상자의 **일반** 페이지에서 새 서버 역할의 이름을 입력 합니다 **서버 역할 이름**상자입니다.  
   
 5.  **소유자** 상자에 새 역할을 소유할 서버 보안 주체의 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **서버 로그인 또는 역할 선택** 대화 상자를 엽니다.  
   

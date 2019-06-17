@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022222"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
@@ -85,7 +85,7 @@ ms.locfileid: "63022222"
   
     -   빈 문자열이 게시된 테이블에 열 값으로 삽입되지 않았는지 확인합니다.  
   
-    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400(**-SkipErrors1400**)을 지정합니다.  
+    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400( **-SkipErrors1400**)을 지정합니다.  
   
     -   빈 문자열과 연결된 가능성이 있는 모든 문자 열에서 NOT NULL 특성을 제거하여 생성된 테이블 생성 스크립트를 수정하고 @creation_script sp_addarticle [의](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)매개 변수를 사용하여 수정된 스크립트를 아티클에 대한 사용자 지정 생성 스크립트로 제공합니다.  
   

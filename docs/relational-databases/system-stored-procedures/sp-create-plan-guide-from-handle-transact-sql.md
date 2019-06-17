@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724498"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
@@ -78,7 +78,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>1. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
+### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>1\. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
  다음 예에서는 계획 캐시에서 쿼리 계획을 지정하여 단일 SELECT 문에 대한 계획 지침을 만듭니다. 이 예에서는 계획 지침이 만들어지는 간단한 `SELECT` 문을 실행하여 시작합니다. 이 쿼리의 계획은 `sys.dm_exec_sql_text` 및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 사용하여 검사됩니다. 그런 다음 쿼리와 관련된 계획 캐시에서 쿼리 계획을 지정하여 쿼리에 대한 계획 지침을 만듭니다. 이 예에서 마지막 문은 계획 지침의 존재를 확인합니다.  
   
 ```sql  
@@ -116,7 +116,7 @@ WHERE scope_batch LIKE N'SELECT WorkOrderID, p.Name, OrderQty, DueDate%';
 GO  
 ```  
   
-### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>2. 다중 문 일괄 처리에 대한 여러 계획 지침 만들기  
+### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>2\. 다중 문 일괄 처리에 대한 여러 계획 지침 만들기  
  다음 예에서는 다중 문 일괄 처리 내에 있는 두 개의 문에 대한 계획 지침을 만듭니다. 계획 지침은 명시적 트랜잭션 내에서 만들어지므로 일괄 처리에 대한 쿼리 계획은 첫 번째 계획 지침을 만든 후에 계획 캐시에서 제거되지 않습니다. 이 예에서는 다중 문 일괄 처리를 실행하여 시작합니다. 일괄 처리에 대한 계획은 동적 관리 뷰를 사용하여 검사됩니다. 일괄 처리의 각 문에 대한 행이 반환됩니다. 그런 다음 `@statement_start_offset` 매개 변수를 지정하여 일괄 처리의 첫 번째 문과 세 번째 문에 대한 계획 지침을 만듭니다. 이 예에서 마지막 문은 계획 지침의 존재를 확인합니다.  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  

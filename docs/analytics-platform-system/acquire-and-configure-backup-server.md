@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63040829"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>획득 및 Parallel Data Warehouse에 대 한 백업 서버 구성

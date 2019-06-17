@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070302"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>보고서 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -44,7 +44,7 @@ ms.locfileid: "66070302"
 |수준 멤버|**대상 개체** 의 수준 내에 있는 멤버가 선택됩니다.|  
   
  **대상 개체**  
- 동작을 연결할 개체를 선택합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스는 선택한 개체에 적용되는 동작만 클라이언트에 반환합니다. 사용 가능한 개체 목록은 **대상 유형**에서 선택한 항목에 따라 달라집니다.  
+ 동작을 연결할 개체를 선택합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스는 선택한 개체에 적용되는 동작만 클라이언트에 반환합니다. 사용 가능한 개체 목록은 **대상 유형**에서 선택한 항목에 따라 달라집니다.  
   
  **조건(옵션)**  
  선택적 조건을 기술하는 MDX(Multidimensional Expression) 식을 입력합니다. 이 옵션은 **대상 개체**와 함께 사용되어 동작의 가용성을 추가로 제한합니다. 식은 부울 값을 반환해야 합니다. True인 경우 동작을 사용할 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "66070302"
 |Column|Description|  
 |------------|-----------------|  
 |**매개 변수 이름**|보고서로 전달할 보고서 매개 변수의 이름을 입력합니다.|  
-|**매개 변수 값**|보고서로 전달할 보고서 매개 변수의 값을 입력합니다.<br /><br /> 줄임표 단추 (**...**)를 클릭하여 **MDX 작성기** 대화 상자를 표시하고 보고서 매개 변수의 값을 제공하는 MDX 식을 만듭니다. **MDX 작성기** 대화 상자에 대한 자세한 내용은 [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](mdx-builder-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 매개 변수를 MDX 식에 설정하면 동작을 실행할 때 해당 식을 평가하고, 매개 변수를 MDX 식에 설정하지 않으면 해당 식을 수정하지 않고 보고서에 전달합니다.|  
+|**매개 변수 값**|보고서로 전달할 보고서 매개 변수의 값을 입력합니다.<br /><br /> 줄임표 단추 ( **...** )를 클릭하여 **MDX 작성기** 대화 상자를 표시하고 보고서 매개 변수의 값을 제공하는 MDX 식을 만듭니다. **MDX 작성기** 대화 상자에 대한 자세한 내용은 [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](mdx-builder-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 매개 변수를 MDX 식에 설정하면 동작을 실행할 때 해당 식을 평가하고, 매개 변수를 MDX 식에 설정하지 않으면 해당 식을 수정하지 않고 보고서에 전달합니다.|  
   
  **추가 속성**  
  확장하면 **호출**, **애플리케이션**, **설명**, **캡션**및 **MDX 캡션** 옵션이 표시됩니다.  

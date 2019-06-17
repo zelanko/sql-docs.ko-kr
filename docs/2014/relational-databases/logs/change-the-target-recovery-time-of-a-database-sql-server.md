@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743219"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "62743219"
   
 2.  다음 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)문을 다음과 같이 사용합니다.  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      0(기본값)보다 큰 경우 충돌 시 지정된 데이터베이스에 대한 복구 시간의 상한을 지정합니다.  

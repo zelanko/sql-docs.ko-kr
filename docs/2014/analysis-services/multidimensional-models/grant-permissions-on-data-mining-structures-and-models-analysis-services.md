@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074937"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>데이터 마이닝 구조 및 모델에 대한 권한 부여(Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074937"
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>마이닝 구조에 대한 액세스 권한 설정  
   
-1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 애플리케이션에서 연결&amp;#40;Analysis Services&amp;#41;](../instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
+1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 애플리케이션에서 연결&#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
   
 2.  **데이터베이스** 폴더를 열고 개체 탐색기에서 데이터베이스를 선택합니다.  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150611"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>서버 성능 및 작업 모니터링
@@ -37,7 +37,7 @@ ms.locfileid: "63150611"
   
 -   [시스템 모니터 시작&#40;Windows&#41;](start-system-monitor-windows.md)  
   
--   [Windows 애플리케이션 로그 보기&amp;#40;Windows&amp;#41;](view-the-windows-application-log-windows-10.md)  
+-   [Windows 애플리케이션 로그 보기&#40;Windows&#41;](view-the-windows-application-log-windows-10.md)  
   
  **Windows 도구로 SQL Server 데이터베이스 경고 만들기**  
   

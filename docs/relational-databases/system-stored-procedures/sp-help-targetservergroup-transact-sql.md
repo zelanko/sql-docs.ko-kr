@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017794"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_targetservergroup
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-all-target-server-groups"></a>1. 모든 대상 서버 그룹에 대한 정보 나열  
+### <a name="a-listing-information-for-all-target-server-groups"></a>1\. 모든 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 모든 대상 서버 그룹에 대한 정보를 나열합니다.  
   
 ```  
@@ -69,7 +69,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>2. 특정 대상 서버 그룹에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>2\. 특정 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 `Servers Maintaining Customer Information` 대상 서버 그룹에 대한 정보를 나열합니다.  
   
 ```  

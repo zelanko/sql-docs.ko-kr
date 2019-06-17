@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033645"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>대상 서버의 폴링 간격 설정
@@ -26,7 +26,7 @@ ms.locfileid: "63033645"
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **사용 하 여 대상 서버에 대 한 폴링 간격을 설정 합니다.**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **대상 서버의 폴링 간격을 설정하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  각 대상 서버는 같은 작업의 한 인스턴스를 동시에 실행할 수 있습니다. 각 대상 서버는 주기적으로 마스터 서버를 폴링하여 해당 대상 서버에 새로 할당된 작업의 복사본을 다운로드한 다음 연결을 끊습니다. 대상 서버는 로컬에서 작업을 실행한 다음 마스터 서버에 다시 연결하여 작업 결과 상태를 업로드합니다.  

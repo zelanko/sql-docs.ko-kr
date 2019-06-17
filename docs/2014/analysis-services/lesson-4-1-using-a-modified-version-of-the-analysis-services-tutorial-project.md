@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078809"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services Tutorial 프로젝트의 수정된 버전 사용

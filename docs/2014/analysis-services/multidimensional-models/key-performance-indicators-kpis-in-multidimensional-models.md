@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074802"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
@@ -37,7 +37,7 @@ ms.locfileid: "66074802"
   
  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다. KPI는 주로 시간에 따라 평가됩니다. 예를 들어 조직의 영업부에서는 월별 매출 총 이익을 KPI로 사용하고 인사부에서는 분기별 직원 전직률을 KPI로 사용할 수 있습니다. 각각은 KPI의 예에 해당합니다. 경영진은 비즈니스 성과표에 그룹화된 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 정확한 요약 정보를 얻습니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 및 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 KPI는 큐브의 비즈니스 성취도 평가에 사용되는 큐브의 측정값 그룹과 관련된 계산의 모음입니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 및 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI는 여러 클라이언트 응용 프로그램에서 사용할 수 있는 서버 기반 KPI라는 주요 이점이 있습니다. 여러 클라이언트 애플리케이션에서 생성되는 여러 사실 버전과 달리 서버 기반 KPI는 단일 사실 버전을 제공합니다. 또한 각 클라이언트 컴퓨터 대신 서버에서 복잡한 계산을 수행하므로 성능상의 이점이 있습니다.  
   

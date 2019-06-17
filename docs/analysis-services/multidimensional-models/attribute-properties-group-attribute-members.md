@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015713"
 ---
 # <a name="attribute-properties---group-attribute-members"></a>특성 속성 - 특성 멤버 그룹화
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
+  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
   
  특성에 대한 **DiscretizationMethod** 속성은 멤버의 그룹화 방식을 제어합니다.  
   

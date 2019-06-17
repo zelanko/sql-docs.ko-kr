@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724575"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
@@ -156,7 +156,7 @@ sp_cursorfetch cursor
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-prev-to-change-a-cursor-position"></a>1. PREV를 사용하여 커서 위치 변경  
+### <a name="a-using-prev-to-change-a-cursor-position"></a>1\. PREV를 사용하여 커서 위치 변경  
  h2 커서가 다음과 같은 내용의 결과 집합을 생성하며 현재 위치는 아래와 같다고 가정해 봅니다.  
   
 ```  
@@ -173,7 +173,7 @@ row 6 contents
 > [!NOTE]  
 >  RPC 상태 매개 변수가 2로 설정된 경우 위와 같은 현상이 발생합니다.  
   
-### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>2. PREV_NOADJUST를 사용하여 PREV보다 적은 행 수 반환  
+### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>2\. PREV_NOADJUST를 사용하여 PREV보다 적은 행 수 반환  
  PREV_NOADJUST는 반환하는 행 블록에서 현재 커서 위치나 그 뒤에 있는 행을 포함하지 않습니다. PREV_NOADJUST 경우 PREV가 현재 위치 뒤 행을 반환 하는 위치에서 요청 된 수보다 적은 수의 행을 반환 합니다 *nrows*합니다. 현재 지정 된 위치 예제의 경우 PREV를 적용 하면 이전에 sp_cursorfetch (h2, 4, 1, 5) 다음 행을 인출 합니다.  
   
 ```  
