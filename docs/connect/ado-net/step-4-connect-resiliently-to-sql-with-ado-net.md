@@ -12,13 +12,13 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fceeefd7c9dd0d3bd7df761273f69355c4e6024a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: b3f7fc6d2d7ab6872bd7100fa51f05a9d9b957c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342872"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770601"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결
 
@@ -45,7 +45,7 @@ ms.locfileid: "58342872"
   
 이 샘플.NET Framework 4.5.1을 가정 하거나 이상을 설치 합니다.  C# 코드 샘플은 Program.cs 라는 하나의 파일로 구성 됩니다. 해당 코드는 다음 섹션에서 제공 됩니다.  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>2.a 단계: 캡처 및 코드 예제를 컴파일하려면  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>2\.a 단계: 캡처 및 코드 예제를 컴파일하려면  
   
 다음 단계를 사용 하 여 샘플을 컴파일할 수 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "58342872"
 4. 다음 코드 블록의 코드를 사용 하 여 Program.cs 파일의 콘텐츠를 완전히 대체 합니다.  
 5. 메뉴 빌드 > 솔루션 빌드.  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>2.b 단계: 샘플 코드를 복사 및 붙여넣기  
+### <a name="step-2b-copy-and-paste-sample-code"></a>2\.b 단계: 샘플 코드를 복사 및 붙여넣기  
   
 이 코드를 붙여 사용자 **Program.cs** 파일입니다.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "58342872"
     }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>2.c 단계: 프로그램 실행  
+###  <a name="step-2c-run-the-program"></a>2\.c 단계: 프로그램 실행  
   
   
 합니다 **RetryAdo2.exe** 실행 파일 매개 변수 없이 입력 합니다. .Exe를 실행 합니다.  
@@ -265,7 +265,7 @@ ms.locfileid: "58342872"
 에 여러 가지 재시도 논리를 테스트 하려면 일시적인 오류를 시뮬레이션할 수 있습니다.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>3.a 단계: 테스트 예외를 Throw 합니다.  
+###  <a name="step-3a-throw-a-test-exception"></a>3\.a 단계: 테스트 예외를 Throw 합니다.  
   
 코드 샘플에는 다음이 포함 됩니다.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "58342872"
   
 코드를 증명 하기 위해 영구 오류에 올바르게 이전 테스트 다시 실행 하는 핸들 4060과 같은 실제 일시적 오류 번호를 사용 하지 마세요. 의미 없는 번호 7654321을 대신 사용 합니다. 프로그램이이 영구 오류로 처리 해야 하 고 다시 시도 무시 해야 합니다.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>3.c 단계: 네트워크에서 연결 끊기  
+###  <a name="step-3c-disconnect-from-the-network"></a>3\.c 단계: 네트워크에서 연결 끊기  
   
 1. 네트워크에서 클라이언트 컴퓨터를 분리 합니다.  
     - 데스크톱에 대 한 네트워크 케이블을 분리 합니다.  
@@ -304,7 +304,7 @@ ms.locfileid: "58342872"
 4. 후속 재시도에 콘솔 보고서 성공 여부를 시청 하세요.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>2.d 단계: 일시적으로 서버 이름을 잘못 입력  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>2\.d 단계: 일시적으로 서버 이름을 잘못 입력  
   
 1. 일시적으로 40615를 다른 오류 번호로 추가 **TransientErrorNumbers**를 하 고 다시 컴파일해야 합니다.  
 2. 줄에 중단점을 설정 합니다. `new QC.SqlConnectionStringBuilder()`합니다.  

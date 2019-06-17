@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713548"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>예제: Ubuntu에 대 한 SQL Server 설치 스크립트를 무인된

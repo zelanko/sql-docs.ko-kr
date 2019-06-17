@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013351"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
@@ -50,7 +50,7 @@ ms.locfileid: "63013351"
   
  이 문서에서는  **\<고객 >** element 노드는 **cid** attribute 노드이면, 및 **"중요"** 노드.  
   
- XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어, 일련의 주어진  **\<고객 >** 모든 XPath 노드를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값은 **"7/14/1999"**. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
+ XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어, 일련의 주어진  **\<고객 >** 모든 XPath 노드를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값은 **"7/14/1999"** . 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
  XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0에 있는 W3C XPath 사양의 하위 집합을 구현 http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   
@@ -98,9 +98,9 @@ ms.locfileid: "63013351"
 |연속 및 중첩 조건자를 포함하는 부울 값 조건자||[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |모든 관계 연산자|=, !=, <, \<=, >, >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |산술 연산자|+, -, *, div|[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|명시적 변환 함수|**number()**, **string()**, **Boolean()**|[XPath 쿼리에 명시적 변환 함수를 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|명시적 변환 함수|**number()** , **string()** , **Boolean()**|[XPath 쿼리에 명시적 변환 함수를 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |부울 연산자|AND, OR|[XPath 쿼리에 부울 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|부울 함수|**true()**, **false()**, **not()**|[XPath 쿼리에 부울 함수 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
+|부울 함수|**true()** , **false()** , **not()**|[XPath 쿼리에 부울 함수 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |XPath 변수||[XPath 쿼리에 XPath 변수 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   
 ## <a name="unsupported-functionality"></a>지원되지 않는 기능  
@@ -108,13 +108,13 @@ ms.locfileid: "63013351"
   
 |기능|항목|  
 |-------------|----------|  
-|Axes|**상위**, **상위 또는 자신의**, **하위**, **하위 항목 또는 자신 (/ /)**, **다음**,  **다음 형제**, **네임 스페이스**, **이전**, **이전 형제**|  
+|Axes|**상위**, **상위 또는 자신의**, **하위**, **하위 항목 또는 자신 (/ /)** , **다음**,  **다음 형제**, **네임 스페이스**, **이전**, **이전 형제**|  
 |숫자 값 조건자||  
 |산술 연산자|mod|  
-|노드 함수|**상위**, **상위 또는 자신의**, **하위**, **하위 항목 또는 자신 (/ /)**, **다음**,  **다음 형제**, **네임 스페이스**, **이전**, **이전 형제**|  
-|문자열 함수|**string()**, **concat()**, **starts-with()**, **contains()**, **substring-before()**, **substring-after()**, **substring()**, **string-length()**, **normalize()**, **translate()**|  
+|노드 함수|**상위**, **상위 또는 자신의**, **하위**, **하위 항목 또는 자신 (/ /)** , **다음**,  **다음 형제**, **네임 스페이스**, **이전**, **이전 형제**|  
+|문자열 함수|**string()** , **concat()** , **starts-with()** , **contains()** , **substring-before()** , **substring-after()** , **substring()** , **string-length()** , **normalize()** , **translate()**|  
 |부울 함수|**lang()**|  
-|숫자 함수|**sum()**, **floor()**, **ceiling()**, **round()**|  
+|숫자 함수|**sum()** , **floor()** , **ceiling()** , **round()**|  
 |Union 연산자|&#124;|  
   
  템플릿에 XPath 쿼리를 지정할 때는 다음 동작에 유의하십시오.  

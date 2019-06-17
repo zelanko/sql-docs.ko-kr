@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ea485d3afaf5785cca18f76be9b093dcc051dffe
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710004"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
@@ -38,7 +38,7 @@ Stream.WriteText Data, Options
  *데이터*  
  A **문자열** 쓸 문자에 텍스트를 포함 하는 값입니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) 지정된 된 문자열의 끝 줄 구분 기호 문자를 작성 해야 하는지 여부를 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  

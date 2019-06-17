@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: a7ad04719883f6674d3656d56ce8df6519c0d29e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761863"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
@@ -39,7 +39,7 @@ ms.locfileid: "66761863"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

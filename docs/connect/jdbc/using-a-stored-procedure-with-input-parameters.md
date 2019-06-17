@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2b85c7ff9943f2c83109b18000adf7c2456b7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635051"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790403"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>입력 매개 변수가 있는 저장 프로시저 사용
 

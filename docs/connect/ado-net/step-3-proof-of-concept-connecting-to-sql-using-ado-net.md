@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+manager: jroth
+ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770570"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명
 

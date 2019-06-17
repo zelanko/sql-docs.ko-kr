@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014615"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -42,7 +42,7 @@ ms.locfileid: "63014615"
 |열 이름|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR를 반환 합니다 **varchar (max)** 데이터 형식입니다.|  
-|TYPE_NAME|에 대해 "varchar", "varbinary" 또는 "nvarchar"를 반환 합니다 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** 데이터 형식입니다.|  
+|TYPE_NAME|에 대해 "varchar", "varbinary" 또는 "nvarchar"를 반환 합니다 **varchar (max)** 를 **varbinary (max)** , 및 **nvarchar (max)** 데이터 형식입니다.|  
 |COLUMN_SIZE|에 대해 SQL_SS_LENGTH_UNLIMITED를 반환 **varchar (max)** 데이터 형식 없다는 열의 크기를 제한 합니다.|  
 |BUFFER_LENGTH|에 대해 SQL_SS_LENGTH_UNLIMITED를 반환 **varchar (max)** 데이터 형식을 나타내는 버퍼의 크기는 제한 되지 않습니다.|  
 |SQL_DATA_TYPE|SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR를 반환 합니다 **varchar (max)** 데이터 형식입니다.|  

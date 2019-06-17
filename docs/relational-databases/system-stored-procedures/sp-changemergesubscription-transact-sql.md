@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993120"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
@@ -51,7 +51,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` 지정된 된 게시에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)** , 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
 |--------------|-----------|-----------------|  

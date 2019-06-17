@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e82d3fd364eef739d352aaa881b0fb18f2db35aa
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66711651"
 ---
 # <a name="requery-method"></a>Requery 메서드
@@ -35,7 +35,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Options*  
+ *옵션*  
  (선택 사항) 포함 하는 비트 마스크 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 하 고 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 이 작업에 영향을 주는 값입니다.  
   
 > [!NOTE]

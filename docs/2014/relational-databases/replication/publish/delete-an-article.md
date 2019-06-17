@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960872"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
@@ -35,13 +35,13 @@ ms.locfileid: "62960872"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에서 아티클을 삭제하려면  
   
-1.  [sp_droparticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)을 실행하여 **@article**로 지정된 아티클을 **@publication**으로 지정된 게시에서 삭제합니다. **@force_invalidate_snapshot**에 값 **1**을 지정합니다.  
+1.  [sp_droparticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)을 실행하여 **@article** 로 지정된 아티클을 **@publication** 으로 지정된 게시에서 삭제합니다. **@force_invalidate_snapshot** 에 값 **1**을 지정합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>병합 게시에서 아티클을 삭제하려면  
   
-1.  [sp_dropmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)을 실행하여 **@article**로 지정된 아티클을 **@publication**으로 지정된 게시에서 삭제합니다. 필요한 경우 **@force_invalidate_snapshot** 값을 **@force_invalidate_snapshot** 을 지정하고 **@force_invalidate_snapshot** 값을 **@force_reinit_subscription**를 참조하세요.  
+1.  [sp_dropmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)을 실행하여 **@article** 로 지정된 아티클을 **@publication** 으로 지정된 게시에서 삭제합니다. 필요한 경우 **@force_invalidate_snapshot** 값을 **@force_invalidate_snapshot** 을 지정하고 **@force_invalidate_snapshot** 값을 **@force_reinit_subscription** 를 참조하세요.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   

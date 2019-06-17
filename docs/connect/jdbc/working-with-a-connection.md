@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687972"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761628"
 ---
 # <a name="working-with-a-connection"></a>연결 사용
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 이 기법에서는 드라이버 목록에 있는 사용 가능한 드라이버 중 주어진 URL로 연결할 수 있는 첫 번째 드라이버를 사용하여 데이터베이스에 연결합니다.
 
 > [!NOTE]  
-> sqljdbc4.jar 클래스 라이브러리를 사용할 때 애플리케이션은 Class.forName 메서드를 사용하여 드라이버를 명시적으로 등록 또는 로드할 필요가 없습니다. DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. 자세한 내용은 JDBC 드라이버 사용을 참조하십시오.
+> sqljdbc4.jar 클래스 라이브러리를 사용할 때 애플리케이션은 Class.forName 메서드를 사용하여 드라이버를 명시적으로 등록 또는 로드할 필요가 없습니다. DriverManager 클래스의 getConnection 메서드가 호출되면 등록된 JDBC 드라이버 집합에서 적합한 드라이버가 검색됩니다. 자세한 내용은 JDBC 드라이버 사용을 참조하십시오.
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>SQLServerDriver 클래스를 사용한 연결 만들기
 
