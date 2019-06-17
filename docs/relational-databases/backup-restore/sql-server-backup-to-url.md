@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582836"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046694"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "59582836"
   
 -   Premium 스토리지로 백업은 지원 되지 않습니다.  
   
--   SQL Server는 페이지 Blob을 사용하여 지원되는 최대 백업 크기를 1TB로 제한합니다. 블록 Blob을 사용하여 지원되는 최대 백업 크기는 약 200MB로 제한됩니다(50,000개 블록 * 4MB MAXTRANSFERSIZE). 블록 Blob은 실질적으로 더 큰 백업 크기를 지원하기 위해 스트라이프를 지원합니다.  
+-   SQL Server는 페이지 Blob을 사용하여 지원되는 최대 백업 크기를 1TB로 제한합니다. 블록 Blob을 사용하여 지원되는 최대 백업 크기는 약 200GB로 제한됩니다(50,000개 블록 * 4MB MAXTRANSFERSIZE). 블록 Blob은 실질적으로 더 큰 백업 크기를 지원하기 위해 스트라이프를 지원합니다.  
   
 -   TSQL, SMO, PowerShell cmdlet, SQL Server Management Studio 백업 또는 복원 마법사를 사용하여 백업 또는 복원 문을 실행할 수 있습니다.   
   
@@ -115,7 +115,7 @@ ms.locfileid: "59582836"
   
 -   backupset 옵션 **RETAINDAYS** 및 **EXPIREDATE** 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 디바이스 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘ https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 디바이스 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘ https://.blob.core.windows.net//.bak ’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   

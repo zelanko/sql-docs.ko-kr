@@ -1,23 +1,25 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: SQL Server Machine Learning Services 설명서
-  href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
-- name: 'Machine Learning 확장(R, Python)'
+- name: SQL Server Machine Learning 서비스
+  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: 개요
   items:
-    - name: What's New
-      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
-    - name: 'SQL ML Services(R, Python)'
+    - name: 'Machine Learning Services(R, Python)'
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
     - name: R Services
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 독립 실행형 서버
       href: ../advanced-analytics/r/r-server-standalone.md
+    - name: 새로운 기능
+      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: 설치
   items:
     - name: SQL Server 2019의 차이점
-      href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
-    - name: 'ML Services 설치(R, Python)'
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
+    - name: Windows에 ML Services 설치
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
+    - name: Linux에 ML Services 설치 >>
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
     - name: R Services 설치
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: '독립 실행형 서버 설치(R, Python)'
@@ -25,20 +27,21 @@
     - name: 미리 학습된 모델 설치
       href: ../advanced-analytics/install/sql-pretrained-models-install.md
     - name: 오프라인 설치(인터넷 없음)
-      href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
       items:
-        - name: CAB 다운로드(오프라인 설치)
+        - name: 인터넷 액세스 권한 없이 설치
+          href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
+        - name: CAB 다운로드
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 명령 프롬프트 설정
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: R 및 Python 업그레이드
-      href: ../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+      href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: R 클라이언트 설정
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Python 클라이언트 설정
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
-    - name: 가상 서버 설정
-      href: ../advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: Azure VM에 설치
+      href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: 빠른 시작
   items:
     - name: R
@@ -70,8 +73,9 @@
         - name: 첫 번째 모델 학습 및 사용
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: 자습서
-  href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
   items:
+    - name: 자습서 개요
+      href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
     - name: 예제 데이터
       items:
         - name: Airline 데이터 집합
@@ -81,80 +85,86 @@
         - name: NYC 택시 데이터 집합
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
     - name: R
-      href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
       items:
+        - name: R 자습서
+          href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
         - name: 파티션 기반 모델 만들기
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
-        - name: SQL 개발자를 위한 R
-          href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+        - name: T-SQL에서 R 사용
           items:
-            - name: 1 - 데이터 살펴보기
+            - name: 1. 소개
+              href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+            - name: 2. 데이터 살펴보기
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 2 - 기능 엔지니어링
+            - name: 3. 기능 엔지니어링
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
-            - name: 3 - 학습 및 배포
+            - name: 4. 학습 및 배포
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-            - name: 4 - 예측
+            - name: 5. 예측
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
-        - name: R 데이터 과학자를 위한 SQL
-          href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+        - name: R 도구에서 SQL ML 사용
           items:
-            - name: 1 - 데이터 살펴보기
+            - name: 1. 소개
+              href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+            - name: 2. 데이터 살펴보기
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: 2 - 그래프 및 플롯
+            - name: 3. 그래프 및 플롯
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 3 - 기능 엔지니어링
+            - name: 4. 기능 엔지니어링
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
-            - name: 4 - 모델 빌드 및 저장
+            - name: 5. 모델 작성 및 저장
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
-            - name: 5 - 모델 배포 및 사용
+            - name: 6. 모델 배포 및 사용
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR 심층 분석
-          href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
           items:
-            - name: 데이터베이스 및 사용 권한 만들기
+            - name: 1. 소개
+              href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+            - name: 2. 데이터베이스 및 사용 권한 만들기
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: RxSqlServerData 개체 만들기
+            - name: 3. RxSqlServerData 개체 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 데이터 쿼리 및 수정
+            - name: 4. 데이터 쿼리 및 수정
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 컴퓨팅 컨텍스트 정의
+            - name: 5. 컴퓨팅 컨텍스트 정의
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 컴퓨팅 요약 통계
+            - name: 6. 컴퓨팅 요약 통계
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 데이터 시각화
+            - name: 7. 데이터 시각화
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 모델 만들기
+            - name: 8. 모델 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 새 데이터 점수 매기기
+            - name: 9. 새 데이터 점수 매기기
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 데이터 변환
+            - name: 10. 데이터 변환
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: rxImport를 사용하여 데이터 로드
+            - name: 11. rxImport를 사용하여 데이터 로드
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: rxDataStep을 사용하여 테이블 만들기
+            - name: 12. rxDataStep을 사용하여 테이블 만들기
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 청크 분석 수행
+            - name: 13. 청크 분석 수행
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: SQL Server와 XDF 파일 간에 데이터 이동
+            - name: 14. SQL Server와 XDF 파일 간에 데이터 이동
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: rxExec를 사용하여 사용자 지정 R 보내기
+            - name: 15. rxExec를 사용하여 사용자 지정 R 보내기
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
     - name: Python
-      href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
       items:
+        - name: Python 자습서
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
         - name: revoscalepy를 사용하여 Python 모델 만들기
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: SQL 개발자를 위한 Python
-          href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
           items:
-            - name: 1 - 데이터 살펴보기
+            - name: 1 - 소개
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2 - 데이터 살펴보기
               href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 2 - 기능 엔지니어링
+            - name: 3 - 기능 엔지니어링
               href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 3 - 학습 및 배포
+            - name: 4 - 학습 및 배포
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 4 - 예측
+            - name: 5 - 예측
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: 샘플 >
   href: 'https://github.com/Microsoft/sql-server-samples'
@@ -171,50 +181,31 @@
     - name: 보안
       href: ../advanced-analytics/concepts/security.md
 - name: 방법 가이드
-  href: ../advanced-analytics/r/sql-server-machine-learning-tasks.md
   items:
-    - name: 패키지 관리
+    - name: 연결
       items:
-        - name: 기본 패키지
-          href: ../advanced-analytics/r/installing-and-managing-r-packages.md
-        - name: 패키지 정보 가져오기
-          href: ../advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md
-        - name: 새 R 패키지 설치
-          href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+        - name: R에서 OLAP에 연결
           items:
-            - name: R 패키지 관리자 사용
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: T-SQL 사용
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: RevoScaleR 사용
-              href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-              items:
-                - name: 원격 R 패키지 관리 사용
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: R 패키지 동기화
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
-            - name: miniCRAN 리포지토리 만들기
-              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
-            - name: R 패키지 사용 팁
-              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 새 Python 패키지 설치
-          href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+            - name: R에서 OLAP 큐브의 데이터 사용
+              href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
+            - name: olapR을 사용하여 MDX 쿼리를 만드는 방법
+              href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
     - name: 데이터 탐색 및 모델링
       items:
-        - name: R-SQL 데이터 형식 변환
+        - name: R
+          items:
+            - name: ODBC를 사용하여 R 개체 로드
+              href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
+            - name: R을 사용한 예측 모델링
+              href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
+            - name: rxExecBy를 사용하여 여러 모델 만들기
+              href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
+    - name: 데이터 형식 변환
+      items:
+        - name: R to SQL
           href: ../advanced-analytics/r/r-libraries-and-data-types.md
-        - name: Python-SQL 데이터 형식 변환
+        - name: Python to SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
-        - name: ODBC를 사용하여 R 개체 로드
-          href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
-        - name: R에서 OLAP 큐브의 데이터 사용
-          href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
-        - name: olapR을 사용하여 MDX 쿼리를 만드는 방법
-          href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
-        - name: R을 사용한 예측 모델링
-          href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
-        - name: rxExecBy를 사용하여 여러 모델 만들기
-          href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: 배포
       items:
         - name: 저장 프로시저를 사용하여 운영
@@ -233,18 +224,60 @@
           href: ../advanced-analytics/real-time-scoring.md
         - name: PREDICT T-SQL로 네이티브 점수 매기기
           href: ../advanced-analytics/sql-native-scoring.md
-    - name: 성능
+    - name: 패키지 관리
       items:
-        - name: R의 성능 조정 개요
-          href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
-        - name: 성능 튜닝 서버 구성
-          href: ../advanced-analytics/r/sql-server-configuration-r-services.md
-        - name: R에서 성능 튜닝 - 데이터 최적화
-          href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
-        - name: R에서 결과 성능 튜닝
-          href: ../advanced-analytics/r/performance-case-study-r-services.md
-        - name: R 코드 프로파일링 함수 사용
-          href: ../advanced-analytics/r/using-r-code-profiling-functions.md
+        - name: 기본 패키지
+          href: ../advanced-analytics/package-management/default-packages.md
+        - name: 패키지 정보 가져오기
+          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 새 R 패키지 설치
+          items:
+            - name: R 패키지 설치
+              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+            - name: T-SQL 사용
+              href: ../advanced-analytics/r/install-r-packages-tsql.md
+            - name: 패키지 관리자 사용
+              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
+            - name: RevoScaleR 사용
+              items:
+                - name: RevoScaleR을 사용하여 설치
+                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
+                - name: 원격 R 패키지 관리 사용
+                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
+                - name: R 패키지 동기화
+                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: miniCRAN 리포지토리 만들기
+              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+            - name: R 패키지 사용 팁
+              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        - name: 새 Python 패키지 설치
+          items:
+            - name: 패키지 관리자 사용
+              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+    - name: 관리
+      items:
+        - name: 통합 관리
+          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
+        - name: 모니터
+          items:
+            - name: SSMS 보고서를 사용한 모니터링
+              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+            - name: DMV를 사용하여 모니터링
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+            - name: 확장 이벤트
+              items:
+                - name: 확장 이벤트
+                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
+                - name: 확장 이벤트 PREDICT T-SQL
+                  href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: 스크립트 실행 확장
+          href: ../advanced-analytics/administration/modify-user-account-pool.md
+        - name: 리소스 관리자
+          items:
+            - name: 리소스 관리자 사용
+              href: ../advanced-analytics/administration/resource-governance.md
+            - name: 리소스 풀 만들기
+              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
     - name: 보안
       items:
         - name: 사용자에게 사용 권한 제공
@@ -255,24 +288,20 @@
           href: ../advanced-analytics/security/firewall-configuration.md
         - name: SQLRUserGroup에 대한 로그인 만들기
           href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
-    - name: 관리
+    - name: 성능
       items:
-        - name: 통합 관리
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
-        - name: SSMS 보고서를 사용한 모니터링
-          href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
-        - name: DMV를 사용하여 모니터링
-          href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
-        - name: 스크립트 실행 확장
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
-        - name: 리소스 관리 거버넌스
-          href: ../advanced-analytics/administration/resource-governance.md
-        - name: 리소스 풀 만들기
-          href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
-        - name: 확장 이벤트
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-        - name: 확장 이벤트 PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: R
+          items:
+            - name: R의 성능 조정 개요
+              href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
+            - name: 성능 튜닝 서버 구성
+              href: ../advanced-analytics/r/sql-server-configuration-r-services.md
+            - name: R에서 성능 튜닝 - 데이터 최적화
+              href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
+            - name: R에서 결과 성능 튜닝
+              href: ../advanced-analytics/r/performance-case-study-r-services.md
+            - name: R 코드 프로파일링 함수 사용
+              href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: 참조
   items:
     - name: R 패키지
@@ -296,8 +325,9 @@
     - name: 릴리스 정보 >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: 문제 해결
-      href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
       items:
+        - name: 문제 해결 개요
+          href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
         - name: 알려진 문제
           href: ../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md
         - name: 데이터 수집

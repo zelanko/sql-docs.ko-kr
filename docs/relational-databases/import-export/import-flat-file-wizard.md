@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012905"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836390"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > 가져오기 및 내보내기 마법사와 관련된 콘텐츠는 [SQL Server 가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 참조하세요.
 
-플랫 파일 가져오기 마법사는 플랫 파일(.csv, .txt)에서 대상으로 데이터를 복사하는 간단한 방법입니다. 이 개요에는 이 마법사를 사용하는 이유, 이 마법사를 찾는 방법 및 수행할 간단한 예제가 나와 있습니다.
+플랫 파일 가져오기 마법사는 플랫 파일(.csv, .txt)에서 데이터베이스의 새 테이블로 데이터를 복사하는 간단한 방법입니다. 이 개요에는 이 마법사를 사용하는 이유, 이 마법사를 찾는 방법 및 수행할 간단한 예제가 나와 있습니다.
 
 ## <a name="why-would-i-use-this-wizard"></a>이 마법사를 왜 사용해야 합니까?
 이 마법사는 [PROSE](https://microsoft.github.io/prose/)(Program Synthesis using Examples)라고 하는 지능형 프레임워크를 활용하여 현재 가져오기 환경을 개선하기 위해 만들어졌습니다. 데이터 가져오기는 특별한 도메인 지식이 없는 사용자에게 복잡하고, 오류가 발생하기 쉬우며 번거로운 작업일 수 있습니다. 이 마법사는 가져오기 프로세스를 간소화하여 입력된 파일 및 고유한 테이블 이름을 선택하기만 하면 됩니다. 나머지는 PROSE 프레임워크가 처리합니다.

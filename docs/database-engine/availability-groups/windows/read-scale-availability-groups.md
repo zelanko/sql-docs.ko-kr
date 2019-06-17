@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
+ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801053"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131820"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "66801053"
 비즈니스 요구 사항이 주 복제본에서 실행되는 중요 업무용 워크로드를 위한 리소스를 절약하는 것이라면 읽기 전용 라우팅을 사용하거나 읽을 수 있는 보조 복제본에 직접 연결할 수 있습니다. 클러스터링 기술과의 통합에 의존할 필요가 없습니다. 이러한 새 기능은 Windows 및 Linux 플랫폼 모두에서 실행되는 SQL Server 2017에 사용할 수 있습니다.
 
 >[!IMPORTANT]
->고가용성 설정이 아닙니다. 오류 검색 및 자동 장애 조치를 모니터링하고 조정할 수 있는 인프라가 없습니다. 클러스터가 없으면 SQL Server는 자동화된 고가용성 솔루션이 제공하는 낮은 RTO(복구 시간 목표)를 제공할 수 없습니다. 고가용성 기능이 필요한 경우 클러스터 관리자(Windows의 경우 Windows Server 장애 조치(Failover) 클러스터링 또는 Linux의 경우 Pacemaker)를 사용합니다.
+>고가용성 설정이 아닙니다. 오류 검색 및 자동 장애 조치를 모니터링하고 조정할 수 있는 인프라가 없습니다. 클러스터가 없으면 SQL Server는 자동화된 고가용성 솔루션이 제공하는 낮은 RTO(복구 시간 목표)를 제공할 수 없습니다. 고가용성 기능이 필요한 경우 클러스터 관리자(Windows의 경우 Windows Server 장애 조치(Failover) 클러스터 또는 Linux의 경우 Pacemaker)를 사용합니다.
 >
 >읽기 확장 가용성 그룹은 재해 복구 기능을 제공할 수 있습니다. 읽기 전용 복제본이 동기 커밋 모드에 있을 경우 0의 RPO(복구 지점 목표)를 제공합니다. 읽기 확장 가용성 그룹을 장애 조치하려면 [읽기 확장 가용성 그룹에서 주 복제본 장애 조치](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly)를 참조하세요.
 

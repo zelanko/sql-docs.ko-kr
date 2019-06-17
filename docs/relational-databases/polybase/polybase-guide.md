@@ -1,6 +1,6 @@
 ---
 title: PolyBase란? | Microsoft Docs
-ms.date: 04/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 39a5341aaf32e37fe7c7cec3bde436cd0c5ba9d2
-ms.sourcegitcommit: f98a8a9a6def82ddd560150068824d4bbf8f067a
+ms.openlocfilehash: 4cea1e73dc2bc19add94a24c7a4f504c4d9e1224
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376177"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836329"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 
@@ -121,5 +121,6 @@ PolyBase를 사용하기 전에 [PolyBase 기능을 설치](polybase-installatio
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+- [ODBC 제네릭 형식](../../relational-databases/polybase/polybase-installation.md)
 
 ::: moniker-end

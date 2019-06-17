@@ -11,12 +11,12 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fac4b997b8dfde4c73fcf846012344c8d9cb7e0e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 73a8e9877b0d72a5d2d05686b2d08678985a50dc
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65717253"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033383"
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version 
 
@@ -39,7 +39,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
   
 ## <a name="arguments"></a>인수  
  [ @use32bitruntime= ] *use32bitruntime*  
- 매개 변수를 **True**로 설정하면 32비트 버전의 dtexec가 호출됩니다. *use32bitruntime*은 **Bool**입니다.  
+ 매개 변수를 **1**로 설정하면 32비트 버전의 dtexec가 호출됩니다. *use32bitruntime*은 **int**입니다.  
   
 ## <a name="result-set"></a>결과 집합  
  없음  

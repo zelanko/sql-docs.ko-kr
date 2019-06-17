@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785121"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826929"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -2935,7 +2935,7 @@ RESULT_SET_CACHING { ON | OFF}
 > [!Note]
 > 이 기능이 모든 Azure 지역에 롤아웃되는 동안 인스턴스에 배포된 버전과 최신 [Azure SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0)에서 기능 가용성을 확인합니다.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Azure SQL Data Warehouse Gen2용 미리 보기) 이 명령은 마스터 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Azure SQL Data Warehouse Gen2 미리 보기에만 적용) 이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
 
 ON은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
 

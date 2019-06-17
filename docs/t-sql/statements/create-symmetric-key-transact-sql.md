@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326504"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836345"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>인수  
  *Key_name*  
- 데이터베이스에서 대칭 키를 식별하는 고유한 이름을 지정합니다. 임시 키의 이름은 한 개의 번호(#) 기호로 시작해야 합니다. 예를 들면 **#temporaryKey900007**과 같습니다. 2개 이상의 #으로 시작하는 이름이 포함된 대칭 키는 만들 수 없습니다. 임시 대칭 키는 EKM 공급자를 사용하여 만들 수 없습니다.  
+ 데이터베이스에서 대칭 키를 식별하는 고유한 이름을 지정합니다. _key_name_이 하나의 숫자(#) 기호로 시작하면 임시 키가 지정됩니다. 예를 들면 **#temporaryKey900007**과 같습니다. 2개 이상의 #으로 시작하는 이름이 포함된 대칭 키는 만들 수 없습니다. 임시 대칭 키는 EKM 공급자를 사용하여 만들 수 없습니다.  
   
  AUTHORIZATION *owner_name*  
  이 키를 소유하는 데이터베이스 사용자 또는 응용 프로그램 역할의 이름을 지정합니다.  
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  키를 파생할 전달 구를 지정합니다.  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  임시 키로 암호화된 데이터 분류용 GUID를 생성할 ID 구를 지정합니다.  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  EKM(확장 가능 키 관리) 공급자에서 참조되는 이름을 지정합니다.  
   
 > [!NOTE]  
@@ -151,12 +151,12 @@ CREATE SYMMETRIC KEY key_name
 > [!WARNING]  
 >  RC4 알고리즘은 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY SYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION이 지정된 경우 데이터베이스 사용자에 대한 IMPERSONATE 권한 또는 애플리케이션 역할에 대한 ALTER 권한이 필요합니다. 인증서 또는 비대칭 키를 통한 암호화의 경우에는 해당 인증서 또는 비대칭 키에 대한 VIEW DEFINITION 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 대칭 키를 소유할 수 있습니다. 그룹 및 역할은 대칭 키를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-symmetric-key"></a>1. 대칭 키 만들기  
+### <a name="a-creating-a-symmetric-key"></a>1\. 대칭 키 만들기  
  다음 예에서는 `JanainaKey09` 알고리즘을 사용하여 `AES 256`라는 대칭 키를 만든 다음 새 키를 `Shipping04` 인증서를 사용하여 암호화합니다.  
   
 ```  
@@ -166,7 +166,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>2. 임시 대칭 키 만들기  
+### <a name="b-creating-a-temporary-symmetric-key"></a>2\. 임시 대칭 키 만들기  
  다음 예에서는 `#MarketingXXV`라는 임시 대칭 키를 `The square of the hypotenuse is equal to the sum of the squares of the sides` 전달 구에서 만듭니다. 이 키는 `Pythagoras` 문자열에서 생성되고 `Marketing25` 인증서로 암호화된 GUID와 함께 제공됩니다.  
   
 ```  
@@ -180,8 +180,8 @@ ENCRYPTION BY CERTIFICATE Marketing25;
 GO  
 ```  
   
-### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>3. EKM(확장 가능 키 관리) 장치를 사용하여 대칭 키 만들기  
- 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 `MyEKMProvider`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 공급자를 이미 등록했다고 가정합니다.  
+### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. EKM(확장 가능 키 관리) 장치를 사용하여 대칭 키 만들기  
+ 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `MyEKMProvider`라는 공급자를 이미 등록했다고 가정합니다.  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  
