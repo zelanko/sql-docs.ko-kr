@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b550fb7300ffdb2d37ae4407aaeeb43a49c89f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c4fb297ed31c801c8326307ab5b7dfd4e694e2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654781"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795785"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 IIS 구성
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "47654781"
 다음은 PHP에 대해 FastCGI를 설정하는 방법과 IIS 6.0 및 IIS 7.0에서 PHP 애플리케이션을 호스트하는 방법이 있는 자습서에 대한 링크입니다.  
   
 -   [PHP에서 FastCGI](https://docs.microsoft.com/iis/web-hosting/web-server-for-shared-hosting/fastcgi-with-php)  
--   [FastCGI를 사용하여 IIS 7.0에서 PHP 응용 프로그램 호스트](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
--   [FastCGI를 사용하여 IIS 6.0에서 PHP 응용 프로그램 호스트](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
+-   [FastCGI를 사용하여 IIS 7.0에서 PHP 애플리케이션 호스트](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis)  
+-   [FastCGI를 사용하여 IIS 6.0에서 PHP 애플리케이션 호스트](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-applications-on-iis/using-fastcgi-to-host-php-applications-on-iis-60)  
 -   [IIS 6.0에 대해 FastCGI 확장 구성](https://docs.microsoft.com/iis/application-frameworks/install-and-configure-php-on-iis/configuring-the-fastcgi-extension-for-iis-60)  
   
 ## <a name="video-presentations"></a>비디오 프레젠테이션  
@@ -46,7 +46,7 @@ ms.locfileid: "47654781"
 -   [IIS 7 - FastCGI 모듈](https://forums.iis.net/1104.aspx)  
   
 ## <a name="see-also"></a>참고 항목  
-[시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 

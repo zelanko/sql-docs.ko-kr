@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061561"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>드라이버 관리자의 함수 매핑
-드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 진입점을 지원 합니다. 데코 레이트 되지 않은 함수 (**SQLDriverConnect**) 함수의 ANSI 형식입니다. 유니코드 형식으로 데코 레이트 된를 *W* (**: SQLDriverConnectW**.)  
+드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 진입점을 지원 합니다. 데코 레이트 되지 않은 함수 (**SQLDriverConnect**) 함수의 ANSI 형식입니다. 유니코드 형식으로 데코 레이트 된를 *W* ( **: SQLDriverConnectW**.)  
   
- ODBC 헤더 파일에는 또한 데코 레이트 하는 함수 지원를 *A* (**: SQLDriverConnectA**) 혼합 된 ANSI/유니코드 응용 프로그램의 편의 위해. 호출을 **A** 함수는 데코 레이트 되지 않은 진입점에 대 한 호출은 실제로 (**SQLDriverConnect**.)  
+ ODBC 헤더 파일에는 또한 데코 레이트 하는 함수 지원를 *A* ( **: SQLDriverConnectA**) 혼합 된 ANSI/유니코드 응용 프로그램의 편의 위해. 호출을 **A** 함수는 데코 레이트 되지 않은 진입점에 대 한 호출은 실제로 (**SQLDriverConnect**.)  
   
- 응용 프로그램은 _UNICODE를 사용 하 여 컴파일된 경우 **#define**, ODBC 헤더 파일을 데코 레이트 되지 않은 함수 호출을 매핑하는 (**SQLDriverConnect**)를 유니코드 버전 (**: SQLDriverConnectW** .)  
+ 응용 프로그램은 _UNICODE를 사용 하 여 컴파일된 경우 **#define**, ODBC 헤더 파일을 데코 레이트 되지 않은 함수 호출을 매핑하는 (**SQLDriverConnect**)를 유니코드 버전 ( **: SQLDriverConnectW** .)  
   
  드라이버 관리자 경우 유니코드 드라이버를 드라이버 인식 **SQLConnectW** 드라이버에서 지원 됩니다.  
   

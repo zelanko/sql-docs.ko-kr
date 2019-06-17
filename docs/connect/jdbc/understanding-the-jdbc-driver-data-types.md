@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: jroth
+ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905015"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782504"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 데이터베이스로 사용하는 Java 응용 프로그램 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원합니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 데이터베이스로 사용하는 Java 애플리케이션 내의 JDBC 기본 및 고급 데이터 형식 사용을 지원합니다.  
   
 JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 Java 언어 형식 및 개체 사이의 변환을 중재합니다. JDBC 형식은 SQL-92 및 SQL-99 형식을 기준으로 합니다. JDBC 드라이버는 JDBC 사양에 따르며 예측 가능성과 융통성 사이의 올바른 균형을 제공하도록 디자인되었습니다.  
   
@@ -39,7 +39,7 @@ JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 | [데이터 형식 변환 이해](../../connect/jdbc/understanding-data-type-conversions.md)                                                 | getter 및 setter 메서드를 사용할 경우 데이터 형식 변환이 처리되는 방법에 대해 설명합니다.                                                                                                                                                                                  |
 | [국가별 문자 집합 지원](../../connect/jdbc/national-character-set-support.md)                                                           | 국가별 문자 집합 형식 지원에 대해 설명합니다.                                                                                                                                                                                                          |
 | [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)                                                                                 | SQLXML 인터페이스에 대해 설명합니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에 XML 데이터를 읽고 쓰는 방법에 대해서도 설명합니다.                                                                                                             |
-| [래퍼 및 인터페이스](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스에 대해 설명합니다. 응용 프로그램 서버는 이 인터페이스를 사용하여 클래스의 프록시를 만들 수 있습니다. 또한 `java.sql.Wrapper` 인터페이스에 대한 지원에 대해서도 설명합니다. |
+| [래퍼 및 인터페이스](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스에 대해 설명합니다. 애플리케이션 서버는 이 인터페이스를 사용하여 클래스의 프록시를 만들 수 있습니다. 또한 `java.sql.Wrapper` 인터페이스에 대한 지원에 대해서도 설명합니다. |
   
 ## <a name="see-also"></a>참고 항목
 

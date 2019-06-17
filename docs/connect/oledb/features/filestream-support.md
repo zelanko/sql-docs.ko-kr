@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: afc794e19ecc93f7275427760df78004a0f1fb13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: ebaaf0da2a051106b690f80d4524e675358450c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211552"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777786"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53211552"
 
 FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상 된 FILESTREAM 지원에 대 한 자세한 내용은 참조 하세요. [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)합니다.  
   
-데이터베이스 연결을 열면 **@@TEXTSIZE**가 기본적으로 -1("제한 없음")로 설정됩니다.  
+데이터베이스 연결을 열면 **@@TEXTSIZE** 가 기본적으로 -1("제한 없음")로 설정됩니다.  
   
 Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   

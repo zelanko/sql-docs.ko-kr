@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211823"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781542"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -70,7 +70,7 @@ note 하십시오.
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   **MultiSubnetFailover** 연결 속성을 사용하는 애플리케이션의 동작은 인증 유형([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따른 영향을 받지 않습니다.  
+-   **multiSubnetFailover** 연결 속성을 사용하는 애플리케이션 동작은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증, Kerberos 인증, Windows 인증과 같은 인증 유형의 영향을 받지 않습니다.  
   
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 증가시킵니다.  
   

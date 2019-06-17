@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922886"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
@@ -115,42 +115,42 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enumerating-objects-using-false"></a>1. false()를 사용하여 개체 열거  
+### <a name="a-enumerating-objects-using-false"></a>1\. false()를 사용하여 개체 열거  
  이 쿼리 식은 **MyComputer** 의 기본 인스턴스에서 **AutoClose**특성이 false로 설정된 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>2. contains를 사용하여 개체 열거  
+### <a name="b-enumerating-objects-using-contains"></a>2\. contains를 사용하여 개체 열거  
  이 쿼리 식은 대/소문자를 구분하지 않고 이름에 'm' 문자가 있는 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, 'm')]   
 ```  
   
-### <a name="c-enumerating-objects-using-not"></a>3. not을 사용하여 개체 열거  
+### <a name="c-enumerating-objects-using-not"></a>3\. not을 사용하여 개체 열거  
  이 쿼리 식은 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Production **스키마에 없으며 테이블 이름에 History라는 단어를 포함하는** 테이블을 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>4. 최종 노드에 대한 필터 식 제공 안 함  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>4\. 최종 노드에 대한 필터 식 제공 안 함  
  이 쿼리 식은 **AdventureWorks2012.Sales.SalesPerson** 테이블에서 모든 열을 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@Schema='Sales' and @Name='SalesPerson']/Columns  
 ```  
   
-### <a name="e-enumerating-objects-using-datetime"></a>5. datetime을 사용하여 개체 열거  
+### <a name="e-enumerating-objects-using-datetime"></a>5\. datetime을 사용하여 개체 열거  
  이 쿼리 식은 특정 시간에 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스에서 만든 테이블을 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDate=datetime('2008-03-21 19:49:32.647')]  
 ```  
   
-### <a name="f-enumerating-objects-using-isnull"></a>6. is_null을 사용하여 개체 열거  
+### <a name="f-enumerating-objects-using-isnull"></a>6\. is_null을 사용하여 개체 열거  
  이 쿼리 식은 마지막 수정 날짜 속성에 대한 NULL이 없는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 테이블을 모두 열거합니다.  
   
 ```  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020862"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle 데이터베이스에서 게시 만들기
@@ -31,13 +31,13 @@ ms.locfileid: "63020862"
   
 -   **다음을 사용하여 Oracle 데이터베이스에서 게시를 만들려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   게시를 만들기 전에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 Oracle 소프트웨어를 설치하고 Oracle 데이터베이스를 구성해야 합니다. 자세한 내용은 [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
@@ -114,32 +114,32 @@ ms.locfileid: "63020862"
   
 2.  원격 배포자가 없는 경우 원격 배포자를 구성합니다. 자세한 내용은 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)을 참조하세요.  
   
-3.  Oracle 게시자가 사용할 원격 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행합니다. 에 Oracle 데이터베이스 인스턴스의 네트워크 TNS (Transparent Substrate) 이름을 지정 **@publisher** 값 `ORACLE` 하거나 `ORACLE GATEWAY` 에 대 한 **@publisher_type**합니다. Oracle 게시자에서 원격`Specify` 배포자에 연결할 때 사용하는 보안 모드를 다음 중 하나로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
+3.  Oracle 게시자가 사용할 원격 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행합니다. 에 Oracle 데이터베이스 인스턴스의 네트워크 TNS (Transparent Substrate) 이름을 지정 **@publisher** 값 `ORACLE` 하거나 `ORACLE GATEWAY` 에 대 한 **@publisher_type** 합니다. Oracle 게시자에서 원격`Specify` 배포자에 연결할 때 사용하는 보안 모드를 다음 중 하나로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
-    -   기본값인 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@security_mode**, **@login**에 구성 중 Oracle 게시자에 만든 복제 관리 사용자 스키마의 로그인, **@password**의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
+    -   기본값인 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@security_mode** , **@login** 에 구성 중 Oracle 게시자에 만든 복제 관리 사용자 스키마의 로그인, **@password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
   
         > [!IMPORTANT]  
         >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 스크립트 파일에 자격 증명을 저장하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  
   
-    -   Windows 자격 증명을 사용하려면 **@security_mode** 에 **@security_mode**의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
+    -   Windows 자격 증명을 사용하려면 **@security_mode** 에 **@security_mode** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
   
         > [!NOTE]  
         >  Windows 인증을 사용하려면 Windows 자격 증명을 사용한 연결을 허용하도록 Oracle 서버를 구성해야 하며(자세한 내용은 Oracle 설명서 참조), 복제 관리 사용자 스키마에 대해 지정한 Microsoft Windows 계정과 동일한 계정으로 로그인한 상태여야 합니다.  
   
 4.  게시 데이터베이스에 대한 로그 판독기 에이전트 작업을 만듭니다.  
   
-    -   게시된 데이터베이스에 대한 로그 판독기 에이전트 작업이 존재하는지 확실하지 않으면 배포 데이터베이스의 Oracle 게시자가 사용하는 배포자에서 [sp_helplogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)를 실행합니다. **@publisher**에 Oracle 게시자의 이름을 지정합니다. 결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만들어야 합니다.  
+    -   게시된 데이터베이스에 대한 로그 판독기 에이전트 작업이 존재하는지 확실하지 않으면 배포 데이터베이스의 Oracle 게시자가 사용하는 배포자에서 [sp_helplogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을 지정합니다. 결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만들어야 합니다.  
   
     -   게시 데이터베이스에 대한 로그 판독기 에이전트 작업이 이미 존재하면 5단계를 실행합니다.  
   
-    -   배포 데이터베이스의 Oracle 게시자가 사용하는 배포자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. 이때 **@job_login** 및 **@job_password**의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
+    -   배포 데이터베이스의 Oracle 게시자가 사용하는 배포자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. 이때 **@job_login** 및 **@job_password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다.  
   
         > [!NOTE]  
         >  동일한 테이블을 여러 트랜잭션 게시에 게시하려는 경우에는 **@job_login** 매개 변수는 3단계에 제공된 로그인과 일치해야 합니다. 게시자 보안 정보를 제공하지 마세요. 로그 판독기 에이전트는 3단계에 제공된 보안 정보를 사용하여 게시자에 연결합니다.  
   
 5.  배포 데이터베이스의 배포자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
   
-6.  배포 데이터베이스의 배포자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication**에 4단계에서 사용된 게시 이름을, **@job_name** 및 **@password**에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@publisher_security_mode** 을 지정하고 **@publisher_login** 및 **@publisher_password**의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다.  
+6.  배포 데이터베이스의 배포자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 4단계에서 사용된 게시 이름을, **@job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@publisher_security_mode** 을 지정하고 **@publisher_login** 및 **@publisher_password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)   

@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744373"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796205"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 다운로드
 
@@ -42,7 +42,7 @@ Php 드라이버 다운로드 쉽게 되 고 PECL를 사용 하 여 Linux 및 ma
 
 ## <a name="see-also"></a>관련 항목:
 
-[시작 Microsoft Drivers for PHP for SQL Server](getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](getting-started-with-the-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)
 

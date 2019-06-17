@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054606"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
@@ -126,7 +126,7 @@ ms.locfileid: "63054606"
   
 5.  **확인**을 클릭합니다.  
   
- 문제 해결 데이터 새로 고침에 대 한 자세한 내용은 참조 하세요. [Power Pivot 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)합니다.  
+ 문제 해결 데이터 새로 고침에 대 한 자세한 내용은 참조 하세요. [Power Pivot 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 합니다.  
   
  구성 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   

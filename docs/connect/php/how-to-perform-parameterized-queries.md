@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666591"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796095"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>방법: 매개 변수가 있는 쿼리 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -114,7 +114,7 @@ sqlsrv_close( $conn);
 이전 예제에서는 쿼리를 실행하기 위해 **sqlsrv_query** 함수를 사용했습니다. 이 함수는 문을 준비하고 실행하므로 일회성 쿼리를 실행할 때 유용합니다. **sqlsrv_prepare**/**sqlsrv_execute** 조합은 다른 매개 변수 값을 사용하는 쿼리를 다시 실행할 때 적합합니다. 다른 매개 변수 값으로 쿼리를 다시 실행하는 예제를 확인하려면 다음 예제를 참조하세요.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열은 **sqlsrv_prepare**가 호출될 때 명령문(*$stmt*)에 바인딩됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
+다음 예제에서는 **sqlsrv_prepare** 함수를 사용할 때 변수의 암시적 바인딩을 보여 줍니다. 예제에서는 *Sales.SalesOrderDetail* 테이블에 여러 개의 판매 주문을 삽입합니다. *$params* 배열은 **sqlsrv_prepare**가 호출될 때 명령문( *$stmt*)에 바인딩됩니다. 테이블에 새 판매 주문을 삽입하는 각 쿼리를 실행하기 전에 *$params* 배열이 판매 주문 세부 사항에 해당하는 새 값으로 업데이트됩니다. 후속 쿼리를 실행할 때는 새 매개 변수 값을 사용합니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   

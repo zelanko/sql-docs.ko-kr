@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000790"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state(Transact-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 상태를 지우려는 개체 탐색기에서 노드를 나타냅니다. *target_tree_root_with_id* 됩니다 **nvarchar(400)**, 기본값은 NULL입니다.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 상태를 지우려는 개체 탐색기에서 노드를 나타냅니다. *target_tree_root_with_id* 됩니다 **nvarchar(400)** , 기본값은 NULL입니다.  
   
  msdb.dbo.syspolicy_system_health_state 시스템 뷰의 target_query_expression_with_id 열에 있는 값을 지정할 수 있습니다.  
   

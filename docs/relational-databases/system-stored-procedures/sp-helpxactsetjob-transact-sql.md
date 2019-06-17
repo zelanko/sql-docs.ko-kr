@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959613"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
@@ -38,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publisher** = ] **'***publisher***'**  
+ [ **@publisher** = ] **'***publisher***'**  
  비-의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업이 속한 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  

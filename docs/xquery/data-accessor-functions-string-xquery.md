@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62934739"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>데이터 접근자 함수 - string(XQuery)
@@ -55,7 +55,7 @@ fn:string($arg as item()?) as xs:string
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-string-function"></a>1. 문자열 함수 사용  
+### <a name="a-using-the-string-function"></a>1\. 문자열 함수 사용  
  다음 검색 쿼리는 <`Features`> 자식 요소 노드는 <`ProductDescription`> 요소입니다.  
   
 ```  
@@ -98,7 +98,7 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>2. 여러 노드에서 문자열 함수 사용  
+### <a name="b-using-the-string-function-on-various-nodes"></a>2\. 여러 노드에서 문자열 함수 사용  
  다음 예에서는 XML 인스턴스가 xml 유형의 변수에 할당됩니다. 쿼리를 적용 한 결과 보여 주기 위해 지정 된 **string ()** 다양 한 노드에 있습니다.  
   
 ```  

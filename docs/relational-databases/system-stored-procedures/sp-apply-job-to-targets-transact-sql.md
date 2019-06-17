@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998021"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @target_server_groups = ] 'target_server_groups'` 지정된 된 된 작업을 적용 하는 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
+`[ @target_server_groups = ] 'target_server_groups'` 지정된 된 된 작업을 적용 하는 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 됩니다 **nvarchar(2048)** , 기본값은 NULL입니다.  
   
-`[ @target_servers = ] 'target_servers'` 지정된 된 된 작업을 적용할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers*됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
+`[ @target_servers = ] 'target_servers'` 지정된 된 된 작업을 적용할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers*됩니다 **nvarchar(2048)** , 기본값은 NULL입니다.  
   
-`[ @operation = ] 'operation'` 지정된 된 된 작업은 적용할 또는 지정 된 대상 서버나 대상 서버 그룹에서 제거 여부입니다. *작업이*됩니다 **varchar(7)**, 기본값은 APPLY 사용 하 여 합니다. 유효한 연산은 **적용** 하 고 **제거**합니다.  
+`[ @operation = ] 'operation'` 지정된 된 된 작업은 적용할 또는 지정 된 대상 서버나 대상 서버 그룹에서 제거 여부입니다. *작업이*됩니다 **varchar(7)** , 기본값은 APPLY 사용 하 여 합니다. 유효한 연산은 **적용** 하 고 **제거**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

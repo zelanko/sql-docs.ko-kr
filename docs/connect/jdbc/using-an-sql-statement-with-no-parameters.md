@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041a0119425e6469a394420469b14f47f3b84a81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d63b7195e2de73292e56f9a63dcce561ca3b906e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674841"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790217"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>매개 변수가 없는 SQL 문 사용
 

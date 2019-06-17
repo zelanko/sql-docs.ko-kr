@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 289647915666437cbb0aed8bff7dd2bba2ba89a9
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+manager: jroth
+ms.openlocfilehash: 73b30ff0ed4f4173f13fff518b6578e3d041f3b1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227145"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780730"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>방법: 데이터를 스트림으로 전송
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57227145"
 세 번째 예제는 PDO_SQLSRV 드라이버를 사용하여 서버에 스트림 데이터를 전송하는 방법을 보여 줍니다.  
   
 ## <a name="example-sending-stream-data-at-execution"></a>예: 실행 시 Stream 데이터 보내기
-다음 예제는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에 한 행을 삽입합니다. 고객의 의견(*$comments*)은 PHP [fopen](https://php.net/manual/en/function.fopen.php) 함수를 통해 스트림으로 열린 다음, 쿼리를 실행할 때 서버에 스트림됩니다.  
+다음 예제는 AdventureWorks 데이터베이스의 *Production.ProductReview* 테이블에 한 행을 삽입합니다. 고객의 의견( *$comments*)은 PHP [fopen](https://php.net/manual/en/function.fopen.php) 함수를 통해 스트림으로 열린 다음, 쿼리를 실행할 때 서버에 스트림됩니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 콘솔에 기록됩니다.  
   

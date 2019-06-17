@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922134"
 ---
 # <a name="copy-only-backups-sql-server"></a>복사 전용 백업(SQL Server)
@@ -52,14 +52,14 @@ ms.locfileid: "62922134"
   
 -   복사 전용 전체 백업의 경우:  
   
-     데이터베이스 백업 *database_name* TO \<backup_device*>* ... WITH COPY_ONLY...  
+     데이터베이스 백업 *database_name* TO \<backup_device *>* ... WITH COPY_ONLY...  
   
     > [!NOTE]  
     >  DIFFERENTIAL 옵션과 함께 지정하면 COPY_ONLY가 적용되지 않습니다.  
   
 -   복사 전용 로그 백업의 경우:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* ... WITH COPY_ONLY...  
+     BACKUP LOG *database_name* TO *\<* backup_device *>* ... WITH COPY_ONLY...  
   
 ###  <a name="PowerShellProcedure"></a> PowerShell 사용  
   

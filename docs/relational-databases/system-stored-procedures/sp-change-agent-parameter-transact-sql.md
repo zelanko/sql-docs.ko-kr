@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997030"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
@@ -241,7 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  지정된 된 프로필에 정의 된 매개 변수를 보려면 실행 **sp_help_agent_profile** 확인 합니다 *profile_name* 연관 합니다 *profile_id*. 적절 한 *profile_id*, 다음 실행 **sp_help_agent_parameters** 는 사용 하 여 *profile_id* 프로필과 연결 된 매개 변수를 보려면. 매개 변수는 실행 하 여 프로필을 추가할 수 있습니다 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)합니다.  
   
-`[ @parameter_value = ] 'parameter_value'` 매개 변수의 새 값이입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수의 새 값이입니다. *parameter_value* 됩니다 **nvarchar(255)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
