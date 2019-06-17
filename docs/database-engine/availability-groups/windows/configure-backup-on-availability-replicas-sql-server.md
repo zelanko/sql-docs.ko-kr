@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133225"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793803"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본에서 백업 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,36 +33,13 @@ ms.locfileid: "54133225"
 > [!NOTE]  
 >  보조 복제본에 백업에 대한 소개는 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
--   **시작하기 전 주의 사항:**  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 보조 복제본에 백업을 구성하려면:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **후속 작업:**  [보조 복제본에 백업을 구성한 후의 작업](#FollowUp)  
-  
--   [백업 기본 설정에 대한 정보를 가져오려면](#ForInfoAboutBuPref)  
-  
--   [관련 내용](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
  주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
   
-|태스크|Permissions|  
+|태스크|사용 권한|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 보조 복제본에 백업을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 그룹 또는 가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
@@ -206,7 +183,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 |보기|정보|관련 열|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|현재 복제본이 기본 백업 복제본인지 여부|이 오류에는 이 작업을 적용할 수 없습니다.|  
+|[sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)|현재 복제본이 기본 백업 복제본인지 여부|해당 사항 없음|  
 |[sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)|자동화된 백업 기본 설정|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)|지정된 가용성 복제본의 백업 우선 순위|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)|복제본이 서버 인스턴스의 로컬 복제본인지 여부<br /><br /> 현재 역할<br /><br /> 작동 상태<br /><br /> 연결 상태<br /><br /> 가용성 복제본의 동기화 상태|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  

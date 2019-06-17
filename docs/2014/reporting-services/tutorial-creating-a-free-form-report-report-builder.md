@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098946"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 (보고서 작성기) 만들기
@@ -330,7 +330,7 @@ ms.locfileid: "66098946"
   
 3.  **다음**을 클릭합니다.  
   
-4.   **필드 정렬** 페이지에서 **사용 가능한 필드** 의 Product 필드를 **값**으로 끌어옵니다.  
+4.  **필드 정렬** 페이지에서 **사용 가능한 필드** 의 Product 필드를 **값**으로 끌어옵니다.  
   
 5.  SalesDate, Quantity 및 Sales에 대해 4단계를 반복합니다. SalesDate는 Product 아래에 배치하고, Quantity는 SalesDate 아래에 배치하고, Sales는SalesDate 아래에 배치합니다.  
   

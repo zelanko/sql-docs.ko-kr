@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995670"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rulename = ] 'rule'` 규칙 만들기 문에 의해 작성 된 규칙의 이름이입니다. *규칙* 는 **nvarchar(776)**, 기본값은 없음입니다.  
+`[ @rulename = ] 'rule'` 규칙 만들기 문에 의해 작성 된 규칙의 이름이입니다. *규칙* 는 **nvarchar(776)** , 기본값은 없음입니다.  
   
-`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식에 바인딩할 규칙은입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식에 바인딩할 규칙은입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. 하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열 상속 *규칙* 규칙 열에 직접 바인딩된 경우를 제외 합니다.  
   
@@ -77,7 +77,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-binding-a-rule-to-a-column"></a>1. 열에 규칙 바인딩  
+### <a name="a-binding-a-rule-to-a-column"></a>1\. 열에 규칙 바인딩  
  CREATE RULE 문을 사용하여 현재 데이터베이스에 `today`라는 규칙을 만들었다고 가정할 때 다음 예에서는 `HireDate` 테이블의 `Employee` 열에 이 규칙을 바인딩하는 방법을 보여 줍니다. 이제 `Employee`에 행을 추가하면 `HireDate` 열의 데이터가 `today` 규칙에 부합하는지 확인합니다.  
   
 ```  
@@ -86,7 +86,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>2. 별칭 데이터 형식에 규칙 바인딩  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>2\. 별칭 데이터 형식에 규칙 바인딩  
  `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. 형식의 기존 열 `ssn` 상속 합니다 `rule_ssn` 규칙을 하지 않는 한 **futureonly** 에 대해 지정 된 *futureonly_flag*, 또는 `ssn` 직접 바인딩한 규칙이 있는 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
   
 ```  
@@ -95,7 +95,7 @@ GO
 EXEC sp_bindrule 'rule_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>3. futureonly_flag 사용  
+### <a name="c-using-the-futureonlyflag"></a>3\. futureonly_flag 사용  
  다음 예에서는 `rule_ssn` 별칭 데이터 형식에 `ssn` 규칙을 바인딩하는 방법을 보여 줍니다. `futureonly`를 지정하였으므로 기존 `ssn` 형식의 열은 전혀 영향을 받지 않습니다.  
   
 ```  
@@ -104,7 +104,7 @@ GO
 EXEC sp_bindrule rule_ssn, 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>4. 구분 식별자 사용  
+### <a name="d-using-delimited-identifiers"></a>4\. 구분 식별자 사용  
  다음 예제에서 구분된 식별자의 사용을 보여 줍니다 *object_name* 매개 변수입니다.  
   
 ```  

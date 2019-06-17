@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737034"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775971"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -39,7 +39,7 @@ SQL Server 용 Microsoft JDBC Driver에서 Azure Active Directory 인증을 지�
     * **NotSpecified**
         * 사용 하 여 `authentication=NotSpecified` 또는 이러한 인증 방법을 필요할 경우 기본값을 그대로 둡니다.
 
-*   **accessToken**: 이 연결 속성을 사용 하 여 액세스 토큰을 사용 하 여 SQL Database에 연결 합니다. accessToken은 DriverManager 클래스의 getconnection () 메서드의 속성 매개 변수를 사용 하 여 서만 설정할 수 있습니다. 연결 URL에 사용할 수 없습니다.  
+*   **accessToken**:이 연결 속성을 사용 하 여 액세스 토큰을 사용 하 여 SQL Database에 연결 합니다. accessToken은 DriverManager 클래스의 getconnection () 메서드의 속성 매개 변수를 사용 하 여 서만 설정할 수 있습니다. 연결 URL에 사용할 수 없습니다.  
 
 자세한 내용은 인증 속성에 참조를 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md) 페이지입니다.  
 
@@ -164,7 +164,7 @@ Windows 도메인 계정에 현재 사용자를 연결 하는 Kerberos 티켓을
 #### <a name="windows"></a>Windows
 JDK가 함께 `kinit`, 로그온 TGT 키 배포 센터 (KDC)에서 도메인을 사용할 수 있는 Azure Active Directory와 페더레이션 되는 컴퓨터를 가입 합니다.
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>1단계: 티켓 부여 티켓 검색
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>1 단계: 티켓 부여 티켓 검색
 - **실행**: Windows
 - **작업**:
   - 명령을 사용 하 여 `kinit username@DOMAIN.COMPANY.COM` TGT는 KDC에서 가져오려는 다음 라는 메시지가 나타납니다. 도메인 암호입니다.
@@ -178,7 +178,7 @@ JDK가 함께 `kinit`, 로그온 TGT 키 배포 센터 (KDC)에서 도메인을 
 ##### <a name="requirements"></a>요구 사항
 Kerberos 도메인 컨트롤러를 쿼리 하는 Windows 도메인에 가입 된 컴퓨터에 액세스 합니다.
 
-##### <a name="step-1-find-kerberos-kdc"></a>1단계: Kerberos KDC를 찾기
+##### <a name="step-1-find-kerberos-kdc"></a>1 단계: Kerberos KDC를 찾기
 - **실행**: Windows 명령줄
 - **동작**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (여기서 "DOMAIN.COMPANY.COM" 매핑 도메인의 이름으로)
 - **샘플 출력**
@@ -190,7 +190,7 @@ Kerberos 도메인 컨트롤러를 쿼리 하는 Windows 도메인에 가입 된
   ```
 - **정보를 추출할** DC 이름,이 경우 `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>2단계: Krb5.conf에서 KDC 구성
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>2 단계: krb5.conf에서 KDC를 구성합니다.
 - **실행**: Linux/Mac
 - **작업**: 원하는 편집기에서 /etc/krb5.conf를 편집 합니다. 다음 키 구성
   ```
@@ -207,7 +207,7 @@ Kerberos 도메인 컨트롤러를 쿼리 하는 Windows 도메인에 가입 된
 > [!NOTE]
 >  도메인 모두 대문자 여야 합니다.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3단계: 티켓 부여 티켓 검색 테스트
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3 단계: 테스트 티켓 부여 티켓 검색
 - **실행**: Linux/Mac
 - **작업**:
   - 명령을 사용 하 여 `kinit username@DOMAIN.COMPANY.COM` TGT는 KDC에서 가져오려는 다음 라는 메시지가 나타납니다. 도메인 암호입니다.

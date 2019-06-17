@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961061"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @IndexNamePattern = ] 'table_or_index_name'` 사용자 정의 테이블이 나 인덱스의 정규화 되거나 정규화 되지 않은 이름이입니다. *table_or_index_name* 됩니다 **nvarchar(1035)**, 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 사용자 정의 테이블이 나 인덱스의 정규화 되거나 정규화 되지 않은 이름이입니다. *table_or_index_name* 됩니다 **nvarchar(1035)** , 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
   
-`[ @OptionName = ] 'option_name'` 인덱스 옵션 이름이입니다. *option_name* 됩니다 **varchar(35)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
+`[ @OptionName = ] 'option_name'` 인덱스 옵션 이름이입니다. *option_name* 됩니다 **varchar(35)** , 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|TRUE로 설정된 경우 행 잠금을 사용하지 않습니다. FALSE인 경우 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.|  
 |**DisAllowPageLocks**|TRUE로 설정된 경우 페이지 잠금을 사용하지 않습니다. FALSE인 경우 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.|  
   
-`[ @OptionValue = ] 'value'` 지정 여부를 *option_name* 설정을 사용 하도록 설정 (TRUE, ON, yes 또는 1)은 사용 하지 않도록 설정 하거나 (FALSE, OFF, no 또는 0). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
+`[ @OptionValue = ] 'value'` 지정 여부를 *option_name* 설정을 사용 하도록 설정 (TRUE, ON, yes 또는 1)은 사용 하지 않도록 설정 하거나 (FALSE, OFF, no 또는 0). *값* 됩니다 **varchar(12)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0 초과(실패)  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-an-option-on-a-specific-index"></a>1. 특정 인덱스에 대한 옵션 설정  
+### <a name="a-setting-an-option-on-a-specific-index"></a>1\. 특정 인덱스에 대한 옵션 설정  
  다음 예제에서는 페이지 잠금을에서 허용 하지 않습니다 합니다 `IX_Customer_TerritoryID` 인덱스에 `Customer` 테이블입니다.  
   
 ```sql  
@@ -95,7 +95,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
     N'disallowpagelocks', TRUE;  
 ```  
   
-### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>2. 테이블의 모든 인덱스에 대한 옵션 설정  
+### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>2\. 테이블의 모든 인덱스에 대한 옵션 설정  
  다음 예에서는 `Product` 테이블에 연결된 모든 인덱스에 대해 행 잠금을 허용하지 않습니다. 문의 결과를 표시하기 위해 `sys.indexes` 프로시저를 실행하기 전과 후에 `sp_indexoption` 카탈로그 뷰를 쿼리합니다.  
   
 ```sql  
@@ -117,7 +117,7 @@ WHERE object_id = OBJECT_ID(N'Production.Product');
 GO  
 ```  
   
-### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>3. 클러스터형 인덱스가 없는 테이블에 대한 옵션 설정  
+### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>3\. 클러스터형 인덱스가 없는 테이블에 대한 옵션 설정  
  다음 예에서는 클러스터형 인덱스가 없는 테이블(힙)에 대해 페이지 잠금을 허용하지 않습니다. 합니다 `sys.indexes` 전후 카탈로그 뷰를 쿼리하여는 `sp_indexoption` 문의 결과 표시 하려면 프로시저가 실행 될 합니다.  
   
 ```sql  

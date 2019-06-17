@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538185"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
@@ -50,7 +50,7 @@ SQLRETURN SQLBrowseConnect(
   
 ## <a name="arguments"></a>인수  
  *ConnectionHandle*  
- [입력] 연결 핸들입니다.  
+ [Input] 연결 핸들입니다.  
   
  *InConnectionString*  
  [입력] 요청 연결 문자열을 찾습니다 (참조 "*InConnectionString* 인수"에서 "설명").  

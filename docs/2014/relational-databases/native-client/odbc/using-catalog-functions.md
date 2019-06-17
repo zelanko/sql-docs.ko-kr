@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667381"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
@@ -43,7 +43,7 @@ ms.locfileid: "62667381"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 _linked_server_name_**.** _카탈로그_ 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
+ 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 _linked_server_name_ **.** _카탈로그_ 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62667381"
   
 -   **SQLTables**  
   
- 두 부분 _linked_server_name_**.** _카탈로그_ 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)합니다.  
+ 두 부분 _linked_server_name_ **.** _카탈로그_ 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md)합니다.  
   
  SQLLinkedServers 및 SQLLinkedCatalogs를 사용하려면 다음 파일이 필요합니다.  
   

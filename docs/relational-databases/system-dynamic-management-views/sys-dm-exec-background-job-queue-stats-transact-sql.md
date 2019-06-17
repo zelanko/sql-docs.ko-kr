@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013508"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats(Transact-SQL)
@@ -61,7 +61,7 @@ ms.locfileid: "63013508"
 
 ## <a name="examples"></a>예  
   
-### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>1. 실패한 백그라운드 작업의 백분율 확인  
+### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>1\. 실패한 백그라운드 작업의 백분율 확인  
  다음 예에서는 실행된 모든 쿼리에 대해 실패한 백그라운드 작업의 백분율을 반환합니다.  
   
 ```  
@@ -74,7 +74,7 @@ FROM sys.dm_exec_background_job_queue_stats;
 GO  
 ```  
   
-### <a name="b-determining-the-percentage-of-failed-enqueue-attempts"></a>2. 큐에 넣지 못한 시도의 백분율 확인  
+### <a name="b-determining-the-percentage-of-failed-enqueue-attempts"></a>2\. 큐에 넣지 못한 시도의 백분율 확인  
  다음 예에서는 실행된 모든 쿼리에 대해 큐에 넣지 못한 시도의 백분율을 반환합니다.  
   
 ```  

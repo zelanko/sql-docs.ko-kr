@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071085"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 사용 데이터 컬렉션
@@ -43,7 +43,7 @@ ms.locfileid: "66071085"
   
 |단계|Description|  
 |-----------|-----------------|  
-|1.|사용 데이터 컬렉션은 SharePoint 배포의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 공급자와 PowerPivot 구성 요소가 생성하는 이벤트에 의해 트리거됩니다. 설정하거나 해제할 수 있는 구성 가능 이벤트에는 연결 요청, 로드 및 언로드 요청, 쿼리 응답 타이밍 이벤트가 포함되며 이들은 애플리케이션 서버에서 PowerPivot 서비스에 의해 모니터링됩니다. 다른 이벤트는 서버에서만 관리되며 해제할 수 없습니다. 여기에는 데이터 새로 고침 및 서버 상태 이벤트가 포함됩니다.<br /><br /> 처음에 사용 데이터는 SharePoint 시스템의 데이터 컬렉션 기능을 사용하여 논리 로그 파일에 수집되고 저장됩니다. 파일과 해당 위치는 SharePoint의 표준 사용 데이터 컬렉션 시스템의 일부입니다. 파일의 위치는 팜에 있는 모든 서버에서 동일합니다. 로깅 디렉터리의 위치를 보거나 변경하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동하고 **Usage and Health Data Collection 구성**을 클릭합니다.|  
+|1\.|사용 데이터 컬렉션은 SharePoint 배포의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 공급자와 PowerPivot 구성 요소가 생성하는 이벤트에 의해 트리거됩니다. 설정하거나 해제할 수 있는 구성 가능 이벤트에는 연결 요청, 로드 및 언로드 요청, 쿼리 응답 타이밍 이벤트가 포함되며 이들은 애플리케이션 서버에서 PowerPivot 서비스에 의해 모니터링됩니다. 다른 이벤트는 서버에서만 관리되며 해제할 수 없습니다. 여기에는 데이터 새로 고침 및 서버 상태 이벤트가 포함됩니다.<br /><br /> 처음에 사용 데이터는 SharePoint 시스템의 데이터 컬렉션 기능을 사용하여 논리 로그 파일에 수집되고 저장됩니다. 파일과 해당 위치는 SharePoint의 표준 사용 데이터 컬렉션 시스템의 일부입니다. 파일의 위치는 팜에 있는 모든 서버에서 동일합니다. 로깅 디렉터리의 위치를 보거나 변경하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동하고 **Usage and Health Data Collection 구성**을 클릭합니다.|  
 |2|Microsoft SharePoint Foundation 사용 데이터 가져오기 타이머 작업은 예약된 간격(기본적으로 1시간 간격)으로 사용 데이터를 로컬 파일에서 PowerPivot 서비스 애플리케이션 데이터베이스로 이동합니다. 팜에 PowerPivot 서비스 애플리케이션이 여러 개 있을 경우 애플리케이션마다 고유한 데이터베이스가 있습니다. 이벤트에는 해당 이벤트를 생성한 PowerPivot 서비스 애플리케이션을 식별하는 내부 정보가 포함되어 있습니다. 애플리케이션 식별자를 통해 사용 데이터가 해당 데이터를 생성한 애플리케이션에 바인딩됩니다.|  
 |3|중앙 관리의 PowerPivot 관리 대시보드에서 사용할 수 있는 내부 보고 데이터베이스에 데이터가 복사됩니다.|  
 |4|데이터 원본은 Excel에서 사용자 지정 보고서를 만들기 위해 액세스할 수 있는 PowerPivot 통합 문서입니다. 원본 통합 문서의 인스턴스는 하나뿐입니다. 지역화된 보고서는 모두 동일한 원본 통합 문서를 기반으로 합니다.|  

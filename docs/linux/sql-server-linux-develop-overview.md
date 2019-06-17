@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705819"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 응용 프로그램 개발을 시작 하는 방법

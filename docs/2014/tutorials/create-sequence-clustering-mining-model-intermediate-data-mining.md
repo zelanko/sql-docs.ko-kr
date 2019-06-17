@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273474"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 마이닝 모델 구조 만들기(중급 데이터 마이닝 자습서)
@@ -32,7 +32,7 @@ ms.locfileid: "63273474"
   
 3.  에 **정의 방법 선택** 페이지에서 **기존 관계형 데이터베이스 또는 데이터 웨어하우스에서** 를 선택한 다음 클릭 **다음**합니다.  
   
-4.  에 **데이터 마이닝 구조 만들기** 페이지에서 옵션 **마이닝 모델을 사용 하 여 마이닝 구조 만들기** 을 선택 합니다. 옵션의 경우 드롭다운 목록에서 클릭 **사용할 데이터 마이닝 기술을 사용 하 시겠습니까?**, 선택한 **Microsoft 시퀀스 클러스터링**합니다. **다음**을 클릭합니다.  
+4.  에 **데이터 마이닝 구조 만들기** 페이지에서 옵션 **마이닝 모델을 사용 하 여 마이닝 구조 만들기** 을 선택 합니다. 옵션의 경우 드롭다운 목록에서 클릭 **사용할 데이터 마이닝 기술을 사용 하 시겠습니까?** , 선택한 **Microsoft 시퀀스 클러스터링**합니다. **다음**을 클릭합니다.  
   
      합니다 **데이터 원본 뷰 선택** 페이지가 나타납니다. 아래 **사용 가능한 데이터 원본 뷰**, 선택 `Orders`합니다.  
   

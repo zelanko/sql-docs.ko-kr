@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020056"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
@@ -40,7 +40,7 @@ ms.locfileid: "63020056"
   
 4.  개체 탐색기에서 마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
-5.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 (**...** ) 데이터베이스 폴더를 찾습니다.  
+5.  **폴더** 입력란에 데이터베이스 폴더의 원래 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 ( **...** ) 데이터베이스 폴더를 찾습니다.  
   
 6.  데이터베이스의 읽기/쓰기 모드를 선택합니다.  
   

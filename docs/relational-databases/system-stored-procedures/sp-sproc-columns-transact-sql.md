@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032742"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns(Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @procedure_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 하는 프로시저의 이름이입니다. *이름을* 됩니다 **nvarchar (** 390 **)**, 기본값은 % 이며 현재 데이터베이스의 모든 테이블을 의미입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @procedure_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 하는 프로시저의 이름이입니다. *이름을* 됩니다 **nvarchar (** 390 **)** , 기본값은 % 이며 현재 데이터베이스의 모든 테이블을 의미입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @procedure_owner = ] 'owner'` 프로시저의 소유자의 이름이입니다. *소유자*됩니다 **nvarchar (** 384 **)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 프로시저 표시 규칙이 적용 됩니다.  
+`[ @procedure_owner = ] 'owner'` 프로시저의 소유자의 이름이입니다. *소유자*됩니다 **nvarchar (** 384 **)** , 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 프로시저 표시 규칙이 적용 됩니다.  
   
  지정한 이름의 프로시저를 현재 사용자가 갖고 있을 경우 해당 프로시저에 대한 정보가 반환됩니다. 하는 경우 *소유자*지정 하지 않으면 현재 사용자 지정 된 이름의 프로시저를 소유 하지 않는 한 **sp_sproc_columns** 데이터베이스 소유자가 소유한 지정한 이름의 프로시저를 찾습니다. 프로시저가 있으면 해당 열에 대한 정보가 반환됩니다.  
   
 `[ @procedure_qualifier = ] 'qualifier'` 프로시저 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-`[ @column_name = ] 'column_name'` 단일 열 및 카탈로그 정보 중 한 열만 필요한 경우에 사용 됩니다. *column_name* 됩니다 **nvarchar (** 384 **)**, 기본값은 NULL입니다. 하는 경우 *column_name* 는 생략 하면 모든 열 반환 됩니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트에서 ISO 표준 패턴 일치(% 및 _ 와일드카드 문자)만 사용해야 합니다.  
+`[ @column_name = ] 'column_name'` 단일 열 및 카탈로그 정보 중 한 열만 필요한 경우에 사용 됩니다. *column_name* 됩니다 **nvarchar (** 384 **)** , 기본값은 NULL입니다. 하는 경우 *column_name* 는 생략 하면 모든 열 반환 됩니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트에서 ISO 표준 패턴 일치(% 및 _ 와일드카드 문자)만 사용해야 합니다.  
   
 `[ @ODBCVer = ] 'ODBCVer'` 사용 중인 ODBC의 버전입니다. *ODBCVer* 됩니다 **int**, 기본값은 2 이며 ODBC 버전 2.0 나타내는입니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이점에 대 한 자세한 내용은 ODBC 참조 **SQLProcedureColumns** odbc 버전 3.0 사양  
   

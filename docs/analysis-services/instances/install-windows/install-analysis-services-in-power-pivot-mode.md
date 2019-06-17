@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054813"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
@@ -105,7 +105,7 @@ ms.locfileid: "63054813"
   
      **다음**을 선택합니다.  
   
-15.  **Analysis Services 구성** 페이지에서 **서버 모드** 아래에 있는 **PowerPivot 모드**를 선택합니다.  
+15. **Analysis Services 구성** 페이지에서 **서버 모드** 아래에 있는 **PowerPivot 모드**를 선택합니다.  
   
      ![SQL 설치 프로그램-Analysis Services 구성 페이지를 방문](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL 설치 프로그램-Analysis Services 구성 페이지를 방문 합니다.")  
   
@@ -262,7 +262,7 @@ ms.locfileid: "63054813"
  이전 버전의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 검토하세요.  
   
 ##  <a name="bkmk_multiple_servers"></a> Microsoft SharePoint 용 Power Pivot-단일 서버 설치 그 이상  
- **WFE (웹 프런트 엔드)** 나 **중간 계층:**: 사용 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 추가 설치를 더 큰 SharePoint 팜에 SharePoint 모드의 서버 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치 관리자 패키지를 실행 하는 기능을 팜에 **(SharePoint 2016) spPowerPivot16.msi 또는 spPowerPivot.msi (SharePoint 2013)** 각 SharePoint 서버에 있습니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
+ **WFE (웹 프런트 엔드)** 나 **중간 계층:** : 사용 하는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 추가 설치를 더 큰 SharePoint 팜에 SharePoint 모드의 서버 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치 관리자 패키지를 실행 하는 기능을 팜에 **(SharePoint 2016) spPowerPivot16.msi 또는 spPowerPivot.msi (SharePoint 2013)** 각 SharePoint 서버에 있습니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
   
  중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

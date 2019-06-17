@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62827395"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림 전송
@@ -36,11 +36,11 @@ ms.locfileid: "62827395"
   
 6.  다음 출력 중 하나를 선택합니다.  
   
-    -   삭제 출력: 삭제 변경 행이 전달 되는 출력입니다.  
+    -   삭제 출력: DELETE 변경 행이 전송되는 출력입니다.  
   
-    -   삽입 출력: 삽입 변경 행이 전달 되는 출력입니다.  
+    -   삽입 출력: INSERT 변경 행이 전송되는 출력입니다.  
   
-    -   업데이트 출력: 출력 위치 전/후 업데이트 변경 행 및 병합 변경 행이 전달 됩니다.  
+    -   업데이트 출력: UPDATE 전/후 변경 행 및 병합 변경 행이 전송되는 출력입니다.  
   
 7.  필요에 따라 **고급 편집기** 대화 상자를 사용하여 고급 속성을 구성할 수도 있습니다.  
   

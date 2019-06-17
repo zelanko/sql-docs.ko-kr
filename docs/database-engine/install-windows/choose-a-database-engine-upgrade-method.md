@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872263"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795000"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,11 @@ ms.locfileid: "58872263"
 -   고가용성(HA) 구성이 없는 개발 환경  
   
 -   가동 중시 시간이 허용되고 최근 하드웨어 및 소프트웨어에서 실행되는 중요 업무와 관련 없는 운영 환경 가동 중지 시간은 데이터베이스의 크기와 I/O 하위 시스템의 속도에 따라 달라집니다. 메모리 최적화 테이블을 사용하는 경우 SQL Server 2014를 업그레이드하려면 시간이 다소 더 걸립니다. 자세한 내용은 [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하세요.  
-  
+
+> [!NOTE]
+> Microsoft가 이 전략을 사용하는 방법의 예는 다음 블로그 게시물을 참조하세요. [업그레이드 또는 업그레이드 안함](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/). 
+
+
 > [!WARNING]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 때에는 업그레이드 사전 검사가 실행되는 과정에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 중지된 다음 다시 실행됩니다.  
   
