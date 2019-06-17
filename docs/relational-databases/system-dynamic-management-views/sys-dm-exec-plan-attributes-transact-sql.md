@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013221"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
@@ -141,7 +141,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-attributes-for-a-specific-plan"></a>1. 특정 계획에 대한 특성 반환  
+### <a name="a-returning-the-attributes-for-a-specific-plan"></a>1\. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  
   
 ```sql  
@@ -153,7 +153,7 @@ FROM sys.dm_exec_plan_attributes(<plan_handle>);
 GO  
 ```  
   
-### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>2. 컴파일된 계획의 SET 옵션 및 캐시된 계획의 SQL 핸들 반환  
+### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>2\. 컴파일된 계획의 SET 옵션 및 캐시된 계획의 SQL 핸들 반환  
  다음 예에서는 각 계획이 컴파일될 때 사용한 옵션을 나타내는 값을 반환합니다. 또한 모든 캐시된 계획의 SQL 핸들도 반환됩니다.  
   
 ```sql  

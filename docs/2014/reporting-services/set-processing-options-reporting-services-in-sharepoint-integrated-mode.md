@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d64015e0b1756033f3a3a0b7caf90262d7d43f9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101342"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
@@ -107,6 +107,6 @@ ms.locfileid: "66101342"
 ## <a name="see-also"></a>관련 항목  
  [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)   
  [보고서 캐시&#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
- [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

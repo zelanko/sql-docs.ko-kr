@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653758"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스를 생성 합니다.
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 만든 후 다음 단계는 보고서 정의 스키마의 로컬 복사본을 검색하고 XML 스키마 정의 도구(Xsd.exe)를 실행하는 것입니다.  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL 클래스를 생성하려면  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004282"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
@@ -41,7 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @cache_directory = ] 'cache_directory'` 수집 된 데이터가 임시로 저장 되는 파일 시스템에서 디렉터리입니다. *cache_directory* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 값을 지정하지 않으면 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.  
+`[ @cache_directory = ] 'cache_directory'` 수집 된 데이터가 임시로 저장 되는 파일 시스템에서 디렉터리입니다. *cache_directory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 값을 지정하지 않으면 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

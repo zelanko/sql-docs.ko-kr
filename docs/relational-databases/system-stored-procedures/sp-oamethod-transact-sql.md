@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450113"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  출력 매개 변수, 반환 값을 얻을 *매개 변수* 적절 한 데이터 형식의 지역 변수 이어야 합니다 하 고 **출력** 지정 해야 합니다. 상수 매개 변수를 지정 여부나 **출력** 지정 하지 않으면 모든 반환 출력 매개 변수의 값은 무시 됩니다.  
   
- 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다. 사실은 **@**_parametername_is 하지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 (**@**) 제거 되 고 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 를 지정 하는 경우 *parametername* 의 이름 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수입니다. 사실은 **@** _parametername_is 하지는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수입니다. at 기호 ( **@** ) 제거 되 고 *parametername*매개 변수 이름으로 OLE 개체에 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-a-method"></a>1. 메서드 호출  
+### <a name="a-calling-a-method"></a>1\. 메서드 호출  
  다음 예제에서는 합니다 `Connect` 이전에 만든된 메서드의 **SQLServer** 개체입니다.  
   
 ```  
@@ -123,7 +123,7 @@ BEGIN
 END;  
 ```  
   
-### <a name="b-getting-a-property"></a>2. 속성 가져오기  
+### <a name="b-getting-a-property"></a>2\. 속성 가져오기  
  다음 예제에서는 합니다 `HostName` 속성 (이전에 생성 **SQLServer** 개체) 하 고 지역 변수에 저장 합니다.  
   
 ```  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f784da5b506930bd3a28366c4610c79e73b14c77
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105546"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>지도(보고서 작성기 및 SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66105546"
 #### <a name="sources-of-spatial-data"></a>공간 데이터 원본  
  다음과 같은 공간 데이터 원본이 지원됩니다.  
   
--   **지도 갤러리 보고서.** 지도 갤러리에 있는 보고서에 공간 데이터가 포함되어 있습니다. 기본적으로 지도 갤러리는 *\<drive>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery에 설치됩니다.  
+-   **지도 갤러리 보고서.** 지도 갤러리에 있는 보고서에 공간 데이터가 포함되어 있습니다. 기본적으로 지도 갤러리는 *\<drive>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery에 설치됩니다.  
   
     > [!NOTE]  
     >  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하십시오. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  

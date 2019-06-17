@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070043"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>데이터 샘플링(SQL Server 데이터 마이닝 추가 기능)
@@ -32,7 +32,7 @@ ms.locfileid: "66070043"
  모델을 학습하고 테스트하기 위해 적합한 종류의 데이터를 만드는 것은 데이터 마이닝에서 중요한 부분이지만 적합한 도구 없이는 힘든 작업입니다. 마법사는 층별 샘플링을 수행하여 학습 및 테스트 집합의 균형이 잘 잡히도록 합니다.  
   
 ## <a name="random-sampling-and-oversampling"></a>무작위 샘플링 및 과다 샘플링  
- . 무작위 샘플링은 모델을 테스트하는 데 사용하는 데이터가 모델을 만드는 데 사용하는 데이터를 잘 나타내는지 확인할 수 있는 가장 좋은 방법입니다. Excel 또는 외부 데이터 원본에 저장된 데이터를 무작위로 샘플링할 수 있습니다.  
+ 을 선택합니다. 무작위 샘플링은 모델을 테스트하는 데 사용하는 데이터가 모델을 만드는 데 사용하는 데이터를 잘 나타내는지 확인할 수 있는 가장 좋은 방법입니다. Excel 또는 외부 데이터 원본에 저장된 데이터를 무작위로 샘플링할 수 있습니다.  
   
  무작위 샘플링 옵션을 사용 하는 경우는 **샘플 데이터** 마법사에서 자동으로 학습 및 테스트 데이터 집합을 만들고 하 고 나중에 참조할 수에 대 한 개별 Excel 워크시트로 출력 합니다.  
   

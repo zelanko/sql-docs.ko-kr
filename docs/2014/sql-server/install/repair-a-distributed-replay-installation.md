@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092955"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Distributed Replay 설치 복구
@@ -32,7 +32,7 @@ ms.locfileid: "66092955"
   
 2.  선택 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 **제거 또는 변경 프로그램** 창에서를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 대화 상자에서 클릭 **복구**.  
   
-3.  단계를 수행 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사 및는 **기능 선택** 페이지를 복구 하 고 클릭 하려는 Distributed Replay 구성 요소를 선택 합니다 **다음.**.  
+3.  단계를 수행 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 마법사 및는 **기능 선택** 페이지를 복구 하 고 클릭 하려는 Distributed Replay 구성 요소를 선택 합니다 **다음.** .  
   
 4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 완료하여 선택한 Distributed Replay 기능을 복구합니다.  
   

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5584984121403b1a70e15fb02e85b7afcc169843
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094976"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 모드의 Reporting Services에 대한 하드웨어 및 소프트웨어 요구 사항
@@ -29,7 +29,7 @@ ms.locfileid: "66094976"
   
 -   [자세한 정보](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq"></a> 사전 요구 사항  
   
 -   로컬 설치의 경우 SharePoint 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 중 로그인된 계정은 로컬 운영 체제의 administrators 그룹의 구성원이어야 합니다. 설치 계정이 SharePoint 팜 관리자 그룹의 구성원이 될 필요는 없습니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66094976"
   
 ##  <a name="bkmk_more_information"></a> 자세한 정보
 
- SharePoint 변경에 대 한 정보를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 변경](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx)합니다.  
+ SharePoint 변경에 대 한 정보를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 변경](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx) 합니다.  
   
  [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   

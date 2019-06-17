@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354362"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>링크 특성 만들기(Master Data Services)

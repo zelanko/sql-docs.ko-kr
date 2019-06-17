@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982874"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
--   에 대 한 값을 제공 하는 경우 **@database_name**에 지정 된 데이터베이스가 스트레치 지원 하지만 값을 제공 해야 합니다 **@server_address**합니다.  
+-   에 대 한 값을 제공 하는 경우 **@database_name** 에 지정 된 데이터베이스가 스트레치 지원 하지만 값을 제공 해야 합니다 **@server_address** 합니다.  
   
--   에 대 한 값을 제공 하는 경우 **@database_name**에 지정 된 데이터베이스가 스트레치 사용 하도록 설정 하 고 값을 제공 하지 않아도 **@server_address**합니다. 에 대 한 값을 제공 하는 경우 **@server_address**, 저장된 프로시저를 무시 하 고 스트레치 사용 데이터베이스를 사용 하 여 기존 Azure 서버를 이미 사용 하 여 연결 합니다.  
+-   에 대 한 값을 제공 하는 경우 **@database_name** 에 지정 된 데이터베이스가 스트레치 사용 하도록 설정 하 고 값을 제공 하지 않아도 **@server_address** 합니다. 에 대 한 값을 제공 하는 경우 **@server_address** , 저장된 프로시저를 무시 하 고 스트레치 사용 데이터베이스를 사용 하 여 기존 Azure 서버를 이미 사용 하 여 연결 합니다.  
   
  @azure_username = N'*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078838"
 ---
 # <a name="modifying-the-product-dimension"></a>Product 차원 수정
@@ -57,7 +57,7 @@ ms.locfileid: "66078838"
   
 2.  **차원 구조** 탭의 **특성** 창에서 **Product Line**을 선택합니다.  
   
-3.  화면의 오른쪽 속성 창에서 클릭 합니다 **NameColumn** 속성 창 맨 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
+3.  화면의 오른쪽 속성 창에서 클릭 합니다 **NameColumn** 속성 창 맨 아래에 필드 및 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자. 화면 오른쪽의 **속성** 탭을 클릭하여 속성 창을 열어야 할 수도 있습니다.  
   
 4.  선택 `ProductLineName` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66078838"
   
 5.  **차원 구조** 탭의 **특성** 창에서 **Product Key**를 선택합니다.  
   
-6.  속성 창에서 클릭 합니다 **NameColumn** 속성, 필드 및 줄임표를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
+6.  속성 창에서 클릭 합니다 **NameColumn** 속성, 필드 및 줄임표를 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 7.  **원본 열** 목록에서 **EnglishProductName** 을 선택하고 **확인**을 클릭합니다.  
   

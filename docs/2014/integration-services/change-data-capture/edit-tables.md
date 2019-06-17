@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771339"
 ---
 # <a name="edit-tables"></a>테이블 편집
@@ -25,11 +25,11 @@ ms.locfileid: "62771339"
  **테이블 목록**  
  테이블 목록은 다음과 같은 세 개의 열이 있습니다.  
   
--   **Oracle 테이블 이름**: 테이블 스키마를 포함 하 여 테이블의 이름입니다.  
+-   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체 이름으로 사용 되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
   
--   **보안 역할**: 변경 데이터에 액세스 하는 데 데이터베이스 역할의 이름입니다. 이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
+-   **보안 역할**: 변경 데이터에 대한 액세스 권한을 얻는 데 사용되는 데이터베이스 역할의 이름입니다. 이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
   
  **테이블 추가**  
  **테이블 추가** 를 클릭하면 테이블 선택 대화 상자가 열립니다. 이 대화 상자에서 [CDC 인스턴스에 테이블을 추가](add-tables-to-a-cdc-instance.md)할 수 있습니다. 이 세션에서 Oracle 데이터베이스에 처음으로 액세스하는 경우 [Connect to Oracle](connect-to-oracle.md)해야 합니다.  

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809484"
 ---
 # <a name="server-network-configuration"></a>서버 네트워크 구성
@@ -39,7 +39,7 @@ ms.locfileid: "62809484"
  동적 포트에 대해 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용한 포트는 시작할 때마다 변경될 수 있습니다. 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용한 포트를 열어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 특정 포트를 사용하도록 구성되므로 서버에 대한 통신을 허용하도록 방화벽을 구성할 수 있습니다. 자세한 내용은 [특정 TCP 포트로 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md)을 참조하세요.  
   
 ### <a name="changing-a-named-pipe"></a>명명된 파이프 변경  
- 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$*\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
+ 지정된 명명된 파이프에서 수신하도록 명명된 파이프 프로토콜을 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 기본 인스턴스는 기본 인스턴스의 경우 \\\\.\pipe\sql\query 파이프에서, 명명된 인스턴스의 경우 \\\\.\pipe\MSSQL$ *\<instancename>* \sql\query 파이프에서 수신 대기합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 하나의 명명된 파이프에서만 수신할 수 있지만 필요한 경우 파이프를 다른 이름으로 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스는 클라이언트에서 연결할 때 파이프를 식별하는 데 도움이 됩니다. 자세한 내용은 [대체 파이프에서 수신하도록 서버 구성&#40;SQL Server 구성 관리자&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md)을 참조하세요.  
   
 ## <a name="force-encryption"></a>암호화 적용  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 클라이언트 응용 프로그램과 통신할 경우 암호화를 요구하도록 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  

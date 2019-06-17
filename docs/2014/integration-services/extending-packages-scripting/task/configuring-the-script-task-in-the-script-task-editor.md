@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9e1ebbf8a6ba8186d30063bd377f95b8e286d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894747"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>스크립트 태스크 편집기에서 스크립트 태스크 구성
@@ -51,7 +51,7 @@ ms.locfileid: "62894747"
 > [!NOTE]  
 >  변수 이름은 대소문자를 구분합니다.  
   
- 변수를 선택하려면 속성 필드 옆의 줄임표(**...**) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../control-flow/select-variables-page.md)를 참조하세요.  
+ 변수를 선택하려면 속성 필드 옆의 줄임표( **...** ) 단추를 클릭합니다. 자세한 내용은 [변수 선택 페이지](../../control-flow/select-variables-page.md)를 참조하세요.  
   
 ### <a name="edit-script-button"></a>스크립트 편집 단추  
  **스크립트 편집** 단추를 클릭하면 사용자 지정 스크립트를 작성할 수 있는 VSTA 개발 환경이 시작됩니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)을 참조하십시오.  

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 436d90b75a5995ac8f455a52ebfffe662b1f9b7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094457"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint와 함께 SQL Server BI 기능 설치(PowerPivot 및 Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66094457"
 |**3**|SharePoint와 SharePoint 모드의 Reporting Services|파워 뷰|SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치합니다.<br /><br /> 설치 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애드인 **(기능 rsSharePoint.msi)** SharePoint에 대 한 합니다. 자세한 내용은 [설치 또는 SharePoint 용 Reporting Services 추가 기능에 제거 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
 |**4**|모든 PowerPivot 기능|팜 외부로부터 통합 문서를 데이터 원본으로 액세스합니다.<br /><br /> 데이터 새로 고침을 예약합니다.<br /><br /> PowerPivot 갤러리입니다.<br /><br /> 관리 대시보드입니다.<br /><br /> BISM 링크 파일 콘텐츠 형식입니다.|PowerPivot for SharePoint 2013 추가 기능에서 배포할 **(spPowerPivot.msi)** 합니다. 자세한 내용은 다음 항목을 참조하세요.<br /><br /> [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot을 제거할 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> **spPowerPivot.msi**를 다운로드하는 방법에 대한 자세한 내용은 [SQL Server 2014 SharePoint용 PowerPivot 다운로드](https://go.microsoft.com/fwlink/?LinkID=296473)를 참조하세요.|  
   
- 사용 하도록 설정 하는 자세한 방법은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기능을 참조 하세요 [The SQL Server BI 스토리 SharePoint 2013 용](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx)합니다.  
+ 사용 하도록 설정 하는 자세한 방법은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기능을 참조 하세요 [The SQL Server BI 스토리 SharePoint 2013 용](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 합니다.  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a> 설치 개요  
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 둘 다 사용하려는 경우 SQL Server 설치 마법사를 두 번 실행하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 별도 선택 항목에는 **설치 역할** SQL Server 설치 마법사의 페이지입니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "66094457"
   
      ![두 개의 파워 피벗 구성 도구](../../../2014/analysis-services/media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
-5.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 사용하도록 SharePoint Server 2013의 Excel Services를 구성합니다. 자세한 내용은 "Basic Analysis Services SharePoint 통합 구성" 섹션을 참조 [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)그리고 [관리 Excel Services 데이터 모델 설정 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)합니다.  
+5.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 사용하도록 SharePoint Server 2013의 Excel Services를 구성합니다. 자세한 내용은 "Basic Analysis Services SharePoint 통합 구성" 섹션을 참조 [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)그리고 [관리 Excel Services 데이터 모델 설정 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx) 합니다.  
   
 6.  자세한 내용은 [PowerPivot for SharePoint 2013 Installation](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)을 참조하세요.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66094457"
   
 3.  자세한 내용은 [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)을 참조하세요.  
   
- **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**    
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  
   
 1.  SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치는 이전 릴리스와 달라지지 않았습니다.  
   

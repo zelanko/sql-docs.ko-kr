@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1b098733eccd03db7bafff084fdc2416ddff5845
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701756"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
@@ -69,7 +69,7 @@ Website, click OK, otherwise click Cancel.
     >  Ado 2.8 이상에서 사용자가 없습니다 경고 하거나 사이트를 신뢰할 수 있는 사이트 영역 목록에 추가 하는 것이 좋습니다. 따라서 신뢰할 수 있는 사이트 목록 관리는 배포 또는 로컬 파일 시스템에 액세스 해야 하는 웹 사이트 기반 응용 프로그램을 지 원하는 사용자의 책임입니다.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>ActiveCommand 속성 레코드 집합 개체에 차단 액세스
- 2.8 ADO에 대 한 액세스 차단, Internet Explorer에서 실행할 때는 합니다 [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) 속성을 활성 **레코드 집합** 개체 및 오류를 반환 합니다. 오류는 페이지 신뢰할 수 있는 사이트 목록에 등록 된 웹 사이트에서 제공 되는 여부에 관계 없이 발생 합니다.
+ 2\.8 ADO에 대 한 액세스 차단, Internet Explorer에서 실행할 때는 합니다 [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) 속성을 활성 **레코드 집합** 개체 및 오류를 반환 합니다. 오류는 페이지 신뢰할 수 있는 사이트 목록에 등록 된 웹 사이트에서 제공 되는 여부에 관계 없이 발생 합니다.
 
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>OLE DB 공급자 및 통합된 보안에 대 한 처리의 변경 내용
  ADO 2.7 및 잠재적인 보안 문제 및 문제에 대 한 이전 버전을 검토 하는 동안에 다음 시나리오는 검색 되었습니다.
@@ -113,4 +113,4 @@ This Website is using your identity to access a data source. If you trust this W
  ADO 2.8 이상에 대 한이 기능 업데이트 되었습니다. 열기 및 저장에 대 한 **레코드 집합** 하 고 **Stream** 개체, ADO 이제 URL 또는 파일 이름에 지정 된 입력 또는 출력 장치는 실제 파일 인지 확인 하는 파일 형식 검사를 수행 합니다.
 
 > [!NOTE]
->  파일 형식 확인이 섹션에 설명 된 대로 적용 됩니다 Windows 2000 이상. 2.8 이상 ADO Windows 98와 같은 이전 Windows 버전에서 실행 되는 상황에는 적용 되지 않습니다.
+>  파일 형식 확인이 섹션에 설명 된 대로 적용 됩니다 Windows 2000 이상. 2\.8 이상 ADO Windows 98와 같은 이전 Windows 버전에서 실행 되는 상황에는 적용 되지 않습니다.

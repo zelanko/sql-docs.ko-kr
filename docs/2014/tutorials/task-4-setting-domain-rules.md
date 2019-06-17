@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489074"
 ---
 # <a name="task-4-setting-domain-rules"></a>태스크 4: 도메인 규칙 설정
-  이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com**합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
+  이 작업에 대 한 규칙을 만듭니다는 **Contact Email** 도메인으로 끝나는 경우 전자 메일 주소를 확인 하려면 **@adventure-works.com** 합니다. 이 페이지에 대한 자세한 내용은 [도메인 규칙 만들기](https://msdn.microsoft.com/library/hh510397.aspx) 항목을 참조하십시오.  
   
 1.  **도메인 목록** 에서 **Contact Email**을 클릭합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65489074"
   
 10. 이전 두 단계를 반복 추가 **joe2@adventure-work.com** (no 사용 하 여 잘못 된 값의 ').  
   
-11. 도구 모음에서 마지막 단추(**모든 용어에 대한 도메인 규칙을 테스트합니다.**)를 클릭하여 규칙에 대해 입력 데이터를 테스트합니다.  
+11. 도구 모음에서 마지막 단추(**모든 용어에 대한 도메인 규칙을 테스트합니다.** )를 클릭하여 규칙에 대해 입력 데이터를 테스트합니다.  
   
      ![모든 조건 도구 모음 단추에서 도메인 규칙 테스트](../../2014/tutorials/media/et-settingdomainrules-05.jpg "모든 조건 도구 모음 단추에서 도메인 규칙 테스트")  
   

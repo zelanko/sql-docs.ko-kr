@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ef93c354333bd4a99fedc83cb950021367a6cc2f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983042"
 ---
 # <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database(Transact-SQL)
@@ -44,7 +44,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @action = ] 'action'` 수행할 동작이입니다. **동작** 됩니다 **varchar(20)"**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작이입니다. **동작** 됩니다 **varchar(20)"** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

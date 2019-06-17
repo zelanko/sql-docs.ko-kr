@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082196"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>계정 인텔리전스 정의(비즈니스 인텔리전스 마법사)
-   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 계정 차원에 데이터를 제공하는 데이터 원본의 원본 테이블에서 정의한 계정 유형으로 매핑할 수 있습니다.  
+  **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 계정 차원에 데이터를 제공하는 데이터 원본의 원본 테이블에서 정의한 계정 유형으로 매핑할 수 있습니다.  
   
 > [!NOTE]  
 >  이 페이지는 **차원 특성 구성** 페이지에서 **계정 유형** 특성 유형에 차원 특성을 매핑한 경우에 나타납니다.  

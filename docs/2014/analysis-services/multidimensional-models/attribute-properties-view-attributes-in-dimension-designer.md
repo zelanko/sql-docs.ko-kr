@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec86d5e7a910b7fb17397b1601fcc912b46c4d7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077124"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>차원 디자이너에서 특성 보기
-  특성은 차원 개체에 대해 생성됩니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 디자이너를 사용하여 특성을 보고 구성할 수 있습니다. 차원 디자이너의 **차원 구조** 탭에 있는 **특성** 창에 차원에 포함된 특성이 나열됩니다. 이 창에서 특성을 추가하거나 제거하고 구성할 수 있습니다. 또한 새 계층에서 수준으로 사용하거나 기존 계층에 수준으로 추가할 특성을 선택할 수도 있습니다.  
+  특성은 차원 개체에 대해 생성됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 디자이너를 사용하여 특성을 보고 구성할 수 있습니다. 차원 디자이너의 **차원 구조** 탭에 있는 **특성** 창에 차원에 포함된 특성이 나열됩니다. 이 창에서 특성을 추가하거나 제거하고 구성할 수 있습니다. 또한 새 계층에서 수준으로 사용하거나 기존 계층에 수준으로 추가할 특성을 선택할 수도 있습니다.  
   
  차원의 특성을 보려면 해당 차원의 차원 디자이너를 엽니다. 디자이너의 **차원 구조** 탭에 있는 **특성**  창에 해당 차원에 포함된 특성이 표시됩니다. 가리키는 방식으로 목록, 트리 또는 표 뷰 간에 전환할 수 있습니다 **특성 표시 위치** 에 **차원** 메뉴 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 다음 표에 나오는 명령 중 하나를 클릭 한 다음.  
   

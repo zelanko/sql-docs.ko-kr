@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994112"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
@@ -106,7 +106,7 @@ ms.locfileid: "65994112"
     |![mds_AddRolesFeaturesWizard_RoleServicesPage_AppDevsection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-appdevsection.png)|![mds_AddRolesFeaturesWizard_RoleServicesPage_ManageToolssection](../master-data-services/media/mds-addrolesfeatureswizard-roleservicespage-managetoolssection.png)|  
     |||  
   
-     다른 운영 체제에서 필요한 기능 및 역할 서비스 목록은 [웹 애플리케이션 요구 사항&amp;#40;Master Data Services&amp;#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.   
+     다른 운영 체제에서 필요한 기능 및 역할 서비스 목록은 [웹 애플리케이션 요구 사항&#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.   
   
  설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치하는 방법에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "65994112"
   
 3.  에 **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server 관리 되는 인스턴스에 대 한 지원을 추가합니다. 값을 설정할 **SQL Server 인스턴스** Azure SQL Database의 호스트 인스턴스를 관리 합니다. `xxxxxx.xxxxxx.database.windows.net`) 을 입력합니다.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server 관리 되는 인스턴스에 대 한 지원을 추가합니다. 값을 설정할 **SQL Server 인스턴스** Azure SQL Database의 호스트 인스턴스를 관리 합니다. `xxxxxx.xxxxxx.database.windows.net` )을 입력합니다.
 
 4. 선택 합니다 **인증 유형** 클릭 하 고 **연결 테스트** 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
@@ -193,7 +193,7 @@ ms.locfileid: "65994112"
 
         ![mds_2016ConfigManager_WebConfig_CreateWebApplication](../master-data-services/media/mds-2016configmanager-webconfig-createwebapplication.png)   
   
-     **웹 애플리케이션 만들기** 대화 상자에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&amp;#40;Master Data Services 구성 관리자&amp;#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+     **웹 애플리케이션 만들기** 대화 상자에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
 12. **웹 구성** 페이지의 **웹 애플리케이션** 상자에서 만든 애플리케이션을 클릭한 다음 **데이터베이스에 애플리케이션 연결** 섹션에서 **선택**을 클릭합니다.  
   

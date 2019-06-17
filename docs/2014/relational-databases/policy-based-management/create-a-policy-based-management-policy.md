@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b81fb13b8b8635bd5e5cecde801b4123fc74c99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253532"
 ---
 # <a name="create-a-policy-based-management-policy"></a>정책 기반 관리 정책 만들기
@@ -30,7 +30,7 @@ ms.locfileid: "63253532"
   
 -   **다음을 사용하여 정책을 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63253532"
   
 6.  정책을 만든 즉시 사용하려면 **사용** 확인란을 선택합니다. 평가 모드가 **요청 시**인 경우 **사용** 확인란은 사용할 수 없습니다.  
   
-7.  **조건 확인** 목록에서 기존 조건 중 하나를 선택하거나 **새 조건**을 선택합니다. 조건을 편집하려면 조건을 선택한 다음 줄임표(**...**)를 클릭합니다. 자세한 내용은 [새로운 정책 기반 관리 조건 만들기](create-a-new-policy-based-management-condition.md) 또는 [정책 기반 관리 조건의 속성 보기 또는 수정](view-or-modify-the-properties-of-a-policy-based-management-condition.md)을 참조하세요.  
+7.  **조건 확인** 목록에서 기존 조건 중 하나를 선택하거나 **새 조건**을 선택합니다. 조건을 편집하려면 조건을 선택한 다음 줄임표( **...** )를 클릭합니다. 자세한 내용은 [새로운 정책 기반 관리 조건 만들기](create-a-new-policy-based-management-condition.md) 또는 [정책 기반 관리 조건의 속성 보기 또는 수정](view-or-modify-the-properties-of-a-policy-based-management-condition.md)을 참조하세요.  
   
 8.  **적용 대상** 상자에서 이 정책의 대상 유형을 하나 이상 선택합니다. 일부 조건 및 패싯만 특정 대상 유형에 적용될 수 있습니다. 사용 가능한 대상 집합이 관련 상자에 나타납니다. **매** 를 확장하여 일부 대상 유형에 대한 필터링 조건을 선택합니다. 이 상자에 대상이 표시되지 않으면 검사 조건 범위가 서버 수준으로 지정됩니다.  
   

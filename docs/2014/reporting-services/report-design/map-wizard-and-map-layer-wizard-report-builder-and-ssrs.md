@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105536"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66105536"
  지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)를 클릭합니다.  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>*.shp 파일과 지원 파일 *\<filename>*.dbf가 포함됩니다.  
+ ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로 이 파일 집합에는 공간 데이터가 들어 있는 *\<filename>* .shp 파일과 지원 파일 *\<filename>* .dbf가 포함됩니다.  
   
  셰이프 파일을 공간 데이터 원본으로 지정하는 경우 셰이프 파일이 로컬 컴퓨터에 있으면 공간 데이터가 자동으로 보고서에 포함됩니다. ESRI 파일에서 공간 데이터를 동적으로 사용하려면 다음을 수행해야 합니다.  
   

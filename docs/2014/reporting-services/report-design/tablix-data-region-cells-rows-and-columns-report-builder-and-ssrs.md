@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104645"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
@@ -106,7 +106,7 @@ ms.locfileid: "66104645"
  테이블릭스 본문 영역의 셀에는 셀이 정보 행 또는 열에 있는 경우 정보 데이터가, 셀이 그룹 행이나 열에 있는 경우 집계된 그룹 데이터가 표시될 수 있습니다. 셀에서 데이터 범위는 셀이 속한 가장 안쪽 행 그룹과 가장 안쪽 열 그룹의 교차 지점입니다.  
   
 > [!NOTE]  
->  각 셀에 대해 표시되는 실제 데이터는 셀에 포함된 보고서 항목(일반적으로 입력란)에 대해 계산된 식입니다. 정보 행 또는 열에 속하는 셀에서 식은 기본적으로 정보 데이터(예: **[LineTotal]**)로 설정됩니다. 정보 행 또는 열에 속하지 않는 셀에서 식은 기본적으로 집계 함수(예: **Sum[LineTotal]**)로 설정됩니다. 셀이 그룹 행이나 열에 속하지만 식에 집계 함수가 지정되지 않은 경우 그룹의 첫 번째 값이 표시됩니다. 집계에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+>  각 셀에 대해 표시되는 실제 데이터는 셀에 포함된 보고서 항목(일반적으로 입력란)에 대해 계산된 식입니다. 정보 행 또는 열에 속하는 셀에서 식은 기본적으로 정보 데이터(예: **[LineTotal]** )로 설정됩니다. 정보 행 또는 열에 속하지 않는 셀에서 식은 기본적으로 집계 함수(예: **Sum[LineTotal]** )로 설정됩니다. 셀이 그룹 행이나 열에 속하지만 식에 집계 함수가 지정되지 않은 경우 그룹의 첫 번째 값이 표시됩니다. 집계에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ### <a name="merging-and-splitting-cells"></a>셀 병합 및 분할  
  테이블릭스 영역 안에서 여러 인접 셀을 함께 병합할 수 있습니다. 예를 들어 여러 행 또는 열에 걸쳐 있는 레이블에 대한 셀을 만들 수 있습니다.  

@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014015"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
@@ -106,7 +106,7 @@ ms.locfileid: "66014015"
 #### <a name="deepest-cell-rule"></a>최하위 셀 규칙  
  최하위 셀 규칙은 모든 하위 셀이 상위 셀에 속한다는 사실을 활용합니다. 즉, 수준-4 셀은 수준-3 셀에 속하고, 수준-3 셀은 수준-2 셀에 속하며, 수준-2 셀은 수준-1 셀에 속합니다. 예를 들어 셀 1.1.1.1에 속하는 개체는 셀 1.1.1, 셀 1.1 및 셀 1에도 속합니다. 이러한 셀 계층 관계에 대한 정보는 쿼리 프로세서에 포함됩니다. 따라서 인덱스가 저장해야 하는 정보를 최소화하기 위해 최하위 수준의 셀만 인덱스에 기록해야 합니다.  
   
- 다음 그림에서는 비교적 작은 다이아몬드형 다각형이 공간 분할되어 있습니다. 인덱스는 개체당 셀 수로 기본값 16을 사용하며 이 값은 이러한 작은 개체로는 도달되지 않는 값입니다. 따라서 공간 분할은 수준 4까지 계속되며, 다각형은 수준-3 셀을 통해 다음 수준-1: 4, 4.4, 4.4.10 및 4.4.14 합니다. 그러나 최하위 셀 규칙을 사용 하는 공간 분할에서는 12 수준-4 셀만: 4.4.10.13-15 4.4.14.1-3, 4.4.14.5-7, 및 4.4.14.9-11 합니다.  
+ 다음 그림에서는 비교적 작은 다이아몬드형 다각형이 공간 분할되어 있습니다. 인덱스는 개체당 셀 수로 기본값 16을 사용하며 이 값은 이러한 작은 개체로는 도달되지 않는 값입니다. 따라서 공간 분할은 수준 4까지 계속되며, 다각형은 수준-1에서 수준-3 셀까지 4, 4.4, 4.4.10 및 4.4.14에 위치합니다. 그러나 최하위 셀 규칙을 사용하면 공간 분할에서는 수준-4 셀 12개만(4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7, 4.4.14.9-11 등) 계산합니다.  
   
  ![최하위 셀 최적화](../../database-engine/media/spndx-opt-deepest-cell.gif "Deepest-cell optimization")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66014015"
 >  [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 절을 사용하여 이 공간 분할(tessellation) 구성표를 명시적으로 지정할 수 있습니다.  
   
 ##### <a name="the-bounding-box"></a>경계 상자  
- 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자 4 개의 좌표로 정의 되며 `(` _x-m_**를**_y-min은_ `)` 하 고 `(` _x 최대값_ **,**_y 최대값_`)`, 공간 인덱스의 속성으로 저장 됩니다. 이러한 좌표는 다음을 나타냅니다.  
+ 기하학적 데이터는 무한할 수 있는 평면을 차지합니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 공간 인덱스는 제한된 공간을 필요로 합니다. 분해를 위한 제한된 공간을 설정하려면 기하 도형 표 공간 분할 구성표에는 사각형 *경계 상자*가 필요합니다. 경계 상자 4 개의 좌표로 정의 되며 `(` _x-m_**를**_y-min은_ `)` 하 고 `(` _x 최대값_ **,** _y 최대값_`)`, 공간 인덱스의 속성으로 저장 됩니다. 이러한 좌표는 다음을 나타냅니다.  
   
 -   *x-min* 은 경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66014015"
 ##  <a name="methods"></a> 공간 인덱스에서 지원되는 메서드  
   
 ###  <a name="geometry"></a> 공간 인덱스에서 지원되는 기하 도형 메서드  
- 공간 인덱스는 특정 조건에서 다음과 같은 집합 지향 geometry 메서드를 지원 합니다. Stcontains (), stdistance (), stequals (), stintersects (), stoverlaps (), Sttouches 및 stwithin (). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 공간 인덱스는 특정 조건에서 다음과 같은 집합 지향 geometry 메서드를 지원합니다. STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() 및 STWithin(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 또는 JOIN ON 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66014015"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 공간 인덱스에서 지원되는 지리 메서드  
- 특정 조건에서 공간 인덱스는 집합 지향 지리 메서드인을 지원합니다. STIntersects(),STEquals(), 및 stdistance ()입니다. 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
+ 특정 조건에서 공간 인덱스는 다음과 같은 집합 지향 지리 메서드를 지원합니다. STIntersects(),STEquals() 및 STDistance(). 공간 인덱스의 지원을 받기 위해 이러한 메서드는 쿼리의 WHERE 절 내에 사용해야 하며 다음 일반 형식의 조건자 내에서 발생해야 합니다.  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   

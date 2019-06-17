@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768857"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
@@ -125,7 +125,7 @@ ms.locfileid: "62768857"
   
  패키지 이름이 EmailRowCountPP이고 2005/3/4에 9초 동안 실행된 경우 식이 다음 문자열로 계산됩니다.  
   
- PExpression-패키지->: (EmailRowCountPP) 시작: 2005 년 3 월 4 일 오전 11시 06분: 18 기간: 9 시간 (초)입니다.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>전자 메일 메시지의 메시지에 속성 식 사용  
  다음 속성 식을 사용하여 메일 보내기 태스크의 MessageSource 속성을 설정할 수 있습니다. 식에는 문자열 리터럴 조합, 사용자 정의 변수 및 연결 (+) 연산자를 사용합니다. 사용자 정의 변수의 이름은 `nasdaqrawrows`, `nyserawrows`및 `amexrawrows`입니다. 문자열 "\n"은 캐리지 리턴을 나타냅니다.  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915690"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
@@ -33,7 +33,7 @@ ms.locfileid: "62915690"
 |메시지 텍스트|스칼라 변수 "%.*ls"을(를) 선언해야 합니다.|  
   
 ## <a name="explanation"></a>설명  
- 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예제에서는 **@mycol**이 선언되지 않았으므로 SET 및 SELECT 문에 대해 오류 137이 반환됩니다.  
+ 이 오류는 SQL 스크립트에서 변수를 먼저 선언하지 않고 사용하는 경우에 발생합니다. 다음 예제에서는 **@mycol** 이 선언되지 않았으므로 SET 및 SELECT 문에 대해 오류 137이 반환됩니다.  
   
  SET @mycol = 'ContactName';  
   

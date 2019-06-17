@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983060"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column(Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. 테이블에 전체 텍스트 인덱스가 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
+`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. 테이블에 전체 텍스트 인덱스가 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)** , 기본값은 없습니다.  
   
 `[ @colname = ] 'column_name'` 에 있는 열의 이름인 *qualified_table_name*합니다. 열은 문자, 해야 **varbinary (max)** 하거나 **이미지** 열 계산된 열일 수 없습니다. *column_name* 됩니다 **sysname**, 기본값은 없습니다.  
   

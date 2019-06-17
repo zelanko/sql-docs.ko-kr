@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213474"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 32비트 애플리케이션 사용
@@ -38,7 +38,7 @@ ms.locfileid: "63213474"
 ## <a name="components"></a>구성 요소  
  ODBC 구성 요소에는 32 비트 드라이버를 사용 하 여 32 비트 응용 프로그램을 실행 하기 위한 다음 파일이 포함 됩니다. 이러한 구성 요소는 \Redist 디렉터리에 있습니다.  
   
-| 파일 이름 |Description|  
+|파일 이름|Description|  
 |---------------|-----------------|  
 |Odbc32.dll|32 비트 드라이버 관리자입니다.|  
 |Odbccp32.dll|32 비트 설치 관리자 DLL|  

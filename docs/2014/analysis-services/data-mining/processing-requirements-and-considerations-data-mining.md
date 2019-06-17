@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083128"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
@@ -39,7 +39,7 @@ ms.locfileid: "66083128"
   
  모델을 처리할 때 모델은 데이터 원본에서 데이터를 다시 읽지 않고 대신 마이닝 구조에서 데이터의 요약을 가져옵니다. 캐시된 인덱스와 함께 만든 큐브를 사용하여 사례 데이터가 캐시되면 서버는 모델 학습을 위한 독립 스레드를 만듭니다.  
   
- 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+ 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 합니다.  
   
 ##  <a name="bkmk_ProcessStructures"></a> 마이닝 구조 처리  
  모든 종속 모델과 함께 또는 따로 마이닝 구조를 처리할 수 있습니다. 일부 모델이 처리하는 데 오랜 시간이 소요될 것으로 예상되어 해당 작업을 지연시키려는 경우 마이닝 구조를 모델과 따로 처리하는 것이 유용할 수 있습니다.  

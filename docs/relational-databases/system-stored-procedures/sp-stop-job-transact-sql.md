@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004258"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job(Transact-SQL)
@@ -49,12 +49,12 @@ sp_stop_job
   
 `[ @job_id = ] job_id` 중지할 작업의 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
-`[ @originating_server = ] 'master_server'` 마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 대상 서버에서.  
+`[ @originating_server = ] 'master_server'` 마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 됩니다 **nvarchar (128)** , 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 대상 서버에서.  
   
 > [!NOTE]  
 >  처음 세 매개 변수 중 하나만 지정할 수 있습니다.  
   
-`[ @server_name = ] 'target_server'` 다중 서버 작업을 중지 하는 특정 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 다중 서버 작업에 대 한 마스터 서버에서.  
+`[ @server_name = ] 'target_server'` 다중 서버 작업을 중지 하는 특정 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)** , 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 다중 서버 작업에 대 한 마스터 서버에서.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891581"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>2단계: 패키지 설치 마법사를 실행합니다.
+# <a name="step-2-running-the-package-installation-wizard"></a>2단계: 패키지 설치 마법사 실행
   이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
   
  패키지 설치 마법사는 패키지를 설치하고 구성하는 단계를 안내합니다. 배포 번들을 복사한 컴퓨터인 대상 컴퓨터의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 패키지를 설치합니다. 또한 패키지가 아닌 파일을 마법사에서 설치하는 C:\DeploymentTutorialInstall 폴더를 만듭니다.  
@@ -81,11 +81,11 @@ ms.locfileid: "62891581"
   
      대상 컴퓨터의 환경 변수 값이 개발 컴퓨터의 환경 변수 값과 다르므로 패키지 유효성 검사 페이지에 여러 경고가 표시됩니다. 다음 4개의 경고를 예상해야 합니다.  
   
-    -   구성 파일: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" is not valid. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   
-    -   구성 파일: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig is not valid. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   
