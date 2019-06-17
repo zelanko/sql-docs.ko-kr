@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004194"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics(Transact-SQL)
@@ -53,13 +53,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *이름*,이 프로시저는 지정 된 테이블 *이름* 소유 하는 데이터베이스 소유자입니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_ **.** _소유자_ **.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ @index_name = ] 'index_name'` 인덱스 이름이입니다. *index_name* 됩니다 **sysname**, 기본값은 %입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @is_unique = ] 'is_unique'` 가 있는지 여부를 고유 인덱스 (하는 경우 **Y**) 반환 되도록 합니다. *is_unique* 됩니다 **char(1)**, 기본값은 **N**합니다.  
+`[ @is_unique = ] 'is_unique'` 가 있는지 여부를 고유 인덱스 (하는 경우 **Y**) 반환 되도록 합니다. *is_unique* 됩니다 **char(1)** , 기본값은 **N**합니다.  
   
-`[ @accuracy = ] 'accuracy'` 카디널리티 및 통계에 대 한 페이지 정확도 수준이입니다. *정확도* 됩니다 **char(1)**, 기본값은 **Q**합니다. 지정할 **E** 있도록 카디널리티와 페이지가 정확한 통계 업데이트 되었는지 확인 합니다.  
+`[ @accuracy = ] 'accuracy'` 카디널리티 및 통계에 대 한 페이지 정확도 수준이입니다. *정확도* 됩니다 **char(1)** , 기본값은 **Q**합니다. 지정할 **E** 있도록 카디널리티와 페이지가 정확한 통계 업데이트 되었는지 확인 합니다.  
   
  값 **E** (SQL_ENSURE)에 통계를 무조건 검색 하도록 드라이버에 요청 합니다.  
   

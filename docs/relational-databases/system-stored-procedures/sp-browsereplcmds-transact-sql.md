@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996361"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 반환할 가장 낮은 값된 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 됩니다 **nchar(22)**, 기본값은 0x00000000000000000000입니다.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 반환할 가장 낮은 값된 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 됩니다 **nchar(22)** , 기본값은 0x00000000000000000000입니다.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 됩니다 **nchar(22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 됩니다 **nchar(22)** , 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
   
 `[ @originator_id = ] 'originator_id'` 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
   

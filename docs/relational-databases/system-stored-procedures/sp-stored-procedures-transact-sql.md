@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63005869"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @sp_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 하는 프로시저의 이름이입니다. *이름* 됩니다 **nvarchar(390)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @sp_name = ] 'name'` 카탈로그 정보를 반환 하는 데 사용 하는 프로시저의 이름이입니다. *이름* 됩니다 **nvarchar(390)** , 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ @sp_owner = ] 'schema'` 프로시저가 속한 스키마의 이름이입니다. *스키마* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 프로시저 표시 규칙이 적용 됩니다.  
+`[ @sp_owner = ] 'schema'` 프로시저가 속한 스키마의 이름이입니다. *스키마* 됩니다 **nvarchar(384)** , 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 프로시저 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 스키마에 지정된 이름을 가진 프로시저가 포함된 경우 해당 프로시저가 반환됩니다. 불완전한 저장 프로시저가 지정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   현재 데이터베이스의 **dbo** 스키마  
   
-`[ @qualifier = ] 'qualifier'` 프로시저 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 형태로 테이블에 대 한 이름 (_한정자_**.** _스키마_**.** _이름을_입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @qualifier = ] 'qualifier'` 프로시저 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 형태로 테이블에 대 한 이름 (_한정자_ **.** _스키마_ **.** _이름을_입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 *한정자* 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ @fUsePattern = ] 'fUsePattern'` 확인 여부를 밑줄 (_), 백분율 (%) 또는 대괄호) 와일드 카드 문자로 해석 됩니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
@@ -91,7 +91,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>1. 현재 데이터베이스의 모든 저장 프로시저 반환  
+### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>1\. 현재 데이터베이스의 모든 저장 프로시저 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 모든 저장 프로시저를 반환합니다.  
   
 ```  
@@ -100,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>2. 단일 저장 프로시저 반환  
+### <a name="b-returning-a-single-stored-procedure"></a>2\. 단일 저장 프로시저 반환  
  다음 예에서는 `uspLogError` 저장 프로시저의 결과 집합을 반환합니다.  
   
 ```  

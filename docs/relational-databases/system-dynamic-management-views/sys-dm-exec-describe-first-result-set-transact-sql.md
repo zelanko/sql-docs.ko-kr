@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013428"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set(Transact-SQL)
@@ -66,7 +66,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**is_nullable**|**bit**|다음 값을 포함합니다.<br /><br /> 열에서 NULL을 허용하면 값이 1입니다.<br /><br /> 열에서 NULL을 허용하지 않으면 값이 0입니다.<br /><br /> 열에서 NULL을 허용하는지 확인할 수 없으면 값이 1입니다.|  
 |**system_type_id**|**int**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256)**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다.<br /><br /> 데이터 형식이 사용자 정의 별칭 형식일 경우 기본 시스템 형식이 여기에 지정됩니다.<br /><br /> 데이터 형식이 CLR 사용자 정의 형식일 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
+|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
 |**전체 자릿수**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
@@ -129,7 +129,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="examples"></a>예  
  항목의 추가 예제 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 사용 하 여 적용할 수 있습니다 **sys.dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>1. 단일 Transact-SQL 문에 대한 정보 반환  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>1\. 단일 Transact-SQL 문에 대한 정보 반환  
  다음 코드에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 결과에 대한 정보를 반환합니다.  
   
 ```  
@@ -139,7 +139,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>2. 프로시저에 대한 정보 반환  
+### <a name="b-returning-information-about-a-procedure"></a>2\. 프로시저에 대한 정보 반환  
  다음 예제에서는 두 개의 결과 집합을 반환 하는 pr_TestProc 라는 저장된 프로시저를 만듭니다. 다음 예제는 방법을 보여 줍니다 **sys.dm_exec_describe_first_result_set** 프로시저에서 설정 하는 첫 번째 결과 대 한 정보를 반환 합니다.  
   
 ```  
@@ -156,7 +156,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 ('Production.TestProc', NULL, 0) ;  
 ```  
   
-### <a name="c-returning-metadata-from-a-batch-that-contains-multiple-statements"></a>3. 여러 문이 포함된 일괄 처리에서 메타데이터 반환  
+### <a name="c-returning-metadata-from-a-batch-that-contains-multiple-statements"></a>3\. 여러 문이 포함된 일괄 처리에서 메타데이터 반환  
  다음 예에서는 두 개의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함된 일괄 처리를 평가합니다. 결과 집합이 반환된 첫 번째 결과 집합을 설명합니다.  
   
 ```  

@@ -26,10 +26,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702471"
 ---
 # <a name="user-hierarchies"></a>사용자 계층
@@ -64,7 +64,7 @@ ms.locfileid: "62702471"
  균형 계층 구조에서는 계층 구조의 모든 분기가 동일한 수준으로 이어지며 각 멤버의 바로 위에 있는 수준이 해당 멤버의 논리적 부모가 됩니다. [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Product 차원의 Product Categories 계층이 균형 계층 구조의 좋은 예입니다. Product Name 수준의 각 멤버에게는 Subcategory 수준의 부모 멤버가 있으며 이 부모 멤버에게는 Category 수준의 부모 멤버가 있습니다. 또한 이 계층 구조의 모든 분기에는 Product Name 수준의 리프 멤버가 있습니다.  
   
 ### <a name="unbalanced-hierarchies"></a>불균형 계층 구조  
- 불균형 계층 구조에서는 계층 구조의 분기들이 서로 다른 수준으로 이어집니다.  부모-자식 계층 구조는 불균형 계층 구조입니다. 예를 들어 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 Organization 차원은 각 직원에 대한 멤버를 포함합니다. CEO가 계층 구조의 최상위 멤버이며 각 부서장과 비서 실장이 CEO 바로 아래 위치합니다. 부서장에게는 부하 멤버들이 있지만 비서 실장에게는 없습니다.  
+ 불균형 계층 구조에서는 계층 구조의 분기들이 서로 다른 수준으로 이어집니다. 부모-자식 계층 구조는 불균형 계층 구조입니다. 예를 들어 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 Organization 차원은 각 직원에 대한 멤버를 포함합니다. CEO가 계층 구조의 최상위 멤버이며 각 부서장과 비서 실장이 CEO 바로 아래 위치합니다. 부서장에게는 부하 멤버들이 있지만 비서 실장에게는 없습니다.  
   
  최종 사용자가 불균형 계층 구조와 비정형 계층 구조를 구분하는 것은 불가능합니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 여러 가지 기술과 속성을 사용하여 이러한 두 가지 유형의 계층 구조를 지원할 수 있습니다. 자세한 내용은 [비정형 계층 구조](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md), 및 [부모-자식 계층의 특성](../multidimensional-models/parent-child-dimension-attributes.md)합니다.  
   

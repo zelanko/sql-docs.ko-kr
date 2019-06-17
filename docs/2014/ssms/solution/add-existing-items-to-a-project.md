@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956165"
 ---
 # <a name="add-existing-items-to-a-project"></a>프로젝트에 기존 항목 추가
-  프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 기존 항목은 쿼리나 기타 파일이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 두 가지 프로젝트 형식에 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트입니다. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 쿼리 파일이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다. 프로젝트 형식에 추가 파일 확장명에 연결 하려면을 참조 하세요 [연결 파일 확장명을 코드 편집기에](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)입니다.  
+  프로젝트에 새 항목을 추가하여 애플리케이션 기능을 확장할 수 있습니다. 기존 항목은 쿼리나 기타 파일이 될 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 다음과 같은 두 가지 프로젝트 형식이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 프로젝트 및 Analysis Services 스크립트 프로젝트. 프로젝트 형식에 따라 프로젝트에 추가할 수 있는 쿼리 파일이 결정됩니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 프로젝트에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리(확장명이 .sql인 파일)를 추가할 수 있지만 Analysis Services 스크립트 프로젝트에는 추가할 수 없습니다. 프로젝트 형식에 추가 파일 확장명에 연결 하려면을 참조 하세요 [연결 파일 확장명을 코드 편집기에](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)입니다.  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>기존 쿼리나 기타 파일을 프로젝트에 추가하려면  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62956165"
      표시되는 파일과 폴더를 필터링하려면 이 옵션을 사용합니다. 필터링할 파일 이름 전체를 입력하거나 와일드카드 문자로 별표(`*`)를 사용하여 파일 이름 일부를 입력합니다.  
   
     > [!NOTE]  
-    >  **파일 이름** 상자에 URL이나 네트워크 경로를 입력하여 웹 및 네트워크 위치로 이동할 수 있습니다. 예를 들어 **http://mywebsite**를 입력하면 mywebsite 웹 위치에서 사용 가능한 파일이 표시되고 **\\myserver\myshare**의 myserver 위치에서 사용 가능한 파일이 표시됩니다.  
+    >  **파일 이름** 상자에 URL이나 네트워크 경로를 입력하여 웹 및 네트워크 위치로 이동할 수 있습니다. 예를 들어 **http://mywebsite** 를 입력하면 mywebsite 웹 위치에서 사용 가능한 파일이 표시되고 **\\ myserver\myshare**의 myserver 위치에서 사용 가능한 파일이 표시됩니다.  
   
      **파일 형식**  
      파일 확장명을 기준으로 파일을 필터링하려면 이 옵션을 사용합니다. 각 제품별로 가장 일반적인 파일 형식에 대한 기본 필터가 나열됩니다.  

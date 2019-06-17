@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068024"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>스토리지 설정 대화 상자(Analysis Services - 다차원 데이터)
   **의** 저장소 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대해 자동 관리 캐싱, 저장소 및 알림 설정을 지정할 수 있습니다. 다음을 수행하여 **에서** 스토리지 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 표시할 수 있습니다.  
   
--   줄임표 단추를 클릭 (**...** )에 대 한 합니다 `ProactiveCaching` 속성은 차원, 큐브, 측정값 그룹 또는 파티션에 합니다 **속성** 기간 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다.  
+-   줄임표 단추를 클릭 ( **...** )에 대 한 합니다 `ProactiveCaching` 속성은 차원, 큐브, 측정값 그룹 또는 파티션에 합니다 **속성** 기간 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]합니다.  
   
 -   **큐브 디자이너** 의 **파티션** 탭에서 측정값 그룹을 확장하고 **저장소 설정**을 클릭합니다.  
   

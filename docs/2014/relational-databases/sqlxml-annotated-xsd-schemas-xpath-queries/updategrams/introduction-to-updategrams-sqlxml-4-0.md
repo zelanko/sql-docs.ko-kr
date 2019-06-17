@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014797"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
@@ -40,10 +40,10 @@ ms.locfileid: "66014797"
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XDR을 사용 하는 레거시 응용 프로그램에 대 한 참조 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram의 필수 네임스페이스  
- Updategram에서 키워드와 같은  **\<동기화 >** 를  **\<전에 >**, 및  **\<후 >** 에 존재 합니다 `urn:schemas-microsoft-com:xml-updategram`네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서 `updg` 접두사는 `updategram` 네임스페이스를 나타냅니다.  
+ Updategram에서 키워드와 같은  **\<동기화 >** 를  **\<전에 >** , 및  **\<후 >** 에 존재 합니다 `urn:schemas-microsoft-com:xml-updategram`네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서 `updg` 접두사는 `updategram` 네임스페이스를 나타냅니다.  
   
 ## <a name="reviewing-syntax"></a>구문 검토  
- Updategram은 사용 하 여 템플릿  **\<동기화 >**,  **\<전에 >**, 및  **\<후 >** 블록의 구문을 구성 하는 updategram입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
+ Updategram은 사용 하 여 템플릿  **\<동기화 >** ,  **\<전에 >** , 및  **\<후 >** 블록의 구문을 구성 하는 updategram입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

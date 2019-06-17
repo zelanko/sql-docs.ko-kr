@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995681"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats(Transact-SQL)
@@ -45,7 +45,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tblname = ] 'table_or_indexed_view_name'` 테이블의 이름 또는 인덱싱된 뷰 AUTO_UPDATE_STATISTICS 옵션을 표시 합니다. *table_or_indexed_view_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @tblname = ] 'table_or_indexed_view_name'` 테이블의 이름 또는 인덱싱된 뷰 AUTO_UPDATE_STATISTICS 옵션을 표시 합니다. *table_or_indexed_view_name* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
 `[ @flagc = ] 'stats_value'` 이러한 값 중 하나로 AUTO_UPDATE_STATISTICS 옵션을 업데이트합니다.  
   
@@ -53,7 +53,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- 때 *stats_flag* 은 지정 하지 않으면 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_value* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
+ 때 *stats_flag* 은 지정 하지 않으면 현재 AUTO_UPDATE_STATISTICS 설정을 표시 합니다. *stats_value* 됩니다 **varchar(10)** , 기본값은 NULL입니다.  
   
 `[ @indname = ] 'statistics_name'` 표시 하거나 AUTO_UPDATE_STATISTICS 옵션에서 업데이트할 통계의 이름이입니다. 인덱스에 대한 통계를 표시하려면 인덱스 이름을 사용하면 됩니다. 인덱스와 해당 통계 개체는 동일한 이름을 갖습니다.  
   
@@ -85,7 +85,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>1. 테이블의 모든 통계에 대한 상태 표시  
+### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>1\. 테이블의 모든 통계에 대한 상태 표시  
  다음은 `Product` 테이블의 모든 통계에 대한 상태를 표시합니다.  
   
 ```  
@@ -95,7 +95,7 @@ EXEC sp_autostats 'Production.Product';
 GO  
 ```  
   
-### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>2. 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 활성화  
+### <a name="b-enable-autoupdatestatistics-for-all-statistics-on-a-table"></a>2\. 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 활성화  
  다음은 `Product` 테이블의 모든 통계에 대해 AUTO_UPDATE_STATISTICS 옵션을 활성화합니다.  
   
 ```  
@@ -105,7 +105,7 @@ EXEC sp_autostats 'Production.Product', 'ON';
 GO  
 ```  
   
-### <a name="c-disable-autoupdatestatistics-for-a-specific-index"></a>3. 특정 인덱스에 대해 AUTO_UPDATE_STATISTICS 비활성화  
+### <a name="c-disable-autoupdatestatistics-for-a-specific-index"></a>3\. 특정 인덱스에 대해 AUTO_UPDATE_STATISTICS 비활성화  
  다음 예에서는 `AK_Product_Name` 테이블의 `Product` 인덱스에 대해 AUTO_UPDATE_STATISTICS 옵션을 비활성화합니다.  
   
 ```  

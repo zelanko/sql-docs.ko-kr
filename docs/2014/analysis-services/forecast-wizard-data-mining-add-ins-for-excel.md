@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081028"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-forecast.gif "연결 데이터 마이닝 리본의 마법사")  
   
- 예측 마법사를 사용하면 시계열의 값을 예측할 수 있습니다. 예측 마법사는 제품 판매량과 같은 연속 열을 예측하기 위해 사용되는 회귀 알고리즘인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용합니다.   
+ 예측 마법사를 사용하면 시계열의 값을 예측할 수 있습니다. 예측 마법사는 제품 판매량과 같은 연속 열을 예측하기 위해 사용되는 회귀 알고리즘인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용합니다.  
   
  각 예측 모델은 시퀀스의 요소를 구분하는 열인 사례 계열을 포함해야 합니다. 예를 들어 여러 달 동안의 판매량을 예측하기 위해 기록 데이터를 사용하는 경우 날짜 계열이 포함된 열을 사례 계열로 사용합니다.  
   

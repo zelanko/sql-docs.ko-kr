@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013529"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "63013529"
 
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>1. 다시 사용된 캐시된 항목의 일괄 처리 텍스트 반환  
+### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>1\. 다시 사용된 캐시된 항목의 일괄 처리 텍스트 반환  
  다음 예에서는 두 번 이상 사용되었던 모든 캐시된 항목의 SQL 텍스트를 반환합니다.  
   
 ```sql  
@@ -72,7 +72,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>2. 모든 캐시된 트리거에 대한 쿼리 계획 반환  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>2\. 모든 캐시된 트리거에 대한 쿼리 계획 반환  
  다음 예에서는 모든 캐시된 트리거의 쿼리 계획을 반환합니다.  
   
 ```sql  
@@ -83,7 +83,7 @@ WHERE objtype ='Trigger';
 GO  
 ```  
   
-### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>3. 계획 컴파일 시 사용된 SET 옵션의 반환  
+### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>3\. 계획 컴파일 시 사용된 SET 옵션의 반환  
  다음 예에서는 계획 컴파일 시 사용된 SET 옵션을 반환합니다. `sql_handle` 계획도 반환 됩니다. PIVOT 연산자는 출력 하는 `set_options` 및 `sql_handle` 특성 행 대신 열으로. 반환 된 값에 대 한 자세한 내용은 `set_options`를 참조 하세요 [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)합니다.  
   
 ```sql  
@@ -98,7 +98,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>4. 모든 캐시된 컴파일 계획의 메모리 분석 반환  
+### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>4\. 모든 캐시된 컴파일 계획의 메모리 분석 반환  
  다음 예에서는 캐시에서 모든 컴파일된 계획에 사용되는 메모리 분석을 반환합니다.  
   
 ```sql  

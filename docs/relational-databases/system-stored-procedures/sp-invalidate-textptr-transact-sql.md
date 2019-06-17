@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960928"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr(Transact-SQL)
@@ -40,7 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @TextPtrValue = ] textptr_value` 행 내부 텍스트 포인터가 무효화 될입니다. *textptr_value* 됩니다 **varbinary (** 16 **)**, 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 트랜잭션에서 모든 행 내부 텍스트 포인터를 무효화 합니다.  
+`[ @TextPtrValue = ] textptr_value` 행 내부 텍스트 포인터가 무효화 될입니다. *textptr_value* 됩니다 **varbinary (** 16 **)** , 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 트랜잭션에서 모든 행 내부 텍스트 포인터를 무효화 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

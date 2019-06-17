@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078568"
 ---
 # <a name="defining-a-fact-relationship"></a>팩트 관계 정의
@@ -87,7 +87,7 @@ ms.locfileid: "66078568"
   
      **Internet Sales Order Details** 큐브 차원은 고유 아이콘에 표시된 대로 자동으로 팩트 관계를 갖도록 구성되어 있습니다.  
   
-2.  찾아보기 단추를 클릭 (**...** )에 **Item Description** 의 교집합에서 셀을 **Internet Sales** 측정값 그룹 및 **Internet Sales Order Details** 차원에 팩트 관계 속성을 검토 합니다.  
+2.  찾아보기 단추를 클릭 ( **...** )에 **Item Description** 의 교집합에서 셀을 **Internet Sales** 측정값 그룹 및 **Internet Sales Order Details** 차원에 팩트 관계 속성을 검토 합니다.  
   
      **관계 정의** 대화 상자가 열립니다. 어떤 속성도 구성할 수 없습니다.  
   

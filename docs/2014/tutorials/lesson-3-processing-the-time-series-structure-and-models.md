@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042879"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 처리 된 시계열 구조 및 모델
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>3단원: 시계열 구조 및 모델 처리
   이 단원에서는 사용할지는 [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) 시계열 마이닝 구조 및 마이닝 사용자가 만든 모델을 처리 하는 문입니다.  
   
  마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 원본 데이터를 읽은 다음 마이닝 모델을 지원하는 구조를 작성합니다. 처음 마이닝 모델 및 구조를 만들면 해당 마이닝 모델 및 구조를 항상 처리해야 합니다. INSERT INTO를 사용하여 마이닝 구조를 지정하는 경우 이 문은 마이닝 구조 및 연결된 모든 마이닝 모델을 처리합니다.  

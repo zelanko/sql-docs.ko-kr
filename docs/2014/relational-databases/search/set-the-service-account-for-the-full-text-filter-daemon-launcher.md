@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010943"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
@@ -32,7 +32,7 @@ ms.locfileid: "66010943"
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**를 마우스 오른쪽 단추로 클릭 **SQL 전체 텍스트 필터 데몬 시작 관리자 (*`instance name`*)** 를 클릭 하 고 **속성**합니다.  
+2.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**를 마우스 오른쪽 단추로 클릭 **SQL 전체 텍스트 필터 데몬 시작 관리자 ( *`instance name`* )** 를 클릭 하 고 **속성**합니다.  
   
 3.  대화 상자의 **로그온** 탭을 클릭한 다음 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스에서 만든 각 프로세스를 실행할 계정을 선택하거나 입력합니다.  
   

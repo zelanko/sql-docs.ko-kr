@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075055"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
@@ -74,7 +74,7 @@ ms.locfileid: "66075055"
     >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 가정 된 `All` 특성 계층의 멤버 권한이 적용 되기 전에 200의 개수를 반환 합니다. 일부 구성원에 대 한 액세스를 거부 하는 권한이 적용 된 후 `All` 사용자에 게 표시 되는 구성원 값 훨씬 적은 경우에 계속 200을 반환 합니다. 큐브의 소비자가 혼동을 방지 하려면 구성할 수 있습니다는 `All` 멤버의 모든 특성 계층의 멤버에 대 한 집계가 아니라, 역할 구성원에 대 한 구성원의 집계 됩니다. 이 동작을 호출 하기 위해 사용할 수 있습니다 `Visual Totals` 에 **고급** 차원 보안을 구성 하는 경우를 탭 합니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
   
 ## <a name="hiding-measures"></a>측정값 숨기기  
-  [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
+ [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
   
 1.  **차원 데이터** | **기본**에서 큐브 차원에 도달할 때까지 차원 목록을 아래로 스크롤한 다음 **측정값 차원**을 선택합니다.  
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997081"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login(Transact-SQL)
@@ -89,14 +89,14 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>1. 현재 사용자와 로그인 간의 매핑에 대한 보고서 표시  
+### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>1\. 현재 사용자와 로그인 간의 매핑에 대한 보고서 표시  
  다음 예에서는 현재 데이터베이스의 사용자 및 해당 사용자의 SID(보안 식별자)에 대한 보고서를 생성합니다.  
   
 ```  
 EXEC sp_change_users_login 'Report';  
 ```  
   
-### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>2. 데이터베이스 사용자를 새 SQL Server 로그인에 매핑  
+### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>2\. 데이터베이스 사용자를 새 SQL Server 로그인에 매핑  
  다음 예에서는 데이터베이스 사용자가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결됩니다. 데이터베이스 사용자 `MB-Sales`는 처음에 다른 로그인에 매핑되어 있다가 `MaryB` 로그인에 다시 매핑됩니다.  
   
 ```  
@@ -110,7 +110,7 @@ EXEC sp_change_users_login 'Update_One', 'MB-Sales', 'MaryB';
 GO  
 ```  
   
-### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>3. 사용자를 로그인에 자동으로 매핑하고 필요한 경우 새 로그인 만들기  
+### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>3\. 사용자를 로그인에 자동으로 매핑하고 필요한 경우 새 로그인 만들기  
  다음 예에서는 `Auto_Fix`를 사용하여 기존 사용자를 동일한 이름의 로그인에 매핑하거나 `Mary` 로그인이 없는 경우 암호가 `B3r12-3x$098f6`인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Mary`를 만드는 방법을 보여 줍니다.  
   
 ```  

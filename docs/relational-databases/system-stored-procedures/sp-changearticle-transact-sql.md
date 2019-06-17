@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997947"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|인덱스를 복제 **xml** 열입니다.|  
 ||**0x8000000**|구독자에 없는 스키마를 만듭니다.|  
 ||**0x10000000**|변환 **xml** 열을 **ntext** 구독자의 합니다.|  
-||**0x20000000**|변환 큰 개체 데이터 형식 (**nvarchar (max)** 하십시오 **varchar (max)**, 및 **varbinary (max)**)에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원 되는 데이터 형식 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]합니다.|  
+||**0x20000000**|변환 큰 개체 데이터 형식 (**nvarchar (max)** 하십시오 **varchar (max)** , 및 **varbinary (max)** )에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원 되는 데이터 형식 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]합니다.|  
 ||**0x40000000**|사용 권한을 복제합니다.|  
 ||**0x80000000**|게시의 일부가 아닌 개체에 대한 종속성을 삭제합니다.|  
 ||**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  

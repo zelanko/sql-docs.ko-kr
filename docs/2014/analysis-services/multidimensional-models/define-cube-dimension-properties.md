@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecf47eff045aa379a8e67332a82b2045a8569a2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075686"
 ---
 # <a name="define-cube-dimension-properties"></a>큐브 차원 속성 정의
@@ -25,7 +25,7 @@ ms.locfileid: "66075686"
   
 |속성|Description|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 집계 디자이너로 집계를 디자인하는 방식을 제어합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **전체**: 큐브의 모든 집계가 All 멤버를 포함해야 합니다.<br /><br /> **없음**: 큐브에 대 한 집계 없음 All 멤버를 포함할 수 있습니다. 이것은 기본값입니다.<br /><br /> **제한 없음**: 집계 디자이너에 제한 사항이 지정되지 않습니다.<br /><br /> **기본값**: Unrestricted와 동일한 기능을 합니다.|  
+|`AllMemberAggregationUsage`|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 집계 디자이너로 집계를 디자인하는 방식을 제어합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **전체**: 큐브의 모든 집계가 All 멤버를 포함해야 합니다.<br /><br /> **없음**: 큐브에 대 한 집계 없음 All 멤버를 포함할 수 있습니다. 이것은 기본값입니다.<br /><br /> **제한 없음**: 집계 디자이너에 제한 사항이 지정되지 않습니다.<br /><br /> **기본값**: Unrestricted와 동일한 기능을 합니다.|  
 |`Description`|수준에 대한 설명이 포함된 이름을 제공합니다.|  
 |`DimensionID`|데이터베이스 차원의 고유 ID를 포함합니다.|  
 |`HierarchyUniqueNameStyle`|큐브 차원에 포함된 계층에 고유한 이름을 생성하는 방식을 결정합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `IncludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함됩니다. 이것은 기본값입니다.<br /><br /> `ExcludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함되지 않습니다.|  

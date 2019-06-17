@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012251"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
@@ -57,7 +57,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|XML 웹 서비스가 포함된 폴더의 이름입니다. 이 폴더는 설치 중 구성됩니다.|  
 |*\<endpoint name>.asmx*|웹 서비스 엔드포인트의 이름입니다.|  
   
- WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
+ WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl 에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

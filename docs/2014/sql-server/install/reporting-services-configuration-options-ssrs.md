@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092584"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 구성 옵션(SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66092584"
   
  경우에 따라 컴퓨터에 SSL(Secure Sockets Layer) 인증서가 설치되어 강력한 와일드카드에 바인딩되어 있는 경우 설치 프로그램이 HTTPS 접두사를 사용하여 Reporting Services URL을 만듭니다. 인증서 Reporting Services Url에 매핑되는 방법에 대 한 자세한 내용은 참조 하세요. [Secure Sockets Layer (SSL) 연결에 대 한 보고서 서버 구성](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) SQL Server 온라인 설명서의 합니다.  
   
- 최신 정보에 대 한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및이 릴리스의 구성 내용과 [추가 설치 정보](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425)합니다.  
+ 최신 정보에 대 한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및이 릴리스의 구성 내용과 [추가 설치 정보](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425) 합니다.  
   
 ## <a name="options"></a>변수  
   
@@ -43,23 +43,23 @@ ms.locfileid: "66092584"
   
  보고서 서버 설치에 사용되는 기본값이 시스템에 적합한 경우에만 이 옵션을 사용할 수 있습니다. 로컬에서 모든 구성 요소를 설치하는 개발자와 소프트웨어를 평가하는 사용자의 경우 이 옵션을 사용하는 것이 좋습니다.  
   
- 설치에 사용하는 기본 설정에 대한 정보를 검토하거나 기본 구성을 설치할 수 없는 이유를 알아 보려면 **자세히**를 클릭합니다. 기본 모드 보고서 서버용 기본 구성에 대 한 자세한 내용은 참조 하세요. [Native Mode Installation (Reporting Services)에 대 한 기본 구성을](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091)합니다.  
+ 설치에 사용하는 기본 설정에 대한 정보를 검토하거나 기본 구성을 설치할 수 없는 이유를 알아 보려면 **자세히**를 클릭합니다. 기본 모드 보고서 서버용 기본 구성에 대 한 자세한 내용은 참조 하세요. [Native Mode Installation (Reporting Services)에 대 한 기본 구성을](https://go.microsoft.com/fwlink/?LinkId=199091) (https://go.microsoft.com/fwlink/?LinkId=199091) 합니다.  
   
 #### <a name="install-only"></a>설치만  
- 보고서 서버 프로그램 파일을 설치하고 보고서 서버 서비스 계정을 만든 다음 보고서 서버 WMI(Windows Management Instrumentation) 공급자를 등록합니다. 이 설치 옵션은 "파일만" 설치라고도 합니다. 기본 구성을 사용하지 않으려면 이 옵션을 선택합니다. 기본 구성을 설치할 수 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]장애 조치 클러스터를 설치하는 경우에는 이 옵션만 사용할 수 있습니다. 파일만 설치에 대 한 자세한 내용은 참조 하세요. [파일만 설치 (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093)합니다.  
+ 보고서 서버 프로그램 파일을 설치하고 보고서 서버 서비스 계정을 만든 다음 보고서 서버 WMI(Windows Management Instrumentation) 공급자를 등록합니다. 이 설치 옵션은 "파일만" 설치라고도 합니다. 기본 구성을 사용하지 않으려면 이 옵션을 선택합니다. 기본 구성을 설치할 수 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]장애 조치 클러스터를 설치하는 경우에는 이 옵션만 사용할 수 있습니다. 파일만 설치에 대 한 자세한 내용은 참조 하세요. [파일만 설치 (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093) 합니다.  
   
- 설치가 완료된 후 보고서 서버 데이터베이스를 만들고 보고서 서버를 사용할 수 있도록 구성합니다. 보고서 서버를 구성하고 데이터베이스를 만들려면 Reporting Services 구성 관리자를 사용합니다. 자세한 내용은 [방법: Create a Report Server Database (Reporting Services 구성)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) 하 고 [보고서 서버 데이터베이스 연결을 구성할](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)합니다.  
+ 설치가 완료된 후 보고서 서버 데이터베이스를 만들고 보고서 서버를 사용할 수 있도록 구성합니다. 보고서 서버를 구성하고 데이터베이스를 만들려면 Reporting Services 구성 관리자를 사용합니다. 자세한 내용은 [방법: Create a Report Server Database (Reporting Services 구성)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) 하 고 [보고서 서버 데이터베이스 연결을 구성할](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095) 합니다.  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드  
   
 #### <a name="install-only"></a>설치만  
  보고서 서버 프로그램 파일과 PowerShell cmdlet을 설치합니다. 설치가 완료된 후에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 시작하고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만들어야 합니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [Reporting Services SharePoint 모드 보고서 서버 설치 Power View 및 데이터 경고에 대 한](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543)합니다.  
+-   [Reporting Services SharePoint 모드 보고서 서버 설치 Power View 및 데이터 경고에 대 한](https://go.microsoft.com/fwlink/?LinkId=207543) (https://go.microsoft.com/fwlink/?LinkId=207543) 합니다.  
   
--   [Reporting Services SharePoint 모드 단일 서버 팜으로 설치](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544)합니다.  
+-   [Reporting Services SharePoint 모드 단일 서버 팜으로 설치](https://go.microsoft.com/fwlink/?LinkId=207544) (https://go.microsoft.com/fwlink/?LinkId=207544) 합니다.  
   
--   [Reporting Services 보고서 서버 (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244)합니다.  
+-   [Reporting Services 보고서 서버 (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244) 합니다.  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>SharePoint 기술용 Reporting Services 추가 기능 설치  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 이 추가 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지에서 SQL Server 설치의 일부로 설치할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "66092584"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에서 설치합니다. **설치가 끝난 후** 설치 미디어의 Setup 폴더에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일을 클릭합니다.  
   
--   추가 기능을 다운로드하고 설치합니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634)합니다.  
+-   추가 기능을 다운로드하고 설치합니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634) 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 구성 관리자 시작](https://go.microsoft.com/fwlink/?LinkId=199096)   

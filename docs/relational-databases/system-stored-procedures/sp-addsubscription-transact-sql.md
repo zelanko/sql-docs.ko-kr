@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998306"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  복제된 데이터를 추가할 대상 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 인 경우 *destination_db* 게시 데이터베이스의 이름으로 설정 됩니다. For Oracle Publishers *destination_db* 지정 해야 합니다. 에 SQL Server 이외 구독자에 대 한 (기본 대상)의 값을 지정 *destination_db*합니다.  
   
  [ @sync_type=] '*sync_type*'  
- 구독 동기화 유형입니다. *sync_type* 됩니다 **nvarchar(255)**, 이며 다음 값 중 하나일 수 있습니다.  
+ 구독 동기화 유형입니다. *sync_type* 됩니다 **nvarchar(255)** , 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|구독을 초기화해야 합니다. 이 옵션을 설정 하는 경우 값 *sync_type* 자동입니다.|  
   
  [ @subscription_type=] '*subscription_type*'  
- 구독 유형입니다. *subscription_type* 됩니다 **nvarchar(4)**, 기본값은 push 사용 하 여 합니다. push 또는 pull이 될 수 있습니다. 배포자에서 밀어넣기 구독의 배포 에이전트 들이 있고 구독자의 끌어오기 구독의 배포 에이전트입니다. *subscription_type* 게시자에 알려진 명명 된 끌어오기 구독을 만들려면 끌어오기를 수 있습니다. 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
+ 구독 유형입니다. *subscription_type* 됩니다 **nvarchar(4)** , 기본값은 push 사용 하 여 합니다. push 또는 pull이 될 수 있습니다. 배포자에서 밀어넣기 구독의 배포 에이전트 들이 있고 구독자의 끌어오기 구독의 배포 에이전트입니다. *subscription_type* 게시자에 알려진 명명 된 끌어오기 구독을 만들려면 끌어오기를 수 있습니다. 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
 > [!NOTE]  
 >  익명 구독은 이 저장 프로시저를 사용할 필요가 없습니다.  
   
  [ @update_mode=] '*update_mode*'  
- 업데이트의 유형이입니다. *update_mode* 됩니다 **nvarchar(30)**, 이며 다음이 값 중 하나일 수 있습니다.  
+ 업데이트의 유형이입니다. *update_mode* 됩니다 **nvarchar(30)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  값 synctran 및 queued tran 되지 않는 참고에 구독 되는 게시가 DTS를 허용 하는 경우를 허용 합니다.  
   
  [ @loopback_detection=] '*loopback_detection*'  
- 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 지정합니다. *loopback_detection* 됩니다 **nvarchar(5)**, 이며 다음이 값 중 하나일 수 있습니다.  
+ 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 지정합니다. *loopback_detection* 됩니다 **nvarchar(5)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- 실행할 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
+ 실행할 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(4000)** , 기본값은 NULL입니다.  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- 구독을 통해 동기화 할 수 있는지 여부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자입니다. *enabled_for_syncmgr* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. false인 경우 구독이 Windows 동기화 관리자에 등록되지 않습니다. true인 경우에는 구독이 Windows 동기화 관리자에 등록되며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하지 않고 구독을 동기화할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.  
+ 구독을 통해 동기화 할 수 있는지 여부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자입니다. *enabled_for_syncmgr* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. false인 경우 구독이 Windows 동기화 관리자에 등록되지 않습니다. true인 경우에는 구독이 Windows 동기화 관리자에 등록되며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하지 않고 구독을 동기화할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  에이전트를 원격으로 활성화할 수 있음을 나타냅니다. *remote_agent_activation* 됩니다 **비트** 이며 기본값은 0입니다.  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  경우에 암호를 지정 해야 합니다 *dts_package_name* 지정 됩니다.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- 패키지 위치를 지정합니다. *dts_package_location* 되는 **nvarchar(12)**, 배포자의 기본값을 사용 하 여 합니다. 패키지 위치는 distributor 또는 subscriber일 수 있습니다.  
+ 패키지 위치를 지정합니다. *dts_package_location* 되는 **nvarchar(12)** , 배포자의 기본값을 사용 하 여 합니다. 패키지 위치는 distributor 또는 subscriber일 수 있습니다.  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- 백업에서 구독자를 초기화할 때 사용되는 백업 장치의 유형을 지정합니다. *backupdevicetype* 됩니다 **nvarchar(20)**, 이며 다음이 값 중 하나일 수 있습니다.  
+ 백업에서 구독자를 초기화할 때 사용되는 백업 장치의 유형을 지정합니다. *backupdevicetype* 됩니다 **nvarchar(20)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* 때만 사용 됩니다 *sync_method*initialize_with_backup으로 설정 됩니다.  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- 백업에서 구독자를 초기화할 때 사용되는 장치의 이름을 지정합니다. *backupdevicename* 됩니다 **nvarchar(1000)**, 기본값은 NULL입니다.  
+ 백업에서 구독자를 초기화할 때 사용되는 장치의 이름을 지정합니다. *backupdevicename* 됩니다 **nvarchar(1000)** , 기본값은 NULL입니다.  
   
  [ @mediapassword= ] '*mediapassword*'  
  미디어를 포맷할 때 암호를 설정한 경우 미디어 세트의 암호를 지정합니다. *mediapassword* 됩니다 **sysname**, 기본값은 NULL입니다.  
