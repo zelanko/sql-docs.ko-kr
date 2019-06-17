@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184271"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63184271"
   
 2.  선택한 열을 관련 테이블로 끌어 옵니다.  
   
-3.  두 개의 대화 상자가 표시 됩니다. **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열** 대화 상자가 나타납니다.  
+3.  백그라운드에 **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열** 대화 상자가 나타납니다.  
   
 4.  **관계 이름** 에는 FK_*localtable*_*foreigntable*형식으로 시스템에서 제공한 이름이 표시됩니다. 이 값은 변경할 수 있습니다.  
   

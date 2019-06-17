@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b896aa1221f3da636d6754e829f00f0b4b5c24fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62868874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046775"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
     
@@ -71,7 +71,7 @@ ms.locfileid: "62868874"
   
      AND qs.plan_handle = *plan_handle*;  
   
-2.  이유 코드 설명에 따라 문, 일괄 처리 또는 프로시저를 수정하여 재컴파일을 방지합니다. 예를 들어 저장 프로시저에는 하나 이상의 SET 문이 포함되어 있을 수 있는데, 이러한 문을 프로시저에서 제거해야 합니다. 재컴파일의 원인 및 해결 방법에 대한 추가 예는 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=69175)(SQL Server 2005에서의 일괄 컴파일, 다시 컴파일 및 계획 캐싱 문제)를 참조하세요.  
+2.  이유 코드 설명에 따라 문, 일괄 처리 또는 프로시저를 수정하여 재컴파일을 방지합니다. 예를 들어 저장 프로시저에는 하나 이상의 SET 문이 포함되어 있을 수 있는데, 이러한 문을 프로시저에서 제거해야 합니다. 재컴파일의 원인 및 해결 방법에 대한 추가 예는 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc966425(v=technet.10))(SQL Server 2005에서의 일괄 컴파일, 다시 컴파일 및 계획 캐싱 문제)를 참조하세요.  
   
 3.  문제가 지속되면 Microsoft 고객 지원 서비스에 문의하십시오.  
   

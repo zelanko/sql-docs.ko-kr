@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767515"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>2단원: 배포 번들 만들기
@@ -24,7 +24,7 @@ ms.locfileid: "62767515"
   
  또한 배포 번들의 파일 목록을 확인하고 매니페스트의 내용을 검사합니다.  
   
- **이 단원에 소요되는 예상 시간:**: 30분  
+ **이 단원에 소요되는 예상 시간:** : 30분  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  

@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269856"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>규칙, 트리거, 기본값 및 저장 프로시저 지원(Visual FoxPro ODBC 드라이버)
@@ -44,7 +44,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
  드라이버 인 규칙, 트리거, 기본값, 응용 프로그램 데이터와 상호 작용 또는 다른 Visual FoxPro 명령 또는 함수 저장된 프로시저를 호출 하는 경우 오류가 발생 합니다. 참조 [지원 되지 않는 Visual FoxPro 명령 및 함수](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) 명령 목록과 드라이버에서 지원 되지 않는 함수에 대 한 합니다.  
   
 > [!TIP]  
->  규칙, 트리거 또는 드라이버에 의해 호출 될 때 실행할 명령을 결정 하는 저장된 프로시저에 조건부 코드를 삽입 하려는 경우 사용할 수 있습니다 합니다 **버전 ()** 함수입니다. 합니다 **버전 ()** 함수에서 반환 "Visual FoxPro ODBC 드라이버  *\<버전 >*" 드라이버에 의해 호출 될 때입니다.  
+>  규칙, 트리거 또는 드라이버에 의해 호출 될 때 실행할 명령을 결정 하는 저장된 프로시저에 조건부 코드를 삽입 하려는 경우 사용할 수 있습니다 합니다 **버전 ()** 함수입니다. 합니다 **버전 ()** 함수에서 반환 "Visual FoxPro ODBC 드라이버  *\<버전 >* " 드라이버에 의해 호출 될 때입니다.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 명령 및 규칙, 트리거, 기본값 및 저장된 프로시저에서 지원 되는 함수  
   
@@ -96,7 +96,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
 |CTOT () 함수|CURSORGETPROP () 함수||  
 |CURVAL () 함수|CDOW () 함수||  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  

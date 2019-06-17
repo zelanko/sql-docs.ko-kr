@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270766"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
-  [SecurityCertificate 클래스] securitycertificate-class.md) 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 공개 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 인증 기관에서 발급합니다.  
+  [SecurityCertificate 클래스] securitycertificate-class.md) 보안 인증서를 나타냅니다. 인증서는 해당 프라이빗 키를 보유하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 퍼블릭 키 값을 바인딩하는 디지털 서명 문입니다. 인증서는 인증 기관에서 발급합니다.  
   
  [SecurityCertificate 클래스] securitycertificate-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   

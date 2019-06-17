@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639508"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 관리 권한
@@ -62,7 +62,7 @@ SQL Server PDW에서 데이터베이스 엔진 권한 로그인을 통해 서버
   
 -   Using 하 여 로그인을 만들면 **CREATE LOGIN** 문을 로그인 수신 합니다 **CONNECT SQL** SQL Server PDW에 연결할 로그인을 허용 하는 권한.  
   
--   데이터베이스 사용자를 사용 하 여 만들어질 때를 **CREATE USER** 문, 사용자에 게는 **ON DATABASE 연결::**_< database_name >_ 권한이 허용 합니다 사용자로 데이터베이스에 연결할에 로그인 합니다.  
+-   데이터베이스 사용자를 사용 하 여 만들어질 때를 **CREATE USER** 문, 사용자에 게는 **ON DATABASE 연결::** _< database_name >_ 권한이 허용 합니다 사용자로 데이터베이스에 연결할에 로그인 합니다.  
   
 -   공용 역할을 포함 한 모든 보안 주체에 명시적 사용 권한에서 암시적 사용 권한 상속 되기 때문에 기본적으로 명시적 또는 암시적 사용 권한 없음를 갖습니다. 따라서 명시적 사용 권한 없음 있을 때 있을 수도 있습니다 암시적 권한이 없습니다.  
   

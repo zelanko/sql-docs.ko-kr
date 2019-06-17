@@ -14,17 +14,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd52b851d4ff35fe1fc9a3a9fed05be0b8098fa9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900992"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](integration-services-data-types.md)을 참조하세요.  
   
 ## <a name="types-of-parsing"></a>구문 분석 유형  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 두 가지 유형의 데이터를 변환 하는 것에 대 한 구문 분석을 제공 합니다. 빠른 구문 분석과 표준 구문 분석 합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 데이터 변환을 위해 빠른 구문 분석과 표준 구문 분석의 두 가지 구문 분석 유형이 제공됩니다.  
   
 -   빠른 구문 분석은 신속하고 간단한 구문 분석 루틴이지만 로캘 특정 데이터 형식 변환을 지원하지 않으며 가장 자주 사용되는 날짜 및 시간 형식만 지원합니다. 자세한 내용은 [Fast Parse](../fast-parse.md)을 참조하세요.  
   

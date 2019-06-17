@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035390"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -135,10 +135,10 @@ ms.locfileid: "63035390"
   
  **-P** 옵션 다음에 둘 이상의 인수를 지정하면 오류 메시지가 생성되고 프로그램이 종료됩니다.  
   
- **-S** [*protocol*:]*server*[**\\**_instance_name_][**,**_port_]  
+ **-S** [*protocol*:]*server*[ **\\** _instance_name_][ **,** _port_]  
  연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. `sqlcmd` 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name* [ **\\**_instance_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 `sqlcmd`가 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 `sqlcmd`를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*을 지정합니다. 해당 서버 컴퓨터에 있는 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name* [ **\\** _instance_name_ ]을 지정합니다. 서버 컴퓨터를 지정하지 않으면 `sqlcmd`가 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 `sqlcmd`를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *프로토콜* 될 수 있습니다 `tcp` (TCP/IP), `lpc` (공유 메모리) 또는 `np` (명명 된 파이프).  
   
@@ -168,7 +168,7 @@ ms.locfileid: "63035390"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **입/출력 옵션**  
-  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:** _codepage_[ **,o:** _codepage_] | **o:** _codepage_[ **,i:** _codepage_]  
  입력 및 출력 코드 페이지를 지정합니다. 코드 페이지 번호는 설치된 Windows 코드 페이지를 지정하는 숫자 값입니다.  
   
  코드 페이지 변환 규칙은 다음과 같습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "63035390"
   
  명령 프롬프트에서 `chcp`를 입력하여 Cmd.exe의 코드 페이지를 확인합니다.  
   
- **-i** _input_file_[**,**_input_file2_...]  
+ **-i** _input_file_[ **,** _input_file2_...]  
  SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 나타냅니다. 순서대로 읽고 처리할 파일을 여러 개 지정할 수 있습니다. 파일 이름 사이에 공백을 넣지 마십시오. 먼저 `sqlcmd`는 지정한 모든 파일이 있는지 확인합니다. 하나 이상의 파일이 없을 경우 `sqlcmd`가 종료됩니다. -i 옵션과 -Q/-q 옵션은 함께 사용할 수 없습니다.  
   
  경로 예는 다음과 같습니다.  
@@ -266,7 +266,7 @@ ms.locfileid: "63035390"
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
  **-vvar =** _value_[ **var =** _value_...]  
- 만듭니다는 `sqlcmd`에서 사용할 수 있는 스크립팅 변수는 `sqlcmd` 스크립트입니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 개 지정할 수 있습니다  **_var_**=**"*`values`*"** 값입니다. 지정한 값에 오류가 있을 경우 `sqlcmd`는 오류 메시지를 생성하고 종료됩니다.  
+ 만듭니다는 `sqlcmd`에서 사용할 수 있는 스크립팅 변수는 `sqlcmd` 스크립트입니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 개 지정할 수 있습니다  **_var_** = **" *`values`* "** 값입니다. 지정한 값에 오류가 있을 경우 `sqlcmd`는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -460,11 +460,11 @@ ms.locfileid: "63035390"
 |||  
 |-|-|  
 |**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -474,7 +474,7 @@ ms.locfileid: "63035390"
 -   GO를 제외하고 모든 `sqlcmd` 명령에는 접두사로 콜론(:)을 붙여야 합니다.  
   
     > [!IMPORTANT]  
-    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이도 인식됩니다. 이러한 명령은 [**:**]으로 표시됩니다.  
+    >  **osql** 스크립트와의 호환성을 유지하기 위해 일부 명령은 콜론 없이도 인식됩니다. 이러한 명령은 [ **:** ]으로 표시됩니다.  
   
 -   `sqlcmd` 명령은 줄 시작 부분에 나타난 경우에만 인식됩니다.  
   
@@ -485,21 +485,21 @@ ms.locfileid: "63035390"
 -   명령은 즉시 실행되며 [!INCLUDE[tsql](../includes/tsql-md.md)] 문처럼 실행 버퍼에 포함되지 않습니다.  
   
  **명령 편집**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  텍스트 편집기를 시작합니다. 이 편집기를 사용하여 현재 [!INCLUDE[tsql](../includes/tsql-md.md)] 일괄 처리를 편집하거나 마지막으로 실행된 일괄 처리를 편집할 수 있습니다. 마지막으로 실행된 일괄 처리를 편집하려면 마지막 일괄 처리 실행을 마친 후 즉시 **ED** 명령을 입력해야 합니다.  
   
  텍스트 편집기는 SQLCMDEDITOR 환경 변수에 의해 정의됩니다. 기본 편집기는 'Edit'입니다. 편집기를 변경하려면 SQLCMDEDITOR 환경 변수를 설정합니다. 예를 들어 편집기를 [!INCLUDE[msCoName](../includes/msconame-md.md)] 메모장으로 설정하려면 명령 프롬프트에서 다음을 입력합니다.  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  문 캐시를 지웁니다.  
   
  **:List**  
  문 캐시 내용을 출력합니다.  
   
  **변수**  
-  **:Setvar** \<**var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **" *`value`* "** ]  
  `sqlcmd` 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
@@ -531,7 +531,7 @@ ms.locfileid: "63035390"
   
  **출력 명령**  
   **:Error**   
- **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
+ ** _\<_ ** _filename_  ** _>|_ STDERR|STDOUT**  
  *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
   
  *file name*  
@@ -543,10 +543,10 @@ ms.locfileid: "63035390"
  **STDOUT**  
  오류 출력을 **stdout** 스트림으로 전환합니다. 스트림을 리디렉션할 경우 리디렉션된 스트림 대상이 오류 출력을 받습니다.  
   
- **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
  쿼리 결과를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Out** 명령이 여러 번 나타날 수 있습니다.  
   
- **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
  성능 추적 정보를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 성능 추적 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Perftrace** 명령이 여러 번 나타날 수 있습니다.  
   
  **실행 제어 명령**  
@@ -557,10 +557,10 @@ ms.locfileid: "63035390"
   
  `ignore` 옵션을 사용하면 `sqlcmd`는 오류를 무시하고 일괄 처리 또는 스크립트를 계속 실행합니다. 기본적으로 오류 메시지가 출력됩니다.  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  `sqlcmd`를 끝냅니다.  
   
- [**:**] **EXIT**[ **(*`statement`*)** ]  
+ [ **:** ] **EXIT**[ **( *`statement`* )** ]  
  `sqlcmd`의 반환 값에 SELECT 문의 결과를 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "63035390"
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect** _server_name_[ **\\** _instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -651,8 +651,8 @@ ms.locfileid: "63035390"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**\< *command*>  
- 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ [ **:** ] **!!** \< *command*>  
+ 운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개( **!!** )로 줄을 시작하고 운영 체제 명령을 입력합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `:!! Dir`  
   
@@ -668,11 +668,11 @@ ms.locfileid: "63035390"
 ### <a name="sqlcmd-file-names"></a>sqlcmd 파일 이름  
  `sqlcmd` 입력된 파일을 사용 하 여 지정할 수는 **-i** 옵션 또는 **: r** 명령입니다. 출력 파일은 **-o** 옵션 또는 **:Error**, **:Out** 및 **:Perftrace** 명령을 사용하여 지정할 수 있습니다. 다음은 이러한 파일 작업에 대한 지침입니다.  
   
--   **: Error**, **: Out** 하 고 **: Perftrace** 별도 사용할지 **< *`filename`* >**. 하는 경우 동일한 **< *`filename`* >** 는 사용 하면 명령의 입력 섞일 수 있습니다.  
+-   **: Error**, **: Out** 하 고 **: Perftrace** 별도 사용할지 **< *`filename`* >** . 하는 경우 동일한 **< *`filename`* >** 는 사용 하면 명령의 입력 섞일 수 있습니다.  
   
 -   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 `sqlcmd`에서 호출할 경우 이 파일에 :out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   
--   올바른 파일 경로 다음과 같습니다. C:\\**<*`filename`*>** 하십시오 \\ \\< Server\>\\<$ 공유 >\\ **< *`filename`* >** 및 "C:\Some 폴더\\  **< *`file name`*>**". 경로에 공백이 있을 경우 따옴표를 사용합니다.  
+-   올바른 파일 경로 다음과 같습니다. C:\\ **< *`filename`* >** 하십시오 \\ \\< Server\>\\<$ 공유 >\\ **< *`filename`* >** 및 "C:\Some 폴더\\  **< *`file name`* >** ". 경로에 공백이 있을 경우 따옴표를 사용합니다.  
   
 -   각각의 새 `sqlcmd` 세션은 이름이 같은 기존 파일을 덮어씁니다.  
   

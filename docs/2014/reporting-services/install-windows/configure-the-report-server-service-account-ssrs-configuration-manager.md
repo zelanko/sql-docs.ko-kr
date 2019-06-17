@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261079"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
@@ -64,7 +64,7 @@ ms.locfileid: "63261079"
   
 - [서비스 계정 &#40;SSRS 기본 모드&#41;](../../sql-server/install/service-account-ssrs-native-mode.md)합니다.  
   
-- SQL Server 온라인 설명서의[Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+- SQL Server 온라인 설명서의[Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
 - [서비스 및 서비스 계정 보안 계획 가이드](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   

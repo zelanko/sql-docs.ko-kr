@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450025"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>인수  
  *progid*  
- 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열이 OLE 개체의 클래스를 설명 하며 그 형식은: **'**_OLEComponent_**.** _개체_**'**  
+ 만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열이 OLE 개체의 클래스를 설명 하며 그 형식은: **'** _OLEComponent_ **.** _개체_ **'**  
   
  *OLEComponent* 은 OLE Automation 서버의 구성 요소 이름 및 *개체* OLE 개체의 이름입니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다 **IDispatch** 인터페이스입니다.  
   
  예를 들어 SQLDMO입니다. SQLServer의 경우 SQL-DMO의 ProgID **SQLServer** 개체입니다. SQL-DMO에 구성 요소 이름은 SQLDMO이 고는 **SQLServer** 개체가 유효 하 고 (같은 모든 SQL-DMO 개체)를 **SQLServer** 지 원하는 개체 **IDispatch**합니다.  
   
  *clsid*  
- 만들 OLE 개체의 CLSID(클래스 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 하며 그 형식은: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'** 합니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다 **IDispatch** 인터페이스입니다.  
+ 만들 OLE 개체의 CLSID(클래스 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 하며 그 형식은: **' {** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}'** 합니다. 지정 된 OLE 개체가 유효 해야 하며 지원 해야 합니다 **IDispatch** 인터페이스입니다.  
   
  예를 들어 {00026ba1-0000-0000-c000-000000000046}은 SQL-DMO의 CLSID **SQLServer** 개체입니다.  
   
@@ -88,7 +88,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-progid"></a>1. ProgID 사용  
+### <a name="a-using-progid"></a>1\. ProgID 사용  
  다음 예제에서는 SQL-DMO **SQLServer** ProgID를 사용 하 여 개체입니다.  
   
 ```  
@@ -105,7 +105,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-clsid"></a>2. CLSID 사용  
+### <a name="b-using-clsid"></a>2\. CLSID 사용  
  다음 예제에서는 SQL-DMO **SQLServer** 개체의 CLSID를 사용 하 여 합니다.  
   
 ```  

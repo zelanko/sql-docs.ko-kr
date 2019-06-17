@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484099"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
@@ -30,7 +30,7 @@ ms.locfileid: "65484099"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  맞춤법 검사기를 실행하려면 기술 자료 검색 또는 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다. 맞춤법 검사기를 실행하려는 도메인과 페이지에서 맞춤법 검사기를 설정한 상태여야 합니다. 그리고 도메인의 언어 속성이 지정되어 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

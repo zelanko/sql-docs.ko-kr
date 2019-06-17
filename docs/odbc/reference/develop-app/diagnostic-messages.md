@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63034920"
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
@@ -51,4 +51,4 @@ ms.locfileid: "63034920"
   
  [1]이 경우 드라이버 역할을 하는 드라이버 및 데이터 원본입니다.  
   
- 대괄호 (**[]**) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.
+ 대괄호 ( **[]** ) 메시지에 포함 되어야 하며 선택적 항목을 나타내지 않습니다.

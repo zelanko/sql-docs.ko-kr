@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676055"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>1단원: 웹 서비스 클라이언트 프로젝트 만들기
+# <a name="lesson-1-creating-the-web-service-client-project"></a>1단원: Web Service 클라이언트 프로젝트 만들기
   이 연습에서는 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경을 사용하여 보고서 서버 웹 서비스에 액세스하는 간단한 콘솔 응용 프로그램을 만듭니다.  
   
 ### <a name="to-create-a-console-application"></a>콘솔 애플리케이션을 만들려면  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660790"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job(Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  특정 작업을 하거나 보려는 *job_id* 하거나 *job_name* 지정 해야 합니다.  둘 다 생략 *job_id* 하 고 *job_name* 모든 작업에 대 한 정보를 반환 합니다.
   
-`[ @job_aspect = ] 'job_aspect'` 표시할 작업 특성입니다. *job_aspect* 됩니다 **varchar(9)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @job_aspect = ] 'job_aspect'` 표시할 작업 특성입니다. *job_aspect* 됩니다 **varchar(9)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|작업 단계 정보입니다.|  
 |**대상**|대상 정보입니다.|  
   
-`[ @job_type = ] 'job_type'` 보고서에 포함할 작업의 형식입니다. *job_type* 됩니다 **varchar(12)**, 기본값은 NULL입니다. *job_type* 될 수 있습니다 **로컬** 하거나 **MULTI-SERVER**합니다.  
+`[ @job_type = ] 'job_type'` 보고서에 포함할 작업의 형식입니다. *job_type* 됩니다 **varchar(12)** , 기본값은 NULL입니다. *job_type* 될 수 있습니다 **로컬** 하거나 **MULTI-SERVER**합니다.  
   
 `[ @owner_login_name = ] 'login_name'` 작업 소유자의 로그인 이름입니다. *login_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @subsystem = ] 'subsystem'` 하위 시스템의 이름입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
+`[ @subsystem = ] 'subsystem'` 하위 시스템의 이름입니다. *하위 시스템* 됩니다 **nvarchar(40)** , 기본값은 NULL입니다.  
   
 `[ @category_name = ] 'category'` 범주의 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -92,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|일시 중지 상태입니다.|  
 |**7**|동작을 완전히 수행하였습니다.|  
   
-`[ @date_comparator = ] 'date_comparison'` 비교에 사용할 비교 연산자 *date_created* 하 고 *date_modified*합니다. *date_comparison* 됩니다 **char(1)**, = 될 수 있습니다 \<, 또는 >.  
+`[ @date_comparator = ] 'date_comparison'` 비교에 사용할 비교 연산자 *date_created* 하 고 *date_modified*합니다. *date_comparison* 됩니다 **char(1)** , = 될 수 있습니다 \<, 또는 >.  
   
 `[ @date_created = ] date_created` 작업이 만들어진 날짜입니다. *date_created*됩니다 **datetime**, 기본값은 NULL입니다.  
   
 `[ @date_last_modified = ] date_modified` 작업을 마지막으로 수정한 날짜입니다. *date_modified* 됩니다 **datetime**, 기본값은 NULL입니다.  
   
-`[ @description = ] 'description_pattern'` 작업의 설명입니다. *description_pattern* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. *description_pattern* 패턴 일치를 위해 SQL Server 와일드 카드 문자를 포함할 수 있습니다.  
+`[ @description = ] 'description_pattern'` 작업의 설명입니다. *description_pattern* 됩니다 **nvarchar(512)** , 기본값은 NULL입니다. *description_pattern* 패턴 일치를 위해 SQL Server 와일드 카드 문자를 포함할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -224,7 +224,7 @@ sp_help_job { [ @job_id = ] job_id
   
 ## <a name="examples"></a>예  
   
-### <a name="a-list-information-for-all-jobs"></a>1. 모든 작업에 관한 정보 나열  
+### <a name="a-list-information-for-all-jobs"></a>1\. 모든 작업에 관한 정보 나열  
  다음 예에서는 매개 변수 없이 `sp_help_job` 프로시저를 실행하여 `msdb` 데이터베이스에 현재 정의되어 있는 모든 작업에 대한 정보를 반환합니다.  
   
 ```  
@@ -235,7 +235,7 @@ EXEC dbo.sp_help_job ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>2. 특정 조건에 맞는 작업 정보 나열  
+### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>2\. 특정 조건에 맞는 작업 정보 나열  
  다음 예에서는 작업이 사용되고 실행되고 있는 `françoisa` 소유의 다중 서버 작업에 대한 정보를 나열합니다.  
   
 ```  
@@ -250,7 +250,7 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-### <a name="c-listing-all-aspects-of-information-for-a-job"></a>3. 작업에 대한 모든 정보 나열  
+### <a name="c-listing-all-aspects-of-information-for-a-job"></a>3\. 작업에 대한 모든 정보 나열  
  다음 예에서는 `NightlyBackups` 작업에 대한 모든 측면의 정보를 나열합니다.  
   
 ```  

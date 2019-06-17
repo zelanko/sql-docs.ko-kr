@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90e7ee3b8c0ac9c77c4ef863367ff46467a35277
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705382"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
@@ -43,7 +43,7 @@ ms.locfileid: "62705382"
  **요청 시** 평가 모드를 사용하여 실행되는 정책은 이 확인란을 사용하지 않습니다.  
   
  **조건 확인**  
- 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추(**...**)를 클릭합니다.  
+ 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추( **...** )를 클릭합니다.  
   
  **적용 대상**  
  이 패싯에서 필터 식을 완성하는 데 사용할 수 있는 대상 유형을 선택합니다.  

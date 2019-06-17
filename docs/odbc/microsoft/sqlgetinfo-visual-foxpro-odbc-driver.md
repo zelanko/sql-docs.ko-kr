@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213325"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo(Visual FoxPro ODBC 드라이버)
@@ -97,7 +97,7 @@ ms.locfileid: "63213325"
   
  SQL_CURSOR_ROLLBACK_BEHAVIOR SQL_CB_PRESERVE를 반환합니다.  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
  SQL_DATA_SOURCE_NAME DSN에 변수로 전달 된 값을 반환 합니다. [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), 또는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md); 없는 DSN에서 지정 된 경우 빈 문자열을 반환 합니다.  
   
  SQL_DATA_SOURCE_READ_ONLY 반환 ' N '입니다.  

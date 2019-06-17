@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161895"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
@@ -93,7 +93,7 @@ ms.locfileid: "63161895"
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>***에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>* **에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  
@@ -180,7 +180,7 @@ ms.locfileid: "63161895"
 ### <a name="bounding-box"></a>경계 상자  
  *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
- 패널에 표시 됩니다는 **(*`X-min`* 합니다*`Y-min`*)** 하 고 **(*`X-max`*,*`Y-max`*)** 경계 상자 좌표입니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
+ 패널에 표시 됩니다는 **( *`X-min`* 합니다 *`Y-min`* )** 하 고 **( *`X-max`* , *`Y-max`* )** 경계 상자 좌표입니다. 기본 좌표 값은 없습니다. 따라서 `geometry` 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
  `X-min`  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  

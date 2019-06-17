@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997982"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview(Transact-SQL)
@@ -51,7 +51,7 @@ sp_articleview [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @view_name = ] 'view_name'` 게시 된 아티클을 정의 하는 뷰의 이름이입니다. *view_name* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
+`[ @view_name = ] 'view_name'` 게시 된 아티클을 정의 하는 뷰의 이름이입니다. *view_name* 됩니다 **nvarchar(386)** , 기본값은 NULL입니다.  
   
 `[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 WHERE 키워드를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
   

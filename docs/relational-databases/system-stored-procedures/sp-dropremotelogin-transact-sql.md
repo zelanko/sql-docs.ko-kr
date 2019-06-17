@@ -19,10 +19,10 @@ ms.author: vanto
 author: VanMSFT
 manager: jroth
 ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822467"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
@@ -68,21 +68,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>1. 원격 서버에 대한 모든 원격 로그인 삭제  
+### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>1\. 원격 서버에 대한 모든 원격 로그인 삭제  
  다음 예에서는 `ACCOUNTS`라는 원격 서버의 항목을 제거하여 로컬 서버의 로그인과 원격 서버의 원격 로그인 간의 모든 매핑을 제거합니다.  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>2. 로그인 매핑 삭제  
+### <a name="b-dropping-a-login-mapping"></a>2\. 로그인 매핑 삭제  
  다음 예에서는 `ACCOUNTS` 원격 서버에서 `Albert` 로컬 로그인으로의 원격 로그인 매핑에 사용된 항목을 제거합니다.  
   
 ```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
-### <a name="c-dropping-a-remote-user"></a>3. 원격 사용자 삭제  
+### <a name="c-dropping-a-remote-user"></a>3\. 원격 사용자 삭제  
  다음 예에서는 `Chris` 로컬 로그인에 매핑된 `ACCOUNTS` 원격 서버에서 `salesmgr` 원격 로그인에 대한 로그인을 제거합니다.  
   
 ```sql

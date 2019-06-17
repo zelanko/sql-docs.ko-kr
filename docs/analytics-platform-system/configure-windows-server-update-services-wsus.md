@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63134955"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Windows Server Update Services (WSUS) 구성
@@ -55,7 +55,7 @@ WSUS를 구성 하려면:
   
     1.  에 **서버 관리자 대시보드**에 **도구** 메뉴에서 클릭 **Windows Server Update Services**.  
   
-    2.  왼쪽된 창에서 합니다 **Update Services** 창에서 가상 컴퓨터 관리 노드 서버를 확장 하려면 클릭 (**_appliance_domain_VMM**), 클릭및**옵션**합니다.  
+    2.  왼쪽된 창에서 합니다 **Update Services** 창에서 가상 컴퓨터 관리 노드 서버를 확장 하려면 클릭 ( **_appliance_domain_VMM**), 클릭및**옵션**합니다.  
   
     3.  에 **옵션** 창 클릭 **WSUS 서버 구성 마법사** 구성 마법사를 시작 합니다.  
   
