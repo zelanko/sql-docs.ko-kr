@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f658ae1bfbfca7a487157c0129d67a12e890a2e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523530"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803452"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Always On 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,9 @@ ms.locfileid: "52523530"
 > [!IMPORTANT]  
 >  Always On 정책의 경우 범주 이름이 ID로 사용됩니다. Always On 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 따라서 Always On 범주의 이름을 수정해서는 안 됩니다.  
   
--   **시작하기 전에:** [보안](#Security)  
   
--   **Always On 정책을 사용하여 가용성 그룹의 상태를 보려면:**  
   
-     [Always On 대시보드](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Security"></a> 보안  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> Always On 대시보드 사용  
@@ -129,9 +119,9 @@ ms.locfileid: "52523530"
   
 -   [2부: 고급 Cmdlet 사용](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [3부: 간단한 모니터링 응용 프로그램](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [3부: 간단한 모니터링 애플리케이션](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [4부: SQL Server 에이전트와의 통합](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [파트 4: SQL Server 에이전트와의 통합](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -24,15 +24,18 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 41acbbf99bc84f96803a296d19c6f63a32761d8e
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993927"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744195"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [SQL Docs 허브 페이지에 대한 피드백을 공유하세요!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 SSMS(SQL Server Management Studio)는 SQL Server에서 Azure SQL Database까지 모든 SQL 인프라를 관리하기 위한 통합 환경입니다. SSMS는 SQL Server 및 데이터베이스의 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. SSMS를 사용하면 애플리케이션에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드하고 쿼리 및 스크립트를 작성할 수 있습니다.
 
@@ -75,7 +78,7 @@ SQL Server Management Studio 18.0 업그레이드 패키지 다운로드(18.0으
 
 ## <a name="new-in-this-release-ssms-180-ga"></a>이 릴리스의 새로운 기능(SSMS 18.0 GA)
 
-SSMS 18.0(GA)은 최신 버전의 SQL Server Management Studio입니다. 18.X 세대의 SSMS는 SQL Server 2019 미리 보기를 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다.
+SSMS 18.0(GA)은 최신 버전의 SQL Server Management Studio입니다. 18\.X 세대의 SSMS는 SQL Server 2019 미리 보기를 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다.
 
 이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS release notes](release-notes-ssms.md)(SSMS 릴리스 정보)를 참조하세요.
 

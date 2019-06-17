@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824991"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803442"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +30,8 @@ ms.locfileid: "47824991"
 > [!NOTE]  
 >  개체 탐색기 정보 창을 사용하는 방법은 [개체 탐색기 정보 창](../../../ssms/object/object-explorer-details-pane.md)을 참조하세요.  
   
--   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
--   **가용성 그룹을 모니터링하려면**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **개체 탐색기 정보:**  
-  
-     [가용성 그룹 정보](#AvGroupsDetails)  
-  
-     [가용성 복제본 정보](#AvReplicaDetails)  
-  
-     [가용성 데이터베이스 정보](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
-  
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
  주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -109,7 +96,7 @@ ms.locfileid: "47824991"
 |값|설명|  
 |-----------|-----------------|  
 |**동기화되지 않음**|데이터베이스가 동기화되지 않았거나 가용성 그룹에 아직 조인되지 않았습니다.|  
-|**동기화됨**|데이터베이스가 현재 주 복제본 또는 마지막 주 복제본(있는 경우)의 주 데이터베이스와 동기화되어 있습니다.<br /><br /> 참고: 성능 모드에서 데이터베이스는 절대 동기화된 상태가 되지 않습니다.|  
+|**동기화됨**|데이터베이스가 현재 주 복제본 또는 마지막 주 복제본(있는 경우)의 주 데이터베이스와 동기화되어 있습니다.<br /><br /> 참고: 성능 모드에서는 데이터베이스가 절대 Synchronized 상태로 되지 않습니다.|  
 |**NULL**|알 수 없는 상태입니다. 이 값은 로컬 서버 인스턴스가 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없는 경우(즉, 로컬 노드가 WSFC 쿼럼의 일부가 아닌 경우)에 발생합니다.|  
   
 > [!NOTE]  

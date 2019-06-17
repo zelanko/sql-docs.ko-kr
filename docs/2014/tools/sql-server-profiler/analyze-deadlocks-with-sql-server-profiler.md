@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316324"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
@@ -31,7 +31,7 @@ ms.locfileid: "63316324"
   
  교착 상태 이벤트를 추적하려면 **Deadlock graph** 이벤트 클래스를 추적에 추가합니다. 이 이벤트 클래스는 교착 상태와 관련된 프로세스 및 개체에 대한 XML 데이터로 추적 시 **TextData** 데이터 열을 채웁니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 XML 문서를 교착 상태 XML(.xdl) 파일로 추출할 수 있습니다. 이 XML 파일은 나중에 SQL Server Management Studio에서 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 구성하여 모든 **Deadlock graph** 이벤트가 포함되어 있는 단일 파일로 **Deadlock graph** 이벤트를 추출하거나 개별 파일로 추출할 수도 있습니다. 다음과 같은 방법으로 추출할 수 있습니다.  
   
--   추적 구성 시 **이벤트 추출 설정** 탭을 사용합니다. 이벤트 선택 탭에서 **Deadlock graph** 이벤트를 선택해야만 이 탭이 표시됩니다.  
+-   추적 구성 시 **이벤트 추출 설정** 탭을 사용합니다. **이벤트 선택** 탭에서 **Deadlock graph** 이벤트를 선택해야만 이 탭이 표시됩니다.  
   
 -   **파일** 메뉴에서 **SQL Server 이벤트 추출** 옵션을 사용합니다.  
   
