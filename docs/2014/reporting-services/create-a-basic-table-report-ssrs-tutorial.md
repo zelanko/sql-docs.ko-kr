@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109676"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
@@ -32,7 +32,7 @@ ms.locfileid: "66109676"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 기본 모드의 데이터베이스 엔진  
   
--   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스.  자세한 내용은 [(SQL Server 2012 용 Adventure Works) SQL Server 2012 용 Adventure Works](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471).합니다. 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 샘플 코드 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 참조 하세요 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex 웹 사이트에서.  
+-   [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스.  자세한 내용은 [(SQL Server 2012 용 Adventure Works) SQL Server 2012 용 Adventure Works](https://go.microsoft.com/fwlink/?LinkId=245471) (https://go.microsoft.com/fwlink/?LinkId=245471). 합니다. 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 예제 데이터베이스 및 샘플 코드 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 참조 하세요 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391) CodePlex 웹 사이트에서.  
   
 -   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.  
   

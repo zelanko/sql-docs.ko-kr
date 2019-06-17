@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63158805"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
@@ -44,7 +44,7 @@ GO
 ### <a name="determine-the-minimum-value-for-minmemorypercent-and-maxmemorypercent"></a>MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 최소값 결정  
  메모리 최적화 테이블에 필요한 메모리를 결정한 후에는 필요한 사용 가능 메모리 비율을 결정하고 해당 값 이상으로 메모리 비율을 설정합니다.  
   
- **예:**   
+ **예:**    
 이 예에서는 메모리 최적화 테이블 및 인덱스에 16GB의 메모리가 필요하며, 32GB의 메모리를 사용할 수 있게 커밋했다고 가정합니다.  
   
  얼핏 보기에는 MIN_MEMORY_PERCENT와 MAX_MEMORY_PERCENT를 50(16은 32의 50%)으로 설정하면 될 것 같습니다.  그러나 이렇게 설정하면 메모리 최적화 테이블에서 사용할 수 있는 메모리가 부족합니다. 아래 표([메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](#percent-of-memory-available-for-memory-optimized-tables-and-indexes))에서 커밋된 메모리가 32GB인 경우 이 중 80%는 메모리 최적화 테이블과 인덱스에 사용할 수 있습니다.  따라서 커밋된 메모리가 아니라 사용 가능한 메모리를 기준으로 최소 및 최대 비율을 계산합니다.  

@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63180534"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 (Analysis Services-데이터 마이닝)
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용하여 데이터 마이닝 솔루션을 만든 후 데이터 마이닝 모델에 대한 쿼리를 만들어 추세를 예측하고, 데이터 패턴을 검색하고, 마이닝 모델의 정확도를 측정할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용하여 데이터 마이닝 솔루션을 만든 후 데이터 마이닝 모델에 대한 쿼리를 만들어 추세를 예측하고, 데이터 패턴을 검색하고, 마이닝 모델의 정확도를 측정할 수 있습니다.  
   
  다음 목록의 단계별 자습서에서는 데이터를 최대한으로 활용할 수 있도록 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 사용하여 데이터 마이닝 쿼리를 작성하고 실행하는 방법을 배울 수 있습니다.  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266576"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
@@ -70,7 +70,7 @@ ms.locfileid: "63266576"
 ### <a name="enabling-partition-switching"></a>파티션 전환 설정  
  다음과 같은 트랜잭션 게시 속성을 사용하면 사용자가 복제된 환경에서 파티션 전환의 동작을 제어할 수 있습니다.  
   
--   **@allow_partition_switch**을로 설정 하면 `true`, 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
+-   **@allow_partition_switch** 을로 설정 하면 `true`, 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
   
 -   **@replicate_partition_switch** . SWITCH PARTITION DDL 문을 구독자에 복제해야 하는지 여부를 결정합니다. 이 옵션은 경우에만 유효 **@allow_partition_switch** 로 설정 된 `true`합니다.  
   

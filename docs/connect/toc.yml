@@ -4958,7 +4958,7 @@
           href: ../connect/oledb/features/performing-asynchronous-operations.md
         - name: 대량 복사 작업 수행
           href: ../connect/oledb/features/performing-bulk-copy-operations.md
-        - name: '클라이언트 연결의 SPN(서비스 사용자 이름) 지원 '
+        - name: 클라이언트 연결의 SPN(서비스 사용자 이름) 지원
           href: ../connect/oledb/features/service-principal-name-spn-support-in-client-connections.md
         - name: SQL Server용 OLE DB 드라이버에서 스파스 열 지원
           href: ../connect/oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md

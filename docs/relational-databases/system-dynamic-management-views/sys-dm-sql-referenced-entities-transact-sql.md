@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66354403"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
@@ -149,7 +149,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1. 데이터베이스 수준 DDL 트리거에 의해 참조 되는 엔터티 반환  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1\. 데이터베이스 수준 DDL 트리거에 의해 참조 되는 엔터티 반환  
  다음 예에서는 데이터베이스 수준 DDL 트리거 `ddlDatabaseTriggerLog`에 의해 참조되는 엔터티(테이블 및 열)를 반환합니다.  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT
 GO  
 ```  
   
-### <a name="b-return-entities-that-are-referenced-by-an-object"></a>2. 개체에 의해 참조 되는 엔터티 반환  
+### <a name="b-return-entities-that-are-referenced-by-an-object"></a>2\. 개체에 의해 참조 되는 엔터티 반환  
  다음 예에서는 사용자 정의 함수 `dbo.ufnGetContactInformation`에 의해 참조되는 엔터티를 반환합니다.  
   
 ```sql  
@@ -191,7 +191,7 @@ SELECT
 GO  
 ```  
   
-### <a name="c-return-column-dependencies"></a>3. 열 종속성 반환  
+### <a name="c-return-column-dependencies"></a>3\. 열 종속성 반환  
  다음 예에서는 `Table1` 열과 `c` 열의 합계로 정의되는 계산 열 `a`가 포함된 `b` 테이블을 만듭니다. 그런 다음 `sys.dm_sql_referenced_entities` 뷰를 호출합니다. 이 뷰는 계산 열에 정의된 각 열마다 하나씩 두 개의 행을 반환합니다.  
   
 ```sql  
@@ -224,7 +224,7 @@ GO
  dbo         Table1     b                 c  
 ```
 
-### <a name="d-returning-non-schema-bound-column-dependencies"></a>4. 비스키마 바운드 열 종속성 반환  
+### <a name="d-returning-non-schema-bound-column-dependencies"></a>4\. 비스키마 바운드 열 종속성 반환  
  다음 예에서는 `Table1`을 삭제하고 `Table2` 및 저장 프로시저 `Proc1`을 만듭니다. 이 프로시저는 `Table2` 및 존재하지 않는 테이블 `Table1`을 참조합니다. 저장 프로시저가 참조 엔터티로 지정되어 `sys.dm_sql_referenced_entities` 뷰가 실행됩니다. 결과 집합에는 `Table1`에 대한 행 하나와 `Table2`에 대한 행 세 개가 표시됩니다. `Table1`이 없기 때문에 열 종속성을 확인할 수 없고 오류 2020이 반환됩니다. `is_all_columns_found` 열은 `Table1`에 대해 검색할 수 없는 열이 있음을 나타내는 0을 반환합니다.  
   
 ```sql  
@@ -265,7 +265,7 @@ The dependencies reported for entity "dbo.Proc1" might not include
   all objects referenced by the entity exist.
  ```
   
-### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>5. 동적 종속성 유지 관리 설명  
+### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>5\. 동적 종속성 유지 관리 설명  
 
 이 예제 E 예제 D 실행 된 것을 가정 합니다. 예제 E를 보여 줍니다 종속성 동적으로 유지 됩니다. 이 예제에서는 다음 작업을 수행합니다.
 
@@ -304,7 +304,7 @@ GO
  967674495     Table1       c                       1  
  ```
  
-### <a name="f-returning-object-or-column-usage"></a>6. 개체 또는 열 사용법 반환  
+### <a name="f-returning-object-or-column-usage"></a>6\. 개체 또는 열 사용법 반환  
  다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 절차는 열을 업데이트 `NationalIDNumber`, `BirthDate,``MaritalStatus`, 및 `Gender` 의 `Employee` 테이블 기준으로 지정 된 `BusinessEntityID` 값입니다. 다른 저장된 프로시저 `upsLogError` 에 정의 된... 실행 오류를 캡처하려면 블록을 CATCH 합니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
 
 ```sql  

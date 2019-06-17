@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a355108635799d03c2859b6c47eaaf8acc87dc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185549"
 ---
 # <a name="set-cpu-idle-time-and-duration-sql-server-management-studio"></a>CPU 유휴 상태 시간 및 지속 시간 설정(SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "63185549"
   
 3.  **CPU 유휴 상태 판단 기준**에서 다음을 수행합니다.  
   
-    -    **CPU 유휴 상태 판단 기준 정의**를 선택합니다.  
+    -   **CPU 유휴 상태 판단 기준 정의**를 선택합니다.  
   
     -   **평균 CPU 사용량이 다음 미만인 경우** (모든 CPU에서) 상자에 백분율(%)을 지정합니다. 이 옵션은 CPU가 유휴 상태로 간주되기 전에 도달해야 하는 사용량 수준을 설정합니다.  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150690"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>교착 상태 파일 열기, 보기 및 인쇄(SQL Server Management Studio)
@@ -39,7 +39,7 @@ ms.locfileid: "63150690"
   
 3.  인쇄할 교착 상태 파일을 선택하고 **열기**를 클릭합니다.  
   
-4.   **파일** 메뉴에서 **인쇄**를 클릭합니다.  
+4.  **파일** 메뉴에서 **인쇄**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [교착 상태 그래프 저장&#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  

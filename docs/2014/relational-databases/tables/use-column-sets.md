@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298632"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
@@ -139,7 +139,7 @@ GO
 ## <a name="examples"></a>예  
  다음 예의 Document 테이블에는 `DocID` 및 `Title`열의 공통 집합이 포함되어 있습니다. Production 그룹은 모든 생산 문서에 대한 `ProductionSpecification` 및 `ProductionLocation` 열을 원하며, Marketing 그룹은 마케팅 문서에 대한 `MarketingSurveyGroup` 열을 원합니다.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>1. 열 집합을 포함하는 테이블 만들기  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>1\. 열 집합을 포함하는 테이블 만들기  
  다음 예에서는 스파스 열을 사용하고 열 집합 `SpecialPurposeColumns`를 포함하는 테이블을 만듭니다. 이 예에서는 테이블에 두 개의 행을 삽입한 다음 테이블에서 데이터를 선택합니다.  
   
 > [!NOTE]  
@@ -160,7 +160,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>2. 스파스 열 이름을 사용하여 테이블에 데이터 삽입  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>2\. 스파스 열 이름을 사용하여 테이블에 데이터 삽입  
  다음 예에서는 예 1에서 만든 테이블에 두 개의 행을 삽입합니다. 이 예에서는 스파스 열 이름을 사용하고 열 집합을 참조하지 않습니다.  
   
 ```  
@@ -173,7 +173,7 @@ VALUES (2, 'Survey 2142', 'Men 25 - 35');
 GO  
 ```  
   
-### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>3. 열 집합 이름을 사용하여 테이블에 데이터 삽입  
+### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>3\. 열 집합 이름을 사용하여 테이블에 데이터 삽입  
  다음 예에서는 예 1에서 만든 테이블에 세 번째 행을 삽입합니다. 이 예에서는 스파스 열 이름이 사용되지 않습니다. 대신 열 집합 이름이 사용되고 삽입 작업으로 인해 XML 형식의 스파스 열 4개 중 2개에 대한 값이 제공됩니다.  
   
 ```  
@@ -182,7 +182,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>4. SELECT *가 사용되는 경우의 열 집합 결과 관찰  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>4\. SELECT *가 사용되는 경우의 열 집합 결과 관찰  
  다음 예에서는 열 집합을 포함하는 테이블의 모든 열을 선택합니다. 이 예에서는 스파스 열의 조합 값과 함께 XML 열을 반환하며 스파스 열을 개별적으로 반환하지 않습니다.  
   
 ```  
@@ -199,7 +199,7 @@ SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;
   
  `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>5. 이름별로 열 집합을 선택한 결과 관찰  
+### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>5\. 이름별로 열 집합을 선택한 결과 관찰  
  Production 부서는 마케팅 데이터에 관심이 없으므로 이 예에서는 `WHERE` 절을 추가하여 출력을 제한합니다. 이 예에서는 열 집합 이름을 사용합니다.  
   
 ```  
@@ -216,7 +216,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
   
-### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>6. 이름별로 스파스 열을 선택한 결과 관찰  
+### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>6\. 이름별로 스파스 열을 선택한 결과 관찰  
  테이블에 열 집합이 포함되어 있으면 다음 예에서처럼 개별 열 이름을 사용하여 테이블을 쿼리할 수 있습니다.  
   
 ```  
@@ -233,7 +233,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `3     Tire Spec 2  AXW9R411                38`  
   
-### <a name="g-updating-a-table-by-using-a-column-set"></a>7. 열 집합을 사용하여 테이블 업데이트  
+### <a name="g-updating-a-table-by-using-a-column-set"></a>7\. 열 집합을 사용하여 테이블 업데이트  
  다음 예에서는 해당 행에서 사용하는 스파스 열 모두에 대해 세 번째 레코드를 새 값으로 업데이트합니다.  
   
 ```  

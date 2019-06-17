@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63285016"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Excel 드라이버에 프로그래밍 방식으로 옵션 설정
@@ -33,4 +33,4 @@ ms.locfileid: "63285016"
 |디렉터리|현재 선택한 디렉터리가 표시 됩니다.<br /><br /> Microsoft Excel 3.0/4.0 파일에 대 한 경로 표시는 레이블이 지정 된 "Directory", Microsoft Excel 5.0에 대 한 7.0 또는 97 파일 경로 표시 "통합" 라고 합니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)합니다.|  
 |읽기 전용|읽기 전용으로 데이터베이스를 지정합니다.|이 옵션을 동적으로 설정 하려면 합니다 **읽기 전용** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |검색할 행|각 열의 데이터 형식을 확인 하려면 검색할 행의 수입니다. 데이터 형식 최대 종류의 데이터를 찾을 수에 따라 결정 됩니다. 열에 대 한 추측 데이터 형식과 일치 하지 않는 데이터가 발견 되 면 데이터 형식이 NULL 값으로 반환 됩니다.<br /><br /> Microsoft Excel 드라이버의 경우 16 검색할 행에 대해 1에서 숫자를 입력할 수 있습니다. 기본값은 8입니다. 0으로 설정 하는 경우 모든 행 검사 됩니다. (제한 벗어나는 숫자로 오류가 반환 됩니다.)|이 옵션을 동적으로 설정 하려면 합니다 **MAXSCANROWS** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)합니다.|  
-|디렉터리 선택|액세스 하려는 파일이 포함 된 디렉터리를 선택할 수 있는 대화 상자를 표시 합니다.<br /><br /> 데이터 원본 디렉터리 (예: Microsoft 액세스를 제외한 모든 드라이버)을 정의할 때 가장 자주 사용 되는 파일이 있는 디렉터리를 지정 합니다. ODBC 드라이버는 기본 디렉터리로이 디렉터리를 사용 합니다. 자주 사용 되는 경우 다른 파일을이 디렉터리에 복사 합니다. 또는 디렉터리 이름이 포함 된 SELECT 문에서 파일 이름을 한정할 수 있습니다.<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 또는 사용 하 여 새 기본 디렉터리를 지정할 수는 **SQLSetConnectOption** SQL_CURRENT_QUALIFIER 옵션을 사용 하 여 함수입니다.<br /><br /> Microsoft Excel 3.0 또는 4.0 파일에 대 한 경로 표시 "Directory" 레이블이 지정 되며 경로 선택 단추를 "디렉터리 선택" 이라고 합니다. 5.0, 7.0, 또는 97 Microsoft Excel 파일에 대 한 경로 표시 "통합" 레이블이 지정 되며 경로 선택 단추에 "통합 문서 선택" 레이블이 지정 됩니다. 데이터 원본 디렉터리를 정의 하는 경우에 자주 사용 하는 Microsoft Excel 파일이 있는 Microsoft Excel 3.0/4.0에 대 한 디렉터리 또는 Microsoft Excel 97 5.0, 7.0에 대 한 통합 문서 파일이 있는 디렉터리를 지정 합니다. **현재 디렉터리를 사용 하 여** 5.0, 7.0 및 97 Microsoft Excel은 사용할 수 없습니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)합니다.|
+|디렉터리 선택|액세스 하려는 파일이 포함 된 디렉터리를 선택할 수 있는 대화 상자를 표시 합니다.<br /><br /> 데이터 원본 디렉터리 (예: Microsoft 액세스를 제외한 모든 드라이버)을 정의할 때 가장 자주 사용 되는 파일이 있는 디렉터리를 지정 합니다. ODBC 드라이버는 기본 디렉터리로이 디렉터리를 사용 합니다. 자주 사용 되는 경우 다른 파일을이 디렉터리에 복사 합니다. 또는 디렉터리 이름이 포함 된 SELECT 문에서 파일 이름을 한정할 수 있습니다.<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> 또는 사용 하 여 새 기본 디렉터리를 지정할 수는 **SQLSetConnectOption** SQL_CURRENT_QUALIFIER 옵션을 사용 하 여 함수입니다.<br /><br /> Microsoft Excel 3.0 또는 4.0 파일에 대 한 경로 표시 "Directory" 레이블이 지정 되며 경로 선택 단추를 "디렉터리 선택" 이라고 합니다. 5\.0, 7.0, 또는 97 Microsoft Excel 파일에 대 한 경로 표시 "통합" 레이블이 지정 되며 경로 선택 단추에 "통합 문서 선택" 레이블이 지정 됩니다. 데이터 원본 디렉터리를 정의 하는 경우에 자주 사용 하는 Microsoft Excel 파일이 있는 Microsoft Excel 3.0/4.0에 대 한 디렉터리 또는 Microsoft Excel 97 5.0, 7.0에 대 한 통합 문서 파일이 있는 디렉터리를 지정 합니다. **현재 디렉터리를 사용 하 여** 5.0, 7.0 및 97 Microsoft Excel은 사용할 수 없습니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)합니다.|

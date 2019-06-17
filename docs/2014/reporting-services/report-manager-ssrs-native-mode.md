@@ -1,32 +1,20 @@
 ---
 title: 보고서 관리자 (SSRS 기본 모드) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568388"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
   보고서 관리자는 HTTP 연결을 통해 원격 위치의 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 기반 보고서 액세스 및 관리 도구입니다. 또한 보고서 관리자를 보고서 뷰어로 사용하고 탐색 기능도 활용할 수 있습니다. 항목 내용  
@@ -48,7 +36,7 @@ ms.locfileid: "59940669"
   
 -   보고서 실행 속성, 보고서 기록 및 보고서 매개 변수 구성  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본의 데이터에 연결하고 데이터를 검색하는 보고서 모델 만들기  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 데이터 원본의 데이터에 연결하고 데이터를 검색하는 보고서 모델 만들기  
   
 -   모델의 특정 엔터티에 대한 액세스를 허용하도록 모델 항목 보안 설정 또는 미리 정의된 클릭 광고 보고서에 엔터티 매핑  
   
@@ -113,13 +101,11 @@ ms.locfileid: "59940669"
 |![공유 데이터 원본 아이콘](media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본 항목|공유 데이터 원본 아이콘을 클릭하여 데이터 원본의 속성 페이지, 보고서 목록 및 구독 목록을 엽니다.|  
 |![속성 페이지 아이콘](media/hlp-16prop.gif "속성 페이지 아이콘")|속성 페이지|속성 아이콘을 클릭하여 속성 및 보안을 설정할 수 있는 추가 페이지에 액세스합니다.|  
   
-## <a name="see-also"></a>관련 항목  
- [URL 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [보고서 작성기 &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services 도구](tools/reporting-services-tools.md)   
- [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [SharePoint 웹 파트를 사용 하 여 기본 모드 보고서 보기 및 탐색 &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>참고자료
+
+- [URL 구성&#40;SSRS 구성 관리자&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [보고서 작성기 &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services 도구](tools/reporting-services-tools.md)
+- [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316004"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>2단원: 웹 참조 추가
@@ -32,7 +32,7 @@ ms.locfileid: "63316004"
   
 3.  에 **서비스 참조 설정** 대화 상자, 클릭 **웹 참조 추가**합니다.  
   
-4.  에 **URL** 상자를 **웹 참조 추가** 대화 상자와 같은 서비스에 대 한 설명은 보고서 서버 웹 서비스를 얻을 수 있는 URL 입력 http://localhost/reportserver/reportservice2010.asmx합니다. 다음을 클릭 합니다 **이동** 웹 서비스에 대 한 정보를 검색 하는 단추입니다.  
+4.  에 **URL** 상자를 **웹 참조 추가** 대화 상자와 같은 서비스에 대 한 설명은 보고서 서버 웹 서비스를 얻을 수 있는 URL 입력 http://localhost/reportserver/reportservice2010.asmx 합니다. 다음을 클릭 합니다 **이동** 웹 서비스에 대 한 정보를 검색 하는 단추입니다.  
   
      \- 또는-  
   

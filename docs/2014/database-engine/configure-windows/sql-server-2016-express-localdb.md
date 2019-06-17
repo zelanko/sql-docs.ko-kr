@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757004"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -30,7 +30,7 @@ ms.locfileid: "62757004"
  설치 하는 기본 방법은 `LocalDB` SqlLocalDB.msi 프로그램을 사용 하는 것입니다. `LocalDB` SKU를 설치할 때 옵션 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]합니다. 선택 `LocalDB` 에 **기능 선택** 설치 하는 동안 페이지 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]합니다. 하나만 설치할 수는 `LocalDB` 각 주에 대 한 이진 파일 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 버전입니다. 여러 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스를 시작할 수 있으며, 이러한 프로세스에는 모두 동일한 이진 파일이 사용됩니다. 인스턴스를 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로 시작 된 `LocalDB` 동일한 제약이 있습니다 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
 ## <a name="description"></a>Description  
- `LocalDB` 설치 프로그램 SqlLocalDB.msi 프로그램을 사용 하 여 컴퓨터에 필요한 파일을 설치 합니다. 설치가 끝나면 `LocalDB` 의 인스턴스이고 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
+ `LocalDB` 설치 프로그램 SqlLocalDB.msi 프로그램을 사용 하 여 컴퓨터에 필요한 파일을 설치 합니다. 설치가 끝나면 `LocalDB` 의 인스턴스이고 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 만들고 열 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다. 데이터베이스의 시스템 데이터베이스 파일은 사용자의 로컬 AppData 경로에 저장되는데, 이 경로는 일반적으로 숨겨져 있습니다. 예를 들어 **C:\Users\\<사용자\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** 입니다. 사용자 데이터베이스 파일은 사용자가 지정하는 위치(일반적으로 **C:\Users\\<사용자\>\Documents\\** 폴더 내 임의 위치)에 저장됩니다.  
   
  포함 하는 방법에 대 한 자세한 내용은 `LocalDB` 응용 프로그램에서 참조 합니다 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설명서 [로컬 데이터 개요](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [연습: SQL Server LocalDB 데이터베이스를 만드는](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), 및 [연습: SQL Server LocalDB 데이터베이스 (Windows Forms)에서 데이터를 연결할](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx)합니다.  
   

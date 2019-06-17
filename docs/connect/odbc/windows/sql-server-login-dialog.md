@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698061"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797742"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 로그인 대화 상자(ODBC)
 
 드라이버에서 SQL Server에 연결하는 데 필요한 정보를 충분히 지정하지 않고 ODBC 연결을 호출하면 ODBC 드라이버는 **SQL Server 로그인** 대화 상자를 표시합니다.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 
 ### <a name="server"></a>서버
 
@@ -55,7 +55,7 @@ SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입
 
 연결에 사용 하는 경우 SQL Server 또는 Azure Active Directory 로그인 ID에 대 한 암호를 지정 합니다 **인증 모드** 로 설정 된 **SQL Server** 또는 **ActiveDirectory암호**. 그렇지 않으면 합니다 **암호** 상자는 비활성화 됩니다.
 
-### <a name="options"></a>Options
+### <a name="options"></a>옵션
 
 **옵션** 그룹을 표시하거나 숨깁니다. **옵션** 단추는 **서버**에 값이 있는 경우 사용할 수 있습니다.
 

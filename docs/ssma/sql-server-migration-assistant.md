@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240230"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
@@ -47,7 +47,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 - Azure SQL 데이터베이스
 - Azure SQL Data Warehouse * *
 
-* *이 대상 Oracle 용 SSMA 에서만 지원 됩니다.
+\* *이 대상 Oracle 용 SSMA 에서만 지원 됩니다.
  
 ## <a name="downloads"></a>다운로드
 - [SSMA for Access](https://aka.ms/ssmaforaccess)

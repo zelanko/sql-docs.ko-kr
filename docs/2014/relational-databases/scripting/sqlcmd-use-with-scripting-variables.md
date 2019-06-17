@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090056"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>스크립팅 변수와 함께 sqlcmd 사용
@@ -129,7 +129,7 @@ ms.locfileid: "66090056"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>1. 스크립트에서 setvar 명령 사용  
+### <a name="a-using-the-setvar-command-in-a-script"></a>1\. 스크립트에서 setvar 명령 사용  
  **setvar** 명령을 사용하면 스크립트에서 여러 **sqlcmd** 옵션을 제어할 수 있습니다. 다음 예에서는 `test.sql` 변수가 `SQLCMDLOGINTIMEOUT` 초로 설정되고 다른 스크립팅 변수인 `60` 가 `server`로 설정된 `testserver`스크립트를 만듭니다. `test.sql`의 코드는 다음과 같습니다.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -148,7 +148,7 @@ ms.locfileid: "66090056"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>2. 대화식으로 setvar 명령 사용  
+### <a name="b-using-the-setvar-command-interactively"></a>2\. 대화식으로 setvar 명령 사용  
  다음 예에서는 `setvar` 명령을 사용하여 대화식으로 스크립팅 변수를 설정하는 방법을 보여 줍니다.  
   
  `sqlcmd`  
@@ -165,7 +165,7 @@ ms.locfileid: "66090056"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>3. sqlcmd 내에서 명령 프롬프트 환경 변수 사용  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>3\. sqlcmd 내에서 명령 프롬프트 환경 변수 사용  
  다음 예에서는 환경 변수 4개를 `are` 다음 `sqlcmd`에서 호출합니다.  
   
  `C:\>SET tablename=Person.Person`  
@@ -186,7 +186,7 @@ ms.locfileid: "66090056"
   
  `4> GO`  
   
-### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>4. sqlcmd 내에서 사용자 수준 환경 변수 사용  
+### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>4\. sqlcmd 내에서 사용자 수준 환경 변수 사용  
  다음 예에서는 명령 프롬프트에서 사용자 수준 환경 변수인 `%Temp%` 를 설정하고 `sqlcmd` 입력 파일로 전달합니다. 사용자 수준 환경 변수를 얻으려면 **제어판**에서 **시스템**을 두 번 클릭하고 **고급** 탭을 클릭한 다음 **환경 변수**를 클릭합니다.  
   
  입력 파일 `c:\testscript.txt`의 코드는 다음과 같습니다.  
@@ -225,7 +225,7 @@ ms.locfileid: "66090056"
   
  `(4 rows affected)`  
   
-### <a name="e-using-a-startup-script"></a>5. 시작 스크립트 사용  
+### <a name="e-using-a-startup-script"></a>5\. 시작 스크립트 사용  
  **sqlcmd** 시작 스크립트는 **sqlcmd** 가 시작될 때 실행됩니다. 다음 예에서는 `SQLCMDINI`환경 변수를 설정합니다. 다음은 `init.sql.`  
   
  `SET NOCOUNT ON`  
@@ -269,7 +269,7 @@ ms.locfileid: "66090056"
 > [!NOTE]  
 >  **-X** 옵션은 시작 스크립트 기능을 사용하지 않도록 설정합니다.  
   
-### <a name="f-variable-expansion"></a>6. 변수 확장  
+### <a name="f-variable-expansion"></a>6\. 변수 확장  
  다음 예에서는 **sqlcmd** 변수 형식의 데이터로 작업하는 방법을 보여 줍니다.  
   
  `USE AdventureWorks2012;`  
