@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087097"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>원본 데이터에 연결(Excel용 데이터 마이닝 클라이언트)
@@ -28,7 +28,7 @@ ms.locfileid: "66087097"
   
  **외부 데이터 원본에 연결 합니다.** 모델을 작성하거나 결과를 저장할 때 외부 데이터에 대한 연결을 만들 수도 있습니다. 예를 들어 한 서버에 데이터 마이닝 모델을 만든 다음 다른 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스, Excel 데이터 테이블 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access와 같은 외부 데이터 원본에 저장된 데이터를 사용하여 이 데이터 마이닝 모델에 대한 예측 쿼리를 수행할 수 있습니다. 새 데이터 원본에 액세스할 때마다 대화 상자를 사용하여 연결을 만들라는 메시지가 표시됩니다.  
   
-##  <a name="bkmk_prereq2"></a> 필수 구성 요소  
+##  <a name="bkmk_prereq2"></a> 사전 요구 사항  
  이 버전의 추가 기능을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 SQL Server 2012여야 합니다. 개별 버전의 추가 기능을 사용하여 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결할 수도 있습니다. SQL Server 2005, SQL Server 2008 및 SQL Server 2008 R2를 지원하는 추가 기능 버전이 있습니다.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 연결하려면 해당 데이터베이스 서버에 대한 액세스 권한이 있어야 합니다. 또한 데이터 마이닝 세션이 활성화되어야 하며 서버에 저장된 데이터베이스 개체에 대한 읽기 또는 읽기/쓰기 권한이 있어야 합니다.  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488036"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
@@ -123,7 +123,7 @@ ms.locfileid: "65488036"
   
 -   Name 및 Code 특성 이름 바꾸기 및 숨기기  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   

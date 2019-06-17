@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802607"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749187"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "56802607"
 인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. `ALL`을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다.   
 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다.  
    
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Fragmentation"></a> 조각화 검색  
 사용할 조각 모음 방법을 결정하기 위한 첫 번째 단계는 인덱스를 분석하여 조각화 수준을 확인하는 것입니다. [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)시스템 함수를 사용하여 특정 인덱스, 테이블이나 인덱싱된 뷰의 모든 인덱스, 데이터베이스의 모든 인덱스 또는 모든 데이터베이스 내 모든 인덱스에서 조각화를 검색할 수 있습니다. 분할된 인덱스의 경우 **sys.dm_db_index_physical_stats** 에서도 각 파티션의 조각화 정보를 제공합니다.  
@@ -93,8 +93,14 @@ ms.locfileid: "56802607"
   
 ### <a name="Security"></a> 보안  
   
-#### <a name="Permissions"></a> Permissions  
-테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
+#### <a name="Permissions"></a> 사용 권한  
+테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 다음 역할 중 하나 이상의 멤버여야 합니다.
+
+* **db_ddladmin** 데이터베이스 역할 <sup>1</sup> 
+* **db_owner** 데이터베이스 역할
+* **sysadmin** 서버 역할  
+
+<sup>1</sup>**db_ddladmin** 데이터베이스 역할은 [최소 권한](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models)입니다.
   
 ## <a name="SSMSProcedureFrag"></a> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 인덱스 조각화 확인  
   

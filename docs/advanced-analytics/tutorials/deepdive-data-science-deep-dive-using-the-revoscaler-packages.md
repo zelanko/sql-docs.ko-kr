@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641306"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 사용 하 여 SQL Server 데이터를 사용 하 여
@@ -28,7 +28,7 @@ ms.locfileid: "62641306"
   
 + [데이터베이스 사용 권한을](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
-+ 다른 도구는 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
 + RStudio 등 R의 기본 제공 RGUI 도구는 IDE
 

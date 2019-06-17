@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721016"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>2단원: 스냅숏 폴더 준비
@@ -36,9 +36,9 @@ ms.locfileid: "62721016"
   
 6.  **보안** 탭에서 **편집**을 클릭합니다.  
   
-7.   **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1단원에서 만든 스냅숏 에이전트 계정 이름을 \<_Machine_Name>_**\repl_snapshot**으로 입력합니다. 여기서 \<*Machine_Name>* 은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
+7.  **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1단원에서 만든 스냅숏 에이전트 계정 이름을 \<_Machine_Name>_ **\repl_snapshot**으로 입력합니다. 여기서 \<*Machine_Name>* 은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
   
-8.  이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_merge**로 추가합니다.  
+8.  이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 \<_Machine_Name>_ **\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 \<_Machine_Name>_ **\repl_merge**로 추가합니다.  
   
 9. 다음 사용 권한이 허용되는지 확인합니다.  
   

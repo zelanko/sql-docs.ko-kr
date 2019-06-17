@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489122"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>태스크 5: 정리 결과를 Excel 파일로 내보내기
@@ -42,7 +42,7 @@ ms.locfileid: "65489122"
   
     3.  검색할 **Los Angeles** 되었는지 확인 합니다 **상태** 로 설정 되어 **CA**합니다.  
   
-    4.  용어가 없는지 확인 **Co.** 하십시오 **Corp.**, 및 **Inc.** 합니다.  
+    4.  용어가 없는지 확인 **Co.** 하십시오 **Corp.** , 및 **Inc.** 합니다.  
   
     5.  삭제 된 **Address Validation** 열 스프레드시트에서 excel 파일을 저장 합니다. 이 추가 열은 Address Validation 복합 도메인에 해당합니다.  
   

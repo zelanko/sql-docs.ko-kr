@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184549"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
@@ -68,7 +68,7 @@ ms.locfileid: "63184549"
   
  디자인 화면에 유지 관리 태스크를 끌어다 놓은 후에는 필요에 따라 해당 속성을 편집할 수 있습니다. 예를 들어 데이터베이스 백업 태스크에서 백업할 특정 데이터베이스는 계획에 작업을 추가한 후에 지정합니다. 디자인 화면에서 제대로 구성되어 있지 않은 태스크에는 흰색 X 표시가 있는 빨간색 아이콘이 나타납니다.  
   
- 계획에 유지 관리 태스크를 추가하려면 **유지 관리 계획 태스크** 도구 상자에서 계획 디자인 화면으로 태스크 아이콘을 끌어다 놓거나 도구 상자에서 해당 태스크를 두 번 클릭합니다. 그러면 현재 활성화되어 있는 디자이너 화면에 해당 태스크가 추가됩니다.  **유지 관리 계획 태스크** 도구 상자가 보이지 않으면 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구 상자** 를 선택합니다. 그런 다음 **도구 상자** 창에서 **유지 관리 계획 태스크** 노드를 확장합니다.  
+ 계획에 유지 관리 태스크를 추가하려면 **유지 관리 계획 태스크** 도구 상자에서 계획 디자인 화면으로 태스크 아이콘을 끌어다 놓거나 도구 상자에서 해당 태스크를 두 번 클릭합니다. 그러면 현재 활성화되어 있는 디자이너 화면에 해당 태스크가 추가됩니다. **유지 관리 계획 태스크** 도구 상자가 보이지 않으면 **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구 상자** 를 선택합니다. 그런 다음 **도구 상자** 창에서 **유지 관리 계획 태스크** 노드를 확장합니다.  
   
  계획에서 태스크를 제거하려면 디자이너 화면에서 태스크를 선택한 다음 **DELETE** 키를 누르거나 태스크를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   

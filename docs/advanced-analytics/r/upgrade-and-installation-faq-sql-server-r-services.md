@@ -3,17 +3,17 @@ title: 자주 묻는 질문 (FAQ)-SQL Server Machine Learning Services 업그레
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642321"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140363"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>R Server 또는 SQL Server Machine Learning에 대 한 업그레이드 및 설치 FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "62642321"
 
 - SQL Server 2016 R Services의 초기 버전에서 작업 디렉터리를 포함 하는 드라이브에서 8dot3 표기법 필요 했습니다. 시험판 버전을 설치한 경우 SQL Server 2016 서비스 팩 1로 업그레이드 합니다.이 문제를 해결 해야 합니다. 이 요구 사항은 SP1 이후 버전에 적용 되지 않습니다.
 
-- 설치할 수 없는 현재 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 장애 조치 클러스터입니다. 그러나 SQL Server 2019 미리 보기는 테스트 환경에서이 capablity 평가 하려는 경우 장애 조치 지원을 제공 합니다. 자세한 내용은 [What's New](../what-s-new-in-sql-server-machine-learning-services.md)합니다.
+- 설치할 수 없는 현재 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 장애 조치 클러스터입니다. 그러나 SQL Server 2019 미리 보기는 테스트 환경에서이 기능을 평가 하려는 경우 장애 조치 지원을 제공 합니다. 자세한 내용은 [What's New](../what-s-new-in-sql-server-machine-learning-services.md)합니다.
 
 - Azure VM에서 몇 가지 추가 구성이 필요할 수 있습니다. 예를 들어, 원격 액세스를 지원 하도록 방화벽 예외를 만들려면 해야 합니다.
 
@@ -63,7 +63,7 @@ SQL Server 2016의 초기 릴리스 버전 인터넷 연결 없이 오프 라인
 + [SQL Server 설치 마법사를 사용 하 여 업그레이드](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 방금 기계 학습 구성 요소 바인딩 이라는 프로세스를 사용 하 여 업그레이드할 수 있습니다. 
-+ [SqlBindR을 사용 하 여 기계 학습 구성 요소를 업그레이드 합니다.](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [SqlBindR을 사용 하 여 기계 학습 구성 요소를 업그레이드 합니다.](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>시험판 버전에서 전체 업그레이드에 대 한 지원 종료
 

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3cda7757d5cf7f62f5946dc69882e5bd8cd5c42
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404055"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>단원 6-1-정의 계산 멤버
@@ -58,7 +58,7 @@ ms.locfileid: "65404055"
   
 5.  **계산 도구** 창의 **메타데이터** 탭에서 **계산 식** 창의 **식** 상자로 **Internet Sales-Sales Amount** 를 끌어옵니다.  
   
-6.  **식** 상자에서 **+** [Measures].[Internet Sales-Sales Amount] **뒤에 더하기 기호(**)를 입력합니다.  
+6.  **식** 상자에서 **+** [Measures].[Internet Sales-Sales Amount] **뒤에 더하기 기호(** )를 입력합니다.  
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   

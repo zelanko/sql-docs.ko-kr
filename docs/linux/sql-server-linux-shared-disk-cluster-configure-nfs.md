@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0e325a8f717a84ed224fa619bdb47e79cf7af80f
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719360"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux의 SQL Server 구성

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188180"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>기업 내 작업 관리
@@ -55,7 +55,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **작업의 대상 서버를 변경하려면**  
   
--   다른 도구는 [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
+-   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
@@ -63,7 +63,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **대상 서버의 위치를 변경하려면**  
   
--   다른 도구는 [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+-   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
@@ -71,13 +71,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **대상 서버 클럭을 동기화하려면**  
   
--   다른 도구는 [SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
+-   [SQL Server Management Studio](synchronize-target-server-clocks-sql-server-management-studio.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)  
   
  **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
   
--   다른 도구는 [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
+-   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   

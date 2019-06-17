@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667441"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>테스트할 개체 선택 및 구성(SybaseToSQL)
@@ -61,7 +61,7 @@ ms.locfileid: "62667441"
   
 -   선택 하는 경우 **무시 밀리초**, 초까지 결과 비교 합니다.  
   
--   선택 하는 경우 **무시 날짜 및 시간 (밀리초)**, 결과 초의 소수 부분 시간 부분으로만 비교 및 무시 됩니다.  
+-   선택 하는 경우 **무시 날짜 및 시간 (밀리초)** , 결과 초의 소수 부분 시간 부분으로만 비교 및 무시 됩니다.  
   
 ### <a name="ignore-strings-case"></a>문자열의 대/소문자 무시  
 비교의 대/소문자 구분을 제어합니다.  

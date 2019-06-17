@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Execute method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 86de5c5e985d038ec4e2640fcd9d4d87b56546d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24ecb2e2089780ee9aed25853e0933bab1a4664c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773828"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781319"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>ICommand::Execute를 사용하여 행 집합 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

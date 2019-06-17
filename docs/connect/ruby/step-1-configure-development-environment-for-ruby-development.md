@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a298a7c7f65a198e5bfb0922f2b061fd44079739
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ff03ce6ec79aede2e056f0154836e77970af9c50
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800815"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>1단계: Ruby 개발을 위한 개발 환경 구성
 SQL Server 용 Ruby 드라이버를 사용 하 여 응용 프로그램을 개발 하기 위해 개발 환경 필수 구성 요소를 사용 하 여 구성 해야 합니다.    
@@ -31,8 +31,8 @@ Ruby 드라이버는 SQL Server 및 Azure SQL Database에 기본적으로 사용
   
 2.  **Ruby 설치**  
 설치 관리자 다운로드 되 면 다음을 수행 합니다.  
-1. 설치 관리자를 시작 하려면 파일을 두 번 클릭 합니다.  
-2. 언어를 선택 하 고 약관에 동의 합니다.  
+1\. 설치 관리자를 시작 하려면 파일을 두 번 클릭 합니다.  
+2\. 언어를 선택 하 고 약관에 동의 합니다.  
 c.  설치 설정 화면에서이 Ruby 설치를 사용 하 여 경로 연결.rb 및.rbw 파일 모두 추가 Ruby 실행 파일 옆의 확인란을 선택 합니다.  
   
 3.  **Ruby DevKit를 다운로드 합니다.**  
@@ -40,8 +40,8 @@ DevKit RubyInstaller 페이지에서 다운로드
   
 4.  **Ruby DevKit를 설치 합니다.**  
 다운로드가 완료 되 면 다음을 수행 합니다.  
-1. 파일을 두 번 클릭 합니다. 파일을 추출 하는 where를 라는 메시지가 나타납니다.  
-2. "..." 단추를 클릭 하 고 "C:\DevKit"를 선택 합니다. "새 폴더 만들기"를 클릭 하 여이 폴더를 먼저 만들어야 아마도 해야 합니다.  
+1\. 파일을 두 번 클릭 합니다. 파일을 추출 하는 where를 라는 메시지가 나타납니다.  
+2\. "..." 단추를 클릭 하 고 "C:\DevKit"를 선택 합니다. "새 폴더 만들기"를 클릭 하 여이 폴더를 먼저 만들어야 아마도 해야 합니다.  
 c. 파일을 추출 하려면 [확인]을 및 다음 추출""를 클릭 합니다.  
   
 5. **Cmd.exe를 열으십시오**  

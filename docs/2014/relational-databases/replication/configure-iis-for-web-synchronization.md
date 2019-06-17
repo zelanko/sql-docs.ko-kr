@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62722373"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
@@ -169,7 +169,7 @@ ms.locfileid: "62722373"
   
 8.  **디렉터리 액세스** 페이지에서 다음을 수행하십시오.  
   
-    1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* parameter.  
+    1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parameter.  
   
 9. **스냅숏 공유 액세스** 페이지에서 스냅숏 공유를 입력합니다. 구독자가 스냅숏 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
   
@@ -323,7 +323,7 @@ ms.locfileid: "62722373"
   
     5.  **확인**을 클릭합니다.  
   
-2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어 https://server.domain.com/directory/replisapi.dll?diag을 참조하십시오.  
+2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어 https://server.domain.com/directory/replisapi.dll?diag 을 참조하십시오.  
   
 3.  IIS에 대해 지정한 인증서를 Windows 운영 체제에서 인식하지 못할 경우 **보안 경고** 대화 상자가 나타납니다. 이 경고는 인증서가 테스트 인증서이거나 Windows에서 인식할 수 없는 CA(인증 기관)에서 발급한 인증서이기 때문에 발생할 수 있습니다.  
   

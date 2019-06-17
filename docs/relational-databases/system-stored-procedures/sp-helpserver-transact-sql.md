@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635890"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>인수  
 `[ @server = ] 'server'` 에 대 한 정보를 보고 서버가입니다. 때 *server* 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @optname = ] 'option'` 서버를 설명 하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
+`[ @optname = ] 'option'` 서버를 설명 하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)** , 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**원격 데이터 정렬 사용**|로컬 서버가 아닌 원격 열의 데이터 정렬을 사용합니다.|  
   
-`[ @show_topology = ] 'show_topology'` 다른 서버에 지정 된 서버의 관계가입니다. *show_topology* 됩니다 **varchar (** 1 **)**, 기본값은 NULL입니다. 하는 경우 *show_topology* 같지 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 값과 같음 **t**에 결과 집합에 나열 된 열 외에도 **sp_helpserver** 반환 **topx** 및 **topy** 정보입니다.  
+`[ @show_topology = ] 'show_topology'` 다른 서버에 지정 된 서버의 관계가입니다. *show_topology* 됩니다 **varchar (** 1 **)** , 기본값은 NULL입니다. 하는 경우 *show_topology* 같지 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 값과 같음 **t**에 결과 집합에 나열 된 열 외에도 **sp_helpserver** 반환 **topx** 및 **topy** 정보입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
@@ -85,7 +85,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-information-about-all-servers"></a>1. 모든 서버에 관한 정보 표시  
+### <a name="a-displaying-information-about-all-servers"></a>1\. 모든 서버에 관한 정보 표시  
  다음 예에서는 매개 변수 없이 `sp_helpserver`를 사용하여 모든 서버에 관한 정보를 표시합니다.  
   
 ```  
@@ -94,7 +94,7 @@ GO
 EXEC sp_helpserver;  
 ```  
   
-### <a name="b-displaying-information-about-a-specific-server"></a>2. 특정 서버에 관한 정보 표시  
+### <a name="b-displaying-information-about-a-specific-server"></a>2\. 특정 서버에 관한 정보 표시  
  다음 예에서는 `SEATTLE2` 서버에 관한 모든 정보를 표시합니다.  
   
 ```  

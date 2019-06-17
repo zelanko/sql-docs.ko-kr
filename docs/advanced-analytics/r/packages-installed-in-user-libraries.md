@@ -2,17 +2,17 @@
 title: 사용자 라이브러리-SQL Server Machine Learning Services에에서 설치 된 R 패키지를 사용 하기 위한 팁
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642288"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140508"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server에서 R 패키지를 사용 하기 위한 팁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ R 패키지는 여러 컴퓨팅 플랫폼에서 실행합니다. 설치한 버�
 
 모든 항목을 설치 하기 전에 컴퓨터의 R 환경을 수정한 이전에, 경우 확인 하는 R 환경 변수 `.libPath` 하나의 경로 사용 합니다.
 
-이 경로 인스턴스에 대 한 R_SERVICES 폴더를 가리켜야 합니다. 이미 설치 된 패키지를 확인 하는 방법을 비롯 한 자세한 내용은 참조 하세요. [SQL Server의 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)합니다.
+이 경로 인스턴스에 대 한 R_SERVICES 폴더를 가리켜야 합니다. 이미 설치 된 패키지를 확인 하는 방법을 비롯 한 자세한 내용은 참조 하세요. [SQL Server의 기본 R 및 Python 패키지](../package-management/default-packages.md)합니다.
 
 ## <a name="new-to-sql-server"></a>새 SQL server
 
@@ -73,7 +73,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + R 패키지 또는 R 라이브러리에 대 한 경로에 대 한 직접 참조를 제거 하도록 코드를 업데이트 합니다. 
 
-+ 패키지 라이브러리는 인스턴스와 관련 된 것입니다. 자세한 내용은 [SQL Server의 기본 R 및 Python 패키지](installing-and-managing-r-packages.md)합니다.
++ 패키지 라이브러리는 인스턴스와 관련 된 것입니다. 자세한 내용은 [SQL Server의 기본 R 및 Python 패키지](../package-management/default-packages.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

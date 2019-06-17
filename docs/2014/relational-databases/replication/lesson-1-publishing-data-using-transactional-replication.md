@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721087"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용 하 여 데이터 게시
@@ -50,7 +50,7 @@ ms.locfileid: "62721087"
   
 10. 에이전트 보안 페이지에서 **스냅숏 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.  
   
-11. 스냅숏 에이전트에 대해 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_**\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다.  
+11. 스냅숏 에이전트에 대해 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_ **\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다.  
   
 12. 이전 단계를 반복하여 repl_logreader를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정한 다음 **마침**을 클릭합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721087"
   
 3.  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
   
-4.  **게시 액세스 추가** 대화 상자에서 _<Machine_Name>_**\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
+4.  **게시 액세스 추가** 대화 상자에서 _<Machine_Name>_ **\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 트랜잭션 게시에 구독을 만드는](lesson-2-creating-a-subscription-to-the-transactional-publication.md)합니다.  
