@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298974"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 연결
@@ -24,7 +24,7 @@ ms.locfileid: "63298974"
 **서버 이름**  
 입력 하거나 연결할 SQL Server 인스턴스를 선택 합니다. 기본적으로 가장 최근에 연결 된 인스턴스가 표시 됩니다.  
   
--   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 중 하나를 입력할 수 있습니다 **localhost** 또는 점 (**.**).  
+-   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 중 하나를 입력할 수 있습니다 **localhost** 또는 점 ( **.** ).  
   
 -   다른 컴퓨터의 기본 인스턴스에 연결 하는 경우에 컴퓨터의 이름을 입력 합니다.  
   

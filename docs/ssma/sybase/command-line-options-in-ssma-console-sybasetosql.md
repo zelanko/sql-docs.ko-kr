@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240162"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔의 명령줄 옵션(SybaseToSQL)
@@ -27,7 +27,7 @@ Microsoft는 강력한 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵
   
 이 섹션 'option' 용어는 또한 'switch' 라고 합니다.  
   
--   옵션 대/소문자 구분 하지 않으며 사용 하 여 시작할 수 '**-**','**/**' 문자입니다.  
+-   옵션 대/소문자 구분 하지 않으며 사용 하 여 시작할 수 ' **-** ',' **/** ' 문자입니다.  
   
 -   옵션을 지정 하는 경우 해당 옵션 매개 변수를 지정 하는 필수 됩니다.  
   

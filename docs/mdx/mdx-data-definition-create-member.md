@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250204"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 데이터 정의 - CREATE MEMBER
@@ -93,7 +93,7 @@ SELECT {USAWithoutWA} ON 0 FROM SALES
 WHERE ProfitRatio  
 ```  
   
- 이전 쿼리의 원하는 결과는 WA를 제외한 미국의 매장 비용 대비 WA를 제외한 미국의 매출 비율입니다. 이전 쿼리는 원하는 결과를 반환하지 않고 미국 비율에서 WA 비율을 뺀 값을 반환하는데 이 결과는 의미가 없습니다.  원하는 결과를 얻으려면 SCOPE_ISOLATION 계산 속성을 사용합니다.  
+ 이전 쿼리의 원하는 결과는 WA를 제외한 미국의 매장 비용 대비 WA를 제외한 미국의 매출 비율입니다. 이전 쿼리는 원하는 결과를 반환하지 않고 미국 비율에서 WA 비율을 뺀 값을 반환하는데 이 결과는 의미가 없습니다. 원하는 결과를 얻으려면 SCOPE_ISOLATION 계산 속성을 사용합니다.  
   
  **SCOPE_ISOLATION 계산 속성을 사용 하 여 MDX 쿼리:**  
   
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |-------------------------|-------------|  
 |SOLVE_ORDER|계산 멤버가 다른 계산 멤버를 참조하는 경우(즉, 계산 멤버가 서로 교차하는 경우) 계산 멤버를 확인하는 순서입니다.|  
 |FORMAT_STRING|셀 값을 표시할 때 클라이언트 응용 프로그램이 사용할 수는 Office 스타일 서식 문자열입니다.|  
-|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다.  계산 멤버를 사용 하 여 집합에 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
+|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다. 계산 멤버를 사용 하 여 집합에 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버(이 값이 0으로 설정된 계산 멤버)는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
 |NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하는 데 사용하는 측정값 또는 집합입니다.<br /><br /> **\*\* 경고 \* \***  이 속성은 사용 되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md) 을 참조하세요.|  
 |CAPTION|클라이언트 응용 프로그램이 멤버에 대한 캡션으로 사용하는 문자열입니다.|  
 |DISPLAY_FOLDER|클라이언트 응용 프로그램이 멤버를 표시하기 위해 사용하는 표시 폴더의 경로를 식별하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및 클라이언트에서 제공한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  

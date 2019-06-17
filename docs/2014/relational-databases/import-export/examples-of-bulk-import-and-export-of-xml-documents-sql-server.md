@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011967"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
@@ -44,15 +44,15 @@ ms.locfileid: "66011967"
 ## <a name="examples"></a>예  
  다음과 같은 예가 제공됩니다.  
   
--   1. [XML 데이터를 이진 바이트 스트림으로 대량 가져오기](#binary_byte_stream)  
+-   1\. [XML 데이터를 이진 바이트 스트림으로 대량 가져오기](#binary_byte_stream)  
   
--   2. [기존 행에 XML 데이터 대량 가져오기](#existing_row)  
+-   2\. [기존 행에 XML 데이터 대량 가져오기](#existing_row)  
   
--   3. [XML 데이터 대량 가져오기 dtd가 포함 된 파일](#file_contains_dtd)  
+-   3\. [XML 데이터 대량 가져오기 dtd가 포함 된 파일](#file_contains_dtd)  
   
--   4. [서식 파일을 사용 하 여 명시적으로 필드 종결자 지정](#field_terminator_in_format_file)  
+-   4\. [서식 파일을 사용 하 여 명시적으로 필드 종결자 지정](#field_terminator_in_format_file)  
   
--   5. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
+-   5\. [XML 데이터 대량 내보내기](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> 1. XML 데이터를 이진 바이트 스트림으로 대량 가져오기  
  적용할 인코딩 선언이 있는 파일에서 XML 데이터를 대량으로 가져오는 경우 OPENROWSET(BULK…) 절에 SINGLE_BLOB 옵션을 지정합니다. SINGLE_BLOB 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 XML 파서가 XML 선언에 지정된 인코딩 체계에 따라 데이터를 가져오도록 합니다.  

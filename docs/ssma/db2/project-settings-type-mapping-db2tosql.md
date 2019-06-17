@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270012"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
@@ -104,7 +104,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 |urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>\*</sup> 값 형식 매핑만 반환에 적용 됩니다.  
   
@@ -176,7 +176,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 |urowid[\*..\*]|uniqueidentifier|  
 |varchar[\*..\*]|varchar[\*]|  
 |varchar2[\*..\*]|varchar[\*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>기본 로컬 변수 형식 매핑  
 다음 표에서 로컬 변수에 대 한 기본 형식 매핑을 보여 줍니다.  
@@ -263,7 +263,7 @@ DB2 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 지
 |varchar[8001..\*]|varchar(max)|  
 |varchar2[\*..8000]|varchar[\*]|  
 |varchar2[8001..\*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

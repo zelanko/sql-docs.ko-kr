@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060173"
 ---
 # <a name="create-package-configurations"></a>패키지 구성 만들기
@@ -110,7 +110,7 @@ ms.locfileid: "66060173"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](https://go.microsoft.com/fwlink/?LinkId=165643)   
+-   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
 -   블로그 항목 [패키지 구성을 코드에서 패키지를 만드는](https://go.microsoft.com/fwlink/?LinkId=217663), www.sqlis.com에 있습니다.  
   
