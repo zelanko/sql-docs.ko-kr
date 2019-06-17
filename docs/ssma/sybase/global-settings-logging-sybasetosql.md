@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1c4b128dc548780350d76c758543a852895118e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126606"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>전역 설정(로깅)(SybaseToSQL)
@@ -51,7 +51,7 @@ ms.locfileid: "63126606"
 |**디버그**|디버그 로그에 메시지를 비롯 한 모든 메시지를 작성 합니다.|  
   
 **로그 파일 경로**  
-파일 경로 및 SSMA 로그 파일의 이름입니다. 다른 이름을 지정 하는 현재 경로 클릭 한 다음 찾아보기를 클릭 (**...** ) 단추입니다.  
+파일 경로 및 SSMA 로그 파일의 이름입니다. 다른 이름을 지정 하는 현재 경로 클릭 한 다음 찾아보기를 클릭 ( **...** ) 단추입니다.  
   
 **로그 파일 크기**  
 최대 크기 (kb)에서 로그 파일입니다. 최소 크기는 10KB입니다. 기본값은 10240KB 합니다.  

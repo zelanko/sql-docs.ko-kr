@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527126"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765801"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527126"
 > [!IMPORTANT]  
 >  WSFC 클러스터를 삭제한 다음 다시 만들려는 경우 원본 WSFC 클러스터에서 가용성 복제본을 호스팅한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 각 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 사용하지 않도록 설정한 후 다시 사용하도록 설정해야 합니다.  
   
--   **시작하기 전 주의 사항:**  
   
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **방법:**  
-  
-    -   [Always On 가용성 그룹을 사용할 수 있는지 여부 확인](#IsEnabled)  
-  
-    -   [Always On 가용성 그룹 활성화](#EnableAOAG)  
-  
-    -   [Always On 가용성 그룹 비활성화](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Prerequisites"></a> Always On 가용성 그룹 사용을 위한 사전 요구 사항  
+##  <a name="Prerequisites"></a> Always On 가용성 그룹 사용을 위한 사전 요구 사항  
   
 -   서버 인스턴스는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 있어야 합니다.  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527126"
   
  가용성 그룹을 만들고 구성하기 위한 추가 필수 조건에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+## <a name="Permissions"></a> 사용 권한  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 한 인스턴스에서 Always On 가용성 그룹을 사용할 수 있는 동안에는 서버 인스턴스가 WSFC 클러스터에 대한 모든 권한을 가집니다.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  로컬 컴퓨터 **관리자** 그룹의 멤버 자격과 WSFC 클러스터에 대한 모든 권한이 필요합니다. Powershell을 사용하여 Always On을 사용하도록 설정하는 경우 **관리자 권한으로 실행** 옵션을 사용하여 명령 프롬프트 창을 엽니다.  
   
  Active Directory 개체 만들기 및 개체 관리 권한이 필요합니다.  

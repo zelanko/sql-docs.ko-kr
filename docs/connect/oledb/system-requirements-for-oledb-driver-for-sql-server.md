@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5e509014412bb89995602141d596ff34fa7f3572
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744433"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795863"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버의 시스템 요구 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "56744433"
 
  IDBInfo::GetKeywords는 항상 해당 서버 버전에 연결 하 고 영향을 받지는 키워드 목록을 반환 **DataTypeCompatibility**합니다.  
 
-|데이터 형식|SQL Server Native Client <br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SQL Server용 OLE DB 드라이버|Windows Data Access Components, MDAC 및<br /><br /> OLE DB 드라이버 응용 프로그램의 SQL Server OLE DB DataTypeCompatibility 사용 하 여 = 80|  
+|데이터 형식|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SQL Server용 OLE DB 드라이버|Windows Data Access Components, MDAC 및<br /><br /> OLE DB 드라이버 응용 프로그램의 SQL Server OLE DB DataTypeCompatibility 사용 하 여 = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<8kb =)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  

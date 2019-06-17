@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6d0ecf55c23d693b03fc289db5b8c6f3e7dd3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e981f46deab0973f9a6d8459b4b8578e414c70b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697391"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796446"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

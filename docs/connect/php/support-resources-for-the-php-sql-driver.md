@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d688f3e23d0ecb9ecd00364c783b90e770ef4205
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306151"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803944"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

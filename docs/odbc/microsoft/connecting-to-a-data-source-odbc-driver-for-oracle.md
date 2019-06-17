@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: adee8d8dd8d6db0d79b37ff853c41e7604fe21de
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63302128"
 ---
 # <a name="connecting-to-a-data-source-odbc-driver-for-oracle"></a>데이터 원본에 연결(Oracle용 ODBC 드라이버)

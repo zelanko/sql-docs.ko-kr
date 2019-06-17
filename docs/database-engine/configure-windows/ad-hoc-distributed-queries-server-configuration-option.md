@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ddef6de92c0bb5329e84011f9996368ef6b452dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e60261790ce1597c9968fb9c6c3c15403f71a93c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690150"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786947"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>임시 분산 쿼리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47690150"
 >  임시 이름 사용을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 모든 인증된 로그인에서 공급자에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자는 모든 로컬 로그인에서 액세스해도 안전한 공급자에 대해 이 기능을 설정해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **임시 분산 쿼리** 가 설정되지 않은 임시 연결을 만들려고 하면 Msg 7415, Level 16, State 1, Line 1 오류가 발생합니다.  
+ **임시 분산 쿼리**가 설정되지 않은 임시 연결을 만들려고 하면 오류가 발생합니다. 메시지 7415, 수준 16, 상태 1, 줄 1  
   
  OLE DB 공급자 'Microsoft.ACE.OLEDB.12.0'에 대한 임의 액세스가 거부되었습니다. 연결된 서버를 통해 이 공급자에 액세스해야 합니다.  
   

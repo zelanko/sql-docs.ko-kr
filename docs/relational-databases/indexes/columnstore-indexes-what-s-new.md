@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044390"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749132"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044390"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.
 
 ### <a name="functional"></a>기능
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 지속형 열은 클러스터형 columnstore 인덱스에서 지원되지 않습니다. 계산 열이 있는 columnstore 인덱스에는 비클러스터형 인덱스를 만들 수 없습니다. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 클러스터형 columnstore 인덱스에서는 지속형 계산 열이 지원되지 않습니다. 계산된 열이 있는 columnstore 인덱스에 비클러스터형 인덱스를 만들 수 없습니다. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이러한 향상된 기능을 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  

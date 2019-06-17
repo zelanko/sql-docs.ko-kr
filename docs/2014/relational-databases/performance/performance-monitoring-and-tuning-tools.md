@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150831"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
@@ -41,7 +41,7 @@ ms.locfileid: "63150831"
 |오류 로그|Windows 애플리케이션 이벤트 로그는 Windows Server 및 Windows 운영 체제 전체에서 발생하는 이벤트뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 이벤트와 전체 텍스트 검색을 전반적으로 보여 줍니다. 이 이벤트 로그에는 다른 곳에서 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이벤트 정보가 포함됩니다. 오류 로그에 있는 정보를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련 있는 문제를 해결할 수 있습니다.|  
 |[시스템 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)|다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 저장 프로시저는 다양한 모니터링 태스크에 대한 강력한 대체 방법을 제공합니다.<br /><br /> [sp_who&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql): <br />                    현재 실행 중인 문을 포함한 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자와 프로세스에 대한 스냅숏 정보 및 문의 차단 여부를 보고합니다.<br /><br /> [sp_lock&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-lock-transact-sql): 개체 ID, 인덱스 ID, 잠금 유형, 잠금이 적용되는 유형이나 리소스에 대한 스냅숏 정보를 보고합니다.<br /><br /> [sp_spaceused&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql): 테이블이나 전체 데이터베이스가 사용 중인 현재 예상 디스크 공간의 양을 보여 줍니다.<br /><br /> [sp_monitor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-monitor-transact-sql): **sp_monitor** 가 마지막으로 실행된 이후의 CPU 사용량, I/O 사용량 및 유휴 시간 양을 포함하는 통계를 표시합니다.|  
 |[DBCC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)|DBCC(데이터베이스 콘솔 명령) 문을 사용하면 성능 통계 및 데이터베이스의 논리적, 물리적 일관성을 검사할 수 있습니다.|  
-|[기본 제공 함수s&#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|기본 제공 함수는 서버가 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업에 대한 스냅숏 통계를 표시하며 이러한 통계는 미리 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 저장됩니다. 예를 들어 **@@CPU_BUSY**에는 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드를 실행한 시간이 포함되고 **@@CONNECTIONS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 수나 시도 횟수가 포함되며 **@@PACKET_ERRORS**에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 발생한 네트워크 패킷 수가 포함됩니다.|  
+|[기본 제공 함수s&#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)|기본 제공 함수는 서버가 시작된 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업에 대한 스냅숏 통계를 표시하며 이러한 통계는 미리 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 저장됩니다. 예를 들어 **@@CPU_BUSY** 에는 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드를 실행한 시간이 포함되고 **@@CONNECTIONS** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 수나 시도 횟수가 포함되며 **@@PACKET_ERRORS** 에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에서 발생한 네트워크 패킷 수가 포함됩니다.|  
 |[추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)|추적 플래그는 서버에서 특정 작업에 대한 정보를 표시하며 문제점이나 교착 상태 체인과 같은 성능 문제를 진단하는 데 사용됩니다.|  
 |[데이터베이스 엔진 튜닝 관리자](database-engine-tuning-advisor.md)|데이터베이스 엔진 튜닝 관리자는 튜닝할 데이터베이스에 대해 실행된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 성능 영향을 분석합니다. 데이터베이스 엔진 튜닝 관리자는 인덱스, 인덱싱된 뷰 및 분할의 추가, 제거 또는 수정에 대한 권장 구성을 제공합니다.|  
   

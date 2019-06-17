@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 143bff3e-2b5c-485d-9529-1c2387560094
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6c5cc380d626152a494cc61c238d163f0188c24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 7a359f078ce42c1bf9a11637db1281c2257c1bfc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527841"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797196"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-long"></a>updateAsciiStream 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ public void updateAsciiStream(int columnIndex,
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   
- 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 길이를 알 수 없는 스트림에서 응용 프로그램이 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [updateAsciiStream 메서드&#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)를 사용하는 것이 좋습니다.  
+ 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 길이를 알 수 없는 스트림에서 애플리케이션이 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [updateAsciiStream 메서드&#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateAsciiStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   

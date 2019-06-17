@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093734"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
