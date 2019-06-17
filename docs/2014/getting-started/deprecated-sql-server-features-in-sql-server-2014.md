@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d28d829280e205028a99afd9fec2e019bf567ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089476"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능
@@ -31,7 +31,7 @@ ms.locfileid: "66089476"
 ### <a name="slipstream-functionality"></a>통합 설치 기능  
  제품 업데이트 기능은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1에서 제공했던 통합 설치 기능을 대체합니다. 따라서 통합 설치 기능과 관련된 명령줄 매개 변수, /*PCUSource* 및 /*CUSource*는 더 이상 사용되지 않습니다. 이러한 매개 변수는 계속 작동하지만 향후 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램 릴리스에서 제거될 수 있습니다. /*UpdateSource* 매개 변수는 통합 설치 매개 변수 /*PCUSource* 및 /*CUSource*의 기능을 결합합니다.  
   
- 제공 했던 통합 설치 기능에 대 한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1을 참조 하세요 [SQL Server 업데이트 통합 설치](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945)합니다.  
+ 제공 했던 통합 설치 기능에 대 한 자세한 내용은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] PCU1을 참조 하세요 [SQL Server 업데이트 통합 설치](https://go.microsoft.com/fwlink/?LinkId=219945) (https://go.microsoft.com/fwlink/?LinkId=219945) 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [이전 버전과의 호환성](../../2014/getting-started/backward-compatibility.md)  
