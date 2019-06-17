@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699710"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
@@ -42,7 +42,7 @@ ms.locfileid: "66699710"
 |지금|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|오른쪽|  
 |RightB|Right$|RightB$|Rnd|RTrim|RTrim$|  
-|Second|Sgn|Sin|SLN|공백|Space$|  
+|Second|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|문자열|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  

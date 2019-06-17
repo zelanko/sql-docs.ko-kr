@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721705"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
@@ -62,25 +62,25 @@ ms.locfileid: "62721705"
   
     -   결과 집합의 **installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)를 실행합니다.  
   
-    -   결과 집합의 **distribution db installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)를 실행합니다. 이때 **@database**을 참조하세요. 필요에 따라 **@max_distretention** 에 최대 트랜잭션 보존 기간을 지정하고 **@history_retention**을 참조하세요. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.  
+    -   결과 집합의 **distribution db installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)를 실행합니다. 이때 **@database** 을 참조하세요. 필요에 따라 **@max_distretention** 에 최대 트랜잭션 보존 기간을 지정하고 **@history_retention** 을 참조하세요. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.  
   
-2.  게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행하고 **@working_directory**에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다.  
+2.  게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행하고 **@working_directory** 에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다.  
   
-3.  게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 게시할 데이터베이스를 지정 **@dbname**에 대 한 복제 유형을 **@optname**에 값 `true` 에 대 한 **@value**.  
+3.  게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 게시할 데이터베이스를 지정 **@dbname** 에 대 한 복제 유형을 **@optname** 에 값 `true` 에 대 한 **@value** .  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>원격 배포자를 사용하여 게시를 구성하려면  
   
 1.  [sp_get_distributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql)를 실행하여 서버가 이미 배포자로 구성되어 있는지 확인합니다.  
   
-    -   결과 집합의 **installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)를 실행합니다. 이때 **@password**을 참조하세요. 이는 **distributor_admin** 계정의 암호로 배포자에 연결할 때 게시자에서 사용됩니다.  
+    -   결과 집합의 **installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)를 실행합니다. 이때 **@password** 을 참조하세요. 이는 **distributor_admin** 계정의 암호로 배포자에 연결할 때 게시자에서 사용됩니다.  
   
-    -   결과 집합의 **distribution db installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)를 실행합니다. 이때 **@database**을 참조하세요. 필요에 따라 **@max_distretention** 에 최대 트랜잭션 보존 기간을 지정하고 **@history_retention**을 참조하세요. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.  
+    -   결과 집합의 **distribution db installed** 값이 **0**인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)를 실행합니다. 이때 **@database** 을 참조하세요. 필요에 따라 **@max_distretention** 에 최대 트랜잭션 보존 기간을 지정하고 **@history_retention** 을 참조하세요. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.  
   
-2.  배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행하고 **@working_directory**에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **0** @value **@security_mode** 을 지정하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@login** 에 **@password**을 참조하세요.  
+2.  배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)를 실행하고 **@working_directory** 에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **0** @value **@security_mode** 을 지정하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@login** 에 **@password** 을 참조하세요.  
   
-3.  master 데이터베이스의 게시자에서 [sp_adddistributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)를 실행합니다. 이때 **@password**을 참조하세요. 이 암호는 배포자에 연결할 때 게시자에서 사용됩니다.  
+3.  master 데이터베이스의 게시자에서 [sp_adddistributor&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql)를 실행합니다. 이때 **@password** 을 참조하세요. 이 암호는 배포자에 연결할 때 게시자에서 사용됩니다.  
   
-4.  게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 이때 **@dbname**에 게시할 데이터베이스를 지정하고 **@optname**에 복제 유형을 지정하며 **@value**을 참조하세요.  
+4.  게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행합니다. 이때 **@dbname** 에 게시할 데이터베이스를 지정하고 **@optname** 에 복제 유형을 지정하며 **@value** 을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예제에서는 게시 및 배포를 프로그래밍 방식으로 구성하는 방법을 보여 줍니다. 이 예제에서 게시자 및 로컬 배포자로 구성할 서버의 이름은 스크립팅 변수를 사용하여 제공됩니다. 복제 저장 프로시저를 사용하여 복제 게시 및 배포를 프로그래밍 방식으로 구성할 수 있습니다.  

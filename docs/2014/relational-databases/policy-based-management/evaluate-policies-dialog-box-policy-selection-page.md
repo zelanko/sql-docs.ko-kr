@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705132"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
@@ -24,10 +24,10 @@ ms.locfileid: "62705132"
   
 ## <a name="options"></a>변수  
  **원본**  
- 정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 (**...**)를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
+ 정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 ( **...** )를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
   
  **파일**  
- 정책 기반 관리 정책이 포함된 파일의 경로를 입력하거나 찾아보기 단추(**...**)를 사용하여 파일을 선택합니다.  
+ 정책 기반 관리 정책이 포함된 파일의 경로를 입력하거나 찾아보기 단추( **...** )를 사용하여 파일을 선택합니다.  
   
  **Server**  
  원하는 정책이 포함된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 선택합니다.  

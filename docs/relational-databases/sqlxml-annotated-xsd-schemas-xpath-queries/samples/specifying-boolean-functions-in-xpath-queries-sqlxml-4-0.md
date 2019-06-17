@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737412"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
@@ -31,7 +31,7 @@ ms.locfileid: "62737412"
   
 ## <a name="examples"></a>예  
   
-## <a name="a-specify-the-not-boolean-function"></a>1. not() 부울 함수 지정  
+## <a name="a-specify-the-not-boolean-function"></a>1\. not() 부울 함수 지정  
  이 쿼리 모두 반환 합니다  **\<고객 >** 하지 않은 컨텍스트 노드의 자식 요소  **\<순서 >** 자식 요소:  
   
 ```  
@@ -79,7 +79,7 @@ ms.locfileid: "62737412"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>2. true() 및 false() 부울 함수 지정  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>2\. true() 및 false() 부울 함수 지정  
  이 쿼리 모두 반환  **\<고객 >** 하지 않은 컨텍스트 노드의 요소 자식을  **\<순서 >** 자식 요소입니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
   
 ```  

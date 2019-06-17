@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701827"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
@@ -90,7 +90,7 @@ ms.locfileid: "66701827"
 
  database 요소 레코드 탐색, 데이터의 업데이트 및 다른 사용자가 데이터베이스에 대 한 변경 내용의 표시 유형을 제어 하는 커서입니다.
 
-## <a name="d"></a>d
+## <a name="d"></a>D
  데이터 바인딩 개체 또는 데이터 원본에 응용 프로그램의 컨트롤을 연결 하는 프로세스입니다. 데이터 원본에 연결 된 컨트롤 이라고는 *데이터 바인딩된 컨트롤*합니다.
 
  데이터 바인딩된 컨트롤의 내용이 데이터베이스에서 값을 사용 하 여 연결 합니다. 표 컨트롤에 바인딩되는 예를 들어,를 **레코드 집합** 개체 수 업데이트 될 때의 행을 **레코드 집합** 업데이트 됩니다. 새 값을 검색 하는 경우는 **레코드 집합**, 새 값이 표에 표시 됩니다.

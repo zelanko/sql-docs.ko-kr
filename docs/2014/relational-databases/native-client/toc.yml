@@ -38,7 +38,7 @@
       href: features/large-clr-user-defined-types.md
     - name: FILESTREAM 지원
       href: features/filestream-support.md
-    - name: '클라이언트 연결의 SPN(서비스 사용자 이름) 지원 '
+    - name: 클라이언트 연결의 SPN(서비스 사용자 이름) 지원
       href: features/service-principal-name-spn-support-in-client-connections.md
     - name: SQL Server Native Client의 스파스 열 지원
       href: features/sparse-columns-support-in-sql-server-native-client.md

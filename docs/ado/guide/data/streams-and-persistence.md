@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700498"
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지속성
 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *지속 되 면*, **레코드 집합** 파일인 및 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드를 복원 합니다 **레코드 집합** 해당 파일에서.  
   
- 2.7 이상 ADO를 사용 하 여는 **저장** 및 **열려** 메서드를 유지할 수 있습니다를 **레코드 집합** 에 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체도 합니다. 이 기능은 원격 데이터 서비스 (RDS) 및 ASP Active Server Pages ()를 사용 하 여 작업할 때 특히 유용 합니다.  
+ 2\.7 이상 ADO를 사용 하 여는 **저장** 및 **열려** 메서드를 유지할 수 있습니다를 **레코드 집합** 에 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체도 합니다. 이 기능은 원격 데이터 서비스 (RDS) 및 ASP Active Server Pages ()를 사용 하 여 작업할 때 특히 유용 합니다.  
   
  지 속성 사용할 수 있는 방법을 자체적으로 ASP 페이지에 대 한 자세한 내용은 현재 ASP 설명서를 참조 하세요.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683977"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation(Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` 배포 에이전트가 실행 되는 경우 **sp_table_validation**에 있는지 여부를 배포 에이전트가 즉시 종료 되어야 유효성 검사 완료 시를 지정 합니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 복제 에이전트가 종료 되지 않습니다. 하는 경우 **1**20578 오류가 발생 하 고 복제 에이전트가 종료 신호를 받는, 합니다. 이 매개 변수는 무시 하면 **sp_table_validation** 사용자가 직접 실행 됩니다.  
   
-`[ @table_name = ] table_name` 출력 메시지에 사용 되는 뷰의 테이블 이름이입니다. *table_name* 됩니다 **sysname**, 기본값은 **@table**합니다.  
+`[ @table_name = ] table_name` 출력 메시지에 사용 되는 뷰의 테이블 이름이입니다. *table_name* 됩니다 **sysname**, 기본값은 **@table** 합니다.  
   
-`[ @column_list = ] 'column_list'` Checksum 함수에서 사용 해야 하는 열의 목록이입니다. *column_list* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
+`[ @column_list = ] 'column_list'` Checksum 함수에서 사용 해야 하는 열의 목록이입니다. *column_list* 됩니다 **nvarchar(4000)** , 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  테이블의 체크섬이 필요한 체크섬 및 체크섬 유효성 검사를 수행 하는 경우 **sp_table_validation** 테이블이 체크섬 유효성 검사를 통과 하는 메시지를 반환 합니다. 그렇지 않은 경우에는 테이블이 동기화되지 않았다는 메시지를 반환하며 예상 행 개수 및 실제 행 개수의 차이를 보고합니다.  

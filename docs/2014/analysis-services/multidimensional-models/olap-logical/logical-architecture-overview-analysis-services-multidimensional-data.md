@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699191"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
@@ -89,7 +89,7 @@ ms.locfileid: "62699191"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- 큐브를 정의한 다음에는 새 집계를 만들거나, 집계를 처리하는 동안 미리 계산할 것인지 또는 쿼리 시 계산할 것인지와 같은 옵션을 설정하기 위해 기존 집계를 변경할 수 있습니다. **관련된 항목:**[집계 및 집계 디자인](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
+ 큐브를 정의한 다음에는 새 집계를 만들거나, 집계를 처리하는 동안 미리 계산할 것인지 또는 쿼리 시 계산할 것인지와 같은 옵션을 설정하기 위해 기존 집계를 변경할 수 있습니다. **관련된 항목:** [집계 및 집계 디자인](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>측정값, 특성 및 계층 매핑  
  이 예제 큐브의 측정값, 특성 및 계층은 큐브의 팩트 및 차원 테이블의 다음 열에서 파생됩니다.  
@@ -119,9 +119,9 @@ ms.locfileid: "62699191"
   
  앞의 표에서 각 행에 동일한 값을 **RouteKey**, **SourceKey**, 및 **TimeKey** 동일한 큐브 셀에 영향을 이러한 행을 나타내는 열입니다.  
   
- 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련된 항목:**[차원 &#40;Analysis Services-Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)합니다.  
+ 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련된 항목:** [차원 &#40;Analysis Services-Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)합니다.  
   
- 여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:**[차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
+ 여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:** [차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

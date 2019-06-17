@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721110"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>백업에서 트랜잭션 구독 초기화(복제 Transact-SQL 프로그래밍)
@@ -34,7 +34,7 @@ ms.locfileid: "62721110"
   
     -   값이 **1**이면 게시에서 이 기능을 지원하는 것입니다.  
   
-    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 값을 지정 **allow_initialize_from_backup** 에 대 한 **@property** 값 `true` 에 대 한 **@value**합니다.  
+    -   값이 **0**이면 게시 데이터베이스의 게시자에서 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 값을 지정 **allow_initialize_from_backup** 에 대 한 **@property** 값 `true` 에 대 한 **@value** 합니다.  
   
 2.  새 게시의 경우 게시 데이터베이스의 게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 값을 지정 `true` 에 대 한 **allow_initialize_from_backup**합니다. 자세한 내용은 [Create a Publication](publish/create-a-publication.md)를 참조하세요.  
   

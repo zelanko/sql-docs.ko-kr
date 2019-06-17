@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714190"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714190"
 |**colid**|**smallint**|아티클의 열을 식별합니다.|  
 |**is_udt**|**bit**|열이 UDT(사용자 정의 데이터 형식) 열인지 여부를 나타냅니다. 값이 **1** UDT 열을 나타냅니다.|  
 |**is_xml**|**bit**|열이 있는지 여부를 나타냅니다는 **xml** 열입니다. 값이 **1** xml 열을 나타냅니다.|  
-|**is_max**|**bit**|열에 큰 값 데이터 형식 열이 있는지 여부를 나타냅니다 **varchar (max)** 하십시오 **nvarchar (max)**, 및 **varbinary (max)** 합니다. 값이 **1** 큰 값 열을 나타냅니다.|  
+|**is_max**|**bit**|열에 큰 값 데이터 형식 열이 있는지 여부를 나타냅니다 **varchar (max)** 하십시오 **nvarchar (max)** , 및 **varbinary (max)** 합니다. 값이 **1** 큰 값 열을 나타냅니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719222"
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드(ADO 레코드 집합)
@@ -47,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *LockType*  
  (선택 사항) A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 사용할지 결정 하는 어떤 유형의 잠금 (동시성) 공급자를 열 때 값을 **Recordset**합니다. 기본값은 **adLockReadOnly**합니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 *원본* 것 이외의 다른 나타내는 경우 인수는 **명령** 개체 또는 합니다 **레코드 집합** 이전에 저장 된 파일에서 복원 해야 합니다. 하나 이상의 수 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 하거나 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값을 비트 OR 연산자를 함께 사용할 수 있습니다.  
   
 > [!NOTE]

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753030"
 ---
 # <a name="summary-solutions-and-script-projects"></a>요약: 솔루션 및 스크립트 프로젝트
@@ -26,6 +26,6 @@ ms.locfileid: "62753030"
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014 자습서](tutorial-sql-server-management-studio.md)   
  [데이터베이스 엔진 자습서](../../relational-databases/database-engine-tutorials.md)   
- 다른 도구는 [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721104"
 ---
 # <a name="lesson-3-configuring-distribution"></a>3단원: 배포 구성
@@ -35,11 +35,11 @@ ms.locfileid: "62721104"
   
      배포 구성 마법사가 시작됩니다.  
   
-3.  에 **배포자** 페이지에서 **'**_\<ServerName >_**' 자체 배포자 역할을 할 SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 클릭 하 고 **다음**합니다.  
+3.  에 **배포자** 페이지에서 **'** _\<ServerName >_ **' 자체 배포자 역할을 할 SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 클릭 하 고 **다음**합니다.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**에이전트 시작** 페이지에서 **예**를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작되도록 구성합니다. **다음**을 클릭합니다.  
   
-5.  **스냅숏 폴더** 입력란에 **\\\\**\<_Machine_Name>_**\repldata**를 입력하고 **다음**을 클릭합니다. 여기서 \<*Machine_Name>* 은 게시자의 이름입니다.  
+5.  **스냅숏 폴더** 입력란에 **\\\\** \<_Machine_Name>_ **\repldata**를 입력하고 **다음**을 클릭합니다. 여기서 \<*Machine_Name>* 은 게시자의 이름입니다.  
   
 6.  마법사의 나머지 페이지에 기본값을 적용합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721104"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **보안**을 확장하고 **로그인**을 마우스 오른쪽 단추로 클릭한 다음 **새 로그인**을 선택합니다.  
   
-2.  **일반** 페이지에서 **검색**을 클릭하고 **선택할 개체 이름 입력** 상자에 \<_Machine_Name>_**\repl_snapshot**을 입력한 다음 **이름 확인**, **확인**을 차례로 클릭합니다. 여기서 \<*Machine_Name>* 은 로컬 게시자 서버의 이름입니다.  
+2.  **일반** 페이지에서 **검색**을 클릭하고 **선택할 개체 이름 입력** 상자에 \<_Machine_Name>_ **\repl_snapshot**을 입력한 다음 **이름 확인**, **확인**을 차례로 클릭합니다. 여기서 \<*Machine_Name>* 은 로컬 게시자 서버의 이름입니다.  
   
 3.  **사용자 매핑** 페이지의 **이 로그인으로 매핑된 사용자** 목록에서 **배포** 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 둘 다 선택합니다.  
   

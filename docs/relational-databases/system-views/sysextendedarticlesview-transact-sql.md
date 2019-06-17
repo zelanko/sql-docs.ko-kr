@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62693763"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview(Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "62693763"
 |**upd_cmd**|**nvarchar(255)**|UPDATE 시 실행할 명령입니다. 그렇지 않으면 로그에서 만들어집니다.|  
 |**schema_option**|**binary**|스냅숏에 스크립팅할 게시된 개체의 속성을 나타냅니다. 지원 되는 스키마 옵션의 목록을 참조 하세요 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)합니다.|  
 |**dest_owner**|**nvarchar(128)**|대상 데이터베이스에 있는 테이블의 소유자입니다.|  
-|**ins_scripting_proc**|**int**|INSERT 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다. |  
+|**ins_scripting_proc**|**int**|INSERT 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**del_scripting_proc**|**int**|DELETE 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**upd_scripting_proc**|**int**|UPDATE 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**custom_script**|**int**|DDD 트리거 완료 시 실행되는 사용자 지정 스크립트 또는 프로시저의 개체 식별자입니다.|  

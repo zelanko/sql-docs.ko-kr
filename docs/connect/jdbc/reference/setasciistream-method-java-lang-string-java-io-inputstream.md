@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d76d8dc1123cf17d95a0e6587b79168bedefb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: af7d8bbc9362d2aae15c9f84a64b76f00bd3a1df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643951"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765075"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>setAsciiStream 메서드(java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  이 setAsciiStream 메서드는 java.sql.PreparedStatement 인터페이스의 setAsciiStream 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setAsciiStream&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
+ [setAsciiStream(SQLServerCallableStatement)](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714350"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping(Transact-SQL)
@@ -67,7 +67,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  경우에이 매개 변수를 지정 해야 합니다 *mapping_id* NULL입니다.  
   
-`[ @source_version = ] 'source_version'` 원본 DBMS의 버전입니다. *source_version* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
+`[ @source_version = ] 'source_version'` 원본 DBMS의 버전입니다. *source_version* 됩니다 **varchar(10)** , 기본값은 NULL입니다.  
   
 `[ @source_type = ] 'source_type'` 원본 DBMS의에서 데이터 형식이입니다. *source_type* 됩니다 **sysname**합니다. 경우에이 매개 변수를 지정 해야 합니다 *mapping_id* NULL입니다.  
   
@@ -95,7 +95,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
 |NULL(기본값)||  
   
-`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전이입니다. *destination_version* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
+`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전이입니다. *destination_version* 됩니다 **varchar(10)** , 기본값은 NULL입니다.  
   
 `[ @destination_type = ] 'destination_type'` 대상 DBMS에에서 나열 된 데이터 형식입니다. *destination_type* 됩니다 **sysname**, 기본값은 NULL입니다.  
   

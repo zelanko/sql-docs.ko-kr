@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721033"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>2단원: 병합 게시에 대 한 구독 만들기
@@ -40,7 +40,7 @@ ms.locfileid: "62721033"
   
 7.  **새 데이터베이스** 대화 상자에서 **데이터베이스 이름** 상자에 **SalesOrdersReplica** 를 입력하고 **확인**을 클릭한 후 **다음**을 클릭합니다.  
   
-8.  병합 에이전트 보안 페이지에서 줄임표 (**...** ) 단추를 입력 합니다 \< _Machine_Name >_**\repl_merge** 에 **Process account** 상자,이 계정의 암호를 입력, 클릭 **확인**, 클릭 **다음**를 클릭 하 고 **다음** 다시 합니다.  
+8.  병합 에이전트 보안 페이지에서 줄임표 ( **...** ) 단추를 입력 합니다 \< _Machine_Name >_ **\repl_merge** 에 **Process account** 상자,이 계정의 암호를 입력, 클릭 **확인**, 클릭 **다음**를 클릭 하 고 **다음** 다시 합니다.  
   
 9. 구독 초기화 페이지의 **초기화 시기** 목록에서 **첫 번째 동기화 시** 를 선택하고 **다음**을 클릭한 후 다시 **다음** 을 클릭합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721033"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구독자에 연결하고 **데이터베이스**, **SalesOrdersReplica**및 **보안**을 확장하고 **사용자**를 마우스 오른쪽 단추로 클릭한 다음 **새 사용자**를 선택합니다.  
   
-2.  에 **일반적인** 페이지에서 입력 \< _Machine_Name >_**\repl_merge** 에 **사용자 이름** 상자에서 줄임표 ( **...** ) 단추를 클릭 **찾아보기**선택 \< _Machine_Name >_**\repl_merge**를 클릭 **확인**, 클릭 **이름 확인**를 클릭 하 고 **확인**합니다.  
+2.  에 **일반적인** 페이지에서 입력 \< _Machine_Name >_ **\repl_merge** 에 **사용자 이름** 상자에서 줄임표 ( **...** ) 단추를 클릭 **찾아보기**선택 \< _Machine_Name >_ **\repl_merge**를 클릭 **확인**, 클릭 **이름 확인**를 클릭 하 고 **확인**합니다.  
   
 3.  **데이터베이스 역할 멤버 자격**에서 **db_owner**를 선택한 다음 **확인** 을 클릭하여 사용자를 만듭니다.  
   

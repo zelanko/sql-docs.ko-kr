@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3109c1ae9d751cb4eece04a7bc2dc241fdd84c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ac9d1db25dd06b83a20c98c0fe6f6bc3a4c57e1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646531"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795695"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

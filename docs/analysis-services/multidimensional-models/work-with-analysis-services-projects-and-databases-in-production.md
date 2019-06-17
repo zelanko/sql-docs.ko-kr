@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f90af41c397da20fb26c73bebc6723b9a3cf6270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743239"
 ---
 # <a name="work-with-analysis-services-projects-and-databases-in-production"></a>작업할 Analysis Services 프로젝트 및 프로덕션 환경에서 데이터베이스

@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719521"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
@@ -70,7 +70,7 @@ sys.dm_db_log_info ( database_id )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>1. 많은 Vlf 사용 하 여 SQL Server 인스턴스에서 데이터베이스 확인
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>1\. 많은 Vlf 사용 하 여 SQL Server 인스턴스에서 데이터베이스 확인
 다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일에 100 개가 넘는 Vlf 사용 하 여 데이터베이스를 결정 합니다.
 
 ```sql
@@ -81,7 +81,7 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>2. 마지막 위치 확인 `VLF` 로그 파일을 축소 하기 전에 트랜잭션 로그
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>2\. 마지막 위치 확인 `VLF` 로그 파일을 축소 하기 전에 트랜잭션 로그
 
 트랜잭션 로그를 축소할 수 있는지 확인 하려면 트랜잭션 로그에 shrinkfile을 실행 하기 전에 마지막 활성 VLF의 위치를 확인 하려면 다음 쿼리를 사용할 수 있습니다.
 

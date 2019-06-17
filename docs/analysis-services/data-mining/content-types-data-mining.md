@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725187"
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열에 대한 실제 데이터 형식과 모델에 사용된 열에 대한 논리적 내용 유형을 모두 정의할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열에 대한 실제 데이터 형식과 모델에 사용된 열에 대한 논리적 내용 유형을 모두 정의할 수 있습니다.  
   
  *데이터 형식* 은 마이닝 모델을 만들 때 알고리즘이 이 열의 데이터를 처리하는 방법을 결정합니다. 열의 데이터 형식을 정의하면 열의 데이터 처리 방법 및 해당 데이터 형식에 대한 알고리즘 정보를 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 데이터 형식은 데이터 마이닝에 대해 하나 이상의 내용 유형을 지원합니다.  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1b6e9f3ccb71c0b3a45101cd1da660e6bc1af133
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724798"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>분류 행렬(Analysis Services - 데이터 마이닝)
@@ -37,7 +37,7 @@ ms.locfileid: "62724798"
 |예측|0(실제)|1(실제)|  
 |---------------|------------------|------------------|  
 |0|362|144|  
-|1.|121|373|  
+|1\.|121|373|  
   
  값 362가 포함된 첫 번째 결과 셀은 값 0에 대한 *참 긍정* 수를 나타냅니다. 0은 고객이 자전거를 구매하지 않았다는 것을 나타내므로 362개의 사례에서 모델이 자전거 비구매자에 대한 올바른 값을 예측했음을 이 통계에서 알 수 있습니다.  
   

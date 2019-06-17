@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719892"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>데이터베이스 백업, 복원 및 동기화(XMLA)
@@ -136,7 +136,7 @@ ms.locfileid: "62719892"
 ### <a name="synchronizing-rolap-objects"></a>ROLAP 개체 동기화  
  합니다 **동기화** 명령 집계 또는 이러한 정보는 기본 관계형 데이터 원본에서 테이블로 저장 되기 때문에 ROLAP 저장소를 사용 하는 개체에 대 한 데이터를 동기화 할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 동기화할 수 있습니다. 메타 데이터를 동기화 하는 **동기화** 명령에서는 관계형 데이터 원본에서 테이블 구조를 다시 만듭니다.  
   
- 사용할 수는 **위치** 명령의 ROLAP 개체를 동기화 하는 요소입니다. 각 **위치** 데이터 원본을 재배치 하는 데 사용 되는 요소는 **DataSourceType** 속성 명시적으로 설정 해야 *로컬*합니다. . 설정 해야 할 수도 있습니다는 **ConnectionString** 의 속성을 **위치** 새 위치의 연결 문자열로 요소. 동기화 하는 동안는 **동기화** 명령으로 식별 된 데이터 원본의 연결 문자열을 대체 합니다 **DataSourceID** 속성을 **위치** 값을 가진 요소를 **ConnectionString** 의 속성을 **위치** 요소.  
+ 사용할 수는 **위치** 명령의 ROLAP 개체를 동기화 하는 요소입니다. 각 **위치** 데이터 원본을 재배치 하는 데 사용 되는 요소는 **DataSourceType** 속성 명시적으로 설정 해야 *로컬*합니다. 을 선택합니다. 설정 해야 할 수도 있습니다는 **ConnectionString** 의 속성을 **위치** 새 위치의 연결 문자열로 요소. 동기화 하는 동안는 **동기화** 명령으로 식별 된 데이터 원본의 연결 문자열을 대체 합니다 **DataSourceID** 속성을 **위치** 값을 가진 요소를 **ConnectionString** 의 속성을 **위치** 요소.  
   
 ## <a name="see-also"></a>관련 항목  
  [Backup 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
