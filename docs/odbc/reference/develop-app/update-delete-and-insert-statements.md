@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632481"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
@@ -39,9 +39,9 @@ SQL 기반 응용 프로그램 실행 하 여 테이블에 변경 내용을 확�
   
  **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** _테이블 이름_[**(** _열 식별자_ [**하십시오** _열 식별자_]... **)**]  
+ **INSERT INTO** _테이블 이름_[ **(** _열 식별자_ [**하십시오** _열 식별자_]... **)** ]  
   
- {*쿼리 사양* &#124; **값 (** _삽입 값_ [**하십시오** _삽입 값_]... **)**}  
+ {*쿼리 사양* &#124; **값 (** _삽입 값_ [**하십시오** _삽입 값_]... **)** }  
   
  *쿼리 사양* 요소는 및 코어 및 확장 SQL 문법의 경우에 유효 합니다 *식* 및 *검색 조건을* 요소 정하여 코어 및 확장 SQL 문법에 복합 형식입니다.  
   

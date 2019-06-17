@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920683"
 ---
 # <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62920683"
 ##  <a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 원리  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
-| Time |이벤트|  
+|Time|이벤트|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업합니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  

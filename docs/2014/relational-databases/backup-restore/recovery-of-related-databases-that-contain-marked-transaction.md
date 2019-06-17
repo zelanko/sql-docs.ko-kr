@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875715"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>표시 지점으로 복구하는 Transact-SQL 구문  
  [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)문을 사용하여 표시된 트랜잭션을 대상으로 지정할 때 중지된 곳이나 표시 바로 앞에 다음 절 중 하나를 사용할 수 있습니다.  
   
--   WITH stopatmark = **'*`<mark_name>`*'** 절에 표시 된 트랜잭션이 복구 지점 임을 지정 합니다.  
+-   WITH stopatmark = **' *`<mark_name>`* '** 절에 표시 된 트랜잭션이 복구 지점 임을 지정 합니다.  
   
      STOPATMARK는 표시로 롤포워드하고 표시된 트랜잭션을 롤포워드에 포함시킵니다.  
   
--   WITH STOPBEFOREMARK 사용 = **'*`<mark_name>`*'** 표시가 복구 지점 직전 로그 레코드를 지정 하는 절이 있습니다.  
+-   WITH STOPBEFOREMARK 사용 = **' *`<mark_name>`* '** 표시가 복구 지점 직전 로그 레코드를 지정 하는 절이 있습니다.  
   
      STOPBEFOREMARK는 표시로 롤포워드하고 롤포워드에서 표시된 트랜잭션을 제외시킵니다.  
   

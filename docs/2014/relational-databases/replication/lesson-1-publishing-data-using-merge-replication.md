@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721182"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용 하 여 데이터 게시
@@ -83,7 +83,7 @@ ms.locfileid: "62721182"
   
 21. **즉시 스냅숏 만들기**를 선택하고 **스냅숏 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 클릭합니다.  
   
-22. 에이전트 보안 페이지에서 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_**\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다. **마침**을 클릭합니다.  
+22. 에이전트 보안 페이지에서 **보안 설정**을 클릭하고 **프로세스 계정** 상자에 \<_Machine_Name>_ **\repl_snapshot**을 입력한 다음 이 계정에 대한 암호를 입력하고 **확인**을 클릭합니다. **마침**을 클릭합니다.  
   
 23. 마법사 완료 페이지에서 **게시 이름** 상자에 **AdvWorksSalesOrdersMerge** 를 입력하고 **마침**을 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62721182"
   
 3.  **게시 액세스 목록** 페이지를 선택하고 **추가**를 클릭합니다.  
   
-4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_**\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
+4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_ **\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 병합 게시에 대 한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)합니다.  

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62939096"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>시퀀스 함수 - distinct-values
@@ -49,7 +49,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>1. distinct-values() 함수를 사용하여 시퀀스에서 중복 값 제거  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>1\. distinct-values() 함수를 사용하여 시퀀스에서 중복 값 제거  
  이 예에서 전화 번호가 포함 된 XML 인스턴스에 할당 됩니다는 **xml** 형식 변수입니다. 이 변수는 지정 된 XQuery 합니다 **distinct-values ()** 함수의 중복을 포함 하지 않는 전화 번호 목록을 컴파일합니다.  
   
 ```  

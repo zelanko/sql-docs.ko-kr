@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768229"
 ---
 # <a name="install-integration-services"></a>Integration Services 설치
@@ -33,7 +33,7 @@ ms.locfileid: "62768229"
  이 항목에서는 설치 프로그램 시작, 설치 마법사 사용 또는 명령줄에서 설치 프로그램 실행에 대한 지침을 다루지 않습니다. 설치 및 구성 요소 선택 설치를 시작 하는 방법에 대 한 단계별 지침을 참조 하세요 [SQL Server 2014 빠른 시작 설치](../../getting-started/quick-start-installation-of-sql-server-2014.md)합니다. 설치용 명령줄 옵션에 대 한 자세한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 참조 하세요 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   
 ## <a name="preparing-to-install-integration-services"></a>Integration Services 설치 준비  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하기 전에 다음 요구 사항을 검토하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치하기 전에 다음 요구 사항을 검토하십시오.  
   
 -   [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   

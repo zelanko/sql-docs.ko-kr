@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042337"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>다운로드 및 Analytics Platform System에 대 한 Microsoft 업데이트를 적용 합니다.
@@ -107,7 +107,7 @@ ms.locfileid: "63042337"
   
 1.  시작 하기 전에 열를 [관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), 클릭는 **어플라이언스 상태** 탭을 확인 합니다  **클러스터** 하 고 **네트워크** 모든 노드에 대 한 열 표시 녹색 (또는 NA). 모든 경고에 있는 경우 이러한 열 중 어플라이언스 업데이트를 제대로 설치 하지 못할 수 있습니다. 모든 기존 경고를 해결 합니다 **클러스터** 하 고 **네트워크** 계속 하기 전에 열.  
   
-2.  에 로그온 합니다 _< 도메인 _ 이름 >_**-HST01** 노드 Fabric 도메인 관리자입니다.  
+2.  에 로그온 합니다 _< 도메인 _ 이름 >_ **-HST01** 노드 Fabric 도메인 관리자입니다.  
   
 3.  WSUS에 대 한 승인 된 모든 업데이트를 적용 하려면 업데이트 프로그램을 실행 합니다. 참조 [업데이트 프로그램 실행](#RunUpdateWizard) 아래 지침에 대 한 합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "63042337"
   
 5.  에 **상태** 드롭 다운 메뉴에서 **모든** 클릭 **새로 고침**합니다.  
   
-6.  확장 **서비스 업데이트**를 *<appliance name>*-VMM **업데이트**를 **업데이트를 모두**여기서 *<appliance name>* 은 어플라이언스 이름입니다.  
+6.  확장 **서비스 업데이트**를 *<appliance name>* -VMM **업데이트**를 **업데이트를 모두**여기서 *<appliance name>* 은 어플라이언스 이름입니다.  
   
 7.  에 **모든 업데이트** 창 집합 **승인** 하 **거부를 제외한 모든**합니다.  
   

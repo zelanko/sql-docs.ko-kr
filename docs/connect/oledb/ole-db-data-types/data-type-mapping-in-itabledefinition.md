@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4101c458b066ec34f010a5733510fb21e25e6840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dcd4b33121d5459120572b2b31de413106aeeda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834191"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775602"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47834191"
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
-|DBTYPE_I4|**int**||  
+|DBTYPE_I4|**ssNoversion**||  
 |DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|SQL Server용 OLE DB 드라이버는 DBCOLUMDESC *bPrecision* 및 *bScale* 멤버를 검사하여 **numeric** 열의 전체 자릿수 및 소수 자릿수를 확인합니다.|  
 |DBTYPE_R4|**real**||  

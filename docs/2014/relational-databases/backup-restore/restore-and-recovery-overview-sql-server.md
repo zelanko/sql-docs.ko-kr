@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921015"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
@@ -88,9 +88,9 @@ ms.locfileid: "62921015"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |데이터 복구|전체 복구합니다(로그를 사용 가능한 경우).|일부 데이터 손실이 노출됩니다.|마지막 전체 또는 차등 백업 이후의 데이터는 손실됩니다.|  
 |지정 시간 복원|로그 백업 범위 내의 시간에서 복원합니다.|로그 백업이 대량 로그된 변경 내용을 포함한 경우 허용되지 않습니다.|지원되지 않습니다.|  
-|File restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다.**\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
-|Page restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다.**\*\***|없음|  
-|증분(파일 그룹 수준) 복원 **\***|전체 지원됩니다.|경우에 따라 지원됩니다.**\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
+|File restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
+|Page restore **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|없음|  
+|증분(파일 그룹 수준) 복원 **\***|전체 지원됩니다.|경우에 따라 지원됩니다. **\*\***|읽기 전용 보조 파일에만 사용 가능합니다.|  
   
  **\*** 엔터프라이즈 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

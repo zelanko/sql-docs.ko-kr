@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767635"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
-  패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 패키지, For Loop, Foreach Loop, Sequence 컨테이너 및 각 작업을 캡슐화하는 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너 유형은 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 트랜잭션 구성을 위해 세 가지 옵션이 있습니다. **NotSupported**, **Supported** 및 **Required**, 이렇게 세 가지 옵션을 제공합니다.  
+  패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 패키지, For Loop, Foreach Loop, Sequence 컨테이너 및 각 작업을 캡슐화하는 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너 유형은 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 트랜잭션 구성을 위해 **NotSupported**, **Supported** 및 **Required**, 이렇게 세 가지 옵션을 제공합니다.  
   
 -   **Required** 는 부모 컨테이너가 이미 트랜잭션을 시작한 경우를 제외하고 컨테이너가 트랜잭션을 시작하도록 합니다. 트랜잭션이 이미 있는 경우 컨테이너는 해당 트랜잭션에 참여합니다. 예를 들어 트랜잭션을 지원하도록 구성되지 않은 패키지가 **Required** 옵션을 사용하는 시퀀스 컨테이너를 포함하는 경우 시퀀스 컨테이너가 자체 트랜잭션을 시작합니다. **Required** 옵션을 사용하도록 패키지를 구성한 경우 시퀀스 컨테이너는 패키지 트랜잭션에 참여합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62767635"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   www.mssqltips.com의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
+-   www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
 ## <a name="see-also"></a>관련 항목  
  [상속된 트랜잭션](../../2014/integration-services/inherited-transactions.md)   

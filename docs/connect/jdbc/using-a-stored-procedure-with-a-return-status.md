@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f5aa998fa6e0e61bc0417aaf9703a0d0809fc4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737101"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797138"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>반환 상태가 있는 저장 프로시저 사용
 

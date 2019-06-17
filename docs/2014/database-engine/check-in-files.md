@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812587"
 ---
 # <a name="check-in-files"></a>파일 체크 인
@@ -50,7 +50,7 @@ ms.locfileid: "62812587"
      **이름**  
      체크 인할 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 체크 인하지 않으려면 확인란의 선택을 취소합니다.  
   
-     **Options**  
+     **옵션**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 인 옵션이 표시됩니다.  
   
      **정렬**  

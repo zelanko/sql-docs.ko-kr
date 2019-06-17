@@ -13,10 +13,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5f1eeab5d0c3dfae008bbcecc3fe8d89d2c7e2c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011972"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업

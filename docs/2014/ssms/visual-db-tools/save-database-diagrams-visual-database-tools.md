@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62710509"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710509"
   
 ### <a name="to-save-the-database-diagram"></a>데이터베이스 다이어그램을 저장하려면  
   
-1.  **파일** 메뉴 선택 **저장 <*`tablename`*>** 합니다.  
+1.  **파일** 메뉴 선택 **저장 < *`tablename`* >** 합니다.  
   
 2.  저장하려는 다이어그램을 이전에 한번도 저장한 적이 없으면 **다른 이름으로 저장** 대화 상자가 열립니다. 다이어그램의 이름을 입력합니다.  
   

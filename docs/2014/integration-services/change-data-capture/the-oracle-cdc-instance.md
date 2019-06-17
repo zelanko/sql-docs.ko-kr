@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0152594c213196860e80ff5d5267356977404b7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771194"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 인스턴스
@@ -24,11 +24,11 @@ ms.locfileid: "62771194"
   
 -   **서비스 시작 확인 처리**: 시작할 때 CDC 인스턴스는 **xdbcdc_config** 테이블에서 구성을 로드하고 상태 확인을 수행하여 CDC 인스턴스 지속 상태가 일관되고 변경 처리를 시작할 수 있는지를 확인합니다.  
   
--   **변경 캡처 준비**: 확인에 통과 하면 성공적으로 Oracle CDC 인스턴스 검색이 현재 정의 된 캡처 인스턴스의 모든 고 Oracle LogMiner 쿼리와 변경 캡처에 필요한 다른 지원 구조를 준비 합니다. 또한 Oracle 인스턴스는 Oracle CDC 인스턴스를 마지막으로 실행할 때 저장된 내부 캡처 상태를 다시 로드합니다.  
+-   **변경 캡처 준비**: 확인에 통과하면 Oracle CDC 인스턴스는 현재 정의된 모든 캡처 인스턴스를 검색하고 변경 캡처에 필요한 Oracle LogMiner 쿼리와 다른 지원 구조를 준비합니다. 또한 Oracle 인스턴스는 Oracle CDC 인스턴스를 마지막으로 실행할 때 저장된 내부 캡처 상태를 다시 로드합니다.  
   
--   **Oracle에서 변경 내용 캡처**: Oracle CDC 인스턴스는 Oracle LogMiner 기능을 사용 하 여 Oracle에서 변경 내용을, 트랜잭션 커밋에 따라 다음 트랜잭션 시간을 변경 및 기록 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스 테이블을 변경 합니다.  
+-   **Oracle에서 변경 내용 캡처**: Oracle CDC 인스턴스는 Oracle LogMiner 기능을 사용하여 Oracle에서 변경 내용을 풀링하여 트랜잭션 커밋에 따라 정렬한 다음 트랜잭션 시간을 변경하여 CDC 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 기록합니다.  
   
--   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에서 관리 됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
+-   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에 의해 관리 됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
   
     -   Oracle 트랜잭션 로그 읽기를 중지합니다.  
   

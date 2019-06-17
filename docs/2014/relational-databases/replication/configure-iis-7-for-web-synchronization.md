@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721549"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
@@ -68,7 +68,7 @@ ms.locfileid: "62721549"
   
     2.  에 대 한 **별칭**, 입력 `SQLReplication`합니다.  
   
-    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\**을 입력하고 **확인**을 클릭합니다.  
+    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\** 을 입력하고 **확인**을 클릭합니다.  
   
 7.  replisapi.dll이 실행될 수 있도록 IIS를 구성합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62721549"
   
 ###### <a name="to-test-the-certificate"></a>인증서를 테스트하려면  
   
-1.   **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
+1.  **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
   
 2.  **동작** 창에서 **\**:443(https) 찾아보기**를 클릭합니다.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62721549"
   
     4.  프록시 서버가 사용되는 경우 **사용자 LAN에 프록시 서버 사용** 및 **로컬 주소에 프록시 서버 사용 안 함**을 클릭한 다음 **확인**을 클릭합니다.  
   
-2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어: **https://server.domain.com/directory/replisapi.dll?diag**합니다.  
+2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어: **https://server.domain.com/directory/replisapi.dll?diag** 합니다.  
   
     > [!NOTE]  
     >  위 예에서 **server.domain.com** 은 IIS 관리자의 **서버 인증서** 섹션 아래에 나열된 정확한 **발급 대상** 이름으로 대체되어야 합니다.  

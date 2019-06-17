@@ -3,17 +3,17 @@ title: 미리 학습 된 기계 학습 모델-SQL Server Machine Learning 설치
 description: SQL Server 2017 Machine Learning Services (R 또는 Python) 또는 SQL Server 2016 R Services에 감정 분석 및 이미지 기능화 (featurization)에 대 한 미리 학습 된 모델을 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745414"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140747"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "62745414"
 
 + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) 사용자의 추가 작업이 없으므로 사용 하 여이 필수 조건을 충족 하므로 두 언어 버전의 machine learning 라이브러리를 포함 합니다. 라이브러리가 있는 이기 때문에 이러한 라이브러리에 미리 학습된 된 모델을 추가 하려면이 문서에 설명 된 PowerShell 스크립트를 사용할 수 있습니다.
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)에 R 전용 이며, 포함 되지 않습니다 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 기본적입니다. MicrosoftML를 추가 하려면 수행 해야 합니다는 [구성 요소 업그레이드](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다. 구성 요소 업그레이드의 장점 중 하나는 추가할 수 있는 동시에 미리 학습 된 모델에 불필요 한 PowerShell 스크립트를 실행할 수 있습니다. 그러나 이미 업그레이드 하지만 경우 처음에는 미리 학습된 된 모델을 추가 하는 누락 된이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. 두 버전의 SQL Server에서 작동합니다. 를 수행 하기 전에 MicrosoftML 라이브러리 C:\Program Files\Microsoft SQL Server\MSSQL13에 존재 하는지 확인 합니다. MSSQLSERVER\R_SERVICES\library 합니다.
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md)에 R 전용 이며, 포함 되지 않습니다 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 기본적입니다. MicrosoftML를 추가 하려면 수행 해야 합니다는 [구성 요소 업그레이드](../install/upgrade-r-and-python.md)합니다. 구성 요소 업그레이드의 장점 중 하나는 추가할 수 있는 동시에 미리 학습 된 모델에 불필요 한 PowerShell 스크립트를 실행할 수 있습니다. 그러나 이미 업그레이드 하지만 경우 처음에는 미리 학습된 된 모델을 추가 하는 누락 된이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. 두 버전의 SQL Server에서 작동합니다. 를 수행 하기 전에 MicrosoftML 라이브러리 C:\Program Files\Microsoft SQL Server\MSSQL13에 존재 하는지 확인 합니다. MSSQLSERVER\R_SERVICES\library 합니다.
 
 
 <a name="file-location"></a>
@@ -209,6 +209,6 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
-+ [SQL Server 인스턴스에 R 및 Python 구성 요소를 업그레이드 합니다.](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [SQL Server 인스턴스에 R 및 Python 구성 요소를 업그레이드 합니다.](../install/upgrade-r-and-python.md)
 + [R에 대 한 MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 용 microsoftml 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

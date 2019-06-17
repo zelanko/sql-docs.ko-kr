@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901073"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
@@ -48,7 +48,7 @@ ms.locfileid: "62901073"
   
     2.  **Activation Type**에서 **Registered Server Program**을 선택합니다.  
   
-    3.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)**(비유니코드(비활성 MDMP 설정))를 선택합니다.  
+    3.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)** (비유니코드(비활성 MDMP 설정))를 선택합니다.  
   
     4.  적절한 프로그램 ID를 할당합니다.  
   
