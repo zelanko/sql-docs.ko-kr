@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62744487"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
@@ -40,7 +40,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>인수  
  *query_sql_text*  
- 핸들을 원하는 쿼리 저장소의 쿼리 텍스트가입니다. *query_sql_text* 되는 **nvarchar (max)**, 기본값은 없습니다.  
+ 핸들을 원하는 쿼리 저장소의 쿼리 텍스트가입니다. *query_sql_text* 되는 **nvarchar (max)** , 기본값은 없습니다.  
   
  *query_param_type*  
  쿼리 매개 변수 형식이입니다. *query_param_type* 되는 **tinyint**합니다. 가능한 값은  

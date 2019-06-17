@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507343"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec(Transact-SQL)
@@ -86,7 +86,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- 요청한 옵션이 적합 하지 않은에서 정의한 커서에 대 한 가능성으로 인해  *\<stmt >*,이 매개 변수 둘 다로 입력과 출력 사용 됩니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 형식을 할당하고 이 값을 수정합니다.  
+ 요청한 옵션이 적합 하지 않은에서 정의한 커서에 대 한 가능성으로 인해  *\<stmt >* ,이 매개 변수 둘 다로 입력과 출력 사용 됩니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 적절한 형식을 할당하고 이 값을 수정합니다.  
   
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796186"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @operation = ] 'operation'` 지정된 된 된 작업에 대 한 유효한 작업입니다. *작업* 됩니다 **varchar(64)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @operation = ] 'operation'` 지정된 된 된 작업에 대 한 유효한 작업입니다. *작업* 됩니다 **varchar(64)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|대상 서버로 하여금 시스템 시계와 다중 서버 도메인을 동기화하도록 하는 서버 작업입니다. 이 작업은 비용이 많이 필요하므로 자주 실행하지 않고 제한적으로 실행합니다.|  
 |**UPDATE**|정보만 업데이트 하는 작업은 **sysjobs** 작업, 없습니다 작업 단계 또는 일정에 대 한 정보입니다. 자동으로 호출한 **sp_update_job**합니다.|  
   
-`[ @object_type = ] 'object_type'` 지정된 된 된 작업에 대 한 개체의 형식입니다. *object_type* 됩니다 **varchar(64)**, 기본값은 NULL입니다. *object_type* JOB 이나 SERVER 일 수 있습니다. 올바른 대 한 자세한 내용은 *object_type*값을 참조 하십시오 [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` 지정된 된 된 작업에 대 한 개체의 형식입니다. *object_type* 됩니다 **varchar(64)** , 기본값은 NULL입니다. *object_type* JOB 이나 SERVER 일 수 있습니다. 올바른 대 한 자세한 내용은 *object_type*값을 참조 하십시오 [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` 개체의 이름입니다. *object_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *object_type* job 인 *object_name*작업의 이름입니다. 하는 경우 *object_type*서버인 *object_name*서버의 이름입니다.  
   
-`[ @target_server = ] 'target_server'` 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
+`[ @target_server = ] 'target_server'` 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)** , 기본값은 NULL입니다.  
   
 `[ @has_error = ] has_error` 작업 오류를 승인 해야 하는지 여부입니다. *has_error* 됩니다 **tinyint**, 기본값은 NULL, 의미 없는 오류를 승인 해야 합니다. **1** 모든 오류를 승인 해야 있는지를 나타냅니다.  
   
