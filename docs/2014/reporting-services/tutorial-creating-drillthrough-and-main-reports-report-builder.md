@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098882"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 (보고서 작성기) 만들기
@@ -598,7 +598,7 @@ ms.locfileid: "66098882"
   
 3.  **동작** 탭을 클릭합니다.  
   
-4.   **보고서로 이동**을 선택합니다.  
+4.  **보고서로 이동**을 선택합니다.  
   
 5.  **보고서 지정**에서 **찾아보기**를 클릭한 다음 이름이 ResellerVSOnlineDrillthrough인 드릴스루 보고서를 찾습니다.  
   

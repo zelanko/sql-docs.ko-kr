@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: f719ef6777dc86d9e815a837732dcc045b2599ad
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793784"
 ---
 # <a name="create-a-cross-domain-rule"></a>도메인 간 규칙 만들기
@@ -37,7 +37,7 @@ ms.locfileid: "66793784"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 간 규칙을 만들려면 복합 도메인을 만들어 열어 놓아야 합니다.  
   
 ###  <a name="Security"></a> 보안  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011256"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
@@ -128,10 +128,10 @@ ms.locfileid: "66011256"
   
 |플랫폼|MB-fdhost.exe 메모리 요구 사항을 추정*F*<sup>1</sup>|최대 서버 메모리-계산 수식*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _탐색 범위 수가_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
+|x86|_F_ **=** _탐색 범위 수가_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)- *`F`* -** 500|  
 |x64|_F_ **=** _탐색 범위 수가_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
+ <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
   
  <sup>2</sup> 500MB는 시스템의 다른 프로세스에 필요한 메모리를 예상 합니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
   

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626768"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
@@ -75,7 +75,7 @@ ms.locfileid: "65626768"
 
 ## <a name="examples"></a>예  
   
-### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>1. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
+### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>1\. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
  다음 쿼리에서는 모든 스케줄러에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크 및 작업자 상태를 출력합니다. 이 쿼리는 다음 조건을 충족시키는 컴퓨터 시스템에서 실행되었습니다.  
   
 -   프로세스(CPU) 두 개  
@@ -143,7 +143,7 @@ active_workers_count work_queue_count
   
 -   숨겨진 스케줄러는 일반적인 사용자 요청을 처리하지 않습니다. 단, DAC 스케줄러는 예외입니다. 이 DAC 스케줄러에는 요청을 처리하는 스레드 하나가 있습니다.  
   
-### <a name="b-monitoring-nonhidden-schedulers-in-a-busy-system"></a>2. 사용량이 많은 시스템에서 숨겨지지 않은 스케줄러 모니터링  
+### <a name="b-monitoring-nonhidden-schedulers-in-a-busy-system"></a>2\. 사용량이 많은 시스템에서 숨겨지지 않은 스케줄러 모니터링  
  다음 쿼리에서는 사용 가능한 작업자가 처리할 수 없을 만큼 많은 요청이 있는 숨겨지지 않은 과도한 스케줄러의 상태를 보여 줍니다. 이 예에서는 256개의 작업자에 태스크가 할당되어 있습니다. 일부 태스크는 작업자에 할당되기를 기다리고 있습니다. 실행 가능 수가 더 적은 경우 여러 태스크가 하나의 리소스를 기다리고 있음을 의미합니다.  
   
 > [!NOTE]  

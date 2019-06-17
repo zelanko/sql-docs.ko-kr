@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca2f92441841168916cb3d50b63376634073456b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079552"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
@@ -221,7 +221,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Memory Grant|XMLA `Discover` 메서드를 사용하여 DISCOVER_MEMORYGRANT 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||성능 카운터|XMLA `Discover` 메서드를 사용하여 DISCOVER_PERFORMANCE_COUNTERS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||세션|XMLA `Discover` 메서드를 사용하여 DISCOVER_SESSIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
-||Traces|XMLA `Discover` 메서드를 사용하여 DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
+||추적|XMLA `Discover` 메서드를 사용하여 DISCOVER_TRACES 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
 ||의|XMLA `Discover` 메서드를 사용하여 DISCOVER_TRANSACTIONS 스키마 행 집합의 콘텐츠를 검색하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>관련 항목  

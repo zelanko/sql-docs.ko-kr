@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996289"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
@@ -46,11 +46,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @defname = ] 'default'` CREATE DEFAULT 문으로 작성 되는 기본값의 이름이입니다. *기본* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @defname = ] 'default'` CREATE DEFAULT 문으로 작성 되는 기본값의 이름이입니다. *기본* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
 `[ @objname = ] 'object_name'` 기본값이 바인딩될 별칭 데이터 형식 또는 테이블과 열의 이름이입니다. *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. *object_name* 으로 정의할 수 없습니다 합니다 **varchar (max)** 를 **nvarchar (max)** 를 **varbinary (max)** 를 **xml**, 또는 CLR 사용자 정의 형식입니다.  
   
- 하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열을 상속 *기본*열에 직접 바인딩된 기본값 되지 않은 경우. 에 기본값을 바인딩할 수 없습니다는 **텍스트**를 **ntext**를 **이미지**를 **varchar (max)** 를 **nvarchar (max)**, **varbinary (max)**, **xml**하십시오 **타임 스탬프**, 또는 CLR 사용자 정의 형식 열, IDENTITY 속성이 있는 열, 계산된 열 또는 열은 DEFAULT 제약 조건이 이미 있습니다.  
+ 하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열을 상속 *기본*열에 직접 바인딩된 기본값 되지 않은 경우. 에 기본값을 바인딩할 수 없습니다는 **텍스트**를 **ntext**를 **이미지**를 **varchar (max)** 를 **nvarchar (max)** , **varbinary (max)** , **xml**하십시오 **타임 스탬프**, 또는 CLR 사용자 정의 형식 열, IDENTITY 속성이 있는 열, 계산된 열 또는 열은 DEFAULT 제약 조건이 이미 있습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분된 식별자로. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
@@ -72,7 +72,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-binding-a-default-to-a-column"></a>1. 열에 기본값 바인딩  
+### <a name="a-binding-a-default-to-a-column"></a>1\. 열에 기본값 바인딩  
  `today`라는 기본값이 CREATE DEFAULT에 의해 현재 데이터베이스에 정의되었으며, 다음 예에서는 이 기본값을 `HireDate` 테이블의 `Employee` 열에 바인딩합니다. `Employee` 열의 데이터가 제공되지 않은 채로 `HireDate` 테이블에 행이 추가될 때마다 열은 `today`라는 기본값을 할당받게 됩니다.  
   
 ```  
@@ -81,7 +81,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>2. 별칭 데이터 형식에 기본값 바인딩  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>2\. 별칭 데이터 형식에 기본값 바인딩  
  `def_ssn`이라는 이름의 기본값과 `ssn`이라는 이름의 별칭 데이터 형식이 이미 존재합니다. 다음 예에서는 기본값 `def_ssn`을 `ssn`에 바인딩합니다. 테이블을 작성할 때 별칭 데이터 형식인 `ssn`으로 할당된 모든 열은 기본값을 상속합니다. 형식의 기존 열 **ssn** 도 기본값을 상속 **def_ssn 이라는**경우가 아니면 **futureonly** 에 대해 지정 된 *futureonly_flag* 값 또는 열에 직접 바인딩된 기본값이 없는 경우. 열에 바인딩된 기본값은 데이터 형식에 바인딩된 값보다 항상 우선합니다.  
   
 ```  
@@ -90,7 +90,7 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>3. futureonly_flag 사용  
+### <a name="c-using-the-futureonlyflag"></a>3\. futureonly_flag 사용  
  다음 예에서는 기본값 `def_ssn`을 별칭 데이터 형식 `ssn`에 바인딩합니다. 때문에 **futureonly** 지정 된 형식의 기존 열이 없습니다 `ssn` 영향을 받습니다.  
   
 ```  
@@ -99,7 +99,7 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>4. 구분 식별자 사용  
+### <a name="d-using-delimited-identifiers"></a>4\. 구분 식별자 사용  
  다음 예제에서는 구분된 식별자를 사용 하 여 보여 줍니다 `[t.1]`의 *object_name*합니다.  
   
 ```  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63156354"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>병합 구독 유형 및 충돌 해결 우선 순위 지정(SQL Server Management Studio)

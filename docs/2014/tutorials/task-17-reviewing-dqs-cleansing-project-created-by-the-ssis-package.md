@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484711"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>태스크 17: SSIS 패키지로 생성된 DQS 정리 프로젝트 검토

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650214"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -30,7 +30,7 @@ ms.locfileid: "62650214"
   
 -   **다음을 사용하여 SQL Server 에이전트 마스터 작업의 단계를 제거하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62650214"
   
 4.  단계를 삭제하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **Job Properties -**_job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
+5.  **Job Properties -** _job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
   
 6.  **작업 단계 목록**에서 삭제하려는 작업 단계를 선택하고 **삭제**를 클릭합니다.  
   

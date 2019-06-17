@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755579"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>데이터베이스 미러링 및 SQL Server 장애 조치(Failover) 클러스터 인스턴스

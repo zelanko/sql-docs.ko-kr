@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529f93e136ac2515e13fb69866ff5b570557cd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741271"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796944"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

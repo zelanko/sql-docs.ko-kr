@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013427"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
@@ -106,7 +106,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-detecting-old-cursors"></a>1. 오래된 커서 검색  
+### <a name="a-detecting-old-cursors"></a>1\. 오래된 커서 검색  
  다음 예에서는 지정한 36시간을 초과하여 서버에서 열려 있는 커서에 대한 정보를 반환합니다.  
   
 ```  

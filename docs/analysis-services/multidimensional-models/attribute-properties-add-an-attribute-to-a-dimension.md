@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02773eadf282fe9ac25fa96543a86c5d3e77da4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020620"
 ---
 # <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>특성 속성 - 차원에 특성 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 또는 수동으로 차원에 특성을 추가할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 또는 수동으로 차원에 특성을 추가할 수 있습니다.  
   
  특성을 자동으로 만들려면 **에 있는 차원 디자이너의** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 특성에 매핑할 열을 선택하고 **데이터 원본 뷰** 창에서 **특성** 창으로 해당 열을 끌어서 놓습니다. 이렇게 하면 열에 매핑되는 특성이 생성되고 특성에 열과 동일한 이름이 할당됩니다. 해당 이름으로 된 특성이 이미 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 첫 번째 중복 이름에 대해 "1"로 시작하는 서수 접미사 추가됩니다.  
   

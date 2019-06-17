@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109177"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>다른 파일 형식으로 보고서 내보내기(보고서 작성기 및 SSRS)

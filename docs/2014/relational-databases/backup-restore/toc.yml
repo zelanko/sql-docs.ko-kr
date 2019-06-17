@@ -28,7 +28,7 @@
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
     - name: Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
-    - name: '관리되는 백업 구성(SQL Server Management Studio) '
+    - name: 관리되는 백업 구성(SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
     - name: Microsoft Azure에 저장된 백업 복원
       href: restoring-from-backups-stored-in-microsoft-azure.md

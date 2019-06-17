@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815758"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 운영 문제에 대한 Always On 정책(SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815758"
 ##  <a name="AlwaysOnPBM"></a> 미리 정의된 정책 및 문제  
  다음 표에는 미리 정의된 정책이 요약되어 있습니다.  
   
-|정책 이름|문제점|Category**<sup>*</sup>**|패싯|  
+|정책 이름|문제점|Category **<sup>*</sup>**|패싯|  
 |-----------------|-----------|------------------------------|-----------|  
 |WSFC 클러스터 상태|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md)입니다.|심각|SQL Server 인스턴스|  
 |가용성 그룹 온라인 상태|[Availability group is offline](availability-group-is-offline.md)입니다.|심각|가용성 그룹|  

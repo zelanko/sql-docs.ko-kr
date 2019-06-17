@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103401"
 ---
 # <a name="report-server-http-log"></a>보고서 서버 HTTP 로그
@@ -54,7 +54,7 @@ ms.locfileid: "66103401"
 ```  
   
 ## <a name="log-file-fields"></a>로그 파일 필드  
-  다음 표에서는 로그에서 사용 가능한 필드를 설명합니다.   필드 목록은 구성 가능하므로 `HTTPTraceSwitches` 구성 설정을 통해 포함할 필드를 지정할 수 있습니다.  합니다 **기본** 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 열 지정 `HTTPTraceSwitches`합니다.  
+ 다음 표에서는 로그에서 사용 가능한 필드를 설명합니다. 필드 목록은 구성 가능하므로 `HTTPTraceSwitches` 구성 설정을 통해 포함할 필드를 지정할 수 있습니다. 합니다 **기본** 포함될지 여부를 필드 로그 파일에 자동으로 지정 하지 않으면 열 지정 `HTTPTraceSwitches`합니다.  
   
 |필드|Description|Default|  
 |-----------|-----------------|-------------|  

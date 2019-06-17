@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064377"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 백업 대화 상자(Analysis Services - 다차원 데이터)
@@ -92,7 +92,7 @@ ms.locfileid: "66064377"
 |**Server**|원격 파티션을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 표시합니다.|  
 |**데이터베이스 백업**|원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 표시합니다.|  
 |**파티션 목록**|**데이터베이스**에 표시된 데이터베이스가 포함하는 원격 파티션의 목록을 표시합니다.|  
-|**원격 백업 파일**|사용할 원격 백업 파일의 전체 경로 및 파일 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **다른 이름으로 파일 저장** 대화 상자를 표시하고 사용할 원격 백업 파일의 경로 및 파일 이름을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에 대한 자세한 내용은 [다른 이름으로 파일 저장 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**원격 백업 파일**|사용할 원격 백업 파일의 전체 경로 및 파일 이름을 입력하거나 줄임표 단추( **...** )를 클릭하여 **다른 이름으로 파일 저장** 대화 상자를 표시하고 사용할 원격 백업 파일의 경로 및 파일 이름을 선택합니다. **다른 이름으로 파일 저장** 대화 상자에 대한 자세한 내용은 [다른 이름으로 파일 저장 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

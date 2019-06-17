@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161690"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462718"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -625,7 +625,7 @@ WHERE ProductSubcategoryID = 4;
 * 저장 프로시저, 트리거 또는 사용자 정의 함수의 본문 안에 있는 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이미 이러한 루틴에 대한 쿼리 계획을 재사용하고 있습니다.
 * 클라이언트 쪽 애플리케이션에서 이미 매개 변수화된 준비된 문
 * XQuery 메서드 호출이 포함된 문. 이러한 문에서는 `WHERE` 절과 같이 해당 인수가 일반적으로 매개 변수화되는 컨텍스트에서 메서드가 나타납니다. 해당 인수가 매개 변수화되지 않는 컨텍스트에서 메서드가 나타날 경우에는 문의 나머지 부분이 매개 변수화됩니다.
-* [!INCLUDE[tsql](../includes/tsql-md.md)] 커서 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
+* [!INCLUDE[tsql](../includes/tsql-md.md)] 커서 내의 명령문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
 * 사용되지 않는 쿼리 구문
 * `ANSI_PADDING` 또는 `ANSI_NULLS` 를 `OFF`로 설정한 컨텍스트에서 실행되는 모든 문.
 * 매개 변수화하기에 적합한 리터럴이 2,097개 이상 포함된 문
@@ -728,6 +728,8 @@ WHERE ProductID = 63;
 -  저장 프로시저
 -  sp_executesql을 통해 제출된 쿼리 
 -  준비된 쿼리
+
+잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)을 참조하세요.
 
 > [!NOTE]
 > `RECOMPILE` 힌트를 사용하는 쿼리는 매개 변수 값과 지역 변수의 현재 값을 모두 검사합니다. 검사되는 매개 변수 및 지역 변수 값은 `RECOMPILE` 힌트가 포함된 문 바로 앞에 있는 일괄 처리 위치의 값입니다. 특히 매개 변수의 경우 일괄 처리 호출과 함께 사용된 값은 검사하지 않습니다.
@@ -923,10 +925,10 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ts
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음 이 행 집합은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 테이블처럼 참조될 수 있습니다. 
+   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음, 이 행 집합은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 테이블처럼 참조될 수 있습니다. 
 
 * 임의 커넥터 이름  
-  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
+  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음, 행 집합은 테이블이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
   
   ```sql
   SELECT *
@@ -935,11 +937,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ts
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 스토리지 엔진 간에 통신합니다. 관계형 엔진은 각 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 스토리지 엔진 간에 통신합니다. 관계형 엔진은 각 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 기본 테이블의 스토리지 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 관계형 엔진은 OLE DB API(애플리케이션 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 
-연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 연산 집합은 OLE DB 공급자의 기능에 따라 다릅니다.
+연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 연산 세트는 OLE DB 공급자의 기능에 따라 다릅니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임의 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
 

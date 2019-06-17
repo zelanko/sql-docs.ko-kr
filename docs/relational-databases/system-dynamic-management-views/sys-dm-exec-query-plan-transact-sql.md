@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013270"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
@@ -90,7 +90,7 @@ sys.dm_exec_query_plan(plan_handle)
   
  XML 실행 계획을 보려면 다음 쿼리를 실행의 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 클릭 **ShowPlanXML** 에 **query_plan** 반환한 테이블의 열 **sys.dm _ exec_query_plan**합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 보고서 요약 창에 XML 실행 계획이 표시됩니다. XML 실행 계획을 파일로 저장 하려면 마우스 오른쪽 단추로 클릭 **ShowPlanXML** 에 **query_plan** 열을 클릭 **이름으로 결과 저장**, 형식으로 파일 이름을 \< *file_name*>.sqlplan; 예를 들어 MyXMLShowplan.sqlplan 합니다.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>1. 실행 속도가 느린 Transact-SQL 쿼리 또는 일괄 처리에 대한 캐시된 쿼리 계획 검색  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>1\. 실행 속도가 느린 Transact-SQL 쿼리 또는 일괄 처리에 대한 캐시된 쿼리 계획 검색  
  임시 일괄 처리, 저장 프로시저, 사용자 정의 함수 등 다양한 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대한 쿼리 계획은 계획 캐시라는 메모리 영역에서 캐시됩니다. 캐시된 쿼리 계획 각각은 계획 핸들이라는 고유 식별자로 식별됩니다. 이 계획 핸들을 지정할 수 있습니다 합니다 **sys.dm_exec_query_plan** 동적 관리 뷰를 특정 실행 계획을 검색할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리 합니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 특정 연결에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 또는 일괄 처리가 오랫동안 실행되는 경우 이 쿼리나 일괄 처리에 대한 실행 계획을 검색하여 지연 원인을 알아낼 수 있습니다. 다음 예에서는 실행 속도가 느린 쿼리나 일괄 처리에 대한 XML 실행 계획을 검색하는 방법을 보여 줍니다.  
@@ -127,7 +127,7 @@ FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>2. 계획 캐시에서 모든 쿼리 계획 검색  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>2\. 계획 캐시에서 모든 쿼리 계획 검색  
  계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_query_plan`으로 전달합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
   
 ```sql  
@@ -139,7 +139,7 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>3. 서버가 계획 캐시에서 쿼리 통계를 수집한 모든 쿼리 계획 검색  
+### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>3\. 서버가 계획 캐시에서 쿼리 통계를 수집한 모든 쿼리 계획 검색  
  서버가 통계를 수집한 현재 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_query_stats` 동적 관리 뷰를 쿼리하여 캐시에서 이 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_query_stats` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_query_plan`으로 전달합니다. 서버가 통계를 수집한 현재 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 반환된 테이블의 `query_plan` 열에 있습니다.  
   
 ```sql  
@@ -151,7 +151,7 @@ CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);
 GO  
 ```  
   
-### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>4. 평균 CPU 시간별 상위 5개 쿼리에 대한 정보 검색  
+### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>4\. 평균 CPU 시간별 상위 5개 쿼리에 대한 정보 검색  
  다음 예에서는 상위 5개 쿼리에 대한 계획과 평균 CPU 시간을 반환합니다.  
   
 ```sql  

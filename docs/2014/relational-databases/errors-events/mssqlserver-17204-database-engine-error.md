@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_17204 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 17204 (Database Engine error)
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2fd28a126b3a0a7f833c6410d4e590b5dc07e5a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62869618"
 ---
 # <a name="mssqlserver17204"></a>MSSQLSERVER_17204
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>설명  
   
 |||  
@@ -34,8 +33,9 @@ ms.locfileid: "62869618"
 |메시지 텍스트|%ls: 파일 번호 %d 대 한 %ls 파일을 열 수 없습니다.  OS 오류: '%ls'.|  
   
 ## <a name="explanation"></a>설명  
-SQL Server에서 특정 오류로 인해 지정한 파일을 열 수 없습니다.  
+ SQL Server에서 특정 오류로 인해 지정한 파일을 열 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-운영 체제 문제를 진단하고 해결한 다음 작업을 다시 합니다.  
+ 운영 체제 문제를 진단하고 해결한 다음 작업을 다시 합니다.  
+  
   

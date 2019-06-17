@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3fc12b1c8622596881810b784d5ceb95ae603ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 57bc8d1e6112a64f99864ce08f7adb81db6df781
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605143"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799122"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

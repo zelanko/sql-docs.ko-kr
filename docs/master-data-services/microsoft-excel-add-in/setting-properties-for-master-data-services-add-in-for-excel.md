@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 00cdd9f4968af4e0af47259341a60255d32faa8f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486080"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
@@ -31,7 +31,7 @@ ms.locfileid: "65486080"
 ||||  
 |-|-|-|  
 |탭 및 섹션|설정|Description|  
-|설정: 게시|게시할 때 **게시 및 주석** 대화 상자 표시|**게시** 를 클릭한 후 모든 변경 내용에 대한 단일 주석을 입력하거나 각 변경 내용에 대한 개별 주석을 입력할 수 있도록 **게시 및 주석**대화 상자를 표시하려면 선택합니다.<br /><br /> **게시 및 주석** 대화 상자를 표시하지 않고 게시 프로세스가 시작되도록 지정하려면 선택을 취소합니다. 이 경우 주석을 입력할 수 없습니다.|  
+|설정: Publishing|게시할 때 **게시 및 주석** 대화 상자 표시|**게시** 를 클릭한 후 모든 변경 내용에 대한 단일 주석을 입력하거나 각 변경 내용에 대한 개별 주석을 입력할 수 있도록 **게시 및 주석**대화 상자를 표시하려면 선택합니다.<br /><br /> **게시 및 주석** 대화 상자를 표시하지 않고 게시 프로세스가 시작되도록 지정하려면 선택을 취소합니다. 이 경우 주석을 입력할 수 없습니다.|  
 |설정: 버전|버전 선택|Excel 추가 기능으로 로드할 마스터 데이터의 버전을 선택합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **없음** 은 기본 버전을 설정하지 않습니다.<br /><br /> **내림차순** 은 가장 오래된 버전을 기본값으로 설정하고, **오름차순** 은 최신 버전을 기본값으로 설정합니다.|  
 |설정: 로깅|자세한 로깅 설정|MDS에서 Excel 추가 기능으로 마스터 데이터를 로드하는 프로세스에 대한 로깅을 설정하여 서비스의 모든 명령에 대한 결과가 기록되도록 합니다.|  
 |설정: 원격 분석|원격 분석 데이터 컬렉션 켜기|원격 분석을 켜서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Excel 추가 기능의 품질, 안정성 및 성능을 개선합니다.|  
