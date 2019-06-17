@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560114"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744168"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [SQL Docs 허브 페이지에 대한 피드백을 공유하세요!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 이 항목에서는 SQL Server 2017의 다양 한 버전에서 지원하는 기능을 자세히 설명합니다. 
 
@@ -111,7 +113,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 |관리 도구|설명|  
 |----------------------|-----------------|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.<br /><br /> 를 다운로드하여 설치합니다 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] SQL Server Management Studio 다운로드  [에서](https://msdn.microsoft.com/library/mt238290.aspx)|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소를 액세스, 구성, 관리, 운영 및 개발하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 모든 수준의 개발자와 관리자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용할 수 있습니다.<br /><br /> 를 다운로드하여 설치합니다 <br />                [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] SQL Server Management Studio 다운로드  [에서](https://msdn.microsoft.com/library/mt238290.aspx)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스, 서버 프로토콜, 클라이언트 프로토콜 및 클라이언트 별칭에 대한 기본 구성 관리 작업을 수행할 수 있습니다.|  
 |[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 모니터링하기 위한 그래픽 사용자 인터페이스를 제공합니다.|  
 |[!INCLUDE[ssDE](../includes/ssde-md.md)] 튜닝 관리자|[!INCLUDE[ssDE](../includes/ssde-md.md)] 튜닝 관리자는 최적의 인덱스, 인덱싱된 뷰 및 파티션 집합을 만드는 데 도움을 줍니다.|  
@@ -194,9 +196,9 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |관리|예|아니오|아니오|아니오|아니오|  
 |분할된 테이블 병렬 처리|예|아니오|아니오|아니오|아니오|
 |여러 Filestream 컨테이너|예|예|예|예|예|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니오|
+|NUMA 인식 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니오|
 |Buffer Pool Extension|예|예|아니오|아니오|아니오|
-|IO 리소스 관리|예|아니오|아니오|아니오|아니오|  
+|I/O 리소스 거버런스|예|아니오|아니오|아니오|아니오|  
 |미리 읽기|예|아니오|아니오|아니오|아니오|
 |고급 검색|예|아니오|아니오|아니오|아니오|
 |지연된 내구성|예|예|예|예|예|
