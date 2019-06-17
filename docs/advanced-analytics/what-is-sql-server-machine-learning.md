@@ -3,22 +3,22 @@ title: R 언어 및 Python 통합-SQL Server Machine Learning Services 기능
 description: R 언어와 데이터 과학 및 통계 모델링, 기계 학습 모델, 예측 분석, 데이터 시각화 등에 대 한 관계형 데이터와 통합 되는 SQL Server의 Python 기능입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2018
+ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf7d8a7cddcfbe0d47d4808f82abc0a47efade2c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512458"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140324"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017의 Machine Learning Services는 SQL Server에서 R 및 Python 코드를 실행 하는 데 사용 되는 데이터베이스 엔진 인스턴스를 추가 합니다. 기능이 포함 되어 있습니다 [Microsoft R 및 Python 패키지](#components) 고성능 예측 분석 및 기계 학습에 대 한 합니다. 핵심 엔진 프로세스 로부터 격리 하지만 저장된 프로시저, R 또는 Python 문이 포함 된 T-SQL 스크립트 또는 T-SQL을 포함 하는 R 또는 Python 코드와 관계형 데이터에 완벽 하 게 사용할 수 있는 코드는 확장성 프레임 워크에서 실행 됩니다. 
+Machine Learning 서비스에에서 in-database R 및 Python 스크립트를 실행 하는 데 사용 되는 SQL Server의 기능입니다. 기능이 포함 되어 있습니다 [Microsoft R 및 Python 패키지](#components) 고성능 예측 분석 및 기계 학습에 대 한 합니다. R 및 Python 코드 포함 하는 T-SQL 또는 저장된 프로시저에 R 및 Python 문이 포함 된 T-SQL 스크립트를 통해 R 및 Python 스크립트에서 관계형 데이터를 사용할 수 있습니다.
 
 이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다. 
 
@@ -44,11 +44,11 @@ SQL Server 2017은 R과 Python을 지원합니다. 다음 표에서 구성 요�
 | 구성 요소 | Description |
 |-----------|-------------|
 | SQL Server 실행 패드 서비스 | 외부 R 및 Python 런타임 및 데이터베이스 엔진 인스턴스 간 통신을 관리 하는 서비스입니다. |
-| R 패키지 | [**RevoScaleR**](r/ref-r-revoscaler.md)은 확장 가능한 R의 주요 라이브러리입니다. 이 라이브러리의 함수들은 가장 널리 사용됩니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 다양한 형태의 모델링 및 분석을 이러한 라이브러리에서 찾을 수 있습니다. 또한 이 라이브러리의 함수는 계산 엔진에서 조정 및 관리하는 데이터 청크 작업을 수행할 수 있는 병렬 처리를 위해 사용 가능한 코어에 작업 부하를 자동으로 배포합니다.  <br/>[**MicrosoftML (R)**](r/ref-r-microsoftml.md)은 텍스트 분석, 이미지 분석 및 감정 분석에 대한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가합니다. <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)는 T-SQL 저장 프로시저에 R 스크립트를 배치하고, 데이터베이스에 저장 프로시저를 등록하고, R 개발 환경에서 저장 프로시저를 실행하는 것에 대한 도우미 함수를 제공합니다.<br/>[**olapR**](r/ref-r-olapr.md)은 R 스크립트에서 MDX 쿼리를 작성 또는 실행합니다.|
+| R 패키지 | [**RevoScaleR**](r/ref-r-revoscaler.md)은 확장 가능한 R의 주요 라이브러리입니다. 이 라이브러리의 함수들은 가장 널리 사용됩니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 다양한 형태의 모델링 및 분석을 이러한 라이브러리에서 찾을 수 있습니다. 또한 이 라이브러리의 함수는 계산 엔진에서 조정 및 관리하는 데이터 청크 작업을 수행할 수 있는 병렬 처리를 위해 사용 가능한 코어에 작업 부하를 자동으로 배포합니다.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md)은 텍스트 분석, 이미지 분석 및 감정 분석에 대한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가합니다. <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)는 T-SQL 저장 프로시저에 R 스크립트를 배치하고, 데이터베이스에 저장 프로시저를 등록하고, R 개발 환경에서 저장 프로시저를 실행하는 것에 대한 도우미 함수를 제공합니다.<br/>[**olapR**](r/ref-r-olapr.md)은 R 스크립트에서 MDX 쿼리를 작성 또는 실행합니다.|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open)은 R의 Microsoft의 오픈 소스 배포입니다. 패키지 및 인터프리터를 포함합니다. 항상 설치 프로그램으로 설치되는 MRO의 버전을 사용합니다. |
 | R 도구 | R 콘솔 창 및 명령 프롬프트를 R 배포에 표준 도구 이며  |
 | R 샘플 및 스크립트 |  오픈 소스 R 및 RevoScaleR 패키지 만들기 및 미리 설치 된 데이터를 사용 하 여 스크립트를 실행할 수 있도록 기본 제공 데이터 집합을 포함 합니다. |
-| Python 패키지 | [**revoscalepy** ](python/ref-py-revoscalepy.md) 데이터 조작, 변환, 시각화 및 분석에 대 한 함수를 사용 하 여 확장 가능한 Python 주 라이브러리입니다. <br/>[**(Python) microsoftml** ](python/ref-py-microsoftml.md) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다.  |
+| Python 패키지 | [**revoscalepy** ](python/ref-py-revoscalepy.md) 데이터 조작, 변환, 시각화 및 분석에 대 한 함수를 사용 하 여 확장 가능한 Python 주 라이브러리입니다. <br/>[ **(Python) microsoftml** ](python/ref-py-microsoftml.md) 텍스트 분석, 이미지 분석 및 감정 분석에 대 한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가 합니다.  |
 | Python 도구 | 기본 제공 Python 명령줄 도구는 임시 테스트 및 작업에 유용 합니다.  |
 | Anaconda | Anaconda는 Python 및 필수 패키지의 오픈 소스 배포입니다. |
 | Python 샘플 및 스크립트 | R에서와 마찬가지로 Python 기본 제공 데이터 집합 및 스크립트를 포함 합니다.  |
@@ -140,7 +140,7 @@ SQL Server 2017의 Machine Learning Services는 SQL Server 2016 R Services에 Py
 | SQL Server 2016 R Services (In-database) | R Server 9.1  | 2017 년 7 월  |
 | SQL Server 2016 R Server (독립 실행형)  |  R Server 9.1 | 2017 년 7 월 |
 
-릴리스에서 패키지 버전을 버전에 매핑할을 참조 하세요 [업그레이드 하는 R 및 Python 구성 요소](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md#version-map)합니다.
+릴리스에서 패키지 버전을 버전에 매핑할을 참조 하세요 [업그레이드 하는 R 및 Python 구성 요소](install/upgrade-r-and-python.md#version-map)합니다.
 
 ## <a name="portability-and-related-products"></a>이식성 및 관련된 제품
 

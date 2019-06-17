@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462529"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
@@ -108,7 +108,7 @@ ms.locfileid: "66462529"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>1. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>1\. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
 
  다음 예에서는 `sys.dm_exec_requests`를 쿼리하여 필요한 쿼리를 찾고 출력에서 `sql_handle`을 복사합니다.  
 
@@ -124,7 +124,7 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2\. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
 
 다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.
 
@@ -142,7 +142,7 @@ WHERE request_owner_type = N'TRANSACTION'
 GO  
 ```
 
-### <a name="c-finding-all-currently-blocked-requests"></a>3. 현재 차단된 모든 요청 찾기
+### <a name="c-finding-all-currently-blocked-requests"></a>3\. 현재 차단된 모든 요청 찾기
 
 다음 예제에서는 쿼리 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
 
@@ -155,7 +155,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>4. CPU에서 기존 요청을 순서 지정
+### <a name="d-ordering-existing-requests-by-cpu"></a>4\. CPU에서 기존 요청을 순서 지정
 
 ```sql
 SELECT 

@@ -3,17 +3,17 @@ title: R 개발-SQL Server Machine Learning Services에 대 한 데이터 과학
 description: SQL Server에 대 한 원격 연결에 대 한 개발 워크스테이션에 로컬 R 라이브러리 및 도구를 설치 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641878"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140342"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발에 대 한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -199,9 +199,9 @@ IDE를 로컬 R 라이브러리를 가리키도록: 기본 R, RevoScaleR 및 등
 
 사용 하는 경우 [RStudio](https://www.rstudio.com/), R 라이브러리 및 해당 원격 SQL Server에 해당 하는 실행 파일을 사용 하도록 환경을 구성할 수 있습니다.
 
-1. SQL Server에 설치 된 R 패키지 버전을 확인 합니다. 자세한 내용은 [가져오려면 R 패키지 정보](determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)합니다.
+1. SQL Server에 설치 된 R 패키지 버전을 확인 합니다. 자세한 내용은 [가져오려면 R 패키지 정보](../package-management/installed-package-information.md)합니다.
 
-1. Microsoft R Client 또는 RevoScaleR 및 SQL Server 인스턴스에서 사용 되는 기본 R 배포를 포함 하 여 다른 R 패키지를 추가 하는 독립 실행형 서버 옵션 중 하나를 설치 합니다. 수준 이하로 동시 버전을 선택 (패키지는 이전 버전과 호환 됨) 서버에서와 동일한 패키지 버전을 제공 합니다. 버전 정보에 대 한이 문서의 매핑 버전을 보려면 [R 및 Python 구성 요소를 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+1. Microsoft R Client 또는 RevoScaleR 및 SQL Server 인스턴스에서 사용 되는 기본 R 배포를 포함 하 여 다른 R 패키지를 추가 하는 독립 실행형 서버 옵션 중 하나를 설치 합니다. 수준 이하로 동시 버전을 선택 (패키지는 이전 버전과 호환 됨) 서버에서와 동일한 패키지 버전을 제공 합니다. 버전 정보에 대 한이 문서의 매핑 버전을 보려면 [R 및 Python 구성 요소를 업그레이드](../install/upgrade-r-and-python.md)합니다.
 
 1. RStudio에 [R 경로 업데이트](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) RevoScaleR, Microsoft R Open 및 기타 Microsoft 패키지를 제공 하 여 R 환경을 가리키도록 합니다. 
 

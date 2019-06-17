@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077017"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
@@ -73,7 +73,7 @@ ms.locfileid: "66077017"
   
  사용자 ID에 따라 권한을 다르게 설정할 수도 있습니다. 이를 종종 동적 보안이라고 하며, [UserName&#40;MDX&#41;](/sql/mdx/username-mdx) 함수를 사용하여 구현됩니다.  
   
-## <a name="best-practices"></a>최선의 구현 방법  
+## <a name="best-practices"></a>모범 사례  
  권한을 잘 관리하기 위해 다음과 유사한 방법을 제안합니다.  
   
 1.  역할을 관리하는 사람은 누구라도 역할에서 허용하는 것을 알 수 있도록 기능별 역할(예: dbadmin, cubedeveloper, processadmin)을 만듭니다. 다른 곳에서 설명한 것처럼, 모델 정의에 역할을 정의하여 이러한 역할을 이후 솔루션 배포에 대해서 유지할 수 있습니다.  

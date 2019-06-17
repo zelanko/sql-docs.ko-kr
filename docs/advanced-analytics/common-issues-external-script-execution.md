@@ -2,17 +2,17 @@
 title: 실행 패드 서비스와 외부 스크립트 실행-SQL Server Machine Learning Services를 사용 하 여 일반적인 문제
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509700"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140208"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -131,7 +131,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 
     b. 실행 패드에서 사용 되는 Windows 그룹에 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다.
 
-    다. 서비스 속성을 변경 하면 실행 패드 서비스를 다시 시작 합니다.
+    c. 서비스 속성을 변경 하면 실행 패드 서비스를 다시 시작 합니다.
 
 ## <a name="fatal-error-creation-of-tmpfile-failed"></a>"심각한 오류 tmpFile 만들지가 못했습니다."
 
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 문제를 해결 하려면 SQL Server 인스턴스 라이브러리에 패키지 다시 설치 해야 합니다.
 
 >[!NOTE]
->최신 버전의 Microsoft R을 사용 하려면 SQL Server 2016의 인스턴스를 업그레이드 한 경우에 기본 라이브러리 위치를 다릅니다. 자세한 내용은 [R services 인스턴스를 업그레이드 하려면 사용 하 여 SqlBindR](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+>최신 버전의 Microsoft R을 사용 하려면 SQL Server 2016의 인스턴스를 업그레이드 한 경우에 기본 라이브러리 위치를 다릅니다. 자세한 내용은 [R services 인스턴스를 업그레이드 하려면 사용 하 여 SqlBindR](install/upgrade-r-and-python.md)합니다.
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>실행 패드가 일치 하지 않는 Dll 인해 종료
 
@@ -212,7 +212,7 @@ EXEC sp_execute_external_script @language = N'R',
 > * SQL Server 2016 SP1 및 CU1: [SQL Server 용 누적 업데이트 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)합니다.
 > * SQL Server 2016 RTM, 누적 업데이트 3 및이 [핫픽스](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), 요청 시 사용할 수 있는 합니다.
 
-R 사용 하 여 호환성을 위해 SQL Server 2016 R Services (In-database)를 사용 하 여 짧은 파일 이름을 생성을 지원 하도록 기능이 설치 되어 있는 드라이브를 필요한 *8dot3 표기법*합니다. 8.3 파일 이름을 라고는 *약식 파일 이름을*, 또는 긴 파일 이름에는 대 안으로 Microsoft Windows의 이전 버전과 호환성을 위해 사용 됩니다.
+R 사용 하 여 호환성을 위해 SQL Server 2016 R Services (In-database)를 사용 하 여 짧은 파일 이름을 생성을 지원 하도록 기능이 설치 되어 있는 드라이브를 필요한 *8dot3 표기법*합니다. 8\.3 파일 이름을 라고는 *약식 파일 이름을*, 또는 긴 파일 이름에는 대 안으로 Microsoft Windows의 이전 버전과 호환성을 위해 사용 됩니다.
 
 R 설치 하는 볼륨에서 짧은 파일 이름을 지원 하지 않습니다, 경우에 SQL Server에서 R을 시작 하는 프로세스를 올바른 실행 파일을 찾을 수 되지 않을 수 있으며 실행 패드 시작 되지 않습니다.
 

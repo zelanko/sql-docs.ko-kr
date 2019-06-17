@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098851"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
@@ -123,7 +123,7 @@ ms.locfileid: "66098851"
   
      이 쿼리에서는 생일, 이름, 성, 시/도, 국가/지역 식별자, 성별 및 구매량 연간 누계를 포함하는 열 이름을 지정합니다.  
   
-10. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 20 행의 데이터가 표시 하 고 다음 열이 포함 됩니다. FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 합니다.  
+10. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. 결과 집합은 20 행의 데이터가 표시 하 고 다음 열이 포함 됩니다. FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 합니다.  
   
 11. **다음**을 클릭합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66098851"
   
 2.  **DataSource1**을 마우스 오른쪽 단추로 클릭하고 **데이터 원본 속성**을 클릭합니다.  
   
-3.   **이름** 상자에 **ExpressionsDataSource**를 입력합니다.  
+3.  **이름** 상자에 **ExpressionsDataSource**를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -174,12 +174,12 @@ ms.locfileid: "66098851"
   
 2.  **DataSet1**을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
   
-3.   **이름** 상자에 **Expressions**를 입력합니다.  
+3.  **이름** 상자에 **Expressions**를 입력합니다.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. 이름, 이니셜 및 성 표시  
- 이니셜과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate**(**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.  
+ 이니셜과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate**( **&** ) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.  
   
 #### <a name="to-add-the-name-column"></a>Name 열을 추가하려면  
   
@@ -201,7 +201,7 @@ ms.locfileid: "66098851"
   
 7.  **값** 목록에서 **FirstName**을 두 번 클릭합니다.  
   
-8.   **, 1)** 을 입력합니다.  
+8.  **, 1)** 을 입력합니다.  
   
      이 식은 **FirstName** 값에서 가장 왼쪽의 한 자를 추출합니다.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098851"
   
 4.  **데이터 원본** 목록에서 ExpressionsDataSource를 선택합니다.  
   
-5.   **이름** 상자에 **CountryRegion**을 입력합니다.  
+5.  **이름** 상자에 **CountryRegion**을 입력합니다.  
   
 6.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098851"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. **실행** (**!**)을 클릭하여 쿼리를 실행합니다.  
+9. **실행** ( **!** )을 클릭하여 쿼리를 실행합니다.  
   
      쿼리 결과는 국가/지역 식별자와 이름입니다.  
   
@@ -421,7 +421,7 @@ ms.locfileid: "66098851"
   
  표시기와 그 상태의 구성에는 많은 단계가 필요합니다. "표시기를 구성 하려면" 절차에서, 원하는 경우 건너뛸 하 수에이 자습서에서 완성 된 식 복사/붙여넣기를 **식** 대화 상자.  
   
-#### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 열을 추가하려면  
+#### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 열을 추가하려면  
   
 1.  **YTD Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **오른쪽**을 클릭합니다.  
   
@@ -505,7 +505,7 @@ ms.locfileid: "66098851"
   
 30. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-31.  **끝** 값의 입력란에 **0**을 입력합니다.  
+31. **끝** 값의 입력란에 **0**을 입력합니다.  
   
 32. 옆쪽 화살표가 있는 행을 클릭하고 **삭제**를 클릭합니다.  
   
@@ -532,7 +532,7 @@ ms.locfileid: "66098851"
   
      **보고서 매개 변수 속성** 대화 상자가 열립니다.  
   
-3.   **프롬프트**에 **Choose color**를 입력합니다.  
+3.  **프롬프트**에 **Choose color**를 입력합니다.  
   
 4.  **이름**에 **RowColor**를 입력합니다.  
   
@@ -544,25 +544,25 @@ ms.locfileid: "66098851"
   
 8.  에 **레이블** 상자에 입력 합니다. **노란색**  
   
-9.  **값** 상자에 **Yellow**를 입력합니다.  
+9. **값** 상자에 **Yellow**를 입력합니다.  
   
 10. **추가**를 클릭합니다.  
   
-11.  **레이블** 상자에 **Green**을 입력합니다.  
+11. **레이블** 상자에 **Green**을 입력합니다.  
   
-12.  **값** 상자에 **PaleGreen**을 입력합니다.  
+12. **값** 상자에 **PaleGreen**을 입력합니다.  
   
 13. **추가**를 클릭합니다.  
   
-14.  **레이블** 상자에 **Blue**를 입력합니다.  
+14. **레이블** 상자에 **Blue**를 입력합니다.  
   
-15.  **값** 상자에 **LightBlue**를 입력합니다.  
+15. **값** 상자에 **LightBlue**를 입력합니다.  
   
 16. **추가**를 클릭합니다.  
   
-17.  **레이블** 상자에 **Pink**를 입력합니다.  
+17. **레이블** 상자에 **Pink**를 입력합니다.  
   
-18.  **값** 상자에 **Pink**를 입력합니다.  
+18. **값** 상자에 **Pink**를 입력합니다.  
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

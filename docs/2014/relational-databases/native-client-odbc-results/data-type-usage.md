@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200188"
 ---
 # <a name="data-type-usage"></a>데이터 형식 사용
@@ -42,7 +42,7 @@ ms.locfileid: "63200188"
 |**tinyint**|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** 부호 없는 데이터 형식입니다. A **tinyint** 열은 기본적으로 SQL_C_UTINYINT 데이터 형식의 변수에 바인딩됩니다.|  
 |별칭 데이터 형식|인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, ODBC 드라이버는 열의 null 허용 여부가 명시적으로 선언 하지 않는 열 정의에 NULL을 추가 합니다. 따라서 별칭 데이터 형식의 정의에 저장된 Null 허용 여부는 무시됩니다.<br /><br /> 인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, 기본 데이터가 있는 별칭 데이터 형식이 있는 열 형식의 **char** 하거나 **이진** 및 없는 null 허용 여부는 선언 된 데이터 형식으로 만들어집니다 **varchar** 하거나 **varbinary**합니다. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md), 및 [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) SQL_VARCHAR 또는 이러한 열에 대 한 입력 데이터와 SQL_VARBINARY를 반환 합니다. 해당 열에서 검색한 데이터는 채워지지 않습니다. **참고:**  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 연결에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전입니다.|  
 |LONG 데이터 형식|*실행 시 데이터* 매개 변수는 SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 데이터 형식에 대 한 제한 됩니다.|  
-|큰 값 형식|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 노출 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** SQL_VARCHAR, SQL_VARBINARY 및 SQL_ 형식 받아들이거나 ODBC SQL 데이터 형식을 반환 하는 각각의 Api WVARCHAR입니다.|  
+|큰 값 형식|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 노출 **varchar (max)** 를 **varbinary (max)** , 및 **nvarchar (max)** SQL_VARCHAR, SQL_VARBINARY 및 SQL_ 형식 받아들이거나 ODBC SQL 데이터 형식을 반환 하는 각각의 Api WVARCHAR입니다.|  
 |UDT(사용자 정의 형식)|UDT 열은 SQL_SS_UDT로 매핑됩니다. UDT의 ToString() 또는 ToXMLString() 메서드를 사용하거나 CAST/CONVERT 함수를 통해 SQL 문에서 명시적으로 UDT 열이 다른 형식에 매핑되어 있으면 결과 집합의 열 형식은 해당 열이 변환된 실제 형식을 반영합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 이진 형식으로 UDT 열에만 바인딩할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SQL_SS_UDT 및 SQL_C_BINARY 데이터 형식 간의 변환만 지원합니다.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 XML을 유니코드 텍스트로 변환합니다. XML 유형은 SQL_SS_XML로 매핑됩니다.|  
   

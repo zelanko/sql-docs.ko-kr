@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef5c7aee0daef073ff22494162d8024201b2f97c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600830"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770519"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서 추적([드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md))이 업데이트되어 서버의 연결 링 버퍼와 확장 이벤트 로그의 응용 프로그램 성능 정보에서 클라이언트 이벤트와 진단 정보(예: 연결 실패)의 상관관계를 손쉽게 지정할 수 있게 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)를 참조하십시오.  
+  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서 추적([드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md))이 업데이트되어 서버의 연결 링 버퍼와 확장 이벤트 로그의 애플리케이션 성능 정보에서 클라이언트 이벤트와 진단 정보(예: 연결 실패)의 상관관계를 손쉽게 지정할 수 있게 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)를 참조하십시오.  
   
 ## <a name="details"></a>세부 정보  
  연결 작업의 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](https://go.microsoft.com/fwlink/?LinkId=207752)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 클라이언트 드라이버 진단 추가 지원이 필요한 경우 추적을 사용하도록 설정하고 연결 명령을 다시 실행하여 추적에 있는 **ClientConnectionID** 필드를 관찰할 수 있습니다.  

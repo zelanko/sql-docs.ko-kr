@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287714"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
@@ -179,7 +179,7 @@ FOR XML PATH('sql:root')
 </sql:root>  
 ```  
   
- 다음 PATH 모드 쿼리에 표시된 것과 같이 WITH XMLNAMESPACES에 명시적으로 정의할 필요 없이 xml 네임스페이스 접두사만 사용할 수 있습니다. 또한 접두사가 선언된 경우 네임스페이스 http://www.w3.org/XML/1998/namespace에 바인딩되어야 합니다. SELECT 절에 지정된 이름은 WITH XMLNAMESPACES를 사용하여 명시적으로 정의되지 않은 xml 네임스페이스 접두사를 참조합니다.  
+ 다음 PATH 모드 쿼리에 표시된 것과 같이 WITH XMLNAMESPACES에 명시적으로 정의할 필요 없이 xml 네임스페이스 접두사만 사용할 수 있습니다. 또한 접두사가 선언된 경우 네임스페이스 http://www.w3.org/XML/1998/namespace 에 바인딩되어야 합니다. SELECT 절에 지정된 이름은 WITH XMLNAMESPACES를 사용하여 명시적으로 정의되지 않은 xml 네임스페이스 접두사를 참조합니다.  
   
 ```  
 SELECT 'en'    as "English/@xml:lang",  

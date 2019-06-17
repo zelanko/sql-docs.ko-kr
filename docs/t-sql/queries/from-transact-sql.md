@@ -1,7 +1,7 @@
 ---
-title: FROM(Transact-SQL) | Microsoft Docs
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334790"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462683"
 ---
-# <a name="from-transact-sql"></a>FROM(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DELETE, SELECT, UPDATE 문에 사용되는 테이블, 뷰, 파생된 테이블 문 조인된 테이블을 지정합니다. SELECT 문에서 SELECT 목록에 상수, 변수 및 산술식(열 이름 없이)만 포함되는 경우를 제외하고는 FROM 절이 필요합니다.  
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+Transact-SQL에서 FROM 절은 다음 명령문에서 사용할 수 있습니다.
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+일반적으로 FROM 절은 SELECT 문에 필요합니다. 예외는 테이블 열이 나열되지 않고 나열된 항목만 리터럴, 변수 또는 산술 식입니다.
+
+이 문서에서는 FROM 절에서 사용할 수 있는 다음 키워드도 설명합니다.
+
+- JOIN
+- APPLY
+- PIVOT
+
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -256,7 +269,7 @@ FROM { <table_source> [ ,...n ] }
  난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed*는 **bigint**입니다. *repeat_seed*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
   
 ### <a name="tablesample-clause"></a>Tablesample 절
-**적용 대상:** SQL 데이터 웨어하우스
+**적용 대상:** SQL Data Warehouse
 
  테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT 또는 UPDATE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다. 
 
@@ -441,7 +454,7 @@ APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블
   
  예제를 포함하여 PIVOT 및 UNPIVOT에 대한 자세한 내용은 [PIVOT 및 UNPIVOT 사용](../../t-sql/queries/from-using-pivot-and-unpivot.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DELETE, SELECT 또는 UPDATE 문의 사용 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>참고 항목  
  [CONTAINSTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY&#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [연산자&#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

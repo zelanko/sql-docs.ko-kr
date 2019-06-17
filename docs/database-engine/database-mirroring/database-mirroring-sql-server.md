@@ -23,13 +23,13 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0eafeec6fb34729de0545df636386ed42186c7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6be95b1c8a1a04f681abe270d3ab27d7b3aa62b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629271"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795546"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47629271"
   
      데이터베이스 미러링은 운영 모드가 보호 우선 모드인지 성능 우선 모드인지에 따라 완벽하거나 거의 완벽한 데이터 중복을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [운영 모드](#OperatingModes)를 참조하세요.  
   
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 실행 중인 데이터베이스 미러링 파트너는 데이터 페이지를 읽지 못하게 하는 특정 오류 유형을 자동으로 해결하려고 시도합니다. 페이지를 읽지 못하는 파트너는 다른 파트너로부터 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 새 복사본으로 대체되고 일반적으로 오류가 해결됩니다. 자세한 내용은 [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)을 참조하세요.  
   
 -   업그레이드 중에 프로덕션 데이터베이스의 가용성이 증가합니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47629271"
   
  또 다른 예로 서버 인스턴스가 자동 장애 조치 있는 보호 우선 모드에서 실행 중인 둘 이상의 데이터베이스에 대해 주 서버가 된다고 가정합니다. 서버 인스턴스가 실패하면 모든 데이터베이스는 해당하는 각 미러 데이터베이스에 대해 자동으로 장애 조치(Failover)를 수행합니다.  
   
- 서버 인스턴스가 파트너 및 미러링 모니터 두 가지 모두로 작동하도록 설정하는 경우 데이터베이스 미러링 엔드포인트가 두 역할을 모두 지원해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)) 또한 리소스 충돌을 줄이기 위해 시스템에 충분한 리소스가 있어야 합니다.  
+ 서버 인스턴스가 파트너 및 미러링 모니터 두 가지 모두로 작동하도록 설정하는 경우 데이터베이스 미러링 엔드포인트가 두 역할을 모두 지원해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)) 또한 리소스 충돌을 줄이기 위해 시스템에 충분한 리소스가 있어야 합니다.  
   
 > [!NOTE]  
 >  미러된 데이터베이스는 서로 독립적이므로 여러 데이터베이스에 대한 장애 조치를 하나의 그룹으로 처리할 수 없습니다.  
@@ -264,7 +264,7 @@ ms.locfileid: "47629271"
  [데이터베이스 미러링 중에 발생 가능한 오류](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
  데이터베이스 미러링 세션에서 오류를 발생시킬 수 있는 물리적 문제, 운영 체제 문제 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제(하드 오류 및 소프트 오류 포함)에 대해 설명합니다. 미러링 시간 제한 메커니즘이 소프트 오류에 대처하는 방식에 대해서도 설명합니다.  
   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
  데이터베이스 미러링 엔드포인트의 작동 방법에 대해 설명합니다.  
   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)  
@@ -294,13 +294,13 @@ ms.locfileid: "47629271"
   
  **Transact-SQL 사용**  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
@@ -344,7 +344,7 @@ ms.locfileid: "47629271"
   
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [자동 페이지 복구&#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [데이터베이스 미러링: 상호 운용성 및 공존성&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   

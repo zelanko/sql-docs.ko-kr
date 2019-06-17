@@ -3,17 +3,17 @@ title: Python 개발-SQL Server Machine Learning을 위한 데이터 과학 클�
 description: Python 사용 하 여 SQL Server Machine Learning Services에 대 한 원격 연결에 대 한 Python 로컬 환경 (Jupyter Notebook 또는 PyCharm)를 설정 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c0ca592d98f9bb69586c537006fd14d4230b661b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642795"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140641"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SSMS는 만들기 및 Python 코드를 포함 하는 등 SQL Server에서 저장
 
   + [https://aka.ms/mls-py](https://aka.ms/mls-py) 9.2.1 Microsoft Python 패키지의 버전을 설치합니다. 이 버전을 기본 SQL Server 2017 인스턴스에 해당합니다. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 버전 9.3의 Microsoft Python 패키지를 설치합니다. 원격 SQL Server 2017 인스턴스에 있으면이 버전 보다 적합 [Machine Learning Server 9.3에 바인딩된](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 버전 9.3의 Microsoft Python 패키지를 설치합니다. 원격 SQL Server 2017 인스턴스에 있으면이 버전 보다 적합 [Machine Learning Server 9.3에 바인딩된](../install/upgrade-r-and-python.md)합니다.
 
 2. 관리자 권한으로 PowerShell 창을 열고 (마우스 오른쪽 단추로 클릭 **관리자 권한으로 실행**).
 
@@ -107,7 +107,7 @@ Anaconda는 Jupyter 노트북을 포함 합니다. 다음 단계로, 노트북�
 
 3. 입력 `import revoscalepy` Microsoft 전용 라이브러리 중 하나를 로드 하 고 명령을 실행 합니다.
 
-4. 입력 하 고 실행 `print(revoscalepy.__version__)` 버전 정보를 반환 합니다. 9.2.1 또는 9.3.0 표시 됩니다. 사용 하 여 이러한 버전 중 하나를 사용할 수 있습니다 [서버의 revoscalepy](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers)합니다. 
+4. 입력 하 고 실행 `print(revoscalepy.__version__)` 버전 정보를 반환 합니다. 9\.2.1 또는 9.3.0 표시 됩니다. 사용 하 여 이러한 버전 중 하나를 사용할 수 있습니다 [서버의 revoscalepy](../package-management/installed-package-information.md)합니다. 
 
 4. 더 복잡 한 일련의 문 입력 합니다. 이 예제에서는 사용 하 여 요약 통계를 생성 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 로컬 데이터 집합에 대해 합니다. 다른 함수 샘플 데이터의 위치를 가져옵니다 하 고 로컬.xdf 파일에 대 한 데이터 원본 개체를 만듭니다.
 
@@ -296,7 +296,7 @@ PyCharm의 Machine Learning Server 설치 실행 python 인터프리터를 설�
 
 1. 설정에서 새 프로젝트를 클릭 **로컬 추가**합니다.
 
-2. 입력 `C:\Program Files\Microsoft\PyForMLS\`합니다.
+2. `C:\Program Files\Microsoft\PyForMLS\` 을 입력합니다.
 
 이제 가져올 수 있습니다 **revoscalepy**하십시오 **microsoftml**, 또는 **azureml** 모듈입니다. 선택할 수도 있습니다 **도구가** > **Python 콘솔** 는 대화형 창을 엽니다.
 

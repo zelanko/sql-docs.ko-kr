@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710052"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트(ADO)
@@ -46,7 +46,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *암호*  
  A **문자열** 보류 중인 연결에 대 한 암호를 포함 하는 합니다.  
   
- *Options*  
+ *옵션*  
  A **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 *ConnectionString*합니다. 유일한 방법은 **adAsyncOpen**합니다.  
   
  *adStatus*  

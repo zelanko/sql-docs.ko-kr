@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1453daf6bf9e806a4b3ac79ae8c9a322e5bd0bac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771531"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798575"
 ---
 # <a name="using-ssl-encryption"></a>SSL 암호화 사용
 
@@ -41,8 +41,8 @@ SSL 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)                                 | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 SSL 암호화를 지원하는 방식에 대해 설명합니다.                                              |
 | [SSL 암호화를 사용한 연결](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 새 SSL 특정 연결 속성을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 방법에 대해 설명합니다. |
-| [SSL 암호화를 위한 클라이언트 구성](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 클라이언트 쪽에서 기본 트러스트 저장소를 구성하는 방법과 개인 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.   |
+| [SSL 암호화를 위한 클라이언트 구성](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | 클라이언트 쪽에서 기본 트러스트 저장소를 구성하는 방법과 프라이빗 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.   |
   
 ## <a name="see-also"></a>참고 항목
 
-[JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  

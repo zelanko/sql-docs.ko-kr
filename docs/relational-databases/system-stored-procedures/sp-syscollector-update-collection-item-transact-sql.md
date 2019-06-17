@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63001392"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
@@ -92,7 +92,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>예  
  다음 예제에서 정의 된 예에서 만들어진 컬렉션 항목에 기반한 [sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)합니다.  
   
-### <a name="a-changing-the-collection-frequency"></a>1. 컬렉션 빈도 변경  
+### <a name="a-changing-the-collection-frequency"></a>1\. 컬렉션 빈도 변경  
  다음 예에서는 지정한 컬렉션 항목에 대한 컬렉션 빈도를 변경합니다.  
   
 ```  
@@ -104,7 +104,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="b-renaming-a-collection-item"></a>2. 컬렉션 항목 이름 바꾸기  
+### <a name="b-renaming-a-collection-item"></a>2\. 컬렉션 항목 이름 바꾸기  
  다음 예에서는 컬렉션 항목의 이름을 바꿉니다.  
   
 ```  
@@ -116,7 +116,7 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-### <a name="c-changing-the-parameters-of-a-collection-item"></a>3. 컬렉션 항목의 매개 변수 변경  
+### <a name="c-changing-the-parameters-of-a-collection-item"></a>3\. 컬렉션 항목의 매개 변수 변경  
  다음 예에서는 컬렉션 항목과 관련된 매개 변수를 변경합니다. `<Value>` 특성 내에 정의된 문이 변경되며 `UseSystemDatabases` 특성이 false로 설정됩니다. 이 항목의 현재 매개 변수를 보려면 syscollector_collection_items 시스템 뷰의 parameters 열을 쿼리합니다. `@collection_item_id`의 값을 수정해야 할 수 있습니다.  
   
 ```  

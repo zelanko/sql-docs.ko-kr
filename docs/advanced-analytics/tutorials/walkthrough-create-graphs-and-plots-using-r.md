@@ -3,17 +3,17 @@ title: 그래프 및 SQL 및 R 함수-SQL Server Machine Learning을 사용 하 
 description: 그래프 및 SQL Server에서 R 언어 함수를 사용 하 여 그림을 만드는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513170"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140383"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "58513170"
     + `plot` 으로 시작하는 행이 실행되면 렌더링 데이터가 다시 로컬 R 환경으로 직렬화되어 R 클라이언트에서 볼 수 있게 됩니다.
 
     > [!NOTE]
-    > SQL Server를 Azure 가상 머신에서 사용 하는 경우 오류가 발생할 수 있습니다는 시점에서. 기본 방화벽 규칙이 Azure에서 R 코드에서 네트워크 액세스를 차단 하는 경우 오류가 발생 했습니다. 이 오류를 해결 하는 방법에 대 한 세부 정보를 참조 하세요 [Machine Learning 설치 (R) 서비스는 Azure VM에서](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)합니다.
+    > SQL Server를 Azure 가상 머신에서 사용 하는 경우 오류가 발생할 수 있습니다는 시점에서. 기본 방화벽 규칙이 Azure에서 R 코드에서 네트워크 액세스를 차단 하는 경우 오류가 발생 했습니다. 이 오류를 해결 하는 방법에 대 한 세부 정보를 참조 하세요 [Machine Learning 설치 (R) 서비스는 Azure VM에서](../install/sql-machine-learning-azure-virtual-machine.md)합니다.
 
 4. 다음 그림은 출력 플롯을 보여줍니다. 택시 승차 위치가 지도에 빨간색 점으로 추가되었습니다. 사용한 데이터 원본의 위치 수에 따라 이미지가 다르게 보일 수 있습니다.
 

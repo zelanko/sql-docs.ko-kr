@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f03f0f4c210408324ee4a2cae255ba805e0377a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107707"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
@@ -45,7 +45,7 @@ ms.locfileid: "66107707"
   
 -   **테이블, 행렬, 차트 및 자유 형식 보고서 레이아웃을 사용 하 여 보고서를 만듭니다.** 열 중심의 데이터에 대한 테이블 보고서, 요약된 데이터에 대한 행렬 보고서(예: 크로스탭 또는 피벗 테이블 보고서), 그래픽 데이터에 대한 차트 보고서, 그 외 모든 데이터에 대한 자유 형식 보고서를 만듭니다. 목록, 그래픽, 동적 웹 기반 애플리케이션을 위한 컨트롤 등과 함께 다른 보고서 및 차트를 보고서에 포함할 수 있습니다.  
   
--   **다양한 데이터 원본을 사용하여 보고서를 작성합니다.**  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]관리 데이터 공급자, OLE DB 공급자 또는 ODBC 데이터 원본이 있는 데이터 원본 유형의 데이터를 사용하여 보고서를 작성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion 및 기타 데이터베이스에서 관계형 및 다차원 데이터를 사용하는 보고서를 만들 수 있습니다. XML 데이터 처리 확장 프로그램을 사용하면 어떠한 XML 데이터 원본에서도 데이터를 검색할 수 있습니다. 테이블 반환 함수를 사용하여 사용자 지정 데이터 원본을 디자인할 수 있습니다.  
+-   **다양한 데이터 원본을 사용하여 보고서를 작성합니다.** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]관리 데이터 공급자, OLE DB 공급자 또는 ODBC 데이터 원본이 있는 데이터 원본 유형의 데이터를 사용하여 보고서를 작성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], Oracle, Hyperion 및 기타 데이터베이스에서 관계형 및 다차원 데이터를 사용하는 보고서를 만들 수 있습니다. XML 데이터 처리 확장 프로그램을 사용하면 어떠한 XML 데이터 원본에서도 데이터를 검색할 수 있습니다. 테이블 반환 함수를 사용하여 사용자 지정 데이터 원본을 디자인할 수 있습니다.  
   
 -   **기존 보고서를 수정합니다.** 보고서 작성기를 사용 하 여 사용자 지정 하 고 업데이트할 수에서 생성 된 보고서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 디자이너입니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66107707"
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-design-view-report-builder.md)  
  보고서 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
- [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](shared-dataset-design-view-report-builder.md)  
+ [공유 데이터 세트 디자인 뷰&#40;보고서 작성기&#41;](shared-dataset-design-view-report-builder.md)  
  공유 데이터 세트 디자인 뷰의 여러 창 및 영역에 대해 설명합니다.  
   
  [바로 가기 키&#40;보고서 작성기&#41;](keyboard-shortcuts-report-builder.md)  

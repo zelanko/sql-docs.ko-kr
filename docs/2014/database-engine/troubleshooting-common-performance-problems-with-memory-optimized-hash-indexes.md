@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842538"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결
@@ -70,7 +70,7 @@ WITH (MEMORY_OPTIMIZED = ON)
      ) WITH (MEMORY_OPTIMIZED=ON)  
     ```  
   
- 지정 된 인덱스 키 값에 대 한 중복 행 많은 경우 메모리 최적화 해시 인덱스를 최적으로 수행 하지 않습니다 확인 합니다: 예제에서는 o_id 열의 고유 값 수가 테이블의 행 수보다 훨씬 작은 경우 (o_id);에서 인덱스를 추가 하는 데 가장 적합 한 수 대신 해시에서 비클러스터형 PK_od 인덱스 유형을 변경 것 보다 나은 솔루션입니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
+ 지정 된 인덱스 키 값에 대 한 중복 행 많은 경우 메모리 최적화 해시 인덱스를 최적으로 수행 하지 않습니다 확인 합니다: 예제에서는 o_id 열의 고유 값 수가 테이블의 행 수보다 훨씬 작은 경우 (o_id);에서 인덱스를 추가 하는 데 가장 적합 한 수 대신 해시에서 비클러스터형 PK_od 인덱스 유형을 변경 것 보다 나은 솔루션입니다. 자세한 내용은 [해시 인덱스에 대 한 올바른 버킷 수를 결정](../relational-databases/indexes/indexes.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 테이블의 인덱스](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b78f2d8fdc34743e4e74d1e27346651c7adc443
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66076727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046627"
 ---
 # <a name="calculations-in-multidimensional-models"></a>다차원 모델의 계산
   큐브 디자이너의 **계산** 탭을 사용하여 계산 멤버, 명명된 집합 및 기타 MDX(Multidimensional Expression) 계산을 만들 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "66076727"
 -   계산 식 창 - 폼 보기와 스크립트 보기를 지원합니다.  
   
 > [!NOTE]  
->  MDX 스크립팅에 대 한 자세한 내용은 참조 하세요. [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892), 및 추가 리소스 섹션을 참조 합니다 [SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) 페이지는 Microsoft TechNet 웹 사이트입니다. 큐브 디자인과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2005 Analysis Services 성능 가이드(SQL Server 2005 Analysis Services Performance Guide)](https://go.microsoft.com/fwlink/?LinkId=81621)를 참조하십시오.  
+>  MDX 스크립팅에 대 한 자세한 내용은 참조 하세요. [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892), 및 추가 리소스 섹션을 참조 합니다 [SQL Server 2005-Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) 페이지는 Microsoft TechNet 웹 사이트입니다. 큐브 디자인과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2005 Analysis Services 성능 가이드(SQL Server 2005 Analysis Services Performance Guide)](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc)를 참조하십시오.  
   
 ## <a name="creating-a-new-calculation"></a>새 계산 만들기  
  새 계산을 만들려면 큐브 디자이너의 **계산** 탭에서 **큐브** 메뉴를 선택하고 만들려는 계산 유형에 따라 **새 계산 멤버**, **새 명명된 집합**또는 **새 스크립트 명령**을 클릭합니다. 도구 모음에서 해당 단추를 클릭하거나 **스크립트 구성 도우미** 창에서 아무데나 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 명령 중 하나를 클릭할 수도 있습니다. 이렇게 하면 **스크립트 구성 도우미** 창에 새 계산이 추가되고 계산 식 창의 계산 폼에 계산에 대한 필드가 표시됩니다. 새 스크립트를 만드는 경우에는 계산 식 창에 스크립트 보기가 열립니다. 세 가지 유형의 계산을 작성하는 방법은 [계산 멤버 만들기](create-calculated-members.md), [명명된 집합 만들기](create-named-sets.md)및 [할당 및 기타 스크립트 명령 정의](define-assignments-and-other-script-commands.md)를 참조하세요.  

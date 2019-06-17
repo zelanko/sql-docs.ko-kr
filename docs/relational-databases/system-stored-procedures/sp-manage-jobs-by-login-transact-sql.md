@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957158"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login(Transact-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @action = ] 'action'` 지정된 된 로그인에 대해 수행할 동작입니다. *동작* 됩니다 **varchar(10)**, 기본값은 없습니다. 때 *동작*됩니다 **삭제**, **sp_manage_jobs_by_login** 소유 하는 모든 작업을 삭제 *current_owner_login_name*합니다. 때 *동작* 됩니다 **재할당**, 모든 작업에 할당 된 *new_owner_login_name*합니다.  
+`[ @action = ] 'action'` 지정된 된 로그인에 대해 수행할 동작입니다. *동작* 됩니다 **varchar(10)** , 기본값은 없습니다. 때 *동작*됩니다 **삭제**, **sp_manage_jobs_by_login** 소유 하는 모든 작업을 삭제 *current_owner_login_name*합니다. 때 *동작* 됩니다 **재할당**, 모든 작업에 할당 된 *new_owner_login_name*합니다.  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` 현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 됩니다 **sysname**, 기본값은 없습니다.  
   

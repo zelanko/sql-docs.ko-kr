@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0bce6022-00bd-45c6-9671-eaa9dfa395a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 722b1094327ba7ccfce71e5066e683e8a2229aef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dc1970dbb422bdcbe29ebc8943fa233915c8f7cb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771601"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782744"
 ---
 # <a name="step-1-configure-environment-for-php-development"></a>1 단계: PHP 개발을 위한 환경 구성
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

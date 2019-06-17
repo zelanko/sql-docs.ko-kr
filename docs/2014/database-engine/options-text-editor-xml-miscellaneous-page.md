@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089204"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>옵션(텍스트 편집기 - XML - 기타 페이지)
@@ -26,7 +26,7 @@ ms.locfileid: "66089204"
  XML 요소를 만들 때 텍스트 편집기가 닫는 태그를 추가합니다. 요소 시작 태그를 선택하면 일치하는 네임스페이스 접두사와 함께 일치하는 닫는 태그가 삽입됩니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
  **특성 따옴표**  
- XML 특성을 작성할 때 편집기에서 `="``"` 문자를 삽입하고 따옴표 안에 캐럿(**^** )을 넣습니다. 이 확인란은 기본적으로 선택되어 있습니다.  
+ XML 특성을 작성할 때 편집기에서 `="``"` 문자를 삽입하고 따옴표 안에 캐럿( **^** )을 넣습니다. 이 확인란은 기본적으로 선택되어 있습니다.  
   
  **Namespace 선언**  
  필요할 때마다 네임스페이스 선언이 자동으로 삽입됩니다. 이 확인란은 기본적으로 선택되어 있습니다.  

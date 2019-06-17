@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918135"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
@@ -101,7 +101,7 @@ ms.locfileid: "62918135"
  **취소** - DAC를 등록하지 않고 마법사를 종료합니다.  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **.**  _._ **를 실행할 수 없습니다.** _ObjectName_ **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **.**  _._ **를 실행할 수 없습니다.** _ObjectName_ **를 실행할 수 없습니다.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_ **.** _ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **\< 이전** -반환 하는 **속성 설정** 페이지 항목을 변경 하려면.  
   

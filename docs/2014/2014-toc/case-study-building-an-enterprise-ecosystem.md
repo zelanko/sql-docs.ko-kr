@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470104"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>사례 연구: Microsoft Dynamics ERP와 SQL Server 2014 Replication for Scalability and Performance를 사용 하 여 엔터프라이즈 에코 시스템 구축
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 빌드
 
   **요약:** 이 문서에서는 다음 시나리오를 다룹니다.  
 SQL Server 2014의 트랜잭션 복제를 사용 하 여 Dynamics AX 클라이언트의 트랜잭션을 여러 노드에 분산 하는 방법. 데이터가 전체 노드에서 실시간으로 유지 관리되므로 트랜잭션 복제에서 데이터 중복성을 제공하여 데이터 가용성을 늘리고 더 효율적인 성능 분석에 사용할 수 있는 데이터를 포함합니다.  

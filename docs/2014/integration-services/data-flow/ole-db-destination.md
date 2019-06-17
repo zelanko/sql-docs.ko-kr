@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62901558"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
@@ -45,7 +45,7 @@ ms.locfileid: "62901558"
 > [!NOTE]  
 >  OLE DB 대상은 매개 변수를 지원하지 않습니다. 매개 변수가 있는 INSERT 문을 실행해야 하는 경우 OLE DB 명령 변환을 사용하십시오. 자세한 내용은 [OLE DB Command Transformation](transformations/ole-db-command-transformation.md)을 참조하세요.  
   
- OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 확인 하는 데 OLE DB 연결 관리자를 구성 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 또는 빠른 로드 액세스 모드 중 하나를 사용 합니다. **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. 프로그래밍 하는 경우는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델 AccessMode 속성을 설정 해야 하면 `OpenRowset Using FastLoad`, 또는 `OpenRowset Using FastLoad From Variable`합니다.  
+ OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 보장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 사용되도록 OLE DB 연결 관리자를 구성하거나 **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. 프로그래밍 하는 경우는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델 AccessMode 속성을 설정 해야 하면 `OpenRowset Using FastLoad`, 또는 `OpenRowset Using FastLoad From Variable`합니다.  
   
 > [!NOTE]  
 >  OLE DB 대상에서 데이터를 삽입할 대상 테이블을 만들기 위해 **디자이너에서** OLE DB 대상 편집기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 사용하는 경우에는 새로 만든 테이블을 수동으로 선택해야 할 수도 있습니다. DB2용 OLE DB 공급자와 같은 OLE DB 공급자에서 테이블 이름에 스키마 식별자를 자동으로 추가하는 경우에는 이렇게 테이블을 수동으로 선택해야 합니다.  
@@ -85,9 +85,9 @@ ms.locfileid: "62901558"
   
 |빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션은 폼 `KILOBYTES_PER_BATCH`  =  \<integer value**>** 합니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션은 폼 `KILOBYTES_PER_BATCH`  =  \<integer value **>** 합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
-|ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용 하 여 테이블에 클러스터형된 인덱스에 따라 입력된 데이터를 정렬 하는 경우에 성능이 향상 될 수 있습니다.|  
+|ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드는 일반적으로 대문자를 사용하여 입력하지만 키워드는 대/소문자를 구분하지 않습니다.  
   

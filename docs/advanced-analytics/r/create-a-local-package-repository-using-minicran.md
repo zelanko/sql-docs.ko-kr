@@ -3,17 +3,17 @@ title: MiniCRAN-SQL Server Machine Learning Services를 사용 하 여 로컬 R 
 description: MiniCran을 사용 하 여 감지, 어셈블 및 R 패키지 종속성을 하나의 통합 패키지로 설치 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642599"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140626"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN을 사용 하 여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ local_repo <- "C:/mylocalrepo"
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. 로컬 리포지토리를 만듭니다. SQL Server 인스턴스에 설치 된 버전에 필요한 경우 R 버전을 변경 해야 합니다. 3.2.2 버전이 SQL Server 2016에서, SQL Server 2017에서 버전 3.3을 합니다. 구성 요소 업그레이드를 수행한 경우에 버전 새로운 버전일 수 있습니다. 자세한 내용은 [가져오려면 R 및 Python 패키지 정보](determine-which-packages-are-installed-on-sql-server.md)합니다.
+3. 로컬 리포지토리를 만듭니다. SQL Server 인스턴스에 설치 된 버전에 필요한 경우 R 버전을 변경 해야 합니다. 3\.2.2 버전이 SQL Server 2016에서, SQL Server 2017에서 버전 3.3을 합니다. 구성 요소 업그레이드를 수행한 경우에 버전 새로운 버전일 수 있습니다. 자세한 내용은 [가져오려면 R 및 Python 패키지 정보](../package-management/installed-package-information.md)합니다.
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -159,8 +159,5 @@ pdb[, c("Package", "Version", "License")]
 
 ## <a name="see-also"></a>참고자료
 
-+ [패키지 정보 가져오기](determine-which-packages-are-installed-on-sql-server.md)
++ [패키지 정보 가져오기](../package-management/installed-package-information.md)
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
-+ [방법 가이드](sql-server-machine-learning-tasks.md)
-
-

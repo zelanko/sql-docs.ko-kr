@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943686"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469645"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ DATEADD (datepart , number , date )
 *date*의 경우 `DATEADD`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 문자열 리터럴 값은 **datetime**을 확인해야 합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-*date* 인수 데이터 형식은 문자열 리터럴 *date* 값을 제외하면 `DATEADD` 반환 값 데이터 형식이 됩니다. 문자열 리터럴의 경우 `DATEADD`은 **datetime** 값을 반환합니다. 문자열 리터럴 초 소수 자릿수가 세 자릿수(.nnn)를 초과하거나 문자열 리터럴이 표준 시간대 오프셋 부분을 포함하는 경우 `DATEADD`은 오류를 발생합니다.
+
+이 메서드의 반환 값 데이터 형식은 동적입니다. 반환 형식은 `date`에 제공된 인수의 따라 달라집니다. `date`의 값이 문자열 리터럴 날짜인 경우 `DATEADD`가 **datetime** 값을 반환합니다. `date`에 대해 다른 유효한 입력 데이터 형식이 제공되면 `DATEADD`가 동일한 데이터 형식을 반환합니다. 문자열 리터럴 초 소수 자릿수가 세 자릿수(.nnn)를 초과하거나 문자열 리터럴이 표준 시간대 오프셋 부분을 포함하는 경우 `DATEADD`는 오류를 발생합니다.
   
 ## <a name="return-value"></a>반환 값  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108493"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>3단원: 보고서 마법사를 사용하여 부모 보고서 디자인
@@ -39,7 +39,7 @@ ms.locfileid: "66108493"
   
     1.  **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**및 **ReorderLevel** 을 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  옆에 화살표를 클릭 **sum (productid)**, **sum (safetystocklevel)**, **sum (reorderlevel)** 선택을 취소 합니다 **합계** 선택 합니다.  
+    2.  옆에 화살표를 클릭 **sum (productid)** , **sum (safetystocklevel)** , **sum (reorderlevel)** 선택을 취소 합니다 **합계** 선택 합니다.  
   
 7.  **다음** 을 두 번 클릭한 다음 **마침** 을 클릭하여 **보고서 마법사**를 닫습니다.  
   
