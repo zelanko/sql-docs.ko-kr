@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc43780fc7864614c550a0192f363219823376c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776261"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802031"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

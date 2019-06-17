@@ -1,6 +1,7 @@
 ---
 title: ReportViewer 컨트롤 2016에서 데이터 수집
 uthor: markingmyname
+author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: f1d24c2de0b6398b4effb2dcaa6129a7b252d130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 69d37c54e49943807c35102362f161e2dbf23068
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65504128"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822999"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer 컨트롤을 사용하여 Reporting Services 통합 - 데이터 수집
 
@@ -27,14 +28,14 @@ Microsoft SQL Server 및 보고서 뷰어의 데이터 수집 및 사용 사례�
 
 사용 현황 데이터의 수집을 ```EnableTelemetry``` 속성을 통해 사용하지 않도록 설정할 수 있습니다.
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 또는 컨트롤이 렌더링되기 전에 실제로 설정할 수 있습니다.
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

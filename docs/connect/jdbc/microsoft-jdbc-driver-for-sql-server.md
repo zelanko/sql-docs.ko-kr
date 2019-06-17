@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801840"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 

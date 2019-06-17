@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 7d352b02d118c3de14cd437daf012885d7491c1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2c41b9215979488cbec9ebda89d98bb0f464d11a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639521"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797811"
 ---
 # <a name="data-source-wizard-screen-2"></a>데이터 원본 마법사 화면 2
 
 인증 방법을 지정하고, 데이터 원본을 구성하는 동안 SQL Server에 연결하기 위해 ODBC Driver for SQL Server에서 사용할 로그인과 암호 및 Microsoft SQL Server 고급 클라이언트 항목을 설정합니다.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 
 ### <a name="with-integrated-windows-authentication"></a>Windows 통합 인증 사용
 

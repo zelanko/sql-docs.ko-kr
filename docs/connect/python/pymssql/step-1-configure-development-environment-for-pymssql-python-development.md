@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 623b4bf9a88031cf891e88f75c30b06716bb27ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 9d74e3ce2f7db91aca295dcb7507431a82e49c8c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605023"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803870"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>1단계: pymssql Python 개발을 위한 개발 환경 구성
 SQL Server 용 Python Driver를 사용 하 여 응용 프로그램을 개발 하기 위해 개발 환경 필수 구성 요소를 사용 하 여 구성 해야 합니다.    
@@ -26,8 +26,8 @@ Python SQL 드라이버 SQL Server 및 Azure SQL Database에서 기본적으로 
 ## <a name="windows"></a>Windows  
   
 1. **Python 런타임을 설치 하 고 pip 패키지 관리자**  
-1. 로 [python.org](https://www.python.org/downloads/)  
-2. 적절 한 Windows installer msi 링크를 클릭 합니다.   
+1\. 로 [python.org](https://www.python.org/downloads/)  
+2\. 적절 한 Windows installer msi 링크를 클릭 합니다.   
 c. Python 런타임을 설치 msi 다운로드 한 번 실행  
   
 2. **Pymssql 모듈을 다운로드** 에서 [여기](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -63,8 +63,8 @@ c. Python 런타임을 설치 msi 다운로드 한 번 실행
 ## <a name="mac"></a>Mac  
   
 1. **Python 런타임을 설치 하 고 pip 패키지 관리자**  
-1. 로 [python.org](https://www.python.org/downloads/)  
-2. 적절 한 Mac 설치 관리자 패키지 링크를 클릭 합니다.   
+1\. 로 [python.org](https://www.python.org/downloads/)  
+2\. 적절 한 Mac 설치 관리자 패키지 링크를 클릭 합니다.   
 c. 한 번 다운로드 한 실행 Python 런타임을 설치 패키지  
   
 2.  **터미널 열기**  

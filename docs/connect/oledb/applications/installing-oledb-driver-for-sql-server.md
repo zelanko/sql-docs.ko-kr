@@ -21,13 +21,13 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: e779d51f535d3b3489c1fbe043c7ff9212b0e875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744383"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800882"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Msoledbsql.msi 통해 SQL Server 용 OLE DB 드라이버를 배포할 수 있습
   
 X64 msoledbsql.msi도 SQL Server 용 OLE DB 드라이버의 32 비트 버전을 설치 합니다. 응용 프로그램에 개발 된 것 이외의 플랫폼을 대상으로 하는 경우에 x64 및 x86 msoledbsql.msi의 버전을 다운로드할 수 있습니다.
 
-msoledbsql.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 SQL Server용 OLE DB 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+msoledbsql.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 SQL Server용 OLE DB 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 예를 들어  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 

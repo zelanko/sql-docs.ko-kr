@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841731"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798613"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
 
@@ -62,7 +62,7 @@ JDBC 드라이버는 다음 구문을 사용하여 SQL 문에서 함수 이스�
 {fn functionName}  
 ```
 
-여기서 `functionName`은 JDBC 드라이버에서 지원하는 함수입니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+여기서 `functionName`은 JDBC 드라이버에서 지원하는 함수입니다. 예를 들어 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -93,7 +93,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | 타임스탬프   | yyyy-mm-dd hh:mm:ss[.f...] |
   
-예를 들어 다음과 같이 사용할 수 있습니다.  
+예를 들어  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -131,7 +131,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 여기서 `table-reference`는 테이블 이름이고 `search-condition`은 테이블에 사용할 조인 조건입니다.  
   
-예를 들어 다음과 같이 사용할 수 있습니다.  
+예를 들어  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status

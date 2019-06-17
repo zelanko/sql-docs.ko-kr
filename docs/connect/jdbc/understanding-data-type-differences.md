@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773211"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801950"
 ---
 # <a name="understanding-data-type-differences"></a>데이터 형식 차이 이해
 
@@ -32,7 +32,7 @@ JDBC 문자열 데이터 형식이 됩니다 **CHAR**하십시오 **VARCHAR**, �
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 고정 길이    | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char** 하 고 **nchar** 데이터 형식은 JDBC에 직접 매핑됩니다 **CHAR** 하 고 **NCHAR** 형식입니다. 이는 해당 열에 `SET ANSI_PADDING ON`이 설정된 경우 서버에서 패딩을 제공하는 고정 길이 형식입니다. **nchar**에 대해서는 패딩이 항상 설정되어 있지만 **char**에 대해서는 그렇지 않습니다. 서버 char 열이 패딩되지 않은 경우 JDBC 드라이버에서 패딩을 추가합니다.                                                                                                                                                                                                                                                                                                                                                                                      |
 | 가변 길이 | 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varchar** 및 **nvarchar** 형식은 JDBC에 직접 매핑됩니다 **VARCHAR** 하 고 **NVARCHAR** 각각.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Long            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트** 및 **ntext** 형식은 JDBC에 매핑됩니다 **LONGVARCHAR** 하 고 **LONGNVARCHAR** 각각 입력 합니다. 이러한 형식은 사용 되지 않는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]큰 값 형식을 사용 해야 하므로 **varchar (max)** 또는 **nvarchar (max)**, 대신 합니다.<br /><br /> 업데이트를 사용 하 여\<숫자 유형 > 및 [updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) 방법에 대해 실패 **텍스트** 하 고 **ntext** 서버 열입니다. 그러나 **text** 및 **ntext** 서버 열에 대해 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 메서드를 지정된 문자 변환 형식과 함께 사용할 수 있습니다. |
+| Long            | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **텍스트** 및 **ntext** 형식은 JDBC에 매핑됩니다 **LONGVARCHAR** 하 고 **LONGNVARCHAR** 각각 입력 합니다. 이러한 형식은 사용 되지 않는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]큰 값 형식을 사용 해야 하므로 **varchar (max)** 또는 **nvarchar (max)** , 대신 합니다.<br /><br /> 업데이트를 사용 하 여\<숫자 유형 > 및 [updateObject (int, java.lang.Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) 방법에 대해 실패 **텍스트** 하 고 **ntext** 서버 열입니다. 그러나 **text** 및 **ntext** 서버 열에 대해 [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 메서드를 지정된 문자 변환 형식과 함께 사용할 수 있습니다. |
   
 ## <a name="binary-string-types"></a>이진 문자열 형식
 

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700351"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800694"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 공개합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  SQL Server용 OLE DB 드라이버는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 XML 데이터 형식을 BLOB(Binary Large Object)으로 액세스할 수 있도록 지원하기 위해 **ISequentialStream** 인터페이스를 공개합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
  이 기능을 보여 주는 샘플을 참조 하세요 [큰 데이터 집합 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47700351"
   
  큰 값 데이터 형식의 경우 SQL Server용 OLE DB 드라이버는 **IRowset** 및 DDL 인터페이스의 형식 크기 가정을 확인합니다. 최대 크기가 무제한으로 설정된 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식의 열은 열 데이터 형식을 반환하는 스키마 행 집합 및 인터페이스를 통해 ISLONG으로 나타납니다.  
   
- SQL Server용 OLE DB 드라이버는 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
+ SQL Server용 OLE DB 드라이버는 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
   
  이러한 형식으로 작업하기 위해 응용 프로그램에는 다음 옵션이 있습니다.  
   

@@ -19,10 +19,10 @@ ms.author: vanto
 author: VanMSFT
 manager: craigg
 ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822645"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
@@ -79,7 +79,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-associations"></a>1. 모든 연결 나열  
+### <a name="a-listing-all-associations"></a>1\. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 프록시와 하위 시스템 간에 설정된 모든 사용 권한을 나열합니다.  
   
 ```sql
@@ -90,7 +90,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>2. 프록시가 특정 하위 시스템에 액세스할 수 있는지 확인  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>2\. 프록시가 특정 하위 시스템에 액세스할 수 있는지 확인  
  다음 예에서는 프록시 `Catalog application proxy`가 `ActiveScripting` 하위 시스템에 액세스할 수 있는 경우 행을 반환합니다. 그렇지 않으면 빈 결과 집합을 반환합니다.  
   
 ```sql

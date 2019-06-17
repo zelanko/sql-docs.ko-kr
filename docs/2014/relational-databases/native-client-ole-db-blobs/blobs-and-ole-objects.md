@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63195221"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)**, 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)** , 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
  이 기능을 보여 주는 샘플을 참조 하세요 [큰 데이터 집합 &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63195221"
   
  큰 값 데이터 형식에 대 한 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 형식 크기 가정을 확인 **IRowset** 및 DDL 인터페이스입니다. 열 **varchar**를 **nvarchar**, 및 **varbinary** 무제한으로 설정 하는 최대 크기를 사용 하 여 데이터 형식이 스키마 행 집합 및 인터페이스를 통해 ISLONG으로 표현 열 데이터 형식을 반환 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)**, **varbinary (max)** 하 고 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_ 형식 WSTR 각각.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)** , **varbinary (max)** 하 고 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_ 형식 WSTR 각각.  
   
  응용 프로그램에서 이러한 형식을 사용하기 위해 처리하는 방법은 다음과 같습니다.  
   

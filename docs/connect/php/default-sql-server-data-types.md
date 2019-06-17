@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3ccdf7ffa8b5eaf01108ca0492b9b5db9ecc042
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599871"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801473"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-데이터를 서버에 보낼 때 사용자가 SQL Server 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 데이터를 해당 PHP 데이터 형식에서 SQL Server 데이터 형식으로 변환합니다. 다음 표는 PHP 데이터 형식(서버에 전송할 데이터 형식) 및 기본 SQL Server 데이터 형식(데이터가 변환되는 데이터 형식)을 나열합니다. 서버에 데이터를 보낼 때 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)을 참조하세요.  
+데이터를 서버에 보낼 때 사용자가 SQL Server 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 데이터를 해당 PHP 데이터 형식에서 SQL Server 데이터 형식으로 변환합니다. 다음 표는 PHP 데이터 형식(서버에 전송할 데이터 형식) 및 기본 SQL Server 데이터 형식(데이터가 변환되는 데이터 형식)을 나열합니다. 서버에 데이터를 보낼 때 데이터 형식을 지정하는 방법에 대한 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)을 참조하세요.  
   
 |PHP 데이터 형식|SQLSRV 드라이버에서 기본 SQL Server 형식|PDO_SQLSRV 드라이버에서 기본 SQL Server 형식|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  

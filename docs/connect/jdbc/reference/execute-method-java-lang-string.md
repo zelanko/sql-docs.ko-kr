@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39f1763a7c7a3d06db99460df3f16a0f2fee412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727581"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802350"
 ---
 # <a name="execute-method-javalangstring"></a>execute 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

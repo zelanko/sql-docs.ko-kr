@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e41f5a97c4b32611589e5da24a95e237416a5b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204999"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>사용자 정의 데이터 형식(UDT)에 대한 FOR XML 지원

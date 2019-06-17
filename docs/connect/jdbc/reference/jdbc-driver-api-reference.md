@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773796"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803215"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 드라이버 API 참조
 

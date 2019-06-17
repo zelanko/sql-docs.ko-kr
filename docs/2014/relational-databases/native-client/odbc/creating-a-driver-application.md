@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205270"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC 드라이버 애플리케이션 만들기
@@ -66,7 +66,7 @@ ms.locfileid: "63205270"
   
 -   대량 복사 작업 수행  
   
--   대용량 데이터 관리 (**(는) 트랜잭션**, **nvarchar(max)**, 및 **varbinary (max)** 열) 작업  
+-   대용량 데이터 관리 ( **(는) 트랜잭션**, **nvarchar(max)** , 및 **varbinary (max)** 열) 작업  
   
 -   데이터베이스 미러링이 구성되어 있는 경우 다시 연결 논리를 사용하여 효과적인 장애 조치(failover) 수행  
   

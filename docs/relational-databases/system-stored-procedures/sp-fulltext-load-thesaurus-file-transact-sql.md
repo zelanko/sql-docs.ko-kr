@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822766"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
@@ -71,14 +71,14 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>1. 이미 로드되어 있더라도 동의어 사전 파일 로드  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>1\. 이미 로드되어 있더라도 동의어 사전 파일 로드  
  다음 예에서는 영어 동의어 사전 파일을 구문 분석하고 로드합니다.  
   
 ```sql
 EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
-### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>2. 아직 로드되지 않은 경우에만 동의어 사전 파일 로드  
+### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>2\. 아직 로드되지 않은 경우에만 동의어 사전 파일 로드  
  다음 예에서는 아직 로드되지 않은 아랍어 동의어 사전 파일을 구문 분석하고 로드합니다.  
   
 ```sql

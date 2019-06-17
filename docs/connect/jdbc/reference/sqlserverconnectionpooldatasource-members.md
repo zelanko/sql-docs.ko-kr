@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 103dcc54b470be5db744dc6b5bf7bed6660de787
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746911"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800592"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47746911"
 |속성|설명|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 **applicationIntent** 연결 속성의 값을 반환합니다.|  
-|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 응용 프로그램 이름을 반환합니다.|  
+|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 애플리케이션 이름을 반환합니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 이 DataSource 개체가 나타내는 데이터 원본과의 연결을 설정합니다.|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 데이터베이스 이름을 반환합니다.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 데이터 원본에 대한 설명을 반환합니다.|  
@@ -63,8 +63,8 @@ ms.locfileid: "47746911"
 |[getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, SQL 상태에서 XOPEN 규격 상태로의 변환이 가능한지 여부를 나타내는 **Boolean** 값을 반환합니다.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)|이 개체가 지정된 인터페이스에 대한 래퍼인지 여부를 나타냅니다.|  
 |[setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 **applicationIntent** 연결 속성의 값을 설정합니다.|  
-|[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 응용 프로그램 이름을 설정합니다.|  
-|[setAuthenticationSceme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 응용 프로그램에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
+|[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 애플리케이션 이름을 설정합니다.|  
+|[setAuthenticationSceme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 애플리케이션에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 연결할 데이터베이스 이름을 설정합니다.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 데이터 원본에 대한 설명을 설정합니다.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 데이터베이스 미러링 구성에 사용되는 장애 조치(Failover) 서버의 이름을 설정합니다.|  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736994"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798599"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
@@ -77,9 +77,9 @@ SPN(서비스 사용자 이름)에 대한 자세한 내용은 다음을 참조�
 - [SQL Server에서 Kerberos 사용](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
-> 6.2 릴리스의 JDBC 드라이버에서 적절 한 영역 간 Kerberos를 사용 하기 전에 명시적으로 설정 해야 합니다 **serverSpn**합니다.
+> 6\.2 릴리스의 JDBC 드라이버에서 적절 한 영역 간 Kerberos를 사용 하기 전에 명시적으로 설정 해야 합니다 **serverSpn**합니다.
 >
-> 6.2 릴리스를 기준으로 드라이버를 작성 하는 일을 할 수는 **serverSpn** 교차 영역 Kerberos를 사용 하는 경우에 기본적으로 합니다. 하나를 사용할 수 있지만 **serverSpn** 명시적으로 너무 합니다.
+> 6\.2 릴리스를 기준으로 드라이버를 작성 하는 일을 할 수는 **serverSpn** 교차 영역 Kerberos를 사용 하는 경우에 기본적으로 합니다. 하나를 사용할 수 있지만 **serverSpn** 명시적으로 너무 합니다.
 
 ## <a name="creating-a-login-module-configuration-file"></a>로그인 모듈 구성 파일 만들기
 
@@ -195,7 +195,7 @@ Username 속성 영역을 사용자가 krb5.conf 파일에서 설정 default_rea
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>같은 도메인에 Unix 컴퓨터에서 Kerberos 인증을 사용합니다.
 
-이 가이드에서는 Kerberos 설정 이미 작동을 가정 합니다. 앞서 언급 한이 true 인 경우를 확인 하려면 Kerberos 인증을 사용 하는 Windows 컴퓨터에서 다음 코드를 실행 합니다. 코드 인쇄 "인증 체계: KERBEROS 성공 하는 경우 콘솔에 "입니다. 없는 추가 런타임 플래그, 종속성 또는 드라이버 설정을 제공한 외부에서 필수 이며 동일한 코드 블록은 성공적인 연결을 확인 하는 Linux에서 실행할 수 있습니다.
+이 가이드에서는 Kerberos 설정 이미 작동을 가정 합니다. 앞서 언급 한이 true 인 경우를 확인 하려면 Kerberos 인증을 사용 하는 Windows 컴퓨터에서 다음 코드를 실행 합니다. 코드는 "인증 체계:: KERBEROS" 성공 하는 경우 콘솔에 인쇄 됩니다. 없는 추가 런타임 플래그, 종속성 또는 드라이버 설정을 제공한 외부에서 필수 이며 동일한 코드 블록은 성공적인 연결을 확인 하는 Linux에서 실행할 수 있습니다.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

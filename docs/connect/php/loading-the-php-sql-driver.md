@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 4b2f02fc81b969f8633a5a951483745c1d2635b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744613"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799639"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 로드
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +84,7 @@ PHP를 시작할 때 SQLSRV 드라이버를 로드하려면 먼저 드라이버 
 **php.ini** 지시문에 대한 자세한 내용은 [핵심 php.ini 지시문 설명](https://php.net/manual/en/ini.core.php)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)
 

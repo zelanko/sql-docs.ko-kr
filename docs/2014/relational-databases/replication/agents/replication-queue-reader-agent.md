@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d92a15ae855c5521319abd252b1f5a7efc2bf300
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191668"
 ---
 # <a name="replication-queue-reader-agent"></a>복제 큐 판독기 에이전트
@@ -62,7 +62,7 @@ ms.locfileid: "63191668"
  **-DefinitionFile** _def_path_and_file_name_  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령줄 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
  배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 기본 *server_name*\\*instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 이 인수가 지정되지 않은 경우 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
   
  **-DistributionDB** _distribution_database_  
@@ -113,7 +113,7 @@ ms.locfileid: "63191668"
  **-PollingInterval** _polling_interval_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기반 큐를 사용하는 구독 업데이트에만 해당됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐가 보류 중인 지연 트랜잭션에 대해 폴링되는 빈도(초)를 지정합니다. 이 값은 0초에서 240초 사이일 수 있습니다. 기본값은 5초입니다.  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)를 참조하세요.  
   
  **-ProfileName** _agent_profile_name_  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605133"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801442"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하는 SQL과 연결된 개념 증명
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -165,6 +165,6 @@ ms.locfileid: "51605133"
   
 ## <a name="additional-examples"></a>추가 예  
   
-[예제 응용 프로그램(SQLSRV 드라이버)](../../connect/php/example-application-sqlsrv-driver.md)  
+[예제 애플리케이션(SQLSRV 드라이버)](../../connect/php/example-application-sqlsrv-driver.md)  
 
-[예제 응용 프로그램(PDO_SQLSRV 드라이버)](../../connect/php/example-application-pdo-sqlsrv-driver.md)
+[예제 애플리케이션(PDO_SQLSRV 드라이버)](../../connect/php/example-application-pdo-sqlsrv-driver.md)

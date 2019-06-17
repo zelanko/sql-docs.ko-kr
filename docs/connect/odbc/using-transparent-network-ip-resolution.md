@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610760"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801716"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>투명 네트워크 IP 확인 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ TransparentNetworkIPResolution은 않습니다 호스트 이름의 첫 번째 �
 
 `SQL_COPT_SS_TNIR` 사전 연결 특성을 사용 하면이 설정을 프로그래밍 방식으로 제어 하는 응용 프로그램:
 
-연결 특성|   크기/유형|  Default| 값| 설명
+연결 특성|   크기/형식|  Default| 값| 설명
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` 또는 `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|사용 하거나 TNIR를 사용 하지 않도록 설정 합니다.
 

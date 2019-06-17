@@ -17,20 +17,20 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: ef4f863e4aca24cff654469f6447c02814008089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cb6c20746746d3261593e13978be022af8938a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706111"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803822"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 통해 데이터를 인출하고 업데이트할 때는 SQL Server용 OLE DB 드라이버 소비자 응용 프로그램에 다른 모든 클라이언트 응용 프로그램에 적용되는 것과 동일한 고려 사항 및 제약 조건이 적용됩니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서를 통해 데이터를 인출하고 업데이트할 때는 SQL Server용 OLE DB 드라이버 소비자 애플리케이션에 다른 모든 클라이언트 애플리케이션에 적용되는 것과 동일한 고려 사항 및 제약 조건이 적용됩니다.  
   
  동시 데이터 액세스 제어에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서의 행만 참여합니다. 소비자가 수정이 가능한 행 집합을 요청하면 DBPROP_LOCKMODE에서 동시성 제어를 관리합니다. 소비자는 행 집합을 열기 전에 DBPROP_LOCKMODE 속성을 설정하여 동시 액세스 제어의 수준을 변경합니다.  
   

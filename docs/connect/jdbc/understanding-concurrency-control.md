@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654351"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798272"
 ---
 # <a name="understanding-concurrency-control"></a>동시성 제어 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47654351"
 |----------------------|---------------------|---------------|-----------------|  
 |CONCUR_READ_ONLY|읽기 전용|아니오|커서를 통한 업데이트는 지원되지 않으며 결과 집합을 구성하는 행에 대해 잠금이 보유되지 않습니다.|  
 |CONCUR_UPDATABLE|낙관적 읽기/쓰기|아니오|데이터베이스에서 행 경합이 발생할 가능성은 희박하지만 발생할 가능성도 있다고 간주합니다. 타임스탬프 비교를 통해 행 무결성을 검사합니다.|  
-|CONCUR_SS_SCROLL_LOCKS|비관적 읽기/쓰기|사용자 계정 컨트롤|데이터베이스에서 행 경합이 발생할 가능성이 있다고 간주합니다. 행 잠금 없이 행 무결성이 보장됩니다.|  
+|CONCUR_SS_SCROLL_LOCKS|비관적 읽기/쓰기|예|데이터베이스에서 행 경합이 발생할 가능성이 있다고 간주합니다. 행 잠금 없이 행 무결성이 보장됩니다.|  
 |CONCUR_SS_OPTIMISTIC_CC|낙관적 읽기/쓰기|아니오|데이터베이스에서 행 경합이 발생할 가능성은 희박하지만 발생할 가능성도 있다고 간주합니다. 타임스탬프 비교를 통해 행 무결성을 검사합니다.<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 경우 테이블에 타임스탬프 열이 없으면 이 유형은 CONCUR_SS_OPTIMISTIC_CCVAL로 변경됩니다.<br /><br /> [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]의 경우 기본 테이블에 타임스탬프 열이 있으면 OPTIMISTIC WITH VALUES를 지정해도 OPTIMISTIC WITH ROW VERSIONING이 사용됩니다. OPTIMISTIC WITH ROW VERSIONING을 지정하고 테이블에 타임스탬프가 없는 경우 OPTIMISTIC WITH VALUES가 사용됩니다.|  
 |CONCUR_SS_OPTIMISTIC_CCVAL|낙관적 읽기/쓰기|아니오|데이터베이스에서 행 경합이 발생할 가능성은 희박하지만 발생할 가능성도 있다고 간주합니다. 행 데이터 비교를 통해 행 무결성을 검사합니다.|  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802566"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
@@ -72,7 +72,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>1. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
+### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>1\. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
 ```sql  
@@ -81,7 +81,7 @@ FROM sys.master_files AS f
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
 ```  
   
-### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>2. 현재 데이터베이스에 대해 전체 공간과 사용 가능한 공간 반환  
+### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>2\. 현재 데이터베이스에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 현재 데이터베이스의 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
 ```sql  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 305be93a342b66a18cae6de4f60ba9efa98e1738
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736904"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798320"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>3단계: Java를 사용하여 SQL에 연결하는 개념 증명
   
@@ -100,7 +100,7 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>3단계: 행 삽입  
+## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
 이 예제에서는 INSERT 문을 실행 매개 변수를 전달 하 고 자동으로 생성 된 기본 키 값을 검색 합니다.   
   
 ```java  

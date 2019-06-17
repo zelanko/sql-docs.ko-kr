@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b8ac216e31755a8d60989699dec248ba17f4dde3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ad7f9ee6fc5250ac2bc349ccadb8909fc0e3cbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841431"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804028"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>getBytes 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

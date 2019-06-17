@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2b8e85b4ebfa679dda4e980df54cd11a06b1946d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4f894ae19a421b759870ceb597291b33fc1d2dec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805401"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801097"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

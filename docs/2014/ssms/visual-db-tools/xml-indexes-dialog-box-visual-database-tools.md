@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63228373"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
@@ -57,7 +57,7 @@ ms.locfileid: "63228373"
  XML 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
  **설명**  
- 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+ 인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
  **테이블 디자이너 범주**  
  확장하면 현재 XML 인덱스의 속성에 대한 정보가 표시됩니다.  

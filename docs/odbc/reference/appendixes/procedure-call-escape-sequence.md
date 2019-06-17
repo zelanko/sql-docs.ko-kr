@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188500"
 ---
 # <a name="procedure-call-escape-sequence"></a>프로시저 호출 이스케이프 시퀀스
 ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 한 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
   
- **{**[?=]**call** *procedure-name*[**(**[*parameter*][,[*parameter*]]...**)**]**}**  
+ **{** [?=]**call** *procedure-name*[ **(** [*parameter*][,[*parameter*]]... **)** ] **}**  
   
  BNF 표기법의 구문은 다음과 같습니다.  
   

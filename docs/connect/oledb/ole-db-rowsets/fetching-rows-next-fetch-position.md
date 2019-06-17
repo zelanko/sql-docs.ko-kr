@@ -15,13 +15,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cdfe3a7c5d702bed0b40447ae196a181ed3e4e15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a619923c2fb144fa0572c8706edbdc6b908ad621
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731641"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803192"
 ---
 # <a name="fetching-rows---next-fetch-position"></a>행 인출 - 다음 인출 위치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

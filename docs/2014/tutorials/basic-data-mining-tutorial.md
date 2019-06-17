@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185577"
 ---
 # <a name="basic-data-mining-tutorial"></a>기본 데이터 마이닝 자습서
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서를 시작합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용하여 결과를 분석하는 방법과 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 데이터 마이닝 도구를 사용하여 예측과 정확도 차트를 만드는 방법도 알아봅니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 기본 데이터 마이닝 자습서를 시작합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 마이닝 모델을 만들고 예측 하기 위한 통합된 환경을 제공 합니다. 이 자습서에서는 시스템 학습을 사용하여 고객 구매 행동을 분석하고 예측하는 타겟 메일링 캠페인 시나리오를 완료합니다. 이 자습서에서는 가장 중요한 세 가지 데이터 마이닝 알고리즘인 클러스터링, 의사 결정 트리 및 Naive Bayes를 사용하는 방법을 보여 줍니다. 또한 마이닝 모델 뷰어를 사용하여 결과를 분석하는 방법과 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 포함된 데이터 마이닝 도구를 사용하여 예측과 정확도 차트를 만드는 방법도 알아봅니다. 모든 예에 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]가 사용됩니다.  
   
  데이터 마이닝 도구를 사용 하 여 편리 하 게 되 면도 완료 하는 것이 좋습니다 합니다 [중급 데이터 마이닝 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)합니다. 해당 단원에서는 예측, 시장 바구니 분석, 시계열, 연결 모델, 중첩 테이블 및 시퀀스 클러스터링을 사용하는 방법을 보여 줍니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63185577"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스.  
   
- 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 선택합니다.  
+ 보안을 위해 예제 데이터베이스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 함께 설치되지 않습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 선택합니다.  
   
 > [!NOTE]  
 >  문서 뷰어 도구 모음에 **다음 항목** 단추 및 **이전 항목** 단추를 추가하면 단계의 앞뒤로 편리하게 이동할 수 있어 자습서를 더 쉽게 진행할 수 있습니다.  

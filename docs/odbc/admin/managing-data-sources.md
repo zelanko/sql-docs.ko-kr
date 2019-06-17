@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198762"
 ---
 # <a name="managing-data-sources"></a>데이터 원본 관리
@@ -30,7 +30,7 @@ ms.locfileid: "63198762"
 > [!NOTE]  
 >  64 비트 플랫폼에서 32 비트 드라이버에 연결 하는 데이터 소스를 관리 하려면 c:\windows\sysWOW64\odbcad32.exe를 사용 합니다. 64 비트 드라이버에 연결 하는 데이터 소스를 관리 하려면 c:\windows\system32\odbcad32.exe를 사용 합니다. **관리 도구** 64 비트 Windows 8 운영 체제는 32 비트 및 64 비트에 대 한 아이콘 **ODBC 데이터 원본 관리자** 대화 상자.  
   
- 구성 하거나 예를 들어 32 비트 드라이버를 연결 하는 DSN을 제거 하려면 64 비트 odbcad32.exe를 사용 하는 경우 **드라이버 수행 됩니다 (\*.mdb)**, 다음 오류 메시지가 나타납니다.  
+ 구성 하거나 예를 들어 32 비트 드라이버를 연결 하는 DSN을 제거 하려면 64 비트 odbcad32.exe를 사용 하는 경우 **드라이버 수행 됩니다 (\*.mdb)** , 다음 오류 메시지가 나타납니다.  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

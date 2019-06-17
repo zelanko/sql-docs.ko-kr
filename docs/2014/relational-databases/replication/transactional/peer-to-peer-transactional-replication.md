@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274368"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
@@ -137,7 +137,7 @@ ms.locfileid: "63274368"
   
 -   배포 에이전트 매개 변수 **-SubscriptionStreams** 및 로그 판독기 에이전트 매개 변수 **-MaxCmdsInTran**  
   
--   아티클 속성 **@destination_owner** 및 **@destination_table**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   아티클 속성 **@destination_owner** 및 **@destination_table** 라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
 
 -   피어 투 피어 트랜잭션 복제에서는 피어 투 피어 게시에 대한 단방향 트랜잭션 구독을 만들 수 없습니다.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274368"
   
 -   아티클 속성 **@replicate_ddl** 의 값은 `true`; **@identityrangemanagementoption** 의 값이 필요 `manual`; 하 고 **@status** 옵션에 **24** 설정 됩니다.  
   
--   아티클 속성에 대 한 값 **@ins_cmd**합니다 **@del_cmd**, 및 **@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
+-   아티클 속성에 대 한 값 **@ins_cmd** 합니다 **@del_cmd** , 및 **@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
   
 -   구독 속성 **@sync_type** 의 값이 필요 `none` 또는 `automatic`합니다.  
   

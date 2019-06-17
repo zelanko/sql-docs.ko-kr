@@ -7,17 +7,18 @@ ms.prod_service: connectivity
 ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: kenvh
-ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d710bb6e83d6f9761f7926afac3280a2c33d2bec
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618280"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822238"
 ---
 # <a name="fips-mode"></a>FIPS 모드
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 SQL Server 용 Microsoft JDBC Driver 지원으로 구성 된 Jvm에서 실행 중인 *FIPS 140 규격*합니다.
@@ -90,7 +91,7 @@ JDBC 드라이버를 FIPS 규격 모드에서 실행 하려면 다음 표에 나
 |TrustServerCertificate|부울 ["true / false"]|"false"|FIPS에 대 한 사용자는 사용자가 사용 해야 하므로 인증서 체인의 유효성을 검사 해야 **"false"** 이 속성의 값입니다. ||
 |trustStore|String|null|인증서를 가져온 위치에 Java Keystore 파일 경로입니다. 인증서에서 시스템을 무엇이 든 전달할 필요가 없습니다 설치 하는 경우. 드라이버는 cacerts 또는 jssecacerts 파일을 사용합니다.||
 |trustStorePassword|String|null|trustStore 데이터의 무결성을 검사하는 데 사용되는 암호입니다.||
-|fips|부울 ["true / false"]|"false"|이 속성은 같아야 FIPS 사용 JVM **true**|6.1.4에 추가 (안정적인 6.2.2 릴리스)||
-|fipsProvider|String|null|JVM에 구성 된 FIPS 공급자입니다. 예를 들어 BCFIPS 또는 SunPKCS11 NSS |6.1.2에 추가 (안정적인 6.2.2 릴리스), 세부 정보를 보려면 6.4.0-에서 사용 되지 않음 [여기](https://github.com/Microsoft/mssql-jdbc/pull/460)합니다.|
-|trustStoreType|String|JKS|FIPS 모드 집합 신뢰 저장소 형식에 대 한 PKCS12 또는 형식 공급자가 정의한 FIPS |6.1.2에 추가 (안정적인 6.2.2 릴리스)||
+|fips|부울 ["true / false"]|"false"|이 속성은 같아야 FIPS 사용 JVM **true**|6\.1.4에 추가 (안정적인 6.2.2 릴리스)||
+|fipsProvider|String|null|JVM에 구성 된 FIPS 공급자입니다. 예를 들어 BCFIPS 또는 SunPKCS11 NSS |6\.1.2에 추가 (안정적인 6.2.2 릴리스), 세부 정보를 보려면 6.4.0-에서 사용 되지 않음 [여기](https://github.com/Microsoft/mssql-jdbc/pull/460)합니다.|
+|trustStoreType|String|JKS|FIPS 모드 집합 신뢰 저장소 형식에 대 한 PKCS12 또는 형식 공급자가 정의한 FIPS |6\.1.2에 추가 (안정적인 6.2.2 릴리스)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

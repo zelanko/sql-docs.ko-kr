@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c15755e2099f96a1fccc8fbf6c5dcdbdd25a751
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632761"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802712"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

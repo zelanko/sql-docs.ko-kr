@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: b00e90174c865ac06e934cc1a89914ff3deef76c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802198"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
@@ -38,7 +38,7 @@ ms.locfileid: "66802198"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

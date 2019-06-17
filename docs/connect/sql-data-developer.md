@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 62b84b7be01389cffd45175003066283ac14a7a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578293"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800801"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 모바일 장치 및 데스크톱 웹 서버, 엔터프라이즈 서버 및 클라우드 전반에서 데이터 중심 솔루션을 만드는 데 사용 하 여 Microsoft SQL 데이터 플랫폼입니다.  

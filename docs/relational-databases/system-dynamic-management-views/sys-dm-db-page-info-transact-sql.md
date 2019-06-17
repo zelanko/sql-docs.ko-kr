@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822239"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -123,7 +123,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-all-the-properties-of-a-page"></a>1. 페이지의 모든 속성 표시
+### <a name="a-displaying-all-the-properties-of-a-page"></a>1\. 페이지의 모든 속성 표시
 모든 페이지 정보를 사용 하 여 하나의 행을 반환 하는 다음 쿼리는 주어진 `database_id`, `file_id`, `page_id` 기본 모드 ('제한')와 함께
 
 ```sql
@@ -131,7 +131,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>2. 다른 Dmv sys.dm_db_page_info 사용 
+### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>2\. 다른 Dmv sys.dm_db_page_info 사용 
 
 다음 쿼리는 행을 하나씩 반환 `wait_resource` 에 의해 노출 `sys.dm_exec_requests` 행에 null이 아닌를 포함 하는 경우 `page_resource`
 

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798257"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 추적 또는 로깅 기능을 사용하여 응용 프로그램에서 사용되는 JDBC 드라이버 관련 문제를 해결할 수 있습니다. 추적 기능을 활성화하기 위해 JDBC 드라이버는 java.util.logging의 로깅 API를 사용합니다. 이 API는 Logger 및 LogRecord 개체를 만드는 클래스 집합을 제공합니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 추적 또는 로깅 기능을 사용하여 애플리케이션에서 사용되는 JDBC 드라이버 관련 문제를 해결할 수 있습니다. 추적 기능을 활성화하기 위해 JDBC 드라이버는 java.util.logging의 로깅 API를 사용합니다. 이 API는 Logger 및 LogRecord 개체를 만드는 클래스 집합을 제공합니다.  
   
 > [!NOTE]  
 >  JDBC 드라이버에 포함된 네이티브 구성 요소(sqljdbc_xa.dll)의 경우 BID(Built-In Diagnostics) 프레임워크를 사용하여 추적 기능을 활성화합니다. BID에 대한 자세한 내용은 [SQL Server에서 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=70042)을 참조하세요.  
@@ -83,7 +83,7 @@ ms.locfileid: "51605783"
 |AuthenticationJNI|통합 인증 문제는 Windows에 대 한 로그 메시지 (때 합니다 **authenticationScheme** 연결 속성이 암시적 또는 명시적으로 설정 **NativeAuthentication**).<br /><br /> 응용 프로그램에서는 로깅 수준을 FINEST 및 FINE으로 설정할 수 있습니다.|  
 |SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
 |SQLServerDataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스의 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|InputStream|java.io.InputStream, java.io.Reader 및 varchar, nvarchar, varbinary 데이터 형식 등의 최대값 지정자가 있는 데이터 형식과 관련된 메시지를 로깅합니다. <br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|InputStream|java.io.InputStream, java.io.Reader 및 varchar, nvarchar, varbinary 데이터 형식 등의 최대값 지정자가 있는 데이터 형식과 관련된 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
 |SQLServerException|[SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
 |SQLServerResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
 |SQLServerStatement|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  

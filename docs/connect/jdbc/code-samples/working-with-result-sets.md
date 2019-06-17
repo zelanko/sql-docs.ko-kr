@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3144eb103a1197d36ddc165d15bf16f828ebd9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798505"
 ---
 # <a name="working-with-result-sets"></a>결과 집합 사용
 
@@ -41,5 +41,5 @@ ms.locfileid: "47610157"
   
 ## <a name="see-also"></a>참고 항목  
 
-[샘플 JDBC 드라이버 응용 프로그램](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[샘플 JDBC 드라이버 애플리케이션](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   
