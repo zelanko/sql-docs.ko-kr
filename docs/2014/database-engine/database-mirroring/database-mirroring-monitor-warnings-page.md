@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755048"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>데이터베이스 미러링 모니터(경고 페이지)
@@ -48,7 +48,7 @@ ms.locfileid: "62755048"
  자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
 ## <a name="remarks"></a>Remarks  
- 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 _<SYSTEM_NAME>_**에 연결되지 않음** 또는 _<SYSTEM_NAME>_**\\**_<instance_name>_**에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
+ 서버 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 해당 **임계값** 열의 셀에 회색 배경과 워터마크 텍스트가 표시됩니다. 모니터가 서버 인스턴스에 연결되지 않은 경우 인스턴스가 기본 인스턴스인지 명명된 인스턴스인지에 따라 _<SYSTEM_NAME>_ **에 연결되지 않음** 또는 _<SYSTEM_NAME>_ **\\** _<instance_name>_ **에 연결되지 않음**이 표의 모든 셀에 표시됩니다. 모니터에서 쿼리 반환을 기다리고 있는 경우 표의 모든 셀에 **데이터를 기다리는 중...** 이 표시됩니다.  
   
  정보를 사용할 수 있는 경우 각 경고의 셀에 지정된 임계값과 측정 단위 또는 **사용 안 함**이 표시됩니다.  
   

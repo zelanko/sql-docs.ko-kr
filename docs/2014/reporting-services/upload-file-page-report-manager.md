@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098872"
 ---
 # <a name="upload-file-page-report-manager"></a>파일 업로드 페이지(보고서 관리자)
@@ -22,7 +22,7 @@ ms.locfileid: "66098872"
   
 -   업로드된 .rdl 파일은 보고서 서버에 보고서로 게시됩니다.  
   
--   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
+-   Uploaded .smdl 파일이 데이터 원본 뷰 정보를 포함하는 경우 이 파일은 보고서 모델로 게시됩니다. 데이터 원본 뷰 참조가 유실되면 업로드 중에 오류가 발생합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 보고서 모델 프로젝트에서 .smdl 파일을 업로드하면 데이터 원본 뷰 정보가 누락될 수 있습니다. 보고서 모델 프로젝트에서 데이터 원본 뷰 정보는 .smdl 파일 자체가 아닌 별도의 파일에 저장됩니다.  
   
      데이터 원본 뷰 정보가 들어 있고 따라서 성공적으로 업로드할 수 있는 모델 파일은 이전에 보고서 서버에 게시된 후 서버에서 파일 시스템의 파일로 저장된 파일입니다. 모델의 일반 속성 페이지를 열고 **편집** 을 클릭하여 모델을 연 경우 파일에 모델을 저장하고 보고서 서버에 새 모델로 해당 파일을 업로드할 수 있습니다. 나중에 업로드하는 .smdl 파일은 모델 게시에 필요한 모든 정보를 포함하게 됩니다.  
   

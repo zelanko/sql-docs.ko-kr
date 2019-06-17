@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4a404903e7095b633633ec1dc398bc4af767c080
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092617"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Reporting Services SharePoint 모드 업그레이드(SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66092617"
 ## <a name="options"></a>변수  
  **다음** 단추는 **업그레이드 계속** 확인란을 선택한 경우에만 사용할 수 있습니다. 이 확인란을 선택하지 않으면 업그레이드를 계속할 수 없습니다.  
   
- 자세한 내용은 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)합니다.  
+ 자세한 내용은 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628) 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   

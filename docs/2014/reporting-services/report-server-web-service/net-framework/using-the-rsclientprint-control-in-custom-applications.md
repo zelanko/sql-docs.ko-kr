@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519123"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
@@ -104,7 +104,7 @@ ms.locfileid: "62519123"
   
 |인수|입력/출력|형식|Description|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|입력|String|보고서 서버 가상 디렉터리를 지정 합니다 (예를 들어 https://adventure-works/reportserver)합니다.|  
+|ServerPath|입력|String|보고서 서버 가상 디렉터리를 지정 합니다 (예를 들어 https://adventure-works/reportserver) 합니다.|  
 |ReportPathParameters|입력|String|보고서 서버 폴더 네임스페이스에 있는 보고서의 전체 이름을 매개 변수를 포함하여 지정합니다. 보고서는 URL 액세스를 통해 검색됩니다. 예제: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|입력|String|보고서의 짧은 이름입니다. 위의 예에서 짧은 이름은 Employee Sales Summary입니다. 짧은 이름은 인쇄 대화 상자와 인쇄 큐에 나타납니다.|  
   

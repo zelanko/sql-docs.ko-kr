@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060849"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS 서비스 액세스에 대한 Windows 방화벽 구성
@@ -65,11 +65,11 @@ ms.locfileid: "66060849"
   
 1.  제어판에서 **Windows 방화벽**을 두 번 클릭합니다.  
   
-2.   **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
+2.  **Windows 방화벽** 대화 상자에서 **예외** 탭을 클릭한 다음 **프로그램 추가**를 클릭합니다.  
   
 3.  **프로그램 추가** 대화 상자에서 **찾아보기**를 클릭하고 Program Files\Microsoft SQL Server\100\DTS\Binn 폴더로 이동한 다음 MsDtsSrvr.exe를 클릭하고 **열기**를 클릭합니다. **확인** 을 클릭하여 **프로그램 추가** 대화 상자를 닫습니다.  
   
-4.   **예외** 탭에서 **포트 추가**를 클릭합니다.  
+4.  **예외** 탭에서 **포트 추가**를 클릭합니다.  
   
 5.  **포트 추가** 대화 상자의 **이름** 상자에 **RPC(TCP/135)** 나 다른 설명이 포함된 이름을 입력하고 **포트 번호** 상자에 **135** 를 입력한 다음 **TCP**를 선택합니다.  
   

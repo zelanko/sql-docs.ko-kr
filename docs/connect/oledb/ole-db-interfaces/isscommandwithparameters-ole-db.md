@@ -15,13 +15,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2ae4bee1e0dd4fea3a5f52e46085da53f75dcab9
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: cdc794865d62ae1ff832b2355601a6aff572783c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030390"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783874"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

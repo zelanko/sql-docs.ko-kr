@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a11d29e7cd8a44f052ad5e0b9ed9278d79174b39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208682"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798223"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 강제 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,37 +49,8 @@ ms.locfileid: "53208682"
 > [!NOTE]  
 >  강제 장애 조치(failover)를 위한 사전 요구 사항 및 권장 사항에 대한 자세한 내용과 강제 장애 조치(failover)를 사용하여 치명적인 오류에서 복구하는 예제 시나리오는 이 항목의 뒷부분에 나오는 [예제 시나리오: 강제 장애 조치(failover)를 사용하여 치명적인 오류 복구](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)를 참조하세요.  
   
--   **시작하기 전 주의 사항:**  
   
-     [제한 사항](#Restrictions)  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [권장 사항](#Recommendations)  
-  
-     [강제 쿼럼 후 데이터 손실을 방지할 수 있는 잠재적인 방법](#WaysToAvoidDataLoss)  
-  
-     [보안](#Security)  
-  
--   **강제 장애 조치(failover)를 수행하려면(데이터가 손실될 수 있음):**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **후속 작업:** [강제 장애 조치(failover) 후 필수 작업](#FollowUp)  
-  
--   **시나리오 예:** [강제 장애 조치(Failover)를 사용하여 치명적인 오류 복구](#ExampleRecoveryFromCatastrophy)  
-  
--   [관련 작업](#RelatedTasks)  
-  
--   [관련 내용](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Restrictions"></a> 제한 사항  
+##  <a name="Restrictions"></a> 제한 사항  
   
 -   장애 조치(failover)를 수행할 수 없는 유일한 시간은 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 쿼럼이 부족할 때입니다.  
   
@@ -94,13 +65,13 @@ ms.locfileid: "53208682"
     > [!NOTE]  
     >  데이터베이스 간 트랜잭션 및 분산 트랜잭션 지원은 SQL Server 및 운영 체제 버전에 따라 달라집니다. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   WSFC 클러스터에 쿼럼이 있습니다. 클러스터에 쿼럼이 없는 경우 [강제 쿼럼을 통해 WSFC 재해 복구&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)의 PowerShell을 사용하여 Always On 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법을 설명합니다.  
   
 -   역할이 SECONDARY 또는 RESOLVING 상태인 복제본을 호스팅하는 서버 인스턴스에 연결할 수 있어야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+##  <a name="Recommendations"></a> 권장 사항  
   
 -   주 복제본이 여전히 실행되는 동안에는 강제 장애 조치(failover)를 수행하지 마세요.  
   
@@ -113,7 +84,7 @@ ms.locfileid: "53208682"
   
 -   클라이언트가 원래 주 복제본에 연결할 수 있는 경우 강제 장애 조치(failover)를 수행하면 분리 장애(split-brain) 동작이 발생할 위험이 있습니다. 강제 장애 조치(failover)를 수행하기 전에 클라이언트가 원래 주 복제본에 액세스하지 않도록 하는 것이 좋습니다. 그렇지 않으면 강제로 장애 조치한 후 원래 주 데이터베이스와 현재 주 데이터베이스가 서로 독립적으로 업데이트될 수 있습니다.  
   
-###  <a name="WaysToAvoidDataLoss"></a> 강제 쿼럼 후 데이터 손실을 방지할 수 있는 잠재적인 방법  
+##  <a name="WaysToAvoidDataLoss"></a> 강제 쿼럼 후 데이터 손실을 방지할 수 있는 잠재적인 방법  
  쿼럼이 손실된 후 오류 조건에 따라 다음과 같이 데이터 손실을 방지할 수 있습니다.  
   
 -   **원래 주 복제본이 온라인 상태가 된 경우**  
@@ -140,9 +111,8 @@ ms.locfileid: "53208682"
     > [!NOTE]  
     >  보조 복제본으로 강제 장애 조치(failover)를 수행할 때 손실되는 데이터의 양은 주 복제본과 장애 조치 대상(failover) 간의 시간차에 의해 결정됩니다. 그러나 WSFC 클러스터에 쿼럼이 부족하거나 쿼럼이 강제로 적용된 경우에는 잠재적 데이터 손실 양을 평가할 수 없습니다. 그러나 WSFC 클러스터가 정상 상태의 쿼럼을 다시 얻으면 잠재적 데이터 손실 추적을 시작할 수 있습니다. 자세한 내용은 [장애 조치(failover) 및 장애 조치(failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)의 PowerShell을 사용하여 Always On 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법을 설명합니다.  
   
-###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -217,7 +187,7 @@ ms.locfileid: "53208682"
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 강제 장애 조치(Failover) 후 필수 태스크  
+##  <a name="FollowUp"></a> 후속 작업: 강제 장애 조치(failover) 후 필수 작업  
   
 1.  강제 장애 조치 후 장애 조치한 보조 복제본은 새로운 주 복제본이 됩니다. 그러나 해당 가용성 복제본이 클라이언트에 액세스할 수 있도록 하려면 다음과 같이 WSFC 쿼럼을 다시 구성하거나 가용성 그룹의 가용성 모드 구성을 조정해야 할 수 있습니다.  
   
@@ -319,7 +289,7 @@ ms.locfileid: "53208682"
   
 ||단계|링크|  
 |-|----------|-----------|  
-|**1.**|기본 데이터 센터의 노드가 다시 온라인 상태가 되고 WSFC 클러스터와의 통신을 다시 설정합니다. 해당 가용성 복제본이 일시 중지된 데이터베이스가 있는 보조 복제본으로 온라인 상태가 되고 DBA가 곧 이 데이터베이스를 각각 수동으로 재개해야 합니다.|[가용성 데이터베이스 재개&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> 팁:  사후 장애 조치(Post-failover) 주 데이터베이스에서 발생할 수 있는 데이터 손실이 우려되는 경우에는 동기 커밋 보조 데이터베이스에서 일시 중지된 데이터베이스에 대한 데이터베이스 스냅숏을 만들어야 합니다. 보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다. 또한 일시 중지된 상태로 남아 있는 로컬 데이터베이스가 있으면 동기 커밋 보조 복제본의 동기화 상태가 정상으로 전환될 수 없습니다.|  
+|**1.**|기본 데이터 센터의 노드가 다시 온라인 상태가 되고 WSFC 클러스터와의 통신을 다시 설정합니다. 해당 가용성 복제본이 일시 중지된 데이터베이스가 있는 보조 복제본으로 온라인 상태가 되고 DBA가 곧 이 데이터베이스를 각각 수동으로 재개해야 합니다.|[가용성 데이터베이스 재개&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)<br /><br /> 팁: 사후 장애 조치(failover) 주 데이터베이스에서 데이터가 손실될 가능성이 있는 경우에는 동기 커밋 보조 데이터베이스 중 하나에서 일시 중지된 데이터베이스에 대한 데이터베이스 스냅샷을 만들어야 합니다. 보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다. 또한 일시 중지된 상태로 남아 있는 로컬 데이터베이스가 있으면 동기 커밋 보조 복제본의 동기화 상태가 정상으로 전환될 수 없습니다.|  
 |**2.**|데이터베이스를 재개하면 DBA가 새 주 복제본을 동기 커밋 모드로 일시적으로 변경합니다. 여기에는 다음 두 단계가 포함됩니다.<br /><br /> 1) 오프라인 가용성 복제본 하나를 비동기 커밋 모드로 변경합니다.<br /><br /> 2) 새 주 복제본을 동기 커밋 가용성 모드로 변경합니다. 참고: 이 단계에서는 재개된 동기 커밋 보조 데이터베이스를 동기화된 상태로 만들 수 있습니다.|[가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|**노드 03** (원래 주 복제본)에서 동기 커밋 보조 복제본이 정상 동기화 상태가 되면 DBA는 해당 복제본에 대해 계획된 수동 장애 조치(failover)를 수행하여 다시 주 복제본이 되도록 합니다. **노드 04** 의 복제본은 보조 복제본으로 돌아갑니다.|[sys.dm_hadr_database_replica_states&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)<br /><br /> [Always On 정책을 사용하여 가용성 그룹의 상태 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|DBA는 새 주 복제본에 연결하고 다음 작업을 수행합니다.<br /><br /> 1) 원격 센터의 이전 주 복제본을 다시 비동기 커밋 모드로 변경합니다.<br /><br /> 2) 기본 데이터 센터의 비동기 커밋 보조 복제본을 다시 동기 커밋 모드로 변경합니다.|[가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
@@ -359,7 +329,7 @@ ms.locfileid: "53208682"
   
      [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server 고객 자문 팀 백서](https://sqlcat.com/)  
+     [SQL Server 고객 자문 팀 백서](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

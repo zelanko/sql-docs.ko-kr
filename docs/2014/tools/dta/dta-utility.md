@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670698"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  튜닝을 위한 입력으로 사용할 작업 파일의 경로와 이름을 지정합니다. 파일은 .trc(SQL Server Profiler 추적 파일), .sql(SQL 파일) 또는 .log([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 파일) 형식 중 하나여야 합니다. 작업 파일 또는 작업 테이블을 하나 지정해야 합니다.  
   
  **-it** _workload_trace_table_name_  
- 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*]**.**[*owner_name*]**.**_table_name_ 형식으로 지정됩니다.  
+ 튜닝을 위한 작업 추적을 포함하는 테이블의 이름을 지정합니다. 이름은 [*database_name*] **.** [*owner_name*] **.** _table_name_ 형식으로 지정됩니다.  
   
  다음 표에서는 각 매개 변수의 기본값을 보여 줍니다.  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- 이 인수는 명령 프롬프트에서 테이블 목록(**-Tl**)을 입력하는 대신 사용할 수 있습니다. **-Tl**를 사용하는 경우 테이블 목록 파일( **-Tf**)을 사용하지 마세요. 두 인수를 모두 사용하면 **dta** 가 실패하고 오류가 반환됩니다.  
+ 이 인수는 명령 프롬프트에서 테이블 목록( **-Tl**)을 입력하는 대신 사용할 수 있습니다. **-Tl**를 사용하는 경우 테이블 목록 파일( **-Tf**)을 사용하지 마세요. 두 인수를 모두 사용하면 **dta** 가 실패하고 오류가 반환됩니다.  
   
  **-Tf** 및 **-Tl** 인수를 둘 다 생략하면 지정한 데이터베이스의 모든 사용자 테이블이 튜닝 대상으로 고려됩니다.  
   
  **-Tl** _table_list_  
  명령 프롬프트에서 튜닝할 테이블 목록을 지정합니다. 테이블 이름은 쉼표를 입력하여 구분합니다. **-D** 인수로 데이터베이스를 하나만 지정하는 경우 데이터베이스 이름으로 테이블 이름을 정규화할 필요가 없습니다. 그렇지 않고 여러 데이터베이스를 지정하는 경우에는 각 테이블에 *database_name.schema_name.table_name* 형식으로 정규화된 이름을 사용해야 합니다.  
   
- 이 인수는 테이블 목록 파일(**-Tf**) 대신 사용할 수 있습니다. **-Tl** 및 **-Tf** 를 모두 사용하면 **dta** 가 실패하고 오류가 반환됩니다.  
+ 이 인수는 테이블 목록 파일( **-Tf**) 대신 사용할 수 있습니다. **-Tl** 및 **-Tf** 를 모두 사용하면 **dta** 가 실패하고 오류가 반환됩니다.  
   
  **-U** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결에 사용하는 로그인 ID를 지정합니다.  

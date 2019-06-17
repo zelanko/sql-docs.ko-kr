@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736824"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790359"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -52,7 +52,7 @@ JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페�
 
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 큰 값 데이터 형식을 사용할 때 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 max 지정자를 제공하여 값을 2^31바이트로 스토리지할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 큰 값 데이터 형식을 사용할 때 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 max 지정자를 제공하여 값을 2^31바이트로 스토리지할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수에서 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
 
 큰 값 형식을 사용하는 주요 시나리오는 큰 값 형식을 데이터베이스에서 검색하거나 데이터베이스에 추가하는 것입니다. 다음 섹션에서는 이러한 태스크를 수행하는 다양한 접근 방식에 대해 설명합니다.  
 
