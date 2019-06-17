@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537649"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
@@ -63,7 +63,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>인수  
  *ConnectionHandle*  
- [입력] 연결 핸들입니다.  
+ [Input] 연결 핸들입니다.  
   
  *WindowHandle*  
  [입력] 창 핸들입니다. 해당 하는 경우 응용 프로그램의 부모 창 핸들을 전달할 수 없거나 null 포인터인 경우 창 핸들을 적용 하거나 **SQLDriverConnect** 대화 상자를 표시 하지 것입니다.  

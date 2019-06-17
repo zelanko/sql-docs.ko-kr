@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100987"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Create, Modify, and Delete Standard Subscriptions (Reporting Services in Native Mode)
@@ -79,7 +79,7 @@ ms.locfileid: "66100987"
   
 8.  렌더링 형식에서 파일 배달에 대한 보고서 출력 형식을 선택합니다. 보고서를 열 때 사용할 데스크톱 애플리케이션에 맞는 형식을 선택합니다. 보고서를 단일 스트림으로 렌더링하지 않거나 정적 파일(예: HTML 4.0)에서 지원될 수 없는 대화형 작업을 발생시키는 형식은 사용하지 마세요.  
   
-9. **사용자 이름** 및 **암호** 입력란에서 파일 공유에 액세스하는 데 필요한 자격 증명을 지정합니다. 사용자 이름에는 *\<domain>*\\*\<user name>* 형식을 사용합니다.  
+9. **사용자 이름** 및 **암호** 입력란에서 파일 공유에 액세스하는 데 필요한 자격 증명을 지정합니다. 사용자 이름에는 *\<domain>* \\ *\<user name>* 형식을 사용합니다.  
   
 10. 덮어쓰기 옵션을 지정합니다. **이전 버전이 있으면 파일을 덮어쓰지 않음**옵션을 클릭한 경우 기존 파일이 검색되면 배달이 수행되지 않습니다. **새 버전 추가 시 파일 이름 자동 증가**를 클릭한 경우 보고서 서버는 이름이 같은 기존 파일과 구분할 수 있도록 파일 이름에 번호를 추가합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66100987"
   
 3.  **전달한**를 선택 **전자 메일**합니다. 이 배달 유형을 사용할 수 없는 경우 보고서 서버가 전자 메일 구독에 대해 구성되지 않은 것입니다.  
   
-4.  에 **To** 의 받는 사람 이름, 텍스트 상자: 필드에 도메인 사용자 계정을 사용 하 여 자동으로 지정 됩니다. 보고서 서버 구성 설정 확인 여부를 합니다 **에** 필드에 사용자 계정으로 자동으로 지정 됩니다. 구성 설정 전자 메일 주소를 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
+4.  에 **To** 의 받는 사람 이름, 텍스트 상자: 필드에 도메인 사용자 계정을 사용 하 여 자동으로 지정 됩니다. 보고서 서버 구성 설정에 따라 **받는 사람** 필드가 사용자 계정을 사용하여 자동으로 지정되는지 여부가 결정됩니다. 구성 설정 전자 메일 주소를 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [전자 메일 배달을 위한 보고서 서버 구성 &#40;SSRS 구성 관리자&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)합니다.  
   
     > [!NOTE]  
     >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25cc5bf210b218df59232efb5a6f1cf363174115
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c1f24e9bdbfed037aa1fe1b3a0baabedb1673cef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609161"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800149"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>4단계: PHP를 사용하여 탄력적으로 SQL에 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

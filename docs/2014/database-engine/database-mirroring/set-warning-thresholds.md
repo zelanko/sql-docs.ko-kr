@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805164"
 ---
 # <a name="set-warning-thresholds"></a>경고 임계값 설정
@@ -30,7 +30,7 @@ ms.locfileid: "65805164"
   
 ## <a name="options"></a>변수  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
- _SYSTEM_**\\**_INSTANCE_NAME_형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
+ _SYSTEM_ **\\** _INSTANCE_NAME_형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   
  또한 이 필드는 모니터가 이 서버 인스턴스에 현재 연결되어 있는지 여부를 나타냅니다. 가능한 연결 상태는 다음과 같습니다.  
   

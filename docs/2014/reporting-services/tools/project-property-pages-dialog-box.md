@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100035"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
-  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
+  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_ **속성**을 클릭합니다.  
   
  구성 속성을 정의한 후 도구 모음의 **솔루션 구성** 드롭다운 목록에서 구성을 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **Configuration**  
- 편집할 구성을 선택합니다. 처음에 다음 구성을 사용할 수 있습니다. **디버그**하십시오 **DebugLocal**, 및 **릴리스**합니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
+ 편집할 구성을 선택합니다. 처음에 다음 구성을 사용할 수 있습니다. **디버그**하십시오 **DebugLocal**, 및 **릴리스**합니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)** ).  
   
  두 개 이상의 구성에 대한 속성을 동시에 보려면 **모든 구성** 또는 **여러 구성**을 선택합니다.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66100035"
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 루트로 시작되는 폴더 계층의 전체 경로를 지정합니다. Folder1/Folder2/Folder3).  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http://*\<서버 이름 > /\<사이트 >*/documents/myfolder 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http:// *\<서버 이름 > /\<사이트 >* /documents/myfolder 합니다.  
   
  **TargetReportFolder**  
  게시된 보고서를 저장할 폴더의 이름입니다. 기본적으로 보고서 프로젝트의 이름입니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 루트로 시작되는 폴더 계층의 전체 경로를 지정합니다. 폴더가 다른 폴더 안에 있는 경우 루트로 시작되는 폴더 경로를 입력합니다(예: Folder1/Folder2/Folder3).  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http://*\<서버 이름 >*/*\<사이트 >*/documents/myfolder 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 라이브러리에 대한 URL을 사용합니다(예: 예를 들어, http:// *\<서버 이름 >* / *\<사이트 >* /documents/myfolder 합니다.  
   
  **TargetServerURL**  
  대상 보고서 서버의 URL입니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다.  
   
  기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL을 사용합니다(예: 예를 들어, http://\<서버 > / reportserver입니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 "reportserver"라는 가상 디렉터리에 설치되어 있습니다.  
   
- SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어, http://\<*서버 이름 >*, http://&lt*servername*/\<*사이트 >* 또는 http://\< *서버 이름 >*/\<*사이트 >*/\<*하위 >* 합니다.  
+ SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어, http://\<*서버 이름 >* , http://&lt*servername*/\<*사이트 >* 또는 http://\< *서버 이름 >* /\<*사이트 >* /\<*하위 >* 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 게시](../publish-reports.md)   

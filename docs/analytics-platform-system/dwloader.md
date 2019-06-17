@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175039"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
@@ -567,7 +567,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-dwloader-example"></a>1. 간단한 dwloader 예제  
+### <a name="a-simple-dwloader-example"></a>1\. 간단한 dwloader 예제  
 다음 예제에서는 시작 합니다 **로더** 선택한 필수 옵션을 사용 하 여 합니다. 전역 구성 파일에서 사용 되는 기타 옵션 *loadparamfile.txt*합니다.  
   
 SQL Server 인증을 사용 하는 예입니다.  
@@ -597,7 +597,7 @@ dwloader.exe -S MyPDW-SQLCTL01 -W -f /configfiles/loadparamfile.txt
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>2. AdventureWorks 테이블에 데이터 로드  
+### <a name="b-load-data-into-an-adventureworks-table"></a>2\. AdventureWorks 테이블에 데이터 로드  
 다음 예제에서는 데이터를 로드 하는 배치 스크립트의 일부인 **AdventureWorksPDW2012**합니다.  전체 스크립트를 보려면 사용 하 여 제공 되는 압축을 푼 aw_create.bat 파일을 엽니다는 **AdventureWorksPDW2012** 설치 패키지입니다. 
 
 <!-- Missing link
@@ -666,7 +666,7 @@ DISTRIBUTION = REPLICATE);
 13|3|1170|110|Deferred Taxes|Assets|+||Currency|  
 ```  
   
-### <a name="c-load-data-from-the-command-line"></a>3. 명령줄에서 데이터를 로드 합니다.  
+### <a name="c-load-data-from-the-command-line"></a>3\. 명령줄에서 데이터를 로드 합니다.  
 예 B의 스크립트는 다음 예와에서 같이 명령줄에서 모든 매개 변수를 입력 하 여 바꿀 수 있습니다.  
   
 ```  

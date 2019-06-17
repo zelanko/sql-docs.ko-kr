@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619591"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
@@ -94,7 +94,7 @@ ms.locfileid: "65619591"
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   
     -   **SqlException 3284이(가) 발생했습니다. 심각도: 16 상태: 5**  
-        **장치에서 메시지 파일 마크가 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 정렬 되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하십시오. '65536' 유사 값입니다.**  
+        **장치에서 메시지 파일 마크가 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' 정렬 되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하십시오. '65536' 유사 값입니다.**  
   
          이 오류를 해결하려면 `BACKUP`을 지정하여 `BLOCKSIZE = 65536` 문을 다시 실행하십시오.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619591"
   
  프록시 서버에는 분당 연결 수를 제한하는 설정이 있을 수 있습니다. URL에 대한 백업 프로세스는 다중 스레드 프로세스이므로 이 제한을 초과할 수 있습니다. 이러한 경우 프록시 서버는 연결을 해제합니다. 이 문제를 해결하려면 SQL Server에서 프록시를 사용하지 않도록 프록시 설정을 변경합니다.   다음은 오류 로그에 표시될 수 있는 오류 메시지 유형의 몇 가지 예입니다.  
   
--   쓰기 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 실패 했습니다. URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
+-   쓰기 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " 실패 했습니다. URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
   
--   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 오류가 발생했습니다. 원격 엔드포인트에서 오류를 수집할 수 없습니다.  
+-   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ”에서 복구할 수 없는 오류가 발생했습니다. 원격 엔드포인트에서 오류를 수집할 수 없습니다.  
   
      메시지 3013, 수준 16, 상태 1, 줄 2  
   
      백업 데이터베이스가 비정상적으로 종료됩니다.  
   
--   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
+-   BackupIoRequest::ReportIoError: 백업 장치에 쓰기 실패 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다. 연결이 닫혔습니다.  
   
  추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619591"
   
  **기본 프록시 설정이 선택되지 않음:**  
   
- 경우에 따라 기본 설정이 선택되지 않아서 다음과 같은 프록시 인증 오류가 발생합니다. *파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 I/O 오류가 발생했습니다. URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 (407)*  **프록시 인증 필요**합니다.  
+ 경우에 따라 기본 설정이 선택되지 않아서 다음과 같은 프록시 인증 오류가 발생합니다. *파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ”에서 복구할 수 없는 I/O 오류가 발생했습니다. URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 (407)*  **프록시 인증 필요**합니다.  
   
  이 문제를 해결하려면 다음 단계를 사용하여 URL에 대한 백업 프로세스에서 기본 프록시 설정을 사용하도록 허용하는 구성 파일을 만듭니다.  
   

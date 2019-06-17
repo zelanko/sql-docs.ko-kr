@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098859"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서 (보고서 작성기)
@@ -191,7 +191,7 @@ ms.locfileid: "66098859"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다.  
+9. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다.  
   
      결과 집합 열을 7 개를 표시합니다. StoreKey, StoreName, SellingArea, City, County, Sales 및 SpatialLocation 합니다. 이 데이터는 소비재를 판매하는 뉴욕 주의 상점 집합을 나타냅니다. 결과 집합의 각 행에는 상점 식별자, 상점 이름, 제품 전시 구역, 상점이 있는 도시와 군, 판매량 합계, 경도와 위도로 나타낸 공간 위치 등이 포함됩니다. 전시 구역의 범위는 455제곱피트(42제곱미터)부터 1125제곱피트(105제곱미터)까지입니다.  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098859"
   
 4.  **표시 유형**을 클릭합니다.  
   
-5.  **투명도 (%)**, 형식 **30**합니다.  
+5.  **투명도 (%)** , 형식 **30**합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -433,7 +433,7 @@ ms.locfileid: "66098859"
   
 6.  클릭 **Title** 의 범례는 범례 제목을 선택 합니다.  
   
-7.  클릭 **Title** 텍스트 삽입 모드로 돌아갑니다. 바꿉니다 **제목** 하 여 **Sales (Thousands)**, 다음 텍스트 외부를 클릭 합니다.  
+7.  클릭 **Title** 텍스트 삽입 모드로 돌아갑니다. 바꿉니다 **제목** 하 여 **Sales (Thousands)** , 다음 텍스트 외부를 클릭 합니다.  
   
  범례가 확장되어 제목이 표시됩니다.  
   

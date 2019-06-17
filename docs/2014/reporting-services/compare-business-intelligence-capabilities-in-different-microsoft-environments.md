@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109759"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>다양한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교
@@ -39,7 +39,7 @@ SharePoint Server 및 SharePoint Online 비교에 대한 자세한 내용은 [Sh
 |사용 현황 모니터링|사용자 계정 컨트롤|아니요|사용자 계정 컨트롤|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 행 기반 보안 활용|사용자 계정 컨트롤|아니오|아니요|  
   
- **<sup>1</sup>**[데이터 관리에서 데이터 관리자의 역할 이해](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) 고 [비디오: Power BI 정보 관리 및 데이터 관리](https://www.youtube.com/watch?v=8dHOj68ts7c)합니다.  
+ **<sup>1</sup>** [데이터 관리에서 데이터 관리자의 역할 이해](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) 고 [비디오: Power BI 정보 관리 및 데이터 관리](https://www.youtube.com/watch?v=8dHOj68ts7c)합니다.  
   
  **<sup>2</sup>**  [Power BI Q&A: Power BI 통합 문서 최적화 (클라우드 모델링)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/)합니다.  
   

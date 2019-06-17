@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d82ca352c574d02a5b0631df5c9448df12a5acc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404005"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>단원 5-2-팩트 관계 정의
@@ -88,7 +88,7 @@ ms.locfileid: "65404005"
   
     **Internet Sales Order Details** 큐브 차원은 고유 아이콘에 표시된 대로 자동으로 팩트 관계를 갖도록 구성되어 있습니다.  
   
-2.  찾아보기 단추를 클릭 (**...** )에 **Item Description** 의 교집합에서 셀을 **Internet Sales** 측정값 그룹 및 **Internet Sales Order Details** 차원에 팩트 관계 속성을 검토 합니다.  
+2.  찾아보기 단추를 클릭 ( **...** )에 **Item Description** 의 교집합에서 셀을 **Internet Sales** 측정값 그룹 및 **Internet Sales Order Details** 차원에 팩트 관계 속성을 검토 합니다.  
   
     **관계 정의** 대화 상자가 열립니다. 어떤 속성도 구성할 수 없습니다.  
   

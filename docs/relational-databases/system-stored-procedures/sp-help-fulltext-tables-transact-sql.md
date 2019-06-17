@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2148c5145ab9d28c698d04253871677560fea9d9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980201"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables(Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ## <a name="arguments"></a>인수  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름이입니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *fulltext_catalog_name* 이 생략 되거나 NULL 이면 데이터베이스에 연결 된 모든 전체 텍스트 인덱싱된 테이블 반환 됩니다. 하는 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 이 생략 되거나 NULL이이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블 전체 텍스트 인덱스 정보가 검색 됩니다. 둘 다 *fulltext_catalog_name* 하 고 *table_name* 를 지정 하는 경우 행이 반환 됩니다 *table_name* 연관 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
   
-`[ @table_name = ] 'table_name'` 전체 텍스트 메타 데이터를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
+`[ @table_name = ] 'table_name'` 전체 텍스트 메타 데이터를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)** , 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

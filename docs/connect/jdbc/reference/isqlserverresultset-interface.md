@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60fe47067c02edab3d115aa7848a83cb82f3fb42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6a5332a31da0114eb710befe5ecd62c6821a3295
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849561"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796406"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public interface ISQLServerResultSet
   
  이 인터페이스는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 관련 메서드를 노출합니다.  
   
-|메서드|자세한 내용은 다음을 참조하십시오.|  
+|메서드|자세한 내용은 다음을 참조하세요.|  
 |------------|-------------------------------|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(int)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|  

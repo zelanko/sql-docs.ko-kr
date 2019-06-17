@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980757"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
@@ -286,7 +286,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>비재귀 요소  
  경우는 **sql:max-깊이** 재귀가 발생 하지 않는 스키마의 요소에 주석이 지정 된 경우 무시 됩니다. 다음 스키마에는  **\<Emp >** 구성 요소를  **\<상수 >** 포함 하는 자식 요소를를  **\<Emp >** 자식 요소입니다.  
   
- 이 스키마에는 **sql:max-깊이** 에 지정 된 주석 합니다  **\<상수 >** 사이 재귀 관계가 없으므로 요소는 무시 됩니다는  **\<Emp >** 부모 하며  **\<상수 >** 자식 요소입니다. 간에 재귀가 발생 하지만 합니다  **\<Emp >** 상위 하며  **\<Emp >** 자식입니다. 스키마를 지정 합니다 **sql:max-깊이** 둘 다에서 주석입니다. 따라서 합니다 **sql:max-깊이** 상위 항목에서 지정 된 주석 (**\<Emp >** supervisor 역할에서)가 우선 적용 됩니다.  
+ 이 스키마에는 **sql:max-깊이** 에 지정 된 주석 합니다  **\<상수 >** 사이 재귀 관계가 없으므로 요소는 무시 됩니다는  **\<Emp >** 부모 하며  **\<상수 >** 자식 요소입니다. 간에 재귀가 발생 하지만 합니다  **\<Emp >** 상위 하며  **\<Emp >** 자식입니다. 스키마를 지정 합니다 **sql:max-깊이** 둘 다에서 주석입니다. 따라서 합니다 **sql:max-깊이** 상위 항목에서 지정 된 주석 ( **\<Emp >** supervisor 역할에서)가 우선 적용 됩니다.  
   
 #### <a name="example-c"></a>예 3  
   
@@ -330,9 +330,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  이 스키마를 테스트하려면 이 항목의 앞부분에 있는 예 1에 제공된 단계를 따릅니다.  
   
 ## <a name="complex-types-derived-by-restriction"></a>제한에 의해 파생되는 복합 유형  
- 복합 유형이 파생 있다면  **\<제한 >**, 해당 기본 복합 유형의 요소를 지정할 수 없습니다는 **sql:max-깊이** 주석입니다. 이러한 경우에는 **sql:max-깊이** 주석 파생 된 형식의 요소에 추가할 수 있습니다.  
+ 복합 유형이 파생 있다면  **\<제한 >** , 해당 기본 복합 유형의 요소를 지정할 수 없습니다는 **sql:max-깊이** 주석입니다. 이러한 경우에는 **sql:max-깊이** 주석 파생 된 형식의 요소에 추가할 수 있습니다.  
   
- 반면에 의해 복합 유형이 파생 있다면  **\<확장 >**, 해당 기본 복합 유형의 요소를 지정할 수는 **sql:max-깊이** 주석입니다.  
+ 반면에 의해 복합 유형이 파생 있다면  **\<확장 >** , 해당 기본 복합 유형의 요소를 지정할 수는 **sql:max-깊이** 주석입니다.  
   
  예를 들어 다음 XSD 스키마 때문에 오류가 발생 합니다 **sql:max-깊이** 주석은 기본 형식에 지정 됩니다. 파생 된 형식에는이 주석이 지원 되지 않습니다  **\<제한 >** 다른 형식에서입니다. 이 문제를 해결 하려면 스키마를 변경 하 고 지정 해야 합니다 **sql:max-깊이** 파생 된 유형의 요소에서 주석입니다.  
   

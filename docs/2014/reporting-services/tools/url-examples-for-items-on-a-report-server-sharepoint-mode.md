@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099447"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099447"
   
 |Object|Description|  
 |------------|-----------------|  
-|SharePoint 웹 애플리케이션|SharePoint 웹 애플리케이션은 독립 실행형 서버로 설치하거나 가상 서버 컬렉션이 포함된 팜에 설치할 수 있습니다. 웹 애플리케이션에는 URL(예: http:*//servername*)이 있으며 여러 사이트가 포함될 수 있습니다.|  
+|SharePoint 웹 애플리케이션|SharePoint 웹 애플리케이션은 독립 실행형 서버로 설치하거나 가상 서버 컬렉션이 포함된 팜에 설치할 수 있습니다. 웹 애플리케이션에는 URL(예: http: *//servername*)이 있으며 여러 사이트가 포함될 수 있습니다.|  
 |사이트|사이트는 웹 애플리케이션의 부모 사이트 또는 하위 사이트입니다.|  
 |SharePoint 라이브러리|라이브러리에는 문서나 폴더가 들어 있습니다. 라이브러리 또는 라이브러리 내의 폴더는 보고서, 보고서 모델, 공유 데이터 원본 및 외부 이미지를 저장할 수 있는 유일한 사이트 개체입니다.|  
 |항목|URL에서 참조할 수 있는 보고서 서버 항목에는 보고서나 하위 보고서에 대한 보고서 정의, 보고서 모델, 공유 데이터 원본 또는 외부 이미지가 있습니다.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099447"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint 서버에 대한 URL  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서 서버로 보고서 서버 또는 보고서 모델 프로젝트를 배포하는 경우 SharePoint 서버에 대한 URL을 사용해야 합니다.  
   
- 사용할 서버의 이름을 찾으려면 브라우저를 열고 보고서를 게시할 SharePoint 라이브러리를 찾습니다. 서버 이름은 프로토콜 접두사 바로 뒤에 표시됩니다(예: http:*//servername*).  
+ 사용할 서버의 이름을 찾으려면 브라우저를 열고 보고서를 게시할 SharePoint 라이브러리를 찾습니다. 서버 이름은 프로토콜 접두사 바로 뒤에 표시됩니다(예: http: *//servername*).  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 끝점은 사용할 수 없습니다. 프록시 엔드포인트에는 포트 번호가 포함됩니다(예: http:*//servername:8080/reportserver*).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 프록시 끝점은 사용할 수 없습니다. 프록시 엔드포인트에는 포트 번호가 포함됩니다(예: http: *//servername:8080/reportserver*).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint 서버 사이트 또는 하위 사이트에 대한 URL  
  보고서 또는 보고서 데이터 원본을 배포하는 경우 SharePoint 사이트 및 하위 사이트(있는 경우)에 대한 URL을 사용해야 합니다. URL에서 사이트 이름은 서버 이름 바로 뒤에 표시됩니다(예: http://*servername/site* 또는 http://*servername/site/subsite*).  

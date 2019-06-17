@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110077"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>동작 속성 대화 상자(보고서 작성기 및 SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110077"
   
  기본 모드로 구성된 보고서 서버에 게시된 보고서의 경우 파일 이름 확장명 없이 전체 경로나 상대 경로를 사용합니다. 보고서가 현재 보고서와 같은 폴더에 있으면 보고서 이름만 사용합니다. 보고서가 동일한 보고서 서버의 다른 폴더에 있으면 상대 경로 또는 전체 경로를 사용합니다. 상대 경로는 현재 폴더에서 시작하여 폴더 계층의 위로 이동합니다(예: ../Folder2/Report1). 전체 경로는 홈 폴더인 /에서 시작합니다. 예를 들면 /Reports/Report1과 같은 형태입니다.  
   
- SharePoint 통합 모드로 구성된 보고서 서버에 게시된 보고서의 경우 파일 이름 확장명(.rdl)을 포함하여 정규화된 URL을 사용합니다(예: 예를 들어, http://*\<SharePointservername > /\<사이트 >*/Documents/Report1.rdl 합니다. 상대 경로는 지원되지 않습니다.  
+ SharePoint 통합 모드로 구성된 보고서 서버에 게시된 보고서의 경우 파일 이름 확장명(.rdl)을 포함하여 정규화된 URL을 사용합니다(예: 예를 들어, http:// *\<SharePointservername > /\<사이트 >* /Documents/Report1.rdl 합니다. 상대 경로는 지원되지 않습니다.  
   
  자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110077"
  웹 페이지에 대한 링크를 정의하려면 이 옵션을 선택합니다. 웹 페이지의 URL 또는 이를 반환하는 식을 입력하거나 선택합니다. 식을 변경하려면 **식** 단추(*fx*)를 클릭합니다. 식은 URL이 들어 있는 필드를 포함할 수 있습니다. **URL로 이동**을 선택하면 다음 옵션이 추가로 표시됩니다.  
   
  **URL 선택**  
- 항목의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. 예를 들어, http://*\<서버 이름 >*  /images/image1.jpg입니다. SharePoint 통합 모드로 구성 된 보고서 서버에 게시 하는 항목에 대 한 정규화 된 URL을 사용 하 여 (예를 들어, http://*\<SharePointservername > /\<사이트 >* 문서/이미지 / / image1.jpg)입니다.  
+ 항목의 URL을 입력합니다. 기본 모드로 구성된 보고서 서버에 게시된 항목의 경우 전체 경로나 상대 경로를 사용합니다. 예를 들어, http:// *\<서버 이름 >*  /images/image1.jpg입니다. SharePoint 통합 모드로 구성 된 보고서 서버에 게시 하는 항목에 대 한 정규화 된 URL을 사용 하 여 (예를 들어, http:// *\<SharePointservername > /\<사이트 >* 문서/이미지 / / image1.jpg)입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

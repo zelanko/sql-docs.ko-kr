@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6afaa65d5d0a9c368b35cc410a1753838c8a5480
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107185"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 연결 유형(SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66107185"
  보고서 데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 사용합니다.  
   
 ## <a name="connection-string"></a>연결 문자열  
- 연결 문자열은 SharePoint의 PowerPivot 갤러리 또는 예를 들어 다른 라이브러리에 게시 된 PowerPivot 통합 문서 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx합니다.  
+ 연결 문자열은 SharePoint의 PowerPivot 갤러리 또는 예를 들어 다른 라이브러리에 게시 된 PowerPivot 통합 문서 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx 합니다.  
   
 ## <a name="credentials"></a>자격 증명  
  PowerPivot 통합 문서 및 SharePoint 사이트에 액세스하는 데 필요한 자격 증명을 지정합니다. 예를 들어 Windows 인증(통합 보안)을 지정합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 Reporting Services의 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 하거나 [보고서 작성기에 자격 증명 지정](../specify-credentials-in-report-builder.md)합니다.  

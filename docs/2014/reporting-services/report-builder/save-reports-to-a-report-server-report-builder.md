@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107636"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
@@ -25,7 +25,7 @@ ms.locfileid: "66107636"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>보고서 서버에 보고서를 저장하려면  
   
-1.  보고서 작성기 단추에서 **저장**을 클릭합니다. 합니다 **다른 이름으로 저장**_\<Item\>_  대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **저장**을 클릭합니다. 합니다 **다른 이름으로 저장** _\<Item\>_  대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. 다른 이름으로 저장 옵션을 사용하여 위치를 변경할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107636"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>보고서를 다른 이름으로 저장하려면  
   
-1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. 합니다 **다른 이름으로 저장**_\<Item\>_  대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. 합니다 **다른 이름으로 저장** _\<Item\>_  대화 상자가 열립니다.  
   
 2.  보고서를 저장할 보고서 서버 위치 또는 파일 공유로 이동합니다.  
   

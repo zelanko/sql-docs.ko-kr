@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101932"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
@@ -58,7 +58,7 @@ ms.locfileid: "66101932"
  서버 관리자나 사이트 모음 관리자는 다른 사이트 소유자가 사용 권한을 설정할 수 있는지 여부를 결정하는 옵션을 설정할 수 있습니다. 현재 사용 권한 수준에 따라 SharePoint 그룹 또는 사용 권한 수준을 만들거나 사용자 지정하지 못할 수 있습니다.  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>미리 정의된 SharePoint 그룹 및 사용 권한 수준 사용  
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 제품 설명서의 권장 사항에 따르면 표준 SharePoint 그룹( *Site name* **소유자**, *Site name* **멤버**및 *Site name* **방문자**)을 사용하고 사이트 수준에서 사용 권한을 할당하는 것이 좋습니다. 사용 권한을 할당하는 사용자는 대부분 *Site name* **방문자** 또는 *Site name* **멤버** 그룹의 멤버여야 합니다. 부모 사이트에 대한 사용 권한은 전체 사이트 계층에서 상속됩니다. 추가 제한이 필요한 항목이 있을 경우 이 항목에 대해 사용 권한 상속을 해제할 수 있습니다.  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 제품 설명서의 권장 사항에 따르면 표준 SharePoint 그룹( *Site name* **소유자**, *Site name* **멤버**및 *Site name* **방문자**)을 사용하고 사이트 수준에서 사용 권한을 할당하는 것이 좋습니다. 사용 권한을 할당하는 사용자는 대부분 *Site name* **방문자** 또는 *Site name* **멤버** 그룹의 멤버여야 합니다. 부모 사이트에 대한 사용 권한은 전체 사이트 계층에서 상속됩니다. 추가 제한이 필요한 항목이 있을 경우 이 항목에 대해 사용 권한 상속을 해제할 수 있습니다.  
   
  다음 SharePoint 그룹에는 아래와 같은 사용 권한 수준이 미리 정의되어 있습니다.  
   

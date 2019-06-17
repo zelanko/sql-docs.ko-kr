@@ -12,10 +12,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: 8f5b935636c4d00f39324e4a343419e3da68284b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108574"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
@@ -41,9 +41,9 @@ SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconam
   
  추가 기능을 다운로드하고 설치하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터를 참조하십시오.  
   
--   **SP1에서 추가 기능:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services add-in for Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583)합니다.  
+-   **SP1에서 추가 기능:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services add-in for Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583) 합니다.  
   
--   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(sp1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906)합니다.  
+-   **SP1:**  [Microsoft® SQL Server® 2012 서비스 팩 1(sp1)](https://go.microsoft.com/fwlink/p/?LinkID=255906) (https://go.microsoft.com/fwlink/p/?LinkID=255906) 합니다.  
   
 ##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 제품용 Reporting Services 추가 기능  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 SQL Server 설치 마법사 중에 기능 선택 페이지에서 이 추가 기능을 설치할 수 있습니다. 추가 기능을 개별적으로 다운로드하고 설치하려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft® SharePoint® 기술 2010용 Microsoft® SQL Server® 2012 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=207242) 페이지에서 이 파일의 최신 버전을 얻을 수 있습니다.  

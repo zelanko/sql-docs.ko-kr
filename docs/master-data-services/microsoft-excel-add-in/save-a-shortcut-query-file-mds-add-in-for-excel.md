@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65486098"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>바로 가기 쿼리 파일 저장(Excel용 MDS 추가 기능)

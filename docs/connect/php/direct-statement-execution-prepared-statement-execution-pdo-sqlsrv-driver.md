@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 96a03a678152c523cdb16b77834863ff920586c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676111"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801462"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

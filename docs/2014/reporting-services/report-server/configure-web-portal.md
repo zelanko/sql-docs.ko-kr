@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103942"
 ---
 # <a name="configure-report-manager-native-mode"></a>보고서 관리자 구성(기본 모드)
@@ -147,7 +147,7 @@ ms.locfileid: "66103942"
   
 2.  Internet Explorer를 엽니다.  
   
-3.  보고서 관리자 URL을 입력합니다. 기본적으로 이 URL은 http://\<**your-server-name**>/reports이지만 Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 http://\<**your-server-name**>/reports\<**_instancename**>입니다.  
+3.  보고서 관리자 URL을 입력합니다. 기본적으로 이 URL은 http://\<**your-server-name**>/reports이지만 Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 http://\<**your-server-name**>/reports\< **_instancename**>입니다.  
   
 4.  **사이트 설정**을 클릭합니다.  
   

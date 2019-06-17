@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622361"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797059"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>보안 고려 사항 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Windows 인증을 사용하여 연결할 때 SQL Server가 Kerberos 인증 프�
 ## <a name="use-parameterized-queries"></a>매개 변수가 있는 쿼리 사용  
 매개 변수가 있는 쿼리를 사용하여 SQL 주입 공격의 위험을 줄일 수 있습니다. 매개 변수가 있는 쿼리를 실행하는 예제를 보려면 [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md)을 참조하세요.  
   
-SQL 삽입 공격 및 관련된 보안 고려 사항에 대한 자세한 내용은 [SQL 삽입](https://msdn.microsoft.com/library/ms161953.aspx)을 참조하세요.  
+SQL 주입 공격 및 관련된 보안 고려 사항에 대한 자세한 내용은 [SQL 주입](https://msdn.microsoft.com/library/ms161953.aspx)을 참조하세요.  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>최종 사용자에게서 서버 또는 연결 문자열 정보 허용하지 않음  
 최종 사용자가 서버 또는 연결 문자열 정보를 애플리케이션에 제출할 수 없도록 애플리케이션을 작성합니다. 서버 및 연결 문자열 정보에 대해 엄격한 제어를 유지하면 악성 활동에 대한 노출 영역이 줄어듭니다.  

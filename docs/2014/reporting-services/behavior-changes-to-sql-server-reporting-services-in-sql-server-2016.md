@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109935"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 동작 변경 내용
@@ -81,7 +81,7 @@ ms.locfileid: "66109935"
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  
   
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI 공급자 라이브러리의 SecureConnectionLevel 속성  
- 용 WMI 공급자 라이브러리에서 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **SecureConnectionLevel** 속성의 값을 사용 하면 `0`를`1`,`2`를`3`를 사용 하 여 `0` 보안 소켓 레이어 (SSL) 웹 서비스 메서드 중 하나에 대 한 필수 임을 나타내는 `3` SSL은 모든 웹 서비스 메서드에 대 한 필수 항목 임을 나타내는 및 `1` 고 `2` 웹 서비스 메서드의 하위 집합을 나타내는 SSL이 필요 합니다.  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 이러한 값은 단 두 가지 의미를 갖습니다.  
+ 용 WMI 공급자 라이브러리에서 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], **SecureConnectionLevel** 속성의 값을 사용 하면 `0`를`1`,`2`를`3`를 사용 하 여 `0` 보안 소켓 레이어 (SSL) 웹 서비스 메서드 중 하나에 대 한 필수 임을 나타내는 `3` SSL은 모든 웹 서비스 메서드에 대 한 필수 항목 임을 나타내는 및 `1` 고 `2` 웹 서비스 메서드의 하위 집합을 나타내는 SSL이 필요 합니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 이러한 값은 단 두 가지 의미를 갖습니다.  
   
 -   `0`은 웹 서비스에 메서드에 SSL이 필요하지 않음을 나타냅니다.  
   

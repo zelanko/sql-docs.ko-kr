@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488076"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
@@ -43,7 +43,7 @@ ms.locfileid: "65488076"
   
  위의 스크린 샷에서는 **Employee** 엔터티가 가운데 **현재 수준** 아래 유일한 수준으로 나타납니다. 오른쪽에 있는 파생 계층 **미리 보기** 는 **Employee** 엔터티의 모든 구성원 목록을 보여 줍니다. 왼쪽에 있는 **사용 가능한 수준** 섹션은 현재 최상위 수준(**Employee**)의 맨 위에 어떤 수준을 추가할 수 있는지 보여 줍니다. 이들 중 대부분은 **Department** DBA를 포함하여 **Employee** 엔터티에서 DBA(도메인 기반 특성)입니다.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **클래스(ClassRegistration.Student를 통해 매핑됨)**. 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]부터는 M2M 관계를 모델링하는 새로운 유형의 수준이 있습니다(예: **클래스(ClassRegistration.Student를 통해 매핑됨)** . 수준 이름은 매핑 관계를 명확하게 설명하는 데 필요한 추가 정보를 반영하기 위해 보다 세부적입니다. 이 수준을 **현재 수준** 섹션에서 **Employee** 수준으로 끌어서 놓습니다.  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   

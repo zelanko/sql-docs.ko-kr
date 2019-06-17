@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109815"
 ---
 # <a name="choose-the-deployment-location"></a>배포 위치 선택
@@ -24,7 +24,7 @@ ms.locfileid: "66109815"
   
 ## <a name="options"></a>변수  
  **보고서 서버**  
- 예를 들어, 보고서 서버의 가상 디렉터리 URL을 입력 http://localhost/reportserver합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 reportserver라는 가상 디렉터리에 설치되어 있습니다.  
+ 예를 들어, 보고서 서버의 가상 디렉터리 URL을 입력 http://localhost/reportserver 합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다. 기본적으로 보고서 서버는 reportserver라는 가상 디렉터리에 설치되어 있습니다.  
   
  **배포 폴더**  
  보고서 서버 프로젝트에 포함되어 있는 보고서를 게시할 대상 폴더의 이름을 입력합니다. 폴더의 기본값은 프로젝트 이름입니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  

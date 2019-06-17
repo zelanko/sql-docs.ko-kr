@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48607533df2b1a5b5411dc539f07204a2ed11c4a
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403825"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>2단원: 큐브 정의 및 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 데이터 원본 뷰를 정의하면 초기 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 됩니다.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 데이터 원본 뷰를 정의하면 초기 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브를 정의할 준비가 됩니다.  
   
 큐브 마법사를 사용하여 단일 패스에서 큐브와 차원을 정의할 수 있습니다. 또는 하나 이상의 차원을 정의한 다음 큐브 마법사를 사용하여 이러한 차원을 사용하는 큐브를 정의할 수 있습니다. 복잡한 솔루션을 디자인하는 경우 일반적으로 차원을 정의하는 작업부터 시작합니다. 자세한 내용은 [다차원 모델의 차원](../multidimensional-models/dimensions-in-multidimensional-models.md) 또는 [다차원 모델의 큐브](../multidimensional-models/cubes-in-multidimensional-models.md)를 참조하세요.  
   
