@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718283"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out 문제 해결
@@ -66,7 +66,7 @@ SSIS Scale Out에는 SSIS 카탈로그 데이터베이스인 `SSISDB`, Scale Out
 
 ### <a name="symptoms"></a>증상
 
-*"System.ServiceModel.EndpointNotFoundException: 메시지를 수락할 수 있는 https://*[MachineName]:[Port]*/ClusterManagement/에서 수신 대기 중인 엔드포인트가 없습니다."*
+*"System.ServiceModel.EndpointNotFoundException: 메시지를 수락할 수 있는 https://* [MachineName]:[Port] */ClusterManagement/에서 수신 대기 중인 엔드포인트가 없습니다."*
 
 ### <a name="solution"></a>해결 방법
 

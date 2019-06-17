@@ -48,10 +48,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413639"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
@@ -797,7 +797,7 @@ ALTER INDEX ALL ON dbo.table1 REBUILD;
 ## <a name="examples-columnstore-indexes"></a>예: columnstore 인덱스  
  이 예제는 columnstore 인덱스에는 적용되지 않습니다.  
   
-### <a name="a-reorganize-demo"></a>1. REORGANIZE 데모  
+### <a name="a-reorganize-demo"></a>1\. REORGANIZE 데모  
  이 예제에서는 ALTER INDEX REORGANIZE 명령의 작동 원리를 보여줍니다.  복수의 rowgroup이 있는 테이블을 만든 다음, REORGANIZE가 rowgroup을 병합하는 방법을 보여줍니다.  
   
 ```sql  
@@ -875,7 +875,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>2. 닫힌(CLOSED) 델타 rowgroup을 columnstore으로 압축  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>2\. 닫힌(CLOSED) 델타 rowgroup을 columnstore으로 압축  
  이 예제에서는 REORGANIZE 옵션을 사용하여 각 닫힌(CLOSED) 델타 rowgroup을 압축된 rowgroup으로 columnstore으로 압축합니다.   이 작업은 필수는 아니지만 튜플 이동기가 닫힌(CLOSED) rowgroup을 충분히 빠르게 압축하지 않는 경우에 유용합니다.  
   
 ```sql  
@@ -1003,14 +1003,14 @@ GO
   
 ## <a name="examples-rowstore-indexes"></a>예: Rowstore 인덱스  
   
-### <a name="a-rebuilding-an-index"></a>1. 인덱스 다시 작성  
+### <a name="a-rebuilding-an-index"></a>1\. 인덱스 다시 작성  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 단일 인덱스를 다시 작성합니다.  
   
 ```sql  
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>2. 테이블의 모든 인덱스 다시 작성 및 옵션 지정  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>2\. 테이블의 모든 인덱스 다시 작성 및 옵션 지정  
  다음 예에서는 ALL 키워드를 지정합니다. 그러면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.Product 테이블과 연결된 모든 인덱스를 다시 작성합니다. 3개의 옵션이 지정됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -1116,7 +1116,7 @@ REBUILD Partition = 5
 GO  
 ```  
   
-### <a name="i-changing-the-compression-setting-of-an-index"></a>9. 인덱스의 압축 설정 변경  
+### <a name="i-changing-the-compression-setting-of-an-index"></a>9\. 인덱스의 압축 설정 변경  
  다음 예에서는 분할되지 않은 rowstore 테이블에 인덱스를 다시 작성합니다.  
   
 ```sql

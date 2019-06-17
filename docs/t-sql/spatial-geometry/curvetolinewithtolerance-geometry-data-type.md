@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938134"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
@@ -72,7 +72,7 @@ ms.locfileid: "65938134"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>1. CircularString 인스턴스에 여러 허용 오차 값 사용  
+### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>1\. CircularString 인스턴스에 여러 허용 오차 값 사용  
  다음 예에서는 허용 오차를 설정하면 `CircularString` 인스턴스에서 반환된 `LineString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  
   
 ```
@@ -81,7 +81,7 @@ ms.locfileid: "65938134"
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
  ```  
   
-### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>2. LineString 하나를 포함하는 MultiLineString 인스턴스에 메서드 사용  
+### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>2\. LineString 하나를 포함하는 MultiLineString 인스턴스에 메서드 사용  
  다음 예에서는 `MultiLineString` 인스턴스 하나만 포함하는 `LineString` 인스턴스에서 반환되는 결과를 보여 줍니다.  
   
 ```

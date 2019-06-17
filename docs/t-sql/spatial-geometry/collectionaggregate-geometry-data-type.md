@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 47540d82abb349691f63fb9209010b42cefe4e2a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935966"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate(geometry 데이터 형식)
@@ -36,7 +36,7 @@ CollectionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>인수  
  *geometry_operand*  
- **GeometryCollection** 인스턴스에 나열될 **geometry** 개체 집합을 나타내는 **geometry** 형식 테이블 열입니다.   
+ **GeometryCollection** 인스턴스에 나열될 **geometry** 개체 집합을 나타내는 **geometry** 형식 테이블 열입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7fd4ca761d87df2a98a8c88ab0848ddff2e4faa
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948848"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH(Transact-SQL)
@@ -56,7 +56,7 @@ EOMONTH ( start_date [, month_to_add ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-eomonth-with-explicit-datetime-type"></a>1. 명시적 datetime 형식을 사용하는 EOMONTH  
+### <a name="a-eomonth-with-explicit-datetime-type"></a>1\. 명시적 datetime 형식을 사용하는 EOMONTH  
   
 ```  
 DECLARE @date DATETIME = '12/1/2011';  
@@ -73,7 +73,7 @@ Result
 (1 row(s) affected)  
 ```  
 
-### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>2. 문자열 매개 변수 및 암시적 변환을 사용하는 EOMONTH  
+### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>2\. 문자열 매개 변수 및 암시적 변환을 사용하는 EOMONTH  
   
 ```  
 DECLARE @date VARCHAR(255) = '12/1/2011';  

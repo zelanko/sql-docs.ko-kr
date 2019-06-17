@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949200"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME(Transact-SQL)
@@ -54,7 +54,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>1. key_guid를 사용하여 대칭 키의 이름 표시  
+### <a name="a-displaying-the-name-of-a-symmetric-key-using-the-keyguid"></a>1\. key_guid를 사용하여 대칭 키의 이름 표시  
  **master** 데이터베이스에는 ##MS_ServiceMasterKey##라는 대칭 키가 있습니다. 다음 예에서는 sys.symmetric_keys 동적 관리 뷰에서 해당 키의 GUID를 가져오고, 이를 변수에 할당한 다음 해당 변수를 KEY_NAME 함수로 전달하여 GUID에 해당하는 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -67,7 +67,7 @@ WHERE name = '##MS_ServiceMasterKey##' ;
 SELECT KEY_NAME(@guid) AS [Name of Key];  
 ```  
   
-### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>2. ciphertext를 사용하여 대칭 키의 이름 표시  
+### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>2\. ciphertext를 사용하여 대칭 키의 이름 표시  
  다음 예에서는 대칭 키를 만들고 데이터를 테이블에 채우는 전체 과정을 보여 줍니다. 그런 다음 암호화된 텍스트를 전달할 때 KEY_NAME이 키 이름을 반환하는 방법을 보여 줍니다.  
   
 ```  

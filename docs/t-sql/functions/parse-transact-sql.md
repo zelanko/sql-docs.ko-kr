@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943502"
 ---
 # <a name="parse-transact-sql"></a>PARSE(Transact-SQL)
@@ -134,7 +134,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-parse-into-datetime2"></a>1. Datetime2로 구문 분석  
+### <a name="a-parse-into-datetime2"></a>1\. Datetime2로 구문 분석  
   
 ```  
 SELECT PARSE('Monday, 13 December 2010' AS datetime2 USING 'en-US') AS Result;  
@@ -150,7 +150,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-parse-with-currency-symbol"></a>2. 통화 기호를 포함하는 PARSE  
+### <a name="b-parse-with-currency-symbol"></a>2\. 통화 기호를 포함하는 PARSE  
   
 ```  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  

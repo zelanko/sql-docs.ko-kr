@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105594"
 ---
 # <a name="create-a-login"></a>로그인 만들기
@@ -165,7 +165,7 @@ ms.locfileid: "65105594"
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택합니다. **특정 개체...**, **선택한 유형의 모든 개체...** 또는 **서버**_서버\_이름_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 다음 옵션 중 하나를 선택합니다. **특정 개체...** , **선택한 유형의 모든 개체...** 또는 **서버**_서버\_이름_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **참고:** **서버**_서버\_이름_을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   

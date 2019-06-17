@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102617"
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  열려는 솔루션을 지정합니다. 매개 변수에 솔루션 파일의 전체 경로가 포함되어야 합니다.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
   서버 이름  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   데이터베이스 이름  
 
- [**-G**] Active Directory 인증을 사용하여 연결. **-P** 및/또는 **-U**의 포함 여부에 따라 연결 형식이 결정됩니다.
+ [ **-G**] Active Directory 인증을 사용하여 연결. **-P** 및/또는 **-U**의 포함 여부에 따라 연결 형식이 결정됩니다.
  - **-U** 및 **-P**가 포함되지 *않으면* **Active Directory - 통합**이 사용되고 대화 상자가 표시되지 않습니다.
  - **-U** 및 **-P**가 둘 다 포함되면 **Active Directory - 암호**가 사용됩니다. 이 옵션을 사용하면 명령줄에서 일반 텍스트 암호를 지정해야 하는데, 매우 번거로운 일이므로 이 옵션을 **사용하지 않는 것이 좋습니다**.
  - **-U**는 포함되고 **-P**는 포함되지 않으면 인증 대화 상자가 나타나지만, 모든 로그인 시도가 실패합니다. 
 
   **Active Directory - MFA 지원을 포함한 유니버설 인증**은 현재 지원되지 않습니다. 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  'SQL 인증' 또는 'Active Directory - 암호'와 연결할 때의 사용자 이름  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  'SQL 인증' 또는 'Active Directory - 암호'와 연결할 때의 암호
   
-[**-E**]  
+[ **-E**]  
  Windows 인증을 사용하여 연결  
   
-[**-nosplash**]  
+[ **-nosplash**]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 여는 동안 시작 화면을 표시하지 않습니다. 대역폭이 제한된 연결에서 터미널 서비스를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 실행하는 컴퓨터에 연결할 때 이 옵션을 사용합니다. 이 인수는 대/소문자를 구분하지 않으며 다른 인수 앞이나 뒤에 나타날 수 있습니다.  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  문제 해결을 위해 지정된 파일에 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 작업을 기록합니다.  
   
-[**-?**]  
+[ **-?** ]  
  명령줄 도움말을 표시합니다.  
   
 ## <a name="remarks"></a>Remarks  
