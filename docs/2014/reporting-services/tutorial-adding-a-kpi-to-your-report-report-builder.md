@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098983"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: (보고서 작성기) 보고서에 KPI 추가
@@ -273,7 +273,7 @@ ms.locfileid: "66098983"
   
 9. 클릭 **값 및 상태**합니다.  
   
-10. 값 드롭다운 목록에서 선택 **[sum (sales)]**, 되지만 다른 모든 옵션을 변경 하지 마세요.  
+10. 값 드롭다운 목록에서 선택 **[sum (sales)]** , 되지만 다른 모든 옵션을 변경 하지 마세요.  
   
      기본적으로 데이터 영역에서 데이터 동기화가 발생하며 보고서에 있는 테이블 데이터 영역의 이름인 **Tablix1**값이 **동기화 범위** 상자에 나타납니다.  
   

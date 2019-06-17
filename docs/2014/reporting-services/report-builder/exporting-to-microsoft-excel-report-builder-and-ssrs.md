@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107908"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66107908"
 >   
 >  문제에 대 한 자세한 내용은 참조 하세요. [수정: SSRS 2012를 Excel 형식으로 10 MB 보다 큰 보고서를 내보낼 수 없습니다.](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
 >   
->   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 가져오려면 [SQL Server 2012의 최신 서비스 팩을 가져오는 방법](https://go.microsoft.com/fwlink/p/?LinkId=402512)을 참조하세요.  
+>  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 최신 서비스 팩을 가져오려면 [SQL Server 2012의 최신 서비스 팩을 가져오는 방법](https://go.microsoft.com/fwlink/p/?LinkId=402512)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  `String` 유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되지 않고 매개 변수 값이 보고서에 포함된 경우 보고서 사용자는 식 구문, 스크립트 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  

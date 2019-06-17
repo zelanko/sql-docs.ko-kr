@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404045"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>단원 2-5-Analysis Services 프로젝트 배포
@@ -36,7 +36,7 @@ ms.locfileid: "65404045"
     프로젝트의 배포 속성을 검토합니다. 기본적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 통해 모든 프로젝트를 로컬 컴퓨터의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 기본 인스턴스에 증분식으로 배포하며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트와 같은 이름으로 데이터베이스를 만들고 기본 처리 옵션을 사용하여 배포 후에 개체를 처리하도록 해당 프로젝트를 구성합니다. 자세한 내용은 [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)을 참조하세요.  
   
     > [!NOTE]  
-    > 프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 컴퓨터의 로컬 또는 원격 서버의 인스턴스에 변경 합니다 **Server** 와 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName**>\\<** InstanceName * * >* 합니다.  
+    > 프로젝트의 명명된 된 인스턴스를 배포 하려는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 컴퓨터의 로컬 또는 원격 서버의 인스턴스에 변경 합니다 **Server** 와 같은 속성을 적절 한 인스턴스 이름 \<  *ServerName **>\\<** InstanceName * * >* 합니다.  
   
 3.  **확인**을 클릭합니다.  
   

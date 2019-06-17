@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096664"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>데이터베이스 변경 마법사(SSRS 기본 모드)
@@ -62,7 +62,7 @@ ms.locfileid: "66096664"
  다른 보고서 서버 데이터베이스를 선택하면 현재 데이터베이스의 사용 방식을 알 수 있도록 현재 데이터베이스 모드가 표시됩니다.  
   
  **자격 증명**  
- 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 로컬 계정을 지정할 수 있습니다 (*\<컴퓨터 이름 >\\< 사용자 이름\>*) 동일한 컴퓨터 또는 도메인 사용자를 보고서 서버 및 데이터베이스에 있는 경우 계정 (*\<도메인 >\\< 사용자 이름\>*) 하는 경우 동일한 도메인의 다른 컴퓨터에 있습니다.  
+ 보고서 서버가 보고서 서버 데이터베이스에 연결할 때 사용하는 계정을 지정합니다. 유효한 값으로는 보고서 서버 웹 서비스의 서비스 계정, 보고서 서버를 호스팅하는 데 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스 로그인 또는 Windows 계정이 있습니다. Windows 계정을 사용 하는 경우 로컬 계정을 지정할 수 있습니다 ( *\<컴퓨터 이름 >\\< 사용자 이름\>* ) 동일한 컴퓨터 또는 도메인 사용자를 보고서 서버 및 데이터베이스에 있는 경우 계정 ( *\<도메인 >\\< 사용자 이름\>* ) 하는 경우 동일한 도메인의 다른 컴퓨터에 있습니다.  
   
  그러면 보고서 서버에서 지정한 계정에 대한 데이터베이스 로그인을 만들고 데이터베이스 권한을 할당합니다.  
   

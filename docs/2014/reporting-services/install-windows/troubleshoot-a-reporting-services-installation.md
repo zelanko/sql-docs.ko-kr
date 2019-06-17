@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108673"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
   설치 중에 오류가 발생하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치할 수 없는 경우 이 항목에 설명된 지침에 따라 설치 오류가 발생할 가능성이 가장 높은 상황을 처리하세요.  
   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 문제에 대한 최신 정보는 [Reporting Services SQL Server 2012 질문과 대답, 팁과 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkId=221297)을 참조하십시오.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 문제에 대한 최신 정보는 [Reporting Services SQL Server 2012 질문과 대답, 팁과 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkId=221297)을 참조하십시오.  
   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
  릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](https://go.microsoft.com/fwlink/?linkid=236893) 를 검토하십시오.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66108673"
  기본적으로 이러한 속성은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성에 존재하지 않습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 이러한 속성을 구성했고 해당 기능을 계속 사용해야 하는 경우 업그레이드 프로세스 후에 **RSReportServer.config** 파일에 이러한 속성을 수동으로 추가해야 합니다. 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
 ###  <a name="Default2005InstallBreaks2008"></a> SQL Server 2012Reporting 서비스를 실행 하는 컴퓨터의 SQL Server 2005 Reporting Services의 기본 인스턴스에 대해 설치 실패  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 설치가 실패합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 설치가 실패합니다.  
   
  "이름이 같은 인스턴스가 이 컴퓨터에 이미 설치되어 있습니다. SQL Server 설치를 계속하려면 고유한 인스턴스 이름을 지정하십시오."  
   
@@ -253,10 +253,10 @@ ms.locfileid: "66108673"
   
 -   컴퓨터에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 인스턴스로 실행해야 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 먼저 설치한 후 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 인스턴스를 설치해야 합니다.  
   
--    [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 기본 인스턴스로 실행하지 않아도 되는 경우에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 인스턴스를 설치해야 합니다.  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 기본 인스턴스로 실행하지 않아도 되는 경우에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 인스턴스를 설치해야 합니다.  
   
 ###  <a name="WindowsAuthBreaksAfterUpgrade"></a> SQL Server 2005에서 SQL Server 2012로 업그레이드 한 후 Windows 인증을 사용할 때 401-권한이 없음 오류  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 NTLM 인증에 보고서 서버 서비스 계정에 대한 기본 제공 계정을 사용하는 경우 업그레이드 후에 보고서 서버 또는 보고서 관리자에 액세스할 때 401-권한이 없음 오류가 발생할 수 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]로 업그레이드할 때 NTLM 인증에 보고서 서버 서비스 계정에 대한 기본 제공 계정을 사용하는 경우 업그레이드 후에 보고서 서버 또는 보고서 관리자에 액세스할 때 401-권한이 없음 오류가 발생할 수 있습니다.  
   
  이 오류는 Windows 인증에 대한 기본 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 구성이 변경되었기 때문에 발생합니다. 보고서 서버 서비스 계정이 네트워크 서비스 또는 로컬 시스템인 경우 협상 인증이 구성됩니다. NTLM은 보고서 서버 서비스 계정이 이러한 기본 제공 계정 중 하나가 아닌 경우에 구성됩니다. 업그레이드 후에 이 문제를 해결하려면 RSReportServer.config 파일을 편집하여 `AuthenticationType`을 `RSWindowsNTLM`으로 구성하면 됩니다. 자세한 내용은 [Configure Windows Authentication on the Report Server](../security/configure-windows-authentication-on-the-report-server.md)을 참조하세요.  
   
@@ -277,6 +277,6 @@ ms.locfileid: "66108673"
   
 -   [포럼: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 설정](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)합니다.  
+ ![SharePoint 설정](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) 합니다.  
   
   

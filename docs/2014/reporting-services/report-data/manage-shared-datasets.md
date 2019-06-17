@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107207"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 세트 관리
@@ -88,12 +88,12 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |태스크|도구|링크|  
 |----------|----------|----------|  
-|공유 데이터 세트를 추가하거나 공유 데이터 세트 정의 속성을 변경합니다.|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지&#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)<br /><br /> 공유 데이터 세트를 공유 데이터 세트가 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 세트를 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 msdn.microsoft.com의 [일반 속성 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](../general-properties-page-shared-datasets-report-manager.md)을 참조하세요.|  
-|공유 데이터 세트 항목 속성을 변경합니다.|보고서 관리자|[일반 속성 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](../general-properties-page-shared-datasets-report-manager.md)|  
+|공유 데이터 세트를 추가하거나 공유 데이터 세트 정의 속성을 변경합니다.|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지&#40;보고서 관리자&#41;](../upload-file-page-report-manager.md)<br /><br /> 공유 데이터 세트를 공유 데이터 세트가 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 세트를 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 msdn.microsoft.com의 [일반 속성 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](../general-properties-page-shared-datasets-report-manager.md)을 참조하세요.|  
+|공유 데이터 세트 항목 속성을 변경합니다.|보고서 관리자|[일반 속성 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |보고서의 공유 데이터 세트 인스턴스에 대한 추가 공유 데이터 세트 속성을 지정합니다.|보고서 작성기 보고서 디자이너|[데이터 집합 속성 대화 상자, 쿼리](../dataset-properties-dialog-box-query.md)|  
 |공유 데이터 세트의 다른 공유 데이터 원본에 바인딩합니다.|보고서 관리자|[데이터 원본 선택 페이지&#40;보고서 관리자&#41;](../data-source-selection-page-report-manager.md)|  
 |데이터 세트 매개 변수의 기본값을 확인합니다.|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](../caching-page-shared-datasets-report-manager.md)|  
+|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](../caching-page-shared-datasets-report-manager.md)|  
 |캐시 새로 고침 계획 만들기 또는 편집|보고서 관리자|[캐시 새로 고침 옵션&#40;보고서 관리자&#41;](../cache-refresh-options-report-manager.md)|  
 |공유 데이터 세트 정의 스키마를 봅니다.|보고서 관리자|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 통합 모드에서 보고서 서버와 SharePoint 사이트 간의 공유 데이터 세트 정의 동기화|SharePoint 애플리케이션 페이지|공유 데이터 세트 항목 속성 변경<br /><br /> 캐시 옵션 변경<br /><br /> 공유 데이터 원본 변경|  

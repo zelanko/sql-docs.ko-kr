@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107716"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "66107716"
   
 -   다른 모든 행 및 열은 각 보고서 항목의 크기에 따라 커질 수 있습니다.  
   
--   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
+-   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0\.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
   
 ##  <a name="Interactivity"></a> 상호 작용  
  HTML에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  

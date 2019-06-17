@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103225"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
@@ -98,7 +98,7 @@ ms.locfileid: "66103225"
  다음 표에서는 파일의 첫 부분에 나타나는 일반 구성 설정에 대한 정보를 제공합니다. 설정은 구성 파일에 나타나는 순서로 표시됩니다. 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지 **(N)** , SharePoint 모드 보고서 서버에 적용되는지 **(S)** 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
 > [!NOTE]  
->  이 항목에서 "최대 정수"는 INT_MAX 값, 2147483647을 의미합니다.  자세한 내용은 [정수 제한](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)(https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)을 참조하세요.  
+>  이 항목에서 "최대 정수"는 INT_MAX 값, 2147483647을 의미합니다.  자세한 내용은 [정수 제한](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx)(https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx) 을 참조하세요.  
   
 |설정|Description|모드|  
 |-------------|-----------------|----------|  
@@ -288,7 +288,7 @@ ms.locfileid: "66103225"
 |**SMTPUseSSL**|네트워크를 통해 SMTP 메시지를 보낼 때 SSL(Secure Sockets Layer)을 사용하도록 설정할 수 있는 부울 값을 지정합니다. 기본값은 0 또는 false입니다. 이 설정은 **SendUsing** 요소가 2로 설정되면 사용할 수 있습니다.|  
 |**SendUsing**|메시지를 보낼 때 사용할 방법을 지정합니다. 유효한 값은<br /><br /> 1= 로컬 SMTP 서비스 픽업 디렉터리에서 메시지를 보냅니다.<br /><br /> 2= 네트워크 SMTP 서비스에서 메시지를 보냅니다.|  
 |**SMTPAuthenticate**|TCP/IP 연결을 통해 SMTP 서비스에 메시지를 보낼 때 사용할 인증 종류를 나타내는 정수 값을 지정합니다. 유효한 값은<br /><br /> 0= 인증 없음<br /><br /> 1= (지원되지 않음)<br /><br /> 2= NTLM(NT LanMan) 인증. 보고서 서버 Windows 서비스의 보안 컨텍스트는 네트워크 SMTP 서버에 연결하는 데 사용됩니다.|  
-|**보낸 사람**|보고서를 *abc@host.xyz*을 참조하세요. 주소는 보내는 전자 메일 메시지의 **보낸 사람** 줄에 나타납니다. 이 값은 원격 SMTP 서버를 사용할 때 필요합니다. 또한 이 값은 메일을 보낼 수 있는 권한이 있는 유효한 전자 메일 계정이어야 합니다.|  
+|**보낸 사람**|보고서를 *abc@host.xyz* 을 참조하세요. 주소는 보내는 전자 메일 메시지의 **보낸 사람** 줄에 나타납니다. 이 값은 원격 SMTP 서버를 사용할 때 필요합니다. 또한 이 값은 메일을 보낼 수 있는 권한이 있는 유효한 전자 메일 계정이어야 합니다.|  
 |**EmbeddedRenderFormats, RenderingExtension**|전자 메일 메시지 본문에 보고서를 캡슐화하는 데 사용되는 렌더링 형식을 지정합니다. 보고서 내의 이미지는 보고서 내에 포함됩니다. 유효한 값은 MHTML 및 HTML4.0입니다.|  
 |**PrivilegedUserRenderFormats**|"모든 구독 관리" 태스크 통해 구독이 설정되면 사용자가 보고서 구독에 대해 선택할 수 있는 렌더링 형식을 지정합니다. 이 값을 설정하지 않으면 의도적으로 제외하지 않은 모든 렌더링 형식을 사용할 수 있습니다.|  
 |**ExcludedRenderFormats, RenderingExtension**|지정된 배달 확장 프로그램에서 제대로 작동하지 않는 형식을 제외합니다. 같은 렌더링 확장 프로그램의 여러 인스턴스를 제외할 수는 없습니다. 여러 인스턴스를 제외하면 보고서 서버에서 구성 파일을 읽을 때 오류가 발생합니다. 기본적으로 다음 확장 프로그램은 전자 메일 배달에서 제외됩니다.<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  

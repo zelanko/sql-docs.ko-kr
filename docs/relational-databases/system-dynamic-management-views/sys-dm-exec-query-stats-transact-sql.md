@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66429020"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
@@ -135,7 +135,7 @@ ms.locfileid: "66429020"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-top-n-queries"></a>1. TOP N 쿼리 찾기  
+### <a name="a-finding-the-top-n-queries"></a>1\. TOP N 쿼리 찾기  
  다음 예에서는 평균 CLR 시간을 기준으로 상위 5개의 쿼리에 대한 정보를 반환합니다. 이 예에서는 논리적으로 동일한 쿼리를 누적 리소스 소비량에 따라 그룹화할 수 있도록 쿼리 해시에 따라 쿼리를 집계합니다.  
   
 ```sql  
@@ -155,7 +155,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>2. 쿼리에 대한 행 개수 집계 반환  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>2\. 쿼리에 대한 행 개수 집계 반환  
  다음 예에서는 쿼리에 대한 행 개수 집계 정보(합계 행, 최소 행, 최대 행 및 마지막 행)를 반환합니다.  
   
 ```sql  
