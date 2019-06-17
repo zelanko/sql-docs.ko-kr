@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098068"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cc00205c7278e25fad3c3301dcdf0507cb9b4bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600611"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672440"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -136,7 +136,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](work-with-sql-server-powershell-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   

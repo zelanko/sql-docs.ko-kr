@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1e9c989630296c8417bb6d72f82ef67fcaf28033
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413413"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY(Transact-SQL)
@@ -74,7 +74,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-decrypting-by-using-a-symmetric-key"></a>1. 대칭 키를 사용한 해독  
+### <a name="a-decrypting-by-using-a-symmetric-key"></a>1\. 대칭 키를 사용한 해독  
 이 예에서는 대칭 키로 암호 텍스트를 해독합니다.  
   
 ```sql  
@@ -94,7 +94,7 @@ SELECT NationalIDNumber, EncryptedNationalID
 GO  
 ```  
   
-### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>2. 대칭 키 및 인증 해시를 사용한 해독  
+### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>2\. 대칭 키 및 인증 해시를 사용한 해독  
 이 예에서는 인증자를 사용하여 암호화된 데이터를 해독합니다.  
   
 ```sql  

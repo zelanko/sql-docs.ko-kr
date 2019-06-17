@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 8d49fa09e703c186664a46f1daa8fe0b6283d33b
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939080"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer(geometry 데이터 형식)
@@ -71,7 +71,7 @@ ms.locfileid: "65939080"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>1. 1차원 geometry 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
+### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>1\. 1차원 geometry 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
 ```
@@ -79,7 +79,7 @@ ms.locfileid: "65939080"
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>2. Polygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>2\. Polygon 인스턴스에서 parameter_value < 0을 사용하여 STBuffer() 호출  
  다음 예에서는 버퍼가 음수인 `Polygon` 인스턴스를 반환합니다.  
   
 ```
@@ -151,7 +151,7 @@ ms.locfileid: "65939080"
 > [!NOTE]  
 >  위의 두 예에서 `STBuffer()`에 문자열 리터럴을 전달한 경우.  첫 번째 예는 문자열 리터럴을 숫자 값으로 변환할 수 있으므로 정상적으로 작동하지만, 두 번째 예에서는 `ArgumentException`이 발생합니다.  
   
-### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>9. MultiPoint 인스턴스에서 STBuffer() 호출  
+### <a name="i-calling-stbuffer-on-a-multipoint-instance"></a>9\. MultiPoint 인스턴스에서 STBuffer() 호출  
  다음 예에서는 `MultiPolygon` 인스턴스 2개와 `Polygon` 인스턴스 1개를 반환합니다.  
   
 ```

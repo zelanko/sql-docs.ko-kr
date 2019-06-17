@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728267"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
@@ -259,7 +259,7 @@ ms.locfileid: "65728267"
 |**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자로 묶였는지 여부를 나타냅니다.<br /><br /> True: 플랫 파일의 텍스트 데이터가 한정됩니다. False: 플랫 파일의 텍스트 데이터가 한정되지 않았습니다.|  
 |**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|  
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
-|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|  
+|**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}** . 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}** . 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}** . 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}** . 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}** . 열이 콜론으로 구분됩니다.<br /><br /> **쉼표 {,}** . 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}** . 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}** . 열이 세로 막대로 구분됩니다.|  
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|  
 |**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 문자 수로 표시됩니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|  
   

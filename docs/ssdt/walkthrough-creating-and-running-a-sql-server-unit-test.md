@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101937"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
@@ -556,7 +556,7 @@ ms.locfileid: "65101937"
   
 4.  **테스트 조건** 창의 목록에서 **필요한 스키마** 를 클릭하고 **테스트 조건 추가**를 클릭합니다.  
   
-5.  **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**...**’)를 클릭합니다.  
+5.  **속성** 창의 **구성** 속성에서 찾아보기 단추(‘ **...** ’)를 클릭합니다.  
   
 6.  **expectedSchemaCondition1에 대한 구성** 대화 상자에서 데이터베이스에 대한 연결을 지정합니다. 예를 들어 기본 배포 위치인 LocalDB를 사용한 경우 **새 연결**을 클릭하고 **(LocalDB)\Projects**를 지정합니다. 그런 다음 데이터베이스의 이름을 선택합니다.  
   
@@ -621,7 +621,7 @@ ms.locfileid: "65101937"
   
 13. **테스트 조건** 창의 목록에서 **데이터 체크섬** 을 클릭하고 **테스트 조건 추가**를 클릭합니다.  
   
-14. **속성** 창의 **구성** 속성에서 찾아보기 단추(‘**...**’)를 클릭합니다.  
+14. **속성** 창의 **구성** 속성에서 찾아보기 단추(‘ **...** ’)를 클릭합니다.  
   
 15. **checksumCondition1에 대한 구성** 대화 상자에서 데이터베이스에 대한 연결을 지정합니다.  
   

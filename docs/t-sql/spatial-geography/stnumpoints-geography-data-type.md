@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935741"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints(geography 데이터 형식)
@@ -47,7 +47,7 @@ ms.locfileid: "65935741"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>1. LineString에 있는 점의 총 개수 검색  
+### <a name="a-retrieving-the-total-number-of-points-in-a-linestring"></a>1\. LineString에 있는 점의 총 개수 검색  
  다음 예에서는 `LineString` 인스턴스를 만들고 `STNumPoints()`를 사용하여 인스턴스의 설명에 사용된 점의 수를 확인합니다.  
   
 ```  
@@ -56,7 +56,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STNumPoints();  
 ```  
   
-### <a name="b-retrieving-the-total-number-of-points-in-a-geometrycollection"></a>2. GeometryCollection에 있는 점의 총 개수 검색  
+### <a name="b-retrieving-the-total-number-of-points-in-a-geometrycollection"></a>2\. GeometryCollection에 있는 점의 총 개수 검색  
  다음 예에서는 `GeometryCollection`에 있는 모든 요소에 대해 점의 합계를 반환합니다.  
   
 ```  

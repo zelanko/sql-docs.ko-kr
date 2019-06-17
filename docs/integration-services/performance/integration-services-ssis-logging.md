@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719590"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
@@ -313,7 +313,7 @@ ms.locfileid: "65719590"
  설명 필드는 편집할 수 있습니다. 클릭한 다음 로그의 기본 설명을 수정합니다.  
   
  **Configuration**  
- 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
  관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

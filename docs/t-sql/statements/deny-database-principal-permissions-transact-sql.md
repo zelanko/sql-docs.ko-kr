@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644577"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  데이터베이스 보안 주체에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  USER ::*database_user*  
- 사용 권한을 거부할 사용자의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 거부할 사용자의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  ROLE ::*database_role*  
- 사용 권한을 거부할 역할의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 거부할 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  APPLICATION ROLE ::*application_role*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
- 사용 권한을 거부할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 거부할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  CASCADE  
  사용 권한이 거부된 보안 주체에게 사용 권한을 부여 받은 다른 보안 주체의 사용 권한도 거부됨을 나타냅니다.  
@@ -144,14 +144,14 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정한 보안 주체에 대한 CONTROL 권한 또는 CONTROL 권한을 포함하는 상위 사용 권한이 필요합니다.  
   
  db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 거부할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>1. 다른 사용자에게 사용자에 대한 CONTROL 권한 거부  
+### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>1\. 다른 사용자에게 사용자에 대한 CONTROL 권한 거부  
  다음 예에서는 사용자 `CONTROL`에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 사용자 `Wanida`에 대`RolandX` 권한을 거부합니다.  
   
 ```  
@@ -160,7 +160,7 @@ DENY CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>2. GRANT OPTION이 부여된 사용자에 대해 역할에 대한 VIEW DEFINITION 권한 거부  
+### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>2\. GRANT OPTION이 부여된 사용자에 대해 역할에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 데이터베이스 사용자 `VIEW DEFINITION`에 대해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 역할 `SammamishParking`에 대한 `JinghaoLiu` 권한을 거부합니다. 사용자 `CASCADE`에게 GRANT OPTION을 사용하여 VIEW DEFINITION 권한이 부여되었기 때문에 `JinghaoLiu` 옵션이 지정되었습니다.  
   
 ```  
@@ -170,8 +170,8 @@ DENY VIEW DEFINITION ON ROLE::SammamishParking
 GO  
 ```  
   
-### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>3. 응용 프로그램 역할에 대해 사용자에 대한 IMPERSONATE 권한 거부  
- 다음 예에서는 `IMPERSONATE` 응용 프로그램 역할 `HamithaL`에 대해 사용자 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 대한 `AccountsPayable17` 권한을 거부합니다.  
+### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 응용 프로그램 역할에 대해 사용자에 대한 IMPERSONATE 권한 거부  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 응용 프로그램 역할 `IMPERSONATE`에 대해 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 거부합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   

@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106282"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -63,13 +63,13 @@ ms.locfileid: "65106282"
   
 4.  단계를 수정하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성 –**_job\_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
+5.  **작업 속성 –** _job\_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
   
-6.  **편집**을 클릭하여 **작업 단계 속성 –**_job\_step\_name_ 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
+6.  **편집**을 클릭하여 **작업 단계 속성 –** _job\_step\_name_ 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
-8.  **작업 속성 –**_job\_name_ 대화 상자에서 **확인**을 클릭합니다.  
+8.  **작업 속성 –** _job\_name_ 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL 사용  
   

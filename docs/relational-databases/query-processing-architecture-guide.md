@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462718"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
@@ -753,7 +753,7 @@ WHERE ProductID = 63;
 >   커서에 대한 자세한 내용은 [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)를 참조하세요.
 > - **재귀 쿼리**    
 >   재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
-> - **TVF(테이블 반환된 함수)**    
+> - **TVF(테이블 반환된 함수)**     
 >   TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
 > - **TOP 키워드**    
 >   자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.

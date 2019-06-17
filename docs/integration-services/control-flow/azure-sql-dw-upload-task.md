@@ -15,10 +15,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.openlocfilehash: 96be54415e3a2892da2ec892a0e90c02c5365e90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727930"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW 업로드 태스크
@@ -62,7 +62,7 @@ RetainFiles|Azure Storage에 업로드된 파일을 유지할지 여부를 지�
 CompressionType|Azure Storage에 파일 업로드 시 사용할 압축 형식을 지정합니다. 로컬 원본은 영향을 받지 않습니다.
 CompressionLevel|압축 형식에 사용할 압축 수준을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>**(새 테이블...)을 선택하여 새 테이블을 만듭니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** (새 테이블...)을 선택하여 새 테이블을 만듭니다.
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 
@@ -77,7 +77,7 @@ RowDelimiter|각 행의 끝을 표시하는 문자를 지정합니다.
 ColumnDelimiter|각 열의 끝을 표시하는 하나 이상의 문자를 지정합니다. 예를 들어 &#124;(파이프), \t(탭), '(작은따옴표), "(큰따옴표) 및 0x5c(백슬래시).
 CompressionType|원본 데이터에 사용되는 압축 형식을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>**(새 테이블...)을 선택하여 새 테이블을 만듭니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택하거나 **\<New Table ...>** (새 테이블...)을 선택하여 새 테이블을 만듭니다.
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 

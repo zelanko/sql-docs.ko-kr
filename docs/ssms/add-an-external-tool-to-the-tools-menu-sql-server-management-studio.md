@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ed8edd7407ce83418379dbdd4a2a0f8baf2b2fef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099513"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)

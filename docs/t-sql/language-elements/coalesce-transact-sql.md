@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982680"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
@@ -116,7 +116,7 @@ SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-a-simple-example"></a>1. 간단한 예 실행  
+### <a name="a-running-a-simple-example"></a>1\. 간단한 예 실행  
 다음 예에서는 `COALESCE`가 Null 이외의 값이 있는 첫 번째 열에서 데이터를 선택하는 방법을 보여 줍니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -125,7 +125,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>2. 복잡한 예 실행  
+### <a name="b-running-a-complex-example"></a>2\. 복잡한 예 실행  
 다음 예에서는 `wages` 테이블에 직원의 연봉 정보에 대한 시급, 월급 및 커미션의 3개 열이 포함되어 있습니다. 그러나 각 직원은 이 중 한 종류의 급여만 받습니다. 모든 직원에게 지급된 총 급여액을 확인하려면 `COALESCE` 함수를 사용하여 `hourly_wage`, `salary`, `commission`에서 검색된 Null이 아닌 값만 포함시킵니다.  
   
 ```sql  

@@ -12,10 +12,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935388"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -95,7 +95,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>1. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>1\. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
  다음 예에서는 빈 `CompoundCurve` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -103,7 +103,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>2. 동일한 문에서 CompoundCurve를 사용하여 기하 도형 인스턴스 선언 및 인스턴스화  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>2\. 동일한 문에서 CompoundCurve를 사용하여 기하 도형 인스턴스 선언 및 인스턴스화  
  다음 예에서는 동일한 문에서 `geometry` 을 사용하여 `CompoundCurve`인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -165,7 +165,7 @@ SELECT @g.STLength();
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
-### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>9. CircularString 인스턴스를 명시적으로 선언해야 하는 이유에 대한 설명  
+### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>9\. CircularString 인스턴스를 명시적으로 선언해야 하는 이유에 대한 설명  
  다음 예에서는 `CircularString` 인스턴스를 명시적으로 선언해야 하는 이유를 보여 줍니다. 프로그래머는 `CompoundCurve` 인스턴스에 원을 저장하려고 합니다.  
   
 ```sql  
