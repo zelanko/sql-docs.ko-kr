@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011913"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
@@ -73,7 +73,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  서식 파일을 만드는 방법은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>1. bcp 사용 및 ID 값 유지  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>1\. bcp 사용 및 ID 값 유지  
  다음 예에서는 `bcp`를 사용하여 데이터를 대량으로 가져올 때 ID 값을 유지하는 방법을 보여 줍니다. `bcp` 명령은 서식 파일인 `myDepartment-f-n-x.Xml`을 사용하며 다음 스위치를 포함합니다.  
   
 |한정자|Description|  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
   
 ```  
   
-### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>2. BULK INSERT 사용 및 ID 값 유지  
+### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>2\. BULK INSERT 사용 및 ID 값 유지  
  다음 예에서는 BULK INSERT를 사용하여 `myDepartment-c.Dat` 데이터 파일에서 `AdventureWorks.HumanResources.myDepartment` 테이블로 데이터를 대량으로 가져옵니다. 해당 문은 `myDepartment-f-n-x.Xml` 서식 파일을 사용하며 KEEPIDENTITY 옵션을 포함하여 데이터 파일의 모든 ID를 유지합니다.  
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  
@@ -109,7 +109,7 @@ SELECT * FROM HumanResources.myDepartment;
   
 ```  
   
-### <a name="c-using-openrowset-and-keeping-identity-values"></a>3. OPENROWSET 사용 및 ID 값 유지  
+### <a name="c-using-openrowset-and-keeping-identity-values"></a>3\. OPENROWSET 사용 및 ID 값 유지  
  다음 예에서는 OPENROWSET 대량 행 집합 공급자를 사용하여 `myDepartment-c.Dat` 파일에서 `AdventureWorks.HumanResources.myDepartment` 테이블로 데이터를 대량으로 가져옵니다. 해당 문은 `myDepartment-f-n-x.Xml` 서식 파일을 사용하고 KEEPIDENTITY 힌트를 포함하여 데이터 파일의 모든 ID 값을 유지합니다.  
   
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행합니다.  

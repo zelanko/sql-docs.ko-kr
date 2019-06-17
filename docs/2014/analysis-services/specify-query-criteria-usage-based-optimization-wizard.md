@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068218"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>쿼리 조건 지정(사용 빈도 기반 최적화 마법사)
@@ -49,7 +49,7 @@ ms.locfileid: "66068218"
 >  **시작 날짜** 를 선택하지 않으면 쿼리 로그에서 이 옵션에 대해 지정한 날짜와 시간 이전의 모든 쿼리를 고려합니다.  
   
  **사용자**  
- 지정한 사용자 집합을 기준으로 쿼리 로그의 쿼리를 필터링합니다. 줄임표(**...**) 단추를 클릭하여 **사용자 선택** 대화 상자를 표시하고 쿼리 필터링 기준으로 사용할 사용자를 선택할 수 있습니다. **사용자 선택** 대화 상자에 대한 자세한 내용은 [사용자 선택 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 지정한 사용자 집합을 기준으로 쿼리 로그의 쿼리를 필터링합니다. 줄임표( **...** ) 단추를 클릭하여 **사용자 선택** 대화 상자를 표시하고 쿼리 필터링 기준으로 사용할 사용자를 선택할 수 있습니다. **사용자 선택** 대화 상자에 대한 자세한 내용은 [사용자 선택 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **가장 자주 쿼리**  
  선택한 파티션에 대해 가장 자주 실행한 고유한 쿼리의 최상위 백분율을 기준으로 쿼리 로그의 쿼리를 필터링합니다. 입력란에서 백분율 값을 선택하거나 입력합니다.  

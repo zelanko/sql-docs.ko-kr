@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633018"
 ---
 # <a name="text-file-format-text-file-driver"></a>텍스트 파일 형식(텍스트 파일 드라이버)
@@ -42,7 +42,7 @@ ms.locfileid: "62633018"
 |------------|--------------------|  
 |비-기울임꼴|표시 된 대로 입력 해야 하는 문자|  
 |*italics*|문법에서 다른 곳에서 정의 된 인수|  
-|대괄호 ()|선택 항목|  
+|대괄호 ()|선택적 항목입니다.|  
 |중괄호 ({})|상호 배타적인 선택 목록|  
 |세로 막대 (&#124;)|별도 상호 배타적인 선택|  
 |줄임표 (...)|한 번 이상 반복 될 수 있는 항목|  

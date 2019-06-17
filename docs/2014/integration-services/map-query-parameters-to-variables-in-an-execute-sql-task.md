@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057803"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
@@ -39,7 +39,7 @@ ms.locfileid: "66057803"
 3.  **제어 흐름** 탭을 클릭합니다.  
   
 4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  .  
+  을 선택합니다.  
   
 5.  SQL 실행 태스크를 두 번 클릭합니다.  
   

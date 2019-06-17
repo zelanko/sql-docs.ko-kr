@@ -14,20 +14,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db132a4a4cf6e8c2b73067220a5ed91a5316afef
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075193"
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
 |`AttributeHierarchyDisplayFolder`|연관된 특성 계층을 최종 사용자에게 표시할 폴더를 식별합니다.|  
 |`AttributeHierarchyEnabled`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성에 대한 특성 계층을 생성할지 여부를 결정합니다. 특성 계층이 설정되지 않으면 사용자 정의 계층에서 해당 특성을 사용할 수 없고 MDX(Multidimensional Expressions) 문에서 특성 계층을 참조할 수 없습니다.|  
-|`AttributeHierarchyOptimizedState`|특성 계층에 적용되는 최적화 수준을 결정합니다. 기본적으로 특성 계층은 `FullyOptimized`입니다. 즉, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 계층에 대한 인덱스를 작성하여 쿼리 성능을 향상시킵니다.  다른 옵션인 `NotOptimized`는 특성 계층에 대해 작성된 인덱스가 없다는 의미입니다. 특성에 대해 추가 인덱스가 작성되지 않으므로 `NotOptimized` 사용은 특성 계층이 쿼리 이외의 용도로 사용될 경우에 유용합니다. 특성 계층은 다른 특성을 정렬하는 데 사용할 수도 있습니다.|  
+|`AttributeHierarchyOptimizedState`|특성 계층에 적용되는 최적화 수준을 결정합니다. 기본적으로 특성 계층은 `FullyOptimized`입니다. 즉, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 계층에 대한 인덱스를 작성하여 쿼리 성능을 향상시킵니다. 다른 옵션인 `NotOptimized`는 특성 계층에 대해 작성된 인덱스가 없다는 의미입니다. 특성에 대해 추가 인덱스가 작성되지 않으므로 `NotOptimized` 사용은 특성 계층이 쿼리 이외의 용도로 사용될 경우에 유용합니다. 특성 계층은 다른 특성을 정렬하는 데 사용할 수도 있습니다.|  
 |`AttributeHierarchyOrdered`|연관된 특성 계층의 정렬 여부를 결정합니다. 기본값은 `True`입니다. 그러나 특성 계층이 쿼리에 사용되지 않을 경우 이 속성 값을 `False`로 변경하여 처리 시간을 단축할 수 있습니다.|  
 |`AttributeHierarchyVisible`|클라이언트 애플리케이션에서 특성 계층을 볼 수 있는지 여부를 결정합니다. 기본값은 `True`입니다. 그러나 특성 계층이 쿼리에 사용되지 않을 경우 이 속성 값을 `False`로 변경하여 처리 시간을 단축할 수 있습니다.|  
 |`CustomRollupColumn`|사용자 지정 롤업 수식을 정의하는 열을 지정합니다.|  
@@ -41,10 +41,10 @@ ms.locfileid: "66075193"
 |`ID`|차원의 고유 ID를 포함합니다.|  
 |`InstanceSelection`|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 애플리케이션에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이것은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
 |`IsAggregatable`|특성 멤버 값을 집계할 수 있는지 여부를 지정합니다. 기본값은 `True`이며 특성 계층에 (All) 수준이 포함됨을 의미합니다. 이 속성 값이 `False`이면 특성 계층에 (All) 수준이 포함되지 않습니다.|  
-|`KeyColumns`|특성의 키를 나타내는 열을 포함합니다. 이러한 열은 특성이 바인딩된 데이터 원본 뷰의 기본 관계형 테이블에 있는 열을 나타냅니다.  `NameColumn` 속성 값을 지정하지 않는 한 각 멤버의 이 열 값이 사용자에게 표시됩니다.|  
+|`KeyColumns`|특성의 키를 나타내는 열을 포함합니다. 이러한 열은 특성이 바인딩된 데이터 원본 뷰의 기본 관계형 테이블에 있는 열을 나타냅니다. `NameColumn` 속성 값을 지정하지 않는 한 각 멤버의 이 열 값이 사용자에게 표시됩니다.|  
 |`MemberNamesUnique`|특성 계층의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  
 |`MembersWithData`|부모 특성이 리프가 아닌 멤버에 대한 데이터 멤버를 표시할지 여부를 결정하는 데 사용합니다. 이 속성 값은 `Usage` 속성 값을 Parent로 설정한 경우에만 사용됩니다. 즉, 부모-자식 계층이 정의된 경우입니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **NonLeafDataHidden** 리프가 아닌 데이터가 숨겨집니다.<br /><br /> **NonLeafDataVisible** 리프가 아닌 데이터가 표시됩니다.|  
-|`MembersWithDataCaption`|부모 특성이 시스템 생성 데이터 멤버에 대한 캡션을 만들기 위해 사용하는 템플릿 문자열을 제공합니다. 이 속성 값은 `Usage` 속성 값을 Parent로 설정한 경우에만 사용됩니다. 즉, 부모-자식 계층이 정의된 경우입니다. |  
+|`MembersWithDataCaption`|부모 특성이 시스템 생성 데이터 멤버에 대한 캡션을 만들기 위해 사용하는 템플릿 문자열을 제공합니다. 이 속성 값은 `Usage` 속성 값을 Parent로 설정한 경우에만 사용됩니다. 즉, 부모-자식 계층이 정의된 경우입니다.|  
 |`Name`|특성의 이름을 포함합니다.|  
 |`NameColumn`|특성의 키 열에 있는 값 대신 사용자에게 표시되는 특성의 이름을 제공하는 열을 식별합니다. 이 열은 특성 멤버의 키 열 값이 암호화되어 있거나 사용자에게 유용하지 않을 때 또는 키 열이 복합 키를 기반으로 할 경우 사용됩니다. `NameColumn` 속성은 부모-자식 계층에서 사용되지 않습니다. 대신 자식 멤버의 `NameColumn` 속성이 부모-자식 계층의 멤버 이름으로 사용됩니다.|  
 |`NamingTemplate`|부모 특성에서 생성된 부모-자식 계층에서 수준의 이름이 지정되는 방식을 정의합니다. 이 속성 값은 `Usage` 속성 값을 Parent로 설정한 경우에만 사용됩니다. 즉, 부모-자식 계층이 정의된 경우입니다.|  

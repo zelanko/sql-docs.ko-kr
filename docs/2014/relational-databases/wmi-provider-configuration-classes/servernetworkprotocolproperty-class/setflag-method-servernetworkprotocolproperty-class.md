@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642678"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 메서드(ServerNetworkProtocolProperty 클래스)

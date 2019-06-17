@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627818"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 수직 분할을 만들 열을 식별 합니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업이* 로 설정 되어 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 하 고 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 *문서*.  
   
-`[ @operation = ] 'operation'` 복제 상태가입니다. *작업이* 됩니다 **nvarchar(4)**, 기본값은 ADD 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열을 지웁니다.  
+`[ @operation = ] 'operation'` 복제 상태가입니다. *작업이* 됩니다 **nvarchar(4)** , 기본값은 ADD 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열을 지웁니다.  
   
-`[ @schema_replication = ] 'schema_replication'` 병합 에이전트가 실행 될 때 스키마 변경 내용이 전파 되도록 지정 합니다. *schema_replication* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ @schema_replication = ] 'schema_replication'` 병합 에이전트가 실행 될 때 스키마 변경 내용이 전파 되도록 지정 합니다. *schema_replication* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다.  
   
 > [!NOTE]  
 >  만 **FALSE** 지원 됩니다 *schema_replication*합니다.  

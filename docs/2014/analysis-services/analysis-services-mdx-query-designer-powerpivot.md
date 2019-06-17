@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062464"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 쿼리 디자이너(PowerPivot)
@@ -36,7 +36,7 @@ ms.locfileid: "66062464"
   
 |창|기능|  
 |----------|--------------|  
-|큐브 선택 단추(**...**)|현재 선택한 큐브를 표시합니다.|  
+|큐브 선택 단추( **...** )|현재 선택한 큐브를 표시합니다.|  
 |메타데이터 창|선택한 큐브에 정의된 측정값, KPI(핵심 성과 지표) 및 차원의 계층 목록을 표시합니다.|  
 |계산 멤버 창|쿼리에 사용할 수 있는 현재 정의된 계산 멤버를 표시합니다.|  
 |필터 창|원본의 데이터를 필터링하고 반환되는 데이터를 제한하기 위해 차원과 관련 계층을 선택하려면 사용합니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "66062464"
   
 |창|기능|  
 |----------|--------------|  
-|큐브 선택 단추(**...**)|현재 선택한 큐브를 표시합니다.|  
+|큐브 선택 단추( **...** )|현재 선택한 큐브를 표시합니다.|  
 |메타데이터/함수/템플릿 창|선택한 큐브에 정의된 측정값, KPI 및 차원의 계층 목록을 표시합니다.|  
 |쿼리 창|쿼리 텍스트를 표시합니다.|  
 |결과 창|쿼리의 실행 결과를 표시합니다.|  

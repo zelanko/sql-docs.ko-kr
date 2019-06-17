@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62512385"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인

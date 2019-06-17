@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636168"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
@@ -70,14 +70,14 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-reporting-help-on-a-single-server"></a>1. 단일 서버에 관한 도움말 보고  
+### <a name="a-reporting-help-on-a-single-server"></a>1\. 단일 서버에 관한 도움말 보고  
  다음 예에서는 `Accounts`라는 원격 서버의 모든 원격 사용자에 대한 정보를 표시합니다.  
   
 ```  
 EXEC sp_helpremotelogin 'Accounts';  
 ```  
   
-### <a name="b-reporting-help-on-all-remote-users"></a>2. 모든 원격 사용자에 관한 도움말 보고  
+### <a name="b-reporting-help-on-all-remote-users"></a>2\. 모든 원격 사용자에 관한 도움말 보고  
  다음 예에서는 로컬 서버에 알려진 모든 원격 서버의 모든 원격 사용자에 관한 정보를 표시합니다.  
   
 ```  

@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 95d18bdc96a8215f5050c3b8ecd68ec2b133e28f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092672"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)

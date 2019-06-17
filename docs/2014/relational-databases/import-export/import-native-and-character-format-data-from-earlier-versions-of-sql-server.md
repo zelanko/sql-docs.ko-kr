@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011923"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
@@ -55,14 +55,14 @@ ms.locfileid: "66011923"
  사용 하 여 내보내기 데이터를 대량 경우 합니다 **-V80** 스위치 `nvarchar(max)`, `varchar(max)`, `varbinary(max)`, XML 및 기본 모드에서 UDT 데이터와 같은 4 바이트 접두사를 사용 하 여 저장 됩니다 `text`, `image`, 및 `ntext`데이터에 대 한 기본 8 바이트 접두사를 사용 하 여는 대신 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상.  
   
 ## <a name="copying-date-values"></a>날짜 값 복사  
- **bcp** 는 ODBC 대량 복사 API를 사용합니다. 따라서 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져오기 위해 **bcp** 는 ODBC 날짜 형식(*yyyy-mm-dd hh:mm:ss*[*.f...*])을 사용합니다.  
+ **bcp** 는 ODBC 대량 복사 API를 사용합니다. 따라서 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져오기 위해 **bcp** 는 ODBC 날짜 형식(*yyyy-mm-dd hh:mm:ss*[ *.f...* ])을 사용합니다.  
   
  합니다 **bcp** 명령에 대해 ODBC 기본 형식을 사용 하 여 문자 형식 데이터 파일을 내보냅니다 `datetime` 고 `smalldatetime` 값입니다. 예를 들어 `12 Aug 1998`이라는 날짜가 포함된 `datetime` 열은 `1998-08-12 00:00:00.000` 문자열로 데이터 파일에 대량 복사됩니다.  
   
 > [!IMPORTANT]  
 >  데이터를 가져올 때를 `smalldatetime` 를 사용 하 여 필드 **bcp**, 초 값이 00.000 인지. 그렇지 않으면 작업이 실패 해야 합니다. `smalldatetime` 데이터 형식은 가장 근접한 분 값만 갖습니다. 이 경우 BULK INSERT 및 INSERT ... SELECT * FROM OPENROWSET(BULK...)는 이 경우 실패하지 않지만 초 값이 잘립니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  

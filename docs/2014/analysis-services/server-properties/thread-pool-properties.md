@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068842"
 ---
 # <a name="thread-pool-properties"></a>스레드 풀 속성
@@ -235,7 +235,7 @@ ms.locfileid: "66068842"
  작업 아키텍처에 대한 자세한 내용은 [SQL Server 2008 Analysis Services 성능 가이드](https://www.microsoft.com/download/details.aspx?id=17303)의 2.2 섹션을 참조하세요.  
   
 ##  <a name="bkmk_related"></a> 종속되었거나 관련된 속성  
- 2.4 섹션에 설명 된 대로 합니다 [Analysis Services 작업 가이드](https://msdn.microsoft.com/library/hh226085.aspx), 처리 스레드 풀을 늘리면 확인 해야 하는 합니다 `CoordinatorExecutionMode` 설정을 뿐만 `CoordinatorQueryMaxThreads` 설정 값이 있는 사용 증가 한 스레드 풀 크기를 충분히 활용할 수 있습니다.  
+ 2\.4 섹션에 설명 된 대로 합니다 [Analysis Services 작업 가이드](https://msdn.microsoft.com/library/hh226085.aspx), 처리 스레드 풀을 늘리면 확인 해야 하는 합니다 `CoordinatorExecutionMode` 설정을 뿐만 `CoordinatorQueryMaxThreads` 설정 값이 있는 사용 증가 한 스레드 풀 크기를 충분히 활용할 수 있습니다.  
   
  Analysis Services는 처리 또는 쿼리 요청을 완료하는 데 필요한 데이터 수집을 위해 코디네이터 스레드를 사용합니다. 코디네이터는 각 파티션에 대해 먼저 처리되어야 하는 최대 1개의 작업을 큐에 넣습니다. 이러한 각 작업은 파티션에서 검색되어야 하는 총 세그먼트 수에 따라 계속해서 추가 작업을 큐에 넣습니다.  
   

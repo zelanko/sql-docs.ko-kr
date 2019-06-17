@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054275"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 태스크 편집기(일반 페이지)
@@ -51,7 +51,7 @@ ms.locfileid: "66054275"
  **원본**  
  **Source**를 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(…)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **Source**를 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **Source**를 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- 기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -112,11 +112,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -130,11 +130,11 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -158,11 +158,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -176,11 +176,11 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -204,11 +204,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -239,11 +239,11 @@ ms.locfileid: "66054275"
  **XPathStringSource**  
  **XPathStringSourceType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **XPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **XPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -256,11 +256,11 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -284,11 +284,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -331,11 +331,11 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -359,11 +359,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -377,11 +377,11 @@ ms.locfileid: "66054275"
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
  **대상**  
- **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -405,11 +405,11 @@ ms.locfileid: "66054275"
  **SecondOperand**  
  **SecondOperandType**을 **직접 입력**으로 설정한 경우 XML 코드를 입력하거나 줄임표 단추 **(...)** 를 클릭하고 **문서 원본 편집기** 대화 상자를 사용하여 XML을 입력합니다.  
   
- **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ **SecondOperandType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   

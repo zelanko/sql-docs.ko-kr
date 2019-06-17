@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d66ba3298b2346e2ec139f27ec53d6104ad0ac9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625818"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>네트워크 패킷 크기는 8060바이트를 초과할 수 없음

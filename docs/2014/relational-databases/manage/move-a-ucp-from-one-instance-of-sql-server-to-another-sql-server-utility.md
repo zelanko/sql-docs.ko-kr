@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640331"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동(SQL Server 유틸리티)

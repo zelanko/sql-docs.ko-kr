@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667391"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>비관리자의 복제 모니터 사용 허용
@@ -38,7 +38,7 @@ ms.locfileid: "62667391"
   
 -   **비관리자의 복제 모니터 사용을 허용하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -75,12 +75,12 @@ ms.locfileid: "62667391"
   
 2.  배포 데이터베이스의 배포자에서 실행 [sp_helprolemember &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)의 값을 지정 `replmonitor` 에 대 한 합니다 **@rolename** 매개 변수입니다. 사용자에 표시 된 경우 `MemberName` 결과 집합에서 사용자는 이미이 역할에 속해 있습니다.  
   
-3.  사용자에 속하지 않는 경우는 `replmonitor` 역할을 실행 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) 배포 데이터베이스의 배포자에서. 값을 지정 `replmonitor` 에 대 한 **@rolename** 및 데이터베이스 사용자의 이름 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에 대 한 추가 되는 Windows 로그인 **@membername**합니다.  
+3.  사용자에 속하지 않는 경우는 `replmonitor` 역할을 실행 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) 배포 데이터베이스의 배포자에서. 값을 지정 `replmonitor` 에 대 한 **@rolename** 및 데이터베이스 사용자의 이름 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에 대 한 추가 되는 Windows 로그인 **@membername** 합니다.  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>replmonitor 고정 데이터베이스 역할에서 사용자를 제거하려면  
   
-1.  사용자에 속해 있는지 확인 하는 `replmonitor` 역할을 실행 [sp_helprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) 배포 데이터베이스의 배포자에서의 값을 지정 하 고 `replmonitor` 에대한**@rolename**. 사용자가 결과 집합의 `MemberName`에 나열되어 있지 않으면 해당 사용자는 현재 이 역할에 속해 있지 않은 것입니다.  
+1.  사용자에 속해 있는지 확인 하는 `replmonitor` 역할을 실행 [sp_helprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) 배포 데이터베이스의 배포자에서의 값을 지정 하 고 `replmonitor` 에대한 **@rolename** . 사용자가 결과 집합의 `MemberName`에 나열되어 있지 않으면 해당 사용자는 현재 이 역할에 속해 있지 않은 것입니다.  
   
-2.  사용자에 속하지는 `replmonitor` 역할을 실행할 [sp_droprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) 배포 데이터베이스의 배포자에서. 값을 지정 `replmonitor` 에 대 한 **@rolename** 제거할 Windows 로그인 또는 데이터베이스 사용자의 이름과 **@membername**합니다.  
+2.  사용자에 속하지는 `replmonitor` 역할을 실행할 [sp_droprolemember &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) 배포 데이터베이스의 배포자에서. 값을 지정 `replmonitor` 에 대 한 **@rolename** 제거할 Windows 로그인 또는 데이터베이스 사용자의 이름과 **@membername** 합니다.  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635870"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'object_statement'` 현재 데이터베이스 또는 보고서에 사용 권한이 있는 문의 개체의 이름이입니다. *object_statement* 됩니다 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름 형식에서 소유자의 한정자를 포함할 수 있습니다 _소유자_**.** _개체_합니다.  
+`[ @name = ] 'object_statement'` 현재 데이터베이스 또는 보고서에 사용 권한이 있는 문의 개체의 이름이입니다. *object_statement* 됩니다 **nvarchar(776)** , 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름 형식에서 소유자의 한정자를 포함할 수 있습니다 _소유자_ **.** _개체_합니다.  
   
  하는 경우 *object_statement* , 문인 CREATE 문일 수 있습니다.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` 권한을 부여 하는 보안 주체의 이름이입니다. *grantor* 됩니다 **sysname**, 기본값은 NULL 반환 하는 보안 주체는 데이터베이스에 의해 부여 된 권한에 대 한 모든 정보입니다.  
   
-`[ @permissionarea = ] 'type'` 개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 됩니다 **varchar(10)**, 기본값은 **os**합니다. *형식* 의 조합일 수 있습니다 **o** 및 **s**과 함께 또는 없이 쉼표나 사이 공백이 **o** 하 고 **s**입니다.  
+`[ @permissionarea = ] 'type'` 개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 됩니다 **varchar(10)** , 기본값은 **os**합니다. *형식* 의 조합일 수 있습니다 **o** 및 **s**과 함께 또는 없이 쉼표나 사이 공백이 **o** 하 고 **s**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -97,28 +97,28 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-the-permissions-for-a-table"></a>1. 테이블에 대한 사용 권한 나열  
+### <a name="a-listing-the-permissions-for-a-table"></a>1\. 테이블에 대한 사용 권한 나열  
  다음 예에서는 `titles` 테이블에 대한 사용 권한을 나열합니다.  
   
 ```  
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>2. 사용자에 대한 사용 권한 나열  
+### <a name="b-listing-the-permissions-for-a-user"></a>2\. 사용자에 대한 사용 권한 나열  
  다음 예에서는 `Judy`라는 사용자가 현재 데이터베이스에서 갖고 있는 모든 사용 권한을 나열합니다.  
   
 ```  
 EXEC sp_helprotect NULL, 'Judy';  
 ```  
   
-### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>3. 특정 사용자에 의해 부여된 사용 권한 나열  
+### <a name="c-listing-the-permissions-granted-by-a-specific-user"></a>3\. 특정 사용자에 의해 부여된 사용 권한 나열  
  다음 예에서는 현재 데이터베이스에서 `Judy`라는 사용자에 의해 부여된 모든 사용 권한을 나열하고 누락된 매개 변수에 대해 `NULL`을 자리 표시자로 사용합니다.  
   
 ```  
 EXEC sp_helprotect NULL, NULL, 'Judy';  
 ```  
   
-### <a name="d-listing-the-statement-permissions-only"></a>4. 문 사용 권한만 나열  
+### <a name="d-listing-the-statement-permissions-only"></a>4\. 문 사용 권한만 나열  
  다음 예에서는 현재 데이터베이스의 모든 문 사용 권한을 나열하고 누락된 매개 변수에 대해 `NULL`을 자리 표시자로 사용합니다.  
   
 ```  

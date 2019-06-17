@@ -16,10 +16,10 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62512556"
 ---
 # <a name="use-the-systemhealth-session"></a>system_health 세션 사용

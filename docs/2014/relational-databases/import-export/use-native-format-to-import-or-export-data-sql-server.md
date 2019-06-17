@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011658"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
@@ -80,7 +80,7 @@ ms.locfileid: "66011658"
 |**bcp**|**-n**|발생 합니다 **bcp** 유틸리티가 네이티브 데이터 형식의 데이터를 사용 하도록 합니다.<sup> 1</sup>|  
 |BULK INSERT|DATAFILETYPE **='** native **'**|데이터의 네이티브 또는 와이드 네이티브 데이터 형식을 사용합니다. 서식 파일로 데이터 형식을 지정하면 DATAFILETYPE은 필요하지 않습니다.|  
   
- <sup>1</sup> 네이티브 로드 (**-n**)의 이전 버전과 호환 되는 형식에 대 한 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여 합니다 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> 네이티브 로드 ( **-n**)의 이전 버전과 호환 되는 형식에 대 한 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트를 사용 하 여 합니다 **-V** 전환 합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
@@ -145,7 +145,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **대량 가져오기 또는 대량 내보내기를 위한 데이터 형식을 사용하려면**  
   
 -   [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

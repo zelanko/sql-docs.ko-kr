@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056068"
 ---
 # <a name="script-transformation-editor-script-page"></a>스크립트 변환 편집기(스크립트 페이지)
@@ -42,7 +42,7 @@ ms.locfileid: "66056068"
 |**UserComponentTypeName**|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라를 지원하는 `Microsoft.SqlServer.TxScript` 어셈블리 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스를 지정합니다.|  
   
  **스크립트 편집**  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

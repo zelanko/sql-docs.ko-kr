@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094243"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 매개 변수
@@ -24,7 +24,7 @@ ms.locfileid: "66094243"
   
 ## <a name="options"></a>변수  
  **컴퓨터에서 SSIS 패키지 분석**  
- 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다. 기본적으로 이 옵션은 선택되어 있습니다.  
+ 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다. 이 옵션은 기본적으로 선택됩니다.  
   
  **SSIS 패키지 파일 분석**  
  파일 시스템에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 분석하려면 이 옵션을 선택합니다.  

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627919"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "62627919"
 
 ## <a name="examples"></a>예  
   
-### <a name="a-monitoring-parallel-requests"></a>1. 병렬 요청 모니터링  
+### <a name="a-monitoring-parallel-requests"></a>1\. 병렬 요청 모니터링  
  병렬로 실행 되는 요청에 대 한 여러 행의 동일한 조합 표시 됩니다 (\<**session_id**>를 \< **request_id**>). 찾으려면 다음 쿼리를 사용 합니다 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 모든 활성 요청에 대 한 합니다.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>2. Windows 스레드와 세션 ID 연결  
+### <a name="b-associating-session-ids-with-windows-threads"></a>2\. Windows 스레드와 세션 ID 연결  
  다음 쿼리를 사용하여 세션 ID 값을 Windows 스레드 ID와 연결할 수 있습니다. 그런 다음 Windows 성능 모니터에서 스레드의 성능을 모니터링할 수 있습니다. 다음 쿼리는 중지 상태인 세션에 대한 정보를 반환하지 않습니다.  
   
 ```  

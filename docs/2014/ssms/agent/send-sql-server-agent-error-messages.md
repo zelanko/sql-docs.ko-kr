@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1aa0faafc6fb1cca693fe58665c7344db84c9f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666790"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
@@ -66,7 +66,7 @@ ms.locfileid: "62666790"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  에 **SQL Server 에이전트 속성-**_server_name_ 대화 상자의 **오류 로그** 에 **일반** 페이지, 사용자 이름을 입력 합니다 또는 컴퓨터 이름 오류를 보내려는 메시지를 **Net send 수신자** 상자입니다.  
+3.  에 **SQL Server 에이전트 속성-** _server_name_ 대화 상자의 **오류 로그** 에 **일반** 페이지, 사용자 이름을 입력 합니다 또는 컴퓨터 이름 오류를 보내려는 메시지를 **Net send 수신자** 상자입니다.  
   
 4.  **확인**을 클릭합니다.  
   

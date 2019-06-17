@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012705"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "66012705"
   
  이 문서에서는  **\<고객 >** element 노드는 **cid** attribute 노드이면, 및 **"중요"** 노드.  
   
- XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어, 일련의 주어진  **\<고객 >** 모든 XPath 노드를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값은 **"7/14/1999"**. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
+ XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어, 일련의 주어진  **\<고객 >** 모든 XPath 노드를 선택할 수  **\<순서 >** 노드는 **날짜** 특성 값은 **"7/14/1999"** . 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
  XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0에 있는 W3C XPath 사양의 하위 집합을 구현 http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   

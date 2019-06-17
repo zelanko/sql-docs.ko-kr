@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502804"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 는 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 합니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 는 **sysname**, 기본값은 **%** , 모든 아티클의 이름을 반환 합니다.  
   
-`[ @filtername = ] 'filtername'` 정보를 반환할 필터의 이름이입니다. *filtername* 됩니다 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
+`[ @filtername = ] 'filtername'` 정보를 반환할 필터의 이름이입니다. *filtername* 됩니다 **sysname**, 기본값은 **%** , 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

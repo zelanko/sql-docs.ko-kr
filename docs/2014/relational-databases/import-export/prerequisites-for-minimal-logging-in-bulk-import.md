@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ccb9642982b8680e4111346298e7a70bbc606dbb
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011884"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
@@ -62,7 +62,7 @@ ms.locfileid: "66011884"
 > [!NOTE]  
 >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   

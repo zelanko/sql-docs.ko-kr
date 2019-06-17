@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066898"
 ---
 # <a name="partitions-ssas-tabular"></a>파티션(SSAS 테이블 형식)
@@ -44,7 +44,7 @@ ms.locfileid: "66066898"
 ### <a name="partitions-in-a-deployed-model-database"></a>배포된 model 데이터베이스의 파티션  
  모델을 배포하면 배포된 model 데이터베이스에 대한 파티션은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 데이터베이스 개체로 나타납니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션 대화 상자를 사용하여 배포된 모델에 대해 파티션을 만들고 편집, 병합 및 삭제할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 배포된 모델에 대한 파티션 관리는 이 항목에서 다루지 않습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 파티션을 관리하는 방법에 대한 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  

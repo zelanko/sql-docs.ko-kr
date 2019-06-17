@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523886"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
@@ -32,7 +32,7 @@ ms.locfileid: "62523886"
   
 -   **다음을 사용하여 Transact-SQL 작업 단계 옵션 정의**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
      [SQL Server 관리 개체](#SMO)  
   

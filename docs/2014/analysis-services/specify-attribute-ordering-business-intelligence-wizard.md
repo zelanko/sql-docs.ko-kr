@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068539"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>특성 순서 지정(비즈니스 인텔리전스 마법사)
@@ -29,7 +29,7 @@ ms.locfileid: "66068539"
  **특성 순서 지정**  
  해당 **특성**의 순서를 지정할 특성을 선택합니다. 동일한 특성을 지정할 수 있습니다.  
   
- 새 순서 특성을 만들려면 선택  **\<새 특성 >**, 및를 **열을 선택** 대화 상자는 새 특성이 기반으로 하는 열을 선택 합니다.  
+ 새 순서 특성을 만들려면 선택  **\<새 특성 >** , 및를 **열을 선택** 대화 상자는 새 특성이 기반으로 하는 열을 선택 합니다.  
   
  **조건**  
  해당 **특성** 내 멤버의 순서를 지정하는 데 사용할 조건을 **순서 특성**에서 지정합니다. 다음 표에서는 사용 가능한 조건을 나열합니다.  

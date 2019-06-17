@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a001509cba1ef02182963fd8d8f8946f95321ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659841"
 ---
 # <a name="make-a-target-server"></a>대상 서버 만들기
@@ -37,7 +37,7 @@ ms.locfileid: "62659841"
   
 -   **대상 서버를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62659841"
   
 #### <a name="to-make-a-target-server"></a>대상 서버를 만들려면  
   
-1.   **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상으로 만들기**를 클릭합니다. **대상 서버 만들기 마법사** 가 대상 서버를 만드는 프로세스를 안내합니다.  
   

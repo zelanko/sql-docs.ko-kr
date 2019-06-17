@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013867"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped를 사용하여 결과 XML 문서에서 스키마 요소 제외(SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66013867"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>1. sql:mapped 주석 지정  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>1\. sql:mapped 주석 지정  
  다른 원본의 XSD 스키마가 있고, 이 XSD 스키마 구성를  **\<Person.Contact >** 사용 하 여 요소 **ContactID**를 **FirstName**를 **LastName**, 및 **HomeAddress** 특성입니다.  
   
  이 XSD 스키마는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑할 `sql:mapped` 에 지정 되어 합니다 **HomeAddress** Employees 테이블에 직원의 자택 주소가 저장 하지 않으므로 특성입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  

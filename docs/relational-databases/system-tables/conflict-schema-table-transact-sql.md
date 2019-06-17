@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471082"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;스키마&gt;_&lt;테이블&gt; (Transact SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62471082"
 |__$pre_version|**varbinary (32)**|충돌을 일으키는 변경이 시작된 데이터베이스 버전입니다.|  
 |__$reason_code|**int**|충돌 상태를 나타내는 코드이며 다음 값 중 하나입니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 자세한 내용은 **__ $reason_text**합니다.|  
 |__$reason_text|**nvarchar (720)**|충돌 상태를 나타내는 텍스트이며 다음 값 중 하나입니다.<br /><br /> Resolved (1)<br /><br /> Unresolved (2)<br /><br /> Unknown (0)|  
-|__$update_bitmap|**varbinary(** *n* **)**. 크기가 내용에 따라 달라 집니다.|업데이트/업데이트 충돌이 발생했을 때 업데이트된 열을 나타내는 비트맵입니다.|  
+|__$update_bitmap|**varbinary(** *n* **)** . 크기가 내용에 따라 달라 집니다.|업데이트/업데이트 충돌이 발생했을 때 업데이트된 열을 나타내는 비트맵입니다.|  
 |__$inserted_date|**datetime**|충돌을 일으키는 행이 이 테이블에 삽입된 날짜와 시간입니다.|  
 |__$row_id|**timestamp**|충돌을 일으키는 행과 연관된 행 버전입니다.|  
 |__$change_id|**이진 (8)**|로컬 행의 경우 이 값은 해당 로컬 행과 충돌하는 들어오는 행의 __$row_id에 해당합니다. 들어오는 행의 경우 이 값은 NULL입니다.|  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61ae582c2b35f96ccb21d16b19b0191017e05366
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650406"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile 이벤트 클래스
-  Showplan XML For Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함하세요.  
+  Showplan XML For Query Compile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 컴파일할 때 발생합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 계획 연산자를 식별하려면 이 이벤트 클래스를 포함하세요.  
   
  Showplan XML For Query Compile 이벤트 클래스는 완전한 컴파일 시간 데이터를 표시하므로 이 이벤트 클래스가 포함된 추적은 상당한 성능 오버헤드를 초래할 수 있습니다. 이 문제를 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

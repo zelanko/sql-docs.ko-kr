@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640405"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
@@ -64,7 +64,7 @@ END
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>1. sys.fn_hadr_backup_is_preferred_replica 사용  
+### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>1\. sys.fn_hadr_backup_is_preferred_replica 사용  
  다음 예에서는 현재 데이터베이스가 기본 백업 복제본인 경우 1을 반환합니다.  
   
 ```  

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62629862"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server 2017로 마이그레이션

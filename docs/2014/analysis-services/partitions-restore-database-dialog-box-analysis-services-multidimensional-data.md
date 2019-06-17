@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072109"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>파티션(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
@@ -66,7 +66,7 @@ ms.locfileid: "66072109"
 |**파티션**|로컬 파티션 이름을 표시합니다.|  
 |**크기(MB)**|로컬 파티션의 크기(MB)를 표시합니다.|  
 |**원본 폴더**|로컬 파티션이 저장된 원본 폴더 이름을 표시합니다.|  
-|**복원 폴더**|로컬 파티션의 복원 폴더 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 사용할 폴더의 경로를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**복원 폴더**|로컬 파티션의 복원 폴더 이름을 입력하거나 줄임표 단추( **...** )를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 사용할 폴더의 경로를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
  **원격 파티션 복원**  
  원격 백업 파일에 저장된 원격 파티션을 복원하려면 선택합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "66072109"
 |------------|-----------------|  
 |**Server**|원격 파티션을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 이름을 표시합니다.|  
 |**데이터 원본**|백업 파일에서 원격 파티션이 포함된 데이터베이스를 나타내는 데이터 원본 이름을 표시합니다.|  
-|**백업 파일**|사용할 원격 백업 파일의 전체 경로 및 파일 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **데이터베이스 파일 찾기** 대화 상자를 표시하고 사용할 원격 백업 파일의 경로 및 파일 이름을 선택합니다. **데이터베이스 파일 찾기** 대화 상자에 대한 자세한 내용은 [데이터베이스 파일 찾기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**백업 파일**|사용할 원격 백업 파일의 전체 경로 및 파일 이름을 입력하거나 줄임표 단추( **...** )를 클릭하여 **데이터베이스 파일 찾기** 대화 상자를 표시하고 사용할 원격 백업 파일의 경로 및 파일 이름을 선택합니다. **데이터베이스 파일 찾기** 대화 상자에 대한 자세한 내용은 [데이터베이스 파일 찾기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**...**|**원격 파티션 - 고급 설정** 대화 상자를 표시하고 데이터 원본의 연결 문자열과 같은 원격 파티션 복원에 대한 고급 옵션을 수정하려면 클릭합니다. **원격 파티션 - 고급 설정** 대화 상자에 대한 자세한 내용은 [원격 파티션 - 고급 설정 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  

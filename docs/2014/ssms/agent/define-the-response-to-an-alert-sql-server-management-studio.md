@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524073"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>경고에 대한 응답 정의(SQL Server Management Studio)
@@ -69,7 +69,7 @@ ms.locfileid: "62524073"
   
 6.  **작업 실행** 확인란을 선택하고 **작업 실행** 확인란 아래의 목록에서 경고가 발생할 때 실행할 작업을 선택합니다. **새 작업**을 클릭하여 새 작업을 만듭니다. **작업 보기**를 클릭하면 해당 작업에 대한 자세한 내용을 확인할 수 있습니다. **새 작업** 및 **작업 속성**_job_name_ 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [작업 만들기](create-a-job.md) 및 [작업 보기](view-a-job.md)를 참조하세요.  
   
-7.  경고가 활성화될 때 운영자에게 알리려면 **운영자에게 알림** 확인란을 선택합니다. 에 **운영자 목록**를 운영자에 게 알리기 위한 다음 방법 중 하나 이상 선택: **전자 메일**, **호출기**, 또는 **Net Send**합니다. **새 운영자**를 클릭하여 새 운영자를 만들 수 있습니다. **운영자 보기**를 클릭하면 운영자에 대한 자세한 정보를 볼 수 있습니다. **새 운영자** 및 **운영자 속성 보기** 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [Create an Operator](create-an-operator.md) 및 [View Information About an Operator](view-information-about-an-operator.md)를 참조하세요.  
+7.  경고가 활성화될 때 운영자에게 알리려면 **운영자에게 알림** 확인란을 선택합니다. **운영자 목록**에서 운영자에게 알리는 다음 방법 중 하나 이상을 선택합니다. **이메일**, **호출기** 또는 **Net 보내기**. **새 운영자**를 클릭하여 새 운영자를 만들 수 있습니다. **운영자 보기**를 클릭하면 운영자에 대한 자세한 정보를 볼 수 있습니다. **새 운영자** 및 **운영자 속성 보기** 대화 상자에서 사용 가능한 옵션에 대한 자세한 내용은 [Create an Operator](create-an-operator.md) 및 [View Information About an Operator](view-information-about-an-operator.md)를 참조하세요.  
   
 8.  완료되었으면 **확인**을 클릭합니다.  
   

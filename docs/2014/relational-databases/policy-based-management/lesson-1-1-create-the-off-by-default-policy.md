@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064300"
 ---
 # <a name="create-the-off-by-default-policy"></a>Off By Default 정책 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "66064300"
   
 3.  **패싯** 상자에서 **노출 영역 구성** 패싯이 선택되어 있는지 확인합니다.  
   
-4.  **식** 영역의 **필드** 상자에서 **@DatabaseMailEnabled**를 선택하고, **연산자** 상자에서 **=** 를 선택한 다음 **값**에서 **False**를 선택합니다.  
+4.  **식** 영역의 **필드** 상자에서 **@DatabaseMailEnabled** 를 선택하고, **연산자** 상자에서 **=** 를 선택한 다음 **값**에서 **False**를 선택합니다.  
   
 5.  **설명** 페이지에서 조건에 대한 설명을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
   

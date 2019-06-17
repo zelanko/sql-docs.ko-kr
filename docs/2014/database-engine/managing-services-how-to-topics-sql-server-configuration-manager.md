@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064637"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>서비스 관리 방법 도움말 항목(SQL Server 구성 관리자)

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655508"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성

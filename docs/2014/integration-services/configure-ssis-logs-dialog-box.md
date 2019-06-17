@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060590"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS 로그 구성 대화 상자
@@ -73,7 +73,7 @@ ms.locfileid: "66060590"
  설명 필드는 편집할 수 있습니다. 클릭한 다음 로그의 기본 설명을 수정합니다.  
   
  **Configuration**  
- 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
+ 목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
  관련 항목: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [File Connection Manager](connection-manager/file-connection-manager.md)  
   

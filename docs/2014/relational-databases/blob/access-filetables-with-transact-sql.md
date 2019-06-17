@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010425"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
@@ -29,7 +29,7 @@ ms.locfileid: "66010425"
   
 -   INSERT 문이 **name**, **path_locator**, **parent_path_locator** 또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
--   애플리케이션에서는 [GetPathLocator&amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
+-   애플리케이션에서는 [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
   
 ##  <a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  

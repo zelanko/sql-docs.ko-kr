@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070938"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을: PowerPivot 데이터

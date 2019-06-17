@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f9a8e08fc230a24e3d00f2b13ec4ccb6c039dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62510234"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
@@ -133,7 +133,7 @@ ms.locfileid: "62510234"
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
 |마이닝 모델 열 작업|[마이닝 모델에서 열 제외](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |모델 속성 변경|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [알고리즘 매개 변수 보기 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [내보내기 & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|복사. 모델 복사, 이동 또는 관리|[마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [마이닝 모델의 뷰 복사](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [내보내기 &#40; DMX &#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   

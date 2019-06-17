@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655678"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정

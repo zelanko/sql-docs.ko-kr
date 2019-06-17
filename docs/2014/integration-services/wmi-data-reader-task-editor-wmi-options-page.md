@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054355"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 데이터 판독기 태스크 편집기(WMI 옵션 페이지)
@@ -28,7 +28,7 @@ ms.locfileid: "66054355"
   
 ## <a name="static-options"></a>정적 옵션  
  **WMIConnectionName**  
- 목록에서 WMI 연결 관리자를 선택하거나 \<**새 WMI 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 WMI 연결 관리자를 선택하거나 \<**새 WMI 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [WMI 연결 관리자](connection-manager/wmi-connection-manager.md), [WMI 연결 관리자 편집기](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -63,13 +63,13 @@ ms.locfileid: "66054355"
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = 파일 연결  
  **WQLQuerySource**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 변수  
  **WQLQuerySource**  
- 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -77,13 +77,13 @@ ms.locfileid: "66054355"
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = 파일 연결  
  **대상**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = 변수  
  **대상**  
- 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
