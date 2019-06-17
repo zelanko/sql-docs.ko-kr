@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56683b05b940ce9c11ba41d05659fb94bf26a921
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949202"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID(Transact-SQL)
@@ -57,14 +57,14 @@ Key_ID ( 'Key_Name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-id-of-a-symmetric-key"></a>1. 대칭 키의 ID 반환  
+### <a name="a-returning-the-id-of-a-symmetric-key"></a>1\. 대칭 키의 ID 반환  
  다음은 `ABerglundKey1`이라는 키의 ID를 반환하는 예입니다.  
   
 ```  
 SELECT KEY_ID('ABerglundKey1');  
 ```  
   
-### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>2. 임시 대칭 키의 ID 반환  
+### <a name="b-returning-the-id-of-a-temporary-symmetric-key"></a>2\. 임시 대칭 키의 ID 반환  
  다음은 임시 대칭 키의 ID를 반환하는 예입니다. 키 이름 앞에 `#`이 있습니다.  
   
 ```  

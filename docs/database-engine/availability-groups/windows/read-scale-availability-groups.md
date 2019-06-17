@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
-ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67131820"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용

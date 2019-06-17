@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a336b58ed148fa135835f4d991d73644c5f1799e
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503232"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE(Transact-SQL)
@@ -174,14 +174,14 @@ WITH
   
 ## <a name="examples"></a>예  
   
-### <a name="a-making-a-queue-unavailable"></a>1. 큐를 사용할 수 없게 설정  
+### <a name="a-making-a-queue-unavailable"></a>1\. 큐를 사용할 수 없게 설정  
  다음 예에서는 `ExpenseQueue` 큐에서 메시지를 받을 수 없도록 설정합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
-### <a name="b-changing-the-activation-stored-procedure"></a>2. 활성화 저장 프로시저 변경  
+### <a name="b-changing-the-activation-stored-procedure"></a>2\. 활성화 저장 프로시저 변경  
  다음 예에서는 큐가 시작하는 저장 프로시저를 변경합니다. 이 저장 프로시저는 `ALTER QUEUE` 문을 실행한 사용자로 실행됩니다.  
   
 ```  

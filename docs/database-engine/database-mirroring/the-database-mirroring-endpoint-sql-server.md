@@ -19,10 +19,10 @@ ms.author: mikeray
 manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d7577a95f08b4e960fc3f5dfdeb356cd7434d73
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795162"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)

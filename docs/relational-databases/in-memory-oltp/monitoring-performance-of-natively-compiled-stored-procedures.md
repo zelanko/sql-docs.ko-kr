@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f3b341f6e40fdc5acf618d3f81c5932b9be50149
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106227"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
@@ -43,12 +43,12 @@ SELECT [definition]
 
 ## <a name="procedure-level-execution-statistics"></a>프로시저 수준 실행 통계
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_PROCEDURE_EXECUTION_STATISTICS`를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_PROCEDURE_EXECUTION_STATISTICS`를 사용하여 프로시저 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 프로시저 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION
@@ -57,12 +57,12 @@ ALTER DATABASE
 
 ## <a name="query-level-execution-statistics"></a>쿼리 수준 실행 통계
 
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: [sys.sp_xtp_control_query_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : [sys.sp_xtp_control_query_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다.  다음 명령문을 사용하면 현재 인스턴스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_QUERY_EXECUTION_STATISTICS`를 사용하여 명령문 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 옵션 `XTP_QUERY_EXECUTION_STATISTICS`를 사용하여 명령문 수준의 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 활성화하거나 비활성화할 수 있습니다. 다음 명령문을 사용하면 현재 데이터베이스에 있는 고유하게 컴파일된 모든 T-SQL 모듈에 대한 쿼리 수준 실행 통계 수집을 활성화할 수 있습니다.
 ```sql
 ALTER DATABASE
     SCOPED CONFIGURATION

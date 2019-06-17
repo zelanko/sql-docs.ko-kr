@@ -16,11 +16,11 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 ms.openlocfilehash: 2b5df9a7cab1a4ebf7ae1ac089a51bdfd32100dd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716280"
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -29,10 +29,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945721"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
@@ -195,7 +195,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *@t*에는 **time** 데이터 형식이 있습니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
+*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATEPART`은 오류 9810을 반환합니다. 이 예제에서 변수 *@t* 에는 **time** 데이터 형식이 있습니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794846"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
@@ -87,7 +87,7 @@ ms.locfileid: "66794846"
 |**/UpdateEnabled**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.| 
 |**/IAcceptSQLServerLicenseTerms**|무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.| 
  
- * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다. 
+ \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다. 
  
 ## <a name="see-also"></a>관련 항목: 
  [SQL Server 서비스 설치 개요](https://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e) 

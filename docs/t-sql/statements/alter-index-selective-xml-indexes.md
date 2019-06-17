@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65504030"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
@@ -125,7 +125,7 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
  인덱싱할 경로에서 사용하는 네임스페이스 목록입니다. WITH XMLNAMESPACES 절의 구문에 대한 자세한 내용은 [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)를 참조하세요.  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
@@ -135,7 +135,7 @@ identifier
   
 -   **경로를 제거합니다.** 경로를 제거할 때는 해당 경로를 만들 때 지정한 경로 이름을 제공합니다.  
   
- [WITH **(** \<index_options> **)**]  
+ [WITH **(** \<index_options> **)** ]  
  FOR 절 없이 ALTER INDEX를 사용할 때는 \<index_options>만 지정할 수 있습니다. ALTER INDEX를 사용하여 인덱스에서 경로를 추가 또는 제거할 때는 인덱스 옵션이 잘못된 인수가 아닙니다. 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  

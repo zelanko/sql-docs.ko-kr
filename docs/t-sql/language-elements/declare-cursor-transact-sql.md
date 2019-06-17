@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982533"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
@@ -175,7 +175,7 @@ FOR UPDATE [OF *column_name* [ **,** ...*n*]]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-simple-cursor-and-syntax"></a>1. 단순 커서 및 구문 사용  
+### <a name="a-using-simple-cursor-and-syntax"></a>1\. 단순 커서 및 구문 사용  
 
 다음 커서를 열 때 생성된 결과 집합에는 테이블에 있는 모든 행과 모든 열이 포함됩니다. 이 커서는 업데이트가 가능하며 이 커서에 대해 수행한 인출에는 모든 업데이트와 삭제 내용이 나타납니다. `FETCH NEXT` 옵션을 지정하지 않았으므로 `SCROLL` 인출만 사용할 수 있습니다.  
  
@@ -186,7 +186,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>2. 중첩된 커서를 사용하여 보고서 출력 생성  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>2\. 중첩된 커서를 사용하여 보고서 출력 생성  
  다음 예에서는 커서를 중첩시켜 복잡한 보고서를 생성하는 방법을 보여 줍니다. 각 공급업체에 대해 내부 커서가 선언됩니다.  
   
 ```sql  

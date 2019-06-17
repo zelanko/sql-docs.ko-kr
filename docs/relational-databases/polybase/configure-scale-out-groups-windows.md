@@ -11,10 +11,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774725"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
@@ -41,13 +41,13 @@ ms.locfileid: "64774725"
 
 4. [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 사용하여 그룹에서 노드를 모니터링합니다.
 
-5. (선택 사항) [sp_polybase_leave_group&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 컴퓨팅 노드를 제거합니다.
+5. (선택 사항) [sp_polybase_leave_group&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 컴퓨팅 노드를 제거합니다.
 
 ## <a name="example-walk-through"></a>예제 연습
 
 이 예제는 다음을 사용하여 PolyBase 그룹을 구성하는 단계를 보여줍니다.  
   
-1. 	*PQTH4A* 도메인의 시스템 두 대. 시스템 이름:  
+1. *PQTH4A* 도메인의 시스템 두 대. 시스템 이름:  
   
    - PQTH4A-CMP01  
   

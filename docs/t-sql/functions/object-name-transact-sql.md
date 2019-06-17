@@ -26,10 +26,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1f27628a944c8df1d27bf05f9eb5fbade28aa30b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948989"
 ---
 # <a name="objectname-transact-sql"></a>OBJECT_NAME(Transact-SQL)
@@ -90,7 +90,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>1. WHERE 절에서 OBJECT_NAME 사용  
+### <a name="a-using-objectname-in-a-where-clause"></a>1\. WHERE 절에서 OBJECT_NAME 사용  
  다음 예에서는 `sys.objects` 문의 `OBJECT_NAME` 절에서 `WHERE`으로 지정한 개체에 대한 열을 `SELECT` 카탈로그 뷰에서 반환합니다.  
   
 ```  
@@ -105,7 +105,7 @@ WHERE name = OBJECT_NAME(@MyID);
 GO  
 ```  
   
-### <a name="b-returning-the-object-schema-name-and-object-name"></a>2. 개체 스키마 이름 및 개체 이름 반환  
+### <a name="b-returning-the-object-schema-name-and-object-name"></a>2\. 개체 스키마 이름 및 개체 이름 반환  
  다음 예에서는 임시 문이나 준비된 문이 아닌 모든 캐시된 쿼리 계획에 대한 개체 스키마 이름, 개체 이름 및 SQL 텍스트를 반환합니다.  
   
 ```  

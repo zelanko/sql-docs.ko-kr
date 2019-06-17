@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201716"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -64,7 +64,7 @@ ms.locfileid: "56828383"
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -140,17 +140,17 @@ REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
 > [!WARNING]
-> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 
-데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+데이터 파일이나 로그 파일의 논리적 이름을 수정하려면 `NAME` 절에 이름을 바꿀 논리적 파일 이름을 지정하고 `NEWNAME` 절에 파일의 새 논리적 이름을 지정합니다. 예를 들어
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+데이터 파일 또는 로그 파일을 새 위치로 이동하려면 `NAME` 절에 파일의 현재 논리적 이름을 지정하고 `FILENAME` 절에 새 경로와 운영 체제 파일 이름을 지정합니다. 예를 들어
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* 파일의 새 논리적 이름을 지정합니�
 
 *new_logical_file_name* 기존 논리적 파일 이름을 바꿀 이름입니다. 이 이름은 데이터베이스 내에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 이름에 문자나 유니코드 상수, 일반 식별자, 구분 식별자를 지정할 수 있습니다.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} 운영 체제(물리적) 파일 이름을 지정합니다.
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } 운영 체제(물리적) 파일 이름을 지정합니다.
 
 ' *os_file_name* ' 표준(행) 파일 그룹의 경우 이것은 파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 서버에 있어야 합니다. ALTER DATABASE 문을 실행하기 전에 지정된 경로가 존재해야 합니다.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제�
 > [!NOTE]
 > FILESTREAM 가비지 수집기가 FILESTREAM 컨테이너에서 모든 파일을 제거하지 않은 경우 FILESTREAM 컨테이너를 제거하기 위한 `ALTER DATABASE REMOVE FILE` 작업이 실패하고 오류를 반환합니다. 이 항목의 뒷부분에 나오는 [FILESTREAM 컨테이너 제거](#removing-a-filestream-container) 섹션을 참조하세요.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 파일 그룹 상태를 READ_ONLY 또는 READ_WRITE로 설정하고 파일 그룹을 데이터베이스에 대한 기본 파일 그룹으로 설정하거나 파일 그룹 이름을 바꿔 파일 그룹을 수정합니다.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 파일 그룹 상태를 READ_ONLY 또는 READ_WRITE로 설정하고 파일 그룹을 데이터베이스에 대한 기본 파일 그룹으로 설정하거나 파일 그룹 이름을 바꿔 파일 그룹을 수정합니다.
 
 \<filegroup_updatability_option> 파일 그룹에 대한 읽기 전용 또는 읽기/쓰기 속성을 설정합니다.
 
@@ -570,7 +570,7 @@ MODIFY FILEGROUP [PRIMARY] DEFAULT;
 GO
 ```
 
-### <a name="i-adding-a-filegroup-using-alter-database"></a>9. ALTER DATABASE를 사용하여 파일 그룹 추가
+### <a name="i-adding-a-filegroup-using-alter-database"></a>9\. ALTER DATABASE를 사용하여 파일 그룹 추가
 
 다음 예에서는 `FILEGROUP` 절을 포함하는 `FILESTREAM`을 `FileStreamPhotoDB` 데이터베이스에 추가합니다.
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\*SQL Database<br />관리되는 인스턴스\*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\*SQL Database<br />관리되는 인스턴스\*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* 데이터베이스에서 파일 그룹을 제거합니다. 파일 그룹은 비어 있어야 제거할 수 있습니다. 먼저 파일 그룹에서 모든 파일을 제거합니다. 자세한 내용은 이 토픽의 앞부분에 나오는 "REMOVE FILE *logical_file_name*"을 참조하세요.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 파일 그룹 상태를 READ_ONLY 또는 READ_WRITE로 설정하고 파일 그룹을 데이터베이스에 대한 기본 파일 그룹으로 설정하거나 파일 그룹 이름을 바꿔 파일 그룹을 수정합니다.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } 파일 그룹 상태를 READ_ONLY 또는 READ_WRITE로 설정하고 파일 그룹을 데이터베이스에 대한 기본 파일 그룹으로 설정하거나 파일 그룹 이름을 바꿔 파일 그룹을 수정합니다.
 
 \<filegroup_updatability_option> 파일 그룹에 대한 읽기 전용 또는 읽기/쓰기 속성을 설정합니다.
 

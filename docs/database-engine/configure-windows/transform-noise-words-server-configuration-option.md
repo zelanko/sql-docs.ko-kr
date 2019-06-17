@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 57c63cde99dc8319e998277ab1d4c1120c8bf73f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775258"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words 서버 구성 옵션
@@ -35,7 +35,7 @@ ms.locfileid: "66775258"
 |1|의미 없는 단어(또는 중지 단어)가 변환되지 않습니다. 이러한 단어는 무시되고 쿼리의 나머지가 평가됩니다.<br /><br /> 근접 단어에서 의미 없는 단어가 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 의미 없는 단어를 제거합니다. 예를 들어 `is` 에서 의미 없는 단어 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`가 제거되고 검색 쿼리가 `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`로 변환됩니다. `CONTAINS(<column_name>, 'NEAR(hello,is)')` 는 유효한 검색 단어가 하나만 있으므로 간단히 `CONTAINS(<column_name>, hello)` 로 변환됩니다.|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>의미 없는 단어 변환 설정의 효과  
- 이 섹션에서는`the`transform noise words **의 설정별로 의미 없는 단어 "**"가 들어 있는 쿼리의 동작을 보여 줍니다.  예제 전체 텍스트 쿼리 문자열은 다음 데이터가 포함된 테이블 행에 대해 실행되는 것으로 가정합니다. `[1, "The black cat"]`.  
+ 이 섹션에서는`the`transform noise words **의 설정별로 의미 없는 단어 "** "가 들어 있는 쿼리의 동작을 보여 줍니다.  예제 전체 텍스트 쿼리 문자열은 다음 데이터가 포함된 테이블 행에 대해 실행되는 것으로 가정합니다. `[1, "The black cat"]`.  
   
 > [!NOTE]  
 >  이러한 모든 시나리오에서 의미 없는 단어 경고가 생성될 수 있습니다.  

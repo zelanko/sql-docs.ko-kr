@@ -14,18 +14,18 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 0384f081f3c660bb54d75b72992b991e822ec630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678709"
 ---
 # <a name="reading-pages"></a>페이지 읽기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 I/O에는 논리적 읽기 수 및 물리적 읽기 수가 포함되어 있습니다. 논리적 읽기는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 [버퍼 캐시](../relational-databases/memory-management-architecture-guide.md)에서 페이지를 요청할 때마다 발생합니다. 페이지가 현재 버퍼 캐시에 없는 경우 물리적 읽기가 먼저 디스크의 페이지를 캐시로 복사합니다.
 
-[!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스로 생성된 읽기 요청은 관계형 엔진에 의해 제어되고 저장소 엔진에 의해 최적화됩니다. 관계형 엔진은 테이블 검색, 인덱스 검색 또는 키 사용 읽기와 같은 가장 효과적인 액세스 방법을 결정합니다. 스토리지 엔진의 액세스 방법 및 버퍼 관리자 구성 요소는 수행할 일반적인 읽기 패턴을 결정하고 액세스 방법을 구현하는 데 필요한 읽기를 최적화합니다. 일괄 처리를 실행하는 스레드는 읽기 일정을 계획합니다.
+[!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스로 생성된 읽기 요청은 관계형 엔진에 의해 제어되고 스토리지 엔진에 의해 최적화됩니다. 관계형 엔진은 테이블 검색, 인덱스 검색 또는 키 사용 읽기와 같은 가장 효과적인 액세스 방법을 결정합니다. 스토리지 엔진의 액세스 방법 및 버퍼 관리자 구성 요소는 수행할 일반적인 읽기 패턴을 결정하고 액세스 방법을 구현하는 데 필요한 읽기를 최적화합니다. 일괄 처리를 실행하는 스레드는 읽기 일정을 계획합니다.
 
 ## <a name="read-ahead"></a>미리 읽기
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 미리 읽기라고 하는 성능 최적화 메커니즘을 지원합니다. 미리 읽기는 쿼리 실행 계획을 수행하는 데 필요한 데이터 및 인덱스 페이지를 예상하고 페이지가 쿼리에서 실제로 사용되기 전에 해당 페이지를 버퍼 캐시로 가져옵니다. 이렇게 하면 계산과 I/O가 동시에 수행되어 CPU와 디스크를 모두 충분히 활용할 수 있습니다. 

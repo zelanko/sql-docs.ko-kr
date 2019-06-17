@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a34790fec91c183531ff875f94839f45de1cf9cc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945644"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
@@ -62,7 +62,7 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-database-id-of-the-current-database"></a>1. 현재 데이터베이스의 데이터베이스 ID 반환  
+### <a name="a-returning-the-database-id-of-the-current-database"></a>1\. 현재 데이터베이스의 데이터베이스 ID 반환  
 이 예에서는 현재 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql
@@ -70,7 +70,7 @@ SELECT DB_ID() AS [Database ID];
 GO  
 ```  
   
-### <a name="b-returning-the-database-id-of-a-specified-database"></a>2. 지정한 데이터베이스의 데이터베이스 ID 반환  
+### <a name="b-returning-the-database-id-of-a-specified-database"></a>2\. 지정한 데이터베이스의 데이터베이스 ID 반환  
 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다.
   
 ```sql

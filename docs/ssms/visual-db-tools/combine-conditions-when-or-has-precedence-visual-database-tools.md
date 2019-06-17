@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5757d32093ab6547092d967f1d9fcf8c94323cf0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65093353"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2df32344ce2359419f5b0b66b7f5e429f9edebc0
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944570"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>암호화 함수(Transact-SQL)
@@ -75,7 +75,7 @@ ms.locfileid: "65944570"
 |||  
 |-|-|  
 |[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>관련 항목:
 [함수](../../t-sql/functions/functions.md)  

@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a37eef1db62c91577fe8afb9851fc189d985681a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948884"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK(Transact-SQL)
@@ -61,7 +61,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-ranking-rows-within-a-partition"></a>1. 파티션 내의 행 순위 지정  
+### <a name="a-ranking-rows-within-a-partition"></a>1\. 파티션 내의 행 순위 지정  
 이 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. `DENSE_RANK`는 `LocationID`로 결과 집합을 분할하고 `Quantity`로 논리적으로 결과 집합의 순서를 정합니다. 제품 494와 495는 수량이 동일합니다. 모두가 동일한 수량 값을 갖기 때문에 모두가 1의 순위 값을 갖습니다.  
   
 ```  
@@ -98,7 +98,7 @@ ProductID   Name                               LocationID Quantity Rank
   
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>2. 결과 집합의 모든 행 순위 지정  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>2\. 결과 집합의 모든 행 순위 지정  
 이 예제에서는 연봉이 상위 10위권에 들어가는 직원을 반환합니다. `SELECT` 문이 `PARTITION BY` 절을 지정하지 않았기 때문에 `DENSE_RANK` 함수가 모든 결과 집합 행에 적용됐습니다.  
   
 ```  

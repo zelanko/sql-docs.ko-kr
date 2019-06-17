@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025573"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52507928"
   
 -   메모리 최적화으로 테이블과 데이터를 마이그레이션합니다(지원되지 않는 기능이 있는 경우).  
     
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>메모리 최적화 관리자 사용 연습  
  **개체 탐색기**에서 변환할 테이블을 마우스 오른쪽 단추로 클릭하고 **메모리 최적화 관리자**를 선택합니다. **테이블 메모리 최적화 관리자**시작 페이지가 표시됩니다.  

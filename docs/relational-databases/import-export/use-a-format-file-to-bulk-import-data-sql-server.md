@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d29f7718a71485e04dda6aac848def5822557d4e
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946060"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
@@ -156,7 +156,7 @@ XML 서식 파일 `D:\BCP\myFirstImport.xml` 은 다음과 같이 표시됩니�
 ## 서식 파일을 사용하여 데이터를 대량으로 가져오기<a name="import_data"></a>
 아래 예제에서는 위에서 만든 데이터베이스, 데이터 파일 및 서식 파일을 사용합니다.
 
-### **[bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일 사용](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_nonxml"></a>
+### **[bcp](../../tools/bcp-utility.md) 및 [비 XML 서식 파일 사용](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_nonxml"></a>
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```cmd
 REM Truncate table (for testing)
@@ -170,7 +170,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport"
 ```
 
 
-### **[bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일 사용](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bcp_xml"></a>
+### **[bcp](../../tools/bcp-utility.md) 및 [XML 서식 파일 사용](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bcp_xml"></a>
 명령 프롬프트에서 다음 명령을 입력합니다.
 ```cmd
 REM Truncate table (for testing)
@@ -184,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.MyFirstImport;"
 ```
 
 
-### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_nonxml"> 사용</a>
+### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_nonxml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -200,7 +200,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="bulk_xml"> 사용</a>
+### **[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="bulk_xml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  
@@ -216,7 +216,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_nonxml"> 사용</a>    
+### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset_nonxml"> 사용</a>    
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;
@@ -235,7 +235,7 @@ GO
 SELECT * FROM TestDatabase.dbo.myFirstImport;
 ```
 
-### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)**<a name="openrowset_xml"> 사용</a>
+### **[OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)** <a name="openrowset_xml"> 사용</a>
 Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```sql
 USE TestDatabase;  

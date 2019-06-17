@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: adbc2e1862a783c0452519054e839261d08709d9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946228"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
@@ -68,7 +68,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>1. 서명된 데이터가 변경되지 않았는지 확인  
+### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>1\. 서명된 데이터가 변경되지 않았는지 확인  
  다음 예에서는 `Signed_Data`의 정보가 `Shipping04`라는 인증서로 서명된 후 변경되었는지 테스트합니다. 서명은 `DataSignature`에 저장됩니다. 인증서 `Shipping04`는 데이터베이스 내의 인증서 ID를 반환하는 `Cert_ID`로 전달됩니다. `VerifySignedByCert`가 1을 반환하면 서명이 올바른 것입니다. `VerifySignedByCert`가 0을 반환하면 `Signed_Data`의 데이터는 `DataSignature`를 생성하는 데 사용된 데이터와 다릅니다. 이 경우 `Signed_Data`가 서명된 후 변경되었거나 `Signed_Data`가 다른 인증서로 서명된 것입니다.  
   
 ```  
@@ -79,7 +79,7 @@ WHERE Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-### <a name="b-returning-only-records-that-have-a-valid-signature"></a>2. 유효한 서명을 가진 레코드만 반환  
+### <a name="b-returning-only-records-that-have-a-valid-signature"></a>2\. 유효한 서명을 가진 레코드만 반환  
  이 쿼리에서는 인증서 `Shipping04`를 사용하여 서명된 이후 변경되지 않은 레코드만 반환합니다.  
   
 ```  

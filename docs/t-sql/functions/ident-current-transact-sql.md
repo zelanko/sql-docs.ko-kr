@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: faee4465ed79d064085efc8962de054989ef3b84
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946428"
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
@@ -71,7 +71,7 @@ IDENT_CURRENT( 'table_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>1. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
+### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>1\. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
  다음 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대해 마지막으로 생성된 ID 값을 반환합니다.  
   
 ```  
@@ -81,7 +81,7 @@ SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>2. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
+### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>2\. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
  다음 예에서는 `IDENT_CURRENT`, `@@IDENTITY` 및 `SCOPE_IDENTITY`가 반환하는 서로 다른 ID 값을 보여 줍니다.  
   
 ```  

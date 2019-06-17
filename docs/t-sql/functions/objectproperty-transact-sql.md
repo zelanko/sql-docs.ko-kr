@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948961"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
@@ -184,7 +184,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-verifying-that-an-object-is-a-table"></a>1. 개체가 테이블인지 확인  
+### <a name="a-verifying-that-an-object-is-a-table"></a>1\. 개체가 테이블인지 확인  
  다음 예에서는 `UnitMeasure`가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 테이블인지 테스트하는 방법을 보여 줍니다.  
   
 ```  
@@ -200,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>2. 스칼라 반환 사용자 정의 함수가 결정적인지 확인  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>2\. 스칼라 반환 사용자 정의 함수가 결정적인지 확인  
  다음 예에서는 **money** 값을 반환하는 사용자 정의 스칼라 반환 함수 `ufnGetProductDealerPrice`가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
   
 ```  

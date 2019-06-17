@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 173b33d6bf609d2acf3e1b85622cfe73a8c55b38
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946167"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
@@ -133,7 +133,7 @@ FROM { \<backup_device&gt; [ **,** ...*n* ]| \<database_snapshot&gt; } 일반적
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
  지정한 디스크나 테이프 장치에서 백업을 복원할 수 있습니다. 디스크나 테이프의 디바이스 유형은 전체 경로와 파일 이름을 포함한 디바이스의 실제 이름으로 지정해야 합니다. `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 또는 `TAPE ='\\\\.\TAPE0'`. 변수( **@** _physical\_backup\_device\_name\_var_)로 지정한 경우 디바이스 이름은 문자열 상수( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*')나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.  
   
- 네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+ 네트워크 서버에 UNC 이름(컴퓨터 이름 포함)을 사용하는 경우 디스크의 장치 유형을 지정합니다. UNC 이름을 사용하는 방법에 대한 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  RESTORE 작업을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 계정에 원격 컴퓨터나 네트워크 서버에 대한 READ 권한이 있어야 합니다.  
   
@@ -430,7 +430,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 RESTORE 문 내에서 호환되지 않습니다.  
   
 > [!NOTE]  
->  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+>  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열린 테이프 목록을 표시하고 열린 테이프를 닫는 방법은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
  { **UNLOAD** | NOUNLOAD }  
  **지원 요소:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) 및 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  

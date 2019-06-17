@@ -14,10 +14,10 @@ ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66836390"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기

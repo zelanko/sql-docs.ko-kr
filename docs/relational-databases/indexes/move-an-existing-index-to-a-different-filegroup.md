@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4eebf51a73a6d5f4665c418b6f6b03078777bd0f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686010"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53590377"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -53,7 +53,7 @@ ms.locfileid: "53590377"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -90,7 +90,7 @@ ms.locfileid: "53590377"
   
 5.  이동할 인덱스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  **페이지 선택**아래에서 **저장소**를 선택합니다.  
+6.  **페이지 선택**아래에서 **스토리지**를 선택합니다.  
   
 7.  인덱스를 이동할 파일 그룹을 선택합니다.  
   

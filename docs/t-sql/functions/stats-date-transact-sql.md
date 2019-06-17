@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f313706aba43b939e267cee8b79deee2b8b80bc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947678"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE(Transact-SQL)
@@ -67,7 +67,7 @@ STATS_DATE ( object_id , stats_id )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>1. 테이블에 대한 가장 최근 통계의 날짜 반환  
+### <a name="a-return-the-dates-of-the-most-recent-statistics-for-a-table"></a>1\. 테이블에 대한 가장 최근 통계의 날짜 반환  
  다음 예에서는 `Person.Address` 테이블에 있는 각 통계 개체에 대한 가장 최근의 업데이트 날짜를 반환합니다.  
   
 ```sql  
@@ -94,7 +94,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>2. 명명된 통계가 마지막으로 업데이트된 시기 알아보기  
+### <a name="b-learn-when-a-named-statistics-was-last-updated"></a>2\. 명명된 통계가 마지막으로 업데이트된 시기 알아보기  
  다음 예에서는 DimCustomer 테이블의 LastName 열에 대한 통계를 만듭니다. 그런 다음, 쿼리를 실행하여 통계 날짜를 표시합니다. 다음으로, 통계를 업데이트하고 쿼리를 다시 실행하여 업데이트된 날짜를 표시합니다.  
   
 ```sql

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3f433c5bfd5f6ee2f3a962b47c3d6a4430083976
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098980"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
@@ -64,9 +64,9 @@ ms.locfileid: "65098980"
   
 **기하 도형** 열 옵션:  
   
--   기하 도형 열에 대한**기하 도형 표**   
+-   기하 도형 열에 대한**기하 도형 표**  
   
--   지리 열에 대한**지리 표**   
+-   지리 열에 대한**지리 표**  
   
 **형식**  
 공간 인덱스가 선택되어 있음을 나타냅니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "65098980"
 공간 인덱스의 이름을 표시합니다. 새 인덱스를 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
-인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+인덱스에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음, 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
 **테이블 디자이너 범주**  
 확장하면 현재 공간 인덱스의 속성에 대한 정보가 표시됩니다.  

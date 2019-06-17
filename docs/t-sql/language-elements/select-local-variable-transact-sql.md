@@ -27,10 +27,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 3ea8dffc7256d08788b2a3b12812cd1f6e8f9cbd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981866"
 ---
 # <a name="select-localvariable-transact-sql"></a>SELECT @local_variable(Transact-SQL)
@@ -84,7 +84,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>1. SELECT @local_variable을 사용하여 단일 값 반환  
+### <a name="a-use-select-localvariable-to-return-a-single-value"></a>1\. SELECT @local_variable을 사용하여 단일 값 반환  
  다음 예에서는 `@var1` 변수에 `Generic Name` 값이 할당됩니다. `Store`에 지정된 값이 테이블에 없기 때문에 `CustomerID` 테이블에 대한 쿼리에서 행을 반환하지 않습니다. 따라서 변수는 `Generic Name` 값을 유지합니다.  
   
 ```sql  
@@ -106,7 +106,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>2. SELECT @local_variable을 사용하여 null 반환  
+### <a name="b-use-select-localvariable-to-return-null"></a>2\. SELECT @local_variable을 사용하여 null 반환  
  다음 예에서는 `@var1`에 값을 할당하기 위해 하위 쿼리가 사용됩니다. `CustomerID`에 대해 요청한 값이 없기 때문에 하위 쿼리에서 값을 반환하지 않고 변수가 `NULL`로 설정됩니다.  
   
 ```sql  

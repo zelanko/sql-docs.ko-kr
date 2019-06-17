@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 9deb380eb4c92b283afac6f1bdcbe3c85c98beb1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794734"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 업그레이드(설치 프로그램)

@@ -11,17 +11,18 @@ dev_langs:
 - TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 author: VanMSFT
-ms.author: vanto"
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d5017005cba460f04bd82dcbfd721d26e5f0b7d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 97c7a7f45408fa4e6ea314bd04a0d35d127af660
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822465"
 ---
 # <a name="queries"></a>쿼리
+
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   DML(데이터 조작 언어)은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 SQL Database에서 데이터를 검색하고 데이터로 작업하는 데 사용하는 어휘입니다. 대부분 SQL Data Warehouse 및 PDW에서도 작동합니다(자세한 내용은 각 개별 문을 검토). 이러한 DML 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 추가, 수정, 쿼리 또는 제거할 수 있습니다.  
@@ -35,8 +36,9 @@ ms.locfileid: "57334590"
 |[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|  
 |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)|[UPDATETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/updatetext-transact-sql.md)|  
 |[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|[WRITETEXT&#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)|  
-|[READTEXT&#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)||  
-  
+|[READTEXT&#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)| &nbsp; |  
+| &nbsp; | &nbsp; |
+
  다음 표에서는 여러 DML 문 또는 절에 사용되는 절을 나열합니다.  
   
 |절|다음과 같은 문에서 사용할 수 있습니다.|  
@@ -50,5 +52,4 @@ ms.locfileid: "57334590"
 |[TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
 |[WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)|DELETE, SELECT, UPDATE, MATCH|  
 |[WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)|DELETE, INSERT, MERGE, SELECT, UPDATE|  
-  
-  
+| &nbsp; | &nbsp; |

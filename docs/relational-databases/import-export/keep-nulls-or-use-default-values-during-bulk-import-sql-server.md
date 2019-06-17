@@ -23,10 +23,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6269db9bcf9c242162a01ab144ebc55de6aa0803
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946626"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
@@ -154,7 +154,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
+### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 **-k** 및 **-f** 스위치. 명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -182,7 +182,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **서식 파일 없이 [bcp](../../tools/bcp-utility.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 **-f** 스위치.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```cmd
@@ -215,7 +215,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
+### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 **KEEPNULLS** 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -253,7 +253,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -271,7 +271,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
+### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -290,7 +290,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
+### **서식 파일 없이 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 과 함께 [bcp](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 **KEEPDEFAULTS** 테이블 힌트 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 
 ```sql
@@ -347,7 +347,7 @@ SELECT * FROM TestDatabase.dbo.myNulls;
   
 -   [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

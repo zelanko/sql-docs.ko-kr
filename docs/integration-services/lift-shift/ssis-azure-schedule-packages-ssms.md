@@ -12,10 +12,10 @@ ms.author: sawinark
 ms.reviewer: maghan
 manager: craigg
 ms.openlocfilehash: 5ab271c79ffdcb43573c8a55680a2695305a96af
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012826"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio(SSMS)를 사용하여 Azure에 배포된 SSIS 패키지 실행 예약

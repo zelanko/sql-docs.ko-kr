@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7895158afd1f0302182ca7601cb138af4afc36f1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639273"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>인수  
- [**sys.**] .  
+ [**sys.** ] .  
  **sys** 한정자는 카탈로그 뷰 및 동적 관리 뷰를 참조하는 경우에만 필요합니다.  
   
  *system_object*  
@@ -61,7 +61,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
   
  시스템 개체는 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

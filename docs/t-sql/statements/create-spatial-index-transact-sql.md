@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503220"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
@@ -500,7 +500,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1. geometry 열에 공간 인덱스 만들기
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1\. geometry 열에 공간 인덱스 만들기
 
  다음 예에서는 **geometry** 형식 열 `geometry_col`을 포함하는 `SpatialTable` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
   
@@ -511,7 +511,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2. geometry 열에 공간 인덱스 만들기
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2\. geometry 열에 공간 인덱스 만들기
 
  다음 예에서는 `SIndx_SpatialTable_geometry_col2` 테이블의 `geometry_col`에 두 번째 공간 인덱스 `SpatialTable`를 만듭니다. 이 예에서는 `GEOMETRY_GRID`를 공간 분할 구성표로 지정합니다. 또한 경계 상자를 지정하고 표 수준마다 다른 밀도를 지정하며 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   

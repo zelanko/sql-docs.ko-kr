@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946794"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
@@ -53,7 +53,7 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-unicode-and-the-nchar-function"></a>1. UNICODE 및 NCHAR 함수 사용  
+### <a name="a-using-unicode-and-the-nchar-function"></a>1\. UNICODE 및 NCHAR 함수 사용  
  다음 예에서는 `UNICODE`와 `NCHAR` 함수를 사용하여 `Åkergatan` 24 문자열에 있는 첫 글자의 UNICODE 값을 인쇄하고 실제 첫 글자 `Å`를 인쇄합니다.  
   
 ```sql  
@@ -69,7 +69,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 197         Å  
 ```  
   
-### <a name="b-using-substring-unicode-and-convert"></a>2. SUBSTRING, UNICODE, CONVERT 사용  
+### <a name="b-using-substring-unicode-and-convert"></a>2\. SUBSTRING, UNICODE, CONVERT 사용  
  다음 예에서는 `SUBSTRING`, `UNICODE` 및 `CONVERT` 함수를 사용하여 `Åkergatan 24` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자, UNICODE 값 등을 인쇄하는 방법을 보여 줍니다.  
   
 ```sql  

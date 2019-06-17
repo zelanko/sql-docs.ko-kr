@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506586"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6a69b84fb78acaa30800f69783e6117e37e01149
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943857"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS(Transact-SQL)
@@ -63,7 +63,7 @@ argument1, argument2, argument*N*
 
 ## <a name="examples"></a>예   
 
-### <a name="a--concatenating-values-with-separator"></a>1.  구분 기호를 사용하여 값 연결
+### <a name="a--concatenating-values-with-separator"></a>1\.  구분 기호를 사용하여 값 연결
 이 예제에서는 `-`로 값을 구분하여 sys.databases 테이블의 세 열을 연결합니다.   
 
 ```sql
@@ -81,7 +81,7 @@ FROM sys.databases;
 |4 - SIMPLE - NONE |
 
 
-### <a name="b--skipping-null-values"></a>2.  NULL 값 유지
+### <a name="b--skipping-null-values"></a>2\.  NULL 값 유지
 이 예제에서는 인수 목록의 `NULL` 값을 무시합니다.
 
 ```sql

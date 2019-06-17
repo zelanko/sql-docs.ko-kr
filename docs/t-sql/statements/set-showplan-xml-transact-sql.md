@@ -26,11 +26,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16707627e7df326fe88edb3712a7c4bd11a2c92c
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816387"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML(Transact-SQL)
 
@@ -74,7 +74,7 @@ SET SHOWPLAN_XML에 의한 XML 출력의 XML 스키마가 포함된 문서는 �
 
 실행 계획 스키마는 [이 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)에서도 제공합니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 SET SHOWPLAN_XML을 사용하려면 SET SHOWPLAN_XML가 실행되는 문을 실행할 수 있는 권한이 있어야 하며 참조된 개체를 포함하는 모든 데이터베이스에 대한 SHOWPLAN 권한이 있어야 합니다.
 

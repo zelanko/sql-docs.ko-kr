@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943074"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID(Transact-SQL)
@@ -93,7 +93,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>1. GROUPING_ID를 사용하여 그룹화 수준 식별  
+### <a name="a-using-groupingid-to-identify-grouping-levels"></a>1\. GROUPING_ID를 사용하여 그룹화 수준 식별  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Name`과 `Title`, `Name,` 및 Company Total별 직원 수를 반환합니다. `GROUPING_ID()`는 `Title` 열의 각 행에 대해 집계 수준을 식별하는 값을 생성합니다.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>2. GROUPING_ID를 사용하여 결과 집합 필터링  
+### <a name="b-using-groupingid-to-filter-a-result-set"></a>2\. GROUPING_ID를 사용하여 결과 집합 필터링  
   
 #### <a name="simple-example"></a>간단한 예  
  다음 예제에서 title별 직원 수를 갖는 행만 반환하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`에서 주석 문자를 제거하세요. department별 직원 수를 갖는 행만 반환하려면 `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`에서 주석 문자를 제거하세요.  

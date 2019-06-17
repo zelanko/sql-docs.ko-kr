@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684371"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,14 +97,14 @@ ON ALL SERVER
   
  기존 트리거의 목록 보기에 대한 자세한 내용은 [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 및 [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DML 트리거를 삭제하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
  서버 범위(ON ALL SERVER)로 정의된 DDL 트리거 또는 LOGON 트리거를 삭제하려면 현재 서버에서 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)로 정의된 DDL 트리거를 삭제하려면 현재 데이터베이스에서 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-dml-trigger"></a>1. DML 트리거 삭제  
+### <a name="a-dropping-a-dml-trigger"></a>1\. DML 트리거 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
   
 ```  
@@ -112,7 +112,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
    DROP TRIGGER employee_insupd;  
 ```  
   
-### <a name="b-dropping-a-ddl-trigger"></a>2. DML 트리거 삭제  
+### <a name="b-dropping-a-ddl-trigger"></a>2\. DML 트리거 삭제  
  다음 예에서는 `safety` DDL 트리거를 삭제합니다.  
   
 > [!IMPORTANT]  

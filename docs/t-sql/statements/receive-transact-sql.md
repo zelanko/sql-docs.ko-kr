@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503673"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
@@ -178,14 +178,14 @@ ms.locfileid: "65503673"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1\. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 결과 집합으로 메시지를 반환합니다.  
   
 ```  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
-### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
+### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2\. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 `conversation_handle`, `message_type_name` 및 `message_body` 열을 포함하는 결과 집합으로 메시지를 반환합니다.  
   
 ```  
@@ -278,7 +278,7 @@ WAITFOR (
 TIMEOUT 60000 ;  
 ```  
   
-### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9. 메시지 받기, 열의 유형 수정  
+### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9\. 메시지 받기, 열의 유형 수정  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 메시지 유형이 메시지에 XML 문서가 포함되어 있음을 나타내면 문은 메시지 본문을 XML로 변환합니다.  
   
 ```  

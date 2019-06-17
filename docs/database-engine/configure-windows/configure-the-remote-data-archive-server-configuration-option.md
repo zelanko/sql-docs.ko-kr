@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: jroth
 ms.openlocfilehash: 39967c68efa3f514759c3c7c910674f62097e3ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783855"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>원격 데이터 보관 서버 구성 옵션 구성

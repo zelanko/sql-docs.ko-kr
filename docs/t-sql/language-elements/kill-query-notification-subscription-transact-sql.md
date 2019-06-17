@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2cb16e1a8abe807149caed9e5b520cae0d8f44c7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982215"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION(Transact-SQL)
@@ -62,14 +62,14 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
   
 ## <a name="examples"></a>예  
   
-### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>1. 인스턴스에서 모든 쿼리 알림 구독 제거  
+### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>1\. 인스턴스에서 모든 쿼리 알림 구독 제거  
  다음 예에서는 인스턴스에서 모든 쿼리 알림 구독을 제거합니다.  
   
 ```  
 KILL QUERY NOTIFICATION SUBSCRIPTION ALL ;  
 ```  
   
-### <a name="b-removing-a-single-query-notification-subscription"></a>2. 단일 쿼리 알림 구독 제거  
+### <a name="b-removing-a-single-query-notification-subscription"></a>2\. 단일 쿼리 알림 구독 제거  
  다음 예에서는 ID가 `73`인 쿼리 알림 구독을 제거합니다.  
   
 ```  

@@ -36,10 +36,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462683"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 절과 JOIN, APPLY, PIVOT(Transact-SQL)
@@ -459,7 +459,7 @@ APPLY 연산자는 다음과 같은 방식으로 FROM 절에 지정될 테이블
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-from-clause"></a>1. 간단한 FROM 절 사용  
+### <a name="a-using-a-simple-from-clause"></a>1\. 간단한 FROM 절 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 샘플 데이터베이스에서 `TerritoryID` 테이블의 `Name` 및 `SalesTerritory`을 검색합니다.  
   
 ```sql    
@@ -486,7 +486,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>2. TABLOCK 및 HOLDLOCK 최적화 프로그램 힌트 사용  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>2\. TABLOCK 및 HOLDLOCK 최적화 프로그램 힌트 사용  
  다음의 부분 트랜잭션은 `Employee`에 명시적인 공유 테이블 잠금을 설정하고 인덱스를 읽는 방법을 보여 줍니다. 잠금은 전체 트랜잭션 동안 유지됩니다.  
   
 ```sql    
@@ -567,7 +567,7 @@ ON pv.BusinessEntityID = v.BusinessEntityID
 ORDER BY p.Name, v.Name ;  
 ```  
   
-### <a name="i-using-a-derived-table"></a>9. 파생된 테이블 사용  
+### <a name="i-using-a-derived-table"></a>9\. 파생된 테이블 사용  
  다음 예에서는 파생된 테이블과 `SELECT` 문을 `FROM` 절 다음에 사용하여 모든 직원의 성과 이름, 직원이 거주하는 도시를 반환합니다.  
   
 ```sql    
@@ -591,7 +591,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;  
 ```  
   
-### <a name="k-using-apply"></a>11. APPLY 사용  
+### <a name="k-using-apply"></a>11\. APPLY 사용  
 다음 예제에서는 다음 테이블 및 테이블 반환 함수가 데이터베이스에 존재한다고 가정합니다.  
 
 |개체 이름|열 이름|      
@@ -619,7 +619,7 @@ FROM Departments d
 OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
-### <a name="l-using-cross-apply"></a>12. CROSS APPLY 사용  
+### <a name="l-using-cross-apply"></a>12\. CROSS APPLY 사용  
 다음 예제는 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색함으로써 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색합니다. 그런 다음 `CROSS APPLY`에 계획 핸들을 전달할 `sys.dm_exec_query_plan` 연산자를 지정합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
   
 ```sql
@@ -631,7 +631,7 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>13. FOR SYSTEM_TIME 사용  
+### <a name="m-using-for-systemtime"></a>13\. FOR SYSTEM_TIME 사용  
   
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
@@ -700,7 +700,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
+### <a name="n-using-the-inner-join-syntax"></a>14\. INNER JOIN 구문 사용  
  다음 예제에서는 두 테이블 모두에서 `ProductKey` 조인 키가 일치하는 `FactInternetSales` 및 `DimProduct` 테이블에서 `SalesOrderNumber`, `ProductKey` 및 `EnglishProductName` 열을 반환합니다. `SalesOrderNumber` 및 `EnglishProductName` 열은 각각 테이블 중 하나에만 존재하므로 이러한 열을 표시된 대로 사용하여 테이블 별칭을 지정할 필요가 없습니다. 이러한 별칭은 가독성을 높이기 위해 포함되었습니다. **AS**라는 단어는 별칭 이름 앞에 필요하지 않지만, 가독성을 높이고 ANSI 표준을 준수하기 위해 사용하는 것이 좋습니다.  
   
 ```sql
@@ -736,7 +736,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>15. LEFT OUTER JOIN 및 RIGHT OUTER JOIN 구문 사용  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>15\. LEFT OUTER JOIN 및 RIGHT OUTER JOIN 구문 사용  
  다음 예제에서는 `FactInternetSales` 및 `DimProduct` 테이블을 `ProductKey` 열에 조인합니다. 왼쪽 우선 외부 조인 구문은 왼쪽(`FactInternetSales`) 테이블에서 일치하지 않는 행을 유지합니다. `FactInternetSales` 테이블에는 `DimProduct` 테이블과 일치하지 않는 `ProductKey` 값이 포함되어 있지 않으므로 다음 쿼리는 위의 첫 번째 내부 조인 예제와 동일한 행을 반환합니다.  
   
 ```sql
@@ -785,7 +785,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-full-outer-join-syntax"></a>16. FULL OUTER JOIN 구문 사용  
+### <a name="p-using-the-full-outer-join-syntax"></a>16\. FULL OUTER JOIN 구문 사용  
  다음 예제에서는 조인된 두 테이블의 모든 행을 반환하지만, 다른 테이블과 일치하지 않는 값에 대해 NULL을 반환하는 완전 외부 조인을 보여 줍니다.  
   
 ```sql
@@ -810,7 +810,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-cross-join-syntax"></a>17. CROSS JOIN 구문 사용  
+### <a name="q-using-the-cross-join-syntax"></a>17\. CROSS JOIN 구문 사용  
  다음 예제에서는 `FactInternetSales` 및 `DimSalesTerritory` 테이블의 교차곱을 반환합니다. `SalesOrderNumber` 및 `SalesTerritoryKey`의 가능한 모든 조합 목록이 반환됩니다. 크로스 조인 쿼리에 `ON` 절이 없습니다.  
   
 ```sql
@@ -822,7 +822,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-a-derived-table"></a>18. 파생된 테이블 사용  
+### <a name="r-using-a-derived-table"></a>18\. 파생된 테이블 사용  
  다음 예제에서는 파생 테이블(`FROM` 절 뒤의 `SELECT` 문)을 사용하여 `DimCustomer` 테이블에서 1970년 1월 1일 이후의 `BirthDate` 값과 'Smith' 성이 있는 모든 고객의 `CustomerKey` 및 `LastName` 열을 반환합니다.  
   
 ```sql
@@ -852,7 +852,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>20. REPLICATE 조인 힌트 예제  
+### <a name="t-replicate-join-hint-example"></a>20\. REPLICATE 조인 힌트 예제  
  다음 예제에서는 `REDUCE` 조인 힌트 대신 `REPLICATE` 조인 힌트가 사용된다는 점을 제외하고는 위의 예제와 동일한 쿼리를 보여 줍니다. `REPLICATE` 힌트를 사용하면 `FactInternetSales` 테이블의 `ProductKey`(조인) 열의 값이 모든 노드에 복제됩니다. `DimProduct` 테이블은 해당 값의 복제된 버전에 조인됩니다.  
   
 ```sql
@@ -868,7 +868,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>21. REDISTRIBUTE 힌트를 사용하여 호환되지 않는 배포 조인에 대한 순서 섞기 이동 보장  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>21\. REDISTRIBUTE 힌트를 사용하여 호환되지 않는 배포 조인에 대한 순서 섞기 이동 보장  
  다음 쿼리에서는 호환되지 않는 배포 조인에서 REDISTRIBUTE 쿼리 힌트를 사용합니다. 이렇게 하면 쿼리 최적화 프로그램이 쿼리 계획에서 순서 섞기 이동을 사용하도록 보장합니다. 또한 쿼리 계획에서 분산된 테이블을 복제된 테이블로 이동하는 브로드캐스트 이동을 사용하지 않도록 보장합니다.  
   
  다음 예제에서는 ProductKey가 DimProduct에 대한 배포 열이고 FactInternetSales에 대한 배포 열이 아니기 때문에 REDISTRIBUTE 힌트는 FactInternetSales 테이블에서 순서 섞기 이동을 수행하도록 합니다.  
@@ -883,7 +883,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
 
-### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>22. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>22\. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
  다음 예에서는 `TABLESAMPLE` 절에 `FROM`을 사용하여 `10` 테이블에 있는 모든 행 중 대략 `Customer` 퍼센트를 반환합니다.  
   
 ```sql    

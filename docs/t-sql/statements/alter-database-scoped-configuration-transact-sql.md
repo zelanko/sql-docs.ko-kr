@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270165"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
@@ -384,14 +384,14 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 ## <a name="examples"></a>예
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION의 사용을 보여 줍니다.
 
-### <a name="a-grant-permission"></a>1. 사용 권한 부여
+### <a name="a-grant-permission"></a>1\. 사용 권한 부여
 이 예제에서는 ALTER DATABASE SCOPED CONFIGURATION을 실행하는 데 필요한 사용 권한을 사용자 Joe에게 부여합니다.
 
 ```sql
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
-### <a name="b-set-maxdop"></a>2. MAXDOP 설정
+### <a name="b-set-maxdop"></a>2\. MAXDOP 설정
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 MAXDOP = 1을 설정하고 보조 데이터베이스에 대해 MAXDOP = 4를 설정합니다.
 
 ```sql
@@ -469,7 +469,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>9. ELEVATE_ONLINE 설정
+### <a name="i-set-elevateonline"></a>9\. ELEVATE_ONLINE 설정
 **적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.
@@ -487,7 +487,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
-### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11. 계획 캐시에서 쿼리 계획 지우기
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11\. 계획 캐시에서 쿼리 계획 지우기
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 이 예에서는 프로시저 캐시에서 특정 계획을 지웁니다. 

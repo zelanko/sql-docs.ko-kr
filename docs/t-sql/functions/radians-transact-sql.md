@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 105b1aea27bd37efd1394f9d158e7050ea71dfcc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943235"
 ---
 # <a name="radians-transact-sql"></a>RADIANS(Transact-SQL)
@@ -48,7 +48,7 @@ RADIANS ( numeric_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-radians-to-show-00"></a>1. 0.0을 표시하기 위해 RADIANS 사용  
+### <a name="a-using-radians-to-show-00"></a>1\. 0\.0을 표시하기 위해 RADIANS 사용  
  다음 예에서는 라디안으로 변환하기 위한 숫자 식이 `0.0` 함수에 대해 너무 작기 때문에 `RADIANS`인 결과를 반환합니다.  
   
 ```  
@@ -64,7 +64,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>2. float 식에서 같은 각도를 반환하기 위해 RADIANS 사용  
+### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>2\. float 식에서 같은 각도를 반환하기 위해 RADIANS 사용  
  다음 예에서는 `float` 식을 사용하고 지정한 각도의 `RADIANS`를 반환합니다.  
   
 ```  

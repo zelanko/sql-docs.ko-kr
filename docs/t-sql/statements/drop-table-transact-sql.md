@@ -39,10 +39,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503469"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE(Transact-SQL)
@@ -106,14 +106,14 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-table-in-the-current-database"></a>1. 현재 데이터베이스에서 테이블 삭제  
+### <a name="a-dropping-a-table-in-the-current-database"></a>1\. 현재 데이터베이스에서 테이블 삭제  
  다음 예에서는 현재 데이터베이스에서 `ProductVendor1` 테이블과 해당 데이터 및 인덱스를 제거합니다.  
   
 ```  
 DROP TABLE ProductVendor1 ;  
 ```  
   
-### <a name="b-dropping-a-table-in-another-database"></a>2. 다른 데이터베이스에서 테이블 삭제  
+### <a name="b-dropping-a-table-in-another-database"></a>2\. 다른 데이터베이스에서 테이블 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `SalesPerson2` 테이블을 삭제합니다. 이 예는 서버 인스턴스의 모든 데이터베이스에서 실행할 수 있습니다.  
   
 ```  

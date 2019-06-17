@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 05/29/2019
 ms.openlocfilehash: 3f80cc74cc20c2ed02e32577fadbe13a5bf7dd38
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500337"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?

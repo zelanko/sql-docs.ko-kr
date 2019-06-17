@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1fc40d263e5b7e22c38f225f50809d35e0b73415
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949238"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL)
@@ -61,7 +61,7 @@ ISNULL ( check_expression , replacement_value )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isnull-with-avg"></a>1. AVG와 함께 ISNULL 사용  
+### <a name="a-using-isnull-with-avg"></a>1\. AVG와 함께 ISNULL 사용  
  다음 예에서는 모든 제품의 평균 무게를 구하는 방법을 보여 줍니다. `50` 테이블의 `Weight` 열에 있는 모든 NULL 항목을 `Product` 값으로 대체합니다.  
   
 ```  
@@ -81,7 +81,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="b-using-isnull"></a>2. ISNULL 사용  
+### <a name="b-using-isnull"></a>2\. ISNULL 사용  
  다음 예에서는 `AdventureWorks2012`에서 모든 특별 행사에 대한 설명, 할인율, 최소 수량 및 최대 수량을 선택하는 방법을 보여 줍니다. 특정한 특별 행사에 대한 최대 수량이 NULL인 경우 결과 집합의 `MaxQty`는 `0.00`으로 표시됩니다.  
   
 ```  

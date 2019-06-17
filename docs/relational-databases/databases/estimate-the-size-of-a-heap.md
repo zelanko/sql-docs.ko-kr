@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860684"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>힙 크기 예측
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591767"
   
 3.  행의 Null 비트맵 부분은 열의 Null 허용 여부 관리를 위해 예약됩니다. 다음과 같이 이 부분의 크기를 계산합니다.  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      이 식의 정수 부분만 사용하고 나머지는 무시해야 합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53591767"
   
      테이블에 가변 길이 열이 있는 경우에는 해당 행 안에 열을 저장하는 데 사용되는 공간을 측정합니다.  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      **_Max_Var_Size_** 에 추가된 바이트는 각 가변 길이 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 스토리지 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 **_Max_Var_Size_** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "53591767"
   
 5.  전체 행 크기를 계산합니다.  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      이 수식에서 값 4는 데이터 행의 행 머리글 오버헤드입니다.  
   
 6.  페이지당 행 수를 계산합니다. 페이지당 사용 가능한 바이트 수는 8,096바이트입니다.  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      행이 여러 페이지에 걸쳐 배치되지는 않으므로 페이지당 행 수는 가장 근사한 정수 값으로 내림하여 계산해야 합니다. 수식에서 값 2는 페이지의 슬롯 배열에서 행의 입력을 위한 것입니다.  
   
 7.  모든 행을 저장하는 데 필요한 페이지 수를 계산합니다.  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      예상 페이지 수는 가장 근사한 전체 페이지로 올림되어 계산됩니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591767"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식 **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntextxml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
+     LOB 데이터 형식 **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. LOB 값의 예상 평균 크기만 전체 힙 크기에 추가해도 됩니다.  
   
 -   압축  
   

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5dd733ff5de0a45f689a8d768c29453136cba550
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942903"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
@@ -46,7 +46,7 @@ IS_OBJECTSIGNED (
  보안 개체 클래스의 유형입니다.  
   
  *@object_id*  
- 테스트 중인 개체의 object_id입니다. *@object_id*는 **int** 형식입니다.  
+ 테스트 중인 개체의 object_id입니다. *@object_id* 는 **int** 형식입니다.  
   
  *@class*  
  개체의 클래스입니다.  
@@ -55,10 +55,10 @@ IS_OBJECTSIGNED (
   
 -   '비대칭 키'  
   
- *@class*는 **sysname**입니다.  
+ *@class* 는 **sysname**입니다.  
   
  *@thumbprint*  
- 개체의 SHA 지문입니다. *@thumbprint*는 **varbinart(32)** 형식입니다.  
+ 개체의 SHA 지문입니다. *@thumbprint* 는 **varbinart(32)** 형식입니다.  
   
 ## <a name="returned-types"></a>반환 형식  
  **ssNoversion**  
@@ -77,7 +77,7 @@ IS_OBJECTSIGNED (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>1. 데이터베이스의 확장 속성 표시  
+### <a name="a-displaying-extended-properties-on-a-database"></a>1\. 데이터베이스의 확장 속성 표시  
  다음 예에서는 **master** 데이터베이스의 spt_fallback_db 테이블이 스키마 서명 인증서로 서명되었는지를 테스트합니다.  
   
 ```  

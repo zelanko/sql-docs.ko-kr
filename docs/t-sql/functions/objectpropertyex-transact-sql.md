@@ -24,10 +24,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 28581b5468557c19b44381a2527b76830f04216b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948946"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX(Transact-SQL)
@@ -191,7 +191,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-base-type-of-an-object"></a>1. 기본 개체 형식 찾기  
+### <a name="a-finding-the-base-type-of-an-object"></a>1\. 기본 개체 형식 찾기  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `MyEmployeeTable` 테이블에 대한 SYNONYM `Employee`을 만든 다음 SYNONYM에 대한 기본 유형을 반환합니다.  
   
 ```  
@@ -211,7 +211,7 @@ Base Type
 U
 ```  
   
-### <a name="b-returning-a-property-value"></a>2. 속성 값 반환  
+### <a name="b-returning-a-property-value"></a>2\. 속성 값 반환  
  다음 예에서는 지정된 테이블의 UPDATE 트리거 수를 반환합니다.  
   
 ```  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 4d804c41803824f0bc7d69873677984dfba6a729
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66780291"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)

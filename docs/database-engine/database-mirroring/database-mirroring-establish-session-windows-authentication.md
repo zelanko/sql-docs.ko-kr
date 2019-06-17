@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 57ff486a239436dd8686970052ae73f3fed2ebb6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774744"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>데이터베이스 미러링 - 세션 설정 - Windows 인증
@@ -46,7 +46,7 @@ ms.locfileid: "66774744"
     > [!NOTE]  
     >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)을 참조하세요.  
   
-     각 파트너 서버에서 데이터베이스 미러링의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 엔드포인트에 파트너 역할을 할당합니다(ROLE**=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 엔드포인트 역할을 ALL로 지정합니다.  
+     각 파트너 서버에서 데이터베이스 미러링의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 엔드포인트에 파트너 역할을 할당합니다(ROLE **=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 엔드포인트 역할을 ALL로 지정합니다.  
   
      SET PARTNER 문을 실행하려면 두 파트너의 엔드포인트에 대한 STATE가 STARTED로 설정되어 있어야 합니다.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66774744"
   
 4.  미러 데이터베이스에서 주 서버를 파트너로 설정하려면 미러 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=** _\<server\_network\_address\>_  
   
      여기서 _\<database\_name\>_ 은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 _\<server\_network\_address\>_ 는 주 서버의 서버 네트워크 주소입니다.  
   
      서버 네트워크 주소 구문은 다음과 같습니다.  
   
-     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
+     TCP<b>\://</b> _\<system-address\>_ <b>\:</b> _\<port\>_  
   
      여기서 _\<system-address&gt;_ 는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고, _\<포트&gt;_ 는 파트너 서버 인스턴스의 미러링 엔드포인트에서 사용되는 포트 번호입니다. 자세햔 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 사용합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66774744"
   
 5.  주 데이터베이스에서 미러 서버를 파트너로 설정하려면 주 서버에 연결하여 다음 문을 실행합니다.  
   
-     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=** _\<server\_network\_address\>_  
   
      자세한 내용은 4단계를 참조하십시오.  
   

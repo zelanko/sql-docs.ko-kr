@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 48f99b048474372ead6cdcef1f6988418b93c5b6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794657"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에 보조 데이터베이스 추가(SQL Server)

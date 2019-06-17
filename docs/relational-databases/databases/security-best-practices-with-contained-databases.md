@@ -14,10 +14,10 @@ ms.author: vanto
 ms.reviewer: aliceku
 manager: craigg
 ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938192"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>포함된 데이터베이스의 보안 모범 사례

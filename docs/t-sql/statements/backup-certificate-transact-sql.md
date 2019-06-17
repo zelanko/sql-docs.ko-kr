@@ -30,10 +30,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774905"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE(Transact-SQL)
@@ -105,7 +105,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-exporting-a-certificate-to-a-file"></a>1. 인증서를 파일로 내보내기  
+### <a name="a-exporting-a-certificate-to-a-file"></a>1\. 인증서를 파일로 내보내기  
  다음 예에서는 인증서를 파일로 내보냅니다.  
   
 ```  
@@ -113,7 +113,7 @@ BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';
 GO  
 ```  
   
-### <a name="b-exporting-a-certificate-and-a-private-key"></a>2. 인증서와 프라이빗 키 내보내기  
+### <a name="b-exporting-a-certificate-and-a-private-key"></a>2\. 인증서와 프라이빗 키 내보내기  
  다음 예에서는 백업된 인증서의 프라이빗 키가 암호 `997jkhUbhk$w4ez0876hKHJH5gh`를 사용하여 암호화됩니다.  
   
 ```  
@@ -139,7 +139,7 @@ GO
  [ALTER CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
- [CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   

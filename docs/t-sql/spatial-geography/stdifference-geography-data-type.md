@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c5d32ef391dee55f0b651c6729ccd5e2924e9f3c
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937083"
 ---
 # <a name="stdifference-geography-data-type"></a>STDifference(geography 데이터 형식)
@@ -56,7 +56,7 @@ ms.locfileid: "65937083"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-difference-between-two-geography-instances"></a>1. 두 geography 인스턴스 간의 차이 계산  
+### <a name="a-computing-the-difference-between-two-geography-instances"></a>1\. 두 geography 인스턴스 간의 차이 계산  
  다음 예제에서는 `STDifference()`를 사용하여 두 **geography** 인스턴스 간의 차이를 컴퓨팅합니다.  
   
 ```  
@@ -67,7 +67,7 @@ SET @h = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STDifference(@h).ToString();  
 ```  
   
-### <a name="b-using-a-fullglobe-with-stdifference"></a>2. STDifference()에 FullGlobe 사용  
+### <a name="b-using-a-fullglobe-with-stdifference"></a>2\. STDifference()에 FullGlobe 사용  
  다음 예에서는 `FullGlobe` 인스턴스를 사용합니다. 첫 번째 결과는 빈 `GeometryCollection`이고 두 번째 결과는 `Polygon` 인스턴스입니다. `STDifference()` 인스턴스가 매개 변수인 경우 `GeometryCollection`는 빈 `FullGlobe`을 반환합니다. 호출하는 `geography` 인스턴스의 모든 점이 `FullGlobe` 인스턴스에 포함됩니다.  
   
 ```

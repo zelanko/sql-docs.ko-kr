@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981598"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY(Transact-SQL)
@@ -68,7 +68,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-a-simple-example"></a>1. 간단한 예 실행  
+### <a name="a-running-a-simple-example"></a>1\. 간단한 예 실행  
  다음 문에서는 간단한 테이블을 만들고 `1` 열에 값 `2`, `3`, `4` 및 `ID`를 추가합니다.  
   
 ```  
@@ -99,7 +99,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
-### <a name="b-running-a-practical-example"></a>2. 실제 예 실행  
+### <a name="b-running-a-practical-example"></a>2\. 실제 예 실행  
  다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 `AdventureWorks2012`의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예에서는 하위 쿼리를 사용하여 특정 `DaysToManufacture`의 모든 구성 요소에 대해 `SalesOrderID` 값의 숫자 목록을 만든 다음 하위 쿼리에서 반환한 값 중 지정된 일 수를 초과하는 값이 있는지 테스트합니다. 반환된 `DaysToManufacture`의 모든 값이 제공된 숫자보다 작을 경우 조건은 TRUE이며 첫 번째 메시지가 출력됩니다.  
   
 ```  

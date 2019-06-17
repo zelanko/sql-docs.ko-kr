@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3e6bead506a9e7b84aba4f5ec2cee1668e6483e1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982154"
 ---
 # <a name="in-transact-sql"></a>IN(Transact-SQL)
@@ -80,7 +80,7 @@ test_expression [ NOT ] IN
   
 ## <a name="examples"></a>예  
   
-### <a name="a-comparing-or-and-in"></a>1. OR와 IN 비교  
+### <a name="a-comparing-or-and-in"></a>1\. OR와 IN 비교  
  다음 예에서는 디자인 엔지니어, 툴 엔지니어 또는 마케팅 지원 담당 직원들의 이름 목록을 선택합니다.  
   
 ```  
@@ -126,7 +126,7 @@ Mary        Dempsey     Marketing Assistant
 (8 row(s) affected)  
 ```  
   
-### <a name="b-using-in-with-a-subquery"></a>2. 하위 쿼리와 함께 IN 사용  
+### <a name="b-using-in-with-a-subquery"></a>2\. 하위 쿼리와 함께 IN 사용  
  다음 예에서는 `SalesPerson` 테이블에서 연간 판매 할당량이 $250,000 이상인 모든 직원들의 ID를 찾은 다음 `Employee` 테이블에서 `EmployeeID`가 `SELECT` 하위 쿼리의 결과와 일치하는 모든 직원들의 이름을 선택합니다.  
   
 ```  

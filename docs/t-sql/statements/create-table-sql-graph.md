@@ -34,10 +34,10 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e61c1dc4501dfdfe45d10b2fda4434be2f35e7b2
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503107"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
@@ -91,7 +91,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
  
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-node-table"></a>1. `NODE` 테이블 만들기
+### <a name="a-create-a-node-table"></a>1\. `NODE` 테이블 만들기
  다음 예에서는 `NODE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```
@@ -102,7 +102,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>2. `EDGE` 테이블 만들기
+### <a name="b-create-an-edge-table"></a>2\. `EDGE` 테이블 만들기
 다음 예에서는 `EDGE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```

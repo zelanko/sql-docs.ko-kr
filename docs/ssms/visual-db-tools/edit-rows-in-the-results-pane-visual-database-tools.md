@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 41f097c0edfbdf0f8014b54bd72099f72f4e239b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096809"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 편집(Visual Database Tools)

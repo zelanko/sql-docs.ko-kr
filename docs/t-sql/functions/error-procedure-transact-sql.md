@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0476dbe87d545deab13681a28fd2939a4182bfb
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949074"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE(Transact-SQL)
@@ -62,7 +62,7 @@ CATCH 블록에서 호출된 경우 `ERROR_PROCEDURE`는 오류가 발생한 저
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_PROCEDURE 사용  
+### <a name="a-using-errorprocedure-in-a-catch-block"></a>1\. CATCH 블록에서 ERROR_PROCEDURE 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
   
 ```  
@@ -99,7 +99,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_PROCEDURE 사용  
+### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>2\. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_PROCEDURE 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. 오류가 발생한 저장 프로시저의 이름과 함께 저장 프로시저는 오류에 대한 정보를 반환합니다.  
   
 ```  

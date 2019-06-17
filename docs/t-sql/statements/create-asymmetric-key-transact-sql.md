@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1198567d07035413463a35accbd58c17127118bb
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270194"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY(Transact-SQL)
@@ -127,7 +127,7 @@ CREATE ASYMMETRIC KEY asym_key_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-asymmetric-key"></a>1. 비대칭 키 만들기  
+### <a name="a-creating-an-asymmetric-key"></a>1\. 비대칭 키 만들기  
  다음 예에서는 `PacificSales09` 알고리즘을 사용하여 `RSA_2048`라는 비대칭 키를 만들고 암호로 프라이빗 키를 보호합니다.  
   
 ```  
@@ -137,7 +137,7 @@ CREATE ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>2. 파일로부터 비대칭 키를 만들어서 사용자에게 권한 부여  
+### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>2\. 파일로부터 비대칭 키를 만들어서 사용자에게 권한 부여  
  다음 예에서는 파일에 저장된 키 쌍으로부터 비대칭 키 `PacificSales19`를 만든 다음, 사용자 `Christina`에게 비대칭 키의 소유권을 할당합니다. 프라이빗 키는 데이터베이스 마스터 키로 보호되며 마스터 키는 비대칭 키를 만들기 전에 만들어져야 합니다.  
   
 ```  

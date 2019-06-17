@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664594"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +89,12 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  스키마 컬렉션에 이미 lax 유효성 검사 와일드카드 또는 **xs:anyType** 형식의 요소가 포함되어 있는 경우 새 전역 요소, 형식 또는 특성 선언을 스키마 컬렉션에 추가하면 해당 스키마 컬렉션의 제한을 받는 모든 저장된 데이터에 대해 유효성 재검사가 수행됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  XML SCHEMA COLLECTION을 변경하려면 해당 컬렉션에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-xml-schema-collection-in-the-database"></a>1. 데이터베이스에 XML 스키마 컬렉션 만들기  
+### <a name="a-creating-xml-schema-collection-in-the-database"></a>1\. 데이터베이스에 XML 스키마 컬렉션 만들기  
  다음 예에서는 XML 스키마 컬렉션 `ManuInstructionsSchemaCollection`을 만듭니다. 이 컬렉션에는 스키마 네임스페이스가 하나만 있습니다.  
   
 ```  
@@ -187,8 +187,8 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
   
  CREATE XML SCHEMA COLLECTION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인식되는 스키마 구성 요소만 저장합니다. XML 스키마의 모든 내용이 데이터베이스에 저장되지는 않습니다. 따라서 XML 스키마 컬렉션을 제공된 방식과 똑같이 되돌리려면 XML 스키마를 데이터베이스 열 또는 컴퓨터의 다른 폴더에 저장하는 것이 좋습니다.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>2. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
- XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>2\. 스키마 컬렉션에 여러 개의 스키마 네임스페이스 지정  
+ XML 스키마 컬렉션을 만들 때 XML 스키마를 여러 개 지정할 수 있습니다. 예를 들어  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724598"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52507717"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52507717"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -77,7 +77,7 @@ ms.locfileid: "52507717"
   
 8.  파일의 처음 크기를 지정합니다. 데이터베이스에서 예상되는 최대 데이터 양을 고려하여 데이터 파일의 크기를 최대한 크게 지정합니다.  
   
-9. 파일 증가 방법을 지정하려면 **자동 증가** 열에서 (**...**)를 클릭합니다. 다음 옵션 중에서 선택합니다.  
+9. 파일 증가 방법을 지정하려면 **자동 증가** 열에서 ( **...** )를 클릭합니다. 다음 옵션 중에서 선택합니다.  
   
     1.  현재 선택한 파일이 데이터 공간이 추가로 필요할 때마다 증가되도록 하려면 **자동 증가 사용** 확인란을 선택하고 다음 옵션 중에서 선택합니다.  
   

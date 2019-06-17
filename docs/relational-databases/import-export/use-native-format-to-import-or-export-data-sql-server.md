@@ -16,10 +16,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946395"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
@@ -94,7 +94,7 @@ ms.locfileid: "64946395"
 |OPENROWSET|해당 사항 없음|서식 파일을 사용해야 합니다.|
 
   
- \*네이티브(**-n**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환되는 형식으로 로드하려면 **-V** 스위치를 사용합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
+ \*네이티브( **-n**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환되는 형식으로 로드하려면 **-V** 스위치를 사용합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
 > [!NOTE]
 >  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.
