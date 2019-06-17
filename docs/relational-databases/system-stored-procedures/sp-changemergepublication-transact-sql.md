@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997118"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
@@ -46,7 +46,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 지정 된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값입니다. *값* 됩니다 **nvarchar(255)**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값입니다. *값* 됩니다 **nvarchar(255)** , 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   

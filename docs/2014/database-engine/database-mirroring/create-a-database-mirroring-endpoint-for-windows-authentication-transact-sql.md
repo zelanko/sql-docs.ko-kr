@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755288"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
@@ -79,13 +79,13 @@ ms.locfileid: "62755288"
   
      ]  
   
-     [ [**,**] ENCRYPTION = **REQUIRED**  
+     [ [ **,** ] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<알고리즘>* } ]  
   
      ]  
   
-     [**,**] ROLE = *\<역할>*  
+     [ **,** ] ROLE = *\<역할>*  
   
      )  
   
@@ -132,10 +132,10 @@ ms.locfileid: "62755288"
         > [!NOTE]  
         >  다양 한 버전의 데이터베이스 미러링 옵션에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
-     CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql)에서 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다.  
+     CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)에서 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
-    >  기존 엔드포인트를 변경하려면 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
+    >  기존 엔드포인트를 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
   
 ###  <a name="TsqlExample"></a> 예제: 데이터베이스 미러링 (Transact SQL) 지원을 위한 끝점 만들기  
  다음 예에서는 세 대의 다른 컴퓨터 시스템에 있는 기본 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만듭니다.  
@@ -190,7 +190,7 @@ GO
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **데이터베이스 미러링 엔드포인트에 대한 정보를 보려면**  
   
@@ -202,6 +202,6 @@ GO
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)   
  [예: Windows 인증을 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

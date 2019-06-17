@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 081da23826951c5c8c4d4872de1c28a771a2958b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720921"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795685"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

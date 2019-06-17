@@ -1,9 +1,8 @@
 ---
 title: CPU 사용량 모니터링 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -20,18 +19,17 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032108"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 정기적으로 모니터링하여 CPU 사용량이 정상 범위에 있는지 확인할 수 있습니다. CPU 사용량이 계속 높게 나타나면 CPU 업그레이드 또는 멀티 프로세서 추가가 필요하거나 애플리케이션 튜닝 또는 디자인이 적절하지 않다는 의미일 수 있습니다. 애플리케이션을 최적화하면 CPU 사용률을 낮출 수 있습니다.  
   
  CPU 사용량을 확인하는 효과적인 방법은 시스템 모니터의 **Processor:% Processor Time** 카운터를 사용하는 것입니다. 카운터는 CPU가 비유휴 스레드를 실행하는 데 소비하는 시간을 모니터링합니다. 카운터 값이 계속 80-90%로 나타나면 CPU를 업그레이드하거나 프로세서를 추가해야 할 수 있습니다. 다중 프로세서 시스템에서는 각 프로세서에 대해 이 카운터의 개별 인스턴스를 모니터링해야 합니다. 이 값은 특정 프로세서의 프로세서 시간의 합을 나타냅니다. 모든 프로세서의 평균을 확인하려면 **System: %Total Processor Time** 카운터를 대신 사용합니다.  

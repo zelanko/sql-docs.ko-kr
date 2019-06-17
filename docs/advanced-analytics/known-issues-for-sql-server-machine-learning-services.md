@@ -2,17 +2,17 @@
 title: R 언어 및 Python 통합-SQL Server Machine Learning Services의 알려진된 문제
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
-ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
+ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64906158"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140730"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +136,7 @@ R 코드를 실행할 때 계산 컨텍스트를 SQL Server 2016, 다음과 같�
 + 설치 마법사를 사용 하 여 클라이언트 컴퓨터에서 R Server (독립 실행형)를 설치한 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]합니다.
 + 사용 하 여 Microsoft R Server를 설치 합니다 [Windows installer를 별도](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)합니다.
 
-서버와 클라이언트에는 사용 해야 합니다. 동일한 버전을 사용 하도록 _바인딩_, Microsoft R Server 9.0(spark 및 이후 버전의 SQL Server 2016 인스턴스에 R 구성 요소를 업그레이드 하려면 지원 합니다. 확인 하려면 R Services의 버전 참조에 대 한 업그레이드를 사용할 수에 대 한 지원이 [SqlBindR.exe를 사용 하 여 R Services 인스턴스 업그레이드](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+서버와 클라이언트에는 사용 해야 합니다. 동일한 버전을 사용 하도록 _바인딩_, Microsoft R Server 9.0(spark 및 이후 버전의 SQL Server 2016 인스턴스에 R 구성 요소를 업그레이드 하려면 지원 합니다. 확인 하려면 R Services의 버전 참조에 대 한 업그레이드를 사용할 수에 대 한 지원이 [SqlBindR.exe를 사용 하 여 R Services 인스턴스 업그레이드](install/upgrade-r-and-python.md)합니다.
 
 **적용 대상:** R Server 버전 9.0.0 사용 하 여 SQL Server 2016 R Services 또는 이전 버전
 
@@ -484,7 +484,7 @@ go
 
 SQL Server 2017 CU2부터, 그렇지 않으면 Python 코드가 성공적으로 실행 하는 경우에 다음과 같은 메시지가 나타날 수 있습니다.
 
-> *외부 스크립트의 STDERR 메시지:*
+> *외부 스크립트의 STDERR 메시지:* 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state 됩니다 전역 선언 전에 사용*
 
