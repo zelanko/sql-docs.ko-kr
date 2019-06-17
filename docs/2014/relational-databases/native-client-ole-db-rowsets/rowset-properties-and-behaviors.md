@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36a2af059b75e6ca86dcb8354b1e2c9f8d2abe54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62826639"
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
@@ -93,7 +93,7 @@ ms.locfileid: "62826639"
 |SSPROP_DEFERPREPARE|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: VARIANT_TRUE: 준비 된 실행에서 명령 준비 될 때까지 지연 됩니다 **icommand:: Execute** 가 호출 되거나 메타 속성 작업이 수행 됩니다. 속성 설정에 따른 동작은 다음과 같습니다.<br /><br /> VARIANT_FALSE: 문을 준비할 때 **icommandprepare:: Prepare** 실행 됩니다.|  
 |SSPROP_IRowsetFastLoad|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 이 속성을 통해 빠른 로드 행 집합을 variant_true로 설정 **iopenrowset:: Openrowset**합니다. **ICommandProperties::SetProperties**에서는 이 속성을 설정할 수 없습니다.|  
 |SSPROP_ISSAsynchStatus|열: 아니요.<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 이 속성을 VARIANT_TRUE를 사용 하 여 비동기 작업을 사용 하도록 설정 합니다 [ISSAsynchStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md) 인터페이스입니다.|  
-|SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환 하는 텍스트의 크기를 제한 하지 않습니다 하 고 속성 값을 해당 최대값으로 설정 됩니다. 2147483647).<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 SELECT 문에서 반환 되는 이진 BLOB (large object) 데이터의 길이 제한 하는 SET TEXTSIZE 문을 실행 합니다.|  
+|SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환 하는 텍스트의 크기를 제한 하지 않습니다 하 고 속성 값을 해당 최대값으로 설정 됩니다. 2147483647\).<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 SELECT 문에서 반환 되는 이진 BLOB (large object) 데이터의 길이 제한 하는 SET TEXTSIZE 문을 실행 합니다.|  
 |SSPROP_NOCOUNT_STATUS|열: NoCount<br /><br /> R/W: 읽기 전용<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: SET NOCOUNT on/off에서의 상태를 나타내는 부울 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: SET NOCOUNT ON인 경우<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF인 경우|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_BSTR (1부터 2000 자 허용)<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림의 메시지 텍스트입니다. 사용자가 정의하며 정의된 형식은 없습니다.|  
 |SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/W: 읽기/쓰기<br /><br /> 형식: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> `service=mySSBService;local database=mydb`|  

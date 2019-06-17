@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810067"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
@@ -136,7 +136,7 @@ ms.locfileid: "62810067"
   
  * **/3gb** 는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
- * * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
+ \* * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   

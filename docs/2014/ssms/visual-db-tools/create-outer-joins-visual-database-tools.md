@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184315"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "63184315"
   
 1.  자동 또는 수동으로 조인을 만듭니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) 또는 [테이블 수동 조인&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)을 참조하세요.  
   
-2.  다이어그램 창에서 조인 선을 선택 합니다 **쿼리 디자이너** 메뉴 선택 **의 모든 행 선택 \<tablename >**, 해당 추가 테이블을 포함 하는 명령을 선택 행을 포함 합니다.  
+2.  다이어그램 창에서 조인 선을 선택 합니다 **쿼리 디자이너** 메뉴 선택 **의 모든 행 선택 \<tablename >** , 해당 추가 테이블을 포함 하는 명령을 선택 행을 포함 합니다.  
   
     -   첫 번째 테이블을 선택하여 왼쪽 우선 외부 조인을 만듭니다.  
   

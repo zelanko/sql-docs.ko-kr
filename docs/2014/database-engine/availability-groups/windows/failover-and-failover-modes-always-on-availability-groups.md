@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814532"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>장애 조치(Failover) 및 장애 조치(Failover) 모드(AlwaysOn 가용성 그룹)
@@ -66,7 +66,7 @@ ms.locfileid: "62814532"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |자동 장애 조치(automatic failover)|아니요|아니요|사용자 계정 컨트롤|  
 |계획된 수동 장애 조치(Failover)|아니요|예|사용자 계정 컨트롤|  
-|강제 장애 조치(failover)|사용자 계정 컨트롤|사용자 계정 컨트롤|예**<sup>*</sup>**|  
+|강제 장애 조치(failover)|사용자 계정 컨트롤|사용자 계정 컨트롤|예 **<sup>*</sup>**|  
   
  **<sup>*</sup>**  동기화 된 보조 복제본에 강제 장애 조치 명령을 실행 하는 경우 보조 복제본을 수동 장애 조치의 경우와 동일 하 게 동작 합니다.  
   

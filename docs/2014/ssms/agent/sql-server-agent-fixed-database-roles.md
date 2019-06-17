@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245989"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
@@ -123,9 +123,9 @@ ms.locfileid: "63245989"
   
  <sup>2</sup> 작업 소유권을 변경할 수 없습니다.  
   
- <sup>3</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 로컬 작업을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_job** 에 대 한 값을 지정 하는 **@enabled** 하며 **@job_id** (또는 **@job_name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
+ <sup>3</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 로컬 작업을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_job** 에 대 한 값을 지정 하는 **@enabled** 하며 **@job_id** (또는 **@job_name** ) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
   
- <sup>4</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 일정을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_schedule** 에 대 한 값을 지정 하는 **@enabled** 하며 **@schedule_id** (또는 **@name**) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
+ <sup>4</sup> **SQLAgentOperatorRole** 멤버 저장된 프로시저를 사용 하 여 소유 하지 않은 일정을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **sp_update_schedule** 에 대 한 값을 지정 하는 **@enabled** 하며 **@schedule_id** (또는 **@name** ) 매개 변수입니다. 이 역할의 멤버가 이 저장 프로시저에 다른 매개 변수를 지정하는 경우 프로시저 실행이 실패합니다.  
   
 ## <a name="assigning-users-multiple-roles"></a>사용자에게 다중 역할 할당  
  **sysadmin** 고정 서버 역할의 멤버는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 기능에 액세스할 수 있습니다. 사용자가 **sysadmin** 역할의 멤버가 아니지만 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할의 멤버인 경우 이러한 역할에 대한 공통적 사용 권한 모델을 고려해야 합니다. 사용 권한이 많은 역할은 항상 사용 권한이 적은 역할의 모든 사용 권한을 포함하기 때문에 두 개 이상의 역할의 멤버는 해당 사용자가 멤버로 속한 사용 권한이 가장 많은 역할과 관련된 사용 권한을 자동으로 갖습니다.  

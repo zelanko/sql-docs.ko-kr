@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809279"
 ---
 # <a name="server-properties-processors-page"></a>서버 속성(프로세서 페이지)
@@ -27,7 +27,7 @@ ms.locfileid: "62809279"
  특정 스레드에 프로세서를 할당하여 프로세서를 다시 로드해야 하는 필요성을 없애고 프로세스 간의 스레드 마이그레이션을 줄입니다. 자세한 내용은 [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)을 참조하세요.  
   
  **I/O 선호도**  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O를 지정된 CPU 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O를 지정된 CPU 하위 집합에 바인딩합니다. 자세한 내용은 [affinity Input-Output mask 서버 구성 옵션](affinity-input-output-mask-server-configuration-option.md)을 참조하세요.  
   
  **모든 프로세서에 대해 자동으로 프로세서 선호도 마스크 설정**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 프로세서 선호도를 자동으로 설정하도록 합니다.  

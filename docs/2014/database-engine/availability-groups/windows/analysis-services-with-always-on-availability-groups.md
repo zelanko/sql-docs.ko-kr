@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791888"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
@@ -28,7 +28,7 @@ ms.locfileid: "62791888"
   
  TDS(Tabular Data Stream) 프로토콜 버전 7.4 이상을 지원하는 데이터 공급자(예: SQL Server Native Client 11.0 또는 .NET Framework 4.02의 SQL Server용 공급자)를 사용하십시오.  
   
- **(읽기 전용 작업의 경우)**. 읽기 전용 연결에는 보조 복제본 역할을 구성해야 하고, 가용성 그룹은 라우팅 목록이 있어야 하며, Analysis Services 데이터 원본의 연결에는 가용성 그룹 수신기를 지정해야 합니다. 지침은 이 항목에 설명되어 있습니다.  
+ **(읽기 전용 작업의 경우)** . 읽기 전용 연결에는 보조 복제본 역할을 구성해야 하고, 가용성 그룹은 라우팅 목록이 있어야 하며, Analysis Services 데이터 원본의 연결에는 가용성 그룹 수신기를 지정해야 합니다. 지침은 이 항목에 설명되어 있습니다.  
   
 ##  <a name="bkmk_UseSecondary"></a> 검사 목록: 읽기 전용 작업에 보조 복제본 사용  
  Analysis Services 솔루션에 쓰기 저장이 포함되지 않으면 데이터 원본 연결에 읽기 가능한 보조 복제본을 사용하도록 구성할 수 있습니다. 빠른 네트워크 연결인 경우 보조 복제본의 데이터 대기 시간이 매우 적어 주 복제본과 거의 동일한 데이터를 제공합니다. Analysis Services 작업에 보조 복제본을 사용하면 주 복제본에 대한 읽기-쓰기 경합을 줄이고 가용성 그룹에 있는 보조 복제본의 활용도를 높일 수 있습니다.  

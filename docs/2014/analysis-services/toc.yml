@@ -45,7 +45,7 @@
       items:
         - name: 클라이언트 애플리케이션에서 연결
           href: instances/connect-from-client-applications-analysis-services.md
-        - name: '연결 문자열 속성 '
+        - name: 연결 문자열 속성
           href: instances/connection-string-properties-analysis-services.md
         - name: 인증 방법
           href: instances/authentication-methodologies-supported-by-analysis-services.md
@@ -183,11 +183,11 @@
 - name: 세계화 시나리오
   href: globalization-scenarios-for-analysis-services-multiidimensional.md
   items:
-    - name: ' 언어 및 데이터 정렬 '
+    - name: 언어 및 데이터 정렬
       href: languages-and-collations-analysis-services.md
     - name: Translations
       href: translations-analysis-services.md
-    - name: ' 통화 변환 '
+    - name: 통화 변환
       href: currency-conversions-analysis-services.md
     - name: 팁과 모범 사례
       href: globalization-tips-and-best-practices-analysis-services.md

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62822315"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>5단원: 예측 쿼리를 실행합니다.
+# <a name="lesson-5-executing-prediction-queries"></a>5단원: 예측 쿼리 실행
   이 단원에서는 사용할지 합니다 [SELECT FROM \<모델 > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) 형식의 두 가지 유형의 의사 결정 트리를 기반으로 예측을 만드는 SELECT 문은 모델에서 만든 [ 2 단원: 연결 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다. 이러한 예측 유형은 다음과 같습니다.  
   
  단일 쿼리  

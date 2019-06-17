@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808734"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>서버에 연결(로그인 페이지) Integration Services
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결할 때 이 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결할 때 이 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **서버 유형**  
@@ -31,7 +31,7 @@ ms.locfileid: "62808734"
  연결할 서버를 선택합니다. 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
   
 > [!NOTE]  
->  사용 하지 마세요  *\<서버 이름 >*\\*\<n a m e >* 이므로 [!INCLUDE[ssIS](../includes/ssis-md.md)] 컴퓨터에서 여러 인스턴스를 지원 하지 않습니다.  
+>  사용 하지 마세요  *\<서버 이름 >* \\ *\<n a m e >* 이므로 [!INCLUDE[ssIS](../includes/ssis-md.md)] 컴퓨터에서 여러 인스턴스를 지원 하지 않습니다.  
   
  **인증**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 에는 [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 인증만 사용할 수 있습니다. Windows 인증 모드에서는 사용자가 Windows 사용자 계정을 통해 연결할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "62808734"
  **연결**  
  위에서 선택한 서버에 연결합니다.  
   
- **Options**  
+ **옵션**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
   

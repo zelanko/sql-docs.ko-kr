@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047597"
 ---
 # <a name="atomization-xquery"></a>원자화(XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   OrignialLaborHours 특성을 구성할 때 원자화는 (`$WC/@LaborHours`)에서 반환된 단일 시퀀스에 암시적으로 적용됩니다. LaborHours 특성의 유형 값은 OrignialLaborHours에 할당됩니다.  
   
--   UpdatedLaborHoursV1 특성을 구성할 때 산술 연산자에 원자 값이 필요합니다. 따라서 **data ()** 에서 반환 된 LaborHours 특성에 암시적으로 적용 됩니다 (`$WC/@LaborHours`). 그런 다음 원자 값 1이 추가됩니다. UpdatedLaborHoursV2 특성의 명시적 응용 프로그램을 보여 줍니다 **data ()**, 필수는 아닙니다.  
+-   UpdatedLaborHoursV1 특성을 구성할 때 산술 연산자에 원자 값이 필요합니다. 따라서 **data ()** 에서 반환 된 LaborHours 특성에 암시적으로 적용 됩니다 (`$WC/@LaborHours`). 그런 다음 원자 값 1이 추가됩니다. UpdatedLaborHoursV2 특성의 명시적 응용 프로그램을 보여 줍니다 **data ()** , 필수는 아닙니다.  
   
 ```  
 SELECT Instructions.query('  

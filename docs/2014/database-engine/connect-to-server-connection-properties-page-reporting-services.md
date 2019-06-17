@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808664"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>서버에 연결(연결 속성 페이지) Reporting Services
@@ -32,7 +32,7 @@ ms.locfileid: "62808664"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **Options**  
+ **옵션**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  

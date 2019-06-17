@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831884"
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
@@ -52,12 +52,12 @@ ms.locfileid: "62831884"
  데이터 웨어하우스의 FactBuyingHabits 테이블은 고객이 특정 제품을 구매한 마지막 날짜를 추적합니다. 테이블은 ProductID, CustomerID 및 PurchaseDate 열로 구성됩니다. 매주 트랜잭션 데이터베이스는 해당 주 동안 이루어진 구매를 포함하는 PurchaseRecords 테이블을 생성합니다. 목표는 하나의 MERGE 문을 사용하여 PurchaseRecords 테이블의 정보를 FactBuyingHabits 테이블로 병합하는 것입니다. MERGE 문은 존재하지 않는 제품-고객 쌍에 대해 새 행을 삽입하고, 존재하는 제품-고객 쌍에 대한 최근 구매 날짜를 업데이트합니다.  
   
 ###### <a name="track-price-history"></a>가격 기록 추적  
- DimBook 테이블은 서점에 재고가 있는 책 목록을 나타내고 각 책의 가격 기록을 식별합니다. 이 테이블에는 이러한 열에 있습니다. ISBN, ProductID, Price, Shelf 및 IsCurrent 합니다. 또한 이 테이블에는 책의 각 가격에 대한 행이 하나씩 있습니다. 이러한 여러 행 중 하나에 현재 가격이 포함됩니다. 현재 가격이 포함된 행을 나타내기 위해 해당 행에 대한 IsCurrent 열의 값이 1로 설정됩니다.  
+ DimBook 테이블은 서점에 재고가 있는 책 목록을 나타내고 각 책의 가격 기록을 식별합니다. 이 테이블에는 ISBN, ProductID, Price, Shelf 및 IsCurrent 열이 있습니다. 또한 이 테이블에는 책의 각 가격에 대한 행이 하나씩 있습니다. 이러한 여러 행 중 하나에 현재 가격이 포함됩니다. 현재 가격이 포함된 행을 나타내기 위해 해당 행에 대한 IsCurrent 열의 값이 1로 설정됩니다.  
   
  매주 데이터베이스는 해당 주의 가격 변동과 주 동안 추가된 새 책을 포함하는 WeeklyChanges 테이블을 생성합니다. 하나의 MERGE 문을 사용하여 WeeklyChanges 테이블의 변경 사항을 DimBook 테이블에 적용할 수 있습니다. MERGE 문은 새로 추가된 책에 대해 새 행을 삽입하고, 가격이 변경된 기존 책의 행에 대한 IsCurrent 열을 0으로 업데이트합니다. 또한 MERGE 문은 가격이 변경된 책에 대해 새 행을 삽입하고, 삽입된 새 행에 대해 IsCurrent 열의 값을 1로 설정합니다.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>새 데이터가 있는 테이블을 기존 테이블에 병합  
- 데이터베이스는 "개방형 스키마", 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. 속성 테이블에는 세 개의 열에 있습니다. EntityID, PropertyID 및 Value입니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
+ 데이터베이스는 "개방형 스키마", 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. Properties 테이블에는 EntityID, PropertyID 및 Value라는 3개의 열이 있습니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
   
 -   NewProperties 테이블에 없는 속성을 Properties 테이블에서 삭제합니다.  
   

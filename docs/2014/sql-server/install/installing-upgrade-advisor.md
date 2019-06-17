@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094320"
 ---
 # <a name="installing-upgrade-advisor"></a>업그레이드 관리자 설치
@@ -26,7 +26,7 @@ ms.locfileid: "66094320"
   
  실행 합니다 **SQLUA.msi** 업그레이드 관리자를 설치 하는 파일입니다. 명령 프롬프트를 사용하여 무인 및 자동 설치를 수행할 수 있습니다. 참조 [명령 프롬프트에서 업그레이드 관리자 설치](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) 구문 및 예제에 대 한 합니다.  
   
- SQLUA.msi를    
+ SQLUA.msi를  
   
 -   에 **redist** 의 폴더를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 미디어입니다.  
   

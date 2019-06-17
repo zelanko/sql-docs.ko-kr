@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790662"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On 클라이언트 연결(SQL Server)
@@ -37,13 +37,13 @@ ms.locfileid: "62790662"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니요|  
-|연결 패치가 포함 된.NET Framework 4.0이 있는 ADO.NET**<sup>*</sup>**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
-|연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>**</sup>**|사용자 계정 컨트롤|예|예|예|예|  
+|연결 패치가 포함 된.NET Framework 4.0이 있는 ADO.NET **<sup>*</sup>**|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
+|연결 패치가 포함 된.NET Framework 3.5 SP1이 있는 ADO.NET **<sup>** </sup>**|사용자 계정 컨트롤|예|예|예|예|  
 |SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|사용자 계정 컨트롤|  
   
  **<sup>*</sup>**  .NET Framework 4.0이 있는 ADO.NET 용 연결 패치 다운로드: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211)합니다.  
   
- **<sup>**</sup>* *.NET Framework 3.5 SP1이 있는 ADO.NET 용 연결 패치 다운로드: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)합니다.  
+ **<sup>** </sup>* *.NET Framework 3.5 SP1이 있는 ADO.NET 용 연결 패치 다운로드: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347)합니다.  
   
 > [!IMPORTANT]  
 >  가용성 그룹 수신기에 연결하려면 클라이언트에서 TCP 연결 문자열을 사용해야 합니다.  

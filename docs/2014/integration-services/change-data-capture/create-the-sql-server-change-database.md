@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771369"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
@@ -35,9 +35,9 @@ ms.locfileid: "62771369"
  **Oracle CDC 인스턴스**  
  만들려는 CDC 인스턴스에 대한 다음 정보를 입력합니다.  
   
--   **이름**: 새 서비스에 대 한 이름을 입력 합니다. 이 이름은 새 변경 데이터베이스의 이름이기도 합니다.  
+-   **이름**: 새 서비스의 이름을 입력합니다. 이 이름은 새 변경 데이터베이스의 이름이기도 합니다.  
   
--   **설명**: 쉽게 식별할 수 있도록 새 인스턴스에 대 한 설명을 입력 합니다. 이 옵션은 선택적입니다.  
+-   **설명**: 새 인스턴스를 식별하는 데 도움이 되는 설명을 입력합니다. 이 옵션은 선택적입니다.  
   
  **SQL Server 변경 데이터베이스**  
  이 섹션은 데이터베이스를 만드는 데 사용됩니다.  

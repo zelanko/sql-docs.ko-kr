@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788326"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링(SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "62788326"
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
--   **가용성 그룹 모니터링을 사용 하 여:**  다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+-   **가용성 그룹 모니터링을 사용 하 여:**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **개체 탐색기 정보:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62788326"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  주 복제본 또는 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스(서버 인스턴스)에 연결해야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -68,13 +68,13 @@ ms.locfileid: "62788326"
          여러 가용성 데이터베이스에 대해 작업을 수행하려면 원하는 가용성 데이터베이스를 선택한 후 마우스 오른쪽 단추로 클릭하여 사용 가능한 명령을 나열하는 상황에 맞는 메뉴를 엽니다.  
   
 ##  <a name="AvGroupsDetails"></a> 가용성 그룹 정보  
-  **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
+ **가용성 그룹** 정보 화면에 다음 열이 표시됩니다.  
   
  **이름**  
  선택한 가용성 그룹의 **가용성 복제본**, **가용성 데이터베이스**및 **가용성 그룹** 수신기 폴더를 나열합니다.  
   
 ##  <a name="AvReplicaDetails"></a> 가용성 복제본 정보  
-  **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
+ **가용성 복제본** 정보 화면에 다음 열이 표시됩니다.  
   
  **서버 인스턴스**  
  가용성 복제본을 호스팅하는 서버 인스턴스 이름을 로컬 서버 인스턴스에 대한 서버 인스턴스의 현재 연결 상태를 나타내는 아이콘과 함께 표시합니다.  

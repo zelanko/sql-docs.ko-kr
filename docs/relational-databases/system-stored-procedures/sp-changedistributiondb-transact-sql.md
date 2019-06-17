@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997056"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
@@ -51,7 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|최소 배포 보존 기간입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

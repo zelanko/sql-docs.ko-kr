@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806876"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
@@ -112,7 +112,7 @@ ms.locfileid: "62806876"
     GO  
     ```  
   
-     자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
+     자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
 4.  인증서를 백업하고 다른 시스템에 복사합니다. 다른 시스템에서 인바운드 연결을 구성하는 데 이 인증서가 필요합니다.  
   
@@ -164,7 +164,7 @@ GO
  원하는 안전한 방법으로 인증서를 다른 시스템에 복사합니다. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
 > [!IMPORTANT]  
->  아웃바운드 연결을 설정한 후에는 다른 서버 인스턴스에 대해 각 서버 인스턴스에서 인바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
+>  아웃바운드 연결을 설정한 후에는 다른 서버 인스턴스에 대해 각 서버 인스턴스에서 인바운드 연결을 구성해야 합니다. 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)을 참조하세요.  
   
  Transact-SQL 예제를 포함하여 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
   

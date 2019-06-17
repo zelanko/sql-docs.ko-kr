@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771059"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
@@ -26,15 +26,15 @@ ms.locfileid: "62771059"
  **테이블 목록**  
  테이블 목록은 다음과 같은 세 개의 열이 있습니다.  
   
--   **Oracle 테이블 이름**: 테이블 스키마를 포함 하 여 테이블의 이름입니다.  
+-   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체 이름으로 사용 되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
   
      지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>`형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다.  
   
      이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
   
--   **보안 역할**: 변경 데이터에 대 한 액세스를 제어 하는 데 사용 하는 역할을 제어 하는 데이터베이스의 이름입니다.  
+-   **보안 역할**: 변경 데이터에 대한 액세스를 제어하는 데 사용되는 데이터베이스 제어 역할의 이름입니다.  
   
      이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
   

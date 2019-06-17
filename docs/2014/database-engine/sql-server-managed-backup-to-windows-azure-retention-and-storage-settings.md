@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773552"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 - 보존 및 스토리지 설정
@@ -94,7 +94,7 @@ ms.locfileid: "62773552"
   
 -   **TRANSACT-SQL을 사용 합니다.**  
   
-     설정 하는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 처음으로 필요한 매개 변수는: *@database_name*, *@credential_name*, *@encryption_algorithm*하십시오 *@enable_backup* 합니다 *@storage_url* 매개 변수는 선택 사항입니다. 에 대 한 값을 제공 하지 않는 경우는 @storage_url 매개 변수 값은 SQL 자격 증명의 저장소 계정 정보를 사용 하 여 파생 됩니다. 스토리지 URL을 제공하는 경우 스토리지 계정의 루트에 대한 URL만 제공해야 하고 지정한 SQL 자격 증명의 정보와 일치시켜야 합니다.  
+     설정 하는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 처음으로 필요한 매개 변수는: *@database_name* , *@credential_name* , *@encryption_algorithm* 하십시오 *@enable_backup* 합니다 *@storage_url* 매개 변수는 선택 사항입니다. 에 대 한 값을 제공 하지 않는 경우는 @storage_url 매개 변수 값은 SQL 자격 증명의 저장소 계정 정보를 사용 하 여 파생 됩니다. 스토리지 URL을 제공하는 경우 스토리지 계정의 루트에 대한 URL만 제공해야 하고 지정한 SQL 자격 증명의 정보와 일치시켜야 합니다.  
   
     1.  [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결합니다.  
   

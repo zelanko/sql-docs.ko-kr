@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891405"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>3단계: 오류 흐름 리디렉션 추가
+# <a name="step-3-adding-error-flow-redirection"></a>3단계: 오류 Flow 리디렉션 추가
   이전 태스크에서 설명한 대로 Lookup Currency Key 변환은 오류를 생성한 손상된 예제 플랫 파일을 처리할 때 일치하는 항목을 생성할 수 없습니다. 변환은 오류 출력에 대해 기본 설정을 사용하므로 오류가 발생하면 변환이 실패합니다. 변환이 실패하면 나머지 패키지도 실패합니다.  
   
  이때 변환이 실패하도록 두는 대신 오류 출력을 사용하여 실패한 행을 구성 요소가 다른 처리 경로로 리디렉션하도록 구성할 수 있습니다. 별도의 오류 처리 경로를 사용하면 다양한 작업을 수행할 수 있습니다. 예를 들어 데이터를 정리한 다음 실패한 행을 다시 처리하거나 나중에 유효성을 검사하고 다시 처리할 수 있도록 추가 오류 정보와 함께 실패한 행을 저장할 수 있습니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "62891405"
   
 8.  **입/출력** 페이지에서 **출력 0**을 확장하고 **출력 열**을 클릭한 다음 **열 추가**를 클릭합니다.  
   
-9. 에 `Name` 속성에 입력 **ErrorDescription** 설정의 `DataType` 속성을 **유니코드 문자열 [DT_WSTR]**.  
+9. 에 `Name` 속성에 입력 **ErrorDescription** 설정의 `DataType` 속성을 **유니코드 문자열 [DT_WSTR]** .  
   
 10. 에 **스크립트** 페이지에서 합니다 `LocaleID` 속성이 **영어 (미국.**  
   
-11.  **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
+11. **스크립트 편집** 을 클릭하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications)를 엽니다. `Input0_ProcessInputRow` 메서드에 다음 코드를 입력하거나 붙여 넣습니다.  
   
      [Visual Basic]  
   

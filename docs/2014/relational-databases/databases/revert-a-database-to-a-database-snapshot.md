@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357030c913888d299cbec06c212eb049383b4526
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916711"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
@@ -99,7 +99,7 @@ ms.locfileid: "62916711"
   
      되돌리기 작업을 수행하려면 원본 데이터베이스에 대해 RESTORE DATABASE 권한이 필요합니다. 데이터베이스를 되돌리려면 다음과 같은 Transact-SQL 문을 사용합니다.  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
   
      여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 디바이스가 아닌 스냅숏 이름을 지정해야 합니다.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "62916711"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 섹션에는 데이터베이스를 데이터베이스 스냅숏으로 되돌리는 다음 예가 포함되어 있습니다.  
   
--   1. [AdventureWorks 데이터베이스에 대한 스냅숏 되돌리기](#Reverting_AW)  
+-   1\. [AdventureWorks 데이터베이스에 대한 스냅숏 되돌리기](#Reverting_AW)  
   
--   2. [Sales 데이터베이스에 대한 스냅숏 되돌리기](#Reverting_Sales)  
+-   2\. [Sales 데이터베이스에 대한 스냅숏 되돌리기](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅숏 되돌리기  
  이 예에서는 현재 하나의 스냅숏만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅숏을 만드는 예는 [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md).  

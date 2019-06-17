@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026878"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 B: ODBC 상태 전환 테이블
@@ -47,7 +47,7 @@ ms.locfileid: "63026878"
   
 -   **E**  
 
-     **_n_**  , **C_n_** 합니다 **S_n_**, 또는 **D_n_** -환경, 연결, 문 또는 설명자 상태가 지정 된 상태로 이동 합니다.  
+     **_n_**  , **C_n_** 합니다 **S_n_** , 또는 **D_n_** -환경, 연결, 문 또는 설명자 상태가 지정 된 상태로 이동 합니다.  
  
 -   **(구매자)**  -잘못 된 핸들을 함수에 전달 되었습니다. 핸들이 핸들을 null 이거나 잘못 된 형식의-유효한 핸들을 하는 경우 예를 들어 연결 핸들을 전달 된 문 핸들 필요 했습니다.-함수에서 SQL_INVALID_HANDLE;을 반환 하는 경우 그렇지 않으면 동작이 정의 되지 않은 및 아마도 심각한있지 않습니다. 이 오류는 지정된 된 상태에서 함수를 호출 하는 유일한 결과 경우에 표시 됩니다. 이 오류 상태를 변경 하지 않습니다 하 고는 괄호로 표시 된 대로 드라이버 관리자에 의해 항상 검색 됩니다.  
   

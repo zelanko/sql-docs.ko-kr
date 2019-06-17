@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62895032"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
@@ -43,7 +43,7 @@ ms.locfileid: "62895032"
   
 4.  스크립트 프로젝트에서 `System.DirectoryServices` 네임스페이스에 대한 참조를 추가합니다.  
   
-5.  . 코드에서 `Imports` 문을 사용하여 `DirectoryServices` 네임스페이스를 가져옵니다.  
+5.  을 선택합니다. 코드에서 `Imports` 문을 사용하여 `DirectoryServices` 네임스페이스를 가져옵니다.  
   
 > [!NOTE]  
 >  이 스크립트를 성공적으로 실행하려면 회사 네트워크에서 Active Directory가 사용되고 있고 이 예에서 사용하는 직원 정보가 회사에 저장되어 있어야 합니다.  

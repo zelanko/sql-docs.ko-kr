@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980040"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
@@ -82,7 +82,7 @@ OUTPUT
   
 ## <a name="examples"></a>예  
   
-### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>1. 올바른 형식의 XML 문서를 위한 내부 표현 준비  
+### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>1\. 올바른 형식의 XML 문서를 위한 내부 표현 준비  
  다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
   
 ```  
@@ -108,7 +108,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>2. DTD가 있는 올바른 형식의 XML 문서를 위한 내부 표현 준비  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>2\. DTD가 있는 올바른 형식의 XML 문서를 위한 내부 표현 준비  
  다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 저장 프로시저는 문서에 포함된 DTD에 대해 로드된 문서의 유효성을 검사합니다. `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
   
 ```  
@@ -127,7 +127,7 @@ SET @doc = '
 EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;  
 ```  
   
-### <a name="c-specifying-a-namespace-uri"></a>3. 네임스페이스 URI 지정  
+### <a name="c-specifying-a-namespace-uri"></a>3\. 네임스페이스 URI 지정  
  다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 에 대 한 호출 `sp_xml_preparedocument` 유지 합니다 `mp` 메타 속성 네임 스페이스 매핑 접두사를 추가 합니다 `xyz` 네임 스페이스에 대 한 매핑 접두사 `urn:MyNamespace`합니다.  
   
 ```  

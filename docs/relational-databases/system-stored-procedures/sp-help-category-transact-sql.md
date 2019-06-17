@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797822"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @class = ] 'class'` 에 대 한 정보를 요청 하는 클래스입니다. *클래스* 됩니다 **varchar(8)**, 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 에 대 한 정보를 요청 하는 클래스입니다. *클래스* 됩니다 **varchar(8)** , 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
 |**OPERATOR**|운영자 범주에 관한 정보를 제공합니다.|  
   
-`[ @type = ] 'type'` 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -101,7 +101,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-local-job-information"></a>1. 로컬 작업 정보 반환  
+### <a name="a-returning-local-job-information"></a>1\. 로컬 작업 정보 반환  
  다음 예에서는 로컬로 관리되는 작업에 대한 정보를 반환합니다.  
   
 ```  
@@ -113,7 +113,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>2. 경고 정보 반환  
+### <a name="b-returning-alert-information"></a>2\. 경고 정보 반환  
  다음 예에서는 복제 경고 범주에 대한 정보를 반환합니다.  
   
 ```  

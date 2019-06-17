@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 17b4052b8842225d729bc8de996a7b0649f85a59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782406"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
@@ -50,7 +50,7 @@ ms.locfileid: "62782406"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 콘솔 창에서 **SQL Server 네트워크 구성**을 확장합니다.  
   
-2.  콘솔 창에서 *\<인스턴스 이름>***에 대한 프로토콜**을 클릭합니다.  
+2.  콘솔 창에서 *\<인스턴스 이름>* **에 대한 프로토콜**을 클릭합니다.  
   
 3.  세부 정보 창에서 변경할 프로토콜을 마우스 오른쪽 단추로 클릭한 다음 **사용** 또는 **사용 안 함**을 클릭합니다.  
   

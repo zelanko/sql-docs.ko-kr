@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1101 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 1101 (Database Engine error)
 ms.assetid: d63b67d5-59f5-4f77-904e-5ba67f2dd850
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4468e85f8170ecb6b23abf5af8ee3a114a6bef3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62870173"
 ---
 # <a name="mssqlserver1101"></a>MSSQLSERVER_1101
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>설명  
   
 |||  
@@ -34,14 +33,15 @@ ms.locfileid: "62870173"
 |메시지 텍스트|파일 그룹 '%.\*ls'에 디스크 공간이 부족하여 데이터베이스 '%1!s!'에 새 페이지를 할당할 수 없습니다. 파일 그룹의 개체를 삭제하거나, 파일 그룹에 파일을 추가하거나, 파일 그룹의 기존 파일에 대해 자동 증가를 설정하여 필요한 공간을 만드십시오.|  
   
 ## <a name="explanation"></a>설명  
-파일 그룹에 사용 가능한 디스크 공간이 없습니다.  
+ 파일 그룹에 사용 가능한 디스크 공간이 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-다음 동작으로 파일 그룹에 사용 가능한 공간을 만들 수 있습니다.  
+ 다음 동작으로 파일 그룹에 사용 가능한 공간을 만들 수 있습니다.  
   
 -   AUTOGROW를 설정합니다.  
   
 -   파일에 파일 추가  
   
 -   불필요한 인덱스나 파일 그룹 내의 테이블을 삭제하여 디스크 공간을 확보합니다.  
+  
   

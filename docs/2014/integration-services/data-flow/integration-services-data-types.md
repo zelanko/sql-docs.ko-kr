@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902450"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
@@ -60,7 +60,7 @@ ms.locfileid: "62902450"
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. .|  
+|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. 을 선택합니다.|  
 |DT_NTEXT|최대 길이가 2 사용 하 여 유니코드 문자열<sup>30</sup> -1 (1073741823) 자인 합니다.|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 문자열 2의 최대 길이가<sup>31</sup>-1 (2147483647) 자입니다.|  
   

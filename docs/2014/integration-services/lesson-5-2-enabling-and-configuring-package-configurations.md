@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891072"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>2단계: 패키지 구성 설정 및 구성
@@ -75,7 +75,7 @@ ms.locfileid: "62891072"
   
 10. **구성 파일 위치 선택** 대화 상자에서 **파일 이름** 에 **SSISTutorial**을 입력한 다음 **저장**을 클릭합니다.  
   
-11.  **구성 유형 선택** 페이지에서 **다음**을 클릭합니다.  
+11. **구성 유형 선택** 페이지에서 **다음**을 클릭합니다.  
   
 12. **내보낼 속성 선택** 페이지의 **개체** 창에서 **변수**, **varFolderName**, **Properties**를 차례로 확장한 다음 **값**을 선택합니다.  
   
