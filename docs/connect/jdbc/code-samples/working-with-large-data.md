@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78fc155c0007379c4b393b24476761aaf8a5a256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d1d279371d425af60687e2c046d1c75316eeae67
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724901"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797482"
 ---
 # <a name="working-with-large-data"></a>큰 데이터 작업
 
@@ -40,5 +40,5 @@ JDBC 드라이버에서는 서버 커서 오버헤드 없이 모든 종류의 �
   
 ## <a name="see-also"></a>참고 항목
 
-[샘플 JDBC 드라이버 응용 프로그램](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[샘플 JDBC 드라이버 애플리케이션](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 451b2b52f44af44176ab5470992d30e24df70582
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600273"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790832"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

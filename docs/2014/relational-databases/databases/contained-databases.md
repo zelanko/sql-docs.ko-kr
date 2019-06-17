@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917572"
 ---
 # <a name="contained-databases"></a>포함된 데이터베이스
@@ -35,7 +35,7 @@ ms.locfileid: "62917572"
   
  메타데이터를 데이터베이스에 저장하는 등의 부분적으로 포함된 데이터베이스의 일부 기능은 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 적용됩니다. 데이터베이스 수준 인증 및 카탈로그 데이터 정렬 등의 부분적으로 포함된 데이터베이스의 일부 이점은 먼저 사용하도록 설정해야만 사용할 수 있습니다. `CREATE DATABASE` 및 `ALTER DATABASE` 문을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 부분 포함을 사용하도록 설정할 수 있습니다. 부분 데이터베이스 포함을 사용하도록 설정하는 방법은 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)을 참조하십시오.  
   
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 항목에는 다음 섹션이 수록되어 있습니다.  
   
 -   [부분적으로 포함 된 데이터베이스 개념](#Concepts)  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872338"
 ---
 # <a name="create-a-database"></a>데이터베이스 만들기
@@ -38,7 +38,7 @@ ms.locfileid: "62872338"
   
 -   **데이터베이스를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62872338"
   
 -   하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 최대 32,767개의 데이터베이스를 지정할 수 있습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   CREATE DATABASE 문은 기본 트랜잭션 관리 모드인 자동 커밋 모드에서 실행해야 하며 명시적 또는 암시적 트랜잭션에서는 허용되지 않습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62872338"
   
 4.  모든 기본값을 사용하여 데이터베이스를 만들려면 **확인**을 클릭합니다. 그렇지 않으면 다음 옵션 단계로 계속 진행합니다.  
   
-5.  소유자 이름을 변경하려면 (**…**)을 클릭하여 다른 소유자를 선택합니다.  
+5.  소유자 이름을 변경하려면 ( **…** )을 클릭하여 다른 소유자를 선택합니다.  
   
     > [!NOTE]  
     >  **부터 모든 사용자 데이터베이스에서 전체 텍스트를 사용할 수 있기 때문에** 전체 텍스트 인덱싱 사용 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]옵션이 항상 선택되어 있고 흐리게 표시됩니다.  

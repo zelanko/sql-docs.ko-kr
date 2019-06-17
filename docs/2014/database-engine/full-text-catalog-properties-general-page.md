@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779666"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
@@ -64,7 +64,7 @@ ms.locfileid: "62779666"
  전체 텍스트 카탈로그의 이름입니다.  
   
  **악센트 구분**  
- 카탈로그에서 물결표(**~**), 양음 악센트 표시(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 확인하거나 수정합니다. 유효한 값은  
+ 카탈로그에서 물결표( **~** ), 양음 악센트 표시(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 확인하거나 수정합니다. 유효한 값은  
   
 -   **아니요**  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3139c864805c7df9220afc9b81d2a242775f4fa7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856705"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>올바른 선호도 마스크 및 선호도 입된/출력 마스크 겹침

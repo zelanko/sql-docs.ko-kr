@@ -21,13 +21,13 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a70489259d8636d424f24927cab4ebc5ff090bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759371"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796016"
 ---
 # <a name="working-with-snapshot-isolation"></a>스냅숏 격리 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994312"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` 하루 중에서 병합 에이전트에 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @job_login = ] 'job_login'` 가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'` 가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다.  
   
-`[ @job_password = ] 'job_password'` 매개 변수가 있는 행 필터를 사용 하는 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정의 암호입니다. *job_password* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_password = ] 'job_password'` 매개 변수가 있는 행 필터를 사용 하는 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정의 암호입니다. *job_password* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  

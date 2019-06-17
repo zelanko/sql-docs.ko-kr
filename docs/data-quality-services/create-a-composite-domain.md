@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: ef9a9a2ed3d91c3ce870580f35f09f069e9ef04a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793815"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
@@ -33,7 +33,7 @@ ms.locfileid: "66793815"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  복합 도메인을 만들려면 기술 자료를 만들고 열어야 하며 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810424"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
@@ -43,7 +43,7 @@ ms.locfileid: "62810424"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치(**-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사을 연결할 수 있습니다 `admin:`형식으로 인스턴스 이름에 **sqlcmd-Sadmin:**_< instance_name >._ DAC를 시작할 수도 있습니다는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 연결 하 여 쿼리 편집기 `admin:` \< *instance_name*>.  
+ DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사을 연결할 수 있습니다 `admin:`형식으로 인스턴스 이름에 **sqlcmd-Sadmin:** _< instance_name >._ DAC를 시작할 수도 있습니다는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 연결 하 여 쿼리 편집기 `admin:` \< *instance_name*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "62810424"
   
 -   DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` DBCC SQLPERF 등의 기본 DBCC 명령을 사용합니다. **DBCC** CHECKDB, DBCC DBREINDEX 또는 DBCC SHRINKDATABASE 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
   
     -   `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`쿼리를 실행하여 SPID가 실제로 중지되었는지 확인합니다. 행이 반환되지 않으면 세션이 중지된 것입니다.  
   

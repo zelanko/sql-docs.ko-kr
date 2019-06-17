@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481216"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>웹 구성 페이지(Master Data Services 구성 마법사)
@@ -47,7 +47,7 @@ ms.locfileid: "65481216"
 ## <a name="see-also"></a>관련 항목  
  [Master Data Services에 대 한 데이터베이스 및 웹 사이트 설정](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [웹 응용 프로그램 요구 사항 &#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
- [마스터 데이터 관리자 웹 애플리케이션 만들기&amp;#40;Master Data Services&amp;#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
+ [마스터 데이터 관리자 웹 애플리케이션 만들기&#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [MDS 2014 및 "서비스를 사용할 수 없음" 오류](https://blogs.msdn.com/b/womeninanalytics/archive/2015/08/19/mds-2014-and-service-unavailable-error.aspx)  
   
   

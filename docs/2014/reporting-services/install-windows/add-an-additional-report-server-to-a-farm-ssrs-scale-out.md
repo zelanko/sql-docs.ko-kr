@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b90bb5624e5b5cdbf3f1542ad0bef0d2765da248
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108973"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)

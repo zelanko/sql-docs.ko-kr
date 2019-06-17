@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737693"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "62737693"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieve-child-elements-of-the-context-node"></a>1. 컨텍스트 노드의 자식 요소 검색  
+### <a name="a-retrieve-child-elements-of-the-context-node"></a>1\. 컨텍스트 노드의 자식 요소 검색  
  다음 XPath 쿼리에서 모든 선택 된  **\<연락처 >** 컨텍스트 노드의 자식 요소:  
   
 ```  
@@ -86,14 +86,14 @@ ms.locfileid: "62737693"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>2. 컨텍스트 노드의 손자 검색  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>2\. 컨텍스트 노드의 손자 검색  
  다음 XPath 쿼리에서 모든 선택 된  **\<순서 >** 요소 자식을 합니다  **\<고객 >** 컨텍스트 노드의 요소 자식을:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 쿼리에서 `child` 는 축이고 및 `Customer` 하 고 `Order` 는 노드 테스트 (이러한 노드 테스트 Customer와 Order는 경우 TRUE를  **\<요소 >** 노드를 때문에  **\<요소 >** 노드는 주 노드를 **자식** 축). 일치 하는 각 노드  **\<고객 >**, 일치 하는 노드  **\<주문 >** 결과에 추가 됩니다. 만  **\<순서 >** 결과 집합에 반환 됩니다.  
+ 쿼리에서 `child` 는 축이고 및 `Customer` 하 고 `Order` 는 노드 테스트 (이러한 노드 테스트 Customer와 Order는 경우 TRUE를  **\<요소 >** 노드를 때문에  **\<요소 >** 노드는 주 노드를 **자식** 축). 일치 하는 각 노드  **\<고객 >** , 일치 하는 노드  **\<주문 >** 결과에 추가 됩니다. 만  **\<순서 >** 결과 집합에 반환 됩니다.  
   
  합니다 **자식** 축은 기본값입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "62737693"
   
  XPath 쿼리로 지정 된 경우 `Customer/Order/OrderDetail`에서 일치 하는 각 노드  **\<고객 >** 쿼리 이동할 해당  **\<순서 >** 요소입니다. 와 일치 하는 각 노드  **\<순서 >** 는 노드를 추가 하는 쿼리  **\<OrderDetail >** 결과에 합니다. 만  **\<OrderDetail >** 결과 집합에 반환 됩니다.  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>3. ..를 사용하여 부모 축 지정  
+### <a name="c-use--to-specify-the-parent-axis"></a>3\. ..를 사용하여 부모 축 지정  
  다음 쿼리를 모두 검색 합니다  **\<순서 >** 부모 요소가  **\<고객 >** 요소를 **CustomerID** 특성 1의 값입니다. 쿼리에서 사용 합니다 **자식** 의 부모를 찾습니다는 조건자에서는 축 합니다  **\<순서 >** 요소.  
   
 ```  
@@ -184,7 +184,7 @@ ms.locfileid: "62737693"
 ```  
   
 > [!NOTE]  
->  XPath 쿼리 `/Order[../@CustomerID="1"]` 의 부모가 없기 때문에 오류가 반환 됩니다  **\<순서 >** 합니다. 매핑 스키마에 포함 된 요소가 있을 수 있지만  **\<순서 >**, 하며에서 XPath를 시작 하지 따라서  **\<순서 >** 것으로 간주 됩니다는 문서의 최상위 요소 형식입니다.  
+>  XPath 쿼리 `/Order[../@CustomerID="1"]` 의 부모가 없기 때문에 오류가 반환 됩니다  **\<순서 >** 합니다. 매핑 스키마에 포함 된 요소가 있을 수 있지만  **\<순서 >** , 하며에서 XPath를 시작 하지 따라서  **\<순서 >** 것으로 간주 됩니다는 문서의 최상위 요소 형식입니다.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
@@ -248,7 +248,7 @@ ms.locfileid: "62737693"
 </ROOT>  
 ```  
   
-### <a name="d-specify-the-attribute-axis"></a>4. 특성 축 지정  
+### <a name="d-specify-the-attribute-axis"></a>4\. 특성 축 지정  
  다음 XPath 쿼리에서 모든 선택 합니다  **\<고객 >** 인 컨텍스트 노드의 자식 요소를 **CustomerID** 값이 1 특성:  
   
 ```  

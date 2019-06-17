@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697421"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788438"
 ---
 # <a name="understanding-ssl-support"></a>SSL 지원 이해
 
@@ -85,4 +85,4 @@ SSL 핸드셰이크 중 서버는 공개 키 인증서를 클라이언트로 보
 
 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)
 
-[JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  

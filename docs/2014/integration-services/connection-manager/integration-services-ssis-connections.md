@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833792"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
@@ -78,7 +78,7 @@ ms.locfileid: "62833792"
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](msmq-connection-manager.md)|  
-|MSOLAP100| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
+|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](analysis-services-connection-manager.md)|  
 |MULTIFILE|다중 파일 또는 폴더에 연결합니다.|[다중 파일 연결 관리자](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|다중 데이터 파일 및 폴더에 연결합니다.|[다중 플랫 파일 연결 관리자](multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB Provider를 사용하여 데이터 원본에 연결합니다.|[OLE DB 연결 관리자](ole-db-connection-manager.md)|  
@@ -112,7 +112,7 @@ ms.locfileid: "62833792"
   
 -   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS에서 MySQL에 연결](https://go.microsoft.com/fwlink/?LinkId=217669)  
   

@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26e4c7394f1af445534e32f9a960cb71480f72c9
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481133"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
@@ -29,7 +29,7 @@ ms.locfileid: "65481133"
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   정리 작업에 대한 적절한 임계값을 지정해야 합니다. 이렇게 하는 방법은 [정리 및 일치에 대한 임계값 구성](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65481133"
   
 1.  [데이터 품질 프로젝트 만들기](../../2014/data-quality-services/create-a-data-quality-project.md)항목의 1~3단계를 수행합니다.  
   
-2.  3.d 단계에서 **정리** 작업을 선택합니다.  
+2.  3\.d 단계에서 **정리** 작업을 선택합니다.  
   
 3.  **만들기** 를 클릭하여 정리 데이터 품질 프로젝트를 만듭니다.  
   

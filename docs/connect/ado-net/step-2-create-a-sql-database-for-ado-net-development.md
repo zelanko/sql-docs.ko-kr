@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd0f6329-d379-458e-aba1-7b0b9e7277ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e7f792a115fcc2e01125f639b5f0ae310ad316e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 592bae8e9c26420fe54944f9834ff19186aace25
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692381"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770636"
 ---
 # <a name="step-2-create-a-sql-database-for-adonet-development"></a>2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기
 

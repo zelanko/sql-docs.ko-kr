@@ -2,24 +2,24 @@
 title: RevoScaleR 함수를 사용 하 여 찾거나 R 패키지-SQL Server Machine Learning Services를 설치 하는 방법
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642332"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140405"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 RevoScaleR 9.0.1 나중에 SQL Server 계산 컨텍스트에서 R 패키지 관리에 대 한 함수를 포함 합니다. 이러한 함수는 서버에 직접 액세스 하지 않고도 SQL Server에서 패키지를 설치 하려면 원격 비관리자가 사용할 수 있습니다.
 
-SQL Server 2017의 Machine Learning Services RevoScaleR의 최신 버전을 이미 포함 되어 있습니다. SQL Server 2016 R Services 고객이 수행 해야 합니다는 [구성 요소 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md) RevoScaleR 패키지 관리 함수를 가져오려고 합니다. 버전 및 콘텐츠를 검색 하는 방법에 대 한 지침 패키지 참조 [패키지 정보를 가져올](determine-which-packages-are-installed-on-sql-server.md)합니다.
+SQL Server 2017의 Machine Learning Services RevoScaleR의 최신 버전을 이미 포함 되어 있습니다. SQL Server 2016 R Services 고객이 수행 해야 합니다는 [구성 요소 업그레이드](../install/upgrade-r-and-python.md) RevoScaleR 패키지 관리 함수를 가져오려고 합니다. 버전 및 콘텐츠를 검색 하는 방법에 대 한 지침 패키지 참조 [패키지 정보를 가져올](../package-management/installed-package-information.md)합니다.
 
 ## <a name="revoscaler-functions-for-package-management"></a>패키지 관리를 위한 RevoScaleR 함수
 
@@ -38,7 +38,7 @@ SQL Server 2017의 Machine Learning Services RevoScaleR의 최신 버전을 이�
 
 + [SQL Server에서 원격 R 패키지 관리](r-package-how-to-enable-or-disable.md)
 
-+ RevoScaleR 버전 클라이언트와 서버 환경에서 동일 해야 합니다. 자세한 내용은 [패키지 정보를 가져올](determine-which-packages-are-installed-on-sql-server.md)합니다.
++ RevoScaleR 버전 클라이언트와 서버 환경에서 동일 해야 합니다. 자세한 내용은 [패키지 정보를 가져올](../package-management/installed-package-information.md)합니다.
 
 + 서버 및 데이터베이스에 연결 하 고 R 명령을 실행할 수 있는 권한입니다. 지정 된 인스턴스 및 데이터베이스에 패키지를 설치할 수 있도록 데이터베이스 역할의 멤버 여야 합니다.
 
@@ -212,4 +212,4 @@ exec sp_execute_external_script
 + [원격 R 패키지 관리 사용](r-package-how-to-enable-or-disable.md)
 + [R 패키지 동기화](package-install-uninstall-and-sync.md)
 + [R 패키지를 설치 하기 위한 팁](packages-installed-in-user-libraries.md)
-+ [기본 패키지](installing-and-managing-r-packages.md)
++ [기본 패키지](../package-management/default-packages.md)

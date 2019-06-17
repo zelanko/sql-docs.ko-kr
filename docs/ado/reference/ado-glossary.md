@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66709978"
 ---
 # <a name="ado-glossary"></a>ADO 용어 설명
@@ -117,7 +117,7 @@ ms.locfileid: "66709978"
  cursor  
  데이터베이스에는 레코드 탐색, 데이터의 업데이트 및 다른 사용자가 데이터베이스에 대 한 변경 내용의 표시 유형을 제어 하는 요소입니다.  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
  데이터 바인딩  
  개체 또는 데이터 원본에 응용 프로그램의 컨트롤을 연결 하는 프로세스입니다. 데이터 원본에 연결 된 컨트롤 이라고는 *데이터 바인딩된 컨트롤*합니다.  
   

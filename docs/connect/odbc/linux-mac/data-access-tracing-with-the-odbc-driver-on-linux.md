@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81ff6d637b28a55d45c8be02de24832b0cbc27ea
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306201"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785871"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
 
@@ -38,7 +38,7 @@ TraceFile=/home/myappuser/odbctrace.log
 
 응용 프로그램 추적을 마친 후 제거 `Trace=Yes` 에서 `odbcinst.ini` 추적의 성능 저하를 방지 하려면 파일 및 불필요 한 추적 파일 제거 되었는지 확인 하십시오.
 
-추적은 `odbcinst.ini`에서 드라이버를 사용하는 모든 애플리케이션에 적용됩니다. 일부 애플리케이션을 추적하지 않으려면(예: 중요한 사용자별 정보가 공개되는 것을 방지하려는 경우) `ODBCSYSINI` 환경 변수를 사용하여 비공개 `odbcinst.ini`의 위치를 제공함으로써 개별 애플리케이션 인스턴스를 추적할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+추적은 `odbcinst.ini`에서 드라이버를 사용하는 모든 애플리케이션에 적용됩니다. 일부 애플리케이션을 추적하지 않으려면(예: 중요한 사용자별 정보가 공개되는 것을 방지하려는 경우) `ODBCSYSINI` 환경 변수를 사용하여 프라이빗 `odbcinst.ini`의 위치를 제공함으로써 개별 애플리케이션 인스턴스를 추적할 수 있습니다. 예를 들어
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp

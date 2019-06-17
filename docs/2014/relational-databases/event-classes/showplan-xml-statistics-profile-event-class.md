@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea60aef999f871f28e21839ce0d7808aad0727b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63053076"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile 이벤트 클래스
-  Showplan XML Statistics Profile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 계획 연산자를 식별하려면 Showplan XML Statistics Profile 이벤트 클래스를 포함시키십시오.  
+  Showplan XML Statistics Profile 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 계획 연산자를 식별하려면 Showplan XML Statistics Profile 이벤트 클래스를 포함시키십시오.  
   
  Showplan XML Statistics Profile 이벤트 클래스는 전체 컴파일 시간 데이터를 표시하므로 이 이벤트를 포함하는 추적으로 인해 큰 성능 오버헤드가 발생할 수도 있습니다. 오버헤드 발생을 최소화하려면 단기간 동안 특정 문제를 모니터링하는 추적에서만 이 이벤트 클래스를 사용하십시오.  
   

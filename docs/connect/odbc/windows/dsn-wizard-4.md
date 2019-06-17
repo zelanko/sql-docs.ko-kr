@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724371"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797764"
 ---
 # <a name="data-source-wizard-screen-4"></a>데이터 원본 마법사 화면 4
 
 SQL Server 메시지에 사용할 언어, 문자 집합 변환 및 ODBC Driver for SQL Server가 국가별 설정을 사용해야 하는지 여부를 지정합니다. 또한 장시간 실행되는 쿼리와 드라이버 통계 설정에 대한 로깅을 제어할 수도 있습니다.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>SQL Server 시스템 메시지 언어를 다음으로 변경
 

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701471"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드

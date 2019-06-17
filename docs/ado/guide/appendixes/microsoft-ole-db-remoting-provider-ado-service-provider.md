@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702696"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 원격 공급자 개요
@@ -71,7 +71,7 @@ cn.Properties("Internet Timeout") = 5000
 ```
 
 ## <a name="remarks"></a>Remarks
- 2.0 ado, OLE DB 원격 공급자 수에 지정할 합니다 *ActiveConnection* 의 매개 변수를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **열기** 메서드. ADO 2.1부터 공급자도 지정할 수 있습니다에 *ConnectionString* 의 매개 변수를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 **열기** 메서드.
+ 2\.0 ado, OLE DB 원격 공급자 수에 지정할 합니다 *ActiveConnection* 의 매개 변수를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **열기** 메서드. ADO 2.1부터 공급자도 지정할 수 있습니다에 *ConnectionString* 의 매개 변수를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 **열기** 메서드.
 
  에 해당 하는는 **rds. DataControl** 개체 [SQL](../../../ado/reference/rds-api/sql-property.md) 속성을 사용할 수 없습니다. [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 **열려** 메서드 *원본* 인수 대신 사용 됩니다.
 

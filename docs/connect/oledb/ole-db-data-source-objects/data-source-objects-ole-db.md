@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726901"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768601"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726901"
 
   SQL Server용 OLE DB 드라이버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 데이터 저장소에 연결할 때 사용되는 OLE DB 인터페이스 집합에 데이터 원본이라는 용어를 사용합니다. 공급자의 데이터 원본 개체의 인스턴스를 만드는 첫 번째 태스크는 OLE DB Driver for SQL Server 소비자의 경우  
   
- 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. OLE DB Driver for SQL Server에 대 한 CLSID가 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 올바른로 확인 되는 기호를 참조 하는 msoledbsql.h 파일에 progid). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
+ 각 OLE DB 공급자는 자체적으로 사용할 CLSID(클래스 식별자)를 선언합니다. OLE DB Driver for SQL Server에 대 한 CLSID가 C /C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 올바른로 확인 되는 기호를 참조 하는 msoledbsql.h 파일에 progid). CLSID가 있으면 소비자는 OLE **CoCreateInstance** 함수를 사용하여 데이터 원본 개체의 인스턴스를 만듭니다.  
   
  OLE DB Driver for SQL Server는 처리 중인 서버. SQL Server용 OLE DB 드라이버 개체의 인스턴스는 실행 가능 콘텐츠를 나타내기 위해 CLSCTX_INPROC_SERVER 매크로를 사용하여 만들어집니다.  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316064"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>쿼리 및 뷰 디자인 방법 도움말 항목(Visual Database Tools)

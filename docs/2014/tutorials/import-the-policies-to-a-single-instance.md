@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865102"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>단일 인스턴스로 정책 가져오기
@@ -31,7 +31,7 @@ ms.locfileid: "62865102"
   
 3.  **정책**을 마우스 오른쪽 단추로 클릭한 다음 **정책 가져오기**를 클릭합니다.  
   
-4.  에 **가져올** 대화 상자에서 다음을 **가져올 파일** 상자에서 줄임표를 클릭 (**...** ) 단추입니다.  
+4.  에 **가져올** 대화 상자에서 다음을 **가져올 파일** 상자에서 줄임표를 클릭 ( **...** ) 단추입니다.  
   
 5.  **찾는 위치** 목록에서 최선의 구현 방법 정책이 포함된 다음 폴더를 찾습니다.  
   

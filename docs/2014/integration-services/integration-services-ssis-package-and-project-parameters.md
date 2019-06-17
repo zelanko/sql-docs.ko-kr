@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892264"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services(SSIS) 매개 변수
@@ -28,7 +28,7 @@ ms.locfileid: "62892264"
  패키지 배포 모델을 사용하여 매개 변수가 포함된 패키지를 배포한 다음 패키지를 실행할 경우 실행 중에는 매개 변수가 호출되지 않습니다. 패키지에 패키지 매개 변수가 포함되고 있고 패키지 내의 식에 매개 변수가 사용되는 경우 결과 값은 런타임에 적용됩니다. 패키지에 프로젝트 매개 변수가 포함되어 있는 경우 패키지 실행이 실패할 수 있습니다.  
   
 ## <a name="parameters-and-project-deployment-model"></a>매개 변수 및 프로젝트 배포 모델  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하는 경우 뷰, 저장 프로시저 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI를 사용하여 프로젝트 및 패키지 매개 변수를 관리합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하는 경우 뷰, 저장 프로시저 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI를 사용하여 프로젝트 및 패키지 매개 변수를 관리합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [보기&#40;Integration Services 카탈로그&#41;](/sql/integration-services/system-views/views-integration-services-catalog)  
   
