@@ -3,17 +3,17 @@ title: R 패키지 관리자-SQL Server Machine Learning Services를 사용 합�
 description: Install.packages 같은 표준 R 명령을 사용 하 여 SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)에 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642267"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140775"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>R 패키지 관리자를 사용 하 여 SQL Server에서 R 패키지를 설치 하려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "62642267"
 
 ## <a name="install-a-package-using-rgui"></a>RGui를 사용 하 여 패키지를 설치 합니다.
 
-1. [인스턴스 라이브러리의 위치를 확인할](installing-and-managing-r-packages.md)합니다. R 도구 설치 되어 있는 폴더로 이동 합니다. 예를 들어, SQL Server 2017 기본 인스턴스에 대 한 기본 경로 다음과 같습니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [인스턴스 라이브러리의 위치를 확인할](../package-management/default-packages.md)합니다. R 도구 설치 되어 있는 폴더로 이동 합니다. 예를 들어, SQL Server 2017 기본 인스턴스에 대 한 기본 경로 다음과 같습니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. RGui.exe를 마우스 오른쪽 단추로 클릭 **관리자 권한으로 실행**합니다. 필요한 사용 권한이 없으면 데이터베이스 관리자에 게 문의 하 고 필요한 패키지의 목록을 제공 합니다.
 

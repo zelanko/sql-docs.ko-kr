@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3bf9211fb62db1452f48306e682638fd17041b8
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404065"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>단원 5-3-다 대 다 관계 정의
@@ -134,7 +134,7 @@ ms.locfileid: "65404065"
   
     **Sales Reason** 차원은 **Internet Sales Reason** 측정값 그룹과 일반 관계가 정의되어 있지만 **Internet Sales** 또는 **Reseller Sales** 측정값 그룹과는 관계가 정의되어 있지 않습니다. 또한 **Internet Sales Order Details** 차원은 **Internet Sales** 측정값 그룹과 **Fact Relationship** 관계가 정의되어 있는 **Internet Sales Reason** 차원과 일반 관계가 정의되어 있습니다. 이 차원이 없거나 **Internet Sales Reason** 및 **Internet Sales** 측정값 그룹과 관계가 정의된 다른 차원이 없을 경우 다 대 다 관계를 정의할 수 없습니다.  
   
-2.  **Internet Sales** 측정값 그룹과 **Sales Reason** 차원의 교집합에 있는 셀을 클릭한 다음 찾아보기 단추(**...**)를 클릭합니다.  
+2.  **Internet Sales** 측정값 그룹과 **Sales Reason** 차원의 교집합에 있는 셀을 클릭한 다음 찾아보기 단추( **...** )를 클릭합니다.  
   
 3.  **관계 정의** 대화 상자의 **관계 유형 선택** 목록에서 **다 대 다** 를 선택합니다.  
   

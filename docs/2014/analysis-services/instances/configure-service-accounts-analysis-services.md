@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080184"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66080184"
 ## <a name="logon-account-recommendations"></a>로그온 계정 권장 사항  
  장애 조치(failover) 클러스터에서 Analysis Services의 모든 인스턴스는 Windows 도메인 사용자 계정을 사용하도록 구성되어야 합니다. 모든 인스턴스에 동일한 계정을 할당합니다. 자세한 내용은 [Analysis Services를 클러스터링하는 방법](https://msdn.microsoft.com/library/dn736073.aspx) 을 참조하세요.  
   
- 독립 실행형 인스턴스는 기본 가상 계정 **NT Service\MSSQLServerOLAPService** (기본 인스턴스의 경우) 또는 **NT Service\MSOLAP$**_instance-name_ (명명된 인스턴스의 경우)을 사용해야 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
+ 독립 실행형 인스턴스는 기본 가상 계정 **NT Service\MSSQLServerOLAPService** (기본 인스턴스의 경우) 또는 **NT Service\MSOLAP$** _instance-name_ (명명된 인스턴스의 경우)을 사용해야 합니다. 이 권장 사항은 운영 체제가 Windows Server 2008 R2 이상이고 SQL Server 2012 이상의 Analysis Services가 실행된다고 가정할 때 모든 서버 모드의 Analysis Services 인스턴스에 적용됩니다.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services에 권한 부여  
  이 섹션에서는 Analysis Services에서 로컬 내부 작업(예: 실행 파일 시작, 구성 파일 읽기, 데이터 디렉터리에서 데이터베이스 로드)을 수행하는 데 필요한 권한에 대해 설명합니다. 외부 데이터 액세스를 위한 권한 설정 방법과 다른 서비스 및 애플리케이션과의 상호 운용성에 대한 지침은 이 항목의 뒤에 나오는 [특정 서버 작업에 대한 추가 권한 부여](#bkmk_tasks) 를 참조하세요.  

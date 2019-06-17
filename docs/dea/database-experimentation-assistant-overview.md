@@ -14,10 +14,10 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 manager: jroth
 ms.openlocfilehash: 25b5d051f6241919f34a60a42582e8a101052290
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794462"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미의 개요

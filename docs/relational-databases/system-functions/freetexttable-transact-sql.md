@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8f61daaedb3aa0157c872e6b1e9441d6523b8601
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097282"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE(Transact-SQL)
@@ -104,7 +104,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>1\. 간단한 예  
  다음 예제에서는 만들고 두 개의 열을 3 지방 및 해당 플래그 색의 간단한 테이블을 채웁니다. It가 만들고 전체 텍스트 카탈로그 및 테이블에 인덱스를 채웁니다. 그런 다음 **FREETEXTTABLE** 구문을 보여 줍니다.  
   
 ```  
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>2. INNER JOIN에 FREETEXT 사용  
+### <a name="b-using-freetext-in-an-inner-join"></a>2\. INNER JOIN에 FREETEXT 사용  
  다음 예에서는 설명 및 설명의 의미를 일치 하는 모든 제품의 순위를 반환 합니다. `high level of performance`합니다.  
   
 ```  
@@ -143,7 +143,7 @@ ORDER BY RANK DESC;
 GO  
 ```  
   
-### <a name="c-specifying-language-and-highest-ranked-matches"></a>3. 언어 및 최고 등급 일치 항목 지정  
+### <a name="c-specifying-language-and-highest-ranked-matches"></a>3\. 언어 및 최고 등급 일치 항목 지정  
  다음 예에서는 동일 하 고 사용을 보여 줍니다 합니다 `LANGUAGE` *language_term* 하 고 *top_n_by_rank* 매개 변수입니다.  
   
 ```  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813380"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
@@ -33,7 +33,7 @@ ms.locfileid: "62813380"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는, 하는 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션에서 참조 [필수 구성 요소, 제한 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   

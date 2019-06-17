@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efdb01e4488688a4709df36383145c60c4687667
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2b27de6f879fad1e45b83bd9585e4f92ca08fb91
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805741"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781813"
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>JDBC 드라이버 시작
 

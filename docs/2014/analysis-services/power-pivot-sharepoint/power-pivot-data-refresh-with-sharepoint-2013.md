@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071232"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot Data Refresh with SharePoint 2013
@@ -108,7 +108,7 @@ ms.locfileid: "66071232"
   
  **.NET Framework Data Provider for SQL Server 사용 시**  
   
--   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: 아웃오브 라인 개체 'DataSource', ' f5fb916c-3eac-4d 07-a542-531524c0d44a', ID(s) 참조가 지정 되었지만 사용 되지 않았습니다.  상위 수준 관계형 엔진에서 오류가 발생했습니다. 예외가 발생 하는 동안 관리 되는 IDbConnection 인터페이스를 사용 하는 동안: 파일 또는 어셈블리를 로드할 수 없습니다 ' System.Transactions, 버전 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =' 또는 해당 종속성 중 하나입니다. 필요한 가장 수준이 제공되지 않았거나, 제공된 가장 수준이 올바르지 않습니다. (HRESULT의 예외: 0x80070542).  ConnectionName: ThisWorkbookDataModel, Workbook: NETProvider.xlsx.  
+-   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: 아웃오브 라인 개체 'DataSource', ' f5fb916c-3eac-4d 07-a542-531524c0d44a', ID(s) 참조가 지정 되었지만 사용 되지 않았습니다.  상위 수준 관계형 엔진에서 오류가 발생했습니다. 예외가 발생 하는 동안 관리 되는 IDbConnection 인터페이스를 사용 하는 동안: 파일 또는 어셈블리를 로드할 수 없습니다 ' System.Transactions, 버전 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =' 또는 해당 종속성 중 하나입니다. 필요한 가장 수준이 제공되지 않았거나, 제공된 가장 수준이 올바르지 않습니다. (예외가 발생한 HRESULT: 0x80070542).  ConnectionName: ThisWorkbookDataModel, Workbook: NETProvider.xlsx.  
   
  **구성 단계 요약** 로컬 서버에 대한 **운영 체제의 일부로 작동** 권한을 구성하려면  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66071232"
   
 -   아래 그림을 참조하여 단계를 수행하십시오.  
   
-1.  SharePoint 문서 라이브러리에서 PowerPivot 통합 문서에 대한 **열기 메뉴** (**...**)를 클릭합니다.  
+1.  SharePoint 문서 라이브러리에서 PowerPivot 통합 문서에 대한 **열기 메뉴** ( **...** )를 클릭합니다.  
   
 2.  두 번째 **열기 메뉴** 를 클릭하고 **PowerPivot 데이터 새로 고침 관리**를 클릭합니다.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66071232"
  ![데이터 새로 고침 상황에 맞는 메뉴를 관리할](../media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴 관리")  
   
 > [!TIP]  
->  Online SharePoint에서 통합 문서 새로 고침에 대 한 정보를 참조 하세요 [SharePoint Online (백서)에서 포함 된 PowerPivot 모델을 사용 하 여 새로 고침 Excel 통합 문서](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx)합니다.  
+>  Online SharePoint에서 통합 문서 새로 고침에 대 한 정보를 참조 하세요 [SharePoint Online (백서)에서 포함 된 PowerPivot 모델을 사용 하 여 새로 고침 Excel 통합 문서](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx) 합니다.  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013의 예약된 데이터 새로 고침 아키텍처  
  다음 그림에는 SharePoint 2013과 SQL Server 2012 SP1의 데이터 새로 고침 아키텍처가 요약되어 있습니다.  

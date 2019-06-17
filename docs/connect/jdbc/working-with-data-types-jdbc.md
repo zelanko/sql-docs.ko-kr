@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a160da53ddc8a634953fc7f7b75028075ce3d691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696712"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783272"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
 
@@ -41,4 +41,4 @@ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServ
 
 ## <a name="see-also"></a>참고 항목
 
-[샘플 JDBC 드라이버 응용 프로그램](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[샘플 JDBC 드라이버 애플리케이션](../../connect/jdbc/sample-jdbc-driver-applications.md)  

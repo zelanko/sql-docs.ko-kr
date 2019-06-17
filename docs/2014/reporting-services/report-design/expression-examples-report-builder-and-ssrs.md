@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 11441e0866904742985c55d535e8398802b206fa
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775045"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
@@ -178,7 +178,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 대신 서식을 적용 하려면 입력란의 Format 속성을 사용 해야 입력란에 날짜 또는 숫자만 있으면는 `Format` 입력란 내의 함수입니다.  
 
--   합니다 `Right`, `Len`, 및 `InStr` 함수는 부분 문자열을 반환, 예를 들어, 조정 하는 데 유용 *도메인*\\*username* 에서 사용자 이름만을 합니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(*) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   합니다 `Right`, `Len`, 및 `InStr` 함수는 부분 문자열을 반환, 예를 들어, 조정 하는 데 유용 *도메인*\\*username* 에서 사용자 이름만을 합니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  

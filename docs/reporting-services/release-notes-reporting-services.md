@@ -1,20 +1,20 @@
 ---
 title: 릴리스 정보 (SSRS)에 대 한 2017 이상 | Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283300"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037855"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 릴리스 정보
 
@@ -86,7 +86,7 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 | pageHeight가 0.5인치 미만일 때 텍스트 크기가 조절되지 않습니다. | &nbsp; |
 | CRM 함께 사용 하는 SSRS 카탈로그 데이터베이스에서 교착 상태가 발생 합니다. | &nbsp; |
 | 보고서에서 스크롤할 때 세로로 정렬된 열 머리글이 잘못 표시됩니다. | &nbsp; |
-| SCOM Reporting 역할에 추가된 사용자가 SSRS 웹 포털에 액세스할 수 없습니다. | &nbsp; |
+| System Center Operations Manager Reporting 역할에 추가 된 사용자 권한이 SSRS 웹 포털에 차단 합니다. | &nbsp; |
 | 태국어 문자는 PDF로 올바르게 내보내지지 않습니다. | &nbsp; |
 | 브라우저 역할 동작이 변경됩니다. | &nbsp; |
 | rc:Toolbar=false가 Express Edition에서 작동하지 않습니다. | &nbsp; |

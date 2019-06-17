@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80c9d8103e7a0a0eeea766487e1fc013ae5e100
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726631"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797469"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 암호화에 대한 클라이언트 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 또는 클라이언트는 서버가 올바른 서버이며 서버 인증서가 클라이언트에서 신뢰하는 인증 기관에서 발행되었는지 유효성을 검사해야 합니다. 서버 인증서의 유효성을 검사하기 위해서는 연결 시 트러스트 자료를 제공해야 합니다. 또한 서버 인증서의 발급자가 클라이언트에서 신뢰하는 인증 기관이어야 합니다.  
   
- 이 항목에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 SSL(Secure Sockets Layer) 인증서가 개인 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
+ 이 항목에서는 먼저 클라이언트 컴퓨터에 트러스트 자료를 제공하는 방법에 대해 설명합니다. 그런 다음 SQL Server 인스턴스의 SSL(Secure Sockets Layer) 인증서가 프라이빗 인증 기관에서 발행된 경우 서버 인증서를 클라이언트 컴퓨터의 트러스트 저장소로 가져오는 방법에 대해 설명합니다.  
   
  서버 인증서의 유효성을 검사하는 방법은 [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)의 서버 SSL 인증서 유효성 검사 섹션을 참조하세요.  
   
@@ -56,7 +56,7 @@ java -Djavax.net.ssl.trustStorePassword=storePassword
 ### <a name="importing-the-server-certificate-to-trust-store"></a>트러스트 저장소로 서버 인증서 가져오기  
  SSL 핸드셰이크 중 서버에서는 공개 키 인증서를 클라이언트로 보내는데 공개 키 인증서의 발급자를 CA(인증 기관)라고 합니다. 클라이언트에서는 인증 기관이 신뢰할 수 있는 기관인지 확인해야 합니다. 신뢰할 수 있는 CA의 공개 키를 알고 있으면 이를 확인할 수 있습니다. 일반적으로 JVM은 미리 정의된 신뢰할 수 있는 인증 기관 집합과 함께 제공됩니다.  
   
- SQL Server 인스턴스의 SSL 인증서가 개인 인증 기관에서 발행된 경우 클라이언트 컴퓨터의 트러스트 저장소에 있는 신뢰할 수 있는 인증서 목록에 해당 인증 기관의 인증서를 추가해야 합니다.  
+ SQL Server 인스턴스의 SSL 인증서가 프라이빗 인증 기관에서 발행된 경우 클라이언트 컴퓨터의 트러스트 저장소에 있는 신뢰할 수 있는 인증서 목록에 해당 인증 기관의 인증서를 추가해야 합니다.  
   
  이를 위해서는 JRE(Java Runtime Environment)와 함께 설치되는 JAVA "keytool" 유틸리티를 사용하십시오. 다음 명령 프롬프트는 "keytool" 유틸리티를 사용하여 파일에서 인증서를 가져오는 방법을 보여 줍니다.  
   
@@ -76,7 +76,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 5.  다음을 클릭하여 인증서 내보내기 마법사의 시작 대화 상자에서 이동합니다.  
   
-6.  "아니요, 개인 키를 내보내지 않습니다."가 선택되어 있는지 확인하고 다음을 클릭합니다.  
+6.  "아니요, 프라이빗 키를 내보내지 않습니다."가 선택되어 있는지 확인하고 다음을 클릭합니다.  
   
 7.  DER 인코딩 이진 X.509(.CER) 또는 Base-64 인코딩 X.509(.CER)가 선택되어 있는지 확인하고 다음을 클릭합니다.  
   
@@ -86,6 +86,6 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 ## <a name="see-also"></a>참고 항목  
  [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   
- [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

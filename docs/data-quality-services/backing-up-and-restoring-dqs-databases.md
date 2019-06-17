@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: f831f2c077f89a57dd8b1dfde667aa91efa01c36
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802215"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
@@ -26,7 +26,7 @@ ms.locfileid: "66802215"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   DQS 서버 설치 중에 제공한 데이터베이스 마스터 키에 대한 암호를 알고 있어야 합니다.  
   

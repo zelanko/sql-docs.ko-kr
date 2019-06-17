@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306131"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789330"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
@@ -81,9 +81,9 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>암호화 사용에 hostNameInCertificate 설정 필요
 
-7.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **encrypt=true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
+7\.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
 
-예를 들어 다음과 같이 사용할 수 있습니다.
+예를 들어
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

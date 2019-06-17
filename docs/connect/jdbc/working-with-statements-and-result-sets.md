@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94a0a5fbf228f7fbf8249e9e75a7e2aebf861065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690058"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780797"
 ---
 # <a name="working-with-statements-and-result-sets"></a>문 및 결과 집합 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 함께 드라이버에서 제공하는 Statement 및 ResultSet 개체를 사용하는 경우 여러 가지 기술을 사용하여 응용 프로그램의 성능 및 안정성을 향상시킬 수 있습니다.
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 함께 드라이버에서 제공하는 Statement 및 ResultSet 개체를 사용하는 경우 여러 가지 기술을 사용하여 애플리케이션의 성능 및 안정성을 향상시킬 수 있습니다.
 
 ## <a name="use-the-appropriate-statement-object"></a>알맞은 문 개체 사용
 

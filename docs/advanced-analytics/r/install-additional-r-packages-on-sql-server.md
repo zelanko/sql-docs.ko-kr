@@ -3,24 +3,24 @@ title: 새 R 언어 패키지-SQL Server Machine Learning Services 설치
 description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)를 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994203"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140583"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새로운 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 machine learning이 사용 되는 SQL Server 인스턴스에 새로운 R 패키지를 설치 하는 방법을 설명 합니다. SQL server 버전에 있고 인터넷에 연결 되어 있는지에 따라 새 R 패키지를 설치 하는 방법은 여러 가지가 있습니다. 새 패키지 설치를 위한 다음 방법을 사용할 수 있습니다.
 
-| 방법                           | 사용 권한               | 원격/로컬 |
+| 접근 방식                           | 사용 권한               | 원격/로컬 |
 |------------------------------------|---------------------------|--------------|
 | [기존 R 패키지 관리자를 사용 합니다.](use-r-package-managers-on-sql-server.md)  | Admin | 로컬 |
 | [RevoScaleR 사용](use-revoscaler-to-manage-r-packages.md) |  데이터베이스 역할 관리자 활성화 나중에 | both|
@@ -88,8 +88,7 @@ R 및 Python 기능 모두 동일한 컴퓨터에 공존할 수 여러 Microsoft
 
 컴퓨터에 별도 데이터베이스 내 분석 (SQL Server 2017의 Machine Learning Services 및 SQL Server 2016 R Services) 외에도 SQL Server 2017 Microsoft Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R Server (독립 실행형)를 설치한 경우 모든 R 도구 및 라이브러리의 중복 항목 각각에 대 한 R 설치입니다.
 
-R_SERVER 라이브러리에 설치 된 패키지를 독립 실행형 서버 에서만 사용 되 고 (In-database) SQL Server 인스턴스에서 액세스할 수 없습니다. 항상 사용은 `R_SERVICES` 라이브러리 데이터베이스에서 SQL Server를 사용 하려는 패키지를 설치 하는 경우. 경로 대 한 자세한 내용은 참조 하세요. [패키지 라이브러리 위치](installing-and-managing-r-packages.md#package-library-location)합니다.
-
+R_SERVER 라이브러리에 설치 된 패키지를 독립 실행형 서버 에서만 사용 되 고 (In-database) SQL Server 인스턴스에서 액세스할 수 없습니다. 항상 사용은 `R_SERVICES` 라이브러리 데이터베이스에서 SQL Server를 사용 하려는 패키지를 설치 하는 경우. 경로 대 한 자세한 내용은 참조 하세요. [패키지 라이브러리 위치](../package-management/default-packages.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

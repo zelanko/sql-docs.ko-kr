@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cdb0e888276c2c9b08eb99b6972b645ac9b46607
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: f52dd4a9fe86b9c4ab94ddbca2b00872244a4345
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602054"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781630"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.2 준수
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 > [!NOTE]  
-> SQL Server용 Microsoft JDBC Driver 4.2 이전 버전은 Java Database Connectivity API 4.0 사양을 준수합니다. 4.2 릴리스 이전 버전에는 이 섹션이 적용되지 않습니다.  
+> SQL Server용 Microsoft JDBC Driver 4.2 이전 버전은 Java Database Connectivity API 4.0 사양을 준수합니다. 4\.2 릴리스 이전 버전에는 이 섹션이 적용되지 않습니다.  
   
  Java Database Connectivity API 4.2 사양은 다음과 같은 API 메서드를 통해 SQL Server용 Microsoft JDBC Driver 4.2에서 지원됩니다.  
   

@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480478"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 후 DQSInstaller.exe 파일을 실행해야 합니다. 이 항목에서는 **시작** 화면, **시작** 메뉴, Windows 탐색기 또는 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법에 대해 설명합니다. DQSInstaller.exe 파일을 실행하기 위해 어떤 방법이나 선택할 수 있습니다.  
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   SQL Server를 설치하는 동안 SQL Server 설치 프로그램의 기능 선택 페이지에 있는 **데이터베이스 엔진 서비스** 에서 **Data Quality Services** 를 선택하고 SQL Server 설치를 완료해야 합니다. 자세한 내용은 [Install Data Quality Services](install-data-quality-services.md)을 참조하세요.  
   

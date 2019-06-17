@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6a7ed91da704fa81b0c8f101f8da5cd71ff48f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857201"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796250"
 ---
 # <a name="converting-data-types"></a>데이터 형식 변환
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,5 +41,5 @@ ms.locfileid: "47857201"
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+[예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

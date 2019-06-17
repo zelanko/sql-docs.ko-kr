@@ -1,7 +1,7 @@
 ---
 title: deletesAreDetected 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,23 +15,23 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20007b2918d8e0b8675c082edc5040c092973579
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806101"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786369"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 메서드(SQLServerDatabaseMetaData)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
+```cpp
 public boolean deletesAreDetected(int type)  
 ```  
   
@@ -59,7 +59,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>반환 값  
- **true** 빈 삭제 된 행을 대체 하는 경우. **false** 경우 삭제 된 행이 제거 됩니다.  
+ **true** 간격이 삭제 된 행을 대체 하는 경우. **false** 경우 삭제 된 행이 제거 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864161"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795963"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864161"
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리를 지원하기 위해 SQL Server용 OLE DB 드라이버 **IDBSchemaRowset** 인터페이스는 연결된 서버에서 메타데이터를 반환합니다.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 스키마 행 집합 출력을 카탈로그별로 제한하면 SQL Server용 OLE DB 드라이버에서 연결된 서버와 카탈로그 이름이 포함된 두 부분으로 이루어진 이름을 인식합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 _linked\_server_**.**_catalog_로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 스키마 행 집합 출력을 카탈로그별로 제한하면 SQL Server용 OLE DB 드라이버에서 연결된 서버와 카탈로그 이름이 포함된 두 부분으로 이루어진 이름을 인식합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성된 카탈로그 이름을 _linked\_server_ **.** _catalog_로 지정하면 명명된 연결된 서버에 적용 가능한 카탈로그로 출력이 제한됩니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  

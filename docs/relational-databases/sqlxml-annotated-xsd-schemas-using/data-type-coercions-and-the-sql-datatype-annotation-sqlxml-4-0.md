@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981033"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "65981033"
   
 -   에 대량 로드 하는 **날짜/시간** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xsd에서 열 **dateTime**를 **날짜**, 또는 **시간** 형식입니다. 이 경우 식별 해야 합니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 열 데이터 형식 **sql: datatype = "dateTime"** 합니다. 이 규칙은 updategram에도 적용됩니다.  
   
--   열으로 대량 로드 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** 형식과 XSD 값은 중괄호를 포함 하는 GUID ({및}). 지정 하는 경우 **sql: datatype = "uniqueidentifier"**, 열에 삽입 하기 전에 중괄호가 값에서 제거 됩니다. 하는 경우 **sql: datatype** 를 지정 하지 않은 값 삽입 이나 업데이트가 실패 하 고 중괄호를 사용 하 여 전송 됩니다.  
+-   열으로 대량 로드 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** 형식과 XSD 값은 중괄호를 포함 하는 GUID ({및}). 지정 하는 경우 **sql: datatype = "uniqueidentifier"** , 열에 삽입 하기 전에 중괄호가 값에서 제거 됩니다. 하는 경우 **sql: datatype** 를 지정 하지 않은 값 삽입 이나 업데이트가 실패 하 고 중괄호를 사용 하 여 전송 됩니다.  
   
 -   XML 데이터 형식 **base64Binary** 다양 한 매핑됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 (**이진**를 **이미지**, 또는 **varbinary**). XML 데이터 형식에 매핑할 **base64Binary** 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 사용 합니다 **sql: datatype** 주석입니다. 이 주석은 특성이 매핑될 열의 명시적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정합니다. 데이터가 데이터베이스에 저장될 경우 이 주석을 사용하는 것이 좋습니다. 지정 하 여 합니다 **sql: datatype** 주석이 명시적 식별할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "65981033"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-xsdtype"></a>1. xsd:type 지정  
+### <a name="a-specifying-xsdtype"></a>1\. xsd:type 지정  
  이 예에서는 XSD **날짜** 사용 하 여 지정 된 형식에는 **xsd: type** 스키마의 특성 결과 XML 문서에 영향을 줍니다. 이 스키마에서는 AdventureWorks 데이터베이스에 Sales.SalesOrderHeader 테이블의 XML 뷰를 제공합니다.  
   
 ```  
@@ -192,7 +192,7 @@ ms.locfileid: "65981033"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>2. sql:datatype을 사용하여 SQL 데이터 형식 지정  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>2\. sql:datatype을 사용하여 SQL 데이터 형식 지정  
  작업 샘플은 예제 G를 참조 하세요 [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)합니다. 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예제에서 스키마 지정 **sql: datatype** 식별 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 **uniqueidentifier**합니다. 이 예제에서는 시기를 보여 줍니다 **sql: datatype** 스키마를 지정 해야 합니다.  
   
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 286156070f62faa576eec11cb1f6d946420c7fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a404b80c855fa866f55114431dbb0e8fc2bb476e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823291"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778658"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>getTimestamp 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

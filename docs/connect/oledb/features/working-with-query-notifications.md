@@ -21,13 +21,13 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7139e6a80e05fbe3671acc9246d42a1354da714f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602713"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796034"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51602713"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  `service=mySSBService;local database=mydb`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "51602713"
   
  알림은 한 번만 전달됩니다. 데이터 변경을 연속해서 알리려면 각 알림이 처리된 후 쿼리를 다시 실행하여 새 구독을 만들어야 합니다.  
   
- 일반적으로 OLE DB Driver for SQL Server 응용 프로그램은 알림을 받을 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)] [RECEIVE](../../../t-sql/statements/receive-transact-sql.md) 명령을 사용하여 알림 옵션에 지정된 서비스와 연결된 큐에서 알림을 읽습니다.  
+ 일반적으로 OLE DB Driver for SQL Server 애플리케이션은 알림을 받을 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)][RECEIVE](../../../t-sql/statements/receive-transact-sql.md) 명령을 사용하여 알림 옵션에 지정된 서비스와 연결된 큐에서 알림을 읽습니다.  
   
 > [!NOTE]  
 >  쿼리에서 알림이 필요한 테이블 이름을 정규화해야 합니다(예: `dbo.myTable`). 두 부분으로 구성된 이름을 사용하여 테이블 이름을 정규화해야 합니다. 세 부분이나 네 부분으로 구성된 이름을 사용하면 구독이 유효하지 않습니다.  
@@ -86,7 +86,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  구독 알림은 문이 사용자 트랜잭션 또는 자동 커밋에서 실행되었는지 여부나 문이 실행된 트랜잭션이 커밋 또는 롤백되었는지 여부에 관계없이 항상 커밋됩니다. 서버 알림은 잘못된 알림 조건, 즉 기본 데이터 또는 스키마 변경이나 제한 시간에 도달한 경우 중 더 빠른 시간에 발생합니다. 알림 등록은 발생하는 즉시 삭제됩니다. 따라서 알림을 받을 때 응용 프로그램에서 추가 업데이트를 가져오려는 경우 다시 구독해야 합니다.  
   
- 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 예를 들어  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

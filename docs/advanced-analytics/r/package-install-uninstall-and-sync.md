@@ -3,17 +3,17 @@ title: 파일 시스템-SQL Server Machine Learning Services에서에서 R 패�
 description: 파일 시스템에 설치 된 최신 버전을 사용 하 여 SQL Server에서 R 라이브러리를 업데이트 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642745"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140515"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server에 대 한 R 패키지 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ SQL Server 2017에 포함 하는 RevoScaleR의 버전 간에 파일 시스템 �
 
 이 기능은 이상 SQL Server 2017 CTP 2에서 사용할 수 있습니다.
 
-최신 버전의 Microsoft R을 사용 하도록 인스턴스를 업그레이드 하 여 SQL Server 2016 인스턴스에이 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server R Services를 업그레이드 하려면 사용 하 여 SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+최신 버전의 Microsoft R을 사용 하도록 인스턴스를 업그레이드 하 여 SQL Server 2016 인스턴스에이 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server R Services를 업그레이드 하려면 사용 하 여 SqlBindR.exe](../install/upgrade-r-and-python.md)합니다.
 
 ### <a name="enable-the-package-management-feature"></a>패키지 관리 기능을 사용 하도록 설정
 
@@ -69,7 +69,7 @@ SQL Server 2017에 포함 하는 RevoScaleR의 버전 간에 파일 시스템 �
 
 + 로 표시 하는 패키지를 동기화 할 **개인**, 중 관리자 또는 패키지의 소유자는 함수를 실행 해야 하며 패키지는 private 이어야 합니다.
 
-+ 다른 사용자를 대신 하 여 패키지를 동기화 하려면 소유자 bhe의 구성원 이어야 합니다 **db_owner** 데이터베이스 역할.
++ 다른 사용자를 대신 하 여 패키지를 동기화 하려면 소유자의 구성원 이어야 합니다 **db_owner** 데이터베이스 역할.
 
 ## <a name="how-package-synchronization-works"></a>패키지 동기화의 작동 원리
 

@@ -3,17 +3,17 @@ title: T-SQL (CREATE EXTERNAL LIBRARY)을 사용 하 여 R 패키지-SQL Server 
 description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (In-database)에 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b18b5cf4a7255a206162bd002004767b7e3ab1fa
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507043"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140666"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY)를 사용 하 여 SQL Server에서 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,6 +68,5 @@ EXEC sp_execute_external_script
 
 ## <a name="see-also"></a>참고자료
 
-+ [패키지 정보 가져오기](determine-which-packages-are-installed-on-sql-server.md)
++ [패키지 정보 가져오기](../package-management/installed-package-information.md)
 + [R 자습서](../tutorials/sql-server-r-tutorials.md)
-+ [방법 가이드](sql-server-machine-learning-tasks.md)

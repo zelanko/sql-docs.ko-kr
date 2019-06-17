@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997106"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
@@ -51,7 +51,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 변경할 속성이입니다. *속성* 됩니다 **sysname**합니다.  
   
-`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(1000)** , 기본값은 없습니다.  
   
 `[ @publication_type = ] publication_type` 게시의 복제 유형을 지정합니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   

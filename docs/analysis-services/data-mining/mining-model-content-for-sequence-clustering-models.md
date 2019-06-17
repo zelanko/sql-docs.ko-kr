@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65961367"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠

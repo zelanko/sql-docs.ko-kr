@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980251"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
@@ -90,7 +90,7 @@ sp_help_fulltext_system_components
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-full-text-system-components"></a>1. 모든 전체 텍스트 시스템 구성 요소 나열  
+### <a name="a-listing-all-full-text-system-components"></a>1\. 모든 전체 텍스트 시스템 구성 요소 나열  
  다음 예에서는 서버 인스턴스에 등록된 모든 전체 텍스트 시스템 구성 요소를 나열합니다.  
   
 ```  
@@ -98,7 +98,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>2. 단어 분리기 나열  
+### <a name="b-listing-word-breakers"></a>2\. 단어 분리기 나열  
  다음 예에서는 서비스 인스턴스에 등록된 모든 단어 분리기를 나열합니다.  
   
 ```  
@@ -106,8 +106,8 @@ EXEC sp_help_fulltext_system_components 'wordbreaker';
 GO  
 ```  
   
-### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>3. 특정 단어 분리기의 등록 여부 확인  
- 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 매개 변수 이름을 지정 하는이 예제 **@component_type** 하 고 **@param**합니다.  
+### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>3\. 특정 단어 분리기의 등록 여부 확인  
+ 다음 예에서는 시스템에 설치되어 있으며 서비스 인스턴스에 등록되어 있는 터키어(LCID=1055)용 단어 분리기를 나열합니다. 매개 변수 이름을 지정 하는이 예제 **@component_type** 하 고 **@param** 합니다.  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
@@ -116,7 +116,7 @@ GO
   
  기본적으로 이 단어 분리기는 설치되지 않으므로 결과 집합이 비어 있습니다.  
   
-### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>4. 특정 필터의 등록 여부 확인  
+### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>4\. 특정 필터의 등록 여부 확인  
  다음 예에서는 수동으로 시스템에 설치되어 있으며 서버 인스턴스에 등록되어 있는 .xdoc 구성 요소에 대한 필터를 나열합니다.  
   
 ```  
@@ -126,7 +126,7 @@ GO
   
  기본적으로 이 필터는 설치되지 않으므로 결과 집합이 비어 있습니다.  
   
-### <a name="e-listing-a-specific-dll-file"></a>5. 특정 .dll 파일 나열  
+### <a name="e-listing-a-specific-dll-file"></a>5\. 특정 .dll 파일 나열  
  다음 예에서는 기본적으로 설치되는 특정 .ddl 파일 `nlhtml.dll`을 나열합니다.  
   
 ```  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16ac54c78839df4c5ce911a1258dfa052ac1666c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625011"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790319"
 ---
 # <a name="using-adaptive-buffering"></a>선택 버퍼링 사용
 
@@ -28,9 +28,9 @@ ms.locfileid: "47625011"
 
 애플리케이션에서 매우 큰 결과를 처리할 수 있도록 하기 위해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 선택 버퍼링을 제공합니다. 선택 버퍼링을 사용하면 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 명령문 실행 결과를 한 번에 모두 검색하는 것이 아니라 애플리케이션에 필요할 때 검색합니다. 또한 응용 프로그램에서 더 이상 액세스할 수 없는 결과를 즉시 삭제합니다. 다음은 선택 버퍼링을 유용하게 사용할 수 있는 몇 가지 예입니다.
 
-- **쿼리로 매우 큰 결과 집합이 생성되는 경우**: 메모리에 저장할 수 있는 행보다 더 많은 행을 생성하는 SELECT 문을 응용 프로그램에서 실행하는 경우가 있습니다. 이전 릴리스에서는 OutOfMemoryError를 방지하기 위해 애플리케이션에서 서버 커서를 사용해야 했습니다. 선택 버퍼링을 사용하면 서버 커서 없이도 임의의 큰 결과 집합을 정방향 읽기 전용으로 처리할 수 있습니다.
+- **쿼리로 매우 큰 결과 집합이 생성되는 경우**: 메모리에 저장할 수 있는 행보다 더 많은 행을 생성하는 SELECT 문을 애플리케이션에서 실행하는 경우가 있습니다. 이전 릴리스에서는 OutOfMemoryError를 방지하기 위해 애플리케이션에서 서버 커서를 사용해야 했습니다. 선택 버퍼링을 사용하면 서버 커서 없이도 임의의 큰 결과 집합을 정방향 읽기 전용으로 처리할 수 있습니다.
 
-- **쿼리가 너무 큰** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **열 또는** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **출력 매개 변수 값을 생성합니다.** 응용 프로그램이 너무 커서 응용 프로그램 메모리에 한 번에 저장할 수 없는 큰 단일 값(열 또는 출력 매개 변수)을 검색할 수 있습니다. 선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 애플리케이션은 스트림에서 읽으면서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 값을 검색합니다.
+- **쿼리가 너무 큰**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**열 또는**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**출력 매개 변수 값을 생성합니다.** 애플리케이션이 너무 커서 애플리케이션 메모리에 한 번에 저장할 수 없는 큰 단일 값(열 또는 출력 매개 변수)을 검색할 수 있습니다. 선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 애플리케이션은 스트림에서 읽으면서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 값을 검색합니다.
 
 > [!NOTE]  
 > 선택 버퍼링을 사용하면 JDBC 드라이버는 필요한 양의 데이터만 버퍼링합니다. 드라이버는 버퍼 크기를 제어 또는 제한하는 공용 메서드를 제공하지 않습니다.
@@ -53,13 +53,13 @@ JDBC 드라이버 버전 1.2를 사용하는 경우 애플리케이션에서 [se
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>선택 버퍼링을 사용하여 큰 데이터 검색
 
-get\<Type>Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환하는 순서로 ResultSet 열과 CallableStatement 출력 매개 변수에 액세스하면 결과를 처리할 때 선택 버퍼링이 응용 프로그램 메모리 사용량을 최소화합니다. 선택 버퍼링을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
+get\<Type&gt;Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환하는 순서로 ResultSet 열과 CallableStatement 출력 매개 변수에 액세스하면 결과를 처리할 때 선택 버퍼링이 애플리케이션 메모리 사용량을 최소화합니다. 선택 버퍼링을 사용하면 다음과 같은 결과를 얻을 수 있습니다.
 
-- [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스에 정의된 get\<Type>Stream 메서드는 응용 프로그램에서 표시하는 경우 스트림을 재설정할 수 있다 하더라도 기본적으로 한 번 읽기 스트림을 반환합니다. 애플리케이션에서 스트림 `reset`을 원할 경우 먼저 해당 스트림에서 `mark` 메서드를 호출해야 합니다.
+- [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스에 정의된 get\<Type&gt;Stream 메서드는 애플리케이션에서 표시하는 경우 스트림을 재설정할 수 있다 하더라도 기본적으로 한 번 읽기 스트림을 반환합니다. 애플리케이션에서 스트림 `reset`을 원할 경우 먼저 해당 스트림에서 `mark` 메서드를 호출해야 합니다.
 
 - [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 및 [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 클래스에 정의된 get\<Type>Stream 메서드는 `mark` 메서드를 호출하지 않고 항상 스트림의 시작 위치로 변경될 수 있는 스트림을 반환합니다.
 
-응용 프로그램에서 선택 버퍼링을 사용하는 경우 get\<Type>Stream 메서드에 의해 검색된 값은 한 번만 검색될 수 있습니다. 같은 개체의 get\<Type>Stream 메서드를 호출한 후 같은 열이나 매개 변수에서 get\<Type> 메서드를 호출하려고 하면 "데이터에 액세스되었으나 이 열이나 매개 변수에는 사용할 수 없습니다."라는 메시지와 함께 예외가 발생합니다.
+애플리케이션에서 선택 버퍼링을 사용하는 경우 get\<Type&gt;Stream 메서드에 의해 검색된 값은 한 번만 검색될 수 있습니다. 같은 개체의 get\<Type>Stream 메서드를 호출한 후 같은 열이나 매개 변수에서 get\<Type> 메서드를 호출하려고 하면 "데이터에 액세스되었으나 이 열이나 매개 변수에는 사용할 수 없습니다."라는 메시지와 함께 예외가 발생합니다.
 
 > [!NOTE]
 > 결과 집합을 처리 하는 중 ResultSet.close() 호출 Microsoft JDBC Driver for SQL Server를 읽고 나머지 모든 패킷을 삭제 해야 합니다. 쿼리는 큰 데이터 집합을 반환 하 고 네트워크 연결이 느린 경우에 특히 상당한 시간 정도 걸립니다.
@@ -90,7 +90,7 @@ get\<Type>Stream 메서드를 사용하여 큰 값을 한 번 읽은 다음, [!I
 
 - 스크롤 가능한 결과 집합의 경우 행 블록을 인출할 때 드라이버는 선택 버퍼링이 설정된 경우에도 항상 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 메서드가 나타내는 행 수를 메모리로 읽어들입니다. 스크롤로 인해 OutOfMemoryError가 발생하는 경우 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 메서드를 호출하여 인출 크기를 더 적은 행 수(필요한 경우 1도 가능)로 설정함으로써 인출되는 행 수를 줄일 수 있습니다. 이렇게 해도 OutOfMemoryError가 발생하는 경우에는 스크롤 가능한 결과 집합에 아주 큰 열을 포함하지 마십시오.
 
-- 업데이트 가능한 정방향 결과 집합의 경우 행 블록을 인출할 때 드라이버는 해당 연결에 대해 선택 버퍼링이 설정된 경우에도 일반적으로 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 메서드가 나타내는 행 수를 메모리로 읽어들입니다. [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 메서드를 호출하여 OutOfMemoryError가 발생하는 경우 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 메서드를 호출하여 인출 크기를 더 적은 행 수(필요한 경우 1도 가능)로 설정함으로써 인출되는 행 수를 줄일 수 있습니다. 또한 명령문을 실행하기 전에 "**adaptive**" 매개 변수를 사용하여 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 호출하여 드라이버가 행을 버퍼링하지 않도록 지시할 수 있습니다. 결과 집합을 스크롤할 수 없으므로 응용 프로그램이 get\<Type>Stream 메서드 중 하나를 사용하여 큰 열 값에 액세스하는 경우 드라이버는 정방향 읽기 전용 결과 집합을 처리할 때와 마찬가지로 응용 프로그램이 값을 읽는 즉시 해당 값을 삭제합니다.
+- 업데이트 가능한 정방향 결과 집합의 경우 행 블록을 인출할 때 드라이버는 해당 연결에 대해 선택 버퍼링이 설정된 경우에도 일반적으로 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) 메서드가 나타내는 행 수를 메모리로 읽어들입니다. [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) 메서드를 호출하여 OutOfMemoryError가 발생하는 경우 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) 메서드를 호출하여 인출 크기를 더 적은 행 수(필요한 경우 1도 가능)로 설정함으로써 인출되는 행 수를 줄일 수 있습니다. 또한 명령문을 실행하기 전에 "**adaptive**" 매개 변수를 사용하여 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 호출하여 드라이버가 행을 버퍼링하지 않도록 지시할 수 있습니다. 결과 집합을 스크롤할 수 없으므로 애플리케이션이 get\<Type&gt;Stream 메서드 중 하나를 사용하여 큰 열 값에 액세스하는 경우 드라이버는 정방향 읽기 전용 결과 집합을 처리할 때와 마찬가지로 애플리케이션이 값을 읽는 즉시 해당 값을 삭제합니다.
 
 ## <a name="see-also"></a>참고 항목
 
