@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e0d0f760bcc31414dc6a6f69b62cdd28bb36741d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946108"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp를 사용하여 데이터 파일에 접두사 길이 지정(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "64946108"
   원시 형식의 데이터를 데이터 파일에 대량으로 내보내는 작업에서 파일 스토리지를 가장 적게 사용하도록 하기 위해 **bcp** 명령은 각 필드의 이름 앞에 필드 길이를 나타내는 문자를 하나 이상 추가합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>bcp 프롬프트에서 접두사 길이 지정  
- 대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**)가 없으면 명령에서 다음과 같이 각 데이터 필드의 접두사 길이를 지정하라는 메시지가 표시됩니다.  
+ 대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치( **-f**) 또는 데이터 형식 스위치( **-n**, **-c**, **-w**또는 **-N**)가 없으면 명령에서 다음과 같이 각 데이터 필드의 접두사 길이를 지정하라는 메시지가 표시됩니다.  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64946108"
 |**XML**|8|8|8|8|  
 |**sql_variant**|8|8|8|8|  
   
- \***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)**, **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
+ \***ntext**, **text**및 **image** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)** , **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
 ##  <a name="PrefixLengthsImport"></a> 대량 가져오기의 접두사 길이  
  데이터를 대량 가져올 때 접두사 길이는 해당 데이터 파일이 원래 작성될 때 지정된 값입니다. **bcp** 을 사용하여 데이터 파일을 만들지 않은 경우에는 길이 접두사 문자가 없을 수도 있습니다. 이 경우에는 접두사 길이에 0을 지정합니다.  
@@ -98,6 +98,6 @@ ms.locfileid: "64946108"
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
- [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

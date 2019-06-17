@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105156"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
@@ -44,7 +44,7 @@ ms.locfileid: "65105156"
 확장하면 **열** 및 **전체 텍스트 카탈로그 이름**이 표시됩니다.  
   
 **열**  
-검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표 단추(**...**)를 클릭합니다.  
+검색 가능한 전체 텍스트 열의 이름 목록을 쉼표로 구분하여 표시합니다. 전체 목록을 보려면 속성 필드의 왼쪽에 있는 줄임표 단추( **...** )를 클릭합니다.  
   
 **Full-Text Catalog Name**  
 현재 전체 텍스트 인덱스가 저장되어 있는 전체 텍스트 카탈로그의 이름을 표시합니다. 인덱스를 다른 카탈로그에 저장하려면 카탈로그 이름을 클릭하고 드롭다운 목록에서 다른 이름을 선택합니다.  

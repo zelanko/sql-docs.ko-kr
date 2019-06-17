@@ -12,10 +12,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06a6ef378e621d055d039d22ea023d8d0d68f25b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088982"
 ---
 # <a name="dynamic-data-masking"></a>동적 데이터 마스킹
@@ -61,7 +61,7 @@ DDM(동적 데이터 마스킹)에서는 권한이 없는 사용자로 마스킹
   
 -   열에서 마스크를 만들어도 해당 열에 대한 업데이트가 방해되지는 않습니다. 따라서 마스크된 열 쿼리 시 사용자가 마스크된 데이터를 받게 되더라도 쓰기 권한이 있는 경우 같은 사용자는 데이터를 업데이트할 수 있습니다. 업데이트 권한을 제한하려면 적절한 액세스 제어 정책을 사용해야 합니다.  
   
--   	`SELECT INTO` 또는 `INSERT INTO` 을 사용하여 데이터를 마스크된 열에서 다른 테이블로 복사하면 대상 테이블에 마스크된 데이터가 생성됩니다.  
+-   `SELECT INTO` 또는 `INSERT INTO` 을 사용하여 데이터를 마스크된 열에서 다른 테이블로 복사하면 대상 테이블에 마스크된 데이터가 생성됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 실행 시 동적 데이터 마스킹이 적용됩니다. 마스킹된 열을 포함한 데이터베이스를 사용하면 마스킹된 데이터가 있는 내보내는 데이터 파일이 생성되며(**UNMASK** 권한이 없는 사용자가 내보낸다고 가정), 가져온 데이터베이스에는 정적으로 마스킹된 데이터가 포함됩니다.  
   

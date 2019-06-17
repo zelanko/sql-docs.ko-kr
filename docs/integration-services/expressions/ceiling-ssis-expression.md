@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b9c9c7ab5ed0067d86b3beaa69461ab6e90672
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725570"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING(SSIS 식)
@@ -52,7 +52,7 @@ CEILING(numeric_expression)
 CEILING(123.74)  
 ```  
   
- 124.00을 반환합니다.  
+ 124\.00을 반환합니다.  
   
 ```  
 CEILING(-124.27)  
@@ -64,7 +64,7 @@ CEILING(-124.27)
 CEILING(0.00)  
 ```  
   
- 0.00을 반환합니다.  
+ 0\.00을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FLOOR&#40;SSIS 식&#41;](../../integration-services/expressions/floor-ssis-expression.md)   
