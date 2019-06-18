@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502427"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
@@ -36,7 +36,7 @@ ms.locfileid: "56286961"
 * 공유 데이터 세트를 만들려면 [보고서 작성기를 설치](../install-windows/install-report-builder.md)합니다.  
 * 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](https://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
 * [AdventureWorks 예제 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)  
-*  또는 [Microsoft SQL Server 샘플](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 샘플 데이터베이스.
+*  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
   *  모바일 디바이스(iOS, Android 휴대폰 또는 Windows 10 디바이스)에[Power BI 모바일 앱을 다운로드](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 합니다.  
@@ -121,7 +121,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
 
 7. **추세 집합** 상자에서 **데이터 세트 추세**를 클릭합니다.  
   
-6. **데이터 세트 추세 선택** 상자에서 줄임표(**...**)를 클릭합니다.  
+6. **데이터 세트 추세 선택** 상자에서 줄임표( **...** )를 클릭합니다.  
    
 7. 필드를 선택하고 **확인**을 클릭합니다.  
 

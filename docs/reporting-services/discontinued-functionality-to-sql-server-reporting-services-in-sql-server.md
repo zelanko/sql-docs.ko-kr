@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
 ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503985"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)에서 지원되지 않는 기능

@@ -9,10 +9,10 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580661"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "65580661"
   
 -   다른 모든 행 및 열은 각 보고서 항목의 크기에 따라 커질 수 있습니다.  
   
--   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
+-   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0\.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
   
   
 ##  <a name="Interactivity"></a> 상호 작용  

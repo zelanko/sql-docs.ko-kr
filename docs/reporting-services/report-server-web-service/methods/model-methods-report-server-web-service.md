@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a6800914614ba495eb56ff38beaf7749aaa10976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284561"
 ---
 # <a name="model-methods---report-server-web-service"></a>모델 메서드 - 보고서 서버 웹 서비스
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47623302"
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|모델 항목에 대한 보안 정책을 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

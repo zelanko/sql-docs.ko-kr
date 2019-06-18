@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295051"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200546"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
 다양한 데이터 시각화와 함께 모바일 디바이스용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 
@@ -37,13 +37,13 @@ ms.locfileid: "56295051"
 -  [SQL Server 모바일 보고서 게시자](https://go.microsoft.com/fwlink/?LinkID=733527)다운로드  
 -  [Reporting Services 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [전체 연습: SQL Server Reporting Services에서 모바일 보고서 및 KPI 만들기](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/)(Christopher Finlan의 블로그)  
-- [디자인 먼저 진행 또는 데이터 먼저 입력](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): 먼저 시뮬레이션된 데이터로 보고서를 디자인할지 또는 사용자 고유의 데이터로 시작할지 결정합니다.  
-- [Reporting Services 모바일 보고서에 대한 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): 공유 데이터 세트의 데이터를 사용하거나 모바일 보고서에서 사용할 Excel 통합 문서에서 데이터를 준비합니다.
-- [Reporting Services의 모바일 보고서 및 KPI에서 데이터 새로 고침이 작동하는 방식](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/)(Christopher Finlan의 블로그): 공유 데이터 세트의 캐싱에 대해 읽어봄으로써 설정 데이터를 새로 고침 빈도를 제어하고 보고서 성능을 향상시킬 수 있습니다.
+- [디자인 우선 또는 데이터 우선](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): 먼저 시뮬레이션된 데이터로 보고서를 디자인할지 또는 사용자 고유의 데이터로 시작할지 결정합니다.  
+- [Reporting Services 모바일 보고서용 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): 공유 데이터 세트의 데이터를 사용하거나 모바일 보고서에서 사용할 Excel 통합 문서에서 데이터를 준비합니다.
+- [Reporting Services의 모바일 보고서 및 KPI에서 데이터 새로 고침이 작동하는 방식](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan의 블로그): 데이터 새로 고침 빈도 및 보고서 성능 향상을 제어할 수 있도록 공유 데이터 세트의 캐싱을 설정하는 방법을 알아봅니다.
 - [모바일 보고서의 시각화](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [모바일 보고서의 계기](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [모바일 보고서의 맵](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- 회사의 색 및 로고로[웹 포털 및 모바일 보고서 브랜딩](../../reporting-services/branding-the-web-portal.md) 
+- 회사의 색 및 로고로[웹 포털 및 모바일 보고서 브랜딩](../../reporting-services/branding-the-web-portal.md)
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI 모바일 앱의 SSRS 모바일 보고서
 

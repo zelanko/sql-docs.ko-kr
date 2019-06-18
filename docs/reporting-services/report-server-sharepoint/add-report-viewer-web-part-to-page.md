@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574784"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
@@ -46,7 +46,7 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
     ![보고서 뷰어 웹 파트를 추가합니다.](media/sharepoint-report-viewer-web-part.png)
 
-    처음에 오류가 표시될 수 있습니다. 오류는 기본 보고서 서버 URL이 *https://localhost*로 설정되어 있으며 해당 위치에서 사용할 수 없기 때문입니다.
+    처음에 오류가 표시될 수 있습니다. 오류는 기본 보고서 서버 URL이 *https://localhost* 로 설정되어 있으며 해당 위치에서 사용할 수 없기 때문입니다.
 
 ## <a name="configure-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 구성
 
@@ -56,7 +56,7 @@ SharePoint 페이지에 보고서 뷰어 웹 파트를 추가하여 SQL Server R
 
     ![웹 파트 드롭다운 목록에서 웹 페이지를 편집합니다.](media/sharepoint-edit-web-part.png)
 
-2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. URL은 *https://myrsserver/reportserver*와 같아야 합니다.
+2. 보고서를 호스팅하는 보고서 서버에 대한 **보고서 서버 URL**을 입력합니다. URL은 *https://myrsserver/reportserver* 와 같아야 합니다.
 
 3. 웹 파트 내에서 표시하려는 보고서의 경로 및 이름을 입력합니다. */AdventureWorks Sample Reports/Company Sales*와 유사합니다. 이 예제에서는 보고서 *Company Sales*는 *AdventureWorks Sample Reports*라는 폴더에 있습니다.
 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041207"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "56298388"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-이 자습서에 소요되는 예상 시간: 20분.  
+이 자습서에 소요되는 예상 시간: 20분  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -124,7 +124,7 @@ ms.locfileid: "56298388"
   
     ```  
   
-3.  쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다.  
+3.  쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다.  
   
     쿼리가 실행되고 SalesDate, Subcategory, Product, Sales 및 Quantity 필드에 대한 결과 집합이 표시됩니다.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "56298388"
   
 3.  **홈** 탭의 **숫자** 그룹에서 **통화** 단추를 클릭합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
   
-    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [**$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **홈** 탭의 **숫자** 그룹에서 **자리 표시자 스타일** 아이콘 옆의 화살표 > **샘플 값**을 클릭합니다.  
+    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **홈** 탭의 **숫자** 그룹에서 **자리 표시자 스타일** 아이콘 옆의 화살표 > **샘플 값**을 클릭합니다.  
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   

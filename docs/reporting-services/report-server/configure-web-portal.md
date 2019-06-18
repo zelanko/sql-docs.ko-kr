@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308397"
 ---
 # <a name="configure-the-web-portal"></a>웹 포털 구성
 
@@ -80,7 +80,7 @@ ms.locfileid: "52415410"
 
 2. Internet Explorer를 엽니다.
 
-3. 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 https://\<**your-server-name**>/reports이지만, Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 https://\<**your-server-name**>/reports\<**_instancename**>입니다.
+3. 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 https://\<**your-server-name**>/reports이지만, Reporting Services를 명명된 인스턴스로 설치한 경우 기본 URL은 https://\<**your-server-name**>/reports\< **_instancename**>입니다.
 
 4. **사이트 설정**을 선택합니다.
 

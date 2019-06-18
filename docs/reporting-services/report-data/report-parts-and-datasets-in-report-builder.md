@@ -9,16 +9,16 @@ ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571192"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>보고서 작성기의 보고서 파트 및 데이터 세트
   보고서 작성기에서 보고서에 데이터를 포함하는 가장 쉬운 방법은 보고서 파트 갤러리에서 보고서 파트를 추가하는 것입니다. 보고서 파트에는 파트가 종속되는 *종속 데이터 세트*라는 데이터 세트가 들어 있습니다. 종속 데이터 세트는 공유 데이터 원본을 기반으로 하며 포함된 데이터 세트 또는 공유 데이터 세트일 수 있습니다. [보고서 파트](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
- 보고서에 데이터를 포함하는 또 다른 쉬운 방법은 공유 데이터 세트를 사용하는 것입니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에 데이터를 포함하는 또 다른 쉬운 방법은 공유 데이터 세트를 사용하는 것입니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,9 +35,9 @@ ms.locfileid: "65571192"
   
  포함된 데이터 세트의 데이터 및 데이터 옵션을 변경하려면 데이터 세트를 만들었을 때처럼 쿼리를 비롯한 데이터 세트 속성을 편집하면 됩니다.  
   
- 공유 데이터 세트의 데이터 및 데이터 옵션을 변경하려면 보고서 서버에서 공유 데이터 세트 정의를 변경하면 됩니다. 단, 이 경우 해당하는 사용 권한이 있어야 합니다. 필터와 계산 필드를 추가하고 대/소문자 구분 등의 데이터 옵션을 변경하여 보고서에서 공유 데이터 세트 인스턴스를 사용자 지정할 수도 있습니다. 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 공유 데이터 세트의 데이터 및 데이터 옵션을 변경하려면 보고서 서버에서 공유 데이터 세트 정의를 변경하면 됩니다. 단, 이 경우 해당하는 사용 권한이 있어야 합니다. 필터와 계산 필드를 추가하고 대/소문자 구분 등의 데이터 옵션을 변경하여 보고서에서 공유 데이터 세트 인스턴스를 사용자 지정할 수도 있습니다. 자세한 내용은 [포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
- 공유 데이터 세트의 정의를 변경하는 방법 또는 보고서에서 공유 데이터 세트의 최신 데이터 변경 내용을 표시하는 방법에 대한 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
+ 공유 데이터 세트의 정의를 변경하는 방법 또는 보고서에서 공유 데이터 세트의 최신 데이터 변경 내용을 표시하는 방법에 대한 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Publishing"></a> 공유 데이터 세트로 종속 데이터 세트 게시  
  종속 데이터 세트가 포함된 보고서 항목을 게시할 때는 각 데이터 세트를 공유 데이터 세트 또는 포함된 데이터 세트(보고서 항목에 포함된 상태로 유지됨)로 게시할 수 있습니다.  
@@ -55,6 +55,6 @@ ms.locfileid: "65571192"
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [보안&#40;보고서 작성기&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

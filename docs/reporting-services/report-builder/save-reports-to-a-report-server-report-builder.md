@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580668"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>보고서 서버에 보고서 저장(보고서 작성기)
@@ -23,7 +23,7 @@ ms.locfileid: "65580668"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>보고서 서버에 보고서를 저장하려면  
   
-1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장**  대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. 다른 이름으로 저장 옵션을 사용하여 위치를 변경할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "65580668"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>보고서를 다른 이름으로 저장하려면  
   
-1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **다른 이름으로 저장**을 클릭합니다. **\<Report Item>으로 저장**  대화 상자가 열립니다.  
   
 2.  보고서를 저장할 보고서 서버 위치 또는 파일 공유로 이동합니다.  
   

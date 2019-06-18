@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], application building
 - Web service [Reporting Services], client creation
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2d5ec43cbde8c130b346072774edcf94f44f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284652"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 메서드, 기본 유형, 사용자 정의 복합 형식 등과 같은 친숙한 프로그래밍 구문을 사용하여 웹 서비스 작업을 수행할 수 있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에는 모든 W3C(World Wide Web 컨소시엄) 표준 호환 웹 서비스를 호출할 수 있는 웹 서비스 클라이언트를 만드는 데 사용할 수 있는 인프라와 도구가 포함되어 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "47798151"
 |[웹 서비스 메서드 인수 제공](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|웹 서비스 메서드를 호출하고 메서드 인수를 제공하는 방법을 설명합니다.|  
 |[선택적 웹 서비스 개체에 대한 값 생략](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|선택적 웹 서비스 개체에 대한 값을 생략하는 방법을 설명합니다.|  
 |[보안 웹 서비스 메서드 사용](../../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)|**SecureConnectionLevel** 설정 및 이러한 설정이 Reporting Services SOAP API의 사용에 영향을 미치는 방식에 대해 설명합니다.|  
-|[장치 정보 설정을 렌더링 확장 프로그램에 전달](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|보고서를 다양한 형식으로 렌더링하는 데 사용되는 장치 정보 설정을 설명합니다.|  
+|[디바이스 정보 설정을 렌더링 확장 프로그램에 전달](../../../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)|보고서를 다양한 형식으로 렌더링하는 데 사용되는 장치 정보 설정을 설명합니다.|  
 |[Reporting Services 배달 확장 프로그램 설정](../../../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md)|보고서 서버 전자 메일을 사용하여 보고서를 배달하는 데 사용되는 설정을 설명합니다.|  
 |[Reporting Services SOAP 헤더 사용](../../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더의 사용에 대해 설명합니다.|  
 |[Reporting Services의 예외 처리 소개](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 오류를 처리하는 방법에 대해 설명합니다.|  

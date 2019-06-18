@@ -9,10 +9,10 @@ ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4cae758708ce0ac703aa2b6e82b574b45c54195a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572271"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "65572271"
   
 3.  **차트** 섹션에서 **색상표** 속성에 대해 **사용자 지정**을 선택합니다.  
   
-4.  CustomPaletteColors 속성에서 컬렉션 편집(**...**) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
+4.  CustomPaletteColors 속성에서 컬렉션 편집( **...** ) 단추를 클릭합니다. **ReportColorExpression 컬렉션 편집기** 가 열립니다.  
   
 5.  색을 추가하려면 **추가** 를 클릭합니다. 드롭다운 목록에서 색을 선택하거나 식을 선택한 다음 특정 색의 16진수 값을 지정합니다. 예를 들어 ff6600은 "주황색"을 의미합니다.  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512395"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
 부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "47700377"
   
 2.  정수 형식의 **productid**매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 집합 [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)인스턴스를 만듭니다.  
+    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 세트([DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md))의인스턴스를 만듭니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "47700377"
   
 2.  정수 형식의 **productid**매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 집합 [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)인스턴스를 만듭니다.  
+    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 세트([DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md))의인스턴스를 만듭니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "47700377"
 6.  파일을 저장합니다.  
   
 ## <a name="next-task"></a>다음 태스크  
-자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 성공적으로 만들었습니다. 이제 웹 사이트 애플리케이션을 빌드하고 실행합니다. [9단원: 응용 프로그램 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)을 참조하세요.  
+자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 성공적으로 만들었습니다. 이제 웹 사이트 애플리케이션을 빌드하고 실행합니다. [9단원: 애플리케이션 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)을 참조하세요.  
   
   
   

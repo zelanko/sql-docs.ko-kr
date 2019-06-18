@@ -9,10 +9,10 @@ ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574764"
 ---
 # <a name="cache-a-shared-dataset"></a>공유 데이터 세트 캐시
@@ -20,7 +20,7 @@ ms.locfileid: "65574764"
   
  공유 데이터 세트 또는 캐시 새로 고침 계획을 기반으로 보고서를 실행하는 사용자는 쿼리 캐시를 만들며 두 경우 모두 캐시 만료 옵션에 따라 캐시를 사용할 수 있습니다.  
   
- 캐시할 수 있는 공유 데이터 세트 유형은 제한되어 있습니다. 예를 들어 사용자 ID에 따라 데이터가 달라지는 경우 또는 보고서를 요청하는 사용자의 보안 토큰을 사용하여 데이터가 검색되는 경우 쿼리 결과를 캐시할 수 없습니다. 자세한 내용은 [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md) 및 [보고서 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/caching-reports-ssrs.md)을 참조하세요.  
+ 캐시할 수 있는 공유 데이터 세트 유형은 제한되어 있습니다. 예를 들어 사용자 ID에 따라 데이터가 달라지는 경우 또는 보고서를 요청하는 사용자의 보안 토큰을 사용하여 데이터가 검색되는 경우 쿼리 결과를 캐시할 수 없습니다. 자세한 내용은 [공유 데이터 세트 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md) 및 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)을 참조하세요.  
   
 ### <a name="to-schedule-the-expiration-of-a-cached-report"></a>캐시된 보고서의 만료를 예약하려면  
   

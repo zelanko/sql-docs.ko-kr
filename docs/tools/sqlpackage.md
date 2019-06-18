@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269915"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527595"
   
 **SqlPackage.exe** 명령줄을 사용하면 작업별 매개 변수 및 속성과 함께 이러한 작업을 지정할 수 있습니다.  
 
-**[최신 버전 다운로드](sqlpackage-download.md)**. 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](release-notes-sqlpackage.md)합니다.
+**[최신 버전 다운로드](sqlpackage-download.md)** . 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
   
 ## <a name="command-line-syntax"></a>명령줄 구문
 

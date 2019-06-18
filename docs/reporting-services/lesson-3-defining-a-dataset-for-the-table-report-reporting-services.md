@@ -9,10 +9,10 @@ ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: eaa2af570ae363e6a48c8d14e5b73c70e6790b5c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106022"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services)
@@ -60,7 +60,7 @@ ms.locfileid: "65106022"
     HAVING ppc.Name = 'Clothing'
     ```
 
-7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다. **쿼리 디자이너** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 봅니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
+7. (선택 사항) **쿼리 디자이너** 단추를 선택합니다. 텍스트 기반 ‘쿼리 디자이너’에 쿼리가 표시됩니다.  **쿼리 디자이너** 도구 모음에서 ![ssrs_querydesigner_run](media/ssrs-querydesigner-run.png) **실행** 단추를 선택하여 쿼리 결과를 봅니다. 표시되는 데이터 세트에는 AdventureWorks2016 데이터베이스에 있는 테이블 4개의 필드 6개가 포함됩니다. 쿼리는 Transact-SQL 기능을 별칭으로 사용합니다. 예를 들어 SalesOrderHeader 테이블을 *soh*라고 합니다.
 
 8. **확인**을 선택하여 **쿼리 디자이너**를 종료합니다.
 

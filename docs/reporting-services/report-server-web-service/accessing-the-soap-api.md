@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c125c4e1c413fd974ee80fd7f06c8c9f69f33b8d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c78f160e51265e4ce87a191aa3076dc4464c31d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026168"
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
   보고서 서버 웹 서비스는 HTTP를 통한 SOAP(Simple Object Access Protocol)을 사용하며 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스 역할을 합니다. 웹 서비스는 보고서 실행용과 보고서 관리용으로 엔드포인트를 두 개 제공하며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 전체 기능에 액세스하는 데 사용할 수 있는 메서드 및 복합 형식 개체 집합으로 구성됩니다. 서비스를 호출하려면 Reporting Services WSDL(웹 서비스 기술 언어)을 참조해야 합니다.  
@@ -55,7 +55,7 @@ https://server/reportserver/ReportService2010.asmx?wsdl
 |*reportserver*|XML 웹 서비스가 포함된 폴더의 이름입니다. 이 폴더는 설치 중 구성됩니다.|  
 |*\<endpoint name>.asmx*|웹 서비스 엔드포인트의 이름입니다.|  
   
- WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
+ WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl 에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

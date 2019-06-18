@@ -9,19 +9,19 @@ helpviewer_keywords:
 - HelpLink element
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c7df237a967b2601667ccf8b4849bfa146c6103
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991682"
 ---
 # <a name="helplink-element"></a>HelpLink 요소
   **Detail** 속성의 **HelpLink** 요소는 보고서 서버에서 생성되는 URL 문자열입니다. 이 URL은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 도움말 및 지원에서 관리되는 웹 페이지를 대상으로 하며 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 발생하는 특정 오류에 대한 추가 도움말 및 기술 자료 문서를 제공합니다. URL의 구문은 다음과 같습니다.  
   
- **https://** www.microsoft.com**/** 제품**/** ee**/** transform.aspx **?EvtSrc**=v_alue_**&EvtID**=_값_**&ProdName**=_값_**&ProdVer**=*값*  
+ **https://** www.microsoft.com **/** 제품 **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_값_ **&ProdName**=_값_ **&ProdVer**=*값*  
   
  다음 표는 **HelpLink** URL의 인수를 나열합니다.  
   

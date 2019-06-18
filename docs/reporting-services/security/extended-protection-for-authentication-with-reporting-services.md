@@ -9,10 +9,10 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b273ef327b666c7c660349657fa9ca9eabe9f4a4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570992"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 인증에 대한 확장된 보호
@@ -112,7 +112,7 @@ SSRS는 운영 체제에서 사용하도록 설정된 확장된 보호를 지원
   
 |설정|설명|  
 |-------------|-----------------|  
-|**RSWindowsExtendedProtectionLevel**|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은<br /><br /> **Off**: 기본값입니다. 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> **Allow** 를 사용하는 경우 확장된 보호가 지원은 되지만 반드시 사용할 필요는 없습니다.  이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. - **RsWindowsExtendedProtectionScenario**를 설정하여 보호 적용 방법을 결정합니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> **Require** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용되지 **않습니다** .|  
+|**RSWindowsExtendedProtectionLevel**|확장된 보호를 적용하는 수준을 지정합니다. 유효한 값은<br /><br /> **Off**: 기본값입니다. 채널 바인딩이나 서비스 바인딩을 확인하지 않도록 지정합니다.<br /><br /> **Allow** 를 사용하는 경우 확장된 보호가 지원은 되지만 반드시 사용할 필요는 없습니다.  이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다. \- **RsWindowsExtendedProtectionScenario**를 설정하여 보호 적용 방법을 결정합니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용됩니다.<br /><br /> **Require** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -확장된 보호를 지원하는 운영 체제에서 실행되는 클라이언트 애플리케이션에 대해 확장된 보호가 적용됩니다.<br /><br /> -확장된 보호를 지원하지 않는 운영 체제에서 실행되는 애플리케이션에 대해 인증이 허용되지 **않습니다** .|  
 |**RsWindowsExtendedProtectionScenario**|유효성을 검사할 확장된 보호의 형식(채널 바인딩, 서비스 바인딩, 둘 다)을 지정합니다. 유효한 값은<br /><br /> **Proxy**: 기본값입니다. 이 값을 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -채널 바인딩 토큰이 있으면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Any** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> -Windows NTLM, Kerberos 및 협상 인증이 지정되며 채널 바인딩은 필요하지 않습니다.<br /><br /> -서비스 바인딩이 적용됩니다.<br /><br /> **Direct** 를 사용하는 경우 다음 사항이 지정됩니다.<br /><br /> --CBT가 있고, 현재 서비스로의 SSL 연결이 있으며, SSL 연결의 CBT가 NTLM/Kerberos/협상 토큰의 CBT와 일치하면 Windows NTLM, Kerberos 및 협상 인증이 지정됩니다.<br /><br /> -서비스 바인딩이 적용되지 않습니다.<br /><br /> <br /><br /> 참고: **RsWindowsExtendedProtectionLevel** 이 **OFF** 로 설정되어 있으면 **RsWindowsExtendedProtectionScenario**설정은 무시됩니다.|  
   
  **rsreportserver.config** 구성 파일의 항목 예:  

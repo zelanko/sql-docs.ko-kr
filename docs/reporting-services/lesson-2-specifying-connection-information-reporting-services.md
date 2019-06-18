@@ -9,17 +9,17 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106041"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: 연결 정보 지정(Reporting Services)
 
 1단원에서는 [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 Tutorial 프로젝트에 추가했습니다.
   
-이 단원에서는 보고서에서 관계형 데이터베이스 또는 다른 원본의 데이터에 액세스하는 데 사용하는 연결 정보 및 데이터 원본을 정의해 보겠습니다.
+이 단원에서는 보고서에서 관계형 데이터베이스 또는 다른 원본의 데이터에 액세스하는 데 사용하는 연결 정보 및 데이터 원본을 정의해 보겠습니다. 
 
 이 보고서에 대한 데이터 원본으로 AdventureWorks2016 샘플 데이터베이스를 추가하겠습니다. 이 자습서에서는 데이터베이스가 로컬 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]의 기본 인스턴스에 있다고 가정합니다.  
 

@@ -8,17 +8,17 @@ ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b6ed33ec1aac9b875a4c26b3aa3b209faf118267
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225868"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>보안 확장 프로그램 개요 - Reporting Services(SSRS)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램은 사용자 또는 그룹에 대한 인증 및 권한 부여를 제공합니다. 즉, 여러 사용자들이 보고서 서버에 로그온한 다음 각자의 ID에 준하여 서로 다른 태스크나 작업을 수행할 수 있습니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 계정 프로토콜을 사용하여 시스템에 계정을 보유하고 있다고 주장하는 사용자의 신원을 확인하는 방식의 Windows 기반 인증 확장 프로그램을 사용합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 역할 기반 보안 시스템을 사용하여 사용자에게 권한을 부여합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델은 다른 기술의 역할 기반 보안 모델과 비슷합니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램은 사용자 또는 그룹에 대한 인증 및 권한 부여를 제공합니다. 즉, 여러 사용자들이 보고서 서버에 로그온한 다음 각자의 ID에 준하여 서로 다른 태스크나 작업을 수행할 수 있습니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 Windows 계정 프로토콜을 사용하여 시스템에 계정을 보유하고 있다고 주장하는 사용자의 신원을 확인하는 방식의 Windows 기반 인증 확장 프로그램을 사용합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 역할 기반 보안 시스템을 사용하여 사용자에게 권한을 부여합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델은 다른 기술의 역할 기반 보안 모델과 비슷합니다.  
   
  보안 확장 프로그램은 확장 가능한 개방형 API를 기반으로 하므로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 새 인증 및 권한 부여 확장 프로그램을 만들 수 있습니다. 다음은 Forms 기반 인증 및 권한 부여를 사용하는 일반적인 보안 확장 구현의 예입니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47636671"
 13. 세션이 종료될 때까지 사용자가 계속해서 보고서 서버에 작업을 요청합니다.  
   
 ## <a name="when-to-implement-a-security-extension"></a>보안 확장 프로그램 구현 시기  
- 가능하면 Windows 인증을 사용하는 것이 좋습니다. 그러나 다음 두 가지 경우에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 사용자 지정 인증 및 권한 부여가 적합할 수 있습니다.  
+ 가능하면 Windows 인증을 사용하는 것이 좋습니다. 그러나 다음 두 가지 경우에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에 사용자 지정 인증 및 권한 부여가 적합할 수 있습니다.  
   
 -   인터넷 또는 엑스트라넷 애플리케이션에서 Windows 계정을 사용할 수 없는 경우  
   

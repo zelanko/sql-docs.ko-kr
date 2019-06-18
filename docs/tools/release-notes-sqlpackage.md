@@ -11,11 +11,11 @@ author: pensivebrian
 ms.author: broneill
 manager: kenvh
 ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183696"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -162,7 +162,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fix | 세부 정보 |
 | :-- | :------ |
-| Azure SQL Database .bacpac를 온-프레미스 인스턴스로 가져올 때 ‘이 버전의 SQL Server에서는 암호가 없는 데이터베이스 마스터 키 지원되지 않습니다’로 인한 오류를 수정했습니다. | &nbsp; |
+| Azure SQL Database .bacpac를 온-프레미스 인스턴스로 가져올 때 ‘이 버전의 SQL Server에서는 암호가 없는 데이터베이스 마스터 키 지원되지 않습니다’로 인한 오류를 수정했습니다.  | &nbsp; |
 | 그래프 테이블에 대한 확인되지 않은 의사(pseudo) 열 오류를 수정했습니다. | &nbsp; |
 | 스키마를 비교하기 위해 SQL 인증과 함께 SchemaCompareDataModel 사용을 수정했습니다. | &nbsp; |
 | &nbsp; | &nbsp; |
@@ -176,7 +176,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | 기능 | 세부 정보 |
 | :------ | :------ |
-| SQL 2017 이상 및 Azure SQL Database에서 ‘임시 보존 정책’에 대한 지원을 추가했습니다. | &nbsp; |
+| SQL 2017 이상 및 Azure SQL Database에서 ‘임시 보존 정책’에 대한 지원을  추가했습니다. | &nbsp; |
 | 진단 정보를 저장할 파일 경로를 지정하는 /DiagnosticsFile:"C:\Temp\sqlpackage.log" 명령줄 매개 변수를 추가했습니다. | &nbsp; |
 | 진단 정보를 콘솔에 기록하는 /Diagnostics 명령줄 매개 변수를 추가했습니다. | &nbsp; |
 | &nbsp; | &nbsp; |

@@ -11,10 +11,10 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580315"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
@@ -22,9 +22,9 @@ ms.locfileid: "65580315"
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
- 1. 이중선 테두리와 링크를 비롯한 다양한 서식 스타일이 있는 입력란  
+ 1\. 이중선 테두리와 링크를 비롯한 다양한 서식 스타일이 있는 입력란  
   
- 2. 파선 테두리와 원시 HTML 및 렌더링된 HTML이 있는 입력란  
+ 2\. 파선 테두리와 원시 HTML 및 렌더링된 HTML이 있는 입력란  
   
  C. 텍스트 레이블과 자리 표시자가 있는 입력란  
   

@@ -10,10 +10,10 @@ author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
 ms.openlocfilehash: 2e1e6e6773644b12b6259349c522113ec66a0d43
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502770"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
@@ -335,7 +335,7 @@ function formatErrors($errors)
 }
 ?>
 ```
-브라우저에서 https://localhost/testsql.php(macOS에서는 https://localhost:8080/testsql.php)를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다.
+브라우저에서 https://localhost/testsql.php (macOS에서는 https://localhost:8080/testsql.php )를 가리킵니다. SQL Server/Azure SQL 데이터베이스에 연결할 수 있어야 합니다.
 
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)

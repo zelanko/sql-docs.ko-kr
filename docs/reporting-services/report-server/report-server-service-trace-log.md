@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581382"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
@@ -101,9 +101,9 @@ Windows용 Dr. Watson 도구에서 덤프 파일 저장에 사용하는 위치�
 ## <a name="previous-versions"></a>이전 버전
 
 이전 릴리스의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서는 애플리케이션마다 하나씩, 여러 개의 추적 로그 파일이 있었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서
-+ ReportServerWebApp_*\<timestamp>*.log
-+ ReportServer_*\<timestamp>*.log
-+ ReportServerService_main_*\<timestamp>*.log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>관련 항목:
 

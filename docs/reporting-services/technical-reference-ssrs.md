@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d8ed5f298da17422e90cb6ab29fba596a0422079
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021037"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63301527"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50021037"
   
  [HTML 뷰어 및 보고서 도구 모음](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
- [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
  ![작은 파일 폴더 아이콘](../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **보고서 서버 명령 프롬프트 유틸리티**  
  [RS.exe 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  

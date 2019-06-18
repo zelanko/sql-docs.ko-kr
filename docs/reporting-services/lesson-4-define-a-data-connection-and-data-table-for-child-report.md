@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651363"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 부모 보고서를 디자인 한 후에는 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "50031462"
   
 1.  **웹 사이트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
+2.  **새 항목 추가** 대화 상자에서 **DataSet**을 선택한 다음, **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
     그러면 프로젝트에 새 XSD 파일 **DataSet2.xsd**가 추가되고 데이터 세트 디자이너가 열립니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "50031462"
   
 6.  5단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 애플리케이션 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
-7.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
+7.  **애플리케이션 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
   
 8.  **명령 유형을 선택하세요.** 페이지에서 **SQL 문 사용**을 선택하고 **다음**을 선택합니다.  
   

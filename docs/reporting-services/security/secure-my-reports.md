@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570694"
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
@@ -32,7 +32,7 @@ ms.locfileid: "65570694"
   
  **내 보고서** 역할 할당은 다음과 같은 요소로 구성됩니다.  
   
--   사용자 폴더\\*\<username>* \내 보고서 폴더에 있는 사용자의 내 보고서 폴더  
+-   사용자 폴더\\ *\<username>* \내 보고서 폴더에 있는 사용자의 내 보고서 폴더  
   
 -   내 보고서 폴더 활성화 시 결정되는 사용자 계정. 사용자가 보고서 관리자에서 내 보고서 폴더를 클릭하거나 보고서 디자이너에서 내 보고서 폴더에 보고서를 게시할 때 폴더가 활성화됩니다. 이 폴더는 사용자가 내 보고서 링크에 대한 속성을 요청할 때도 활성화됩니다.  
   

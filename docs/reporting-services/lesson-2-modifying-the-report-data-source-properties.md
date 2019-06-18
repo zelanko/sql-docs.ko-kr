@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651740"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기 &#40;SSRS 자습서 &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
+이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
   
 또한 구독이 특정 주문 및 렌더링 형식에 대해 보고서의 서로 다른 인스턴스를 출력할 수 있도록 `[Order]` 에 대해 보고서를 필터링하는 매개 변수를 사용하기 위해 데이터 세트 및 보고서를 수정합니다.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "52399916"
   
 1.  관리자 권한으로 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털로 이동합니다. 예를 들어 Internet Explorer 아이콘을 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.  
  
-2.    웹 포털 URL로 이동합니다.  예를 들어 다음과 같이 사용할 수 있습니다.   
+2.    웹 포털 URL로 이동합니다.  예를 들어   
     `https://<server name>/reports`보고서를 배포합니다.  
     `https://localhost/reports`
  **참고:** 웹 *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "52399916"
 10. **저장**을 클릭합니다.
 11. **취소**를 클릭합니다.  
   
-11. 보고서를 확인하여 지정한 자격 증명으로 보고서가 실행되는지 확인합니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+11. 보고서를 확인하여 지정한 자격 증명으로 보고서가 실행되는지 확인합니다. .  
   
 ## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset을 수정하려면  
  다음 단계에서는 매개 변수를 사용하여 주문 번호에 따라 데이터 세트를 필터링하도록 데이터 세트를 수정합니다.
 1.  에서 **Sales Orders** 보고서를 엽니다.(!!) [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
-2.  `AdventureWorksDataset` 데이터 집합을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
+2.  `AdventureWorksDataset` 데이터 세트를 마우스 오른쪽 단추로 클릭하고 **데이터 세트 속성**을 클릭합니다.  
     ![ssrs_tutorial_datadriven_datasetproperties](../reporting-services/media/ssrs-tutorial-datadriven-datasetproperties.png)  
 3.  `WHERE (UPPER(SalesOrderNumber) =UPPER(@OrderNumber) or  @OrderNumber IS NULL)` 문 앞에 `Group By` 문을 추가합니다. 전체 쿼리 구문은 다음과 같습니다.  
   

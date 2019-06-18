@@ -5,15 +5,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c68f8070bba8f392ded453f36078f0141d80ee04
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225686"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>팜에 추가 보고서 서버 추가(SSRS 확장)
 
@@ -53,7 +53,7 @@ ms.locfileid: "52711896"
   
 -   (4) 소프트웨어 또는 하드웨어 네트워크 부하 분산 솔루션(NLB)을 나타냅니다.  
   
- ![Reporting Services 응용 프로그램 서버 추가](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Reporting Services 응용 프로그램 서버 추가")  
+ ![Reporting Services 애플리케이션 서버 추가](../../reporting-services/install-windows/media/rs-sharepointscale.gif "Reporting Services 애플리케이션 서버 추가")  
   
  다음 단계에서는 관리자가 서버를 설치하고 구성한다고 가정합니다. 서버는 팜에 새 애플리케이션 서버로 설치되고 WFE(웹 프런트 엔드)로 사용되지 않습니다.  
   

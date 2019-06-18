@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2310ee8969c92ac832a2426654af5b6f69841c75
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63129669"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃
 이제 [에서](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services 모바일 보고서를 만들었으므로 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]해당 보고서의 휴대폰 또는 태블릿 버전의 레이아웃을 지정할 수 있습니다.  

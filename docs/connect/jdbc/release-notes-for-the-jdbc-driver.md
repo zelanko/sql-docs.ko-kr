@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8f5f520be226d74c2c6530aacee7916aa381dc06
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778144"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대한 릴리스 정보
@@ -33,7 +33,7 @@ ms.locfileid: "66778144"
 | 규정 준수 변경 | 세부 정보 |
 | :---------------- | :------ |
 | JDBC Driver 7.2의 최신 업데이트를 다운로드합니다. | &bull; &nbsp; [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| JDBC API 사양 4.2를 완벽히 준수합니다. | 7.2 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다.<br/><br/>예를 들어 7.2 패키지의 mssql-jdbc-7.2.2.jre11.jar 파일은 Java 11과 함께 사용해야 합니다. |
+| JDBC API 사양 4.2를 완벽히 준수합니다. | 7\.2 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다.<br/><br/>예를 들어 7.2 패키지의 mssql-jdbc-7.2.2.jre11.jar 파일은 Java 11과 함께 사용해야 합니다. |
 | JDK 1.8 외에도 JDK(Java Development Kit) 버전 11.0을 지원합니다. | SQL Server용 Microsoft JDBC Driver 7.2는 이제 JDK 1.8 외에도 JDK(Java Development Kit) 버전 11.0과도 호환됩니다. |
 | &nbsp; | &nbsp; |
 
@@ -42,7 +42,7 @@ ms.locfileid: "66778144"
 >
 > ActivityID가 제대로 정리되지 않는 문제를 수정하기 위해 드라이버가 또 한번 업데이트되었습니다. 새 jar(버전 7.2.2)는 2019년 4월 16일에 릴리스되었습니다.
 > 
-> 7.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하는 것이 좋습니다. 자세한 내용은 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 및 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)의 릴리스 정보를 참조하세요.
+> 7\.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하는 것이 좋습니다. 자세한 내용은 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 및 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)의 릴리스 정보를 참조하세요.
 
 ### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory MSI(관리 서비스 ID)  인증
 
@@ -96,7 +96,7 @@ ms.locfileid: "66778144"
 
 ## <a name="70"></a>7.0
 
-SQL Server용 Microsoft JDBC Driver 7.0은 JDBC API 사양 4.2를 완벽하게 준수합니다. 7.0 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 7.0 패키지의 mssql-jdbc-7.0.0.jre10.jar 파일은 Java 10과 함께 사용해야 합니다.
+SQL Server용 Microsoft JDBC Driver 7.0은 JDBC API 사양 4.2를 완벽하게 준수합니다. 7\.0 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 7.0 패키지의 mssql-jdbc-7.0.0.jre10.jar 파일은 Java 10과 함께 사용해야 합니다.
 
 ### <a name="support-for-jdk-10"></a>JDK 10 지원
 
@@ -153,7 +153,7 @@ SQL Server용 Microsoft JDBC Driver 7.0에서는 “ADAL4J(Java용 Microsoft Azu
 
 ## <a name="64"></a>6.4
 
-SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6.4 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 6.4 패키지의 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8과 함께 사용해야 합니다.
+SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6\.4 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 6.4 패키지의 mssql-jdbc-6.4.0.jre8.jar 파일은 Java 8과 함께 사용해야 합니다.
 
 ### <a name="support-for-jdk-9"></a>JDK 9 지원
 
@@ -209,14 +209,14 @@ JDBC Driver에서 “ADAL4J(Java용 Microsoft Azure Active Directory 인증 라�
 
 ## <a name="62"></a>6.2
 
-SQL Server용 Microsoft JDBC Driver 6.2는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6.2 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 6.2 패키지의 mssql-jdbc-6.2.2.jre8.jar 파일은 Java 8과 함께 사용해야 합니다.
+SQL Server용 Microsoft JDBC Driver 6.2는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6\.2 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다. 예를 들어 6.2 패키지의 mssql-jdbc-6.2.2.jre8.jar 파일은 Java 8과 함께 사용해야 합니다.
 
 > [!NOTE]  
 > 2017년 6월 29일에 릴리스된 JDBC 6.2 RTW에서 메타데이터 캐싱 개선 관련 문제가 발견되었습니다. 개선 내용은 롤백되었고 새 jar(버전 6.2.1)가 2017년 7월 17일에 릴리스되었습니다. 
 >
 > 또 한번의 개선에서 Azure Key Vault 종속 라이브러리 버전을 1.0.0으로 업그레이드했고 새 jar(버전 6.2.2)가 2017년 10월 19일에 릴리스되었습니다.
 >
-> [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 및 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver)에서 JDBC Driver 6.2의 최신 업데이트를 다운로드하세요. 6.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하세요. 자세한 내용은 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 및 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)의 릴리스 정보를 참조하세요.
+> [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) 및 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver)에서 JDBC Driver 6.2의 최신 업데이트를 다운로드하세요. 6\.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하세요. 자세한 내용은 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 및 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)의 릴리스 정보를 참조하세요.
 
 ### <a name="azure-ad-support-for-linux"></a>Linux에 대한 Azure AD 지원
 
@@ -247,7 +247,7 @@ SQL Server용 Microsoft JDBC Driver 6.1은 JDBC API 사양 4.1 및 4.2를 완벽
 
 ## <a name="60"></a>6.0
 
-SQL Server용 Microsoft JDBC Driver 6.0은 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6.0 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 6.0 패키지의 sqljdbc42.jar는 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
+SQL Server용 Microsoft JDBC Driver 6.0은 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 6\.0 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 6.0 패키지의 sqljdbc42.jar는 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
 
 적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 6.0.7507.100"이면 JDBC Driver 6.0 패키지가 있는 것입니다.
 
@@ -284,7 +284,7 @@ TVP를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서
 
 ## <a name="42"></a>4.2
 
-SQL Server용 Microsoft JDBC Driver 4.2는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 4.2 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 4.2 패키지의sqljdbc42.jar 파일은 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
+SQL Server용 Microsoft JDBC Driver 4.2는 JDBC API 사양 4.1 및 4.2를 완벽하게 준수합니다. 4\.2 패키지의 jar는 JDBC API 버전에 따라 이름이 지정됩니다. 예를 들어 4.2 패키지의sqljdbc42.jar 파일은 JDBC API 4.2를 준수합니다. 마찬가지로 sqljdbc41.jar 파일은 JDBC API 4.1을 준수합니다.
 
 적절한 sqljdbc42.jar 또는 sqljdbc41.jar 파일이 있는지 확인하려면 다음 코드 줄을 실행합니다. 출력이 "드라이버 버전: 4.2.6420.100"이면 JDBC Driver 4.2 패키지가 있는 것입니다.
 

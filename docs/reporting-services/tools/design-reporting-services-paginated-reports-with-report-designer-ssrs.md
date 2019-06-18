@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577867"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
@@ -49,9 +49,9 @@ ms.locfileid: "65577867"
 ##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 세트  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 보고 솔루션용 공유 데이터 세트를 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 세트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
   
- 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 세트를 열 수 없습니다. 해당 기능의 경우 공유 데이터 세트 모드에서 [보고서 작성기 제작 환경&amp;#40;SSRS&amp;#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
+ 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 세트를 열 수 없습니다. 해당 기능의 경우 공유 데이터 세트 모드에서 [보고서 작성기 제작 환경&#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
   
 ##  <a name="bkmk_Reports"></a> 페이지를 매긴 보고서  
 페이지 매김 처리한 보고서는 보고서 프로젝트에 저장된 파일입니다. 보고서는 독립 실행형 보고서, 하위 보고서 또는 주 보고서의 드릴스루 동작 대상으로 사용할 수 없습니다. **TargetReportFolder** 및 기타 속성을 사용하면 보고서를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
@@ -99,7 +99,7 @@ ms.locfileid: "65577867"
  **미리 보기** 를 사용하여 보고서 데이터 및 레이아웃 디자인을 확인할 수 있습니다. 보고서를 미리 보는 경우 보고서 처리기에서 보고서 정의 스키마와 식 구문의 유효성을 검사하고 문제를 [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) 창에 나열합니다.  
   
 > [!NOTE]  
->  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>*.rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
+>  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>* .rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
   
  다음과 같은 방법으로 보고서를 미리 볼 수 있습니다.  
   

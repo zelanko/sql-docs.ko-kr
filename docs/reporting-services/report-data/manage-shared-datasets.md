@@ -9,10 +9,10 @@ ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4da49802b5f1d6aa6dbaa082c3d9a10e6273f3b8
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572064"
 ---
 # <a name="manage-shared-datasets"></a>공유 데이터 세트 관리
@@ -31,7 +31,7 @@ ms.locfileid: "65572064"
   
  공유 데이터 세트 정의에는 쿼리, 기본값을 포함하는 데이터 세트 매개 변수, 대/소문자 구분과 같은 데이터 옵션 및 데이터 세트 필터가 포함됩니다. 정의에서 설정하는 값은 공유 데이터 세트가 보고서에 포함될 때마다 사용됩니다.  
   
- 보고서에서 공유 데이터 세트를 사용하려면 보고서 작성기와 같은 애플리케이션을 열고 보고서 서버 또는 SharePoint 사이트로 이동하여 공유 데이터 세트를 선택합니다. 이렇게 하면 보고서에 공유 데이터 세트의 인스턴스가 추가됩니다. 보고서에서 공유 데이터 세트에 대한 쿼리 또는 공유 데이터 원본을 보거나 변경할 수 없습니다. 보고서의 인스턴스에 적용할 일련의 데이터 세트 속성 값을 추가로 지정할 수 있습니다. 예를 들어 필터를 추가하거나 대/소문자 구분과 같은 데이터 옵션을 변경할 수 있습니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에서 공유 데이터 세트를 사용하려면 보고서 작성기와 같은 애플리케이션을 열고 보고서 서버 또는 SharePoint 사이트로 이동하여 공유 데이터 세트를 선택합니다. 이렇게 하면 보고서에 공유 데이터 세트의 인스턴스가 추가됩니다. 보고서에서 공유 데이터 세트에 대한 쿼리 또는 공유 데이터 원본을 보거나 변경할 수 없습니다. 보고서의 인스턴스에 적용할 일련의 데이터 세트 속성 값을 추가로 지정할 수 있습니다. 예를 들어 필터를 추가하거나 대/소문자 구분과 같은 데이터 옵션을 변경할 수 있습니다. 자세한 내용은 msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="managing-shared-datasets"></a>공유 데이터 세트 관리  
  게시된 공유 데이터 세트의 속성을 관리하려면 기본 모드 보고서 서버에 대한 보고서 관리자를 사용하거나 보고서 서버를 SharePoint 통합 모드로 배포한 경우 SharePoint 사이트의 애플리케이션 페이지를 사용할 수 있습니다. 공유 데이터 세트에서 수행할 수 있는 태스크는 역할 할당, 사이트 수준 및 항목 수준 사용 권한(사용 권한 상속이 적용되는 경우에는 폴더에 대한 사용 권한 포함)에 따라 달라집니다. 공유 데이터 세트에 대한 항목 수준 보안은 보고서에 대한 항목 수준 보안과 동일한 모델을 사용합니다. 자세한 내용은 [공유 데이터 세트 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "65572064"
 |-|-|  
 |이름 편집|공유 데이터 세트의 이름을 변경합니다. 종속 항목에서의 참조는 계속 작동합니다.|  
 |설명 편집|공유 데이터 세트에 대한 설명을 변경합니다.|  
-|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 세트 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)을 참조하세요.|  
+|쿼리 실행 제한 시간 편집|쿼리 실행 제한 시간(초)을 설정합니다. 0초는 시간 제한이 없음을 의미합니다. 데이터 세트 쿼리 시간이 초과되기 전까지의 시간(초)을 결정합니다. 제한 시간 값을 지정하지 않으려면 0을 사용합니다. 자세한 내용은 [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)을 참조하세요.|  
 |종속 항목 보기|게시된 보고서 파트, 공유 데이터 원본 및 보고서와 같은 공유 데이터 세트를 사용하는 항목을 볼 수 있습니다.|  
   
  다음과 같은 추가 공유 데이터 세트 속성이 자동으로 구성됩니다.  
@@ -86,12 +86,12 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |태스크|도구|링크|  
 |----------|----------|----------|  
-|공유 데이터 세트를 추가하거나 공유 데이터 세트 정의 속성을 변경합니다.|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 공유 데이터 세트를 공유 데이터 세트가 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 세트를 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 msdn.microsoft.com의 [일반 속성 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)을 참조하세요.|  
-|공유 데이터 세트 항목 속성을 변경합니다.|보고서 관리자|[일반 속성 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
+|공유 데이터 세트를 추가하거나 공유 데이터 세트 정의 속성을 변경합니다.|보고서 작성기에서 저장<br /><br /> 보고서 디자이너에서 배포<br /><br /> 보고서 관리자에서 .rsd 파일 업로드|msdn.microsoft.com의 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [파일 업로드 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 공유 데이터 세트를 공유 데이터 세트가 종속되어 있는 공유 데이터 원본보다 먼저 업로드하는 경우 공유 데이터 세트를 공유 데이터 원본에 수동으로 바인딩해야 합니다. 자세한 내용은 msdn.microsoft.com의 [일반 속성 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)을 참조하세요.|  
+|공유 데이터 세트 항목 속성을 변경합니다.|보고서 관리자|[일반 속성 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |보고서의 공유 데이터 세트 인스턴스에 대한 추가 공유 데이터 세트 속성을 지정합니다.|보고서 작성기 보고서 디자이너|[데이터 세트 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |공유 데이터 세트의 다른 공유 데이터 원본에 바인딩합니다.|보고서 관리자|[데이터 원본 선택 페이지&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
 |데이터 세트 매개 변수의 기본값을 확인합니다.|보고서 작성기에서 열기 또는 URL 액세스 구문 사용|예를 들어<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&amp;#40;보고서 관리자&amp;#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
+|캐싱 설정|보고서 관리자|[공유 데이터 세트 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [캐싱 페이지, 공유 데이터 세트&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |캐시 새로 고침 계획 만들기 또는 편집|보고서 관리자|[캐시 새로 고침 옵션&#40;보고서 관리자&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |공유 데이터 세트 정의 스키마를 봅니다.|보고서 관리자|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |SharePoint 통합 모드에서 보고서 서버와 SharePoint 사이트 간의 공유 데이터 세트 정의 동기화|SharePoint 애플리케이션 페이지|공유 데이터 세트 항목 속성 변경<br /><br /> 캐시 옵션 변경<br /><br /> 공유 데이터 원본 변경|  
@@ -103,7 +103,7 @@ https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   공유 데이터 원본과 마찬가지로 공유 데이터 세트는 공유 데이터 세트가 사용되는 보고서와는 별도로 관리됩니다. 보고서 서버에서의 공유 데이터 세트 관리에는 공유 데이터 세트 정의를 편집하지 않고 공유 데이터 세트가 종속되는 공유 데이터 원본을 변경할 수 있는 기능이 포함됩니다.  
   
--   보고서와 마찬가지로 공유 데이터 세트도 캐시할 수 있습니다. 데이터 원본에서 필요로 하는 자격 증명은 캐싱 제한 사항을 충족해야 하며 모든 매개 변수에 대해 기본값이 지정되어야 합니다. 자세한 내용은 msdn.microsoft.com의 [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)을 참조하세요.  
+-   보고서와 마찬가지로 공유 데이터 세트도 캐시할 수 있습니다. 데이터 원본에서 필요로 하는 자격 증명은 캐싱 제한 사항을 충족해야 하며 모든 매개 변수에 대해 기본값이 지정되어야 합니다. 자세한 내용은 msdn.microsoft.com의 [공유 데이터 세트 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)을 참조하세요.  
   
 -   보고서와 마찬가지로 처리가 발생할 때마다 보고서 서버 항목의 현재 정의가 사용됩니다. 공유 데이터 세트를 변경하는 경우 해당 항목을 사용하는 각 보고서는 보고서가 처리될 때 보고서 서버에 있는 현재 정의를 사용합니다. 공유 데이터 세트에 대해 캐싱이 설정되어 있는 경우 공유 데이터 세트 정의를 변경하면 이러한 변경 사항은 캐시에 있는 데이터가 만료될 때까지 적용되지 않습니다. 캐시 새로 고침 계획을 사용하여 여러 보고서에 대해 일관성 있는 데이터 집합을 제공할 수 있습니다.  
   

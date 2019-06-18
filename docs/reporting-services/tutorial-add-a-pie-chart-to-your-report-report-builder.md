@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041269"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.
@@ -27,7 +27,7 @@ ms.locfileid: "56293642"
 원형 차트에 데이터 요소가 너무 많으면 데이터 요소 레이블이 복잡해져서 가독성이 떨어질 수 있습니다. 이 경우 여러 개의 작은 조각을 하나의 큰 조각으로 결합하는 것이 좋습니다. 데이터를 몇 개의 데이터 요소로 집계하면 원형 차트를 더 쉽게 읽을 수 있습니다.  
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 추가하고 데이터 집합을 추가하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 추가하고 데이터 세트를 추가하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 10분  
   
@@ -73,7 +73,7 @@ ms.locfileid: "56293642"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (옵션) 실행 단추(**!**)를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
+8.  (옵션) 실행 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
 9. **다음**을 클릭합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "56293642"
   
 4.  **레이블 데이터** 상자에서 **#PERCENT**를 선택합니다.  
     
-5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT****레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
+5.  (옵션) 레이블을 표시할 때 사용할 소수 자릿수를 지정하려면 **#PERCENT** **레이블 데이터** 상자에 **{Pn}** 을 입력합니다. 여기서 *n*은 표시할 소수 자릿수입니다. 예를 들어 소수 자릿수를 표시하지 않으려면 **#PERCENT{P0}** 을 입력합니다.  
 
 6.  값을 백분율로 표시하려면 UseValueAsLabel 속성이 false여야 합니다. **동작 확인** 대화 상자에서 이 값을 설정할지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   

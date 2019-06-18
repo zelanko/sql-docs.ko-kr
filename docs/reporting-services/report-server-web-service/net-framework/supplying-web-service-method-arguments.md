@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], arguments
 - XML Web service [Reporting Services], methods
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 47c2312ab472714263509e2d5201bce07d1c1df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765031"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128954"
 ---
 # <a name="supplying-web-service-method-arguments"></a>웹 서비스 메서드 인수 제공
   보고서 서버 웹 서비스 메서드는 HTTP를 통해 SOAP을 사용하여 주어진 URL에 있는 서비스에 요청을 보냅니다. 서비스에서는 요청을 수신하고 처리한 다음 응답을 반환합니다. 이러한 요청과 응답은 XML 문서 형식입니다.  
@@ -39,7 +39,7 @@ rs.CreateFolder("Product Sales", "/Sales", null);
  프록시 클래스를 생성하면 WSDL 파일에 정의된 복합 데이터 형식이 해당 프록시의 클래스에 의해 나타나며, 여기에는 복합 데이터 형식의 다양한 SOAP 요소에 해당하는 속성이 포함됩니다. 이러한 데이터 형식의 시퀀스는 코드에서 열거할 수 있는 개체 배열이 됩니다. 그러면 SOAP 메시지로 전송된 XML 구조를 직접 사용하여 작업할 필요가 없습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 자동으로 변환이 처리됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  
   

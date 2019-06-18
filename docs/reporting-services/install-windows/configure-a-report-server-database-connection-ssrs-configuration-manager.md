@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
 ms.openlocfilehash: 6aecb763ccfe8743942ddb41a7eeb826e2ec5088
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64568375"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
@@ -58,7 +58,7 @@ ms.locfileid: "64568375"
 
 - 사용자 이름 및 암호. Windows 도메인 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하는 경우에만 필요합니다.
 
-제공하는 자격 증명에는 보고서 서버 데이터베이스에 대한 액세스 권한을 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 이 단계가 자동으로 수행됩니다. 데이터베이스에 액세스하는 데 필요한 권한에 대한 자세한 내용은 이 항목의 "데이터베이스 권한" 섹션을 참조하세요.  
+제공하는 자격 증명에는 보고서 서버 데이터베이스에 대한 액세스 권한을 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 이 단계가 자동으로 수행됩니다. 데이터베이스에 액세스하는 데 필요한 권한에 대한 자세한 내용은 이 항목의 "데이터베이스 권한" 섹션을 참조하십시오.  
 
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장
 
@@ -97,11 +97,11 @@ Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통�
 
 서비스 계정은 보고서 서버 데이터베이스 연결을 최소한의 수준으로 유지 관리하는 트러스트된 계정입니다. 서비스 계정에서는 Windows 통합 보안을 사용하여 연결을 설정하기 때문에 자격 증명을 저장할 필요가 없습니다. 그러나 기본 제공 계정을 도메인 계정으로 전환하는 등 이후에 서비스 계정 암호나 ID를 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 변경해야 합니다. 이 도구는 데이터베이스 권한을 자동으로 업데이트하여 수정된 계정 정보를 사용합니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
 
-데이터베이스 연결에서 서비스 계정을 사용하도록 구성하는 경우 보고서 서버 데이터베이스가 원격 컴퓨터에 있으면 해당 계정에 네트워크 사용 권한이 있어야 합니다. 보고서 서버 데이터베이스가 방화벽 뒤에 있는 다른 도메인에 있거나 도메인 보안 대신 작업 그룹 보안을 사용하는 경우에는 서비스 계정을 사용하지 말고 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 계정을 사용하세요.  
+데이터베이스 연결에서 서비스 계정을 사용하도록 구성하는 경우 보고서 서버 데이터베이스가 원격 컴퓨터에 있으면 해당 계정에 네트워크 사용 권한이 있어야 합니다. 보고서 서버 데이터베이스가 방화벽 뒤에 있는 다른 도메인에 있거나 도메인 보안 대신 작업 그룹 보안을 사용하는 경우에는 서비스 계정을 사용하지 말고 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 계정을 사용하십시오.  
 
 #### <a name="using-a-domain-user-account"></a>도메인 사용자 계정 사용
 
-보고서 서버 데이터베이스에 대한 보고서 서버 연결에 대해 Windows 사용자 계정을 지정할 수 있습니다. 로컬 계정이나 도메인 계정을 사용하는 경우에는 암호나 계정을 변경할 때마다 보고서 서버 데이터베이스 연결을 업데이트해야 합니다. 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 업데이트하세요.  
+보고서 서버 데이터베이스에 대한 보고서 서버 연결에 대해 Windows 사용자 계정을 지정할 수 있습니다. 로컬 계정이나 도메인 계정을 사용하는 경우에는 암호나 계정을 변경할 때마다 보고서 서버 데이터베이스 연결을 업데이트해야 합니다. 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 업데이트하십시오.  
 
 #### <a name="using-a-sql-server-login"></a>SQL Server 로그인 사용
 

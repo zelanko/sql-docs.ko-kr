@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041792"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
 이 자습서에서는 보고서를 읽는 사람이 하나 이상의 값에 대해 보고서 데이터를 필터링할 수 있도록 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 매개 변수를 추가합니다. 
@@ -23,7 +23,7 @@ ms.locfileid: "56286951"
 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다. 
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 세트를 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)을 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 25분  
   
@@ -80,9 +80,9 @@ ms.locfileid: "56286951"
   
     이 쿼리는 공용 테이블 식에 있는 몇 가지 [!INCLUDE[tsql_md](../includes/tsql-md.md)] SELECT 문의 결과를 결합하여 Contoso 샘플 데이터베이스의 단순화된 카메라 매출 데이터를 기반으로 하는 값을 지정합니다. 하위 범주는 디지털 카메라, 디지털 SLR(Single Lens Reflex) 카메라, 캠코더 및 액세서리입니다.  
   
-11. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭하여 데이터를 확인합니다.   
+11. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭하여 데이터를 확인합니다.   
   
-    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성됩니다. 상점 이름은 결과 집합에 포함되지 않습니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
+    결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 StoreID, Subcategory, Quantity 열에 표시하는 11개 데이터 행으로 구성되어 있습니다. 상점 이름은 결과 집합에 포함되는 데이터가 아닙니다. 이 자습서의 뒷부분에 나오는 별도의 데이터 세트에서 상점 식별자에 해당하는 상점 이름을 조회할 수 있습니다.  
   
     이 쿼리에는 쿼리 매개 변수가 포함되어 있지 않습니다. 이 자습서의 뒷부분에서 쿼리 매개 변수를 추가합니다.   
   
@@ -142,9 +142,9 @@ ms.locfileid: "56286951"
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **WHERE** 절은 검색된 데이터를 쿼리 매개 변수 *@StoreID*로 지정된 상점 식별자로 제한합니다.  
+    **WHERE** 절은 검색된 데이터를 쿼리 매개 변수 *@StoreID* 로 지정된 상점 식별자로 제한합니다.  
   
-4.  쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. **쿼리 매개 변수 정의** 대화 상자가 열리고 쿼리 매개 변수 *@StoreID*의 값을 입력하라는 메시지가 나타납니다.  
+4.  쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. **쿼리 매개 변수 정의** 대화 상자가 열리고 쿼리 매개 변수 *@StoreID* 의 값을 입력하라는 메시지가 나타납니다.  
   
 5.  **매개 변수 값**에 **200**을 입력합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "56286951"
   
 8.  보고서 데이터 창에서 **매개 변수** 폴더를 확장합니다.  
   
-이제 *@StoreID*라는 보고서 매개 변수와 보고서 매개 변수를 레이아웃할 수 있는 매개 변수 창이 있습니다.   
+이제 *@StoreID* 라는 보고서 매개 변수와 보고서 매개 변수를 레이아웃할 수 있는 매개 변수 창이 있습니다.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ ms.locfileid: "56286951"
   
 기본적으로 만든 매개 변수의 데이터 형식은 **Text**입니다. 상점 식별자가 정수이므로 데이터 형식을 Integer로 변경할 수 있습니다.  
   
-1.  보고서 데이터 창의 **매개 변수** 노드에서 *@StoreID*를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
+1.  보고서 데이터 창의 **매개 변수** 노드에서 *@StoreID* 를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
 2.  **프롬프트**에 **Store identifier?** 를 입력합니다. 보고서를 실행할 때 이 텍스트가 보고서 뷰어 도구 모음에 표시됩니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "56286951"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  **실행** 을 클릭하여 보고서를 미리 봅니다. 보고서 뷰어에 **Store Identifier?** 에 대한 *@StoreID*를 참조하세요.  
+6.  **실행** 을 클릭하여 보고서를 미리 봅니다. 보고서 뷰어에 **Store Identifier?** 에 대한 *@StoreID* 를 참조하세요.  
   
 7.  보고서 뷰어 도구 모음에서 Store ID 옆에 **200**을 입력한 다음 **보고서 보기**를 클릭합니다.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "56286951"
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>데이터 세트의 매개 변수에 사용 가능한 값을 제공하려면  
   
-1.  보고서 데이터 창에서 *@StoreID*를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
+1.  보고서 데이터 창에서 *@StoreID* 를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
 2.  **사용 가능한 값**을 클릭한 다음 **쿼리에서 값 가져오기**를 클릭합니다.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "56286951"
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  보고서 데이터 창에서 *@StoreID*를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
+2.  보고서 데이터 창에서 *@StoreID* 를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
 3.  **기본값**을 클릭한 다음 **쿼리에서 값 가져오기**를 클릭합니다.  
   
@@ -265,13 +265,13 @@ ms.locfileid: "56286951"
   
 7.  보고서를 미리 봅니다.  
   
-*@StoreID*의 경우 보고서 뷰어는 데이터 세트 **Stores**에 대한 결과 집합의 첫 번째 값이기 때문에 "Contoso North America Online Store" 값을 표시합니다. 보고서에는 상점 식별자 **199**에 대한 Digital Cameras의 판매 수량이 표시됩니다.  
+*@StoreID* 의 경우 보고서 뷰어는 데이터 세트 **Stores**에 대한 결과 집합의 첫 번째 값이기 때문에 "Contoso North America Online Store" 값을 표시합니다. 보고서에는 상점 식별자 **199**에 대한 Digital Cameras의 판매 수량이 표시됩니다.  
   
 ### <a name="to-specify-a-custom-default-value"></a>사용자 지정 기본값을 지정하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  보고서 데이터 창에서 *@StoreID*을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
+2.  보고서 데이터 창에서 *@StoreID* 을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
 3.  **기본값** > **값 지정** > **추가**를 클릭합니다. 새 값 행이 추가됩니다.  
   
@@ -281,7 +281,7 @@ ms.locfileid: "56286951"
   
 6.  보고서를 미리 봅니다.  
   
-For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조하세요. 보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
+For *@StoreID* 의 경우 보고서 뷰어에 상점 식별자 **200**를 참조하세요. 보고서에는 상점 식별자 **200**에 대한 Accessories, Camcorders 및 Digital SLR Cameras의 판매 수량이 표시됩니다.  
   
 ## <a name="NameValue"></a>4d. 이름/값 쌍 조회  
 데이터 세트에는 식별자 및 해당 이름 필드가 포함되어 있을 수 있습니다. 식별자만 있는 경우 이름/값 쌍이 포함된 만든 데이터 세트에서 해당 이름을 조회할 수 있습니다.  
@@ -308,7 +308,7 @@ For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조�
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    상점 열 머리글에 복잡한 식의 표시 텍스트인 **Expr**.  
+    상점 열 머리글에 복잡한 식의 표시 텍스트인 **Expr**이 포함됩니다.  
   
 8.  보고서를 미리 봅니다.  
   
@@ -371,7 +371,7 @@ For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조�
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  보고서 데이터 창에서 *@StoreID*을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
+2.  보고서 데이터 창에서 *@StoreID* 을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**를 참조하세요.  
   
 3.  **다중 값 허용**을 선택합니다.  
   

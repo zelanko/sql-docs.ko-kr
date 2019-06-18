@@ -8,10 +8,10 @@ ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502665"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
@@ -178,7 +178,7 @@ ms.locfileid: "65502665"
   
  이 기능은 SQL Server Reporting Services 서비스 애플리케이션이 없거나 보고서 서버 URL이 중앙 관리에 구성되지 않았기 때문에 지원되지 않습니다.  
   
- **해결 방법:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
+ **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
   
  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
@@ -211,7 +211,7 @@ ms.locfileid: "65502665"
     -   **run \<** *.NET 4.0 Framework 디렉터리* **>\InstallUtil.exe \<** *Report Server Bin 디렉터리* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  \<*.NET 4.0 Framework 디렉터리*>를 .NET Framework 4.0 파일의 실제 경로로 바꾸고 \<*Report Server Bin 디렉터리*>를 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  
+        >  \< *.NET 4.0 Framework 디렉터리*>를 .NET Framework 4.0 파일의 실제 경로로 바꾸고 \<*Report Server Bin 디렉터리*>를 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  
   
 3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작합니다.  
   

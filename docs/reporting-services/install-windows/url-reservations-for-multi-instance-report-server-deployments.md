@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513285"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>다중 인스턴스 보고서 서버 배포를 위한 URL 예약
   같은 컴퓨터에 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하는 경우 각 인스턴스의 URL 예약을 어떻게 정의할지 고려해야 합니다. 각 인스턴스 내에서 보고서 서버 웹 서비스와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에는 각각 한 개 이상의 URL 예약이 있어야 합니다. 전체 예약 집합은 HTTP.SYS에서 고유해야 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "51814066"
 |`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|각 인스턴스가 다른 서버 이름(정규화된 도메인 이름 및 컴퓨터 이름)에 응답합니다.|  
   
 ## <a name="uniqueness-requirements"></a>고유성 요구 사항  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용되는 기본 기술에는 고유 이름 관련 요구 사항이 적용됩니다. HTTP.SYS의 리포지토리 내에서 모든 URL이 고유해야 합니다. 포트, 호스트 이름 또는 가상 디렉터리 이름을 변경하여 고유한 URL을 만들 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 을 사용하려면 응용 프로그램 ID가 동일한 프로세스 내에서 고유해야 합니다. 이러한 요구 사항은 가상 디렉터리 이름에 영향을 줍니다. 따라서 동일한 보고서 서버 인스턴스 내에서 중복되는 가상 디렉터리 이름을 사용할 수 없습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 사용되는 기본 기술에는 고유 이름 관련 요구 사항이 적용됩니다. HTTP.SYS의 리포지토리 내에서 모든 URL이 고유해야 합니다. 포트, 호스트 이름 또는 가상 디렉터리 이름을 변경하여 고유한 URL을 만들 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 을 사용하려면 애플리케이션 ID가 동일한 프로세스 내에서 고유해야 합니다. 이러한 요구 사항은 가상 디렉터리 이름에 영향을 줍니다. 따라서 동일한 보고서 서버 인스턴스 내에서 중복되는 가상 디렉터리 이름을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   

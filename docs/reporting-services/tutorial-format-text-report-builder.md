@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043045"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
 
@@ -111,7 +111,7 @@ ms.locfileid: "57579343"
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  실행(**!**)을 클릭하여 쿼리를 실행합니다.  
+7.  실행( **!** )을 클릭하여 쿼리를 실행합니다.  
   
     쿼리 결과는 보고서에 표시할 수 있는 데이터입니다.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "57579343"
   
 1.  **삽입** 탭 > **테이블** > **테이블 마법사**를 클릭합니다.  
   
-2.  새 테이블 또는 행렬 마법사의 **데이터 세트 선택** 페이지에서 **이 보고서의 기존 데이터 세트 또는 공유 데이터 세트 선택** > **TextDataset(이 보고서)** > **다음**을 클릭합니다.  
+2.  새 테이블 또는 행렬 마법사의 **데이터 세트 선택** 페이지에서 **이 보고서의 기존 데이터 세트 또는 공유 데이터 세트 선택** > **TextDataset(이 보고서)**  > **다음**을 클릭합니다.  
   
 3.  **필드 정렬** 페이지에서 **Territory**, **LinkText**및 **Product** 필드를 **행 그룹**으로 끌고 **Sales** 필드를 **값**으로 끈 후 **다음**을 클릭합니다.  
 
@@ -254,7 +254,7 @@ ms.locfileid: "57579343"
    
 6.  **홈** 탭 > **단락** 섹션에서 **중간** 및 **가운데**를 선택하여 셀에서 세로 및 가로로 가운데에 있는 텍스트를 찾습니다.  
   
-8.  실행(**!**)을 클릭합니다.  
+8.  실행( **!** )을 클릭합니다.  
   
 이제 `[Territory]` 셀에 있는 텍스트가 셀의 아래쪽에서 위쪽으로 세로로 움직입니다.  
 
@@ -268,13 +268,13 @@ ms.locfileid: "57579343"
   
 3.  **홈** 탭 > **숫자** 그룹 > **통화** 단추를 클릭합니다.  
   
-4.  (옵션) 국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [**$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
+4.  (옵션) 국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (옵션) **홈** 탭에 있는 **숫자** 그룹에서 **소수 자릿수 줄이기** 단추를 두 번 클릭하여 센트가 표시되지 않는 달러 숫자를 표시합니다.  
   
-6.  실행(**!**)을 클릭하여 보고서를 미리 봅니다.  
+6.  실행( **!** )을 클릭하여 보고서를 미리 봅니다.  
   
 이제 보고서에 서식이 지정된 데이터가 표시되므로 보다 쉽게 읽을 수 있습니다.  
 
@@ -316,7 +316,7 @@ ms.locfileid: "57579343"
   
 7.  **확인**을 클릭합니다.  
   
-8.  실행(**!**)을 클릭하여 보고서를 미리 봅니다.  
+8.  실행( **!** )을 클릭하여 보고서를 미리 봅니다.  
   
 입력란의 텍스트가 머리글, 단락 및 글머리 기호 목록으로 표시됩니다.  
   

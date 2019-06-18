@@ -9,10 +9,10 @@ ms.assetid: 4daa1eee-78b7-43d0-8b22-4a98e8fa66ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 916c135c9de0d67862d4b7300e24c2ae412b0cb6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581139"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>SharePoint 라이브러리에 보고서 저장(보고서 작성기)
@@ -22,7 +22,7 @@ ms.locfileid: "65581139"
   
 ### <a name="to-save-a-report-to-a-sharepoint-site"></a>SharePoint 사이트에 보고서를 저장하려면  
   
-1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장** 대화 상자가 열립니다.  
+1.  보고서 작성기 단추에서 **저장**을 클릭합니다. **\<Report Item>으로 저장**  대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  보고서를 다시 저장하는 경우 보고서가 이전 위치에 자동으로 다시 저장됩니다. **다른 이름으로 저장** 옵션을 사용하여 위치를 변경할 수 있습니다.  

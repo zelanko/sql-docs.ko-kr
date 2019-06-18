@@ -9,10 +9,10 @@ ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 838214206101337a35245e3a9f6fee461a47933d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580179"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "65580179"
 > [!NOTE]  
 >  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [온라인 설명서](../../reporting-services/security/secure-reports-and-resources.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][보고서 및 리소스 보안](https://go.microsoft.com/fwlink/?LinkId=154888) 을 참조하세요.  
   
- 정렬, 필터 및 표시 유형에 대한 매개 변수 참조를 포함하는 식을 디자인하면 사용자가 보고서 표시 및 콘텐츠를 제어하는 것이 가능합니다. 자세한 내용은 [보고서 매개 변수&amp;#40;보고서 작성기 및 보고서 디자이너&amp;#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [데이터 필터링, 그룹화 및 정렬&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
+ 정렬, 필터 및 표시 유형에 대한 매개 변수 참조를 포함하는 식을 디자인하면 사용자가 보고서 표시 및 콘텐츠를 제어하는 것이 가능합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

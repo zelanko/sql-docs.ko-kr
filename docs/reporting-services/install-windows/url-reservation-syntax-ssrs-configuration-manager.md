@@ -7,20 +7,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 585a2a14d94382a6b4f7923e8563ddd4d8cae570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 115035e4ab8711a251ec8d2ac253b9987b5ebe66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651670"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 예약 구문(SSRS 구성 관리자)
   이 항목에서는 보고서 서버 웹 서비스 및 보고서 관리자에서 사용하는 URL 문자열 부분에 대해 설명합니다. 내부적으로 저장되는 URL 문자열의 구조는 브라우저 창의 주소 표시줄에 입력하는 URL과는 다릅니다. URL 예약 문자열은 URL을 구성할 때 Reporting Services 구성 도구의 결과 창 및 RSReportServer.config 파일에 표시됩니다. URL 문자열이 정의되는 방식을 알면 URL 예약 문제를 해결하거나 HTTP.SYS를 쿼리하여 서버에 정의된 내부 URL 문자열 예약을 보는 경우 도움이 됩니다.  
   
 ## <a name="url-syntax"></a>URL 구문  
- 보고서 서버 URL은 **UrlString** 요소와 **VirtualDirectory** 요소에 저장됩니다. **UrlString** 과 **VirtualDirectory** 가 별도의 요소로 구분되는 것은 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램에서 URL 문자열은 여러 개일 수 있지만 가상 디렉터리 이름은 하나뿐이기 때문입니다.  
+ 보고서 서버 URL은 **UrlString** 요소와 **VirtualDirectory** 요소에 저장됩니다. **UrlString** 과 **VirtualDirectory** 가 별도의 요소로 구분되는 것은 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션에서 URL 문자열은 여러 개일 수 있지만 가상 디렉터리 이름은 하나뿐이기 때문입니다.  
   
  HTTP.SYS에서 URL 예약은 **UrlString** 과 **VirtualDirectory**를 모두 포함합니다. URL 예약 구문은 다음 부분으로 구성됩니다.  
   

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8a2e36f2a897be3c9ea7f37077ae5e947ace9bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1c3b4ad599864bc2ddb752982ed61bf73684c2f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685311"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193869"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 집합 사용
-  **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 응용 프로그램의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 집합을 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  
+  **DataSet** 개체는 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]에서 연결이 끊긴 분산 데이터 시나리오를 지원하는 데 있어 핵심적인 역할을 합니다. **DataSet** 개체는 데이터 원본과 상관없이 일관성 있는 관계형 프로그래밍 모델을 제공하는 데이터의 메모리 상주 표현입니다. 다양한 데이터 원본 또는 XML 데이터와 함께 사용하거나 응용 프로그램의 로컬 데이터를 관리하는 데 사용할 수 있습니다. **DataSet** 개체는 관련 테이블, 제약 조건, 테이블 간의 관계 등을 포함한 전체 데이터 세트를 나타냅니다. **DataSet** 개체는 데이터를 유연하게 저장하고 표시할 수 있기 때문에 데이터에 대한 보고가 이루어지기 전에 데이터가 처리되고 **DataSet** 개체로 변환되는 경우도 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용하여 외부 응용 프로그램으로 만든 사용자 지정 **DataSet** 개체를 통합할 수 있습니다. 그러려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **DataSet** 개체와 보고서 서버를 연결하는 사용자 지정 데이터 처리 확장 프로그램을 만듭니다. 이 **DataSet** 개체를 처리하기 위한 코드의 대부분은 사용자가 만드는 **DataReader** 클래스에 포함됩니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 사용하여 외부 애플리케이션으로 만든 사용자 지정 **DataSet** 개체를 통합할 수 있습니다. 그러려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **DataSet** 개체와 보고서 서버를 연결하는 사용자 지정 데이터 처리 확장 프로그램을 만듭니다. 이 **DataSet** 개체를 처리하기 위한 코드의 대부분은 사용자가 만드는 **DataReader** 클래스에 포함됩니다.  
   
  **DataSet** 개체를 보고서 서버에 표시하는 첫 단계는 **DataReader** 클래스에서 **DataSet** 개체를 채울 수 있는 공급자별 메서드를 구현하는 것입니다. 다음 예는 **DataReader** 클래스에서 공급자별 메서드를 사용하여 **DataSet** 개체에 정적 데이터를 로드하는 방법을 보여 줍니다.  
   

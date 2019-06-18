@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775972"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거
@@ -101,7 +101,7 @@ Rssharepoint.msi /?
   
     1.  **rsCustomAction.exe**파일이 포함된 폴더로 이동합니다. 이 파일은 추가 기능의 파일만 설치에 따라 컴퓨터에 복사됩니다. **rsCustomAction.exe** 는 **%Temp%** 디렉터리에 있습니다. 파일로 이동하려면 명령 프롬프트에서 다음을 입력합니다.  
   
-         **CD %temp%**.  
+         **CD %temp%** .  
   
          이 파일은 다음 위치에 있습니다. **/Users\\<사용자 이름\>/AppData/Local/Temp**  
   

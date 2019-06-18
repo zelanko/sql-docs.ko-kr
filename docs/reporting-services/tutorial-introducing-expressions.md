@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295891"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 일반적인 함수 및 연산자와 함께 식을 사용하여 강력하고 유연한 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -89,7 +89,7 @@ ms.locfileid: "56292221"
     ```  
 
   
-10. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합에는 23개 행의 데이터가 표시되고 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열이 포함됩니다.  
+10. 쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다. 결과 집합에는 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열에 23행의 데이터가 표시됩니다.  
 
     ![보고서-작성기-식-자습서-쿼리를-텍스트로](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -138,7 +138,7 @@ ms.locfileid: "56292221"
   
 1.  보고서 데이터 창에서 **데이터 세트** 폴더를 확장합니다.  
   
-2.  **DataSet1** 을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 속성**을 클릭합니다.  
+2.  **DataSet1**을 마우스 오른쪽 단추로 클릭하고 **데이터 세트 속성**을 클릭합니다.  
 
     ![보고서-작성기-식-자습서-데이터 집합-이름 바꾸기](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
@@ -147,7 +147,7 @@ ms.locfileid: "56292221"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. 이름 및 성 표시  
-이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** (**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
+이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** ( **&** ) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
   
 1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
   
@@ -345,7 +345,7 @@ ms.locfileid: "56292221"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. **실행** (**!**)을 클릭하여 쿼리를 실행합니다.  
+9. **실행** ( **!** )을 클릭하여 쿼리를 실행합니다.  
   
     쿼리 결과는 국가/지역 식별자와 이름입니다.  
   
@@ -424,7 +424,7 @@ ms.locfileid: "56292221"
   
 표시기와 해당 상태를 구성하려면 여러 단계를 수행해야 합니다. 원하는 경우 "표시기를 구성하려면" 절차에서 단계를 건너뛰고 이 자습서의 완성된 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.  
   
-### <a name="to-add-the--or---avg-sales-column"></a>+ or - AVG Sales 열을 추가하려면  
+### <a name="to-add-the--or---avg-sales-column"></a>\+ or - AVG Sales 열을 추가하려면  
   
 1.  **YTD Purchase** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **오른쪽**을 클릭합니다.  
   
@@ -660,7 +660,7 @@ ms.locfileid: "56292221"
 [표시기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
 [이미지, 입력란, 사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)  
 [테이블&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-[보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+[보고서 데이터 세트&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
   
   
   

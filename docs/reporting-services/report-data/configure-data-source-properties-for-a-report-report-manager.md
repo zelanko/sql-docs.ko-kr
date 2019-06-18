@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573202"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>페이지를 매긴 보고서의 데이터 원본 속성 구성
@@ -24,9 +24,9 @@ ms.locfileid: "65573202"
   
 ## <a name="to-configure-an-embedded-data-source"></a>포함된 데이터 원본을 구성하려면  
   
-1.  웹 포털에서 보고서별 데이터 원본을 구성할 보고서로 이동합니다..  
+1.  웹 포털에서 보고서별 데이터 원본을 구성할 보고서로 이동합니다.  
   
-3.  오른쪽 위 모서리 > **관리**에서 줄임표(**...**)를 선택합니다.  
+3.  오른쪽 위 모서리 > **관리**에서 줄임표( **...** )를 선택합니다.  
   
 4.  **데이터 원본** 탭을 클릭합니다. 보고서의 데이터 원본 속성 페이지가 열립니다.  
   

@@ -11,10 +11,10 @@ ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573816"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
@@ -109,13 +109,13 @@ ms.locfileid: "65573816"
   
  집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 세트의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
--   *\<report item type>* '*\<report item name>*'에 잘못된 범위 "*\<scope name>*"이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 잘못된 범위 " *\<scope name>* "이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
--   *\<report item type>* '*\<report item name>*'에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(**Previous**, **RunningValue**또는 **RowNumber**) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
--   *\<report item type>* '*\<report item name>*'의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>* 의 열과 행 모두에 있는 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
+-   *\<report item type>* ' *\<report item name>* '의 데이터 셀에 사용된 **Previous**, **RunningValue** 또는 **RowNumber** 집계 함수가 *\<report item type>* 의 열과 행 모두에 있는 그룹화 범위를 참조합니다. *\<report item type>* 내의 모든 **Previous**, **RunningValue** 및 **RowNumber** 집계 함수의 범위 매개 변수는 행 그룹화나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
@@ -126,9 +126,9 @@ ms.locfileid: "65573816"
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   

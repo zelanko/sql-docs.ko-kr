@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 23bee332835d0beb812d7737c254d6eccabee6d1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288606"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64330636"
 ---
 # <a name="report-builder-tutorials"></a>보고서 작성기 자습서
 
@@ -56,7 +56,7 @@ ms.locfileid: "56288606"
 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 이 자습서의 단계를 따라 보고서에 KPI(핵심 성과 지표)를 추가하는 방법을 배울 수 있습니다.  
   
-[자습서: 맵 보고서&#40;보고서 작성기&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
+[자습서: 지도 보고서&#40;보고서 작성기&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
 이 자습서의 단계를 따라 보고서에 지도를 추가하는 방법을 배울 수 있습니다.  
   
 [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
