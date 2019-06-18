@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044158"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 이벤트 클래스
-   **Server Memory Change** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 1MB 또는 최대 서버 메모리의 5% 중 큰 값만큼 증가하거나 감소하는 경우 발생합니다.  
+  **Server Memory Change** 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용량이 1MB 또는 최대 서버 메모리의 5% 중 큰 값만큼 증가하거나 감소하는 경우 발생합니다.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 이벤트 클래스 데이터 열  
   

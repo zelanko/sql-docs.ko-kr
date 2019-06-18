@@ -9,10 +9,10 @@ ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1c0f695bc5c7cb6d68935d23e918f19c1408d475
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570783"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 셀 병합(보고서 작성기 및 SSRS)

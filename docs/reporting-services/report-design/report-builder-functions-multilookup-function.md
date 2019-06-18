@@ -9,10 +9,10 @@ ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577159"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>보고서 작성기 함수 - Multilookup 함수
@@ -55,7 +55,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   결과 집합을 반환합니다.  
   
- 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)을 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 세트에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)을 사용합니다.  
+ 일 대 일 관계의 이름-값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)을 사용합니다. 일 대 다 관계의 이름-값 쌍을 포함하는 데이터 세트에서 이름에 대한 여러 값을 검색하려면 [LookupSet 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)을 사용합니다.  
   
  다음과 같은 제한 사항이 있습니다.  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e34b5bd595f70dc18b2e7ba447a689d6e1791367
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651279"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>3단원: 보고서 마법사를 사용하여 부모 보고서 디자인
 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만든 후에는 보고서 디자이너의 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. 보고서 디자이너에 대한 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
@@ -28,9 +28,9 @@ ms.locfileid: "52390296"
   
     그러면 보고서 마법사가 시작됩니다.  
   
-4.  **데이터 집합 속성** 페이지의 **데이터 원본** 상자에서, **2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의** 에서 만든 [DataSet1](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)을 선택합니다.  
+4.  **데이터 세트 속성** 페이지의 **데이터 원본** 상자에서, **2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 만든 [DataSet1](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)을 선택합니다.  
   
-    **사용 가능한 데이터 집합** 상자가 위에서 만든 **DataTable** 로 자동 업데이트됩니다.  
+    **사용 가능한 데이터 세트** 상자가 위에서 만든 **DataTable**로 자동 업데이트됩니다.  
   
 5.  **다음**을 선택합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52390296"
   
     1.  **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**및 **ReorderLevel** 을 **사용 가능한 필드** 에서 **값** 상자로 끌어옵니다.  
   
-    2.  **Sum(ProductID)**, **Sum(SafetyStockLevel)**, **Sum(ReorderLevel)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
+    2.  **Sum(ProductID)** , **Sum(SafetyStockLevel)** , **Sum(ReorderLevel)** 옆에 있는 화살표를 선택하고 **합계** 선택을 취소합니다.  
   
 7.  **다음** 을 두 번 선택한 다음 **마침** 을 선택하여 **보고서 마법사**를 닫습니다.  
   

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ad67f5a187ae8ef314ee29122f3cefb866185b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284414"
 ---
 # <a name="linked-reports-methods"></a>링크된 보고서 메서드
   다음 메서드를 사용하여 링크된 항목을 만들고 관리할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47620961"
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|기존 링크된 항목의 항목 정의에 사용되는 카탈로그 항목을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

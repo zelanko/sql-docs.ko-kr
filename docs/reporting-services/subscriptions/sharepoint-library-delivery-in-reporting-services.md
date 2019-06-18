@@ -13,16 +13,16 @@ ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578072"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
   SharePoint 통합용으로 구성된 보고서 서버는 보고서를 SharePoint 라이브러리로 보내는 데 사용할 수 있는 배달 확장 프로그램이 포함되어 있습니다.  
   
- SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 애플리케이션 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자에서 만든 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
+ SharePoint 배달 확장 프로그램을 사용하려면 SharePoint 사이트의 애플리케이션 페이지에서 구독을 만든 다음 배달 유형으로 **SharePoint 문서 라이브러리** 를 선택해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자에서 만든 구독에 대해서는 SharePoint 배달 확장 프로그램을 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  배달 확장 프로그램은 보고서 서버가 기본 모드로 실행되고 있는 경우 SharePoint 사이트로의 보고서 배달을 지원하지 않습니다. 기본 모드 보고서 서버에 대해 프로그래밍 방식으로 배달 확장 프로그램을 호출하려고 하면 서버에서 **rsDeliveryExtensionNotFound** 오류를 반환하고 보고서 서버 로그 파일에 **rsOperationNotSupportedSharePointMode** 오류를 기록합니다.  

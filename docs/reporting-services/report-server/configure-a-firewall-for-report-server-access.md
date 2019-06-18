@@ -12,10 +12,10 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: dfb2676b2cc06b2a3ab774b467759c7e26c58e3a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175572"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>보고서 서버에 액세스할 수 있도록 방화벽 구성
@@ -40,11 +40,11 @@ ms.locfileid: "66175572"
   
 2.  **고급 설정**을 클릭합니다.  
   
-3.   **인바운드 규칙**을 클릭합니다.  
+3.  **인바운드 규칙**을 클릭합니다.  
   
 4.  **동작** 창의 **새 규칙**을 클릭합니다.  
   
-5.   **포트** 의 **규칙 종류**를 클릭합니다.  
+5.  **포트** 의 **규칙 종류**를 클릭합니다.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66175572"
   
 13. **다음**을 클릭합니다.  
   
-14.  **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
+14. **이름** 페이지에서 이름으로**ReportServer (TCP on port 80)** 를 입력합니다.  
   
 15. **마침**을 클릭합니다.  
   

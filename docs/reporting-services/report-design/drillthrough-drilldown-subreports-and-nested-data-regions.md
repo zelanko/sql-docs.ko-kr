@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578772"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역
@@ -20,9 +20,9 @@ ms.locfileid: "65578772"
   
  ![rs_DrillThruDrilldownEtc](../../reporting-services/report-design/media/rs-drillthrudrilldownetc.gif "rs_DrillThruDrilldownEtc")  
   
- 1. 드릴스루 보고서  
+ 1\. 드릴스루 보고서  
   
- 2. 하위 보고서  
+ 2\. 하위 보고서  
   
  C. 중첩된 데이터 영역  
   

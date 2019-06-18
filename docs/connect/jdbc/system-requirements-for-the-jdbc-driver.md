@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 244f5383add437b8bd4985045bd9edc8538805e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798289"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
@@ -52,8 +52,8 @@ ms.locfileid: "66798289"
   
   |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.2.2.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7.2의 새로운 기능은 JDK 11 지원, Active Directory MSI(관리 서비스 ID) 인증, OSGi 지원, SQLServerError API 등입니다. |    
-|mssql-jdbc-7.2.2.jre11.jar|4.3|10|JRE(Java Runtime Environment) 11.0이 필요합니다. JRE 10.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7.2의 새로운 기능은 JDK 11 지원, Active Directory MSI(관리 서비스 ID) 인증, OSGi 지원, SQLServerError API 등입니다. |    
+|mssql-jdbc-7.2.2.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7\.2의 새로운 기능은 JDK 11 지원, Active Directory MSI(관리 서비스 ID) 인증, OSGi 지원, SQLServerError API 등입니다. |    
+|mssql-jdbc-7.2.2.jre11.jar|4.3|10|JRE(Java Runtime Environment) 11.0이 필요합니다. JRE 10.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7\.2의 새로운 기능은 JDK 11 지원, Active Directory MSI(관리 서비스 ID) 인증, OSGi 지원, SQLServerError API 등입니다. |    
 
 
   JDBC Driver 7.2는 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다.  
@@ -76,8 +76,8 @@ ms.locfileid: "66798289"
   
   |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-7.0.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7.0의 새로운 기능은 JDK 10 지원, 기본 준수 수준을 JDBC 4.2 사양으로 업데이트, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 경계 요청 메서드, useBulkCopyForBatchInsert 연결 속성, 데이터 검색 및 분류 정보, UTF-8 기능 확장 및 CityHash 지원 등입니다. |    
-|mssql-jdbc-7.0.0.jre10.jar|4.3|10|JRE(Java Runtime Environment) 10.0이 필요합니다. JRE 9.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7.0의 새로운 기능은 JDK 10 지원, 기본 준수 수준을 JDBC 4.2 사양으로 업데이트, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 경계 요청 메서드, useBulkCopyForBatchInsert 연결 속성, 데이터 검색 및 분류 정보, UTF-8 기능 확장 및 CityHash 지원 등입니다. |    
+|mssql-jdbc-7.0.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7\.0의 새로운 기능은 JDK 10 지원, 기본 준수 수준을 JDBC 4.2 사양으로 업데이트, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 경계 요청 메서드, useBulkCopyForBatchInsert 연결 속성, 데이터 검색 및 분류 정보, UTF-8 기능 확장 및 CityHash 지원 등입니다. |    
+|mssql-jdbc-7.0.0.jre10.jar|4.3|10|JRE(Java Runtime Environment) 10.0이 필요합니다. JRE 9.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 7\.0의 새로운 기능은 JDK 10 지원, 기본 준수 수준을 JDBC 4.2 사양으로 업데이트, 공간 데이터 형식 지원, cancelQueryTimeout 연결 속성, 경계 요청 메서드, useBulkCopyForBatchInsert 연결 속성, 데이터 검색 및 분류 정보, UTF-8 기능 확장 및 CityHash 지원 등입니다. |    
 
 
   JDBC Driver 7.0은 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다.  
@@ -100,9 +100,9 @@ ms.locfileid: "66798289"
   
   |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
 |---------|-----------------------------|----------------------|-----------------|   
-|mssql-jdbc-6.4.0.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |  
-|mssql-jdbc-6.4.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|JRE(Java Runtime Environment) 9.0이 필요합니다. JRE 8.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |
+|mssql-jdbc-6.4.0.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |  
+|mssql-jdbc-6.4.0.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|JRE(Java Runtime Environment) 9.0이 필요합니다. JRE 8.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.4의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |
 
 JDBC Driver 6.4는 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다. 
 
@@ -124,8 +124,8 @@ JDBC Driver 6.4는 Maven 중앙 리포지토리에서도 사용할 수 있고 PO
   
 |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
 |---------|-----------------------------|----------------------|-----------------|
-|mssql-jdbc-6.2.2.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.2의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |  
-|mssql-jdbc-6.2.3.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.2의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다.|    
+|mssql-jdbc-6.2.2.jre7.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.2의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다. |  
+|mssql-jdbc-6.2.3.jre8.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.2의 새로운 기능은 Linux용 Azure AD 인증, Kerberos에 대한 보안 주체/암호 방식, 도메인 간 인증을 위해 SPN에서 REALM 자동 검색, Kerberos 제한 위임, 쿼리 시간 제한, 소켓 시간 제한, 준비된 문 재사용 등입니다.|    
 
   JDBC Driver 6.2는 Maven 중앙 리포지토리에서도 사용할 수 있고 POM.XML에 다음 코드를 추가하여 Maven 프로젝트에 추가할 수 있습니다. 
   
@@ -147,8 +147,8 @@ JDBC Driver 6.4는 Maven 중앙 리포지토리에서도 사용할 수 있고 PO
   
 |JAR|JDBC 버전 규격|권장 Java 버전|설명|  
 |---------|-----------------------------|----------------------|-----------------|   
-|sqljdbc41.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.0 및 4.2 패키지의 새로운 기능에는 JDBC 4.1 준수 및 대량 복사가 포함됩니다.<br /><br /> 또한 6.0 패키지만의 새로운 기능에는 Always Encrypted, 테이블 반환 매개 변수, Azure Active Directory 인증, Always On 가용성 그룹에 투명하게 연결, 준비된 쿼리에 한 매개 변수 메타데이터 검색 향상 및 IDN(다국어 도메인 이름)이 포함됩니다.|  
-|sqljdbc42.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6.0 및 4.2 패키지의 새로운 기능에는 JDBC 4.1 준수, JDBC 4.2 준수 및 대량 복사가 포함됩니다.<br /><br /> 또한 6.0 패키지만의 새로운 기능에는 Always Encrypted, 테이블 반환 매개 변수, Azure Active Directory 인증, Always On 가용성 그룹에 투명하게 연결, 준비된 쿼리에 한 매개 변수 메타데이터 검색 향상 및 IDN(다국어 도메인 이름)이 포함됩니다.|  
+|sqljdbc41.jar|4.1|7|JRE(Java Runtime Environment) 7.0이 필요합니다. JRE 6.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.0 및 4.2 패키지의 새로운 기능에는 JDBC 4.1 준수 및 대량 복사가 포함됩니다.<br /><br /> 또한 6.0 패키지만의 새로운 기능에는 Always Encrypted, 테이블 반환 매개 변수, Azure Active Directory 인증, Always On 가용성 그룹에 투명하게 연결, 준비된 쿼리에 한 매개 변수 메타데이터 검색 향상 및 IDN(다국어 도메인 이름)이 포함됩니다.|  
+|sqljdbc42.jar|4.2|8|JRE(Java Runtime Environment) 8.0이 필요합니다. JRE 7.0 이전 버전을 사용하면 예외가 throw됩니다.<br /><br /> 6\.0 및 4.2 패키지의 새로운 기능에는 JDBC 4.1 준수, JDBC 4.2 준수 및 대량 복사가 포함됩니다.<br /><br /> 또한 6.0 패키지만의 새로운 기능에는 Always Encrypted, 테이블 반환 매개 변수, Azure Active Directory 인증, Always On 가용성 그룹에 투명하게 연결, 준비된 쿼리에 한 매개 변수 메타데이터 검색 향상 및 IDN(다국어 도메인 이름)이 포함됩니다.|  
   
  **SQL Server용 Microsoft JDBC Driver 4.1:**  
   

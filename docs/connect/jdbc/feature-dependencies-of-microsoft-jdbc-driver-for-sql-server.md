@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8316978e0122fe800dbd5af592b2ed57506873b6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66781949"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver의 기능 종속성
@@ -106,7 +106,7 @@ ms.locfileid: "66781949"
 - JDBC Driver 버전 6.0.0 - 종속성 버전: Azure-Keyvault(버전 0.9.7), Adal4j(버전 1.3.0) 및 해당 종속성([애플리케이션 예제](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
-> 6.2.2 및 6.4.0 드라이버 버전에서는 azure-keyvault-java 종속성 버전이 버전 1.0.0으로 업데이트되었습니다. 그러나 새 버전은 이전 버전(0.9.7)과 호환되지 않아 드라이버의 기존 구현이 중단됩니다. 드라이버의 새 구현을 사용하려면 API를 변경해야 하므로 Azure Key Vault 공급자를 사용하는 클라이언트 프로그램이 중단됩니다.
+> 6\.2.2 및 6.4.0 드라이버 버전에서는 azure-keyvault-java 종속성 버전이 버전 1.0.0으로 업데이트되었습니다. 그러나 새 버전은 이전 버전(0.9.7)과 호환되지 않아 드라이버의 기존 구현이 중단됩니다. 드라이버의 새 구현을 사용하려면 API를 변경해야 하므로 Azure Key Vault 공급자를 사용하는 클라이언트 프로그램이 중단됩니다.
 >
 > 이 문제는 최신 드라이버 버전(7.0.0)에서 해결되었습니다. 인증 콜백 메커니즘을 사용한 제거된 생성자가 이전 버전과의 호환성을 위해 Azure Key Vault 공급자에 다시 추가되었습니다.
 

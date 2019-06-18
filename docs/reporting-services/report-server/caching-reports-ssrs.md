@@ -21,10 +21,10 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175583"
 ---
 # <a name="caching-reports-ssrs"></a>보고서 캐시(SSRS)
@@ -73,6 +73,6 @@ ms.locfileid: "66175583"
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
  [캐시 미리 로드](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
+ [공유 데이터 세트 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
   
   

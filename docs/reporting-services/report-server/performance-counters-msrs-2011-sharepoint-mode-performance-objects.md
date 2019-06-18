@@ -16,10 +16,10 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d98abc6a17e22afd73cb1c2c14c782fa57b5eaed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581074"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>성능 카운터 MSRS 2011 SharePoint 모드 성능 개체

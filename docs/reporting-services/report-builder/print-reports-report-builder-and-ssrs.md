@@ -9,10 +9,10 @@ ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581153"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>보고서 인쇄 - Reporting Services(SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "65581153"
  [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  클라이언트 쪽 인쇄 기능을 사용하여 웹 포털에서 보고서를 인쇄하는 방법을 설명합니다.  
   
- [다른 애플리케이션에서 보고서 인쇄&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [다른 애플리케이션에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  다른 애플리케이션으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  
   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  

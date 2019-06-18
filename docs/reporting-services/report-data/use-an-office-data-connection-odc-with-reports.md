@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574944"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>보고서에 Office 데이터 연결(.odc) 사용
@@ -90,7 +90,7 @@ ms.locfileid: "65574944"
   
 10. 보고서에서 사용자 지정 데이터 원본 정보를 사용하는 경우 **공유**를 클릭합니다.  
   
-11. **데이터 원본 연결**에서 찾아보기(**...**) 단추를 클릭합니다.  
+11. **데이터 원본 연결**에서 찾아보기( **...** ) 단추를 클릭합니다.  
   
 12. 방금 업로드한 .odc 파일을 선택합니다.  
   

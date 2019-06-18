@@ -17,23 +17,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011817"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
   *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>파일 스토리지 유형에 대한 bcp 프롬프트  
- 대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**)가 없으면 각 데이터 필드의 파일 스토리지 유형을 다음과 같이 입력해야 합니다.  
+ 대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치( **-f**) 또는 데이터 형식 스위치( **-n**, **-c**, **-w**또는 **-N**)가 없으면 각 데이터 필드의 파일 스토리지 유형을 다음과 같이 입력해야 합니다.  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
  이 프롬프트에 대한 사용자 응답은 수행하는 태스크에 따라 다음과 같이 달라집니다.  
   
--    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 스토리지 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 스토리지 유형"을 참조하십시오.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 스토리지 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 스토리지 유형"을 참조하십시오.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터를 문자 형식으로 데이터 파일에 대량으로 내보내려면 `char`를 테이블의 모든 열에 대한 파일 저장 유형으로 지정합니다.  
   

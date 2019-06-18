@@ -11,10 +11,10 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7e87b285eccbd35c6c90cffa2f32e276aaefe0ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581060"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
@@ -38,7 +38,7 @@ ms.locfileid: "65581060"
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 성능 카운터(기본 모드 보고서 서버)  
  **ReportServer:Service** 성능 개체에는 보고서 서버 인스턴스에 대한 HTTP 관련 이벤트 및 메모리 관련 이벤트를 추적하는 카운터 모음이 들어 있습니다. 이 성능 개체는 컴퓨터의 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스마다 한 번씩 나타나며 사용자는 각 인스턴스에 대한 성능 카운터에서 카운터를 추가하거나 제거할 수 있습니다. 기본 인스턴스의 카운터는 **ReportServer:Service**형식으로 나타납니다. 명명된 인스턴스의 카운터는 **ReportServer$\<***instance_name***>:Service** 형식으로 나타납니다.  
   
-  **ReportServer:Service** 성능 개체는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 새로 도입되었으며 이전 버전의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 IIS(인터넷 정보 서비스) 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]과 함께 제공된 카운터의 하위 집합을 제공합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
+ **ReportServer:Service** 성능 개체는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 새로 도입되었으며 이전 버전의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 IIS(인터넷 정보 서비스) 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]과 함께 제공된 카운터의 하위 집합을 제공합니다. 이러한 새 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그온 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 또한 이 성능 개체에는 메모리 관리 이벤트를 추적하는 카운터가 포함됩니다.  
   
  다음 표에서는 **ReportServer:Service** 성능 개체에 포함된 카운터를 나열합니다.  
   

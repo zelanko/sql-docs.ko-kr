@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013343"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
@@ -146,7 +146,7 @@ ms.locfileid: "66013343"
   
  예제 XML 데이터와 작업 예제를 만드는 단계는 아래에 지정되어 있습니다.  
   
--   경우는  **\<고객 >** XML 데이터 파일의 요소 노드가 범위에 입력, XML 대량 로드는 Cust 테이블에 대 한 레코드를 생성 합니다. 그런 다음 XML 대량 로드에서 필요한 열 값 (CustomerID, CompanyName, City)에 복사는  **\<CustomerID >**,  **\<CompanyName >**, 및  **\<도시 >** 이러한 요소와 자식 요소 범위를 시작 합니다.  
+-   경우는  **\<고객 >** XML 데이터 파일의 요소 노드가 범위에 입력, XML 대량 로드는 Cust 테이블에 대 한 레코드를 생성 합니다. 그런 다음 XML 대량 로드에서 필요한 열 값 (CustomerID, CompanyName, City)에 복사는  **\<CustomerID >** ,  **\<CompanyName >** , 및  **\<도시 >** 이러한 요소와 자식 요소 범위를 시작 합니다.  
   
 -   경우는  **\<주문 >** 요소 노드가 범위를 입력, XML 대량 로드는 CustOrder 테이블에 레코드를 생성 합니다. XML 대량 로드의 값이 복사는 **OrderID** 이 레코드에 대 한 특성입니다. 가져온 CustomerID 열에 필요한 값은  **\<CustomerID >** 의 자식 요소는  **\<고객 >** 요소. 에 지정 된 정보를 사용 하는 XML 대량 로드 `<sql:relationship>` 경우가 아니면이 레코드에 대 한 CustomerID 외래 키 값을 가져오려고 합니다 **CustomerID** 특성에 지정 된를  **\<순서 >** 요소입니다. 일반 규칙은 자식 요소가 외래 키 특성 값을 명시적으로 지정하는 경우 XML 대량 로드가 해당 값을 사용하고 지정된 `<sql:relationship>`을 사용하여 부모 요소에서 값을 가져오지 않는 것입니다. 이  **\<주문 >** 요소 노드가 범위를 벗어나면 XML 대량 로드는 레코드를 전송, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 모든 후속 처리 및  **\<주문 >** element 노드 같은 방법으로 합니다.  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917731"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
@@ -31,7 +31,7 @@ ms.locfileid: "62917731"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   전자 메일을 보내는 데 사용할 SMTP(Simple Mail Transfer Protocol) 서버의 이름과 포트 번호를 결정합니다. SMTP 서버에 인증이 필요한 경우 SMTP 서버의 사용자 이름과 암호를 결정합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62917731"
   
 -   **프로필 및 계정 관리** 페이지에서 **새 계정 만들기** 를 선택하고 **다음**을 클릭합니다.  
   
--   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다.  **다음**을 클릭합니다.  
+-   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다. **다음**을 클릭합니다.  
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 계정 만들기를 완료합니다.  
   

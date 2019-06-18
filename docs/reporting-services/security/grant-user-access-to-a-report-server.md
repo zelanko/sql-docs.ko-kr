@@ -15,10 +15,10 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619606"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 데이터베이스 액세스 권한 부여
@@ -45,7 +45,7 @@ ms.locfileid: "65619606"
 
 - 이 태스크를 다른 사용자에게 위임하려면 사용자 계정을 내용 관리자 및 시스템 관리자 역할에 매핑하는 역할 할당을 만듭니다. 내용 관리자 및 시스템 관리자 권한이 있는 사용자는 보고서 서버에 사용자를 추가할 수 있습니다.
 
--  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 웹 포털에는 작업 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 각 역할의 태스크 종류에 익숙해질 수 있도록 시스템 역할 및 사용자 역할에 대해 미리 정의된 역할을 확인합니다. 웹 포털에는 작업 설명이 표시되지 않으므로 사용자를 추가하기 전에 역할에 익숙해지는 것이 좋습니다.
 
 - 필요에 따라 필요한 태스크 모음을 포함하는 추가 역할을 정의하거나 역할을 사용자 지정합니다. 예를 들어 개별 항목에 대해 사용자 지정 보안 설정을 사용하려는 경우 폴더에 대한 보기 액세스 권한을 부여하는 새 역할 정의를 만들 수 있습니다.
 
@@ -76,7 +76,7 @@ ms.locfileid: "65619606"
 
 1. **웹 포털**을 시작하고 사용자 또는 그룹을 추가할 보고서 항목을 찾습니다.
 
-2. 항목에서 **...**(줄임표)를 선택합니다.
+2. 항목에서 **...** (줄임표)를 선택합니다.
 
 3. 드롭다운 메뉴에서 **관리**를 선택합니다.
 

@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620589"
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
@@ -117,7 +117,7 @@ ms.locfileid: "65620589"
   
 -   *Stylesheet*: HTML 뷰어에 적용할 스타일시트를 지정합니다.  
   
--   디바이스 정보 설정: `rc:tag=value`형식으로 디바이스 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&amp;#40;Reporting Services&amp;#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
+-   디바이스 정보 설정: `rc:tag=value`형식으로 디바이스 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 디바이스 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 디바이스 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)  
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
@@ -239,7 +239,7 @@ ms.locfileid: "65620589"
     ```  
   
 -   *ParameterLanguage*:  
-                  브라우저 언어와 독립적으로 URL에 전달되는 매개 변수의 언어를 제공합니다. 기본값은 브라우저 언어입니다.  **en-us** 또는 **de-de**와 같은 문화권 값일 수 있습니다.  
+                  브라우저 언어와 독립적으로 URL에 전달되는 매개 변수의 언어를 제공합니다. 기본값은 브라우저 언어입니다. **en-us** 또는 **de-de**와 같은 문화권 값일 수 있습니다.  
   
      브라우저 언어를 재정의하고 문화권 값을 de-DE로 지정하는 **Native** 모드의 예제입니다.  
   

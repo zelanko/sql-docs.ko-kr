@@ -12,11 +12,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669605"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>10진수 문자열 및 금액 값 형식 지정(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

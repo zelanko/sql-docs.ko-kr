@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36f53b9f4daaa25d6276778ed4f38ae641c73c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712428"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47716821"
   
     -   **파일에 저장** 을 클릭하면 추적이 파일에 캡처됩니다. **최대 파일 크기 설정**에 대한 값을 지정합니다. 기본값은 5MB입니다.  
   
-         **파일 롤오버 사용** 을 선택하여 최대 파일 크기에 도달할 때 자동으로 새 파일을 만들 수도 있습니다. **서버에서 추적 데이터 처리**를 선택하면 클라이언트 응용 프로그램 대신 추적을 실행하는 서비스에서 추적 데이터를 처리하게 됩니다. 서버에서 추적 데이터를 처리하는 경우 스트레스 상태에서도 이벤트를 건너뛰지 않지만 서버 성능은 저하될 수 있습니다.  
+         **파일 롤오버 사용** 을 선택하여 최대 파일 크기에 도달할 때 자동으로 새 파일을 만들 수도 있습니다. **서버에서 추적 데이터 처리**를 선택하면 클라이언트 애플리케이션 대신 추적을 실행하는 서비스에서 추적 데이터를 처리하게 됩니다. 서버에서 추적 데이터를 처리하는 경우 스트레스 상태에서도 이벤트를 건너뛰지 않지만 서버 성능은 저하될 수 있습니다.  
   
     -   **테이블에 저장** 을 클릭하여 추적을 데이터베이스 테이블에 캡처합니다.  
   

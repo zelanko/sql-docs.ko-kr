@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798744"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
@@ -114,7 +114,7 @@ SQLBindParameter를 사용하여 입력 매개 변수를 바인딩하는 경우 
 
 데이터 정렬 및 인코딩에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
-Windows와 Linux 및 macOS 기반 iconv 라이브러의 여러 버전 간에는 인코딩 변환에서 몇 가지 차이점이 있습니다. 코드 페이지 1255(히브리어)의 텍스트 데이터에는 유니코드로 변환하면 다르게 동작하는 하나의 코드 포인트(0xCA)가 있습니다. Windows의 경우 이 문자는 UTF-16 코드 포인트 0x05BA로 변환됩니다. 1.15 이전 버전 libiconv를 포함하는 macOS 및 Linux의 경우 0x00CA로 변환됩니다. 2003 개정판 Big5/CP950(`BIG5-2003`)을 지원하지 않는 iconv 라이브러리를 포함하는 Linux의 경우 해당 개정판에서 추가된 문자는 올바르게 변환되지 않습니다. 코드 페이지 932(일본어, Shift-JIS)의 경우 원래 인코딩 표준에 정의되지 않은 문자를 해독한 결과도 다릅니다. 예를 들어 바이트 0x80은 Windows에서 U+0080으로 변환되지만 Linux 및 macOS에서는 iconv 버전에 따라 U+30FB가 될 수 있습니다.
+Windows와 Linux 및 macOS 기반 iconv 라이브러의 여러 버전 간에는 인코딩 변환에서 몇 가지 차이점이 있습니다. 코드 페이지 1255(히브리어)의 텍스트 데이터에는 유니코드로 변환하면 다르게 동작하는 하나의 코드 포인트(0xCA)가 있습니다. Windows의 경우 이 문자는 UTF-16 코드 포인트 0x05BA로 변환됩니다. 1\.15 이전 버전 libiconv를 포함하는 macOS 및 Linux의 경우 0x00CA로 변환됩니다. 2003 개정판 Big5/CP950(`BIG5-2003`)을 지원하지 않는 iconv 라이브러리를 포함하는 Linux의 경우 해당 개정판에서 추가된 문자는 올바르게 변환되지 않습니다. 코드 페이지 932(일본어, Shift-JIS)의 경우 원래 인코딩 표준에 정의되지 않은 문자를 해독한 결과도 다릅니다. 예를 들어 바이트 0x80은 Windows에서 U+0080으로 변환되지만 Linux 및 macOS에서는 iconv 버전에 따라 U+30FB가 될 수 있습니다.
 
 ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 서로게이트가 SQLPutData 버퍼로 분할되면 데이터 손상이 발생합니다. 버퍼를 부분 문자 인코딩으로 끝나지 않는 SQLPutData 스트리밍에 사용합니다. 이 제한 사항은 ODBC 드라이버 17에서 제거되었습니다.
 

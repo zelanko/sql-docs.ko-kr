@@ -12,10 +12,10 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581485"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
@@ -50,13 +50,13 @@ ms.locfileid: "65581485"
  [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)  
  보고서 서버의 보고서 캐시 동작에 대해 설명합니다.  
   
- [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
+ [공유 데이터 세트 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
  보고서 서버의 공유 데이터 세트 캐싱 동작에 대해 설명합니다.  
   
  [큰 보고서 처리](../../reporting-services/report-server/process-large-reports.md)  
  대형 보고서를 구성 및 배포하는 권장 방법을 제공합니다.  
   
- [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [보고서 및 공유 데이터 세트 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  쿼리 및 보고서 처리에 대한 제한 시간을 설정하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

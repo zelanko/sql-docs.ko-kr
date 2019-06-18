@@ -10,10 +10,10 @@ ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 69f198696c434f53dfbef328bdbf3b9be832ca11
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65370166"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>구성 파일의 URL(SSRS 구성 관리자)
@@ -29,14 +29,14 @@ ms.locfileid: "65370166"
   
 -   **UrlString** 요소만 사용하는 구문에 대한 자세한 내용은 [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)을 참조하세요.  
   
--   애플리케이션 액세스를 위한 URL을 구성하는 방법은 [URL 구성&amp;#40;SSRS 구성 관리자&amp;#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
+-   애플리케이션 액세스를 위한 URL을 구성하는 방법은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)에 액세스하는 데 사용됩니다.  
   
 #### <a name="urls-for-report-access"></a>보고서 액세스용 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 링크나 첨부 파일을 보낼 때 사용할 수 있는 보고서 서버 전자 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서 링크는 보고서가 배달될 때 생성됩니다. 보고서 서버 전자 메일 배달 확장 프로그램은 구성 파일의 **UrlRoot** 설정을 사용하여 링크를 만듭니다. **UrlRoot** 는 무인 보고서 처리를 통해 생성된 렌더링된 보고서의 링크를 확인하는 데에도 사용됩니다.  
   
  **UrlRoot** 는 애플리케이션 액세스를 위한 URL을 구성하면 RSReportServer.config 파일에 자동으로 지정됩니다. 구성 파일에서 이 값을 수정하려면 배달하려는 보고서가 하위 보고서 서버 데이터베이스에 연결된 보고서 서버 웹 서비스에 대한 올바른 URL 주소를 지정해야 합니다. 보고서 서버 인스턴스당 하나의 **UrlRoot** 만 지정할 수 있습니다. 따라서 지정된 보고서 서버 인스턴스의 RSReportServer.config 파일에는 하나의 **UrlRoot** 항목만 존재할 수 있습니다. 보고서 서버 웹 서비스에 여러 개의 URL이 예약된 경우 **UrlRoot**에 사용할 하나를 선택해야 합니다.  
   
- 대부분의 경우 **UrlRoot**를 수정할 필요는 없습니다. 그러나 보고서 서버가 정규화된 URL을 통해 액세스되는 경우에는 앞서 정규화된 사이트 이름에 대한 호스트 헤더를 사용하는 URL을 구성하지 않았다면 RSReportServer.config를 수동으로 편집하여 **UrlRoot** 를 보고서 렌더링에 사용되는 정규화된 보고서 서버 URL로 설정해야 합니다(예: https://www.adventure-works.com/mywebapp/reportserver)).  
+ 대부분의 경우 **UrlRoot**를 수정할 필요는 없습니다. 그러나 보고서 서버가 정규화된 URL을 통해 액세스되는 경우에는 앞서 정규화된 사이트 이름에 대한 호스트 헤더를 사용하는 URL을 구성하지 않았다면 RSReportServer.config를 수동으로 편집하여 **UrlRoot** 를 보고서 렌더링에 사용되는 정규화된 보고서 서버 URL로 설정해야 합니다(예: https://www.adventure-works.com/mywebapp/reportserver) ).  
   
 #### <a name="urls-connecting-the-includessrswebportalincludesssrswebportalmd-and-web-parts-to-the-report-server-web-service"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 및 웹 파트를 보고서 서버 웹 서비스에 연결하는 URL  
  Reporting Services의 SharePoint 2.0 웹 파트와 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 는 보고서 서버에 연결되는 웹 프런트 엔드 구성 요소입니다. 백 엔드 보고서 서버에 연결하는 데 사용되는 URL은 다음과 같습니다.  

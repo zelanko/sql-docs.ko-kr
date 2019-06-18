@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb24a0615fcfbe2a04fa6daedbd0e08ac90875d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787870"
 ---
 # <a name="browse-for-servers-local-servers"></a>서버 찾아보기(로컬 서버)
-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 연결할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 정확한 이름을 모르는 경우 **서버 이름** 상자에서 **더 찾아보기**를 클릭하여 **서버 찾아보기** 대화 상자를 엽니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 연결할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 정확한 이름을 모르는 경우 **서버 이름** 상자에서 **더 찾아보기**를 클릭하여 **서버 찾아보기** 대화 상자를 엽니다.  
   
 ## <a name="options"></a>변수  
  **연결할 서버를 선택하십시오.**  

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 562c762871db5c29476d10a81ac52dad46f65ad5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579395"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>웹 페이지에 보고서 뷰어 웹 파트 추가
@@ -43,7 +43,7 @@ ms.locfileid: "65579395"
   
 6.  뷰어에서 **도구 창을 열려면 여기를 클릭하십시오**를 클릭합니다.  
   
-7.  찾아보기 (**...**) 단추를 클릭하여 현재 사이트 모음의 임의 라이브러리에 있는 보고서를 선택합니다. 보고서 URL을 입력할 수도 있습니다. 보고서의 URL을 확인하려면 해당 보고서를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 보고서 옆의 아래쪽 화살표는 클릭하지 마십시오. 보고서 URL은 항목의 속성 보기 페이지에 표시되지 않습니다. **속성** 대화 상자에서 URL을 복사하여 붙여넣는 경우 "%20" URL 인코딩을 공백으로 바꿉니다. 예를 들어 "Company%20Sales"는 "Company Sales"가 되어야 합니다.  
+7.  찾아보기 ( **...** ) 단추를 클릭하여 현재 사이트 모음의 임의 라이브러리에 있는 보고서를 선택합니다. 보고서 URL을 입력할 수도 있습니다. 보고서의 URL을 확인하려면 해당 보고서를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 보고서 옆의 아래쪽 화살표는 클릭하지 마십시오. 보고서 URL은 항목의 속성 보기 페이지에 표시되지 않습니다. **속성** 대화 상자에서 URL을 복사하여 붙여넣는 경우 "%20" URL 인코딩을 공백으로 바꿉니다. 예를 들어 "Company%20Sales"는 "Company Sales"가 되어야 합니다.  
   
     > [!NOTE]  
     >  각 보고서 뷰어 웹 파트에는 단일 보고서가 포함되어 있습니다. URL은 동일한 웹 애플리케이션 또는 팜 내의 사이트나 현재 SharePoint 사이트에 있는 보고서에 대한 정규화된 경로여야 합니다. URL은 문서 라이브러리나 보고서가 포함된 문서 라이브러리 내의 폴더로 확인되어야 합니다. 보고서 URL은 .rdl 파일 확장명을 포함해야 합니다. 보고서가 모델 또는 공유 데이터 원본 파일에 종속되어 있는 경우 URL에 이러한 파일을 지정할 필요가 없습니다. 보고서에 필요한 파일에 대한 참조가 포함되어 있습니다.  

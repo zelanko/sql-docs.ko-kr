@@ -11,10 +11,10 @@ ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576026"
 ---
 # <a name="system-role-properties-management-studio"></a>시스템 역할 속성(Management Studio)
@@ -30,7 +30,7 @@ ms.locfileid: "65576026"
  시스템 역할 정의 이름을 지정합니다.  
   
  **설명**  
- 시스템 역할 정의에 대한 설명을 보여 줍니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 이 설명은 이 페이지에만 표시됩니다. 보고서 관리자를 통해 이 항목을 보는 사용자는 폴더 계층을 검색할 때 이 설명을 볼 수 있습니다.  
+ 시스템 역할 정의에 대한 설명을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 이 설명은 이 페이지에만 표시됩니다. 보고서 관리자를 통해 이 항목을 보는 사용자는 폴더 계층을 검색할 때 이 설명을 볼 수 있습니다.  
   
  **태스크**  
  이 역할 정의에 대해 선택할 수 있는 시스템 수준 태스크를 모두 나열합니다. 미리 정의된 태스크 목록에서 항목을 추가 또는 제거하여 사용자가 이 역할을 통해 지정된 항목에 액세스하는 방법을 정의할 수 있습니다. 새 태스크를 만들거나 기존 작업을 수정할 수 없습니다.  

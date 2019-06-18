@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767090"
 ---
 # <a name="execution-of-projects-and-packages"></a>프로젝트 및 패키지 실행
@@ -41,8 +41,8 @@ ms.locfileid: "62767090"
 |**dtexecui**<br /><br /> 자세한 내용은 [패키지 실행 유틸리티&#40;DtExecUI&#41; UI 참조](execute-package-utility-dtexecui-ui-reference.md)를 참조하세요.|아니요|예|사용자 계정 컨트롤|  
 |**SQL Server 에이전트**<br /><br /> 패키지를 예약하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md)을 참조하세요.|사용자 계정 컨트롤|예|사용자 계정 컨트롤|  
 |**기본 제공 저장 프로시저**<br /><br /> 자세한 내용은 [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database)을 참조하세요.|사용자 계정 컨트롤|아니오|아니요|  
-| **<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|사용자 계정 컨트롤|아니오|아니요|  
-| **<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|**<xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|사용자 계정 컨트롤|아니오|아니요|  
+|**<xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스의 형식 및 멤버를 사용하여 관리되는 API**|현재는 아님|사용자 계정 컨트롤|사용자 계정 컨트롤|  
   
 ## <a name="execution-and-logging"></a>실행 및 로깅  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에 대한 로깅을 활성화할 수 있으며 로그 파일에서 런타임 정보를 확인할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  

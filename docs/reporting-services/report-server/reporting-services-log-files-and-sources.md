@@ -16,10 +16,10 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5a0f6270fc40d4a22db2d8b03deba8a53e57fbf6
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620316"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 로그 파일 및 소스
@@ -38,7 +38,7 @@ ms.locfileid: "65620316"
 |[Windows 애플리케이션 로그](../../reporting-services/report-server/windows-application-log.md)|Microsoft Windows 애플리케이션 로그에는 보고서 서버 이벤트에 대한 정보가 들어 있습니다.|  
 |Windows 성능 로그|Windows 성능 로그에는 보고서 서버 성능 데이터가 들어 있습니다. 성능 로그를 만든 다음 수집할 데이터를 결정하는 카운터를 선택할 수 있습니다. 자세한 내용은 [Monitoring Report Server Performance](../../reporting-services/report-server/monitoring-report-server-performance.md)을 참조하세요.|  
 |SQL Server 설치 로그 파일|설치 중에도 로그 파일이 만들어집니다. 설치에 실패하거나 성공했지만 경고 또는 기타 메시지가 있을 경우 문제 해결을 위해 로그 파일을 검사할 수 있습니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.|  
-|IIS 로그|Microsoft IIS(인터넷 정보 서비스)에 의해 생성되는 로그 파일입니다. 자세한 내용은 [IIS(인터넷 정보 서비스)에서 로깅을 사용하도록 설정하는 방법](https://support.microsoft.com/kb/313437)(https://support.microsoft.com/kb/313437)을 참조하세요.|  
+|IIS 로그|Microsoft IIS(인터넷 정보 서비스)에 의해 생성되는 로그 파일입니다. 자세한 내용은 [IIS(인터넷 정보 서비스)에서 로깅을 사용하도록 설정하는 방법](https://support.microsoft.com/kb/313437)(https://support.microsoft.com/kb/313437) 을 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

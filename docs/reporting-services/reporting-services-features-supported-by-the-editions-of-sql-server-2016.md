@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/01/2018
 ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936549"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
@@ -26,7 +26,7 @@ ms.locfileid: "65936549"
 
 > [![SQL Server 2017 다운로드](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine 소형](../analysis-services/media/azure-virtual-machine-small.png)**[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL Server Enterprise Edition 열을 참조하세요.
 

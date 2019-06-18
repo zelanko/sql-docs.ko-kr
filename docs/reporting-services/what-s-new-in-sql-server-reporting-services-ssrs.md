@@ -11,10 +11,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
 ms.openlocfilehash: 37c3c8b874534f3a8a649d438b26b0ee133cb371
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993856"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
@@ -212,7 +212,7 @@ SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md
 
 ![보고서 데이터 창 및 매개 변수 창의 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창의 매개 변수 목록")  
 
-**높은 DPI 지원:**[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 는 높은 DPI(인치당 도트 수) 배율 및 디바이스를 지원합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
+**높은 DPI 지원:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] 는 높은 DPI(인치당 도트 수) 배율 및 디바이스를 지원합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
 
 - [Windows 8.1 DPI 배율 향상된 기능](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 

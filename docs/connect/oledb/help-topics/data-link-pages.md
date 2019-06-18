@@ -11,13 +11,13 @@ ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
 ms.openlocfilehash: e198f561fd4f6bcec390ef8632c1cdc96f2810d6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854663"
 ---
-# <a name="universal-data-link-udl-configuration"></a>유니버설 데이터 링크 (UDL) 구성
+# <a name="universal-data-link-udl-configuration"></a>UDL(유니버설 데이터 링크) 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

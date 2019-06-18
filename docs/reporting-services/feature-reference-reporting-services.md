@@ -14,10 +14,10 @@ ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503095"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
@@ -33,7 +33,7 @@ ms.locfileid: "65503095"
  보고서 서버 인스턴스의 관리 및 배포에 사용되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 도구에 대한 도움말을 제공합니다.  
   
  [Management Studio의 보고서 서버 F1 도움말](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  
   
  [HTML 뷰어 및 보고서 도구 모음](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  웹 브라우저에서 보고서를 보는 데 사용되는 HTML 뷰어 구성 요소에 대한 도움말을 제공합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "65503095"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 개념&#40;SSRS&#41;](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)   
  [보고서 작성기 시작](https://www.microsoft.com/download/en/details.aspx?id=29072)   
  [보고서 작성기 1.0을 사용하여 보고서 디자인 및 구현](https://go.microsoft.com/fwlink/?LinkId=142601)  
   

@@ -13,10 +13,10 @@ ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a505b2ed548f0fe7d90559d6a89b2f1c112af91e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576381"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)

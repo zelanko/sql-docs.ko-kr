@@ -9,10 +9,10 @@ ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578834"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>행렬 및 차트에 같은 데이터 표시(보고서 작성기)
@@ -22,7 +22,7 @@ ms.locfileid: "65578834"
   
  행렬 열 그룹 값을 차트에 대한 범례로 사용하려면 차트의 계열 데이터에 대한 색을 지정한 다음 같은 색을 그룹 값을 표시하는 행렬 셀의 입력란 배경색으로 사용해야 합니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)을 참조하세요.  
   
- 보고서에 그룹 정의에 대한 그룹 값이 너무 많은 경우 런타임에 보고서가 복잡하게 표시될 수 있습니다. 값을 필터링하고 그룹을 결합하거나 차트에서 그룹을 결합하는 임계값을 조정해야 할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결하기 &amp;#40;보고서 작성기 및 SSRS#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서에 그룹 정의에 대한 그룹 값이 너무 많은 경우 런타임에 보고서가 복잡하게 표시될 수 있습니다. 값을 필터링하고 그룹을 결합하거나 차트에서 그룹을 결합하는 임계값을 조정해야 할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결하기 &#40;보고서 작성기 및 SSRS#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -94,8 +94,8 @@ ms.locfileid: "65578834"
 25. 결과를 미리 봅니다. 행렬 행 및 열 그룹에 차트 계열 및 범주 그룹과 같은 데이터가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [동일한 데이터 세트에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

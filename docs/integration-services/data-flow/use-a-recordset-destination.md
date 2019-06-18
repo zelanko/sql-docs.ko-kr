@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725723"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
@@ -103,7 +103,7 @@ ms.locfileid: "65725723"
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 데이터 흐름 태스크를 추가합니다.  
   
-2.   **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
+2.  **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
   
 3.  OLE DB 원본 편집기의 **연결 관리자** 페이지에서 다음과 같이 원본을 구성합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "65725723"
   
     5.  **MessageSourceType**에 대해 **직접 입력**을 선택합니다.  
   
-5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추(**...**)를 클릭하여 **속성 식 편집기**를 엽니다.  
+5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추( **...** )를 클릭하여 **속성 식 편집기**를 엽니다.  
   
 6.  **속성 식 편집기**에서 다음 정보를 입력합니다.  
   

@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 11bbbfd015377186c97e4f8229de5cdbe8919b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8196e045704adedbf235fcba566ba22b009536f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704578"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>WMI공급자에 프로그래밍 방식으로 액세스
 
 ## <a name="wmi-provider-overview"></a>WMI 공급자 개요  
- 이 항목에 표시된 코드 예제의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 대한 정보를 얻는 데 사용되는 네임스페이스는 **System.Management** 네임스페이스이며 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]에서 찾을 수 있습니다. **System.Management** 네임스페이스는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 응용 프로그램에서 관리 정보를 액세스하고 조작하는 데 사용할 수 있는 관리 코드 클래스 집합을 제공합니다. **System.Management** 네임스페이스를 사용하여 Reporting Services WMI 클래스를 사용하는 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK의 "System.Management를 사용하여 관리 정보 액세스"를 참조하십시오.  
+ 이 항목에 표시된 코드 예제의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 대한 정보를 얻는 데 사용되는 네임스페이스는 **System.Management** 네임스페이스이며 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]에서 찾을 수 있습니다. **System.Management** 네임스페이스는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 애플리케이션에서 관리 정보를 액세스하고 조작하는 데 사용할 수 있는 관리 코드 클래스 집합을 제공합니다. **System.Management** 네임스페이스를 사용하여 Reporting Services WMI 클래스를 사용하는 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK의 "System.Management를 사용하여 관리 정보 액세스"를 참조하십시오.  
   
 ## <a name="finding-a-report-server-instance"></a>보고서 서버 인스턴스 찾기  
  보고서 서버 설치에 대한 정보를 찾을 때는 WMI 인스턴스 컬렉션을 열거하는 것이 좋습니다. 아래 예는 컬렉션을 만들고 이 컬렉션을 반복하여 속성을 표시하는 방법으로 모든 보고서 서버 인스턴스에 대한 속성을 찾는 방법을 보여 줍니다.  

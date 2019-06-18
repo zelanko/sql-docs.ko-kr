@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5ecdbebcc23ddce8947cd7e832eb62af0f64008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665174"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server 복제의 주요 변경 내용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다.  
   
-## <a name="breaking-changes-made-in-includesssql15includessssql15-mdmd"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="breaking-changes-made-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 또는 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대한 복제를 지원하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  

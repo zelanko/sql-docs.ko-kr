@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c371558070ee6ef41afe167e3be2ed4adbd80cc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513605"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
 Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메일 배달 확장 프로그램이 있습니다. 전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.
@@ -48,7 +48,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 
 ## <a name="a-namersconfigmanconfigure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="rsconfigman"/>Reporting Services 구성 관리자를 사용하여 보고서 서버 메일 구성
 
-1. Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 
+1. Reporting Services 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다.
 
 2. **보낸 사람 주소**에 생성된 메일의 **보낸 사람:** 필드에 사용할 메일 주소를 입력합니다. 
 
@@ -109,7 +109,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
      <SendPassword></SendPassword>
 </RSEmailDPConfiguration>
 ```
-## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한  구성 옵션 
+## <a name="configuration-options-for-setting-the-to-field-in-a-message"></a>메시지의 받는 사람: 필드 설정을 위한 구성 옵션
 개인 구독 관리 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.
 
 도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.

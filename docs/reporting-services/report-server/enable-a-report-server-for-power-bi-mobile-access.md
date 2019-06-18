@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2739af78765645db8f24c211e8c9110085995e74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d14c8e092a030c88dbc4d0b5d4375bb56a8eb82c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308177"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>Power BI Mobile에 액세스할 수 있도록 보고서 서버 활성화
 Power BI Mobile 앱을 사용하여 모바일 보고서를 사용할 수 있습니다. Power BI Mobile 앱을 Reporting Services에 연결하기 위해서는 몇 가지 구성 사항이 있습니다.  
   
 -   [모바일 보고서에서는 Reporting Services 기본 모드가 필요합니다.](#nativemode)  
 -   [Reporting Services에 대한 기본 인증 구성 사용](#basicauth) (CTP 3.2용)  
--   [클라이언트 장치를 위한 올바른 인증서 신뢰와 함께 HTTPS를 사용하는 것이 좋습니다.](#https)  
+-   [클라이언트 디바이스를 위한 올바른 인증서 신뢰와 함께 HTTPS를 사용하는 것이 좋습니다.](#https)  
 -   [방화벽 설정 검토](#firewall)  
   
 <a name="nativemode"/>  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294723"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
 이 자습서에서는 중첩된 행 및 열 그룹의 샘플 판매 데이터 행렬을 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 설명합니다. 
@@ -22,7 +22,7 @@ ms.locfileid: "56291681"
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-이 자습서에 소요되는 예상 시간: 20분.  
+이 자습서에 소요되는 예상 시간: 20분  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요. 
@@ -133,7 +133,7 @@ ms.locfileid: "56291681"
   
 13. **마침**을 클릭합니다.  
   
-    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 Subcategory 및 Product라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+    디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 하위 범주 및 제품이라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -156,7 +156,7 @@ ms.locfileid: "56291681"
   
 3.  **홈** 탭 > **숫자** > **통화**를 선택합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
   
-    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [**$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
+    국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   

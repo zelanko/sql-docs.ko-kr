@@ -9,10 +9,10 @@ ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3ab6708212ce429f2abacae4353670235a687cb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582060"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가
@@ -20,7 +20,7 @@ ms.locfileid: "65582060"
   
  필터를 사용하여 보고서에서 표시 및 처리되는 데이터를 제어할 수 있습니다. 데이터 세트, 데이터 영역, 그룹 또는 이러한 항목의 조합에 대해 필터를 지정할 수 있습니다.  
   
- 자세한 내용은 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

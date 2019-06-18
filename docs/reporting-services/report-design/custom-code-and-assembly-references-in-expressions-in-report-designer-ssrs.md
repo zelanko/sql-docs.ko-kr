@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581497"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
@@ -115,7 +115,7 @@ End Function
  기본 제공 개체 컬렉션 및 초기화에 대한 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md) 및 [사용자 지정 어셈블리 개체 초기화](../../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 코드에서 매개 변수에 대한 참조 포함  
- 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다.  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구조를 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
+ 보고서 정의의 코드 블록 또는 사용자가 제공하는 사용자 지정 어셈블리에서 사용자 지정 코드를 통해 전역 매개 변수 컬렉션을 참조할 수 있습니다. 매개 변수 컬렉션은 읽기 전용이며 공개 반복기는 없습니다. [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **For Each** 구조를 사용하여 컬렉션을 단계별로 실행할 수 없습니다. 보고서 정의에 정의된 매개 변수 이름을 알아야 사용자의 코드에서 해당 매개 변수를 참조할 수 있습니다. 하지만 다중값 매개 변수의 모든 값을 반복할 수 있습니다.  
   
  다음 표에는 사용자 지정 코드에서 기본 제공 컬렉션 `Parameters` 를 참조하는 예가 들어 있습니다.  
   

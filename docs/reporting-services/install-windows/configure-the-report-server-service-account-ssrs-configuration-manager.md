@@ -1,19 +1,19 @@
 ---
 title: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 06ac6b8fb0c24751439d955b32eb93d9447bdf7c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: HT
+ms.openlocfilehash: 81b323f869aa28312911bf744e359def819029fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328843"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514412"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
 

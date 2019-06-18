@@ -13,15 +13,15 @@ ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578235"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
 
-  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
+  프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_ **속성**을 클릭합니다.  
   
  구성 속성을 정의한 후 도구 모음의 **솔루션 구성** 드롭다운 목록에서 구성을 선택할 수 있습니다.  
 
@@ -29,7 +29,7 @@ ms.locfileid: "65578235"
   
 ## <a name="options"></a>옵션  
  **Configuration**  
- 편집할 구성을 선택합니다. 처음에는 **Debug**, **DebugLocal**및 **Release**의 3가지 구성을 사용할 수 있습니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
+ 편집할 구성을 선택합니다. 처음에는 **Debug**, **DebugLocal**및 **Release**의 3가지 구성을 사용할 수 있습니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)** ).  
   
  두 개 이상의 구성에 대한 속성을 동시에 보려면 **모든 구성** 또는 **여러 구성**을 선택합니다.  
   

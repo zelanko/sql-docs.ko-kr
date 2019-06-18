@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 33613a90ee21069b2ef7d2f9908ed13bd4f040e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66799675"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 매개 변수 방향 지정

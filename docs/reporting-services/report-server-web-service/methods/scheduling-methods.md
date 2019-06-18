@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shared schedules [Reporting Services], methods
 - methods [Reporting Services], scheduling
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 387be09d03396c0bacb4d282ff2b6abdbaa9c4d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640564af3d2c46045d328c2d86788e803672512c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284430"
 ---
 # <a name="scheduling-methods"></a>일정 예약 메서드
   이러한 메서드는 보고서 실행 및 전달을 위한 공유 일정을 만들고 관리하는 데 사용할 수 있으며 보고서 서버에서 사용하는 캐시 새로 고침 계획에도 사용할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47856792"
 |<xref:ReportService2010.ReportingService2010.SetScheduleProperties%2A>|공유 일정의 속성 값을 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 서비스와 .NET Framework를 사용하여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
  [기술 참조&#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

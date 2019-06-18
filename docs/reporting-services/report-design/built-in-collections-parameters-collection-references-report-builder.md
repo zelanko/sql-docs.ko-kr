@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581799"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
@@ -37,7 +37,7 @@ ms.locfileid: "65581799"
 |`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|매개 변수 값을 문자열로 반환합니다.|  
 |`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|매개 변수와 동일한 이름을 갖고 있는 필드에 대해 값을 반환합니다.|  
   
- 필터에서 매개 변수를 사용하는 방법은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
+ 필터에서 매개 변수를 사용하는 방법은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 ##  <a name="Multi"></a> 식에서 다중값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 다중값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  

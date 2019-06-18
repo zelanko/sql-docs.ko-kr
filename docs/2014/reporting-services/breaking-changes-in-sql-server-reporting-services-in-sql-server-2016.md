@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109927"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
@@ -74,7 +74,7 @@ ms.locfileid: "66109927"
 >  SQL Server 2008 R2는 SQL Server 2008의 부 버전 업그레이드이므로 SQL Server 2008 섹션의 내용도 검토하는 것이 좋습니다.  
   
 ### <a name="expanded-csv-data-renderer"></a>확장된 CSV 데이터 렌더러  
-  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 CSV 파일에는 차트 및 계기 데이터가 들어 있습니다. 차트 및 계기 열의 추가로 인해 이전의 CSV 파일 구조에 기반한 애플리케이션은 더 이상 작동하지 않습니다.  
+ [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 CSV 파일에는 차트 및 계기 데이터가 들어 있습니다. 차트 및 계기 열의 추가로 인해 이전의 CSV 파일 구조에 기반한 애플리케이션은 더 이상 작동하지 않습니다.  
   
  자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.  
   

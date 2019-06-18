@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060419"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>원격 Integration Services 서버에 연결(SSIS 서비스)
@@ -42,7 +42,7 @@ ms.locfileid: "66060419"
   
 3.  **서버 유형** 목록에서 **Integration Services** 를 선택합니다.  
   
-4.   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
+4.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cd45cc3b0db61e87c8d9ce506e141cc9ad8c97c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798792"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
@@ -52,7 +52,7 @@ ms.locfileid: "66798792"
   
 5.  설치 준비가 되고 컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 있는 경우 **./build_dm.sh** 명령을 실행합니다.
 
-컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. [http://www.unixodbc.org](http://www.unixodbc.org/)에서 `unixODBC-2.3.0.tar.gz`를 가져올 수 있습니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**합니다.  
+컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. [http://www.unixodbc.org](http://www.unixodbc.org/)에서 `unixODBC-2.3.0.tar.gz` 를 가져올 수 있습니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**합니다.  
 
 6.  **YES**를 입력하여 파일의 압축 해제를 진행합니다. 이 부분의 프로세스를 완료하려면 최대 5분까지 걸릴 수 있습니다.  
 

@@ -9,10 +9,10 @@ ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45cc3c743c8ece0aecf3a286baef9e1f907c157d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579127"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역의 유연성 살펴보기(보고서 작성기 및 SSRS)
@@ -40,7 +40,7 @@ ms.locfileid: "65579127"
  기본적으로 테이블릭스 데이터 영역에 그룹을 추가하면 행 그룹 머리글 영역의 셀에서 그룹 값이 열로 표시됩니다. 중첩된 그룹이 있으면 각 그룹은 별도의 열에 표시됩니다. 단계별 레이아웃을 만들려면 하나를 제외한 모든 그룹 열을 제거하고 나머지 열에 서식을 지정하여 그룹 계층 구조를 들여쓰기 형식의 텍스트로 표시합니다. 자세한 내용은 [단계별 보고서 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-an-adjacent-details-group"></a>인접 세부 정보 그룹 추가  
- 기본적으로 세부 정보 그룹은 그룹 계층 구조의 가장 안쪽 자식 그룹입니다. 그룹을 세부 정보 그룹 아래에 중첩할 수 없습니다. 예를 들어 인접 세부 정보 그룹을 추가로 만들어 판매 상위 5개 제품과 하위 5개 제품을 표시할 수 있습니다. 각 그룹에 필터 및 정렬 식을 추가할 수 있기 때문에 동일한 데이터 세트를 기반으로 하는 두 개의 세부 데이터 보기를 하나의 테이블릭스 데이터 영역에 표시할 수 있습니다. 자세한 내용은 [그룹 이해&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [데이터 영역에서 그룹 추가 및 삭제&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 기본적으로 세부 정보 그룹은 그룹 계층 구조의 가장 안쪽 자식 그룹입니다. 그룹을 세부 정보 그룹 아래에 중첩할 수 없습니다. 예를 들어 인접 세부 정보 그룹을 추가로 만들어 판매 상위 5개 제품과 하위 5개 제품을 표시할 수 있습니다. 각 그룹에 필터 및 정렬 식을 추가할 수 있기 때문에 동일한 데이터 세트를 기반으로 하는 두 개의 세부 데이터 보기를 하나의 테이블릭스 데이터 영역에 표시할 수 있습니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md), [데이터 영역에서 그룹 추가 및 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   

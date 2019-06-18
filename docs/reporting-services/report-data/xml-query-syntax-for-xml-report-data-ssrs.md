@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574855"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574855"
  연결 문자열 URL이 가리키는 웹 서비스 엔드포인트의 경우 XML **Query** 는 웹 서비스 메서드나 SOAP 동작 또는 둘 모두를 정의합니다. XML 데이터 공급자는 보고서에 사용할 XML 데이터를 검색하는 웹 서비스 요청을 만듭니다.  
   
 > [!NOTE]  
->  웹 서비스 네임스페이스에 슬래시(**/)** 문자가 포함되어 있으면 XML 데이터 처리 확장 프로그램에서 해당 네임스페이스를 올바르게 가져올 수 있도록 웹 서비스 메서드와 SOAP 동작을 모두 포함하세요.  
+>  웹 서비스 네임스페이스에 슬래시( **/)** 문자가 포함되어 있으면 XML 데이터 처리 확장 프로그램에서 해당 네임스페이스를 올바르게 가져올 수 있도록 웹 서비스 메서드와 SOAP 동작을 모두 포함하세요.  
   
  포함 XML 문서의 경우 XML **Query** 는 사용할 포함 XML 데이터를 정의하고 선택적 네임스페이스와 선택적 XML **ElementPath**를 포함합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65574855"
 |`<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 문서: DPNamespace.xml  
- 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: https://localhost/DPNamespace.xml).  
+ 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: https://localhost/DPNamespace.xml ).  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  

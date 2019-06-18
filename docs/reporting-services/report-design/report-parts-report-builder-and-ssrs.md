@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fbef30f8a5bf5658376a37144c8f770317d6981
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576720"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
@@ -92,7 +92,7 @@ ms.locfileid: "65576720"
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
  보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결에 따라 달라집니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 세트 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
- 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 포함된 데이터 세트 및 공유 데이터 세트에 대한 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
+ 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 포함된 데이터 세트 및 공유 데이터 세트에 대한 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 ### <a name="resolving-naming-conflicts"></a>이름 지정 충돌 해결  
  보고서 파트를 추가할 때 보고서 작성기는 이름 충돌을 해결합니다. 예를 들어 보고서에 이미 Chart1이 있는데 Chart1 보고서 파트를 또 추가하면 보고서 작성기가 자동으로 새 보고서 파트 이름을 Chart2로 바꿉니다. 보고서에 이미 Dataset1이 있는데 역시 이름이 Dataset1인 다른 데이터 세트를 참조하는 보고서 파트를 추가하는 경우에는 보고서 작성기가 새 데이터 세트 이름을 Dataset2로 바꾸고 참조를 업데이트합니다.  
