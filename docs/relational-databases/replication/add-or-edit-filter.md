@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665747"
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47719951"
   
  행 필터를 사용하여 게시할 행의 하위 집합을 테이블로부터 지정할 수 있습니다. 중요한 정보 또는 비밀 정보가 포함된 행과 같이 사용자가 보지 말아야 하는 행을 삭제하거나 서로 다른 구독자에 전달할 서로 다른 데이터 파티션을 만드는 데 행 필터를 사용할 수 있습니다. 서로 다른 데이터 파티션을 서로 다른 구독자로 게시하면 여러 구독자에서 동일한 데이터를 업데이트함으로써 발생할 수 있는 충돌을 방지할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  이 대화 상자는 2단계로 이루어진 트랜잭션 및 스냅숏 게시 처리 과정과 3단계로 이루어진 병합 게시 처리 과정으로 구성되어 있습니다. 모든 게시 유형에 대해 필터링할 테이블과 필터에 포함할 하나 이상의 열을 선택해야 합니다. 필터는 표준 WHERE 절로 정의합니다.  
   
 1.  **필터링할 테이블을 선택하십시오.**  

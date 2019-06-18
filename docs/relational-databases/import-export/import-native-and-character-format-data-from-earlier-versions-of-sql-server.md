@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946613"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기
@@ -55,10 +55,10 @@ ms.locfileid: "64946613"
  **UDT는 사용자 정의 형식을 나타냅니다.  
   
 ## <a name="exporting-using--v-80"></a>–V 80을 사용하여 내보내기  
- **–V80** 스위치를 사용하여 데이터를 대량으로 내보내는 경우 기본 모드의 **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML 및 UDT 데이터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 기본값인 8바이트 접두사가 아니라 **text**, **image** 및 **ntext** 데이터와 같은 4바이트 접두사를 사용하여 저장됩니다.  
+ **–V80** 스위치를 사용하여 데이터를 대량으로 내보내는 경우 기본 모드의 **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML 및 UDT 데이터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 기본값인 8바이트 접두사가 아니라 **text**, **image** 및 **ntext** 데이터와 같은 4바이트 접두사를 사용하여 저장됩니다.  
   
 ## <a name="copying-date-values"></a>날짜 값 복사  
- **bcp** 는 ODBC 대량 복사 API를 사용합니다. 따라서 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져오기 위해 **bcp** 는 ODBC 날짜 형식(*yyyy-mm-dd hh:mm:ss*[*.f...*])을 사용합니다.  
+ **bcp** 는 ODBC 대량 복사 API를 사용합니다. 따라서 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져오기 위해 **bcp** 는 ODBC 날짜 형식(*yyyy-mm-dd hh:mm:ss*[ *.f...* ])을 사용합니다.  
   
  **bcp** 명령은 **datetime** 및 **smalldatetime** 값에 대해 ODBC 기본 형식을 사용하여 문자 형식 데이터 파일을 내보냅니다. 예를 들어 **이라는 날짜가 포함된** datetime `12 Aug 1998` 열은 `1998-08-12 00:00:00.000`문자열로 데이터 파일에 대량 복사됩니다.  
   

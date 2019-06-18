@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675668"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System 핫픽스 제거 
@@ -26,13 +26,13 @@ ms.locfileid: "62675668"
   
 -   어플라이언스를 모니터링 하려면 관리자 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인을 합니다.  
   
--   도메인 관리자 계정에 로그인 하는 <em>< appliance_domain ></em>**-HST01** 노드.  
+-   도메인 관리자 계정에 로그인 하는 <em>< appliance_domain ></em> **-HST01** 노드.  
   
 -   기술 자료 문서 번호를 핫픽스를 제거 합니다.  
   
 ## <a name="HowToUninstallPDW"></a>SQL Server PDW 핫픽스를 제거 하려면  
   
-1.  에 로그온 합니다 <em>< appliance_domain ></em>**-HST01** 노드 Fabric 도메인 관리자입니다.  
+1.  에 로그온 합니다 <em>< appliance_domain ></em> **-HST01** 노드 Fabric 도메인 관리자입니다.  
   
 2.  As Administrator 옵션 실행 사용 하 여 명령 프롬프트를 엽니다.  
   

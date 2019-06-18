@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724026"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dsn = ] 'dsn'` ODBC DSN 또는 OLE DB 연결 된 서버의 이름이입니다. *dsn* 됩니다 **varchar(128)**, 기본값은 없습니다.  
+`[ @dsn = ] 'dsn'` ODBC DSN 또는 OLE DB 연결 된 서버의 이름이입니다. *dsn* 됩니다 **varchar(128)** , 기본값은 없습니다.  
   
-`[ @infotype = ] 'info_type'` 반환할 정보의 유형이입니다. 하는 경우 *info_type* 지정 되지 않았거나 NULL을 지정한 경우 모든 정보 유형이 반환 됩니다. *info_type* 됩니다 **varchar(128)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @infotype = ] 'info_type'` 반환할 정보의 유형이입니다. 하는 경우 *info_type* 지정 되지 않았거나 NULL을 지정한 경우 모든 정보 유형이 반환 됩니다. *info_type* 됩니다 **varchar(128)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|데이터베이스 이름을 나타냅니다.|  
 |**SQL_SUBSCRIBER**|데이터 원본이 구독자가 될 수 있는지를 나타냅니다.|  
   
-`[ @login = ] 'login'` 데이터 원본에 대 한 로그인이입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *로그인*됩니다 **varchar(128)**, 기본값은 NULL입니다.  
+`[ @login = ] 'login'` 데이터 원본에 대 한 로그인이입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *로그인*됩니다 **varchar(128)** , 기본값은 NULL입니다.  
   
-`[ @password = ] 'password'` 로그인에 대 한 암호가입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*됩니다 **varchar(128)**, 기본값은 NULL입니다.  
+`[ @password = ] 'password'` 로그인에 대 한 암호가입니다. 데이터 원본에 로그인이 포함되어 있는 경우에는 NULL을 지정하거나 매개 변수를 생략하십시오. *암호*됩니다 **varchar(128)** , 기본값은 NULL입니다.  
   
 `[ @dso_type = ] dso_type` 데이터 원본 유형이입니다. *dso_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   

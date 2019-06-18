@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681496"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,14 +71,14 @@ DDL 트리거의 경우 서버 범위에서 실행하도록 *trigger_name*을 �
 ## <a name="remarks"></a>Remarks  
 트리거를 활성화해도 트리거를 다시 만드는 것은 아닙니다. 비활성화된 트리거는 현재 데이터베이스 내에 여전히 개체로 존재하지만 실행하지는 않습니다. 트리거를 활성화하려면 트리거가 원래 프로그래밍된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 실행될 때 트리거가 실행되도록 합니다. 트리거는 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md)를 사용하여 비활성화됩니다. 테이블에 정의된 DML 트리거는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 비활성화되거나 활성화될 수도 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 DML 트리거를 활성화하려면 최소한 트리거가 만들어진 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 서버 범위(ON ALL SERVER)의 DDL 트리거 또는 LOGON 트리거를 활성화하려면 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)에서 DDL 트리거를 활성화하려면 최소한 현재 데이터베이스에 대한 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-a-dml-trigger-on-a-table"></a>1. 테이블의 DML 트리거 활성화  
+### <a name="a-enabling-a-dml-trigger-on-a-table"></a>1\. 테이블의 DML 트리거 활성화  
 다음 예에서는 AdventureWorks 데이터베이스의 `uAddress` 테이블에서 만든 `Address` 트리거를 비활성화한 다음, 다시 활성화하는 방법을 보여 줍니다.  
   
 ```  
@@ -88,7 +88,7 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>2. DDL 트리거 활성화  
+### <a name="b-enabling-a-ddl-trigger"></a>2\. DDL 트리거 활성화  
 다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 다음, 비활성화하고 활성화합니다.  
   
 ```  

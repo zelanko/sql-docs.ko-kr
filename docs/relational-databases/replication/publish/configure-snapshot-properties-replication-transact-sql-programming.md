@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661097"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54134213"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 만들 때 스냅숏 속성을 구성하려면  
   
-1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **@publication**에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq**를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
+1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **@publication** 에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq** 를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
   
     -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
     -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** true [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 값을 지정합니다.    
@@ -40,7 +40,7 @@ ms.locfileid: "54134213"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>병합 게시를 만들 때 스냅숏 속성을 구성하려면  
   
-1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **@publication**에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq**를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
+1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **@publication** 에 게시 이름을 지정하고 **@repl_freq** 에 **snapshot** 또는 **@repl_freq** 를 지정하며 다음과 같은 스냅숏 관련 매개 변수를 하나 이상 지정합니다.  
   
     -   **@alt_snapshot_folder** - 이 게시에 대한 스냅숏을 기본 스냅숏 폴더 이외 위치 또는 기본 스냅숏 폴더에 추가된 위치에서 액세스하는 경우 경로를 지정합니다.    
     -   **@compress_snapshot** - 대체 스냅숏 폴더의 스냅숏 파일이 **CAB 파일 형식으로 압축되는 경우** 값을 지정합니다.   
@@ -52,9 +52,9 @@ ms.locfileid: "54134213"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>기존 스냅숏 또는 트랜잭션 게시의 스냅숏 속성을 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property**에 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property** 에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value**을 실행합니다.    
+    -   **alt_snapshot_folder** - **@value** 을 실행합니다.    
     -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
     -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
@@ -69,9 +69,9 @@ ms.locfileid: "54134213"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>기존 병합 게시의 스냅숏 속성을 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property**에 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **@force_invalidate_snapshot** 또는 **@force_invalidate_snapshot** 을 지정하고 **@property** 에 다음 값 중 하나를 지정합니다.  
   
-    -   **alt_snapshot_folder** - **@value**을 실행합니다.    
+    -   **alt_snapshot_folder** - **@value** 을 실행합니다.    
     -   **compress_snapshot** - **CAB 파일 형식으로 압축되는 경우** 에 **false** 또는 **@value** 값을 지정합니다.    
     -   **pre_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    
     -   **post_snapshot_script** - **@value** 에도 마찬가지로 초기 스냅숏을 적용하기 전에 초기화하는 동안 구독자에서 실행할 **.sql** 파일의 이름 및 전체 경로를 지정합니다.    

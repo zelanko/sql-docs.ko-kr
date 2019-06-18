@@ -25,11 +25,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712369"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -99,7 +99,7 @@ ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSIT
 
 ## <a name="examples"></a>예  
 
-### <a name="a-classifying-two-columns"></a>1. 두 개의 열 분류
+### <a name="a-classifying-two-columns"></a>1\. 두 개의 열 분류
 
 다음 예제에서는 민감도 레이블 **Highly Confidential** 및 정보 유형 **Financial**을 사용하여 **dbo.sales.price** 및 **dbo.sales.discount** 열을 분류합니다.
 
@@ -109,7 +109,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial' )
 ```  
 
-### <a name="b-classifying-only-a-label"></a>2. 레이블만 분류
+### <a name="b-classifying-only-a-label"></a>2\. 레이블만 분류
 다음 예제에서는 레이블 **Confidential** 및 레이블 ID **643f7acd-776a-438d-890c-79c3f2a520d6**을 사용하여 **dbo.customer.comments** 열을 분류합니다. 이 열의 정보 유형은 분류되지 않았습니다.
 
 ```sql

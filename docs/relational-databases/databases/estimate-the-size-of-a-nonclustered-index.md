@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6c00b0abcd09d4712b82df1d0d138cb37a390
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653166"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
 
@@ -250,7 +250,7 @@ ms.locfileid: "51559180"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식 **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
+     LOB 데이터 형식 **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
   
 -   압축  
   

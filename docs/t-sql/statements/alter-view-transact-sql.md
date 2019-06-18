@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664717"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ AS select_statement
  ALTER VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 항목을 암호화합니다. WITH ENCRYPTION은 뷰가 SQL Server 복제의 일부로 게시되는 것을 방지합니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용하는 경우 _select\_statement_에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_**.**_object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 줄 수 있는 경우에는 기본 테이블을 수정할 수 없습니다. 수정할 테이블의 종속성을 제거하려면 우선 뷰 정의 자체를 수정 또는 삭제해야 합니다. SCHEMABINDING을 사용하는 경우 _select\_statement_에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에 스키마 바인딩이 있는 뷰에서 사용하는 테이블에 ALTER TABLE 문을 실행하면 실패합니다.  
   
@@ -103,7 +103,7 @@ AS select_statement
   
  인덱싱된 뷰에도 ALTER VIEW를 적용할 수 있지만 ALTER VIEW는 뷰에 대한 모든 인덱스를 무조건 삭제합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER VIEW를 실행하려면 최소 OBJECT에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

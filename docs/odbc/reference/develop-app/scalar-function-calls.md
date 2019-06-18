@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468800"
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  최대 상호 운용성을 위해 응용 프로그램 사용 해야 합니다 **변환** 스칼라 함수는 스칼라 함수의 출력을 필수 형식 인지 확인 합니다. 합니다 **변환** 함수 한 SQL 데이터 형식에서 지정된 된 SQL 데이터 형식으로 데이터를 변환 합니다. 구문의 합니다 **변환** 함수는  
   
- **CONVERT(** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_ **)**  
   
  여기서 *value_exp* 열 이름, 다른 스칼라 함수 또는 리터럴 값의 결과 및 *data_type* 일치 하는 키워드를 **#define** 에서 사용 되는 이름은 SQL 데이터 형식 식별자에 정의 된 대로 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다. 예를 들어, 다음 SQL 문을 사용 하 여는 **변환** 되도록 하는 함수 출력을 **CURDATE** 함수는 날짜, 타임 스탬프 나 문자 데이터를 대신:  
   

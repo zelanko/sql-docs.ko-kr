@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774845"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE(Transact-SQL)
@@ -211,7 +211,7 @@ DBCC CLONEDATABASE는 복사를 수행하는 데 필요한 트랜잭션 일관�
 
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>1. 스키마, 통계 및 쿼리 저장소를 포함하는 데이터베이스의 클론 만들기 
+### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>1\. 스키마, 통계 및 쿼리 저장소를 포함하는 데이터베이스의 클론 만들기 
 다음 예에서는 스키마, 통계 및 쿼리 저장소 데이터를 포함하는 AdventureWorks 데이터베이스의 클론을 만듭니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상 버전).
 
 ```sql  
@@ -219,7 +219,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>2. 통계가 없는 데이터베이스의 스키마 전용 클론 만들기 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>2\. 통계가 없는 데이터베이스의 스키마 전용 클론 만들기 
 다음 예에서는 통계를 포함하지 않는 AdventureWorks 데이터베이스의 클론을 만듭니다([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 이상 버전).
 
 ```sql  

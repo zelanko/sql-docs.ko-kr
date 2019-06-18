@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625887"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정(형식 매핑)(OracleToSQL)
@@ -104,7 +104,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |urowid|uniqueidentifier|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>*</sup> 값 형식 매핑만 반환에 적용 됩니다.  
   
@@ -176,7 +176,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |urowid[*..\*]|uniqueidentifier|  
 |varchar[*..\*]|varchar[*]|  
 |varchar2[*..\*]|varchar[*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>기본 로컬 변수 형식 매핑  
 다음 표에서 로컬 변수에 대 한 기본 형식 매핑을 보여 줍니다.  
@@ -263,7 +263,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |varchar[8001..*]|varchar(max)|  
 |varchar2[*..8000]|varchar[*]|  
 |varchar2[8001..*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  

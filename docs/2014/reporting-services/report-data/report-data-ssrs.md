@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721409"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터
@@ -78,6 +78,6 @@ ms.locfileid: "62721409"
 |게시 후 데이터 원본 관리|[보고서 데이터 원본 관리](manage-report-data-sources.md)|  
 |게시 후 공유 데이터 세트 관리|[공유 데이터 집합 관리](manage-shared-datasets.md)|  
 |데이터 경고 만들기 및 관리|[Reporting Services 데이터 경고](../tutorial-creating-a-basic-table-report-report-builder.md)|  
-|공유 데이터 세트 캐시|[공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../report-server/cache-shared-datasets-ssrs.md)|  
+|공유 데이터 세트 캐시|[공유 데이터 세트 캐시&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)|  
 |캐시를 미리 로드하도록 공유 데이터 세트 일정 예약|[일정](../subscriptions/schedules.md)|  
 |데이터 확장 프로그램 추가|[데이터 처리 확장 프로그램 구현](../extensions/data-processing/implementing-a-data-processing-extension.md)|

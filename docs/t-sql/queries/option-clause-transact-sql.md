@@ -23,11 +23,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 771eaedd3c5bc723422c9fd82a1c979e331eabf0
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506078"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ OPTION ( <query_option> [ ,...n ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>1. GROUP BY 절과 함께 OPTION 절 사용  
+### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>1\. GROUP BY 절과 함께 OPTION 절 사용  
  다음 예에서는 `OPTION` 절과 함께 `GROUP BY` 절을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>2. OPTION 절에서 레이블을 사용하는 SELECT 문  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>2\. OPTION 절에서 레이블을 사용하는 SELECT 문  
  다음 예제에서는 OPTION 절에서 레이블을 사용하는 간단한 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문을 보여 줍니다.  
   
 ```  

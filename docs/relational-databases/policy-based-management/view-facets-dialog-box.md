@@ -14,17 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0251f8649b7999439255e49a344d0d5ac894f801
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62628254"
 ---
 # <a name="view-facets-dialog-box"></a>패싯 보기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 정책 기반 관리 패싯의 속성을 볼 수 있습니다. 패싯의 속성은 패싯을 만들 때 정의되며 이 대화 상자를 사용하여 변경할 수 없습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **패싯**  
  현재 선택한 패싯의 이름입니다.  
   

@@ -19,11 +19,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62504638"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ MATCH 내 에지 이름을 반복할 수 없습니다.
 OR 또는 NOT 연산자는 MATCH 패턴에서 지원되지 않습니다. MATCH는 WHERE 절에서 AND를 사용하여 다른 식과 결합할 수 있습니다. 그러나 OR나 NOT을 사용한 다른 식과의 결합은 지원되지 않습니다. 
 
 ## <a name="examples"></a>예  
-### <a name="a--find-a-friend"></a>1.  친구 찾기 
+### <a name="a--find-a-friend"></a>1\.  친구 찾기 
  다음 예에서는 Person 노드 테이블 및 친구 Edge 테이블을 만들고 일부 데이터를 삽입한 다음, MATCH를 사용하여 그래프에 있는 사람인 Alice라는 친구를 찾습니다.
 
  ```
@@ -103,7 +103,7 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>2.  친구의 친구 찾기
+ ### <a name="b--find-friend-of-a-friend"></a>2\.  친구의 친구 찾기
  다음 예제에서는 친구 Alice의 친구를 찾으려 합니다. 
 
  ```
@@ -114,7 +114,7 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>3.  다른 `MATCH` 패턴
+### <a name="c--more-match-patterns"></a>C.  다른 `MATCH` 패턴
  다음은 MATCH 안에서 패턴을 지정하는 몇 가지 다른 방법입니다.
 
  ```

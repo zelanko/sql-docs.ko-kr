@@ -24,10 +24,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4fdd3b1512d64cb8c702e00ba89aed02d5abb0a
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946579"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
@@ -109,7 +109,7 @@ ms.locfileid: "64946579"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 인증된 Windows 사용자의 자격 증명을 전달하여 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있도록 구성될 수 있습니다. 이러한 작업을 *가장* 또는 *위임*이라고 합니다. BULK INSERT 또는 OPENROWSET을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용자 가장에 대한 보안을 처리하는 방법을 이해해야 합니다. 사용자 가장을 사용하면 데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 또는 사용자와는 다른 컴퓨터에 저장할 수 있습니다. 예를 들어 **Computer_A** 의 사용자에게 **Computer_B**의 데이터 파일에 대한 액세스 권한이 있고 자격 증명의 위임이 적절하게 설정되어 있는 경우 해당 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Computer_C **에서 실행 중인**인스턴스에 연결하고 **Computer_B**의 데이터 파일에 액세스하여 해당 파일의 데이터를 **Computer_C**의 테이블로 대량 가져올 수 있습니다.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>원격 데이터 파일에서 대량 가져오기  
- BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_의 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.  
+ BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_의 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.  
   
  예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce`에서 공유 폴더 `computer2`에 있습니다.  
   

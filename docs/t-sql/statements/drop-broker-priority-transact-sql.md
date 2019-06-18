@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c922d50bdac99ad39fe9057a2c5091a2a389a849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723356"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ DROP BROKER PRIORITY ConversationPriorityName
 ## <a name="remarks"></a>Remarks  
  대화 우선 순위를 삭제해도 기존의 모든 대화는 대화 우선 순위에 할당된 우선 순위 수준대로 계속 작동합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화 우선 순위를 만들 수 있는 권한은 기본적으로 db_ddladmin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

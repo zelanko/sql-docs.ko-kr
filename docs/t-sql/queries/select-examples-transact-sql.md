@@ -32,18 +32,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 212a13b10fcc43eb8113da3b418bdf57c53ae19a
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671368"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하는 예제를 제공합니다.  
   
-## <a name="a-using-select-to-retrieve-rows-and-columns"></a>1. SELECT를 사용하여 행 및 열 검색  
+## <a name="a-using-select-to-retrieve-rows-and-columns"></a>1\. SELECT를 사용하여 행 및 열 검색  
  다음 예에서는 세 개의 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`Product` 사용)을 반환합니다.  
   
  [!code-sql[Select#SelectExamples1](../../t-sql/queries/codesnippet/tsql/select-examples-transact_1.sql)]  
@@ -56,7 +56,7 @@ ms.locfileid: "57334430"
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
-## <a name="b-using-select-with-column-headings-and-calculations"></a>2. SELECT에 열 머리글 및 계산 사용  
+## <a name="b-using-select-with-column-headings-and-calculations"></a>2\. SELECT에 열 머리글 및 계산 사용  
  다음 예에서는 `Product` 테이블의 모든 행을 반환합니다. 첫 번째 예에서는 각 제품에 대한 총 판매액과 할인 판매액을 반환합니다. 두 번째 예에서는 각 제품에 대한 총 수익이 계산됩니다.  
   
  [!code-sql[Select#SelectExamples4](../../t-sql/queries/codesnippet/tsql/select-examples-transact_4.sql)]  
@@ -115,7 +115,7 @@ ms.locfileid: "57334430"
   
  [!code-sql[Select#SelectExamples15](../../t-sql/queries/codesnippet/tsql/select-examples-transact_15.sql)]  
   
-## <a name="i-using-group-by-with-an-expression"></a>9. GROUP BY에 식 사용  
+## <a name="i-using-group-by-with-an-expression"></a>9\. GROUP BY에 식 사용  
  다음 예에서는 식으로 그룹화를 수행합니다. 식에 집계 함수가 없는 경우 식으로 그룹화를 수행할 수 있습니다.  
   
  [!code-sql[Select#SelectExamples16](../../t-sql/queries/codesnippet/tsql/select-examples-transact_16.sql)]  
