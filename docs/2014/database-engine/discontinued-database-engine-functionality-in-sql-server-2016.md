@@ -34,23 +34,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779878"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  다음 표에는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 제거된 기능이 나와 있습니다.  
   
 |범주|지원되지 않는 기능|대체 기능|  
 |--------------|--------------------------|-----------------|  
 |호환성 수준|호환성 수준 90|데이터베이스를 호환성 수준 100 이상으로 설정해야 합니다. 호환성 수준이 100 미만인 데이터베이스가 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]로 업그레이드될 때 데이터베이스의 호환성 수준은 업그레이드 작업 중 100으로 설정됩니다.|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  다음 표에는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 제거된 기능이 나와 있습니다.  
   
 |범주|지원되지 않는 기능|대체 기능|  

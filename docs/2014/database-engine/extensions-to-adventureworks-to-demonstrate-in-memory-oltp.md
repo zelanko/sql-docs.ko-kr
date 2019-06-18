@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779975"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
@@ -31,7 +31,7 @@ ms.locfileid: "62779975"
   
  이 샘플에 대한 설명서는 다음과 같이 구성되어 있습니다.  
   
--   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
+-   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)  
   
 -   [AdventureWorks 기반의 메모리 내장 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   

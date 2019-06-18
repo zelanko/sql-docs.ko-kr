@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661760"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "62661760"
  현재 선택한 개체가 나열됩니다. 활성 편집기 또는 디자이너의 개체만 표시됩니다.  
   
  **범주별**  
- 선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기(**+**) 또는 빼기(**-**) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.  
+ 선택한 개체에 대한 모든 속성과 속성 값을 범주별로 나열합니다. 범주를 축소하여 표시되는 속성의 수를 줄일 수 있습니다. 범주를 확장하거나 축소할 경우 범주 이름 왼쪽에 있는 더하기( **+** ) 또는 빼기( **-** ) 기호를 각각 사용합니다. 범주는 사전순으로 나열됩니다.  
   
  **사전순**  
  선택한 개체에 대한 모든 디자인 타임 속성과 이벤트를 사전순으로 정렬합니다.  

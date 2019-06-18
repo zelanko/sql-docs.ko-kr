@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29984a52d711ef02c3c3b640ef8d59323806c2bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812285"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
@@ -53,7 +53,7 @@ ms.locfileid: "62812285"
 |**-m "클라이언트 응용 프로그램 이름"**|**SQLCMD**와 함께 **-m** 옵션을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 경우 지정한 클라이언트 응용 프로그램에 대한 연결 수를 제한합니다. 예를 들어 **-m"SQLCMD"** 는 연결 수를 단일 연결로 제한하며 해당 연결은 자신을 **SQLCMD** 클라이언트 프로그램으로 식별해야 합니다. 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하며 알 수 없는 클라이언트 애플리케이션에서 사용 가능한 유일한 연결을 사용할 경우 이 옵션을 사용합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 쿼리 편집기를 통해 연결하려면 **-m"Microsoft SQL Server Management Studio - 쿼리"** 를 사용합니다.<br /><br /> 클라이언트 애플리케이션 이름은 대/소문자를 구분합니다.<br /><br /> **\*\* 보안 정보 \*\*** 이 옵션을 보안 기능으로는 사용하지 마세요. 클라이언트 애플리케이션에서 클라이언트 애플리케이션 이름을 제공하므로 연결 문자열의 일부로 잘못된 이름을 제공할 수 있습니다.|  
 |**-n**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 기록하는 데 Windows 응용 프로그램 로그를 사용하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -n **으로**인스턴스를 시작하는 경우 **-e** 시작 옵션도 사용하는 것이 좋습니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트가 로깅되지 않습니다.|  
 |**-s**|명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작을 시도합니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다.|  
-|**-T**  *trace#*|지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** **-T** 옵션으로 추적 플래그를 지정할 때 추적 플래그 번호를 전달하려면 대문자 "T"를 입력합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 소문자 "t"도 사용할 수 있지만 그럴 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 엔지니어에게만 필요한 다른 내부 추적 플래그가 설정됩니다. 제어판 시작 창에서 지정한 매개 변수를 읽을 수 없습니다.|  
+|**-T**  *trace#*|지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** **-T** 옵션으로 추적 플래그를 지정할 때 추적 플래그 번호를 전달하려면 대문자 "T"를 입력합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 소문자 "t"도 사용할 수 있지만 그럴 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 엔지니어에게만 필요한 다른 내부 추적 플래그가 설정됩니다. 제어판 시작 창에서 지정한 매개 변수를 읽을 수 없습니다.|  
 |**-x**|다음 모니터링 기능을 해제합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 모니터 카운터<br /><br /> CPU 시간과 캐시 적중률 통계 유지<br /><br /> DBCC SQLPERF 명령에 대한 정보 수집<br /><br /> 일부 동적 관리 뷰에 대한 정보 수집<br /><br /> 여러 확장 이벤트 이벤트 지점<br /><br /> <br /><br /> **\*\* 경고 \* \***  사용 하는 경우의 **-x** 시작 옵션을 사용 가능한 성능 및 기능 문제를 진단 하는 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 크게 줄어듭니다.|  
 |**-E**|파일 그룹의 각 파일에 할당되는 익스텐트의 수를 늘립니다. 이 옵션은 인덱스 또는 데이터 검색을 실행하는 사용자 수가 제한되는 데이터 웨어하우스 애플리케이션에 유용합니다. 성능에 부정적인 영향을 줄 수 있으므로 다른 애플리케이션에서는 이 옵션을 사용하면 안 됩니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]32비트 릴리스에서는 지원되지 않습니다.|  
   

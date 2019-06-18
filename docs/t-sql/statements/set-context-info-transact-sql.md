@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6aad4a262c60e4ecab5d286f04971e024d114666
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747521"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639443"
 ---
 # <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-context-information-by-using-a-constant"></a>1. 상수를 사용하여 컨텍스트 정보 설정  
+### <a name="a-setting-context-information-by-using-a-constant"></a>1\. 상수를 사용하여 컨텍스트 정보 설정  
  다음 예에서는 값을 설정하고 결과를 표시하여 `SET CONTEXT_INFO`를 보여 줍니다. `sys.dm_exec_sessions`을 쿼리하려면 SELECT 및 VIEW SERVER STATE 권한이 필요하지만 CONTEXT_INFO 함수를 사용하면 해당 권한이 필요하지 않습니다.  
   
 ```  
@@ -77,7 +77,7 @@ WHERE session_id = @@SPID;
 GO  
 ```  
   
-### <a name="b-setting-context-information-by-using-a-function"></a>2. 함수를 사용하여 컨텍스트 정보 설정  
+### <a name="b-setting-context-information-by-using-a-function"></a>2\. 함수를 사용하여 컨텍스트 정보 설정  
  다음 예에서는 함수의 결과를 사용하여 컨텍스트 값을 설정합니다. 이때 함수의 값을 **binary** 변수에 먼저 넣어야 합니다.  
   
 ```  

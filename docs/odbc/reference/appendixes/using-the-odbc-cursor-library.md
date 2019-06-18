@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fe19efb2d39e875cdafec76f2c50164f3a66f03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62735028"
 ---
 # <a name="using-the-odbc-cursor-library"></a>ODBC 커서 라이브러리 사용
@@ -39,7 +39,7 @@ ms.locfileid: "62735028"
   
 6.  호출 **SQLFetch** 하거나 **SQLFetchScroll** 한 번 이상 나타나는 결과 집합을 스크롤할 수 있습니다.  
   
- 응용 프로그램 버퍼 행 집합의에서 데이터 값을 변경할 수 있습니다. 응용 프로그램이 호출 커서 라이브러리 캐시에서 데이터를 사용 하 여 행 집합 버퍼를 새로 고치려면 **SQLFetchScroll** 사용 하 여 합니다 *FetchOrientation* 인수와 함께 SQL_FETCH_RELATIVE 및  *FetchOffset* 인수는 0으로 설정 합니다.  
+ 응용 프로그램 버퍼 행 집합의에서 데이터 값을 변경할 수 있습니다. 응용 프로그램이 호출 커서 라이브러리 캐시에서 데이터를 사용 하 여 행 집합 버퍼를 새로 고치려면 **SQLFetchScroll** 사용 하 여 합니다 *FetchOrientation* 인수와 함께 SQL_FETCH_RELATIVE 및 *FetchOffset* 인수는 0으로 설정 합니다.  
   
  바인딩되지 않은 열을 호출 하 여 응용 프로그램에서 데이터를 검색할 **SQLSetPos** 원하는 행에 커서를 배치 합니다. 그런 다음 호출 **SQLGetData** 데이터를 검색 합니다.  
   

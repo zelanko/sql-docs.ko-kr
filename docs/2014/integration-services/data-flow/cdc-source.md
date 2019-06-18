@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828125"
 ---
 # <a name="cdc-source"></a>CDC 원본
@@ -38,7 +38,7 @@ ms.locfileid: "62828125"
   
 -   CDC 처리 범위 결정의 기준이 되는 CDC 상태 패키지 변수의 이름. CDC 원본은 해당 변수를 수정하지 않습니다.  
   
- CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>**(사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../control-flow/cdc-control-task.md)를 참조하십시오.  
+ CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../control-flow/cdc-control-task.md)를 참조하십시오.  
   
  CDC 원본에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "62828125"
   
 -   **오류 코드**: 값은 항상 -1입니다.  
   
--   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
+-   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
--   **오류 행 열**: 오류를 발생 시키는 레코드 데이터입니다.  
+-   **오류 행 열**: 오류의 원인이 되는 레코드 데이터입니다.  
   
  오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)를 참조하세요.  
   

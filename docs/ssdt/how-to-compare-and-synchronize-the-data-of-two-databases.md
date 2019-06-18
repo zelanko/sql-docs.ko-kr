@@ -16,19 +16,19 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090120"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>방법: 두 데이터베이스의 데이터 비교 및 동기화
-두 데이터베이스에 포함된 데이터를 비교할 수 있습니다. 비교하는 데이터베이스는 각각 ‘원본’ 및 ‘대상’이라고 합니다.  
+두 데이터베이스에 포함된 데이터를 비교할 수 있습니다. 비교하는 데이터베이스는 각각 ‘원본’ 및 ‘대상’이라고 합니다.    
   
 > [!NOTE]  
-> ‘데이터베이스 프로젝트’ 및 .dacpac 또는 .bacpac 패키지는 데이터 비교 시 원본 또는 대상이 될 수 없습니다.  
+> ‘데이터베이스 프로젝트’ 및 .dacpac 또는 .bacpac 패키지는 데이터 비교 시 원본 또는 대상이 될 수 없습니다.   
   
-데이터를 비교할 때는 대상 데이터베이스의 데이터 일부 또는 모두를 업데이트하여 차이가 있는 데이터베이스를 동기화하는 데 사용할 수 있는 ‘DML(데이터 조작 언어)’ 스크립트가 생성됩니다. 데이터 비교가 완료되면 결과가 Visual Studio의 [데이터 비교] 창에 표시됩니다.  
+데이터를 비교할 때는 대상 데이터베이스의 데이터 일부 또는 모두를 업데이트하여 차이가 있는 데이터베이스를 동기화하는 데 사용할 수 있는 ‘DML(데이터 조작 언어)’ 스크립트가 생성됩니다.  데이터 비교가 완료되면 결과가 Visual Studio의 [데이터 비교] 창에 표시됩니다.  
   
 비교가 완료된 후에는 다른 단계를 수행할 수 있습니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65090120"
 자세한 내용은 [하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교하고 동기화](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)를 참조하세요.  
   
 > [!NOTE]  
-> 또한 두 데이터베이스 또는 동일 데이터베이스의 두 버전의 ‘스키마’를 비교할 수 있습니다. 자세한 내용은 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)를 참조하세요.  
+> 또한 두 데이터베이스 또는 동일 데이터베이스의 두 버전의 ‘스키마’를 비교할 수 있습니다.  자세한 내용은 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)를 참조하세요.  
   
 ## <a name="CompareDatabaseData"></a>데이터베이스 데이터 비교  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65090120"
     지정된 원본 및 대상 데이터베이스의 데이터가 비교됩니다. 결과는 데이터 비교 세션에 표시됩니다. 결과를 보거나 데이터를 동기화하는 방법에 대한 자세한 내용은 [데이터 차이 보기](#ViewDifferences) 및 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
   
 ## <a name="ViewDifferences"></a>데이터 차이 보기  
-두 데이터베이스의 데이터를 비교한 후에는 데이터 비교에 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 나열됩니다. 또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다. 상태 지정에 대한 자세한 내용은 [하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)를 참조하세요.  
+두 데이터베이스의 데이터를 비교한 후에는 데이터 비교에 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 나열됩니다.  또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다. 상태 지정에 대한 자세한 내용은 [하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)를 참조하세요.  
   
 차이를 확인한 후에는 서로 다르거나, 누락되었거나, 새로 추가된 개체 또는 레코드의 일부 또는 전체가 원본과 일치하도록 대상을 업데이트할 수 있습니다. 자세한 내용은 [데이터베이스 데이터 동기화](#Synchronize)를 참조하세요.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "65090120"
   
 5.  (선택 사항) **스크립트 생성**을 클릭합니다.  
   
-    Transact\-SQL 편집기 창이 열리고 대상을 업데이트하는 데 사용되는 ‘DML(데이터 조작 언어)’ 스크립트가 표시됩니다.  
+    Transact\-SQL 편집기 창이 열리고 대상을 업데이트하는 데 사용되는 ‘DML(데이터 조작 언어)’ 스크립트가 표시됩니다.   
   
 6.  서로 다르거나, 누락되었거나, 새로 추가된 레코드를 동기화하려면 **대상 업데이트**를 클릭합니다.  
   

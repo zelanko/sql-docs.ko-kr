@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049486"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
@@ -27,7 +27,7 @@ ms.locfileid: "63049486"
   
 -   **사용 하 여 쿼럼 없이 시작 하려면 클러스터를 강제 합니다.**  [장애 조치 클러스터 관리자를 사용 하 여](#FailoverClusterManagerProcedure)하십시오 [Powershell을 사용 하 여](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
   
--   **후속편:**  [후속편: 클러스터를 강제로 시작한 후 쿼럼 없이](#FollowUp)  
+-   **후속 작업:**  [후속편: 클러스터를 강제로 시작한 후 쿼럼 없이](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

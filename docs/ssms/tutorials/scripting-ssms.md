@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Script objects in SQL Server Management Studio'
+title: '자습서: SQL Server Management Studio에서 개체 스크립팅'
 description: SSMS에서 개체 스크립팅에 대한 자습서
 keywords: SQL Server, SSMS, SQL Server Management Studio, 스크립트, 스크립팅
 author: MashaMSFT
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: b3a9bdd7735d7a1573567ca06076f83d400775c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662827"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140616"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>자습서: SQL Server Management Studio에서 개체 스크립팅
+
 이 자습서에서는 SSMS(SQL Server Management Studio) 내에서 발견되는 다양한 개체에 대한 T-SQL(Transact-SQL) 스크립트를 생성하는 방법을 설명합니다. 이 자습서에서는 다음 개체를 스크립팅하는 방법의 예제를 찾을 수 있습니다.
 
 > [!div class="checklist"]
@@ -123,9 +124,9 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
  
 5. **다음** 선택하여 **스크립팅 옵션 설정** 페이지를 엽니다. 여기에서 스크립트 및 일부 추가 고급 옵션을 저장하는 위치를 구성할 수 있습니다. 
 
-    1. **새 쿼리 창에 저장**을 선택합니다. 
+    1\. **새 쿼리 창에 저장**을 선택합니다. 
 
-    2. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
+    2\. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
 
       - *통계 스크립팅*으로 설정된 **통계 스크립팅**입니다.
       - *스키마 전용*으로 설정된 **스크립팅할 데이터 형식**입니다.
@@ -197,6 +198,6 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 자세히 알아보려면 다음 문서로 이동합니다.
 > [!div class="nextstepaction"]
-> [다음 단계](templates-ssms.md)
+> [다음 단계](ssms-configuration.md)
 
 

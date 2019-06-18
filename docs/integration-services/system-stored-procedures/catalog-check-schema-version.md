@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a8e9877b0d72a5d2d05686b2d08678985a50dc
-ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67033383"
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version 

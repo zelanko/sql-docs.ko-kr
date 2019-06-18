@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 67876c93657f643247487c7cf712b9194604773e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62795661"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,12 +68,12 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
   
  통계에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-statistics-from-a-table"></a>1. 테이블에서 통계 삭제  
+### <a name="a-dropping-statistics-from-a-table"></a>1\. 테이블에서 통계 삭제  
  다음 예에서는 두 테이블의 통계 그룹(컬렉션)을 삭제하는 방법을 보여 줍니다. `VendorCredit` 테이블의 `Vendor` 통계 그룹(컬렉션)과 `CustomerTotal` 테이블의 `SalesOrderHeader` 통계(컬렉션)가 삭제됩니다.  
   
 ```  
@@ -93,7 +93,7 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-dropping-statistics-from-a-table"></a>2. 테이블에서 통계 삭제  
+### <a name="b-dropping-statistics-from-a-table"></a>2\. 테이블에서 통계 삭제  
  다음 예에서는 `CustomerStats1` 테이블에서 통계 `Customer`를 삭제합니다.  
   
 ```  
@@ -103,7 +103,7 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   

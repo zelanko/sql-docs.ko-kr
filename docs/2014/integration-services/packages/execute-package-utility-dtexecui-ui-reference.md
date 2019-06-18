@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890237"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>패키지 실행 유틸리티(DtExecUI) UI 참조
@@ -146,7 +146,7 @@ ms.locfileid: "62890237"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="command-files-page"></a>명령 파일 페이지  
- 	**패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
+ **패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
   
 ### <a name="options"></a>변수  
  **Command files**  

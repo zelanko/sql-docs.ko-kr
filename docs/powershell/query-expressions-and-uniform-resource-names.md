@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256478"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672368"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
 
@@ -127,21 +127,21 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enumerating-objects-using-false"></a>1. false()를 사용하여 개체 열거  
+### <a name="a-enumerating-objects-using-false"></a>1\. false()를 사용하여 개체 열거  
  이 쿼리 식은 **MyComputer** 의 기본 인스턴스에서 **AutoClose**특성이 false로 설정된 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>2. contains를 사용하여 개체 열거  
+### <a name="b-enumerating-objects-using-contains"></a>2\. contains를 사용하여 개체 열거  
  이 쿼리 식은 대/소문자를 구분하지 않고 이름에 'm' 문자가 있는 데이터베이스를 모두 열거합니다.  
   
 ```  
 Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, 'm')]   
 ```  
   
-### <a name="c-enumerating-objects-using-not"></a>3. not을 사용하여 개체 열거  
+### <a name="c-enumerating-objects-using-not"></a>C. not을 사용하여 개체 열거  
  이 쿼리 식은 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Production **스키마에 없으며 테이블 이름에 History라는 단어를 포함하는** 테이블을 모두 열거합니다.  
   
 ```  

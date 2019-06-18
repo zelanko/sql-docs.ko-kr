@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727759"
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
@@ -75,7 +75,7 @@ Call MyStoredProcedure(a,b,c)
   
  저장 프로시저에서 .NET 행 집합을 반환하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 서버의 결과를 XML for Analysis 행 집합으로 변환합니다. XML for Analysis 행 집합은 항상 `Call` 함수의 저장 프로시저에 의해 반환됩니다. 데이터 세트에 XML for Analysis 행 세트로 표현할 수 없는 기능이 있다면 실패합니다.  
   
- Void 값을 반환하는 프로시저(예: Visual Basic의 서브루틴)를 CALL 키워드와 함께 사용할 수 있습니다.  예를 들어 MDX 문에서 MyVoidFunction() 함수를 사용하려면 다음과 같은 구문을 사용합니다.  
+ Void 값을 반환하는 프로시저(예: Visual Basic의 서브루틴)를 CALL 키워드와 함께 사용할 수 있습니다. 예를 들어 MDX 문에서 MyVoidFunction() 함수를 사용하려면 다음과 같은 구문을 사용합니다.  
   
 ```  
 CALL(MyVoidFunction)  

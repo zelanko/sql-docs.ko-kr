@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936521"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
@@ -50,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>1. 특정 노드의 로컬 이름 검색  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>1\. 특정 노드의 로컬 이름 검색  
  다음은 형식화되지 않은 XML 인스턴스에 대해 지정된 쿼리입니다. `local-name(/ROOT[1])` 쿼리 식은 지정한 노드의 로컬 이름 부분을 검색합니다.  
   
 ```  
@@ -71,7 +71,7 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>2. 조건자에서 인수가 없는 로컬 이름 사용  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>2\. 조건자에서 인수가 없는 로컬 이름 사용  
  형식화 된 Instructions 열에 대해 다음 쿼리를 지정 **xml** ProductModel 테이블의 열입니다. 식의 모든 요소 자식을 반환 합니다 <`root`> QName의 로컬 이름 부분이 "Location" 인 요소입니다. 합니다 **local-name ()** 함수는 지정 된 조건자 및 함수에 의해 컨텍스트 노드를 사용 하는 인수가 없습니다.  
   
 ```  

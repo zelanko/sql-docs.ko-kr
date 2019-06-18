@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9533f5764dd7613454e89696e61b353b8bdccda3
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774823"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
@@ -124,7 +124,7 @@ ALTER CERTIFICATE certificate_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-removing-the-private-key-of-a-certificate"></a>1. 인증서의 프라이빗 키 제거  
+### <a name="a-removing-the-private-key-of-a-certificate"></a>1\. 인증서의 프라이빗 키 제거  
   
 ```  
 ALTER CERTIFICATE Shipping04   
@@ -132,7 +132,7 @@ ALTER CERTIFICATE Shipping04
 GO  
 ```  
   
-### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>2. 프라이빗 키를 암호화하는 데 사용된 암호 변경  
+### <a name="b-changing-the-password-that-is-used-to-encrypt-the-private-key"></a>2\. 프라이빗 키를 암호화하는 데 사용된 암호 변경  
   
 ```  
 ALTER CERTIFICATE Shipping11   
@@ -165,7 +165,7 @@ GO
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
- [CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
  [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   

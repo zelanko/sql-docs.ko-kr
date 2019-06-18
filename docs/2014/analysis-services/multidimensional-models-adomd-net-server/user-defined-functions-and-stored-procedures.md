@@ -1,19 +1,26 @@
 ---
 title: 사용자 정의 함수 및 저장 프로시저 | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: adomd
-ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [ADOMD.NET]
+- ADOMD.NET, user defined functions
+- user defined functions [ADOMD.NET]
+- ADOMD.NET, UDFs
+- ADOMD.NET, stored procedures
+ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727859"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
@@ -86,7 +93,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### <a name="applying-a-filter-to-a-tuple"></a>튜플에 필터 적용  
  다음 예의 UDF는 집합을 매개 변수로 받고 Expression 개체를 사용하여 집합의 각 튜플에 필터를 적용하도록 정의되어 있습니다. 필터에 맞는 모든 튜플은 반환 집합에 추가됩니다.  
   
- [!code-cs[Adomd.NetServer#FilterSet](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_1.cs)]  
+ [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
   
  위의 예는 이름이 'A'로 시작하는 도시로 집합을 필터링하는 다음 MDX 예에서 호출됩니다.  
   
@@ -99,6 +106,6 @@ From [Adventure Works]
 ## <a name="stored-procedure-example"></a>저장 프로시저 예  
  다음 예의 MDX 기반 저장 프로시저는 필요한 경우 AMO를 사용하여 인터넷 판매를 위한 파티션을 만듭니다.  
   
- [!code-cs[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_2.cs)]  
+ [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
   
   

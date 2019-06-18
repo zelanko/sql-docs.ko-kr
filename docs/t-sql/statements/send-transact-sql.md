@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3ead09886af3ec64c00af06e3919941effd7b234
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638678"
 ---
 # <a name="send-transact-sql"></a>SEND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ SEND 문은 대화당 요청된 배달을 확인하기 위해 메시지가 전�
   
 SEND는 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 메시지를 보내려면 현재 사용자가 메시지를 보내는 모든 서비스의 큐에 대한 RECEIVE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

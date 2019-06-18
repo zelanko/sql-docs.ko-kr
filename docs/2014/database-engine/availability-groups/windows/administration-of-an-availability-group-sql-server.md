@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791897"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>가용성 그룹 관리(SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62791897"
   
 -   데이터베이스 일시 중단 또는 다시 시작  
   
--   계획된 수동 장애 조치(failover)( *수동 장애 조치(failover)*) 또는 강제 수동 장애 조치(failover)( *강제 장애 조치(failover)*) 수행  
+-   계획된 수동 장애 조치(failover)( *수동 장애 조치(failover)* ) 또는 강제 수동 장애 조치(failover)( *강제 장애 조치(failover)* ) 수행  
   
 -   가용성 그룹 수신기 만들기 또는 구성  
   

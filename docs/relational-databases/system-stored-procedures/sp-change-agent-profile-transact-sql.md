@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993892"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile(Transact-SQL)
@@ -44,7 +44,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` 속성의 이름이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(3000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(3000)** , 기본값은 없습니다.  
   
  이 표에서는 변경할 수 있는 프로필 속성에 대해 설명합니다.  
   

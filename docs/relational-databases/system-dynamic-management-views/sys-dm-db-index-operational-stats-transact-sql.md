@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684306"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|인덱스 또는 힙에서 시작된 범위 및 테이블 검색의 누적 횟수입니다.|    
 |**singleton_lookup_count**|**bigint**|인덱스 또는 힙에서 발생한 단일 행 검색의 누적 횟수입니다.|    
 |**forwarded_fetch_count**|**bigint**|전달된 레코드를 통해 인출된 행 수입니다.<br /><br /> 0 = 인덱스|    
-|**lob_fetch_in_pages**|**bigint**|LOB_DATA 할당 단위에서 검색된 LOB(Large Object) 페이지의 누적 개수입니다. 이러한 페이지 형식의 열에 저장 된 데이터가 **텍스트**, **ntext**, **이미지**, **(는) 트랜잭션**, **nvarchar ( max)**, **varbinary (max)**, 및 **xml**. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|    
+|**lob_fetch_in_pages**|**bigint**|LOB_DATA 할당 단위에서 검색된 LOB(Large Object) 페이지의 누적 개수입니다. 이러한 페이지 형식의 열에 저장 된 데이터가 **텍스트**, **ntext**, **이미지**, **(는) 트랜잭션**, **nvarchar ( max)** , **varbinary (max)** , 및 **xml**. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|    
 |**lob_fetch_in_bytes**|**bigint**|검색된 LOB 데이터 바이트의 누적값입니다.|    
 |**lob_orphan_create_count**|**bigint**|대량 작업 중에 생성된 고아 LOB의 누적값입니다.<br /><br /> 0 = 비클러스터형 인덱스|    
 |**lob_orphan_insert_count**|**bigint**|대량 작업 중에 삽입된 고아 LOB의 누적값입니다.<br /><br /> 0 = 비클러스터형 인덱스|    
-|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA 할당 단위에서 검색된 행 오버플로 데이터 페이지의 누적 개수입니다.<br /><br /> 이러한 페이지는 데이터 형식의 열에 저장 된 포함 **varchar (n)**, **nvarchar (n)** 합니다 **varbinary (n)**, 및 **sql_variant** 를 행 외부로 푸시됩니다.|    
+|**row_overflow_fetch_in_pages**|**bigint**|ROW_OVERFLOW_DATA 할당 단위에서 검색된 행 오버플로 데이터 페이지의 누적 개수입니다.<br /><br /> 이러한 페이지는 데이터 형식의 열에 저장 된 포함 **varchar (n)** , **nvarchar (n)** 합니다 **varbinary (n)** , 및 **sql_variant** 를 행 외부로 푸시됩니다.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|검색된 행 오버플로 데이터 바이트의 누적값입니다.|    
 |**column_value_push_off_row_count**|**bigint**|삽입되거나 업데이트된 행을 페이지에 맞추기 위해 행 외부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다.|    
 |**column_value_pull_in_row_count**|**bigint**|행 내부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다. 업데이트 작업이 레코드의 공간을 비울 때 발생하며 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에서 IN_ROW_DATA 할당 단위로 하나 이상의 행 외부 값을 밀어넣을 수 있게 됩니다.|    
@@ -200,7 +200,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="examples"></a>예    
     
-### <a name="a-returning-information-for-a-specified-table"></a>1. 지정된 테이블에 대한 정보 반환    
+### <a name="a-returning-information-for-a-specified-table"></a>1\. 지정된 테이블에 대한 정보 반환    
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스 및 파티션에 대한 정보를 반환합니다. 이 쿼리를 실행하려면 적어도 `Person.Address` 테이블에 대한 CONTROL 권한이 필요합니다.    
     
 > [!IMPORTANT]    
@@ -227,7 +227,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>2. 모든 테이블 및 인덱스에 대한 정보 반환    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>2\. 모든 테이블 및 인덱스에 대한 정보 반환    
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 테이블 및 인덱스에 대한 정보를 반환합니다. 이 쿼리를 실행 하려면 VIEW SERVER STATE 권한이 필요.    
     
 ```    

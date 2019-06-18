@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 293b599c8927115c8b82a75d783c222cbf53e8ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865092"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>전역 설정(출력 창)(OracleToSQL)

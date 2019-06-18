@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8ec316925fcd21a80561750665386a72f096060d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993783"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
 ## <a name="remarks"></a>Remarks  
  공급자에서 만든 모든 키는 해당 GUID로 공급자를 참조합니다. GUID는 모든 버전의 DLL에 보존됩니다.  
   
- SQLEKM 인터페이스를 구현하는 DLL은 인증서를 사용하여 디지털로 서명해야 합니다.  그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 서명을 확인합니다. 여기에는 해당 루트가 Windows 시스템에서 **Trusted Root Cert Authorities** 위치에 설치해야 하는 해당 인증서 체인이 포함됩니다. 서명이 제대로 확인되지 않으면 CREATE CRYPTOGRAPHIC PROVIDER 문이 실패합니다. 인증서 및 인증서 체인에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
+ SQLEKM 인터페이스를 구현하는 DLL은 인증서를 사용하여 디지털로 서명해야 합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 서명을 확인합니다. 여기에는 해당 루트가 Windows 시스템에서 **Trusted Root Cert Authorities** 위치에 설치해야 하는 해당 인증서 체인이 포함됩니다. 서명이 제대로 확인되지 않으면 CREATE CRYPTOGRAPHIC PROVIDER 문이 실패합니다. 인증서 및 인증서 체인에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
   
  EKM 공급자 dll이 필요한 메서드를 모두 구현하지 않으면 CREATE CRYPTOGRAPHIC PROVIDER가 다음과 같은 오류 33085를 반환할 수 있습니다.  
   
@@ -65,7 +65,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
