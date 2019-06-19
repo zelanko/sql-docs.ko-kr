@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101890"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 테스트 조건 사용
@@ -88,7 +88,7 @@ SQL Server 단위 테스트 디자이너를 표시하려면 **솔루션 탐색�
   
 3.  (옵션) 테스트 조건의 **(이름)** 속성을 설명이 포함된 이름으로 변경할 수도 있습니다.  
   
-4.  **구성** 속성에서 찾아보기 단추(**…**)를 클릭합니다.  
+4.  **구성** 속성에서 찾아보기 단추( **…** )를 클릭합니다.  
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   
@@ -118,7 +118,7 @@ SQL Server 단위 테스트에 필요한 스키마 테스트 조건을 추가한
   
 3.  (옵션) 테스트 조건의 **(이름)** 속성을 설명이 포함된 이름으로 변경할 수도 있습니다.  
   
-4.  **구성** 속성에서 찾아보기 단추(**…**)를 클릭합니다.  
+4.  **구성** 속성에서 찾아보기 단추( **…** )를 클릭합니다.  
   
     **TestConditionName에 대한 구성** 대화 상자가 나타납니다.  
   

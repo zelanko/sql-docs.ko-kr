@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503213"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX(Transact-SQL)
@@ -112,9 +112,9 @@ identifier
  *xml_column_name*  
  인덱싱할 경로가 포함된 XML 열의 이름입니다.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] 인덱싱할 경로에서 사용하는 네임스페이스의 목록입니다. WITH XMLNAMESPACES 절의 구문에 대한 자세한 내용은 [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)를 참조하세요.  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] 인덱싱할 경로에서 사용하는 네임스페이스의 목록입니다. WITH XMLNAMESPACES 절의 구문에 대한 자세한 내용은 [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)를 참조하세요.  
   
- FOR **(**\<promoted_node_path_list>**)** 선택적 최적화 힌트를 사용하여 인덱싱할 경로의 목록입니다. CREATE 또는 ALTER 문에 지정할 수 있는 경로 및 최적화 힌트에 대한 자세한 내용은 [선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)을 참조하세요.  
+ FOR **(** \<promoted_node_path_list> **)** 선택적 최적화 힌트를 사용하여 인덱싱할 경로의 목록입니다. CREATE 또는 ALTER 문에 지정할 수 있는 경로 및 최적화 힌트에 대한 자세한 내용은 [선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)을 참조하세요.  
   
  WITH *\<index_options>* 인덱스 옵션에 대한 자세한 내용은 [CREATE XML INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)를 참조하세요.  
   

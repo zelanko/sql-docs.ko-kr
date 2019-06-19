@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 379511e36b7e6a680b9971ace79b269a9df0db86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789682"
 ---
 # <a name="administration-of-an-availability-group"></a>가용성 그룹 관리
@@ -28,7 +28,7 @@ ms.locfileid: "66789682"
 -   보조 복제본 추가 또는 제거    
 -   데이터베이스 추가 또는 제거    
 -   데이터베이스 일시 중단 또는 다시 시작   
--   계획된 수동 장애 조치(failover)( *수동 장애 조치(failover)* ) 또는 강제 수동 장애 조치(failover)( *강제 장애 조치(failover)* ) 수행    
+-   계획된 수동 장애 조치(failover)( *수동 장애 조치(failover)*) 또는 강제 수동 장애 조치(failover)( *강제 장애 조치(failover)*) 수행    
 -   가용성 그룹 수신기 만들기 또는 구성    
 -   지정된 가용성 그룹에 대한 [읽기 가능한 보조 복제본](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 관리 이 태스크에는 보조 역할로 실행하고 읽기 전용 라우팅을 구성할 때 읽기 전용으로 액세스할 하나 이상의 복제본을 구성하는 태스크가 포함됩니다.    
 -   지정된 가용성 그룹에 대한 [보조 복제본에서의 백업](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 관리. 이 태스크에는 백업 작업을 실행할 기본 위치를 구성한 다음 백업 작업을 스크립팅하여 백업 기본 설정을 구현하는 태스크가 포함됩니다. 가용성 복제본을 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 가용성 그룹의 모든 데이터베이스에 대한 백업 작업을 스크립팅해야 합니다.    

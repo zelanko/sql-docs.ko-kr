@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713319"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -133,6 +133,6 @@ ms.locfileid: "65713319"
 -   [분할된 테이블로 대량 로드](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: 데이터 수명 주기 -- 분할](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](https://msdn.microsoft.com/library/ms345599.aspx)    
--   _SQLCAT의 가이드: 관계형 엔진_의 [대규모 관계형 데이터 웨어하우스 빌드를 위한 상위 10가지 모범 사례](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf)
+-   _SQLCAT의 가이드: 관계형 엔진_의 대규모 관계형 데이터 웨어하우스 빌드를 위한 상위 10가지 모범 사례
   
   

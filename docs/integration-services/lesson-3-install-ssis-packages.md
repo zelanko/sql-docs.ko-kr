@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b79666ea6ebc28a68777f1c87cd79ef5c8f1ade
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721870"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>3단원: SSIS 패키지 설치
@@ -27,7 +27,7 @@ ms.locfileid: "65721870"
   
 이 단원에서는 배포 번들을 대상 컴퓨터에 복사한 다음 패키지 설치 마법사를 실행하여 패키지, 패키지 종속 파일 및 보조 파일을 해당 컴퓨터에 설치합니다. 패키지는 **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 설치되고 다른 항목은 파일 시스템에 설치됩니다. 패키지 설치를 완료한 후에 패키지 실행 유틸리티를 통해 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하여 배포를 테스트합니다.  
   
-**이 단원에 소요되는 예상 시간:**: 30분  
+**이 단원에 소요되는 예상 시간:** : 30분  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  

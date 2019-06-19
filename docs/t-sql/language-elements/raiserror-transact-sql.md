@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980429"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
@@ -124,7 +124,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  값을 [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** 데이터 형식으로 변환하려면 **%I64d**를 지정합니다.  
   
  *@local_variable*  
- *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. *@local_variable*은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
+ *msg_str*와 동일한 방식으로 형식이 지정된 문자열을 포함하는 유효한 문자 데이터 형식의 변수입니다. *@local_variable* 은 **char** 또는 **varchar**이거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다.  
   
  *severity*  
  이 메시지에 연결된 사용자 정의 심각도입니다. sp_addmessage를 사용해 만든 사용자 정의 메시지를 발생시키기 위해 *msg_id*를 사용할 경우 RAISERROR에 지정된 심각도가 sp_addmessage에 지정된 심각도보다 우선합니다.  
@@ -214,7 +214,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-error-information-from-a-catch-block"></a>1. CATCH 블록의 오류 정보 반환  
+### <a name="a-returning-error-information-from-a-catch-block"></a>1\. CATCH 블록의 오류 정보 반환  
  다음 코드 예제에서는 `RAISERROR` 블록 내의 `TRY`를 사용하여 관련 `CATCH` 블록으로 실행을 이동하는 방법을 보여 줍니다. 또한 `RAISERROR` 블록을 호출한 오류에 관한 정보를 반환하는 방법을 `CATCH`을 사용하여 보여 줍니다.  
   
 > [!NOTE]  
@@ -249,7 +249,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>2. sys.messages에 임시 메시지 만들기  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>2\. sys.messages에 임시 메시지 만들기  
  다음 예에서는 sys.messages 카탈로그 뷰에 저장된 메시지를 발생시키는 방법을 보여 줍니다. `sp_addmessage` 시스템 저장 프로시저를 사용하여 sys.messages 카탈로그 뷰에 `50005`의 메시지 번호로 메시지가 추가되었습니다.  
   
 ```  

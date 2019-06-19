@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: fe99e6044963f9591614b331df0238658744af63
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947529"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
@@ -74,7 +74,7 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>예  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>1.  JSON 서식 지정 규칙에 따라 텍스트를 이스케이프합니다
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>1\.  JSON 서식 지정 규칙에 따라 텍스트를 이스케이프합니다
 
  다음 쿼리는 JSON 규칙을 사용하여 특수 문자를 이스케이프하며 이스케이프된 텍스트를 반환합니다.  
   
@@ -91,7 +91,7 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>2. JSON 개체 서식 지정
+### <a name="b-format-json-object"></a>2\. JSON 개체 서식 지정
 
  다음 쿼리는 숫자 및 문자열 변수에서 JSON 텍스트를 만들며 변수의 모든 특수 JSON 문자를 이스케이프합니다.  
   

@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: f817c09333e895650760441f14d7967d0db120df
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938996"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference(geometry 데이터 형식)
@@ -51,7 +51,7 @@ ms.locfileid: "65938996"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-difference-between-two-polygon-instances"></a>1. 두 Polygon 인스턴스 사이의 차이 계산  
+### <a name="a-computing-the-difference-between-two-polygon-instances"></a>1\. 두 Polygon 인스턴스 사이의 차이 계산  
  다음 예에서는 `STDifference()`를 사용하여 두 다각형 간의 차이를 계산합니다.  
   
 ```  
@@ -62,7 +62,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STDifference(@h).ToString();  
 ```  
   
-### <a name="b-invoking-stdifference-on-a-curvepolygon-instance"></a>2. CurvePolygon 인스턴스에서 STDifference() 호출  
+### <a name="b-invoking-stdifference-on-a-curvepolygon-instance"></a>2\. CurvePolygon 인스턴스에서 STDifference() 호출  
  다음 예에서는 CurvePolygon 인스턴스에서 STDifference()를 사용합니다.  
   
 ```

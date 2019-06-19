@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 2107137f9b50a289e056042446c2d763f0b7cd23
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800133"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Always On 가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않았습니다.

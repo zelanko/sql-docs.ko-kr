@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948876"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY(Transact-SQL)
@@ -98,7 +98,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
 ## <a name="examples"></a>예  
  다음 예에 설명된 기능은 [방법: 데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)에서 생성된 키와 인증서를 이용합니다.  
   
-### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>1. 대칭 키로 문자열 암호화  
+### <a name="a-encrypting-a-string-with-a-symmetric-key"></a>1\. 대칭 키로 문자열 암호화  
  다음 예에서는 `Employee` 테이블에 열을 추가한 다음 `NationalIDNumber` 열에 저장되는 주민 등록 번호의 값을 암호화합니다.  
   
 ```  
@@ -122,7 +122,7 @@ SET EncryptedNationalIDNumber
 GO  
 ```  
   
-### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>2. 인증 값과 함께 레코드 암호화  
+### <a name="b-encrypting-a-record-together-with-an-authentication-value"></a>2\. 인증 값과 함께 레코드 암호화  
   
 ```  
 USE AdventureWorks2012;  

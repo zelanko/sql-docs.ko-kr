@@ -25,10 +25,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ddd5d9584f71e8a6b1ae9686203463b1eb77f47e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944681"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
@@ -81,7 +81,7 @@ COUNT(DISTINCT *식*)은 그룹에 포함된 각 행의 *식*을 계산하여 Nu
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-count-and-distinct"></a>1. COUNT 및 DISTINCT 사용  
+### <a name="a-using-count-and-distinct"></a>1\. COUNT 및 DISTINCT 사용  
 이 예제에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 직원이 보유할 수 있는 여러 직함의 수를 반환합니다.
   
 ```sql
@@ -99,7 +99,7 @@ GO
 (1 row(s) affected)
 ```
   
-### <a name="b-using-count"></a>2. COUNT(\*) 사용  
+### <a name="b-using-count"></a>2\. COUNT(\*) 사용  
 이 예제에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 직원의 총 수를 반환합니다.
   
 ```sql
@@ -257,7 +257,7 @@ Sales           18
 Production      179
 ```
   
-### <a name="i-using-count-with-over"></a>9. OVER와 함께 COUNT 사용  
+### <a name="i-using-count-with-over"></a>9\. OVER와 함께 COUNT 사용  
 이 예제에서는 `OVER` 절과 함께 `COUNT`를 사용하여 지정된 각 판매 주문에 포함된 제품의 수를 반환합니다.
   
 ```sql

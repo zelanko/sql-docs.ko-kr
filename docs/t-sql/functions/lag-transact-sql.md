@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2a31e3566c8ce27b010109b658573bf571148b3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946989"
 ---
 # <a name="lag-transact-sql"></a>LAG(Transact-SQL)
@@ -62,7 +62,7 @@ LAG (scalar_expression [,offset] [,default])
   
 ## <a name="examples"></a>예  
   
-### <a name="a-compare-values-between-years"></a>1. 연도 간 값 비교  
+### <a name="a-compare-values-between-years"></a>1\. 연도 간 값 비교  
  다음 예에서는 LAG 함수를 사용하여 특정 직원의 전년도 대비 판매 할당량 차이를 반환합니다. 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql   
@@ -88,7 +88,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
   
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>2. 파티션 내의 값 비교  
+### <a name="b-compare-values-within-partitions"></a>2\. 파티션 내의 값 비교  
  다음 예에서는 LAG 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 나누기 위해 PARTITION BY 절이 지정되었습니다. LAG 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에서 ORDER BY 절은 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 첫 번째 행의 경우 앞에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql   

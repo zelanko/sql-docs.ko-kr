@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095920"
 ---
 # <a name="how-to-view-data-differences"></a>방법: 데이터 차이 보기
-두 데이터베이스의 데이터를 비교한 후에는 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 표시됩니다. 또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다.  
+두 데이터베이스의 데이터를 비교한 후에는 사용자가 비교한 각 ‘데이터베이스 개체’ 및 해당 상태가 표시됩니다.  또한 상태별로 그룹화된 각 개체 내에서 레코드에 대한 결과를 볼 수도 있습니다.  
   
 차이를 확인한 후에는 서로 다르거나, 누락되었거나, 새로 추가된 개체 또는 레코드의 일부 또는 전체가 *원본*과 일치하도록 *대상*을 업데이트할 수 있습니다.  
   

@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632027"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51676072"
   
 3.  [파일 테이블 페이지](#FileTable)  
   
-4.  [저장소 페이지](#Storage)  
+4.  [ 페이지](#Storage)  
   
 ##  <a name="GeneralPage"></a> 일반 페이지  
  **데이터베이스 백업**  
@@ -112,7 +112,7 @@ ms.locfileid: "51676072"
  **FileTable 네임스페이스 사용**  
  **True**값은 해당 테이블이 FileTable임을 나타냅니다. 이 값을 **False**로 변경하면 FileTable이 일반적인 사용자 테이블로 변경됩니다. 나중에 테이블을 다시 FileTable로 변경할 경우 테이블이 FileTable 일관성 검사를 통과해야 변환이 성공합니다.  
   
-##  <a name="Storage"></a> 저장소 페이지  
+##  <a name="Storage"></a> 스토리지 페이지  
  선택한 테이블의 스토리지 관련 속성을 표시합니다.  
   
 ### <a name="compression"></a>압축  
@@ -144,8 +144,8 @@ ms.locfileid: "51676072"
  테이블에 FILESTREAM 데이터가 없는 경우 이 필드가 비어 있습니다.  
   
 ### <a name="general"></a>일반  
- **VarDecimal 저장소 형식을 사용합니다.**  
- **True**이면 이 읽기 전용 값은 **decimal** 및 **numeric** 데이터 형식이 VarDecimal 저장소 형식을 사용하여 저장됨을 나타냅니다. 이 옵션을 변경하려면 **sp_tableoption** 의 [VarDecimal 스토리지 형식](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)옵션을 사용합니다. VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
+ **VarDecimal 스토리지 형식을 사용합니다.**  
+ **True**이면 이 읽기 전용 값은 **decimal** 및 **numeric** 데이터 형식이 VarDecimal 스토리지 형식을 사용하여 저장됨을 나타냅니다. 이 옵션을 변경하려면 **sp_tableoption** 의 [VarDecimal 스토리지 형식](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)옵션을 사용합니다. VarDecimal 스토리지 형식은 더 이상 사용되지 않습니다. 대신 ROW 압축을 사용하세요.  
   
  **인덱스 공간**  
  테이블의 인덱스가 차지하는 공간의 크기(MB)입니다. 이 값에 테이블에 대한 XML 인덱스 공간 사용량은 포함되지 않습니다. XML 인덱스가 해당 테이블에 속할 경우 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 를 대신 사용하세요.  

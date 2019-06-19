@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022520"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
@@ -149,7 +149,7 @@ ms.locfileid: "63022520"
   
 -   배포자에서 게시자로 스냅숏 에이전트와 로그 판독기 에이전트를 연결하는 계정은 다음 중 한 가지 방법으로 지정됩니다.  
   
-    -   [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)의 **@security_mode** 매개 변수(Oracle 인증을 사용하는 경우 **@login** 및 **@password**에 대한 값도 지정)  
+    -   [sp_adddistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)의 **@security_mode** 매개 변수(Oracle 인증을 사용하는 경우 **@login** 및 **@password** 에 대한 값도 지정)  
   
     -   **배포자에서 Oracle 게시자를 구성할 때 사용하는 SQL Server Management Studio의** 서버에 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대화 상자에서 지정합니다.  
   

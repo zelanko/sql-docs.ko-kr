@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069102"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 프로필 탭(마이닝 모델 뷰어
@@ -51,7 +51,7 @@ ms.locfileid: "66069102"
   
 -   **\<특성 이름 >.samples**: 이 행의 히스토그램은 각 클러스터의 특징을 나타내는 항목의 시퀀스를 보여 줍니다. DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
   
--   **\<특성 이름 >**: 이 행의 히스토그램은 클러스터에 포함 된 모든 항목 및 전체적인 분포를 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
+-   **\<특성 이름 >** : 이 행의 히스토그램은 클러스터에 포함 된 모든 항목 및 전체적인 분포를 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
   
  **상태**  
  차트의 이 열은 선택 사항이며 **범례 표시** 옵션을 선택하여 표시하거나 제거할 수 있습니다. **상태** 열은 해당 클러스터 히스토그램에서 어떤 색이 어떤 상태를 나타내는지를 안내합니다.  

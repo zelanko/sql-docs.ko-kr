@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8919457cb10ae9feaa7e1c82eed5a73860fd6d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446123"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47829761"
 |메시지 텍스트|내부 작업을 수행하는 중 불일치가 감지되었습니다. 기술 지원 서비스에 문의하십시오. 참조 번호는 %ld입니다.|  
   
 ## <a name="explanation"></a>설명  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리 내 저장소 엔진 구조에서 구조적 불일치를 감지했습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리 내 스토리지 엔진 구조에서 구조적 불일치를 감지했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
 하드웨어 오류를 찾습니다. 하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. Windows 시스템 및 애플리케이션 로그와 SQL Server 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하세요. 로그에 하드웨어 관련 문제가 있으면 모두 해결합니다.

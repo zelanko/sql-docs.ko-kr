@@ -28,10 +28,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 691f88eab85d4a9adda1cb44d5d234eb1f6360fd
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503130"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS(Transact-SQL)
@@ -168,7 +168,7 @@ CREATE STATISTICS statistics_name
  
  **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4부터)에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1부터)까지.    
   
- STATS_STREAM **=**_stats_stream_  
+ STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
@@ -246,7 +246,7 @@ MAXDOP = *max_degree_of_parallelism*
 
 ### <a name="examples-use-the-adventureworks-database"></a>예제에서는 AdventureWorks 데이터베이스를 사용합니다.  
 
-### <a name="a-using-create-statistics-with-sample-number-percent"></a>1. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
+### <a name="a-using-create-statistics-with-sample-number-percent"></a>1\. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플을 사용하여 `Person` 통계를 만듭니다.  
   
 ```sql  
@@ -255,7 +255,7 @@ CREATE STATISTICS ContactMail1
     WITH SAMPLE 5 PERCENT;  
 ```  
   
-### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
+### <a name="b-using-create-statistics-with-fullscan-and-norecompute"></a>2\. CREATE STATISTICS에 FULLSCAN 및 NORECOMPUTE 사용  
  다음 예에서는 `NamePurchase` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에서 모든 행에 대한 `Person` 통계를 만듭니다. 통계의 자동 다시 계산 기능은 사용하지 않습니다.  
   
 ```sql  

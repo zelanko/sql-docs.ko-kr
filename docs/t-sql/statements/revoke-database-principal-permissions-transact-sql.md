@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033843"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  데이터베이스 보안 주체에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  USER ::*database_user*  
- 사용 권한을 취소할 사용자의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 취소할 사용자의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  ROLE ::*database_role*  
- 사용 권한을 취소할 역할의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 취소할 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  APPLICATION ROLE ::*application_role*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   
- 사용 권한을 취소할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 취소할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  GRANT OPTION  
  지정한 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한이 취소됨을 나타냅니다. 사용 권한 자체는 취소되지 않습니다.  
@@ -152,14 +152,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정한 보안 주체에 대한 CONTROL 권한 또는 CONTROL 권한을 포함하는 상위 사용 권한이 필요합니다.  
   
  **db_owner** 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>1. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
+### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>1\. 다른 사용자로부터 사용자에 대한 CONTROL 권한 취소  
  다음 예에서는 사용자 `CONTROL`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 사용자 `Wanida`에 대한 `RolandX` 권한을 취소합니다.  
   
 ```  
@@ -168,7 +168,7 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>2. WITH GRANT OPTION이 부여된 사용자로부터 역할에 대한 VIEW DEFINITION 권한 취소  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>2\. WITH GRANT OPTION이 부여된 사용자로부터 역할에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 데이터베이스 사용자 `VIEW DEFINITION`로부터 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 역할 `SammamishParking`에 대한 `JinghaoLiu` 권한을 취소합니다. 사용자 `CASCADE`에게 `JinghaoLiu` 권한 `VIEW DEFINITION`이 부여되었기 때문에 `WITH GRANT OPTION` 옵션이 지정됩니다.  
   
 ```  
@@ -178,8 +178,8 @@ REVOKE VIEW DEFINITION ON ROLE::SammamishParking
 GO  
 ```  
   
-### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>3. 응용 프로그램 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
- 다음 예에서는 `IMPERSONATE` 응용 프로그램 역할 `HamithaL`로부터 사용자 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 대한 `AccountsPayable17` 권한을 취소합니다.  
+### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 응용 프로그램 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 응용 프로그램 역할 `IMPERSONATE`로부터 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   

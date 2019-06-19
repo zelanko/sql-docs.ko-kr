@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b3692f3c0bc1c09a5841fcff146ceb9f4489548c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945428"
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME(Transact-SQL)
@@ -56,13 +56,13 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>1. 호출자의 기본 스키마 이름 반환  
+### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>1\. 호출자의 기본 스키마 이름 반환  
   
 ```  
 SELECT SCHEMA_NAME();  
 ```  
   
-### <a name="b-returning-the-name-of-a-schema-by-using-an-id"></a>2. ID를 사용하여 스키마 이름 반환  
+### <a name="b-returning-the-name-of-a-schema-by-using-an-id"></a>2\. ID를 사용하여 스키마 이름 반환  
   
 ```  
 SELECT SCHEMA_NAME(1);  

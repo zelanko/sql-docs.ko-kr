@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723673"
 ---
 # <a name="install-integration-services"></a>Integration Services 설치
@@ -85,7 +85,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]을 새로 설치하려면 다음 목록에서 필요한 구성 요소를 선택합니다.
 
--   **Integration Services(SSIS)**. SQL Server 설치 마법사를 사용하여 SSIS를 설치합니다. SSIS를 선택하면 다음 항목이 설치됩니다.
+-   **Integration Services(SSIS)** . SQL Server 설치 마법사를 사용하여 SSIS를 설치합니다. SSIS를 선택하면 다음 항목이 설치됩니다.
 
     -   SQL Server 데이터베이스 엔진에서 SSIS 카탈로그 지원.
 
@@ -97,7 +97,7 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 -   **SQL Server 데이터베이스 엔진**. SQL Server 설치 마법사를 사용하여 데이터베이스 엔진을 설치합니다. 데이터베이스 엔진을 선택하면 SSIS 패키지를 저장, 관리, 실행 및 모니터링하는 SSIS 카탈로그 데이터베이스 `SSISDB`를 만들고 호스팅할 수 있습니다.
 
--   **SQL Server Data Tools(SSDT)**. SSDT를 다운로드하여 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. SSDT를 설치하면 SSIS 패키지를 설계 및 배포할 수 있습니다. SSDT는 다음 항목을 설치합니다.
+-   **SQL Server Data Tools(SSDT)** . SSDT를 다운로드하여 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요. SSDT를 설치하면 SSIS 패키지를 설계 및 배포할 수 있습니다. SSDT는 다음 항목을 설치합니다.
 
     -   SSIS 디자이너를 포함한 SSIS 패키지 디자인 및 개발 도구.
 

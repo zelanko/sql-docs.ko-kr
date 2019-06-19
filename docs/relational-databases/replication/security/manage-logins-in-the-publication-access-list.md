@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026727"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "54124333"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -62,15 +62,15 @@ ms.locfileid: "54124333"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>PAL에 속한 그룹 및 로그인을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication**에 게시 이름을 지정합니다. 그러면 PAL의 그룹 및 로그인에 대한 정보가 표시됩니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름을 지정합니다. 그러면 PAL의 그룹 및 로그인에 대한 정보가 표시됩니다.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>PAL에 그룹 및 로그인을 추가하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication**에 게시 이름, **@login**에 추가할 로그인 또는 그룹 이름을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름, **@login** 에 추가할 로그인 또는 그룹 이름을 지정합니다.  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>PAL에서 그룹 및 로그인을 제거하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication**에 게시 이름, **@login**에 제거할 로그인 또는 그룹 이름을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)를 실행합니다. 이때 **@publication** 에 게시 이름, **@login** 에 제거할 로그인 또는 그룹 이름을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [게시 액세스 목록에서 로그인 관리](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
