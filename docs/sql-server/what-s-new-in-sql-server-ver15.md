@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
 ms.date: 05/28/2019
-ms.prod: sql-server-2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
-ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
+ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836303"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능을 요약하고 있습니다.
 
@@ -60,6 +60,7 @@ CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../incl
 |[메모리 내 데이터베이스](../relational-databases/in-memory-database.md)는 하이브리드 버퍼 풀에 새로운 DDL 구문을 추가합니다. <sup>2</sup>|[하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 사용하여 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다.|
 |새로운 메모리 내 데이터베이스 기능인 메모리 최적화 tempdb 메타데이터가 추가되었습니다.|[메모리 최적화 tempdb 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
 |연결된 서버는 UTF-8 문자 인코딩을 지원합니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
+|BIN2_UTF8 데이터 정렬 이름이 Latin1_General_100_BIN2_UTF8로 변경되었습니다. |[데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md) |
 |SQL Server 설치에는 문서화된 지침을 따르는 MaxDOP 권장 사항이 포함되어 있습니다. |[max degree of parallelism 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats`는 쿼리 계획에 대해 병렬 처리 수준 및 메모리 부여에 관한 더 많은 정보를 반환합니다. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
