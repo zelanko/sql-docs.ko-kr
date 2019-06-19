@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943279"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
@@ -73,7 +73,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-identifying-logins-that-have-no-passwords"></a>1. 암호가 없는 로그인 식별  
+### <a name="a-identifying-logins-that-have-no-passwords"></a>1\. 암호가 없는 로그인 식별  
  다음 예에서는 암호가 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 식별합니다.  
   
 ```  
@@ -81,7 +81,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('', password_hash) = 1 ;  
 ```  
   
-### <a name="b-searching-for-common-passwords"></a>2. 일반적인 암호 검색  
+### <a name="b-searching-for-common-passwords"></a>2\. 일반적인 암호 검색  
  식별하여 변경할 일반적인 암호를 검색하려면 암호를 첫 번째 매개 변수로 지정합니다. 예를 들어 `password`로 지정된 암호를 검색하려면 다음 문을 실행합니다.  
   
 ```  

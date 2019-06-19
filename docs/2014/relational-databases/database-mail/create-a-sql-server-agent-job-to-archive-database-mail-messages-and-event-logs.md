@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917595"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
@@ -31,7 +31,7 @@ ms.locfileid: "62917595"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  데이터를 저장하고 보관할 새 테이블은 특수한 보관 데이터베이스에 위치할 수 있습니다. 행을 텍스트 파일로 내보낼 수도 있습니다.  
  
   
@@ -47,11 +47,11 @@ ms.locfileid: "62917595"
   
 -   첫 번째 절차에서는 다음 단계를 사용하여 Archive Database Mail이라는 작업을 만듭니다.  
   
-    1.  모든 메시지를 데이터베이스 메일 테이블에서 **DBMailArchive_**_<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
+    1.  모든 메시지를 데이터베이스 메일 테이블에서 **DBMailArchive_** _<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
   
-    2.  첫 번째 단계에서 복사된 메시지와 관련된 첨부 파일을 데이터베이스 메일 테이블에서 **DBMailArchive_Attachments_**_<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
+    2.  첫 번째 단계에서 복사된 메시지와 관련된 첨부 파일을 데이터베이스 메일 테이블에서 **DBMailArchive_Attachments_** _<year_month>_ 형식으로 이전 달 이름에 따라 명명된 새 테이블로 복사합니다.  
   
-    3.  첫 번째 단계에서 복사한 메시지와 관련된 데이터베이스 메일 이벤트 로그에서 **DBMailArchive_Log_**_<year_month>_ 형식으로 이전 달 이름을 따라 명명된 새 테이블로 이벤트를 복사합니다.  
+    3.  첫 번째 단계에서 복사한 메시지와 관련된 데이터베이스 메일 이벤트 로그에서 **DBMailArchive_Log_** _<year_month>_ 형식으로 이전 달 이름을 따라 명명된 새 테이블로 이벤트를 복사합니다.  
   
     4.  전송된 메일 항목의 레코드를 데이터베이스 메일 테이블에서 삭제합니다.  
   

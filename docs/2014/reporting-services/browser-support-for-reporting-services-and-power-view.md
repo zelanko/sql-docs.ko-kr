@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266817"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
@@ -35,11 +35,11 @@ ms.locfileid: "63266817"
   
 ##  <a name="bkmk_powerview"></a> Power View 브라우저 시나리오
 
- 지원되는 브라우저 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 에서 지원하는 브라우저 버전 목록은 여는 문서의 유형에 따라 다릅니다. Excel 2013 통합 문서 및 "**.rdlx**" 파일 다양 한 구성 요소를 활용 합니다.  
+ 지원되는 브라우저 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 에서 지원하는 브라우저 버전 목록은 여는 문서의 유형에 따라 다릅니다. Excel 2013 통합 문서 및 " **.rdlx**" 파일 다양 한 구성 요소를 활용 합니다.  
   
 |문서 유형|환경|브라우저 지원|  
 |-------------------|-----------------|---------------------|  
-|Power View 보고서(.RDLX)|**SharePoint Server:**[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 파워 뷰 웹 애플리케이션.|참조 [파워 뷰 SharePoint Server 및 Reporting Services SharePoint 통합된 모드에서](#bkmk_powerview_on_SSRS)합니다.|  
+|Power View 보고서(.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 파워 뷰 웹 애플리케이션.|참조 [파워 뷰 SharePoint Server 및 Reporting Services SharePoint 통합된 모드에서](#bkmk_powerview_on_SSRS)합니다.|  
 |Power View 시트가 있는 Excel 2013 통합 문서|**SharePoint 서버:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel 서비스에서.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web App의 합니다.|참조 [뷰는 Excel services 또는 SharePoint의 Excel Web App을 온라인 Power](#bkmk_powerview_on_ExcelServices)합니다.|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> SharePoint Server 및 Reporting Services SharePoint 통합된 모드의 power View  
@@ -47,9 +47,9 @@ ms.locfileid: "63266817"
   
 - 표는 SharePoint 2010 및 SharePoint 2013에 적용됩니다.  
   
-- SharePoint 2013 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx)합니다.  
+- SharePoint 2013 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com//library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx) 합니다.  
   
-- SharePoint 2010 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [브라우저 지원 계획 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)합니다.  
+- SharePoint 2010 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [브라우저 지원 계획 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx) 합니다.  
   
 |**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -71,7 +71,7 @@ ms.locfileid: "63266817"
 
  다음 표에는 사용자가 Excel Services를 실행 중인 SharePoint Server에서 Power View 시트가 포함된 Excel 2013 통합 문서를 열 때 지원되는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 의 브라우저 버전이 요약되어 있습니다.  
   
--   SharePoint 2013 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx)합니다.  
+-   SharePoint 2013 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx) 합니다.  
   
 |**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -191,9 +191,9 @@ ms.locfileid: "63266817"
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```
   
- Internet Explorer의 호환성 모드에 대 한 자세한 내용은 참조 하세요. [문서 호환성 정의](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380)합니다.  
+ Internet Explorer의 호환성 모드에 대 한 자세한 내용은 참조 하세요. [문서 호환성 정의](https://go.microsoft.com/fwlink/?LinkId=180380) (https://go.microsoft.com/fwlink/?LinkId=180380) 합니다.  
   
- ReportViewer 컨트롤 사용에 대 한 자세한 내용은 참조 하세요. [보고서 및 ReportViewer 컨트롤 배포](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx)합니다.  
+ ReportViewer 컨트롤 사용에 대 한 자세한 내용은 참조 하세요. [보고서 및 ReportViewer 컨트롤 배포](https://msdn.microsoft.com/library/ms251723.aspx) (https://msdn.microsoft.com/library/ms251723.aspx) 합니다.  
   
 ## <a name="next-steps"></a>다음 단계
 

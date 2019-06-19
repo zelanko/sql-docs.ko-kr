@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128692"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
@@ -44,7 +44,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 이 키 아래에는 컴퓨터에 설치된 각 LocalDB 버전별로 하나씩 키 목록이 있습니다. 각이 키 이름이 지정 된 형식의 LocalDB 버전 번호로  *\<주 버전 >*. *\<부 버전 >* (예를 들어 키 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 12.0 이름은). 각 버전 키 아래에는 해당 버전과 함께 설치되는 SQLUserInstance.dll 파일의 전체 경로를 정의하는 `InstanceAPIPath` 이름-값 쌍이 있습니다. 다음 예에서는 LocalDB 버전 11.0 및 12.0이 설치된 컴퓨터에 대한 레지스트리 항목을 보여 줍니다.  
+ 이 키 아래에는 컴퓨터에 설치된 각 LocalDB 버전별로 하나씩 키 목록이 있습니다. 각이 키 이름이 지정 된 형식의 LocalDB 버전 번호로  *\<주 버전 >* . *\<부 버전 >* (예를 들어 키 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 12.0 이름은). 각 버전 키 아래에는 해당 버전과 함께 설치되는 SQLUserInstance.dll 파일의 전체 경로를 정의하는 `InstanceAPIPath` 이름-값 쌍이 있습니다. 다음 예에서는 LocalDB 버전 11.0 및 12.0이 설치된 컴퓨터에 대한 레지스트리 항목을 보여 줍니다.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  

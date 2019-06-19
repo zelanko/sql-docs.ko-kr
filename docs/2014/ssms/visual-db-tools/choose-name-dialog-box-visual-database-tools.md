@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509965"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
-  선택한 경우이 대화 상자에 나타납니다 **저장할 \<TableName**>를 **저장 \<DiagramName >**, 또는 **저장 \<ViewName >** 에서 **파일** 메뉴.  
+  선택한 경우이 대화 상자에 나타납니다 **저장할 \<TableName**>를 **저장 \<DiagramName >** , 또는 **저장 \<ViewName >** 에서 **파일** 메뉴.  
   
  **테이블/다이어그램/뷰 이름 입력**  
  테이블, 다이어그램이나 뷰의 이름을 입력할 수 있는 입력란이 제공됩니다.  

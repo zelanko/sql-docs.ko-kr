@@ -12,11 +12,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: f863259a12be7ef2346ddfa333b79c95a920d2fe
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649479"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, HTTP 스토리지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "53380464"
 |**Avg. microsec/Transfer**|HTTP 스토리지로 각 전송을 수행하는 데 걸리는 평균 마이크로초 수입니다.|  
 |**Avg. microsec/Write**|HTTP 스토리지에서 각 쓰기를 수행하는 데 걸리는 평균 마이크로초 수입니다.|  
 |**Avg. microsec/Write Comp**|HTTP에서 스토리지에 대한 쓰기 작업을 완료하는 데 소요되는 평균 마이크로초의 수입니다.|  
-|**HTTP Storage IO failed/sec**|초당 HTTP 스토리지로 보내진 실패한 쓰기 요청의 수입니다.| 
-|**HTTP Storage I/O retry/sec**|HTTP 스토리지로 보낸 초당 재시도 요청 수입니다.|  
-|**Outstanding HTTP Storage I/O**|HTTP 스토리지에 대한 총 미해결 I/O 수입니다.|  
+|**HTTP 스토리지 IO failed/sec**|초당 HTTP 스토리지로 보내진 실패한 쓰기 요청의 수입니다.| 
+|**HTTP 스토리지 I/O retry/sec**|HTTP 스토리지로 보낸 초당 재시도 요청 수입니다.|  
+|**Outstanding HTTP 스토리지 I/O**|HTTP 스토리지에 대한 총 미해결 I/O 수입니다.|  
 |**Read Bytes/sec**|읽기 작업 중 HTTP 스토리지에서 초당 전송되는 데이터의 양입니다.|  
 |**읽기/초**|HTTP 스토리지의 초당 읽기 수입니다.|  
 |**Total Bytes/sec**|읽기 또는 쓰기 작업 중 HTTP 스토리지에서 초당 전송되는 데이터의 양입니다.|  

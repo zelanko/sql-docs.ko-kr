@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295241"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>새로운&#39;SQL Server 2014의 새로운
@@ -77,7 +77,7 @@ ms.locfileid: "63295241"
 -   **SQL Server에서 입력된 버퍼를 검색 하기 위한 새 DMF:** 이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)합니다.
 -   **과소 평가 하 고 overestimated 메모리 부여에 대 한 완화 합니다.** 추가 된 새 쿼리 힌트 MIN_GRANT_PERCENT 및 MAX_GRANT_PERCENT를 통해 리소스 관리자에 대 한 합니다. 이 옵션을 사용 하면 메모리 경합을 방지 하도록 해당 메모리 부여를 제한 하 여 쿼리를 실행 하는 동안 이러한 힌트를 활용할 수 있습니다. 자세한 내용은 참조 하세요. [KB310740 기술 자료 문서](https://support.microsoft.com/en-us/kb/3107401)
 -   **메모리 부여/사용량 진단 향상:** 새 확장된 이벤트를 요청 하 고 부여 메모리 부여를 추적 하려면 SQL Server (query_memory_grant_usage)에서 추적 기능 목록에 추가 되었습니다. 이 메모리 부여와 관련 된 쿼리 실행 문제 해결을 위한 더 나은 추적 및 분석 기능을 제공 합니다. 자세한 내용은 [기술 자료 문서 KB3107173](https://support.microsoft.com/en-us/kb/3107173)합니다.
--   **쿼리 실행 진단 tempdb 분산에 대 한:**-물리적 I/O 통계, 사용 되는 메모리 및 영향을 받는 행을 추적 하는 추가 열이 이제 Hash Warning 및 Sort Warning입니다. 또한 새 hash_spill_details 확장된 이벤트가 도입 되었습니다. 이제 프로그램 해시 및 정렬 경고에 대 한 더 세부적인 정보를 추적할 수 있습니다 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). 이러한 향상 기능은 이제 또한 SpillToTempDbType 복합 형식에 새 특성의 형태로 XML 쿼리 계획을 통해 표시 됩니다 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). 이제 표시 정렬 작업 테이블 통계의 통계를 설정 합니다. .
+-   **쿼리 실행 진단 tempdb 분산에 대 한:** -물리적 I/O 통계, 사용 되는 메모리 및 영향을 받는 행을 추적 하는 추가 열이 이제 Hash Warning 및 Sort Warning입니다. 또한 새 hash_spill_details 확장된 이벤트가 도입 되었습니다. 이제 프로그램 해시 및 정렬 경고에 대 한 더 세부적인 정보를 추적할 수 있습니다 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). 이러한 향상 기능은 이제 또한 SpillToTempDbType 복합 형식에 새 특성의 형태로 XML 쿼리 계획을 통해 표시 됩니다 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). 이제 표시 정렬 작업 테이블 통계의 통계를 설정 합니다. 을 선택합니다.
 -   **잔여 조건자 푸시 다운을 포함 하는 쿼리 실행 계획에 대 한 향상 된 진단:** 읽은 실제 행 이제 쿼리 성능 문제 해결을 개선 하기 위해 쿼리 실행 계획에서 보고 됩니다. SET STATISTICS IO를 별도로 캡처 필요가 없어질 해야이. 이 구문은 이제를 사용 하면 잔여 조건자 푸시 다운 쿼리 계획에 관련 된 정보를 볼 수 있습니다. 자세한 내용은 [기술 자료 문서 KB3107397](https://support.microsoft.com/en-us/kb/3107397)합니다.
 
 

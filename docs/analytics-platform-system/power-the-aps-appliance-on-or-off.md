@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678631"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스를 끄거나 전원
@@ -39,7 +39,7 @@ ms.locfileid: "62678631"
 > [!WARNING]  
 > 나열 된 정확한 순서로 모든 단계를 수행 해야 하 고 다른 설명이 없는 한 각 단계는 다음 단계를 수행 하기 전에 완료 해야 합니다. 잘못 된 순서 없이 각 단계가 완료 되기를 기다리는 단계를 수행 나중에 어플라이언스 전원이 켜진 경우 오류가 발생할 수 있습니다.  
   
-1.  PDW 제어 노드에 연결 (**_PDW_region_-CTL01** ) 및 Analytics Platform System appliance 도메인 관리자 계정으로 로그인 합니다.  
+1.  PDW 제어 노드에 연결 ( **_PDW_region_-CTL01** ) 및 Analytics Platform System appliance 도메인 관리자 계정으로 로그인 합니다.  
   
 2.  실행할 `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` 열려면 합니다 **Configuration Manager**합니다.  
   

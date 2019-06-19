@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106955"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>보고서에 Office 데이터 연결(.odc) 사용(SharePoint 통합 모드의 Reporting Services)
@@ -92,7 +92,7 @@ ms.locfileid: "66106955"
   
 10. 보고서에서 사용자 지정 데이터 원본 정보를 사용하는 경우 **공유**를 클릭합니다.  
   
-11. **데이터 원본 연결**에서 찾아보기(**...**) 단추를 클릭합니다.  
+11. **데이터 원본 연결**에서 찾아보기( **...** ) 단추를 클릭합니다.  
   
 12. 방금 업로드한 .odc 파일을 선택합니다.  
   

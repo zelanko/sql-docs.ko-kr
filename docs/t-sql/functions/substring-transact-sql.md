@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 429be4403d1df512b43a049b0014afcafea15740
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947499"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
@@ -74,7 +74,7 @@ SUBSTRING ( expression ,start , length )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-substring-with-a-character-string"></a>1. 문자열과 SUBSTRING 사용  
+### <a name="a-using-substring-with-a-character-string"></a>1\. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `sys.databases` 테이블에서 첫 번째 열에 시스템 데이터베이스 이름, 두 번째 열에 데이터베이스의 첫 번째 문자, 마지막 열에 세 번째 및 네 번째 문자를 반환합니다.  
   
 ```  
@@ -111,7 +111,7 @@ bcd
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-substring-with-text-ntext-and-image-data"></a>2. text, ntext, image 데이터와 SUBSTRING 사용  
+### <a name="b-using-substring-with-text-ntext-and-image-data"></a>2\. text, ntext, image 데이터와 SUBSTRING 사용  
   
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  

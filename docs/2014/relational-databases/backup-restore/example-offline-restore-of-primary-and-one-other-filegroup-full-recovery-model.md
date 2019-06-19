@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fec409bf6f391e14dd5e1a2b8b102df2fd00cfd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921758"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>예: 주 서버와 다른 파일 그룹 (전체 복구 모델)의 오프 라인 복원
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>예: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원(전체 복구 모델)
   이 항목에서는 전체 복구 모델에서 데이터베이스에 여러 개의 파일 그룹이 있는 경우와 관련된 내용을 다룹니다.  
   
  이 예에서 `adb` 라는 데이터베이스에 3개의 파일 그룹이 있습니다. 파일 그룹 `A` 및 `C` 는 읽기/쓰기가 가능하며 파일 그룹 `B` 는 읽기 전용입니다. 주 파일 그룹과 파일 그룹 `B` 는 손상되지만 파일 그룹 `A` 와 `C` 는 그대로 유지됩니다. 재해가 발생하기 전에 모든 파일 그룹은 온라인 상태였습니다.  

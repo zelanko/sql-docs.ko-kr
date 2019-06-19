@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755328"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에 클라이언트 연결(SQL Server)
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server 특성  
  연결 문자열에는 초기 파트너 이름을 제공하는 `Server` 특성이 있어야 합니다. 이 특성은 현재 주 서버 인스턴스를 식별합니다.  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 해당 이름을 지정하는 것입니다. 예를 들어  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 해당 이름을 지정하는 것입니다. 예를 들어  
   
  `Server=Partner_A;`  
   
@@ -98,7 +98,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  연결 문자열에서 포트가 아닌 명명된 인스턴스 이름을 지정하는 경우 SQL Server Browser 쿼리가 필요합니다.  
   
- IP 주소와 포트를 지정 하는 `Server` 특성은 형식을 `Server=` *< ip_address >*`,`*\<포트 >* 예를 들어:  
+ IP 주소와 포트를 지정 하는 `Server` 특성은 형식을 `Server=` *< ip_address >* `,` *\<포트 >* 예를 들어:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +118,7 @@ Server=123.34.45.56,4724;
 >  이 문자열에는 인증 정보가 생략됩니다.  
   
 > [!IMPORTANT]  
->  프로토콜 접두사를 사용 합니다 `Server` 특성 (`Server=tcp:`*\<servername >*)와 호환 되지 않습니다는 **네트워크** 특성과의 프로토콜을 지정 두 위치는 오류가 발생 합니다. 따라서 좋습니다 연결 문자열을 사용 하 여 프로토콜을 지정 하는 **네트워크** 특성을 마우스에 서버 이름만 지정 합니다 `Server` 특성 (`"Network=dbmssocn; Server=`*\<servername >*`"`).  
+>  프로토콜 접두사를 사용 합니다 `Server` 특성 (`Server=tcp:` *\<servername >* )와 호환 되지 않습니다는 **네트워크** 특성과의 프로토콜을 지정 두 위치는 오류가 발생 합니다. 따라서 좋습니다 연결 문자열을 사용 하 여 프로토콜을 지정 하는 **네트워크** 특성을 마우스에 서버 이름만 지정 합니다 `Server` 특성 (`"Network=dbmssocn; Server=` *\<servername >* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 특성  
  초기 파트너 이름 외에 클라이언트에서 현재 미러 서버 인스턴스를 식별하는 장애 조치(failover) 파트너 이름을 지정할 수도 있습니다. 장애 조치(failover) 파트너는 Failover Partner 특성의 키워드 중 하나에 의해 지정됩니다. 이 특성의 키워드는 사용 중인 API에 따라 다릅니다. 다음 표에서는 이러한 키워드를 보여 줍니다.  
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC 드라이버|`Failover_Partner`|  
 |ADO(ActiveX Data Objects)|`Failover Partner`|  
   
- 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>*[**\\**_<SQL_Server_instance_name>_]과 같이 시스템 이름을 지정하는 것입니다.  
+ 서버 인스턴스를 식별하는 가장 간단한 방법은 *<server_name>* [ **\\** _<SQL_Server_instance_name>_ ]과 같이 시스템 이름을 지정하는 것입니다.  
   
  또는 `Failover Partner` 특성에 IP 주소와 포트 번호를 제공할 수 있습니다. 데이터베이스에 대한 첫 번째 연결 중에 초기 연결 시도가 실패하면 장애 조치(failover) 파트너에 대한 연결에서 DNS 및 SQL Server Browser를 사용하지 않습니다. 연결이 설정되면 장애 조치(failover) 파트너 이름이 장애 조치(failover) 파트너 이름을 덮어쓰므로 장애 조치가 발생할 경우 리디렉션된 연결에 DNS 및 SQL Server Browser가 필요합니다.  
   
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  다시 시도 시간은 다음 수식을 사용하여 계산됩니다.  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
   
  여기서 *PreviousRetryTime* 의 초기값은 0입니다.  
   

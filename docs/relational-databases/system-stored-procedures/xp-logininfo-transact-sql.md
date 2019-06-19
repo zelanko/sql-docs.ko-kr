@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099955"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>인수  
 `[ @acctname = ] 'account_name'` Windows 사용자 또는 액세스 권한을 부여 하는 그룹의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *account_name* 지정 하지 않으면에 로그인 권한을 부여 받은 모든 Windows 그룹 및 Windows 사용자가 명시적으로 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
   
- **'모든'** | **'멤버가'**  
- 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** 됩니다 **varchar(10)**, 기본값은 NULL입니다. 경우가 아니면 **모든** 지정, 첫 번째 권한 경로만 표시 됩니다.  
+ **'모든'**  |  **'멤버가'**  
+ 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** 됩니다 **varchar(10)** , 기본값은 NULL입니다. 경우가 아니면 **모든** 지정, 첫 번째 권한 경로만 표시 됩니다.  
   
-`[ @privilege = ] variable_name` 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수가입니다. *variable_name* 됩니다 **varchar(10)**, 'Not w'의 기본값입니다. 권한 수준을 반환 **사용자**를 **admin**, 또는 **null**합니다.  
+`[ @privilege = ] variable_name` 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수가입니다. *variable_name* 됩니다 **varchar(10)** , 'Not w'의 기본값입니다. 권한 수준을 반환 **사용자**를 **admin**, 또는 **null**합니다.  
   
  OUTPUT  
  인수를 지정 하면 *variable_name* 출력 매개 변수에서입니다.  

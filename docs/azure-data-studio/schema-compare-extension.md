@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798090"
 ---
-# <a name="schema-compare-extension-preview"></a>스키마 비교 확장 (미리 보기)
+# <a name="schema-compare-extension-preview"></a>스키마 비교 확장(미리 보기)
 스키마 비교 확장에는.dacpac 파일 및 데이터베이스를 비교 하 여 변경 내용을 원본에서 대상에 적용 하는 사용 하기 쉬운 환경을 제공 합니다.
 
 이 환경은 현재 초기 미리 보기 중입니다. 문제 보고 및 기능 요청 [여기 있습니다.](https://github.com/microsoft/azuredatastudio/issues)

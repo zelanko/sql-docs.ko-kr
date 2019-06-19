@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3675362cefae97ce453e80dccd5ed79113a257a5
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413547"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
@@ -279,7 +279,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  ENDPOINT_URL은 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다.  자세한 내용은 [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
- **'** TCP **://** _system-address_ **:** _port_ **'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  엔드포인트 URL 또는 읽기 전용 라우팅 URL을 지정하기 위한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -321,7 +321,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
 >  SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)는 가용성 그룹에 따라 AlwaysOn 자동 장애 조치(Failover)를 지원하지 않으므로 FCI에서 호스팅하는 모든 가용성 복제본은 수동 장애 조치(Failover)에 대해서만 구성될 수 있습니다.  
   
  MANUAL  
- 데이터베이스 관리자에 의한 수동 장애 조치(failover) 또는 강제 수동 장애 조치(failover)(*강제 장애 조치(failover)* )를 사용하도록 설정합니다.  
+ 데이터베이스 관리자에 의한 수동 장애 조치(failover) 또는 강제 수동 장애 조치(failover)(*강제 장애 조치(failover)*)를 사용하도록 설정합니다.  
   
  FAILOVER_MODE는 ADD REPLICA ON 절에서는 필수적이고 MODIFY REPLICA ON 절에서는 선택적입니다. 수동 장애 조치(failover)에는 데이터 손실이 없는 수동 장애 조치(failover)와 데이터가 손실될 수 있는 강제 장애 조치(failover)의 두 가지 유형이 있으며 이 두 유형은 서로 다른 조건에서 지원됩니다.  자세한 내용은 이 항목의 뒷부분에 나오는 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
@@ -337,7 +337,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  MANUAL  
  수동 시드(기본값)를 지정합니다. 이 메서드를 사용하면 주 복제본에서 데이터베이스의 백업을 만들고 보조 복제본에서 해당 백업을 수동으로 복원해야 합니다.  
   
- BACKUP_PRIORITY **=** _n_  
+ BACKUP_PRIORITY **=**_n_  
  이 복제본에 대한 백업을 수행하기 위한 우선 순위를 지정하며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100  사이의 정수입니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
   
 -   1..100은 가용성 복제본이 백업 수행을 위해 선택될 수 있음을 나타냅니다. 1은 가장 낮은 우선 순위를 나타내고 100은 가장 높은 우선 순위를 나타냅니다. BACKUP_PRIORITY = 1이면 현재 사용 가능한 더 높은 우선 순위의 가용성 복제본이 없는 경우에만 해당 가용성 복제본이 백업 수행을 위해 선택됩니다.  
@@ -365,10 +365,10 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
- READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  이 가용성 복제본에 대한 읽기 전용 연결 요청을 라우팅하는 데 사용할 URL을 지정합니다. 이 URL은 SQL Server 데이터베이스 엔진이 수신하는 URL입니다. 일반적으로 SQL Server 데이터베이스 엔진의 기본 인스턴스는 TCP 포트 1433에서 수신합니다.  
   
- 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'** ).  
+ 명명된 인스턴스의 경우 [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md) 동적 관리 뷰의 **port** 및 **type_desc** 열을 쿼리하여 포트 번호를 가져올 수 있습니다. 서버 인스턴스는 Transact-SQL 수신기를 사용합니다(**type_desc='TSQL'**).  
   
  가용성 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법에 대한 자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)을 참조하세요.  
   
@@ -389,7 +389,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이것이 기본 동작입니다.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
  보조 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스팅하는 서버 인스턴스의 쉼표로 구분된 목록을 지정합니다.  
   
 -   모든 연결 또는 읽기 전용 연결을 허용하도록 구성되어야 합니다(위에서 SECONDARY_ROLE 옵션의 ALLOW_CONNECTIONS 인수 참조).  
@@ -408,7 +408,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  없음  
  이 가용성 복제본이 주 복제본인 경우 읽기 전용 라우팅이 지원되지 않도록 지정합니다. 이것이 기본 동작입니다. 이 값에 MODIFY REPLICA ON을 사용하면 기존 목록(있는 경우)이 비활성화됩니다.  
   
- SESSION_TIMEOUT **=** _seconds_  
+ SESSION_TIMEOUT **=**_seconds_  
  세션 제한 시간(초)을 지정합니다. 이 옵션을 지정하지 않으면 기본적으로 제한 시간은 10초로 설정됩니다. 최소값은 5초입니다.  
   
 > [!IMPORTANT]  
@@ -459,7 +459,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  강제 장애 조치(failover)에 대한 제한 사항, 사전 요구 사항 및 권장 사항과 강제 장애 조치(failover) 시 가용성 그룹의 이전 주 데이터베이스에 미치는 영향에 대한 자세한 내용은 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)을 참조하세요.  
   
- ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
+ ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
  이 가용성 그룹의 새 가용성 그룹 수신기를 정의합니다. 주 복제본에서만 지원되며,  
   
 > [!IMPORTANT]
@@ -486,12 +486,12 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  \<ag_name>  
  분산 가용성 그룹의 절반을 구성하는 가용성 그룹의 이름을 지정합니다.  
   
- LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  가용성 그룹과 연결된 수신기에 대한 URL 경로를 지정합니다.  
   
  LISTENER 절은 필수입니다.  
   
- **'** TCP **://** _system-address_ **:** _port_ **'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  가용성 그룹과 연결된 수신기에 대한 URL을 지정합니다. URL 매개 변수는 다음과 같습니다.  
   
  *system-address*  
@@ -519,7 +519,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  보조 가용성 그룹에 대한 자동 장애 조치(failover)는 지원되지 않습니다.  
   
- SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
+ SEEDING_MODE**=** { AUTOMATIC | MANUAL }  
  보조 가용성 그룹을 처음에 시드하는 방법을 지정합니다.  
   
  AUTOMATIC  
@@ -543,7 +543,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  \<add_listener_option>  
  ADD LISTENER는 다음 옵션 중 하나를 사용합니다.  
   
- WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
+ WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
  가용성 그룹 수신기가 DHCP(동적 호스트 구성 프로토콜)를 사용할지 여부를 지정합니다.  필요할 경우 ON 절을 사용하여 이 수신기를 만들 네트워크를 식별합니다. DHCP는 가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 사용되는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
@@ -553,7 +553,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  DHCP를 사용하는 대신 가용성 그룹 수신기가 하나 이상의 고정 IP 주소를 사용할지 여부를 지정합니다. 여러 서브넷에서 가용성 그룹을 만들려면 각 서브넷의 수신기 구성에 하나의 고정 IP 주소가 필요합니다. 지정된 서브넷에 대해 고정 IP 주소는 IPv4 주소이거나 IPv6 주소일 수 있습니다. 새 가용성 그룹에 대한 가용성 복제본을 호스팅할 각 서브넷의 고정 IP 주소를 얻으려면 네트워크 관리자에게 문의하십시오.  
   
  예를 들어  
@@ -576,22 +576,22 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  예: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
  이 가용성 그룹의 기존 가용성 수신기를 수정합니다. 주 복제본에서만 지원되며,  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER는 다음 옵션 중 하나를 사용합니다.  
   
- ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
+ ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
  *dns\_name*으로 지정된 가용성 그룹 수신기에 지정된 IP 주소를 추가합니다.  
   
  PORT **=** *listener_port*  
  이 섹션 앞에 나온 이 인수에 대한 설명을 참조하십시오.  
   
- RESTART LISTENER **'** _dns\_name_ **'**  
+ RESTART LISTENER **'**_dns\_name_**'**  
  지정된 DNS 이름과 관련된 수신기를 다시 시작합니다. 주 복제본에서만 지원되며,  
   
- REMOVE LISTENER **'** _dns\_name_ **'**  
+ REMOVE LISTENER **'**_dns\_name_**'**  
  지정된 DNS 이름과 관련된 수신기를 제거합니다. 주 복제본에서만 지원되며,  
   
  OFFLINE  

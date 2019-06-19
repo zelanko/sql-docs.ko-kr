@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: bea5d805294216b796f36f3f0762b564162924dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64776267"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,12 +82,12 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
  비대칭 키의 소유권을 변경하려면 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  프라이빗 키를 제거하는 경우 비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-the-private-key"></a>1. 프라이빗 키의 암호 변경  
+### <a name="a-changing-the-password-of-the-private-key"></a>1\. 프라이빗 키의 암호 변경  
  다음 예에서는 비대칭 키 `PacificSales09`의 프라이빗 키를 보호하는 데 사용된 암호를 변경합니다. 새 암호는 `<enterStrongPasswordHere>`입니다.  
   
 ```  
@@ -98,7 +98,7 @@ ALTER ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>2. 비대칭 키로부터 프라이빗 키 제거  
+### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>2\. 비대칭 키로부터 프라이빗 키 제거  
  다음 예에서는 `PacificSales19`에서 프라이빗 키를 제거하여 퍼블릭 키만 남겨 둡니다.  
   
 ```  
@@ -106,11 +106,11 @@ ALTER ASYMMETRIC KEY PacificSales19 REMOVE PRIVATE KEY;
 GO  
 ```  
   
-### <a name="c-removing-password-protection-from-a-private-key"></a>3. 프라이빗 키로부터 암호 보호 제거  
+### <a name="c-removing-password-protection-from-a-private-key"></a>C. 프라이빗 키로부터 암호 보호 제거  
  다음 예에서는 프라이빗 키에서 암호 보호를 제거하고 데이터베이스 마스터 키로 보호합니다.  
   
 ```  
-OPEN MASTER KEY;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
 GO  

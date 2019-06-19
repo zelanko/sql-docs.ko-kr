@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981762"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
@@ -189,7 +189,7 @@ public 역할의 멤버 자격이 필요합니다. 모든 사용자는 SET **@**
   
 ## <a name="examples"></a>예  
   
-### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>1. SET을 사용하여 초기화된 변수 값 인쇄  
+### <a name="a-printing-the-value-of-a-variable-initialized-by-using-set"></a>1\. SET을 사용하여 초기화된 변수 값 인쇄  
 다음 예제에서는 `@myvar` 변수를 만들고, 문자열 값을 변수에 넣고, `@myvar` 변수 값을 출력합니다.  
   
 ```  
@@ -199,7 +199,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>2. SELECT 문에서 SET을 사용하여 값이 할당된 지역 변수 사용  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>2\. SELECT 문에서 SET을 사용하여 값이 할당된 지역 변수 사용  
 다음 예에서는 `@state`라는 지역 변수를 만들고 이 변수를 `SELECT` 문에 사용하여 `Oregon` 주에 사는 모든 직원의 이름과 성을 찾습니다.  
   
 ```  
@@ -296,7 +296,7 @@ DECLARE @p Point;
 SET @p=point.SetXY(23.5, 23.5);  
 ```  
   
-### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>9. CLR 유형에 대한 변수를 만들고 변경자(mutator) 메서드 호출  
+### <a name="i-creating-a-variable-for-a-clr-type-and-calling-a-mutator-method"></a>9\. CLR 유형에 대한 변수를 만들고 변경자(mutator) 메서드 호출  
 다음 예에서는 유형 `Point`에 대한 변수를 만들고 `Point`에서 변경자(mutator) 메서드를 실행합니다.  
   
 ```  

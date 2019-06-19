@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669668"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>트랜잭션 복제를 위한 업데이트 가능 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54132993"
  업데이트할 수 있는 구독을 사용할 때는 구독에서 특정 업데이트 모드를 사용하도록 지정한 다음 애플리케이션의 필요에 따라 다른 업데이트 모드로 전환할 수 있습니다. 예를 들어 구독에서 즉시 업데이트를 사용하도록 지정한 다음 시스템 오류로 인해 네트워크 연결이 손실된 경우에 지연 업데이트로 전환할 수 있습니다.  
   
 > [!NOTE]  
->  복제에서는 업데이트 모드가 자동으로 전환되지 않습니다. 모드를 전환하려면 SQL Server Management Studio를 통해 업데이트 모드를 설정하거나 애플리케이션에서 [sp_setreplfailovermode&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 호출해야 합니다.  
+>  복제에서는 업데이트 모드가 자동으로 전환되지 않습니다. 모드를 전환하려면 SQL Server Management Studio를 통해 업데이트 모드를 설정하거나 애플리케이션에서 [sp_setreplfailovermode&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 호출해야 합니다.  
   
  즉시 업데이트에서 지연 업데이트로 전환하면 구독자와 게시자가 연결되고 큐 판독기 에이전트에서 큐의 보류 중인 모든 메시지를 게시자에 적용할 때까지는 즉시 업데이트로 다시 전환할 수 없습니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54132993"
   
 -   복제에 대한 변경 내용 추적 트리거 내의 삽입 테이블 또는 삭제 테이블에서는 읽기 작업을 수행할 수 없으므로 구독자는 **text**, **ntext** 또는 **image** 값을 업데이트하거나 삽입할 수 없습니다. 마찬가지로 게시자가 데이터를 덮어쓰므로 구독자는 **WRITETEXT** 또는 **UPDATETEXT** 를 사용하여 **text** 또는 **image** 값을 업데이트하거나 삽입할 수 없습니다. 대신 **text** 및 **image** 열을 별개의 테이블에 분할할 수 있고 트랜잭션 내에서 두 테이블을 수정할 수 있습니다.  
   
-     구독자에서 큰 개체를 업데이트하려면 **text**, **ntext**및 **image** 데이터 형식 대신 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.  
+     구독자에서 큰 개체를 업데이트하려면 **text**, **ntext**및 **image** 데이터 형식 대신 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용합니다.  
   
 -   중복을 생성하는 고유 키(기본 키 포함)에 대한 업데이트(예: `UPDATE <column> SET <column> =<column>+1` 형식의 업데이트)는 허용되지 않으며 고유성 위반 때문에 거부됩니다. 이는 구독자에서의 업데이트 설정이 영향을 받는 각 행에 대한 개별 **UPDATE** 문으로 복제에 의해 전파되기 때문입니다.  
   

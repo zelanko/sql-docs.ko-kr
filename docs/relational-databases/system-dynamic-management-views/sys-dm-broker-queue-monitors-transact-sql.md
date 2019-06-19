@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760120"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors(Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62760120"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-current-status-queue-monitor"></a>1. 현재 상태 큐 모니터  
+### <a name="a-current-status-queue-monitor"></a>1\. 현재 상태 큐 모니터  
  이 시나리오에서는 모든 메시지 큐의 현재 상태를 제공합니다.  
   
 ```  

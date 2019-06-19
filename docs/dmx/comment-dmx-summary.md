@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62707257"
 ---
 # <a name="---comment-dmx-summary"></a>-(주석) (DMX) 요약
@@ -33,7 +33,7 @@ ms.locfileid: "62707257"
  주석 텍스트를 포함하는 문자열입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다.  --를 사용하여 입력한 주석은 줄 바꿈 문자로 구분됩니다.  
+ 이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다. --를 사용하여 입력한 주석은 줄 바꿈 문자로 구분됩니다.  
   
  주석의 길이에는 제한이 없습니다.  
   

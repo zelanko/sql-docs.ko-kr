@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128760"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
@@ -399,7 +399,7 @@ ms.locfileid: "63128760"
 ##  <a name="_examples"></a> 예  
  이 섹션의 예에서는 사용 권한 정보를 검색하는 방법을 보여 줍니다.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1. 부여 가능한 사용 권한의 전체 목록 반환  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1\. 부여 가능한 사용 권한의 전체 목록 반환  
  다음 문에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 함수를 사용하여 모든 `fn_builtin_permissions` 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql)를 참조하세요.  
   
 ```  
@@ -407,7 +407,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2. 특정 개체 클래스의 사용 권한 반환  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2\. 특정 개체 클래스의 사용 권한 반환  
  다음 예제에서는 `fn_builtin_permissions` 를 사용하여 보안 개체 범주에 사용할 수 있는 모든 사용 권한을 표시합니다. 다음 예에서는 어셈블리의 사용 권한을 반환합니다.  
   
 ```  
@@ -415,7 +415,7 @@ SELECT * FROM fn_builtin_permissions('assembly');
 GO    
 ```  
   
-### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>3. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
+### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>3\. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
  다음 예에서는 `fn_my_permissions` 를 사용하여 지정된 보안 개체에 대해 해당 보안 주체가 가진 유효 사용 권한의 목록을 반환합니다. 다음 예에서는 `Orders55`라는 개체의 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_my_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-my-permissions-transact-sql)를 참조하세요.  
   
 ```  
@@ -423,7 +423,7 @@ SELECT * FROM fn_my_permissions('Orders55', 'object');
 GO  
 ```  
   
-### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>4. 지정된 개체에 적용할 수 있는 사용 권한 반환  
+### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>4\. 지정된 개체에 적용할 수 있는 사용 권한 반환  
  다음 예에서는 `Yttrium`이라는 개체에 적용할 수 있는 사용 권한을 반환합니다. `OBJECT_ID` 개체의 ID를 검색하는 데 기본 제공 함수인 `Yttrium`가 사용됩니다.  
   
 ```  

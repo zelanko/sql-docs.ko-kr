@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014812"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
@@ -90,7 +90,7 @@ ms.locfileid: "66014812"
   
 -   대부분의 예에서는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>1. Updategram을 사용하여 단일 레코드 삽입  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>1\. Updategram을 사용하여 단일 레코드 삽입  
  이 특성 중심 Updategram은 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Employee 테이블에 레코드를 삽입합니다.  
   
  이 예에서 Updategram은 매핑 스키마를 지정하지 않으므로 요소 이름은 테이블 이름에 매핑되고 특성 또는 자식 요소는 해당 테이블의 열에 매핑되는 기본 매핑을 사용합니다.  
@@ -156,7 +156,7 @@ ms.locfileid: "66014812"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>2. Updategram을 사용하여 여러 레코드 삽입  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>2\. Updategram을 사용하여 여러 레코드 삽입  
  이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram은 선택적 지정 하지 않습니다  **\<하기 전에 >** 블록입니다.  
   
 ```  
@@ -207,7 +207,7 @@ ms.locfileid: "66014812"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>3. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>3\. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나이 올바르지 않습니다 유효한 XML 문자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효 하지 않은 XML 식별자를 사용 하 여 인코딩할 수 ' __xHHHH\_\_' 여기서 hhhh는 4 자리 16 진수 ucs-2 코드에 대 한 인코딩 값으로 가장 중요 한 비트 우선 순서 문자입니다.  
   
 > [!NOTE]  
@@ -245,7 +245,7 @@ ms.locfileid: "66014812"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>4. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>4\. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
  다음 Updategram은 두 개의 레코드를 삽입합니다. 하나는 Sales.SalesOrderHeader 테이블에 삽입하고 다른 하나는 Sales.SalesOrderDetail 테이블에 삽입합니다.  
   
  먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서 이 레코드를 테이블에 추가할 때 Updategram은 `at-identity` 특성을 사용하여 할당된 SalesOrderID 값을 "x"(자리 표시자 값)로 캡처합니다. updategam 지정 되 고이 `at-identity` SalesOrderID 특성 값으로 변수를 \<Sales.SalesOrderDetail > 요소입니다.  
@@ -325,7 +325,7 @@ ms.locfileid: "66014812"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>5. updg:guid 특성을 사용하여 고유한 값 생성  
+### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>5\. updg:guid 특성을 사용하여 고유한 값 생성  
  이 예에서 Updategram은 Cust 및 CustOrder 테이블에 레코드를 삽입합니다. 또한 Updategram은 `updg:guid` 특성을 사용하여 CustomerID 특성의 고유한 값을 생성합니다.  
   
 ```  
@@ -373,7 +373,7 @@ ms.locfileid: "66014812"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="f-specifying-a-schema-in-an-updategram"></a>6. Updategram에 스키마 지정  
+### <a name="f-specifying-a-schema-in-an-updategram"></a>6\. Updategram에 스키마 지정  
  이 예의 Updategram은 다음 테이블에 레코드를 삽입합니다.  
   
 ```  
@@ -448,7 +448,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </Schema>  
 ```  
   
-### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>7. xsi:nil 특성을 사용하여 열에 Null 값 삽입  
+### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>7\. xsi:nil 특성을 사용하여 열에 Null 값 삽입  
  테이블의 해당 열에 Null 값을 삽입하려는 경우 Updategram의 요소에 `xsi:nil` 특성을 지정할 수 있습니다. 해당 XSD 스키마에 XSD `nillable` 특성도 지정해야 합니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
@@ -526,7 +526,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="h-specifying-namespaces-in-an-updategram"></a>8. Updategram에 네임스페이스 지정  
+### <a name="h-specifying-namespaces-in-an-updategram"></a>8\. Updategram에 네임스페이스 지정  
  Updategram에는 Updategram의 동일한 요소에서 선언된 네임스페이스에 속하는 요소가 있을 수 있습니다. 이 경우 해당 스키마에서도 동일한 네임스페이스를 선언해야 하며 요소가 대상 네임스페이스에 속해야 합니다.  
   
  예를 들어 다음 updategram (Updategram-elementhavingnamespace.xml)에  **\<순서 >** 요소는 요소에서 선언 된 네임 스페이스에 속합니다.  
@@ -609,7 +609,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9. XML 데이터 형식 열에 데이터 삽입  
+### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9\. XML 데이터 형식 열에 데이터 삽입  
  `xml` 데이터 형식은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입되었습니다. Updategram을 사용하여 다음 프로비전과 함께 `xml` 데이터 형식 열에 저장된 데이터를 삽입 및 업데이트할 수 있습니다.  
   
 -   `xml` 열은 기존 행을 식별하는 데 사용할 수 없습니다. 따라서 Updategram의 `updg:before` 섹션에 포함할 수 없습니다.  

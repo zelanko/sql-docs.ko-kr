@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a2dae52947d736ccc371e1cdc675924149c67cf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641531"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939812"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |BEGIN TRANSACTION|GRANT|SELECT(아래 예외 참조)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
 |Delete|OPEN|UPDATE|  
-|DROP|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.|  
+|DROP|.|.|  
   
  OFF이면 앞의 T-SQL 문은 보이지 않는 BEGIN TRANSACTION 및 보이지 않는 COMMIT TRANSACTION 문으로 제한됩니다. OFF이면 트랜잭션 모드가 자동 커밋(*autocommit*)이라고 합니다. T-SQL 코드가 BEGIN TRANSACTION을 눈에 보이게 발급하면 트랜잭션 모드가 명시적(*explicit*)이라고 합니다.  
   

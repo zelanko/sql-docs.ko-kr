@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: efe248e774c238a7bd95a08533c17f7d68827cb0
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819338"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67230648"
 ---
 Analysis Services 서비스

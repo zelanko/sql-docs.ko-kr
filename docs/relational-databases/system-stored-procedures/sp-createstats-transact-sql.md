@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724458"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats(Transact-SQL)
@@ -73,7 +73,7 @@ sp_createstats
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>1. 적합한 모든 열에 대한 단일 열 통계 만들기  
+### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>1\. 적합한 모든 열에 대한 단일 열 통계 만들기  
  다음 예에서는 현재 데이터베이스에 있는 적합한 모든 열에 대한 단일 열 통계를 만듭니다.  
   
 ```  
@@ -81,7 +81,7 @@ EXEC sp_createstats;
 GO  
 ```  
   
-### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>2. 적합한 모든 인덱스 열에 대한 단일 열 통계 만들기  
+### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>2\. 적합한 모든 인덱스 열에 대한 단일 열 통계 만들기  
  다음 예에서는 인덱스에 있으며 인덱스의 첫 번째 열이 아닌, 적합한 모든 열에 대한 단일 열 통계를 만듭니다.  
   
 ```  

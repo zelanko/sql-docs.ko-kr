@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013804"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "66013804"
   
  아래의 예에서는 템플릿을 사용하여 매핑 XSD 스키마를 기준으로 XPath 쿼리를 지정합니다.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>1. 고객 주소를 제한하여 특정 주소 형식만 반환  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>1\. 고객 주소를 제한하여 특정 주소 형식만 반환  
  이 예에서 데이터베이스에는 다음과 같은 두 개의 테이블이 있습니다.  
   
 -   Customer (CustomerID, CompanyName)  
@@ -163,7 +163,7 @@ ms.locfileid: "66013804"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>2. Real 데이터 형식의 할인 값을 기준으로 결과 제한  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>2\. Real 데이터 형식의 할인 값을 기준으로 결과 제한  
  이 예에서 데이터베이스에는 다음과 같은 두 개의 테이블이 있습니다.  
   
 -   Orders (OrderID)  

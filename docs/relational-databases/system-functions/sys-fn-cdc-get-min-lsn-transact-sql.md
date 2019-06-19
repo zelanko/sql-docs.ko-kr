@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62948945"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn(Transact-SQL)
@@ -59,7 +59,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>1. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
+### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>1\. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources_Employee` 캡처 인스턴스에 대한 최소 LSN 값을 반환합니다.  
   
 ```  
@@ -69,7 +69,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>2. 쿼리 범위의 하위 엔드포인트 확인  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>2\. 쿼리 범위의 하위 엔드포인트 확인  
  다음 예에서는 `sys.fn_cdc_get_min_lsn`에서 반환된 최소 LSN 값을 사용하여 변경 데이터 쿼리에 대해 제안된 하위 엔드포인트가 `HumanResources_Employee` 캡처 인스턴스의 현재 시간대에 유효한지 확인합니다. 이 예에서는 캡처 인스턴스에 대한 이전 상위 엔드포인트 LSN이 저장되었고 `@save_to_lsn` 변수를 설정하는 데 사용할 수 있다고 가정합니다. 설명을 위해 오류 처리 섹션이 실행되도록 예의 `@save_to_lsn`은 0x000000000000000000으로 설정되어 있습니다.  
   
 ```  

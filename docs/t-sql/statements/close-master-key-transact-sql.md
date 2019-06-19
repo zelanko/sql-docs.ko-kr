@@ -24,11 +24,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df21774185b2289cbd9a045c28368555ca2d01ac
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051403"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ CLOSE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  이 문은 OPEN MASTER KEY로 수행한 작업을 반대로 수행합니다. CLOSE MASTER KEY는 OPEN MASTER KEY 문을 사용하여 현재 세션에서 데이터베이스 마스터 키를 연 경우에만 성공합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한이 필요 없습니다.  
   
 ## <a name="examples"></a>예  

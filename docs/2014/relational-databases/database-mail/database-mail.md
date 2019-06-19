@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917971"
 ---
 # <a name="database-mail"></a>데이터베이스 메일
@@ -41,37 +41,37 @@ ms.locfileid: "62917971"
   
 ### <a name="scalability"></a>확장성  
   
--   백그라운드 배달: 데이터베이스 메일 제공 백그라운드 또는 비동기 배달 합니다. **sp_send_dbmail** 을 호출하여 메시지를 보낼 때 데이터베이스 메일은 요청을 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐에 추가합니다. 저장 프로시저가 즉시 반환됩니다. 외부 전자 메일 구성 요소는 요청을 받아 전자 메일을 배달합니다.  
+-   백그라운드 배달: 데이터베이스 메일은 백그라운드 또는 비동기 배달을 제공합니다. **sp_send_dbmail** 을 호출하여 메시지를 보낼 때 데이터베이스 메일은 요청을 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐에 추가합니다. 저장 프로시저가 즉시 반환됩니다. 외부 전자 메일 구성 요소는 요청을 받아 전자 메일을 배달합니다.  
   
--   여러 프로필: 데이터베이스 메일을 사용 하면 내에 여러 프로필을 만들 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스. 필요에 따라 메시지를 보낼 때 데이터베이스 메일이 사용하는 프로필을 선택할 수 있습니다.  
+-   여러 프로필: 데이터베이스 메일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에 여러 프로필을 만들 수 있습니다. 필요에 따라 메시지를 보낼 때 데이터베이스 메일이 사용하는 프로필을 선택할 수 있습니다.  
   
--   여러 계정: 각 프로필에는 여러 장애 조치 계정을 포함할 수 있습니다. 여러 개의 전자 메일 서버를 통해 전자 메일을 배포할 때 서로 다른 계정으로 다양한 프로필을 구성할 수 있습니다.  
+-   여러 계정: 각 프로필에는 여러 개의 장애 조치 계정이 있을 수 있습니다. 여러 개의 전자 메일 서버를 통해 전자 메일을 배포할 때 서로 다른 계정으로 다양한 프로필을 구성할 수 있습니다.  
   
--   64 비트 호환성: 데이터베이스 메일은 64 비트 설치에서 완전히 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+-   64비트 호환성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64비트를 설치하면 데이터베이스 메일이 완전하게 지원됩니다.  
   
 ### <a name="security"></a>보안  
   
--   기본적으로 해제 합니다. 노출 영역을 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 메일 저장 프로시저는 기본적으로 비활성화 됩니다.  
+-   기본적으로 해제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 노출 영역을 줄이기 위해 데이터베이스 메일 저장 프로시저는 기본적으로 사용할 수 없도록 설정되어 있습니다.  
   
 -   메일 보안:데이터베이스 메일을 보내려면 **msdb** 데이터베이스에서 **DatabaseMailUserRole** 데이터베이스 역할의 멤버여야 합니다.  
   
--   프로필 보안: 데이터베이스 메일은 메일 프로필에 대 한 보안을 적용 합니다. 데이터베이스 메일 프로필에 액세스할 수 있는 **msdb** 데이터베이스 사용자나 그룹을 선택합니다. **msdb**의 특정 사용자나 모든 사용자에게 액세스 권한을 부여할 수 있습니다. 프라이빗 프로필은 지정된 목록의 사용자만 액세스할 수 있도록 제한되어 있습니다. 공개 프로필은 데이터베이스의 모든 사용자가 사용할 수 있습니다.  
+-   프로필 보안: 데이터베이스 메일은 메일 프로필에 대해 보안을 강제 적용합니다. 데이터베이스 메일 프로필에 액세스할 수 있는 **msdb** 데이터베이스 사용자나 그룹을 선택합니다. **msdb**의 특정 사용자나 모든 사용자에게 액세스 권한을 부여할 수 있습니다. 프라이빗 프로필은 지정된 목록의 사용자만 액세스할 수 있도록 제한되어 있습니다. 공개 프로필은 데이터베이스의 모든 사용자가 사용할 수 있습니다.  
   
--   첨부 파일 크기 관리자: 데이터베이스 메일은 첨부 파일 크기에 대해 구성 가능한 제한을 적용 합니다. [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) 저장 프로시저를 사용하여 이 제한을 변경할 수 있습니다.  
+-   첨부 파일 크기 관리자: 데이터베이스 메일은 첨부 파일 크기에 대해 구성 가능한 제한을 강제 적용합니다. [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) 저장 프로시저를 사용하여 이 제한을 변경할 수 있습니다.  
   
--   금지할 파일 확장명: 데이터베이스 메일은 금지할된 파일 확장명의 목록을 유지 관리 합니다. 사용자는 목록에 표시된 확장명의 파일을 첨부할 수 없습니다. sysmail_configure_sp를 사용하여 이 목록을 변경할 수 있습니다.  
+-   금지할 파일 확장명: 데이터베이스 메일은 금지할 파일 확장명 목록을 유지 관리합니다. 사용자는 목록에 표시된 확장명의 파일을 첨부할 수 없습니다. sysmail_configure_sp를 사용하여 이 목록을 변경할 수 있습니다.  
   
 -   데이터베이스 메일은e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진 서비스 계정에서 실행됩니다. 폴더의 파일을 전자 메일에 첨부하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진 계정에 파일이 들어 있는 폴더에 대한 액세스 권한이 있어야 합니다.  
   
 ### <a name="supportability"></a>지원 가능성  
   
--   통합된 구성: 데이터베이스 메일에서 전자 메일 계정에 대 한 정보를 유지 관리 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)]합니다.  
+-   통합된 구성: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)] 내에 이메일 계정에 대한 정보를 유지 관리합니다.  
   
 -   로깅. 데이터베이스 메일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Microsoft Windows 애플리케이션 이벤트 로그 및 **msdb** 데이터베이스의 테이블에 메일 작업을 기록합니다.  
   
--   감사: 데이터베이스 메일 메시지와 전송 된 첨부 파일의 복사본을 유지 합니다 **msdb** 데이터베이스입니다. 데이터베이스 메일 사용을 쉽게 감사하고 보존된 메시지를 검토할 수 있습니다.  
+-   감사: 데이터베이스 메일은 **msdb** 데이터베이스에 보낸 메시지와 첨부 파일의 복사본을 보존합니다. 데이터베이스 메일 사용을 쉽게 감사하고 보존된 메시지를 검토할 수 있습니다.  
   
--   HTML 지원: 데이터베이스 메일을 사용 하면 HTML 형식의 전자 메일을 보낼 수 있습니다.  
+-   HTML 지원: 데이터베이스 메일을 사용하면 HTML 형식의 이메일 메시지를 보낼 수 있습니다.  
   
 
   

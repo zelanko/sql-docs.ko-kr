@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789399"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>자동 시드를 사용하여 Always On 가용성 그룹 초기화

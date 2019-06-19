@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087146"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Azure SQL Database에 연결(SSAS)
   **테이블 가져오기 마법사**의 이 페이지에서는 [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
 > [!NOTE]  
->  Azure DataMarket 데이터 세트에 연결할 경우 [보고서 또는 데이터 피드에 연결&amp;#40;SSAS&amp;#41;](connect-to-a-report-or-data-feed-ssas.md)을 참조하세요.  
+>  Azure DataMarket 데이터 세트에 연결할 경우 [보고서 또는 데이터 피드에 연결&#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md)을 참조하세요.  
   
  [!INCLUDE[ssSDS](../includes/sssds-md.md)] 는 SQL Server 인증을 사용하여 연결하는 호스팅된 관계형 데이터베이스입니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)]에 대한 자세한 내용은 [SQL 데이터베이스](https://go.microsoft.com/fwlink/?LinkID=157856)웹 사이트를 참조하세요. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   

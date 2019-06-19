@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76d25aabd5b24cdbcc72d3c356168a040a83081a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073047"
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>데이터 원본 속성 설정(SSAS 다차원)
@@ -43,7 +43,7 @@ ms.locfileid: "66073047"
 |**이름, ID, 설명**|이름, ID 및 설명은 다차원 모델에서 데이터 원본 개체를 식별하고 설명하는 데 사용됩니다.<br /><br /> 이름 및 설명은 솔루션을 배포하거나 처리한 후 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 지정할 수 있습니다.<br /><br /> 개체를 만들 때 ID가 생성됩니다. 이름과 설명을 쉽게 수정할 수 있지만 ID는 읽기 전용이며 변경해서는 안 됩니다. 정해진 개체 ID는 모델 전체에서 개체 종속성 및 참조를 유지합니다.|  
 |**생성된 타임스탬프**|이 읽기 전용 속성은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 표시됩니다. 데이터 원본을 만든 날짜 및 시간을 표시합니다.|  
 |**최종 스키마 업데이트**|이 읽기 전용 속성은 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에 표시됩니다. 데이터 원본에 대한 메타데이터가 마지막으로 업데이트된 날짜 및 시간을 표시합니다. 이 값은 솔루션을 배포할 때 업데이트됩니다.|  
-|**쿼리 제한 시간**|연결 요청이 중단되기 전에 시도하는 시간을 지정합니다.<br /><br /> 다음 형식으로 쿼리 제한 시간을 입력합니다.<br /><br /> *\<시간 >*:*\<분 >*:*\<시간 (초) >*<br /><br /> 이 속성은 `DatabaseConnectionPoolTimeoutConnection` 서버 속성에서 수정할 수 있습니다. 서버 속성이 더 작으면 **쿼리 제한 시간**대신 사용됩니다.<br /><br /> 에 대 한 자세한 내용은 합니다 **쿼리 제한 시간** 속성인 참조 <xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>합니다. 서버 속성에 대한 자세한 내용은 [OLAP Properties](../server-properties/olap-properties.md)을 참조하십시오.|  
+|**쿼리 제한 시간**|연결 요청이 중단되기 전에 시도하는 시간을 지정합니다.<br /><br /> 다음 형식으로 쿼리 제한 시간을 입력합니다.<br /><br /> *\<시간 >* : *\<분 >* : *\<시간 (초) >*<br /><br /> 이 속성은 `DatabaseConnectionPoolTimeoutConnection` 서버 속성에서 수정할 수 있습니다. 서버 속성이 더 작으면 **쿼리 제한 시간**대신 사용됩니다.<br /><br /> 에 대 한 자세한 내용은 합니다 **쿼리 제한 시간** 속성인 참조 <xref:Microsoft.AnalysisServices.DataSource.Timeout%2A>합니다. 서버 속성에 대한 자세한 내용은 [OLAP Properties](../server-properties/olap-properties.md)을 참조하십시오.|  
 |**연결 문자열**|다차원 모델에 데이터를 제공하는 데이터베이스의 물리적 위치와 연결에 사용되는 데이터 공급자를 지정합니다. 이 정보는 연결 요청을 수행하는 클라이언트 라이브러리에 제공됩니다. 공급자에 따라 연결 문자열에서 설정할 수 있는 속성이 결정됩니다.<br /><br /> 연결 문자열은 **연결 관리자** 대화 상자에 제공한 정보를 사용하여 만들어집니다. 데이터 원본 속성 페이지에서도 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 연결 문자열을 보고 편집할 수 있습니다.<br /><br /> SQL Server 데이터베이스의 경우 `user ID`를 포함하는 연결 문자열은 데이터베이스 인증을 나타내고 `Integrated Security=SSPI`를 포함하는 연결은 Windows 인증을 나타냅니다.<br /><br /> 데이터베이스를 새로운 위치로 이동했으면 서버 또는 데이터베이스 이름을 변경할 수 있습니다. 현재 연결에 지정된 자격 증명이 데이터베이스 로그인에 매핑되어 있는지 확인하십시오.|  
 |**최대 연결 수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 원본에 연결하는 데 허용되는 최대 연결 수를 지정합니다. 추가로 연결해야 하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 연결을 사용할 수 있을 때까지 대기합니다. 기본값은 10입니다. 연결 수를 제한하면 외부 데이터 원본이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 요청으로 오버로드되지 않습니다.|  
 |**격리성**|관계형 데이터베이스에 연결하여 실행되는 SQL 문의 잠금 및 행 버전 관리 기능을 지정합니다. 유효한 값은 ReadCommitted 또는 Snapshot입니다. 기본값은 ReadCommitted이며, 데이터를 읽기 전에 먼저 커밋하도록 지정합니다. 이렇게 하면 더티 읽기가 방지됩니다. 스냅숏은 이전에 커밋된 데이터의 스냅숏에서 읽기가 수행됨을 지정합니다. SQL Server의 격리 수준에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하세요.|  
