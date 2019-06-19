@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728244"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
@@ -96,7 +96,7 @@ ms.locfileid: "65728244"
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|다중 파일 또는 폴더에 연결합니다.|[다중 파일 연결 관리자](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|다중 데이터 파일 및 폴더에 연결합니다.|[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB Provider를 사용하여 데이터 원본에 연결합니다.|[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -340,7 +340,7 @@ ms.locfileid: "65728244"
   
 -   technet.microsoft.com의 비디오 - [패키지 성능 향상을 위해 Microsoft Attunity Connector for Oracle 활용](https://technet.microsoft.com/sqlserver/gg598963.aspx)  
   
--   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)   
+-   social.technet.microsoft.com의 Wiki 문서 - [SSIS 연결](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)  
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS에서 MySQL에 연결](https://go.microsoft.com/fwlink/?LinkId=217669)  
   

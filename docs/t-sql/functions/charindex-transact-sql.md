@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947078"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
@@ -73,7 +73,7 @@ SC 데이터 정렬을 사용하는 경우 *start_location*과 반환 값 둘 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-starting-position-of-an-expression"></a>1. 식의 시작 위치 반환  
+### <a name="a-returning-the-starting-position-of-an-expression"></a>1\. 식의 시작 위치 반환  
 다음 예제에서는 검색된 `@document` 문자열 값 변수에서 `bicycle`을 검색합니다.
   
 ```sql
@@ -91,7 +91,7 @@ GO
 48            
 ```  
   
-### <a name="b-searching-from-a-specific-position"></a>2. 특정 위치에서 검색  
+### <a name="b-searching-from-a-specific-position"></a>2\. 특정 위치에서 검색  
 다음 예제에서는 선택적 *start_location* 매개 변수를 사용하여 검색된 `@document` 문자열 값 변수의 다섯 번째 문자에서 `vital`에 대한 검색을 시작합니다.
   
 ```sql

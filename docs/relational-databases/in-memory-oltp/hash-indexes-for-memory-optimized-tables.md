@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047667"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>메모리 최적화 테이블의 해시 인덱스 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,8 +114,8 @@ ORDER BY [table], [index];
   
 1. 몇 개의 해시 인덱스가 있는 메모리 최적화 테이블을 만듭니다.  
 2. 수천 개의 행으로 테이블을 채웁니다.  
-    1. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
-    2. 약 1분 이내에 루프에서 26만 2,144개의 행을 삽입합니다.  
+    1\. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
+    2\. 약 1분 이내에 루프에서 26만 2,144개의 행을 삽입합니다.  
 3. **sys.dm_db_xtp_hash_index_stats**에서 이전 SELECT를 실행하라는 메시지가 인쇄됩니다.  
   
 ```sql

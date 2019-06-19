@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705661"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,12 +102,12 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
 ## <a name="logging-behavior"></a>로깅 동작  
  `SELECT...INTO`에 대한 로깅의 양은 데이터베이스에 적용되는 복구 모델에 따라 다릅니다. 단순 복구 모델 또는 대량 로그 복구 모델에서는 대량 작업이 최소 로깅됩니다. 최소 로깅으로 `SELECT...INTO` 문을 사용하면 테이블을 만든 다음, INSERT 문을 사용하여 해당 테이블을 채우는 것보다 더 효율적일 수 있습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대상 데이터베이스에서 CREATE TABLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>1. 여러 원본에서 열을 지정하여 테이블 만들기  
+### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>1\. 여러 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 다양한 직원 관련 테이블 및 주소 관련 테이블에서 7개의 열을 선택하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `dbo.EmployeeAddresses` 테이블을 만듭니다.  
   
 ```sql  
@@ -126,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>2. 최소 로깅을 사용하여 행 삽입  
+### <a name="b-inserting-rows-using-minimal-logging"></a>2\. 최소 로깅을 사용하여 행 삽입  
  다음 예에서는 `dbo.NewProducts` 테이블을 만든 후 `Production.Product` 테이블의 행을 삽입합니다. 여기에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 FULL로 설정되었다고 가정합니다. 최소 로깅을 사용할 수 있도록 행 삽입 전에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 복구 모델이 BULK_LOGGED로 설정되고 SELECT...INTO 문 다음에 FULL로 재설정됩니다. 이 프로세스를 통해 SELECT...INTO 문은 트랜잭션 로그에 최소 공간을 사용하여 효율적으로 수행됩니다.  
   
 ```sql  

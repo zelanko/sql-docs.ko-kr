@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c5705a237bda9b426b8f39103b9c9fdf19abb00c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088694"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
@@ -77,7 +77,7 @@ ms.locfileid: "65088694"
   
 4.  보려는 오류 로그를 마우스 오른쪽 단추로 클릭하고 **에이전트 로그 보기**를 선택합니다.  
   
-    다음 옵션은 **로그 파일 뷰어-**_server_name_ 대화 상자에서 사용할 수 있습니다.  
+    다음 옵션은 **로그 파일 뷰어-** _server_name_ 대화 상자에서 사용할 수 있습니다.  
   
     **로그 로드**  
     로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  

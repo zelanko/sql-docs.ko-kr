@@ -31,10 +31,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084067"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
@@ -63,7 +63,7 @@ ms.locfileid: "66084067"
   
 -   **단일 예측 가능한 열** 연결 모델은 예측 가능한 열을 한 개만 포함할 수 있습니다. 일반적으로 이 열은 구매한 제품을 나열하는 필드와 같은 중첩 테이블의 키 열로, 값은 Discrete 또는 Discretized여야 합니다.  
   
--   **입력 열**    입력 열은 불연속 열이어야 합니다. 연결 모델에 대한 입력 데이터가 두 개의 테이블에 포함되는 경우가 자주 있습니다. 예를 들어 한 테이블은 고객 정보를 포함하고 다른 테이블은 고객 구매 내역을 포함할 수 있습니다. 중첩 테이블을 사용하여 이 데이터를 모델에 입력할 수 있습니다. 중첩 테이블에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](nested-tables-analysis-services-data-mining.md)을 참조하세요.  
+-   **입력 열** 입력 열은 불연속 열이어야 합니다. 연결 모델에 대한 입력 데이터가 두 개의 테이블에 포함되는 경우가 자주 있습니다. 예를 들어 한 테이블은 고객 정보를 포함하고 다른 테이블은 고객 구매 내역을 포함할 수 있습니다. 중첩 테이블을 사용하여 이 데이터를 모델에 입력할 수 있습니다. 중첩 테이블에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](nested-tables-analysis-services-data-mining.md)을 참조하세요.  
   
  연결 모델에 대해 지원되는 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)의 요구 사항 섹션을 참조하세요.  
   
