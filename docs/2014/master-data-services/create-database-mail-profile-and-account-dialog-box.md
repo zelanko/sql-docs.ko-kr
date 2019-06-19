@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483272"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자(Master Data Services 구성 관리자)
@@ -40,7 +40,7 @@ ms.locfileid: "65483272"
 |**전자 메일 주소**|계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 메일을 보내는 메일 주소이며 *email_name*@*domain_name* 이메일 주소의 예는 sales@contoso.com입니다.|  
 |**표시 이름**|선택적 설정입니다. 이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름(예: Contoso Sales Group)을 입력합니다.|  
 |**회신 전자 메일 주소**|선택적 설정입니다. 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 회신 이메일 주소의 예는 admin@contoso.com입니다.|  
-|**SMTP 서버**|계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 서버 형식 예 SMTP `smtp.` *< company_name >*`.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.|  
+|**SMTP 서버**|계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 서버 형식 예 SMTP `smtp.` *< company_name >* `.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.|  
 |**포트 번호**|이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 기본 SMTP 포트는 25입니다.|  
 |**이 서버에는 보안 연결(SSL)이 필요합니다.**|SSL(Secure Sockets Layer)을 사용하여 통신을 암호화합니다.|  
   

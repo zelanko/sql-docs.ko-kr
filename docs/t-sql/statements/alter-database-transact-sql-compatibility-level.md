@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626685"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
@@ -139,7 +139,7 @@ SELECT name, compatibility_level FROM sys.databases;
 *데이터베이스 호환성 수준* 설정은 전체 서버가 아닌 지정된 데이터베이스의 동작에만 적용됩니다. 데이터베이스 호환성 수준은 부분적으로만 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 제공합니다.
 
 > [!TIP]
-> ‘데이터베이스 호환성 수준’은 데이터베이스 수준 설정이므로 이전 데이터베이스 호환성 수준을 사용하는 동안 최신 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 실행되는 애플리케이션은 애플리케이션을 변경할 필요 없이 서버 수준 개선 사항을 계속 활용할 수 있습니다.
+> ‘데이터베이스 호환성 수준’은 데이터베이스 수준 설정이므로 이전 데이터베이스 호환성 수준을 사용하는 동안 최신 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 실행되는 애플리케이션은 애플리케이션을 변경할 필요 없이 서버 수준 개선 사항을 계속 활용할 수 있습니다. 
 >
 > 여기에는 새로운 [시스템 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 통한 풍부한 모니터링 및 문제 해결 개선 사항이 포함됩니다. 또한 [자동 Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa) 등을 통해 확장성이 개선되었습니다.
 
@@ -295,7 +295,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 정의된 키워드는 예약된 상태로 유지됩니다. 예를 들어 호환성 수준 90에서 정의된 예약 키워드 PIVOT은 수준 100, 110 및 120에서도 예약되어 있습니다.
 
-응용 프로그램이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호(**[]**)나 따옴표(**""**)로 묶으십시오. 예를 들어 식별자**EXTERNAL**을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 **[EXTERNAL]** 이나 **"EXTERNAL"** 로 변경할 수 있습니다.
+응용 프로그램이 호환성 수준에 대한 키워드로 예약되어 있는 식별자를 사용할 경우 제대로 실행되지 않습니다. 이러한 문제를 해결하려면 식별자를 대괄호( **[]** )나 따옴표( **""** )로 묶으십시오. 예를 들어 식별자**EXTERNAL**을 사용하는 애플리케이션을 호환성 수준 90으로 업그레이드하려면 식별자를 **[EXTERNAL]** 이나 **"EXTERNAL"** 로 변경할 수 있습니다.
 
 자세한 내용은 [예약 키워드](../../t-sql/language-elements/reserved-keywords-transact-sql.md)를 참조하세요.
 
@@ -305,7 +305,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 ## <a name="examples"></a>예
 
-### <a name="a-changing-the-compatibility-level"></a>1. 호환성 수준 변경
+### <a name="a-changing-the-compatibility-level"></a>1\. 호환성 수준 변경
 
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 호환성 수준을 `110,`[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)](으)로 변경합니다.
 
@@ -323,7 +323,7 @@ FROM sys.databases
 WHERE name = db_name();
 ```
 
-### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>2. 호환성 수준이 120 미만일 때를 제외하고 SET LANGUAGE 문을 무시합니다.
+### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>2\. 호환성 수준이 120 미만일 때를 제외하고 SET LANGUAGE 문을 무시합니다.
 
 다음 쿼리에서는 호환성 수준이 120 미만일 때를 제외하고 SET LANGUAGE 문을 무시합니다.
 

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 876b9f1501ff4fa4ba819e5fbccecfe48c9bf6dc
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099474"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
@@ -40,7 +40,7 @@ ms.locfileid: "65099474"
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 FILESTREAM Win32 액세스 권한이 충돌을 발생시키는 방법을 보여 줍니다.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>1. 쓰기 권한으로 FILESTREAM BLOB 열기  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>1\. 쓰기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 쓰기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -63,7 +63,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>2. 읽기 권한으로 FILESTREAM BLOB 열기  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>2\. 읽기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 읽기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  

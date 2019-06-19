@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718103"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
@@ -38,10 +38,10 @@ ms.locfileid: "65718103"
   
 |이벤트 ID|심볼 이름|텍스트 모드|참고|  
 |--------------|-------------------|----------|-----------|  
-|256|DTS_MSG_SERVER_STARTING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 시작하고 있습니다.|서비스를 시작하려고 합니다.|  
+|256|DTS_MSG_SERVER_STARTING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 시작하고 있습니다.|서비스를 시작하려고 합니다.|  
 |257|DTS_MSG_SERVER_STARTED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스가 시작되었습니다.|서비스가 시작되었습니다.|  
 |260|DTS_MSG_SERVER_START_FAILED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 시작하지 못했습니다.%오류: %1|서비스를 시작하지 못했습니다. 서비스를 시작할 수 없는 것은 손상된 설치 또는 부적절한 서비스 계정 때문일 수 있습니다.|  
-|258|DTS_MSG_SERVER_STOPPING| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 중지하고 있습니다.%n%n종료 시에 실행 중인 모든 패키지를 중지합니다: %1|서비스가 중지될 때 해당 서비스가 실행 중인 모든 패키지를 중지하도록 구성한 경우 실행 중인 패키지가 모두 중지됩니다. 구성 파일에서 서비스 자체가 중지될 때 해당 서비스가 실행 중인 패키지를 중지할지 여부를 결정하는 true 또는 false 값을 설정할 수 있습니다. 이 이벤트 메시지에는 이러한 설정에 대한 값이 포함되어 있습니다.|  
+|258|DTS_MSG_SERVER_STOPPING|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스를 중지하고 있습니다.%n%n종료 시에 실행 중인 모든 패키지를 중지합니다: %1|서비스가 중지될 때 해당 서비스가 실행 중인 모든 패키지를 중지하도록 구성한 경우 실행 중인 패키지가 모두 중지됩니다. 구성 파일에서 서비스 자체가 중지될 때 해당 서비스가 실행 중인 패키지를 중지할지 여부를 결정하는 true 또는 false 값을 설정할 수 있습니다. 이 이벤트 메시지에는 이러한 설정에 대한 값이 포함되어 있습니다.|  
 |259|DTS_MSG_SERVER_STOPPED|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서비스가 중지되었습니다.%n서버 버전 %1|서비스가 중지되었습니다.|  
   
 ## <a name="settings-file-messages"></a>설정 파일 메시지  

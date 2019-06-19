@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488939"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: Data Flow에 DQS 정리 변환 추가
@@ -48,7 +48,7 @@ ms.locfileid: "65488939"
   
 11. 아래쪽 창에서 드롭 다운 목록에서 사용 하 여 이러한 열을 매핑할 합니다 **도메인** 열:  
   
-    |Column|도메인|  
+    |Column|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Contact Email|  

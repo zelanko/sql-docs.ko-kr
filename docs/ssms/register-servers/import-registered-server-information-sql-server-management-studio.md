@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8b3550f04aff3ec837f55872b791f2d98939fa97
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104491"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 가져오기(SQL Server Management Studio)
@@ -42,7 +42,7 @@ ms.locfileid: "65104491"
 3.  **등록된 서버 가져오기** 대화 상자에서 가져오려는 등록된 서버 파일을 선택한 다음 **확인**을 클릭합니다.  
   
      **파일 가져오기**  
-     입력란에 가져올 파일 이름을 입력하거나 찾아보기 단추(**...**)를 클릭하여 클라이언트 컴퓨터에서 가져올 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. 이전에 내보낸 등록된 서버 파일만 가져올 수 있습니다. 등록된 서버 파일의 확장자는 .regsrvr입니다.  
+     입력란에 가져올 파일 이름을 입력하거나 찾아보기 단추( **...** )를 클릭하여 클라이언트 컴퓨터에서 가져올 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. 이전에 내보낸 등록된 서버 파일만 가져올 수 있습니다. 등록된 서버 파일의 확장자는 .regsrvr입니다.  
   
      **가져올 서버 그룹을 선택하세요.**  
      파일의 등록된 서버 항목을 가져올 루트 노드나 특정 서버 그룹을 선택합니다. 등록된 모든 서버, 특정 서버 그룹에 속한 등록된 서버 또는 등록된 단일 서버를 내보내기 파일로 가져올 수 있습니다. 가져오기 기능은 재귀적입니다. 예를 들어 서버 그룹 A에는 서버 그룹 B가, 서버 그룹 B에는 서버 그룹 C와 D가 포함된 경우 서버 그룹 A를 가져오면 A, B, C, D의 모든 항목이 내보내집니다.  

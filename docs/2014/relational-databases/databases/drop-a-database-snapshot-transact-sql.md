@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871920"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 삭제(Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62871920"
   
 2.  삭제할 데이터베이스 스냅숏의 이름을 지정하여 [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) 문을 실행합니다. 구문은 다음과 같습니다.  
   
-     DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
+     DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
      여기서 *database_snapshot_name* 은 삭제할 데이터베이스 스냅숏의 이름입니다.  
   

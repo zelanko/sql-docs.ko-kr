@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71e52e1e20575f52e4aefde27e16578411c2ea2d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723823"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑
@@ -26,8 +26,8 @@ ms.locfileid: "65723823"
   
 ##  <a name="wizardMapping"></a> 마법사가 원본과 대상 간에 데이터 형식을 매핑하는 방법
 마법사에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 설치한 매핑 파일을 사용하여 데이터베이스 시스템 또는 버전 간에 데이터 형식을 매핑합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Oracle 데이터 형식으로 매핑할 수 있습니다. 기본적으로 XML 형식의 매핑 파일은 다음 폴더에 설치됩니다.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\**(64비트)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\**(32비트).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (64비트)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (32비트).  
   
  기존 매핑 파일을 편집하거나 새 매핑 파일을 폴더에 추가할 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫았다가 다시 열어야 새 파일 또는 변경된 파일이 인식됩니다.  
  

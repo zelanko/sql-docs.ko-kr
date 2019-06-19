@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc5b6cc425ad04e9ad1f2cafbae2a3d88f8599c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718237"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
@@ -55,7 +55,7 @@ ms.locfileid: "65718237"
   
 -   *유효한 서명* 이란 성공적으로 읽을 수 있는 서명을 말합니다.  
   
--   *잘못된 서명* 이란 해독된 체크섬(개인 키로 암호화된 패키지 코드의 단방향 해시)이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로드하는 과정에 계산하여 해독된 체크섬과 일치하지 않는 서명을 말합니다.  
+-   *잘못된 서명* 이란 해독된 체크섬(프라이빗 키로 암호화된 패키지 코드의 단방향 해시)이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로드하는 과정에 계산하여 해독된 체크섬과 일치하지 않는 서명을 말합니다.  
   
 -   *신뢰할 수 있는 서명* 이란 신뢰할 수 있는 루트 인증 기관에서 서명한 디지털 인증서를 사용하여 만든 서명을 말합니다. 이 설정을 사용할 경우 서명자가 사용자의 신뢰할 수 있는 게시자 목록에 없어도 됩니다.  
   

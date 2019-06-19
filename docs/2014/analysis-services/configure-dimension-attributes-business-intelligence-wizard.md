@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087453"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>차원 특성 구성(비즈니스 인텔리전스 마법사)
-   **차원 특성 구성** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 계정 차원에 대한 특성을 식별하는 데 사용하는 특성 유형으로 차원 특성을 매핑할 수 있습니다.  
+  **차원 특성 구성** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 계정 차원에 대한 특성을 식별하는 데 사용하는 특성 유형으로 차원 특성을 매핑할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **차원 유형**  

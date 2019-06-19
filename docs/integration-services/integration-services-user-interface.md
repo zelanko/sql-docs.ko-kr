@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723523"
 ---
 # <a name="integration-services-user-interface"></a>Integration Services 사용자 인터페이스
@@ -52,7 +52,7 @@ ms.locfileid: "65723523"
 |**디지털 서명**|패키지에 서명하거나 패키지에서 서명을 제거합니다.|**SSIS** 메뉴에서 **디지털 서명**을 클릭합니다.<br /><br /> -또는-<br /><br /> **제어 흐름** 탭의 디자인 화면에서 마우스 오른쪽 단추로 아무 곳이나 클릭한 후 **디지털 서명**을 클릭합니다.|  
 |**중단점 설정**|태스크에 중단점을 설정하고 중단점 속성을 설정합니다.|**제어 흐름** 탭의 디자인 화면에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **중단점 편집**을 클릭합니다. 패키지에 중단점을 설정하려면 **제어 흐름** 탭의 디자인 화면에서 마우스 오른쪽 단추로 아무 곳이나 클릭한 후 **중단점 편집**을 클릭합니다.|  
   
- **시작** 창에서는 샘플, 자습서 및 비디오에 대한 링크를 제공합니다. 추가 콘텐츠에 대한 링크를 추가하려면 현재 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 포함된 SamplesSites.xml 파일을 수정합니다. RSS 피드 URL을 지정하는 \<GettingStartedSamples> 요소 값은 수정하지 않는 것이 좋습니다. 파일은 *\<드라이브>*:\Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다. 64비트 컴퓨터의 경우 파일은 *\<드라이브>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다.  
+ **시작** 창에서는 샘플, 자습서 및 비디오에 대한 링크를 제공합니다. 추가 콘텐츠에 대한 링크를 추가하려면 현재 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 포함된 SamplesSites.xml 파일을 수정합니다. RSS 피드 URL을 지정하는 \<GettingStartedSamples> 요소 값은 수정하지 않는 것이 좋습니다. 파일은 *\<드라이브>* :\Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다. 64비트 컴퓨터의 경우 파일은 *\<드라이브>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn 폴더에 있습니다.  
   
  SamplesSites.xml 파일이 손상된 경우 파일에서 xml을 다음과 같은 기본 xml로 바꿉니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "65723523"
  추가 창 및 메뉴에 대한 자세한 내용은 Visual Studio 설명서를 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만드는 방법은 [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 패키지를 만드는 방법은 [SQL Server Data Tools에서 패키지 만들기](../integration-services/create-packages-in-sql-server-data-tools.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SSIS 디자이너](../integration-services/ssis-designer.md)  

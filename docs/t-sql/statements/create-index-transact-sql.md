@@ -56,10 +56,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626697"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
@@ -233,19 +233,19 @@ NONCLUSTERED 테이블의 논리적 순서를 지정하는 인덱스를 만듭�
 
 단일 복합 인덱스 키에 최대 32개의 열을 결합할 수 있으며 복합 인덱스 키의 모든 열은 동일한 테이블 또는 뷰에 있어야 합니다. 결합된 인덱스 값의 최대 허용 크기는 클러스터형 인덱스의 경우 900바이트, 비클러스터형 인덱스의 경우 1,700바이트입니다. 한도는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전의 경우 16열 및 900바이트입니다.
 
-큰 개체(LOB) 데이터 형식 **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** 또는 **image**인 열은 인덱스의 키 열로 지정할 수 없습니다. 또한 CREATE INDEX 문에 참조되지 않은 경우에도 뷰 정의에 **ntext**, **text** 또는 **image** 열을 포함할 수 없습니다.
+큰 개체(LOB) 데이터 형식 **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** 또는 **image**인 열은 인덱스의 키 열로 지정할 수 없습니다. 또한 CREATE INDEX 문에 참조되지 않은 경우에도 뷰 정의에 **ntext**, **text** 또는 **image** 열을 포함할 수 없습니다.
 
 이진 순서를 지원하는 CLR 사용자 정의 형식 열에 인덱스를 만들 수 있습니다. 메서드가 결정적으로 표시되고 데이터 액세스 작업을 수행하지 않는 동안 사용자 정의 형식 열의 메서드 호출로 정의된 계산 열에 인덱스를 만들 수도 있습니다. CLR 사용자 정의 형식 열을 인덱싱하는 방법은 [CLR 사용자 정의 형식](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)을 참조하세요.
 
 [ **ASC** | DESC ] 특정 인덱스 열의 정렬 방향을 오름차순 또는 내림차순으로 지정합니다. 기본값은 ASC입니다.
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)** 비클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하도록 지정합니다. 비클러스터형 인덱스는 고유하거나 고유하지 않을 수 있습니다.
+INCLUDE **(** _column_ [ **,** ... *n* ] **)** 비클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하도록 지정합니다. 비클러스터형 인덱스는 고유하거나 고유하지 않을 수 있습니다.
 
 열 이름을 INCLUDE 목록에 반복 사용할 수 없으며 키 열과 키가 아닌 열로 동시에 사용할 수 없습니다. 클러스터형 인덱스가 테이블에 정의되어 있으면 비클러스터형 인덱스는 항상 클러스터형 인덱스 열을 포함합니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.
 
-**text**, **ntext**및 **image**를 제외한 모든 데이터 형식을 사용할 수 있습니다. 지정된 키가 아닌 열 중 하나가 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식인 경우 인덱스를 오프라인으로 만들거나 다시 만들어야 합니다(ONLINE = OFF).
+**text**, **ntext**및 **image**를 제외한 모든 데이터 형식을 사용할 수 있습니다. 지정된 키가 아닌 열 중 하나가 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식인 경우 인덱스를 오프라인으로 만들거나 다시 만들어야 합니다(ONLINE = OFF).
 
-결정적이면서 정확하거나 정확하지 않은 계산 열은 포괄 열이 될 수 있습니다. **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산된 열은 해당 계산된 열 데이터 형식이 포함된 열로 허용된다면 키가 아닌 열에 포함할 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.
+결정적이면서 정확하거나 정확하지 않은 계산 열은 포괄 열이 될 수 있습니다. **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산된 열은 해당 계산된 열 데이터 형식이 포함된 열로 허용된다면 키가 아닌 열에 포함할 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요.
 
 XML 인덱스 만들기에 대한 자세한 내용은 [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)를 참조하세요.
 
@@ -265,7 +265,7 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 필터링된 인덱스는 XML 인덱스 및 전체 텍스트 인덱스에는 적용되지 않습니다. UNIQUE 인덱스의 경우에는 선택한 행만 고유 인덱스 값을 가져야 합니다. 필터링된 인덱스에서는 IGNORE_DUP_KEY 옵션이 허용되지 않습니다.
 
-ON *partition_scheme_name* **( _column_name_ )**
+ON *partition_scheme_name* **( _column_name_ )** 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.
@@ -285,7 +285,7 @@ ON _filegroup_name_
 
 주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.
 
-ON **"** default **"**
+ON **"** default **"** 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].
 
 테이블 또는 보기와 동일한 파일 그룹 또는 파티션 구성표에 지정된 인덱스를 만듭니다.
@@ -341,7 +341,7 @@ PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지
 
 이전 버전과 호환되는 구문에서 WITH PAD_INDEX는 WITH PAD_INDEX = ON과 같습니다.
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 *fillfactor*가 100이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 리프 페이지가 꽉 찬 인덱스를 만듭니다.
@@ -504,7 +504,7 @@ PAGE 인덱스 또는 지정된 파티션이 페이지 압축을 사용하여 �
 
 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 인덱스가 분할되지 않은 경우 ON PARTITIONS 인수를 사용하면 오류가 발생합니다. ON PARTITIONS 절을 제공하지 않으면 DATA_COMPRESSION 옵션이 분할된 인덱스의 모든 파티션에 적용됩니다.
@@ -631,7 +631,7 @@ XML 인덱스에 대한 자세한 내용은 [CREATE XML INDEX](../../t-sql/state
 
 UNIQUE나 PRIMARY KEY 제약 조건은 인덱싱을 위해 모든 조건을 충족하는 한 계산 열을 포함할 수 있습니다. 특히 계산 열은 결정적이고 정확하거나 결정적이고 지속되어야 합니다. 결정성에 대한 자세한 내용은 [결정적 함수 및 비결정적 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
 
-**image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산된 열은 계산된 열 데이터 형식이 인덱스 키 열 또는 키가 아닌 열로 허용된다면 키로 인덱싱하거나 키가 아닌 열을 포함할 수 있습니다. 예를 들어 계산된 **xml** 열에 기본 XML 인덱스를 만들 수 없습니다. 인덱스 키 크기가 900바이트를 초과하면 경고 메시지가 표시됩니다.
+**image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식에서 파생된 계산된 열은 계산된 열 데이터 형식이 인덱스 키 열 또는 키가 아닌 열로 허용된다면 키로 인덱싱하거나 키가 아닌 열을 포함할 수 있습니다. 예를 들어 계산된 **xml** 열에 기본 XML 인덱스를 만들 수 없습니다. 인덱스 키 크기가 900바이트를 초과하면 경고 메시지가 표시됩니다.
 
 계산 열에 인덱스를 만들면 이전에 작업한 삽입 또는 업데이트 작업이 실패할 수 있습니다. 계산 열에서 산술 오류가 발생하는 경우 이러한 실패가 발생할 수 있습니다. 예를 들어 다음 테이블의 계산 열 `c`에 산술 오류가 발생해도 INSERT 문은 실행됩니다.
 
@@ -658,9 +658,9 @@ INSERT INTO t1 VALUES (1, 0);
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새 인덱스 옵션이 추가되었으며 옵션 지정 방법도 수정되었습니다. 이전 버전과 호환되는 구문에서 WITH *option_name*은 WITH **(** \<option_name> **= ON )** 과 같습니다. 인덱스 옵션을 설정하면 다음 규칙이 적용됩니다.
 
-- 새 인덱스 옵션은 WITH (**_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.
+- 새 인덱스 옵션은 WITH ( **_option\_name_ = ON | OFF**)를 사용해서만 지정할 수 있습니다.
 - 옵션은 동일한 문에 이전 버전과 호환되는 구문 및 새 구문 모두를 사용하여 지정할 수 없습니다. 예를 들어 WITH (**DROP_EXISTING, ONLINE = ON**)을 지정하면 문이 실패합니다.
-- XML 인덱스를 만들 때 WITH(**_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.
+- XML 인덱스를 만들 때 WITH( **_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.
 
 ## <a name="dropexisting-clause"></a>DROP_EXISTING 절
 
@@ -756,7 +756,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 
 ## <a name="permissions"></a>사용 권한
 
-테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 구성원 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
+테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
@@ -775,7 +775,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>예: 모든 버전. AdventureWorks 데이터베이스를 사용합니다.
 
-### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>1. 간단한 비클러스터형 rowstore 인덱스 만들기
+### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>1\. 간단한 비클러스터형 rowstore 인덱스 만들기
 
 다음 예제에서는 `Purchasing.ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
 
@@ -785,7 +785,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>2. 간단한 비클러스터형 rowstore 복합 인덱스 만들기
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>2\. 간단한 비클러스터형 rowstore 복합 인덱스 만들기
 
 다음 예제에서는 `Sales.SalesPerson` 테이블의 `SalesQuota` 및 `SalesYTD` 열에 비클러스터형 복합 인덱스를 만듭니다.
 
@@ -965,7 +965,7 @@ ORDER BY OrderDate ASC;
 GO
 ```
 
-### <a name="i-create-an-index-with-included-non-key-columns"></a>9. (키가 아닌) 포함 열이 있는 인덱스 만들기
+### <a name="i-create-an-index-with-included-non-key-columns"></a>9\. (키가 아닌) 포함 열이 있는 인덱스 만들기
 
 다음 예에서는 1개의 키 열(`PostalCode`)과 4개의 키가 아닌 열(`AddressLine1`, `AddressLine2`, `City`, `StateProvinceID`)이 있는 비클러스터형 인덱스를 만듭니다. 인덱스에서 처리하는 쿼리가 이어집니다. 쿼리 최적화 프로그램에서 선택한 인덱스를 표시하려면 쿼리를 실행하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **쿼리** 메뉴에서 **실제 실행 계획 표시**를 선택합니다.
 

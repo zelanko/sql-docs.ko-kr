@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcdc1c5cdc4dcbb7eb81236a1bb907d929aee5e0
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051570"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
 
@@ -106,7 +106,7 @@ FROM fn_helpcollations();
 
 ## <a name="examples"></a>예
 
-### <a name="a-specifying-collation-during-a-select"></a>1. SELECT 중 데이터 정렬 지정
+### <a name="a-specifying-collation-during-a-select"></a>1\. SELECT 중 데이터 정렬 지정
 
 다음 예에서는 간단한 테이블을 만든 후 행 4개를 삽입합니다. 그런 다음 테이블에서 데이터를 선택할 때 두 데이터 정렬을 적용하여 `Chiapas`가 서로 다르게 정렬되는 방식을 보여 줍니다.
 
@@ -151,7 +151,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>2. 추가 예
+### <a name="b-additional-examples"></a>2\. 추가 예
 
 **COLLATE**를 사용하는 추가 예는 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) 예제 **G. 데이터베이스 만들기 및 데이터 정렬 이름과 옵션 지정** 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column) 예제 **V. 열 데이터 정렬 변경**을 참조하세요.
 

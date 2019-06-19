@@ -24,13 +24,13 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985135"
 ---
-# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드  
+# <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 데이터베이스 애플리케이션 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 애플리케이션 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스 디자인 가이드에서는 인덱스 아키텍처에 대한 정보와, 애플리케이션 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 모범 사례를 제공합니다.  
@@ -123,7 +123,7 @@ XML 인덱스에 대한 자세한 내용은 [XML 인덱스 개요](../relational
   
 -   클러스터형 인덱스의 인덱스 키 길이는 짧게 유지합니다. 또한 클러스터형 인덱스는 고유하거나 Null이 아닌 열에 만들어지는 이점이 있습니다.  
   
--   **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
+-   **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 열은 인덱스 키 열로 지정할 수 없습니다. 그러나 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 및 **xml** 데이터 형식은 비클러스터형 인덱스에 키가 아닌 인덱스 열로 참여할 수 있습니다. 자세한 내용은 이 지침에서 ['포괄 열이 있는 인덱스](#Included_Columns)' 섹션을 참조하십시오.  
   
 -   **xml** 데이터 형식은 XML 인덱스의 키 열만 될 수 있습니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요. SQL Server 2012 SP1에서는 선택적 XML 인덱스라고 하는 새로운 유형의 XML 인덱스를 제공합니다. 이 새 인덱스를 통해 SQL Server에서 XML로 저장된 데이터에 대해 쿼리 성능을 향상시킬 수 있어 대량의 XML 데이터 작업의 인덱싱을 훨씬 빠르게 하고 인덱스 자체의 스토리지 비용을 감소시켜 확장성을 향상할 수 있습니다. 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   인덱스 행을 줄이면 한 페이지에 표시됩니다. 이로 인해 I/O가 증가되고 캐시 효율성이 떨어집니다.  
   
--   인덱스를 저장할 디스크 공간이 더 필요합니다. 특히 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 또는 **xml** 데이터 형식을 키가 아닌 인덱스 열로 추가하면 상당히 많은 디스크 공간이 필요할 수 있습니다. 이는 열 값이 인덱스 리프 수준으로 복사되기 때문입니다. 따라서 열 값은 인덱스 및 기본 테이블 모두에 존재합니다.  
+-   인덱스를 저장할 디스크 공간이 더 필요합니다. 특히 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 **xml** 데이터 형식을 키가 아닌 인덱스 열로 추가하면 상당히 많은 디스크 공간이 필요할 수 있습니다. 이는 열 값이 인덱스 리프 수준으로 복사되기 때문입니다. 따라서 열 값은 인덱스 및 기본 테이블 모두에 존재합니다.  
   
 -   인덱스 유지 관리를 위해 기본 테이블 또는 인덱싱된 뷰에 대해 수정, 삽입, 업데이트 또는 삭제하는 시간이 늘어납니다.  
   

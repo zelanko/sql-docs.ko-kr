@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372444"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server 사용 현황 및 진단 데이터 수집(CEIP)에 대한 로컬 감사
@@ -73,7 +73,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>로컬 감사 파일에 사용할 새 폴더를 구성합니다.    
 
-로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+로컬 감사에서 로그를 기록할 새 폴더(로컬 감사 디렉터리)를 만듭니다. 예를 들어 데이터베이스 엔진의 기본 인스턴스에 대한 로컬 감사 디렉터리의 전체 경로는 다음과 같습니다. *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >감사 기능 및 패치 허용으로 인해 SQL Server에 문제가 발생하는 것을 방지하려면 SQL Server 설치 경로 외부에 로컬 감사 디렉터리 경로를 구성하세요.
@@ -81,7 +81,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
   ||디자인 결정|권장|  
   |------|-----------------|----------|  
   |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공간 가용성 |약 10개의 데이터베이스를 사용하는 보통의 작업에서 인스턴스당 데이터베이스별로 약 2MB의 디스크 공간을 계획합니다.|  
-|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
+|![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 디렉터리 | 각 인스턴스에 대한 디렉터리를 만듭니다. 예를 들어 `MSSQLSERVER`의 SQL Server 인스턴스의 경우 *c:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* 를 사용합니다. 이렇게 하면 파일 관리가 간소화됩니다.
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|개별 폴더 |각 서비스에 대해 특정 폴더를 사용합니다. 예를 들어 지정된 인스턴스 이름에 대해 데이터베이스 엔진에 하나의 폴더를 설정합니다. Analysis Services 인스턴스에서 동일한 인스턴스 이름을 사용할 경우 Analysis Services에 별도 폴더를 만듭니다. 데이터베이스 엔진 및 Analysis Services 인스턴스를 모두 동일한 폴더에 구성하면 모든 로컬 감사에서 두 인스턴스를 모두 동일한 로그 파일에 기록하게 됩니다.| 
 |![확인란](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|SQL Server CEIP 서비스 로그온 계정에 사용 권한 부여|SQL Server CEIP 서비스 로그온 계정에 대해 **폴더 내용 목록**, **읽기** 및 **쓰기** 액세스를 사용하도록 설정합니다.|
 
@@ -140,7 +140,7 @@ SQL Server CEIP 서비스 로그온 계정을 가져오려면 다음 단계를 �
 
 1. **UserRequestedLocalAuditDirectory**를 마우스 오른쪽 단추로 클릭하고 *수정*을 선택합니다. 
 
-1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*).
+1. 로컬 감사를 켜려면 로컬 감사 경로를 입력합니다(예: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* ).
  
     로컬 감사를 끄려면 **UserRequestedLocalAuditDirectory** 값을 비워 둡니다.
 

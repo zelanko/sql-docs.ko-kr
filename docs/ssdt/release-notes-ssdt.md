@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101909"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
@@ -543,7 +543,7 @@ _Visual Studio 2015용 SSDT._
 - KPI 서식에 대해 편집한 항목이 일부 경우에 지속되지 않는 문제를 해결함.
 - PowerQuery UI에서 수식 입력줄이 표시되었는지에 따라 잘못된 메뉴 확인됨 상태를 보여 주는 문제를 해결함.
 - PowerQuery 데이터 원본을 포함한 AS 테이블 형식 1400-compat 수준 프로젝트에서 테이블 형식 모델 탐색기에서 데이터 소스 변경 메뉴를 선택할 때 VS와 충돌할 수 있는 문제를 해결함.
-- 1400 테이블 형식 모델을 로드할 때 ‘파일이나 어셈블리 'Microsoft.ProBI.MashupLibrary를 로드할 수 없음’ 오류가 나타날 수 있는 간헐적 문제를 해결함.
+- 1400 테이블 형식 모델을 로드할 때 ‘파일이나 어셈블리 'Microsoft.ProBI.MashupLibrary를 로드할 수 없음’ 오류가 나타날 수 있는 간헐적 문제를 해결함. 
 
 **RS 프로젝트**
 - RS 눈금자 및 매개 변수 상자 설정 선택 상태에 대한 사용자 기본 설정은 세션 간에 올바로 기억됩니다.

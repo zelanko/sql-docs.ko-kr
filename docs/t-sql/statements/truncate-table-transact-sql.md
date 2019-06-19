@@ -27,10 +27,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82107dd0e4e5927eec1670a2a4e9fcf933ae35df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503306"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
@@ -135,7 +135,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 ## <a name="examples"></a>예  
   
-### <a name="a-truncate-a-table"></a>1. 테이블 자르기  
+### <a name="a-truncate-a-table"></a>1\. 테이블 자르기  
  다음 예에서는 `JobCandidate` 테이블의 모든 데이터를 제거합니다. `SELECT` 문이 `TRUNCATE TABLE` 문 앞과 뒤에 포함되어 결과를 비교합니다.  
   
 ```sql  
@@ -151,7 +151,7 @@ FROM HumanResources.JobCandidate;
 GO  
 ```  
   
-### <a name="b-truncate-table-partitions"></a>2. 테이블 파티션 자르기  
+### <a name="b-truncate-table-partitions"></a>2\. 테이블 파티션 자르기  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   

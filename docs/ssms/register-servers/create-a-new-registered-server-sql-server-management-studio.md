@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cbe062925826b40c6f7612f6becf1af0986461a4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105165"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>새 등록된 서버 만들기(SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "65105165"
      등록된 서버에서 서버를 등록하는 경우 **서버 유형** 상자는 읽기 전용이며 등록된 서버 창에 표시된 서버 유형과 일치합니다. 다른 유형의 서버를 등록하려면 새 서버를 등록하기 전에 **등록된 서비스**도구 모음에서 **데이터베이스 엔진**, **분석 서버**, **Reporting Services** 또는 **Integration Services** 를 클릭합니다.  
   
      **서버 이름**  
-     *\<servername>*[\\*\<instancename>*] 형식으로 등록할 서버 인스턴스를 선택합니다.  
+     *\<servername>* [\\ *\<instancename>* ] 형식으로 등록할 서버 인스턴스를 선택합니다.  
   
      **인증**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 두 가지 인증 모드를 사용할 수 있습니다.  

@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502796"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX(Transact-SQL)
@@ -100,7 +100,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *index_name*  
  인덱스의 이름입니다. 인덱스 이름은 테이블에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- 기본 XML 인덱스 이름은 **#**, **##**, **@** 또는 **@@** 문자로 시작할 수 없습니다.  
+ 기본 XML 인덱스 이름은 **#** , **##** , **@** 또는 **@@** 문자로 시작할 수 없습니다.  
   
  *xml_column_name*  
  인덱스의 기반이 되는 **xml** 열입니다. 단일 XML 인덱스 정의에서는 하나의 **xml** 열만 지정할 수 있지만 **xml** 열에서는 여러 개의 보조 XML 인덱스를 만들 수 있습니다.  
@@ -148,7 +148,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지정된 경우에만 PAD_INDEX 옵션을 사용할 수 있습니다. FILLFACTOR에 지정된 비율이 한 행을 저장하기에도 부족하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 허용된 최소 비율을 무시합니다. *fillfactor* 값이 아무리 작더라도 중간 인덱스 페이지의 행 수는 두 개 이상입니다.  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. *fillfactor*가 100또는 0이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
 > [!NOTE]  
@@ -212,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  인덱스 작업 기간 동안 [max degree of parallelism 서버 구성 옵션 ](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
 > [!IMPORTANT]  
@@ -246,7 +246,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-primary-xml-index"></a>1. 기본 XML 인덱스 만들기  
+### <a name="a-creating-a-primary-xml-index"></a>1\. 기본 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 기본 XML 인덱스를 만듭니다.  
   
 ```sql  
@@ -262,7 +262,7 @@ CREATE PRIMARY XML INDEX PXML_ProductModel_CatalogDescription
 GO  
 ```  
   
-### <a name="b-creating-a-secondary-xml-index"></a>2. 보조 XML 인덱스 만들기  
+### <a name="b-creating-a-secondary-xml-index"></a>2\. 보조 XML 인덱스 만들기  
  다음 예에서는 `CatalogDescription` 테이블의 `Production.ProductModel` 열에 보조 XML 인덱스를 만듭니다.  
   
 ```sql  

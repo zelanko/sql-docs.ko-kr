@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65368350"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
@@ -70,7 +70,7 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 > [!IMPORTANT]
 > - Visual Studio 2017용 SSDT(15.9.1)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
-> - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017(15.8.0)이나 그 이전 버전을 위한 SSDT를 사용하세요. 15.8.0 이후의 Visual Studio 2017용 SSDT로는 Attunity의 Teradata 원본/대상이 포함된 SSIS 패키지를 디자인할 수 없습니다.
+> - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017(15.8.0)이나 그 이전 버전을 위한 SSDT를 사용하세요. 15\.8.0 이후의 Visual Studio 2017용 SSDT로는 Attunity의 Teradata 원본/대상이 포함된 SSIS 패키지를 디자인할 수 없습니다.
 
 
 **버전 정보**  
@@ -110,8 +110,8 @@ Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사�
 3. 여전히 온라인 상태에서 다음 명령 중 하나를 실행하여 오프라인 설치에 필요한 모든 파일을 다운로드합니다. `--layout` 옵션을 사용하는 것이 핵심입니다. 오프라인 설치를 위한 실제 파일을 다운로드합니다. `<filepath>`를 파일을 저장할 실제 레이아웃 경로와 바꿉니다.
 
    
-   1.   특정 언어의 경우 `vs_sql.exe --layout c:\<filepath> --lang en-us` 로캘을 전달합니다(단일 언어는 1GB 이하).  
-   2. 모든 언어의 경우 `--lang` 인수를 생략한 `vs_sql.exe --layout c:\<filepath>` 형태를 사용합니다(모든 언어는 3.9GB 이하).
+   1\.   특정 언어의 경우 `vs_sql.exe --layout c:\<filepath> --lang en-us` 로캘을 전달합니다(단일 언어는 1GB 이하).  
+   2\. 모든 언어의 경우 `--lang` 인수를 생략한 `vs_sql.exe --layout c:\<filepath>` 형태를 사용합니다(모든 언어는 3.9GB 이하).
 
 4. `SSDT-Setup-ENU.exe /layout c:\<filepath>`를 실행하여 VS2017 파일이 다운로드된 동일한 `<filepath>` 위치로 SSDT 페이로드를 추출합니다. 이렇게 하면 두 폴더의 모든 파일이 단일 레이아웃 폴더에 결합됩니다.
 

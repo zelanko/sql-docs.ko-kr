@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 444e41699c1a61acb82acc419a2f23db6142f7bb
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537546"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 함수
@@ -44,7 +44,7 @@ SQLRETURN SQLDisconnect(
   
 ## <a name="arguments"></a>인수  
  *ConnectionHandle*  
- [입력] 연결 핸들입니다.  
+ [Input] 연결 핸들입니다.  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, 또는 SQL_STILL_EXECUTING 합니다.  

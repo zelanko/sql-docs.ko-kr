@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65538016"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
@@ -46,7 +46,7 @@ SQLRETURN SQLGetFunctions(
   
 ## <a name="arguments"></a>인수  
  *ConnectionHandle*  
- [입력] 연결 핸들입니다.  
+ [Input] 연결 핸들입니다.  
   
  *FunctionId*  
  [입력] A **#define** 관심; ODBC 함수를 식별 하는 값 **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**합니다. **SQL_API_ODBC3_ALL_FUNCTIONS** 는 ODBC 3에서 사용 하는 *.x* ODBC 3의 지원을 확인 하기 위해 응용 프로그램 *.x* 및 이전 함수입니다. **SQL_API_ALL_FUNCTIONS** 는 ODBC 2를 사용해 *.x* ODBC 2 지원을 확인 하기 위해 응용 프로그램 *.x* 및 이전 함수입니다.  

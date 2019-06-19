@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725915"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
@@ -218,7 +218,7 @@ ms.locfileid: "65725915"
 |**UserComponentTypeName**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인프라를 지원하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스 및 **Microsoft.SqlServer.TxScript** 어셈블리를 지정합니다.|  
   
  **스크립트 편집**  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

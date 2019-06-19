@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190430"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
@@ -53,7 +53,7 @@ ms.locfileid: "63190430"
 |유틸리티 상태 정책을 구성하는 방법을 설명합니다.|[상태 정책 구성&#40;SQL Server 유틸리티&#41;](configure-health-policies-sql-server-utility.md)|  
 |CPU 사용 정책에서 감쇠를 조정하는 방법을 설명합니다.|[CPU 사용 정책에서 노이즈 줄이기&#40;SQL Server 유틸리티&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
 |UCP에서 SQL Server 인스턴스를 제거하는 방법을 설명합니다.|[SQL Server 유틸리티에서 SQL Server 인스턴스 제거](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
-|SQL Server의 관리되는 인스턴스에서 유틸리티 데이터 수집기에 대한 프록시 계정을 변경하는 방법을 설명합니다.|[SQL Server 관리되는 인스턴스의 유틸리티 컬렉션 집합을 위한 프록시 계정 변경&amp;amp;#40;SQL Server 유틸리티&amp;amp;#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
+|SQL Server의 관리되는 인스턴스에서 유틸리티 데이터 수집기에 대한 프록시 계정을 변경하는 방법을 설명합니다.|[SQL Server 관리되는 인스턴스의 유틸리티 컬렉션 집합을 위한 프록시 계정 변경&#40;SQL Server 유틸리티&#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |SQL Server의 한 인스턴스에서 다른 인스턴스로 UCP를 이동하는 방법을 설명합니다.|[UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동&#40;SQL Server 유틸리티&#41;](move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |UCP를 제거하는 방법을 설명합니다.|[유틸리티 제어 지점 제거&#40;SQL Server 유틸리티&#41;](remove-a-utility-control-point-sql-server-utility.md)|  
 |SQL Server 유틸리티의 문제를 해결하는 방법을 설명합니다.|[SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)|  

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098392"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>방법: 이전 릴리스의 Visual Studio 2010 사용자 지정 테스트 조건을 SQL Server Data Tools로 업그레이드
@@ -50,7 +50,7 @@ SQL Server Data Tools 이전 버전에서 만든 단위 테스트 조건을 사�
   
 8.  **프로젝트** 메뉴에서 **프로젝트 언로드**를 클릭합니다.  
   
-9. **솔루션 탐색기**에서 **프로젝트**를 마우스 오른쪽 단추로 클릭하고 `project_name`**.csproj** **편집**을 선택합니다.  
+9. **솔루션 탐색기**에서 **프로젝트**를 마우스 오른쪽 단추로 클릭하고 `project_name` **.csproj** **편집**을 선택합니다.  
   
 10. `Microsoft.CSharp.targets` 가져오기 뒤에 다음 Import 문을 추가합니다.  
   

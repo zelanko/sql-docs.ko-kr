@@ -43,10 +43,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725802"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -146,7 +146,7 @@ ms.locfileid: "65725802"
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|정수|출력 열의 원본인 입력 열의 **LineageID** 를 지정하는 값입니다.|  
-|MapFlags|Integer(열거형)|열에서 문자표 변환이 수행하는 문자열 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **바이트 반전** (2)<br /><br /> **전자** (6)<br /><br /> **반자** (5)<br /><br /> **히라가나** (3)<br /><br /> **가타카나** (4)<br /><br /> **대/소문자 구분 기능** (7)<br /><br /> **소문자** (0)<br /><br /> **중국어(간체)** (8)<br /><br /> **중국어(번체)**(9)<br /><br /> **대문자** (1)|  
+|MapFlags|Integer(열거형)|열에서 문자표 변환이 수행하는 문자열 연산을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **바이트 반전** (2)<br /><br /> **전자** (6)<br /><br /> **반자** (5)<br /><br /> **히라가나** (3)<br /><br /> **가타카나** (4)<br /><br /> **대/소문자 구분 기능** (7)<br /><br /> **소문자** (0)<br /><br /> **중국어(간체)** (8)<br /><br /> **중국어(번체)** (9)<br /><br /> **대문자** (1)|  
   
  문자표 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "65725802"
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 기본 코드 페이지입니다.|  
 |MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **25**입니다.|  
 |MaxMemoryUsage64|정수|64비트 컴퓨터에서 조회 테이블의 최대 캐시 크기입니다.|  
-|NoMatchBehavior|Integer(열거형)|참조 데이터 세트에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 속성이 **일치하는 항목이 없는 행을 오류로 처리합니다.** (0)로 설정된 경우 일치하는 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이 **일치하는 항목이 없는 행을 불일치 항목 출력으로 보냅니다.**(1)로 설정된 경우 행이 오류로 처리되지 않습니다.<br /><br /> 기본값은 **일치하는 항목이 없는 행을 오류로 처리합니다.** (0)입니다.|  
+|NoMatchBehavior|Integer(열거형)|참조 데이터 세트에서 일치 항목이 없는 열을 오류로 처리할지 여부를 지정하는 값입니다.<br /><br /> 속성이 **일치하는 항목이 없는 행을 오류로 처리합니다.** (0)로 설정된 경우 일치하는 항목이 없는 행이 오류로 처리됩니다. **조회 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 이러한 유형의 오류가 발생할 때 수행할 작업을 지정할 수 있습니다. 자세한 내용은 [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)를 참조하세요.<br /><br /> 속성이 **일치하는 항목이 없는 행을 불일치 항목 출력으로 보냅니다.** (1)로 설정된 경우 행이 오류로 처리되지 않습니다.<br /><br /> 기본값은 **일치하는 항목이 없는 행을 오류로 처리합니다.** (0)입니다.|  
 |ParameterMap|String|**SqlCommand** 문에 사용된 매개 변수에 매핑되는 계보 ID를 세미콜론으로 구분한 목록입니다.|  
 |ReferenceMetadataXML|String|변환에서 해당 출력에 복사하는 조회 테이블의 열에 대한 메타데이터입니다.|  
 |SqlCommand|String|조회 테이블을 채우는 SELECT 문입니다.|  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726422"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 대상
@@ -48,7 +48,7 @@ ms.locfileid: "65726422"
   
     1.  **"Third Party/Staging BAPIs"** 유형을 선택합니다.  
   
-    2.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)**(비유니코드(비활성 MDMP 설정))를 선택합니다.  
+    2.  **Communication Type with Target System**(대상 시스템과 통신 유형)에서 **Non-Unicode (Inactive MDMP Settings)** (비유니코드(비활성 MDMP 설정))를 선택합니다.  
   
     3.  적절한 프로그램 ID를 할당합니다.  
   

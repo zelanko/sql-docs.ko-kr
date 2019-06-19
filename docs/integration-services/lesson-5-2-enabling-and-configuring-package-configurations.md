@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721516"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>5-2단원: 패키지 구성 설정 및 구성
@@ -109,7 +109,7 @@ ms.locfileid: "65721516"
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>새 샘플 데이터 폴더 만들기 및 채우기  
   
-1.  Windows 탐색기의 드라이브 루트 수준(예: **C:\\**)에서 **New Sample Data**라는 폴더를 만듭니다.  
+1.  Windows 탐색기의 드라이브 루트 수준(예: **C:\\** )에서 **New Sample Data**라는 폴더를 만듭니다.  
   
 2.  컴퓨터에서 예제 파일을 찾아 폴더에서 3개의 파일을 복사합니다.  
   

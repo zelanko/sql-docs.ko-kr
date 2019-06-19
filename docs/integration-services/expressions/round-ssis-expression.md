@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724986"
 ---
 # <a name="round-ssis-expression"></a>ROUND(SSIS 식)
@@ -43,7 +43,7 @@ ROUND(numeric_expression,length)
  정수 식입니다. *numeric_expression* 을 반올림할 전체 자릿수입니다.  
   
 ## <a name="result-types"></a>결과 형식  
-  *numeric*_*expression*과 동일한 형식입니다.  
+ *numeric*_*expression*과 동일한 형식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  *length* 인수는 양의 정수이거나 0이어야 합니다.  

@@ -12,10 +12,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503199"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ##  <a name="Examples"></a> 예  
   
-### <a name="a-creating-a-remote-table"></a>1. 원격 테이블 만들기  
+### <a name="a-creating-a-remote-table"></a>1\. 원격 테이블 만들기  
  이 예제에서는 데이터베이스 `OrderReporting` 및 스키마 `Orders`에 대해 `MyOrdersTable`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `e4n8@3`인 사용자 `David`의 자격 증명을 사용합니다.  
   
 ```  
@@ -144,7 +144,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>2. 원격 테이블 복사 상태에 대해 sys.dm_pdw_dms_workers DMV 쿼리  
+### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>2\. 원격 테이블 복사 상태에 대해 sys.dm_pdw_dms_workers DMV 쿼리  
  이 쿼리는 원격 테이블 복사본에 대한 복사 상태를 확인하는 방법을 보여 줍니다.  
   
 ```  

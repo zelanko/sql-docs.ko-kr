@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181297"
 ---
 # <a name="odbc-appendixes"></a>ODBC 부록
 Microsoft ODBC 인터페이스와 관련 된 기술 세부 정보는 다음 부록에 포함 됩니다.  
   
--   [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [부록 A: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [부록 B: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [부록 C: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [부록 D: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
 -   [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   

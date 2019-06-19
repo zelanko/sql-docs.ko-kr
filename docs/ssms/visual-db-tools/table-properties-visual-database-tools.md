@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098126"
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
@@ -67,7 +67,7 @@ ms.locfileid: "65098126"
 테이블이 다른 위치에 복제되었는지 여부를 나타냅니다.  
   
 **기본 데이터 공간 사양 범주**  
-확장하면 **(데이터 공간 형식)**, **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 속성이 표시됩니다.  
+확장하면 **(데이터 공간 형식)** , **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 속성이 표시됩니다.  
   
 **(데이터 공간 형식)**  
 현재 테이블을 저장하는 데 파일 그룹을 사용했는지 분할 구성표를 사용했는지 여부를 표시합니다.  
