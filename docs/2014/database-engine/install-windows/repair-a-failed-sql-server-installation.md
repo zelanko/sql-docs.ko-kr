@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 설치 삭제 | Microsoft Docs
+title: SQL Server 2014 설치 복구 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cea01c7e32248354cf745ed56186d246636d5b28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046659"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>SQL Server 2014 설치 삭제
   복구 작업은 다음 시나리오에서 사용할 수 있습니다.  

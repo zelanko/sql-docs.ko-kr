@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993465"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION(Transact-SQL)
@@ -310,7 +310,7 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 -   그룹 2: 8~12개의 NUMA 노드, 128~191개의 CPU  
 -   그룹 3: 13~16개의 NUMA 노드, 192~255개의 CPU  
   
-#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>1. 그룹 0 및 2의 모든 CPU에 선호도 설정  
+#### <a name="a-setting-affinity-to-all-cpus-in-groups-0-and-2"></a>1\. 그룹 0 및 2의 모든 CPU에 선호도 설정  
 다음 예에서는 그룹 0  및 2의 모든 CPU에 선호도를 설정합니다.  
   
 ```  
@@ -318,7 +318,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>2. NUMA 노드 0 및 7의 모든 CPU에 선호도 설정  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>2\. NUMA 노드 0 및 7의 모든 CPU에 선호도 설정  
 다음 예에서는 노드 `0` 및 `7`에만 CPU  선호도를 설정합니다.  
   
 ```  
@@ -355,14 +355,14 @@ SET PROCESS AFFINITY CPU=AUTO;
   
 이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
-#### <a name="a-starting-diagnostic-logging"></a>1. 진단 로깅 시작  
+#### <a name="a-starting-diagnostic-logging"></a>1\. 진단 로깅 시작  
 다음 예에서는 진단 데이터의 로깅을 시작합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>2. 진단 로깅 중지  
+#### <a name="b-stopping-diagnostic-logging"></a>2\. 진단 로깅 중지  
 다음 예에서는 진단 데이터의 로깅을 중지합니다.  
   
 ```  
@@ -391,7 +391,7 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
   
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover)  클러스터 리소스의 속성 값을 설정하는 방법을 보여 줍니다.  
   
-#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>1. HealthCheckTimeout 속성 값 지정  
+#### <a name="a-specifying-the-value-for-the-healthchecktimeout-property"></a>1\. HealthCheckTimeout 속성 값 지정  
 다음 예에서는 `HealthCheckTimeout` 옵션을 15,000밀리초(15초)로 설정합니다.  
   
 ```  
@@ -420,7 +420,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>2. 버퍼 풀 확장 매개 변수 수정  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>2\. 버퍼 풀 확장 매개 변수 수정  
 다음 예에서는 버퍼 풀 확장 파일의 크기를 수정합니다. 매개 변수를 수정하려면 먼저 버퍼 풀 확장 옵션을 해제해야 합니다.  
   
 ```  
@@ -442,14 +442,14 @@ GO
 
 **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상
 
-#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>1. 기본 옵션으로 모든 IMDB 기능 사용
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>1\. 기본 옵션으로 모든 IMDB 기능 사용
 
 ```
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
 GO
 ```
 
-#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>2. 기본 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>2\. 기본 리소스 풀을 통해 메모리 최적화 tempdb 메타데이터 사용
 ```
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 GO

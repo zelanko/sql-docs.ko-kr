@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bb721d04e32e584a312c779db3aadab2ab83ba19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806140"
 ---
 # <a name="mdx-cell-properties---forecolor-and-backcolor-contents"></a>MDX 셀 속성 - FORE_COLOR 및 BACK_COLOR 콘텐츠

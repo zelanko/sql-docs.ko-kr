@@ -1,5 +1,5 @@
 ---
-title: '예: 인증서 (Transact SQL)를 사용 하 여 데이터베이스 미러링 설정 | Microsoft Docs'
+title: '예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806754"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 데이터베이스 미러링 (Transact SQL) 인증서를 사용 하 여 설정
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
   이 예에서는 인증서 기반 인증을 사용하여 데이터베이스 미러링 세션을 만드는 데 필요한 모든 단계를 보여 줍니다. 이 항목의 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용합니다. 네트워크 보안을 보장할 수 없는 경우 데이터베이스 미러링 연결에 암호화를 사용하는 것이 좋습니다.  
   
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
@@ -150,7 +150,7 @@ ms.locfileid: "62806754"
   
 5.  안전한 복사 방법을 사용하여 C:\HOST_B_cert.cer을 HOST_A로 복사합니다.  
   
- 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용 &#40;Transact-SQL &#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
+ 자세햔 내용은 [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md)을 참조하세요.  
   
 ###  <a name="ConfigureInboundConnections"></a> 인바운드 연결 구성  
  **인바운드 연결에 대한 Host_A를 구성하려면**  
@@ -257,7 +257,7 @@ ms.locfileid: "62806754"
     ```  
   
     > [!NOTE]  
-    >  자동 장애 조치 있는 보호 우선 모드에서 실행 하려는 경우을 FULL (기본 설정) 트랜잭션 안전성 설정 된 채로 및 두 번째 SET PARTNER를 실행 한 후 가능한 한 빨리 미러링 모니터 서버 추가 **'*`partner_server`*'** 문입니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
+    >  자동 장애 조치 있는 보호 우선 모드에서 실행 하려는 경우을 FULL (기본 설정) 트랜잭션 안전성 설정 된 채로 및 두 번째 SET PARTNER를 실행 한 후 가능한 한 빨리 미러링 모니터 서버 추가 **' *`partner_server`* '** 문입니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   

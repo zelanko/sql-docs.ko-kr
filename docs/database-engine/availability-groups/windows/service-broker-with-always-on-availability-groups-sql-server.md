@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787842"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Service Broker(SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "66787842"
      자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
 
     > [!NOTE]  
-    SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.
+    SQL Server Broker는 다중 서브넷을 인식하지 않습니다. "registerallprovidersip"를 0으로 설정하여 사용하고, https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server 에서 정의된 DNS의 클러스터에 필요한 권한을 부여하는 DNS에서 고정 IP를 사용하지 않는지 확인합니다. Broker는 비활성화된 IP를 사용하도록 시도하는 상태 "CONVERSING"으로 메시지를 지연시킬 수 있습니다.
 
 3.  **엔드포인트에 대한 CONNECT 권한을 부여합니다.**  
   

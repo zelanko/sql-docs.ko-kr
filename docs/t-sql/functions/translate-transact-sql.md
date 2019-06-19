@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2f278b257b1e14f88743a03098949712fa7a873
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946662"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE(Transact-SQL)
@@ -58,7 +58,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="examples"></a>예
 
-### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>1. 대괄호 및 중괄호를 일반 괄호로 대체합니다.
+### <a name="a-replace-square-and-curly-braces-with-regular-braces"></a>1\. 대괄호 및 중괄호를 일반 괄호로 대체합니다.
 
 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.
 
@@ -101,7 +101,7 @@ REPLACE
 );
 ```
 
-### <a name="b-convert-geojson-points-into-wkt"></a>2. GeoJSON 포인트를 WKT로 변환
+### <a name="b-convert-geojson-points-into-wkt"></a>2\. GeoJSON 포인트를 WKT로 변환
 
 GeoJSON은 다양한 지리 데이터 구조를 인코딩하는 형식입니다. `TRANSLATE` 함수에서는 개발자가 GeoJSON 포인트를 WKT 형식으로 변환하거나 그 반대로 쉽게 변환할 수 있습니다. 다음 쿼리는 입력 문자열의 대괄호와 중괄호를 괄호로 대체합니다.
 

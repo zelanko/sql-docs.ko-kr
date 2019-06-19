@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 63491a3ba15f9a52e7180597bce7f6295927961f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096406"
 ---
 # <a name="job-activity-monitor"></a>작업 활동 모니터
@@ -58,7 +58,7 @@ ms.locfileid: "65096406"
 **예약**  
 작업이 작업 일정에 할당되어 있으면**예** 이고, 그렇지 않으면 **아니요** 입니다.  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 고정 서버 역할과 서버 관리자 그룹의 멤버만 이 열의 값을 볼 수 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
+\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 고정 서버 역할과 서버 관리자 그룹의 멤버만 이 열의 값을 볼 수 있습니다. SQLAgentOperatorRole 역할의 멤버는 이 열의 값을 볼 수 없습니다.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>작업 활동 모니터를 열려면  
   

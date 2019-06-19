@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3518aeb808b6a77294993aa11a40e35363dfbcd3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644125"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 거부(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  가용성 그룹에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 사용 권한을 거부할 가용성 그룹을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 사용 권한을 거부할 가용성 그룹을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal>  
  사용 권한을 거부할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
@@ -91,12 +91,12 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>1. 가용성 그룹에 대한 VIEW DEFINITION 권한 거부  
+### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>1\. 가용성 그룹에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 거부합니다.  
   
 ```  
@@ -105,7 +105,7 @@ DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>2. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
+### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>2\. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
  다음 예에서는 `TAKE OWNERSHIP` 옵션으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `MyAg`에 대해 가용성 그룹 `PKomosinski`에 대한 `CASCADE` 권한을 거부합니다.  
   
 ```  

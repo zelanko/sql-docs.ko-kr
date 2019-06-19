@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809057"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>단일 사용자 모드로 SQL Server 시작
@@ -55,7 +55,7 @@ ms.locfileid: "62809057"
   
 4.  클러스터 관리자 또는 장애 조치(failover) 클러스터 관리 콘솔에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 여전히 오프라인 상태인지 확인합니다.  
   
-5.  연결할는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지금 사용 하 여 다음 명령 및 필요한 작업을 수행 합니다. SQLCMD-E-S\<서버 이름 >.  
+5.  이제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다. SQLCMD -E -S\<servername> 명령을 사용하고 필수 작업을 수행합니다.  
   
 6.  작업이 완료되면 명령 프롬프트를 닫고 클러스터 관리자를 통해 SQL 및 기타 리소스를 다시 온라인 상태로 만듭니다.  
   

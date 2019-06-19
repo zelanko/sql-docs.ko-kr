@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102527"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>SharePoint 라이브러리에 보고서 게시
@@ -30,9 +30,9 @@ ms.locfileid: "66102527"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 기존 또는 새로운 보고서 서버 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. _\<프로젝트>_**속성 페이지** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. _\<프로젝트>_ **속성 페이지** 대화 상자가 열립니다.  
   
-3.  **구성** 목록에서 보고서를 작성 및 게시하는 데 사용할 솔루션 빌드 구성의 이름을 선택합니다. 현재 구성은 **활성**(*\<configuration>*)으로 나열됩니다.  
+3.  **구성** 목록에서 보고서를 작성 및 게시하는 데 사용할 솔루션 빌드 구성의 이름을 선택합니다. 현재 구성은 **활성**( *\<configuration>* )으로 나열됩니다.  
   
 4.  프로젝트의 공유 데이터 원본을 게시하고 이전에 게시된 공유 데이터 원본을 덮어쓰려면 **OverwriteDataSources** 를 **True**로 설정합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66102527"
   
 6.  에 대 한 **TargetReportFolder**, 라이브러리 또는 라이브러리 폴더에 대 한 URL을 입력 (예를 들어 *http://TestServer/TestSite/Documents/Reports)* 합니다.  
   
-7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정 하지 않으면 기본 최상위 사이트가 사용 됩니다 (예를 들어 *http://servername*하십시오 *http://servername/site*, 또는 *http://servername/site/subsite*).  
+7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정 하지 않으면 기본 최상위 사이트가 사용 됩니다 (예를 들어 *http://servername* 하십시오 *http://servername/site* , 또는 *http://servername/site/subsite* ).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

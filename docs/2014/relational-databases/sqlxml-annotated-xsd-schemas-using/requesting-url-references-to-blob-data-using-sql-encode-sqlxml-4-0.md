@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013726"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
@@ -43,7 +43,7 @@ ms.locfileid: "66013726"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>1. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>1\. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  
  이 예에서 매핑 스키마 지정 `sql:encode` 에 **LargePhoto** (Base 64 인코딩 형식으로 이진 데이터 검색) 대신 특정 제품 사진에 대 한 URI 참조를 검색 하는 특성입니다.  
   
 ```  

@@ -22,10 +22,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175032"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
@@ -304,7 +304,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-delimitedtext-external-file-format"></a>1. DELIMITEDTEXT 외부 파일 형식 만들기  
+### <a name="a-create-a-delimitedtext-external-file-format"></a>1\. DELIMITEDTEXT 외부 파일 형식 만들기  
  이 예제에서는 구분 기호로 분리된 텍스트 파일에 대해 이름이 *textdelimited1*인 외부 파일 형식을 만듭니다. FORMAT\_OPTIONS에 대해 나열된 옵션은 파일의 필드가 파이프 문자 '|'를 사용하여 구분되어야 함을 지정합니다. 또한 텍스트 파일은 Gzip 코덱을 사용하여 압축됩니다. DATA\_COMPRESSION을 지정하지 않은 경우 텍스트 파일이 압축되지 않습니다.
   
  구분 기호로 분리된 텍스트 파일의 경우 데이터 압축 메서드는 기본 코덱 'org.apache.hadoop.io.compress.DefaultCodec’ 또는 Gzip 코덱 'org.apache.hadoop.io.compress.GzipCodec'이 될 수 있습니다.
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>2. RCFile 외부 파일 형식 만들기  
+### <a name="b-create-an-rcfile-external-file-format"></a>2\. RCFile 외부 파일 형식 만들기  
  이 예제에서는 직렬화/역직렬화 메서드org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe를 사용하는 RCFile에 대한 외부 파일 형식을 만듭니다. 데이터 압축 메서드에 기본 코덱을 사용하도록 지정합니다. DATA_COMPRESSION을 지정하지 않은 경우 압축되지 않는 것이 기본값입니다.
   
 ```  

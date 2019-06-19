@@ -28,10 +28,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0753f6459ac832bd4b5564e356a62bcc8b54aa30
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944706"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
@@ -220,7 +220,7 @@ Windows 데이터 정렬 이름 및 SQL 데이터 정렬 이름에 대한 자세
 
 ## <a name="examples"></a>예
 
-### <a name="a-changing-the-name-of-a-database"></a>1. 데이터베이스의 이름 변경
+### <a name="a-changing-the-name-of-a-database"></a>1\. 데이터베이스의 이름 변경
 
 다음 예에서는 `AdventureWorks2012` 데이터베이스의 이름을 `Northwind`로 변경합니다.
 
@@ -232,7 +232,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>2. 데이터베이스 데이터 정렬 변경
+### <a name="b-changing-the-collation-of-a-database"></a>2\. 데이터베이스 데이터 정렬 변경
 
 다음 예에서는 `testdb`S 데이터 정렬을 사용하여 `SQL_Latin1_General_CP1_CI_A`라는 데이터베이스를 만든 다음 `testdb` 데이터베이스의 데이터 정렬을 `COLLATE French_CI_AI`로 변경합니다.
 
@@ -573,7 +573,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 지역 복제 파트너 자격에서 보조 데�
 
 ## <a name="examples"></a>예
 
-### <a name="a-check-the-edition-options-and-change-them"></a>1. 버전 옵션 확인 및 변경
+### <a name="a-check-the-edition-options-and-change-them"></a>1\. 버전 옵션 확인 및 변경
 
 db1 데이터베이스의 버전과 최대 크기를 설정합니다.
 
@@ -585,7 +585,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>2. 다른 탄력적 풀에 데이터베이스 이동
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>2\. 다른 탄력적 풀에 데이터베이스 이동
 
 기존 데이터베이스를 pool1이라는 풀로 이동합니다.
 
@@ -866,14 +866,14 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 
 이러한 예제를 실행하기 전에 변경하는 데이터베이스가 현재 데이터베이스가 아닌지 확인합니다. 현재 데이터베이스는 변경된 것과 다른 데이터베이스여야 합니다. 따라서 **ALTER는 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다**.
 
-### <a name="a-change-the-name-of-the-database"></a>1. 데이터베이스의 이름을 변경합니다.
+### <a name="a-change-the-name-of-the-database"></a>1\. 데이터베이스의 이름을 변경합니다.
 
 ```sql
 ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>2. 데이터베이스의 최대 크기를 변경합니다.
+### <a name="b-change-max-size-for-the-database"></a>2\. 데이터베이스의 최대 크기를 변경합니다.
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -1043,7 +1043,7 @@ TDE를 구현하는 모든 단계를 보여주는 포괄적인 예제는 [TDE(�
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### <a name="a-altering-the-autogrow-setting"></a>1. AUTOGROW 설정 변경
+### <a name="a-altering-the-autogrow-setting"></a>1\. AUTOGROW 설정 변경
 
 데이터베이스에 대해 AUTOGROW를 ON으로 설정합니다 `CustomerSales`.
 
@@ -1052,7 +1052,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 스토리지 변경
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2\. 복제된 테이블에 대해 최대 스토리지 변경
 
 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 컴퓨팅 노드당 스토리지 용량 한도입니다.
 

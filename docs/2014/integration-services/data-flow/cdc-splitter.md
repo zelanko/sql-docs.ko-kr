@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828237"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
@@ -40,11 +40,11 @@ ms.locfileid: "62828237"
   
  구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 1로 설정 합니다.  
+-   **오류 코드**: 1로 설정됩니다.  
   
--   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
+-   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
--   **오류 행 열**: 오류의 원인이 된 행의 입력된 열입니다.  
+-   **오류 행 열**: 오류를 유발한 행의 입력 열입니다.  
   
 ## <a name="configuring-the-cdc-splitter"></a>CDC 분할자 구성  
  CDC 분할자에 대해 구성 가능한 속성은 없습니다.  

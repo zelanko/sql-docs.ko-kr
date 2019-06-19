@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796082"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint(Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'table'` 제약 조건 정보를 반환할 테이블이입니다. 지정된 테이블은 반드시 현재 데이터베이스에 대해 로컬이어야 합니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @objname = ] 'table'` 제약 조건 정보를 반환할 테이블이입니다. 지정된 테이블은 반드시 현재 데이터베이스에 대해 로컬이어야 합니다. *테이블* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
-`[ @nomsg = ] 'no_message'` 테이블 이름을 출력 하는 선택적 매개 변수가입니다. *no_message* 됩니다 **varchar(5)**, 기본값은 **msg**합니다. **nomsg** 인쇄를 표시 하지 않습니다.  
+`[ @nomsg = ] 'no_message'` 테이블 이름을 출력 하는 선택적 매개 변수가입니다. *no_message* 됩니다 **varchar(5)** , 기본값은 **msg**합니다. **nomsg** 인쇄를 표시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

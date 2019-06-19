@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696972"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX(Transact-SQL)
@@ -63,11 +63,11 @@ PATINDEX는 입력 데이터 정렬에 따라 비교를 수행합니다. 지정�
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
 SC 데이터 정렬을 사용하는 경우 반환 값은 *식* 매개 변수에 있는 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
-0x0000 (**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
+0x0000 (**char(0)** )은 Windows 데이터 정렬에서 정의되지 않은 문자이며 PATINDEX에 포함할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-patindex-example"></a>1. 간단한 PATINDEX 예  
+### <a name="a-simple-patindex-example"></a>1\. 간단한 PATINDEX 예  
  다음 예는 짧은 문자열(`interesting data`)에서 `ter` 문자의 시작 위치를 검사합니다.  
   
 ```sql  
@@ -78,7 +78,7 @@ SELECT PATINDEX('%ter%', 'interesting data');
   
 `3`  
   
-### <a name="b-using-a-pattern-with-patindex"></a>2. PATINDEX와 함께 패턴 사용  
+### <a name="b-using-a-pattern-with-patindex"></a>2\. PATINDEX와 함께 패턴 사용  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  

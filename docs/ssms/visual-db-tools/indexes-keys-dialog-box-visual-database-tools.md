@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096668"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>인덱스 - 키 대화 상자(Visual Database Tools)
@@ -57,7 +57,7 @@ ms.locfileid: "65096668"
 키나 인덱스의 이름을 표시합니다. 키나 인덱스를 새로 만들면 테이블 디자이너의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
 **설명**  
-키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음, 속성 필드의 오른쪽에 나타나는 줄임표 단추(**...**)를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+키나 인덱스에 대한 설명을 입력할 수 있습니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음, 속성 필드의 오른쪽에 나타나는 줄임표 단추( **...** )를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
 **테이블 디자이너 범주**  
 확장하면 **클러스터형으로 만들기**에 대한 정보가 표시됩니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "65096668"
 클러스터형 키나 인덱스를 만듭니다. 한 테이블에는 클러스터형 인덱스가 하나만 허용됩니다. 테이블의 데이터는 클러스터형 인덱스의 순서대로 저장됩니다. 자세한 내용은 [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md) 및 [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)를 참조하세요.  
   
 **데이터 공간 사양**  
-확장하면 **(데이터 공간 형식)**, **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 정보가 표시됩니다.  
+확장하면 **(데이터 공간 형식)** , **파일 그룹 또는 파티션 구성표 이름**및 **파티션 열 목록**에 대한 정보가 표시됩니다.  
   
 **(데이터 공간 형식)**  
 현재 인덱스나 키가 파일 그룹 또는 분할 구성표에 속해 있는지 여부를 나타냅니다.  

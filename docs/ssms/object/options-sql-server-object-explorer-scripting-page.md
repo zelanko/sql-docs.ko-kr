@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bd09972eaebba893ac92198c9b953392e383f9e4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095719"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)
@@ -44,7 +44,7 @@ ms.locfileid: "65095719"
 일괄 처리 구분 기호를 사용하여 개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 구분합니다. **쿼리 편집기**에 대한 기본 일괄 처리 구분 기호를 변경하려면 **도구**/**옵션**/**쿼리 실행**/**SQL Server**/**일반**/**일괄 처리 구분 기호**를 선택합니다. 기본값은 False입니다. 자세한 내용은 [GO(Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)를 참조하세요.  
   
 **설명 머리글 포함**  
-스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [/*...*/ (Comment)(Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)를 참조하세요.  
+스크립트를 개체별 섹션으로 구분하여 스크립트에 설명을 추가합니다. 기본값은 True입니다. 자세한 내용은 [/ *...* / (Comment)(Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)를 참조하세요.  
   
 **Vardecimal 압축 사용 설정 포함**  
 VarDecimal 스토리지 옵션을 포함합니다. 기본값은 False입니다. 자세한 내용은 [sp_db_vardecimal_storage_format(Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542)을 참조하세요.  

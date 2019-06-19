@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 316f943091de15857b4654e98b4910061806def6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089361"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
@@ -43,8 +43,8 @@ ms.locfileid: "65089361"
   
 |인스턴스 유형|개체 이름|  
 |-----------------|---------------|  
-|Default|**SQLAgent:**_object_:_counter_|  
-|명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :**_object_:_counter_|  
+|Default|**SQLAgent:** _object_:_counter_|  
+|명명된 형식|**SQLAgent$**<br /> **&#42;instance_name&#42; :** _object_:_counter_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 성능 개체가 포함됩니다.  
   

@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66719434"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
@@ -74,7 +74,7 @@ ms.locfileid: "66719434"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-hash"></a>1. HASH 사용  
+### <a name="a-using-hash"></a>1\. HASH 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `HASH` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  
@@ -85,7 +85,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>2. LOOP 사용  
+### <a name="b-using-loop"></a>2\. LOOP 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `LOOP` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  

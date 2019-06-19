@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099832"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
@@ -102,9 +102,9 @@ ms.locfileid: "66099832"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v를 =**"`1`" **-v b =**"`2`" 라는 변수에 결과 `a` 값을 사용 하 여 "`1`" 변수와 **b**의 값을 사용 하 여 "`2`"입니다.  
+ 전역 변수가 지정한 이름으로 생성된 다음 제공된 값으로 설정됩니다. 예를 들어 **-v를 =** "`1`" **-v b =** "`2`" 라는 변수에 결과 `a` 값을 사용 하 여 "`1`" 변수와 **b**의 값을 사용 하 여 "`2`"입니다.  
   
- 전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호(**\\"**)는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
+ 전역 변수는 스크립트의 모든 함수에서 사용할 수 있습니다. 백슬래시와 인용 부호( **\\"** )는 큰따옴표로 해석됩니다. 인용 부호는 문자열에 공백이 포함되어 있는 경우에만 필요합니다. 변수 이름은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에 유효해야 하며 알파벳 문자 또는 밑줄로 시작하고 알파벳 문자, 숫자 또는 밑줄이 포함되어야 합니다. 예약어는 변수 이름으로 사용할 수 없습니다. 전역 변수 사용에 대한 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
  **-t**  
  추적 로그에 오류 메시지를 출력합니다(옵션). 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)을 참조하세요.  

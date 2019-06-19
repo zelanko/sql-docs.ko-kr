@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101966"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
@@ -47,15 +47,15 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 |동사|설명|  
 |--------|---------------|  
-|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
+|덤프(dump)|.dacpac 파일에 포함된 원본 데이터베이스에 대한 이름, 버전 번호 및 설명 등의 정보를 제공합니다. 명령줄에 다음 형식을 사용하여 원본 데이터베이스를 지정합니다.<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|동기화|명령줄에 다음 형식을 사용하여 dbSqlPackage 작업을 지정합니다.<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />동기화 동사의 올바른 원본 및 대상 매개 변수는 아래 단원을 참조하십시오.|  
   
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 원본  
 **dbSqlPackage** 공급자는 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로인 입력을 받아들입니다.  공급자의 입력 원본을 지정하는 구문은 다음과 같습니다.  
   
 |Input|Default|설명|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**해당 사항 없음**|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로입니다.<br /><br />**참고:** 연결 문자열을 입력 원본으로 사용할 때 지원되는 연결 문자열 속성은 *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* 및 *ConnectionTimeout*뿐입니다.|  
+|**-source:dbSqlPackage=** {*input*}|**해당 사항 없음**|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로입니다.<br /><br />**참고:** 연결 문자열을 입력 원본으로 사용할 때 지원되는 연결 문자열 속성은 *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* 및 *ConnectionTimeout*뿐입니다.|  
   
 입력 원본이 라이브 SQL Server/SQL Azure 데이터베이스에 대한 연결 문자열인 경우 **dbSqlPackage** 라이브 SQL Server/SQL Azure 데이터베이스에서 데이터베이스 스냅숏(.dacpac 파일 형식)을 추출합니다.  
   
@@ -174,7 +174,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
   
 |매개 변수|Default|설명|  
 |-------------|-----------|---------------|  
-|**OutputPath**={ *string* }|해당 사항 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다. 이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
+|**OutputPath**={ *string* }|해당 사항 없음|**dbSqlPackage**에 ‘문자열’로 지정된 디스크 위치에 DeployReport XML 출력 파일 또는 Script SQL 출력 파일을 만들도록 지시하는 선택적 매개 변수입니다.  이 작업은 문자열로 지정된 위치에 현재 존재하는 모든 스크립트를 덮어씁니다.|  
   
 > [!NOTE]  
 > **OutputPath** 매개 변수가 **DeployReport** 또는 **Script** 작업에 제공되지 않은 경우 출력이 메시지로 반환됩니다.  

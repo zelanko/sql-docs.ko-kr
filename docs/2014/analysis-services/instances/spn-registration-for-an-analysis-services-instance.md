@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079566"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
@@ -79,7 +79,7 @@ ms.locfileid: "66079566"
 |서비스 계정|**MSSQLServerOLAPService** Windows  서비스의 시작 계정입니다. Windows  도메인 사용자 계정,  가상 계정,  MSA(관리 서비스 계정)  또는 기본 제공 계정(예:  서비스별 SID,  NetworkService  또는 LocalSystem)일 수 있습니다. Windows 도메인 사용자 계정으로 도메인 \ 사용자 형식을 지정할 수 있습니다 또는 user@domain합니다.|  
   
 ##  <a name="bkmk_virtual"></a> 가상 계정에 대한 SPN  등록  
- 가상 계정은 SQL  Server  서비스의 기본 계정 유형입니다. 가상 계정은 **NT Service\MSOLAPService** 기본 인스턴스 및 **NT Service\MSOLAP$**\<인스턴스 이름 > 명명 된 인스턴스에 대 한 합니다.  
+ 가상 계정은 SQL  Server  서비스의 기본 계정 유형입니다. 가상 계정은 **NT Service\MSOLAPService** 기본 인스턴스 및 **NT Service\MSOLAP$** \<인스턴스 이름 > 명명 된 인스턴스에 대 한 합니다.  
   
  이름에서 알 수 있는 것처럼 해당 계정은 Active  Directory에 존재하지 않습니다. 가상 계정은 로컬 컴퓨터에서만 존재합니다. 외부 서비스,  응용 프로그램 또는 디바이스에 연결할 때 연결은 로컬 컴퓨터 계정을 통해 만들어집니다. 이러한 이유로 가상 계정에서 실행되는 Analysis  Services에 대한 SPN  등록은 실제로 시스템 계정에 대한 SPN  등록입니다.  
   
@@ -96,7 +96,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **NT Service\MSOLAP $로 실행 되는 명명 된 인스턴스에 대 한 구문 예\<인스턴스 이름 >**  
   
- 이 예에서는 기본 가상 계정에서 실행되는 명명된 인스턴스에 대한 **setspn** 구문을 보여 줍니다. 이 예에서 컴퓨터 호스트 이름은 **AW-SRV02**이고 인스턴스 이름은 **AW-FINANCE**입니다. 다시는 가상 계정이 아니라 SPN에 대해 지정 된 컴퓨터 계정을 **NT Service\MSOLAP$**\<인스턴스 이름 >.  
+ 이 예에서는 기본 가상 계정에서 실행되는 명명된 인스턴스에 대한 **setspn** 구문을 보여 줍니다. 이 예에서 컴퓨터 호스트 이름은 **AW-SRV02**이고 인스턴스 이름은 **AW-FINANCE**입니다. 다시는 가상 계정이 아니라 SPN에 대해 지정 된 컴퓨터 계정을 **NT Service\MSOLAP$** \<인스턴스 이름 >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

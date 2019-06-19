@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089448"
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
@@ -37,7 +37,7 @@ ms.locfileid: "65089448"
 ## <a name="understanding-using-tokens"></a>토큰 사용 이해  
   
 > [!IMPORTANT]  
-> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+> Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 > 이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -85,28 +85,28 @@ ms.locfileid: "65089448"
 |**(TIME)**|현재 시간(HHMMSS 형식)입니다.|  
 |**(STRTTM)**|작업이 실행을 시작하는 시간(HHMMSS 형식)입니다.|  
 |**(STRTDT)**|작업이 실행을 시작하는 날짜(YYYYMMDD 형식)입니다.|  
-|**(WMI(**_property_**))**|WMI 경고에 대한 응답으로 실행되는 작업의 경우 *property*에 의해 지정되는 속성 값입니다. 예를 들어 `$(WMI(DatabaseName))` 는 경고를 실행시킨 WMI 이벤트에 대한 **DatabaseName** 속성 값을 제공합니다.|  
+|**(WMI(** _property_ **))**|WMI 경고에 대한 응답으로 실행되는 작업의 경우 *property*에 의해 지정되는 속성 값입니다. 예를 들어 `$(WMI(DatabaseName))` 는 경고를 실행시킨 WMI 이벤트에 대한 **DatabaseName** 속성 값을 제공합니다.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server 에이전트 이스케이프 매크로  
   
 |이스케이프 매크로|설명|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(**_token\_name_**))**|토큰 교체 문자열에서 작은따옴표(')를 이스케이프합니다. 작은따옴표 하나를 작은따옴표 두 개로 바꿉니다.|  
-|**$(ESCAPE_DQUOTE(**_token\_name_**))**|토큰 교체 문자열에서 큰따옴표(")를 이스케이프합니다. 큰따옴표 하나를 큰따옴표 두 개로 바꿉니다.|  
-|**$(ESCAPE_RBRACKET(**_token\_name_**))**|토큰 교체 문자열에서 오른쪽 대괄호(])를 이스케이프합니다. 오른쪽 대괄호 하나를 오른쪽 대괄호 두 개로 바꿉니다.|  
-|**$(ESCAPE_NONE(**_token\_name_**))**|문자열에서 아무 문자도 이스케이프하지 않고 토큰을 바꿉니다. 이 매크로는 신뢰할 수 있는 사용자만 토큰 교체 문자열을 제공할 수 있는 환경에서 이전 버전과의 호환성을 지원하기 위해 제공됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "매크로를 사용하도록 작업 단계 업데이트"를 참조하십시오.|  
+|**$(ESCAPE_SQUOTE(** _token\_name_ **))**|토큰 교체 문자열에서 작은따옴표(')를 이스케이프합니다. 작은따옴표 하나를 작은따옴표 두 개로 바꿉니다.|  
+|**$(ESCAPE_DQUOTE(** _token\_name_ **))**|토큰 교체 문자열에서 큰따옴표(")를 이스케이프합니다. 큰따옴표 하나를 큰따옴표 두 개로 바꿉니다.|  
+|**$(ESCAPE_RBRACKET(** _token\_name_ **))**|토큰 교체 문자열에서 오른쪽 대괄호(])를 이스케이프합니다. 오른쪽 대괄호 하나를 오른쪽 대괄호 두 개로 바꿉니다.|  
+|**$(ESCAPE_NONE(** _token\_name_ **))**|문자열에서 아무 문자도 이스케이프하지 않고 토큰을 바꿉니다. 이 매크로는 신뢰할 수 있는 사용자만 토큰 교체 문자열을 제공할 수 있는 환경에서 이전 버전과의 호환성을 지원하기 위해 제공됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "매크로를 사용하도록 작업 단계 업데이트"를 참조하십시오.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>매크로를 사용하도록 작업 단계 업데이트  
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 토큰 바꾸기를 처리하는 방법에 대해 설명합니다. 경고 토큰 바꾸기를 설정하거나 해제하려면 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 확인란을 선택하거나 선택을 취소합니다.  
   
 |토큰 구문|경고 토큰 바꾸기 설정|경고 토큰 바꾸기 해제|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**및 **WMI(**_property_**)** 가 있습니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
+|ESCAPE 매크로가 사용됨|작업에 있는 모든 토큰이 성공적으로 바뀝니다.|경고로 활성화된 토큰이 바뀌지 않습니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**및 **WMI(** _property_ **)** 가 있습니다. 다른 정적 토큰은 성공적으로 바뀝니다.|  
 |ESCAPE 매크로가 사용되지 않음|토큰이 포함된 모든 작업이 실패합니다.|토큰이 포함된 모든 작업이 실패합니다.|  
   
 ## <a name="token-syntax-update-examples"></a>토큰 구문 업데이트 예  
   
-### <a name="a-using-tokens-in-non-nested-strings"></a>1. 비중첩 문자열에 토큰 사용  
+### <a name="a-using-tokens-in-non-nested-strings"></a>1\. 비중첩 문자열에 토큰 사용  
 다음 예에서는 간단한 비중첩 스크립트를 적절한 이스케이프 매크로로 업데이트하는 방법을 보여 줍니다. 업데이트 스크립트를 실행하기 전에 다음 작업 단계 스크립트는 작업 단계 토큰을 사용하여 해당 데이터베이스 이름을 인쇄합니다.  
   
 `PRINT N'Current database name is $(A-DBN)' ;`  
@@ -115,7 +115,7 @@ ms.locfileid: "65089448"
   
 `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-### <a name="b-using-tokens-in-nested-strings"></a>2. 중첩 문자열에 토큰 사용  
+### <a name="b-using-tokens-in-nested-strings"></a>2\. 중첩 문자열에 토큰 사용  
 중첩 문자열이나 문에 토큰이 사용되는 작업 단계 스크립트에서는 적절한 이스케이프 매크로를 삽입하기 전에 중첩 문을 여러 개의 문으로 다시 작성해야 합니다.  
   
 예를 들어, `A-MSG` 토큰을 사용하며 이스케이프 매크로로 업데이트되지 않은 다음 작업 단계를 가정해 보십시오.  
@@ -131,7 +131,7 @@ PRINT N'Print ' + @msgString ;</pre>
   
 이 예에서 QUOTENAME 함수는 인용 문자도 설정합니다.  
   
-### <a name="c-using-tokens-with-the-escapenone-macro"></a>3. 토큰에 ESCAPE_NONE 매크로 사용  
+### <a name="c-using-tokens-with-the-escapenone-macro"></a>3\. 토큰에 ESCAPE_NONE 매크로 사용  
 다음 예는 `job_id` 테이블에서 `sysjobs` 를 검색하고 `JOBID` 토큰을 사용하여 스크립트의 앞부분에서 binary 데이터 형식으로 선언된 `@JobID` 변수를 채우는 스크립트의 일부입니다. binary 데이터 형식에는 구분 기호가 필요하지 않으므로 `ESCAPE_NONE` 토큰에 `JOBID` 매크로가 사용됩니다. 이 작업 단계는 업데이트 스크립트를 실행한 후에 업데이트하지 않아도 됩니다.  
   
 <pre>SELECT * FROM msdb.dbo.sysjobs  

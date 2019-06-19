@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8cc5c4f61d213a7a89ff7b48268595d75cd596c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982225"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt;(보다 큼)(Transact-SQL)
@@ -53,7 +53,7 @@ expression > expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1. 간단한 쿼리에서 > 사용  
+### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 > 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 13보다 큰 모든 행을 반환합니다.  
   
 ```  
@@ -79,7 +79,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>2. 두 변수 비교에 > 사용  
+### <a name="b-using--to-compare-two-variables"></a>2\. 두 변수 비교에 > 사용  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  

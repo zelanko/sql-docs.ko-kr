@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856510"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
@@ -36,10 +36,10 @@ ms.locfileid: "62856510"
   
 ####  <a name="Permissions"></a> Permissions  
  시스템 저장 프로시저: `sp_helptext`  
- **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 사용자 개체의 정의 개체 소유자 또는 다음 권한 중 하나가 있는 피부 여자에 게 표시 합니다. ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION입니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
   
  시스템 함수: `OBJECT_DEFINITION`  
- 시스템 개체 정의는 공개적으로 표시됩니다. 사용자 개체의 정의 개체 소유자 또는 다음 권한 중 하나가 있는 피부 여자에 게 표시 합니다. ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION입니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
  개체 카탈로그 뷰: `sys.sql_modules`  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "62856510"
 ##  <a name="Procedures"></a> 저장 프로시저의 정의를 보는 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
--   다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   

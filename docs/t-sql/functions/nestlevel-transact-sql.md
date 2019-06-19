@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd01697d833b2db08f24b1f35d3d71ba649887c2
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944204"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
@@ -50,7 +50,7 @@ ms.locfileid: "65944204"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-nestlevel-in-a-procedure"></a>1. 프로 시저에서 @@NESTLEVEL 사용  
+### <a name="a-using-nestlevel-in-a-procedure"></a>1\. 프로 시저에서 @@NESTLEVEL 사용  
  다음 예에서는 다른 프로시저를 호출하는 프로시저와 각각의 `@@NESTLEVEL` 설정을 표시하는 프로시저를 만듭니다.  
   
 ```  
@@ -85,7 +85,7 @@ Inner Level
 2
 ```  
   
-### <a name="b-calling-nestlevel"></a>2. @@NESTLEVEL 호출  
+### <a name="b-calling-nestlevel"></a>2\. @@NESTLEVEL 호출  
  다음 예에서는 `SELECT`, `EXEC` 및 `sp_executesql`에서 각각 `@@NESTLEVEL`을 호출할 때 반환되는 값의 차이를 보여 줍니다.  
   
 ```  

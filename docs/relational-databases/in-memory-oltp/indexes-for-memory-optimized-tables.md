@@ -1,7 +1,7 @@
 ---
 title: 메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66462463"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 메모리 최적화 테이블의 인덱스와 디스크 기반 테이블의 인덱스는 여러 방식에서 다릅니다.  
@@ -35,7 +36,7 @@ ms.locfileid: "51673022"
 - 해시 인덱스  
 - 메모리 최적화 비클러스터형 인덱스(B-트리의 기본 내부 구조를 의미) 
   
-*해시* 인덱스는 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)에서 자세히 설명합니다.
+*해시* 인덱스는 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)에서 자세히 설명합니다.  
 *비클러스터형* 인덱스는 [메모리 최적화 테이블의 비클러스터형 인덱스](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)에서 자세히 설명합니다.  
 *Columnstore* 인덱스에 대해서는 [다른 문서](../../relational-databases/indexes/columnstore-indexes-overview.md)에서 설명합니다.  
 
@@ -57,7 +58,7 @@ ms.locfileid: "51673022"
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 메모리 최적화 테이블 또는 테이블 형식당 8개의 인덱스 제한이 있습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 메모리 최적화 테이블 및 테이블 형식에 해당하는 인덱스 수 제한이 없어집니다.
@@ -116,11 +117,30 @@ ms.locfileid: "51673022"
   
 ## <a name="duplicate-index-key-values"></a>중복된 인덱스 키 값
 
-중복된 인덱스 키 값은 메모리 최적화 테이블에 대한 작업의 성능에 영향을 줄 수 있습니다. 대부분의 인덱스 작업에서 중복 체인을 순회해야 하므로 중복이 많으면(예: 100 이상) 인덱스 유지 관리 작업이 비효율적입니다. 메모리 최적화 테이블에서 `INSERT`, `UPDATE` 및 `DELETE` 작업에 영향을 줄 수 있습니다. 
+중복된 인덱스 키 값이 있으면 메모리 최적화 테이블의 성능이 저하될 수 있습니다. 항목 체인을 트래버스하는 시스템의 중복 항목은 대부분의 인덱스 읽기 및 쓰기 작업에 대한 것입니다. 중복 항목의 체인이 100개 항목을 초과할 경우 성능 저하가 측정될 수 있습니다.
 
-이 문제는 해시 인덱스의 경우 더 자주 발생합니다. 해시 인덱스에 대한 작업당 소요되는 더 적은 비용과 해시 충돌 체인이 있는 큰 중복 체인의 간섭 모두가 원인입니다. 인덱스에서 중복을 줄이려면 비클러스터형 인덱스를 사용하고 중복 수를 줄이기 위해 인덱스 키의 끝에 별도 열을 추가합니다(예: 기본 키에서 추가). 해시 충돌에 대한 자세한 내용은 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조하세요.
+### <a name="duplicate-hash-values"></a>중복된 해시 값
 
-예를 들어, `CustomerId`의 기본 키가 있는 `Customers` 테이블과 열 `CustomerCategoryID`의 인덱스를 고려합니다. 일반적으로 특정 범주에 많은 고객이 있으므로 지정된 키에 대한 중복 값이 CustomerCategoryID의 인덱스에 많습니다. 이 시나리오에서는 `(CustomerCategoryID, CustomerId)`에 대한 비클러스터형 인덱스를 사용하는 것이 모범 사례입니다. 이 인덱스는 `CustomerCategoryID`를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있고 중복을 포함하지 않으므로 인덱스 유지 관리의 비효율성을 야기하지 않습니다.
+이 문제는 해시 인덱스의 경우 더 두드러집니다. 해시 인덱스의 경우 다음과 같은 고려 사항으로 인해 더 문제가 됩니다.
+
+- 해시 인덱스에 대한 작업당 비용이 더 적음
+- 해시 충돌 체인이 있는 큰 중복 체인의 방해
+
+인덱스에서 중복을 줄이려면 다음 조정을 수행합니다.
+
+- 비클러스터형 인덱스를 사용합니다.
+- 인덱스 키의 마지막에 다른 열을 추가하여 중복 항목 수를 줄입니다.
+  - 예를 들어, 기본 키에도 있는 열을 추가할 수 있습니다.
+
+해시 충돌에 대한 자세한 내용은 [메모리 최적화 테이블의 해시 인덱스](../../relational-databases/sql-server-index-design-guide.md#hash_index)를 참조하세요.
+
+### <a name="example-improvement"></a>개선 예제
+
+다음은 인덱스에서 성능 비효율을 방지하는 방법의 예제입니다.
+
+`CustomerId`에 기본 키가 있는 `Customers` 테이블과 `CustomerCategoryID` 열의 인덱스를 고려합니다. 일반적으로 많은 고객이 특정 범주에 속합니다. 이로 인해 인덱스의 주어진 키 안에 CustomerCategoryID에 대해 여러 중복된 값이 있게 됩니다.
+
+이 시나리오에서는 `(CustomerCategoryID, CustomerId)`에서 비클러스터형 인덱스를 사용하는 것이 모범 사례입니다. 이 인덱스는 `CustomerCategoryID`를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있지만, 인덱스 키는 중복을 포함하지 않습니다. 따라서 CustomerCategoryID 값 중복이나 인덱스의 추가 열에 따른 인덱스 유지 관리에서의 비효율이 발생하지 않습니다.
 
 다음 쿼리는 샘플 데이터베이스 `CustomerCategoryID` WideWorldImporters `Sales.Customers`의 테이블 [에 있는](../../sample/world-wide-importers/wide-world-importers-documentation.md)에 대한 인덱스와 관련해 중복 인덱스 키 값의 평균 개수를 보여 줍니다.
 
@@ -155,15 +175,11 @@ SELECT AVG(row_count) FROM
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,7 +211,7 @@ WHERE col1 = 'dn';
   
 `WHERE` 절이 인덱스 키의 두 번째 열만 지정하는 경우에는 두 인덱스 형식 모두 유용하지 않습니다.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>인덱스 사용 시나리오를 비교하기 위한 요약 테이블  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>인덱스 사용 시나리오를 비교하기 위한 요약 테이블  
   
 다음 표에서 다른 인덱스 유형에서 지원 되는 모든 작업을 나열 합니다. *예*는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 *아니요*는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다. 
   
@@ -206,6 +222,7 @@ WHERE col1 = 'dn';
 | 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, >=, `BETWEEN`). | 아니오 <br/> (인덱스 검색의 결과) | 예 <sup>1</sup> | 예 |  
 | 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 예 | 예 |  
 | 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니오 | 아니오 | 예 |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> 메모리 최적화 비클러스터형 인덱스의 경우 인덱스 검색을 수행하는 데 전체 키가 필요하지 않습니다.  
 

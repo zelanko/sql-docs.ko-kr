@@ -39,10 +39,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66428966"
 ---
 # <a name="create-database"></a>CREATE DATABASE
@@ -536,7 +536,7 @@ GO
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]에서는 데이터 및 로그 파일 사용 권한을 설정하지 않습니다.
 
 ## <a name="examples"></a>예
-### <a name="a-creating-a-database-without-specifying-files"></a>1. 파일을 지정하지 않고 데이터베이스 만들기
+### <a name="a-creating-a-database-without-specifying-files"></a>1\. 파일을 지정하지 않고 데이터베이스 만들기
 다음 예에서는 `mytest` 데이터베이스를 만들고 해당 주 파일 및 트랜잭션 로그 파일을 만듭니다. 문에 \<filespec> 항목이 없으므로 주 데이터베이스 파일의 크기는 model 데이터베이스 주 파일의 크기와 같습니다. 트랜잭션 로그는 주 데이터 파일의 25% 크기 또는 512KB 중 큰 값으로 설정됩니다. MAXSIZE를 지정하지 않았으므로 사용 가능한 디스크 공간을 모두 채울 때까지 파일 크기가 증가할 수 있습니다. 이 예에서는 `mytest` 데이터베이스를 만들기 전에 `mytest`라는 데이터베이스(있는 경우)를 삭제하는 방법도 보여 줍니다.
 
 ```sql
@@ -554,7 +554,7 @@ WHERE name = N'mytest';
 GO
 ```
 
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2\. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기
 다음 예에서는 `Sales` 데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.
 
 ```sql
@@ -741,7 +741,7 @@ FOR ATTACH;
 GO
 ```
 
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9\. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기
 다음 예에서는 `FileStreamDB` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개가 있습니다. 각 파일 그룹에는 다음과 같이 하나의 파일이 포함됩니다.
 
 - `FileStreamDB_data`는 행 데이터를 포함합니다. 여기에는 기본 경로가 지정된 `FileStreamDB_data.mdf` 파일 하나가 포함됩니다.
@@ -1346,7 +1346,7 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
-### <a name="a-simple-example"></a>1. 간단한 예
+### <a name="a-simple-example"></a>1\. 간단한 예
 데이터 웨어하우스 데이터베이스를 만드는 간단한 예 그러면 10240 GB의 가장 작은 최대 크기, SQL_Latin1_General_CP1_CI_AS의 기본 데이터 정렬 및 DW100인 가장 작은 컴퓨팅 능력을 가진 데이터베이스가 생성됩니다.
 
 ```sql
@@ -1354,7 +1354,7 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
 ```
 
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2\. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기
 모든 옵션을 사용하여 10테라바이트 데이터 웨어하우스를 생성하는 예입니다.
 
 ```sql
@@ -1465,7 +1465,7 @@ DATABASE 개체에 대한 공유 잠금을 사용합니다.
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제
+### <a name="a-basic-database-creation-examples"></a>1\. 기본 데이터베이스 만들기 예제
 다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.
 
 ```sql
@@ -1487,7 +1487,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 100 GB);
 ```
 
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2\. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
 다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.
 
 ```sql

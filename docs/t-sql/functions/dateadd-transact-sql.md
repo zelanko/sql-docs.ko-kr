@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
-ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66469645"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
@@ -185,7 +185,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
   
 ## <a name="examples"></a>예  
 
-### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>1. 1씩 datepart 증가  
+### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>1\. 1씩 datepart 증가  
 이러한 각 명령문은 *datepart*를 1씩 증가시킵니다.
   
 ```sql
@@ -235,7 +235,7 @@ microsecond  2007-01-01 13:10:10.1111121
 nanosecond   2007-01-01 13:10:10.1111111  
 ```  
   
-### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>2. 하나의 문에서 datepart를 두 수준 이상 증가  
+### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>2\. 하나의 문에서 datepart를 두 수준 이상 증가  
 이러한 각 명령문은 *date*에서 다음으로 높은 *datepart*를 추가적으로 증가시킬 수 있는 크기의 *number*만큼 *datepart*를 증가시킵니다.
   
 ```sql

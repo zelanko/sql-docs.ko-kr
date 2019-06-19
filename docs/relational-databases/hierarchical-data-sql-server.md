@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706921"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
@@ -510,7 +510,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
- 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **@oldMgr**포함)를 **@newMgr**를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
+ 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **@oldMgr** 포함)를 **@newMgr** 를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

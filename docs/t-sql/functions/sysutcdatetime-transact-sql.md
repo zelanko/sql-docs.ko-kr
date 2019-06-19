@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2cdac555a12724f8ef1574b369324a5f0a16bcc3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948580"
 ---
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME(Transact-SQL)
@@ -64,7 +64,7 @@ SYSUTCDATETIME ( )
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
   
-### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>1. 날짜 및 시간 함수가 반환하는 형식 표시  
+### <a name="a-showing-the-formats-that-are-returned-by-the-date-and-time-functions"></a>1\. 날짜 및 시간 함수가 반환하는 형식 표시  
  다음 예에서는 날짜 및 시간 함수가 반환하는 다양한 형식을 보여 줍니다.  
   
 ```  
@@ -87,7 +87,7 @@ GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
 ```  
   
-### <a name="b-converting-date-and-time-to-date"></a>2. 날짜 및 시간을 날짜로 변환  
+### <a name="b-converting-date-and-time-to-date"></a>2\. 날짜 및 시간을 날짜로 변환  
  다음 예에서는 날짜 및 시간 값을 `date`으로 변환하는 방법을 보여 줍니다.  
   
 ```  

@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 871d79c805451e1710dbc400914d2dace01c7eea
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737079"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ SET ANSI_DEFAULTS가 실행되면 QUOTED_IDENTIFIER 옵션은 구문 분석 시 
 |SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
 |SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

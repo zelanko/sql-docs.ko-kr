@@ -41,11 +41,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62708174"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -212,7 +212,7 @@ ORDER BY SchemaName + ''; -- wrong
 ###  <a name="BasicSyntax"></a>기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 ORDER BY 절의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>1. SELECT 목록에 정의된 단일 열 지정  
+#### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>1\. SELECT 목록에 정의된 단일 열 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 결과 집합을 정렬합니다. 특정 정렬 순서를 지정하지 않으므로 기본값(오름차순)이 사용됩니다.  
   
 ```sql
@@ -223,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>2. SELECT 목록에 정의되지 않은 열 지정  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>2\. SELECT 목록에 정의되지 않은 열 지정  
  다음 예에서는 SELECT 목록에 없지만 FROM 절에 지정된 테이블에 정의되어 있는 열을 기준으로 결과 집합을 정렬합니다.  
   
 ```sql
@@ -262,7 +262,7 @@ ORDER BY DATEPART(year, HireDate);
   
 ###  <a name="SortOrder"></a> 오름차순 또는 내림차순 정렬 지정  
   
-#### <a name="a-specifying-a-descending-order"></a>1. 내림차순 지정  
+#### <a name="a-specifying-a-descending-order"></a>1\. 내림차순 지정  
  다음 예에서는 숫자 열 `ProductID`를 기준으로 내림차순으로 결과 집합을 정렬합니다.  
   
 ```sql
@@ -274,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>2. 오름차순 지정  
+#### <a name="b-specifying-an-ascending-order"></a>2\. 오름차순 지정  
  다음 예에서는 `Name` 열을 기준으로 오름차순으로 결과 집합을 정렬합니다. 문자가 숫자순이 아니라 사전순으로 정렬됩니다. 즉, 10이 2보다 먼저 옵니다.  
   
 ```sql
@@ -366,7 +366,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지  
   
-#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>1\. 정수 상수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 정수 상수를 OFFSET 및 FETCH 절의 값으로 지정합니다. 첫 번째 쿼리는 `DepartmentID` 열을 기준으로 정렬된 모든 행을 반환합니다. 이 쿼리에서 반환된 결과를 다음에 나오는 두 쿼리의 결과와 비교해 보세요. 다음 쿼리에서는 `OFFSET 5 ROWS` 절을 사용하여 처음 5개 행을 건너뛰고 나머지 행을 모두 반환합니다. 마지막 쿼리에서는 `OFFSET 0 ROWS` 절을 사용하여 첫 번째 행에서 시작한 다음 `FETCH NEXT 10 ROWS ONLY`를 사용하여 반환되는 행을 정렬된 결과 집합의 10개 행으로 제한합니다.  
   
 ```sql
@@ -391,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>2. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>2\. 변수를 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 변수 `@StartingRowNumber` 및 `@FetchRows`를 선언하고 이러한 변수를 OFFSET 및 FETCH 절에 지정합니다.  
   
 ```sql

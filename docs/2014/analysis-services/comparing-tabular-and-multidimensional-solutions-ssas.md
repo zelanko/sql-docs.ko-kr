@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087767"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>테이블 형식 및 다차원 솔루션(SSAS) 비교
@@ -116,7 +116,7 @@ ms.locfileid: "66087767"
 |사용자 정의 계층|[예](multidimensional-models/user-defined-hierarchies-create.md)|사용자 계정 컨트롤|  
 |쓰기 저장(writeback)|[예](multidimensional-models/set-partition-writeback.md)|아니요|  
   
- * 솔루션을 많은 수의 고유 카운트 (예: 수백만 개의 고객 Id)를 지원 해야 하는 경우 테이블 형식을 먼저 고려 합니다. 이 시나리오에서는 이 형식의 성능이 더 우수합니다. 백서, 고유 카운트에 대 한 섹션을 참조 [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델을 사용 하 여](https://msdn.microsoft.com/library/dn751533.aspx)입니다.  
+ \* 솔루션을 많은 수의 고유 카운트 (예: 수백만 개의 고객 Id)를 지원 해야 하는 경우 테이블 형식을 먼저 고려 합니다. 이 시나리오에서는 이 형식의 성능이 더 우수합니다. 백서, 고유 카운트에 대 한 섹션을 참조 [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델을 사용 하 여](https://msdn.microsoft.com/library/dn751533.aspx)입니다.  
   
 ##  <a name="bkmk_modelsize"></a> 모델 크기  
  총 개체 수 측면에서 모델 크기는 솔루션 유형에 따라 달라지지 않습니다. 하지만 각 솔루션을 구축하는 데 사용된 각 설계 도구에 따라 대량의 개체를 얼마나 잘 지원하는 지가 결정됩니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서는 모델이 클수록 구축하기가 더 편합니다.  이유는 개체 탐색기 및 솔루션 탐색기에서 개체 다이어그램 설정 및 나열을 위한 더 많은 기능을 제공하기 때문입니다.  

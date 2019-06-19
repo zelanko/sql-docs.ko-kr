@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 52f8a04ec251283655ef8d50037b2be8e09bb2c7
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937349"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo(geometry 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "65937349"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>1. 교차하지 않는 인스턴스에서 ShortestLineTo() 호출  
+### <a name="a-calling-shortestlineto-on-non-intersecting-instances"></a>1\. 교차하지 않는 인스턴스에서 ShortestLineTo() 호출  
  다음 예에서는 `CircularString` 인스턴스와 `LineString` 인스턴스 사이의 최단 거리를 찾고 두 점을 연결하는 `LineString` 인스턴스를 반환합니다.  
   
 ```
@@ -57,7 +57,7 @@ ms.locfileid: "65937349"
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>2. 교차하는 인스턴스에서 ShortestLineTo() 호출  
+### <a name="b-calling-shortestlineto-on-intersecting-instances"></a>2\. 교차하는 인스턴스에서 ShortestLineTo() 호출  
  다음 예에서는 `LineString` 인스턴스가 `LineString` 인스턴스와 교차하기 때문에 빈 `CircularString` 인스턴스를 반환합니다.  
   
 ```

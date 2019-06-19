@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
-ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66221170"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자

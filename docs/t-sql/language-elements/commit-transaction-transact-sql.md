@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 392f5138e580f35f030ce51ce5eed1150f7d0be7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982755"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
@@ -95,7 +95,7 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-committing-a-transaction"></a>1. 트랜잭션 커밋  
+### <a name="a-committing-a-transaction"></a>1\. 트랜잭션 커밋  
 **적용 대상:** SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스   
 
 다음 예에서는 작업 후보를 삭제합니다. AdventureWorks를 사용합니다. 
@@ -107,7 +107,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>2. 중첩된 트랜잭션 커밋  
+### <a name="b-committing-a-nested-transaction"></a>2\. 중첩된 트랜잭션 커밋  
 **적용 대상:** SQL Server 및 Azure SQL Database    
 
 다음 예에서는 테이블을 만들고 3단계로 중첩된 트랜잭션을 생성한 다음 중첩된 트랜잭션을 커밋합니다. 각 `COMMIT TRANSACTION` 문에는 *transaction_name* 매개 변수가 있지만, `COMMIT TRANSACTION` 및 `BEGIN TRANSACTION` 문 사이에는 아무 관계가 없습니다. *transaction_name* 매개 변수는 프로그래머가 올바른 수의 커밋이 `@@TRANCOUNT`에서 0까지 감소하여 외부 트랜잭션을 커밋하도록 코딩되었는지 확인하는 데 도움이 됩니다. 

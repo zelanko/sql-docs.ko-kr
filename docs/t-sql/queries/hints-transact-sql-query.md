@@ -57,10 +57,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f5e268e821713e52a48b31bf7afa9553e2dc9712
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66429015"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
@@ -373,7 +373,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-merge-join"></a>1. MERGE JOIN 사용  
+### <a name="a-using-merge-join"></a>1\. MERGE JOIN 사용  
  다음 예에서는 MERGE JOIN이 쿼리에서 조인 작업을 실행하도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -385,7 +385,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>2. OPTIMIZE FOR 사용  
+### <a name="b-using-optimize-for"></a>2\. OPTIMIZE FOR 사용  
  다음 예에서는 쿼리를 최적화할 때 쿼리 최적화 프로그램이 지역 변수 `'Seattle'`에 `@city_name` 값을 사용하고 통계 데이터를 사용하여 지역 변수 `@postal_code`의 값을 결정하도록 지시합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -511,7 +511,7 @@ EXEC sp_create_plan_guide
 GO    
 ```  
   
-### <a name="i-using-multiple-table-hints"></a>9. 여러 테이블 힌트 사용  
+### <a name="i-using-multiple-table-hints"></a>9\. 여러 테이블 힌트 사용  
  다음 예에서는 한 테이블에 INDEX 힌트를 적용하고 다른 테이블에 FORCESEEK 힌트를 적용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -546,7 +546,7 @@ EXEC sp_create_plan_guide
 GO    
 ```  
   
-### <a name="k-specifying-semantics-affecting-table-hints"></a>11. 의미 체계에 영향을 주는 테이블 힌트 지정  
+### <a name="k-specifying-semantics-affecting-table-hints"></a>11\. 의미 체계에 영향을 주는 테이블 힌트 지정  
 다음 예의 쿼리에는 두 가지 테이블 힌트가 포함되어 있습니다. 하나는 의미 체계에 영향을 주는 NOLOCK이고 다른 하나는 의미 체계에 영향을 주지 않는 INDEX입니다. 쿼리의 의미 체계를 유지하기 위해 계획 지침의 OPTIONS 절에 NOLOCK 힌트가 지정됩니다. NOLOCK 힌트와 함께 INDEX 및 FORCESEEK 힌트를 지정하고 문을 컴파일 및 최적화하는 동안 쿼리에서 의미 체계에 영향을 주지 않는 INDEX 힌트를 대체합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -580,7 +580,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (TABLE HINT (e, NOLOCK))';  
 GO  
 ```  
-### <a name="l-using-use-hint"></a>12. USE HINT 사용  
+### <a name="l-using-use-hint"></a>12\. USE HINT 사용  
  다음 예에서는 RECOMPILE 및 USE HINT 쿼리 힌트를 사용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

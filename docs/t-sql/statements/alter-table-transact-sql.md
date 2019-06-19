@@ -61,10 +61,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f6c3888a97c1a4db107009fdd71e878c3e2b6f2
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499531"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE(Transact-SQL)
@@ -454,8 +454,8 @@ ALTER COLUMN
 
 **text**, **ntextntext** 및 **image** 열의 데이터 형식은 다음과 같은 방식으로만 변경할 수 있습니다.
 
-- **text**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로
-- **ntext**에서 **varchar(max)**, **nvarchar(max)** 또는 **xml**로
+- **text**에서 **varchar(max)** , **nvarchar(max)** 또는 **xml**로
+- **ntext**에서 **varchar(max)** , **nvarchar(max)** 또는 **xml**로
 - **image**에서 **varbinary(max)** 로
 
 데이터 형식을 변경하면 데이터 자체가 변경되는 경우도 있습니다. 예를 들어 **nchar** 또는 **nvarchar** 열을 **char** 또는 **varchar**로 변경하면 확장 문자가 변환될 수 있습니다. 자세한 내용은 [CAST 및 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요. 열의 전체 자릿수 또는 소수 자릿수를 줄이면 데이터가 잘릴 수 있습니다.
@@ -474,7 +474,7 @@ Always Encrypted를 보안 Enclave와 함께 사용하는 경우 열을 보호�
 *column_name*  
 변경, 추가 또는 삭제할 열의 이름입니다. *column_name* 최댓값은 128자입니다. 새 열의 경우 **timestamp** 데이터 형식으로 만들어진 열에 대해 *column_name*을 생략할 수 있습니다. **timestamp** 데이터 형식 열에 대해 *column_name*을 지정하지 않으면 **timestamp**가 이름으로 사용됩니다.
 
-[ _type\_schema\_name_**.** ] _type\_name_  
+[ _type\_schema\_name_ **.** ] _type\_name_  
 변경된 열의 새 데이터 형식 또는 추가된 열의 데이터 형식입니다. 분할된 테이블의 기존 열에 *type_name*을 지정할 수 없습니다. *type_name*은 다음 형식 중 하나일 수 있습니다.
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식
@@ -706,7 +706,7 @@ OFF
 > [!NOTE]
 > 온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 및 [SQL Server 2017의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.
 
-MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **“** default **”** }  
+MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ [ 1 **,** ... *n*] **)**  | *filegroup* |  **“** default **”** }  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 이동할 위치를 지정합니다. 테이블이 새 위치로 이동됩니다. 이 옵션은 클러스터형 인덱스를 만드는 제약 조건에만 적용됩니다.
@@ -743,7 +743,7 @@ WITH **(** TRACK_COLUMNS_UPDATED **=** { ON | **OFF** } **)**
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 업데이트된 변경 내용 추적 열을 추적하는지 여부를 지정합니다. 기본값은 OFF입니다.
 
-SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
+SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_ **.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 다음 방법 중 하나를 사용하여 데이터 블록을 전환합니다.
@@ -768,7 +768,7 @@ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 및 버전 V12 이전의 SQL Database용으로 빌드된 비클러스터형 columnstore 인덱스는 읽기 전용 형식입니다. 비클러스터형 columnstore 인덱스는 PARTITION 작업을 실행하기 전 최신 형식(업데이트 가능)으로 다시 빌드해야 합니다.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** | **"** NULL **"** }**)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"**  |  **"** NULL **"** } **)**  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 `FILESTREAM`을 지원하지 않습니다.
 
 FILESTREAM 데이터가 저장되는 위치를 지정합니다.
@@ -996,7 +996,7 @@ ALTER TABLE에 지정하는 변경 내용은 즉시 구현됩니다. 변경할 �
 
 기존 행은 메타데이터에 저장된 값을 참조하는 반면, 기본값은 새로 삽입되는 행에 대한 새 행에 저장되고 열에 대한 다른 값을 지정하지 않습니다. 메타데이터에 저장된 기본값은 행이 업데이트될 때(UPDATE 문에 실제 행이 지정되어 있지 않는 경우에도 동일) 또는 테이블이나 클러스터형 인덱스를 다시 작성하는 경우 기존 행으로 이동됩니다.
 
-**varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** 형식 또는 CLR UDTS의 열은 온라인 작업에 추가할 수 없습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.
+**varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **text**, **ntext**, **image**, **hierarchyid**, **geometry**, **geography** 형식 또는 CLR UDTS의 열은 온라인 작업에 추가할 수 없습니다. 열을 온라인으로 추가할 수 없으며, 온라인으로 추가하면 최대로 가능한 행 크기가 8,060바이트 제한을 초과합니다. 이러한 경우 열은 오프라인 작업으로 추가됩니다.
 
 ## <a name="parallel-plan-execution"></a>병렬 계획 실행
 
@@ -1099,7 +1099,7 @@ ALTER TABLE 문의 열을 CLR(공용 언어 런타임) 사용자 정의 형식 �
 
 이 섹션의 예에서는 테이블에 열 및 제약 조건을 추가하는 방법을 보여 줍니다.
 
-#### <a name="a-adding-a-new-column"></a>1. 새 열 추가
+#### <a name="a-adding-a-new-column"></a>1\. 새 열 추가
 
 다음 예에서는 Null 값을 허용하고 DEFAULT 정의를 통해 제공된 값이 없는 열을 추가합니다. 새 열의 각 행 값은 `NULL`입니다.
 
@@ -1110,7 +1110,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>2. 제약 조건이 있는 열 추가
+#### <a name="b-adding-a-column-with-a-constraint"></a>2\. 제약 조건이 있는 열 추가
 
 다음 예에서는 `UNIQUE` 제약 조건이 있는 새 열을 추가합니다.
 
@@ -1284,7 +1284,7 @@ ALTER COLUMN C4 DROP SPARSE;
 GO
 ```
 
-#### <a name="i-adding-a-column-set"></a>9. 열 집합 추가
+#### <a name="i-adding-a-column-set"></a>9\. 열 집합 추가
 
 다음 예에서는 `T2` 테이블에 열을 추가하는 방법을 보여 줍니다. 스파스 열이 이미 포함되어 있는 테이블에는 열 집합을 추가할 수 없습니다. `T2` 테이블을 만들기 위한 코드는 다음과 같습니다.
 
@@ -1329,7 +1329,7 @@ ALTER TABLE Customers ADD
 
 이 섹션의 예에서는 열 및 제약 조건을 삭제하는 방법을 보여 줍니다.
 
-#### <a name="a-dropping-a-column-or-columns"></a>1. 열 삭제
+#### <a name="a-dropping-a-column-or-columns"></a>1\. 열 삭제
 
 첫 번째 예에서는 테이블을 수정하여 열을 제거합니다. 두 번째 예에서는 여러 열을 제거합니다.
 
@@ -1347,7 +1347,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>2. 제약 조건 및 열 삭제
+#### <a name="b-dropping-constraints-and-columns"></a>2\. 제약 조건 및 열 삭제
 
 첫 번째 예에서는 테이블에서 `UNIQUE` 제약 조건을 제거합니다. 두 번째 예에서는 제약 조건 두 개와 열 하나를 제거합니다.
 
@@ -1412,7 +1412,7 @@ DROP TABLE Person.ContactBackup ;
 
 ### <a name="alter_column"></a> 열 정의 변경
 
-#### <a name="a-changing-the-data-type-of-a-column"></a>1. 열의 데이터 형식 변경
+#### <a name="a-changing-the-data-type-of-a-column"></a>1\. 열의 데이터 형식 변경
 
 다음 예에서는 테이블의 열을 `INT`에서 `DECIMAL`로 변경합니다.
 
@@ -1427,7 +1427,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>2. 열 크기 변경
+#### <a name="b-changing-the-size-of-a-column"></a>2\. 열 크기 변경
 
 다음 예에서는 **varchar** 열의 크기와 **decimal** 열의 전체 자릿수 및 소수 자릿수를 늘립니다. 열에 데이터가 포함되어 있으므로 열 크기는 늘리기만 가능합니다. 또한 `col_a`는 고유 인덱스에 정의됩니다. 데이터 형식이 **varchar**이고 인덱스가 PRIMARY KEY 제약 조건의 결과가 아니므로 `col_a`의 크기를 늘릴 수 있습니다.
 
@@ -1508,7 +1508,7 @@ GO
 
 이 섹션의 예에서는 테이블 정의를 변경하는 방법을 보여 줍니다.
 
-#### <a name="a-modifying-a-table-to-change-the-compression"></a>1. 테이블을 수정하여 압축 변경
+#### <a name="a-modifying-a-table-to-change-the-compression"></a>1\. 테이블을 수정하여 압축 변경
 
 다음 예에서는 분할되지 않은 테이블의 압축을 변경합니다. 힙 또는 클러스터형 인덱스는 다시 작성됩니다. 테이블이 힙인 경우에는 모든 비클러스터형 인덱스가 다시 작성됩니다.
 
@@ -1539,7 +1539,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 데이터 압축 예제를 더 보려면 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>2. columnstore 테이블을 수정하여 보관 압축 변경
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>2\. columnstore 테이블을 수정하여 보관 압축 변경
 
 다음 예에서는 추가 압축 알고리즘을 적용하여 columnstore 테이블 파티션을 보다 더 압축합니다. 이 압축으로 테이블 크기는 보다 작아지지만 저장 및 검색에 필요한 시간은 증가합니다. 보관하거나 보다 적은 저장소가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
 
@@ -1624,7 +1624,7 @@ DISABLE CHANGE_TRACKING;
 
 ### <a name="disable_enable"></a>제약 조건 및 트리거 해제/설정
 
-#### <a name="a-disabling-and-re-enabling-a-constraint"></a>1. 제약 조건 해제 및 다시 설정
+#### <a name="a-disabling-and-re-enabling-a-constraint"></a>1\. 제약 조건 해제 및 다시 설정
 
 다음 예에서는 데이터에 허용되는 급여를 제한하는 제약 조건을 비활성화합니다. `NOCHECK CONSTRAINT`에 `ALTER TABLE`를 사용하면 제약 조건이 비활성화되어 일반적으로 해당 제약 조건을 위반하는 삽입을 허용합니다. `CHECK CONSTRAINT`는 제약 조건을 재설정합니다.
 
@@ -1652,7 +1652,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>2. 트리거 해제 및 다시 설정
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>2\. 트리거 해제 및 다시 설정
 
 다음 예에서는 `DISABLE TRIGGER`의 `ALTER TABLE` 옵션을 사용하여 트리거를 해제하고 일반적으로 트리거를 위반하는 삽입을 허용합니다. 그런 다음 `ENABLE TRIGGER`를 사용하여 트리거를 재설정합니다.
 
@@ -1691,7 +1691,7 @@ GO
 
 ### <a name="online"></a>온라인 작업
 
-#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>1. 낮은 우선 순위 대기 옵션을 사용한 온라인 인덱스 다시 작성
+#### <a name="a-online-index-rebuild-using-low-priority-wait-options"></a>1\. 낮은 우선 순위 대기 옵션을 사용한 온라인 인덱스 다시 작성
 
 다음 예에서는 낮은 우선 순위 대기 옵션을 지정하여 온라인 인덱스 다시 작성을 수행하는 방법을 보여 줍니다.
 
@@ -1708,7 +1708,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>2. 온라인 열 변경
+#### <a name="b-online-alter-column"></a>2\. 온라인 열 변경
 
 다음 예에서는 ONLINE 옵션을 사용하여 열 변경 작업을 실행하는 방법을 보여 줍니다.
 
@@ -1733,7 +1733,7 @@ GO
 
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
 
-#### <a name="a-add-system-versioning-to-existing-tables"></a>1. 기존 테이블에 시스템 버전 관리 추가
+#### <a name="a-add-system-versioning-to-existing-tables"></a>1\. 기존 테이블에 시스템 버전 관리 추가
 
 다음 예는 기존 테이블에 시스템 버전 관리를 추가하고 나중에 기록 테이블을 만드는 방법을 보여줍니다. 이 예에서는 `InsurancePolicy`라는 기본 키가 정의된 기존 테이블이 있는 경우를 가정합니다. 시작 및 끝 시간 값은 null이 될 수 없으므로 이 예는 시작 및 끝 시간의 기본값을 사용하여 시스템 버전 관리에 대해 새로 생성된 기간 열을 채웁니다. 이 예는 현재 테이블과 상호 작용하는 기존 애플리케이션에 영향을 미치지 않도록 HIDDEN 절을 사용합니다. 또한 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서만 사용할 수 있는 HISTORY_RETENTION_PERIOD를 사용합니다.
 
@@ -1751,7 +1751,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>2. 시스템 버전 관리를 사용하기 위해 기존 솔루션 마이그레이션
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>2\. 시스템 버전 관리를 사용하기 위해 기존 솔루션 마이그레이션
 
 다음 예는 temporal 지원을 모방하기 위해 트리거를 사용하는 솔루션에서 시스템 버전 관리로 마이그레이션하는 방법을 보여줍니다. 예제에서는 기존 솔루션에 `ProjectTask` 테이블 및 `ProjectTaskHistory` 테이블을 사용하는 기존 솔루션이 있다고 가정합니다. 즉 해당 기간 동안 `Changed Date` 및 `Revised Date` 열을 사용하고, 이러한 기간 열에서 `datetime2` 데이터 형식을 사용하지 않으며, `ProjectTask` 테이블에 기본 키가 정의되어 있다고 가정합니다.
 
@@ -1813,7 +1813,7 @@ DROP TABLE DepartmentHistory;
 
 다음의 예 A ~ C는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 `FactResellerSales` 테이블을 사용합니다.
 
-### <a name="a-determining-if-a-table-is-partitioned"></a>1. 테이블이 분할되었는지 여부 확인
+### <a name="a-determining-if-a-table-is-partitioned"></a>1\. 테이블이 분할되었는지 여부 확인
 
 다음 쿼리는 `FactResellerSales` 테이블이 분할된 경우 하나 이상의 행을 반환합니다. 테이블이 분할되지 않은 경우 행이 반환되지 않습니다.
 
@@ -1825,7 +1825,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>2. 분할된 테이블에 대한 경계 값 확인
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>2\. 분할된 테이블에 대한 경계 값 확인
 
 다음 쿼리는 `FactResellerSales` 테이블의 각 파티션에 대해 경계 값을 반환합니다.
 

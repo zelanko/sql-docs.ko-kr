@@ -17,10 +17,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936164"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves(geometry 데이터 형식)
@@ -76,7 +76,7 @@ SQL Server 반환 형식: **geometry**
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>1. 1차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geometry-instance"></a>1\. 1차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
 ```
@@ -84,7 +84,7 @@ SQL Server 반환 형식: **geometry**
  SELECT @g.BufferWithCurves(-1).ToString(); 
  ```
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>2. 2차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geometry-instance"></a>2\. 2차원 geometry 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 버퍼가 음수인 `CurvePolygon` 인스턴스를 반환합니다.  
   
 ```
@@ -145,7 +145,7 @@ SQL Server 반환 형식: **geometry**
   
  위의 두 예에서는 문자열 리터럴이 `BufferWithCurves()` 메서드에 전달됩니다. 첫 번째 예는 문자열 리터럴을 숫자 값으로 변환할 수 있으므로 정상적으로 작동하지만, 두 번째 예에서는 `ArgumentException`이 발생합니다.  
   
-### <a name="i-calling-bufferwithcurves-on-multipoint-instance"></a>9. MultiPoint 인스턴스에서 BufferWithCurves() 호출  
+### <a name="i-calling-bufferwithcurves-on-multipoint-instance"></a>9\. MultiPoint 인스턴스에서 BufferWithCurves() 호출  
  다음 예에서는 `GeometryCollection` 인스턴스 2개와 `CurvePolygon` 인스턴스 1개를 반환합니다.  
   
 ```

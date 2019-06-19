@@ -23,16 +23,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a16bc57713ef1a9acda4b83f5a80b85818ceb325
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981920"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (보다 크지 않음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  두 식을 비교합니다(비교 연산자).   Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크지 않으면 결과는 TRUE입니다. 그렇지 않으면 결과는 FALSE입니다. =(등가) 비교 연산자와 달리 두 NULL 값에 대한 !> 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
+  두 식을 비교합니다(비교 연산자). Null이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 크지 않으면 결과는 TRUE입니다. 그렇지 않으면 결과는 FALSE입니다. =(등가) 비교 연산자와 달리 두 NULL 값에 대한 !> 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
  ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

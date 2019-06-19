@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 630df054d6025d70e2dcc2b90d339d1499dbc237
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795176"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
@@ -74,14 +74,14 @@ ms.locfileid: "66795176"
   
 ### <a name="examples"></a>예  
   
-#### <a name="a-using-a-system-name"></a>1. 시스템 이름 사용  
+#### <a name="a-using-a-system-name"></a>1\. 시스템 이름 사용  
  다음 서버 네트워크 주소는 시스템 이름 `SYSTEM46`및 포트 `7022`를 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>2. 정규화된 도메인 이름 사용  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>2\. 정규화된 도메인 이름 사용  
  다음 서버 네트워크 주소는 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com`및 포트 `7024`를 지정합니다.  
   
 ```  

@@ -10,13 +10,13 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 6cca82f3b87fe8d76a5075f2530fe3d9cec1b253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e59ff1270a08e32ea4d9a61cb8f69a89d49e19fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66794831"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>데이터베이스 엔진 업그레이드 계획 및 테스트
 
@@ -32,11 +32,11 @@ ms.locfileid: "47748633"
 - [SQL Server 데이터베이스 엔진 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md) 문서.  
   
 ## <a name="pre-upgrade-planning-checklist"></a>사전 업그레이드 계획 검사 목록  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 검사 목록 및 연결된 문서를 검토하세요. 이러한 아티클은 업그레이드 방법과 상관없이 모든 업그레이드에 적용되며 가장 적절한 업그레이드 방법(즉, 롤링 업그레이드, 새 설치 업그레이드 또는 내부 업그레이드)을 결정하는 데 도움이 됩니다. 예를 들어 운영 체제를 업그레이드하거나 SQL Server 2005에서 업그레이드하거나 SQL Server의 32비트 버전에서 업그레이드하는 경우 내부 또는 롤링 업그레이드를 수행하지 못할 수 있습니다. 의사 결정 트리에 대해서는 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하기 전에 다음 검사 목록 및 연결된 문서를 검토하세요. 이러한 문서는 업그레이드 방법과 상관없이 모든 업그레이드에 적용되며 가장 적절한 업그레이드 방법을 결정하는 데 도움이 됩니다. 즉 롤링 업그레이드, 새 설치 업그레이드 또는 내부 업그레이드가 있습니다. 예를 들어 운영 체제를 업그레이드하거나 SQL Server 2005에서 업그레이드하거나 SQL Server의 32비트 버전에서 업그레이드하는 경우 내부 또는 롤링 업그레이드를 수행하지 못할 수 있습니다. 의사 결정 트리에 대해서는 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
   
--   **하드웨어 및 소프트웨어 요구 사항:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 설치하기 위한 하드웨어 및 소프트웨어 요구 사항을 검토하세요. 이러한 요구 사항은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)에서 확인할 수 있습니다. 업그레이드 계획 주기의 한 부분은 하드웨어 업그레이드(최신 하드웨어는 더 빠르며 프로세서 수가 적거나 데이터베이스와 서버의 통합으로 라이선스가 감소할 수 있음) 및 운영 체제 업그레이드를 고려하는 것입니다. 이러한 유형의 하드웨어 및 소프트웨어 변경은 선택하는 업그레이드 방법의 유형에 영향을 미칩니다.  
+-   **하드웨어 및 소프트웨어 요구 사항:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 위한 하드웨어 및 소프트웨어 요구 사항을 검토합니다. 이러한 요구 사항은 다음에서 확인할 수 있습니다. [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 업그레이드 계획 주기의 한 부분은 하드웨어 업그레이드(최신 하드웨어는 더 빠르며 프로세서 수가 적거나 데이터베이스와 서버의 통합으로 라이선스가 감소할 수 있음) 및 운영 체제 업그레이드를 고려하는 것입니다. 이러한 유형의 하드웨어 및 소프트웨어 변경은 선택하는 업그레이드 방법의 유형에 영향을 미칩니다.  
   
--   **현재 환경:** 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 사용자의 환경에 연결하는 클라이언트를 조사합니다.  
+-   **현재 환경:** 현재 환경에서 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 사용자의 환경에 연결하는 클라이언트를 조사합니다.  
   
     -   **클라이언트 공급자:** 업그레이드가 필요하지 않지만 각 클라이언트에 대한 공급자를 업데이트해야 하는 경우 그렇게 하도록 선택할 수 있습니다. [!INCLUDE[sql14](../../includes/sssql14-md.md)] 이전 버전에서 업그레이드하는 경우 다음 [!INCLUDE[sql15](../../includes/sssql15-md.md)] 기능에서는 각 클라이언트의 업데이트된 공급자 또는 업데이트된 공급자가 추가 기능을 제공해야 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47748633"
   
        -   [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md)  
   
-       -   [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
+       -   [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
        -   SSL 보안 업데이트  
 
@@ -53,16 +53,16 @@ ms.locfileid: "47748633"
   
 -   **타사 구성 요소:** 통합된 백업 등과 같은 타사 구성 요소의 호환성을 확인합니다.  
   
--   **대상 환경:** 대상 환경이 하드웨어 및 소프트웨어 요구 사항을 충족하는지, 그리고 원래 시스템의 요구 사항을 지원할 수 있는지 확인합니다. 예를 들어 업그레이드 과정에서 여러 SQL Server 인스턴스를 새 단일 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 인스턴스로 통합하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경의 가상화를 개인 또는 공용 클라우드에 통합해야 할 수 있습니다.  
+-   **대상 환경:** 대상 환경이 하드웨어 및 소프트웨어 요구 사항을 충족하는지, 그리고 원래 시스템의 요구 사항을 지원할 수 있는지 확인합니다. 예를 들어 업그레이드 과정에서 여러 SQL Server 인스턴스를 새 단일 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 인스턴스로 통합하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경의 가상화를 프라이빗 또는 퍼블릭 클라우드에 통합해야 할 수 있습니다.  
   
--   **버전:** 업그레이드에 적절한 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 의 버전을 결정하고 업그레이드에 유효한 업그레이드 경로를 결정합니다. 자세한 내용은 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)을 참조하십시오. 한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 버전으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 버전에서 지원되는지 확인하세요.  
+-   **버전:** 업그레이드에 적절한 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]의 버전을 결정하고 업그레이드에 유효한 업그레이드 경로를 결정합니다. 자세한 내용은 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)을 참조하십시오. 한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 버전으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 버전에서 지원되는지 확인하세요.  
   
     > [!NOTE]  
-    >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 Enterprise Edition: Core 기반 라이선스와 Enterprise Edition 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
+    >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
 -   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 문서를 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)을 참조하세요.  
   
--   **Data Migration Assistant:** Data Migration Assistant를 실행하여 업그레이드 프로세스를 방해하거나 주요 변경 내용으로 인해 기존 스크립트 또는 응용 프로그램의 수정이 필요할 수 있는 문제를 진단하는 데 도움을 줍니다.
+-   **Data Migration Assistant:** Data Migration Assistant를 실행하여 업그레이드 프로세스를 방해하거나 주요 변경 내용으로 인해 기존 스크립트 또는 애플리케이션의 수정이 필요할 수 있는 문제를 진단하는 데 도움을 줍니다.
     [여기](https://aka.ms/get-dma)에서 Data Migration Assistant를 다운로드할 수 있습니다.  
   
 -   **시스템 구성 검사기:** 업그레이드를 실제로 예약하기 전에 SQL Server 설치 프로그램이 차단 문제를 검색하는지 여부를 결정하려면 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] SCC(시스템 구성 검사기)를 실행합니다. 자세한 내용은 [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)을 참조하세요.  
@@ -88,7 +88,7 @@ ms.locfileid: "47748633"
   
 -   **업그레이드 방법 선택:** [데이터베이스 엔진 업그레이드 방법 선택](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)을 참조하세요.  
   
--   **롤백 계획 개발:** 이 계획을 실행하면 롤백이 필요한 경우 원래 환경을 복원할 수 있습니다.  
+-   **롤백 계획 수립:** 이 계획을 실행하면 롤백이 필요한 경우 원래 환경을 복원할 수 있습니다.  
   
 -   **승인 기준 결정:** 사용자를 업그레이드된 환경으로 전환하기 전에 업그레이드가 성공했는지를 확인합니다.  
   

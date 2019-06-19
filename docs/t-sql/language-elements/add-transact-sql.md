@@ -26,10 +26,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eaa8a0a03137600379e24bd93f7017f896bb0048
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980620"
 ---
 # <a name="-addition-transact-sql"></a>+(더하기)(Transact-SQL)
@@ -54,7 +54,7 @@ expression + expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>1. 더하기 연산자를 사용하여 직원별 전체 휴무 시간 계산  
+### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>1\. 더하기 연산자를 사용하여 직원별 전체 휴무 시간 계산  
  이 예에서는 휴가 및 병가 시간을 더해 직원별 전체 휴무 시간을 계산합니다.  
   
 ```  
@@ -68,7 +68,7 @@ ORDER BY 'Total Hours Away' ASC;
 GO  
 ```  
   
-### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>2. 더하기 연산자를 사용하여 일 수를 날짜 및 시간 값에 더하기  
+### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>2\. 더하기 연산자를 사용하여 일 수를 날짜 및 시간 값에 더하기  
  이 예에서는 일 수를 `datetime` 날짜에 더합니다.  
   
 ```  

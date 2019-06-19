@@ -24,10 +24,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981562"
 ---
 # <a name="--subtraction-transact-sql"></a>-(빼기)(Transact-SQL)
@@ -52,7 +52,7 @@ expression - expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-subtraction-in-a-select-statement"></a>1. SELECT 문에서 빼기 사용  
+### <a name="a-using-subtraction-in-a-select-statement"></a>1\. SELECT 문에서 빼기 사용  
  다음 예에서는 세율이 가장 높은 시/도와 세율이 가장 낮은 시/도 간의 세율 차를 계산합니다.  
   
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -68,7 +68,7 @@ GO
   
  계산 순서를 변경하려면 괄호를 사용합니다. 괄호 안의 계산부터 먼저 수행됩니다. 괄호가 중첩되면 가장 안쪽에 있는 계산이 우선적으로 처리됩니다.  
   
-### <a name="b-using-date-subtraction"></a>2. 날짜 빼기 사용  
+### <a name="b-using-date-subtraction"></a>2\. 날짜 빼기 사용  
  다음 예에서는 `datetime` 날짜에서 일 수를 뺍니다.  
   
  적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462622"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
@@ -125,7 +125,7 @@ ms.locfileid: "66462622"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-users-that-are-connected-to-the-server"></a>1. 서버에 연결된 사용자 찾기  
+### <a name="a-finding-users-that-are-connected-to-the-server"></a>1\. 서버에 연결된 사용자 찾기  
  다음 예에서는 서버에 연결되는 사용자를 찾고 각 사용자에 대한 세션 수를 반환합니다.  
   
 ```sql  
@@ -134,7 +134,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>2. 장기 실행 커서 찾기  
+### <a name="b-finding-long-running-cursors"></a>2\. 장기 실행 커서 찾기  
  다음 예에서는 지정한 시간을 초과하여 열려 있는 커서, 해당 커서를 만든 사람 및 해당 커서가 있는 세션을 찾습니다.  
   
 ```sql  
@@ -148,7 +148,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;  
 ```  
   
-### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>3. 열려 있는 트랜잭션이 있는 유휴 세션 찾기  
+### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>3\. 열려 있는 트랜잭션이 있는 유휴 세션 찾기  
  다음 예에서는 열려 있는 트랜잭션이 있는 유휴 세션을 찾습니다. 유휴 세션은 현재 실행되고 있는 요청이 없는 세션입니다.  
   
 ```sql  
@@ -168,7 +168,7 @@ WHERE EXISTS
     );  
 ```  
   
-### <a name="d-finding-information-about-a-queries-own-connection"></a>4. 쿼리 자체 연결에 대한 정보 찾기  
+### <a name="d-finding-information-about-a-queries-own-connection"></a>4\. 쿼리 자체 연결에 대한 정보 찾기  
  쿼리 자체 연결에 대한 정보를 수집하는 일반 쿼리입니다.  
   
 ```sql  
