@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413424"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP(Transact-SQL)
@@ -481,7 +481,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>1. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
+### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>1\. 보조 복제본, 유연한 장애 조치(failover) 정책 및 연결 액세스에 대한 백업 구성  
  다음 예에서는 두 개의 사용자 데이터베이스 `MyAg` 및 `ThisDatabase`에 대해 `ThatDatabase`라는 가용성 그룹을 만듭니다. 다음 표에는 가용성 그룹 전체에 대해 설정되는 옵션에 지정되는 값이 요약되어 있습니다.  
   
 |그룹 옵션|설정|설명|  

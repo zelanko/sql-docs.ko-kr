@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982311"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
@@ -101,7 +101,7 @@ FETCH
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-fetch-in-a-simple-cursor"></a>1. 단순 커서에서 FETCH 사용  
+### <a name="a-using-fetch-in-a-simple-cursor"></a>1\. 단순 커서에서 FETCH 사용  
  다음 예에서는 `Person.Person` 테이블에 있는 행에 대해 성이 `B`로 시작하는 단순 커서를 선언하고 `FETCH NEXT`를 사용하여 한 행씩 진행하는 방법을 보여 줍니다. `FETCH` 문은 `DECLARE CURSOR`에 지정된 열에 대한 값을 단일 행 결과 집합으로 반환합니다.  
   
 ```sql  
@@ -129,7 +129,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-### <a name="b-using-fetch-to-store-values-in-variables"></a>2. FETCH를 사용하여 변수에 값 저장  
+### <a name="b-using-fetch-to-store-values-in-variables"></a>2\. FETCH를 사용하여 변수에 값 저장  
  다음 예는 `FETCH` 문의 출력이 클라이언트에게 직접 반환되지 않고 지역 변수에 저장된다는 점 외에는 예 1과 유사합니다. `PRINT` 문은 변수를 한 문자열로 결합하여 클라이언트에 반환합니다.  
   
 ```sql  

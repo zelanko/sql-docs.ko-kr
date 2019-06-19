@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034281"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -189,7 +189,7 @@ ROWS/RANGE를 지정되고 \<window frame extent>(짧은 구문)에 \<window fra
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>1. OVER 절에 ROW_NUMBER 함수 사용  
+### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>1\. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예에서는 OVER 절에 ROW_NUMBER 함수를 사용하여 파티션 내의 각 행에 대한 행 번호를 표시하는 방법을 보여 줍니다. OVER 절에 지정된 ORDER BY 절은 각 파티션의 행을 `SalesYTD` 열을 기준으로 정렬합니다. SELECT 문의 ORDER BY 절은 전체 쿼리 결과 집합이 반환되는 순서를 결정합니다.  
   
 ```sql  
@@ -229,7 +229,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>2. OVER 절에 집계 함수 사용  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>2\. OVER 절에 집계 함수 사용  
  다음 예에서는 쿼리에서 반환된 모든 행에 대해 `OVER` 절에 집계 함수를 사용합니다. 이 예에서는 하위 쿼리를 사용하는 것보다 `OVER` 절을 사용하는 것이 집계 값을 파생시키는 데 더 효율적입니다.  
   
 ```sql  
@@ -454,7 +454,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. OVER 절에 ROW_NUMBER 함수 사용  
  다음 예는 담당자의 판매 할당량을 기반으로 영업 담당자의 ROW_NUMBER를 반환합니다.  

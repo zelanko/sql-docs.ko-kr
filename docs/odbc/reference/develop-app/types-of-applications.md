@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63305731"
 ---
 # <a name="types-of-applications"></a>애플리케이션 형식
@@ -52,7 +52,7 @@ ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.
   
 -   **순수 ODBC 3.0 응용 프로그램** 32 비트 응용 프로그램입니다.  
   
-    -   3.0 헤더를 사용 하 여 컴파일됩니다.  
+    -   3\.0 헤더를 사용 하 여 컴파일됩니다.  
   
     -   포함 되지 않은 모든 ODBC 3.0 함수를 호출 합니다.  
   

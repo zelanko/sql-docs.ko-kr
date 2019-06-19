@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63131740"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 사용자가 만든 Bike Buyer 마이닝 구조에 두 개의 마이닝 모델 추가 [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)합니다. 이러한 마이닝 모델을 추가하면 한 모델을 사용하여 데이터를 탐색하고 다른 모델을 사용하여 예측을 만들 수 있습니다.  
   
- 탐색을 기반으로 마이닝 모델을 만들면는 잠재 고객 특성 별로 분류할 수, 하는 방법의 [Microsoft 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)합니다. 이후 단원에서는 이 알고리즘에서 비슷한 특징을 공유하는 고객 집단을 찾는 방법을 알아 봅니다. 예를 들어 여러 특정 고객이 서로 근처에 살고 자전거로 출퇴근하며 비슷한 학력을 갖는 경향이 있음을 알게 될 수 있습니다.  이러한 집단을 사용하여 고객 간의 상호 연관성을 보다 잘 파악할 수 있으며 이러한 정보를 사용하여 특정 고객을 대상으로 하는 마케팅 전략을 세울 수 있습니다.  
+ 탐색을 기반으로 마이닝 모델을 만들면는 잠재 고객 특성 별로 분류할 수, 하는 방법의 [Microsoft 클러스터링 알고리즘](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)합니다. 이후 단원에서는 이 알고리즘에서 비슷한 특징을 공유하는 고객 집단을 찾는 방법을 알아 봅니다. 예를 들어 여러 특정 고객이 서로 근처에 살고 자전거로 출퇴근하며 비슷한 학력을 갖는 경향이 있음을 알게 될 수 있습니다. 이러한 집단을 사용하여 고객 간의 상호 연관성을 보다 잘 파악할 수 있으며 이러한 정보를 사용하여 특정 고객을 대상으로 하는 마케팅 전략을 세울 수 있습니다.  
   
  잠재 고객이 자전거를 구입할 가능성이 있는지 여부를 예측을 기반으로 마이닝 모델을 만들게 됩니다 합니다 [Microsoft Decision Trees Algorithm](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)합니다. 이 알고리즘에서는 각 잠재 고객과 관련된 정보를 조사하여 해당 고객이 자전거를 구입할 지 여부를 예측하는 데 유용한 특징을 찾아냅니다. 그런 다음 이전 자전거 구매자의 특징 값과 새 잠재 고객의 특징 값을 비교하여 새 잠재 고객이 자전거를 구입할 가능성이 있는지 여부를 확인합니다.  
   

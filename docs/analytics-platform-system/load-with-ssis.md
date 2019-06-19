@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213380"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 Integration Services를 사용 하 여 데이터 로드
@@ -222,11 +222,11 @@ id,city,lastUpdateDate,orderDate
   
     이더넷 연결에 대 한 **서버 이름**: 제어 노드 클러스터, 쉼표, 포트 17001의 IP 주소를 입력 합니다. 예를 들어 10.192.63.134,17001 합니다.  
   
-    **사용자:**`user1`  
+    **사용자:** `user1`  
   
-    **암호:**`password1`  
+    **암호:** `password1`  
   
-    **대상 데이터베이스:**`LoadExampleDB`  
+    **대상 데이터베이스:** `LoadExampleDB`  
   
 6.  대상 테이블 선택: `Orders`합니다.  
   

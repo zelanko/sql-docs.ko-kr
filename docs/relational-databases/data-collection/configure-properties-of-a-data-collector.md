@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67df1557cf4035f4e7bfca1eaa23d9bb0505c8e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945508"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>데이터 수집기의 속성 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47757981"
  데이터 컬렉션이 구성될 때 제공된 정보를 사용하여 지정된 **서버** 에 대한 연결을 테스트합니다.  
   
  **캐시 디렉터리**  
- 수집된 데이터를 관리 데이터 웨어하우스에 업로드하기 전에 데이터를 수집하는 시스템에 저장할 디렉터리를 지정합니다. **캐시 디렉터리** 를 지정하지 않으면 데이터 수집기가 %TEMP% 및 %TMP% 환경 변수를 찾고 이러한 위치 중 하나를 임시 저장소의 기본 위치로 사용하려고 합니다. 이러한 환경 변수가 구성되어 있지 않으면 오류가 발생하고 캐시 디렉터리를 만들라는 메시지가 나타납니다.  
+ 수집된 데이터를 관리 데이터 웨어하우스에 업로드하기 전에 데이터를 수집하는 시스템에 저장할 디렉터리를 지정합니다. **캐시 디렉터리** 를 지정하지 않으면 데이터 수집기가 %TEMP% 및 %TMP% 환경 변수를 찾고 이러한 위치 중 하나를 임시 스토리지의 기본 위치로 사용하려고 합니다. 이러한 환경 변수가 구성되어 있지 않으면 오류가 발생하고 캐시 디렉터리를 만들라는 메시지가 나타납니다.  
   
 ## <a name="data-collection-properties-advanced-tab"></a>데이터 컬렉션 속성(고급 탭)  
  이 페이지를 사용하여 관리 데이터 웨어하우스에 연결하는 데 사용되는 다시 시도 설정을 구성할 수 있습니다.  

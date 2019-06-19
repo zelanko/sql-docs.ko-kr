@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 978588df2388f0731bccff024b46cc134e549688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708271"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027032"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47708271"
  **이 시작 페이지를 다시 표시 안 함**  
  다음에 데이터 컬렉션 구성 마법사를 시작할 때 이 페이지를 표시하지 않으려면 선택합니다.  
   
- **관리 데이터 웨어하우스 저장소 구성 페이지**  
+ **관리 데이터 웨어하우스 스토리지 구성 페이지**  
   
  이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서버 및 관리 데이터 웨어하우스를 선택할 수 있습니다. 관리 데이터 웨어하우스는 수집된 데이터를 보관하는 관계형 데이터베이스입니다.  
   

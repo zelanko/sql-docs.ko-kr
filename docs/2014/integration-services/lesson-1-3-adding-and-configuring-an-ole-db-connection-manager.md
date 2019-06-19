@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891722"
 ---
-# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>3단계: 추가 하 고 OLE DB 연결 관리자 구성
+# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>3단계: OLE DB 연결 관리자 추가 및 구성
   데이터 원본에 연결하기 위해 플랫 파일 연결 관리자를 추가한 후에는 OLE DB 연결 관리자를 추가하여 대상에 연결합니다. OLE DB 연결 관리자를 사용하면 패키지가 OLE DB 호환 데이터 원본에서 데이터를 추출하거나 데이터를 로드할 수 있습니다. OLE DB 연결 관리자를 사용하여 서버, 인증 방법 및 연결의 기본 데이터베이스를 지정할 수 있습니다.  
   
  이 단원에서는 Windows 인증을 사용하여 **AdventureWorksDB2012**의 로컬 인스턴스에 연결하는 OLE DB 연결 관리자를 만듭니다. 여기서 만든 OLE DB 연결 관리자는 이 자습서의 뒷부분에서 만들 다른 구성 요소(예: 조회 변환 및 OLE DB 대상)도 참조합니다.  

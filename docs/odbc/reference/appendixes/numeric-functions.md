@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47711a7e974373e9da4ac8068295029d88accaf6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181307"
 ---
 # <a name="numeric-functions"></a>숫자 함수
@@ -40,7 +40,7 @@ ms.locfileid: "63181307"
 |**ACOS(** _float_exp_ **)**  (ODBC 1.0)|아크코사인을 반환 합니다 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
 |**ASIN(** _float_exp_ **)**  (ODBC 1.0)|아크사인 값을 반환 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
 |**ATAN(** _float_exp_ **)**  (ODBC 1.0)|아크탄젠트를 반환 *float_exp* 각도를 라디안 단위로 표현 됩니다.|  
-|**ATAN2(** _float_exp1_, _float_exp2_**)**  (ODBC 2.0)|아크탄젠트를 반환 합니다 *x* 하 고 *y* 으로 지정 된 좌표 *float_exp1* 및 *float_exp2*각각 각도 라디안 단위로 표현 됩니다.|  
+|**ATAN2(** _float_exp1_, _float_exp2_ **)**  (ODBC 2.0)|아크탄젠트를 반환 합니다 *x* 하 고 *y* 으로 지정 된 좌표 *float_exp1* 및 *float_exp2*각각 각도 라디안 단위로 표현 됩니다.|  
 |**CEILING(** _numeric_exp_ **)**  (ODBC 1.0)|보다 크거나 같은 최소 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
 |**COS(** _float_exp_ **)**  (ODBC 1.0)|코사인을 반환 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**COT(** _float_exp_ **)**  (ODBC 1.0)|코탄젠트를 반환 합니다 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
@@ -49,14 +49,14 @@ ms.locfileid: "63181307"
 |**FLOOR(** _numeric_exp_ **)**  (ODBC 1.0)|보다 작거나 같은 최대 정수를 반환 *numeric_exp*합니다. 반환 값은 입력된 매개 변수로 동일한 데이터 형식입니다.|  
 |**LOG(** _float_exp_ **)**  (ODBC 1.0)|자연 로그를 반환 *float_exp*합니다.|  
 |**LOG10(** _float_exp_ **)**  (ODBC 2.0)|반환을 밑수 10 로그 *float_exp*합니다.|  
-|**MOD(** _integer_exp1_, _integer_exp2_**)**  (ODBC 1.0)|나머지를 반환 합니다 (모듈러스) *integer_exp1* 나눈 *integer_exp2*합니다.|  
+|**MOD(** _integer_exp1_, _integer_exp2_ **)**  (ODBC 1.0)|나머지를 반환 합니다 (모듈러스) *integer_exp1* 나눈 *integer_exp2*합니다.|  
 |**PI( )**  (ODBC 1.0)|부동 소수점 값으로 pi의 상수 값을 반환합니다.|  
-|**POWER(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|값을 반환 *numeric_exp* 활용할 *integer_exp*합니다.|  
+|**POWER(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|값을 반환 *numeric_exp* 활용할 *integer_exp*합니다.|  
 |**RADIANS(** _numeric_exp_ **)**  (ODBC 2.0)|변환 하는 라디안 수를 반환 *numeric_exp* 도 합니다.|  
-|**RAND(**[*integer_exp*]**)**  (ODBC 1.0)|사용 하 여 임의의 부동 소수점 값 반환 *integer_exp* 선택적 시드 값으로.|  
-|**ROUND(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 됩니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|  
+|**RAND(** [*integer_exp*] **)**  (ODBC 1.0)|사용 하 여 임의의 부동 소수점 값 반환 *integer_exp* 선택적 시드 값으로.|  
+|**ROUND(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 됩니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|  
 |**SIGN(** _numeric_exp_ **)**  (ODBC 1.0)|부호를 나타내는 표시기 반환 *numeric_exp*합니다. 하는 경우 *numeric_exp* 0-1 보다 작은 반환 됩니다. 하는 경우 *numeric_exp* 0, 0이 반환 됩니다. 하는 경우 *numeric_exp* 0 보다 크면 1이 반환 됩니다.|  
 |**SIN(** _float_exp_ **)**  (ODBC 1.0)|사인을 반환 합니다 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**SQRT(** _float_exp_ **)**  (ODBC 1.0)|제곱근을 반환 합니다 *float_exp*합니다.|  
 |**TAN(** _float_exp_ **)**  (ODBC 1.0)|탄젠트를 반환 *float_exp*, 여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**TRUNCATE(** _numeric_exp_, _integer_exp_**)**  (ODBC 2.0)|반환 *numeric_exp* 잘립니다 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|
+|**TRUNCATE(** _numeric_exp_, _integer_exp_ **)**  (ODBC 2.0)|반환 *numeric_exp* 잘립니다 *integer_exp* 소수점이 하 자릿수를 배치 합니다. 하는 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp* &#124; 소수점의 왼쪽에 배치 합니다.|

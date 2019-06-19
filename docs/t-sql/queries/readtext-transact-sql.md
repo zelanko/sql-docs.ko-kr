@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927670"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ HOLDLOCK
   
 @@TEXTSIZE 함수의 값은 READTEXT에 대해 지정한 크기보다 작을 경우 READTEXT에 대해 지정한 크기를 대체합니다. @@TEXTSIZE 함수는 SET TEXTSIZE 문에서 설정된 반환되는 데이터 바이트 수의 한도를 지정합니다. TEXTSIZE의 세션 설정 방법에 대한 자세한 내용은 [SET TEXTSIZE&#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 지정한 테이블에 대한 SELECT 권한이 있는 사용자에게 기본적으로 READTEXT 권한이 부여됩니다. SELECT 권한을 위임하는 경우에는 READTEXT 권한도 위임할 수 있습니다.  
   
 ## <a name="examples"></a>예  

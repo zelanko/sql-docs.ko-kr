@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014302"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
@@ -105,7 +105,7 @@ ms.locfileid: "66014302"
 ###  <a name="gml"></a> GML 텍스트 입력으로부터 지리 인스턴스 구성  
  합니다 `geography` 데이터 형식을 생성 하는 메서드를 제공 합니다.는 `geography` 의 XML 표현인 GML에서 인스턴스를 `geography` 인스턴스. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
- Geography Markup Language에 대 한 자세한 내용은 OGC 사양을 참조 하세요. [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
+ Geography Markup Language에 대한 자세한 내용은 OGC 사양: [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
  **GML 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [GeomFromGML&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

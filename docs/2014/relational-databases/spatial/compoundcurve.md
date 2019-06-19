@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e234b06917d77e68577e72fbdc7bca1ad033cef8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014337"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -94,7 +94,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>1. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>1\. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
  다음 예에서는 빈 `CompoundCurve` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -102,21 +102,21 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>2. 동일한 문에서 CompoundCurve를 사용하여 기하 도형 인스턴스 선언 및 인스턴스화  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>2\. 동일한 문에서 CompoundCurve를 사용하여 기하 도형 인스턴스 선언 및 인스턴스화  
  다음 예에서는 동일한 문에서 `geometry` 을 사용하여 `CompoundCurve`인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
-### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>3. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화  
+### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>3\. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화  
  다음 예에서는 `CompoundCurve`를 사용하여 `geography` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>4. CompoundCurve 인스턴스에 사각형 저장  
+### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>4\. CompoundCurve 인스턴스에 사각형 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 사각형을 저장하는 두 가지 방법을 보여 줍니다.  
   
 ```sql  
@@ -128,7 +128,7 @@ SELECT @g1.STLength(), @g2.STLength();
   
  `@g1` 및 `@g2` 의 길이는 같습니다. 이 예에서는 `CompoundCurve` 인스턴스가 하나 이상의 `LineString` 인스턴스를 저장할 수 있음을 알 수 있습니다.  
   
-### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>5. 여러 CircularString을 포함하는 CompoundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
+### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>5\. 여러 CircularString을 포함하는 CompoundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
  다음 예에서는 서로 다른 두 `CircularString` 인스턴스를 사용하여 `CompoundCurve`를 초기화하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -139,7 +139,7 @@ SELECT @g.STLength();
   
  이 구문은 4∏에 해당하는 12.566370... 4의 해당 하는??? 합니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
   
-### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>6. CompoundCurve를 사용하여 반원 저장  
+### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>6\. CompoundCurve를 사용하여 반원 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 반원을 저장합니다.  
   
 ```sql  
@@ -148,7 +148,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2
 SELECT @g.STLength();  
 ```  
   
-### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>7. CompoundCurve에 여러 개의 CircularString 및 LineString 인스턴스 저장  
+### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>7\. CompoundCurve에 여러 개의 CircularString 및 LineString 인스턴스 저장  
  다음 예에서는 `CircularString` 를 사용하여 여러 개의 `LineString` 및 `CompoundCurve`인스턴스를 저장하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -157,14 +157,14 @@ SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3
 SELECT @g.STLength();  
 ```  
   
-### <a name="h-storing-instances-with-z-and-m-values"></a>8. Z 및 M 값이 있는 인스턴스 저장  
+### <a name="h-storing-instances-with-z-and-m-values"></a>8\. Z 및 M 값이 있는 인스턴스 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 Z 값과 M 값이 모두 있는 `CircularString` 및 `LineString` 인스턴스 시퀀스를 저장하는 방법을 보여 줍니다.  
   
 ```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
-### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>9. CircularString 인스턴스를 명시적으로 선언해야 하는 이유에 대한 설명  
+### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>9\. CircularString 인스턴스를 명시적으로 선언해야 하는 이유에 대한 설명  
  다음 예에서는 `CircularString` 인스턴스를 명시적으로 선언해야 하는 이유를 보여 줍니다. 프로그래머는 `CompoundCurve` 인스턴스에 원을 저장하려고 합니다.  
   
 ```sql  

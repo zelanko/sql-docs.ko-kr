@@ -17,14 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62985771"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 확장 프로그램
-  확장성을 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 모듈식 아키텍처를 디자인했습니다. 다양한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소에서 사용되는 확장 프로그램을 쉽게 개발, 설치 및 관리할 수 있도록 관리 코드 API를 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 전용 또는 공유 어셈블리를 만들 수 있으며 끊임없이 변하는 업무상의 요구에 맞게 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 추가할 수도 있습니다.  
+  확장성을 위해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 모듈식 아키텍처를 디자인했습니다. 다양한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소에서 사용되는 확장 프로그램을 쉽게 개발, 설치 및 관리할 수 있도록 관리 코드 API를 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 프라이빗 또는 공유 어셈블리를 만들 수 있으며 끊임없이 변하는 업무상의 요구에 맞게 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 추가할 수도 있습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 고유한 확장성 아키텍처를 통해 개발자는 제품 및 해당 구성 요소의 특정 기능을 확장할 수 있습니다. 현재 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 데이터 처리 기능을 확장할 수 있도록 폭넓은 지원이 제공됩니다. 데이터 처리 API에는 개발자가 추가 데이터 처리를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 구축하는 데 사용할 수 있는 친숙한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 공급자 구문 및 규칙이 포함됩니다. 이러한 데이터 처리 확장 프로그램은 보고서 서버와 보고서 디자이너 모두에 기능을 추가하여 사용자 지정 데이터가 보고서에 완벽하게 통합되도록 합니다.  
   

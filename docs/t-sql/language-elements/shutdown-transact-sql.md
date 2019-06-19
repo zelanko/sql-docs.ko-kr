@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9aa0b901424df92a5e223855f066a65c2fcb2234
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981709"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN(Transact-SQL)
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용합니다.  
   
--   기본 인스턴스의 명령 프롬프트에서 **net stop mssqlserver**를 실행하거나 명명된 인스턴스에 대한 명령 프롬프트에서 **net stop mssql$**_instancename_을 실행합니다.  
+-   기본 인스턴스의 명령 프롬프트에서 **net stop mssqlserver**를 실행하거나 명명된 인스턴스에 대한 명령 프롬프트에서 **net stop mssql$** _instancename_을 실행합니다.  
   
 -   제어판에서 서비스를 사용합니다.  
   

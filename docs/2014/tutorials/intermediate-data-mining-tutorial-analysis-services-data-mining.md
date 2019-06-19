@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017178"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>중급 데이터 마이닝 자습서(Analysis Services - 데이터 마이닝)
@@ -70,7 +70,7 @@ ms.locfileid: "63017178"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스가 있는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지를 방문하고 해당 버전의 예제 데이터베이스를 선택합니다.  
+ 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 공식 데이터베이스를 설치하려면 [Microsoft SQL 예제 데이터베이스](https://go.microsoft.com/fwlink/?LinkId=88417) 페이지를 방문하고 해당 버전의 예제 데이터베이스를 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997039"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` 변경할 속성의 이름이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(1000)** , 기본값은 없습니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   

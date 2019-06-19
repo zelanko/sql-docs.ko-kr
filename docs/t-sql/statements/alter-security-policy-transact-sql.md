@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 403887d4e573f28214e5fd82586fd07e20c338d5
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648725"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ALTER SECURITY POLICY 문은 트랜잭션 범위 내에 있습니다. 트랜잭�
   
 차단 조건자는 해당 DML 작업이 실행된 후 평가됩니다. 따라서 READ UNCOMMITTED 쿼리는 롤백될 임시 값을 볼 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 ALTER ANY SECURITY POLICY 권한이 필요합니다.  
   
 또한 추가된 각 조건자에는 다음 권한이 필요합니다.  
@@ -108,7 +108,7 @@ ALTER ANY SECURITY POLICY 권한이 필요합니다.
 ## <a name="examples"></a>예  
 다음 예는 **ALTER SECURITY POLICY** 구문의 사용을 보여줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
-### <a name="a-adding-an-additional-predicate-to-a-policy"></a>1. 정책에 추가적인 조건자 추가  
+### <a name="a-adding-an-additional-predicate-to-a-policy"></a>1\. 정책에 추가적인 조건자 추가  
 다음 구문은 `mytable` 테이블에서 필터 조건자를 추가하여 보안 정책을 변경합니다.  
   
 ```  
@@ -117,7 +117,7 @@ ALTER SECURITY POLICY pol1
     ON myschema.mytable;  
 ```  
   
-### <a name="b-enabling-an-existing-policy"></a>2. 기존 정책을 사용하도록 설정  
+### <a name="b-enabling-an-existing-policy"></a>2\. 기존 정책을 사용하도록 설정  
 다음 예에서는 ALTER 구문을 사용하여 보안 정책을 사용하도록 설정합니다.  
   
 ```  

@@ -36,10 +36,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982143"
 ---
 # <a name="kill-transact-sql"></a>KILL(Transact-SQL)
@@ -130,7 +130,7 @@ KILL _session ID_|_UOW_ WITH STATUSONLY 문이 실행되기 전에 세션 ID 또
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-kill-to-stop-a-session"></a>1. KILL을 사용하여 세션 종료  
+### <a name="a-using-kill-to-stop-a-session"></a>1\. KILL을 사용하여 세션 종료  
  다음 예에서는 세션 ID `53`을 종료하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -138,7 +138,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>2. KILL 세션 ID WITH STATUSONLY를 사용하여 진행률 보고서 가져오기  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>2\. KILL 세션 ID WITH STATUSONLY를 사용하여 진행률 보고서 가져오기  
 다음 예에서는 특정 세션 ID에 대한 롤백 진행 상황을 표시합니다.  
   
 ```sql  

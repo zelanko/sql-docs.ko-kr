@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199215"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC의 C 데이터 형식
@@ -47,7 +47,7 @@ ODBC 응용 프로그램 변수 및 해당 형식 식별자에서 사용 되는 
 > [!NOTE]  
 >  드라이버 관련 C 데이터 형식 드라이버 설명서에서 설명 합니다.  
   
- 3.8의 ODBC 준수 수준을 지정 하는 응용 프로그램 호출 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) 를 SQL_ATTR_ODBC_VERSION으로 설정 특성 **SQL_OV_ODBC3_80**합니다. 드라이버의 버전을 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_DRIVER_ODBC_VER를 사용 하 여 합니다.  
+ 3\.8의 ODBC 준수 수준을 지정 하는 응용 프로그램 호출 [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md) 를 SQL_ATTR_ODBC_VERSION으로 설정 특성 **SQL_OV_ODBC3_80**합니다. 드라이버의 버전을 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_DRIVER_ODBC_VER를 사용 하 여 합니다.  
   
  ODBC 3.8에 대 한 자세한 내용은 참조 하세요. [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)합니다.  
   

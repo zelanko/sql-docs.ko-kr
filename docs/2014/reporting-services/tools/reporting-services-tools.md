@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099907"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
@@ -52,7 +52,7 @@ ms.locfileid: "66099907"
 |----------|-----------------|-------------------|  
 |Reporting Services 구성 관리자|이 도구를 사용하면 Reporting Services 설치를 구성할 수 있습니다. Reporting Services 구성 관리자를 보고서 서버 내용을 관리, 추가 기능을 활성화 하거나 서버에 대 한 액세스를 부여 도움이 되지 않습니다 note 합니다. 사용 가능한 태스크는 다음과 같습니다.<br /><br /> 로컬 및 원격 보고서 서버 인스턴스 구성<br /><br /> 보고서 서버 서비스 계정 구성<br /><br /> 하나 이상의 웹 서비스 URL 만들기 및 구성<br /><br /> 보고서 관리자 URL 구성<br /><br /> 보고서 서버 데이터베이스 만들기 및 구성<br /><br /> 스케일 아웃 배포 구성<br /><br /> 저장된 연결 문자열과 자격 증명을 암호화하는 데 사용되는 대칭 키 백업, 복원 또는 교체<br /><br /> 무인 실행 계정 구성<br /><br /> 전자 메일 배달을 위한 SMTP 서버 구성<br /><br /> <br /><br /> 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.|시작 메뉴|  
 |SQL Server Management Studio|이 도구를 사용하면 단일 환경에서 하나 이상의 보고서 서버 인스턴스를 다음과 같이 관리합니다.<br /><br /> 로컬 및 원격 보고서 서버 인스턴스 관리<br /><br /> 보고서 서버 속성 설정<br /><br /> 역할 정의 수정<br /><br /> 사용하지 않을 보고서 서버 기능 해제<br /><br /> 작업 관리<br /><br /> 공유 일정 관리|시작 메뉴|  
-|SQL Server 구성 관리자|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> Reporting Services Windows 서비스 시작 및 중지<br /><br /> 고객 의견 보고, 덤프 디렉터리 위치 및 오류 보고 구성<br /><br /> <br /><br /> **\*\* 경고 \* \***  서비스 계정을 구성 하려면이 도구를 사용 하지 마십시오. 대신 Reporting Services 구성 도구를 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.|시작 메뉴|  
+|SQL Server 구성 관리자|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> Reporting Services Windows 서비스 시작 및 중지<br /><br /> 고객 의견 보고, 덤프 디렉터리 위치 및 오류 보고 구성<br /><br /> <br /><br /> **\*\* 경고 \* \* ** 서비스 계정을 구성 하려면이 도구를 사용 하지 마십시오. 대신 Reporting Services 구성 도구를 사용합니다.<br /><br /> 자세한 내용은 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)을 참조하세요.|시작 메뉴|  
 |Rsconfig 유틸리티|이 도구를 사용하면 보고서 서버 데이터베이스에 대한 보고서 서버 연결을 구성하고 관리할 수 있습니다. 또한 무인 보고서 처리에 사용할 사용자 계정을 지정할 때도 이 유틸리티를 사용할 수 있습니다.<br /><br /> 자세한 내용은 [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)를 참조하세요.|명령 프롬프트|  
 |Rskeymgmt 유틸리티|이 도구를 사용하면 다음을 수행할 수 있습니다.<br /><br /> 보고서 서버 데이터를 암호화 하는 데 사용하는 대칭 키 추출, 복원, 만들기 및 삭제<br /><br /> 스케일 아웃 배포에서 보고서 서버 인스턴스 조인<br /><br /> <br /><br /> 자세한 내용은 [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)를 참조하세요.|명령 프롬프트|  
 |WMI(Windows Management Instrumentation) 클래스|이 클래스를 사용하면 그래픽 사용자 인터페이스를 사용하지 않고도 Reporting Services 구성 관리자의 구성 태스크를 자동화할 수 있습니다.<br /><br /> 자세한 내용은 [Accessing the WMI Provider Programmatically](../accessing-the-wmi-provider-programmatically.md)을 참조하세요.|Visual Basic 스크립트|  

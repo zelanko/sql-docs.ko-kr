@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821872"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
@@ -41,13 +41,13 @@ ms.locfileid: "65821872"
   
 ## <a name="typically-used-sqlcmd-options"></a>일반적으로 사용되는 sqlcmd 옵션  
   
--   서버 옵션(**-S**): **sqlcmd**가 연결하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 식별합니다.  
+-   서버 옵션( **-S**): **sqlcmd**가 연결하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 식별합니다.  
   
--   인증 옵션(**-E**, **-U** 및 **-P**): **sqlcmd**가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 위해 사용하는 자격 증명을 지정합니다. **참고:** **-E** 옵션은 기본값이므로 지정하지 않아도 됩니다.  
+-   인증 옵션( **-E**, **-U** 및 **-P**): **sqlcmd**가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 위해 사용하는 자격 증명을 지정합니다. **참고:** **-E** 옵션은 기본값이므로 지정하지 않아도 됩니다.  
   
--   입력 옵션(**-Q**, **-q** 및 **-i**): **sqlcmd**에 입력될 내용의 위치를 식별합니다.  
+-   입력 옵션( **-Q**, **-q** 및 **-i**): **sqlcmd**에 입력될 내용의 위치를 식별합니다.  
   
--   출력 옵션(**-o**): **sqlcmd**가 출력 내용을 저장할 파일을 지정합니다.  
+-   출력 옵션( **-o**): **sqlcmd**가 출력 내용을 저장할 파일을 지정합니다.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>sqlcmd 유틸리티에 연결  
   
@@ -212,7 +212,7 @@ ms.locfileid: "65821872"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-a-script-by-using-sqlcmd"></a>1. sqlcmd를 사용하여 스크립트 실행  
+### <a name="a-running-a-script-by-using-sqlcmd"></a>1\. sqlcmd를 사용하여 스크립트 실행  
  메모장을 시작하고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력합니다.  
   
  `USE AdventureWorks2012;`  
@@ -245,7 +245,7 @@ ms.locfileid: "65821872"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>2. 전용 관리 연결에 sqlcmd 사용  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>2\. 전용 관리 연결에 sqlcmd 사용  
  다음 예에서 `sqlcmd` 는 DAC(관리자 전용 연결)를 사용하여 차단 문제가 발생한 서버에 연결하는 데 사용됩니다.  
   
  `C:\>sqlcmd -S ServerName -A`  

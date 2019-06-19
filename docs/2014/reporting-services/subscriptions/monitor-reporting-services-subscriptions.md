@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100756"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
@@ -87,9 +87,9 @@ ms.locfileid: "66100756"
   
 1.  보고서가 있는 문서 라이브러리로 이동합니다.  
   
-2.  보고서의 상황에 맞는 메뉴를 엽니다(**...**).  
+2.  보고서의 상황에 맞는 메뉴를 엽니다( **...** ).  
   
-3.  확장된 메뉴 옵션을 선택합니다(**...**).  
+3.  확장된 메뉴 옵션을 선택합니다( **...** ).  
   
 4.  **구독 관리**를 선택합니다.  
   

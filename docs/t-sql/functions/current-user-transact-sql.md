@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5d3ec1ee3518c4d9f0b66100fff421a5827b353
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947893"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER(Transact-SQL)
@@ -53,7 +53,7 @@ CURRENT_USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-currentuser-to-return-the-current-user-name"></a>1. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
+### <a name="a-using-currentuser-to-return-the-current-user-name"></a>1\. CURRENT_USER를 사용하여 현재 사용자 이름 반환  
 이 예에서는 현재 사용자의 이름을 반환합니다.
   
 ```sql
@@ -61,7 +61,7 @@ SELECT CURRENT_USER;
 GO  
 ```  
   
-### <a name="b-using-currentuser-as-a-default-constraint"></a>2. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
+### <a name="b-using-currentuser-as-a-default-constraint"></a>2\. CURRENT_USER를 DEFAULT 제약 조건으로 사용  
 이 예에서는 판매 행의 `order_person` 열에 대한 `DEFAULT` 제약 조건으로 `CURRENT_USER`를 사용하는 테이블을 만듭니다.
   
 ```sql

@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 47173c820efcced4563bed5f7b2d0f4ed1e4aeb9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948267"
 ---
 # <a name="max-transact-sql"></a>MAX(Transact-SQL)
@@ -74,7 +74,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>1\. 간단한 예  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 가장 높은(최대) 세율을 반환합니다.  
   
 ```sql  
@@ -93,7 +93,7 @@ GO
  (1 row(s) affected)  
  ```  
   
-### <a name="b-using-the-over-clause"></a>2. OVER 절 사용  
+### <a name="b-using-the-over-clause"></a>2\. OVER 절 사용  
  다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```sql  

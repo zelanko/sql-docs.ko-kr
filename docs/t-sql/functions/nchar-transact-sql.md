@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944188"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
@@ -68,7 +68,7 @@ SELECT NCHAR(UNICODE(@d));
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-nchar-and-unicode"></a>1. NCHAR 및 UNICODE 사용  
+### <a name="a-using-nchar-and-unicode"></a>1\. NCHAR 및 UNICODE 사용  
  다음 예에서는 `UNICODE` 및 `NCHAR` 함수를 사용하여 `UNICODE` 문자열에 있는 두 번째 문자의 `NCHAR` 값과 `København`(유니코드 문자)를 인쇄하고 실제 두 번째 문자인 `ø`를 인쇄합니다.  
   
 ```sql  
@@ -87,7 +87,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-substring-unicode-convert-and-nchar"></a>2. SUBSTRING, UNICODE, CONVERT 및 NCHAR 사용  
+### <a name="b-using-substring-unicode-convert-and-nchar"></a>2\. SUBSTRING, UNICODE, CONVERT 및 NCHAR 사용  
  다음 예에서는 `SUBSTRING`, `UNICODE`, `CONVERT` 및 `NCHAR` 함수를 사용하여 `København` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자 및 UNICODE 값을 인쇄합니다.  
   
 ```sql  

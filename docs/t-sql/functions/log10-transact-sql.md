@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a1ebb2b6a5c7fe2d6f71ce73e5e6b9af0924fc0
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949184"
 ---
 # <a name="log10-transact-sql"></a>LOG10(Transact-SQL)
@@ -54,7 +54,7 @@ LOG10 ( float_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>1. 변수에 대한 상용 로그 계산  
+### <a name="a-calculating-the-base-10-logarithm-for-a-variable"></a>1\. 변수에 대한 상용 로그 계산  
  다음 예에서는 지정된 변수의 `LOG10`을 계산하는 방법을 보여 줍니다.  
   
 ```  
@@ -72,7 +72,7 @@ The LOG10 of the variable is: 2.16189
 (1 row(s) affected)  
 ```  
   
-### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>2. 상용 로그를 지정된 거듭제곱으로 올린 결과 계산  
+### <a name="b-calculating-the-result-of-raising-a-base-10-logarithm-to-a-specified-power"></a>2\. 상용 로그를 지정된 거듭제곱으로 올린 결과 계산  
  다음 예에서는 상용 로그를 지정된 거듭제곱으로 올린 결과를 반환하는 방법을 보여 줍니다.  
   
 ```  

@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188820"
 ---
 # <a name="interval-literal-syntax"></a>간격 리터럴 구문
 ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.  
   
- *interval-literal ::= INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
+ *interval-literal ::= INTERVAL* [+ *&#124;* -] *interval-string interval-qualifier*  
   
  *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   

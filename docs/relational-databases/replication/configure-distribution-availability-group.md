@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63228097"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -43,9 +43,9 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ## <a name="supported-scenarios"></a>지원되는 시나리오
 
-- AG에 포함할 배포 데이터베이스 구성 
+- AG에 포함할 배포 데이터베이스 구성
 - AG 장애 조치 전후에 게시 및 구독 등 복제 구성
-- 복제 작업이 장애 조치 전후에 작동 
+- 복제 작업이 장애 조치 전후에 작동
 - 배포 데이터베이스가 AG에 있을 때 배포자 및 게시자에서 복제 제거
 - 기존 배포 데이터베이스 AG에 노드추가 또는 제거
 - 배포자에는 여러 배포 데이터베이스가 있을 수 있습니다. 각 배포 데이터베이스는 자체 AG에 있을 수 있고 다른 AG에는 있을 수 없습니다. 여러 배포 데이터베이스가 AG를 공유할 수 있습니다.
@@ -79,7 +79,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 - 배포 데이터베이스 AG에 참여하는 모든 복제본에서 msdb 저장 프로시저 또는 SQL Server Management Studi를 통해 복제 작업을 변경합니다.
 - 게시자에 대한 배포자 구성은 스크립트를 통해 수행해야 합니다. 복제 마법사는 사용할 수 없습니다. 다른 용도에는 복제 마법사 및 속성 시트를 사용할 수 있습니다.
 - 배포 데이터베이스에 대한 AG 구성은 스크립트를 통해서만 가능합니다.
-- AG에서 배포 데이터베이스를 설정하려면 새 복제 구성이어야 합니다. 기존 배포 데이터베이스를 AG 전환하는 것은 지원되지 않습니다. 또한 배포 데이터베이스가 AG로 가면 더 이상 유효한 배포 데이터베이스로 작동하지 않으며 삭제해야 합니다. 
+- AG에서 배포 데이터베이스를 설정하려면 새 복제 구성이어야 합니다. 기존 배포 데이터베이스를 AG 전환하는 것은 지원되지 않습니다. 또한 배포 데이터베이스가 AG로 가면 더 이상 유효한 배포 데이터베이스로 작동하지 않으며 삭제해야 합니다.
 
 ## <a name="configuration-architecture"></a>구성 아키텍처
 
@@ -170,7 +170,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
    sp_dropdistributiondb 'distribution' , @former_ag_secondary=1
    ```
 
-  이 절차에서는 이 복제본에 따른 모든 작업을 삭제합니다. 
+  이 절차에서는 이 복제본에 따른 모든 작업을 삭제합니다.
 
 1. DIST1에서 `distribution` 데이터베이스를 삭제하려면 다음을 실행합니다.
 
@@ -238,7 +238,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>배포 데이터베이스 AG에서 게시자 제거
 
-이 예에서는 현재 배포 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다. 
+이 예에서는 현재 배포 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다.
 
 ### <a name="publisher-workflow"></a>게시자 워크플로
 
@@ -268,7 +268,7 @@ DIST1은 `distribution` 데이터베이스 AG의 현재 주 복제본입니다.
 
 ### <a name="publisher-workflow"></a>게시자 워크플로
 
-`SUB` 구독자에서 하는 것처럼 PUB에서 구독을 추가합니다. 
+`SUB` 구독자에서 하는 것처럼 PUB에서 구독을 추가합니다.
 
 ### <a name="distributor-workflow"></a>배포자 워크플로
 

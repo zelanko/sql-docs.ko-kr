@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1b55e49768509a5294e30a511f09ec8b91984ab
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981733"
 ---
 # <a name="set-operators---union-transact-sql"></a>집합 연산자 - UNION(Transact-SQL)
@@ -63,7 +63,7 @@ ALL
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-union"></a>1. 단순 UNION 사용  
+### <a name="a-using-a-simple-union"></a>1\. 단순 UNION 사용  
 다음 예에서는 결과 집합에 `ProductModelID` 및 `Name` 테이블의 `ProductModel` 및 `Gloves` 열의 내용이 포함됩니다.  
  
 ```  
@@ -92,7 +92,7 @@ ORDER BY Name;
 GO  
 ```  
   
-### <a name="b-using-select-into-with-union"></a>2. UNION과 함께 SELECT INTO 사용  
+### <a name="b-using-select-into-with-union"></a>2\. UNION과 함께 SELECT INTO 사용  
 다음 예에서 두 번째 `INTO` 문의 `SELECT` 절은 `ProductResults` 및 `ProductModel` 테이블의 선택된 열에 대해 UNION 작업을 수행한 마지막 결과 집합을 `Gloves` 테이블에 포함하도록 지정합니다. `Gloves` 테이블은 첫 번째 `SELECT` 문에서 생성됩니다.  
   
 ```  

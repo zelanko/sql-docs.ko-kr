@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62734714"
 ---
 # <a name="transactions-sql-data-warehouse"></a>트랜잭션(SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  SET AUTOCOMMIT과 같은 모드로 전환됩니다. SET IMPLICIT_TRANSACTIONS 옵션을 ON으로 설정하면 연결이 암시적 트랜잭션 모드로 설정됩니다. OFF이면 연결이 다시 자동 커밋 모드로 돌아갑니다.  자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  트랜잭션 관련 문 실행에는 특정 권한이 필요하지 않습니다. 트랜잭션 안에서 문을 실행하려면 권한이 필요합니다.  
   
 ## <a name="error-handling"></a>오류 처리  
@@ -102,7 +102,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-an-explicit-transaction"></a>1. 명시적 트랜잭션 사용  
+### <a name="a-using-an-explicit-transaction"></a>1\. 명시적 트랜잭션 사용  
   
 ```  
 BEGIN TRANSACTION;  
@@ -111,7 +111,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```  
   
-### <a name="b-rolling-back-a-transaction"></a>2. 트랜잭션 롤백  
+### <a name="b-rolling-back-a-transaction"></a>2\. 트랜잭션 롤백  
  다음 예제에서는 트랜잭션 롤백의 결과를 보여 줍니다.  이 예제에서는 ROLLBACK 문이 INSERT 문을 롤백하지만 만들어진 테이블은 그대로 있습니다.  
   
 ```  
@@ -122,7 +122,7 @@ BEGIN TRANSACTION;
 ROLLBACK;  
 ```  
   
-### <a name="c-setting-autocommit"></a>3. AUTOCOMMIT 설정  
+### <a name="c-setting-autocommit"></a>C. AUTOCOMMIT 설정  
  다음 예제에서는 AUTOCOMMIT 설정을 `ON`으로 설정합니다.  
   
 ```  
@@ -135,7 +135,7 @@ SET AUTOCOMMIT ON;
 SET AUTOCOMMIT OFF;  
 ```  
   
-### <a name="d-using-an-implicit-multi-statement-transaction"></a>4. 암시적 다중 문 트랜잭션 사용  
+### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. 암시적 다중 문 트랜잭션 사용  
   
 ```  
 SET AUTOCOMMIT OFF;  

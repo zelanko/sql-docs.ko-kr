@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5fe880e39b2ace4b23356fbd9ab77b37193cc838
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021428"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028607"
 ---
 # <a name="userid-transact-sql"></a>USER_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ USER_ID ( [ 'user' ] )
  사용할 사용자 이름입니다. *사용자*는 **nchar**입니다. **char** 값을 지정하면 암시적으로 **nchar**로 변환됩니다. 괄호가 필요합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **int**  
+ **ssNoversion**  
   
 ## <a name="remarks"></a>Remarks  
  *사용자*를 생략하면 현재 사용자가 대신 사용됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다. EXECUTE AS를 호출한 후 USER_ID를 호출하면 가장된 컨텍스트의 ID가 반환됩니다.  

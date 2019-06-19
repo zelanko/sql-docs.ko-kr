@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946169"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "64946169"
         > [!NOTE]  
         >  **-n** (네이티브 데이터) 또는 **-N** (유니코드 네이티브 데이터) 스위치를 지정하면 종결자는 삽입되지 않습니다.  
   
-    -   대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**) 없이 포함되어 있고 접두사 길이 및 필드 길이를 지정하지 않도록 선택했다면 명령에서 각 필드의 필드 종결자를 지정하라는 메시지가 표시됩니다. 기본값은 none입니다.  
+    -   대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 서식 파일 스위치( **-f**) 또는 데이터 형식 스위치( **-n**, **-c**, **-w**또는 **-N**) 없이 포함되어 있고 접두사 길이 및 필드 길이를 지정하지 않도록 선택했다면 명령에서 각 필드의 필드 종결자를 지정하라는 메시지가 표시됩니다. 기본값은 none입니다.  
   
          `Enter field terminator [none]:`  
   
@@ -172,7 +172,7 @@ ModifiedDate datetime not NULL CONSTRAINT DF_AddressType_ModifiedDate DEFAULT (G
 GO 
 ```  
   
-#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>1. bcp를 사용하여 대화형으로 종결자 지정  
+#### <a name="a-using-bcp-to-interactively-specify-terminators"></a>1\. bcp를 사용하여 대화형으로 종결자 지정  
  다음 예에서는 `Department-c-t.txt` 명령을 사용하여 `bcp` 데이터 파일을 대량으로 가져옵니다. 이 명령은 대량 내보내기 명령과 동일한 명령 스위치를 사용합니다. 자세한 내용은 이 항목의 앞부분에 나오는 "대량 내보내기를 위한 종결자 지정"을 참조하십시오.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -181,14 +181,14 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>2. BULK INSERT를 사용하여 대화형으로 종결자 지정  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>2\. BULK INSERT를 사용하여 대화형으로 종결자 지정  
  다음 예에서는 다음 표에 나타나는 한정자를 사용하는 `Department-c-t.txt` 문을 사용하여 `BULK INSERT` 데이터 파일을 대량으로 가져옵니다.  
   
 |옵션|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|데이터 필드가 데이터 문자로 로드되도록 지정합니다.|  
-|FIELDTERMINATOR **='**`,`**'**|쉼표(`,`)를 필드 종결자로 지정합니다.|  
-|ROWTERMINATOR **='**`\n`**'**|행 종결자를 줄 바꿈 문자로 지정합니다.|  
+|FIELDTERMINATOR **='** `,` **'**|쉼표(`,`)를 필드 종결자로 지정합니다.|  
+|ROWTERMINATOR **='** `\n` **'**|행 종결자를 줄 바꿈 문자로 지정합니다.|  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음 코드를 실행합니다.  
   
@@ -210,6 +210,6 @@ GO
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [bcp를 사용하여 필드 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
  [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [bcp를 사용하여 파일 스토리지 유형 지정&amp;#40;SQL Server&amp;#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [bcp를 사용하여 파일 스토리지 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

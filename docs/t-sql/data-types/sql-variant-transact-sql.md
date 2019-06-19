@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982074"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant(Transact-SQL)
@@ -115,7 +115,7 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 
 ## <a name="examples"></a>예  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>1. 테이블에서 sql_variant 사용  
+### <a name="a-using-a-sqlvariant-in-a-table"></a>1\. 테이블에서 sql_variant 사용  
  다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `tableA`에 `sql_variant` 및 `colB` 유형인 `colA`가 있는 경우 `colB` =`1689`인 `colA`값`46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
@@ -138,7 +138,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. 변수로 sql_variant 사용   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>2\. 변수로 sql_variant 사용   
  다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, @v1 변수에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    

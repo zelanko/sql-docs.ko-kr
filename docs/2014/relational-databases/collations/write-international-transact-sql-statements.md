@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873517"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
@@ -36,9 +36,9 @@ ms.locfileid: "62873517"
   
     -   ADO, OLE DB 및 ODBC 애플리케이션은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
   
-         **{ts'** yyyy**-**_mm_**-**_ddhh_**:**  _mm_**:**_ss_[**.** _fff_] **'}** 와 같은: **{ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts'** yyyy **-** _mm_ **-** _ddhh_ **:**  _mm_ **:** _ss_[ **.** _fff_] **'}** 와 같은: **{ts'** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 예: **{ d'** 1998**-** 09**-** 24 **'}**  
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 예: **{ d'** 1998 **-** 09 **-** 24 **'}**  
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** such as: **{ t'** 10:02:20 **'}**  
   

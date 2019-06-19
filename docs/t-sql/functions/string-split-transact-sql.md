@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947480"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
@@ -85,7 +85,7 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 ## <a name="examples"></a>예  
   
-### <a name="a-split-comma-separated-value-string"></a>1. CSV(쉼표로 구분된 값) 문자열 분할
+### <a name="a-split-comma-separated-value-string"></a>1\. CSV(쉼표로 구분된 값) 문자열 분할
 
 쉼표로 구분된 값 목록을 구문 분석하고 비어 있지 않은 토큰을 모두 반환합니다.  
 
@@ -99,7 +99,7 @@ WHERE RTRIM(value) <> '';
 
 구분 기호 사이에 아무 것도 없을 경우 STRING_SPLIT은 빈 문자열을 반환합니다. RTRIM(value) <> ''조건은 빈 토큰을 제거합니다.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>2. 열에서 CSV(쉼표로 구분된 값) 문자열 분할
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>2\. 열에서 CSV(쉼표로 구분된 값) 문자열 분할
 
 제품 테이블에는 다음 예제와 같이 쉼표로 구분된 태그 목록이 포함된 열이 있습니다.  
   

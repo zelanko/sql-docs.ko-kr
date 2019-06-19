@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b5bb549859bf6177571b080033b09419c5eed90d
-ms.sourcegitcommit: e92ce0f59345fe61c0dd3bfe495ef4b1de469d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66221166"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
@@ -186,7 +186,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>2. WITH COOKIE 절 사용  
+### <a name="b-using-the-with-cookie-clause"></a>2\. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  

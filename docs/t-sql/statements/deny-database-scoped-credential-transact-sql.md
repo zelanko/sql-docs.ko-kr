@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017731"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 데이터베이스 범위 자격 증명l(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  데이터베이스 범위 자격 증명에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- 데이터베이스 범위 자격 증명에서 **::**_credential_name_  
+ 데이터베이스 범위 자격 증명에서 **::** _credential_name_  
  사용 권한을 거부하는 데이터베이스 범위 자격 증명을 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
@@ -105,7 +105,7 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스 범위 자격 증명에 대한 CONTROL 권한이 필요합니다. AS 절을 사용하는 경우 지정한 보안 주체가 데이터베이스 범위 자격 증명을 소유해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

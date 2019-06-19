@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e2d6c3a22ebae4a8617a4f788f9feb259d9bb7d
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981412"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
@@ -208,7 +208,7 @@ END CATCH;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-trycatch"></a>1. TRY...CATCH 사용  
+### <a name="a-using-trycatch"></a>1\. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  
@@ -228,7 +228,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>2. 트랜잭션에서 TRY...CATCH 사용  
+### <a name="b-using-trycatch-in-a-transaction"></a>2\. 트랜잭션에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내에서 `TRY...CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
   
 ```sql  

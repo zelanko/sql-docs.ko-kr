@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0003102d607cac065a1168e0c5544a8db2163249
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943335"
 ---
 # <a name="power-transact-sql"></a>POWER(Transact-SQL)
@@ -62,7 +62,7 @@ POWER ( float_expression , y )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-power-to-return-the-cube-of-a-number"></a>1. POWER를 사용하여 숫자의 세제곱 반환  
+### <a name="a-using-power-to-return-the-cube-of-a-number"></a>1\. POWER를 사용하여 숫자의 세제곱 반환  
  다음 예에서는 3의 승수로 거듭 제곱한 수(숫자의 세제곱)를 보여줍니다.  
   
 ```  
@@ -83,7 +83,7 @@ Result1                Result2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>2. POWER를 사용하여 데이터 형식 자동 변환 표시  
+### <a name="b-using-power-to-show-results-of-data-type-conversion"></a>2\. POWER를 사용하여 데이터 형식 자동 변환 표시  
  다음 예에서는 *float_expression*에서 예기치 않은 결과를 반환할 수 있는 데이터 형식을 유지하는 방법을 보여 줍니다.  
   
 ```  

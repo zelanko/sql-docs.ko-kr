@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127044"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
@@ -371,10 +371,10 @@ ms.locfileid: "63127044"
 |현재 선택한 텍스트의 이전 위치 찾기|Ctrl+Shift+F3|Ctrl+Shift+F3|  
 |**파일에서 바꾸기** 대화 상자 표시|Ctrl+Shift+H|Ctrl+Shift+H|  
 |파일의 맨 아래에서 시작하여 맨 위로 검색하도록 증분 검색을 반대로 수행|Ctrl+Shift+I|Ctrl+Shift+I|  
-| **찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
+|**찾기 및 바꾸기** 에서 **위로 검색**옵션 선택 또는 선택 취소|Alt+F3, B|Alt+F3, B|  
 |**파일에서 찾기** 검색 중지|Alt+F3, S|Alt+F3, S|  
-| **찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
-| **찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
+|**찾기 및 바꾸기** 에서 **단어 단위로**옵션 선택 또는 선택 취소|Alt+F3, W|Alt+F3, W|  
+|**찾기 및 바꾸기** 에서 **와일드카드**옵션 선택 또는 선택 취소|Alt+F3, P|Alt+F3, P|  
 |표준 도구 모음의 찾기/명령 상자에 캐럿 배치|Ctrl+/|해당 키 없음|  
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>잘라내기 및 붙여넣기 바로 가기 키  
@@ -435,13 +435,13 @@ ms.locfileid: "63127044"
 |작업|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |현재 실행 중인 쿼리 취소 또는 중지|Ctrl+T|Ctrl+T|  
-| **쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
-| **쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
-| **쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
-| **쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
-| **쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
+|**쿼리 디자이너**의 다이어그램 창 표시|Ctrl+1|Ctrl+1|  
+|**쿼리 디자이너**의 조건 창 표시|Ctrl+2|Ctrl+2|  
+|**쿼리 디자이너**의 SQL 창 표시|Ctrl+3|Ctrl+3|  
+|**쿼리 디자이너**의 결과 창 표시|Ctrl+4|Ctrl+4|  
+|**쿼리 디자이너**에 지정된 쿼리 실행|Ctrl+R|Ctrl+R|  
 |결과 창에 있는 경우 디자이너의 맨 아래에 도킹된 도구 모음으로 포커스 이동|Ctrl+G|Ctrl+G|  
-| **쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
+|**쿼리 디자이너**에서 JOIN 모드 사용|Ctrl+Shift+J|Ctrl+Shift+J|  
   
 ## <a name="designer-keyboard-shortcuts"></a>디자이너 바로 가기 키  
   

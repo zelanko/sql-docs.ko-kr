@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010168"
 ---
 # <a name="create-a-policy-based-management-policy"></a>정책 기반 관리 정책 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "51511958"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -57,7 +57,7 @@ ms.locfileid: "51511958"
   
 6.  정책을 만든 즉시 사용하려면 **사용** 확인란을 선택합니다. 평가 모드가 **요청 시**인 경우 **사용** 확인란은 사용할 수 없습니다.  
   
-7.  **조건 확인** 목록에서 기존 조건 중 하나를 선택하거나 **새 조건**을 선택합니다. 조건을 편집하려면 조건을 선택한 다음 줄임표(**...**)를 클릭합니다. 자세한 내용은 [새로운 정책 기반 관리 조건 만들기](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 또는 [정책 기반 관리 조건의 속성 보기 또는 수정](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)을 참조하세요.  
+7.  **조건 확인** 목록에서 기존 조건 중 하나를 선택하거나 **새 조건**을 선택합니다. 조건을 편집하려면 조건을 선택한 다음 줄임표( **...** )를 클릭합니다. 자세한 내용은 [새로운 정책 기반 관리 조건 만들기](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 또는 [정책 기반 관리 조건의 속성 보기 또는 수정](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)을 참조하세요.  
   
 8.  **적용 대상** 상자에서 이 정책의 대상 유형을 하나 이상 선택합니다. 일부 조건 및 패싯만 특정 대상 유형에 적용될 수 있습니다. 사용 가능한 대상 집합이 관련 상자에 나타납니다. **매** 를 확장하여 일부 대상 유형에 대한 필터링 조건을 선택합니다. 이 상자에 대상이 표시되지 않으면 검사 조건 범위가 서버 수준으로 지정됩니다.  
   

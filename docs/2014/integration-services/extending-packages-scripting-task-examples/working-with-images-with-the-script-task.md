@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768449"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
@@ -40,7 +40,7 @@ ms.locfileid: "62768449"
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1 설명: 이미지를 JPEG 형식으로 변환  
+##  <a name="example1"></a> 예 1 설명: JPEG 형식으로 이미지 변환  
  다음 예에서는 변수로 지정된 이미지 파일을 열고 인코더를 사용하여 이 파일을 압축된 JPEG 파일로 저장합니다. 인코더 정보를 검색하는 코드는 프라이빗 함수에 캡슐화되어 있습니다.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>이 스크립트 태스크 예를 단일 이미지 파일에 사용할 수 있도록 구성하려면  

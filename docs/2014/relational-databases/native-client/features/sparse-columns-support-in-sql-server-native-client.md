@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 79151d13f5b90e7da8ea50d3472d05ed46423e2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225749"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client의 스파스 열 지원
@@ -57,7 +57,7 @@ ms.locfileid: "63225749"
   
  `queryout` 작업의 경우 명시적으로 참조된 열의 처리 방법에는 변경된 사항이 없습니다. `column_set` 열은 XML 열과 동작이 같고 스파스 열인지 여부는 명명된 스파스 열의 처리에 어떠한 영향도 주지 않습니다.  
   
- 그러나 내보내기 작업에 `queryout`을 사용하고 스파스 열 집합의 멤버인 스파스 열을 이름으로 참조하는 경우 구조가 비슷한 테이블에는 직접 내보낼 수 없습니다. BCP 사용 메타 데이터와 일치 하기 때문에 이것이 **선택 \***  가져오기에 대 한 작업에 맞게 수 없으면 `column_set` 멤버 열이 메타이 데이터를 사용 하 여 합니다. `column_set` 멤버 열을 개별적으로 가져오려면 원하는 `column_set` 열을 참조하는 뷰를 테이블에 정의한 다음 이 뷰를 사용해 가져오기 작업을 수행해야 합니다.  
+ 그러나 내보내기 작업에 `queryout`을 사용하고 스파스 열 집합의 멤버인 스파스 열을 이름으로 참조하는 경우 구조가 비슷한 테이블에는 직접 내보낼 수 없습니다. BCP 사용 메타 데이터와 일치 하기 때문에 이것이 **선택 \*** 가져오기에 대 한 작업에 맞게 수 없으면 `column_set` 멤버 열이 메타이 데이터를 사용 하 여 합니다. `column_set` 멤버 열을 개별적으로 가져오려면 원하는 `column_set` 열을 참조하는 뷰를 테이블에 정의한 다음 이 뷰를 사용해 가져오기 작업을 수행해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 프로그래밍](../sql-server-native-client-programming.md)  
