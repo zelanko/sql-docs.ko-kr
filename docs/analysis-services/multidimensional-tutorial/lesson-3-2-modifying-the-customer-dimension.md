@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbe4fbfc2cad2df41a1d9bd14fcb2620e2dec5c1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403645"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>단원 3-2-Customer 차원 수정
@@ -106,7 +106,7 @@ ms.locfileid: "65403645"
   
 4.  **Name** 속성 필드에 **Full Name**을 입력합니다.  
   
-5.  클릭 합니다 **NameColumn** 속성 아래에 필드 및 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
+5.  클릭 합니다 **NameColumn** 속성 아래에 필드 및 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 6.  **원본 열** 목록의 맨 아래에서 **FullName** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "65403645"
   
 2.  **특성** 창에서 **City** 특성을 클릭합니다.  
   
-3.  **속성** 창의 아래쪽에서 **KeyColumns** 필드를 클릭한 다음 찾아보기 단추(**...**)를 클릭합니다.  
+3.  **속성** 창의 아래쪽에서 **KeyColumns** 필드를 클릭한 다음 찾아보기 단추( **...** )를 클릭합니다.  
   
 4.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **StateProvinceName**열을 선택한 후 **>** 단추를 클릭합니다.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "65403645"
   
 5.  **확인**을 클릭합니다.  
   
-6.  **City** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 다음 찾아보기 단추(**...**)를 클릭합니다.  
+6.  **City** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 다음 찾아보기 단추( **...** )를 클릭합니다.  
   
 7.  **이름 열** 대화 상자의 **원본 열** 목록에서 **City**를 선택한 후 **확인**을 클릭합니다.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "65403645"
   
 2.  **특성** 창에서 **State-Province** 특성을 클릭합니다.  
   
-3.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+3.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 4.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **EnglishCountryRegionName**열을 선택한 후 **>** 단추를 클릭합니다.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "65403645"
   
 5.  **확인**을 클릭합니다.  
   
-6.  **State-Province** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+6.  **State-Province** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 7.  **이름 열** 대화 상자의 **원본 열** 목록에서 **StateProvinceName**을 선택한 후 **확인**을 클릭합니다.  
   

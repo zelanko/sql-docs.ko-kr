@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6ef9e31744be1cbb6a5f1ac84fdf4d8c315f97e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943310"
 ---
 # <a name="rank-transact-sql"></a>RANK(Transact-SQL)
@@ -63,7 +63,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-ranking-rows-within-a-partition"></a>1. 파티션 내의 행 순위 지정  
+### <a name="a-ranking-rows-within-a-partition"></a>1\. 파티션 내의 행 순위 지정  
  다음 예에서는 재고 수량을 기준으로 지정한 인벤토리 위치의 제품에 순위를 부여합니다. 결과 집합은 `LocationID`를 기준으로 분할되고 `Quantity`를 기준으로 논리적으로 정렬됩니다. 제품 494와 495는 수량이 동일합니다. 두 제품은 서로 연결되어 있으므로 동일하게 순위 1이 부여됩니다.  
   
 ```sql  
@@ -99,7 +99,7 @@ ProductID   Name                   LocationID   Quantity Rank
  (10 row(s) affected)  
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>2. 결과 집합의 모든 행 순위 지정  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>2\. 결과 집합의 모든 행 순위 지정  
  다음 예제에서는 연봉이 상위 10위권에 들어가는 직원을 반환합니다. PARTITION BY 절을 지정하지 않았으므로 결과 집합의 모든 행에 RANK 함수가 적용되었습니다.  
   
 ```sql  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481310"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>태스크 1: 일치 정책 정의
@@ -57,7 +57,7 @@ ms.locfileid: "65481310"
   
 12. 이전 두 단계를 반복 추가 **Contact Email** 도메인과 **30** 에 대 한 합니다 **가중치**합니다.  
   
-13. **최소 일치 점수** 로 설정 된 **80%**, 값에 표시 되는 **일반** 탭을 **구성** 페이지 **DQS 관리**합니다. 이 점수는 이 임계값 위로만 늘릴 수 있습니다.  
+13. **최소 일치 점수** 로 설정 된 **80%** , 값에 표시 되는 **일반** 탭을 **구성** 페이지 **DQS 관리**합니다. 이 점수는 이 임계값 위로만 늘릴 수 있습니다.  
   
 14. 있음을 **겹치는 클러스터** 옵션을 선택 합니다. 이 옵션을 사용하면 레코드를 여러 클러스터에 표시할 수 있습니다. 설정을 겹치지 않는 클러스터로 변경하면 공통 레코드를 포함하는 여러 클러스터가 단일 클러스터로 조합됩니다.  
   

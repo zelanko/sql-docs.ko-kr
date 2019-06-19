@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b62046f315c6921a03cdf692561d8336398792ec
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946100"
 ---
 # <a name="exp-transact-sql"></a>EXP(Transact-SQL)
@@ -56,7 +56,7 @@ EXP ( float_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-exponent-of-a-number"></a>1. 숫자의 지수 찾기  
+### <a name="a-finding-the-exponent-of-a-number"></a>1\. 숫자의 지수 찾기  
  다음 예에서는 변수를 선언하고 텍스트 설명과 함께 지정된 변수(`10`)의 지수 값을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -74,7 +74,7 @@ The EXP of the variable is: 22026.5
 (1 row(s) affected)  
 ```  
   
-### <a name="b-finding-exponentials-and-natural-logarithms"></a>2. 지수 및 자연 로그 찾기  
+### <a name="b-finding-exponentials-and-natural-logarithms"></a>2\. 지수 및 자연 로그 찾기  
  다음 예에서는 `20`의 자연 로그 값을 구한 후 그 값의 지수 값을 계산하고, 다시 `20`의 지수 값을 구한 후 그 값의 자연 로그 값을 계산하여 반환합니다. 이 함수는 서로 역함수 관계에 있으며 두 함수의 반환 값은 모두 `20`입니다.  
   
 ```  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404085"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>단원 5-4-측정값 그룹 차원 세분성 정의
@@ -127,7 +127,7 @@ ms.locfileid: "65404085"
   
     **Employee** 및 **Date** 큐브 차원은 일반 관계를 통해 **Sales Quotas 및 Sales Quotas 1** 측정값 그룹에 연결되어 있습니다. **Sales Territory** 큐브 차원은 이러한 측정값 그룹에 연결되어 있지 않습니다.  
   
-4.  교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas** 측정값 그룹 및 찾아보기 단추를 클릭 (**...** ). **관계 정의** 대화 상자가 열립니다.  
+4.  교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas** 측정값 그룹 및 찾아보기 단추를 클릭 ( **...** ). **관계 정의** 대화 상자가 열립니다.  
   
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "65404085"
   
 10. **확인**을 클릭합니다.  
   
-11. 교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas 1&lt;/ui&gt** 측정값 그룹 및 찾아보기 단추를 클릭 (**...** ). **관계 정의** 대화 상자가 열립니다.  
+11. 교집합에서 셀을 클릭 합니다 **Sales Territory** 차원 및 **Sales Quotas 1&lt;/ui&gt** 측정값 그룹 및 찾아보기 단추를 클릭 ( **...** ). **관계 정의** 대화 상자가 열립니다.  
   
 12. **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "65404085"
   
     **Order Date** 큐브 차원 이름을 **Date** 로 변경하면 사용자가 이 차원의 역할을 이 큐브의 주 날짜 차원으로 쉽게 이해할 수 있습니다.  
   
-20. 찾아보기 단추를 클릭 (**...** )의 교집합에서 셀에는 **Sales Quotas** 측정값 그룹 및 **날짜** 차원입니다.  
+20. 찾아보기 단추를 클릭 ( **...** )의 교집합에서 셀에는 **Sales Quotas** 측정값 그룹 및 **날짜** 차원입니다.  
   
 21. **관계 정의** 대화 상자의 **관계 유형 선택** 목록에서 **일반** 을 선택합니다.  
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 898a7e4cea01b37bcb45334a3fc669cb63357d9d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943908"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS(Transact SQL)
@@ -65,7 +65,7 @@ expression. 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/languag
   
 ## <a name="examples"></a>예  
   
-### <a name="a-compress-data-during-the-table-insert"></a>1. 테이블 삽입 중에 데이터 압축   
+### <a name="a-compress-data-during-the-table-insert"></a>1\. 테이블 삽입 중에 데이터 압축  
 이 예에서는 테이블에 삽입된 데이터를 압축하는 방법을 보여줍니다.
   
 ```sql
@@ -77,7 +77,7 @@ INSERT INTO player (name, surname, info )
 VALUES (N'Michael', N'Raheem', compress(@info));  
 ```  
   
-### <a name="b-archive-compressed-version-of-deleted-rows"></a>2. 삭제된 행의 압축된 버전 보관  
+### <a name="b-archive-compressed-version-of-deleted-rows"></a>2\. 삭제된 행의 압축된 버전 보관  
 이 명령문은 `player` 테이블에서 오래된 플레이어 레코드를 먼저 삭제합니다. 공간을 절약하기 위해 레코드를 `inactivePlayer` 테이블에 압축 형식으로 저장합니다.
   
 ```sql
