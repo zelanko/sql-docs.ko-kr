@@ -37,10 +37,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26fe81f211da49cb4fd14def4603ec3ab5557eb7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943052"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE(Transact-SQL)
@@ -72,7 +72,7 @@ GETUTCDATE()
 ## <a name="examples"></a>예  
  다음 예에서는 현재 날짜 및 시간을 반환하는 6개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 함수를 사용하여 시간, 날짜 또는 두 가지 모두 반환합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
   
-### <a name="a-getting-the-current-system-date-and-time"></a>1. 현재 시스템의 날짜 및 시간 가져오기  
+### <a name="a-getting-the-current-system-date-and-time"></a>1\. 현재 시스템의 날짜 및 시간 가져오기  
   
 ```  
 SELECT 'SYSDATETIME()      ', SYSDATETIME();  
@@ -91,7 +91,7 @@ GETUTCDATE()             2007-05-04 01:34:11.933
 */  
 ```  
   
-### <a name="b-getting-the-current-system-date"></a>2. 현재 시스템의 날짜 가져오기  
+### <a name="b-getting-the-current-system-date"></a>2\. 현재 시스템의 날짜 가져오기  
   
 ```  
 SELECT 'SYSDATETIME()      ', CONVERT (date, SYSDATETIME());  

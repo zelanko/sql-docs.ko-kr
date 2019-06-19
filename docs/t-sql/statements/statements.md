@@ -15,18 +15,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8d1aa3a5156b10050c1b5b977dae40cf0513fbfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927372"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 문
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 참조 항목에는 TRANSACT-SQL(T-SQL)와 함께 사용할 문의 범주가 요약되어 있습니다. 왼쪽 탐색 창에 나열된 모든 문을 찾을 수 있습니다.
 
-## <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+## <a name="backup-and-restore"></a>백업 및 복원
 Backup 및 Restore 문은 백업을 만들고 백업에서 복원하는 방법을 제공합니다.  자세한 내용은 [백업 및 복원 개요](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)를 참조하세요.
 
 ## <a name="data-definition-language"></a>DDL(데이터 정의 언어)

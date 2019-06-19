@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63051604"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL(Transact-SQL)
@@ -69,7 +69,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-a-credential"></a>1. 자격 증명의 암호 변경  
+### <a name="a-changing-the-password-of-a-credential"></a>1\. 자격 증명의 암호 변경  
  다음 예에서는 `Saddles`라는 자격 증명에 저장된 암호를 변경합니다. 이 자격 증명에는 `RettigB` Windows 로그인과 해당 암호가 들어 있습니다. 새 암호는 SECRET 절을 사용하여 자격 증명에 추가됩니다.  
   
 ```  
@@ -78,7 +78,7 @@ ALTER CREDENTIAL Saddles WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>2. 자격 증명에서 암호 제거  
+### <a name="b-removing-the-password-from-a-credential"></a>2\. 자격 증명에서 암호 제거  
  다음 예에서는 `Frames`라는 자격 증명에서 암호를 제거합니다. 이 자격 증명에는 `Aboulrus8` Windows 로그인과 해당 암호가 들어 있습니다. SECRET 옵션이 지정되지 않았기 때문에 문이 실행된 후에는 자격 증명 암호가 NULL이 됩니다.  
   
 ```  

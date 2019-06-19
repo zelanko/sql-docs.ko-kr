@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107295"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 요소 경로 구문(SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107295"
 |&#124;(세로 막대)|각 구문 항목을 구분합니다. 항목 중 하나만 선택할 수 있습니다.|  
 |`[ ] (brackets)`|선택적 구문 항목입니다. 대괄호는 입력하지 않습니다.|  
 |**{ }** (중괄호)|구문 항목의 매개 변수 범위를 지정합니다.|  
-|[**,**...*n*]|앞의 항목이 *n* 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
+|[ **,** ...*n*]|앞의 항목이 *n* 번 반복될 수 있음을 나타냅니다. 각 항목은 쉼표로 구분됩니다.|  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |`ElementNode`|XML 문서의 XML 노드입니다. 노드는 태그로 지정되며 다른 노드와 계층 관계에 있습니다. 예를 들어, \<Customers>는 루트 요소 노드이고 \<Customer>는 \<Customers>의 하위 요소입니다.|  
 |`XMLName`|노드 이름입니다. 예를 들어 Customers 노드의 이름은 Customers입니다. `XMLName`에 네임스페이스 식별자를 접두사로 사용하면 모든 노드에 고유 이름을 지정할 수 있습니다.|  
 |`Encoding`|이 요소에 대한 `Value`가 인코딩된 XML이므로 이 값을 디코딩하여 이 요소의 하위 요소로 포함해야 함을 나타냅니다.|  
-|`FieldList`|데이터를 검색하는 데 사용할 요소 및 특성 집합을 정의합니다.<br /><br /> 지정하지 않으면 모든 특성 및 하위 요소가 필드로 사용됩니다. 빈 필드 목록을 지정하는 경우(**{}**) 이 노드의 필드는 사용되지 않습니다.<br /><br /> `FieldList`에 `Value`와 `Element` 또는 `ElementNode`가 모두 포함될 수는 없습니다.|  
+|`FieldList`|데이터를 검색하는 데 사용할 요소 및 특성 집합을 정의합니다.<br /><br /> 지정하지 않으면 모든 특성 및 하위 요소가 필드로 사용됩니다. 빈 필드 목록을 지정하는 경우( **{}** ) 이 노드의 필드는 사용되지 않습니다.<br /><br /> `FieldList`에 `Value`와 `Element` 또는 `ElementNode`가 모두 포함될 수는 없습니다.|  
 |`Field`|데이터 세트 필드로 검색되는 데이터를 지정합니다.|  
 |`Attribute`|`ElementNode` 내의 이름-값 쌍입니다. 예를 들어 요소 노드를에서 \<고객 ID = "1" >, `ID` 특성 및 `@ID(Integer)` 해당 데이터 필드의 정수 형식으로 "1"을 반환 합니다. `ID`합니다.|  
 |`Value`|요소의 값입니다. `Value`는 요소 경로의 마지막 `ElementNode`에만 사용할 수 있습니다. 예를 들어, 하므로 \<반환 > 값 요소 경로의 끝에 포함 하는 경우 리프 노드는 `Return {@}` 는 `Chair`합니다.|  

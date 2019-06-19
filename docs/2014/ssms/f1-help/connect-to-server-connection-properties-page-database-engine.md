@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245513"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
@@ -24,7 +24,7 @@ ms.locfileid: "63245513"
   
 ## <a name="options"></a>변수  
  **데이터베이스에 연결**  
- 목록에서 연결할 데이터베이스를 선택합니다. 선택 하는 경우  **\<기본값 >**, 서버에 대 한 기본 데이터베이스에 연결 됩니다. 선택 하는 경우  **\<서버 찾아보기 >**, 연결할 데이터베이스의 서버를 찾아볼 수 있습니다.  
+ 목록에서 연결할 데이터베이스를 선택합니다. 선택 하는 경우 **\<기본값 >**, 서버에 대 한 기본 데이터베이스에 연결 됩니다. 선택 하는 경우 **\<서버 찾아보기 >**, 연결할 데이터베이스의 서버를 찾아볼 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 통해 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]데이터베이스 엔진 인스턴스에 연결할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용해야 하며 **서버에 연결** 대화 상자의 **연결 속성** 탭에서 데이터베이스를 지정해야 합니다. **연결 암호화** 확인란을 선택해야 합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63245513"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **Options**  
+ **옵션**  
  대화 상자를 변경하여 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  

@@ -32,10 +32,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981128"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
@@ -145,7 +145,7 @@ COMMIT TRAN T1;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-explicit-transaction"></a>1. 명시적 트랜잭션 사용
+### <a name="a-using-an-explicit-transaction"></a>1\. 명시적 트랜잭션 사용
 **적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 이 예제에서는 AdventureWorks를 사용합니다. 
@@ -157,7 +157,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>2. 트랜잭션 롤백
+### <a name="b-rolling-back-a-transaction"></a>2\. 트랜잭션 롤백
 **적용 대상:** SQL Server(2008부터), Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 다음 예제에서는 트랜잭션 롤백의 결과를 보여 줍니다. 이 예제에서는 ROLLBACK 문이 INSERT 문을 롤백하지만 만들어진 테이블은 그대로 있습니다.

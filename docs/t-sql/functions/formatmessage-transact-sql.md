@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948999"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE(Transact-SQL)
@@ -66,7 +66,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-example-with-a-message-number"></a>1. 메시지 번호 사용 예  
+### <a name="a-example-with-a-message-number"></a>1\. 메시지 번호 사용 예  
  다음 예는 sys.messages에 "아티클 '%s'을(를) 게시 '%s'에 추가할 수 없습니다."로 저장된 복제 메시지 `20009`를 사용합니다. FORMATMESSAGE는 `First Variable` 및 `Second Variable` 값을 매개 변수 자리 표시자로 대체합니다. 결과 문자열 "아티클 '첫 번째 변수'를 게시 '두 번째 변수'에 추가할 수 없습니다."는 지역 변수 `@var1`에 저장됩니다.  
   
 ```  
@@ -76,7 +76,7 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>2. 메시지 문자열 사용 예  
+### <a name="b-example-with-a-message-string"></a>2\. 메시지 문자열 사용 예  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

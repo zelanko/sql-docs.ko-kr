@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c90a3cf1f74eb588bd6faa657a3f47d7e57df453
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66403061"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
@@ -111,7 +111,7 @@ SELECT * FROM SQLTest
 GO
 ```
 
-### <a name="a-full-back-up-to-disk-to-default-location"></a>1. 기본 위치로 디스크 전체 백업
+### <a name="a-full-back-up-to-disk-to-default-location"></a>1\. 기본 위치로 디스크 전체 백업
 이 예제에서는 `SQLTestDB` 데이터베이스가 기본 백업 위치에서 디스크로 백업됩니다.  `SQLTestDB` 백업은 수행되지 않았습니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 2.  **데이터베이스**를 확장하고 `SQLTestDB`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...** 을 클릭합니다.
@@ -325,13 +325,13 @@ GO
 
 ## <a name="powershell-examples"></a>PowerShell 예제
 
-### <a name="a--full-local-backup"></a>1.  전체 로컬 백업 
+### <a name="a--full-local-backup"></a>1\.  전체 로컬 백업 
 다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예제에서는 **-BackupAction Database**를 지정합니다.  
 ```powershell 
 Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Database  
 ```
  
-### <a name="b--full-backup-to-microsoft-azure"></a>2.  Microsoft Azure로 전체 백업 
+### <a name="b--full-backup-to-microsoft-azure"></a>2\.  Microsoft Azure로 전체 백업 
 다음 예제에서는 Microsoft Azure Blob Storage 서비스로 `MyServer` 인스턴스의 `Sales` 데이터베이스 전체 백업을 만듭니다.  읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  PowerShell 명령은 **BackupFile** 매개 변수를 사용하여 위치(URL)와 백업 파일 이름을 지정합니다.
 
 ```powershell  

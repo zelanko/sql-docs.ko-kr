@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106944"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66106944"
 |기본값을 사용하는 XML 문서|*No query*입니다.<br /><br /> 요소 경로는 XML 문서 자체에서 파생되며 네임스페이스로부터 독립적입니다.|  
   
 > [!NOTE]  
->  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드 사용) 이 쿼리를 실행하려면 새 데이터 원본을 만들고 연결 문자열을 http://localhost/reportserver/reportservice2006.asmx로 설정해야 합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 `Item` 및 `Recursive`의 두 매개 변수를 사용합니다. `Item`의 기본값은 `/`로 설정하고 `Recursive`의 기본값은 `1`로 설정합니다.  
+>  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드 사용) 이 쿼리를 실행하려면 새 데이터 원본을 만들고 연결 문자열을 http://localhost/reportserver/reportservice2006.asmx 로 설정해야 합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 `Item` 및 `Recursive`의 두 매개 변수를 사용합니다. `Item`의 기본값은 `/`로 설정하고 `Recursive`의 기본값은 `1`로 설정합니다.  
   
 ## <a name="specifying-namespaces"></a>네임스페이스 지정  
  XML `Query` 요소를 사용하여 데이터 원본의 XML 데이터에 사용된 네임스페이스를 지정할 수 있습니다. 다음 XML 쿼리에서는 `sales` 네임스페이스를 사용합니다. `sales:LineItems` 및 `sales:LineItem`의 XML `ElementPath` 노드는 `sales` 네임스페이스를 사용합니다.  
@@ -87,11 +87,11 @@ ms.locfileid: "66106944"
   
 |XML 쿼리 요소|데이터 세트의 결과 필드|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|A: 값 https://schemas.microsoft.com/..합니다.<br /><br /> 값 b: https://schemas.microsoft.com/..합니다.<br /><br /> C: 값 https://schemas.microsoft.com/..합니다.|  
-|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|A: 값 https://schemas.microsoft.com/.. 합니다.<br /><br /> 값 b: https://schemas.microsoft.com/.. 합니다.<br /><br /> C: 값 https://schemas.microsoft.com/.. 합니다.|  
+|\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery " xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 문서: DPNamespace.xml  
- 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: http://localhost/DPNamespace.xml).  
+ 이 XML을 복사한 후 보고서 디자이너에서 XML 데이터 원본으로 사용할 수 있는 URL에 저장할 수 있습니다(예: http://localhost/DPNamespace.xml ).  
   
 ```  
 <Root xmlns:ns="https://schemas.microsoft.com/...">  

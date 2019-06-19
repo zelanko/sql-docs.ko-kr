@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996255"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write(Transact-SQL)
@@ -64,7 +64,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-user-defined-audit-event-with-informational-text"></a>1. 정보 텍스트를 포함하여 사용자 정의 감사 이벤트 만들기  
+### <a name="a-creating-a-user-defined-audit-event-with-informational-text"></a>1\. 정보 텍스트를 포함하여 사용자 정의 감사 이벤트 만들기  
  다음 예에서는 ID가 27인 감사 이벤트, succeeded 값 0, 그리고 선택적으로 포함되는 정보 텍스트를 작성합니다.  
   
 ```  
@@ -73,7 +73,7 @@ EXEC sp_audit_write @user_defined_event_id =  27 ,
             , @user_defined_information = N'Access to a monitored object.' ;  
 ```  
   
-### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>2.  정보 텍스트 없이 사용자 정의 감사 이벤트 만들기  
+### <a name="b--creating-a-user-defined-audit-event-without-informational-text"></a>2\.  정보 텍스트 없이 사용자 정의 감사 이벤트 만들기  
  다음 예에서는 ID가 27인 감사 이벤트와 succeeded 값 0을 작성하되 선택적 정보 텍스트 또는 매개 변수 이름은 포함하지 않습니다.  
   
 ```  

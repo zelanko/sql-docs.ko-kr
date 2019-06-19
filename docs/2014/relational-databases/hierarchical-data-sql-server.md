@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065709"
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
@@ -159,7 +159,7 @@ GO
   
      너비 우선 인덱스에서는 노드의 모든 직계 자식이 같은 위치에 배치됩니다. 따라서 "이 관리자에게 직접 보고하는 모든 직원 찾기"와 같은 인접한 자식에 대한 쿼리에 답하는 데에는 너비 우선 인덱스가 효율적입니다.  
   
- 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법의 자세한 예제를 참조 하세요. [자습서: Hierarchyid 데이터 형식을 사용 하 여](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)입니다.  
+ 깊이 우선을 사용할 것인지, 너비 우선을 사용할 것인지 또는 둘 다를 사용할 것인지 여부와 클러스터링 키(있는 경우)를 만들 인덱스는 위의 쿼리 형식에 대한 상대적 중요도와 SELECT 및 DML 작업의 상대적 중요도에 따라 달라집니다. 인덱싱 방법에 대한 자세한 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)을 참조하세요.  
   
   
 ### <a name="creating-indexes"></a>인덱스 만들기  
@@ -265,7 +265,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 관련 태스크  
   
 ###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 `hierarchyid`를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예의 1 단원을 참조 [자습서: Hierarchyid 데이터 형식을 사용 하 여](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)입니다.  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 `hierarchyid`를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
@@ -497,7 +497,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> 하위 트리 이동  
- 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **@oldMgr**포함)를 **@newMgr**를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
+ 다른 일반적인 작업은 하위 트리를 이동하는 것입니다. 아래 절차에서는 **@oldMgr** 의 하위 트리를 사용하여 이 하위 트리( **@oldMgr** 포함)를 **@newMgr** 를 사용하면 하위 트리 쿼리가 훨씬 더 빨라집니다.  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
@@ -525,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [hierarchyid 데이터 형식 메서드 참조](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [자습서: Hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid&#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

@@ -33,10 +33,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982352"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE(Transact-SQL)
@@ -392,7 +392,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-execute-to-pass-a-single-parameter"></a>1. EXECUTE를 사용하여 단일 매개 변수 전달  
+### <a name="a-using-execute-to-pass-a-single-parameter"></a>1\. EXECUTE를 사용하여 단일 매개 변수 전달  
  [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `uspGetEmployeeManagers` 저장 프로시저에는 하나의 매개 변수가 필요합니다(`@EmployeeID`). 다음 예에서는 매개 변수 값으로 `Employee ID 6`을 사용하여 `uspGetEmployeeManagers` 저장 프로시저를 실행합니다.  
   
 ```  
@@ -417,7 +417,7 @@ dbo.uspGetEmployeeManagers @EmployeeID = 6;
 GO  
 ```  
   
-### <a name="b-using-multiple-parameters"></a>2. 여러 매개 변수 사용  
+### <a name="b-using-multiple-parameters"></a>2\. 여러 매개 변수 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `spGetWhereUsedProductID` 저장 프로시저를 실행합니다. 이 저장 프로시저는 두 개의 매개 변수를 전달합니다. 첫 번째 매개 변수는 제품 ID(`819`)이고 두 번째 매개 변수인 `@CheckDate,`는 `datetime` 값입니다.  
   
 ```  
@@ -533,7 +533,7 @@ EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;
 GO  
 ```  
   
-### <a name="i-using-execute-with-a-user-defined-function"></a>9. 사용자 정의 함수와 함께 EXECUTE 사용  
+### <a name="i-using-execute-with-a-user-defined-function"></a>9\. 사용자 정의 함수와 함께 EXECUTE 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ufnGetSalesOrderStatusText` 스칼라 사용자 정의 함수를 실행합니다. 이 예에서는 `@returnstatus` 변수를 사용하여 함수가 반환하는 값을 저장합니다. 함수에는 입력 매개 변수 하나(`@Status`)가 필요합니다. 이 매개 변수는 **tinyint** 데이터 형식으로 정의됩니다.  
   
 ```  

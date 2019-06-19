@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946392"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED(Transact-SQL)
@@ -55,7 +55,7 @@ IDENT_SEED ( 'table_or_view' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-seed-value-from-a-specified-table"></a>1. 지정된 테이블에서 초기값 반환  
+### <a name="a-returning-the-seed-value-from-a-specified-table"></a>1\. 지정된 테이블에서 초기값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 초기값을 반환합니다.  
   
 ```  
@@ -65,7 +65,7 @@ SELECT IDENT_SEED('Person.Address') AS Identity_Seed;
 GO  
 ```  
   
-### <a name="b-returning-the-seed-value-from-multiple-tables"></a>2. 여러 테이블에서 초기값 반환  
+### <a name="b-returning-the-seed-value-from-multiple-tables"></a>2\. 여러 테이블에서 초기값 반환  
  다음 예제에서는 초기값이 있는 ID 열을 포함하는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블을 반환합니다.  
   
 ```  

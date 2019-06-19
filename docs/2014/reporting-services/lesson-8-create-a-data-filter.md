@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108387"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
@@ -41,7 +41,7 @@ ms.locfileid: "66108387"
   
 4.  에 **식을** 제출 클릭 `ProductID` 드롭 다운 목록에서. 이는 필터를 적용할 열입니다.  
   
-5.  등호를 클릭 합니다. (**=**) 연산자를 **연산자** 드롭 다운 목록.  
+5.  등호를 클릭 합니다. ( **=** ) 연산자를 **연산자** 드롭 다운 목록.  
   
 6.  옆의 식 단추를 클릭 합니다 **값** 필드를 클릭 **매개 변수** 에 **범주** 영역에서 마우스 두 번 클릭 `productid` 에  **값** 영역입니다. **대 한 식 설정: 값** 필드에 비슷한 식이 포함 **매개 변수 =! productid 합니다. 값**합니다.  
   

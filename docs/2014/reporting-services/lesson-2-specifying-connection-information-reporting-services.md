@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108515"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: (Reporting Services)는 연결 정보 지정
@@ -55,7 +55,7 @@ ms.locfileid: "66108515"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 데이터 원본 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 에 추가 되는 **보고서 데이터** 창입니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. [3단원: 테이블 보고서에 대한 데이터 세트 정의&amp;#40;Reporting Services&amp;#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)를 참조하세요.  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. [3단원: 테이블 보고서에 대한 데이터 세트 정의&#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

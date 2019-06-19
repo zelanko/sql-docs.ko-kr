@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7fbf5c43d58f56a3a383023e5818f1494e86ed68
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821861"
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - 스크립팅 변수와 함께 사용
@@ -137,7 +137,7 @@ R/W는 **setvar** 명령을 사용하여 값을 다시 설정할 수 있으며 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>1. 스크립트에서 setvar 명령 사용  
+### <a name="a-using-the-setvar-command-in-a-script"></a>1\. 스크립트에서 setvar 명령 사용  
  **setvar** 명령을 사용하면 스크립트에서 여러 **sqlcmd** 옵션을 제어할 수 있습니다. 다음 예에서는 `test.sql` 변수가 `SQLCMDLOGINTIMEOUT` 초로 설정되고 다른 스크립팅 변수인 `60` 가 `server`로 설정된 `testserver`스크립트를 만듭니다. `test.sql`의 코드는 다음과 같습니다.  
 
 ```
@@ -157,7 +157,7 @@ FROM Person.Person;
 sqlcmd -i c:\test.sql
 ```
   
-### <a name="b-using-the-setvar-command-interactively"></a>2. 대화식으로 setvar 명령 사용  
+### <a name="b-using-the-setvar-command-interactively"></a>2\. 대화식으로 setvar 명령 사용  
  다음 예에서는 `setvar` 명령을 사용하여 대화식으로 스크립팅 변수를 설정하는 방법을 보여 줍니다.  
 
 ```

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087003"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>사용자 지정 멤버 수식 만들기(비즈니스 인텔리전스 마법사)
@@ -27,7 +27,7 @@ ms.locfileid: "66087003"
  사용자 지정 멤버 수식과 연결할 특성을 선택합니다.  
   
  **원본 열**  
- 찾아보기 (**...** ) 버튼을 클릭 하 여 **열을 선택** 대화 상자 및 특성과 연결할 사용자 지정 멤버 수식 열을 선택 합니다.  
+ 찾아보기 ( **...** ) 버튼을 클릭 하 여 **열을 선택** 대화 상자 및 특성과 연결할 사용자 지정 멤버 수식 열을 선택 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)   

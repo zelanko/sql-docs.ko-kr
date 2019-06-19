@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5e9c4574c462ef42b0235e843970c882532dc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049064"
 ---
 # <a name="mssqlserver10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47635381"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_TOO_MANY_STMTS|  
-|메시지 텍스트|지정된 **@plan_handle**에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있으므로 계획 지침 '%\**ls'을(를) 만들 수 없습니다. 각 문에 **statement_start_offset** 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드세요.|  
+|메시지 텍스트|지정된 **@plan_handle** 에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있으므로 계획 지침 '%\**ls'을(를) 만들 수 없습니다. 각 문에 **statement_start_offset** 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드세요.|  
   
 ## <a name="explanation"></a>설명  
-지정된 **@plan_handle**에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있습니다.  
+지정된 **@plan_handle** 에 해당하는 일괄 처리 또는 모듈에 적합한 문이 1000개 이상 포함되어 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
 각 문에 **statement_start_offset** 값을 지정하여 일괄 처리 또는 모듈의 각 문에 대해 계획 지침을 만드세요.  

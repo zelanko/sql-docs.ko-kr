@@ -1,5 +1,5 @@
 ---
-title: 3.5 드라이버를 3.8 드라이버로 업그레이드 | Microsoft Docs
+title: 3\.5 드라이버를 3.8 드라이버로 업그레이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254163"
 ---
-# <a name="upgrading-a-35-driver-to-a-38-driver"></a>3.5 드라이버를 3.8 드라이버로 업그레이드
+# <a name="upgrading-a-35-driver-to-a-38-driver"></a>3\.5 드라이버를 3.8 드라이버로 업그레이드
 이 항목에서는 ODBC 3.5 드라이버는 ODBC 3.8 드라이버로 업그레이드 시 고려 사항 및 지침을 제공 합니다.  
   
 ##### <a name="version-numbers"></a>버전 번호  

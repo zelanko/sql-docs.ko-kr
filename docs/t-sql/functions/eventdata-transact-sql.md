@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946116"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA(Transact-SQL)
@@ -82,7 +82,7 @@ EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-querying-event-data-in-a-ddl-trigger"></a>1. DDL 트리거에서 이벤트 데이터 쿼리  
+### <a name="a-querying-event-data-in-a-ddl-trigger"></a>1\. DDL 트리거에서 이벤트 데이터 쿼리  
 이 예제에서는 새 데이터베이스 테이블 만들기를 차단하는 DDL 트리거를 만듭니다. `EVENTDATA`에서 생성한 XML 데이터에 XQuery를 사용하면 트리거를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
@@ -114,7 +114,7 @@ GO
 > [!NOTE]  
 >  이벤트 데이터를 반환하려면 **query()** 메서드 대신 XQuery **value()** 메서드를 사용합니다. **query()** 메서드는 XML 및 출력에서 앰퍼샌드로 이스케이프된 CR/LF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하지만 **value()** 메서드는 출력에서는 볼 수 없는 CR/LF 인스턴스를 표시합니다.  
   
-### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>2. DDL 트리거에서 이벤트 데이터가 있는 로그 테이블 만들기  
+### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>2\. DDL 트리거에서 이벤트 데이터가 있는 로그 테이블 만들기  
 이 예에서는 모든 데이터베이스 수준 이벤트 정보를 스토리지할 테이블을 만들고 DDL 트리거로 해당 테이블을 채웁니다. `EVENTDATA`에서 생성된 XML 데이터에 XQuery를 사용하면 이벤트 유형과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다.  
   
 ```  

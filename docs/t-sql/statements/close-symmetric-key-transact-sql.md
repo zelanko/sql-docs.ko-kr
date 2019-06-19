@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 999e8cc5e66e8e809b2c716c77b0c0fba8ae95ba
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051449"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ## <a name="remarks"></a>Remarks  
  열린 대칭 키는 보안 컨텍스트가 아니라 세션에 바인딩됩니다. 열린 키는 명시적으로 닫히거나 세션이 종료될 때까지 계속 사용할 수 있습니다. CLOSE ALL SYMMETRIC KEYS는 [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) 문을 사용하여 현재 세션에서 열려 있는 모든 데이터베이스 마스터 키를 닫습니다.  열린 키에 대한 정보는 [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) 카탈로그 뷰에 표시됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키를 닫는 데 필요한 명시적 사용 권한이 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-closing-a-symmetric-key"></a>1. 하나의 대칭 키 닫기  
+### <a name="a-closing-a-symmetric-key"></a>1\. 하나의 대칭 키 닫기  
  다음 예에서는 대칭 키 `ShippingSymKey04`를 닫습니다.  
   
 ```  
@@ -63,7 +63,7 @@ CLOSE SYMMETRIC KEY ShippingSymKey04;
 GO  
 ```  
   
-### <a name="b-closing-all-symmetric-keys"></a>2. 모든 대칭 키 닫기  
+### <a name="b-closing-all-symmetric-keys"></a>2\. 모든 대칭 키 닫기  
  다음 예에서는 현재 세션에서 열려 있는 모든 대칭 키를 닫고 명시적으로 연 데이터베이스 마스터 키도 닫습니다.  
   
 ```  

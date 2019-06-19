@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996103"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription(Transact-SQL)
@@ -56,7 +56,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>인수  
 `[ @dbname = ] 'dbname'` 대상 구독 데이터베이스 이름으로 지정 하는 문자열이입니다. *dbname* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @filename = ] 'filename'` 이름 및 주 MDF의 실제 위치 (**마스터** 데이터 파일). *filename* 됩니다 **nvarchar(260)**, 기본값은 없습니다.  
+`[ @filename = ] 'filename'` 이름 및 주 MDF의 실제 위치 (**마스터** 데이터 파일). *filename* 됩니다 **nvarchar(260)** , 기본값은 없습니다.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` 동기화 시 구독자에 연결할 때 사용 하 여 구독자의 보안 모드가입니다. *subscriber_security_mode* 됩니다 **int**, 기본값은 NULL입니다.  
   
@@ -91,14 +91,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다. 변수의 *job_password* 120 미만의 유니코드 문자 여야 합니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` 사용자 정의 데이터베이스 마스터 키의 암호가입니다. *db_master_key_password* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다. 하는 경우 *db_master_key_password* 지정 하지 않으면 기존 데이터베이스 마스터 키를 삭제 하 고 다시 생성 됩니다.  
+`[ @db_master_key_password = ] 'db_master_key_password'` 사용자 정의 데이터베이스 마스터 키의 암호가입니다. *db_master_key_password* 됩니다 **nvarchar(524)** , 기본값은 NULL입니다. 하는 경우 *db_master_key_password* 지정 하지 않으면 기존 데이터베이스 마스터 키를 삭제 하 고 다시 생성 됩니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  

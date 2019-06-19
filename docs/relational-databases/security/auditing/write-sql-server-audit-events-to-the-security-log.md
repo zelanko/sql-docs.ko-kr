@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715880"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47723401"
   
  Windows 보안 로그에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 감사를 쓰려면 두 가지 주요 요구 사항을 충족해야 합니다.  
   
--   감사 개체 액세스 설정이 이벤트를 캡처하도록 구성되어야 합니다. 이 감사 정책 도구(`auditpol.exe`)는 **감사 개체 액세스** 범주의 여러 하위 정책 설정을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 개체 액세스를 감사하도록 허용하려면 **응용 프로그램에서 생성된** 설정을 구성합니다.  
+-   감사 개체 액세스 설정이 이벤트를 캡처하도록 구성되어야 합니다. 이 감사 정책 도구(`auditpol.exe`)는 **감사 개체 액세스** 범주의 여러 하위 정책 설정을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 개체 액세스를 감사하도록 허용하려면 **애플리케이션에서 생성된** 설정을 구성합니다.  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 실행 중인 계정이 Windows 보안 로그에 쓰려면 **보안 감사 생성** 권한이 있어야 합니다. 기본적으로 LOCAL SERVICE 및 NETWORK SERVICE 계정에는 이 권한이 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행 중인 경우에는 이 단계가 필요하지 않습니다.  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 대한 모든 권한을 레지스트리 하이브 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`에 제공합니다.  
 
@@ -45,11 +45,11 @@ Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경�
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"**). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"** ). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  이러한 설정을 구성하려면 Windows 관리자여야 합니다.  
   
 ##  <a name="auditpolAccess"></a> Windows에서 auditpol을 사용하여 감사 개체 액세스 설정을 구성하려면  

@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f2597386a3beac94ff1cc5d067299f308a255e9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944066"
 ---
 # <a name="ntile-transact-sql"></a>NTILE(Transact-SQL)
@@ -62,7 +62,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dividing-rows-into-groups"></a>1. 행을 그룹으로 나누기  
+### <a name="a-dividing-rows-into-groups"></a>1\. 행을 그룹으로 나누기  
  다음 예에서는 연간 누계 매출을 기준으로 행을 네 개의 직원 그룹으로 나눕니다. 총 행 수를 그룹 수로 나눌 수 없으므로 처음 두 그룹에는 네 개의 행이 포함되고 나머지 그룹에는 각각 세 개의 행이 포함됩니다.  
   
 ```  
@@ -106,7 +106,7 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 (14 row(s) affected)  
 ```  
   
-### <a name="b-dividing-the-result-set-by-using-partition-by"></a>2. PARTITION BY를 사용하여 결과 집합 나누기  
+### <a name="b-dividing-the-result-set-by-using-partition-by"></a>2\. PARTITION BY를 사용하여 결과 집합 나누기  
  다음 예에서는 예 1의 코드에 `PARTITION BY` 인수를 추가합니다. 행은 먼저 `PostalCode`로 분할된 다음 각 `PostalCode` 내에 4개 그룹으로 나누어집니다. 또한 이 예에서는 변수 `@NTILE_Var`을 선언하고 이 변수를 사용하여 *integer_expression* 매개 변수의 값을 지정합니다.  
   
 ```  

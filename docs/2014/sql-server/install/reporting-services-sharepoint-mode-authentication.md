@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c932d8d75ee33bc0a0970f858a0a04f9b522e4ab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092603"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 모드 인증
@@ -30,7 +30,7 @@ ms.locfileid: "66092603"
   
 -   애플리케이션 풀 계정에 암호가 필요 하지 않은 경우 **SSRS 애플리케이션 풀 계정 암호:** 옵션이 비활성화 됩니다. 예를 들어, "NT Authority\NetworkService"입니다. 애플리케이션 풀 계정에 암호가 필요하지 않은 경우 올바른 암호를 입력할 때까지 업그레이드를 계속할 수 없습니다.  
   
- 자세한 내용은 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628)합니다.  
+ 자세한 내용은 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628) 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 업그레이드 및 마이그레이션](https://go.microsoft.com/fwlink/?LinkID=245628)  

@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007305"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007305"
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. 에 NULL 매개 변수 값을 전달 하려면 지정 된 **nullvalue** 특성입니다. 에 할당 된 값을 **nullvalue** 특성 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->   **\<sql:header >** 및  **\<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서  **\<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
+>  **\<sql:header >** 및  **\<updg:header >** 를 지정 해야 합니다 **nullvalue** unqualified로 반면;에서  **\<updg:sync >** 를 지정할 합니다 **nullvalue** 으로 정규화 된 (예를 들어 **updg: nullvalue**).  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 합니다 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "63007305"
   
 -   이 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되지 않습니다. 매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>1. Updategram에 매개 변수 전달  
+### <a name="a-passing-parameters-to-an-updategram"></a>1\. Updategram에 매개 변수 전달  
  이 예에서 Updategram은 HumanResources.Shift 테이블에 있는 직원의 성을 변경합니다. Updategram은 두 개의 매개 변수가 전달 됩니다. 고유 하 게 근무조를 식별 하 고 이름에 사용 되는 ShiftID  
   
 ```  
@@ -74,7 +74,7 @@ ms.locfileid: "63007305"
     cmd.Parameters.Append cmd.CreateParameter("@Name",   200, 1, 50, "New Name")  
     ```  
   
-### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>2. NULL을 매개 변수 값으로 Updategram에 전달  
+### <a name="b-passing-null-as-a-parameter-value-to-an-updategram"></a>2\. NULL을 매개 변수 값으로 Updategram에 전달  
  Updategram을 실행하면 NULL로 설정할 매개 변수에 "isnull" 값이 할당됩니다. Updategram은 "isnulll" 매개 변수 값을 NULL로 변환하고 적절하게 처리합니다.  
   
  다음 Updategram에서는 직원 직함을 NULL로 설정합니다.  

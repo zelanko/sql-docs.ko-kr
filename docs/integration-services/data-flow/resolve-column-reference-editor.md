@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726475"
 ---
 # <a name="resolve-column-reference-editor"></a>열 참조 확인 편집기
@@ -34,16 +34,16 @@ ms.locfileid: "65726475"
  모든 열 참조가 확인된 후 다른 데이터 경로 오류가 없으면 데이터 경로 옆에 오류 아이콘이 표시되지 않습니다.  
   
 ## <a name="options"></a>옵션  
- **매핑되지 않은 출력 열(원본)**    
+ **매핑되지 않은 출력 열(원본)**     
  현재 매핑되지 않은 업스트림 경로의 열  
   
-**매핑된 열(원본)**    
+**매핑된 열(원본)**     
  다운스트림 경로의 열에 매핑된 업스트림 경로의 열  
   
-**매핑된 열(대상)**    
+**매핑된 열(대상)**     
  다운스트림 경로의 열에 매핑된 업스트림 경로의 열  
   
-**매핑되지 않은 입력 열(대상)**    
+**매핑되지 않은 입력 열(대상)**     
  현재 매핑되지 않은 다운스트림 경로의 열  
   
 **매핑되지 않은 입력 열 삭제**  

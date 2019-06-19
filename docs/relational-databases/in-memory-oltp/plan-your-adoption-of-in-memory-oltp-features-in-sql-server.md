@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462507"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
@@ -27,7 +27,7 @@ ms.locfileid: "66462507"
 
 
 
-## <a name="a-adoption-of-in-memory-oltp-features"></a>1. 메모리 내 OLTP 기능 채택
+## <a name="a-adoption-of-in-memory-oltp-features"></a>1\. 메모리 내 OLTP 기능 채택
 
 
 다음 하위 섹션에서는 메모리 내 기능을 채택하고 구현하려는 경우 고려해야 할 요소를 설명합니다. 다음에서 많은 설명 정보를 확인할 수 있습니다.
@@ -118,7 +118,7 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 
 
-## <a name="b-unsupported-features"></a>2. 지원되지 않는 기능
+## <a name="b-unsupported-features"></a>2\. 지원되지 않는 기능
 
 특정 메모리 내 OLTP 시나리오에서 지원되지 않는 기능은 다음에 설명되어 있습니다.
 

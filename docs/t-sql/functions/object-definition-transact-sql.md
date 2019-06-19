@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a681af6603cdb7c69f91222e03b8a5c326ea2ffe
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944059"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION(Transact-SQL)
@@ -84,7 +84,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>1. 사용자 정의 개체의 원본 텍스트 반환  
+### <a name="a-returning-the-source-text-of-a-user-defined-object"></a>1\. 사용자 정의 개체의 원본 텍스트 반환  
  다음 예에서는 `uAddress` 스키마의 사용자 정의 트리거인 `Person`에 대한 정의를 반환합니다. 기본 제공 함수 `OBJECT_ID`는 트리거의 개체 ID를 `OBJECT_DEFINITION` 문에 반환하는 데 사용됩니다.  
   
 ```  
@@ -94,7 +94,7 @@ SELECT OBJECT_DEFINITION (OBJECT_ID(N'Person.uAddress')) AS [Trigger Definition]
 GO  
 ```  
   
-### <a name="b-returning-the-source-text-of-a-system-object"></a>2. 시스템 개체의 원본 텍스트 반환  
+### <a name="b-returning-the-source-text-of-a-system-object"></a>2\. 시스템 개체의 원본 텍스트 반환  
  다음 예에서는 시스템 저장 프로시저 `sys.sp_columns`의 정의를 반환합니다.  
   
 ```  

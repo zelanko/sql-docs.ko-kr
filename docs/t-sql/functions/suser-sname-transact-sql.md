@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948194"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME(Transact-SQL)
@@ -68,7 +68,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-susersname"></a>1. SUSER_SNAME 사용  
+### <a name="a-using-susersname"></a>1\. SUSER_SNAME 사용  
  다음 예에서는 현재 보안 컨텍스트의 로그인 이름을 반환합니다.  
   
 ```  
@@ -76,7 +76,7 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>2. Windows 사용자의 SID로 SUSER_SNAME 사용  
+### <a name="b-using-susersname-with-a-windows-user-security-id"></a>2\. Windows 사용자의 SID로 SUSER_SNAME 사용  
  다음 예에서는 Windows SID와 연결된 로그인 이름을 반환합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지

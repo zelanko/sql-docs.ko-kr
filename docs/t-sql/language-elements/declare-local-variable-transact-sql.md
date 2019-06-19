@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980182"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
@@ -194,7 +194,7 @@ CURSOR
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-declare"></a>1. DECLARE 사용  
+### <a name="a-using-declare"></a>1\. DECLARE 사용  
  다음 예에서는 `@find`라는 지역 변수를 사용하여 성이 `Man`으로 시작하는 모든 연락처 정보를 검색합니다.  
   
 ```  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>2. 두 변수가 있는 DECLARE 사용  
+### <a name="b-using-declare-with-two-variables"></a>2\. 두 변수가 있는 DECLARE 사용  
  다음 예에서는 북미 영업 지역 소속이고 연간 $2,000,000 이상을 판매한 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] 판매원을 검색합니다.  
   
 ```  

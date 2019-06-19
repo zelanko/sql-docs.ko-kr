@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2a619cbcd02add77bf2b9ff854b6ce5dd662604f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413895"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047868"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52413895"
   
  이 섹션의 항목:  
   
--   [메모리 액세스에 최적화된 테이블 저장소 구성](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
+-   [메모리 액세스에 최적화된 테이블 스토리지 구성](../../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md)  
   
 -   [메모리 액세스에 최적화된 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52413895"
   
 -   [메모리 액세스에 최적화된 개체에 대한 내구성 정의](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
--   [디스크 기반 테이블 저장소와 메모리 액세스에 최적화된 테이블 저장소 비교](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
+-   [디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교](../../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

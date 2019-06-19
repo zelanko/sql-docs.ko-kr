@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199088"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용하여 출력 매개 변수 검색
@@ -30,7 +30,7 @@ ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사�
  이 기능은 ODBC 3.8 응용 프로그램에서 사용할 수 컴파일되거나 ODBC 3.x 및 ODBC 2.x 응용 프로그램 및 이러한 응용 프로그램에 사용 하 여 검색 하는 동안 출력 매개 변수를 지 원하는 ODBC 3.8 드라이버가 있어야 **SQLGetData** 및 ODBC 3.8 드라이버 관리자입니다. 새 ODBC 기능을 사용 하려면 이전 응용 프로그램을 사용 하는 방법에 대 한 정보를 참조 하세요 [호환성 매트릭스](../../../odbc/reference/develop-app/compatibility-matrix.md)합니다.  
   
 ## <a name="usage-example"></a>사용 예  
- 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)}** , 위치 매개 변수가 모두 SQL_PARAM_OUTPUT_STREAM와 바인딩되어 및 저장된 프로시저는 결과 집합이 반환 (이 항목의 뒷부분에 나오는 것 보다 복잡 한 시나리오):  
+ 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)}**, 위치 매개 변수가 모두 SQL_PARAM_OUTPUT_STREAM와 바인딩되어 및 저장된 프로시저는 결과 집합이 반환 (이 항목의 뒷부분에 나오는 것 보다 복잡 한 시나리오):  
   
 1.  각 매개 변수에 대 한 호출 **SQLBindParameter** 사용 하 여 *InputOutputType* SQL_PARAM_OUTPUT_STREAM로 설정 하 고 *ParameterValuePtr* 매개 변수 번호와 같은 토큰 설정 에서 데이터에 대 한 포인터 또는 입력된 매개 변수를 바인딩하는 응용 프로그램 구조에 대 한 포인터입니다. 이 예제에서는 토큰으로 서 수 매개 변수를 사용 합니다.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63062212"
 ---
 # <a name="poll-servers"></a>서버 폴링
@@ -53,7 +53,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
  **대상 서버가 마스터 서버를 폴링하도록 설정하려면**  
   
--   다른 도구는 [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
+-   [SQL Server Management Studio](force-a-target-server-to-poll-the-master-server.md)  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)  
   

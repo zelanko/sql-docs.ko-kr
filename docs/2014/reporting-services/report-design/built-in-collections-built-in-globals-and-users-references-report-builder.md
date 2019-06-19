@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106436"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
@@ -74,7 +74,7 @@ ms.locfileid: "66106436"
   
 |**멤버**|**형식**|**설명**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|보고서를 실행하는 사용자의 `en-US`) 을 입력합니다.|  
+|`Language`|`String`|보고서를 실행하는 사용자의 `en-US` )을 입력합니다.|  
 |`UserID`|`String`|보고서를 실행하는 사용자의 ID입니다. Windows 인증을 사용하는 경우 이 값은 현재 사용자의 도메인 계정입니다. 값은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램에 의해 결정되며 이 프로그램은 Windows 인증 또는 사용자 지정 인증을 사용할 수 있습니다.|  
   
  보고서에서 여러 언어를 지원하는 방법에 대한 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 온라인 설명서 [의](https://go.microsoft.com/fwlink/?LinkId=120955)설명서에서 "다국어 배포 또는 글로벌 배포를 위한 솔루션 디자인 고려 사항"을 참조하세요.  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998290"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter(Transact-SQL)
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @filter_name = ] 'filter_name'` 만들 필터 저장 프로시저의 이름은 합니다 *filter_name*합니다. *filter_name* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다. 고유한 아티클 필터의 이름을 지정해야 합니다.  
+`[ @filter_name = ] 'filter_name'` 만들 필터 저장 프로시저의 이름은 합니다 *filter_name*합니다. *filter_name* 됩니다 **nvarchar(386)** , 기본값은 NULL입니다. 고유한 아티클 필터의 이름을 지정해야 합니다.  
   
 `[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
   

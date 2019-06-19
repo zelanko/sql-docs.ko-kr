@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192912"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **공유 메모리 속성** 대화 상자의 **프로토콜** 탭을 사용하여 공유 메모리를 확인하거나 수정할 수 있습니다. 연결 문자열에 대한 자세한 내용은 [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)을 참조하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **공유 메모리 속성** 대화 상자의 **프로토콜** 탭을 사용하여 공유 메모리를 확인하거나 수정할 수 있습니다. 연결 문자열에 대한 자세한 내용은 [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)을 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **Enabled**  

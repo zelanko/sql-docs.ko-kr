@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26a8299165eea6a2a8f1b8d69f87dc92f9bf12b6
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949070"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET(Transact-SQL)
@@ -63,7 +63,7 @@ TODATETIMEOFFSET ( expression , time_zone )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>1. 현재 날짜 및 시간의 표준 시간대 오프셋 변경  
+### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>1\. 현재 날짜 및 시간의 표준 시간대 오프셋 변경  
  다음 예에서는 현재 날짜 및 시간의 표준 시간대 오프셋을 표준 시간대 `-07:00`으로 변경합니다.  
   
 ```sql  
@@ -73,7 +73,7 @@ SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');
 -- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
-### <a name="b-changing-the-time-zone-offset-in-minutes"></a>2. 표준 시간대 오프셋(분) 변경  
+### <a name="b-changing-the-time-zone-offset-in-minutes"></a>2\. 표준 시간대 오프셋(분) 변경  
  다음 예에서는 현재 표준 시간대를 `-120`분으로 변경합니다.  
   
 ```sql  

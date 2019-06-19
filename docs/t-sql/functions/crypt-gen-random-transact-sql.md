@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c386191c9e6dc9d8cf1836381e50f3a9d607c25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944578"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
@@ -53,7 +53,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-generating-a-random-number"></a>1. 난수 생성  
+### <a name="a-generating-a-random-number"></a>1\. 난수 생성  
 이 함수는 길이 50바이트인 임의의 수를 생성합니다.
   
 ```sql
