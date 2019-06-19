@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772233"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@configname=** ] **'**_option\_name_**'**  
+ [ **@configname=** ] **'** _option\_name_ **'**  
  구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
- [ **@configvalue=** ] **'**_value_**'**  
+ [ **@configvalue=** ] **'** _value_ **'**  
  새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  **'hadoop connectivity'**  
@@ -114,7 +114,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>예  
   
-### <a name="a-list-all-available-configuration-settings"></a>1. 모든 사용 가능한 구성 설정 나열  
+### <a name="a-list-all-available-configuration-settings"></a>1\. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  
   
 ```  
@@ -123,7 +123,7 @@ EXEC sp_configure;
   
  결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **config_value** 는 재구성이 완료되면 SQL 또는 PolyBase에서 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
-### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>2. 특정 구성 이름에 대한 구성 설정 나열  
+### <a name="b-list-the-configuration-settings-for-one-configuration-name"></a>2\. 특정 구성 이름에 대한 구성 설정 나열  
   
 ```  
 EXEC sp_configure @configname='hadoop connectivity';  

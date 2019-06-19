@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726999"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
@@ -25,7 +25,7 @@ ms.locfileid: "65726999"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은**SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**(SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
+  **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은**SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
   
  다음 예제의 쿼리는 SSIS 카탈로그 Power BI 폴더에 있는 SSISPackagePublishing 프로젝트의 Package.dtsx 패키지에서 출력을 반환합니다. 이 쿼리는 연결된 서버 이름[Integration Services의 기본 연결 서버]을 사용하며, 이 이름은 새로운 SSIS용 OLE DB 공급자를 사용합니다. 쿼리에는 SSIS 카탈로그의 폴더 이름, 프로젝트 이름, 패키지 이름이 포함됩니다. SSIS용 OLE DB 공급자는 쿼리에 지정된 패키지를 실행하고 탭 형식의 결과 집합을 반환합니다.  
   
