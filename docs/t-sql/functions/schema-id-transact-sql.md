@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eefc84ea48372824ecec0617513262998bcc5ad1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945351"
 ---
 # <a name="schemaid-transact-sql"></a>SCHEMA_ID(Transact-SQL)
@@ -59,13 +59,13 @@ SCHEMA_ID ( [ schema_name ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-default-schema-id-of-a-caller"></a>1. 호출자의 기본 스키마 ID 반환  
+### <a name="a-returning-the-default-schema-id-of-a-caller"></a>1\. 호출자의 기본 스키마 ID 반환  
   
 ```  
 SELECT SCHEMA_ID();  
 ```  
   
-### <a name="b-returning-the-schema-id-of-a-named-schema"></a>2. 명명된 스키마의 스키마 ID 반환  
+### <a name="b-returning-the-schema-id-of-a-named-schema"></a>2\. 명명된 스키마의 스키마 ID 반환  
   
 ```  
 SELECT SCHEMA_ID('dbo');  

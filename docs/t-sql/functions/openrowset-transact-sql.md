@@ -27,10 +27,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: d29e39a10b71a58878a7a8bcb00ffd274f253b50
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413575"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
@@ -284,7 +284,7 @@ CSV 파일에 따옴표 문자로 사용될 문자를 지정합니다. 지정하
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>1. SELECT 및 SQL Server Native Client OLE DB 공급자와 함께 OPENROWSET 사용  
+### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>1\. SELECT 및 SQL Server Native Client OLE DB 공급자와 함께 OPENROWSET 사용  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 `Seattle1` 원격 서버에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에 액세스합니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. `SELECT` 문은 반환되는 행 집합을 정의하는 데 사용됩니다. 공급자 문자열에는 `Server` 및 `Trusted_Connection` 키워드가 포함됩니다. 이러한 키워드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 인식합니다.  
   
 ```sql  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>2. Microsoft OLE DB Provider for Jet 사용  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>2\. Microsoft OLE DB Provider for Jet 사용  
  다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Customers` 데이터베이스의 `Northwind` 테이블에 액세스합니다.  
   
 > [!NOTE]  
@@ -426,7 +426,7 @@ from openrowset('MSDASQL'
 > - Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 
-### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9. Azure Blob 스토리지에 저장된 파일에서 데이터에 액세스   
+### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9\. Azure Blob 스토리지에 저장된 파일에서 데이터에 액세스   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
 다음 예에서는 공유 액세스 서명을 위해 만든 데이터베이스 범위 자격 증명 및 Azure 스토리지 계정의 컨테이너를 가리키는 외부 데이터 원본을 사용합니다.     
 

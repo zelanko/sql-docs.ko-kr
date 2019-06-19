@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108127"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지 (보고서 관리자)

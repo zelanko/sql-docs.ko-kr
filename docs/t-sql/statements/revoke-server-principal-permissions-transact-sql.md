@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945761"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  LOGIN **::** *SQL_Server_login*  
- 사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  SERVER ROLE **::** *server_role*  
- 사용 권한을 취소할 서버 역할을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 취소할 서버 역할을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  { FROM | TO } \<server_principal> 사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 서버 역할을 지정합니다.  
   
@@ -106,14 +106,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  로그인의 경우 로그인에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
  서버 역할의 경우 서버 역할에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-impersonate-permission-on-a-login"></a>1. 로그인에 대한 IMPERSONATE 권한 취소  
+### <a name="a-revoking-impersonate-permission-on-a-login"></a>1\. 로그인에 대한 IMPERSONATE 권한 취소  
  다음 예에서는 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 취소합니다.  
   
 ```  
@@ -122,7 +122,7 @@ REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-with-cascade"></a>2. CASCADE를 지정하여 VIEW DEFINITION 권한 취소  
+### <a name="b-revoking-view-definition-permission-with-cascade"></a>2\. CASCADE를 지정하여 VIEW DEFINITION 권한 취소  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`으로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대한 `RMeyyappan` 권한을 취소합니다. `CASCADE` 옵션은 `VIEW DEFINITION`에 대한 `EricKurjan` 권한도 `RMeyyappan`이 이 사용 권한을 부여한 보안 주체로부터 취소됨을 나타냅니다.  
   
 ```  
@@ -132,7 +132,7 @@ REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan
 GO   
 ```  
   
-### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>3. 서버 역할에 대한 VIEW DEFINITION 권한 취소  
+### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>C. 서버 역할에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 `VIEW DEFINITION` 서버 역할에 대한 `Sales`을 `Auditors` 서버 역할에서 취소합니다.  
   
 ```  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066507"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
@@ -55,7 +55,7 @@ ms.locfileid: "66066507"
   
  매우 큰 데이터 집합을 작업하는 경우 특정 데이터가 표시되지 않도록 필터링할 수 있습니다. 다른 순서로 데이터를 정렬할 수도 있습니다. 모델 디자이너를 사용하면 필터, 정렬 및 숨기기 기능을 사용하여 전체 열 또는 특정 데이터를 표시하거나 표시하지 않을 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  

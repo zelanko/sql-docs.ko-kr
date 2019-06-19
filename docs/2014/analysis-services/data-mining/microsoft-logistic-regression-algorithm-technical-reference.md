@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9d3dd4e9da0445f966e9e46013f0b7cd4998190
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083934"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 로지스틱 회귀 알고리즘 기술 참조

@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 796de66b6fdce95be5fe235219208a504cc8095e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946831"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY(Transact-SQL)
@@ -66,7 +66,7 @@ TYPEPROPERTY (type , property)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-identifying-the-owner-of-a-data-type"></a>1. 데이터 형식의 소유자 확인  
+### <a name="a-identifying-the-owner-of-a-data-type"></a>1\. 데이터 형식의 소유자 확인  
  다음 예에서는 데이터 형식의 소유자를 반환합니다.  
   
 ```  
@@ -74,7 +74,7 @@ SELECT TYPEPROPERTY(SCHEMA_NAME(schema_id) + '.' + name, 'OwnerId') AS owner_id,
 FROM sys.types;  
 ```  
   
-### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>2. tinyint 데이터 형식의 전체 자릿수 반환  
+### <a name="b-returning-the-precision-of-the-tinyint-data-type"></a>2\. tinyint 데이터 형식의 전체 자릿수 반환  
  다음 예제에서는 `tinyint` 데이터 형식의 자릿수 또는 전체 자릿수를 반환합니다.  
   
 ```  

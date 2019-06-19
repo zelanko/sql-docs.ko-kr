@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944123"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
@@ -185,7 +185,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="a-using-a-sequence-in-a-select-statement"></a>1. SELECT 문에 시퀀스 사용  
+### <a name="a-using-a-sequence-in-a-select-statement"></a>1\. SELECT 문에 시퀀스 사용  
  다음 예에서는 사용할 때마다 1씩 증가하는 `CountBy1`이라는 시퀀스를 만듭니다.  
   
 ```  
@@ -203,7 +203,7 @@ SecondUse
 2
 ```  
   
-### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>2. 변수를 다음 시퀀스 값으로 설정  
+### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>2\. 변수를 다음 시퀀스 값으로 설정  
  다음 예에서는 변수를 시퀀스 번호의 다음 값으로 설정하는 세 가지 방법을 보여 줍니다.  
   
 ```  

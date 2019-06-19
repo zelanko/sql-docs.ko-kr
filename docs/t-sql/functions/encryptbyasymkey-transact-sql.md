@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3510c94a80f0ba7cf06817afd62d6d29e1878f1e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948911"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
@@ -60,7 +60,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 데이터 형식입니다.  
   
 **@plaintext**  
-`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 값을 보유하는 변수입니다. **@plaintext**에는 다음이 있을 수 있습니다
+`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 값을 보유하는 변수입니다. **@plaintext** 에는 다음이 있을 수 있습니다
   
 + **binary**
 + **char**

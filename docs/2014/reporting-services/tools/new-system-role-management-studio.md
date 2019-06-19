@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4d9227136ba3bd1526f8ec04476d6dc5d61ca41f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100176"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "66100176"
  **이름**  
  역할 정의의 이름을 입력합니다. 역할 정의 이름은 보고서 서버 네임스페이스 내에서 고유해야 합니다. 이름은 하나 이상의 영숫자 문자를 포함해야 합니다. 공백과 특정 기호도 포함할 수 있습니다. 이름 지정 시에는 다음 문자를 사용하지 마십시오.  
   
- ; ? : \@ & = + , $ / * \< >  
+ ; ? : \@ & = +, $ / * \< >  
   
  " /  
   

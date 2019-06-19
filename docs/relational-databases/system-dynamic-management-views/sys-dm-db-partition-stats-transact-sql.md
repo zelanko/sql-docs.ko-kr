@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462659"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
@@ -71,7 +71,7 @@ ms.locfileid: "66462659"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>1. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
+### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>1\. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수를 표시합니다.  
   
 ```  
@@ -81,7 +81,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>2. 테이블과 테이블 인덱스의 모든 파티션에 대한 모든 개수 반환  
+### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>2\. 테이블과 테이블 인덱스의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 `HumanResources.Employee` 테이블과 해당 인덱스의 모든 파티션에 대한 모든 개수를 표시합니다.  
   
 ```  
@@ -92,7 +92,7 @@ WHERE object_id = OBJECT_ID('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>3. 힙 또는 클러스터형 인덱스에 대해 사용된 총 페이지 및 총 행 수 반환  
+### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>3\. 힙 또는 클러스터형 인덱스에 대해 사용된 총 페이지 및 총 행 수 반환  
  다음 예에서는 `HumanResources.Employee` 테이블의 힙이나 클러스터형 인덱스에 대해 사용된 총 페이지와 총 행 수를 반환합니다. `Employee` 테이블은 기본적으로 분할되지 않기 때문에 합계에는 하나의 파티션만 포함됩니다.  
   
 ```  

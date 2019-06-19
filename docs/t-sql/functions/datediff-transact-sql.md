@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943649"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
@@ -136,7 +136,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 ## <a name="examples"></a>예  
 이러한 예에서는 여러 유형의 식을 *startdate* 및 *enddate* 매개 변수에 대한 인수로 사용합니다.
   
-### <a name="a-specifying-columns-for-startdate-and-enddate"></a>1. startdate 및 enddate에 대한 열 지정  
+### <a name="a-specifying-columns-for-startdate-and-enddate"></a>1\. startdate 및 enddate에 대한 열 지정  
 이 예에서는 테이블의 두 열 사이에 겹쳐지는 날짜 범위의 수를 계산합니다.
   
 ```sql
@@ -151,7 +151,7 @@ SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'
 -- Returns: 1  
 ```  
   
-### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>2. startdate 및 enddate에 대한 사용자 정의 변수 지정  
+### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>2\. startdate 및 enddate에 대한 사용자 정의 변수 지정  
 이 예에서는 사용자 정의 변수가 *startdate* 및 *enddate* 인수로 작용합니다.
   
 ```sql
@@ -238,7 +238,7 @@ WHERE soh.SalesOrderID IN(43659, 58918);
 GO  
 ```  
 
-### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>9. 날짜 부분 문자열로 startdate와 enddate 간의 차이점 찾기
+### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>9\. 날짜 부분 문자열로 startdate와 enddate 간의 차이점 찾기
 
 ```sql
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
