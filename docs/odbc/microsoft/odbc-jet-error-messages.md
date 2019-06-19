@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63244604"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 오류 메시지
@@ -33,7 +33,7 @@ ms.locfileid: "63244604"
   
  다음 표에서 드라이버 ISAM 드라이버 관리자에서 반환 된 오류 메시지를 보여 줍니다.  
   
-|오류 메시지입니다.|오류 위치|  
+|오류 메시지|오류 위치|  
 |-------------------|--------------------|  
 |[Microsoft] [ODBC 드라이버 관리자] *메시지 텍스트*|드라이버 관리자 (Odbc32.dll)|  
 |[Microsoft][ODBC *driver-name*]*message-text*|ISAM 드라이버 (드라이버 Isam 참조)|

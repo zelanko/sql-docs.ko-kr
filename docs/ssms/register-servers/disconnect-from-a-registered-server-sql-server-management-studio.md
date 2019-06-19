@@ -1,8 +1,9 @@
 ---
 title: 등록된 서버에서 연결 끊기(SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -12,17 +13,18 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], disconnecting
 - disconnecting registered servers [SQL Server]
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 748892527caa3e943c2b7c067184cc31d99935d1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105020"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>등록된 서버에서 연결 끊기(SQL Server Management Studio)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 서버에 대한 개체 탐색기의 연결을 끊는 방법에 대해 설명합니다. 개체 탐색기의 연결을 끊어도 SQL 편집기 같은 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 구성 요소의 연결은 끊어지지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a>  

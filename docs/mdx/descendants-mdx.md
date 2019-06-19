@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248112"
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
@@ -94,7 +94,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
 |플래그|Description|  
 |----------|-----------------|  
-|SELF|지정된 수준 또는 지정된 거리에 있는 하위 멤버만 반환합니다. 이 함수는 지정된 수준이 지정된 멤버의 수준인 경우 지정된 멤버를 포함합니다.|  
+|자체|지정된 수준 또는 지정된 거리에 있는 하위 멤버만 반환합니다. 이 함수는 지정된 수준이 지정된 멤버의 수준인 경우 지정된 멤버를 포함합니다.|  
 |AFTER|지정된 수준에 종속되거나 지정된 거리에 있는 모든 수준의 하위 멤버를 반환합니다.|  
 |BEFORE|지정된 멤버와 지정된 수준 사이에 있거나 지정된 거리에 있는 모든 수준의 하위 멤버를 반환합니다. 이 함수는 지정된 멤버만 포함하고 지정된 수준이나 거리의 멤버는 포함하지 않습니다.|  
 |BEFORE_AND_AFTER|지정된 멤버의 수준에 종속된 모든 수준의 하위 멤버를 반환합니다. 이 함수는 지정된 멤버만 포함하고 지정된 수준이나 지정된 거리의 멤버는 포함하지 않습니다.|  

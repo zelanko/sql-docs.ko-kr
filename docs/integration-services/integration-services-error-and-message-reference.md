@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723640"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
@@ -2017,7 +2017,7 @@ ms.locfileid: "65723640"
 |0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|요소 "%2"에서 "%1"에 대한 XML 스키마 데이터 형식 정보가 변경되었습니다.  이 구성 요소의 메타데이터를 다시 초기화하고 열 매핑을 검토하십시오.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1이(가) 조인 또는 복사에 사용되지 않았습니다. 입력 열 목록에서 사용하지 않은 열을 제거하십시오.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|들어오는 버퍼를 정렬하는 동안 스택 오버플로로 인해 정렬이 실패했습니다.  데이터 흐름 태스크의 DefaultBufferMaxRows 속성을 줄이십시오.|  
-|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 https://www.microsoft.com/downloads를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
+|0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|연결 문자열에서 PROVIDER를 %1(으)로 변경하거나 https://www.microsoft.com/downloads 를 방문하여 %2에 대한 지원을 찾아 설치합니다.|  
 |||DTS_E_INITTASKOBJECTFAILED|0x%3!8.8X! "%4!s!" 오류로 인해 태스크 "%1!s!", 유형 "%2!s!"에 대한 태스크 개체를 초기화하지 없습니다.|  
 |||DTS_E_GETCATMANAGERFAILED|0x%1!8.8X! "%2!s!" 오류로 인해 COM 구성 요소 범주 관리자를 만들지 못했습니다.|  
 |||DTS_E_COMPONENTINITFAILED|0x%2!8.8X! " %3!s!" 오류로 인해 %1!s! 구성 요소를 초기화하지 반환되었습니다|  

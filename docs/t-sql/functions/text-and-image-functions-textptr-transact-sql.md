@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948498"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
@@ -63,10 +63,10 @@ TEXTPTR ( column )
   
 |함수 또는 문|설명|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
-|DATALENGTH<b>(</b>_expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
+|DATALENGTH<b>(</b>_expression_**)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
   
 ## <a name="examples"></a>예  
   

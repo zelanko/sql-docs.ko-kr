@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63057528"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅숏 에이전트가 스냅숏을 만들어 스냅숏 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅숏을 구독자에게 적용합니다. 

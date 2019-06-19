@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403485"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>단원 9-2-번역 정의 및 찾아보기
@@ -45,9 +45,9 @@ ms.locfileid: "65403485"
   
 6.  **Month Name** 특성에 대한 **Caption** 개체의 행에서 **스페인어(스페인)** 번역 열에 **Mes del Año** 를, **프랑스어(프랑스)** 번역 열에 **Mois d'Année** 를 입력합니다.  
   
-    이러한 번역을 줄임표를 입력 (**...** ) 표시 됩니다. 이 줄임표를 클릭하면 특성 계층의 각 멤버에 대한 번역을 제공하는 기본 테이블의 열을 지정할 수 있습니다.  
+    이러한 번역을 줄임표를 입력 ( **...** ) 표시 됩니다. 이 줄임표를 클릭하면 특성 계층의 각 멤버에 대한 번역을 제공하는 기본 테이블의 열을 지정할 수 있습니다.  
   
-7.  줄임표 (**...** )에 대 한 합니다 **스페인어 (스페인)** 에 대 한 번역을 **Month Name** 특성입니다.  
+7.  줄임표 ( **...** )에 대 한 합니다 **스페인어 (스페인)** 에 대 한 번역을 **Month Name** 특성입니다.  
   
     **특성 데이터 번역** 대화 상자가 표시됩니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65403485"
   
     ![특성 데이터 번역 대화 상자](../media/l9-translations-4.gif "특성 데이터 번역 대화 상자")  
   
-9. 클릭 **확인**, 한 다음 줄임표를 클릭 하 고 (**...** )에 대 한 합니다 **프랑스어 (프랑스)** 에 대 한 번역을 **Month Name** 특성입니다.  
+9. 클릭 **확인**, 한 다음 줄임표를 클릭 하 고 ( **...** )에 대 한 합니다 **프랑스어 (프랑스)** 에 대 한 번역을 **Month Name** 특성입니다.  
   
 10. **번역 열** 목록에서 **FrenchMonthName**을 선택한 다음 **확인**을 클릭합니다.  
   

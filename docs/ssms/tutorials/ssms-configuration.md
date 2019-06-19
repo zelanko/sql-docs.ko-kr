@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio components and configuration'
+title: '자습서: SQL Server Management Studio 구성 요소 및 구성'
 description: SQL Server Management Studio 환경에 대한 구성 요소 및 기본 구성 옵션을 설명하는 자습서입니다.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,15 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 10be7a0bcc588961321713e365819a5f699bcbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822276"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>자습서: SQL Server Management Studio 구성 요소 및 구성
+
 이 자습서에서는 SSMS(SQL Server Management Studio)의 다양한 창 구성 요소 및 작업 영역에 대한 몇 가지 기본 구성 옵션을 설명합니다. 이 아티클에서는 다음과 같은 방법을 알아봅니다. 
 
 > [!div class="checklist"]

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939797"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 SET QUOTED_IDENTIFIER 옵션을 ON으로 설정하면 식별자를 큰따옴표로 구분할 수 있으며, 리터럴은 작은따옴표로 구분해야 합니다. SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식별자에 따옴표를 사용할 수 없으며 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요. 리터럴은 작은따옴표 또는 큰따옴표로 구분할 수 있습니다.
 
-SET QUOTED_IDENTIFIER 옵션을 ON(기본값)으로 설정하면 큰따옴표로 구분된 모든 문자열이 개체 식별자로 해석됩니다. 따라서 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 예약 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 일반적으로 허용되지 않는 문자를 포함할 수 있습니다. 큰따옴표로는 리터럴 문자열 식을 구분할 수 없습니다. 리터럴 문자열을 묶으려면 작은따옴표를 사용해야 합니다. 작은따옴표(**'**)가 리터럴 문자열의 일부인 경우 두 개의 작은따옴표(**"**)로 나타낼 수 있습니다. 데이터베이스의 개체 이름에 예약된 키워드를 사용할 경우 SET QUOTED_IDENTIFIER를 ON으로 설정해야 합니다.
+SET QUOTED_IDENTIFIER 옵션을 ON(기본값)으로 설정하면 큰따옴표로 구분된 모든 문자열이 개체 식별자로 해석됩니다. 따라서 따옴표 붙은 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 규칙을 따르지 않아도 됩니다. 따옴표 붙은 식별자는 예약 키워드일 수 있으며 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자에서 일반적으로 허용되지 않는 문자를 포함할 수 있습니다. 큰따옴표로는 리터럴 문자열 식을 구분할 수 없습니다. 리터럴 문자열을 묶으려면 작은따옴표를 사용해야 합니다. 작은따옴표( **'** )가 리터럴 문자열의 일부인 경우 두 개의 작은따옴표( **"** )로 나타낼 수 있습니다. 데이터베이스의 개체 이름에 예약된 키워드를 사용할 경우 SET QUOTED_IDENTIFIER를 ON으로 설정해야 합니다.
 
 SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식의 리터럴 문자열을 작은따옴표나 큰따옴표로 구분할 수 있습니다. 리터럴 문자열을 큰따옴표로 구분할 때 아포스트로피와 같은 작은따옴표가 들어갈 수 있습니다.
 
@@ -89,7 +89,7 @@ SET QUOTED_IDENTIFIER는 구문 분석 시 적용되며 쿼리 실행이 아닌 
 
 sp_executesql 또는 exec()를 사용하는 중첩된 일괄 처리의 경우 세션의 QUOTED_IDENTIFIER 설정을 사용하여 구문 분석이 시작됩니다. 중첩된 일괄 처리가 저장 프로시저 내부에 있으면 구문 분석은 저장 프로시저의 QUOTED_IDENTIFIER 설정을 사용하여 시작됩니다. 중첩된 일괄 처리가 구문 분석될 때 SET QUOTED_IDENTIFIER가 발생하면 해당 지점에서 구문 분석 동작이 변경되지만 세션의 QUOTED_IDENTIFIER 설정은 업데이트되지 않습니다.
 
-대괄호(**[** 및 **]**)를 사용하여 식별자를 구분하는 작업은 QUOTED_IDENTIFIER 설정의 영향을 받지 않습니다.
+대괄호( **[** 및 **]** )를 사용하여 식별자를 구분하는 작업은 QUOTED_IDENTIFIER 설정의 영향을 받지 않습니다.
 
 이 설정에 대한 현재 설정을 보려면 다음 쿼리를 실행합니다.
 
@@ -100,13 +100,13 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 
 ```
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 public 역할의 멤버 자격이 필요합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>1. 따옴표 붙은 식별자 설정 및 예약 키워드 개체 이름 사용
+### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>1\. 따옴표 붙은 식별자 설정 및 예약 키워드 개체 이름 사용
 
 다음 예에서는 `SET QUOTED_IDENTIFIER` 옵션을 `ON`으로 설정하고 테이블 이름의 키워드를 큰따옴표로 묶어 예약 키워드 이름이 있는 개체를 생성 및 사용합니다.
 
@@ -137,7 +137,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 ```
 
-### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>2. 작은따옴표 및 큰따옴표를 사용해 따옴표 붙은 식별자 설정 사용
+### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>2\. 작은따옴표 및 큰따옴표를 사용해 따옴표 붙은 식별자 설정 사용
 
  다음 예에서는 `SET QUOTED_IDENTIFIER` 옵션이 `ON`과 `OFF`로 설정된 문자열 식에서 작은따옴표 및 큰따옴표가 사용되는 방법을 보여 줍니다.
 

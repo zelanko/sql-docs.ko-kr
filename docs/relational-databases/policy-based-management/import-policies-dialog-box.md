@@ -14,19 +14,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cca73d0d0ad9574f592f529a26518c18a6332c77
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63006160"
 ---
 # <a name="import-policies-dialog-box"></a>정책 가져오기 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 XML 파일로 저장된 하나 이상의 정책과 해당 참조 조건을 현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스로 가져올 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **가져올 파일**  
- XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추(**...**)를 사용합니다.  
+ XML 파일에서 정책을 가져오려면 파일의 경로와 이름을 입력하거나 찾아보기 단추( **...** )를 사용합니다.  
   
  **가져온 항목으로 중복 항목 바꾸기**  
  이 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 이름이 같은 정책 또는 조건이 이미 있는 경우 기존 정책 또는 조건을 덮어쓰려면 선택합니다. 종속 정책이 있는 조건은 종속 정책도 덮어쓰지 않는 한 덮어쓸 수 없습니다. 이 옵션을 선택하지 않으면 같은 조건 식을 사용하는 기존 조건으로 인해 오류가 발생하지 않습니다.  

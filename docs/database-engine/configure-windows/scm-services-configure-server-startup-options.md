@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 0b85c75d024edd1e7e53eee08e21683aa7412bbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775736"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>SCM 서비스 - 서버 시작 옵션 구성
@@ -63,7 +63,7 @@ ms.locfileid: "66775736"
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  오른쪽 창에서 **SQL Server(** _<instance_name>_ **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  오른쪽 창에서 **SQL Server(**_<instance_name>_**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **시작 매개 변수** 탭의 **시작 매개 변수 지정** 상자에 매개 변수를 입력하고 **추가**를 클릭합니다.  
   

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983113"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>인수  
 `[ @ftcat = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름이입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 됩니다 **sysname**합니다.  
   
-`[ @action = ] 'action'` 수행할 동작이입니다. *동작* 됩니다 **varchar(20)"**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작이입니다. *동작* 됩니다 **varchar(20)"** , 이며 다음이 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
 >  필요에 따라 전체 텍스트 카탈로그를 만들고 삭제하고 수정할 수 있습니다. 그러나 동시에 여러 카탈로그에서 스키마를 변경하지 마십시오. 사용 하 여 이러한 작업을 수행할 수 있습니다 합니다 **sp_fulltext_table** 저장 프로시저는 것이 좋습니다.  
@@ -84,7 +84,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-full-text-catalog"></a>1. 전체 텍스트 카탈로그 만들기  
+### <a name="a-create-a-full-text-catalog"></a>1\. 전체 텍스트 카탈로그 만들기  
  이 예제에서는 빈 전체 텍스트 카탈로그를 만듭니다 **Cat_Desc**를 **AdventureWorks2012** 데이터베이스입니다.  
   
 ```  
@@ -94,7 +94,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'create';
 GO  
 ```  
   
-### <a name="b-to-rebuild-a-full-text-catalog"></a>2. 전체 텍스트 카탈로그를 다시 작성하려면  
+### <a name="b-to-rebuild-a-full-text-catalog"></a>2\. 전체 텍스트 카탈로그를 다시 작성하려면  
  이 예제에서는 기존 전체 텍스트 카탈로그를 다시 작성 **Cat_Desc**를 **AdventureWorks2012** 데이터베이스입니다.  
   
 ```  
@@ -104,7 +104,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'rebuild';
 GO  
 ```  
   
-### <a name="c-start-the-population-of-a-full-text-catalog"></a>3. 전체 텍스트 카탈로그의 채우기 시작  
+### <a name="c-start-the-population-of-a-full-text-catalog"></a>3\. 전체 텍스트 카탈로그의 채우기 시작  
  전체 채우기를 시작 하는이 예제는 **Cat_Desc** 카탈로그입니다.  
   
 ```  
@@ -114,7 +114,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'start_full';
 GO  
 ```  
   
-### <a name="d-stop-the-population-of-a-full-text-catalog"></a>4. 전체 텍스트 카탈로그의 채우기 중지  
+### <a name="d-stop-the-population-of-a-full-text-catalog"></a>4\. 전체 텍스트 카탈로그의 채우기 중지  
  이 예에서는 채우기를 중지 합니다 **Cat_Desc** 카탈로그입니다.  
   
 ```  
@@ -124,7 +124,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'stop';
 GO  
 ```  
   
-### <a name="e-to-remove-a-full-text-catalog"></a>5. 전체 텍스트 카탈로그 제거  
+### <a name="e-to-remove-a-full-text-catalog"></a>5\. 전체 텍스트 카탈로그 제거  
  이 예제를 제거 합니다 **Cat_Desc** 카탈로그입니다.  
   
 ```  

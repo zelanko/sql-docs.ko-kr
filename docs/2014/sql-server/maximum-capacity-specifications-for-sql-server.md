@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711448"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
@@ -116,7 +116,7 @@ ms.locfileid: "62711448"
 |데이터베이스당 로그 파일 수|1|1|  
 |컴퓨터당 볼륨 수|3|3|  
   
- * 관리 되는 인스턴스의 최대 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
+ \* 관리 되는 인스턴스의 최대 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
