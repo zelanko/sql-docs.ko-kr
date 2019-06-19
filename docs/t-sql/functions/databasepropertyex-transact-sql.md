@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943762"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX(Transact-SQL)
@@ -116,7 +116,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>1. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
+### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>1\. AUTO_SHRINK 데이터베이스 옵션의 상태 검색  
 이 예에서는 `AdventureWorks` 데이터베이스에 대한 AUTO_SHRINK 데이터베이스 옵션의 상태를 반환합니다.
   
 ```sql
@@ -130,7 +130,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>2. 데이터베이스의 기본 데이터 정렬 검색  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>2\. 데이터베이스의 기본 데이터 정렬 검색  
 이 예에서는 `AdventureWorks` 데이터베이스의 여러 속성을 반환합니다.
   
 ```sql

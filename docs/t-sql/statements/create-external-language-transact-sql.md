@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994981"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
@@ -135,7 +135,7 @@ TO database_principal_name;
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-an-external-language-in-a-database"></a>1. 데이터베이스에 외부 언어 만들기  
+### <a name="a-create-an-external-language-in-a-database"></a>1\. 데이터베이스에 외부 언어 만들기  
 
 다음 예제는 Windows에서 SQL Server의 데이터베이스에 외부 언어가 호출한 Java를 추가합니다.
 
@@ -145,7 +145,7 @@ FROM (CONTENT = N'<path-to-zip>', FILE_NAME = 'javaextension.dll');
 GO
 ```
 
-### <a name="b-create-an-external-language-for-both-windows-and-linux"></a>2. Windows 및 Linux 겸용 외부 언어 만들기
+### <a name="b-create-an-external-language-for-both-windows-and-linux"></a>2\. Windows 및 Linux 겸용 외부 언어 만들기
 
 Windows용 하나와 Linux용 하나로 최대 두 개의 `<file_spec>`를 지정할 수 있습니다.
 

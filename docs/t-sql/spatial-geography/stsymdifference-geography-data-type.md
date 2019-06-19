@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dc735e71a286d5caca14c7e54b4ea8128feeda2b
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939132"
 ---
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference(geography 데이터 형식)
@@ -55,7 +55,7 @@ ms.locfileid: "65939132"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>1. 두 Polygon 사이의 대칭 차이 계산  
+### <a name="a-computing-the-symmetric-difference-of-two-polygons"></a>1\. 두 Polygon 사이의 대칭 차이 계산  
  다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 계산합니다.  
   
 ```  
@@ -66,7 +66,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STSymDifference(@h).ToString();  
 ```  
   
-### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>2. FullGlobe와의 대칭 차이 계산  
+### <a name="b-computing-the-symmetric-difference-with-fullglobe"></a>2\. FullGlobe와의 대칭 차이 계산  
  다음 예에서는 `Polygon`와 `FullGlobe`의 대칭 차이를 비교합니다.  
   
 ```

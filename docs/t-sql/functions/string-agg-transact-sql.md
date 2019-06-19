@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947532"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG(Transact-SQL)
@@ -82,7 +82,7 @@ Null 값이 무시되고 해당 구분 기호는 추가되지 않습니다. null
 
 ## <a name="examples"></a>예 
 
-### <a name="a-generate-list-of-names-separated-in-new-lines"></a>1. 새 줄에 구분된 이름 목록 생성 
+### <a name="a-generate-list-of-names-separated-in-new-lines"></a>1\. 새 줄에 구분된 이름 목록 생성 
 다음 예에서는 단일 결과 셀에서 캐리지 리턴으로 구분된 이름 목록을 만듭니다.
 ```sql
 SELECT STRING_AGG (FirstName, CHAR(13)) AS csv 
@@ -98,7 +98,7 @@ FROM Person.Person;
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
 
-### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>2. NULL 값 없이 쉼표로 구분된 이름 목록 생성   
+### <a name="b-generate-list-of-names-separated-with-comma-without-null-values"></a>2\. NULL 값 없이 쉼표로 구분된 이름 목록 생성   
 다음 예는 null 값을 '해당 없음'으로 대체하고 하나의 결과 셀에 쉼표로 구분된 이름을 반환합니다.  
 ```sql
 SELECT STRING_AGG ( ISNULL(FirstName,'N/A'), ',') AS csv 

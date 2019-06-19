@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947394"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
@@ -77,12 +77,12 @@ ROUND ( numeric_expression , length [ ,function ] )
 |--------------|------------|  
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
-|ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
+|ROUND(748.58, -3)|748\.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
 |4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-round-and-estimates"></a>1. ROUND 및 어림값 사용  
+### <a name="a-using-round-and-estimates"></a>1\. ROUND 및 어림값 사용  
  다음 예에서는 마지막 자릿수가 항상 어림값인 `ROUND`를 사용하는 두 개의 식을 보여 줍니다.  
   
 ```  
@@ -97,7 +97,7 @@ GO
 123.9990    124.0000      
 ```  
   
-### <a name="b-using-round-and-rounding-approximations"></a>2. ROUND 사용 및 어림값 반올림  
+### <a name="b-using-round-and-rounding-approximations"></a>2\. ROUND 사용 및 어림값 반올림  
  다음 예에서는 반올림과 어림값을 보여 줍니다.  
   
 ```  

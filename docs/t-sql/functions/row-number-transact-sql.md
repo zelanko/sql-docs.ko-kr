@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f658b9d9780253faf05860912b02687461b9e25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947409"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
@@ -72,7 +72,7 @@ ROW_NUMBER ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-examples"></a>1. 간단한 예제 
+### <a name="a-simple-examples"></a>1\. 간단한 예제 
 
 다음 쿼리는 알파벳 순서로 4개의 시스템 테이블을 반환합니다.
 
@@ -132,7 +132,7 @@ FROM sys.databases WHERE database_id < 5;
 |3 |tempdb |SIMPLE |
 
 
-### <a name="b-returning-the-row-number-for-salespeople"></a>2. 영업 사원의 행 번호 반환  
+### <a name="b-returning-the-row-number-for-salespeople"></a>2\. 영업 사원의 행 번호 반환  
  다음 예에서는 연간 누계 판매 실적에 따라 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 영업 사원에 대한 행 번호를 계산합니다.  
   
 ```sql  

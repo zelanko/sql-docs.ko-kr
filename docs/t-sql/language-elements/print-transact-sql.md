@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980420"
 ---
 # <a name="print-transact-sql"></a>PRINT(Transact-SQL)
@@ -67,7 +67,7 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="examples"></a>예  
   
-### <a name="a-conditionally-executing-print-if-exists"></a>1. 조건에 따라 실행되는 PRINT 문(IF EXISTS)  
+### <a name="a-conditionally-executing-print-if-exists"></a>1\. 조건에 따라 실행되는 PRINT 문(IF EXISTS)  
  다음 예에서는 `PRINT` 문을 사용하여 조건에 따라 메시지를 반환합니다.  
   
 ```  
@@ -78,7 +78,7 @@ ELSE
 GO  
 ```  
   
-### <a name="b-building-and-displaying-a-string"></a>2. 문자열 만들기 및 표시  
+### <a name="b-building-and-displaying-a-string"></a>2\. 문자열 만들기 및 표시  
  다음 예에서는 `GETDATE` 함수의 결과를 `nvarchar` 데이터 형식으로 변환하고 `PRINT`에서 반환되도록 리터럴 텍스트와 연결합니다.  
   
 ```  

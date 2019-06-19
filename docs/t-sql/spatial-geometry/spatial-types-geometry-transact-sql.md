@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 853e290a2222ae2c206e264f2aaeb003ca24e359
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937342"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>공간 형식 - geometry(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "65937342"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-how-to-add-and-query-geometry-data"></a>1. geometry 데이터를 추가하고 쿼리하는 방법 보기  
+### <a name="a-showing-how-to-add-and-query-geometry-data"></a>1\. geometry 데이터를 추가하고 쿼리하는 방법 보기  
  다음 두 예에서는 geometry 데이터를 추가하고 쿼리하는 방법을 보여 줍니다. 첫 번째 예에서는 ID 열과 `geometry` 열 `GeomCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geometry` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geometry`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
 ```sql 
@@ -61,7 +61,7 @@ VALUES (geometry::STGeomFromText('POLYGON ((0 0, 150 0, 150 150, 0 150, 0 0))', 
 GO  
 ```  
   
-### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>2. 두 geometry 인스턴스의 교차점 반환  
+### <a name="b-returning-the-intersection-of-two-geometry-instances"></a>2\. 두 geometry 인스턴스의 교차점 반환  
  두 번째 예에서는 `STIntersection()` 메서드를 사용하여 앞서 삽입한 두 `geometry` 인스턴스가 교차하는 지점을 반환합니다.  
   
 ```sql  

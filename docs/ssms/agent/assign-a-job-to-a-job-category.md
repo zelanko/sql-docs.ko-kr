@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097558"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
@@ -67,7 +67,7 @@ ms.locfileid: "65097558"
   
 4.  편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **작업 속성 -**_job\_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
+5.  **작업 속성 -** _job\_name_ 대화 상자의 **범주** 목록에서 작업에 할당하려는 작업 범주를 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   

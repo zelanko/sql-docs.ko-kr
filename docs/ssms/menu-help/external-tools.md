@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 26ff0aa2920072d8c6fd4ef97d9945bf1b365970
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104839"
 ---
 # <a name="external-tools"></a>외부 도구
@@ -74,7 +74,7 @@ ms.locfileid: "65104839"
   
 3.  **명령** 입력란에 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console 실행 파일의 경로(예: **C:\WINNT\system32\mmc.exe**)를 입력합니다.  
   
-4.  **인수** 입력란에 .msc 파일의 경로(예: **"C:\WINNT\system32\SQLServerManager.msc"**)를 입력합니다.  
+4.  **인수** 입력란에 .msc 파일의 경로(예: **"C:\WINNT\system32\SQLServerManager.msc"** )를 입력합니다.  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 **메뉴에서** 바로 가기 속성을 보고 컴퓨터에 있는 파일의 위치를 확인합니다.  

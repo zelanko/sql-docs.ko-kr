@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cfc981e1d76f476c6dd09582cf016d9c2283bbf0
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980093"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR(Transact-SQL)
@@ -107,7 +107,7 @@ WAITFOR
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-waitfor-time"></a>1. WAITFOR TIME 사용  
+### <a name="a-using-waitfor-time"></a>1\. WAITFOR TIME 사용  
  다음 예에서는 msdb 데이터베이스에서 `sp_update_job` 저장 프로시저를 오후 10시 20분에 실행합니다. (`22:20`).  
   
 ```  
@@ -120,7 +120,7 @@ END;
 GO  
 ```  
   
-### <a name="b-using-waitfor-delay"></a>2. WAITFOR DELAY 사용  
+### <a name="b-using-waitfor-delay"></a>2\. WAITFOR DELAY 사용  
  다음 예에서는 2시간 지연 후에 저장 프로시저를 실행합니다.  
   
 ```  

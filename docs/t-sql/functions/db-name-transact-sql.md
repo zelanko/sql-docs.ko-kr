@@ -24,10 +24,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f16a13c9fb93d17ecb4efaa62b6ba0eb6cd879d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945632"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME(Transact-SQL)
@@ -60,7 +60,7 @@ DB_NAME ( [ database_id ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-current-database-name"></a>1. 현재 데이터베이스 이름 반환  
+### <a name="a-returning-the-current-database-name"></a>1\. 현재 데이터베이스 이름 반환  
 이 예에서는 현재 데이터베이스의 이름을 반환합니다.
   
 ```sql
@@ -68,7 +68,7 @@ SELECT DB_NAME() AS [Current Database];
 GO  
 ```  
   
-### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>2. 지정한 데이터베이스 ID의 데이터베이스 이름 반환  
+### <a name="b-returning-the-database-name-of-a-specified-database-id"></a>2\. 지정한 데이터베이스 ID의 데이터베이스 이름 반환  
 이 예에서는 데이터베이스 ID `3`의 데이터베이스 이름을 반환합니다.
   
 ```sql

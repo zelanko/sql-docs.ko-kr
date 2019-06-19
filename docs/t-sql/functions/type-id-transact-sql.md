@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946908"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID(Transact-SQL)
@@ -59,7 +59,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>1. 한 부분 및 두 부분으로 구성된 유형 이름의 TYPE ID 값 찾기  
+### <a name="a-looking-up-the-type-id-values-for-single--and-two-part-type-names"></a>1\. 한 부분 및 두 부분으로 구성된 유형 이름의 TYPE ID 값 찾기  
  다음 예에서는 한 부분 및 두 부분으로 구성된 유형 이름의 유형 ID를 반환합니다.  
   
 ```  
@@ -76,7 +76,7 @@ SELECT TYPE_ID('NewType') AS [1 Part Data Type ID],
 GO  
 ```  
   
-### <a name="b-looking-up-the-type-id-of-a-system-data-type"></a>2. 시스템 데이터 형식의 TYPE ID 찾기  
+### <a name="b-looking-up-the-type-id-of-a-system-data-type"></a>2\. 시스템 데이터 형식의 TYPE ID 찾기  
  다음 예에서는 `TYPE ID` 시스템 데이터 형식의 `datetime`를 반환합니다.  
   
 ```  

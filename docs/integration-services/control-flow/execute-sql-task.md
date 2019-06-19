@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727718"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
@@ -149,7 +149,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](../../integration-services/connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **대량 삽입 태스크 편집기**  
- 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...**>을 선택합니다.  
+ 정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...** >을 선택합니다.  
   
  **SQLSourceType**  
  태스크에서 실행하는 SQL 문의 원본 유형을 선택합니다.  
@@ -191,13 +191,13 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
- 기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
- 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 기존 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +206,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
   
 ### <a name="options"></a>옵션  
  **변수 이름**  
- **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
+ **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 추가합니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -245,7 +245,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  
   
  **변수 이름**  
- 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**새 변수...**>를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
+ 변수를 선택하여 결과 집합을 변수로 매핑하거나 \<**새 변수...** >를 클릭하여 **변수 추가** 대화 상자를 사용하여 새 변수를 추가합니다.  
   
  **추가**  
  결과 집합 매핑을 추가하려면 클릭합니다.  

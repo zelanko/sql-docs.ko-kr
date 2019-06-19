@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014682"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
@@ -91,7 +91,7 @@ ms.locfileid: "66014682"
   
 -   대부분의 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다. AdventureWorks 데이터베이스를 복원할 수 있습니다.  
   
-### <a name="a-updating-a-record"></a>1. 레코드 업데이트  
+### <a name="a-updating-a-record"></a>1\. 레코드 업데이트  
  다음 Updategram은 AdventureWorks 데이터베이스의 Person.Contact 테이블에서 직원 성을 Fuller로 업데이트합니다. Updategram은 매핑 스키마를 지정하지 않으므로 기본 매핑을 사용합니다.  
   
 ```  
@@ -119,7 +119,7 @@ ms.locfileid: "66014682"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>2. updg:id 특성을 사용하여 여러 레코드 업데이트  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>2\. updg:id 특성을 사용하여 여러 레코드 업데이트  
  이 예에서 Updategram은 AdventureWorks 데이터베이스의 HumanResources.Shift 테이블에 다음과 같은 두 가지 업데이트를 수행합니다.  
   
 -   오전 7시에 시작하는 원래의 주간 근무 이름을 "Day"에서 "Early Morning"으로 변경합니다.  
@@ -155,7 +155,7 @@ ms.locfileid: "66014682"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="c-specifying-multiple-before-and-after-blocks"></a>3. 여러 번 지정 \<하기 전에 > 및 \<후 > 블록  
+### <a name="c-specifying-multiple-before-and-after-blocks"></a>3\. 여러 번 지정 \<하기 전에 > 및 \<후 > 블록  
  모호성을 피하기 위해 작성할 수 있습니다 updategram은 예 B의 배수를 사용 하 여  **\<하기 전에 >** 하 고  **\<후 >** 쌍을 차단 합니다. 지정  **\<하기 전에 >** 하 고  **\<후 >** 쌍의 혼동을 최소화를 사용 하 여 여러 업데이트를 지정 하는 한 가지 방법입니다. 또한 각 경우의 합니다  **\<하기 전에 >** 및  **\<후 >** 블록은 하나의 요소만 지정을 사용할 필요가 없습니다를 `updg:id` 특성.  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ ms.locfileid: "66014682"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>4. 여러 번 지정 \<동기화 > 블록  
+### <a name="d-specifying-multiple-sync-blocks"></a>4\. 여러 번 지정 \<동기화 > 블록  
  여러 개 지정할 수 있습니다  **\<동기화 >** updategram에 차단 합니다. 각  **\<동기화 >** 블록에 지정 된 트랜잭션이 독립적입니다.  
   
  다음 updategram에서 첫 번째  **\<동기화 >** 블록은 Sales.Customer 테이블의 레코드를 업데이트 합니다. 간단하게 보여 주기 위해 이 Updategram은 필수 열 값, 즉 ID 값(CustomerID)과 업데이트되는 값(SalesPersonID)만 지정합니다.  
@@ -258,12 +258,12 @@ ms.locfileid: "66014682"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="e-using-a-mapping-schema"></a>5. 매핑 스키마 사용  
+### <a name="e-using-a-mapping-schema"></a>5\. 매핑 스키마 사용  
  이 예에서 Updategram은 `mapping-schema` 특성을 사용하여 매핑 스키마를 지정합니다. 기본 매핑은 없습니다. 즉, 매핑 스키마가 데이터베이스 테이블 및 열에 대한 Updategram의 필요한 요소 및 특성 매핑을 제공합니다.  
   
  Updategram에 지정된 요소와 특성은 매핑 스키마의 요소와 특성을 참조합니다.  
   
- 다음 XSD 매핑 스키마에  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OD >** 에 매핑되는 요소는 데이터베이스의 Sales.Customer, Sales.SalesOrderHeader 및 Sales.SalesOrderDetail 테이블입니다.  
+ 다음 XSD 매핑 스키마에  **\<고객 >** 합니다  **\<순서 >** , 및  **\<OD >** 에 매핑되는 요소는 데이터베이스의 Sales.Customer, Sales.SalesOrderHeader 및 Sales.SalesOrderDetail 테이블입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -346,7 +346,7 @@ ms.locfileid: "66014682"
   
  매핑 스키마를 사용 하는 updategram에 대 한 더 많은 예제를 참조 하세요 [Updategram에 주석이 추가 된 매핑 스키마 지정 &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)합니다.  
   
-### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>6. 매핑 스키마와 IDREFS 특성 함께 사용  
+### <a name="f-using-a-mapping-schema-with-idrefs-attributes"></a>6\. 매핑 스키마와 IDREFS 특성 함께 사용  
  이 예에서는 Updategram이 매핑 스키마에서 IDREFS 특성을 사용하여 여러 테이블의 레코드를 업데이트하는 방법을 보여 줍니다. 이 예에서는 데이터베이스가 다음 테이블로 구성되어 있다고 가정합니다.  
   
 -   Student(StudentID, LastName)  
@@ -357,7 +357,7 @@ ms.locfileid: "66014682"
   
  한 명의 학생이 다수의 과목에 등록할 수 있고, 하나의 과목은 다수의 학생을 가질 수 있으므로 이 M:N 관계를 나타내기 위해 세 번째 테이블인 Enrollment 테이블이 필요합니다.  
   
- 다음 XSD 매핑 스키마를 사용 하 여 테이블의 XML 뷰를 제공 합니다  **\<학생 >** 합니다  **\<과정 >**, 및  **\<등록 >** 요소입니다. 합니다 **IDREFS** 특성 매핑 스키마에서 이러한 요소 간의 관계를 지정 합니다. **StudentIDList** 특성을  **\<과정 >** 요소는는 **IDREFS** Enrollment 테이블의 StudentID 열을 참조 하는 형식 특성입니다. 마찬가지로 합니다 **enrolledin 특성은** 특성을  **\<학생 >** 요소는는 **IDREFS** 등록의 CourseID 열을 참조 하는 형식 특성 테이블입니다.  
+ 다음 XSD 매핑 스키마를 사용 하 여 테이블의 XML 뷰를 제공 합니다  **\<학생 >** 합니다  **\<과정 >** , 및  **\<등록 >** 요소입니다. 합니다 **IDREFS** 특성 매핑 스키마에서 이러한 요소 간의 관계를 지정 합니다. **StudentIDList** 특성을  **\<과정 >** 요소는는 **IDREFS** Enrollment 테이블의 StudentID 열을 참조 하는 형식 특성입니다. 마찬가지로 합니다 **enrolledin 특성은** 특성을  **\<학생 >** 요소는는 **IDREFS** 등록의 CourseID 열을 참조 하는 형식 특성 테이블입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980083"
 ---
 # <a name="between-transact-sql"></a>BETWEEN(Transact-SQL)
@@ -73,7 +73,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-between"></a>1. BETWEEN 사용  
+### <a name="a-using-between"></a>1\. BETWEEN 사용  
  다음 예제에서는 데이터베이스의 데이터베이스 역할에 대한 정보를 반환합니다. 첫 번째 쿼리는 모든 역할을 반환합니다. 두 번째 예제에서는 `BETWEEN` 절을 사용하여 역할을 지정한 `database_id` 값으로 제한합니다.  
   
 ```sql  
@@ -113,7 +113,7 @@ principal_id    name
 16390           db_datareader
 ```  
   
-### <a name="b-using--and--instead-of-between"></a>2. BETWEEN 대신 > 및 < 사용  
+### <a name="b-using--and--instead-of-between"></a>2\. BETWEEN 대신 > 및 < 사용  
  다음 예에서는 보다 큼(`>`) 및 보다 작음(`<`) 연산자를 사용합니다. 이 연산자는 경계값을 포함하지 않기 때문에 이전 예에서 10개의 행을 반환한 것과 달리 9개의 행을 반환합니다.  
   
 ```sql  

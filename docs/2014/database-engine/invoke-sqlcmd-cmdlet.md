@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064712"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Invoke-Sqlcmd와 sqlcmd 유틸리티 비교  
  **Invoke-Sqlcmd** 를 사용하면 **sqlcmd** 유틸리티로 실행할 수 있는 대부분의 스크립트를 실행할 수 있습니다. 하지만 **Invoke-Sqlcmd** 는 **sqlcmd** 가 실행되는 명령 프롬프트 환경과는 다른 Windows PowerShell 환경에서 실행됩니다. **Invoke-Sqlcmd** 의 동작은 Windows PowerShell 환경에서 작동하도록 수정되었습니다.  
   
- 모든 **sqlcmd** 명령이 **Invoke-Sqlcmd**에서 구현되는 것은 아닙니다. 구현되지 않는 명령으로는 **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, **:serverlist**등이 있습니다.  
+ 모든 **sqlcmd** 명령이 **Invoke-Sqlcmd**에서 구현되는 것은 아닙니다. 구현되지 않는 명령으로는 **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, **:serverlist**등이 있습니다.  
   
  **Invoke-Sqlcmd** 는 **sqlcmd** 환경 변수 또는 스크립팅 변수(예: SQLCMDDBNAME, SQLCMDWORKSTATION)를 초기화하지 않습니다.  
   
@@ -110,7 +110,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |지정된 쿼리 실행 후 종료|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인 ID|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 암호|-P|-Password|  
-|변수 정의|-V|-Variable|  
+|변수 정의|-v|-Variable|  
 |쿼리 제한 시간 간격|-t|-QueryTimeout|  
 |오류 발생 시 실행 중지|-b|-AbortOnError|  
 |관리자 전용 연결|-A|-DedicatedAdministratorConnection|  

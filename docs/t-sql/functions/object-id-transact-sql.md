@@ -28,10 +28,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 02ad3631a37600b3b3a18af38b90a805fe00af5c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944032"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID(Transact-SQL)
@@ -77,7 +77,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-object-id-for-a-specified-object"></a>1. 지정한 개체의 개체 ID 반환  
+### <a name="a-returning-the-object-id-for-a-specified-object"></a>1\. 지정한 개체의 개체 ID 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.WorkOrder` 테이블에 관한 개체 ID를 반환합니다.  
   
 ```  
@@ -87,7 +87,7 @@ SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';
 GO  
 ```  
   
-### <a name="b-verifying-that-an-object-exists"></a>2. 개체의 존재 여부 확인  
+### <a name="b-verifying-that-an-object-exists"></a>2\. 개체의 존재 여부 확인  
  다음 예에서는 테이블에 개체 ID가 있는지 확인해서 지정한 테이블이 있는지 확인합니다. 테이블이 있는 경우 삭제됩니다. 테이블이 없는 경우 `DROP TABLE` 문이 실행되지 않습니다.  
   
 ```  

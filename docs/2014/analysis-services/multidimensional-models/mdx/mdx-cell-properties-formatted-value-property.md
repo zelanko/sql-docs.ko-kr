@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66074395"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE에 대한 LANGUAGE 및 FORMAT_STRING
@@ -79,9 +79,9 @@ ms.locfileid: "66074395"
 |멤버|FORMATTED_VALUE|설명|  
 |------------|----------------------|-----------------|  
 |변수를 잠그기 위한|$5,040.00|FORMAT_STRING이 `Currency` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)입니다.|  
-|B|5.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
+|B|5\.040,00|FORMAT_STRING이 `Currency` (A에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었으므로 유로 기호, 다른 소수 구분 기호 및 다른 천 단위 구분 기호가 표시됩니다.|  
 |C|$5.040,00|FORMAT_STRING이 `$#,##0.00` (A에서 상속된 Currency에 대한 재정의)으로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인)로 설정되었습니다. FORMAT_STRING 속성이 명시적으로 통화 기호를 $로 설정했으므로 FORMATTED_VALUE가 $ 기호와 함께 표시됩니다. 그러나 `.` (점) 및 `,` (쉼표)가 각각 소수 구분 기호와 천 단위 구분 기호의 자리 표시자이므로 언어 사양은 소수 구분 기호와 천 단위 구분 기호에 대해 지역화된 출력을 생성하면서 이러한 기호에 영향을 줍니다.|  
-|d|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
+|D|5.04E+03|FORMAT_STRING이 `Scientific` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.|  
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  
 |F|50.40%|FORMAT_STRING이 `Percent` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.<br /><br /> VALUE가 5040에서 0.5040으로 변경되었습니다.|  
 |G|50,40%|FORMAT_STRING이 `Percent`(F에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.<br /><br /> VALUE가 F 값에서 상속되었습니다.|  
@@ -131,7 +131,7 @@ ms.locfileid: "66074395"
 |변수를 잠그기 위한|3/12/1959 6:30:00 AM|FORMAT_STRING이 CDate() 식에 의해 암시적으로 `General Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)으로 설정되었습니다.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)입니다.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING이 명시적으로 `General Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 미국 형식 지정 스타일과 비교해 보면 월과 일이 바뀌었습니다.|  
-|d|jueves, 12 de marzo de 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 월과 요일은 스페인어로 표시됩니다.|  
+|D|jueves, 12 de marzo de 1959|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1034` (스페인어)입니다.<br /><br /> 월과 요일은 스페인어로 표시됩니다.|  
 |E|1959/03/12 6:30:00|FORMAT_STRING이 명시적으로 `General Date` 로 설정되었고 LANGUAGE가 명시적으로 `1041` (일본어)입니다.<br /><br /> 이제 날짜의 형식이 연도/월/일 시간:분:초입니다.|  
 |F|1959年3月12日|FORMAT_STRING이 명시적으로 `Long Date` 로 설정되었고 LANGUAGE가 명시적으로 `1041` (일본어)입니다.|  
 |G|오전 6:30:00|FORMAT_STRING이 명시적으로 `Long Time` 으로 설정되었고 LANGUAGE가 `1033` (영어)(시스템 로캘 값에서 상속)입니다.|  

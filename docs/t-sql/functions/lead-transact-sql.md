@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a39292725feff65dd98b25fba95d80bd68313805
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946930"
 ---
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
@@ -61,7 +61,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-compare-values-between-years"></a>1. 연도 간 값 비교  
+### <a name="a-compare-values-between-years"></a>1\. 연도 간 값 비교  
  다음 쿼리에서는 LEAD 함수를 사용하여 특정 직원의 연도별 판매 할당량 간 차이를 반환합니다. 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql  
@@ -86,7 +86,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>2. 파티션 내의 값 비교  
+### <a name="b-compare-values-within-partitions"></a>2\. 파티션 내의 값 비교  
  다음 예에서는 LEAD 함수를 사용하여 직원별 연간 누계 매출을 비교합니다. 결과 집합의 행을 판매 지역별로 분할하기 위해 PARTITION BY 절이 지정되었습니다. LEAD 함수는 각 파티션에 별도로 적용되고 각 파티션에 대해 계산이 다시 시작됩니다. OVER 절에 지정된 ORDER BY 절은 함수를 적용하기 전에 각 파티션의 행을 정렬합니다. SELECT 문의 ORDER BY 절은 전체 결과 집합의 행을 정렬합니다. 각 파티션에 있는 마지막 행의 경우 뒤에 나오는 값이 없으므로 기본값(0)이 반환됩니다.  
   
 ```sql  

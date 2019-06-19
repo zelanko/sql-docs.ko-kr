@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1e436a03125559da522adc9fcc54df0866032698
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943989"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
@@ -75,7 +75,7 @@ WHERE TABLE_NAME = 'Person';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>1. COLUMNS_UPDATED를 사용하여 테이블의 첫 번째 8개 열 테스트  
+### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>1\. COLUMNS_UPDATED를 사용하여 테이블의 첫 번째 8개 열 테스트  
 다음 예제에서는 `employeeData` 및 `auditEmployeeData`의 두 테이블을 만듭니다. `employeeData` 테이블에는 중요한 직원 급여 정보가 있으므로 인력 관리 부서의 멤버만 이를 수정할 수 있습니다. 직원의 SSN(사회 보장 번호), 연봉 또는 은행 계좌 번호가 변경되면 감사 레코드가 생성되고 `auditEmployeeData` 감사 테이블에 삽입됩니다.
   
 `COLUMNS_UPDATED()` 함수를 사용하여 중요한 직원 정보가 포함된 열의 변경 내용을 빠르게 테스트할 수 있습니다. `COLUMNS_UPDATED()`를 사용하는 경우 이 방법은 테이블의 처음 8개 열에 대한 변경 내용을 검색하려고 할 때만 작동합니다.
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>2. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>2\. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
 처음 8개 이외의 테이블 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에서 정확한 비트를 반환하는지 테스트합니다. 다음 예제에서는 `AdventureWorks2012.Person.Person` 테이블의 `3`, `5` 및 `9` 열에 영향을 주는 업데이트를 테스트합니다.
   
 ```sql

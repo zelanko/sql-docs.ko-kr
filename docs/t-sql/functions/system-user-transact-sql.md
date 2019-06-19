@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 211d229c767d2c4dbf21d9d813f4a825316efa34
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948550"
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER(Transact-SQL)
@@ -61,7 +61,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>1. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
+### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>1\. SYSTEM_USER를 사용하여 현재 시스템 사용자 이름 반환  
  다음 예에서는 `char` 변수를 선언하고 변수에 `SYSTEM_USER`의 현재 값을 저장한 다음에 변수에 저장된 값을 출력합니다.  
   
 ```  
@@ -80,7 +80,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>2. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
+### <a name="b-using-systemuser-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
  다음 예에서는 `SYSTEM_USER` 열에 대한 `DEFAULT` 제약 조건으로 `SRep_tracking_user`를 사용하는 테이블을 만듭니다.  
   
 ```  

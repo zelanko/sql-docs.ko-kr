@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727169"
 ---
 # <a name="cdc-source"></a>CDC 원본
@@ -46,7 +46,7 @@ ms.locfileid: "65727169"
   
 -   CDC 처리 범위 결정의 기준이 되는 CDC 상태 패키지 변수의 이름. CDC 원본은 해당 변수를 수정하지 않습니다.  
   
- CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>**(사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.  
+ CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하십시오.  
   
  CDC 원본에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b296737ecc7d9988365a9ad7abed8b2ee7abf61c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943556"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "65943556"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>1. 분할 열 값 집합에 대한 파티션 번호 가져오기  
+### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>1\. 분할 열 값 집합에 대한 파티션 번호 가져오기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수 `RangePF1`을 만듭니다. $PARTITION은 `10`의 분할 열을 나타내는 `RangePF1` 값이 테이블의 파티션 1에 포함되는지 확인하는 데 사용됩니다.  
   
 ```  
@@ -73,7 +73,7 @@ SELECT $PARTITION.RangePF1 (10) ;
 GO  
 ```  
   
-### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>2. 분할된 테이블이나 인덱스의 비어 있지 않은 각 파티션에 있는 행 수 가져오기  
+### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>2\. 분할된 테이블이나 인덱스의 비어 있지 않은 각 파티션에 있는 행 수 가져오기  
  다음 예에서는 데이터가 있는 `TransactionHistory` 테이블의 각 파티션에 있는 행 수를 반환합니다. `TransactionHistory` 테이블은 파티션 함수 `TransactionRangePF1`을 사용하며 `TransactionDate` 열에서 분할됩니다.  
   
  이 예를 실행하려면 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예 데이터베이스에 대해 PartitionAW.sql 스크립트를 실행해야 합니다. 자세한 내용은 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)를 참조하세요.  

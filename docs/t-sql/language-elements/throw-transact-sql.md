@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e3838b8144baaaa21d1ae5d9d813bded8a161bd6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981501"
 ---
 # <a name="throw-transact-sql"></a>THROW(Transact-SQL)
@@ -72,7 +72,7 @@ THROW [ { error_number | @local_variable },
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-throw-to-raise-an-exception"></a>1. THROW를 사용하여 예외 발생  
+### <a name="a-using-throw-to-raise-an-exception"></a>1\. THROW를 사용하여 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 예외를 발생시키는 방법을 보여 줍니다.  
   
 ```sql  
@@ -87,7 +87,7 @@ THROW 51000, 'The record does not exist.', 1;
  The record does not exist.
  ```  
   
-### <a name="b-using-throw-to-raise-an-exception-again"></a>2. THROW를 사용하여 다시 예외 발생  
+### <a name="b-using-throw-to-raise-an-exception-again"></a>2\. THROW를 사용하여 다시 예외 발생  
  다음 예에서는 `THROW` 문을 사용하여 발생한 예외를 다시 발생시키는 방법을 보여 줍니다.  
   
 ```sql  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ed63abe0ea2c96461409e964b232abce6e1b103
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723522"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
@@ -160,7 +160,7 @@ ms.locfileid: "65723522"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--    www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
+-   www.mssqltips.com 의 블로그 항목 - [SQL Server Integration Services SSIS에서 트랜잭션을 사용하는 방법](https://go.microsoft.com/fwlink/?LinkId=157783)  
   
 ## <a name="see-also"></a>참고 항목  
  [상속된 트랜잭션](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   

@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944718"
 ---
 # <a name="right-transact-sql"></a>RIGHT(Transact-SQL)
@@ -85,7 +85,7 @@ Rob
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-right-with-a-column"></a>2. 열에서 RIGHT 사용  
+### <a name="b-using-right-with-a-column"></a>2\. 열에서 RIGHT 사용  
  다음 예는 각 성에서 가장 오른쪽 다섯 문자를 `DimEmployee` 표에 반환합니다.  
   
 ```  

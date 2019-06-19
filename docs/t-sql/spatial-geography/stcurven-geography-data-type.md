@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 56adf5a1cfb41b3a8efb10e278109a6d10659e7d
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937086"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN(geography 데이터 형식)
@@ -62,7 +62,7 @@ ms.locfileid: "65937086"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stcurven-on-a-circularstring"></a>1. CircularString에 STCurveN() 사용  
+### <a name="a-using-stcurven-on-a-circularstring"></a>1\. CircularString에 STCurveN() 사용  
  다음 예제에서는 **CircularString** 인스턴스에 두 번째 곡선을 반환합니다.  
   
 ```
@@ -74,7 +74,7 @@ ms.locfileid: "65937086"
   
  `CIRCULARSTRING (-122.348 47.658, -122.358 47.658, -122.358 47.653)`  
   
-### <a name="b-using-stcurven-on-a-compoundcurve"></a>2. CompoundCurve에 STCurveN() 사용  
+### <a name="b-using-stcurven-on-a-compoundcurve"></a>2\. CompoundCurve에 STCurveN() 사용  
  다음 예제에서는 **CompoundCurve** 인스턴스에서 두 번째 곡선을 반환합니다.  
   
 ```

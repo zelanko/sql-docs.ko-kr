@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b361e91469bb92a1f22b95bcceb28347974807e3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946626"
 ---
 # <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL(Transact-SQL)
@@ -62,14 +62,14 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="examples"></a>예  
   
-### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>1. 특정 DML 트리거의 중첩 수준 테스트  
+### <a name="a-testing-the-nesting-level-of-a-specific-dml-trigger"></a>1\. 특정 DML 트리거의 중첩 수준 테스트  
   
 ```  
 IF ( (SELECT TRIGGER_NESTLEVEL( OBJECT_ID('xyz') , 'AFTER' , 'DML' ) ) > 5 )  
    RAISERROR('Trigger xyz nested more than 5 levels.',16,-1)  
 ```  
   
-### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>2. 특정 DML 트리거의 중첩 수준 테스트  
+### <a name="b-testing-the-nesting-level-of-a-specific-ddl-trigger"></a>2\. 특정 DML 트리거의 중첩 수준 테스트  
   
 ```  
 IF ( ( SELECT TRIGGER_NESTLEVEL ( ( SELECT object_id FROM sys.triggers  

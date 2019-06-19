@@ -27,10 +27,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0d14dae215076616b89daf494b6b08dbad2cf826
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982312"
 ---
 # <a name="exists-transact-sql"></a>EXISTS(Transact-SQL)
@@ -58,7 +58,7 @@ EXISTS ( subquery )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>1. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
+### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>1\. 하위 쿼리에서 NULL을 사용하여 결과 집합 계속 반환  
  다음 예에서는 하위 쿼리에 `NULL`을 지정하여 결과 집합을 반환하고 `EXISTS`를 사용하여 TRUE로 계속 평가됩니다.  
   
 ```  
@@ -70,7 +70,7 @@ WHERE EXISTS (SELECT NULL)
 ORDER BY Name ASC ;  
 ```  
   
-### <a name="b-comparing-queries-by-using-exists-and-in"></a>2. EXISTS 및 IN을 사용하여 쿼리 비교  
+### <a name="b-comparing-queries-by-using-exists-and-in"></a>2\. EXISTS 및 IN을 사용하여 쿼리 비교  
  다음 예에서는 기능이 동일한 두 쿼리를 비교합니다. 첫 번째 쿼리에서는 `EXISTS`를 사용하고 두 번째 쿼리에서는 `IN`을 사용합니다.  
   
 ```  

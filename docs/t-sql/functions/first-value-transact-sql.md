@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb15792c255a00b77565bc84eabbd474a63cc63c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945917"
 ---
 # <a name="firstvalue-transact-sql"></a>FIRST_VALUE(Transact-SQL)
@@ -57,7 +57,7 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-firstvalue-over-a-query-result-set"></a>1. 쿼리 결과 집합에 FIRST_VALUE 사용  
+### <a name="a-using-firstvalue-over-a-query-result-set"></a>1\. 쿼리 결과 집합에 FIRST_VALUE 사용  
  다음 예에서는 FIRST_VALUE를 사용하여 지정된 제품 범주에서 가격이 가장 저렴한 제품의 이름을 반환합니다.  
   
 ```  
@@ -89,7 +89,7 @@ HL Mountain Tire        35.00                 Patch Kit/8 Patches
   
 ```  
   
-### <a name="b-using-firstvalue-over-partitions"></a>2. 파티션에 FIRST_VALUE 사용  
+### <a name="b-using-firstvalue-over-partitions"></a>2\. 파티션에 FIRST_VALUE 사용  
  다음 예에서는 FIRST_VALUE를 사용하여 직함이 같은 다른 직원과 비교해 휴가 일 수가 가장 적은 직원을 반환합니다. PARTITION BY 절은 직원을 직함별로 분할하며 FIRST_VALUE 함수는 각 파티션에 개별적으로 적용됩니다. OVER 절에 지정된 ORDER BY 절은 FIRST_VALUE 함수가 각 파티션의 행에 적용되는 논리적 순서를 결정합니다. ROWS UNBOUNDED PRECEDING 절은 창 시작점을 각 파티션의 첫 번째 행으로 지정합니다.  
   
 ```  

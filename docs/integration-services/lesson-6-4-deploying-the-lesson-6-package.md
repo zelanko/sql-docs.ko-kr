@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720816"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>6-4단원: 6단원 패키지 배포
@@ -97,7 +97,7 @@ Integration Services 프로젝트 변환 마법사를 닫으면 SSIS가 Integrat
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>새 샘플 데이터 폴더 만들기 및 채우기  
   
-1.  **Windows 탐색기**의 드라이브 루트 수준(예: **C:\\**)에서 **Sample Data Two**라는 폴더를 만듭니다.  
+1.  **Windows 탐색기**의 드라이브 루트 수준(예: **C:\\** )에서 **Sample Data Two**라는 폴더를 만듭니다.  
   
 2.  [1단원 필수 구성 요소](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites)에서 **샘플 데이터** 폴더를 연 다음, 세 가지 샘플 파일을 복사하세요.  
   

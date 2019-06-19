@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 598738b1352e1010f740dbb3a9e05d02a44d9afe
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945711"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
@@ -84,7 +84,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
   
 ## <a name="examples"></a>예  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>1. 소수 단위 초를 사용하지 않는 예  
+### <a name="a-an-example-without-fractions-of-a-second"></a>1\. 소수 단위 초를 사용하지 않는 예  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
@@ -100,7 +100,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>2. 소수 단위 초를 사용하는 예  
+### <a name="b-example-with-fractions-of-a-second"></a>2\. 소수 단위 초를 사용하는 예  
 
 이 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
 

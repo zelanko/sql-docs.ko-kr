@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: f66cdcebb92127486d75de270d93d0507131c4d3
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937363"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce(geometry 데이터 형식)
@@ -61,7 +61,7 @@ ms.locfileid: "65937363"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-reduce-to-simplify-a-linestring"></a>1. Reduce()를 사용하여 LineString 단순화  
+### <a name="a-using-reduce-to-simplify-a-linestring"></a>1\. Reduce()를 사용하여 LineString 단순화  
  다음 예에서는 `LineString` 인스턴스를 만들고 `Reduce()`를 사용하여 인스턴스를 단순화합니다.  
   
 ```  
@@ -70,7 +70,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0, 2 1, 3 0, 4 1)', 0)
 SELECT @g.Reduce(.75).ToString();  
 ```  
   
-### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>2. CircularString에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
+### <a name="b-using-reduce-with-varying-tolerance-levels-on-a-circularstring"></a>2\. CircularString에서 다양한 허용 오차 수준과 함께 Reduce() 사용  
  다음 예제에서는 **CircularString** 인스턴스에서 세 가지 허용 오차 수준과 함께 `Reduce()`를 사용합니다.  
   
 ```

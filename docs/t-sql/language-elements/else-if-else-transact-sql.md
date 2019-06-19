@@ -22,10 +22,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 63d64ba7c5f762ee39bf0dec3abf099f1ec8690e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982419"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
@@ -56,7 +56,7 @@ IF Boolean_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-boolean-expression"></a>1. 간단한 부울 식 사용  
+### <a name="a-using-a-simple-boolean-expression"></a>1\. 간단한 부울 식 사용  
  다음 예에 포함된 간단한 부울 식(`1=1`)의 결과는 true이므로 첫째 문이 출력됩니다.  
   
 ```  
@@ -72,7 +72,7 @@ ELSE PRINT 'Boolean_expression is false.' ;
 GO  
 ```  
   
-### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>2. 쿼리를 부울 식의 일부로 사용  
+### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>2\. 쿼리를 부울 식의 일부로 사용  
  다음 예에서는 부울 식의 일부로 쿼리를 실행합니다. `Product` 테이블에는 `WHERE` 절을 충족하는 자전거 10대가 있으므로 첫째 print 문이 실행됩니다. 둘째 문이 실행되도록 하려면 `> 5`를 `> 15`로 변경합니다.  
   
 ```  

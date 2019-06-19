@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d46915d40388ee5e899a94a80d64ff0ae3361bd
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945869"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED(Transact-SQL)
@@ -67,7 +67,7 @@ SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
-### <a name="b-copying-a-certificate-to-another-database"></a>2. 다른 데이터베이스에 인증서 복사  
+### <a name="b-copying-a-certificate-to-another-database"></a>2\. 다른 데이터베이스에 인증서 복사  
 조금 더 복잡한 예에서는 `SOURCE_DB` 및 `TARGET_DB`라는 두 데이터베이스를 만듭니다. 그런 다음, `SOURCE_DB`에 인증서를 만들어 `TARGET_DB`에 복사합니다. 마지막으로, `SOURCE_DB`에서 암호화된 데이터가 인증서 사본을 사용하여 `TARGET_DB`에서 해독될 수 있음을 보여 줍니다.
   
 예제 환경을 만들려면 `SOURCE_DB` 및 `TARGET_DB` 데이터베이스를 만들고 각 데이터베이스에 마스터 키를 만듭니다. 그런 다음, `SOURCE_DB`에서 인증서를 만듭니다.
@@ -156,7 +156,7 @@ GO
 ## <a name="see-also"></a>관련 항목:
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[CERTPRIVATEKEY&#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+[CERTPRIVATEKEY &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
 [sys.certificates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

@@ -26,10 +26,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982279"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;=(크거나 같음)(Transact-SQL)
@@ -59,7 +59,7 @@ expression >= expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1. 간단한 쿼리에서 >= 사용  
+### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 >= 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 13보다 큰 모든 행을 반환합니다.  
   
 ```  

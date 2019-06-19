@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993481"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT 데이터베이스 사용 권한(Transact-SQL)
@@ -213,7 +213,7 @@ sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 사용 권한�
 
 ## <a name="examples"></a>예
 
-### <a name="a-granting-permission-to-create-tables"></a>1. 테이블을 만들기 위한 사용 권한 부여
+### <a name="a-granting-permission-to-create-tables"></a>1\. 테이블을 만들기 위한 사용 권한 부여
 
 다음 예에서는 사용자 `MelanieK`에게 `AdventureWorks` 데이터베이스에 대한 `CREATE TABLE` 권한을 부여합니다.
 
@@ -223,7 +223,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO
 ```
 
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>2. 응용 프로그램 역할에 SHOWPLAN 사용 권한 부여
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>2\. 응용 프로그램 역할에 SHOWPLAN 사용 권한 부여
 
  다음 예에서는 `SHOWPLAN` 응용 프로그램 역할에 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 권한을 부여합니다.
 

@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5b66f623744c33c9fdaff92d45ceb66b975285a1
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935753"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves(geography 데이터 형식)
@@ -51,7 +51,7 @@ ms.locfileid: "65935753"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>1. CircularString 인스턴스에 STNumCurves() 사용  
+### <a name="a-using-stnumcurves-on-a-circularstring-instance"></a>1\. CircularString 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `CircularString` 인스턴스의 곡선 수를 가져오는 방법을 보여 줍니다.  
   
 ```
@@ -60,7 +60,7 @@ ms.locfileid: "65935753"
  SELECT @g.STNumCurves();
  ```  
   
-### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>2. CompoundCurve 인스턴스에 STNumCurves() 사용  
+### <a name="b-using-stnumcurves-on-a-compoundcurve-instance"></a>2\. CompoundCurve 인스턴스에 STNumCurves() 사용  
  다음 예에서는 `STNumCurves()`를 사용하여 `CompoundCurve` 인스턴스의 곡선 수를 반환합니다.  
   
 ```

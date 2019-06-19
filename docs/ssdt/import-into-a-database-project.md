@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099579"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
@@ -49,7 +49,7 @@ ms.locfileid: "65099579"
 ![SSDT 가져오기 시 무시됨 폴더](../ssdt/media/ssdt-ignoredonimport.gif "SSDT 가져오기 시 무시됨 폴더")  
   
 ## <a name="bkmk_import_source_script"></a>가져오기 원본: 스크립트(*.sql)  
-프로젝트에 ‘없었던’ 가져오기 원본의 모든 개체가 추가되며, 프로젝트에 ‘이미 있었던’ 가져오기 원본의 모든 개체는 프로젝트의 개체 정의를 덮어씁니다.  
+프로젝트에 ‘없었던’ 가져오기 원본의 모든 개체가 추가되며, 프로젝트에 ‘이미 있었던’ 가져오기 원본의 모든 개체는 프로젝트의 개체 정의를 덮어씁니다.    
   
 > [!NOTE]  
 > 이 경로에는 향후 릴리스에서 수정될 두 가지 알려진 버그가 있습니다.  

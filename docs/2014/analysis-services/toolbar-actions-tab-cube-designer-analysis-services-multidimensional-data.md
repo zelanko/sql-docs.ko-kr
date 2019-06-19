@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e65fce75803445e233ee40890cdefefe8cdd96d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066205"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
@@ -26,7 +26,7 @@ ms.locfileid: "66066205"
 |------------|-----------------|  
 |**비즈니스 인텔리전스 추가**|**비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.|  
 |**처리**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.|  
-|**다시 연결**| **동작** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  **동작** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|  
+|**다시 연결**|**동작** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  **동작** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|  
 |**새 작업**|**동작 폼 편집기** 창을 표시하고 새 동작을 만들려면 클릭합니다.|  
 |**새 드릴스루 동작**|**드릴스루 동작 폼 편집기** 를 표시하고 새 드릴스루 동작을 만들려면 클릭합니다.|  
 |**새 보고 동작**|**보고 동작 폼 편집기** 를 표시하고 새 보고서 동작을 만들려면 클릭합니다.|  

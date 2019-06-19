@@ -12,10 +12,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98d517c4d00d0ed69aa4a04daa4333c65fdf31de
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935263"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -115,7 +115,7 @@ SELECT @g.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>1. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>1\. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 **CurvePolygon** 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -123,7 +123,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2\. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 코드 조각은 동일한 문에서 **CurvePolygon** 을 사용하여 geography 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
 ```sql  

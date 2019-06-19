@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8620c5d309342b6337027581e5bda6b70459a48f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980353"
 ---
 # <a name="return-transact-sql"></a>RETURN(Transact-SQL)
@@ -63,7 +63,7 @@ RETURN [ integer_expression ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-from-a-procedure"></a>1. 프로시저에서 반환  
+### <a name="a-returning-from-a-procedure"></a>1\. 프로시저에서 반환  
  다음 예에서는 `findjobs`를 실행할 때 매개 변수로 사용자 이름을 지정하지 않은 경우 `RETURN`으로 사용자의 화면에 메시지를 보낸 다음 프로시저를 종료하는 방법을 보여 줍니다. 사용자 이름을 지정하면 현재 데이터베이스에서 이 사용자가 만든 모든 개체 이름을 해당 시스템 테이블에서 가져옵니다.  
   
 ```  
@@ -83,7 +83,7 @@ ELSE
     END;  
 ```  
   
-### <a name="b-returning-status-codes"></a>2. 상태 코드 반환  
+### <a name="b-returning-status-codes"></a>2\. 상태 코드 반환  
  다음 예에서는 지정된 연락처 ID의 주를 확인하는 방법을 보여 줍니다. 주가 워싱턴(`WA`)인 경우 `1`이 반환됩니다. 그 외 다른 조건(`2` 또는 `WA`가 `StateProvince` 이외의 값)인 경우 `ContactID`가 반환됩니다.  
   
 ```  

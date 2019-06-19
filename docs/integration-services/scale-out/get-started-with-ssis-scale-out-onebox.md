@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 5ccfa6b0f2f45c53b790664f6dd5c7d6363d7864
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66009785"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>단일 컴퓨터에서 Integration Services(SSIS) Scale Out 시작

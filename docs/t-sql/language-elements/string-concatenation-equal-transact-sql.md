@@ -19,10 +19,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18cbb602155c6f3ca8230d6ad4b149979f3b51bc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981549"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+=(문자열 연결 대입)(Transact-SQL)
@@ -56,7 +56,7 @@ SELECT 'Adventure' += 'Works'
 ```  
   
 ## <a name="examples"></a>예  
-### <a name="a-concatenation-using--operator"></a>1. += 연산자를 사용한 연결
+### <a name="a-concatenation-using--operator"></a>1\. += 연산자를 사용한 연결
  다음 예에서는 `+=` 연산자를 사용하여 문자열을 연결합니다.  
   
 ```  
@@ -70,7 +70,7 @@ PRINT @v1;
   
  `This is the original. More text.`  
   
-### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>2. += 연산자를 사용한 연결 시의 계산 순서
+### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>2\. += 연산자를 사용한 연결 시의 계산 순서
 다음 예제에서는 여러 문자열을 연결하여 하나의 긴 문자열을 만든 다음, 최종 문자열의 길이를 컴퓨팅합니다. 이 예제에서는 연결 연산자 사용 시의 계산 순서 및 잘림 규칙을 보여 줍니다. 
 
 ```

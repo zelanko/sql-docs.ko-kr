@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f6044ff3c8626a4daeee30f100082a8884457fc9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946290"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY(Transact-SQL)
@@ -67,7 +67,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-testing-for-data-with-a-valid-signature"></a>1. 유효한 서명이 있는 데이터 테스트  
+### <a name="a-testing-for-data-with-a-valid-signature"></a>1\. 유효한 서명이 있는 데이터 테스트  
  다음 예에서는 선택한 데이터가 `WillisKey74` 비대칭 키로 서명된 후 변경되지 않은 경우 1을 반환하고 데이터가 손상된 경우에는 0을 반환합니다.  
   
 ```  
@@ -80,7 +80,7 @@ GO
 RETURN;  
 ```  
   
-### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>2. 유효한 서명이 있는 데이터가 포함된 결과 집합 반환  
+### <a name="b-returning-a-result-set-that-contains-data-with-a-valid-signature"></a>2\. 유효한 서명이 있는 데이터가 포함된 결과 집합 반환  
  다음 예에서는 `SignedData04` 비대칭 키로 서명된 후 변경되지 않은 데이터가 포함된 `WillisKey74`의 행을 반환합니다. 이 예에서는 `AsymKey_ID` 함수를 호출하여 데이터베이스에서 비대칭 키의 ID를 가져옵니다.  
   
 ```  

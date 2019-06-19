@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65135239"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>서비스 SID를 사용하여 SQL Server의 서비스에 사용 권한 부여
@@ -45,7 +45,7 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-a-service-sid"></a>1. 서비스 SID 만들기
+### <a name="a-create-a-service-sid"></a>1\. 서비스 SID 만들기
 
 다음 PowerShell 명령은 System Center Operations Manager 상태 서비스에서 서비스 SID를 만듭니다.
 
@@ -56,7 +56,7 @@ sc.exe --% sidtype "HealthService" unrestricted
 > [!IMPORTANT]
 > `--%`는 나머지 명령 구문 분석을 중지하도록 PowerShell에 지시합니다. 이는 레거시 명령 및 애플리케이션을 사용할 때 유용합니다.
 
-### <a name="b-query-a-service-sid"></a>2. 서비스 SID 쿼리
+### <a name="b-query-a-service-sid"></a>2\. 서비스 SID 쿼리
 
 서비스 SID를 확인하거나 서비스 SID가 있는지 확인하려면 PowerShell에서 다음 명령을 실행합니다.
 

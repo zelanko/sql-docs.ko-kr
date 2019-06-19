@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103254"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트에 테스트 조건 추가

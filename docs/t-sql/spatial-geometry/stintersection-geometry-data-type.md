@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 19765373e48ea01c780cc9771c6e55b70333b3c8
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938854"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection(geometry 데이터 형식)
@@ -51,7 +51,7 @@ ms.locfileid: "65938854"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stintersection-on-polygon-instances"></a>1. Polygon 인스턴스에 STIntersection() 사용  
+### <a name="a-using-stintersection-on-polygon-instances"></a>1\. Polygon 인스턴스에 STIntersection() 사용  
  다음 예에서는 `STIntersection()`을 사용하여 두 다각형의 교차점을 계산합니다.  
   
 ```  
@@ -62,7 +62,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STIntersection(@h).ToString();  
 ```  
   
-### <a name="b-using-stintersection-with-curvepolygon-instance"></a>2. CurvePolygon 인스턴스에 STIntersection() 사용  
+### <a name="b-using-stintersection-with-curvepolygon-instance"></a>2\. CurvePolygon 인스턴스에 STIntersection() 사용  
  다음 예에서는 원호 세그먼트를 포함하는 인스턴스를 반환합니다.  
   
 ```

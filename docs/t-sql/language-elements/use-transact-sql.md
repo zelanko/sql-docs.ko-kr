@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f12eff6e67392fd433a6b563876912730b9de279
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980172"
 ---
 # <a name="use-transact-sql"></a>USE(Transact-SQL)
@@ -47,7 +47,7 @@ USE { database_name }
  *database_name*  
  사용자 컨텍스트가 전환되는 데이터베이스 또는 데이터베이스 스냅숏의 이름입니다. 데이터베이스와 데이터베이스 스냅숏 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스 매개 변수는 현재 데이터베이스만 참조할 수 있습니다. 현재 데이터베이스가 아닌 데이터베이스를 제공할 경우 `USE` 문은 데이터베이스 사이를 전환하지 않으며 오류 코드 40508이 반환됩니다. 데이터베이스를 변경하려면 데이터베이스에 직접 연결해야 합니다. USE 문은 이 페이지 맨 위에 SQL Database에 해당하지 않는다고 표기되어 있습니다. 일괄 처리에 `USE` 문이 포함될 수는 있지만 아무 것도 수행되지 않습니다. 
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스 매개 변수는 현재 데이터베이스만 참조할 수 있습니다. 현재 데이터베이스가 아닌 데이터베이스를 제공할 경우 `USE` 문은 데이터베이스 사이를 전환하지 않으며 오류 코드 40508이 반환됩니다. 데이터베이스를 변경하려면 데이터베이스에 직접 연결해야 합니다. USE 문은 이 페이지 맨 위에 SQL Database에 해당하지 않는다고 표기되어 있습니다. 일괄 처리에 `USE` 문이 포함될 수는 있지만 아무 것도 수행되지 않습니다.
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 자동으로 기본 데이터베이스에 연결되며 데이터베이스 사용자의 보안 컨텍스트를 획득합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 데이터베이스 사용자가 생성되지 않은 경우 해당 로그인은 게스트로서 연결합니다. 데이터베이스 사용자에게 데이터베이스에 대한 CONNECT 권한이 없으면 USE 문은 실패합니다. 로그인에 기본 데이터베이스를 할당하지 않은 경우 기본 데이터베이스는 master로 설정됩니다.  

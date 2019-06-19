@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9fe364e8e1f3ca9d610d95283e8a1957a6d60e31
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935658"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion(geometry 데이터 형식)
@@ -51,7 +51,7 @@ ms.locfileid: "65935658"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-union-of-two-polygon-instances"></a>1. 두 Polygon 인스턴스의 통합 계산  
+### <a name="a-computing-the-union-of-two-polygon-instances"></a>1\. 두 Polygon 인스턴스의 통합 계산  
  다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 계산합니다.  
   
 ```  
@@ -62,7 +62,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>2. CurvePolygon 인스턴스가 있는 Polygon 인스턴스의 통합 계산  
+### <a name="b-computing-the-union-of-a-polygon-instance-with-a-curvepolygon-instance"></a>2\. CurvePolygon 인스턴스가 있는 Polygon 인스턴스의 통합 계산  
  다음 예에서는 원호 세그먼트를 포함하는 `GeometryCollection` 인스턴스를 반환합니다.  
   
 ```

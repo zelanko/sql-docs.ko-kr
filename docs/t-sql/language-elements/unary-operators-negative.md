@@ -21,10 +21,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab4143facc0549a52cc271212d273fdf9c906e7b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981421"
 ---
 # <a name="unary-operators---negative"></a>단항 연산자 - 음수
@@ -57,7 +57,7 @@ ms.locfileid: "65981421"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-a-variable-to-a-negative-value"></a>1. 변수를 음의 값으로 설정  
+### <a name="a-setting-a-variable-to-a-negative-value"></a>1\. 변수를 음의 값으로 설정  
  다음 예에서는 변수를 음의 값으로 설정합니다.  
   
 ```  
@@ -80,7 +80,7 @@ NegativeValue
   
 ```  
   
-### <a name="b-changing-a-variable-to-a-negative-value"></a>2. 변수를 음의 값으로 변경  
+### <a name="b-changing-a-variable-to-a-negative-value"></a>2\. 변수를 음의 값으로 변경  
  다음 예에서는 변수를 음의 값으로 변경합니다.  
   
 ```  

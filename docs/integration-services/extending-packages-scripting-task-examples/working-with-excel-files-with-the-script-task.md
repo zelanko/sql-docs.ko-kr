@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1038f68dc6c584928ec0f88fc99f2952590ec956
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724268"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
@@ -83,7 +83,7 @@ ms.locfileid: "65724268"
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFile** 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFile** 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65724268"
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**…**) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFileExists** 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **…** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelFileExists** 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -153,7 +153,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTable** 및 **ExcelFile** 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTable** 및 **ExcelFile** 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -161,7 +161,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTableExists** 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 **ExcelTableExists** 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -260,7 +260,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFolder 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -268,7 +268,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFiles 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -335,7 +335,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelFile 변수를 선택합니다.  
   
 3.  **ReadWriteVariables**를 클릭하고 다음 방법 중 하나를 사용하여 속성 값을 입력합니다.  
   
@@ -343,7 +343,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 ExcelTablesvariable 변수를 선택합니다.  
   
 4.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   
@@ -448,7 +448,7 @@ public class ScriptMain
   
          -또는-  
   
-    -   속성 필드 옆의 줄임표(**...**) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
+    -   속성 필드 옆의 줄임표( **...** ) 단추를 클릭하고 **변수 선택** 대화 상자에서 해당 변수를 선택합니다.  
   
 5.  **스크립트 편집**을 클릭하여 스크립트 편집기를 엽니다.  
   

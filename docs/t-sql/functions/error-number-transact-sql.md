@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 536e45d86f0f40fdfa3269aad5e168573a16c9f9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949087"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER(Transact-SQL)
@@ -60,7 +60,7 @@ CATCH 블록에서 호출되면 `ERROR_NUMBER`는 CATCH 블록을 실행시킨 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_NUMBER 사용  
+### <a name="a-using-errornumber-in-a-catch-block"></a>1\. CATCH 블록에서 ERROR_NUMBER 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `CATCH` 블록은 오류 번호를 반환합니다.  
   
 ```sql  
@@ -87,7 +87,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
+### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>2\. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 번호와 함께 `CATCH` 블록은 해당 오류에 대한 정보를 반환합니다.  
 
 ```sql  

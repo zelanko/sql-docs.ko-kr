@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f46e00be95d751629325a6b7c54160bf00e44be
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948964"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME(Transact-SQL)
@@ -84,7 +84,7 @@ FROM master.sys.objects;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-object-schema-name-and-object-name"></a>1. 개체 스키마 이름 및 개체 이름 반환  
+### <a name="a-returning-the-object-schema-name-and-object-name"></a>1\. 개체 스키마 이름 및 개체 이름 반환  
  다음 예에서는 임시 문이나 준비된 문이 아닌 모든 캐시된 쿼리 계획에 대한 개체 스키마 이름, 개체 이름 및 SQL 텍스트를 반환합니다.  
   
 ```sql
@@ -98,7 +98,7 @@ WHERE st.objectid IS NOT NULL;
 GO  
 ```  
   
-### <a name="b-returning-three-part-object-names"></a>2. 세 부분으로 된 개체 이름 반환  
+### <a name="b-returning-three-part-object-names"></a>2\. 세 부분으로 된 개체 이름 반환  
  다음 예에서는 모든 데이터베이스의 모든 개체에 대해 `sys.dm_db_index_operational_stats` 동적 관리 뷰의 모든 다른 열과 함께 데이터베이스, 스키마 및 개체 이름을 반환합니다.  
   
 ```sql

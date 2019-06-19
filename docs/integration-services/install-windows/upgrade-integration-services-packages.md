@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805389"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services 패키지 업그레이드
@@ -59,14 +59,14 @@ ms.locfileid: "65805389"
   
 -   DTExecUI.exe.config  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 디자인하려면 *\<드라이브>*:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE에 있는 devenv.exe.config 파일을 수정해야 합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 사용자 지정 구성 요소가 포함된 패키지를 디자인하려면 *\<드라이브>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE에 있는 devenv.exe.config 파일을 수정해야 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 런타임을 사용하여 빌드된 사용자 지정 애플리케이션으로 이러한 패키지를 사용하려면 실행 파일에 대한 *.exe.config 파일의 구성 섹션에 리디렉션 파일을 포함하십시오. 규칙은 런타임 어셈블리를 버전 13.0.0.0([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])으로 리디렉션합니다. 어셈블리 버전 리디렉션에 대한 자세한 내용은 [\<runtime>용 \<assemblyBinding>요소](https://msdn.microsoft.com/library/twy1dw1e.aspx)를 참조하세요.  
   
 ### <a name="locating-the-assemblies"></a>어셈블리 찾기  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<드라이브>*:\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. *\<드라이브>* :\Windows\Microsoft.NET\assembly에는 .NET 4에 대한 별도의 전역 어셈블리 캐시가 있습니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
   
- 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서와 같이 핵심 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 확장성 .dll 파일도 *\<드라이브>*:\Program Files\Microsoft SQL Server\130\SDK\Assemblies에 있습니다.  
+ 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서와 같이 핵심 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 확장성 .dll 파일도 *\<드라이브>* :\Program Files\Microsoft SQL Server\130\SDK\Assemblies에 있습니다.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>SQL Server 패키지 업그레이드 결과 이해  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 패키지에 포함된 대부분의 구성 요소 및 기능은 패키지 업그레이드 프로세스 중에 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 해당 구성 요소 및 기능으로 원활하게 변환됩니다. 하지만 업그레이드되지 않거나 업그레이드 결과에 주의해야 하는 몇 가지 구성 요소 및 기능이 있습니다. 다음 표에서는 이러한 구성 요소 및 기능을 보여 줍니다.  

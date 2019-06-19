@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 55721b2b1f843ee78e8b69e4a1b99e39737ebb64
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948937"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE(Transact-SQL)
@@ -71,13 +71,13 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. *add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
   
 @add_authenticator  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. *@add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. *@add_authenticator* 는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *@add_authenticator* 는 **int** 데이터 형식을 갖습니다.  
 
 *authenticator*  
 인증자의 생성에 대한 기준으로 사용되는 데이터입니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
   
 @authenticator  
-인증자의 생성에 대한 기준으로 사용된 데이터를 포함하는 변수입니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자의 생성에 대한 기준으로 사용된 데이터를 포함하는 변수입니다. *@authenticator* 는 **sysname** 데이터 형식을 갖습니다.  
   
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  

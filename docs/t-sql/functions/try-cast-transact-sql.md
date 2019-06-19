@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 20f6cf51157746f167186ad041943167d40e6d65
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946912"
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST(Transact-SQL)
@@ -61,7 +61,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-trycast-returns-null"></a>1. TRY_CAST가 null을 반환  
+### <a name="a-trycast-returns-null"></a>1\. TRY_CAST가 null을 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CAST가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -101,7 +101,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-trycast-fails-with-an-error"></a>2. TRY_CAST가 오류와 함께 실패  
+### <a name="b-trycast-fails-with-an-error"></a>2\. TRY_CAST가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CAST가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  

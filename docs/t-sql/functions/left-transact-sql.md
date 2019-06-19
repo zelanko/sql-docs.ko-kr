@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07fc18f3a2540fd1316078e7e53326d36964c735
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948680"
 ---
 # <a name="left-transact-sql"></a>LEFT(Transact-SQL)
@@ -61,7 +61,7 @@ LEFT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-left-with-a-column"></a>1. 열에서 LEFT 사용  
+### <a name="a-using-left-with-a-column"></a>1\. 열에서 LEFT 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Product` 테이블에서 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
   
 ```  
@@ -71,7 +71,7 @@ ORDER BY ProductID;
 GO  
 ```  
   
-### <a name="b-using-left-with-a-character-string"></a>2. 문자열에서 LEFT 사용  
+### <a name="b-using-left-with-a-character-string"></a>2\. 문자열에서 LEFT 사용  
  다음 예에서는 `LEFT`를 사용하여 `abcdefg` 문자열에서 가장 왼쪽에 있는 두 문자를 반환합니다.  
   
 ```  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2026e33a9e31f437615e8270c61681ec95b287b2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728109"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
@@ -78,7 +78,7 @@ Microsoft Dynamics AX Online 또는 Microsoft Dynamics CRM Online에 연결하�
  연결 관리자의 이름입니다.  
   
  **서비스 문서 위치**  
- OData 서비스의 URL입니다. 예를 들어 https://services.odata.org/V3/Northwind/Northwind.svc/을 참조하십시오.  
+ OData 서비스의 URL입니다. 예를 들어 https://services.odata.org/V3/Northwind/Northwind.svc/ 을 참조하십시오.  
   
  **인증**  
 다음 옵션 중 하나를 선택합니다.

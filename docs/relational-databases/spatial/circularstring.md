@@ -13,10 +13,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38eea1eb78a8944c602e00f94593345f50dc88fd
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012377"
 ---
 # <a name="circularstring"></a>CircularString
@@ -84,7 +84,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>1. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>1\. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 **CircularString** 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -92,7 +92,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>2. 원호 세그먼트가 하나인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>2\. 원호 세그먼트가 하나인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  다음 예에서는 단일 원호 세그먼트(반원)를 사용하여 **CircularString** 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  

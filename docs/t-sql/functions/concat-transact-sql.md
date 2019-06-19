@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943864"
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
@@ -67,7 +67,7 @@ CONCAT 함수는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전 이상
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-concat"></a>1. CONCAT 사용  
+### <a name="a-using-concat"></a>1\. CONCAT 사용  
   
 ```sql
 SELECT CONCAT ( 'Happy ', 'Birthday ', 11, '/', '25' ) AS Result;  
@@ -83,7 +83,7 @@ Happy Birthday 11/25
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-concat-with-null-values"></a>2. NULL 값이 있는 CONCAT 사용  
+### <a name="b-using-concat-with-null-values"></a>2\. NULL 값이 있는 CONCAT 사용  
   
 ```sql
 CREATE TABLE #temp (  

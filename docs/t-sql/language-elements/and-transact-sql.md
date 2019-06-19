@@ -24,10 +24,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5629288c66b3d8ae4f93185f35ec1d8cacaf85e6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983222"
 ---
 # <a name="and-transact-sql"></a>AND(Transact-SQL)
@@ -64,7 +64,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-and-operator"></a>1. AND 연산자 사용  
+### <a name="a-using-the-and-operator"></a>1\. AND 연산자 사용  
  다음 예에서는 직책이 `Marketing Assistant`이고 휴가가 `41`시간 넘게 남은 직원에 대한 정보를 선택합니다.  
   
 ```  
@@ -76,7 +76,7 @@ WHERE JobTitle = 'Marketing Assistant'
 AND VacationHours > 41 ;  
 ```  
   
-### <a name="b-using-the-and-operator-in-an-if-statement"></a>2. IF 문에서 AND 연산자 사용  
+### <a name="b-using-the-and-operator-in-an-if-statement"></a>2\. IF 문에서 AND 연산자 사용  
  다음 예에서는 IF 문에서 AND를 사용하는 방법의 예를 보여 줍니다. 첫 번째 문에서 `1 = 1` 및 `2 = 2`는 모두 true이므로 결과는 true입니다. 두 번째 예에서 인수 `2 = 17`이 false이므로 결과는 false입니다.  
   
 ```  

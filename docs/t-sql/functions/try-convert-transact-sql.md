@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c66c7e7d91f754203d4f23b0d7f45a391aaec67
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946887"
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
@@ -65,7 +65,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-tryconvert-returns-null"></a>1. TRY_CONVERT가 Null 반환  
+### <a name="a-tryconvert-returns-null"></a>1\. TRY_CONVERT가 Null 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CONVERT가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -105,7 +105,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>2. TRY_CONVERT가 오류와 함께 실패  
+### <a name="b-tryconvert-fails-with-an-error"></a>2\. TRY_CONVERT가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CONVERT가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  

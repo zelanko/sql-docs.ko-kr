@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943244"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME(Transact-SQL)
@@ -48,7 +48,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  유니코드 문자 데이터로 이루어진 문자열입니다. *character_string*은 **sysname**이며 128자로 제한됩니다. 128자가 넘는 문자열을 입력하면 NULL이 반환됩니다.  
   
  '*quote_character*'  
- 구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표( **'** ), 왼쪽 또는 오른쪽 대괄호( **[]** ), 큰따옴표( **"** ), 왼쪽 또는 오른쪽 괄호( **()** ), 초과 또는 미만 기호( **><** ), 왼쪽 또는 오른쪽 중괄호( **{}** ) 또는 억음 악센트 기호( **\`**)일 수 있습니다. 허용되지 않는 문자를 입력하는 경우 NULL이 반환됩니다. *quote_character*를 지정하지 않은 경우 대괄호가 사용됩니다.  
+ 구분 기호로 사용되는 단일 문자 문자열입니다. 작은따옴표( **'** ), 왼쪽 또는 오른쪽 대괄호( **[]** ), 큰따옴표( **"** ), 왼쪽 또는 오른쪽 괄호( **()** ), 초과 또는 미만 기호( **><** ), 왼쪽 또는 오른쪽 중괄호( **{}** ) 또는 억음 악센트 기호( **\`** )일 수 있습니다. 허용되지 않는 문자를 입력하는 경우 NULL이 반환됩니다. *quote_character*를 지정하지 않은 경우 대괄호가 사용됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **nvarchar(258)**  

@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e14053f2168beeedcd94c198a1f5b6ca7a69b2ad
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945218"
 ---
 # <a name="sessionuser-transact-sql"></a>SESSION_USER(Transact-SQL)
@@ -54,7 +54,7 @@ SESSION_USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>1. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
+### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>1\. SESSION_USER를 사용하여 현재 세션의 사용자 이름 반환  
  다음 예에서는 변수를 `nchar`로 선언하고 이 변수에 `SESSION_USER`의 현재 값을 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
 ```  
@@ -73,7 +73,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>2. DEFAULT 제약 조건으로 SESSION_USER 사용  
+### <a name="b-using-sessionuser-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 SESSION_USER 사용  
  다음 예에서는 배송물 수령을 기록하는 사람의 이름에 대한 `SESSION_USER` 제약 조건으로 `DEFAULT`를 사용하는 테이블을 만듭니다.  
   
 ```  

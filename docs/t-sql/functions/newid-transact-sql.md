@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d411af5fe27f012884f44e18fd065091237b394f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943000"
 ---
 # <a name="newid-transact-sql"></a>NEWID(Transact-SQL)
@@ -49,7 +49,7 @@ NEWID ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-newid-function-with-a-variable"></a>1. 변수가 있는 NEWID 함수 사용  
+### <a name="a-using-the-newid-function-with-a-variable"></a>1\. 변수가 있는 NEWID 함수 사용  
  다음 예에서는 `NEWID()`를 사용하여 **uniqueidentifier** 데이터 형식으로 선언된 변수에 값을 할당합니다. 값이 테스트되기 전에 **uniqueidentifier** 데이터 형식 변수의 값이 인쇄됩니다.  
   
 ```  
@@ -68,7 +68,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
 > [!NOTE]  
 >  NEWID에서 반환된 값은 컴퓨터마다 다릅니다. 설명을 돕기 위해 이 숫자가 표시됩니다.  
   
-### <a name="b-using-newid-in-a-create-table-statement"></a>2. CREATE TABLE 문에서 NEWID 사용  
+### <a name="b-using-newid-in-a-create-table-statement"></a>2\. CREATE TABLE 문에서 NEWID 사용  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   

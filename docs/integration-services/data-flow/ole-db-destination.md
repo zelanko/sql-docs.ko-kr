@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65802350"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
@@ -96,7 +96,7 @@ ms.locfileid: "65802350"
   
 |빠른 로드 옵션|설명|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값**>** 형식으로 입력합니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값 **>** 형식으로 입력합니다.|  
 |FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
 |ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   

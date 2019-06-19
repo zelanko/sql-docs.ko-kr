@@ -54,10 +54,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f27a13116e1b0e393917c99c30039dce374019b3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944903"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
@@ -105,7 +105,7 @@ ms.locfileid: "65944903"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>1. 저장 프로시저에서 ODBC 함수 사용  
+### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>1\. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
 ```  
@@ -117,7 +117,7 @@ AS
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
   
-### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>2. 사용자 정의 함수에서 ODBC 함수 사용  
+### <a name="b-using-an-odbc-function-in-a-user-defined-function"></a>2\. 사용자 정의 함수에서 ODBC 함수 사용  
  다음 예에서는 사용자 정의 함수에 ODBC 함수를 사용합니다.  
   
 ```  

@@ -42,10 +42,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947048"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
@@ -64,7 +64,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 ||||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -447,15 +447,15 @@ DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리
 
 RESTORE 예에는 다음이 포함됩니다.
 
-- 1. [전체 데이터베이스 복원](#restoring_full_db)
-- 2. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)
+- 1\. [전체 데이터베이스 복원](#restoring_full_db)
+- 2\. [전체 및 차등 데이터베이스 백업 복원](#restoring_full_n_differential_db_backups)
 - C. [RESTART 구문을 사용하여 데이터베이스 복원](#restoring_db_using_RESTART)
 - D. [데이터베이스 복원 및 파일 이동](#restoring_db_n_move_files)
 - E. [BACKUP 및 RESTORE를 사용하여 데이터베이스 복사](#copying_db_using_bnr)
 - F. [STOPAT를 사용하여 지정 시간으로 복원](#restoring_to_pit_using_STOPAT)
 - G. [트랜잭션 로그를 표시까지 복원](#restoring_transaction_log_to_mark)
 - H. [TAPE 구문을 사용하여 복원](#restoring_using_TAPE)
-- 9. [FILE 및 FILEGROUP 구문을 사용하여 복원](#restoring_using_FILE_n_FG)
+- 9\. [FILE 및 FILEGROUP 구문을 사용하여 복원](#restoring_using_FILE_n_FG)
 - J. [데이터베이스 스냅숏으로 되돌리기](#reverting_from_db_snapshot)
 - 11. [Microsoft Azure Blob Storage 서비스에서 복원](#Azure_Blob)
 
@@ -736,7 +736,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />관리되는 인스턴스\*_**|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />관리되는 인스턴스\*_ **|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -877,7 +877,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System(PDW) \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_ **
 
 &nbsp;
 
@@ -989,7 +989,7 @@ DATABASE 개체에서 배타적 잠금을 사용합니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-simple-restore-examples"></a>1. 간단한 RESTORE 예
+### <a name="a-simple-restore-examples"></a>1\. 간단한 RESTORE 예
 
 다음 예에서는 전체 백업을 `SalesInvoices2013` 데이터베이스에 복원합니다. 백업 파일은 \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full 디렉터리에 저장됩니다. SalesInvoices2013 데이터베이스는 대상 어플라이언스에 이미 존재할 수 없으며, 그렇지 않으면 이 명령은 오류가 발생하여 실패합니다.
 
@@ -998,7 +998,7 @@ RESTORE DATABASE SalesInvoices2013
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 ```
 
-### <a name="b-restore-a-full-and-differential-backup"></a>2. 전체 및 차등 백업 복원
+### <a name="b-restore-a-full-and-differential-backup"></a>2\. 전체 및 차등 백업 복원
 
 다음 예에서는 SalesInvoices2013 데이터베이스에 전체 및 차등 백업을 차례로 복원합니다.
 
