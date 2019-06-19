@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3b65c8f0ed4679bcbf35d1e61483346647130ff3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943810"
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
@@ -54,7 +54,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-the-id-of-the-current-user"></a>1. 현재 사용자의 ID 검색  
+### <a name="a-retrieving-the-id-of-the-current-user"></a>1\. 현재 사용자의 ID 검색  
 이 예에서는 현재 사용자의 데이터베이스 보안 주체 ID를 반환합니다.
   
 ```sql
@@ -62,7 +62,7 @@ SELECT DATABASE_PRINCIPAL_ID();
 GO  
 ```  
   
-### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>2. 지정한 데이터베이스 보안 주체의 ID 검색  
+### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>2\. 지정한 데이터베이스 보안 주체의 ID 검색  
 이 예에서는 `db_owner` 데이터베이스 역할에 대한 데이터베이스 보안 주체 ID를 반환합니다.
   
 ```sql

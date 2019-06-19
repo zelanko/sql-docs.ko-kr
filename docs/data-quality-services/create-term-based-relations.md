@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: jroth
 ms.openlocfilehash: a3a6393ff2f2ed5317e63fe0d8979c9b5ddda2ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66785490"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
@@ -56,7 +56,7 @@ ms.locfileid: "66785490"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  용어 기반 관계를 만들려면 도메인 관리 작업에서 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
