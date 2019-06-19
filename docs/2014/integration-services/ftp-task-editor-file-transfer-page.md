@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058442"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 태스크 편집기(파일 전송 페이지)
@@ -67,13 +67,13 @@ ms.locfileid: "66058442"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- 기존 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 사용자 정의 변수를 만듭니다.  
+ 기존 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 사용자 정의 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
   
  **관련 항목:** [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +81,13 @@ ms.locfileid: "66058442"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- 기존 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 변수를 만듭니다.  
+ 기존 사용자 정의 변수를 선택하거나 \<**새 변수...** >를 클릭하여 변수를 만듭니다.  
   
  **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), 변수 추가  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- 기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
   
  **관련 항목**: [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   

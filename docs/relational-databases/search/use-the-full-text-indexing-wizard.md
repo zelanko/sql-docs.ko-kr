@@ -25,11 +25,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716100"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,10 +85,10 @@ ms.locfileid: "57973852"
  10. **새 카탈로그 만들기**
  - 전체 텍스트 카탈로그를 선택합니다.  
   
-    1. **이름**  
+    1\. **이름**  
      새 전체 텍스트 카탈로그에 사용할 이름을 입력합니다.  
   
-     2. **기본 카탈로그로 설정**  
+     2\. **기본 카탈로그로 설정**  
      카탈로그를 이 데이터베이스의 기본 카탈로그로 만들려면 선택합니다.  
   
      c. **악센트 구분**  
@@ -97,7 +97,7 @@ ms.locfileid: "57973852"
      d. **인덱스 파일 그룹 선택**  
      전체 텍스트 인덱스를 만들 파일 그룹을 지정합니다.  
   
-     5. 값 선택:  
+     5\. 값 선택:  
       |값|설명|  
       |-----------|-----------------|
       |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|

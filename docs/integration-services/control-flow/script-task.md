@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727524"
 ---
 # <a name="script-task"></a>스크립트 태스크
@@ -131,13 +131,13 @@ ms.locfileid: "65727524"
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
  **ReadOnlyVariables**  
- 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기 전용 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  
   
  **ReadWriteVariables**  
- 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추(**...**)를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
+ 스크립트에 사용할 수 있는 읽기/쓰기 변수 목록을 쉼표로 구분하여 입력하거나 줄임표 단추( **...** )를 클릭하고 **변수 선택** 대화 상자에서 변수를 선택합니다.  
   
 > [!NOTE]  
 >  변수 이름은 대/소문자를 구분합니다.  

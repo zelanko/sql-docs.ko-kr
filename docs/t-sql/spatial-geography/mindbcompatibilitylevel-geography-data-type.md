@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 32d7df746e51612dd39360ff6702e9489111ce04
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937254"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel(geography 데이터 형식)
@@ -47,7 +47,7 @@ ms.locfileid: "65937254"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>1. 호환성 수준 110으로 CircularString 형식의 호환성 테스트  
+### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>1\. 호환성 수준 110으로 CircularString 형식의 호환성 테스트  
  다음 예에서는 `CircularString` 인스턴스에 대해 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과의 호환성을 테스트합니다.  
   
 ```  
@@ -59,7 +59,7 @@ END
   
 ```  
   
-### <a name="b-testing-linestring-type-for-compatibility-with-compatibility-level-100"></a>2. 호환성 수준 100으로 LineString 형식의 호환성 테스트  
+### <a name="b-testing-linestring-type-for-compatibility-with-compatibility-level-100"></a>2\. 호환성 수준 100으로 LineString 형식의 호환성 테스트  
  다음 예에서는 `LineString` 인스턴스에 대해 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]과의 호환성을 테스트합니다.  
   
 ```  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dbf3bbd011838bc9c000f271317c86623251896
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946348"
 ---
 # <a name="indexcol-transact-sql"></a>INDEX_COL(Transact-SQL)
@@ -70,7 +70,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>1. INDEX_COL을 사용하여 인덱스 열 이름 반환  
+### <a name="a-using-indexcol-to-return-an-index-column-name"></a>1\. INDEX_COL을 사용하여 인덱스 열 이름 반환  
  다음 예에서는 `PK_SalesOrderDetail_SalesOrderID_LineNumber` 인덱스에 있는 2개의 키 열 이름을 반환합니다.  
   
 ```  

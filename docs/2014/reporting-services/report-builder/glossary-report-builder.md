@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107812"
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
@@ -231,7 +231,7 @@ ms.locfileid: "66107812"
 |숫자 식(numeric expression)|숫자로 계산되는 식입니다.|  
 |개체(object)|테이블, 인덱스 또는 저장 프로시저와 같은 데이터베이스 구성 요소 중 하나입니다.|  
 |개체 식별자(object identifier)|1. 개체에 지정된 고유한 이름입니다. 2. Metadata Services에서 GUID(Globally Unique Identifier) 및 내부 식별자로부터 생성된 고유한 식별자입니다.|  
-|ODBC 데이터 원본|1. ODBC 드라이버를 사용하여 액세스할 수 있는 데이터 집합의 위치입니다. 2. 2. ODBC 애플리케이션에서 데이터 원본에 연결하기 위해 필요한 모든 연결 정보가 들어 있는 저장된 정의입니다.|  
+|ODBC 데이터 원본|1. ODBC 드라이버를 사용하여 액세스할 수 있는 데이터 집합의 위치입니다. 2. 2\. ODBC 애플리케이션에서 데이터 원본에 연결하기 위해 필요한 모든 연결 정보가 들어 있는 저장된 정의입니다.|  
 |ODBC 드라이버(ODBC driver)|Excel과 같은 ODBC 사용 애플리케이션에서 ODBC 데이터 원본 액세스를 위해 사용할 수 있는 DLL(동적 연결 라이브러리)입니다.|  
 |OGC|Open Geospatial Consortium의 약어입니다.|  
 |OLAP|다음 용어 참조: OLAP(온라인 분석 처리)|  

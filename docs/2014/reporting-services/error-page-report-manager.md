@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109214"
 ---
 # <a name="error-page-report-manager"></a>오류 페이지(보고서 관리자)
@@ -26,7 +26,7 @@ ms.locfileid: "66109214"
   
 -   다음과 비슷한 오류 메시지가 나타나면 [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)을 참조하십시오.  
   
-     해당 컴퓨터를 찾을 수 없습니다. "RPC 서버를 사용할 수 없습니다. (HRESULT의 예외: 0x800706BA)".  
+     해당 컴퓨터를 찾을 수 없습니다. "RPC 서버를 사용할 수 없습니다. (예외가 발생한 HRESULT: 0x800706BA)".  
   
 -   원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 텍스트가 포함 된 "이이 오류에 대 한 자세한 내용은 로컬 서버 컴퓨터의 보고서 서버를 탐색 하거나 원격 오류 사용"을 참조 하세요 [원격 오류 사용 &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)합니다.  
   

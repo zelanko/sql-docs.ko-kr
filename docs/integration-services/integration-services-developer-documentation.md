@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a9ef2d748bacbcab184c5f60dea8c3514cb61b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723658"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
@@ -87,7 +87,7 @@ ms.locfileid: "65723658"
   
 ## <a name="external-resources"></a>외부 리소스  
   
--    www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 의 CodePlex 예제 - [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  

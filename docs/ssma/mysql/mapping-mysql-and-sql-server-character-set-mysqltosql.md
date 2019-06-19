@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312369"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 및 SQL Server 문자 집합 매핑(MySQLToSQL)
@@ -54,7 +54,7 @@ MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지�
 > [!NOTE]  
 > 문자 집합 매핑 편집을 위해 선택한 탭에는 다른 노드 수준에서 매핑에 관계 없이 세 가지 단추가 있습니다.  
 >   
-> 다음 창이 여기에 포함됩니다.  
+> 구현되지 않은 것은 다음과 같습니다.  
 >   
 > 1.  **고려해 야 합니다.** 문자 집합 매핑을 편집 하 고 아직 저장 되지 경우에 사용자가 수행한 변경 내용을 적용 합니다.  
 > 2.  **취소:** 사용자가 변경한 내용을 취소 합니다. 문자 집합 매핑 편집 되었지만 저장 되지 경우 단추를 사용할 수 있습니다.  

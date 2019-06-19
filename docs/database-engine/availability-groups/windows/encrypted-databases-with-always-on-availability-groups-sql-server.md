@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: d529be67fc2d264ca4b2ddaf3b1a6705165e2cc7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775990"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 암호화된 데이터베이스 추가

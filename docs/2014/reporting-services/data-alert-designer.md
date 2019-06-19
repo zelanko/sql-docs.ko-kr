@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109557"
 ---
 # <a name="data-alert-designer"></a>데이터 경고 디자이너
@@ -197,7 +197,7 @@ ms.locfileid: "66109557"
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
   
-##  <a name="HowTo"></a> 관련 작업  
+##  <a name="HowTo"></a> 관련 태스크  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
   
 -   [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067608"
 ---
 # <a name="column-properties-ssas-tabular"></a>열 속성(SSAS 테이블 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "66067608"
 |--------------|---------------------|-----------------|  
 |기본 이미지|False|행 데이터를 표시하는 이미지를 제공하는 열을 지정합니다(예: 직원 레코드의 사진 ID).|  
 |기본 레이블|False|행 데이터를 표시하도록 표시 이름을 제공하는 열을 지정합니다(예: 직원 레코드의 직원 이름).|  
-|이미지 URL/데이터 범주(SP1)|False|이 열의 값을 서버의 이미지에 대한 하이퍼링크로 지정합니다. 예를 들어 http://localhost/images/image1.jpg을 참조하십시오.|  
+|이미지 URL/데이터 범주(SP1)|False|이 열의 값을 서버의 이미지에 대한 하이퍼링크로 지정합니다. 예를 들어 http://localhost/images/image1.jpg 을 참조하십시오.|  
 |고유한 행 유지|False|중복된 경우에도 고유한 값으로 처리되어야 하는 값을 제공하는 열을 지정합니다(예: 이름이 같은 직원이 여러 명 있는 경우의 직원 이름과 성).|  
 |행 식별자|False|열을 내부 그룹화 키로 사용할 수 있도록 고유한 값만 포함하는 열을 지정합니다.|  
 |요약 기준|기본값|이 열이 필드 목록에 추가될 때 보고 클라이언트 도구에서 열 계산에 대한 집계 함수 SUM을 적용하도록 지정합니다. 기본 계산을 변경하려면 드롭다운 목록에서 기본 계산을 선택합니다. 이 속성은 집계할 수 있는 형식의 열에만 적용됩니다.|  

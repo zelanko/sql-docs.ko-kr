@@ -27,10 +27,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8a344f3c892bf8aca2670d7774813b5ab2af7c7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981972"
 ---
 # <a name="-modulus-transact-sql"></a>%(모듈러스)(Transact-SQL)
@@ -61,7 +61,7 @@ dividend % divisor
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>1\. 간단한 예  
  다음 예에서는 숫자 38을 5로 나눕니다. 결과의 정수 부분은 7이며 나머지 3을 반환하는 모듈로를 보여 줍니다.  
   
 ```  
@@ -69,7 +69,7 @@ SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;
   
 ```  
   
-### <a name="b-example-using-columns-in-a-table"></a>2. 테이블에서 열을 사용한 예  
+### <a name="b-example-using-columns-in-a-table"></a>2\. 테이블에서 열을 사용한 예  
  다음 예에서는 제품 ID 수, 제품 단가 및 정수 값으로 변환된 각 제품의 가격을 주문한 제품의 수로 나눈 모듈로(나머지)를 반환합니다.  
   
 ```  

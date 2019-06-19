@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE(Transact-SQL) | Microsoft Docs
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: ea975f49b5333c2ada88569d6ae3e6d84fac64e8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836364"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,10 +122,10 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="examples"></a>예  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>1. 오프셋 정보 없는 날짜/시간에 대상 표준 시간대 오프셋 추가  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>1\. 오프셋 정보 없는 날짜/시간에 대상 표준 시간대 오프셋 추가  
  원래 **datetime** 값이 동일한 표준 시간대에서 제공된다는 것을 아는 경우 **AT TIME ZONE**을 사용하여 표준 시간대 규칙에 기반한 오프셋을 추가합니다.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -134,24 +134,23 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>2. 다른 표준 시간대 사이의 값 변환  
+### <a name="b-convert-values-between-different-time-zones"></a>2\. 다른 표준 시간대 사이의 값 변환  
  다음 예제에서는 다른 표준 시간대 사이의 값을 변환합니다.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 로컬 표준 시간대를 사용한 쿼리 임시 테이블  
  다음 예제에서는 temporal 테이블에서 데이터를 선택합니다.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

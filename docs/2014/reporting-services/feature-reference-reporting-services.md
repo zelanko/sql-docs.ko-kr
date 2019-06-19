@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109172"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66109172"
  보고서 서버 인스턴스의 관리 및 배포에 사용되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 도구에 대한 도움말을 제공합니다.  
   
  [Management Studio의 보고서 서버 F1 도움말](tools/report-server-in-management-studio-f1-help.md)  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 보고서 및 보고서 서버를 관리하는 데 사용되는 대화 상자에 대한 도움말을 제공합니다.  
   
  [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)  
  웹 브라우저에서 보고서를 보는 데 사용되는 HTML 뷰어 구성 요소에 대한 도움말을 제공합니다.  

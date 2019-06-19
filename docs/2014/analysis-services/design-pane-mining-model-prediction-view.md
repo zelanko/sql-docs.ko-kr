@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081846"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>디자인 창(마이닝 모델 예측 뷰)
@@ -82,10 +82,10 @@ ms.locfileid: "66081846"
  원본 테이블에서 파생된 열 목록에서 열을 선택합니다. **원본** 에서 **예측 함수**를 선택한 경우 여기에는 선택한 마이닝 모델에 사용할 수 있는 예측 함수가 포함되어 있습니다.  
   
  **그룹**  
- **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. `(expr1 Or expr2) And expr3`) 을 입력합니다.  
+ **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. `(expr1 Or expr2) And expr3` )을 입력합니다.  
   
  **및/또는**  
- 논리적 쿼리를 만드는 데 사용합니다. `(expr1 Or expr2) And expr3`) 을 입력합니다.  
+ 논리적 쿼리를 만드는 데 사용합니다. `(expr1 Or expr2) And expr3` )을 입력합니다.  
   
  **조건/인수**  
  열에 적용되는 조건 또는 사용자 식을 지정합니다. 마이닝 모델 및 입력 테이블을 포함하는 테이블에서 셀로 열을 끌 수 있습니다.  

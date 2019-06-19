@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939769"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -227,12 +227,12 @@ update statistics t1 (a) with INCREMENTAL=ON;
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-update-all-statistics-on-a-table"></a>1. 테이블에 대한 모든 통계 업데이트  
+### <a name="a-update-all-statistics-on-a-table"></a>1\. 테이블에 대한 모든 통계 업데이트  
  다음 예제에서는 `SalesOrderDetail` 테이블에서 모든 인덱스에 대한 통계를 업데이트합니다.  
   
 ```sql  
@@ -242,7 +242,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>2. 인덱스에 대한 통계 업데이트  
+### <a name="b-update-the-statistics-for-an-index"></a>2\. 인덱스에 대한 통계 업데이트  
  다음 예에서는 `AK_SalesOrderDetail_rowguid` 테이블의 `SalesOrderDetail` 인덱스에 대한 통계를 업데이트합니다.  
   
 ```sql  
@@ -252,7 +252,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail AK_SalesOrderDetail_rowguid;
 GO  
 ```  
   
-### <a name="c-update-statistics-by-using-50-percent-sampling"></a>3. 50퍼센트 샘플링을 사용하여 통계 업데이트  
+### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50퍼센트 샘플링을 사용하여 통계 업데이트  
  다음 예에서는 `Name` 테이블의 `ProductNumber` 및 `Product` 열에 대한 통계를 만든 후 업데이트합니다.  
   
 ```sql  

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8e1aa9411fbc11becf8e7b159c27ef609e38083b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094546"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>SharePoint 2010용 PowerPivot 설치
@@ -42,7 +42,7 @@ ms.locfileid: "66094546"
   
 6.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. SharePoint용 PowerPivot을 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
   
-7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스는 SQL Server 장애 조치(Failover) 클러스터의 일부가 될 수 없습니다. SharePoint 제품의 고가용성 기능 사용 예를 들어, Excel Services는 SharePoint용 PowerPivot 서버의 부하 분산을 관리합니다. 자세한 내용은 [Manage Excel Services 데이터 모델 설정 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx)합니다.  
+7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스는 SQL Server 장애 조치(Failover) 클러스터의 일부가 될 수 없습니다. SharePoint 제품의 고가용성 기능 사용 예를 들어, Excel Services는 SharePoint용 PowerPivot 서버의 부하 분산을 관리합니다. 자세한 내용은 [Manage Excel Services 데이터 모델 설정 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx) 합니다.  
   
 8.  기존 팜에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 응용 프로그램이 하나 이상 필요합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스는 웹 응용 프로그램에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md)를 참조하십시오.  
   

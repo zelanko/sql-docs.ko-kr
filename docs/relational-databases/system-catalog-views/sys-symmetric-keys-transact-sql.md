@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175621"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys(Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "66175621"
 |**modify_date**|**datetime**|키를 수정한 날짜입니다.|  
 |**key_guid**|**uniqueidentifier**|키와 연결된 GUID(Globally Unique Identifier)입니다. 지속형 키의 GUID는 자동으로 생성되고 임시 키의 GUID는 사용자가 제공한 전달 구에서 파생됩니다.|  
 |**key_thumbprint**|**sql_variant**|키의 SHA-1 해시입니다. 해시는 전역적으로 고유합니다. Extensible Key Management가 아닌 키의 경우 이 값은 NULL입니다.|  
-|**provider_type**|**nvarchar(120)**|암호화 공급자의 유형입니다.<br /><br /> CRYPTOGRAPHIC PROVIDER = EKM(확장 가능 키 관리) 키<br /><br /> NULL = EKM(확장 가능 키 관리) 키가 아닌 경우|  
+|**provider_type**|**nvarchar(120)**|암호화 공급자의 유형입니다.<br /><br /> CRYPTOGRAPHIC PROVIDER = EKM(Extensible Key Management)<br /><br /> NULL = EKM(확장 가능 키 관리) 키가 아닌 경우|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|암호화 공급자의 GUID입니다. Extensible Key Management가 아닌 키의 경우 이 값은 NULL입니다.|  
 |**cryptographic_provider_algid**|**sql_variant**|암호화 공급자의 알고리즘 ID입니다. Extensible Key Management가 아닌 키의 경우 이 값은 NULL입니다.|  
   

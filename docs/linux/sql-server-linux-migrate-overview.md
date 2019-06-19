@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.openlocfilehash: 2443611a63bee3f62ae8225384d79d34dfcb18e0
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705296"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux의 SQL Server로 데이터베이스 및 구조화 된 데이터 마이그레이션 

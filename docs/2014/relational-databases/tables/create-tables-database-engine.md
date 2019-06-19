@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62761593"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
@@ -33,7 +33,7 @@ ms.locfileid: "62761593"
   
 -   **테이블을 만들려면 사용 합니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62761593"
   
      스키마에 대한 자세한 내용은 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)를 참조하세요.  
   
-9.  **파일** 메뉴에서 **저장** *table name*을 선택합니다.  
+9. **파일** 메뉴에서 **저장** *table name*을 선택합니다.  
   
 10. **이름 선택** 대화 상자에서 테이블의 이름을 입력하고 **확인**을 클릭합니다.  
   

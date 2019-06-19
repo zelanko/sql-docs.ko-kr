@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014273"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
@@ -62,7 +62,7 @@ ms.locfileid: "66014273"
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     인덱스를 만들 때를 `geometry` 를 지정 해야 유형 열을 **(*`X-min`* 를*`Y-min`*)** 및 **(*`X-max`* 하십시오*`Y-max`*)** 경계 상자 좌표입니다. 에 대 한 인덱스를 `geography` 유형의 열에 경계 상자 필드는 읽기 전용이 지정한 후 합니다 **지리 표** 지리 표 공간 분할 경계 상자를 사용 하지 않으므로 공간 분할 구성표입니다.  
+     인덱스를 만들 때를 `geometry` 를 지정 해야 유형 열을 **( *`X-min`* 를 *`Y-min`* )** 및 **( *`X-max`* 하십시오 *`Y-max`* )** 경계 상자 좌표입니다. 에 대 한 인덱스를 `geography` 유형의 열에 경계 상자 필드는 읽기 전용이 지정한 후 합니다 **지리 표** 지리 표 공간 분할 경계 상자를 사용 하지 않으므로 공간 분할 구성표입니다.  
   
      필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]입니다.  
   

@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716243"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>서버 감사 및 서버 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53978819"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -53,7 +53,7 @@ ms.locfileid: "53978819"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
   
 -   서버 감사를 생성, 변경 또는 삭제하려면 보안 주체에게 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "53978819"
      **감사 대상** 이 파일인 경우 감사 데이터를 쓸 폴더의 위치를 지정합니다.  
   
      **줄임표(...)**  
-     **폴더 찾기 –**_server\_name_ 대화 상자를 열어 파일 경로를 지정하거나 감사 파일이 기록되는 폴더를 만듭니다.  
+     **폴더 찾기 –** _server\_name_ 대화 상자를 열어 파일 경로를 지정하거나 감사 파일이 기록되는 폴더를 만듭니다.  
   
      **감사 파일의 최대 제한:**  
      **최대 롤오버 파일**  

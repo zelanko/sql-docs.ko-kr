@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93213609abbc3e274cc61207d02b3828f9b90d7d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099029"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 (보고서 작성기) 만들기
@@ -155,7 +155,7 @@ ms.locfileid: "66099029"
   
     ```  
   
-3.  쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다.  
+3.  쿼리 디자이너 도구 모음에서 **실행** ( **!** )을 클릭합니다.  
   
      쿼리가 실행되고 SalesDate, Subcategory, Product, Sales 및 Quantity 필드에 대한 결과 집합이 표시됩니다.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "66099029"
   
 3.  **홈** 탭의 **숫자** 그룹에서 **통화** 단추를 클릭합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
   
-     국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [**$12,345.00**]입니다. 예제 통화 값이 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
+     국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [ **$12,345.00**]입니다. 예제 통화 값이 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63065110"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 드라이버 원시 오류 메시지
@@ -296,7 +296,7 @@ ms.locfileid: "63065110"
 |901|함수 인수 값, 형식 또는 수가 올바르지 않습니다.|  
 |902|식 계산기에 실패 했습니다.|  
 |903|문자열이 너무 길어 맞지 않습니다.|  
-|904|* * 또는 ^ 도메인 오류가 발생 합니다.|  
+|904|\* * 또는 ^ 도메인 오류가 발생 합니다.|  
 |905|LOG(): 0 또는 음수 인수로 사용 합니다.|  
 |906|붙이지 인수는 음수일 수 없습니다.|  
 |912|작업 일반 필드에 대해 올바르지 않습니다.|  

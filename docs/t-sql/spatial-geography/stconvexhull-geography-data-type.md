@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: c823f686909be54890b3c1686da615233c3e9da2
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937133"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull(geography 데이터 형식)
@@ -48,7 +48,7 @@ ms.locfileid: "65937133"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>1. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
+### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>1\. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
  다음 예에서는 초기화되지 않은 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```
@@ -56,7 +56,7 @@ ms.locfileid: "65937133"
  SELECT @g.STConvexHull();
  ```  
   
-### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>2. 빈 geography 인스턴스에 STConvexHull 사용  
+### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>2\. 빈 geography 인스턴스에 STConvexHull 사용  
  다음 예에서는 빈 `STConvexHull()` 인스턴스에 `Polygon`을 사용합니다.  
   
 ```

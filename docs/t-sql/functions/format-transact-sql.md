@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 732ca10f49982c7e2de190cffd50d9780a986a8c
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499524"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
@@ -96,7 +96,7 @@ FORMAT ( value, format [, culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-format-example"></a>1. 간단한 FORMAT 예
+### <a name="a-simple-format-example"></a>1\. 간단한 FORMAT 예
 
  다음 예에서는 다양한 culture에 따라 형식이 지정된 간단한 날짜를 반환합니다.  
   
@@ -129,7 +129,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-format-with-custom-formatting-strings"></a>2. 사용자 지정 서식 문자열이 포함된 FORMAT
+### <a name="b-format-with-custom-formatting-strings"></a>2\. 사용자 지정 서식 문자열이 포함된 FORMAT
 
  다음 예에서는 사용자 지정 서식을 지정하여 숫자 값의 서식을 지정하는 방법을 보여 줍니다. 이 예는 현재 날짜가 2012년 9월 27일인 경우를 가정합니다. 이러한 서식과 다른 사용자 지정 서식에 대한 자세한 내용은 [사용자 지정 숫자 형식 문자열](https://msdn.microsoft.com/library/0c899ak8.aspx)을 참조하세요.  
   

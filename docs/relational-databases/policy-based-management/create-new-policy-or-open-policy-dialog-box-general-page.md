@@ -16,17 +16,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008476"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 새 정책 기반 관리 정책을 만들거나 기존 정책을 수정할 수 있습니다. **적용 대상** 및 **서버 제한** 영역을 필터로 사용하여 정책을 사용 가능한 모든 대상의 하위 집합으로 제한할 수 있습니다. 조건을 대상 필터로 사용하려면 조건이 물리적 패싯에 대해 정의되어야 하며 함수를 포함하지 않아야 하고 Like 연산자를 포함하지 않아야 합니다. 시스템에서 정책에 대한 개체 집합을 계산할 때 기본적으로 시스템 개체가 제외됩니다.  예를 들어, 정책의 개체 집합이 모든 테이블을 참조할 경우 시스템 테이블에 정책이 적용되지 않습니다. 사용자가 시스템 개체에 대해 정책을 평가하려면 개체 집합에 시스템 개체를 명시적으로 추가합니다. 그러나 모든 정책이 **일정 검사** 평가 모드에 대해 지원되더라도 성능상의 이유로 임의 개체 집합의 모든 정책이 **변경 내용 검사** 평가 모드에 대해 지원되지는 않습니다. 자세한 내용은 [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)를 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **이름**  
  새 정책의 경우 새 정책 이름을 입력합니다. 기존 정책의 경우 이름이 표시됩니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52502674"
  **요청 시** 평가 모드를 사용하여 실행되는 정책은 이 확인란을 사용하지 않습니다.  
   
  **조건 확인**  
- 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추(**...**)를 클릭합니다.  
+ 이 정책이 사용하는 정책 기반 관리 조건을 선택합니다. 관련 정책 기반 관리 패싯에 대한 서버의 모든 조건이 나열됩니다. 새 조건을 만들려면 **새 조건** 을 클릭합니다. 조건을 수정하려면 줄임표 단추( **...** )를 클릭합니다.  
   
  **적용 대상**  
  이 패싯에서 필터 식을 완성하는 데 사용할 수 있는 대상 유형을 선택합니다.  

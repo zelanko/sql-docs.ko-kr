@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7fd7377f622d5d986ddb7b665f4f920365d5189f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944900"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY(Transact-SQL)
@@ -66,7 +66,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
 ## <a name="examples"></a>예  
   
-### <a name="a-executing-an-update-pass-through-query"></a>1. UPDATE 통과 쿼리 실행  
+### <a name="a-executing-an-update-pass-through-query"></a>1\. UPDATE 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `UPDATE` 통과 쿼리를 사용합니다.  
   
 ```sql  
@@ -74,7 +74,7 @@ UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')
 SET name = 'ADifferentName';  
 ```  
   
-### <a name="b-executing-an-insert-pass-through-query"></a>2. INSERT 통과 쿼리 실행  
+### <a name="b-executing-an-insert-pass-through-query"></a>2\. INSERT 통과 쿼리 실행  
  다음 예에서는 예 1에서 만든 연결된 서버에 대해 `INSERT` 통과 쿼리를 사용합니다.  
   
 ```sql  

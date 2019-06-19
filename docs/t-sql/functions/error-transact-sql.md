@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842ffc62248cce0df516c927f41185f549281dd9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946122"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "65946122"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-error-to-detect-a-specific-error"></a>1. @@ERROR를 사용하여 특정 오류 검색  
+### <a name="a-using-error-to-detect-a-specific-error"></a>1\. @@ERROR를 사용하여 특정 오류 검색  
  다음 예에서는 `@@ERROR`를 사용하여 `UPDATE` 문에서 CHECK 제약 조건 위반(오류 #547)을 확인합니다.  
   
 ```sql  
@@ -69,7 +69,7 @@ IF @@ERROR = 547
 GO  
 ```  
   
-### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>2. @@ERROR를 사용하여 조건부로 프로시저 종료  
+### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>2\. @@ERROR를 사용하여 조건부로 프로시저 종료  
  다음 예에서는 `IF...ELSE` 문을 사용하여 저장 프로시저에서 `DELETE` 문 뒤의 `@@ERROR`를 테스트합니다. `@@ERROR` 변수의 값은 호출하는 프로그램으로 보내진 반환 코드를 결정하고 프로시저의 성공 여부를 나타냅니다.  
   
 ```sql  

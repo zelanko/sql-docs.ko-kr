@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947205"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE(Transact-SQL)
@@ -83,7 +83,7 @@ ISDATE ( expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>1. ISDATE를 사용하여 올바른 datetime 식 테스트  
+### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>1\. ISDATE를 사용하여 올바른 datetime 식 테스트  
  다음 예에서는 `ISDATE`를 사용하여 문자열이 올바른 **datetime**인지 테스트하는 방법을 보여 줍니다.  
   
 ```  
@@ -93,7 +93,7 @@ ELSE
     PRINT 'INVALID';  
 ```  
   
-### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>2. SET DATEFORMAT 및 SET LANGUAGE 설정이 반환 값에 미치는 영향  
+### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>2\. SET DATEFORMAT 및 SET LANGUAGE 설정이 반환 값에 미치는 영향  
  다음 문에서는 `SET DATEFORMAT` 및 `SET LANGUAGE` 설정의 결과로 반환되는 값을 보여 줍니다.  
   
 ```  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871061"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준 보기 또는 변경
@@ -59,7 +59,7 @@ ms.locfileid: "62871061"
   
      현재 호환성 수준이 **호환성 수준** 목록 상자에 표시됩니다.  
   
-5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. **SQL Server 2008(100)**, **SQL Server 2012(110)** 또는 **SQL Server 2014(120)** 중에서 선택할 수 있습니다.  
+5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. **SQL Server 2008(100)** , **SQL Server 2012(110)** 또는 **SQL Server 2014(120)** 중에서 선택할 수 있습니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

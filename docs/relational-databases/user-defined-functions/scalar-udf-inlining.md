@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775136"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -54,8 +54,9 @@ Transact-SQL로 구현되며 단일 데이터 값을 반환하는 사용자 정�
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ END
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -180,7 +182,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 
 ## <a name="enabling-scalar-udf-inlining"></a>스칼라 UDF 인라인 처리 사용
 
-데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -188,7 +190,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 이와는 별도로 이 기능을 활용하기 위해 UDF나 쿼리에 다른 변경이 필요하지 않습니다.
 
-## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>호환성 수준 변경 없이 스칼라 UDF 인라인 처리 사용 안 함 
+## <a name="disabling-scalar-udf-inlining-without-changing-the-compatibility-level"></a>호환성 수준 변경 없이 스칼라 UDF 인라인 처리 사용 안 함
 
 데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스, 문 또는 UDF 범위에서 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수 있습니다. 데이터베이스 범위에서 스칼라 UDF 인라인 처리를 사용하지 않으려면 해당하는 데이터베이스의 컨텍스트 안에서 다음 명령문을 실행합니다. 
 
@@ -202,12 +204,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+ON이면 이 설정은 [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 사용하는 것으로 표시됩니다. `DISABLE_TSQL_SCALAR_UDF_INLINING`을 `USE HINT` 쿼리 힌트로 지정하여 특정 쿼리에 대해 스칼라 UDF 인라인 처리를 사용하지 않게 설정할 수도 있습니다. 예를 들어
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
@@ -215,7 +218,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 `USE HINT` 쿼리 힌트는 데이터베이스 범위 구성 또는 호환성 수준 설정보다 우선합니다.
 
 `CREATE FUNCTION` 또는 `ALTER FUNCTION` 문에서 INLINE 절을 사용하는 특정 UDF에서는 스칼라 UDF 인라인 처리를 사용하지 않도록 설정할 수 있습니다.
-예를 들어 다음과 같이 사용할 수 있습니다.
+예를 들어
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

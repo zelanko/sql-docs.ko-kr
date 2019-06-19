@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66270164"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
@@ -50,7 +50,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 둘 이상의 게시에서 배포 에이전트를 공유 하는 경우에에 대 한 모든 값을 지정 해야 *게시*합니다.  
   
-`[ @xact_seqno = ] xact_seqno` 배포자의 구독자에 적용 될 다음 트랜잭션의 LSN입니다. *xact_seqno* 됩니다 **varbinary(16)**, 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno` 배포자의 구독자에 적용 될 다음 트랜잭션의 LSN입니다. *xact_seqno* 됩니다 **varbinary(16)** , 기본값은 없습니다.  
   
 ## <a name="result-set"></a>결과 집합  
   

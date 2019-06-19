@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66777624"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
@@ -147,7 +147,7 @@ ms.locfileid: "66777624"
  다음과 같이 이 가용성 그룹에 대한 수신기 기본 설정을 지정합니다.  
   
  **수신기 DNS 이름**  
- 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유해야 하며 영숫자, 대시(**-**) 및 하이픈(**_**)만 임의의 순서로 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
+ 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유해야 하며 영숫자, 대시( **-** ) 및 하이픈( **_** )만 임의의 순서로 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
   
 > [!IMPORTANT]  
 >  **수신기** 탭에 잘못된 DNS 수신기 이름(또는 포트 번호)을 입력하면 **복제본 지정** 페이지에서 **다음** 단추를 사용할 수 없습니다.  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ee2afaf911ac4a3f66a769ded09ed92ebe0dd58
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724299"
 ---
 # <a name="script-task-examples"></a>스크립트 태스크 예
@@ -63,7 +63,7 @@ ms.locfileid: "65724299"
  [스크립트 태스크를 사용한 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
  Excel 파일의 워크시트를 나열하고 특정 워크시트가 있는지 확인합니다.  
   
- [스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)  
+ [스크립트 태스크를 사용하여 원격 프라이빗 메시지 큐에 메시지 보내기](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)  
  메시지를 원격 프라이빗 메시지 큐로 보냅니다.  
   
 ### <a name="other-examples"></a>기타 예  

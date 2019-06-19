@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062006"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>패키지에서 연결 관리자 추가, 삭제 또는 공유
@@ -129,7 +129,7 @@ ms.locfileid: "66062006"
 4.  선택적으로 **SSIS 디자이너** 창의 **연결 관리자** 탭 또는 **연결 관리자** 노드 아래에 있는 **솔루션 탐색기** 창에서 연결 관리자를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭한 다음 연결 관리자의 기본 이름을 수정합니다.  
   
     > [!NOTE]  
-    >  **SSIS 디자이너** 창의 **연결 관리자** 탭에서는 연결 관리자 이름의 **(프로젝트)** 접두사를 덮어쓸 수 없습니다. 이것은 의도적인 것입니다.  
+    >  **SSIS 디자이너** 창의 **연결 관리자** 탭에서는 연결 관리자 이름의 **(프로젝트)** 접두사를 덮어쓸 수 없습니다. 이것은 의도적입니다.  
   
 ##  <a name="parameter"></a> 연결 관리자 속성에 대 한 매개 변수를 만들려면  
   

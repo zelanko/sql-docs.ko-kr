@@ -12,10 +12,10 @@ ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e617a4e9040c8c9f23e37ce7094f1f2e456da7a5
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705847"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구-SQL Server on Linux

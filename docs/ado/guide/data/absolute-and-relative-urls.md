@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702656"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
@@ -51,7 +51,7 @@ ms.locfileid: "66702656"
 ## <a name="defining-context-with-a-url"></a>URL 사용 하 여 컨텍스트를 정의합니다.  
  연결 하 여 표시 한 함수를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체는 데이터 원본에 대 한 후속 작업을 제한 하는 해당 연결이 표시 됩니다. 즉, 연결 후속 작업에 대 한 컨텍스트를 정의합니다.  
   
- 2.7 이상 ADO를 사용 하 여 절대 URL에는 컨텍스트를 정의할 수도 있습니다. 예를 들어 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 절대 URL을 사용 하 여 개체를 열을 **연결** URL에서 지정 된 리소스를 나타내는 개체가 암시적으로 만들어집니다.  
+ 2\.7 이상 ADO를 사용 하 여 절대 URL에는 컨텍스트를 정의할 수도 있습니다. 예를 들어 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 절대 URL을 사용 하 여 개체를 열을 **연결** URL에서 지정 된 리소스를 나타내는 개체가 암시적으로 만들어집니다.  
   
  컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다 합니다 *ActiveConnection* 의 매개 변수를 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL 값으로 지정할 수도 있습니다는 "URL **=** " 키워드를 **연결** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드  *ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
   

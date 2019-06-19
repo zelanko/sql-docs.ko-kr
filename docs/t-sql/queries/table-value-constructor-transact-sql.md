@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e1a4ca0732a8ce2dda6a3d8d674b1a74940b4c8c
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198199"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
@@ -112,7 +112,7 @@ INSERT INTO dbo.t VALUES (1,'a'), (2, CONVERT(CHAR,1));
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-multiple-rows-of-data"></a>1. 여러 데이터 행 삽입  
+### <a name="a-inserting-multiple-rows-of-data"></a>1\. 여러 데이터 행 삽입  
  다음 예에서는 `dbo.Departments` 테이블을 만든 다음 테이블 값 생성자를 사용하여 이 테이블에 5개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
   
 ```sql
@@ -124,7 +124,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923'),
 GO  
 ```  
   
-### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>2. DEFAULT 및 NULL 값을 사용하여 여러 행 삽입  
+### <a name="b-inserting-multiple-rows-with-default-and-null-values"></a>2\. DEFAULT 및 NULL 값을 사용하여 여러 행 삽입  
  다음 예에서는 테이블 값 생성자를 사용하여 테이블에 행을 삽입할 때 DEFAULT  및 NULL을 지정하는 방법을 보여 줍니다.  
   
 ```sql

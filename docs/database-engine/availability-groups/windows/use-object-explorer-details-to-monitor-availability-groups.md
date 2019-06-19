@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803442"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>개체 탐색기 정보를 사용하여 가용성 그룹 모니터링

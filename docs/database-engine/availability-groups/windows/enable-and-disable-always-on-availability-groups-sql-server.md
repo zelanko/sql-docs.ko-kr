@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765801"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정
@@ -118,7 +118,7 @@ ms.locfileid: "66765801"
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<**_인스턴스 이름_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_인스턴스 이름_**>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<** _인스턴스 이름_ **>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<** _인스턴스 이름_ **>** 은 Always On 가용성 그룹을 사용하도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성** 탭을 선택합니다.  
   
@@ -182,7 +182,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server(**\<**_인스턴스 이름_**>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<**_인스턴스 이름_**>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
+3.  **SQL Server 구성 관리자**에서 **SQL Server 서비스**를 클릭하고 SQL Server( **\<** _인스턴스 이름_ **>)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 여기서 **\<** _인스턴스 이름_ **>** 은 Always On 가용성 그룹을 사용하지 않도록 설정할 로컬 서버 인스턴스의 이름입니다.  
   
 4.  **Always On 고가용성**탭에서 **Always On 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   

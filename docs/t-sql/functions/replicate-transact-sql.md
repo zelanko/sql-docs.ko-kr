@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945833"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE(Transact-SQL)
@@ -56,7 +56,7 @@ REPLICATE ( string_expression ,integer_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-replicate"></a>1. REPLICATE 사용  
+### <a name="a-using-replicate"></a>1\. REPLICATE 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 프로덕션 코드 줄 앞에 `0` 문자를 4번 복제합니다.  
   
 ```  
@@ -82,7 +82,7 @@ HL Touring Frame - Yellow, 50                      0000T
 ...  
 ```  
   
-### <a name="b-using-replicate-and-datalength"></a>2. REPLICATE 및 DATALENGTH 사용  
+### <a name="b-using-replicate-and-datalength"></a>2\. REPLICATE 및 DATALENGTH 사용  
  다음 예에서는 숫자 데이터 형식을 문자 또는 유니코드로 변환할 때 지정한 길이까지 0으로 왼쪽을 채웁니다.  
   
 ```  
