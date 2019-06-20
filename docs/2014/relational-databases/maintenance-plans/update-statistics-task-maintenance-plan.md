@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807118"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>통계 업데이트 태스크(유지 관리 계획)
-   **통계 업데이트 태스크** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 인덱스 데이터 정보를 업데이트할 수 있습니다. 데이터베이스의 사용자 테이블에 작성된 각 인덱스의 배포 통계를 다시 샘플링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 배포 통계는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 동안 테이블 탐색을 최적화합니다. 배포 통계를 자동으로 구축하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 인덱스에 대한 해당 테이블에서 데이터를 주기적으로 샘플링합니다. 샘플링하는 양은 테이블의 행 수와 데이터 수정 빈도를 기초로 정해집니다. 테이블에서 지정한 비율의 데이터를 사용하여 추가 샘플링을 수행하려면 이 옵션을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 정보를 사용하여 보다 향상된 쿼리 계획을 만듭니다.  
+  **통계 업데이트 태스크** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 인덱스 데이터 정보를 업데이트할 수 있습니다. 데이터베이스의 사용자 테이블에 작성된 각 인덱스의 배포 통계를 다시 샘플링합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 배포 통계는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리하는 동안 테이블 탐색을 최적화합니다. 배포 통계를 자동으로 구축하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 각 인덱스에 대한 해당 테이블에서 데이터를 주기적으로 샘플링합니다. 샘플링하는 양은 테이블의 행 수와 데이터 수정 빈도를 기초로 정해집니다. 테이블에서 지정한 비율의 데이터를 사용하여 추가 샘플링을 수행하려면 이 옵션을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 정보를 사용하여 보다 향상된 쿼리 계획을 만듭니다.  
   
  이 태스크는 UPDATE STATISTICS 문을 실행합니다.  
   
@@ -98,10 +98,10 @@ ms.locfileid: "62807118"
  서버에 대한 인증 방법을 지정합니다.  
   
  **Windows NT 통합 보안 사용**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022293"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle 테이블스페이스 관리
@@ -25,7 +25,7 @@ ms.locfileid: "63022293"
   
  테이블을 Oracle 게시의 일부로 구성하는 경우 복제 로깅 정보를 저장할 때 기존 Oracle 테이블스페이스를 사용하도록 선택적으로 지정할 수 있습니다. 지정하지 않으면 복제 개체에 대한 테이블스페이스가 게시자를 구성할 때 구성된 복제 관리 사용자 스키마와 연결된 기본 테이블스페이스가 됩니다.  
   
- **아티클 로깅 테이블에 대해 테이블스페이스를 지정하려면**   
+ **아티클 로깅 테이블에 대해 테이블스페이스를 지정하려면**  
   
 -   **아티클 속성** 대화 상자에서 테이블스페이스를 지정합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md)을 참조하세요.  
   

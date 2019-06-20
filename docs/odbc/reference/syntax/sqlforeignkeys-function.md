@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aeaef9b120a0bd4be008adafe8e9a24724279a0
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537252"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 함수
@@ -158,7 +158,7 @@ SQLRETURN SQLForeignKeys(
   
  테이블에 VARCHAR 열 길이가 표시 되지 않습니다. 실제 길이 데이터 원본에 따라 달라 집니다. PKTABLE_CAT 또는 FKTABLE_CAT, PKTABLE_SCHEM FKTABLE_SCHEM의 실제 길이 확인 하려면 PKTABLE_NAME FKTABLE_NAME 및 PKCOLUMN_NAME 또는 FKCOLUMN_NAME 열 응용 프로그램이 호출할 수 있습니다 **SQLGetInfo** 는 SQL_MAX_를 사용 하 여 CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN, 및 SQL_MAX_COLUMN_NAME_LEN 옵션입니다.  
   
- ODBC 3에 대 한 다음과 같은 열 이름이 바뀌었습니다 *. x입니다.* 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC 3에 대 한 다음과 같은 열 이름이 바뀌었습니다. *. x입니다.* 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
   
 |ODBC 2.0 열|ODBC 3 *.x* 열|  
 |---------------------|-----------------------|  

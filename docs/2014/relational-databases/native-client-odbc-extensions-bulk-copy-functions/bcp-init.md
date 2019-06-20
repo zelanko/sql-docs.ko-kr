@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689071"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 복사 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 **bcp_exec** 데이터베이스 테이블에 있는 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
   
--   데이터베이스 데이터 형식의 길이가 가변적인 경우 (예를 들어 **varbinary(22)**) 데이터 파일의 데이터 길이 또는 null 표시기를 붙일 경우 데이터베이스 열에서 null 값을 포함할 수 있습니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
+-   데이터베이스 데이터 형식의 길이가 가변적인 경우 (예를 들어 **varbinary(22)** ) 데이터 파일의 데이터 길이 또는 null 표시기를 붙일 경우 데이터베이스 열에서 null 값을 포함할 수 있습니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
   
  데이터 파일에 대 한 지정 된 데이터 형식 값을 변경 하려면 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md)합니다.  
   

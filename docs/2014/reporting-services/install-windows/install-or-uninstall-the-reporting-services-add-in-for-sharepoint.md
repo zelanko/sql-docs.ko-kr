@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108814"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>SharePoint용 Reporting Services 추가 기능 설치 또는 제거(SharePoint 2010 및 SharePoint 2013)
@@ -80,7 +80,7 @@ ms.locfileid: "66108814"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 먼저 설치하면 SharePoint 제품 준비 도구를 실행할 때 준비 도구에서 새 버전이 감지되어 이전 버전의 추가 기능이 설치되지 않았음을 알리는 대화 상자가 표시됩니다. 이 동작은 정상적인 동작입니다.  
   
-     ![SSRS 추가 기능에 이미 설치 되었습니다. ](../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS 추가 기능이 이미 설치 되어 있습니다.")  
+     ![SSRS 추가 기능에 이미 설치 되었습니다. ] (../../../2014/sql-server/install/media/rs-sharepointprereq-complete.gif "SSRS 추가 기능이 이미 설치 되어 있습니다.")  
   
  **SharePoint 2013**  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 238cf52a52e53aa4ee2712e0bd6abf43a6c5e128
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479381"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 애플리케이션 만들기(Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "65479381"
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   
--   웹 응용 프로그램을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 응용 프로그램 요구 사항&#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)을 참조하세요.  
+-   웹 애플리케이션을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 애플리케이션 요구 사항&#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)을 참조하세요.  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>새 웹 사이트에서 마스터 데이터 관리자 웹 애플리케이션을 만들려면  
  새 웹 사이트를 만들면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 루트 웹 애플리케이션입니다. 또한 웹 애플리케이션이 새 애플리케이션 풀에 추가됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "65479381"
   
 4.  **응용 프로그램 만들기**를 클릭합니다.  
   
-5.  **웹 응용 프로그램 만들기** 대화 상자에서 새 웹 응용 프로그램에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 응용 프로그램 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+5.  **웹 응용 프로그램 만들기** 대화 상자에서 새 웹 응용 프로그램에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
 6.  **확인**을 클릭합니다.  
   

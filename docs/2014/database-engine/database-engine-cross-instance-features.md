@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807527"
 ---
 # <a name="database-engine-cross-instance-features"></a>데이터베이스 엔진 인스턴스 간 기능
@@ -22,7 +22,7 @@ ms.locfileid: "62807527"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-다른 도구는 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
+[SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
 [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 [서버 등록](../ssms/register-servers/register-servers.md)  

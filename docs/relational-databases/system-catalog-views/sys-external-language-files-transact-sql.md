@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995091"
 ---
 # <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 카탈로그 뷰에 데이터베이스의 외부 언어 확장 파일의 목록을 제공합니다. **R** 하 고 **Python** 는 예약 된 이름 및 외부 언어 없음 해당 특정 이름으로 만들 수 있습니다.
+이 카탈로그 뷰에 데이터베이스의 외부 언어 확장 파일의 목록을 제공합니다. **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다.
 
 외부 언어는 file_spec에서 만들어지면 자체 확장 및 해당 속성이 뷰에 나열 됩니다. 이 보기에는 언어에서 OS 당 변수당 하나의 항목이 포함 됩니다.
 

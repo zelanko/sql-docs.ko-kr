@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086785"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>테스트 집합 만들기(데이터 마이닝 마법사)
@@ -28,7 +28,7 @@ ms.locfileid: "66086785"
   
  나중에 테스트 또는 학습 데이터의 크기를 변경 하려는 경우 수정할 수 있습니다는 `HoldoutMaxCases` 하 고 `HoldoutMaxPercent` 속성을 사용 하 여 데이터 마이닝 구조를 **속성** 창. 그러나 변경 후에는 마이닝 구조 및 연결된 모든 마이닝 모델을 다시 처리해야 합니다. 또한 다음과 같은 제한 사항이 적용됩니다.  
   
--   데이터 마이닝 구조의 분할은 데이터 마이닝 구조가 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에 저장된 경우에만 지원됩니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전은 마이닝 구조에 대한 파티션 정보의 캐싱을 지원하지 않습니다.  
+-   데이터 마이닝 구조의 분할은 데이터 마이닝 구조가 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에 저장된 경우에만 지원됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전은 마이닝 구조에 대한 파티션 정보의 캐싱을 지원하지 않습니다.  
   
 -   마이닝 구조에 시계열 마이닝 모델에 필요한 Key Time 열이 포함된 경우 마이닝 구조를 분할할 수 없습니다.  
   

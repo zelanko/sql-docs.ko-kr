@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198580"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL 명령
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>인수  
- FROM [ *DatabaseName!*] *TableName*  
+ FROM [ *DatabaseName!* ] *TableName*  
  삭제 하도록 표시 된 레코드가 있는 테이블을 지정 합니다.  
   
  *DatabaseName!* 포함 된 데이터베이스 데이터 소스를 사용 하 여 지정 된 데이터베이스가 없는 경우 테이블을 포함 하는 데이터베이스의 이름을 지정 합니다. 데이터베이스 데이터 소스를 사용 하 여 지정 된 데이터베이스가 없는 경우 테이블을 포함 하는 데이터베이스의 이름을 포함 해야 합니다. 데이터베이스 이름 뒤에 오는 및 테이블 이름 앞에 느낌표 (!) 구분 기호를 포함 합니다.  

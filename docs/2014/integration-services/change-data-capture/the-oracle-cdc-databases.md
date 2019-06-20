@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771202"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
@@ -98,7 +98,7 @@ ms.locfileid: "62771202"
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
 |connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
-|use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름과 암호를 인증 (기본값)을 위해 제공 됩니다.<br /><br /> **1**: Oracle 데이터베이스에 연결 하려면 Windows 인증이 사용 됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
+|use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  
 |transaction_staging_timeout|커밋되지 않은 Oracle 트랜잭션이 **cdc.xdbcdc_staged_transactions** 테이블에 기록되기 전에 메모리에 보관되는 시간(초)입니다. 기본값은 120초입니다.|  
@@ -141,8 +141,8 @@ ms.locfileid: "62771202"
 |----------|-----------------|  
 |상태|현재 Oracle CDC 인스턴스에 대한 현재 상태 코드입니다. 상태는 CDC의 현재 상태를 설명합니다.|  
 |sub_status|현재 상태에 대한 추가 정보를 제공하는 두 번째 수준 상태입니다.|  
-|active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태인 합니다.|  
-|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태인 경우|  
+|active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태입니다.|  
+|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태입니다.|  
 |status_message|오류 또는 상태에 대해 설명하는 문자열입니다.|  
 |TIMESTAMP|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
 |active_capture_node|Oracle 트랜잭션 로그를 처리 중인 Oracle CDC Service 및 Oracle CDC 인스턴스를 현재 실행 중인 호스트의 이름입니다. 호스트는 클러스터 내의 노드일 수 있습니다.|  
@@ -170,7 +170,7 @@ ms.locfileid: "62771202"
 |상태|상태 테이블에서 사용되는 상태 코드입니다.|  
 |sub_status|상태 테이블에서 사용되는 하위 상태 코드입니다.|  
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
-|데이터|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
+|data|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
   
 ###  <a name="bkmk_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  이 테이블에는 큰 트랜잭션 또는 장기 실행 트랜잭션에 대한 변경 레코드가 트랜잭션 커밋 또는 롤백 이벤트가 캡처될 때까지 저장됩니다. Oracle CDC Service는 캡처된 로그 레코드를 트랜잭션 커밋 시간을 기준으로 정렬한 다음 각 트랜잭션에 대한 시간순으로 정렬합니다. 동일한 트랜잭션에 대한 로그 레코드는 트랜잭션이 종료될 때까지 메모리에 저장되었다가 대상 변경 테이블에 기록되거나 삭제(롤백의 경우)됩니다. 사용 가능한 메모리 양이 제한되므로 대형 트랜잭션은 트랜잭션이 완료될 때까지 **cdc.xdbcdc_staged_transactions** 테이블에 기록됩니다. 트랜잭션은 오래 동안 실행될 경우 준비 테이블에도 기록됩니다. 따라서 Oracle CDC 인스턴스를 다시 시작할 때 Oracle 트랜잭션 로그에서 이전 변경 사항을 다시 읽을 필요가 없습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "62771202"
 |seq_num|현재 트랜잭션에 대한 **xcbcdc_staged_transactions** 행의 번호입니다(0부터 시작).|  
 |data_start_cn|이 행에 있는 데이터의 첫 번째 변경에 대한 CN(변경 번호)입니다.|  
 |data_end_cn|이 행에 있는 데이터의 마지막 변경에 대한 CN(변경 번호)입니다.|  
-|데이터|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
+|data|트랜잭션에 대해 준비된 변경 사항이며 BLOB 형태입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  

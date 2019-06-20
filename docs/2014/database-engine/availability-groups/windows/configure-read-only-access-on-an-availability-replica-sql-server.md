@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aaed1030d35fffb1b539339dc882cfb2d6676229
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815376"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
@@ -182,7 +182,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ```  
   
   
-##  <a name="FollowUp"></a> 후속 작업: 가용성 복제본에 대 한 읽기 전용 액세스를 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 가용성 복제본에 대한 읽기 전용 액세스를 구성한 후  
  **읽을 수 있는 보조 복제본에 대한 읽기 전용 액세스**  
   
 -   사용 하는 경우는 [bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 지정 하 여 읽기 전용 액세스를 위해 사용 되는 모든 보조 복제본에 읽기 전용 액세스를 지정할 수 있습니다는 `-K ReadOnly` 전환 합니다.  

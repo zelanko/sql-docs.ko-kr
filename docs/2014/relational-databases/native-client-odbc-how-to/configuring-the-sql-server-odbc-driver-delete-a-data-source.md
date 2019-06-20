@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126106"
 ---
 # <a name="delete-a-data-source-odbc"></a>데이터 원본 삭제(ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126106"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC 관리자를 사용하여 데이터 원본을 삭제하려면  
   
-1.  **Control Panel**오픈 **관리 도구**를 두 번 클릭 **데이터 원본 (ODBC)**. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
+1.  **Control Panel**오픈 **관리 도구**를 두 번 클릭 **데이터 원본 (ODBC)** . 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
   
 2.  클릭 합니다 **사용자 DSN**를 **시스템 DSN**, 또는 **파일 DSN** 탭 합니다.  
   

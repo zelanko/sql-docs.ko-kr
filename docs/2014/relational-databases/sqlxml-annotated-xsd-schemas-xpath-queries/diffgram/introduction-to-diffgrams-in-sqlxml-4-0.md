@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013021"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
@@ -57,7 +57,7 @@ ms.locfileid: "66013021"
  이 선택적 블록은 DiffGram 처리 논리에서 무시됩니다.  
   
 ## <a name="diffgram-annotations"></a>DiffGram 주석  
- 이러한 주석은 DiffGram 네임 스페이스에 정의 된 **"urn: 스키마-microsoft-com:xml-diffgram-01"**:  
+ 이러한 주석은 DiffGram 네임 스페이스에 정의 된 **"urn: 스키마-microsoft-com:xml-diffgram-01"** :  
   
  **id**  
  이 특성은 요소 쌍을 사용 합니다  **\<하기 전에 >** 및  **\<DataInstance >** 블록입니다.  

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62934835"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 - data(XQuery)
@@ -79,7 +79,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>1. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>1\. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
  다음 쿼리를 보여 줍니다 하는 방법을 **data ()** 함수를 사용 하는 특성, 요소 및 텍스트 노드는 값을 검색 합니다.  
   
 ```  

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013676"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
@@ -34,8 +34,8 @@ ms.locfileid: "66013676"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-a-target-namespace"></a>1. 대상 네임스페이스 지정  
- 다음 XSD 스키마를 사용 하 여 대상 네임 스페이스를 지정 합니다 **xsd: targetnamespace** 특성입니다. 스키마도 설정 합니다 **elementFormDefault** 하 고 **attributeFormDefault** 특성 값을 **"unqualified"** (이러한 특성에 대 한 기본값). 전역 선언 이며 모든 로컬 요소에 영향을 줍니다 (**\<순서 >** 스키마에서) 및 특성 (**CustomerID**를 **ContactName**, 및  **OrderID** 스키마에서).  
+### <a name="a-specifying-a-target-namespace"></a>1\. 대상 네임스페이스 지정  
+ 다음 XSD 스키마를 사용 하 여 대상 네임 스페이스를 지정 합니다 **xsd: targetnamespace** 특성입니다. 스키마도 설정 합니다 **elementFormDefault** 하 고 **attributeFormDefault** 특성 값을 **"unqualified"** (이러한 특성에 대 한 기본값). 전역 선언 이며 모든 로컬 요소에 영향을 줍니다 ( **\<순서 >** 스키마에서) 및 특성 (**CustomerID**를 **ContactName**, 및  **OrderID** 스키마에서).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -129,7 +129,7 @@ ms.locfileid: "66013676"
   
      자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
   
- 스키마를 지정 하는 경우 **않는** 및 **attributeFormDefault** 특성 값이 **"한정 된"**, 모든 로컬 인스턴스 문서는 요소와 특성 한정. 이러한 특성을 포함 하는 앞의 스키마를 변경할 수는  **\<xsd:schema >** 요소 서식 파일을 다시 실행 합니다. 이 경우 특성이 인스턴스에서도 정규화되므로 네임스페이스 접두사를 포함하도록 XPath 쿼리가 변경됩니다.  
+ 스키마를 지정 하는 경우 **않는** 및 **attributeFormDefault** 특성 값이 **"한정 된"** , 모든 로컬 인스턴스 문서는 요소와 특성 한정. 이러한 특성을 포함 하는 앞의 스키마를 변경할 수는  **\<xsd:schema >** 요소 서식 파일을 다시 실행 합니다. 이 경우 특성이 인스턴스에서도 정규화되므로 네임스페이스 접두사를 포함하도록 XPath 쿼리가 변경됩니다.  
   
  수정된 XPath 쿼리는 다음과 같습니다.  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697927"
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드(ADO 명령)
@@ -44,7 +44,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *매개 변수*  
  (선택 사항) A **Variant** 입력된 문자열에서 지정 된 스트림에와 함께 사용 하는 매개 변수 값의 배열 **CommandText** 하거나 **CommandStream**합니다. (출력 매개 변수에 올바른 값이이 인수에 전달 될 때 반환 하지 않습니다.)  
   
- *Options*  
+ *옵션*  
  (선택 사항) **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 하 여 비트 마스크 값일 수 있습니다 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 및/또는 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값입니다. 예를 들어 사용할 수 있습니다 **adCmdText** 하 고 **adExecuteNoRecords** 조합 ADO의 값을 평가 하려는 경우에 **CommandText** 텍스트로 속성 및 명령을 삭제 하 고 명령 텍스트를 실행 하는 경우 발생할 수 있는 레코드를 반환 하지 해야 나타냅니다.  
   
 > [!NOTE]
@@ -53,11 +53,11 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Remarks  
  사용 하 여를 **Execute** 메서드를 **명령** 개체에 지정 된 쿼리를 실행 합니다 **CommandText** 속성 또는 **CommandStream** 개체의 속성입니다.  
   
- 결과가 반환 됩니다는 **레코드 집합** (기본적으로) 또는 이진 정보 스트림으로. 이진 스트림에 가져오려면 지정 **adExecuteStream** 에서 *옵션*를 설정 하 여 입력 스트림을 **Command.Properties ("출력 Stream")** . ADO **Stream** 결과 받을 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림이 없습니다 호출 하기 전에 지정 된 경우 **Execute** 사용 하 여 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 공급자 다릅니다.  
+ 결과가 반환 됩니다는 **레코드 집합** (기본적으로) 또는 이진 정보 스트림으로. 이진 스트림에 가져오려면 지정 **adExecuteStream** 에서 *옵션*를 설정 하 여 입력 스트림을 **Command.Properties ("출력 Stream")**. ADO **Stream** 결과 받을 개체를 지정할 수 있습니다 또는 IIS 응답 개체와 같은 다른 스트림 개체를 지정할 수 있습니다. 스트림이 없습니다 호출 하기 전에 지정 된 경우 **Execute** 사용 하 여 **adExecuteStream**, 오류가 발생 합니다. 반환 된 스트림의 위치 **Execute** 공급자 다릅니다.  
   
  공급자가 반환 하는 경우 명령을 아닙니다 (예를 들어 SQL 업데이트 쿼리) 결과를 반환 **아무** 옵션으로 긴 **adExecuteNoRecords** 지정; 그렇지 않으면 반환을 실행는 닫힌 **레코드 집합**합니다. 일부 응용 프로그램 언어가 없으면 반환 값이 무시 하면 **레코드 집합** 이 필요 합니다.  
   
- **실행** 사용자에 대 한 값을 지정 하는 경우 오류를 발생 시킵니다 **CommandStream** 때의 **CommandType** 됩니다 **adCmdStoredProc**,  **adCmdTable**, 또는 **adCmdTableDirect**합니다.  
+ **실행** 사용자에 대 한 값을 지정 하는 경우 오류를 발생 시킵니다 **CommandStream** 때의 **CommandType** 됩니다 **adCmdStoredProc**, ** adCmdTable**, 또는 **adCmdTableDirect**합니다.  
   
  현재 값에 대 한 쿼리 매개 변수가 합니다 **명령** 함께 전달 된 매개 변수 값을 사용 하 여이 재정의 하지 않는 한 개체의 매개 변수를 사용 합니다 **Execute** 호출 합니다. 호출할 때 매개 변수 중 일부에 대 한 새 값을 생략 하면 매개 변수의 하위 집합을 재정의할 수 있습니다 합니다 **Execute** 메서드. 매개 변수를 지정 하는 순서가 메서드에 전달 하는 순서와 동일 합니다. 예를 들어 첫 번째 및 네 번째 매개 변수에 새 값을 전달 하려는 전달 하는 4 개 (이상) 매개 변수가 `Array(var1,,,var4)` 으로 *매개 변수* 인수입니다.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012346"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- XML 서식이 서버에서 수행 되는 경우 (**클라이언트 쪽 xml = "0"**), dbobject 쿼리는 실제 테이블 및 열 이름이 반환 됩니다 (있는 경우에 지정 된 별칭)을 반환 하는 열에 대 한 별칭을 사용할 수 있습니다. 예를 들어 다음 템플릿은 쿼리를 실행 하 고 XML 서식이 서버에서 수행 됩니다 (합니다 **클라이언트 쪽 xml** 옵션을 지정 하지 하며 **Run On Client** 에 대 한 옵션을 선택 하지 않으면 합니다 가상 루트)입니다. 또한 이 쿼리는 클라이언트 쪽 NESTED 모드가 아니라 AUTO 모드를 지정합니다.  
+ XML 서식이 서버에서 수행 되는 경우 (**클라이언트 쪽 xml = "0"** ), dbobject 쿼리는 실제 테이블 및 열 이름이 반환 됩니다 (있는 경우에 지정 된 별칭)을 반환 하는 열에 대 한 별칭을 사용할 수 있습니다. 예를 들어 다음 템플릿은 쿼리를 실행 하 고 XML 서식이 서버에서 수행 됩니다 (합니다 **클라이언트 쪽 xml** 옵션을 지정 하지 하며 **Run On Client** 에 대 한 옵션을 선택 하지 않으면 합니다 가상 루트)입니다. 또한 이 쿼리는 클라이언트 쪽 NESTED 모드가 아니라 AUTO 모드를 지정합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080650"
 ---
 # <a name="impersonation-information"></a>가장 정보
@@ -27,7 +27,7 @@ ms.locfileid: "66080650"
  **사용자 이름**  
  선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에서 사용할 사용자 계정의 도메인과 이름을 입력합니다. 다음 형식을 사용합니다.  
   
- *\<도메인 이름 >* **\\**  *\<사용자 계정 이름 >*  
+ *\<도메인 이름 >* ** \\ ** * \<사용자 계정 이름 >*  
   
  이 옵션은 **특정 사용자 이름 및 암호 사용** 을 선택한 경우에만 사용할 수 있습니다.  
   

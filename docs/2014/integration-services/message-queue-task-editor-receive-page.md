@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057668"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>메시지 큐 태스크 편집기(받기 페이지)
@@ -85,7 +85,7 @@ ms.locfileid: "66057668"
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
   
  **변수**  
- 변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 변수 이름을 입력하거나 \<**새 변수...** >를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66057668"
  **Compare** 옵션을 **없음**으로 설정한 경우가 아니면 메시지를 비교할 문자열을 제공합니다.  
   
  **변수**  
- 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...** >를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   

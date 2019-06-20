@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3c51a9b1364131630daddabec316c01992ffedfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 045bbc74fcd626059b0442026d13f7d84b53c24f
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62521390"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263321"
 ---
 # <a name="analysis-services-language-reference"></a>Analysis Services 언어 참조
 
 
-  [DAX(Data Analysis Expressions) 참조](https://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
+  [DAX(Data Analysis Expressions) 참조](/dax/data-analysis-expressions-dax-reference)  
   
  [다차원 식 & #40; Mdx& #41; 참조](../mdx/multidimensional-expressions-mdx-reference.md)  
   
