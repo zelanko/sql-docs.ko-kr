@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f620bafc0a734651adfe43bcf0367ca5328dc40c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076960"
 ---
 # <a name="backup-options"></a>백업 옵션
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 여러 가지 방법으로 백업할 수 있지만 백업하기 위해서는 서버 관리자 권한과 데이터베이스 관리자 권한이 필요합니다. **에서** 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적절한 옵션 구성을 선택한 후 백업을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 여러 가지 방법으로 백업할 수 있지만 백업하기 위해서는 서버 관리자 권한과 데이터베이스 관리자 권한이 필요합니다. **에서** 백업 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적절한 옵션 구성을 선택한 후 백업을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다.  
   
 ## <a name="backup-and-synchronize"></a>백업 및 동기화  
  데이터베이스가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]원격 인스턴스에 있는 경우 동기화 기능을 사용하여 데이터베이스를 로컬 인스턴스로 백업할 수 있습니다. 이 방법으로 데이터베이스의 개발 빌드를 프로덕션으로 이동할 수 있습니다. 기존의 파일 기반 백업과 복원을 사용하여 개발 빌드를 프로덕션으로 이동할 수도 있으나 동기화를 사용하면 추가 기능을 이용할 수 있습니다. 예를 들어 개발 컴퓨터와 프로덕션 컴퓨터의 보안 설정이 다른 경우 동기화를 사용하면 해당 설정을 유지하고 역할을 제외한 모든 개체를 동기화할 수 있습니다. 또한 동기화는 일반적으로 원본 컴퓨터와 대상 컴퓨터에서 다른 개체에 대해 증분 업데이트를 수행합니다. 백업/복원 기능으로는 이러한 증분 백업을 사용할 수 없습니다. 자세한 내용은 [Synchronize Analysis Services Databases](synchronize-analysis-services-databases.md)을(를) 참조하세요.  

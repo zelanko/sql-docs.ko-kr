@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66077218"
 ---
 # <a name="rename-an-attribute"></a>특성 이름 변경
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 이름은 **Name** 속성으로 정의됩니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 이름은 **Name** 속성으로 정의됩니다. 특성 이름을 바꾸려면 **에 있는 차원 디자이너의** 차원 구조 **탭의** 특성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]창에서 특성을 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 클릭합니다. **특성** 창이 표 뷰로 되어 있으면 표에서 직접 특성 이름을 클릭하고 편집합니다. 특성을 선택하고 **속성** 창에서 **Name** 속성을 설정할 수도 있습니다.  
   
  특성 이름을 바꾸는 방법에 대한 자세한 내용은 [키 열에 특성 바인딩](attribute-properties-bind-an-attribute-to-a-key-column.md)을 참조하세요.  
   

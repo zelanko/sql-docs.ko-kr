@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c488316c1eaed822685577356e9df6f0cad9d174
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100362"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools의 배포 및 버전 지원(SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66100362"
   
  보고서는 보고서 디자이너에서 미리 보기로 렌더링되거나 보고서 서버에 배포되기 전에 빌드됩니다.  
   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
   
  빌드 및 배포 속성에는 다음이 포함됩니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66100362"
   
 -   TargetServerVersion은 TargetServerURL 속성에 지정된 대상 보고서 서버에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 예상 버전을 식별하는 배포 속성입니다.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
   
  둘 이상의 프로젝트 구성을 프로젝트에 추가할 수 있으며 각 구성은 다른 버전의 보고서 서버에 배포하는 것과 같은 다양한 시나리오에 사용됩니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md) 및 [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)를 참조하세요.  
   

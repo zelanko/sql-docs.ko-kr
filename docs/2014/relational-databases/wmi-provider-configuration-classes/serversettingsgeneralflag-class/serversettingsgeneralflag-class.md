@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 59bfe26d20ed244c6011a6f4d1f37deccf8607c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137286"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag 클래스
-   [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 일반 플래그 설정을 나타냅니다.  
+  [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 일반 플래그 설정을 나타냅니다.  
   
  이 클래스를 사용하여 다음을 수행할 수 있습니다.  
   

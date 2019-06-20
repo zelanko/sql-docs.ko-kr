@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813681"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>선호도 입력-출력 마스크 서버 구성 옵션
@@ -48,7 +48,7 @@ ms.locfileid: "62813681"
   
  affinity I/O 패턴의 1비트는 해당 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 작업을 수행하는 데 적합함을 나타내고 0비트는 해당 CPU에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O 작업이 예약되지 않음을 나타냅니다. 모든 비트가 0으로 설정되어 있거나 **affinity I/O mask** 가 지정되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 I/O는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드를 처리하는 데 적합한 모든 CPU에 대해 예약됩니다.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** 옵션 설정은 특수 작업이므로 필요한 경우에만 사용해야 합니다. 대부분의 경우 Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **affinity I/O mask** 옵션 설정은 특수 작업이므로 필요한 경우에만 사용해야 합니다. 대부분의 경우 Windows 2000 또는 Windows Server 2003 기본 선호도를 사용할 때 최상의 성능을 제공합니다.  
   
  **affinity I/O mask** 옵션을 지정할 때는 **affinity mask** 구성 옵션과 함께 사용해야 합니다. **affinity I/O mask** 스위치와 **affinity mask** 옵션에서 동일한 CPU를 사용하지 마세요. 각 CPU에 해당하는 비트는 다음 3가지 상태 중 하나여야 합니다.  
   
