@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728218"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
@@ -153,7 +153,7 @@ KDC 서버에서 다음을 수행합니다.
 
     구성 후 KDC 서비스를 다시 시작합니다.
 
-2.  KDC 서버에서 **krbtgt/REALM.COM@AD.COM**이라는 보안 주체를 준비합니다. 다음 명령을 사용합니다.
+2.  KDC 서버에서 **krbtgt/REALM.COM@AD.COM** 이라는 보안 주체를 준비합니다. 다음 명령을 사용합니다.
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -168,7 +168,7 @@ KDC 서버에서 다음을 수행합니다.
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Windows 도메인과 Kerberos 영역 간의 신뢰를 설정합니다. 다음 예제에서 `[password]`는 보안 주체 **krbtgt/REALM.COM@AD.COM**의 암호입니다.
+2.  Windows 도메인과 Kerberos 영역 간의 신뢰를 설정합니다. 다음 예제에서 `[password]`는 보안 주체 **krbtgt/REALM.COM@AD.COM** 의 암호입니다.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

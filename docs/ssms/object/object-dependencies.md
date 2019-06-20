@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102978"
 ---
 # <a name="object-dependencies"></a>개체 종속성
@@ -36,7 +36,7 @@ ms.locfileid: "65102978"
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
 **종속성**  
-*<selected object>***에 종속된 개체**를 클릭하면 선택한 개체에 종속된 개체의 계층 뷰가 표시됩니다. *<selected object>***가 **종속된 개체**** 를 클릭하면 선택한 개체가 종속된 개체의 계층 뷰가 표시됩니다.  
+*<selected object>* **에 종속된 개체**를 클릭하면 선택한 개체에 종속된 개체의 계층 뷰가 표시됩니다. *<selected object>* **가 **종속된 개체**** 를 클릭하면 선택한 개체가 종속된 개체의 계층 뷰가 표시됩니다.  
   
 **이름**  
 위의 **종속성** 트리 뷰에서 선택한 개체의 이름을 표시합니다.  

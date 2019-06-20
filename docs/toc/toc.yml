@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: 리소스
           items:
+            - name: FAQ
+              href: ../azure-data-studio/faq.md
             - name: Azure Data Studio GitHub 리포지토리 >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: SQL Server 블로그 >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: FAQ
-              href: ../azure-data-studio/faq.md
             - name: 문제 보고 및 제안 >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 명령 프롬프트 유틸리티

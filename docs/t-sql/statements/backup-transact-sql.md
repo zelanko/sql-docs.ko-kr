@@ -48,10 +48,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175305"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
@@ -740,15 +740,15 @@ BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서
 
 이 섹션에서는 다음과 같은 예를 보여 줍니다.
 
-- 1. [전체 데이터베이스 백업](#backing_up_db)
-- 2. [데이터베이스 및 로그 백업](#backing_up_db_and_log)
+- 1\. [전체 데이터베이스 백업](#backing_up_db)
+- 2\. [데이터베이스 및 로그 백업](#backing_up_db_and_log)
 - C. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)
 - D. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)
 - E. [미러된 단일 패밀리 미디어 세트 만들기 및 백업](#create_single_family_mirrored_media_set)
 - F. [미러된 다중 패밀리 미디어 세트 만들기 및 백업](#create_multifamily_mirrored_media_set)
 - G. [기존 미러된 미디어 세트에 백업](#existing_mirrored_media_set)
 - H. [새 미디어 세트에 압축된 백업 만들기](#creating_compressed_backup_new_media_set)
-- 9. [Microsoft Azure Blob Storage 서비스에 백업](#url)
+- 9\. [Microsoft Azure Blob Storage 서비스에 백업](#url)
 - J. [Backup 문의 진행률 추적](#backup_progress)
 
 > [!NOTE]
@@ -1271,7 +1271,7 @@ DATABASE 개체에서 ExclusiveUpdate 잠금을 얻습니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-add-network-credentials-for-the-backup-location"></a>1. 백업 위치에 대한 네트워크 자격 증명 추가
+### <a name="a-add-network-credentials-for-the-backup-location"></a>1\. 백업 위치에 대한 네트워크 자격 증명 추가
 
 백업을 만들려면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에게 백업 디렉토리에 대한 읽기/쓰기 권한이 있어야 합니다. 다음 예제에서는 사용자에 대한 자격 증명을 추가하는 방법을 보여 줍니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 이러한 자격 증명을 저장하고 백업 및 복원 작업에 그것을 사용합니다.
 
@@ -1282,7 +1282,7 @@ DATABASE 개체에서 ExclusiveUpdate 잠금을 얻습니다.
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';
 ```
 
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>2. 백업 위치에 대한 네트워크 자격 증명 제거
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>2\. 백업 위치에 대한 네트워크 자격 증명 제거
 
 다음 예에서는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 도메인 사용자의 자격 증명을 제거하는 방법을 보여줍니다.
 
