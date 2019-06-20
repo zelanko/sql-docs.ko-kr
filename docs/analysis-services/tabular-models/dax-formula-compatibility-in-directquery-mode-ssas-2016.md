@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63019230"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263325"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 모드에서의 DAX 수식 호환성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "63019230"
 
 특정 함수가 DirectQuery에 대해 최적화되지 않은 이유는 기본 관계형 엔진에서 xVelocity 엔진에서 수행한 것과 동일한 계산을 수행할 수 없거나 수식을 동등한 SQL 식으로 변환할 수 없기 때문입니다. 다른 경우에는 변환된 식 및 결과 계산의 성능이 허용 가능한 수준이 아닐 수 있습니다.
 
-일부 DAX 함수에 대 한 자세한 내용은 [DAX 함수 참조]를 참조 하세요. (https://msdn.microsoft.com/library/ee634396.aspx)
+일부 DAX 함수에 대 한 자세한 내용은 참조는 [DAX 함수 참조](/dax/dax-function-reference)합니다.
 
 ## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 모드의 DAX 연산자
-모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완전히 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.
+모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완전히 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](/dax/dax-operator-reference)를 참조하세요.
 
 
  
@@ -160,7 +160,7 @@ SQL Server에서는 Null과 빈 값을 xVelocity 엔진과는 다르게 처리�
   
 LOG10 및 LN 등의 다른 로그 함수에도 동일한 제한 사항이 적용됩니다.  
   
-DAX에서의 **blank** 데이터 형식에 대한 자세한 내용은 [DAX 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)를 참조하세요.  
+DAX에서의 **blank** 데이터 형식에 대한 자세한 내용은 [DAX 구문 참조](/dax/dax-syntax-reference)를 참조하세요.  
   
 **0으로 나누기 및 빈 값으로 나누기**  
 DirectQuery 모드에서 0으로 나누기나 빈 값으로 나누기는 항상 오류를 반환합니다. SQL Server에서는 무한대 개념이 지원되지 않으며 0으로 나누기의 자연적인 결과는 무한대이므로 결과가 오류가 됩니다. 그러나 SQL Server에서 Null로 나누기는 지원되므로 결과가 항상 Null과 같아야 합니다.  

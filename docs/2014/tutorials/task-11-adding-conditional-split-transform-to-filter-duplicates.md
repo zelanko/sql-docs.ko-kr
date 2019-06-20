@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65476748"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>태스크 11: 조건부 분할 변환을 추가하여 중복 항목 필터링

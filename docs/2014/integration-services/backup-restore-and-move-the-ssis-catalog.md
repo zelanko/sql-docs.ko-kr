@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061273"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
@@ -89,7 +89,7 @@ ms.locfileid: "66061273"
   
     ```  
   
-3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
     -   [데이터베이스 복원&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)  
   

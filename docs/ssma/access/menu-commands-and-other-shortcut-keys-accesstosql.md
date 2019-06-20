@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453454"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>메뉴 명령 및 기타 바로 가기 키 (AccessToSQL)

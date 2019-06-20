@@ -16,10 +16,10 @@ ms.author: lle
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483828"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
@@ -36,8 +36,8 @@ ms.locfileid: "65483828"
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|특별 사용 권한|  
-|SYSTEM|특별 사용 권한|  
-|관리자|특별 사용 권한|  
+|시스템|특별 사용 권한|  
+|Administrators|특별 사용 권한|  
 |사용자|읽기 & 실행, 폴더 내용 보기, 읽기|  
 |TrustedInstaller|폴더 내용 보기, 특별 사용 권한|  
   
@@ -48,16 +48,16 @@ ms.locfileid: "65483828"
   
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
-|SYSTEM|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
-|관리자|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
+|시스템|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
+|Administrators|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
 |MDS_ServiceAccounts|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
   
 ###### <a name="webconfig-permissions"></a>Web.config 사용 권한  
   
 |그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
-|SYSTEM|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
-|관리자|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
+|시스템|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
+|Administrators|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
 |MDS_ServiceAccounts|읽기 & 실행, 읽기|  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 파일의 내용에 대한 자세한 내용은 [웹 구성 참조&#40;Master Data Services&#41;](web-configuration-reference-master-data-services.md)를 참조하세요.  

@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014567"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0의 XPath 쿼리 사용
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 주석이 추가된 XSD 스키마를 사용하면 데이터베이스에 저장된 관계형 데이터의 XML 뷰를 만들 수 있습니다. XPath 언어의 하위 집합을 사용하면 주석이 추가된 XSD 스키마로 만든 XML 뷰에 대해 쿼리를 수행할 수 있습니다.  
   
 > [!NOTE]  
->  SQLXML 4.0의 XPath 쿼리를 이해하려면 템플릿 및 매핑 스키마와 같은 관련 개념과 XML 뷰에 대해 잘 알고 있어야 합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XPath에 대 한 자세한 내용은에서 World Wide Web Consortium (W3C) 정의한 XPath 표준을 참조 http://www.w3.org/TR/xpath합니다.  
+>  SQLXML 4.0의 XPath 쿼리를 이해하려면 템플릿 및 매핑 스키마와 같은 관련 개념과 XML 뷰에 대해 잘 알고 있어야 합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XPath에 대 한 자세한 내용은에서 World Wide Web Consortium (W3C) 정의한 XPath 표준을 참조 http://www.w3.org/TR/xpath 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [XPath 쿼리 사용 소개 &#40;SQLXML 4.0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  

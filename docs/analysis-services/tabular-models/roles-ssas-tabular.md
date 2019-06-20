@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472136"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263299"
 ---
 # <a name="roles"></a>역할
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "62472136"
   
 |기능|Description|  
 |--------------|-----------------|  
-|[USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
-|[CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|연결 문자열의 CustomData 속성을 반환합니다.|  
+|[USERNAME 함수(DAX)](/dax/username-function-dax)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
+|[CUSTOMDATA 함수(DAX)](/dax/customdata-function-dax)|연결 문자열의 CustomData 속성을 반환합니다.|  
   
  LOOKUPVALUE 함수를 사용하여 Windows 사용자 이름이 USERNAME 함수에서 반환된 사용자 이름 또는 CustomData 함수에서 반환된 문자열과 동일한 열의 값을 반환할 수 있습니다. 그런 다음 LOOKUPVALUE에서 반환된 값이 동일한 테이블 또는 관련된 테이블의 값과 일치하는 경우로 쿼리를 제한할 수 있습니다.  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472136"
 ## <a name="see-also"></a>관련 항목  
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE 함수(DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 함수(DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE 함수(DAX)](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 함수(DAX)](/dax/customdata-function-dax)  
   
   

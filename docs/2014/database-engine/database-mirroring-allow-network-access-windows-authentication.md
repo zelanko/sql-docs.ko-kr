@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d561c3939a8f13767faf9195102080cc7b73af0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807487"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용(SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62807487"
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$*)의 로그인은 각 원격 서버 인스턴스에서 **마스터**로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
   
 > [!NOTE]  
->  서버 인스턴스마다 엔드포인트가 있는지 확인합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+>  서버 인스턴스마다 엔드포인트가 있는지 확인합니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
 ### <a name="to-configure-logins-for-windows-authentication"></a>Windows 인증에 대한 로그인을 구성하려면  
   
@@ -56,6 +56,6 @@ GO
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+ [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

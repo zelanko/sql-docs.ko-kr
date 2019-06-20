@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685760"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263271"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services의 새로운 기능
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -111,7 +111,7 @@ SQL Server Data Tools (SSDT)에서는 최신을 테이블 형식 모델에 데�
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-합니다 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 함수는 세부 정보 행 식에서 널리 사용 됩니다. 다음 예제에서는 샘플 Adventure Works 테이블 형식 모델의 Internet Sales 테이블 행에 대해 반환할 열을 정의합니다.
+합니다 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX 함수는 세부 정보 행 식에서 널리 사용 됩니다. 다음 예제에서는 샘플 Adventure Works 테이블 형식 모델의 Internet Sales 테이블 행에 대해 반환할 열을 정의합니다.
 
 ```
 SELECTCOLUMNS(
@@ -179,9 +179,9 @@ db.Update(UpdateOptions.ExpandFull);
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) 향상 측정값 차원에 표시할 다양 한 클라이언트 도구에서 사용 되는이 DMV에 대 한 포함 됩니다. 예를 들어 Excel 피벗 테이블에서 탐색 기능 간 드릴 선택한 측정값을 관련 된 차원에 사용자를 수 있습니다. 이 릴리스에서 잘못 된 값이 표시 된 이전에 카디널리티 열을 수정 합니다.
 
 ## <a name="dax-enhancements"></a>향상된 DAX 기능
-이 릴리스에서 새 DAX 함수 및 기능에 대 한 지원. 를 활용 하려면 최신 버전의 SSDT 사용 해야 합니다. 자세한 내용은 참조 하세요 [새 DAX 함수](https://msdn.microsoft.com/library/mt704075.aspx)합니다.
+이 릴리스에서 새 DAX 함수 및 기능에 대 한 지원. 를 활용 하려면 최신 버전의 SSDT 사용 해야 합니다. 자세한 내용은 참조 하세요 [새 DAX 함수](/dax/new-dax-functions)합니다.
 
-새 DAX 기능의 가장 중요 한 부분 중 하나는 새 [IN 연산자 / CONTAINSROW 함수](https://msdn.microsoft.com/library/mt842621.aspx) DAX 식입니다. 이것은 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 절에서 여러 값을 지정하는 데 자주 사용되는 `WHERE` 연산자와 유사합니다.
+새 DAX 기능의 가장 중요 한 부분 중 하나는 새 [IN 연산자 / CONTAINSROW 함수](/dax/in-operator-containsrow-function) DAX 식입니다. 이것은 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 절에서 여러 값을 지정하는 데 자주 사용되는 `WHERE` 연산자와 유사합니다.
 
 이전에는 다음 측정값 식과 같이 논리적 `OR` 연산자를 사용하여 다중 값 필터를 지정하는 것이 일반적이었습니다.
 

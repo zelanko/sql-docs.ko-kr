@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481020"
 ---
 # <a name="create-a-matching-policy"></a>일치 정책 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "65481020"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  원본 데이터가 Excel 파일 형식인 경우 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 매핑 단계에서 Excel 파일을 선택할 수 없습니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 64비트 버전의 Excel이 사용된 경우 Excel 2003 파일 (.xls)만 지원됩니다. Excel 2007 또는 2010 파일(.xlsx)은 지원되지 않습니다. 64비트 버전의 Excel 2007 또는 2010을 사용 중인 경우 파일을 .xls 파일 또는 .csv 파일로 저장하거나 32비트 버전의 Excel을 대신 설치하세요.  
   
 ###  <a name="Security"></a> 보안  

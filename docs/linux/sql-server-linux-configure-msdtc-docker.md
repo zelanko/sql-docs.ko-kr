@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 71392b2d5de785df22ec1cf758a12675a0058e45
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705577"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker에서 SQL Server를 사용 하 여 분산된 트랜잭션을 사용 하는 방법

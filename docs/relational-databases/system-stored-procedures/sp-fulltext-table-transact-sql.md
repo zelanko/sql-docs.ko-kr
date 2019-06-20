@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982961"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
@@ -50,7 +50,7 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
+`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)** , 기본값은 없습니다.  
   
 `[ @action = ] 'action'` 수행할 동작이입니다. *작업* 됩니다 **nvarchar (50)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나일 수 있습니다.  
   
@@ -93,7 +93,7 @@ sp_fulltext_table
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-a-table-for-full-text-indexing"></a>1. 테이블을 전체 텍스트 인덱싱에 사용  
+### <a name="a-enabling-a-table-for-full-text-indexing"></a>1\. 테이블을 전체 텍스트 인덱싱에 사용  
  다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 만듭니다. `Cat_Desc`는 전체 텍스트 카탈로그이고, `PK_Document_DocumentID`는 `Document`의 고유한 단일 열 인덱스입니다.  
   
 ```  
@@ -107,7 +107,7 @@ EXEC sp_fulltext_table 'Production.Document','activate';
 GO  
 ```  
   
-### <a name="b-activating-and-propagating-track-changes"></a>2. 변경 내용 추적 활성화 및 전파  
+### <a name="b-activating-and-propagating-track-changes"></a>2\. 변경 내용 추적 활성화 및 전파  
  다음 예에서는 변경될 때마다 추적한 변경 내용을 활성화하여 전체 텍스트 인덱스로 전파를 시작합니다.  
   
 ```  
@@ -118,7 +118,7 @@ EXEC sp_fulltext_table 'Production.Document', 'Start_background_updateindex';
 GO  
 ```  
   
-### <a name="c-removing-a-full-text-index"></a>3. 전체 텍스트 인덱스 제거  
+### <a name="c-removing-a-full-text-index"></a>3\. 전체 텍스트 인덱스 제거  
  다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 제거합니다.  
   
 ```  

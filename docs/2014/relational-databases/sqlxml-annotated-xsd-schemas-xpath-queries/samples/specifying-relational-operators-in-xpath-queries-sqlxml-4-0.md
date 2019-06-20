@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012434"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 관계형 연산자 지정(SQLXML 4.0)
@@ -27,7 +27,7 @@ ms.locfileid: "66012434"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-relational-operator"></a>1. 관계형 연산자 지정  
+### <a name="a-specify-relational-operator"></a>1\. 관계형 연산자 지정  
  이 XPath 쿼리에서 요소 자식을 반환 합니다  **\<고객 >** 요소 위치를 **CustomerID** 특성 값이 "1" 및 위치 모든 자식  **\<순서 >** 요소에 포함 된를  **\<OrderDetail >** 자식으로는 **OrderQty** 3 보다 큰 값을 사용 하 여 특성:  
   
 ```  
@@ -78,7 +78,7 @@ ms.locfileid: "66012434"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>2. XPath 쿼리에 관계형 연산자 지정 및 부울 함수를 사용하여 결과 비교  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>2\. XPath 쿼리에 관계형 연산자 지정 및 부울 함수를 사용하여 결과 비교  
  이 쿼리 모두 반환 합니다  **\<순서 >** 는 컨텍스트 노드의 요소 자식을 **SalesPersonID** 270 보다 작은 값을 특성:  
   
 ```  

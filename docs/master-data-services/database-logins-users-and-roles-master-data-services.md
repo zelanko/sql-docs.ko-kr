@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487722"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65487722"
   
 |로그인|Description|  
 |-----------|-----------------|  
-|**mds_dlp_login**|UNSAFE 어셈블리 만들기를 허용합니다. 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)을 참조하세요.<br /><br /> -임의로 생성된 암호를 가진 비활성화된 로그인입니다.<br /><br /> - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 경우 dbo에 매핑됩니다.<br /><br /> -msdb의 경우 mds_clr_user가 이 로그인에 매핑됩니다.|  
+|**mds_dlp_login**|UNSAFE 어셈블리 만들기를 허용합니다. 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)을 참조하세요.<br /><br /> -임의로 생성된 암호를 가진 비활성화된 로그인입니다.<br /><br /> \- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 경우 dbo에 매핑됩니다.<br /><br /> -msdb의 경우 mds_clr_user가 이 로그인에 매핑됩니다.|  
 |**mds_email_login**|알림에 사용되는 활성화된 로그인입니다.<br /><br /> msdb 및 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 경우 mds_email_user가 이 로그인에 매핑됩니다.|  
   
 ## <a name="msdb-users"></a>msdb 사용자  

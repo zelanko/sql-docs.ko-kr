@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013916"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
@@ -51,7 +51,7 @@ ms.locfileid: "66013916"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>1. ID 및 IDREFS 유형 지정  
+### <a name="a-specifying-id-and-idrefs-types"></a>1\. ID 및 IDREFS 유형 지정  
  다음 스키마에는  **\<고객 >** 구성 요소는  **\<순서 >** 자식 요소입니다. 합니다  **\<순서 >** 도 요소가 자식 요소에는  **\<OrderDetail >** 요소입니다.  
   
  **OrderIDList** 특성  **\<고객 >** 참조 하는 IDREFS 형식 특성을 **OrderID** 특성은  **\< 순서 >** 요소입니다.  

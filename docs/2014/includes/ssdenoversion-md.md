@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: a9d09605b040b0ce13e3756d6b26b79d777b7b82
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819620"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224126"
 ---
 SQL Server 데이터베이스 엔진

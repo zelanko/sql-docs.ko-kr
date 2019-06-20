@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472202"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263419"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>테이블 형식 모델에서 지 원하는 데이터 형식
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "62472202"
 >  131,072자가 넘는 문자열이 포함된 **varchar(max)** 열에서는 가져올 수 없습니다.  
   
 ### <a name="table-data-type"></a>테이블 데이터 형식  
- 또한 DAX에서는 *table* 데이터 형식도 사용합니다. 이 데이터 형식은 DAX에서 집계 및 시간 인텔리전스 계산과 같은 여러 함수에 사용됩니다. 일부 함수에는 테이블에 대한 참조가 필요하고 일부 함수는 다른 함수의 입력으로 사용할 수 있는 테이블을 반환합니다. 테이블을 입력으로 사용해야 하는 일부 함수에서는 테이블로 계산되는 식을 지정할 수 있고 일부 함수에는 기본 테이블에 대한 참조가 필요합니다. 특정 함수에 대한 요구 사항은 [DAX 함수 참조](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하십시오.  
+ 또한 DAX에서는 *table* 데이터 형식도 사용합니다. 이 데이터 형식은 DAX에서 집계 및 시간 인텔리전스 계산과 같은 여러 함수에 사용됩니다. 일부 함수에는 테이블에 대한 참조가 필요하고 일부 함수는 다른 함수의 입력으로 사용할 수 있는 테이블을 반환합니다. 테이블을 입력으로 사용해야 하는 일부 함수에서는 테이블로 계산되는 식을 지정할 수 있고 일부 함수에는 기본 테이블에 대한 참조가 필요합니다. 특정 함수에 대한 요구 사항은 [DAX 함수 참조](/dax/dax-function-reference)를 참조하십시오.  
   
 ##  <a name="bkmk_implicit"></a> DAX 수식의 명시적 및 암시적 데이터 형식 변환
   
@@ -136,7 +136,7 @@ ms.locfileid: "62472202"
  예를 들어 나누기 연산에서 정수를 통화 값과 함께 사용하는 경우 두 값이 실수로 변환되고 결과도 실수가 됩니다.  
   
 #### <a name="comparison-operators"></a>비교 연산자  
-비교 작업에 대해 혼합 된 데이터 형식 조합 제한 된 집합만 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.  
+비교 작업에 대해 혼합 된 데이터 형식 조합 제한 된 집합만 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](/dax/dax-operator-reference)를 참조하세요.  
   
 ## <a name="bkmk_hand_blanks"></a> 공백, 빈 문자열 및 0 값 처리  
  다음 표에서 공백 처리 하는 방법에 차이가 DAX와 Microsoft Excel에서:  
@@ -157,5 +157,5 @@ ms.locfileid: "62472202"
 |BLANK OR BLANK|공백|Error|  
 |BLANK AND BLANK|공백|Error|  
   
- 특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
+ 특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](/dax/dax-function-reference)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   

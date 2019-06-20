@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5421d42933660843ac51be3d942a94cf47866200
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713238"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 영구 메모리 (PMEM)를 구성 하는 방법
@@ -79,7 +79,7 @@ ndctl list
 
   장치 ndctl를 사용 하 여 구성, 포맷 되어 탑재를 후에 데이터베이스 파일을 배치할 수 있습니다. 새 데이터베이스를 만들 수도 있습니다. 
 
-1. PMEM 장치 O_DIRECT 안전 하 게 되므로 3979 강제 플러시 메커니즘을 사용 하지 않도록 설정 하려면 추적 플래그를 사용 하도록 설정 합니다. 이 추적 플래그 추적 플래그가 시작 이며 따라서 mssql conf 유틸리티를 사용 하는 데 사용할 수 있어야 합니다. 이 서버 차원의 구성 변경 내용, 하 고 데이터 무결성을 보장 하는 강제 플러시 메커니즘을 필요로 하는 모든 O_DIRECT 비준수 장치가 있는 경우이 추적 플래그를 사용 하지 않아야 note 하십시오. 자세한 내용은 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux을 참조하십시오.
+1. PMEM 장치 O_DIRECT 안전 하 게 되므로 3979 강제 플러시 메커니즘을 사용 하지 않도록 설정 하려면 추적 플래그를 사용 하도록 설정 합니다. 이 추적 플래그 추적 플래그가 시작 이며 따라서 mssql conf 유틸리티를 사용 하는 데 사용할 수 있어야 합니다. 이 서버 차원의 구성 변경 내용, 하 고 데이터 무결성을 보장 하는 강제 플러시 메커니즘을 필요로 하는 모든 O_DIRECT 비준수 장치가 있는 경우이 추적 플래그를 사용 하지 않아야 note 하십시오. 자세한 내용은 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux 을 참조하십시오.
 
 1. SQL Server를 다시 시작하십시오.
 

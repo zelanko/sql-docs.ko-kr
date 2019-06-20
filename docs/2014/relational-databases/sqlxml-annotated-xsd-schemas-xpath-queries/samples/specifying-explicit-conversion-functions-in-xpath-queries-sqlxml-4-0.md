@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010695"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
@@ -27,7 +27,7 @@ ms.locfileid: "66010695"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>1. number() 명시적 변환 함수 사용  
+### <a name="a-use-the-number-explicit-conversion-function"></a>1\. number() 명시적 변환 함수 사용  
  `number()` 함수는 인수를 숫자로 변환합니다.  
   
  값을 가정 **ContactID** 숫자가 다음 변환 쿼리 **ContactID** 숫자로 값 4와 비교 합니다. 다음 쿼리를 모두 반환 합니다  **\<직원 >** 인 컨텍스트 노드의 요소 자식을 합니다 **ContactID** 4의 숫자 값이 있는 특성:  
@@ -76,7 +76,7 @@ ms.locfileid: "66010695"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>2. string() 명시적 변환 함수 사용  
+### <a name="b-use-the-string-explicit-conversion-function"></a>2\. string() 명시적 변환 함수 사용  
  `string()` 함수는 인수를 문자열로 변환합니다.  
   
  다음 쿼리 변환 **ContactID** 문자열 비교를 사용 하 여 문자열 값 "4". 모든 쿼리 반환  **\<직원 >** 인 컨텍스트 노드의 요소 자식을 **ContactID** "4"의 문자열 값을 사용 하 여:  

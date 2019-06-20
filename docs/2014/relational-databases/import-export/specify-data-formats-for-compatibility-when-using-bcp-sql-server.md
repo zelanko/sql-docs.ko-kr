@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011833"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "66011833"
      문자 데이터 필드에서 필요에 따라 종료 문자를 사용하면 데이터 파일 내 각 필드( *필드 종결자*사용)와 행( *행 종결자*사용)의 끝을 표시할 수 있습니다. 종결 문자는 한 필드나 행이 끝나고 다른 필드나 행이 시작하는 부분을 표시하여 데이터 파일을 읽는 프로그램에 전달하는 한 방법입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
 ##  <a name="FieldSpecificPrompts"></a> 필드별 프롬프트 개요  
- 대화형 `bcp` 명령에는 **에** 또는 **아웃** 옵션은 있 서식 파일 스위치 포함 되지 않습니다 (**-f**) 데이터 형식 스위치 (또는 **-n**, **-c**합니다 **-w**, 또는 **-N**), 각 이전에 대 한 원본 또는 대상 테이블의 각 열에는 명령 프롬프트 특성을 설정 합니다. 각 프롬프트에서 `bcp` 명령은 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식(**-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
+ 대화형 `bcp` 명령에는 **에** 또는 **아웃** 옵션은 있 서식 파일 스위치 포함 되지 않습니다 ( **-f**) 데이터 형식 스위치 (또는 **-n**, **-c**합니다 **-w**, 또는 **-N**), 각 이전에 대 한 원본 또는 대상 테이블의 각 열에는 명령 프롬프트 특성을 설정 합니다. 각 프롬프트에서 `bcp` 명령은 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식( **-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서는 `bcp` 명령을 사용하여 대화형으로 `HumanResources.myTeam` 테이블에서 `myTeam.txt` 파일로 데이터를 대량 내보냅니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 테이블 및 테이블을 만드는 방법은 [HumanResources.myTeam 예제 테이블&#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)을 참조하세요.  

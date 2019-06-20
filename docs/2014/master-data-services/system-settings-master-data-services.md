@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65478825"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
@@ -103,7 +103,7 @@ ms.locfileid: "65478825"
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: http://constoso/mds)입니다.|  
+|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: http://constoso/mds )입니다.|  
 |**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
 |**단일 전자 메일의 알림 수**|**NotificationsPerEmail**|단일 알림 전자 메일에 나열될 유효성 검사 문제의 최대 개수입니다. 문제가 더 있더라도 전자 메일에는 포함되지 않지만 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 제공됩니다.|  
 |**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 사용자의 **일반** 탭에서 **이메일 형식**을 변경 및 저장하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]의 개별 사용자에 대한 이 설정을 재정의할 수 있습니다.|  

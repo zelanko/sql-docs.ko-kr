@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63472118"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp(Transact-SQL)
@@ -44,7 +44,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="arguments"></a>인수  
 `[ @profile_name = ] 'profile\_name'` 새 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @description = ] 'description'` 새 프로필에 대 한 선택적 설명입니다. *설명을* 됩니다 **nvarchar(256)**, 기본값은 없습니다.  
+`[ @description = ] 'description'` 새 프로필에 대 한 선택적 설명입니다. *설명을* 됩니다 **nvarchar(256)** , 기본값은 없습니다.  
   
 `[ @profile_id = ] _new\_profile\_idOUTPUT` 새 프로필의 ID를 반환합니다. *new_profile_id* 됩니다 **int**, 기본값은 NULL입니다.  
   

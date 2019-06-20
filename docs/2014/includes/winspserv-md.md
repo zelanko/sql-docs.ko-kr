@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d869c2727c9b4d6a5efbab90023aa3df0e40d635
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65818410"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67211693"
 ---
 Windows SharePoint Services

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014455"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
@@ -44,7 +44,7 @@ ms.locfileid: "66014455"
 </xsd:schema>  
 ```  
   
- 합니다  **\<xsd: schema >** 요소에서 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema합니다.  
+ 합니다  **\<xsd: schema >** 요소에서 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema 합니다.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 스키마에 주석 추가  
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  

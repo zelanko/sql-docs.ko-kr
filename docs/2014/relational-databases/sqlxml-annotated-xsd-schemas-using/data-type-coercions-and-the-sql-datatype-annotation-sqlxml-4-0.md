@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013950"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
@@ -97,7 +97,7 @@ ms.locfileid: "66013950"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-xsdtype"></a>1. xsd:type 지정  
+### <a name="a-specifying-xsdtype"></a>1\. xsd:type 지정  
  이 예에서는 스키마에서 `date` 특성을 사용하여 지정한 XSD `xsd:type` 형식이 결과 XML 문서에 미치는 영향을 보여 줍니다. 이 스키마에서는 AdventureWorks 데이터베이스에 Sales.SalesOrderHeader 테이블의 XML 뷰를 제공합니다.  
   
 ```  
@@ -189,7 +189,7 @@ ms.locfileid: "66013950"
 </Schema>  
 ```  
   
-### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>2. sql:datatype을 사용하여 SQL 데이터 형식 지정  
+### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>2\. sql:datatype을 사용하여 SQL 데이터 형식 지정  
  작업 샘플은 예제 G를 참조 하세요 [XML 대량 로드 예 &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md)합니다. 이 예에서는 "{" 및 "}"을 포함하는 GUID 값을 대량 로드합니다. 이 예의 스키마는 `sql:datatype`을 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 `uniqueidentifier`로 식별합니다. 이 예에서는 스키마에서 `sql:datatype`을 지정해야 하는 경우를 설명합니다.  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489257"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>태스크 3(선택 사항): 구독 뷰 검토
@@ -22,7 +22,7 @@ ms.locfileid: "65489257"
   
 1.  시작할 **SQL Server Management Studio**합니다. 클릭 합니다 **시작** 단추를 클릭 **모든 프로그램**, 클릭 **Microsoft SQL Server 2012**를 클릭 하 고 **SQL Server Management Studio**합니다.  
   
-2.  에 **서버에 연결** 창에서 **서버 유형** 에 **데이터베이스 엔진**, 형식 합니다 **서버 이름** (선택 또는 **( 로컬)**, 및 적절 한 선택 **인증**, 클릭 **Connect**합니다.  
+2.  에 **서버에 연결** 창에서 **서버 유형** 에 **데이터베이스 엔진**, 형식 합니다 **서버 이름** (선택 또는 **( 로컬)** , 및 적절 한 선택 **인증**, 클릭 **Connect**합니다.  
   
 3.  에 **개체 탐색기** 창 확장 **데이터베이스**, 확장 **MDS**를 차례로 확장 **뷰**.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62466268"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148965"
 ---
 # <a name="create-partitions"></a>파티션 만들기
 

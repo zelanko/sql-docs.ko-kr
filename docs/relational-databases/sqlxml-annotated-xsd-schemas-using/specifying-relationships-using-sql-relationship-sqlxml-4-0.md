@@ -31,10 +31,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980703"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
@@ -78,7 +78,7 @@ ms.locfileid: "65980703"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1. 요소에 sql:relationship 주석 지정  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1\. 요소에 sql:relationship 주석 지정  
  다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다. **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다.  
   
  스키마에는 **sql: relationship** 주석은에 지정 됩니다는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체를  **\<xsd: appinfo >** 요소입니다.  
@@ -187,7 +187,7 @@ ms.locfileid: "65980703"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>2. 관계 체인 지정  
+### <a name="b-specifying-a-relationship-chain"></a>2\. 관계 체인 지정  
  이 예에서는 AdventureWorks 데이터베이스에서 가져온 데이터를 사용하는 다음과 같은 XML 문서가 필요하다고 가정해 보겠습니다.  
   
 ```  
@@ -241,7 +241,7 @@ ms.locfileid: "65980703"
 </xsd:schema>  
 ```  
   
- 명명된 관계를 지정하는 대신 익명 관계를 지정할 수 있습니다. 이 경우 전체 내용의  **\<주석 >**...  **\</annotation >**, 두 개의 관계를 설명 하는의 자식 요소로 나타낼  **\<제품 >** 합니다.  
+ 명명된 관계를 지정하는 대신 익명 관계를 지정할 수 있습니다. 이 경우 전체 내용의  **\<주석 >** ...  **\</annotation >** , 두 개의 관계를 설명 하는의 자식 요소로 나타낼  **\<제품 >** 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -319,7 +319,7 @@ ms.locfileid: "65980703"
 </ROOT>  
 ```  
   
-### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>3. 특성에 관계 주석 지정  
+### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>3\. 특성에 관계 주석 지정  
  이 예의 스키마에 포함 되어는 \<고객 > 요소를 \<CustomerID > 자식 요소 및 IDREFS 형식의 OrderIDList 특성입니다. \<고객 > 요소는 AdventureWorks 데이터베이스의 Sales.Customer 테이블에 매핑됩니다. 기본적으로이 매핑의 범위는 모든 자식 요소에 적용 하거나 하지 않는 한 특성 **sql: relation** 된 자식 요소 또는 특성에 경우에 적절 한 기본 키/외래 키 관계 여야 합니다 사용 하 여 정의 된 \<관계 > 요소입니다. 자식 요소 또는 특성을 사용 하 여 다른 테이블을 지정 하 고는 **관계** 주석을 지정 해야 합니다는 **관계** 주석입니다.  
   
 ```  
@@ -384,10 +384,10 @@ ms.locfileid: "65980703"
 </ROOT>  
 ```  
   
-### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4. 여러 요소에 대해 sql:relationship 지정  
- 이 예제에서 주석이 추가 된 XSD 스키마를 포함 합니다  **\<고객 >** 합니다  **\<순서 >**, 및  **\<OrderDetail >** 요소입니다.  
+### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>4\. 여러 요소에 대해 sql:relationship 지정  
+ 이 예제에서 주석이 추가 된 XSD 스키마를 포함 합니다  **\<고객 >** 합니다  **\<순서 >** , 및  **\<OrderDetail >** 요소입니다.  
   
- **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >**.  
+ **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다. **\<sql: relationship >** 에 지정 된  **\<순서 >** 자식 요소 고객에 게 속한 주문은의 자식 요소로 표시 되는 따라서  **\<고객 >** .  
   
  합니다  **\<순서 >** 요소를 포함 합니다  **\<OrderDetail >** 자식 요소입니다. **\<sql: relationship >** 에 지정 됩니다  **\<OrderDetail >** 자식 요소를 주문에 속하는 주문 정보는 자식 요소로 표시 되도록 **\<순서 >** 요소입니다.  
   
@@ -485,7 +485,7 @@ ms.locfileid: "65980703"
 </ROOT>  
 ```  
   
-### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>5. 지정 된 \<sql: relationship > parent 특성 없이  
+### <a name="e-specifying-the-sqlrelationship-without-the-parent-attribute"></a>5\. 지정 된 \<sql: relationship > parent 특성 없이  
  이 예제를 지정 하는  **\<sql: relationship >** 없이 **부모** 특성입니다. 예를 들어 다음과 같은 직원 테이블을 가정해 보십시오.  
   
 ```  
@@ -527,7 +527,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- 스키마에서 모두를  **\<Emp1 >** 요소와  **\<Emp2 >** 형식의 요소는 **EmpType**합니다. 형식 **EmpType** 설명는  **\<순서 >** 자식 요소와 해당  **\<sql: relationship >** 합니다. 이 경우에 식별할 수 있는 단일 부모가 없는  **\<sql: relationship >** 사용 하 여 합니다 **부모** 특성입니다. 이 상황에서 지정 하지 않으면 합니다 **부모** 특성  **\<sql: relationship >**; **부모** 에서 특성 정보를 가져옵니다는 스키마의 계층입니다.  
+ 스키마에서 모두를  **\<Emp1 >** 요소와  **\<Emp2 >** 형식의 요소는 **EmpType**합니다. 형식 **EmpType** 설명는  **\<순서 >** 자식 요소와 해당  **\<sql: relationship >** 합니다. 이 경우에 식별할 수 있는 단일 부모가 없는  **\<sql: relationship >** 사용 하 여 합니다 **부모** 특성입니다. 이 상황에서 지정 하지 않으면 합니다 **부모** 특성  **\<sql: relationship >** ; **부모** 에서 특성 정보를 가져옵니다는 스키마의 계층입니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
