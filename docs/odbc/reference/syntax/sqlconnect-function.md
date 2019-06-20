@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537680"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 함수
@@ -50,7 +50,7 @@ SQLRETURN SQLConnect(
   
 ## <a name="arguments"></a>인수  
  *ConnectionHandle*  
- [입력] 연결 핸들입니다.  
+ [Input] 연결 핸들입니다.  
   
  *데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면*  
  [입력] 데이터 원본 이름입니다. 데이터는 프로그램과 동일한 컴퓨터 또는 네트워크에서 다른 컴퓨터에 있을 수 있습니다. 응용 프로그램에서 데이터 소스를 선택 하는 방법에 대 한 자세한 내용은 [데이터 원본 또는 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)합니다.  
