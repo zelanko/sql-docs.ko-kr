@@ -20,17 +20,17 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719433"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263245"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations(Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   모든 지원 되는 데이터 정렬의 목록을 반환합니다.  
   
@@ -55,7 +55,10 @@ fn_helpcollations ()
   
 ## <a name="examples"></a>예
 
- 다음 예에서는 `L` 문자로 시작하는 이진 정렬 방식의 모든 데이터 정렬 이름을 반환합니다.  
+ 다음 예에서는 `L` 문자로 시작하는 이진 정렬 방식의 모든 데이터 정렬 이름을 반환합니다.
+
+> [!Note]
+> Fn_helpcollations ()에 대 한 azure SQL Data Warehouse 쿼리는 master 데이터베이스에서 실행 되어야 합니다.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

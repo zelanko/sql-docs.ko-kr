@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824399"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
@@ -32,7 +32,7 @@ ms.locfileid: "62824399"
   
 2.  마우스 오른쪽 단추로 클릭 `reports.xml`를 클릭 하 고 **편집**합니다.  
   
-3.  변경**\<SuppressWarning > true\</SuppressWarning > 하 \<SuppressWarning > false\</SuppressWarning >** 합니다.  
+3.  변경 **\<SuppressWarning > true\</SuppressWarning > 하 \<SuppressWarning > false\</SuppressWarning >** 합니다.  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62824399"
   
 2.  마우스 오른쪽 단추로 클릭 `reports.xml`, 클릭 **편집**합니다.  
   
-3.  변경  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > 하 \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  변경  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > 하 \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
   
 4.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 다시 시작합니다.  
   

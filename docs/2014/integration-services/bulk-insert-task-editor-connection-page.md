@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061216"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>대량 삽입 태스크 편집기(연결 페이지)
@@ -28,7 +28,7 @@ ms.locfileid: "66061216"
   
 ## <a name="options"></a>변수  
  **연결**  
- 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
+ 목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결을 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66061216"
 |**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션을 표시 `RowDelimiter` 고 `ColumnDelimiter`입니다.|  
   
  **최근에 사용한 파일**  
- 목록에서 파일 또는 플랫 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
+ 목록에서 파일 또는 플랫 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결을 만듭니다.  
   
  파일 위치는 이 태스크를 위해 연결 관리자에 지정된 SQL Server 데이터베이스 엔진의 상대적 위치입니다. 텍스트 파일은 서버의 로컬 하드 드라이브에서 또는 SQL Server에 매핑된 드라이브 또는 공유 드라이브를 통해 SQL Server 데이터베이스 엔진이 액세스할 수 있어야 합니다. 이 파일은 SSIS 런타임으로 액세스되지 않습니다.  
   

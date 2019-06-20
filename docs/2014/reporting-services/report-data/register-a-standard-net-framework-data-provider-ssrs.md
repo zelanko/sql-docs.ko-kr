@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107150"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66107150"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>보고서 서버에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<드라이브>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
+1.  보고서 서버에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 bin 디렉터리의 기본 위치로 이동합니다. 보고서 서버 bin 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin입니다.  
   
 2.  준비 위치에서 보고서 서버의 bin 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66107150"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>보고서 디자이너 클라이언트에 데이터 공급자 어셈블리를 설치하려면  
   
-1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<드라이브>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
+1.  보고서 디자이너 클라이언트에서 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용할 PrivateAssemblies 디렉터리의 기본 위치로 이동합니다. PrivateAssemblies 디렉터리의 기본 위치는 *\<드라이브>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies입니다.  
   
 2.  준비 위치에서 보고서 디자이너 클라이언트의 PrivateAssemblies 디렉터리로 어셈블리를 복사합니다. 또는 GAC(전역 어셈블리 캐시)에 어셈블리를 로드할 수 있습니다. 자세한 내용은 MSDN에 있는 [SDK 설명서의](https://go.microsoft.com/fwlink/?linkid=63912) 어셈블리 및 전역 어셈블리 캐시 작업(Working with Assemblies and the Global Assembly Cache) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 을 참조하십시오.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62955902"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>서버 연결에 대한 F1 도움말(SQL Server Management Studio)

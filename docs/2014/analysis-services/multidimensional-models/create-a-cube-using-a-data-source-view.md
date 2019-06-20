@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076561"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>데이터 원본 뷰를 사용하여 큐브 만들기
@@ -61,7 +61,7 @@ ms.locfileid: "66076561"
 ## <a name="selecting-dimensions"></a>차원 선택  
  마법사의 **차원 선택** 페이지를 사용하여 기존 차원을 큐브에 추가할 수 있습니다. 이 페이지는 새 큐브의 차원 테이블에 해당하는 공유된 차원이 이미 있을 경우에만 나타납니다.  
   
- 기존 차원을 추가하려면 **공유 차원** 목록에서 하나 이상의 차원을 선택한 후 오른쪽 화살표(**>**) 단추를 클릭하면 선택된 차원이 **큐브 차원** 목록으로 이동합니다. 이중 화살표(**>>**) 단추를 클릭하면 목록의 모든 차원이 이동합니다.  
+ 기존 차원을 추가하려면 **공유 차원** 목록에서 하나 이상의 차원을 선택한 후 오른쪽 화살표( **>** ) 단추를 클릭하면 선택된 차원이 **큐브 차원** 목록으로 이동합니다. 이중 화살표( **>>** ) 단추를 클릭하면 목록의 모든 차원이 이동합니다.  
   
  목록에 있어야 할 기존 차원이 표시되지 않을 경우 **뒤로** 를 클릭하고 하나 이상의 테이블에 대한 테이블 유형 설정을 변경할 수 있습니다. 또한 기존 차원이 **공유 차원** 목록에 나타나려면 해당 차원이 큐브의 팩트 테이블 중 하나 이상과 관련되어야 합니다.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071780"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>SharePoint 2013용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
@@ -140,7 +140,7 @@ ms.locfileid: "66071780"
 ||암호|사용자 입력|데이터 암호화에 사용되는 마스터 키입니다. 기본적으로 키 생성에 사용되는 암호는 팜에서 새 서버를 프로비전하는 데 사용되는 암호와 같습니다. 기본 암호를 고유한 암호로 바꿀 수 있습니다.|  
 |**DataRefresh 무인 계정 만들기**|대상 애플리케이션 ID|필요한 경우 기본값|무인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침용 자격 증명을 저장할 대상 애플리케이션을 만듭니다.<br /><br /> 애플리케이션 ID는 설명 텍스트일 수 있습니다.|  
 ||대상 애플리케이션의 이름|필요한 경우 기본값||  
-||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 애플리케이션에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [SharePoint Server 2013에서 무인된 서비스 계정을 사용 하 여 Excel Services 구성 데이터 새로 고침](https://technet.microsoft.com/library/hh525344\(office.15\).aspx) (https://technet.microsoft.com/library/hh525344(office.15).aspx)합니다.|  
+||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 애플리케이션에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [SharePoint Server 2013에서 무인된 서비스 계정을 사용 하 여 Excel Services 구성 데이터 새로 고침](https://technet.microsoft.com/library/hh525344\(office.15\).aspx) (https://technet.microsoft.com/library/hh525344(office.15).aspx) 합니다.|  
 ||사이트 URL|필요한 경우 기본값|대상 애플리케이션과 연결된 사이트 모음의 사이트 URL을 입력합니다. 사이트 모음을 추가로 연결하려면 SharePoint 중앙 관리를 사용합니다.|  
 |**Excel Services 서비스 응용 프로그램 만들기**|서비스 애플리케이션 이름|필요한 경우 기본값|서비스 애플리케이션 이름을 입력합니다. 동일한 이름의 서비스 응용 프로그램 데이터베이스를 SharePoint 팜의 데이터베이스 서버에 만들어집니다.|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성**|서비스 애플리케이션 이름|필요한 경우 기본값|이전 페이지에서 입력한 서비스 애플리케이션 이름입니다.|  
@@ -200,7 +200,7 @@ ms.locfileid: "66071780"
  이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 SharePoint 모드의 Analysis Services를 실행하는 서버를 더 추가할 수 있습니다. SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 SharePoint 모드에서 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 설치하고 Excel Services를 구성합니다. 자세한 내용은의 "그 이상 단일 서버 설치" 섹션을 참조 하세요. [SharePoint 용 PowerPivot 2013 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)합니다.  
   
 ## <a name="additional-resources"></a>추가 리소스  
- ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback)합니다.  
+ ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback) 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot을 제거할 &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   

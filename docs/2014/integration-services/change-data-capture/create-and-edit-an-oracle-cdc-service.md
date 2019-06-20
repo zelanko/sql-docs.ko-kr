@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771449"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
@@ -56,12 +56,12 @@ ms.locfileid: "62771449"
   
      로컬 또는 도메인 Windows 계정을 서비스 계정에 사용할 수 있습니다. 이 경우 해당 계정의 **암호** 를 입력해야 합니다. 이 계정은 로컬 호스트 또는 도메인 계정에 사용할 수 있습니다. 암호를 변경할 경우 Windows 제어판에서 로컬 서비스를 사용하여 암호를 업데이트해야 합니다.  
   
- **서버 이름**: 연결할 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다(예: **\\\\<computer_name>\\<instance_name>**). 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
+ **서버 이름**: 연결할 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택합니다(예: **\\\\<computer_name>\\<instance_name>** ). 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
   
  **인증**  
  다음 중 하나를 선택합니다.  
   
--   **Windows 인증**: 이 옵션을 선택 하면 Oracle CDC service는 대상 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 서비스 계정 id를 사용 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 다른 컴퓨터에서 실행 중인 경우 도메인 계정과 함께 Windows 인증을 사용해야 합니다.  
+-   **Windows 인증**: 이 옵션을 선택하면 Oracle CDC Service는 서비스 계정 ID를 사용하여 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 다른 컴퓨터에서 실행 중인 경우 도메인 계정과 함께 Windows 인증을 사용해야 합니다.  
   
 -   **SQL Server 인증**: 이 옵션을 선택하면 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 **사용자 이름**과 **암호**를 입력해야 합니다. Oracle CDC Service는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 이러한 자격 증명을 사용합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62771449"
   
  SQL Server에 연결 대화 상자에 입력해야 하는 데이터에 대한 자세한 내용은 [Connection to SQL Server](connection-to-sql-server.md)을 참조하십시오.  
   
- **Options**  
+ **옵션**  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
 -   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "62771449"
   
 -   **연결 암호화**: 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.  
   
--   **고급**: 필요한 경우 모든 추가 연결 속성을 입력 합니다.  
+-   **고급**: 필요한 경우 모든 추가 연결 속성을 입력합니다.  
   
  **마스터 암호**  
  Oracle CDC Windows 서비스에서 Oracle 로그 마이닝 자격 증명을 보호하는 데 사용할 암호를 입력합니다.  

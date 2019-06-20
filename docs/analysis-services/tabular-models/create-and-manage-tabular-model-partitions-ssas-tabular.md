@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a23d2753f6fe1d94fcccab648766c3471581906
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62472295"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263385"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>테이블 형식 모델 파티션 만들기 및 관리
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "62472295"
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포된 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하거나 스크립트를 사용하여 해당 파티션을 관리할 수 있습니다. 이 항목에서 제공하는 태스크에서는 배포된 모델에 대해 파티션을 만들고 관리하는 방법을 설명합니다.  
   
   > [!NOTE]  
->  1400 호환성 수준에서 만든 테이블 형식 모델의 파티션에 M 쿼리 문을 사용 하 여 정의 됩니다. 자세한 내용은 참조 하세요 [M 참조](https://msdn.microsoft.com/library/mt211003.aspx)합니다. 
+>  1400 호환성 수준에서 만든 테이블 형식 모델의 파티션에 M 쿼리 문을 사용 하 여 정의 됩니다. 자세한 내용은 참조 하세요 [M 참조](/powerquery-m/power-query-m-reference)합니다. 
 >
   
 ## <a name="tasks"></a>태스크  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079376"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
@@ -91,7 +91,7 @@ ms.locfileid: "66079376"
   
 -   0x0407 또는 1031 - **독일(독일어)**  
   
--   0x0416 또는 1046 - **포르투갈어(브라질)**.  
+-   0x0416 또는 1046 - **포르투갈어(브라질)** .  
   
  긴 목록을 보려면 [Microsoft에서 할당한 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)(영문)를 참조하세요. 자세한 배경 정보를 참조 하세요 [코드 페이지](/windows/desktop/Intl/code-pages)합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66079376"
      이진 데이터 정렬에서는 언어 값이 아니라 유니코드 코드 포인트로 정렬합니다. 예를 들어 Latin_1_General_BIN과 Japanese_BIN은 유니코드 데이터에서 사용할 때 동일한 정렬 결과를 생성합니다. 모든 대문자의 코드 포인트가 소문자의 코드 포인트보다 높으므로 이진 정렬은 ABCDabcd인 반면 언어적 정렬은 aAbBcCdD와 같은 결과를 산출할 수 있습니다.  
   
 ###  <a name="bkmk_sortorder"></a> 정렬 순서 옵션  
- 정렬 옵션은 대/소문자, 악센트, 가나 및 전자/반자 구분을 기준으로 정렬 및 비교 규칙을 세분화하는 데 사용됩니다.  예를 들어 `Collation`의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 구성 속성 기본값이 Latin1_General_AS_CS이면 Latin1_General 데이터 정렬에 악센트 구분, 대/소문자 구분 정렬 순서를 사용하도록 지정됩니다.   
+ 정렬 옵션은 대/소문자, 악센트, 가나 및 전자/반자 구분을 기준으로 정렬 및 비교 규칙을 세분화하는 데 사용됩니다. 예를 들어 `Collation`의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 구성 속성 기본값이 Latin1_General_AS_CS이면 Latin1_General 데이터 정렬에 악센트 구분, 대/소문자 구분 정렬 순서를 사용하도록 지정됩니다.  
   
  BIN 및 BIN2는 다른 정렬 옵션과 함께 사용할 수 없으며, BIN 또는 BIN2를 사용하려면 악센트 구분용 정렬 옵션의 선택을 취소합니다. 마찬가지로 BIN2를 선택하면 대/소문자 구분, 대/소문자 구분 안 함, 악센트 구분, 악센트 구분 안 함, 일본어 가나 구분 및 전자/반자 구분 옵션을 사용할 수 없습니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66079376"
 4.  큐브를 다시 처리합니다.  
   
 ##  <a name="bkmk_enablefast1033"></a> EnableFast1033Locale을 통해 영어 로캘에 대한 성능 향상  
-  영어(미국) 식별자(0x0409 또는 1033)를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 기본 언어로 사용하는 경우 이 언어 식별자에만 사용 가능한 고급 구성 속성인 `EnableFast1033Locale` 구성 속성을 설정하여 성능상 이점을 추가로 얻을 수 있습니다.  이 속성의 값을 **true** 로 설정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 문자열 해시 및 비교에 보다 빠른 알고리즘을 사용할 수 있습니다. 구성 속성을 설정하는 방법에 대한 자세한 내용은 [Analysis Services에서 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
+ 영어(미국) 식별자(0x0409 또는 1033)를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 기본 언어로 사용하는 경우 이 언어 식별자에만 사용 가능한 고급 구성 속성인 `EnableFast1033Locale` 구성 속성을 설정하여 성능상 이점을 추가로 얻을 수 있습니다. 이 속성의 값을 **true** 로 설정하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 문자열 해시 및 비교에 보다 빠른 알고리즘을 사용할 수 있습니다. 구성 속성을 설정하는 방법에 대한 자세한 내용은 [Analysis Services에서 서버 속성 구성](server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_gb18030"></a> Analysis Services에서의 GB18030 지원  
  GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. Analysis Services에는 외부 원본의 데이터를 처리할 때 데이터 변환이 이루어지지 않습니다. 데이터는 유니코드로 간단히 저장됩니다. 쿼리 시 클라이언트 운영 체제 설정에 따라 쿼리 결과에 텍스트 데이터가 반환되면 Analysis Services 클라이언트 라이브러리를 통해 GB18030 변환이 수행됩니다(특히, MSOLAP.dll OLE DB 공급자). 데이터베이스 엔진은 GB18030도 지원합니다. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)를 참조하십시오.  

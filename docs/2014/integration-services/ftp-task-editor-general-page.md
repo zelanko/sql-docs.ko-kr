@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058427"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 태스크 편집기(일반 페이지)
@@ -28,7 +28,7 @@ ms.locfileid: "66058427"
   
 ## <a name="options"></a>변수  
  **FtpConnection**  
- 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 연결 관리자를 만듭니다.  
+ 기존 FTP 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  FTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  

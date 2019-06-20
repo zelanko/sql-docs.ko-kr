@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 테이블 형식 모델에 계산 그룹 | Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822695"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263444"
 ---
 # <a name="calculation-groups-preview"></a>계산 그룹 (미리 보기)
  
@@ -64,7 +64,7 @@ ms.locfileid: "66822695"
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) -계산 컨텍스트에서 측정값의 측정값 목록에 지정 된 결정 하는 항목에 대 한 식으로 사용 합니다.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) -계산 컨텍스트에서 측정값의 형식 문자열을 검색 하는 항목에 대 한 식으로 사용 합니다.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) -계산 컨텍스트에서 측정값의 형식 문자열을 검색 하는 항목에 대 한 식으로 사용 합니다.
 
 ### <a name="time-intelligence-example"></a>시간 인텔리전스 예제
 
@@ -195,7 +195,7 @@ CALCULATETABLE (
 
 ### <a name="dynamic-format-strings-for-time-intelligence"></a>시간 인텔리전스에 대 한 동적 서식 문자열
 
-모든 계산을 제외한 항목 위에 표시 된 시간 인텔리전스 예제를 보면 **YOY %** 컨텍스트에서 현재 측정값의 형식을 사용 해야 합니다. 예를 들어 **YTD** 통화 Sales 기본 측정값으로 계산 해야 합니다. 같이 Orders 기본 측정값에 대 한 계산 그룹의 경우에 형식 숫자 것입니다. **그러나 YOY %** , 기본 측정값의 형식에 관계 없이 백분율로 있어야 합니다.
+모든 계산을 제외한 항목 위에 표시 된 시간 인텔리전스 예제를 보면 **YOY %** 컨텍스트에서 현재 측정값의 형식을 사용 해야 합니다. 예를 들어 **YTD** 통화 Sales 기본 측정값으로 계산 해야 합니다. 같이 Orders 기본 측정값에 대 한 계산 그룹의 경우에 형식 숫자 것입니다. **그러나 YOY %**, 기본 측정값의 형식에 관계 없이 백분율로 있어야 합니다.
 
 에 대 한 **yoy**, 형식 문자열을 형식 문자열 식 속성을 설정 하 여 재정의할 수 있습니다 **0.00%;-0.00%; 0.00%** 합니다. 형식 문자열 식 속성에 대 한 자세한 내용은 참조 하세요 [MDX 셀 속성-형식 문자열 내용을](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values)합니다.
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-형식 문자열 식에는 스칼라 문자열을 반환 해야 합니다. 사용 하 여 새 [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) 필터 컨텍스트에 포함 된 여러 통화 없으면 기본 측정값 서식 문자열과 되돌리려면 함수입니다.
+형식 문자열 식에는 스칼라 문자열을 반환 해야 합니다. 사용 하 여 새 [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) 필터 컨텍스트에 포함 된 여러 통화 없으면 기본 측정값 서식 문자열과 되돌리려면 함수입니다.
 
 다음 애니메이션 형식의 동적 통화 변환을 보여 줍니다.는 **Sales** 보고서의 측정값입니다.
 
@@ -407,8 +407,6 @@ YTD CALCULATE() 함수 인수 YTD 계산 항목에 이미 정의 된 논리를 �
 [개체 수준 보안](object-level-security.md) (OLS) 계산에 정의 된 그룹 테이블은 지원 되지 않습니다. 그러나 OLS 동일한 모델의 다른 테이블에 정의할 수 있습니다. 계산 항목 OLS 보안된 개체를 가리키는 경우 일반 오류가 반환 됩니다.
 
 [행 수준 보안](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) 지원 되지 않습니다. 정의한 RLS 계산 그룹 자체에 없지만 동일한 모델의 테이블에서 (직접 또는 간접적으로).
-
-[행 식에 자세히 설명](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) 계산 그룹은 지원 되지 않습니다.
 
 ## <a name="see-also"></a>참고자료  
 

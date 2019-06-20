@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078633"
 ---
 # <a name="defining-a-referenced-relationship"></a>참조 관계 정의
@@ -46,7 +46,7 @@ ms.locfileid: "66078633"
   
      현재 **Geography** 큐브 차원은 **Internet Sales** 측정값 그룹이나 **Reseller Sales** 측정값 그룹과 관계가 정의되어 있지 않습니다.  
   
-8.  줄임표 단추 (**...** )에 **전체 이름** 의 교집합에서 셀을 **고객** 차원 및 **Internet Sales** 측정값 그룹입니다.  
+8.  줄임표 단추 ( **...** )에 **전체 이름** 의 교집합에서 셀을 **고객** 차원 및 **Internet Sales** 측정값 그룹입니다.  
   
      **관계 정의** 대화 상자에는 **DimCustomer** 차원 테이블과 **FactInternetSales** 측정값 그룹 테이블 각각의 **CustomerKey** 열을 기반으로 이러한 테이블 간 **일반** 관계가 정의되어 있습니다. 이 작업 이전에 이 자습서에서 정의한 모든 관계는 일반 관계입니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078633"
   
 9. 클릭 **취소**합니다.  
   
-10. 줄임표 단추 (**...** )의 교집합에서 명명 되지 않은 셀에는 **지리** 차원 및 **Reseller Sales** 측정값 그룹입니다.  
+10. 줄임표 단추 ( **...** )의 교집합에서 명명 되지 않은 셀에는 **지리** 차원 및 **Reseller Sales** 측정값 그룹입니다.  
   
      **관계 정의** 대화 상자에는 현재 Geography 큐브 차원과 Reseller Sales 측정값 그룹 간에 관계가 정의되어 있지 않습니다. Geography 차원의 차원 테이블과 Reseller Sales 측정값 그룹의 팩트 테이블 간 직접 관계가 없으므로 일반 관계를 정의할 수 없습니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078633"
   
      Reseller 차원의 Geography Key 특성은 Geography 차원을 Reseller Sales 팩트 테이블에 연결하는 데만 사용됩니다. 이 특성은 찾아보기에는 사용되지 않으므로 이 특성 계층을 표시하도록 정의하는 값은 없습니다. 또한 특성 계층 정렬 및 최적화는 처리 성능에 부정적 영향만 미칩니다. 그러나 두 차원 간 링크로 기능하려면 해당 특성이 설정되어 있어야 합니다.  
   
-4.  에 대 한 큐브 디자이너로 전환 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 클릭 합니다 **차원 용도** 탭을 선택한 다음 줄임표 단추를 클릭 (**...** )의 교집합에서 합니다 **Reseller Sales** 측정값 그룹 및 **Geography** 큐브 차원입니다.  
+4.  에 대 한 큐브 디자이너로 전환 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 클릭 합니다 **차원 용도** 탭을 선택한 다음 줄임표 단추를 클릭 ( **...** )의 교집합에서 합니다 **Reseller Sales** 측정값 그룹 및 **Geography** 큐브 차원입니다.  
   
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   

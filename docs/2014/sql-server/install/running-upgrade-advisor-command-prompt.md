@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092437"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>업그레이드 관리자 실행(명령 프롬프트)
@@ -146,21 +146,21 @@ where <server_info> is any combination of the following:
   
 ## <a name="examples"></a>예  
   
-### <a name="a-run-upgrade-advisor-using-a-configuration-file"></a>1. 구성 파일을 사용하여 업그레이드 관리자 실행  
+### <a name="a-run-upgrade-advisor-using-a-configuration-file"></a>1\. 구성 파일을 사용하여 업그레이드 관리자 실행  
  다음 예에서는 분석할 대상을 지정하는 구성 파일을 사용하여 명령 프롬프트에서 업그레이드 관리자를 실행하는 방법을 보여 줍니다. 이 예에서는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결합니다.  
   
 ```  
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>2. 기본 구성 설정을 사용하여 업그레이드 관리자 실행  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>2\. 기본 구성 설정을 사용하여 업그레이드 관리자 실행  
  다음 예에서는 기본 구성 설정과 Windows 인증을 사용하여 명령 프롬프트에서 업그레이드 관리자를 실행하는 방법을 보여 줍니다.  
   
 ```  
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>3. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 업그레이드 관리자 실행  
+### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>3\. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 업그레이드 관리자 실행  
  다음 예에서는 구성 파일을 사용하여 명령 프롬프트에서 업그레이드 관리자를 실행하는 방법을 보여 줍니다. 이 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
 ```  

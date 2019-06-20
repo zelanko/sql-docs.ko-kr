@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072312"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>새 데이터베이스 대화 상자(Analysis Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66072312"
 |----------|----------------|  
 |**데이터베이스 이름**|새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 이름을 입력합니다.|  
 |**특정 사용자 이름 및 암호 사용**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 지정한 사용자 계정의 보안 자격 증명을 사용하려면 선택합니다. 지정한 자격 증명은 처리, ROLAP 쿼리, 아웃오브 라인 바인딩, 로컬 큐브, 마이닝 모델, 원격 파티션, 연결된 개체 및 대상과 원본 간의 동기화에 사용됩니다. 그러나 DMX OPENQUERY 문의 경우 현재 사용자의 자격 증명이 사용됩니다.|  
-|**사용자 이름**|선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 사용할 사용자 계정의 도메인 및 이름을 입력합니다. 다음 형식을 사용합니다.<br /><br /> *\<도메인 이름 >* **\\**  *\<사용자 계정 이름 >*<br /><br /> 참고: 이 옵션은 경우에 사용할 수 **특정 사용자 이름 및 암호를 사용 하 여** 을 선택 합니다.|  
+|**사용자 이름**|선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 사용할 사용자 계정의 도메인 및 이름을 입력합니다. 다음 형식을 사용합니다.<br /><br /> *\<도메인 이름 >* ** \\ ** * \<사용자 계정 이름 >*<br /><br /> 참고: 이 옵션은 경우에 사용할 수 **특정 사용자 이름 및 암호를 사용 하 여** 을 선택 합니다.|  
 |**암호**|**사용자 이름**에서 지정한 사용자 계정의 암호를 입력합니다.|  
 |**서비스 계정 사용**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 해당 데이터베이스를 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서비스에 연결된 보안 자격 증명을 사용하려면 선택합니다. 서비스 계정 자격 증명은 처리, ROLAP 쿼리, 원격 파티션, 연결된 개체, 대상과 원본 간의 동기화 등에 사용됩니다. DMX OPENQUERY 문, 로컬 큐브 및 마이닝 모델의 경우 현재 사용자의 자격 증명이 사용됩니다. 아웃오브 라인 바인딩에 대해서는 이 옵션이 지원되지 않습니다.|  
 |**현재 사용자의 자격 증명 사용**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 아웃오브 라인 바인딩, DMX OPENQUERY 문, 로컬 큐브 및 마이닝 모델에 대해 현재 사용자의 보안 자격 증명을 사용하려면 선택합니다. 처리, ROLAP 쿼리, 원격 파티션, 연결된 개체 및 대상과 원본 간의 동기화에 대해서는 이 옵션이 지원되지 않습니다.|  

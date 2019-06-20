@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013047"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML 관리되는 클래스를 사용하여 DiffGram 실행
@@ -52,7 +52,7 @@ ms.locfileid: "66013047"
 </ROOT>  
 ```  
   
- 합니다  **\<하기 전에 >** 블록 포함을  **\<고객 >** 요소 (**diffgr: id = "Customer1"**). 합니다  **\<DataInstance >** 해당 블록 포함  **\<고객 >** 동일한 요소 **id**합니다. 합니다  **\<고객 >** 요소에는  **\<NewDataSet >** 도 지정 **diffgr: haschanges = "modified"** 합니다. 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. 경우는 **diffgr: haschanges** 특성이 지정 되지 않은 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트가 수행 되지 않습니다.  
+ 합니다  **\<하기 전에 >** 블록 포함을  **\<고객 >** 요소 (**diffgr: id = "Customer1"** ). 합니다  **\<DataInstance >** 해당 블록 포함  **\<고객 >** 동일한 요소 **id**합니다. 합니다  **\<고객 >** 요소에는  **\<NewDataSet >** 도 지정 **diffgr: haschanges = "modified"** 합니다. 이는 업데이트 작업임을 나타내며 이에 따라 Cust 테이블의 고객 레코드가 업데이트됩니다. 경우는 **diffgr: haschanges** 특성이 지정 되지 않은 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트가 수행 되지 않습니다.  
   
  다음은 C# 자습서 응용 프로그램에 SQLXML 관리 되는 클래스를 사용 하 여 위의 DiffGram을 실행에 만들려는 두 테이블 (Cust, Ord)을 업데이트 하는 방법을 보여 주는 코드를 **tempdb** 데이터베이스입니다.  
   

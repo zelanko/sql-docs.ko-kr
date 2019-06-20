@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871958"
 ---
 # <a name="detach-a-database"></a>데이터베이스 분리
@@ -35,7 +35,7 @@ ms.locfileid: "62871958"
   
 -   **데이터베이스를 분리하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62871958"
   
     -   데이터베이스가 복제와 관련된 경우 **상태** 는 **준비 안 됨** 이고 **메시지** 열에는 **데이터베이스 복제 완료**가 표시됩니다.  
   
-    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우는 **상태** 됩니다 **준비 안 됨** 하며 **메시지** 열에 표시 됩니다 _< number_of_active_connections >_**활성 연결** -예를 들어: **1 활성 연결**이 표시됩니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
+    -   데이터베이스에 하나 이상의 활성 연결이 있는 경우는 **상태** 됩니다 **준비 안 됨** 하며 **메시지** 열에 표시 됩니다 _< number_of_active_connections >_ **활성 연결** -예를 들어: **1 활성 연결**이 표시됩니다. 데이터베이스를 분리하려면 먼저 **연결 삭제**를 선택하여 모든 활성 연결을 끊어야 합니다.  
   
      메시지에 대한 자세한 내용을 보려면 하이퍼링크로 연결된 텍스트를 클릭하여 작업 모니터를 엽니다.  
   

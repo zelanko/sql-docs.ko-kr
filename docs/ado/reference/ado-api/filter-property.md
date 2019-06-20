@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697967"
 ---
 # <a name="filter-property"></a>Filter 속성
@@ -57,7 +57,7 @@ ms.locfileid: "66697967"
 -   이 필터를 생성 하는 대신  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   에 **같은** 절 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 사용할 수 있습니다 `LastName Like '*mit*'`합니다. 문제나 **같은** 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. `LastName Like 'Smit*'`) 을 입력합니다.  
+-   에 **같은** 절 패턴의 시작과 끝에 와일드 카드를 사용할 수 있습니다. 예를 들어 사용할 수 있습니다 `LastName Like '*mit*'`합니다. 문제나 **같은** 패턴의 끝에만 와일드 카드를 사용할 수 있습니다. `LastName Like 'Smit*'` )을 입력합니다.  
   
  필터 상수 쉽게 마지막 영향을 받은 일괄 업데이트 모드를 보고, 예를 들어, 해당 레코드에 허용 하 여 개별 레코드 충돌 해결 [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 호출 합니다.  
   

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084023"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
@@ -99,7 +99,7 @@ ms.locfileid: "66084023"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 결과 마이닝 모델의 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 마이닝 모델 열이나 마이닝 구조 열에 모델링 플래그를 설정하여 데이터 처리 방식을 제어할 수도 있습니다.  
   
 > [!NOTE]  
->  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다.  

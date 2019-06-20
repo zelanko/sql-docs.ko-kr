@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079195"
 ---
 # <a name="lesson-11-create-partitions"></a>11단원: 파티션 만들기
@@ -136,7 +136,7 @@ ms.locfileid: "66079195"
     ```  
   
 ## <a name="process-partitions"></a>파티션 처리  
- **파티션 관리자** 대화 상자에서 방금 만든 새 파티션 각각의 파티션 이름 옆에 별표(**\***)가 표시되는 것을 확인할 수 있습니다. 별표는 파티션이 처리되지 않았음을, 즉 새로 고쳐지지 않았음을 나타냅니다. 새 파티션을 만들면 파티션 처리 또는 테이블 처리 작업을 실행하여 해당 파티션의 데이터를 새로 고쳐야 합니다.  
+ **파티션 관리자** 대화 상자에서 방금 만든 새 파티션 각각의 파티션 이름 옆에 별표( **\*** )가 표시되는 것을 확인할 수 있습니다. 별표는 파티션이 처리되지 않았음을, 즉 새로 고쳐지지 않았음을 나타냅니다. 새 파티션을 만들면 파티션 처리 또는 테이블 처리 작업을 실행하여 해당 파티션의 데이터를 새로 고쳐야 합니다.  
   
 #### <a name="to-process-internet-sales-partitions"></a>Internet Sales 파티션을 처리하려면  
   

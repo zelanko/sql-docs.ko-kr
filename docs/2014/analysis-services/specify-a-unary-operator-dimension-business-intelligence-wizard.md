@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72807eca5fb43c81bf51c20a93cd69f4d618c241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068611"
 ---
 # <a name="specify-a-unary-operator-dimension-business-intelligence-wizard"></a>단항 연산자 지정(차원)(비즈니스 인텔리전스 마법사)

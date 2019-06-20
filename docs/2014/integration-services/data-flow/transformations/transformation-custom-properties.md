@@ -42,10 +42,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770740"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
@@ -70,7 +70,7 @@ ms.locfileid: "62770740"
 |[파생 열](#derived)|[피벗](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>사용자 지정 속성이 없는 변환  
- 다음 변환은 구성 요소, 입력 또는 출력 수준의 사용자 지정 속성이 없습니다. [병합 변환](merge-transformation.md), [멀티캐스트 변환](multicast-transformation.md) 및 [Union All 변환](union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
+ 구성 요소, 입력 또는 출력 수준에서 [병합 변환](merge-transformation.md), [멀티캐스트 변환](multicast-transformation.md) 및 [Union All 변환](union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
   
 ##  <a name="aggregate"></a> 집계 변환 사용자 지정 속성  
  집계 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "62770740"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`입니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. .<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 `False`입니다. 자세한 내용은 [Fast Parse](../../fast-parse.md) 및 [Standard Parse](../../standard-parse.md)를 참조하세요. 을 선택합니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SourceInputColumnLineageId|정수|출력 열의 원본인 입력 열의 `LineageID`입니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
@@ -569,7 +569,7 @@ ms.locfileid: "62770740"
 |NeedRefenceData|Boolean|변환에서 참조 테이블에 저장된 제외 용어 목록을 사용할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
 |OutTermColumn|String|제외 용어가 포함된 열의 이름입니다.|  
 |OutTermTable|String|제외 용어가 있는 열이 포함된 테이블의 이름입니다.|  
-|ScoreType|정수|용어와 연결할 점수 유형을 지정하는 값입니다. 유효한 값으로는 빈도를 나타내는 0과 TFIDF 점수를 나타내는 1이 있습니다. TFIDF 점수는 용어 빈도 같이 정의 역 문서 빈도 같습니다. 용어 T의 TFIDF = (T의 빈도) \* log((입력의 행 수)/(T를 포함하는 행 수)). 이 속성의 기본값은 **0**입니다.|  
+|ScoreType|정수|용어와 연결할 점수 유형을 지정하는 값입니다. 유효한 값으로는 빈도를 나타내는 0과 TFIDF 점수를 나타내는 1이 있습니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) \* log((입력의 행 수)/(T를 포함하는 행 수)). 이 속성의 기본값은 **0**입니다.|  
 |WordOrPhrase|정수|용어 유형을 지정하는 값입니다. 유효한 값으로는 단어만 나타내는 0, 명사구만 나타내는 1 및 단어와 명사구를 모두 나타내는 2가 있습니다. 이 속성의 기본값은 **0**입니다.|  
   
  용어 추출 변환의 입력, 입력 열, 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  

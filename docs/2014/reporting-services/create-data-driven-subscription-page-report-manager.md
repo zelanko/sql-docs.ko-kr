@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109615"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>데이터 기반 구독 만들기 페이지(보고서 관리자)
@@ -151,7 +151,7 @@ ms.locfileid: "66109615"
  시간 간격으로 실행되는 일정을 정의합니다.  
   
  **Daily**  
- 선택하는 요일의 특정 시간과 분에 실행되는 일정의 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다. 모든  *\<날짜 >*, 주중 매일, 매  *\<번호 >* 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
+ 선택하는 요일의 특정 시간과 분에 실행되는 일정의 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다. 모든  *\<날짜 >* , 주중 매일, 매  *\<번호 >* 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
   
  **Weekly**  
  주별 간격으로 특정 시간과 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중 요일로 지정할 수 있습니다.  

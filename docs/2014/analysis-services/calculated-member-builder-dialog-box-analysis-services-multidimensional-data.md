@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8046d93f28c6d7c61899bb5f9aa3598f834c0ab3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088378"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>계산 멤버 작성기 대화 상자(Analysis Services - 다차원 데이터)
@@ -28,7 +28,7 @@ ms.locfileid: "66088378"
 |----------|----------------|  
 |**이름**|계산 멤버의 이름을 입력합니다.|  
 |**부모 계층**|계산 멤버를 만들 계층을 선택합니다.|  
-|**부모 멤버**|수준이 두 개 이상인 부모 계층(`Measures` 차원 제외)을 선택한 경우 이 옵션이 설정됩니다. 줄임표 (**...** ) 단추를 부모 멤버를 선택 합니다. 부모 멤버는 차원 구조에서 계산 멤버의 위치를 결정합니다.|  
+|**부모 멤버**|수준이 두 개 이상인 부모 계층(`Measures` 차원 제외)을 선택한 경우 이 옵션이 설정됩니다. 줄임표 ( **...** ) 단추를 부모 멤버를 선택 합니다. 부모 멤버는 차원 구조에서 계산 멤버의 위치를 결정합니다.|  
 |**식**|사용할 MDX 식을 입력합니다.|  
 |**확인**|**식** 에서 정의한 MDX 식을 테스트하려면 **확인**을 클릭합니다.|  
 |**메타데이터**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 식 **에서 정의한 MDX 식에 포함시킬 수 있는 현재**개체에 대한 메타데이터를 표시합니다.<br /><br /> 선택한 항목을 마우스 오른쪽 단추로 클릭하고 **복사**를 선택하거나 선택한 항목을 **식**으로 끌어서 해당 항목에 대한 MDX 구문을 복사할 수 있습니다.|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 234ebb8b4490d496731e4fb33db8e73a978f7f15
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107387"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
@@ -114,7 +114,7 @@ ms.locfileid: "66107387"
 
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 세트 속성 대화 상자, 필드&amp;#40;보고서 작성기&amp;#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
+ [데이터 세트 속성 대화 상자, 필드&#40;보고서 작성기&#41;](../dataset-properties-dialog-box-fields-report-builder.md)   
  [보고서 작성기의 보고서 파트 및 데이터 세트](report-parts-and-datasets-in-report-builder.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

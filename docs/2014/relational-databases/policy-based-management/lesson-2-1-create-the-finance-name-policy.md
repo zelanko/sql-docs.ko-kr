@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090622"
 ---
 # <a name="create-the-finance-name-policy"></a>Finance Name 정책 만들기
@@ -39,7 +39,7 @@ ms.locfileid: "66090622"
   
 3.  **패싯** 목록에서 **여러 부분으로 구성된 이름**을 선택합니다.  
   
-4.  **식** 영역의 **필드** 상자에서 **@Name**을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 **'fintbl%'** 를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.  
+4.  **식** 영역의 **필드** 상자에서 **@Name** 을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 **'fintbl%'** 를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.  
   
 5.  **설명** 페이지에서 **Finance table names must begin with fintbl**을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
   

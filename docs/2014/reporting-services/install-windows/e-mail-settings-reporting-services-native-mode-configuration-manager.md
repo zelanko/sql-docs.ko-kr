@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 808ad67429ee49d6b04533863112b4cbb3af2514
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108881"
 ---
 # <a name="e-mail-settings---configuration-manager-ssrs-native-mode"></a>전자 메일 설정 - 구성 관리자(SSRS 기본 모드)
