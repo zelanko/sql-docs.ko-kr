@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721231"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
@@ -65,9 +65,9 @@ ms.locfileid: "62721231"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
-1.  **@publication**, **@article**, **@property**에 **article_resolver** 값, **@value**에 **MicrosoftSQL** **Server Stored ProcedureResolver** 값을 지정하여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
+1.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 **MicrosoftSQL** **Server Stored ProcedureResolver** 값을 지정하여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
   
-2.  **@publication**, **@article**, **@property**에 **resolver_info** 값, **@value**에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
+2.  **@publication** , **@article** , **@property** 에 **resolver_info** 값, **@value** 에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
   
 ##  <a name="COM"></a> COM 기반 사용자 지정 해결 프로그램 사용  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스는 이벤트를 처리하고 병합 복제 동기화 프로세스 중에 발생하는 충돌을 해결하는 복잡한 비즈니스 논리를 작성할 수 있게 해주는 인터페이스를 구현합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요. 네이티브 코드 기반 사용자 지정 비즈니스 논리를 직접 작성하여 충돌을 해결할 수도 있습니다. 이 논리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++와 같은 제품을 사용하여 COM 구성 요소로 빌드되며 DLL(동적 연결 라이브러리)로 컴파일됩니다. 이러한 COM 기반 사용자 지정 충돌 해결 프로그램은 충돌 해결을 위해 특별히 설계된 **ICustomResolver** 인터페이스를 구현해야 합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "62721231"
   
 8.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하여 라이브러리가 이미 사용자 지정 충돌 해결 프로그램으로 등록되어 있지 않은지 확인합니다.  
   
-9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. COM 개체의 이름을 지정 **@article_resolver**, 라이브러리의 ID (CLSID)에 대 한 **@resolver_clsid**에 값 `false` 에 대 한 **@is_dotnet_assembly**.  
+9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)를 실행합니다. COM 개체의 이름을 지정 **@article_resolver** , 라이브러리의 ID (CLSID)에 대 한 **@resolver_clsid** 에 값 `false` 에 대 한 **@is_dotnet_assembly** .  
   
     > [!NOTE]  
     >  사용자 지정 충돌 해결 프로그램이 더 이상 필요하지 않으면 [sp_unregistercustomresolver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql)를 사용하여 등록을 취소할 수 있습니다.  
@@ -108,13 +108,13 @@ ms.locfileid: "62721231"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하고 원하는 해결 프로그램의 이름을 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 아티클을 정의합니다. **@article_resolver**에 1단계의 아티클 해결 프로그램 이름을 지정합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 아티클을 정의합니다. **@article_resolver** 에 1단계의 아티클 해결 프로그램 이름을 지정합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하고 원하는 해결 프로그램의 이름을 확인합니다.  
   
-2.  **@publication**, **@article**, **@property**에 **article_resolver** 값, **@value**에 1단계의 아티클 해결 프로그램 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
+2.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 1단계의 아티클 해결 프로그램 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
   
 #### <a name="viewing-a-sample-custom-resolver"></a>예제 사용자 지정 해결 프로그램 보기  
   
@@ -122,10 +122,10 @@ ms.locfileid: "62721231"
   
 2.  다운로드한 압축 .cab 파일에서 파일의 압축을 풉니다.  
   
-3.   **setup.exe**를 실행합니다.  
+3.  **setup.exe**를 실행합니다.  
   
     > [!NOTE]  
-    >  설치 옵션을 선택할 때 **복제** 예제만 설치하면 됩니다. (기본 설치 경로가 **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
+    >  설치 옵션을 선택할 때 **복제** 예제만 설치하면 됩니다. (기본 설치 경로가 **C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\** )  
   
 4.  설치 폴더로 이동합니다. 기본 폴더는 **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**입니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62721231"
     > [!NOTE]  
     >  샘플 컴퓨터 해결 프로그램은 (기본적으로) **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\resolver\subspres** 폴더에 설치됩니다.  
   
-6.   **subspres** 폴더에서 모든 원본 파일에 발생한 **#include sqlres.h** 를 찾고 **#import "replrec.dll" no_namespace, raw_interfaces_only**로 바꿉니다.  
+6.  **subspres** 폴더에서 모든 원본 파일에 발생한 **#include sqlres.h** 를 찾고 **#import "replrec.dll" no_namespace, raw_interfaces_only**로 바꿉니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

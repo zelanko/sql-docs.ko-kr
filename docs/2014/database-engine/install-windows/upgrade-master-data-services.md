@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774663"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
@@ -105,7 +105,7 @@ ms.locfileid: "62774663"
   
  이 태스크를 수행하려면 다음 단계를 완료합니다.  
   
-1.  **에 대 한 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 만**: 오픈 **Control Panel** > **프로그램 및 기능** Microsoft 제거한 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]합니다.  
+1.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에만 해당**: **제어판** > **프로그램 및 기능**을 열고 Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거합니다.  
   
 2.  데이터베이스 엔진을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62774663"
   
     4.  마법사를 완료합니다.  
   
-3.  **에 대 한 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 만**: 업그레이드가 완료 되 면 추가 합니다 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 기능입니다.  
+3.  **[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에만 해당**: 업그레이드가 완료 되 면 추가 합니다 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 기능입니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 엽니다.  
   

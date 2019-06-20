@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62914301"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
@@ -30,7 +30,7 @@ ms.locfileid: "62914301"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|REC_REDOLSNMISMATCH|  
-|메시지 텍스트|로그 레코드 %S_LSN을 다시 실행할 수 없습니다(트랜잭션 ID %S_XID, 페이지 %S_PGID, 데이터베이스 '%.*ls'(데이터베이스 ID %d)). 페이지: LSN = %S_LSN, 유형 = %ld. 로그: OpCode = %ld, 컨텍스트 %ld, PrevPageLSN: %S_LSN. 데이터베이스 백업에서 복원하거나 데이터베이스를 복구하십시오.|  
+|메시지 텍스트|로그 레코드 %S_LSN을 다시 실행할 수 없습니다(트랜잭션 ID %S_XID, 페이지 %S_PGID, 데이터베이스 '%.*ls'(데이터베이스 ID %d)). 페이지: LSN = %S_LSN, 유형 = %ld. 로그 OpCode = %ld, 컨텍스트 %ld, PrevPageLSN: %S_LSN. 데이터베이스 백업에서 복원하거나 데이터베이스를 복구하십시오.|  
   
 ## <a name="explanation"></a>설명  
  복원 작업에서 트랜잭션 로그를 다시 실행할 수 없습니다. 이 오류가 발생하면 데이터베이스가 SUSPECT 상태가 됩니다. 주 파일 그룹(다른 파일 그룹도 해당될 수 있음)이 주의 대상이거나 손상되었을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작하는 동안에는 데이터베이스를 복구할 수 없으므로 데이터베이스를 사용할 수 없습니다. 문제를 해결하려면 사용자 동작이 필요합니다.  

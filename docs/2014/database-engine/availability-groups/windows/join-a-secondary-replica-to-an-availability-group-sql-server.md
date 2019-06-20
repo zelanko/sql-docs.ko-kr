@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62792159"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 조인(SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "62792159"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   가용성 그룹의 주 복제본은 현재 온라인 상태여야 합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62792159"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 보조 데이터베이스를 구성 합니다.  
+##  <a name="FollowUp"></a> 후속 작업: 보조 데이터베이스 구성  
  가용성 그룹의 모든 데이터베이스에 대해, 보조 복제본을 호스팅하는 서버 인스턴스에 보조 데이터베이스를 두어야 합니다. 다음과 같이 보조 복제본을 가용성 그룹에 조인하기 전이나 후에 보조 데이터베이스를 구성할 수 있습니다.  
   
 1.  모든 복원 작업에는 RESTORE WITH NORECOVERY를 사용하여 각 주 데이터베이스의 최신 데이터베이스 및 로그 백업을 보조 복제본을 호스팅하는 서버 인스턴스에 복원합니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  

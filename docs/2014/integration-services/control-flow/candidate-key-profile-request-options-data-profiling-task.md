@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832958"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -38,9 +38,9 @@ ms.locfileid: "62832958"
   
  예를 들어 열 A, B, C를 포함하는 예제 테이블의 경우 **KeyColumns**에 대해 다음과 같이 선택합니다.  
   
--   \*KeyColumns **에서 (**) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns **에서 (** ) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
--   \*KeyColumns\*에서 ( **) 및 (**)를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns\*에서 ( **) 및 (** )를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
 > [!NOTE]  
 >  (*)를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 키의 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 태스크에서 열 C가 키임을 확인하면 복합 키 후보를 더 이상 분석하지 않습니다.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099195"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
@@ -108,7 +108,7 @@ ms.locfileid: "66099195"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (옵션) 실행 단추(**!**)를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
+8.  (옵션) 실행 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
 9. **다음**을 클릭합니다.  
   
@@ -299,7 +299,7 @@ ms.locfileid: "66099195"
   
 8.  **연산자**의 드롭다운 목록에서 **Top N** 을 선택합니다.  
   
-9.  **값**에 **=5**식을 입력합니다.  
+9. **값**에 **=5**식을 입력합니다.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

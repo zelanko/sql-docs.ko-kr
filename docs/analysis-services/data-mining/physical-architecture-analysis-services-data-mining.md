@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668516"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>물리적 아키텍처(Analysis Services - 데이터 마이닝)

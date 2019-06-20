@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808764"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>서버에 연결(로그인 페이지) Analysis Services
@@ -38,7 +38,7 @@ ms.locfileid: "62808764"
  **Connect**  
  위에서 선택한 서버에 연결합니다.  
   
- **Options**  
+ **옵션**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
   

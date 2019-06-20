@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628892"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
@@ -92,7 +92,7 @@ ms.locfileid: "62628892"
 |Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
-|DESCRIPTOR|SESSION|  
+|DESCRIPTOR|세션|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
 |DISTINCT|SIZE|  

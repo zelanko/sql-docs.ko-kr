@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108858"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL 구성(SSRS 구성 관리자)
@@ -128,7 +128,7 @@ ms.locfileid: "66108858"
   
 2.  **추가**를 클릭합니다.  
   
-3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 http://www를 포함한 전체 URL을 포함시킵니다.  
+3.  IP 주소 또는 호스트 헤더 이름을 클릭합니다. 호스트 헤더를 지정한 경우 DNS 서비스가 확인할 수 있는 이름을 지정해야 합니다. 공용으로 사용 가능한 도메인 이름을 지정한 경우 http://www 를 포함한 전체 URL을 포함시킵니다.  
   
 4.  포트를 지정합니다. 사용자 지정 포트를 지정한 경우 애플리케이션 URL에 항상 포트 번호가 포함되어야 합니다.  
   

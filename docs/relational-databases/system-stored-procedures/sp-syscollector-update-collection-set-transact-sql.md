@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004320"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
@@ -137,7 +137,7 @@ sp_syscollector_update_collection_set
   
 ## <a name="examples"></a>예  
   
-### <a name="a-renaming-a-collection-set"></a>1. 컬렉션 집합 이름 바꾸기  
+### <a name="a-renaming-a-collection-set"></a>1\. 컬렉션 집합 이름 바꾸기  
  다음 예에서는 사용자 정의 컬렉션 집합의 이름을 바꿉니다.  
   
 ```  
@@ -149,7 +149,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>2. 컬렉션 모드를 캐시되지 않은 모드에서 캐시된 모드로 변경  
+### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>2\. 컬렉션 모드를 캐시되지 않은 모드에서 캐시된 모드로 변경  
  다음 예에서는 컬렉션 모드를 캐시되지 않은 모드에서 캐시된 모드로 변경합니다. 이렇게 변경하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  
   
 ```  
@@ -164,7 +164,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="c-changing-other-collection-set-parameters"></a>3. 다른 컬렉션 집합 매개 변수 변경  
+### <a name="c-changing-other-collection-set-parameters"></a>3\. 다른 컬렉션 집합 매개 변수 변경  
  다음 예에서는 "Simple collection set test 2"라는 컬렉션 집합의 다양한 속성을 업데이트합니다.  
   
 ```  

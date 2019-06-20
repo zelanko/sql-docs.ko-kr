@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960120"
 ---
 # <a name="splock-transact-sql"></a>sp_lock(Transact-SQL)
@@ -79,7 +79,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-locks"></a>1. 모든 잠금 나열  
+### <a name="a-listing-all-locks"></a>1\. 모든 잠금 나열  
  다음 예에서는 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 보유된 모든 잠금에 대한 정보를 표시합니다.  
   
 ```  
@@ -89,7 +89,7 @@ EXEC sp_lock;
 GO  
 ```  
   
-### <a name="b-listing-a-lock-from-a-single-server-process"></a>2. 단일 서버 프로세스의 잠금 나열  
+### <a name="b-listing-a-lock-from-a-single-server-process"></a>2\. 단일 서버 프로세스의 잠금 나열  
  다음 예에서는 프로세스 ID `53`에 대해 잠금을 포함한 정보를 표시합니다.  
   
 ```  

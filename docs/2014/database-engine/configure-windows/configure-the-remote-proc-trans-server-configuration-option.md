@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 106f4ca8951200110349809065b35ba65a7f8411
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811339"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>remote proc trans 서버 구성 옵션 구성
@@ -40,15 +40,15 @@ ms.locfileid: "62811339"
   
 -   **원격 프로시저 트랜잭션 옵션을 구성하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [Remote proc trans 옵션을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [원격 프로시저 트랜잭션 옵션을 구성한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   이 값을 설정하려면 먼저 원격 서버 연결이 가능해야 합니다.  
   
@@ -93,7 +93,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: Remote proc trans 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 원격 프로시저 트랜잭션 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

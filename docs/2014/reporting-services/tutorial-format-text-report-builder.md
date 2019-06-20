@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098899"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
@@ -128,7 +128,7 @@ ms.locfileid: "66098899"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  실행(**!**)을 클릭하여 쿼리를 실행합니다.  
+7.  실행( **!** )을 클릭하여 쿼리를 실행합니다.  
   
      쿼리 결과는 보고서에 표시할 수 있는 데이터입니다.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098899"
   
 7.  에 **홈** 탭에서 **단락** 섹션을 클릭 합니다 **중간** 및 **Center** 단추를 두 셀의 가운데에 있는 텍스트를 찾습니다 가로 및 세로 방향입니다.  
   
-8.  실행(**!**)을 클릭합니다.  
+8.  실행( **!** )을 클릭합니다.  
   
  이제 `[Territory]` 셀에 있는 텍스트가 셀의 아래쪽에서 위쪽으로 세로로 움직입니다.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098899"
   
 7.  **확인**을 클릭합니다.  
   
-8.  실행(**!**)을 클릭하여 보고서를 미리 봅니다.  
+8.  실행( **!** )을 클릭하여 보고서를 미리 봅니다.  
   
  입력란의 텍스트가 머리글, 단락 및 글머리 기호 목록으로 표시됩니다.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098899"
   
 5.  (옵션) **홈** 탭에 있는 **숫자** 그룹에서 **소수 자릿수 줄이기** 단추를 두 번 클릭하여 센트가 표시되지 않는 달러 숫자를 표시합니다.  
   
-6.  실행(**!**)을 클릭하여 보고서를 미리 봅니다.  
+6.  실행( **!** )을 클릭하여 보고서를 미리 봅니다.  
   
  이제 보고서에 서식이 지정된 데이터가 표시되므로 보다 쉽게 읽을 수 있습니다.  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072386"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
@@ -123,7 +123,7 @@ ms.locfileid: "63072386"
   
  SQL Server 2012 또는 이후 버전의 데이터 수집기를 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
   
- 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 참조 [방법: 자격 증명 (SQL Server Management Studio) 만들기](../security/authentication-access/create-a-credential.md) 자격 증명을 만드는 방법에 대 한 정보에 대 한 합니다.  
+ 트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. UnitTesting.Conditions.ExportTestConditionAttribute에 대한 자세한 내용은 [방법: 자격 증명 (SQL Server Management Studio) 만들기](../security/authentication-access/create-a-credential.md) 자격 증명을 만드는 방법에 대 한 정보에 대 한 합니다.  
   
  다른 인스턴스에서 관리 데이터 웨어하우스 데이터베이스로 업로드하기 위해 데이터 컬렉션을 구성하려면  
   

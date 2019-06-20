@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d338d3d5039c6b8c3111dbccf7e49d161435e0cb
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485079"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>사용자 및 그룹 권한 기능 영역(마스터 데이터 관리자)

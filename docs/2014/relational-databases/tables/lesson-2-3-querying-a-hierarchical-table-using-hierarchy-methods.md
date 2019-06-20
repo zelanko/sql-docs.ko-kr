@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110051"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>계층 메서드를 사용하여 계층적 테이블 쿼리

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62672526"
 ---
 # <a name="attribute-conformance"></a>특성 적합성
@@ -30,7 +30,7 @@ ms.locfileid: "62672526"
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
-|SQL_ATTR_ODBC_VER|핵심|  
+|SQL_ATTR_ODBC_VER|Core|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
  [1]이 선택적 기능 이며 따라서 속하지 적합성 수준입니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "62672526"
   
 |기능|적합성 수준|  
 |--------------|-----------------------|  
-|SQL_ATTR_ACCESS_MODE|핵심|  
+|SQL_ATTR_ACCESS_MODE|Core|  
 |SQL_ATTR_ASYNC_ENABLE|수준 1/수준 2 [1]|  
 |SQL_ATTR_AUTO_IPD|수준 2|  
 |SQL_ATTR_AUTOCOMMIT|수준 1|  
@@ -47,13 +47,13 @@ ms.locfileid: "62672526"
 |SQL_ATTR_CONNECTION_TIMEOUT|수준 2|  
 |SQL_ATTR_CURRENT_CATALOG|수준 2|  
 |SQL_ATTR_LOGIN_TIMEOUT|수준 2|  
-|SQL_ATTR_ODBC_CURSORS|핵심|  
+|SQL_ATTR_ODBC_CURSORS|Core|  
 |SQL_ATTR_PACKET_SIZE|수준 2|  
-|SQL_ATTR_QUIET_MODE|핵심|  
-|SQL_ATTR_TRACE|핵심|  
-|SQL_ATTR_TRACEFILE|핵심|  
-|SQL_ATTR_TRANSLATE_LIB|핵심|  
-|SQL_ATTR_TRANSLATE_OPTION|핵심|  
+|SQL_ATTR_QUIET_MODE|Core|  
+|SQL_ATTR_TRACE|Core|  
+|SQL_ATTR_TRACEFILE|Core|  
+|SQL_ATTR_TRANSLATE_LIB|Core|  
+|SQL_ATTR_TRANSLATE_OPTION|Core|  
 |SQL_ATTR_TXN_ISOLATION|수준 1/수준 2: [2]|  
   
  [이 특성을 호출 하 여 SQL_TRUE로 설정 (수준 1에 필요) 하는 연결 수준 비동기를 지 원하는 1] 응용 프로그램 지원 해야 합니다 **SQLSetConnectAttr**; 특성을 기본값 이외의 값으로 설정할 수 있어야 합니다. 통해 값 **SQLSetStmtAttr**합니다. 문 수준 비동기 (수준 2에 필요)를 지 원하는 응용 프로그램은이 특성을 함수 중 하나를 사용 하 여 SQL_TRUE로 설정 지원 해야 합니다.  
@@ -64,8 +64,8 @@ ms.locfileid: "62672526"
   
 |기능|적합성 수준|  
 |--------------|-----------------------|  
-|SQL_ATTR_APP_PARAM_DESC|핵심|  
-|SQL_ATTR_APP_ROW_DESC|핵심|  
+|SQL_ATTR_APP_PARAM_DESC|Core|  
+|SQL_ATTR_APP_ROW_DESC|Core|  
 |SQL_ATTR_ASYNC_ENABLE|수준 1/수준 2 [1]|  
 |SQL_ATTR_CONCURRENCY|수준 1/수준 2: [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|수준 1|  
@@ -73,28 +73,28 @@ ms.locfileid: "62672526"
 |SQL_ATTR_CURSOR_TYPE|코어/수준 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|수준 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|수준 2|  
-|SQL_ATTR_IMP_PARAM_DESC|핵심|  
-|SQL_ATTR_IMP_ROW_DESC|핵심|  
+|SQL_ATTR_IMP_PARAM_DESC|Core|  
+|SQL_ATTR_IMP_ROW_DESC|Core|  
 |SQL_ATTR_KEYSET_SIZE|수준 2|  
 |SQL_ATTR_MAX_LENGTH|수준 1|  
 |SQL_ATTR_MAX_ROWS|수준 1|  
-|SQL_ATTR_METADATA_ID|핵심|  
-|SQL_ATTR_NOSCAN|핵심|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|핵심|  
-|SQL_ATTR_PARAM_BIND_TYPE|핵심|  
-|SQL_ATTR_PARAM_OPERATION_PTR|핵심|  
-|SQL_ATTR_PARAM_STATUS_PTR|핵심|  
-|SQL_ATTR_PARAMS_PROCESSED_PTR|핵심|  
-|SQL_ATTR_PARAMSET_SIZE|핵심|  
+|SQL_ATTR_METADATA_ID|Core|  
+|SQL_ATTR_NOSCAN|Core|  
+|SQL_ATTR_PARAM_BIND_OFFSET_PTR|Core|  
+|SQL_ATTR_PARAM_BIND_TYPE|Core|  
+|SQL_ATTR_PARAM_OPERATION_PTR|Core|  
+|SQL_ATTR_PARAM_STATUS_PTR|Core|  
+|SQL_ATTR_PARAMS_PROCESSED_PTR|Core|  
+|SQL_ATTR_PARAMSET_SIZE|Core|  
 |SQL_ATTR_QUERY_TIMEOUT|수준 2|  
 |SQL_ATTR_RETRIEVE_DATA|수준 1|  
-|SQL_ATTR_ROW_ARRAY_SIZE|핵심|  
-|SQL_ATTR_ROW_BIND_OFFSET_PTR|핵심|  
-|SQL_ATTR_ROW_BIND_TYPE|핵심|  
+|SQL_ATTR_ROW_ARRAY_SIZE|Core|  
+|SQL_ATTR_ROW_BIND_OFFSET_PTR|Core|  
+|SQL_ATTR_ROW_BIND_TYPE|Core|  
 |SQL_ATTR_ROW_NUMBER|수준 1|  
 |SQL_ATTR_ROW_OPERATION_PTR|수준 1|  
-|SQL_ATTR_ROW_STATUS_PTR|핵심|  
-|SQL_ATTR_ROWS_FETCHED_PTR|핵심|  
+|SQL_ATTR_ROW_STATUS_PTR|Core|  
+|SQL_ATTR_ROWS_FETCHED_PTR|Core|  
 |SQL_ATTR_SIMULATE_CURSOR|수준 2|  
 |SQL_ATTR_USE_BOOKMARKS|수준 2|  
   

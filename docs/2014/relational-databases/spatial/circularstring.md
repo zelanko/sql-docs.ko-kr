@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: efe15f6eea386522fc6139601af66ce736e980f3
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014418"
 ---
 # <a name="circularstring"></a>CircularString
@@ -87,7 +87,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
   
 ## <a name="examples"></a>예  
   
-### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>1. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>1\. 빈 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 `CircularString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -95,7 +95,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>2. 원호 세그먼트가 하나인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>2\. 원호 세그먼트가 하나인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  다음 예에서는 단일 원호 세그먼트(반원)를 사용하여 `CircularString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -104,7 +104,7 @@ SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>3. 원호 세그먼트가 여러 개인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>3\. 원호 세그먼트가 여러 개인 경우 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  다음 예에서는 두 개 이상의 원호 세그먼트(완전한 원)를 사용하여 `CircularString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  
@@ -135,21 +135,21 @@ Perimeter = 5.65685
   
  값을 `CircularString` 예제 2에 가깝습니다???, 원의 실제 원주 인 합니다.  
   
-### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>4. 동일한 문에서 CircularString을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
+### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>4\. 동일한 문에서 CircularString을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 조각은 동일한 문에서 `geometry`을 사용하여 `CircularString` 인스턴스를 선언하고 인스턴스화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
-### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>5. CircularString을 사용하여 Geography 인스턴스 인스턴스화  
+### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>5\. CircularString을 사용하여 Geography 인스턴스 인스턴스화  
  다음 예에서는 `geography`을 사용하여 `CircularString` 인스턴스를 선언하고 인스턴스화하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
-### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>6. 직선인 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
+### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>6\. 직선인 CircularString을 사용하여 Geometry 인스턴스 인스턴스화  
  다음 예에서는 직선인 `CircularString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```sql  

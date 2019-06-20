@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896522"
 ---
 # <a name="-unequal-ssis-expression"></a>!=(같지 않음)(SSIS 식)
@@ -52,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  문자열 비교는 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다.  
   
--   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 합니다.  
+-   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  
@@ -81,7 +81,7 @@ expression1 != expression2
   
 -   **Binary** *expression1* 및 *expression2* 모두 DT_BYTES 데이터 형식으로 계산되어야 합니다.  
   
--   **BLOB** *expression1* 및 *expression2* 모두 동일한 BLOB(Binary Large Object Block) 데이터 형식 DT_TEXT, DT_NTEXT 또는 DT_IMAGE 중에서 선택 합니다.  
+-   **BLOB** *expression1* 및 *expression2* 모두 동일한 BLOB(Binary Large Object Block) 데이터 형식 DT_TEXT, DT_NTEXT 또는 DT_IMAGE로 계산되어야 합니다.  
   
  데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../data-flow/integration-services-data-types.md)을 참조하세요.  
   

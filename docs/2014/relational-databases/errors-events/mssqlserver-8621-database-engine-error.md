@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8621 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 8621 (Database Engine error)
 ms.assetid: 67f59865-becd-4999-8bb0-90aedd7effbf
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4aa55a321f4eea99643ec39cbf5b72682ec7929
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912883"
 ---
 # <a name="mssqlserver8621"></a>MSSQLSERVER_8621
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>설명  
   
 |||  
@@ -34,10 +33,11 @@ ms.locfileid: "62912883"
 |메시지 텍스트|쿼리 최적화 중 쿼리 프로세서에 스택 공간이 부족합니다. 쿼리를 단순하게 만드십시오.|  
   
 ## <a name="explanation"></a>설명  
-확장된 쿼리의 크기가 오류의 원인일 가능성이 높습니다. 확장된 쿼리는 보조 인덱스 및 뷰의 업데이트나 트리거와 같은 연계 동작은 물론 각 뷰, 계산 열, [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 및 참조하는 공통 테이블 식 등의 정의로 원래 쿼리를 대체합니다.  
+ 확장된 쿼리의 크기가 오류의 원인일 가능성이 높습니다. 확장된 쿼리는 보조 인덱스 및 뷰의 업데이트나 트리거와 같은 연계 동작은 물론 각 뷰, 계산 열, [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 및 참조하는 공통 테이블 식 등의 정의로 원래 쿼리를 대체합니다.  
   
-쿼리의 특정 수치가 너무 크기 때문일 가능성이 높습니다. 예를 들어 뷰 정의에서 참조하는 테이블의 수가 지나치게 많거나 스칼라 식이 너무 크기 때문일 수 있습니다.  
+ 쿼리의 특정 수치가 너무 크기 때문일 가능성이 높습니다. 예를 들어 뷰 정의에서 참조하는 테이블의 수가 지나치게 많거나 스칼라 식이 너무 크기 때문일 수 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-가장 큰 수치를 기준으로 쿼리를 여러 개로 나누어 단순하게 만듭니다. 먼저 불필요한 쿼리 요소를 제거한 후 임시 테이블을 추가하고 쿼리를 두 개로 분할합니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 컴파일러가 이들을 다시 결합하므로 단지 쿼리의 일부를 하위 쿼리, 함수 또는 공통 테이블 식으로 옮기는 것만으로는 부족합니다.  
+ 가장 큰 수치를 기준으로 쿼리를 여러 개로 나누어 단순하게 만듭니다. 먼저 불필요한 쿼리 요소를 제거한 후 임시 테이블을 추가하고 쿼리를 두 개로 분할합니다.  [!INCLUDE[tsql](../../includes/tsql-md.md)] 컴파일러가 이들을 다시 결합하므로 단지 쿼리의 일부를 하위 쿼리, 함수 또는 공통 테이블 식으로 옮기는 것만으로는 부족합니다.  
+  
   

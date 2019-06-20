@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473214"
 ---
 # <a name="assign-alerts-to-an-operator"></a>운영자에게 경고 할당
@@ -37,7 +37,7 @@ ms.locfileid: "62473214"
   
 -   **다음을 사용하여 운영자에게 경고를 할당합니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62473214"
   
 5.  _operator_name_**속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택합니다.  
   
-6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 필요에 따라 각 알림에 대 한 알림 방법을 정의 하려면 다음 확인란 중 하나 이상을 선택 합니다. **전자 메일**하십시오 **호출기**, 또는 **Net send**합니다.  
+6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 필요에 따라 각 알림에 대한 통지 방법을 정의하려면 다음 확인란을 하나 이상 선택합니다. **이메일**, **호출기** 또는 **Net 보내기**.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   

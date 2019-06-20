@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105815"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)

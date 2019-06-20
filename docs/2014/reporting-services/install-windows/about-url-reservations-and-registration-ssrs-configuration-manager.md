@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b72d0a263010cc82abab38ea2d6149d3492ed7b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108937"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
@@ -100,9 +100,9 @@ ms.locfileid: "66108937"
  기본 보안이 `RSWindowsNegotiate`이므로 익명 액세스는 허용되지 않습니다. 인트라넷 액세스의 경우 보고서 서버 URL에 네트워크 컴퓨터 이름이 사용됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 인터넷 연결용으로 구성하려는 경우 다른 설정을 사용해야 합니다. 인증에 대한 자세한 내용은 [온라인 설명서의](../security/authentication-with-the-report-server.md) 보고서 서버 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 ##  <a name="URLlocalAdmin"></a> 로컬 관리 URL  
- URL 예약에 대해 강력한 또는 약한 와일드카드를 지정한 경우 http://localhost/reportserver 또는 http://localhost/reports를 사용할 수 있습니다.  
+ URL 예약에 대해 강력한 또는 약한 와일드카드를 지정한 경우 http://localhost/reportserver 또는 http://localhost/reports 를 사용할 수 있습니다.  
   
- http://localhost URL은 http://127.0.0.1로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
+ http://localhost URL은 http://127.0.0.1 로 해석됩니다. URL 예약을 컴퓨터 이름이나 단일 IP 주소로 해석한 경우 로컬 컴퓨터에 127.0.0.1에 대한 예약을 추가로 만들어야 localhost를 사용할 수 있습니다. 마찬가지로 컴퓨터에서 localhost 또는 127.0.0.1을 사용할 수 없는 경우 해당 URL을 사용할 수 없습니다.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]에는 실수로 프로그램을 높은 권한으로 실행하는 위험을 최소화하는 새로운 보안 기능이 포함되어 있습니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66108937"
   
 -   SharePoint 제품 및 기술에 대한 URL 예약이 정의되어 있더라도 서버에 게시할 때 예약을 무시할 수 있습니다. SharePoint 웹 애플리케이션의 경우 URL 예약은 내부 작업입니다.  
   
--   단일 서버 배포의 통합된 보고서 서버 및 SharePoint 기술 인스턴스를 동일한 컴퓨터에 설치 되어 있는 경우 사용할 수 없습니다 http://localhost/reportserver합니다. 경우 http://localhost 는 SharePoint 웹 응용 프로그램에 액세스 하는 데에 사용 해야 기본이 아닌 웹 사이트 또는 고유한 포트 할당을 보고서 서버에 액세스할 수 있습니다. 또한 보고서 서버가 SharePoint 팜과 통합되는 경우 원격 컴퓨터에 설치된 배포의 노드에 대해서는 보고서 서버에 대한 localhost 액세스가 확인되지 않습니다.  
+-   단일 서버 배포의 통합된 보고서 서버 및 SharePoint 기술 인스턴스를 동일한 컴퓨터에 설치 되어 있는 경우 사용할 수 없습니다 http://localhost/reportserver 합니다. 경우 http://localhost 는 SharePoint 웹 응용 프로그램에 액세스 하는 데에 사용 해야 기본이 아닌 웹 사이트 또는 고유한 포트 할당을 보고서 서버에 액세스할 수 있습니다. 또한 보고서 서버가 SharePoint 팜과 통합되는 경우 원격 컴퓨터에 설치된 배포의 노드에 대해서는 보고서 서버에 대한 localhost 액세스가 확인되지 않습니다.  
   
 -   SharePoint 통합 모드에서 실행되는 보고서 서버에 대해서는 보고서 관리자에 대한 URL 예약 및 엔드포인트를 구성할 수 없습니다. 이를 구성하는 경우에는 보고서 서버를 SharePoint 통합 모드로 배포한 후 이 URL 및 가상 디렉터리가 더 이상 작동하지 않습니다. 이 모드에서는 보고서 관리자가 지원되지 않습니다.  
   

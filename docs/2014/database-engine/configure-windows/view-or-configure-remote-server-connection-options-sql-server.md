@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757201"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>원격 서버 연결 옵션 보기 또는 구성(SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62757201"
   
 -   **원격 서버 연결 옵션을 보거나 구성하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

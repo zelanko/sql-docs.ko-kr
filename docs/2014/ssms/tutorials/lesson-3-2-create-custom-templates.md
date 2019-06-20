@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805564"
 ---
 # <a name="create-custom-templates"></a>사용자 지정 템플릿 만들기
@@ -67,7 +67,7 @@ ms.locfileid: "62805564"
   
 10. 쿼리 편집기에 **EXECUTE dbo.WorkOrdersForBlade**를 입력한 다음 F5 키를 눌러 쿼리를 실행합니다. **결과** 창에서 Blade에 대한 작업 주문 목록이 반환되는지 확인합니다.  
   
-11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 제품 이름 Blade를 매개 변수로 바꾸어  <strong>*<* product_name</strong>, `nvarchar(50)`하십시오 <strong>이름*>*</strong> , 네 가지 위치에 있습니다.  
+11. 템플릿 스크립트 (7 단계의 스크립트)를 편집 제품 이름 Blade를 매개 변수로 바꾸어 <strong> *<* product_name</strong>, `nvarchar(50)`하십시오 <strong>이름 *>* </strong>, 네 가지 위치에 있습니다.  
   
     > [!NOTE]  
     >  매개 변수에는 바꾸려는 매개 변수의 이름, 매개 변수의 데이터 형식 및 매개 변수 기본값의 세 가지 요소가 필요합니다.  

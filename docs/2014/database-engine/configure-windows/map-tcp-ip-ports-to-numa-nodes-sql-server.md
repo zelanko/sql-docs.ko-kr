@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781747"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>NUMA 노드에 TCP IP 포트 매핑(SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62781747"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>NUMA 노드에 TCP/IP 포트를 매핑하려면  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 펼친 다음 *\<인스턴스 이름>***에 대한 프로토콜**을 클릭합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 펼친 다음 *\<인스턴스 이름>* **에 대한 프로토콜**을 클릭합니다.  
   
 2.  세부 정보 창에서 **TCP/IP**를 두 번 클릭합니다.  
   

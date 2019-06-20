@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107365"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
@@ -160,7 +160,7 @@ ms.locfileid: "66107365"
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 그래픽 쿼리 디자이너는 **Microsoft SQL Server** 데이터 원본 유형과 함께 사용하는 [Visual Database Tool 디자이너](../../ssms/visual-db-tools/visual-database-tool-designers.md)가 아닌 [관계형 쿼리 디자이너 사용자 인터페이스](../relational-query-designer-user-interface.md)입니다.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 자동으로 구별 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 하 고 **Microsoft SQL Server** 데이터 원본 형식 및 데이터 원본 유형과 연결 된 그래픽 쿼리 디자이너를 엽니다.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 자동으로 구별 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** 하 고 **Microsoft SQL Server** 데이터 원본 형식 및 데이터 원본 유형과 연결 된 그래픽 쿼리 디자이너를 엽니다.  
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요.  
   

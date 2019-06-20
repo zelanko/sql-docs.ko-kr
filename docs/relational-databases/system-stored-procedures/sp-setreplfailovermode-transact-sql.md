@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028644"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode(Transact-SQL)
@@ -48,7 +48,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+ [ **@failover_mode=** ] **'***failover_mode***'**  
  구독의 장애 조치(failover) 모드입니다. *failover_mode* 됩니다 **nvarchar(10)** 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  

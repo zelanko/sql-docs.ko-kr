@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632773"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
@@ -61,7 +61,7 @@ ms.locfileid: "62632773"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- 이 구문에서 **d** 나타냅니다 *값* 갖는 날짜를 *yyyy-월-일* 형식 및 **ts** 나타내는 *값*  은 타임 스탬프에는 *h:mm: ss yyyy-월-일*[.*f...*] 형식입니다. 날짜 및 타임 스탬프 데이터에 대 한 약식 구문을 아래와 같습니다.  
+ 이 구문에서 **d** 나타냅니다 *값* 갖는 날짜를 *yyyy-월-일* 형식 및 **ts** 나타내는 *값*  은 타임 스탬프에는 *h:mm: ss yyyy-월-일*[.*f...* ] 형식입니다. 날짜 및 타임 스탬프 데이터에 대 한 약식 구문을 아래와 같습니다.  
   
 ```  
 {d 'value'}  

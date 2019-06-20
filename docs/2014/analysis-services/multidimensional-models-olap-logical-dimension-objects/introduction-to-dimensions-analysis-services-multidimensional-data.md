@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702516"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>차원 소개(Analysis Services - 다차원 데이터)
@@ -47,7 +47,7 @@ ms.locfileid: "62702516"
   
  이전 다이어그램에는 **FactResellerSales** 팩트 테이블에 외래 키 관계에 없는 합니다 **DimGeography** 차원 테이블입니다. 그러나 합니다 **FactResellerSales** 팩트 테이블에 외래 키 관계에가 **DimReseller** 는 차원 테이블에 외래 키 관계에는  **DimGeography** 차원 테이블입니다. 에 각 대리점에 대 한 지리 정보를 포함 하는 Reseller 차원을 정의 하려면에서 이러한 특성을 검색 해야 합니다 **DimGeography** 하며 **DimReseller** 차원 테이블입니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 별도의 두 차원을 만든 후 두 차원 간에 참조 차원 관계를 정의하여 측정값 그룹 내에서 두 차원을 연결하는 방식으로 동일한 결과를 얻을 수 있습니다. 참조 차원 관계에 대 한 자세한 내용은 참조 하세요. [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
   
- 이 시나리오에서 참조 차원 관계 사용의 이점은 추가 저장 공간 없이 단일 지리 차원을 만든 후 해당 지리 차원을 기반으로 여러 개의 큐브 차원을 만들 수 있다는 점입니다. 예를 들어 지리 큐브 차원 중 하나를 대리점 차원에 연결하고 또 다른 지리 큐브 차원을 고객 차원에 연결할 수 있습니다. **관련 항목:**[차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [참조 관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ 이 시나리오에서 참조 차원 관계 사용의 이점은 추가 저장 공간 없이 단일 지리 차원을 만든 후 해당 지리 차원을 기반으로 여러 개의 큐브 차원을 만들 수 있다는 점입니다. 예를 들어 지리 큐브 차원 중 하나를 대리점 차원에 연결하고 또 다른 지리 큐브 차원을 고객 차원에 연결할 수 있습니다. **관련 항목:** [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [참조 관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>차원 처리  
  차원을 만든 후에는 차원을 처리해야만 해당 차원의 특성 멤버 및 계층을 볼 수 있습니다. 차원의 구조가 변경되거나 해당 기본 테이블의 정보가 업데이트되면 차원을 다시 처리해야만 변경 내용을 볼 수 있습니다. 구조 변경 후에 차원을 처리할 때 차원을 포함하는 큐브도 처리해야 하며 그렇지 않으면 큐브를 볼 수 없습니다.  

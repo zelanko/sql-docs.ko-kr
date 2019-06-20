@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788533"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Service Broker(SQL Server)

@@ -16,10 +16,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288252"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔의 명령줄 옵션(OracleToSQL)
@@ -30,7 +30,7 @@ Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 
   
 이 섹션 'option' 용어는 또한 'switch' 라고 합니다.  
   
--   옵션 대/소문자 구분 하지 않으며 사용 하 여 시작할 수 '**-**','**/**' 문자입니다.  
+-   옵션 대/소문자 구분 하지 않으며 사용 하 여 시작할 수 ' **-** ',' **/** ' 문자입니다.  
   
 -   옵션을 지정 하는 경우 해당 옵션 매개 변수를 지정 하는 필수 됩니다.  
   

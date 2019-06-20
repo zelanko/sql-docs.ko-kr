@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997073"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner(Transact-SQL)
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'object'` 기존 테이블, 뷰, 사용자 정의 함수 또는 현재 데이터베이스에서 저장된 프로시저의 이름이입니다. *개체* 되는 **nvarchar(776)**, 기본값은 없습니다. *개체* 형태로 기존 개체의 소유자를 사용 하 여 정규화 할 수 있습니다 _existing_owner_**.** _개체_ 스키마와 스키마 소유자에 이름이 같은 경우입니다.  
+`[ @objname = ] 'object'` 기존 테이블, 뷰, 사용자 정의 함수 또는 현재 데이터베이스에서 저장된 프로시저의 이름이입니다. *개체* 되는 **nvarchar(776)** , 기본값은 없습니다. *개체* 형태로 기존 개체의 소유자를 사용 하 여 정규화 할 수 있습니다 _existing_owner_ **.** _개체_ 스키마와 스키마 소유자에 이름이 같은 경우입니다.  
   
 `[ @newowner = ] 'owner_ '` 개체의 새 소유자가 될 보안 계정의 이름이입니다. *소유자* 됩니다 **sysname**, 기본값은 없습니다. *소유자* 유효한 데이터베이스 사용자, 서버 역할 이어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인 또는 현재 데이터베이스에 액세스할 수 있는 Windows 그룹입니다. 새 소유자가 해당하는 데이터베이스 수준의 보안 주체가 없는 Windows 사용자 또는 Windows 그룹이면 데이터베이스 사용자가 생성됩니다.  
   

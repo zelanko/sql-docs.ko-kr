@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e9b1752b5e567c2a26080422874e5bf6e31bc568
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506699"
 ---
 # <a name="spdbselectivexmlindex-transact-sql"></a>sp_db_selective_xml_index(Transact-SQL)
@@ -58,7 +58,7 @@ Allowed values: 'on', 'off', 'true', 'false'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enable-selective-xml-index-functionality"></a>1. 선택적 XML 인덱스 기능 설정  
+### <a name="a-enable-selective-xml-index-functionality"></a>1\. 선택적 XML 인덱스 기능 설정  
  다음 예에서는 현재 데이터베이스에서 선택적 XML 인덱스를 설정합니다.  
   
 ```  
@@ -77,7 +77,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="b-disable-selective-xml-index-functionality"></a>2. 선택적 XML 인덱스 기능 해제  
+### <a name="b-disable-selective-xml-index-functionality"></a>2\. 선택적 XML 인덱스 기능 해제  
  다음 예에서는 현재 데이터베이스에서 선택적 XML 인덱스를 해제합니다.  
   
 ```  
@@ -96,7 +96,7 @@ EXECUTE sys.sp_db_selective_xml_index
 GO  
 ```  
   
-### <a name="c-detect-if-selective-xml-index-is-enabled"></a>3. 선택적 XML 인덱스가 설정되어 있는지 확인  
+### <a name="c-detect-if-selective-xml-index-is-enabled"></a>3\. 선택적 XML 인덱스가 설정되어 있는지 확인  
  다음 예에서는 선택적 XML 인덱스가 설정되어 있는지 확인합니다. 선택적 XML 인덱스가 설정되어 있으면 1이 반환됩니다.  
   
 ```  

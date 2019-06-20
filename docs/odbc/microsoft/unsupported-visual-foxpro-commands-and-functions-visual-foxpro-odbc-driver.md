@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62633373"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원되지 않는 Visual FoxPro 명령 및 함수(Visual FoxPro ODBC 드라이버)
@@ -80,7 +80,7 @@ ms.locfileid: "62633373"
 |화면 명령 만들기|SQL 보기 명령 만들기|트리거 명령 만들기|  
 |명령 보기 만들기|CREATEOBJECT () 함수|CURDIR () 함수|  
   
-## <a name="d"></a>d  
+## <a name="d"></a>D  
   
 ||||  
 |-|-|-|  

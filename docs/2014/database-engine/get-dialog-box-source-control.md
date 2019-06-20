@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779010"
 ---
 # <a name="get-dialog-box-source-control"></a>가져오기 대화 상자(소스 제어)
@@ -46,7 +46,7 @@ ms.locfileid: "62779010"
  **이름**  
  가져올 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 가져오지 않으려면 확인란의 선택을 취소합니다.  
   
- **Options**  
+ **옵션**  
  단추 오른쪽의 화살표를 클릭하면 Source Safe 플러그 인의 가져오기 옵션이 표시됩니다.  
   
  **정렬**  

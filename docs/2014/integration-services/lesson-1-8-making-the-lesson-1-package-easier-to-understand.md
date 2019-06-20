@@ -1,5 +1,5 @@
 ---
-title: '8 단계: 1 단원 패키지를 보다 쉽게 이해 | Microsoft Docs'
+title: '8단계: 1 단원 패키지를 보다 쉽게 이해 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767595"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>8 단계: 1 단원 패키지를 보다 쉽게 이해
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기
   1단원 패키지의 구성을 완료했으므로 이제 패키지 레이아웃을 정리하는 것이 좋습니다. 제어 및 데이터 흐름 레이아웃 셰이프의 크기가 제멋대로이거나 셰이프가 정렬 또는 그룹화되지 않은 경우 패키지의 기능을 이해하기가 매우 어려울 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools에서는 패키지 레이아웃의 서식을 쉽고 빠르게 지정할 수 있는 도구를 제공합니다. 서식 지정 기능에는 셰이프의 크기를 동일하게 지정하고 셰이프를 정렬하며 셰이프 간의 가로 및 세로 간격을 조정하는 기능이 포함됩니다.  

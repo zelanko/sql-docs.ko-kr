@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088501"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (** _n_ **)** 하거나 **nvarchar (max)** 합니다.  
   
-`[ \@params = ] N'parameters'` \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@params = ] N'parameters'` \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (** _n_ **)** 하거나 **nvarchar (max)** 합니다.  
   
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열인 *Transact SQL_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. TRANSACT-SQL 문 또는 문의 일괄 처리에 매개 변수가 없는 경우 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
@@ -196,11 +196,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **숫자 (38, 19)** -다른 numeric 또는 decimal 데이터 형식 고려 되지 않습니다.  
   
-    -   **varchar(8000)**, **varchar (max)** 합니다 **nvarchar(4000)**, 및 **nvarchar (max)** -다른 문자열 데이터 형식 (같은 **텍스트**, **char(8000)** 합니다 **nvarchar(30)** 등)는 고려 되지 않습니다.  
+    -   **varchar(8000)** , **varchar (max)** 합니다 **nvarchar(4000)** , 및 **nvarchar (max)** -다른 문자열 데이터 형식 (같은 **텍스트**, **char(8000)** 합니다 **nvarchar(30)** 등)는 고려 되지 않습니다.  
   
-    -   **varbinary(8000)** 하 고 **varbinary (max)** -다른 이진 데이터 형식 고려 되지 않습니다 (같은 **이미지**를 **binary(8000)**, **varbinary (30)** 등.).  
+    -   **varbinary(8000)** 하 고 **varbinary (max)** -다른 이진 데이터 형식 고려 되지 않습니다 (같은 **이미지**를 **binary(8000)** , **varbinary (30)** 등.).  
   
-    -   **날짜**, **time(7)** 를 **smalldatetime**를 **datetime**를 **datetime2(7)**, **datetimeoffset(7)**  -다른 날짜 및 시간 형식, 같은 **time(4)**, 간주 되지 않습니다.  
+    -   **날짜**, **time(7)** 를 **smalldatetime**를 **datetime**를 **datetime2(7)** , **datetimeoffset(7)**  -다른 날짜 및 시간 형식, 같은 **time(4)** , 간주 되지 않습니다.  
   
     -   **sql_variant**  
   
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      이 규칙은 규칙 1에 따라 연결된 모든 데이터 형식과 우선 순위가 가장 높은 데이터 형식 간에 암시적 변환이 있는 경우에만 적용됩니다. 암시적 변환이 없으면 데이터 형식 추론이 오류와 함께 실패합니다. 예를 들어 다음 쿼리에서 `SELECT @p FROM t`, 데이터 형식에 대 한 모든 데이터 형식 추론이 실패 \@p 좋은 동일 하 게 됩니다. 예를 들어 된 암시적 변환이 없는 **int** 하 **xml**합니다.  
   
-3.  두 비슷한 데이터 형식이 규칙 1에 따라 예를 들어 연결할 **varchar(8000)** 하 고 **varchar (max)** 보다 작은 데이터 형식 (**varchar(8000)**) 선택 됩니다. 동일한 원칙이 적용 됩니다 **nvarchar** 하 고 **varbinary** 데이터 형식입니다.  
+3.  두 비슷한 데이터 형식이 규칙 1에 따라 예를 들어 연결할 **varchar(8000)** 하 고 **varchar (max)** 보다 작은 데이터 형식 (**varchar(8000)** ) 선택 됩니다. 동일한 원칙이 적용 됩니다 **nvarchar** 하 고 **varbinary** 데이터 형식입니다.  
   
 4.  규칙 1의 목적상, 형식 추론 알고리즘에서 선호하는 변환에는 우선 순위가 있습니다. 가장 선호하는 변환부터 순서대로 나열하면 다음과 같습니다.  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  기타 변환  
   
- 쿼리에 대 한 예를 들어 `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** (a) 변환이 적합 하기 때문에 선택 됩니다. 쿼리에 대 한 `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** 여전히 선택 하 고 (b) 형식 변환이 발생 하기 때문에 다른 선택 (같은 **varchar(4000)**) (d) 형식 변환이 발생 합니다.  
+ 쿼리에 대 한 예를 들어 `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar(8000)** (a) 변환이 적합 하기 때문에 선택 됩니다. 쿼리에 대 한 `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar(8000)** 여전히 선택 하 고 (b) 형식 변환이 발생 하기 때문에 다른 선택 (같은 **varchar(4000)** ) (d) 형식 변환이 발생 합니다.  
   
  마지막 예로, 쿼리를 지정 `SELECT NULL + @p`, **int** 에 대 한 선택은 \@p 형식 (c) 변환이 있기 때문입니다.  
   

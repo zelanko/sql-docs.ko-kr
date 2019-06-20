@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cae39c440c86348763b20ae04c70b3ce2ecc181
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667361"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>XML 파일로 정책 기반 관리 패싯 상태 복사
@@ -30,7 +30,7 @@ ms.locfileid: "62667361"
   
 -   **다음을 사용하여 패싯 상태를 XML 파일에 복사하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -45,9 +45,9 @@ ms.locfileid: "62667361"
   
 1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭한 다음 **패싯**을 클릭합니다.  
   
-2.  **패싯 보기 –**_object_name_ 대화 상자에서 **정책으로 현재 상태 내보내기**를 클릭합니다.  
+2.  **패싯 보기 –** _object_name_ 대화 상자에서 **정책으로 현재 상태 내보내기**를 클릭합니다.  
   
-3.  **정책으로 내보내기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기(**...**) 단추를 사용하여 파일을 찾은 다음 XML 파일의 이름을 입력합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Export As Policy Dialog Box](export-as-policy-dialog-box.md)를 참조하세요.  
+3.  **정책으로 내보내기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기( **...** ) 단추를 사용하여 파일을 찾은 다음 XML 파일의 이름을 입력합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Export As Policy Dialog Box](export-as-policy-dialog-box.md)를 참조하세요.  
   
 4.  완료되었으면 **확인**을 클릭합니다.  
   

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9397dd268d767fd8c4bad9056455c21b9be65398
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62989865"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>Uninstall PowerPivot for SharePoint
@@ -38,7 +38,7 @@ ms.locfileid: "62989865"
   
 -   [6단계: 제거 후 검사 목록](#bkmk_post)  
   
-##  <a name="prereq"></a> 필수 구성 요소  
+##  <a name="prereq"></a> 사전 요구 사항  
   
 -   팜의 기능과 솔루션을 제거하려면 SharePoint 팜 관리자 또는 서비스 애플리케이션 관리자여야 합니다.  
   

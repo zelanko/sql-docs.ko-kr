@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071578"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성

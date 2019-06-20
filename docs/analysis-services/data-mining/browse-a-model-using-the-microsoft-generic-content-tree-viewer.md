@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f44c1cb014ca9abcd6122f6db6ee0e33407b7d1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678867"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기

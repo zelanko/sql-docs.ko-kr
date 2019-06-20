@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628266"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange(Transact-SQL)
@@ -41,7 +41,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=** ] **'***publication***'**  
+ [ **@publication=** ] **'***publication***'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @schemaversion = ] schemaversion` 보류 중인 스키마 변경을 식별합니다. *schemaversion* 됩니다 **int**, 기본값은 **0**합니다. 사용 하 여 [sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) 에 게시에 대 한 보류 중인 스키마 변경 내용을 나열 합니다.  

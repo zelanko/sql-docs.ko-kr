@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789876"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>온라인 설명서의 AlwaysOn 가용성 그룹(SQL Server)에 대한 필수 구성 요소, 제한 사항 및 권장 사항
@@ -99,7 +99,7 @@ ms.locfileid: "62789876"
   
 3.  다음과 같이 `Get-ClusterResource` Cmdlet을 사용하여 네트워크 이름 리소스를 찾은 다음 `Set-ClusterParameter` Cmdlet을 사용하여 `HostRecordTTL` 값을 설정합니다.  
   
-     Get-ClusterResource “*\<NetworkResourceName>*” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
+     Get-ClusterResource “ *\<NetworkResourceName>* ” | Set-ClusterParameter HostRecordTTL *\<TimeInSeconds>*  
   
      다음 PowerShell 예에서는 "`SQL Network Name (SQL35)`"이라는 네트워크 이름 리스스에 대해 HostRecordTTL을 300초로 설정합니다.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017845"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
@@ -41,7 +41,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 은 **sysname**, 기본값은 **%** 를 정리 하는 모든 게시에 대 한 메타 데이터입니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` 구독자를 다시 초기화할 지 여부를 지정 합니다. *구독자* 됩니다 **nvarchar(5)**, 수 **TRUE** 또는 **FALSE**, 기본값은 **TRUE**합니다. 하는 경우 **TRUE**, 구독을 다시 초기화 하도록 표시 됩니다. 하는 경우 **FALSE**, 구독 다시 초기화 되도록 표시 되지 않습니다.  
+`[ @reinitialize_subscriber = ] 'subscriber'` 구독자를 다시 초기화할 지 여부를 지정 합니다. *구독자* 됩니다 **nvarchar(5)** , 수 **TRUE** 또는 **FALSE**, 기본값은 **TRUE**합니다. 하는 경우 **TRUE**, 구독을 다시 초기화 하도록 표시 됩니다. 하는 경우 **FALSE**, 구독 다시 초기화 되도록 표시 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  이후에 **sp_mergecleanupmetadata** 메타 데이터에 저장 된 게시의 구독자에서 모든 구독이 기본적으로 실행 됩니다 **MSmerge_genhistory**, **MSmerge_contents**  하 고 **MSmerge_tombstone** 표시 된 구독자에서 보류 중인 변경 내용을 다시 초기화에 대 한 손실 되 고 현재 스냅숏을 obsolete로 표시 되어 있습니다.  
 > 
 > [!NOTE]
->  데이터베이스에 게시가 여러 개 및 해당 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 (**@retention**=**0**)에서 실행 되며,  **sp_mergecleanupmetadata** 의 병합 복제 변경 추적 데이터베이스에 대 한 메타 데이터 정리 하지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오.  
+>  데이터베이스에 게시가 여러 개 및 해당 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 ( **@retention** =**0**)에서 실행 되며,  **sp_mergecleanupmetadata** 의 병합 복제 변경 추적 데이터베이스에 대 한 메타 데이터 정리 하지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오.  
   
  이 저장 프로시저 실행 시에 설정 하 여 구독자를 다시 초기화할 지 여부를 선택할 수 있습니다 합니다 **@reinitialize_subscriber** 매개 변수를 **TRUE** (기본값) 또는 **FALSE**. 하는 경우 **sp_mergecleanupmetadata** 실행 되는 **@reinitialize_subscriber** 매개 변수 설정 **TRUE**, 구독 된 경우에 구독자에서 스냅숏을 다시 적용 됩니다 초기 스냅숏 (예를 들어 경우 스냅숏 데이터 및 스키마를 수동으로 적용 되었거나 이미 구독자 됩니다) 없이 만들어집니다. 매개 변수 설정 **FALSE** 게시가 다시 초기화 되지 않습니다 하는 경우 게시자와 구독자에서 데이터가 동기화 확인 해야 하기 때문에 주의 사용 하 여 사용 해야 합니다.  
   
- 값에 관계 없이 **@reinitialize_subscriber**하십시오 **sp_mergecleanupmetadata** 실패할 경우 진행 중인 병합 게시자 또는 재게시 구독자에 변경 내용을 업로드 하려고 하는 프로세스 저장된 프로시저를 호출 하는 시간입니다.  
+ 값에 관계 없이 **@reinitialize_subscriber** 하십시오 **sp_mergecleanupmetadata** 실패할 경우 진행 중인 병합 게시자 또는 재게시 구독자에 변경 내용을 업로드 하려고 하는 프로세스 저장된 프로시저를 호출 하는 시간입니다.  
   
  **Sp_mergecleanupmetadata를 실행 @reinitialize_subscriber = TRUE.**  
   

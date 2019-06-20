@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66695380"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 메서드(ADO 연결)
@@ -45,7 +45,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *RecordsAffected*  
  (선택 사항) A **긴** 하려는 변수 공급자 작업에 영향을 받는 레코드 수를 반환 합니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) A **긴** 공급자의 CommandText 인수를 확인 해야 하는 방법을 나타내는 값입니다. 하나 이상의 비트 마스크 될 수 있습니다 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 하거나 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값입니다.  
   
  **참고** 사용 합니다 **ExecuteOptionEnum** 값 **adExecuteNoRecords** 내부 처리를 최소화 하 여 및 Visual Basic 6.0에서 이식 하는 응용 프로그램에 대 한 성능 향상을 위해.  

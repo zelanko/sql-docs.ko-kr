@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773434"
 ---
 # <a name="view-a-list-of-modified-files"></a>수정된 파일의 목록 보기
@@ -38,7 +38,7 @@ ms.locfileid: "62773434"
      **설명**  
      일반 텍스트 설명을 보류 중인 체크 인에 연결합니다. 만들어진 설명은 각 버전의 프로젝트와 연결되며 원본 제어 데이터베이스에 저장됩니다.  
   
-     **Options**  
+     **옵션**  
      소스 제어를 클릭할 때 수행 해야 하는 작업을 지정 합니다 **체크 인** 단추입니다.  
   
     -   **모든 체크 아웃 유지**  

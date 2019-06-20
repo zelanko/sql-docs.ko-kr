@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098657"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기
@@ -130,13 +130,13 @@ iPad에서 보고서 보기 동작 보기
   
  Microsoft Business Intelligence 및 모바일 디바이스에 대한 자세한 내용을 다음을 참조하세요.  
   
--   [모바일 장치 및 SharePoint 2013 개요](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx)합니다.  
+-   [모바일 장치 및 SharePoint 2013 개요](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx) 합니다.  
   
--   [SharePoint 2013에서 지원 되는 모바일 장치 브라우저](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx)합니다.  
+-   [SharePoint 2013에서 지원 되는 모바일 장치 브라우저](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx) 합니다.  
   
--   [Apple iPad 장치 (SharePoint Server 2010)에서 보고서 및 성과 기록표 보기](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx)합니다.  
+-   [Apple iPad 장치 (SharePoint Server 2010)에서 보고서 및 성과 기록표 보기](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx) 합니다.  
   
--   [(비디오) iPad에서 Reporting Services 보고서 보기](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx)합니다.  
+-   [(비디오) iPad에서 Reporting Services 보고서 보기](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx) 합니다.  
   
 -   [Microsoft Surface RT 장치 (비디오)에서 Reporting Services 보고서 보기](https://technet.microsoft.com/sqlserver/dn146017)  
   

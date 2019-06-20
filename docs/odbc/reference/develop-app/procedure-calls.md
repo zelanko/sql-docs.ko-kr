@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284583"
 ---
 # <a name="procedure-calls"></a>프로시저 호출
 A *프로시저* 는 데이터 원본에 저장 된 실행 개체입니다. 일반적으로 미리 컴파일된 하나 이상의 SQL 문을 것입니다. 프로시저 호출에 대 한 이스케이프 시퀀스는  
   
- **{**[**?=**]**call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
+ **{** [ **?=** ]**call** *procedure-name*[ **(** [*parameter*][ **,** [*parameter*]]... **)** ] **}**  
   
  여기서 *프로시저 이름을* 프로시저의 이름을 지정 하 고 *매개 변수* 프로시저 매개 변수를 지정 합니다.  
   

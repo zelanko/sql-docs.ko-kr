@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473642"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Docs로 이동 하는 SQL Server 2014에 대 한 설명서

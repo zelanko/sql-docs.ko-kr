@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298294"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)

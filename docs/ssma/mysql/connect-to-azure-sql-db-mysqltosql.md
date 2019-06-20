@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253151"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB에 연결(MySQLToSQL)
@@ -55,7 +55,7 @@ SQL Azure 계정에 데이터베이스가 없는 경우에 첫 번째 데이터�
   
 2.  데이터베이스가 없는 경우 다음 두 가지 메뉴 항목이 표시 됩니다.  
   
-    1.  **(데이터베이스를 찾을 수 없음)**  사용 하지 않도록 설정 하 고 항상 회색으로 표시  
+    1.  **(데이터베이스를 찾을 수 없음) ** 사용 하지 않도록 설정 하 고 항상 회색으로 표시  
   
     2.  **새 데이터베이스 만들기** SQL Azure 계정에 데이터베이스가 없는 경우에 활성화 됩니다. 이 메뉴 항목을 클릭 하면 Azure 데이터베이스 만들기 대화 상자가 데이터베이스 이름 및 크기를 사용 하 여 표시 됩니다.  
   

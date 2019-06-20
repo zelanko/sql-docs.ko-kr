@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642254"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>성능 향상을 위해 R 코드 프로 파일링 함수 사용

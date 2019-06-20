@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2645ae5b16ffa4738f06e1439abac977c8e18894
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479329"
 ---
 # <a name="install-master-data-services"></a>MDS(Master Data Services) 설치
@@ -46,7 +46,7 @@ ms.locfileid: "65479329"
 |------------|-------------|--------------------|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 열고 사후 설치 작업 완료|설치가 완료되면 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 은 로컬 컴퓨터에서 다음과 같은 설치 후 작업을 수행합니다.<br /><br /> 애플리케이션 풀에 대한 **서비스 계정을 포함하기 위해 Windows 그룹**MDS_ServiceAccounts [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 만듭니다.<br /><br /> [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 경로에 MDSTempDir 폴더를 만들고 **MDS_ServiceAccounts**에 대한 사용 권한을 할당합니다. 이 폴더에서는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 대한 임시 컴파일 파일이 컴파일됩니다.<br /><br /> 에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web.config 파일을 구성 합니다 `tempDirectory` 특성을  **\<컴파일 >** MDSTempDir 폴더의 경로를 사용 하 여 요소.<br /><br /> <br /><br /> 설치 프로세스를 스크립팅할 경우 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 열어 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 스냅인을 등록할 수 있지만 구성을 완료하려면 다른 단계를 수동으로 수행해야 합니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서는 마법사 기반 구성 프로세스를 제공합니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성하기 위한 명령줄 프로세스는 없습니다.|[폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md)<br /><br /> [웹 구성 참조&#40;Master Data Services&#41;](../web-configuration-reference-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스 만들기|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 마스터 데이터에 대한 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.|[Master Data Services 데이터베이스 만들기](create-a-master-data-services-database.md)|  
-|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 만들기|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]를 호스팅하기 위한 웹 응용 프로그램을 만들고 구성합니다.|[마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)|  
+|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 만들기|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]를 호스팅하기 위한 웹 응용 프로그램을 만들고 구성합니다.|[마스터 데이터 관리자 웹 애플리케이션 만들기&#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 웹 응용 프로그램과 연결|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 사용하여 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결합니다.|[Master Data Services 데이터베이스와 웹 응용 프로그램 연결](associate-a-master-data-services-database-and-web-application.md)|  
 |Internet Explorer 보안 강화 구성|Windows Server 2008 또는 Windows Server 2008 R2 컴퓨터에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 설치하는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 애플리케이션 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 애플리케이션 사이트로의 이동에 실패합니다.|[Internet Explorer: 보안 강화 구성](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
 |설치 - [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|마스터 데이터로 작업하는 사용자는 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 설치할 수 있습니다.|[https://go.microsoft.com/fwlink/?LinkId=219530](https://go.microsoft.com/fwlink/?LinkId=219530)|  

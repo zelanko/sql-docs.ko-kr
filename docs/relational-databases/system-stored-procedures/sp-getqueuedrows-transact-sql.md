@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500430"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows(Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` 구독 소유자가입니다. *소유자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @tranid = ] 'transaction_id'` 출력을을 트랜잭션 ID로 필터링 할 수 있습니다. *transaction_id* 됩니다 **nvarchar(70)**, 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
+`[ @tranid = ] 'transaction_id'` 출력을을 트랜잭션 ID로 필터링 할 수 있습니다. *transaction_id* 됩니다 **nvarchar(70)** , 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

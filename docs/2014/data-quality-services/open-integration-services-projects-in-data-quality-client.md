@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480369"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
@@ -30,7 +30,7 @@ ms.locfileid: "65480369"
   
 -   잠긴 Integration Services 프로젝트는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 삭제할 수 없습니다. 삭제하려면 먼저 잠금을 해제해야 합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  DQS 정리 구성 요소 패키지가 포함된 Integration Services 프로젝트를 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 보고 열려면 올바르게 실행이 완료된 상태여야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -46,7 +46,7 @@ ms.locfileid: "65480369"
   
 3.  **프로젝트 열기** 화면에서 다음 방법 중 하나로 Integration Services 프로젝트를 식별할 수 있습니다.  
   
-    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 이름 지정 용어를 사용 하 여 나열 됩니다. "Package.DQS Cleansing_*\<DATE>**\<TIME>*_{GUID}." [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
+    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 이름 지정 용어를 사용 하 여 나열 됩니다. "Package.DQS Cleansing_ *\<DATE>**\<TIME>* _{GUID}." [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
   
     2.  **프로젝트 형식**: Integration Services 프로젝트는 **프로젝트 열기** 화면에서 **SSIS**라는 프로젝트 형식을 가집니다.  
   

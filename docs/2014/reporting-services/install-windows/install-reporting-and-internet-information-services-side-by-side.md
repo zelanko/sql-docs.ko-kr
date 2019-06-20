@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108795"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
@@ -49,7 +49,7 @@ ms.locfileid: "66108795"
 |http://+:80|**모두 할당됨**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
 |http://*:80|**모두 할당되지 않음**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
   
- 포트가 충돌 표시는 다음과 같은 오류 메시지가 표시: 'System.IO.FileLoadException: 프로세스가 다른 프로세스에서 사용 되는 파일을 액세스할 수 없습니다. (HRESULT의 예외: 0x80070020).'  
+ 포트가 충돌 표시는 다음과 같은 오류 메시지가 표시: 'System.IO.FileLoadException: 프로세스가 다른 프로세스에서 사용 되는 파일을 액세스할 수 없습니다. (예외가 발생한 HRESULT: 0x80070020).'  
   
 ## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services가 있는 IIS 6.0, 7.0, 8.0, 8.5에 대한 URL 예약  
  이전 섹션에 요약된 우선 순위 규칙을 기반으로 Reporting Services 및 IIS에 대해 정의된 URL 예약이 상호 운용성을 향상시키는 방식을 이해할 수 있습니다. Reporting Services는 해당 애플리케이션의 가상 디렉터리 이름을 명시적으로 지정하는 요청을 받습니다. IIS는 나머지 요청을 모두 받은 다음 이를 IIS 프로세스 모델 내에서 실행되는 애플리케이션으로 전송할 수 있습니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "66108795"
   
  모든 애플리케이션이 요청을 받도록 하려면 다음 지침을 따릅니다.  
   
--   Reporting Services 설치의 경우 Reporting Services와 동일한 포트에서 IIS 웹 사이트에 아직 사용되지 않은 가상 디렉터리 이름을 사용합니다. 충돌이 발생하면 설치 완료 후 가상 디렉터리를 구성할 수 있도록 Reporting Services를 "파일만" 모드로 설치합니다(설치를 사용하지만 설치 마법사에서 서버 옵션 구성 안 함). 충돌이 구성이 표시는 오류 메시지가 표시 됩니다. System.IO.FileLoadException: 프로세스가 다른 프로세스에서 사용 되는 파일을 액세스할 수 없습니다. (HRESULT의 예외: 0x80070020).  
+-   Reporting Services 설치의 경우 Reporting Services와 동일한 포트에서 IIS 웹 사이트에 아직 사용되지 않은 가상 디렉터리 이름을 사용합니다. 충돌이 발생하면 설치 완료 후 가상 디렉터리를 구성할 수 있도록 Reporting Services를 "파일만" 모드로 설치합니다(설치를 사용하지만 설치 마법사에서 서버 옵션 구성 안 함). 충돌이 구성이 표시는 오류 메시지가 표시 됩니다. System.IO.FileLoadException: 프로세스가 다른 프로세스에서 사용 되는 파일을 액세스할 수 없습니다. (예외가 발생한 HRESULT: 0x80070020).  
   
 -   수동으로 구성하는 설치의 경우 구성하는 URL에 기본 명명 규칙을 적용합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 를 명명된 인스턴스로 설치하는 경우 가상 디렉터리를 만들 때 인스턴스 이름을 포함합니다.  
   

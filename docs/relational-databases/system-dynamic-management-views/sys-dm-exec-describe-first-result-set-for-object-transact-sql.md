@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013945"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**is_nullable**|**bit**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
 |**system_type_id**|**int**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256)**|데이터 형식 이름을 포함합니다. 열의 데이터 형식에 지정된 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
+|**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
 |**전체 자릿수**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
@@ -123,7 +123,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-metadata-with-and-without-browse-information"></a>1. 찾아보기 정보가 있는 메타데이터와 찾아보기 정보가 없는 메타데이터 반환  
+### <a name="a-returning-metadata-with-and-without-browse-information"></a>1\. 찾아보기 정보가 있는 메타데이터와 찾아보기 정보가 없는 메타데이터 반환  
  다음 예제에서는 두 개의 결과 집합을 반환 하는 TestProc2 라는 저장된 프로시저를 만듭니다. 다음 예제는 방법을 보여 줍니다 **sys.dm_exec_describe_first_result_set** 첫 번째 결과 찾아보기 정보가 없는 절차에서는 집합에 대 한 정보를 반환 합니다.  
   
 ```  
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>2. sys.dm_exec_describe_first_result_set_for_object 함수와 테이블 또는 뷰 결합  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>2\. sys.dm_exec_describe_first_result_set_for_object 함수와 테이블 또는 뷰 결합  
  다음 예제에서는 두 sys.procedures 시스템 카탈로그 뷰 및 **sys.dm_exec_describe_first_result_set_for_object** 결과 집합의 모든 저장된 프로시저에 대 한 메타 데이터를 표시 하는 함수는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
 ```  
