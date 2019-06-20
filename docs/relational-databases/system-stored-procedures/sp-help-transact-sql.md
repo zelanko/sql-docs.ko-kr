@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017759"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'name'` 모든 개체의 이름인 **sysobjects** 에서 모든 사용자 정의 데이터 형식 또는 **systypes** 테이블입니다. *이름* 됩니다 **nvarchar (** 776 **)**, 기본값은 NULL입니다. 데이터베이스 이름은 허용되지 않습니다.  'Person.AddressType' 또는 [Person.AddressType]과 같이 둘 또는 세 부분으로 된 이름을 구분해야 합니다.   
+`[ @objname = ] 'name'` 모든 개체의 이름인 **sysobjects** 에서 모든 사용자 정의 데이터 형식 또는 **systypes** 테이블입니다. *이름* 됩니다 **nvarchar (** 776 **)** , 기본값은 NULL입니다. 데이터베이스 이름은 허용되지 않습니다.  'Person.AddressType' 또는 [Person.AddressType]과 같이 둘 또는 세 부분으로 된 이름을 구분해야 합니다.   
    
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|열 이름입니다.|  
         |**형식**|**nvarchar(** 128 **)**|열의 데이터 형식입니다.|  
         |**계산**|**varchar(** 35 **)**|열에 값을 계산 하는지 여부를 나타냅니다. 예 또는 아니요.|  
-        |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식을 큰 값 형식인 경우 (**varchar (max)** 를 **nvarchar (max)** 합니다 **varbinary (max)**, 또는 **xml**), 값이 -1로 표시 합니다.|  
+        |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식을 큰 값 형식인 경우 (**varchar (max)** 를 **nvarchar (max)** 합니다 **varbinary (max)** , 또는 **xml**), 값이 -1로 표시 합니다.|  
         |**prec**|**char(** 5 **)**|열의 전체 자릿수입니다.|  
         |**소수 자릿수**|**char(** 5 **)**|열의 소수 자릿수입니다.|  
         |**Null 허용**|**varchar(** 35 **)**|열에 NULL 값 허용 되는지 여부를 나타냅니다. 예 또는 아니요.|  
@@ -171,7 +171,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-information-about-all-objects"></a>1. 모든 개체에 대한 정보 반환  
+### <a name="a-returning-information-about-all-objects"></a>1\. 모든 개체에 대한 정보 반환  
  다음 예에서는 `master` 데이터베이스의 각 개체에 대한 정보를 나열합니다.  
   
 ```  
@@ -181,7 +181,7 @@ EXEC sp_help;
 GO  
 ```  
   
-### <a name="b-returning-information-about-a-single-object"></a>2. 단일 개체에 대한 정보 반환  
+### <a name="b-returning-information-about-a-single-object"></a>2\. 단일 개체에 대한 정보 반환  
  다음 예에서는 `Person` 테이블에 대한 정보를 표시합니다.  
   
 ```  

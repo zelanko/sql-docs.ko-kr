@@ -24,10 +24,10 @@ helpviewer_keywords:
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014429"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
@@ -58,7 +58,7 @@ ms.locfileid: "66014429"
 
 ## <a name="examples"></a>예
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>1. 분류 된 모든 열과 해당 분류를 나열합니다.
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>1\. 분류 된 모든 열과 해당 분류를 나열합니다.
 
 다음 예제에서는 반환 테이블 이름, 열 이름, 레이블 나열 되어 있는 표 레이블 ID, 정보 유형, 데이터베이스의 각 분류 된 열에 대 한 정보 유형 ID입니다.
 

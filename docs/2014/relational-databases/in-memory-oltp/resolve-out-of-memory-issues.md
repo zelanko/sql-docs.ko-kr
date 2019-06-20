@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468357"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
@@ -24,12 +24,12 @@ ms.locfileid: "62468357"
   
 |항목|개요|  
 |-----------|--------------|  
-| [OOM으로 인한 데이터베이스 복원 실패 해결](#resolve-database-restore-failures-due-to-oom) |“'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+| [OOM으로 인한 데이터베이스 복원 실패 해결](#resolve-database-restore-failures-due-to-oom) |“' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
 | [메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|메모리 부족 문제가 성능에 부정적인 영향을 미치고 있음을 발견할 경우 수행할 작업입니다.|  
-| [사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+| [사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |작업에 사용할 수 있는 메모리가 충분한데 “' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스를 복원 하려고 할 때 오류 메시지가 표시 될 수 있습니다. "복원 작업이 데이터베이스에 대 한 실패 했습니다. '*\<데이터베이스 이름 >*'리소스 풀의 메모리 부족으로 인해'*\<a m e >*'." 데이터베이스를 복원하기 전에 사용 가능한 메모리를 늘려 메모리 부족 문제를 해결해야 합니다.  
+ 데이터베이스를 복원 하려고 할 때 오류 메시지가 표시 될 수 있습니다. "복원 작업이 데이터베이스에 대 한 실패 했습니다. ' *\<데이터베이스 이름 >* '리소스 풀의 메모리 부족으로 인해' *\<a m e >* '." 데이터베이스를 복원하기 전에 사용 가능한 메모리를 늘려 메모리 부족 문제를 해결해야 합니다.  
   
  OOM으로 인한 복구 오류를 해결하려면 다음 방법으로 복구 작업에 사용 가능한 메모리를 임시로 늘리십시오.  
   
@@ -135,7 +135,7 @@ GO
 > 항목을 참조 [모범 사례: VM 환경에서 메모리 내 OLTP를 사용 하 여](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 자세한 내용은 합니다.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결  
- 오류 메시지를 받게 되 면 "데이터베이스에 대 한 페이지 할당을 허용 하지 않는 '*\<데이터베이스 이름 >*'리소스 풀의 메모리 부족으로 인해'*\<a m e >*'. 참조 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 자세한. " 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
+ 오류 메시지를 받게 되 면 "데이터베이스에 대 한 페이지 할당을 허용 하지 않는 ' *\<데이터베이스 이름 >* '리소스 풀의 메모리 부족으로 인해' *\<a m e >* '. 참조 '<https://go.microsoft.com/fwlink/?LinkId=330673>' 자세한. " 라는 오류 메시지가 기록된 경우 리소스 관리자를 사용하지 않기 때문일 수 있습니다. 리소스 관리자를 사용하지 않으면 MEMORYBROKER_FOR_RESERVE가 인위적인 메모리 압력을 유발합니다.  
   
  이 오류를 해결하려면 리소스 관리자를 사용하도록 설정해야 합니다.  
   

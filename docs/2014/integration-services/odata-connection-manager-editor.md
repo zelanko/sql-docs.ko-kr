@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057381"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
@@ -27,7 +27,7 @@ ms.locfileid: "66057381"
  연결 관리자의 이름입니다.  
   
  **서비스 문서 위치**  
- OData 서비스의 URL입니다. 예를 들어 http://services.odata.org/V3/Northwind/Northwind.svc/을 참조하십시오.  
+ OData 서비스의 URL입니다. 예를 들어 http://services.odata.org/V3/Northwind/Northwind.svc/ 을 참조하십시오.  
   
  **인증**  
  **인증**에 대해 **Windows 인증**을 선택하거나 **이 사용자 이름 및 암호**를 사용합니다. 두 번째 옵션을 선택할 경우 **사용자 이름** 및 **암호**를 입력합니다.  

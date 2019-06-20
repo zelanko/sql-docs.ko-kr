@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835654"
 ---
 # <a name="error-handling"></a>오류 처리
@@ -38,7 +38,7 @@ ms.locfileid: "62835654"
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 예기치 않게 중지되었음을 나타냅니다.<br /><br /> ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 실행되고 있지 않을 때 Oracle CDC Service 기본 인스턴스에 의해 설정됩니다.|  
 |error|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다. ERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  
-|RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. RUNNING 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> IDLE: 모든 변경 레코드가 처리되어 대상 제어 테이블(**_CT**)에 저장되었습니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 제어 테이블(**_CT**)에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
+|RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. RUNNING 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> IDLE: 모든 변경 레코드가 처리되어 대상 제어 테이블( **_CT**)에 저장되었습니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 제어 테이블( **_CT**)에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
 |STOPPED|0|0|CDC 인스턴스가 실행되고 있지 않습니다. STOP 하위 상태는 CDC 인스턴스가 ACTIVE 상태에서 올바르게 중지되었음을 나타냅니다.|  
 |SUSPENDED|1|1|CDC 인스턴스가 실행되고 있지만 복구할 수 있는 오류로 인해 처리가 일시 중지되었습니다. SUSPENDED 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> DISCONNECTED: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> STORAGE: 저장소가 꽉 찼습니다. 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다. 경우에 따라 상태 테이블을 업데이트할 수 없기 때문에 이 상태가 나타나지 않을 수 있습니다.<br /><br /> LOGGER: 로거가 Oracle에 연결되어 있지만 일시적인 문제로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
 |DATAERROR|x|x|이 상태 코드는 **xdbcdc_trace** 테이블에 대해서만 사용됩니다. **xdbcdc_state** 테이블에는 이 상태가 나타나지 않습니다. 추적 레코드에 이 상태가 있으면 Oracle 로그 레코드에 문제가 있는 것입니다. 잘못된 로그 레코드가 **data** 열에 BLOB으로 저장됩니다. DATAERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> BADRECORD: 연결된 로그 레코드를 구문 분석할 수 없습니다.<br /><br /> CONVERT-ERROR: 일부 열의 데이터를 캡처 테이블의 대상 열로 변환할 수 없습니다. 이 상태는 변환 오류가 발생하면 추적 레코드를 생성하도록 구성에 지정된 경우에만 나타날 수 있습니다.|  

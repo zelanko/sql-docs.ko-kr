@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273038"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;참조
@@ -56,7 +56,7 @@ ms.locfileid: "63273038"
 |**SQLEndTran**|굵은 나타냅니다 구문은 함수 이름을 포함 하 여 표시 된 대로 정확히 입력 해야 합니다.|  
 |&#124;|세로 막대 구분 구문 줄의 두 가지 상호 배타적인 선택 합니다.|  
 |...|줄임표는 인수 여러 번 반복할 수를 나타냅니다.|  
-|. 이라고도 합니다. .|점 세 개 열의 이전 코드 줄의 연속 작업을 나타냅니다.|  
+|을 선택합니다. 이라고도 합니다. 을 선택합니다.|점 세 개 열의 이전 코드 줄의 연속 작업을 나타냅니다.|  
   
 ## <a name="about-the-code-examples"></a>코드 예제 정보  
  이 가이드의 코드 예제는 설명 목적 으로만 설계 되었습니다. ODBC 원칙을 설명 하는 데 주로 기록 되므로, 효율성 때로는 따로 설정 된 명확성을 위해. 또한 코드의 전체 섹션 명확성을 위해 생략 되었습니다 경우도 있습니다. 여기에 비 ODBC 함수 (이름이 "SQL"로 시작 하지 않는 해당 함수) 및 대부분의 오류 처리의 정의가 포함 됩니다.  

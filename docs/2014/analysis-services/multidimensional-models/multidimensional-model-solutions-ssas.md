@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073564"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>다차원 모델 솔루션(SSAS)
@@ -44,6 +44,6 @@ ms.locfileid: "66073564"
  기존 관계형 스키마 없이 다차원 데이터베이스 개체를 디자인하는 방법에 대해 설명합니다.  
   
  [Analysis Services 개인 설정 확장 프로그램](extending-olap/analysis-services-personalization-extensions.md)  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 개인 설정 확장 프로그램을 디자인하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 개인 설정 확장 프로그램을 디자인하는 방법에 대해 설명합니다.  
   
   

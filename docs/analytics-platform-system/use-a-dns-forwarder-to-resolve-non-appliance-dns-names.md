@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243785"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS 전달자를 사용 하 여 분석 플랫폼 시스템에 비 어플라이언스 DNS 이름을 확인 하려면
-Active Directory Domain Services 노드에서 DNS 전달자를 구성할 수 있습니다 (**_어플라이언스\_도메인_-AD01** 하 고  **_어플라이언스\_ 도메인_-AD02**) 스크립트 및 소프트웨어 응용 프로그램을 외부 서버에 액세스를 허용 하기 위해 분석 플랫폼 시스템 어플라이언스입니다.  
+Active Directory Domain Services 노드에서 DNS 전달자를 구성할 수 있습니다 ( **_어플라이언스\_도메인_-AD01** 하 고  **_어플라이언스\_ 도메인_-AD02**) 스크립트 및 소프트웨어 응용 프로그램을 외부 서버에 액세스를 허용 하기 위해 분석 플랫폼 시스템 어플라이언스입니다.  
   
 ## <a name="ResolveDNS"></a>DNS 전달자를 사용 하 여  
 Analytics Platform System appliance 기기에 있지 않은 서버의 DNS 이름 확인을 방지 하도록 구성 됩니다. 같은 Windows Software Update Services (WSUS), 일부 프로세스는 어플라이언스 외부 서버에 액세스 해야 합니다. 이 사용 시나리오는 분석 플랫폼 시스템 DNS를 지원 하기 위해 Analytics Platform System 호스트 및 가상 머신 (Vm) 어플라이언스 외부 이름을 확인 하기 위해 외부 DNS 서버를 사용할 수 있는 외부 이름이 전달자를 지원 하도록 구성할 수 있습니다. DNS 접미사의 사용자 지정 구성을 사용할 수 없습니다, 즉, 비 어플라이언스 서버 이름을 확인 하려면 정규화 된 도메인 이름을 사용 해야 합니다.  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288516"
 ---
 # <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)
@@ -42,7 +42,7 @@ ODBC 연결 및 문 작업의 비동기 실행을 허용 합니다. 응용 프�
   
 |ODBC 응용 프로그램 버전|드라이버 관리자 버전|드라이버 버전|동작|  
 |------------------------------|----------------------------|--------------------|--------------|  
-|ODBC 버전의 새 응용 프로그램|ODBC 3.81|3.80 ODBC 드라이버|응용 프로그램 드라이버에서이 기능을 지 원하는 경우이 기능을 사용할 수, 그렇지 않으면 드라이버 관리자는 오류가 발생 합니다.|  
+|ODBC 버전의 새 응용 프로그램|ODBC 3.81|3\.80 ODBC 드라이버|응용 프로그램 드라이버에서이 기능을 지 원하는 경우이 기능을 사용할 수, 그렇지 않으면 드라이버 관리자는 오류가 발생 합니다.|  
 |ODBC 버전의 새 응용 프로그램|ODBC 3.81|Pre-ODBC 3.80 Driver|드라이버 관리자는 드라이버는이 기능을 지원 하지 않는 경우 오류가 출력 됩니다.|  
 |ODBC 버전의 새 응용 프로그램|Pre-ODBC 3.81|임의의 값|이 기능을 사용 하는 응용 프로그램을 이전 드라이버 관리자는 드라이버별 특성으로 새 특성을 생각 하 고 드라이버에 오류가 발생 합니다. 새 드라이버 관리자를 드라이버에 이러한 특성을 전달 합니다.|  
   

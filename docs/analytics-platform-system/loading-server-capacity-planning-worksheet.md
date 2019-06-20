@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213385"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Analytics Platform System에 대 한 서버 용량 계획 워크시트에 로드

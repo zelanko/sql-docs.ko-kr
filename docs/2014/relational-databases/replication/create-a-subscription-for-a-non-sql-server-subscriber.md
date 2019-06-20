@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721675"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
@@ -28,7 +28,7 @@ ms.locfileid: "62721675"
   
 -   **SQL Server 이외 구독자에 대한 구독을 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62721675"
   
     -   IBM DB2의 경우 데이터베이스가 DB2 연결 문자열의 **Initial Catalog** 속성에 지정됩니다. 이 연결 문자열은 이 과정의 뒷부분에서 설명하는 **추가 연결 옵션** 필드에 입력할 수 있습니다.  
   
-8.  **배포 에이전트 보안** 페이지에서 구독자 옆에 있는 속성 단추(**...**)를 클릭하여 **배포 에이전트 보안** 대화 상자에 액세스합니다.  
+8.  **배포 에이전트 보안** 페이지에서 구독자 옆에 있는 속성 단추( **...** )를 클릭하여 **배포 에이전트 보안** 대화 상자에 액세스합니다.  
   
 9. **배포 에이전트 보안** 대화 상자에서 다음을 수행하세요.  
   
@@ -155,27 +155,27 @@ ms.locfileid: "62721675"
   
     -   `enabled_for_het_sub` 값이 1인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자가 지원됩니다.  
   
-    -   경우 값 `enabled_for_het_sub` 가 0 이면 실행 [sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 지정 하 고 `enabled_for_het_sub` 에 대 한 **@property** 및 `true` 에대한 **@value**.  
+    -   경우 값 `enabled_for_het_sub` 가 0 이면 실행 [sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 지정 하 고 `enabled_for_het_sub` 에 대 한 **@property** 및 `true` 에대한 **@value** .  
   
         > [!NOTE]  
         >  `enabled_for_het_sub`을 `true`로 변경하기 전에 게시에 대한 기존 구독을 모두 삭제해야 합니다. 게시에서 업데이트 구독도 지원하는 경우 `enabled_for_het_sub`을 `true`로 설정할 수 없습니다. `enabled_for_het_sub` 변경은 다른 게시 속성에도 영향을 줍니다. 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**를 지정하고 **@destination_db**에 **(기본 대상)** 값을, **@subscription_type**에 **push** 값을, **@subscriber_type**에 3 값을 지정합니다(OLE DB 공급자 지정).  
+3.  게시 데이터베이스의 게시자에서 [sp_addsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication** , **@subscriber** 를 지정하고 **@destination_db** 에 **(기본 대상)** 값을, **@subscription_type** 에 **push** 값을, **@subscriber_type** 에 3 값을 지정합니다(OLE DB 공급자 지정).  
   
 4.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. 다음을 지정합니다.  
   
-    -   배포자의 배포 에이전트가 **@subscriber**및 **@publication** 매개 변수  
+    -   배포자의 배포 에이전트가 **@subscriber** 및 **@publication** 매개 변수  
   
-    -   **@subscriber_db**에 **(기본 대상)** 값  
+    -   **@subscriber_db** 에 **(기본 대상)** 값  
   
-    -   **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location**, **@subscriber_provider_string** 및 **@subscriber_catalog**에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본의 속성  
+    -   **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** 및 **@subscriber_catalog** 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본의 속성  
   
-    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password**를 참조하세요.  
+    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password** 를 참조하세요.  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 및 **@job_password**에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        >  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 및 **@job_password** 에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (선택 사항) **@subscriber_security_mode**에 **0** 값, **@subscriber_login** 및 **@subscriber_password**에 OLE DB 공급자 로그인 정보  
+    -   (선택 사항) **@subscriber_security_mode** 에 **0** 값, **@subscriber_login** 및 **@subscriber_password** 에 OLE DB 공급자 로그인 정보  
   
     -   이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](specify-synchronization-schedules.md)을 참조하세요.  
   

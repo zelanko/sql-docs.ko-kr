@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 562c6de437c37052b65b9d31571fa4c9b2c3a749
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796235"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
@@ -77,7 +77,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="examples"></a>예  
 
-### <a name="a-simple-example"></a>1. 간단한 예
+### <a name="a-simple-example"></a>1\. 간단한 예
 다음 예제에서는 `PartitionTable` 분할된 테이블 및 인덱스 만들기 [항목에서 설명하는](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)테이블에 대한 통계를 반환합니다.
 
 ```sql

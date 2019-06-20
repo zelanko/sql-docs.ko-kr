@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791946"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 활성화 및 비활성화(SQL Server)
@@ -64,7 +64,7 @@ ms.locfileid: "62791946"
   
 ##  <a name="IsEnabled"></a> 여부를 AlwaysOn 가용성 그룹을 사용할 수 확인  
   
--   다른 도구는 [SQL Server Management Studio](#SSMS1Procedure)  
+-   [SQL Server Management Studio](#SSMS1Procedure)  
   
 -   [Transact-SQL](#Tsql1Procedure)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62791946"
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**, SQL Server를 마우스 오른쪽 단추로 클릭 (**<*`instance name`*>)**, 여기서 **< *`instance name`* >** AlwaysOn 가용성 그룹을 사용 하도록 설정할 로컬 서버 인스턴스의 이름이 고 클릭 **속성입니다.**  
+3.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**, SQL Server를 마우스 오른쪽 단추로 클릭 ( **< *`instance name`* >)** , 여기서 **< *`instance name`* >** AlwaysOn 가용성 그룹을 사용 하도록 설정할 로컬 서버 인스턴스의 이름이 고 클릭 **속성입니다.**  
   
 4.  **AlwaysOn 고가용성** 탭을 선택합니다.  
   
@@ -195,13 +195,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-3.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**, SQL Server를 마우스 오른쪽 단추로 클릭 (**<*`instance name`*>)**, 여기서 **< *`instance name`* >** AlwaysOn 가용성 그룹을 사용 하지 않도록 설정 하려는 로컬 서버 인스턴스의 이름이 고 클릭 **속성**합니다.  
+3.  **SQL Server 구성 관리자**, 클릭 **SQL Server Services**, SQL Server를 마우스 오른쪽 단추로 클릭 ( **< *`instance name`* >)** , 여기서 **< *`instance name`* >** AlwaysOn 가용성 그룹을 사용 하지 않도록 설정 하려는 로컬 서버 인스턴스의 이름이 고 클릭 **속성**합니다.  
   
 4.  **AlwaysOn 고가용성**탭에서 **AlwaysOn 가용성 그룹 사용** 확인란의 선택을 취소하고 **확인**을 클릭합니다.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자가 변경 내용을 저장하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 시작하면 AlwaysOn을 사용할 수 없고 `IsHadrEnabled` 서버 속성이 0으로 설정되어 AlwaysOn 가용성 그룹을 사용할 수 없음을 나타냅니다.  
   
-5.  정보를 확인 하는 것이 좋습니다 [후속: AlwaysOn 사용 하지 않도록 설정 후](#FollowUp)이 항목의 뒷부분에 나오는.  
+5.  이 항목의 뒷부분에 나오는 [후속 작업: AlwaysOn 사용 하지 않도록 설정 후](#FollowUp)이 항목의 뒷부분에 나오는.  
   
 ###  <a name="PScmd3Procedure"></a> SQL Server PowerShell 사용  
  **AlwaysOn을 사용 하지 않도록 설정**  

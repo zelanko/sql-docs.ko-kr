@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be861ae0e27bccb682bd4beb89db2c0dd791b04b
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983038"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
@@ -92,7 +92,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. 제공 하는 예제를 실행 하 여이 인덱스를 만들 수 있습니다 합니다 `ProductReview` 테이블의 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>1. 모든 Key 및 DocId 값 가져오기  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>1\. 모든 Key 및 DocId 값 가져오기  
  다음 예제에서는 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 지역 변수를 만들고 문을 `@table_id` 의 ID를 할당할 수는 `ProductReview` 테이블로 해당 값입니다. 이 예제를 실행 **sp_fulltext_keymappings** 지정 `@table_id` 에 대 한 합니다 *table_id* 매개 변수입니다.  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ GO
 |`3`|`3`|`3`|  
 |`4`|`4`|`4`|  
   
-### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>2. 특정 Key 값에 대한 DocId 값 가져오기  
+### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>2\. 특정 Key 값에 대한 DocId 값 가져오기  
  다음 예에서는 DECLARE 문을 사용하여 지역 변수 `@table_id`를 만들고 `ProductReview` 테이블의 ID를 해당 값으로 할당합니다. 예제를 실행 **sp_fulltext_keymappings** 지정 `@table_id` 에 대 한 합니다 *table_id* 매개 변수를 NULL에 대 한 합니다 *docid* 매개 변수 및 4는 *키* 매개 변수입니다.  
   
 > [!NOTE]  

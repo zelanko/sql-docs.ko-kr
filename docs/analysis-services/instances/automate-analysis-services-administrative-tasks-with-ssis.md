@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c750c0e8ee9f13c4b4751af872b02f4ed9ee419a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659596"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS를 사용하여 Analysis Services 관리 태스크 자동화
@@ -23,7 +23,7 @@ ms.locfileid: "62659596"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 데이터 처리 태스크 중에 데이터 정리 작업을 수행하고 여러 다른 데이터 원본의 데이터를 결합하도록 디자인되었습니다. 큐브 및 마이닝 모델 작업 시에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 숫자가 아닌 데이터를 숫자 데이터로 변환할 수 있으며 데이터 값이 예상 범위 안에 포함되도록 만들어 팩트 테이블 및 차원을 채울 무결한 데이터를 만들 수 있습니다.  
   
 ## <a name="integration-services-tasks"></a>Integration Services 태스크  
- 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 또는 작업에는 제어 흐름 요소 및 데이터 흐름 요소의 두 가지 주요 요소가 있습니다. 제어 흐름 요소는 선행 제약 조건을 적용하여 작업 처리 과정의 논리적 순서를 정의합니다. 데이터 흐름 요소는 구성 요소의 출력과 다음 구성 요소의 입력 간의 연결 및 이 연결 사이의 데이터에서 수행되는 모든 데이터 변환을 다룹니다. 데이터 흐름 방향은 출력을 받을 구성 요소를 지정하는 논리가 포함된 선행 제약 조건에 의해 결정됩니다.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 태스크에는 DDL 실행 태스크, Analysis Services 처리 태스크 및 데이터 마이닝 쿼리 태스크가 있습니다. 이러한 각 태스크에 대해 메일 보내기 작업을 사용하여 관리자에게 작업 결과가 포함된 전자 메일 메시지를 보낼 수 있습니다.  
+ 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 태스크 또는 작업에는 제어 흐름 요소 및 데이터 흐름 요소의 두 가지 주요 요소가 있습니다. 제어 흐름 요소는 선행 제약 조건을 적용하여 작업 처리 과정의 논리적 순서를 정의합니다. 데이터 흐름 요소는 구성 요소의 출력과 다음 구성 요소의 입력 간의 연결 및 이 연결 사이의 데이터에서 수행되는 모든 데이터 변환을 다룹니다. 데이터 흐름 방향은 출력을 받을 구성 요소를 지정하는 논리가 포함된 선행 제약 조건에 의해 결정됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 태스크에는 DDL 실행 태스크, Analysis Services 처리 태스크 및 데이터 마이닝 쿼리 태스크가 있습니다. 이러한 각 태스크에 대해 메일 보내기 작업을 사용하여 관리자에게 작업 결과가 포함된 전자 메일 메시지를 보낼 수 있습니다.  
   
 ## <a name="the-execute-ddl-task"></a>DDL 실행 태스크  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 DDL 실행 태스크를 사용하여 DDL 스크립트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 직접 보내고 자동으로 실행할 수 있습니다. 이렇게 하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 백업, 복원 또는 동기화 작업을 수행할 수 있습니다. 패키지는 앞에서 설명한 제어 흐름 요소와 데이터 흐름 요소로 구성되어 있으며 이러한 모든 요소는 태스크에 추가할 수 있는 다른 DDL 문과 같이 **run regularly**여야 합니다. 여기서 설명하는 태스크는 종종 야간에 실행되기 때문에 예약 애플리케이션에서 쉽게 실행할 수 있는 패키지가 있으면 특히 유용합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트를 사용하여 언제든지 패키지가 실행되도록 예약할 수 있습니다. 이 태스크의 구현 방법은 [Analysis Services DDL 실행 태스크](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)를 참조하세요.  

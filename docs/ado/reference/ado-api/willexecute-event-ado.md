@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 571c63e0b8e06c08fb066c3bb6b2d42a019895e5
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66710038"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
@@ -44,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 에 대 한 잠금 형식을 포함 하는 합니다 **레코드 집합** 는 열립니다. 이 매개 변수를 사용 하 여 잠금을 중 임의의 형식으로 변경할 수 있습니다는 **RecordsetOpen** 작업 합니다. *LockType* 다른 작업에 대 한 무시 됩니다.  
   
- *Options*  
+ *옵션*  
  A **긴** 명령을 실행 하거나 열을 사용할 수 있는 옵션을 나타내는 값을 **레코드 집합**합니다.  
   
  *adStatus*  

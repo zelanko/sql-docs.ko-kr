@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026581"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 문법 선택
 SQL 문 생성 하는 경우 첫 번째 결정은 사용 하는 문법입니다. 문법, Open Group, ANSI 및 ISO와 같은 다양 한 표준 기관에서 제공 하는 것 외에도 거의 모든 DBMS 공급 업체는 표준에서 약간씩 다릅니다 각각 자체 문법을 정의 합니다.  
   
- [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 모든 ODBC 드라이버를 지원 해야 하는 최소 SQL 문법을 설명 합니다. 이 문법에는 SQL-92 항목 수준의 일부입니다. 드라이버는 중간, 전체 경로 또는 FIPS 127-2 전환 수준이 정의에서 SQL-92에 맞게 추가 문법을 지원할 수 있습니다. 자세한 내용은 [SQL 최소 문법](../../../odbc/reference/appendixes/sql-minimum-grammar.md) 부록 c: SQL 문법 및 SQL-92 합니다.  
+ [부록 C: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 모든 ODBC 드라이버를 지원 해야 하는 최소 SQL 문법을 설명 합니다. 이 문법에는 SQL-92 항목 수준의 일부입니다. 드라이버는 중간, 전체 경로 또는 FIPS 127-2 전환 수준이 정의에서 SQL-92에 맞게 추가 문법을 지원할 수 있습니다. 자세한 내용은 [SQL 최소 문법](../../../odbc/reference/appendixes/sql-minimum-grammar.md) 부록 c: SQL 문법 및 SQL-92 합니다.  
   
  부록 C 정의 *이스케이프 시퀀스* 외부 조인과 같은 일반적으로 사용 가능한 언어 기능에 대 한 표준 문법을 포함 하는 포함 되지 않는 SQL-92 문법입니다. 자세한 내용은 [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 부록 c: SQL 문법, 및 [이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences.md)이 섹션의 뒷부분에 나오는.  
   

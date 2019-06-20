@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078797"
 ---
 # <a name="modifying-the-date-dimension"></a>Date 차원 수정
@@ -64,7 +64,7 @@ ms.locfileid: "66078797"
   
 3.  속성 창이 열려 있지 않으면 속성 창을 열고 제목 표시줄의 **자동 숨기기** 단추를 클릭하여 열린 상태를 유지합니다.  
   
-4.  클릭 합니다 **NameColumn** 속성 창 아래쪽에 있는 필드 및 줄임표를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
+4.  클릭 합니다 **NameColumn** 속성 창 아래쪽에 있는 필드 및 줄임표를 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 5.  선택 `SimpleDate` 맨 아래에 **원본 열** 목록을 연 다음 클릭 **확인**합니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66078797"
   
 2.  **특성** 창에서 **English Month Name** 특성을 클릭합니다.  
   
-3.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+3.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 4.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **CalendarYear**열을 선택한 후 **>** 단추를 클릭합니다.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66078797"
   
 6.  **확인**을 클릭합니다.  
   
-7.  **EnglishMonthName** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+7.  **EnglishMonthName** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 8.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `MonthName`를 클릭 하 고 **확인**.  
   
@@ -206,7 +206,7 @@ ms.locfileid: "66078797"
   
 1.  **특성** 창에서 **Calendar Quarter** 특성을 클릭합니다.  
   
-2.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+2.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 3.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **CalendarYear** 열을 선택한 후 **>** 단추를 클릭합니다.  
   
@@ -214,7 +214,7 @@ ms.locfileid: "66078797"
   
 4.  **확인**을 클릭합니다.  
   
-5.  **Calendar Quarter** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+5.  **Calendar Quarter** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 6.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `CalendarQuarterDesc`를 클릭 하 고 **확인**.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "66078797"
   
 1.  **특성** 창에서 **Calendar Semester** 특성을 클릭합니다.  
   
-2.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+2.  **속성** 창에서 **KeyColumns** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 3.  **키 열** 대화 상자의 **사용 가능한 열** 목록에서 **CalendarYear**열을 선택한 후 **>** 단추를 클릭합니다.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "66078797"
   
 4.  **확인**을 클릭합니다.  
   
-5.  **Calendar Semester** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추(**...**)를 클릭합니다.  
+5.  **Calendar Semester** 특성의 **NameColumn** 속성을 설정하려면 속성 창에서 **NameColumn** 필드를 클릭한 후 찾아보기 단추( **...** )를 클릭합니다.  
   
 6.  에 **이름 열** 대화 상자의 합니다 **원본 열** 목록에서 `CalendarSemesterDesc`를 클릭 하 고 **확인**.  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66078797"
   
      **Calendar Semester** 특성 계층의 멤버는 키 값을 기준으로 정렬됩니다. 복합 키를 사용하면 멤버 키가 먼저 첫 번째 멤버 키의 값을 기준으로 정렬된 다음 두 번째 멤버 키 값을 기준으로 정렬됩니다. 즉 **Calendar Semester** 특성 계층의 멤버는 먼저 반기순으로 정렬된 다음 연도순으로 정렬됩니다.  
   
-3.  속성 창에서 줄임표 단추(**...**)를 클릭하여 **KeyColumns** 속성 값을 변경합니다.  
+3.  속성 창에서 줄임표 단추( **...** )를 클릭하여 **KeyColumns** 속성 값을 변경합니다.  
   
 4.  **키 열** 대화 상자의 **키 열** 목록에서 **CalendarSemester** 가 선택되어 있는지 확인한 후 아래쪽 화살표를 클릭하여 이 복합 키 멤버의 순서를 반대로 바꿉니다. **확인**을 클릭합니다.  
   

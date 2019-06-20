@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645107"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig(Transact-SQL)
@@ -77,7 +77,7 @@ xp_loginconfig ['config_name']
   
 ## <a name="examples"></a>예  
   
-### <a name="a-how-to-report-all-configuration-values"></a>1. 모든 구성 값을 보고하는 방법  
+### <a name="a-how-to-report-all-configuration-values"></a>1\. 모든 구성 값을 보고하는 방법  
  다음 예에서는 현재 구성된 모든 설정을 표시합니다.  
   
 ```  
@@ -85,7 +85,7 @@ EXEC xp_loginconfig;
 GO  
 ```  
   
-### <a name="b-how-to-report-a-specific-configuration-value"></a>2. 특정 구성 값을 보고하는 방법  
+### <a name="b-how-to-report-a-specific-configuration-value"></a>2\. 특정 구성 값을 보고하는 방법  
  다음 예에서는 로그인 모드에 관한 설정만을 표시합니다.  
   
 ```  

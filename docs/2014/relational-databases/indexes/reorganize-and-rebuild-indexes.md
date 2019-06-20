@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63036234"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
@@ -215,7 +215,7 @@ ms.locfileid: "63036234"
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.   **확인.**  
+8.  **확인.**  
   
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>테이블의 모든 인덱스를 다시 구성하려면  
   
@@ -231,7 +231,7 @@ ms.locfileid: "63036234"
   
 6.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-7.   **확인.**  
+7.  **확인.**  
   
 #### <a name="to-rebuild-an-index"></a>인덱스를 다시 작성하려면  
   
@@ -249,7 +249,7 @@ ms.locfileid: "63036234"
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.   **확인.**  
+8.  **확인.**  
   
 ##  <a name="TsqlProcedureReorg"></a> Transact-SQL 사용  
   
