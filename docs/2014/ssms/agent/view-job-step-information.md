@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245927"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
@@ -33,7 +33,7 @@ ms.locfileid: "63245927"
   
 -   **작업 단계 정보를 보려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63245927"
   
 #### <a name="to-view-job-step-information"></a>작업 단계 정보를 보려면  
   
-1.   **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 보려는 작업 단계가 포함된 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   

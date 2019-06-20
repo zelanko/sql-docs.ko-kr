@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046748"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "66102967"
  보고서 서버 항목에는 보고서, 모델, 공유 데이터 원본, 공유 데이터 세트뿐 아니라 보고서 서버에 게시하거나 업로드하거나 저장할 수 있는 기타 항목도 포함됩니다. 항목은 기본 보고서 서버에 보고서 서버 계층형 폴더 구조로 구성되거나 SharePoint 사이트의 SharePoint 콘텐츠 라이브러리에 구성됩니다, 자세한 내용은 [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](report-server/report-server-content-management-ssrs-native-mode.md)를 참조하세요.  
   
  **폴더**  
- 기본 보고서 서버의 폴더는 보고서 서버에 저장된 모든 주소 지정 가능 항목의 계층형 탐색 구조와 경로를 제공합니다. 폴더 계층과 사이트 및 폴더 사용 권한을 사용하여 보고서 서버 항목에 대한 액세스를 제어하며, 이를 *항목 수준 보안*이라고 합니다. 기본적으로 특정 폴더에 대해 정의한 역할 할당은 폴더 계층 내의 자식 폴더에 상속됩니다. 특정 역할을 폴더에 할당하는 경우 상속 규칙이 더 이상 적용되지 않습니다. 폴더 구조는 **홈**이라는 루트 노드와 선택적인 **내 보고서** 기능을 지원하는 예약된 폴더로 구성됩니다. 브라우저에서 루트 노드는 보고서 서버 가상 디렉터리 주소의 이름입니다(예: http://myreportserver/reports). 자세한 내용은 [Folders](report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)을(를) 참조하세요.  
+ 기본 보고서 서버의 폴더는 보고서 서버에 저장된 모든 주소 지정 가능 항목의 계층형 탐색 구조와 경로를 제공합니다. 폴더 계층과 사이트 및 폴더 사용 권한을 사용하여 보고서 서버 항목에 대한 액세스를 제어하며, 이를 *항목 수준 보안*이라고 합니다. 기본적으로 특정 폴더에 대해 정의한 역할 할당은 폴더 계층 내의 자식 폴더에 상속됩니다. 특정 역할을 폴더에 할당하는 경우 상속 규칙이 더 이상 적용되지 않습니다. 폴더 구조는 **홈**이라는 루트 노드와 선택적인 **내 보고서** 기능을 지원하는 예약된 폴더로 구성됩니다. 브라우저에서 루트 노드는 보고서 서버 가상 디렉터리 주소의 이름입니다(예: http://myreportserver/reports ). 자세한 내용은 [Folders](report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)을(를) 참조하세요.  
   
  SharePoint 사이트에서 문서 라이브러리 및 콘텐츠 라이브러리의 SharePoint 폴더를 사용하여 항목을 구성할 수 있습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66102967"
  **보고서 및 보고서 정의**  
  **RDL.** 보고서 정의는 RDL(Report Definition Language)이라는 XML 문법에 맞는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서 작성기나 보고서 디자이너와 같은 도구에서 보고서 정의를 만듭니다. 이 파일은 데이터 원본 연결을 정의하는 요소, 데이터 검색에 사용되는 쿼리, 식, 매개 변수, 이미지, 입력란, 테이블 및 기타 디자인 타임 레이아웃을 제공합니다. 자세한 내용은 [RDL(Report Definition Language)&#40;SSRS&#41;](reports/report-definition-language-ssrs.md)을 참조하세요.  
   
- **RDLX.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx)(영문)를 참조하세요.  
+ **RDLX.** RDLX로 된 보고서 정의는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 시각화 환경을 활성화하는 내부 확장 프로그램을 사용한 RDL 파일입니다. 자세한 내용은 [Power View 개요](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684)(영문)를 참조하세요.  
   
  **RDLC.** Visual Studio 보고서 디자이너는 ReportViewer 컨트롤에 사용할 XML 형식의 클라이언트 보고서 정의 파일(.rdlc)을 생성합니다.  
   

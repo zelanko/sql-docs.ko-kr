@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720993"
 ---
 # <a name="sinstance-class"></a>SInstance 클래스
-   [SInstance 클래스](sinstance-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 나타냅니다.  
+  [SInstance 클래스](sinstance-class.md) 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스를 나타냅니다.  
   
  [SInstance 클래스](sinstance-class.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스와 연결된 프로토콜 및 네트워크 라이브러리를 관리할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대한 보안 인증서도 지정할 수 있습니다.  
   

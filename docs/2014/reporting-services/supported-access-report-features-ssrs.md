@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100583"
 ---
 # <a name="supported-access-report-features-ssrs"></a>지원되는 Access 보고서 기능(SSRS)
@@ -275,7 +275,7 @@ ms.locfileid: "66100583"
 |LCase|LCase$|왼쪽|Left$|  
 |Len|LTrim|LTrim$|Mid|  
 |Mid$|바꾸기|오른쪽|Right$|  
-|RTrim|공백|Space$|StrComp|  
+|RTrim|Space|Space$|StrComp|  
 |StrConv|문자열|String$|StrReverse|  
 |Trim|Trim$|UCase|UCase$|  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cb48c5a763162685060a95e8d352ebddd8b0032
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270894"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>지원되는 데이터 형식(Visual FoxPro ODBC 드라이버)

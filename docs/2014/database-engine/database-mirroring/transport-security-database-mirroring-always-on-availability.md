@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754292"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대한 전송 보안(SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62754292"
 ##  <a name="Authentication"></a> 인증  
  인증은 사용자가 올바른지 여부를 확인하는 과정입니다. 데이터베이스 미러링 엔드포인트 간 연결에는 인증이 필요합니다. 파트너나 미러링 모니터 서버의 연결 요청은 반드시 인증되어야 합니다.  
   
- 서버 인스턴스에서 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 사용하는 인증 유형은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링 끝점에 사용할 수 있는 두 가지 전송 보안 같습니다. Windows 인증 (보안 지원 공급자 인터페이스 (SSPI)) 및 인증서 기반 인증 합니다.  
+ 서버 인스턴스에서 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 사용하는 인증 유형은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링 엔드포인트에서 사용할 수 있는 두 가지 전송 보안 유형으로는 SSPI(보안 지원 공급자 인터페이스)인 Windows 인증 및 인증서 기반 인증이 있습니다.  
   
 ### <a name="windows-authentication"></a>Windows 인증  
  Windows 인증을 사용할 경우 각 서버 인스턴스는 프로세스가 실행되고 있는 Windows 사용자 계정의 Windows 자격 증명을 사용하여 다른 쪽에 로그인합니다. Windows 인증에는 다음과 같은 로그인 계정에 대한 수동 구성이 필요할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "62754292"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 다른 각 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$* )의 로그인은 다른 각 서버의 **마스터**에서 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$*)의 로그인은 다른 각 서버의 **마스터**에서 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
   
 > [!NOTE]  
 >  Windows 인증을 사용하여 데이터베이스 미러링 세션을 설정하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  

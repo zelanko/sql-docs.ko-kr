@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63280917"
 ---
 # <a name="sql-data-types"></a>SQL 데이터 형식
@@ -86,7 +86,7 @@ ms.locfileid: "63280917"
   
  [5]에 따라 구현 SQL_FLOAT의 정밀도 24 또는 53 일 수 있습니다: 데이터 형식을 SQL_FLOAT SQL_REAL; 동일 24 인 경우 53 인 경우 SQL_DOUBLE 동일 SQL_FLOAT 데이터 유형이입니다.  
   
- [ODBC 3에서 6]*.x*, SQL date, time 및 timestamp 데이터 형식은 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP, ODBC 2에서 각각;. *x*, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP 데이터 형식이 됩니다.  
+ [ODBC 3에서 6] *.x*, SQL date, time 및 timestamp 데이터 형식은 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP, ODBC 2에서 각각;. *x*, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP 데이터 형식이 됩니다.  
   
  [7] 간격 SQL 데이터 형식에 대 한 자세한 내용은 참조는 [Interval 데이터 형식을](../../../odbc/reference/appendixes/interval-data-types.md) 이 부록의 뒷부분에 나오는 섹션입니다.  
   

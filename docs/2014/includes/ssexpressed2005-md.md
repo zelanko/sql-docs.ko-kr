@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0394ee9cd9fd4461ac875a457c7b40bd98b32cba
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819433"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67223669"
 ---
 SQL Server 2005 Express Edition

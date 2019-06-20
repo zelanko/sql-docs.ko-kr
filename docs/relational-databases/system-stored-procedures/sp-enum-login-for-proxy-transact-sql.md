@@ -19,10 +19,10 @@ ms.author: vanto
 author: VanMSFT
 manager: jroth
 ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822633"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
@@ -76,7 +76,7 @@ sp_enum_login_for_proxy
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-associations"></a>1. 모든 연결 나열  
+### <a name="a-listing-all-associations"></a>1\. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 로그인과 프록시 간에 설정된 모든 사용 권한을 나열합니다.  
   
 ```sql
@@ -87,7 +87,7 @@ EXEC dbo.sp_enum_login_for_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-proxies-for-a-specific-login"></a>2. 특정 로그인에 대한 프록시 나열  
+### <a name="b-listing-proxies-for-a-specific-login"></a>2\. 특정 로그인에 대한 프록시 나열  
  다음 예에서는 `terrid` 로그인이 액세스할 수 있는 프록시를 나열합니다.  
   
 ```sql

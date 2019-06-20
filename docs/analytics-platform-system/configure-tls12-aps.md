@@ -10,10 +10,10 @@ ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239462"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP에서 TLS 1.2를 구성 합니다.

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808728"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>서버에 연결(로그인 페이지) Reporting Services
@@ -59,7 +59,7 @@ ms.locfileid: "62808728"
  **연결**  
  선택한 서버에 연결합니다.  
   
- **Options**  
+ **옵션**  
  암호 저장과 같은 추가 서버 연결 옵션을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810438"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>SQL Server에서 사용하는 계정의 암호 변경(SQL Server 구성 관리자)
@@ -55,9 +55,9 @@ ms.locfileid: "62810438"
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server(**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server(** \<instancename> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server(**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server(** \<instancename> **) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하지 않아도 암호가 즉시 적용됩니다.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62810438"
   
 2.  SQL Server 구성 관리자에서 **SQL Server 서비스**를 클릭합니다.  
   
-3.  세부 정보 창에서 **SQL Server 에이전트 (**\<instancename>**)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+3.  세부 정보 창에서 **SQL Server 에이전트 (** \<instancename> **)** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server 에이전트 (**\<instancename>**) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server 에이전트 (** \<instancename> **) 속성** 대화 상자의 [로그온] 탭에서 **계정 이름** 상자에 나열된 계정에 대한 새 암호를 **암호** 및 **암호 확인** 상자에 입력한 다음 **확인**을 클릭합니다.  
   
      독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하지 않아도 암호가 즉시 적용됩니다. 클러스터형 인스턴스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 오프라인 상태로 만들 수 있으므로 다시 시작해야 합니다.  
   

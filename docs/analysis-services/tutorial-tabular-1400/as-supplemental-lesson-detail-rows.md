@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bad45d18c351e838ec944b1ae67e3ce88c7e1d20
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685247"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263312"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>추가 단원 - 세부 정보 행
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685247"
 
 이 추가 단원에서는 DAX 편집기를 사용 하 여 사용자 지정 세부 정보 행 식을 정의 합니다. 세부 정보 행 식을 측정값의 집계 된 결과 대 한 자세한 내용은 최종 사용자에 게 제공 측정값을 속성입니다. 
   
-이 단원에 소요되는 예상 시간: **10 분**  
+예상이 단원을 완료 시간: **10 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
@@ -81,6 +81,6 @@ ms.locfileid: "57685247"
   
 ## <a name="see-also"></a>참고자료  
 
-[SELECTCOLUMNS 함수 (DAX)](https://msdn.microsoft.com/library/mt761759.aspx)  
+[SELECTCOLUMNS 함수 (DAX)](/dax/selectcolumns-function-dax)  
 [추가 단원 - 동적 보안](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [추가 단원-비정형 계층 구조](../tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md)  

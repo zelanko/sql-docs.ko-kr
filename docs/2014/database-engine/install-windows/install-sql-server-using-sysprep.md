@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775306"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep을 사용하여 SQL Server 2014 설치
@@ -171,7 +171,7 @@ ms.locfileid: "62775306"
   
 7.  **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다.  
   
-     **설치 된 인스턴스:** 이이 컴퓨터에서 준비 인스턴스를 포함 하 여 모든 인스턴스가 표시 됩니다.  
+     **설치된 인스턴스:** 준비 인스턴스를 포함하여 이 머신에 설치되어 있는 모든 인스턴스가 표시됩니다.  
   
 8.  준비 단계에서 설치에 포함하도록 선택한 기능 및 구성 요소가 **기능 검토** 페이지에 표시됩니다. 준비 인스턴스에 포함되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 다른 기능을 더 추가하려면 먼저 이 단계를 완료하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 완료한 다음, **설치 센터** 의 **기능 추가**에서 기능을 추가해야 합니다.  
   

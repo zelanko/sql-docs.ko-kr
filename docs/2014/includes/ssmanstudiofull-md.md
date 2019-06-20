@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: af081c1e59617a5d1153659e6fb25474c0fc9b63
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817352"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67210134"
 ---
 SQL Server Management Studio

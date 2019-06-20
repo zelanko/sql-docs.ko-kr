@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63224867"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand-병렬 데이터 웨어하우스를 사용 하 여 원격 테이블 복사본을 받도록 외부 Windows 시스템 구성
@@ -42,7 +42,7 @@ ms.locfileid: "63224867"
   
 3.  설치 하 고 InfiniBand 네트워크 어댑터에 대 한 적절 한 Windows 드라이버를 구성 합니다.  
   
-    Windows에 대 한 infiniband InfiniBand 공급 업체의 업계 컨소시엄 OpenFabrics Alliance에서 개발 됩니다.  올바른 드라이버 InfiniBand 어댑터와 함께 배포 될 수 있습니다. 그렇지 않은 경우 www.openfabrics.org에서 드라이버를 다운로드할 수 있습니다.  
+    Windows에 대 한 infiniband InfiniBand 공급 업체의 업계 컨소시엄 OpenFabrics Alliance에서 개발 됩니다.  올바른 드라이버 InfiniBand 어댑터와 함께 배포 될 수 있습니다. 그렇지 않은 경우 www.openfabrics.org 에서 드라이버를 다운로드할 수 있습니다.  
   
 4.  어댑터에서 각 포트에 대 한 IP 주소를 구성 합니다. SMP 시스템은이 목적을 위해 예약 된 주소 범위에서 고정 IP 주소를 사용 해야 합니다. 다음 매개 변수에 따라 첫 번째 포트를 구성 합니다.  
   

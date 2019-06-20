@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241255"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항
@@ -39,7 +39,7 @@ ms.locfileid: "63241255"
 |**minOccurs** 및 **maxOccurs**|**minOccurs** 및 **maxOccurs** 특성 값은 4바이트 정수로 구성해야 합니다. 이러한 형식을 따르지 않는 스키마는 서버에서 거부됩니다.|  
 |**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 파티클이 0의 **minOccurs** 특성 값으로 정의되지 않으면 하위 항목 없이 **\<xsd:choice>** 파티클을 포함한 스키마를 거부합니다.|  
 |**\<xsd:include>**|현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.<br /><br /> 이러한 문제를 해결하기 위해 **\<xsd:include>** 지시어를 포함하고 있는 XML 스키마를 전처리하여 포함된 모든 스키마의 콘텐츠를 하나의 스키마로 복사 및 병합해서 서버에 업로드할 수 있습니다. 자세한 내용은 [포함된 스키마를 병합하기 위해 스키마 전처리](preprocess-a-schema-to-merge-included-schemas.md)를 참조하세요.|  
-|**\<xsd:key>**, **\<xsd:keyref>** 및 **\<xsd:unique>**|현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유성을 적용하거나 키 및 키 참조를 설정하는 이러한 XSD 기반 제약 조건을 지원하지 않습니다. 이러한 요소를 포함하고 있는 XML 스키마는 등록할 수 없습니다.|  
+|**\<xsd:key>** , **\<xsd:keyref>** 및 **\<xsd:unique>**|현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 고유성을 적용하거나 키 및 키 참조를 설정하는 이러한 XSD 기반 제약 조건을 지원하지 않습니다. 이러한 요소를 포함하고 있는 XML 스키마는 등록할 수 없습니다.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 스키마를 업데이트하는 다른 방법은 [&#60;xsd:redefine&#62; 요소](the-xsd-redefine-element.md)에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다.|  
 |**\<xsd:simpleType>** 값|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `xs:time` 및 `xs:dateTime`이 아닌 두 번째 구성 요소가 있는 단순 유형에 대해 밀리초 정밀도만 지원하며 `xs:time` 및 `xs:dateTime`에 대해서는 100나노초 정밀도만 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인식된 모든 XSD 단순 유형 열거를 제한합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **\<xsd:simpleType>** 선언에서 "NaN" 값을 사용하도록 지원하지 않습니다.<br /><br /> 자세한 내용은[&#60;xsd:simpleType&#62; 선언의 값](values-for-xsd-simpletype-declarations.md)에서 작동할 수 있도록 XSD 스키마를 수정하는 지침을 제공합니다.|  
 |**xsi:schemaLocation** 및 **xsi:noNamespaceSchemaLocation**|`xml` 데이터 형식의 열 또는 변수에 삽입된 XML 인스턴스 데이터에 이러한 특성이 존재할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 특성을 무시합니다.|  

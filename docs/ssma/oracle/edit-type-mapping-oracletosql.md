@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288580"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>형식 매핑 편집(OracleToSQL)
@@ -37,7 +37,7 @@ ms.locfileid: "63288580"
 **보낸 사람**  
 이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식에서 시작 하는 범위에 대 한이 매핑 임을 지정 하려면 10을 입력할 수 있습니다 **nchar(10)** 합니다.  
   
-**대상**  
+**수행할 작업**  
 이 매핑에 대 한 최대 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식으로이 매핑은 끝 범위를 지정 하는 20을 입력할 수 있습니다 **nchar(20)** 합니다.  
   
 **대상 유형**  

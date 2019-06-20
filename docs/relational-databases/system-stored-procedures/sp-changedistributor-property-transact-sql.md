@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997017"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property(Transact-SQL)
@@ -46,7 +46,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
-`[ @value = ] 'value'` 지정된 된 배포자 속성에 대 한 값이입니다. *값* 됩니다 **varchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정된 된 배포자 속성에 대 한 값이입니다. *값* 됩니다 **varchar(255)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

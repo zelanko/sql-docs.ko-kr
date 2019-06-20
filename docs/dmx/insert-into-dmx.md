@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505158"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
@@ -47,7 +47,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Remarks  
  지정 하지 않는 경우 **마이닝 모델** 하거나 **마이닝 구조**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 기반으로 개체 형식을 검색 하 고 올바른 개체를 처리 합니다. 서버에 이름이 서로 동일한 마이닝 구조 및 마이닝 모델이 있는 경우에는 오류가 반환됩니다.  
   
- 두 번째 구문 형식 INSERT INTO를 사용 하 여*\<개체 >* 합니다. COLUMN_VALUES, 데이터 모델을 학습 하지 않고 모델 열에 직접 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 집합으로 작업할 때 유용합니다.  
+ 두 번째 구문 형식 INSERT INTO를 사용 하 여 *\<개체 >* 합니다. COLUMN_VALUES, 데이터 모델을 학습 하지 않고 모델 열에 직접 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 집합으로 작업할 때 유용합니다.  
   
  사용 하는 경우 **INSERT INTO** 마이닝 모델 또는 마이닝 구조 및 해제는 유지 합니다 \<매핑된 모델 열 > 및 \<원본 데이터 쿼리와 > 인수 문 처럼 동작  **ProcessDefault**, 이미 존재 하는 바인딩을 사용 하 여 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. 에 대 한 자세한 내용은 **ProcessDefault**를 참조 하십시오 [처리 옵션 및 설정 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). 다음 예에서는 구문을 보여 줍니다.  
   
@@ -61,11 +61,11 @@ INSERT INTO [MINING MODEL] <model>
   
 |인수를 제거합니다.|개체의 상태|결과|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL*\<모델 >*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
+|INSERT INTO MINING MODEL *\<모델 >*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
 ||마이닝 구조에 추가 마이닝 모델이 포함되어 있습니다.|프로세스가 실패합니다. 마이닝 구조 및 연결된 마이닝 모델을 다시 처리해야 합니다.|  
-|INSERT INTO MINING STRUCTURE*\<구조 >*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
-|INSERT INTO MINING MODEL*\<모델 >* 원본 쿼리 포함<br /><br /> 로 구분하거나 여러<br /><br /> INSERT INTO MINING STRUCTURE*\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)합니다.|  
+|INSERT INTO MINING STRUCTURE *\<구조 >*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
+|INSERT INTO MINING MODEL *\<모델 >* 원본 쿼리 포함<br /><br /> 로 구분하거나 여러<br /><br /> INSERT INTO MINING STRUCTURE *\<구조 >* 원본 쿼리 포함|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)합니다.|  
   
 ## <a name="mapped-model-columns"></a>매핑된 모델 열  
  사용 하 여는 \<매핑된 모델 열 > 요소에 마이닝 모델의 열에 데이터 원본에서 열을 매핑할 수 있습니다. \<매핑된 모델 열 > 요소는 다음과 같은 형식을 갖습니다.  

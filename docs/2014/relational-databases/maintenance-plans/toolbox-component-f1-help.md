@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806831"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
@@ -26,7 +26,7 @@ ms.locfileid: "62806831"
 **도구 상자** 아이콘은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 코드 편집기 또는 디자인 보기로 끌어 놓거나 복사하여 붙여 넣을 수 있습니다.  
   
 ## <a name="using-the-toolbox"></a>도구 상자 사용  
- 도구 상자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 탐색기와 비슷하게 작동하지만 표나 연결선이 없는 슬라이드 트리 컨트롤입니다. 탭이라고 하는 **도구 상자** 의 여러 부분은 동시에 확장할 수 있으며 전체 트리는 **도구 상자** 창 내에서 스크롤됩니다. **도구 상자**의 탭을 확장하려면 탭 이름 옆에 있는 더하기 기호(**+**)를 클릭합니다. 확장된 탭을 축소하려면 탭 이름 옆에 있는 빼기 기호(**-**)를 클릭합니다.  
+ 도구 상자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 탐색기와 비슷하게 작동하지만 표나 연결선이 없는 슬라이드 트리 컨트롤입니다. 탭이라고 하는 **도구 상자** 의 여러 부분은 동시에 확장할 수 있으며 전체 트리는 **도구 상자** 창 내에서 스크롤됩니다. **도구 상자**의 탭을 확장하려면 탭 이름 옆에 있는 더하기 기호( **+** )를 클릭합니다. 확장된 탭을 축소하려면 탭 이름 옆에 있는 빼기 기호( **-** )를 클릭합니다.  
   
  편집기 또는 디자이너로 돌아올 때마다 **도구 상자** 가 자동으로 가장 최근에 선택한 탭 및 항목으로 스크롤됩니다. 포커스를 다른 편집기나 디자이너로 옮기면 **도구 상자** 의 현재 선택 사항이 그대로 해당 편집기 또는 디자이너에 적용됩니다.  
   

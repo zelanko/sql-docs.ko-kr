@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270598"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
@@ -60,7 +60,7 @@ ms.locfileid: "63270598"
 |Column|All|계산된 열의 쿼리 또는 식에 사용되는 데이터 열 이름을 표시합니다. 이 열은 가로로 스크롤할 때 항상 표시되도록 설정되어 있습니다.|  
 |별칭|SELECT, INSERT FROM, UPDATE, MAKE TABLE|열의 대체 이름 또는 계산 열에 사용할 수 있는 이름을 지정합니다.|  
 |Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|관련 데이터 열에 대한 테이블 또는 테이블 구조 개체의 이름을 지정합니다. 계산된 열의 경우에는 이 열이 비어 있습니다.|  
-|출력|SELECT, INSERT FROM, MAKE TABLE|쿼리 출력에 데이터 열을 나타낼지 여부를 지정합니다.<br /><br /> 참고: 데이터베이스에서 허용 하는 경우 결과 집합에 표시 하지 않고 정렬 또는 검색 절에 대 한 데이터 열을 사용할 수 있습니다.|  
+|출력|SELECT, INSERT FROM, MAKE TABLE|쿼리 출력에 데이터 열을 나타낼지 여부를 지정합니다.<br /><br /> 참고: 데이터베이스에서 허용하면 결과 집합에 표시하지 않고 정렬 또는 검색 절에 데이터 열을 사용할 수 있습니다.|  
 |정렬 형식|SELECT, INSERT FROM|관련 데이터 열을 쿼리 결과를 정렬하는 데 사용하고 오름차순으로 정렬할 것인지 또는 내림차순으로 정렬할 것인지 지정합니다.|  
 |정렬 순서|SELECT, INSERT FROM|결과 집합을 정렬하는 데 사용되는 데이터 열에 정렬 우선 순위를 지정합니다. 데이터 열의 정렬 순서를 변경하면 다른 모든 열의 정렬 순서도 적절히 업데이트됩니다.|  
 |그룹화 방법|SELECT, INSERT FROM, MAKE TABLE|관련 데이터 열을 사용하여 집계 쿼리를 만들도록 지정합니다. 이 표 형태 열은 **도구** 메뉴에서 **그룹화 방법** 을 선택하거나 SQL 창에 GROUP BY 절을 추가한 경우에만 나타납니다.<br /><br /> 기본적으로 이 열의 값은 **그룹화 방법**으로 설정되어 있으며 열은 GROUP BY 절의 일부가 됩니다.<br /><br /> 이 열의 한 셀로 이동하고 집계 함수를 선택하여 관련 데이터 열에 적용하면 기본적으로 결과 식이 결과 집합에 대한 출력 열로 추가됩니다.|  

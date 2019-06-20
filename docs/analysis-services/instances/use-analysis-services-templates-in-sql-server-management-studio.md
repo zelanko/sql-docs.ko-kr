@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148138"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263164"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿 사용
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148138"
  이 예에서는 SQL Server Management Studio에서 테이블 형식 model 데이터베이스를 데이터 원본으로 사용하여 MDX 쿼리를 만드는 방법을 보여 줍니다. 사용 중인 컴퓨터에서 이 예를 재현하려면 [Adventureworks 테이블 형식 모델 샘플 프로젝트를 다운로드](http://go.microsoft.com/fwlink/?LinkId=231183)하십시오.  
   
 > [!WARNING]  
->  직접 쿼리 모드에서 배포된 테이블 형식 모델에 대해서는 MDX 쿼리를 사용할 수 없습니다. 그러나 EVALUATE 명령이 포함된 DAX 테이블 쿼리를 사용하여 동일한 쿼리를 보낼 수 있습니다. 자세한 내용은 [DAX 쿼리 매개 변수](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544)를 참조하세요.  
+>  직접 쿼리 모드에서 배포된 테이블 형식 모델에 대해서는 MDX 쿼리를 사용할 수 없습니다. 그러나 EVALUATE 명령이 포함된 DAX 테이블 쿼리를 사용하여 동일한 쿼리를 보낼 수 있습니다. 자세한 내용은 [DAX 쿼리 매개 변수](/dax/dax-queries#parameters-in-dax-queries)를 참조하세요.  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>템플릿에서 MDX쿼리 만들기  
   

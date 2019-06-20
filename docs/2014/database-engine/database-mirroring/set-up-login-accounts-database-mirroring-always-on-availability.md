@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754317"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대한 로그인 계정 설정(SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62754317"
  두 서버 인스턴스가 다른 계정으로 실행되는 경우 시스템 관리자는 CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 서버 인스턴스마다 원격 인스턴스의 시작 서비스 계정에 대한 로그인을 만들 수 있습니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)을 참조하세요.  
   
 > [!IMPORTANT]  
->  도메인이 아닌 계정에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 경우 인증서를 사용해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
+>  도메인이 아닌 계정에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 경우 인증서를 사용해야 합니다. 자세한 내용은 [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)을 참조하세요.  
   
  예를 들어 loginA에서 실행되는 sqlA 서버 인스턴스의 경우 loginB에서 실행되는 sqlB 서버 인스턴스에 연결하려면 loginA는 sqlB에 있어야 하고 loginB는 sqlA에 있어야 합니다. 또한 미러링 모니터 서버 인스턴스(sqlC)가 있고 서버 인스턴스 3개가 서로 다른 도메인 계정으로 실행되는 데이터베이스 미러링 세션의 경우 다음 로그인을 만들어야 합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62754317"
   
 -   [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&amp;#40;SQL Server&amp;#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
 -   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   

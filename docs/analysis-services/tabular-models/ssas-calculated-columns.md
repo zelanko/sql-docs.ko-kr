@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072400"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263382"
 ---
 # <a name="calculated-columns"></a>계산 열
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072400"
   
 -   계산 열의 이름을 바꿀 때는 해당 열에 의존하는 공식을 수동으로 업데이트해야 합니다. 수동 업데이트 모드가 아닌 한 수식 결과 업데이트는 자동으로 수행됩니다. 하지만 이 작업은 어느 정도 시간이 걸릴 수 있습니다.  
   
--   열 이름 내에 사용할 수 없는 몇 가지 문자가 있습니다. 자세한 내용은 [DAX 구문 참조](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)의 "명명 요구 사항"을 참조하세요.  
+-   열 이름 내에 사용할 수 없는 몇 가지 문자가 있습니다. 자세한 내용은 [DAX 구문 참조](/dax/dax-syntax-reference)의 "명명 요구 사항"을 참조하세요.  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  계산 열의 수식은 측정값에 사용된 수식보다 더 많은 리소스가 필요할 수 있습니다. 한 가지 이유는 계산 열의 결과는 테이블의 각 행에 대해 항상 계산되지만 측정값은 보고서, 피벗 테이블 또는 피벗 차트에 사용된 필터에 의해 정의된 셀에 대해서만 계산된다는 것입니다. 예를 들어 백만 개의 행이 있는 테이블에는 항상 백만 개의 결과가 있는 계산 열이 있으며 성능에 대한 영향이 각각 다릅니다. 하지만 피벗 테이블은 일반적으로 행 및 열 머리글을 적용하여 데이터를 필터링하므로 피벗 테이블의 각 셀에 있는 데이터의 하위 집합에 대해서만 측정값이 계산됩니다.  

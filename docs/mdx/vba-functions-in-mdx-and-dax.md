@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251545"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
@@ -139,7 +139,7 @@ ms.locfileid: "63251545"
 |Shell|지원되지 않음||  
 |Sin|MDX만||  
 |SLN|MDX만||  
-|공백|MDX만||  
+|Space|MDX만||  
 |Spc|지원되지 않음||  
 |분할|지원되지 않음||  
 |Sqr|MDX만||  

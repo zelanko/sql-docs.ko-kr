@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241426"
 ---
 # <a name="c-to-sql-timestamp"></a>C에서 SQL로: timestamp
@@ -41,6 +41,6 @@ Timestamp ODBC C 데이터 형식에 대 한 식별자가 있습니다.
   
  SQL_C_TIMESTAMP 구조에서 유효한 값에 대 한 정보를 참조 하세요 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md)이 부록 앞부분입니다.  
   
- 결과 문자 데이터는 타임 스탬프 C 데이터 문자 SQL 데이터를 변환할 때에 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] "형식입니다.  
+ 결과 문자 데이터는 타임 스탬프 C 데이터 문자 SQL 데이터를 변환할 때에 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ] "형식입니다.  
   
  드라이버 타임 스탬프 C 데이터 형식에서 데이터를 변환할 때 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기는 타임 스탬프 C 데이터 형식의 크기를 가정 합니다. 길이/표시기 값이 전달 합니다 *StrLen_or_Ind* 인수에 **SQLPutData** 에 지정 된 버퍼는 *StrLen_or_IndPtr* 에서인수**SQLBindParameter**합니다. 지정 된 데이터 버퍼를 *DataPtr* 에서 인수 **SQLPutData** 및 *ParameterValuePtr* 인수에서 **SQLBindParameter**.

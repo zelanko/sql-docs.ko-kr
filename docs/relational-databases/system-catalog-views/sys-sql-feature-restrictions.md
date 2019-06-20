@@ -18,10 +18,10 @@ ms.author: arib
 manager: tomerw
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b583afef9f52da7801384d4a7a9c76deaf8d4ee4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822680"
 ---
 # <a name="syssqlfeaturerestrictions-transact-sql"></a>sys.sql_feature_restrictions (Transact SQL)
@@ -42,8 +42,8 @@ ms.locfileid: "66822680"
 
 | 기능          | Description |
 |------------------|-------------|
-| N'ErrorMessages' | 제한, 오류 메시지 내에서 사용자 데이터가 마스킹됩니다. |
-| N'Waitfor'       | 제한, 지연 없이 명령이 즉시 반환 됩니다. |
+| N'ErrorMessages' | 제한하면 오류 메시지의 모든 데이터가 마스킹됩니다. |
+| N'Waitfor'       | 제한하면 명령이 지연 없이 즉시 반환됩니다. |
   
 ## <a name="permissions"></a>사용 권한
 

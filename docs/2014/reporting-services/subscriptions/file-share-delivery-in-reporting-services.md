@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100905"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
@@ -67,7 +67,7 @@ ms.locfileid: "66100905"
   
  각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용하거나 새 파일을 만들려면 덮어쓰기 옵션을 지정할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
   
- 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이 작업을 수행 하려면 추가 합니다 `@timestamp` 변수를 파일 이름 (예를 들어 *CompanySales@timestamp*). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
+ 배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이 작업을 수행 하려면 추가 합니다 `@timestamp` 변수를 파일 이름 (예를 들어 *CompanySales@timestamp* ). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [만들기, 수정 및 표준 구독을 삭제 &#40;기본 모드의 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  

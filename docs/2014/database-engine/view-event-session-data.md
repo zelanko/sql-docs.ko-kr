@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131799"
 ---
 # <a name="view-event-session-data"></a>이벤트 세션 데이터 보기
   이 항목에서는 디스플레이 사용자 인터페이스를 사용하여 확장 이벤트 데이터를 확인하고 분석하는 방법에 대해 설명합니다.  
@@ -44,23 +44,27 @@ ms.locfileid: "66088751"
   
 -   event_file 대상의 경우 다음 방법 중 하나를 사용하여 파일 대상 데이터(.XEL 파일)를 봅니다.  
   
-    -   사용 하 여 파일에서 열기-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다.  
-  
-    -   파일을 끌어서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 놓습니다.  
-  
+    -   사용 하 여 파일에서 열기-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다.
+    
+    -   파일을 끌어서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다. 
+    
     -   .XEL 파일을 두 번 클릭합니다.  
-  
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 실행 중인 확장 이벤트 세션을 마우스 오른쪽 단추로 클릭하고 대상 데이터 보기를 선택합니다.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   둘 이상의 볼 수 있습니다. XEL 파일을 선택 하 여 **확장 이벤트 파일 병합** 파일에서 열기 메뉴-> 합니다.  
-  
+    
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 실행 중인 확장 이벤트 세션을 마우스 오른쪽 단추로 클릭하고 대상 데이터 보기를 선택합니다. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   읽기-SQLXevent에서 Powershell을 사용 하 여 [SQLServer.XEvent 모듈](https://www.powershellgallery.com/packages/SqlServer.XEvent)합니다.
+    
+    -   프로그래밍 방식으로 사용 하 여 XEvents를 사용 합니다 [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite)합니다.
+    
+    -   둘 이상의 볼 수 있습니다. XEL 파일을 선택 하 여 **확장 이벤트 파일 병합** 파일에서 열기 메뉴-> 합니다.
+
 ### <a name="watching-live-data"></a>라이브 데이터 감시  
  라이브 데이터를 캡처하면서 감시할 수 있습니다.  
   
 -   개체 탐색기에서 **관리**, **확장 이벤트**, **세션** 노드를 차례로 확장합니다.  
-  
+
 -   세션 이름을 마우스 오른쪽 단추로 클릭한 다음 **라이브 데이터 감시** 를 클릭하여 추적 데이터를 표시합니다.  
   
      기본 표시 열은 **이벤트 이름** 및 **TimeStamp**입니다.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088751"
      추적 창에 다른 열을 추가하려면 확장 이벤트 도구 모음의 **열 선택** 단추를 클릭합니다. **세부 정보** 탭에 선택한 이벤트에 대한 모든 이벤트 세부 정보가 표시됩니다.  
   
      이벤트는 일반적으로 약 30초 내에 표시됩니다. 대기 시간을 변경하려면 **새 세션** 대화 상자의 **고급** 페이지에서 **최대 디스패치 대기 시간** 을 변경합니다.  
-  
+     
+-    라이브 데이터를 스트리밍할 수 있습니다 합니다 [SqlServer.XEvent PowerShell 모듈](https://www.powershellgallery.com/packages/SqlServer.XEvent)합니다.
+     
 ### <a name="to-refresh-target-data"></a>대상 데이터를 새로 고치려면  
  event_files 대상에 대해서는 대상 데이터를 새로 고칠 수 없습니다.  
   
