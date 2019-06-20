@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737529"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "62737529"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-the--arithmetic-operator"></a>1. * 산술 연산자 지정  
+### <a name="a-specify-the--arithmetic-operator"></a>1\. \* 산술 연산자 지정  
  이 XPath 쿼리는 반환  **\<OrderDetail >** 지정 된 조건자를 만족 하는 요소:  
   
 ```  

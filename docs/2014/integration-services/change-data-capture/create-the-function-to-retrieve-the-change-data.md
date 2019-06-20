@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771439"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>변경 데이터 검색을 위한 함수 만들기
@@ -132,7 +132,7 @@ deallocate #hfunctions
   
 -   변경 데이터의 모든 요청된 열  
   
--   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드에 대 한 유효한 값은 다음과 같습니다. ‘I’는 삽입, ‘D’는 삭제, ‘UO’는 이전 값 업데이트 및 ‘UN’은 새 값 업데이트입니다.  
+-   1문자 또는 2문자 필드를 사용하여 행에 연결된 작업을 식별하는 __CDC_OPERATION이라는 열. 이 필드의 유효한 값은 다음과 같습니다. ‘I’는 삽입, ‘D’는 삭제, ‘UO’는 이전 값 업데이트 및 ‘UN’은 새 값 업데이트입니다.  
   
 -   요청 시 작업 코드 뒤에 *@update_flag_list* 매개 변수에 지정된 순서대로 비트 열로 표시되는 업데이트 플래그. 이러한 열의 이름은 관련 열 이름에 '_uflag'를 추가한 것입니다.  
   

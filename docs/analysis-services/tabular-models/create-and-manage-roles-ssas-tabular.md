@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 093197db8257cf9be261658f1828783fa01d7cc2
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 3723d83fb28f6d2824be921906326d719e705478
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072220"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263405"
 ---
 # <a name="create-and-manage-roles"></a>역할 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "53072220"
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [USERNAME 함수(DAX)](/dax/username-function-dax)   
+ [CUSTOMDATA 함수(DAX)](/dax/customdata-function-dax)  
   
   

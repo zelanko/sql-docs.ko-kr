@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205094"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. *AttributeName* 에 대해 지정된 이름은 하위 요소의 이름이 됩니다.  
   
- 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.  
+ 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.   
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

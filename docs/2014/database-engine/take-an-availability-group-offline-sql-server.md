@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773617"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>가용성 그룹을 오프라인 상태로 만들기(SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62773617"
 > [!CAUTION]  
 >  OFFLINE 옵션은 가용성 그룹 리소스의 클러스터 간 마이그레이션에만 사용합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   OFFLINE 명령을 입력하는 서버 인스턴스에서 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62773617"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹이 오프 라인 상태로 전환한 후  
+##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹을 오프라인 상태로 전환한 후  
   
--   **OFFLINE 작업의 로깅:**  OFFLINE 작업이 시작 된 WSFC 노드의 id는 WSFC 클러스터 로그와 SQL ERRORLOG에 저장 됩니다.  
+-   **OFFLINE 작업의 로깅:**  OFFLINE 작업이 시작된 WSFC 노드의 ID는 WSFC 클러스터 로그와 SQL ERRORLOG에 저장됩니다.  
   
--   **오프 라인으로 전환 하기 전에 가용성 그룹 수신기를 삭제 하지 않은 하는 경우:**  가용성 그룹을 다른 WSFC 클러스터로 마이그레이션하려는 경우에 VNN 및 VIP는 수신기를 삭제 합니다. 수신기의 VNN 및 VIP는 장애 조치(Failover) 클러스터 관리자 콘솔, [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 또는 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)를 사용하여 삭제할 수 있습니다. cluster.exe는 Windows 8에서 더 이상 사용되지 않습니다.  
+-   **그룹을 오프라인으로 전환하기 전에 가용성 그룹 수신기를 삭제하지 않은 경우:**  가용성 그룹을 다른 WSFC 클러스터에 마이그레이션할 경우 수신기의 VNN과 VIP를 삭제합니다. 수신기의 VNN 및 VIP는 장애 조치(Failover) 클러스터 관리자 콘솔, [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell Cmdlet 또는 [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)를 사용하여 삭제할 수 있습니다. cluster.exe는 Windows 8에서 더 이상 사용되지 않습니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   

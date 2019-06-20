@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815406"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62815406"
   
 -   원격 HADR 클러스터 컨텍스트는 언제든지 로컬 클러스터로 다시 전환할 수 있습니다. 그러나 서버 인스턴스에서 가용성 복제본을 호스팅하는 동안에는 컨텍스트를 다시 전환할 수 없습니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   HADR 클러스터 컨텍스트를 변경하는 서버 인스턴스에서는 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62815406"
   
 2.  다음과 같이 [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) 문의 SET HADR CLUSTER CONTEXT 절을 사용합니다.  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** {0} **'*`windows_cluster`*'** | 로컬}  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT **=** {0} **' *`windows_cluster`* '** | 로컬}  
   
      각 항목이 나타내는 의미는 다음과 같습니다.  
   

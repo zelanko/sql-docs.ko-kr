@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788356"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
@@ -38,7 +38,7 @@ ms.locfileid: "62788356"
  보조 복제본을 호스팅하는 데 사용하는 서버 인스턴스가 **가용성 복제본** 표에 나열되지 않는 경우 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
   
  **초기 역할**  
- 새 복제본이 처음에 수행할 역할을 나타냅니다. 역할(**주** 또는 **보조**)을 나타냅니다.  
+ 새 복제본이 처음에 수행할 역할(**주** 또는 **보조**)을 나타냅니다.  
   
  **자동 장애 조치 (최대 2 개)**  
  이 가용성 복제본을 자동 장애 조치(failover) 파트너로 사용하려는 경우에만 이 확인란을 선택합니다. 자동 장애(failover) 조치를 구성하려면 초기 주 복제본 및 보조 복제본 하나에 대해 이 옵션을 선택해야 합니다. 이러한 복제본은 모두 동기-커밋 가용성 모드를 사용합니다. 두 개의 복제본만 자동 장애 조치(failover)를 지원할 수 있습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "62788356"
  다음과 같이 이 가용성 그룹에 대한 수신기 기본 설정을 지정합니다.  
   
  **수신기 DNS 이름**  
- 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유해야 하며 영숫자, 대시(**-**) 및 하이픈(**_**)만 임의의 순서로 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
+ 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유해야 하며 영숫자, 대시( **-** ) 및 하이픈( **_** )만 임의의 순서로 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
   
 > [!IMPORTANT]  
 >  **수신기** 탭에 잘못된 DNS 수신기 이름(또는 포트 번호)을 입력하면 **복제본 지정** 페이지에서 **다음** 단추를 사용할 수 없습니다.  

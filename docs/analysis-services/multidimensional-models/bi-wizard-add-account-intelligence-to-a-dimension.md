@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62717570"
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>BI 마법사 - 차원에 계정 인텔리전스 추가

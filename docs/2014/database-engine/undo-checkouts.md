@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773399"
 ---
 # <a name="undo-checkouts"></a>체크 아웃 취소
@@ -45,7 +45,7 @@ ms.locfileid: "62773399"
      **이름**  
      체크 아웃을 취소할 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 항목의 체크 아웃을 취소하지 않으려면 해당 확인란의 선택을 취소합니다.  
   
-     **Options**  
+     **옵션**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 아웃 취소 옵션이 표시됩니다.  
   
      **정렬**  

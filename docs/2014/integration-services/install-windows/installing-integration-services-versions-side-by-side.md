@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 903afa9ef25afcba7818862bc73dc33bf677b47a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67140814"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>상호 운용성 및 공존성(Integration Services)
@@ -62,6 +62,6 @@ ms.locfileid: "67140814"
   
      [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]인스턴스에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에서 패키지를 가져오거나 패키지를 내보낼 수 없습니다.  
   
--   **패키지 실행**. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에이전트의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 **dtexec** Integration Services 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services 패키지를 실행할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 도구는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 개발된 패키지를 로드할 때마다 해당 패키지를 메모리에서 임시로 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에서 사용하는 패키지 형식으로 변환합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 패키지에 성공적인 변환을 방해하는 문제가 있으면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 도구는 이러한 문제가 해결될 때까지 해당 패키지를 실행할 수 없습니다. 자세한 내용은 [Integration Services 패키지 업그레이드](upgrade-integration-services-packages.md) 합니다.  
+-   **패키지 실행**.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에이전트의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 **dtexec** Integration Services 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services 패키지를 실행할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 도구는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 개발된 패키지를 로드할 때마다 해당 패키지를 메모리에서 임시로 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에서 사용하는 패키지 형식으로 변환합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 패키지에 성공적인 변환을 방해하는 문제가 있으면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services 도구는 이러한 문제가 해결될 때까지 해당 패키지를 실행할 수 없습니다. 자세한 내용은 [Integration Services 패키지 업그레이드](upgrade-integration-services-packages.md) 합니다.  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768699"
 ---
 # <a name="year-ssis-expression"></a>YEAR(SSIS 식)
@@ -43,7 +43,7 @@ YEAR(date)
  날짜 리터럴은 다음의 날짜 데이터 형식 중 하나로 명시적 캐스팅되어야 합니다. 자세한 내용은 [Integration Services Data Types](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
 > [!NOTE]  
->  식은 리터럴 날짜 이러한 날짜 데이터 형식 중 하나로 명시적 캐스팅 되 면 유효성을 검사 하는 실패 합니다. DT_DBTIMESTAMPOFFSET 및 DT_DBTIMESTAMP2 합니다.  
+>  날짜 리터럴이 DT_DBTIMESTAMPOFFSET 및 DT_DBTIMESTAMP2 날짜 데이터 형식 중 하나로 명시적 캐스팅되면 식의 유효성 검사가 실패합니다.  
   
  YEAR 함수는 DATEPART("Year", date) 함수보다 간단하지만 동일한 결과를 반환합니다.  
   

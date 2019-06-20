@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62742259"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
@@ -143,10 +143,10 @@ SQLRETURN SQLSetDescField(
 |헤더 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|카드가: R APD: R IRD: R IPD: R|카드가: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> APD: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
-|SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|ARD:[1] APD:[1] IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|ARD:[1] APD:[1] IRD: 사용 되지 않는 IPD: 사용 안 함|  
 |SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|카드가: R/W APD: R/W IRD: R/W IPD: R/W|카드가: Ptr APD null. Null ptr IRD: Null ptr IPD: Null ptr|  
-|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
-|SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 되지 않는<br /><br /> IPD: 사용 되지 않는|  
+|SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 안 함|  
+|SQL_DESC_BIND_TYPE|SQLINTEGER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: 사용 안 함<br /><br /> IPD: 사용 안 함|  
 |SQL_DESC_COUNT|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: 0 APD: 0 IRD: D IPD: 0|  
 |SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R/W IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: Null ptr IPD: Null ptr|  
   
@@ -156,40 +156,40 @@ SQLRETURN SQLSetDescField(
   
 |레코드 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_BASE_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_CASE_SENSITIVE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_CATALOG_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_CATALOG_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_CONCISE_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_ DEFAULT APD: SQL_C_ DEFAULT IRD: D IPD: ND|  
-|SQL_DESC_DATA_PTR|대 SQLPOINTER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: [2] 사용 안 함|  
+|SQL_DESC_DATA_PTR|대 SQLPOINTER|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: [2] 사용 안 함|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_DISPLAY_SIZE|SQLLEN|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_DISPLAY_SIZE|SQLLEN|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_FIXED_PREC_SCALE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_INDICATOR_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
-|SQL_DESC_LABEL|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_INDICATOR_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 안 함|  
+|SQL_DESC_LABEL|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_LENGTH|SQLULEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_LITERAL_PREFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_LITERAL_SUFFIX|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_LOCAL_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NULLABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_NUM_PREC_RADIX|SQLINTEGER|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_OCTET_LENGTH|SQLLEN|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
+|SQL_DESC_OCTET_LENGTH_PTR|SQLLEN *|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 안 함|카드가: Ptr APD null. Null ptr IRD: 사용 되지 않는 IPD: 사용 안 함|  
 |SQL_DESC_PARAMETER_TYPE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: R/W|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: 사용 되지 않는 IPD: D=SQL_PARAM_INPUT|  
 |SQL_DESC_PRECISION|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_ROWVER|SQLSMALLINT|카드가: 사용 되지 않는<br /><br /> APD: 사용 되지 않는<br /><br /> IRD: R<br /><br /> IPD: R|카드가: 사용 되지 않는<br /><br /> APD: 사용 되지 않는<br /><br /> IRD: ND<br /><br /> IPD: ND|  
+|SQL_DESC_ROWVER|SQLSMALLINT|카드가: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: R<br /><br /> IPD: R|카드가: 사용 안 함<br /><br /> APD: 사용 안 함<br /><br /> IRD: ND<br /><br /> IPD: ND|  
 |SQL_DESC_SCALE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
-|SQL_DESC_SCHEMA_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_SEARCHABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
-|SQL_DESC_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_SCHEMA_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_SEARCHABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
+|SQL_DESC_TABLE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
 |SQL_DESC_TYPE|SQLSMALLINT|카드가: R/W APD: R/W IRD: R IPD: R/W|카드가: SQL_C_DEFAULT APD: SQL_C_DEFAULT IRD: D IPD: ND|  
 |SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
 |SQL_DESC_UNNAMED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R/W|카드가: ND APD: ND IRD: D IPD: ND|  
 |SQL_DESC_UNSIGNED|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: R|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: D[1]|  
-|SQL_DESC_UPDATABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
+|SQL_DESC_UPDATABLE|SQLSMALLINT|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 안 함|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 안 함|  
   
  [1]이이 필드는 IPD 드라이버에 의해 자동으로 채워지는 경우에 정의 됩니다. 그렇지 않은 경우 정의 되지 않습니다. 응용 프로그램에서 SQLSTATE HY091 이러한 필드를 설정 하려고 하는 경우 (잘못 된 설명자 필드 식별자)가 반환 됩니다.  
   

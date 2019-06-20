@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705757"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
@@ -50,7 +50,7 @@ ms.locfileid: "62705757"
   
  다음 그림에서는 세션 내용, 그리고 패키지와 세션 간의 관계를 보여 줍니다.  
   
- ![세션에서의 개체 공존 및 공유](../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions")  
+ ![세션에서의 개체 공존 및 공유] (../../database-engine/media/xesessions.gif "Object co-existance and sharing in sessions")  
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   

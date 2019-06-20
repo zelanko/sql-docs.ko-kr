@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f44ef4421419d3b3dd452fb7fab2e4a8768f1b06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63183105"
 ---
 # <a name="data-migration-report--mysqltosql"></a>데이터 마이그레이션 보고서(MySQLToSQL)
@@ -27,7 +27,7 @@ ms.locfileid: "63183105"
 **보낸 사람**  
 원본 테이블입니다.  
   
-**대상**  
+**수행할 작업**  
 대상 테이블입니다.  
   
 **총 행 수**  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f348a7f76f65c19801525967f3ded5c8b0d2d26
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835834"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC를 위한 SQL Server 준비
@@ -49,7 +49,7 @@ ms.locfileid: "62835834"
   
 -   **연결 암호화**: 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.  
   
--   **고급**: 필요한 경우 모든 추가 연결 속성을 입력 합니다.  
+-   **고급**: 필요한 경우 모든 추가 연결 속성을 입력합니다.  
   
 ### <a name="view-script"></a>스크립트 보기  
  설치 스크립트의 읽기 전용 버전을 보려면 **스크립트 보기** 를 클릭합니다. 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 이 스크립트를 SQL Server 관리 콘솔에 복사하여 편집할 수 있습니다. SQL Server 스크립트 준비에 대한 자세한 내용은 [Oracle CDC를 위한 SQL Server 준비-스크립트 보기](prepare-sql-server-for-oracle-cdc-view-script.md)를 참조하세요.  

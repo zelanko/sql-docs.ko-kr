@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667890"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
@@ -111,21 +111,21 @@ ms.locfileid: "62667890"
   
 2.  (옵션) 게시 데이터베이스의 게시자에서 [sp_helpsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 해당 구독이 있는지 그리고 상태가 활성 상태인지 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication**을 지정합니다. **@tracer_token_id** 출력 매개 변수의 값을 확인합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_posttracertoken&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql)을 실행하여 **@publication** 을 지정합니다. **@tracer_token_id** 출력 매개 변수의 값을 확인합니다.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>트랜잭션 복제에 대한 대기 시간을 확인하고 연결 유효성을 검사하려면  
   
 1.  이전 절차를 따라 게시에 추적 프로그램 토큰을 게시합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 원하는 **tracer_id** 를 확인합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql)를 실행하여 **@publication**을 지정하고 **@tracer_id**에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql)를 실행하여 **@publication** 을 지정하고 **@tracer_id** 에 대해 2단계에서 얻은 추적 프로그램 토큰 ID를 지정합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 반환됩니다.  
   
 #### <a name="to-remove-tracer-tokens"></a>추적 프로그램 토큰을 제거하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication**을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helptracertokens&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql)를 실행하여 **@publication** 을 지정합니다. 그러면 해당 게시에 게시된 모든 추적 프로그램 토큰의 목록이 반환됩니다. 결과 집합에서 삭제할 추적 프로그램 토큰의 **tracer_id** 를 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)를 실행하여 **@publication**을 지정하고 **@tracer_id**에 대해 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_deletetracertokenhistory&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql)를 실행하여 **@publication** 을 지정하고 **@tracer_id** 에 대해 2단계에서 얻은 삭제할 추적 프로그램의 ID를 지정합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 추적 프로그램 토큰 레코드를 게시하고 게시된 추적 프로그램 토큰의 반환된 ID를 사용하여 대기 시간 정보를 봅니다.  

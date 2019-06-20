@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721079"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>2단원: 트랜잭션 게시에 구독 만들기
@@ -40,7 +40,7 @@ ms.locfileid: "62721079"
   
 7.  **새 데이터베이스** 대화 상자에서 **데이터베이스 이름** 상자에 **ProductReplica** 를 입력하고 **확인**을 클릭한 후 **다음**을 클릭합니다.  
   
-8.  에 **배포 에이전트 보안** 대화 상자에서 줄임표 (**...** ) 단추를 입력 합니다 \< _Machine_Name >_**\repl_distribution** 에 **프로세스 계정** 상자에서이 대 한 암호를 입력 합니다. 계정, 클릭 **확인**를 클릭 하 고 **다음**합니다.  
+8.  에 **배포 에이전트 보안** 대화 상자에서 줄임표 ( **...** ) 단추를 입력 합니다 \< _Machine_Name >_ **\repl_distribution** 에 **프로세스 계정** 상자에서이 대 한 암호를 입력 합니다. 계정, 클릭 **확인**를 클릭 하 고 **다음**합니다.  
   
 9. **마침** 을 클릭하여 나머지 페이지의 기본값을 적용하고 마법사를 완료합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721079"
   
 2.  **일반** 페이지에 있는 **사용자 유형** 목록에서 **Windows 사용자**를 선택합니다.  
   
-3.  선택 합니다 **사용자 이름** 상자 하 고 줄임표 (...) 단추를 클릭 합니다 **선택할 개체 이름을 입력** < Machine_Name > 상자**\repl_distribution**, 를클릭 **이름 확인**를 클릭 하 고 **확인**합니다.  
+3.  선택 합니다 **사용자 이름** 상자 하 고 줄임표 (...) 단추를 클릭 합니다 **선택할 개체 이름을 입력** < Machine_Name > 상자 **\repl_distribution**, 를클릭 **이름 확인**를 클릭 하 고 **확인**합니다.  
   
 4.  **멤버 자격** 페이지의 **데이터베이스 역할 멤버 자격** 영역에서 **db_owner**를 선택한 다음 **확인** 을 클릭하여 사용자를 만듭니다.  
   

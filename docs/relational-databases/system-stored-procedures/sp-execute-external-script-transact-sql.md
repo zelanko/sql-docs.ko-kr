@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046718"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -124,7 +124,7 @@ sp_execute_external_script
 
  SQL Server 2019에 현재 공개 미리 보기에서 설정할 수 있습니다 분할 된 데이터에 있는 파티션 하나를 기반으로 또는 제공 되는 열 자연스럽 게 데이터 집합을 논리적 파티션으로 분할 생성 및 사용에 관한 모델링을 사용 하도록 설정 하는 두 개의 추가 매개 변수 스크립트를 실행 하는 동안에 나가, 성별, 지역, 날짜 또는 시간에 대 한 반복 되는 값을 포함 하는 열은 데이터 집합을 분할된 하는 몇 가지 예입니다.
  
- 두 매개 변수가 **input_data_1_partition_by_columns** 하 고 **input_data_1_order_by_columns**결과 집합을 정렬 하려면 두 번째 매개 변수는 사용 하는 위치, 합니다. 매개 변수 입력으로 전달 됩니다 `sp_execute_external_script` 는 외부 스크립트를 실행 하 되 면 모든 파티션에 대 한 합니다. 자세한 내용 및 예제를 참조 하세요. [자습서: 파티션 기반 모델을 만들](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md)합니다.
+ 두 매개 변수가 **input_data_1_partition_by_columns** 하 고 **input_data_1_order_by_columns**결과 집합을 정렬 하려면 두 번째 매개 변수는 사용 하는 위치, 합니다. 매개 변수 입력으로 전달 됩니다 `sp_execute_external_script` 는 외부 스크립트를 실행 하 되 면 모든 파티션에 대 한 합니다. 자세한 내용 및 예제를 참조 하세요. [자습서: 파티션 기반 모델을 만들](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition)합니다.
 
  스크립트를 지정 하 여 병렬로 실행할 수 있습니다 `@parallel=1`합니다. 입력된 쿼리를 병렬 처리할 수 하는 경우 설정 해야 `@parallel=1` 에 대 한 인수의 일부로 `sp_execute_external_script`합니다. 기본적으로 쿼리 최적화 프로그램에서 작동 `@parallel=1` 있지만이 명시적으로 처리 하려는 경우 256 개 이상의 행이 있는 테이블에서이 스크립트는 데모로 매개 변수를 포함 합니다.
 

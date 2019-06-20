@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127118"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
@@ -87,6 +87,6 @@ len
  SRV_PROC 구조에 지정된 필드에 대한 현재 값이 포함된 Null로 끝나는 문자열에 대한 포인터입니다. 필드가 비어 있으면 빈 문자열에 대한 올바른 포인터가 반환되고 *len*에 0이 포함됩니다. 필드가 알 수 없는 필드이면 NULL이 반환되고 *len*에 -1 값이 포함됩니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [보안 개발자 센터(Security Developer Center)](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)를 참조하세요.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [보안 개발자 센터(Security Developer Center)](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하세요.  
   
   

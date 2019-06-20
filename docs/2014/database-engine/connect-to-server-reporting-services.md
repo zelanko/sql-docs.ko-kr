@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808681"
 ---
 # <a name="connect-to-server-reporting-services"></a>서버에 연결(Reporting Services)
@@ -54,7 +54,7 @@ ms.locfileid: "62808681"
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  
   
- **Options**  
+ **옵션**  
  서버 등록, 암호 저장 등의 추가 서버 연결 옵션을 표시하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  

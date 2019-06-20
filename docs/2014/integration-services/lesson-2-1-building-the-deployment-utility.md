@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767585"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 작성
+# <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 빌드
   이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
   
  배포 유틸리티를 작성할 수 있으려면 Deployment Tutorial 프로젝트의 속성을 수정해야 합니다. **Deployment Tutorial 속성 페이지** 대화 상자를 사용하여 이러한 속성을 구성합니다. 이 대화 상자에서 배포 중에 구성을 업데이트하는 기능을 설정하고 빌드 프로세스에서 배포 유틸리티를 생성하도록 지정해야 합니다. 속성을 설정한 후에 프로젝트를 작성합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "62767585"
   
 4.  출력 창에서 다음 정보를 확인합니다.  
   
-     빌드 시작: SQL Integration Services 프로젝트: 증분 하는 중...  
+     빌드 시작: SQL Integration Services 프로젝트: 증분 ...  
   
      배포 유틸리티를 만드는 중...  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62767585"
   
      빌드 완료 -- 0개 오류, 0개 경고  
   
-     === 빌드: 0 개 성공, 실패 0, 최신 1, 0 개 건너뜀 ===  
+     ========== 빌드: 성공 0, 실패 0, 최신 1, 생략 0 ==========  
   
 5.  **파일** 메뉴에서 **끝내기**를 클릭합니다. Deployment Tutorial 항목의 변경 내용을 저장할 것인지 묻는 메시지가 표시되면 **예**를 클릭합니다.  
   

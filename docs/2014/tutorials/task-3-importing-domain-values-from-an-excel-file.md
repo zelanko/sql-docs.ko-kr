@@ -10,10 +10,10 @@ ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822983"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>태스크 3: Excel 파일에서 도메인 값 가져오기

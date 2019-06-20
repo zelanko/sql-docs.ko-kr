@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634928"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
@@ -66,7 +66,7 @@ ms.locfileid: "62634928"
   
 -   0x0407 또는 1031 - **독일(독일어)**  
   
--   0x0416 또는 1046 - **포르투갈어(브라질)**.  
+-   0x0416 또는 1046 - **포르투갈어(브라질)** .  
   
  긴 목록을 보려면 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)(영문)를 참조하세요. 자세한 배경을 알고 싶으면 [인코딩 및 코드 페이지](/globalization/encoding/encoding-overview)를 참조하세요.  
   

@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004155"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns(Transact-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
  [ @col_type=] '*col_type*'  
- 열 유형입니다. *col_type* 됩니다 **char (** 1 **)**, R 유형은의 기본값을 사용 하 여 최적 열 또는 열 집합, 열 또는 열에서 값을 검색 하 여 수를 반환의 지정 된 모든 행 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
+ 열 유형입니다. *col_type* 됩니다 **char (** 1 **)** , R 유형은의 기본값을 사용 하 여 최적 열 또는 열 집합, 열 또는 열에서 값을 검색 하 여 수를 반환의 지정 된 모든 행 고유 하 게 식별 하는 테이블입니다. 열은 이 목적을 위해 특별히 구성된 의사 열 또는 테이블의 고유한 인덱스 열이 될 수 있습니다. V 유형은 지정된 테이블에 열이 있는 경우 해당 열을 반환합니다. 이 열은 트랜잭션에 의해 행의 값이 업데이트될 때 데이터 원본에 의해 자동으로 업데이트됩니다.  
   
  [ @scope=] '*scope*'  
- ROWID에 필요한 최소 범위입니다. *범위* 됩니다 **char (** 1 **)**, C의 기본값을 사용 하 여 ROWID가 해당 행에 배치 된 경우에 유효한 지를 지정 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
+ ROWID에 필요한 최소 범위입니다. *범위* 됩니다 **char (** 1 **)** , C의 기본값을 사용 하 여 ROWID가 해당 행에 배치 된 경우에 유효한 지를 지정 합니다. T 범위는 전체 트랜잭션에 대해 ROWID가 유효하도록 지정합니다.  
   
  [ @nullable=] '*nullable*'  
- 특수 열이 Null 값을 허용할 수 있는지 여부입니다. *nullable* 됩니다 **char (** 1 **)**, 기본값은 u입니다. O를 사용 하 여 null 값을 허용 하지 않는 특수 열을 지정 합니다. U는 부분적으로 Null을 허용하는 열을 지정합니다.  
+ 특수 열이 Null 값을 허용할 수 있는지 여부입니다. *nullable* 됩니다 **char (** 1 **)** , 기본값은 u입니다. O를 사용 하 여 null 값을 허용 하지 않는 특수 열을 지정 합니다. U는 부분적으로 Null을 허용하는 열을 지정합니다.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- 사용하고 있는 ODBC 버전입니다. *ODBCVer* 됩니다 **int (** 4 **)**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이점에 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
+ 사용하고 있는 ODBC 버전입니다. *ODBCVer* 됩니다 **int (** 4 **)** , 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타냅니다. ODBC 버전 2.0과 ODBC 버전 3.0의 차이점에 대 한 자세한 내용은 ODBC 버전 3.0 ODBC SQLSpecialColumns 사양을 참조 하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920060"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 개체
@@ -29,7 +29,7 @@ ms.locfileid: "62920060"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되는 CLR(공용 언어 런타임) 데이터베이스 개체의 경우 `Send` 개체의 `SqlPipe` 메서드를 사용하여 결과를 연결된 파이프로 보낼 수 있습니다. `Pipe` 개체의 `SqlContext` 속성에 액세스하여 `SqlPipe` 개체를 가져옵니다. `SqlPipe` 클래스는 개념상 ASP.NET에 있는 `Response` 클래스와 유사합니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 SqlPipe 클래스 참조 설명서를 참조하십시오.  
   
 ## <a name="returning-tabular-results-and-messages"></a>테이블 형식 결과 및 메시지 반환  
- `SqlPipe`에는 3개의 오버로드가 있는 `Send` 메서드가 있습니다. 다음 창이 여기에 포함됩니다.  
+ `SqlPipe`에는 3개의 오버로드가 있는 `Send` 메서드가 있습니다. 구현되지 않은 것은 다음과 같습니다.  
   
 -   `void Send(string message)`  
   

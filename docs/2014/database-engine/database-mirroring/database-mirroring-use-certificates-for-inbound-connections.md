@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807562"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용(Transact-SQL)
@@ -157,14 +157,14 @@ GO
   
  Transact-SQL 예제를 포함하여 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
   
- 성능 우선 모드 세션을 설정 하는 TRANSACT-SQL 예제를 보려면 [예제: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)합니다.  
+ 고성능 모드 세션을 설정하는 Transact-SQL 예는 [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)을 참조하세요.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  인증서를 다른 시스템으로 복사할 때는 안전한 복사 방법을 사용하세요. 모든 인증서를 안전하게 보관하는 데 많은 주의를 기울여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
+ [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [암호화된 미러 데이터베이스 설정](set-up-an-encrypted-mirror-database.md)   
  [데이터베이스 미러링 엔드포인트 &#40;SQL Server &#41;](the-database-mirroring-endpoint-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  

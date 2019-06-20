@@ -23,10 +23,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 794baaa127019eb13a77cb98bf90be71d33917b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507421"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats(Transact-SQL)
@@ -65,7 +65,7 @@ ms.locfileid: "62507421"
 ## <a name="examples"></a>예  
  다음 예제에 사용 하는 방법을 설명 합니다 **sys.dm_db_missing_index_group_stats** 동적 관리 뷰.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>1. 사용자 쿼리 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개 찾기  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>1\. 사용자 쿼리 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개 찾기  
  다음 쿼리에서는 사용자 쿼리의 누적 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개를 내림차순으로 확인합니다.  
   
 ```  
@@ -74,7 +74,7 @@ FROM sys.dm_db_missing_index_group_stats
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
 ```  
   
-### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>2. 특정 누락된 인덱스 그룹의 개별 누락된 인덱스 및 해당 열 정보 찾기  
+### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>2\. 특정 누락된 인덱스 그룹의 개별 누락된 인덱스 및 해당 열 정보 찾기  
  다음 쿼리에서는 특정 누락된 인덱스 그룹을 구성하는 누락된 인덱스를 확인하고 해당 열 정보를 표시합니다. 이 예에서 누락된 인덱스 그룹 핸들은 24입니다.  
   
 ```  

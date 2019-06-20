@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507320"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
@@ -50,8 +50,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|DBMS에 종속된 데이터 형식입니다.|  
 |DATA_TYPE|**smallint**|ODBC 형식의 열이 모두 매핑되는 해당 형식의 코드입니다.|  
 |PRECISION|**int**|데이터 원본에 있는 데이터 형식의 최대 전체 자릿수입니다. 전체 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다. PRECISION 열의 값은 10진수로 반환됩니다.|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은따옴표 (**'**) 형식 문자 및 이진 0 x에 대 한 합니다.|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은따옴표 (**'**) 형식 문자 및 이진 따옴표가 사용 되지 않습니다.|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|상수 앞에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은따옴표 ( **'** ) 형식 문자 및 이진 0 x에 대 한 합니다.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|상수 끝에 사용되는 문자 또는 문자열입니다. 예를 들어, 작은따옴표 ( **'** ) 형식 문자 및 이진 따옴표가 사용 되지 않습니다.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|해당 데이터 형식에 대한 매개 변수 만들기에 대한 설명입니다. 예를 들어 **10 진수** 은 "precision, scale" **float** 가 null 인 경우 및 **varchar** 는 "max_length"입니다.|  
 |NULLABLE|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL 값을 허용합니다.<br /><br /> 0 = NULL 값을 허용하지 않습니다.|  
 |CASE_SENSITIVE|**smallint**|대/소문자 구분 여부를 지정합니다.<br /><br /> 1 = 이 형식의 열은 모두 데이터 정렬 시 대/소문자를 구분합니다.<br /><br /> 0 = 이 형식의 열은 모두 대/소문자를 구분하지 않습니다.|  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210192"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263275"
 ---
 # <a name="what39s-new-in-analysis-services"></a>기능 Analysis Services의 새로운
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -133,9 +133,9 @@ refresh|개체를 처리합니다. ASSL에서는 PROCESS에 해당합니다.
 수식 입력줄이 업데이트되어 구문 색 지정을 사용하여 함수, 필드, 측정값을 구분하는 방식으로 더 쉽게 수식을 작성할 수 있습니다. 이 기능은 지능형 함수 및 필드 제안을 제공하고 오류 *물결선*을 사용하여 DAX 식의 일부가 잘못된 경우 잘못된 부분을 알립니다. 또한 여러 줄(Alt + Enter) 및 들여쓰기(Tab)를 사용할 수 있습니다. 수식 입력줄 지금 할 수도 있습니다에 측정값 부분으로 주석을 작성할 입력 "/ /" 고 같은 줄에 이러한 문자는 주석으로 간주 합니다.
 
 ### <a name="dax-variables"></a>DAX 변수    
-이번 릴리스에서는 DAX의 변수를 지원합니다. 이제 나중에 다른 측정값 식에 인수로 전달될 수 있는 명명된 변수로 식의 결과를 저장할 수 있습니다. 일단 변수 식에 대한 결과 값이 계산되면 변수가 다른 식에서 참조되더라도 해당 값은 변경되지 않습니다. 자세한 내용은 [VAR Function](http://msdn.microsoft.com/library/mt243785.aspx)(VAR 함수)을 참조하세요.    
+이번 릴리스에서는 DAX의 변수를 지원합니다. 이제 나중에 다른 측정값 식에 인수로 전달될 수 있는 명명된 변수로 식의 결과를 저장할 수 있습니다. 일단 변수 식에 대한 결과 값이 계산되면 변수가 다른 식에서 참조되더라도 해당 값은 변경되지 않습니다. 자세한 내용은 [VAR Function](/dax/var-dax)(VAR 함수)을 참조하세요.    
 ### <a name="new-dax-functions"></a>새로운 DAX 함수
-이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해 50 가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](http://msdn.microsoft.com/library/mt704075.aspx)를 참조하세요.
+이번 릴리스에서 DAX는 Power BI에서 보다 빠른 계산 및 향상된 시각화를 지원하기 위해 50 가지 이상의 새로운 함수를 사용합니다. 자세한 내용은 [New DAX Functions(새 DAX 함수)](/dax/new-dax-functions)를 참조하세요.
 ### <a name="save-incomplete-measures"></a>완료되지 않은 측정값 저장
 완료되지 않은 DAX 측정값을 테이블 형식 1200 모델 프로젝트에 직접 저장하고 계속할 수 있을 때 다시 선택할 수 있습니다.
 ### <a name="additional-dax-enhancements"></a>DAX의 추가 기능 향상

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767525"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
@@ -45,7 +45,7 @@ ms.locfileid: "62767525"
   
 4.  에 **Foreach 루프 편집기** 대화 상자의 합니다 **일반** 페이지에 대 한 **이름**, 입력 `Foreach File in Folder`합니다. **확인**을 클릭합니다.  
   
-5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)**.  
+5.  Foreach 루프 컨테이너를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Foreach 루프 컨테이너의 열거자를 구성하려면  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62767525"
   
      이 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.   [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
     2.  **DOWNLOADS** 탭을 클릭합니다.  
   

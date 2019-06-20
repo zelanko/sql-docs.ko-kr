@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796582"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert(Transact-SQL)
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|이 경고를 한 명 이상의 운영자에게 알려 주는 경우에는 0이 아닌 값을 사용합니다. 값은 다음 중 하나 이상이 될 수 있습니다(OR 연산으로 조인).<br /><br /> **1**= 전자 메일 알림<br /><br /> **2**= 호출기 알림<br /><br /> **4**= 했습니다 **net send** 알림.|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|  
 |**performance_condition**|**nvarchar(512)**|하는 경우 **형식** 됩니다 **2**,이 열은 성능 조건의 정의 표시 합니다. 하는 경우 **형식** 됩니다 **3**,이 열은 WMI 이벤트에 대 한 쿼리를 표시 합니다. 그렇지 않은 경우 이 열은 NULL입니다.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 항상 '**[범주화]**'에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0입니다.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 항상 ' **[범주화]** '에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0입니다.|  
 |**type**|**int**|경고의 유형은 다음과 같습니다.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트 경고<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 경고<br /><br /> **3** = WMI 이벤트 경고|  
   
 ## <a name="remarks"></a>Remarks  

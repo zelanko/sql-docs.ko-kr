@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013127"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
@@ -70,7 +70,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>1\. 간단한 예  
  다음 예제에서는 세션 id (SPID) 및 요청 id 함수에 전달 하는 방법을 보여 줍니다.  
   
 ```sql  
@@ -78,7 +78,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
   
-### <a name="b-using-cross-apply-to-additional-information"></a>2. 간 사용 하 여 추가 정보에 적용  
+### <a name="b-using-cross-apply-to-additional-information"></a>2\. 간 사용 하 여 추가 정보에 적용  
  다음 예제에서는 50 보다 큰 세션 id 사용 하 여 세션에 대 한 입력된 버퍼를 나열합니다.  
   
 ```sql  

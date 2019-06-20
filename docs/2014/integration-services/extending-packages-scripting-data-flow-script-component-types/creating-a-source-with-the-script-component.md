@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768669"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
@@ -134,7 +134,7 @@ ms.locfileid: "62768669"
   
 5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -267,7 +267,7 @@ ms.locfileid: "62768669"
   
 6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789239"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Reporting Services(SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62789239"
    
   
 ##  <a name="bkmk_requirements"></a> Reporting Services 및 AlwaysOn 가용성 그룹 사용에 대 한 요구 사항  
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
 > **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62789239"
   
 -   ReportServerTempDB  
   
- 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드에 대 한 서비스 응용 프로그램 데이터베이스 이름 "클라이언트 액세스 지점"의 SharePoint 구성의 일부분으로 만든 이름으로 구성할 수 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165))](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
+ 기본 모드에서는 경고 데이터베이스 및 관련 기능을 지원하거나 사용하지 않습니다. 기본 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 관리자에서 구성합니다. SharePoint 모드에 대 한 서비스 응용 프로그램 데이터베이스 이름 "클라이언트 액세스 지점"의 SharePoint 구성의 일부분으로 만든 이름으로 구성할 수 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 SharePoint 구성에 대한 자세한 내용은 [SharePoint Server용 SQL Server 가용성 그룹 구성 및 관리(https://go.microsoft.com/fwlink/?LinkId=245165) )](https://go.microsoft.com/fwlink/?LinkId=245165)를 참조하세요.  
   
 > [!NOTE]
 >  SharePoint 모드 보고서 서버는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션 데이터베이스와 SharePoint 콘텐츠 데이터베이스 사이의 동기화 프로세스를 사용합니다. 보고서 서버 데이터베이스와 콘텐츠 데이터베이스를 함께 유지 관리하는 것이 중요합니다. 이를 하나의 집합으로 장애 조치(Failover)하고 복구할 수 있도록 동일한 가용성으로 구성해야 합니다. 다음과 같은 시나리오를 고려해 보세요.  
