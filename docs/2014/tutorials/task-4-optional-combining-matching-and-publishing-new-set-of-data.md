@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489276"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>태스크 4(선택 사항): 새 데이터 세트 결합, 일치 및 게시
@@ -78,7 +78,7 @@ ms.locfileid: "65489276"
   
 22. 다음 표에 표시된 대로 워크시트 열을 도메인에 매핑합니다.  
   
-    |워크시트 열|도메인|  
+    |워크시트 열|Domain|  
     |----------------------|------------|  
     |Code(MDS에서 Supplier 엔터티에 대한 Code로 업로드한 Supplier ID)|Supplier ID|  
     |Name(MDS에 Supplier 엔터티에 대한 이름으로 업로드한 Supplier Name)|Supplier Name|  

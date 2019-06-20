@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066261"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
@@ -36,7 +36,7 @@ ms.locfileid: "63066261"
   
 ## <a name="diagram-pane"></a>다이어그램 창  
   
-|**대상**|**작업 방법**|**클릭 대상**|  
+|**수행할 작업**|**작업 방법**|**클릭 대상**|  
 |------------|---------------|---------------|  
 |테이블, 기타 테이블 구조 개체 및 조인 선(가능한 경우) 사이를 이동|Tab 키 또는 Shift+Tab|이동할 대상 테이블, 테이블 구조 개체 또는 조인 선|  
 |테이블 또는 테이블 구조 개체의 열 사이를 이동|화살표 키|이동할 대상 열|  
@@ -86,7 +86,7 @@ ms.locfileid: "63066261"
   
 ## <a name="results-pane"></a>결과 창  
   
-|**대상**|**작업 방법**|**클릭 대상**|  
+|**수행할 작업**|**작업 방법**|**클릭 대상**|  
 |------------|---------------|---------------|  
 |셀 사이를 이동|화살표 키, Tab 키 또는 Shift+Tab|대상 셀|  
 |현재 행의 첫째 셀 또는 마지막 셀로 이동|Home 키 또는 End 키||  

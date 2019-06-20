@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9478f193e3e117abf22da53b225e43adac14c6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980812"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
@@ -44,14 +44,14 @@ ms.locfileid: "65980812"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1\. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
  이 예제에서는 위치를 보여 줍니다 **sql:-필드** 지정 해야 합니다.  
   
  다음과 같은 스키마를 살펴 보십시오. 스키마 간의 계층을 지정 합니다  **\<순서 >** 하 고  **\<고객 >** 요소가  **\<순서 >** 요소는 부모와  **\<고객 >** 는 자식 요소입니다.  
   
  합니다  **\<sql: relationship >** 태그는 부모-자식 관계를 지정 하는 데 사용 됩니다. Sales.SalesOrderHeader 테이블의 CustomerID를 Sales.Customer 테이블의 CustomerID 자식 키를 참조하는 부모 키로 식별합니다. 내용을  **\<sql: relationship >** 부모 테이블 (Sales.SalesOrderHeader)의 행을 고유 하 게 식별 하는 부족 합니다. 따라서 없이 합니다 **sql:-필드** 주석을 생성 되는 계층 구조는 정확 하 게 합니다.  
   
- 사용 하 여 **sql:-필드** 에서 지정한  **\<순서 >**, 부모 (Sales.SalesOrderHeader 테이블)에 있는 행을 고유 하 게 식별 하는 주석 및 해당 자식 요소가 아래에 나타납니다 해당 부모입니다.  
+ 사용 하 여 **sql:-필드** 에서 지정한  **\<순서 >** , 부모 (Sales.SalesOrderHeader 테이블)에 있는 행을 고유 하 게 식별 하는 주석 및 해당 자식 요소가 아래에 나타납니다 해당 부모입니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "65980812"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>2. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>2\. sql:key-fields를 지정하여 결과에서 올바른 중첩 생성  
  다음 스키마에는 사용 하 여 지정 된 계층이 없습니다  **\<sql: relationship >** 합니다. 스키마를 지정 해야 합니다 **sql:-필드** HumanResources.Employee 테이블에 있는 직원을 고유 하 게 식별 하는 주석입니다.  
   
 ```  

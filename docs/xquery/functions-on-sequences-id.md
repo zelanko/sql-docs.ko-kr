@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62933687"
 ---
 # <a name="functions-on-sequences---id"></a>시퀀스 함수 - id
@@ -47,7 +47,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>1. IDREF 특성 값을 기반으로 요소 검색  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>1\. IDREF 특성 값을 기반으로 요소 검색  
  다음 예에서는 fn: id를 사용 하 여 검색 하는 <`employee`> 요소에 IDREF 관리자 특성을 기반으로 합니다. 이 예에서 관리자 특성은 IDREF 유형 특성이고 eid 특성은 ID 유형 특성입니다.  
   
  특정 관리자 특성 값을 **id ()** 찾습니다 함수는 <`employee`> ID 유형 특성 값이 입력된 IDREF 값 일치 하는 요소. 즉, 특정 직원에 대 한 합니다 **합한 것** 함수는 직원 관리자를 반환 합니다.  
@@ -98,7 +98,7 @@ Go
   
  쿼리는 "Dave"를 값으로 반환합니다. 즉 Dave가 Joe의 관리자라는 의미입니다.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>2. OrderList IDREFS 특성 값을 기반으로 요소 검색  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>2\. OrderList IDREFS 특성 값을 기반으로 요소 검색  
  다음 예제에서는 OrderList 특성에에서는 <`Customer`> 요소는 IDREFS 형식 특성입니다. 특정 고객에 대한 주문 ID를 나열합니다. 각 주문 id가는 <`Order`> 자식 요소는 <`Customer`> 순서 값을 제공 하 합니다.  
   
  쿼리 식 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`은 첫 번째 고객에 대한 IDRES 목록에서 첫 번째 값을 검색합니다. 이 값은 다음에 전달 된 **합한 것** 함수입니다. 함수를 찾습니다는 <`Order`> 요소의 OrderID 특성 값에 대 한 입력이 일치 하는 **합한 것** 함수입니다.  

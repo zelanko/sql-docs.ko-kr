@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019048"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System 핫픽스 적용
@@ -32,7 +32,7 @@ ms.locfileid: "63019048"
   
 -   액세스 관리 콘솔 어플라이언스 상태를 모니터링할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인을 합니다. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   연결할 패브릭 도메인 관리자 계정에 대 한 지식이 합니다 _< 도메인 _ 이름 >_**-HST01** 노드.  
+-   연결할 패브릭 도메인 관리자 계정에 대 한 지식이 합니다 _< 도메인 _ 이름 >_ **-HST01** 노드.  
   
 ## <a name="HowToInstallPDW"></a>Analytics Platform System 핫픽스 적용  
 Microsoft 업데이트와는 달리 핫픽스는 분석 플랫폼 시스템 소프트웨어에 대 한 WSUS를 통해 처리 되지 않습니다. 다른 워크플로가 않으며 핫픽스 패키지를 실행 하 여 설치 됩니다.  

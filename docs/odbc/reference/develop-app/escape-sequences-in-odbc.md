@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942976"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC의 이스케이프 시퀀스
@@ -47,9 +47,9 @@ ms.locfileid: "62942976"
  이스케이프 시퀀스를 인식 하 고 드라이버 특정 DBMS 문법 이스케이프 시퀀스를 대체 하 여 구문 분석 합니다. 이스케이프 시퀀스 구문에 대 한 자세한 내용은 참조 하세요. [ODBC 이스케이프 시퀀스](../../../odbc/reference/appendixes/odbc-escape-sequences.md) 부록 c: SQL 문법입니다.  
   
 > [!NOTE]  
->  Odbc 2. *x*,이 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (**_공급 업체 이름_**), 제품 (** _제품 이름_**)**_확장_  **\*)-**  
+>  Odbc 2. *x*,이 이스케이프 시퀀스의 표준 구문을: **-(\*공급 업체 (** _공급 업체 이름_ **), 제품 (** _제품 이름_ **)** _확장_  **\*)-**  
 >   
->  이 구문은 외에도 축약형 구문 형식의 정의 된: **{0}**_확장_**}**  
+>  이 구문은 외에도 축약형 구문 형식의 정의 된: **{0}** _확장_ **}**  
 >   
 >  Odbc 3. *x*, 긴 형식의 이스케이프 시퀀스는 더 이상 사용 되지 않습니다, 및 약식 형태는 단독으로 사용 해야 합니다.  
   

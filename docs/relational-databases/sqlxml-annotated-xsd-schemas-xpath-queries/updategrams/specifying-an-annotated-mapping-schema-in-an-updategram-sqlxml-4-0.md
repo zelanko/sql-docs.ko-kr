@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025556"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Updategram에 주석이 추가된 매핑 스키마 지정(SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "63025556"
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XDR을 사용 하는 레거시 응용 프로그램에 대 한 참조 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
   
 ## <a name="dealing-with-data-types"></a>데이터 형식 처리  
- 스키마를 지정 하는 경우는 **이미지**를 **이진**, 또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (사용 하 여 **sql: datatype**) 하지 않습니다 하 고 XML 데이터 형식을 지정 updategram은 XML 데이터 형식 이라고 가정 **base 64 이진**합니다. 데이터가 있으면 **bin.base** 형식 종류를 명시적으로 지정 해야 합니다 (**dt:type=bin.base** 또는 **형식 = "xsd: hexbinary"**).  
+ 스키마를 지정 하는 경우는 **이미지**를 **이진**, 또는 **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 (사용 하 여 **sql: datatype**) 하지 않습니다 하 고 XML 데이터 형식을 지정 updategram은 XML 데이터 형식 이라고 가정 **base 64 이진**합니다. 데이터가 있으면 **bin.base** 형식 종류를 명시적으로 지정 해야 합니다 (**dt:type=bin.base** 또는 **형식 = "xsd: hexbinary"** ).  
   
  스키마를 지정 하는 경우는 **날짜/시간**를 **날짜**, 또는 **시간** XSD 데이터 형식을 지정 해야 해당 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 하 여 데이터 형식을  **sql: datatype = "dateTime"** 합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63025556"
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면에 지정 된 요구 사항을 충족 해야 합니다 [SQLXML 예 실행에 대 한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>1. 단순한 매핑 스키마를 사용하여 Updategram 만들기  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>1\. 단순한 매핑 스키마를 사용하여 Updategram 만들기  
  다음 XSD 스키마 (SampleSchema.xml)는 매핑되는 매핑 스키마를  **\<고객 >** Sales.Customer 테이블에는 요소:  
   
 ```  
@@ -115,10 +115,10 @@ ms.locfileid: "63025556"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>2. 매핑 스키마에 지정된 부모-자식 관계를 사용하여 레코드 삽입  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>2\. 매핑 스키마에 지정된 부모-자식 관계를 사용하여 레코드 삽입  
  스키마 요소를 연결할 수 있습니다. 합니다  **\<sql: relationship >** 요소 스키마 요소 간의 부모-자식 관계를 지정 합니다. 이 정보는 기본 키/외래 키 관계가 있는 해당 테이블을 업데이트하는 데 사용됩니다.  
   
- 다음 매핑 스키마 (SampleSchema.xml) 구성의 두 요소간  **\<순서 >** 하 고  **\<OD >**:  
+ 다음 매핑 스키마 (SampleSchema.xml) 구성의 두 요소간  **\<순서 >** 하 고  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -232,7 +232,7 @@ ms.locfileid: "63025556"
 </Schema>  
 ```  
   
-### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>3. XSD 스키마에 지정된 부모-자식 관계 및 inverse 주석을 사용하여 레코드 삽입  
+### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>3\. XSD 스키마에 지정된 부모-자식 관계 및 inverse 주석을 사용하여 레코드 삽입  
  다음이 예에서는 updategram 논리가 XSD에 지정 된 부모-자식 관계를 업데이트를 처리 하는 데 사용 하는 방법 하는 방법과 **역** 주석이 사용 됩니다. 에 대 한 자세한 내용은 합니다 **역** 주석을 참조 하세요 [sql: relationship에 sql: inverse 특성 지정 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  이 예제에서는 다음 테이블에 있는 것으로 가정 합니다 **tempdb** 데이터베이스:  

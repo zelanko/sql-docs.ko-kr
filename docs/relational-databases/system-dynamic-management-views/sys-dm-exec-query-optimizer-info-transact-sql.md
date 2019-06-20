@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013211"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
@@ -70,7 +70,7 @@ ms.locfileid: "63013211"
 |search 2 tasks|내부 전용|내부 전용|  
 |gain stage 0 to stage 1|내부 전용|내부 전용|  
 |gain stage 1 to stage 2|내부 전용|내부 전용|  
-|timeout|내부 전용|내부 전용|  
+|timeout 제한|내부 전용|내부 전용|  
 |memory limit exceeded|내부 전용|내부 전용|  
 |insert stmt|INSERT 문에 대한 최적화 수입니다.|해당 사항 없음|  
 |delete stmt|DELETE 문에 대한 최적화 수입니다.|해당 사항 없음|  
@@ -95,14 +95,14 @@ ms.locfileid: "63013211"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-viewing-statistics-on-optimizer-execution"></a>1. 최적화 프로그램 실행 통계 보기  
+### <a name="a-viewing-statistics-on-optimizer-execution"></a>1\. 최적화 프로그램 실행 통계 보기  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 현재 최적화 프로그램 실행 통계를 확인할 수 있습니다.  
   
 ```  
 SELECT * FROM sys.dm_exec_query_optimizer_info;  
 ```  
   
-### <a name="b-viewing-the-total-number-of-optimizations"></a>2. 총 최적화 수 보기  
+### <a name="b-viewing-the-total-number-of-optimizations"></a>2\. 총 최적화 수 보기  
  최적화 수행 횟수를 알 수 있습니다.  
   
 ```  
@@ -110,7 +110,7 @@ SELECT occurrence AS Optimizations FROM sys.dm_exec_query_optimizer_info
 WHERE counter = 'optimizations';  
 ```  
   
-### <a name="c-average-elapsed-time-per-optimization"></a>3. 최적화당 평균 경과 시간  
+### <a name="c-average-elapsed-time-per-optimization"></a>3\. 최적화당 평균 경과 시간  
  최적화당 평균 경과 시간을 알 수 있습니다.  
   
 ```  
@@ -118,7 +118,7 @@ SELECT ISNULL(value,0.0) AS ElapsedTimePerOptimization
 FROM sys.dm_exec_query_optimizer_info WHERE counter = 'elapsed time';  
 ```  
   
-### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>4. 하위 쿼리를 포함하는 최적화 부분  
+### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>4\. 하위 쿼리를 포함하는 최적화 부분  
  하위 쿼리를 포함하는 최적화 쿼리 부분을 확인할 수 있습니다.  
   
 ```  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d04cefe217d72d36ff8cd342c27addca6bcff21e
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012458"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 반환 조건자 지정(SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "66012458"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-specify-multiple-predicates"></a>1. 여러 조건자 지정  
+### <a name="a-specify-multiple-predicates"></a>1\. 여러 조건자 지정  
  다음 XPath 쿼리에서는 여러 조건자를 사용하여 지정된 주문 ID 및 고객 ID에 대한 주문 정보를 찾습니다.  
   
 ```  
@@ -88,7 +88,7 @@ ms.locfileid: "66012458"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>2. 연속 및 중첩된 조건자 지정  
+### <a name="b-specify-successive-and-nested-predicates"></a>2\. 연속 및 중첩된 조건자 지정  
  다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 모든 쿼리에서 반환 된  **\<고객 >** 둘 다 있는 컨텍스트 노드의 자식 요소를 **SalesPersonID** 특성 값이 277 인 및 **TerritoryID**특성 값이 3 인:  
   
 ```  
@@ -165,7 +165,7 @@ ms.locfileid: "66012458"
 </ROOT>  
 ```  
   
-### <a name="c-specify-a-top-level-predicate"></a>3. 최상위 조건자 지정  
+### <a name="c-specify-a-top-level-predicate"></a>3\. 최상위 조건자 지정  
  다음 쿼리에서 반환 된  **\<고객 >** 하는 컨텍스트 노드의 자식 요소 노드  **\<순서 >** 요소 자식을 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
   
 ```  

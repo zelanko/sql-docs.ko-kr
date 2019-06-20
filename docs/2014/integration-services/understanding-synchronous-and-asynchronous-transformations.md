@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62878063"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>동기 및 비동기 변환 이해
@@ -41,7 +41,7 @@ ms.locfileid: "62878063"
   
 -   입력 행과 출력 행은 일 대 일로 대응하지 않는 경우. 예를 들어 구성 요소에서 출력에 행을 추가하여 계산된 집계 값을 저장해야 하는 집계 변환의 경우가 이에 해당합니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립팅 및 프로그래밍에서는 구성 요소 출력의 `SynchronousInputID` 속성에 0 값을 할당하여 비동기 변환을 지정합니다. . 이렇게 하면 데이터 흐름 엔진에서는 자동으로 각 행을 출력으로 보내지 않게 됩니다. 그런 다음 각 행을 비동기 변환의 출력을 위해 만들어진 새 출력 버퍼에 추가하여 해당 행을 명시적으로 적절한 출력으로 보내는 코드를 작성해야 합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 스크립팅 및 프로그래밍에서는 구성 요소 출력의 `SynchronousInputID` 속성에 0 값을 할당하여 비동기 변환을 지정합니다. 을 선택합니다. 이렇게 하면 데이터 흐름 엔진에서는 자동으로 각 행을 출력으로 보내지 않게 됩니다. 그런 다음 각 행을 비동기 변환의 출력을 위해 만들어진 새 출력 버퍼에 추가하여 해당 행을 명시적으로 적절한 출력으로 보내는 코드를 작성해야 합니다.  
   
 > [!NOTE]  
 >  원본 구성 요소에서도 데이터 원본에서 읽어 온 각 행을 해당 출력 버퍼에 명시적으로 추가해야 하므로 비동기 출력을 사용할 경우에는 원본과 변환이 유사하게 됩니다.  

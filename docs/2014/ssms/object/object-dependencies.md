@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032413"
 ---
 # <a name="object-dependencies"></a>개체 종속성
@@ -27,10 +27,10 @@ ms.locfileid: "63032413"
  선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **에 종속 된 개체**_\<선택한 개체 >_  
+ **에 종속 된 개체** _\<선택한 개체 >_  
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
- **개체**_\<선택한 개체 >_**달라 집니다**  
+ **개체** _\<선택한 개체 >_ **달라 집니다**  
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
  **종속성**  

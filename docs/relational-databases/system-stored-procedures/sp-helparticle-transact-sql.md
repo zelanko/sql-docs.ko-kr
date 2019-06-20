@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017809"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
@@ -79,7 +79,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**dest_owner**|**sysname**|대상 개체 소유자의 이름입니다.|  
 |**source_owner**|**sysname**|원본 개체 소유자의 이름입니다.|  
 |**unqua_source_object**|**sysname**|소유자 이름을 제외한 원본 개체의 이름입니다.|  
-|**sync_object_owner**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자입니다. .|  
+|**sync_object_owner**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자입니다. 을 선택합니다.|  
 |**unqualified_sync_object**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자 이름을 제외한 이름입니다.|  
 |**filter_owner**|**sysname**|필터의 소유자입니다.|  
 |**unqua_filter**|**sysname**|소유자 이름을 제외한 필터의 이름입니다.|  

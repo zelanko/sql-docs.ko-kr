@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9bcfda7c233efed6007ab162cd9a4572d241a51d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65819931"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67224591"
 ---
 JScript

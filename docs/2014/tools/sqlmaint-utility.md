@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63186997"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
@@ -79,8 +79,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *인스턴스에 연결하려면**_\\_** server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *인스턴스에 연결하려면 ** _\\_ **server_name* instance_name [!INCLUDE[ssDE](../includes/ssde-md.md)] 을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
  **-U** _login_ID_  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
@@ -134,12 +134,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  **-D**에 지정된 데이터베이스에서 사용하지 않는 공간을 제거하도록 지정합니다. 이 옵션은 자동으로 증가하도록 정의된 데이터베이스에서만 유용합니다. *Threshold_percent* 는 데이터베이스 크기가 몇 MB에 도달하면 **sqlmaint** 가 사용하지 않는 데이터 공간을 제거할지를 지정합니다. 데이터베이스가 *threshold_percent*보다 작으면 동작이 수행되지 않습니다. *Free_percent* 는 사용하지 않는 공간 중 데이터베이스에 유지해야 할 공간을 최종 데이터베이스 크기의 백분율로 지정합니다. 예를 들어 200MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 최종 데이터베이스 크기는 110MB가 됩니다. 데이터베이스가 *free_percent* 와 데이터베이스의 데이터 양을 더한 크기보다 작으면 데이터베이스가 확장되지 않습니다. 예를 들어 108MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 데이터베이스가 110MB로 확장되지 않고 108MB로 유지됩니다.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  **-D**에 지정된 데이터베이스에서 NOINDEX 옵션으로 DBCC CHECKDB 문 또는 DBCC CHECKDB 문을 실행하도록 지정합니다. 자세한 내용은 DBCC CHECKDB를 참조하십시오.  
   
  *sqlmaint* 를 실행할 때 데이터베이스가 사용 중인 경우 **text_file** 에 경고가 기록됩니다.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  **-D**에 지정된 데이터베이스에서 NOINDEX 옵션으로 DBCC CHECKALLOC 문을 실행하도록 지정합니다. 자세한 내용은 [DBCC CHECKALLOC&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)를 참조하세요.  
   
  **-CkCat**  
@@ -211,7 +211,7 @@ dbname_log_yyyymmddhhmm.BAK
  백업 미디어로 테이프를 사용하도록 지정합니다.  
   
  **-BkUpOnlyIfClean**  
- 지정된 **-Ck** 검사를 통해 데이터에 문제가 발견되지 않을 경우에만 백업이 수행되도록 지정합니다. 유지 관리 동작은 명령 프롬프트에 표시되는 것과 같은 순서로 실행됩니다. **-BkUpOnlyIfClean**을 지정할 계획인 경우 **-BkUpDB**-BkUpLog **매개 변수 전에 매개 변수**-CkDB **,**-CkDBNoIdx **,**-CkAl **,** -CkAlNoIdx **,**/**-CkTxtAl** 또는 **-CkCat**를 지정합니다. 이 매개 변수를 지정하지 않으면 검사 보고서 문제가 있는지 여부에 상관없이 백업이 수행됩니다.  
+ 지정된 **-Ck** 검사를 통해 데이터에 문제가 발견되지 않을 경우에만 백업이 수행되도록 지정합니다. 유지 관리 동작은 명령 프롬프트에 표시되는 것과 같은 순서로 실행됩니다. **-BkUpOnlyIfClean**을 지정할 계획인 경우 **-BkUpDB**-BkUpLog **매개 변수 전에 매개 변수**-CkDB **,** -CkDBNoIdx **,** -CkAl **,** -CkAlNoIdx **,** / **-CkTxtAl** 또는 **-CkCat**를 지정합니다. 이 매개 변수를 지정하지 않으면 검사 보고서 문제가 있는지 여부에 상관없이 백업이 수행됩니다.  
   
  **-VrfyBackup**  
  백업이 완료되면 백업에서 RESTORE VERIFYONLY를 실행하도록 지정합니다.  
@@ -245,25 +245,25 @@ dbname_log_yyyymmddhhmm.BAK
   
 ## <a name="examples"></a>예  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>1. 데이터베이스에서 DBCC 검사를 수행합니다.  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>1\. 데이터베이스에서 DBCC 검사를 수행합니다.  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>2. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>2\. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  
 ```  
   
-### <a name="c-backing-up-all-the-databases-in-a-plan-to-their-individual-subdirectories-in-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory-also-delete-any-backups-older-than-2-weeks"></a>3. 계획의 모든 데이터베이스를 기본 x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup 디렉터리에 있는 개별 하위 디렉터리에 백업합니다. 또한 2주가 지난 백업을 삭제합니다.  
+### <a name="c-backing-up-all-the-databases-in-a-plan-to-their-individual-subdirectories-in-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory-also-delete-any-backups-older-than-2-weeks"></a>3\. 계획의 모든 데이터베이스를 기본 x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup 디렉터리에 있는 개별 하위 디렉터리에 백업합니다. 또한 2주가 지난 백업을 삭제합니다.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  
 ```  
   
-### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>4. 기본 x:\Program Files\Microsoft SQL Server\MSSQL12 데이터베이스를 백업합니다. MSSQLSERVER\MSSQL\Backup 디렉터리. \  
+### <a name="d-backing-up-a-database-to-the-default-xprogram-filesmicrosoft-sql-servermssql12mssqlservermssqlbackup-directory"></a>4\. 기본 x:\Program Files\Microsoft SQL Server\MSSQL12 데이터베이스를 백업합니다. MSSQLSERVER\MSSQL\Backup 디렉터리. \  
   
 ```  
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
