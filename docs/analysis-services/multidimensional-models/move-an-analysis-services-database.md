@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3247bf2ca459f013131b21a25278bcc6e5d10b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62930898"
 ---
 # <a name="move-an-analysis-services-database"></a>Analysis Services 데이터베이스 이동
@@ -49,7 +49,7 @@ ms.locfileid: "62930898"
   
 6.  마우스 오른쪽 단추로 클릭 합니다 **데이터베이스** 선택한 폴더 **연결 하는 중...**  
   
-7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 (**...** ) 데이터베이스 폴더를 찾습니다.  
+7.  **폴더** 입력란에 데이터베이스 폴더의 새 위치를 입력합니다. 또는 찾아보기 단추를 사용할 수 있습니다 ( **...** ) 데이터베이스 폴더를 찾습니다.  
   
 8.  데이터베이스에 대해 **ReadWrite** 모드를 선택합니다.  
   

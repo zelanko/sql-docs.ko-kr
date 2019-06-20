@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62802677"
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 계산 멤버-쿼리 범위 계산된 멤버

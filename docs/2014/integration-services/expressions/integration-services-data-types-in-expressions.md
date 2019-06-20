@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769115"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
@@ -92,7 +92,7 @@ ms.locfileid: "62769115"
   
 -   수치 연산 함수에 전달된 인수는 숫자 데이터 형식이어야 합니다. 함수나 연산에 따라 특정 숫자 데이터 형식이 필요할 수 있습니다. 예를 들어 HEX 함수는 부호 있는 정수나 부호 없는 정수가 필요합니다.  
   
--   문자열 함수에 전달 된 인수는 문자 데이터 형식으로 계산 되어야 합니다. DT_STR 또는 DT_WSTR입니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
+-   문자열 함수에 전달된 인수는 문자 데이터 형식은 DT_STR 또는 DT_WSTR여야 합니다. 예를 들어 UPPER("flower")와 같습니다. SUBSTRING과 같은 일부 문자열 함수는 시작 위치와 문자열 길이를 나타내는 추가 정수 인수가 필요합니다.  
   
 -   날짜 및 시간 함수에 전달된 인수는 유효한 날짜여야 합니다. 예를 들어 DAY(GETDATE())와 같습니다. DATEADD와 같은 일부 함수는 날짜에 추가할 일 수를 나타내는 추가 정수 인수가 필요합니다.  
   

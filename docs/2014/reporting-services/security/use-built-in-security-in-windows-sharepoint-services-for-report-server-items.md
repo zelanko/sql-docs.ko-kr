@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 622fbdf67d33972500a5047c3886830ba802796a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101451"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용

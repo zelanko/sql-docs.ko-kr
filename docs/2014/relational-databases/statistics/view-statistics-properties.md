@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015675"
 ---
 # <a name="view-statistics-properties"></a>통계 속성 보기
@@ -33,7 +33,7 @@ ms.locfileid: "63015675"
   
 -   **다음을 사용하여 통계 속성을 보려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63015675"
      통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.  
   
      **문자열 인덱스**  
-     '예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.  
+     '예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.  
   
      **필터 식**  
      통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다.  

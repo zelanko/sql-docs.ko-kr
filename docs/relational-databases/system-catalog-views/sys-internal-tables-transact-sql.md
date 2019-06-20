@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004532"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables(Transact-SQL)
@@ -61,19 +61,19 @@ ms.locfileid: "63004532"
 ## <a name="examples"></a>예  
  다음 예에서는 카탈로그 뷰를 사용하여 내부 테이블 메타데이터를 쿼리하는 방법을 보여 줍니다.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>1. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>1\. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  
 ```  
   
-### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>2. 모든 내부 테이블 메타데이터 반환(sys.objects에서 상속된 메타데이터 포함)  
+### <a name="b-return-all-internal-table-metadata-including-that-which-is-inherited-from-sysobjects"></a>2\. 모든 내부 테이블 메타데이터 반환(sys.objects에서 상속된 메타데이터 포함)  
   
 ```  
 SELECT * FROM sys.internal_tables;  
 ```  
   
-### <a name="c-return-internal-table-columns-and-column-data-types"></a>3. 내부 테이블 열과 열 데이터 형식 반환  
+### <a name="c-return-internal-table-columns-and-column-data-types"></a>3\. 내부 테이블 열과 열 데이터 형식 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -86,7 +86,7 @@ JOIN sys.types AS typ ON typ.user_type_id = col.user_type_id
 ORDER BY itab.name, col.column_id;  
 ```  
   
-### <a name="d-return-internal-table-indexes"></a>4. 내부 테이블 인덱스 반환  
+### <a name="d-return-internal-table-indexes"></a>4\. 내부 테이블 인덱스 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -97,7 +97,7 @@ JOIN sys.indexes AS idx ON itab.object_id = idx.object_id
 ORDER BY itab.name, idx.index_id;  
 ```  
   
-### <a name="e-return-internal-table-statistics"></a>5. 내부 테이블 통계 반환  
+### <a name="e-return-internal-table-statistics"></a>5\. 내부 테이블 통계 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -108,7 +108,7 @@ JOIN sys.stats AS s ON itab.object_id = s.object_id
 ORDER BY itab.name, s.stats_id;  
 ```  
   
-### <a name="f-return-internal-table-partition-and-allocation-unit-information"></a>6. 내부 테이블 파티션 및 할당 단위 정보 반환  
+### <a name="f-return-internal-table-partition-and-allocation-unit-information"></a>6\. 내부 테이블 파티션 및 할당 단위 정보 반환  
   
 ```  
 SELECT SCHEMA_NAME(itab.schema_id) AS schema_name  
@@ -133,7 +133,7 @@ ON au.container_id =
 ORDER BY itab.name, idx.index_id;  
 ```  
   
-### <a name="g-return-internal-table-metadata-for-xml-indexes"></a>7. XML 인덱스에 대한 내부 테이블 메타데이터 반환  
+### <a name="g-return-internal-table-metadata-for-xml-indexes"></a>7\. XML 인덱스에 대한 내부 테이블 메타데이터 반환  
   
 ```  
 SELECT t.name AS parent_table  
@@ -152,7 +152,7 @@ WHERE it.internal_type_desc = 'XML_INDEX_NODES';
 GO  
 ```  
   
-### <a name="h-return-internal-table-metadata-for-service-broker-queues"></a>8. Service Broker 큐에 대한 내부 테이블 메타데이터 반환  
+### <a name="h-return-internal-table-metadata-for-service-broker-queues"></a>8\. Service Broker 큐에 대한 내부 테이블 메타데이터 반환  
   
 ```  
 SELECT q.name AS queue_name  
@@ -165,7 +165,7 @@ WHERE it.internal_type_desc = 'QUEUE_MESSAGES';
 GO  
 ```  
   
-## <a name="i-return-internal-table-metadata-for-all-service-broker-services"></a>9. 모든 Service Broker 서비스에 대한 내부 테이블 메타데이터 반환  
+## <a name="i-return-internal-table-metadata-for-all-service-broker-services"></a>9\. 모든 Service Broker 서비스에 대한 내부 테이블 메타데이터 반환  
   
 ```  
 SELECT *   

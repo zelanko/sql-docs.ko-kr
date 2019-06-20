@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099138"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
@@ -111,13 +111,13 @@ ms.locfileid: "66099138"
   
  집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 세트의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
--   *\<report item type>* '*\<report item name>*'에 잘못된 범위 "*\<scope name>*"이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 잘못된 범위 " *\<scope name>* "이 있습니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
--   *\<report item type>* '*\<report item name>*'에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
+-   *\<report item type>* ' *\<report item name>* '에 대한 *\<property name>* 식에 집계 함수에 유효하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 세트의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(`Previous`, `RunningValue` 또는 `RowNumber`) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
--   `Previous``RunningValue` 하거나 `RowNumber` 집계의 데이터 셀에 사용 되는 함수는  *\<item type >* '*\<보고서 항목 이름 >*' 그룹화 범위 참조 열과 행에는  *\<item type >* 합니다. 모든 범위 매개 변수 `Previous`, `RunningValue` 하 고 `RowNumber` 집계 함수 내에서  *\<item type >* 행 그룹화 나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
+-   `Previous``RunningValue` 하거나 `RowNumber` 집계의 데이터 셀에 사용 되는 함수는  *\<item type >* ' *\<보고서 항목 이름 >* ' 그룹화 범위 참조 열과 행에는  *\<item type >* 합니다. 모든 범위 매개 변수 `Previous`, `RunningValue` 하 고 `RowNumber` 집계 함수 내에서  *\<item type >* 행 그룹화 나 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   

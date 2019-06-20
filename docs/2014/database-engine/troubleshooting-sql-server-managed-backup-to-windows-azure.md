@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842580"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결
@@ -105,8 +105,8 @@ ms.locfileid: "62842580"
   
      SQL Server가 응답하지 않는 경우 이벤트가 관리 채널에 기록됩니다.  이벤트 로그의 예:  
   
-     *Sql 오류 (엔진이 응답 하지 않거나 sqlexception: SqlException:*   
-     *오류 코드, 메시지 및 스택 추적에에서 표시할 추가 정보와 함께 관리 채널 xevent를 같은:*   
+     *Sql 오류 (엔진이 응답 하지 않거나 sqlexception: SqlException:*    
+     *오류 코드, 메시지 및 스택 추적에에서 표시할 추가 정보와 함께 관리 채널 xevent를 같은:*    
     *"아마도 SQL Server 연결 문제가 발생 했습니다. 현재 반복에서 데이터베이스를 건너뜁니다 "*  
   
 -   **SQL 에이전트가 응답 하지 않거나 작동 중지 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 실행 됩니다.**  
@@ -115,7 +115,7 @@ ms.locfileid: "62842580"
   
      SQL 에이전트가 응답하지 않는 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 백업 작업을 계속할 수 없으며 이벤트가 관리 채널에 기록됩니다. 이벤트 로그의 예:  
   
-     *중지 작업: 관리 채널 xevent를 참조 하세요.*   
+     *중지 작업: 관리 채널 xevent를 참조 하세요.*    
     *"SQL server에서 진행률 업데이트를 수신 되지 않았습니다 둘" + Constants.DBBackupInfoMsgMaxWaitTime + "데이터베이스 백업에 대 한 시간입니다.   SSM 클라우드 백업이 계속 대기 합니다. "*  
   
  전자 메일 알림을 사용 하도록 설정한 경우 포함 하는 알림을 받습니다 **백업 루프 수** 하 고 **보존 루프 수**입니다. 이러한 두 열 중 하나나 둘 다에 대해 알림에서 반환되는 값이 0인 경우 시스템이 응답하지 않음을 나타낼 수도 있습니다.  

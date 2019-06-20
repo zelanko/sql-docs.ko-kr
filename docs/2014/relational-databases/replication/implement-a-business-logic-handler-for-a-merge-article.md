@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721197"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
@@ -99,18 +99,18 @@ ms.locfileid: "62721197"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)를 실행하여 어셈블리가 이미 비즈니스 논리 처리기로 등록되어 있지 않은지 확인합니다.  
   
-2.  배포자에서 실행 [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), 비즈니스 논리 처리기의 이름을 지정 하 **@article_resolver**에 값이 `true`에 대 한 **@is_dotnet_assembly**, 어셈블리의 이름을 **@dotnet_assembly_name**, 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한  **@dotnet_class_name**.  
+2.  배포자에서 실행 [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), 비즈니스 논리 처리기의 이름을 지정 하 **@article_resolver** 에 값이 `true`에 대 한 **@is_dotnet_assembly** , 어셈블리의 이름을 **@dotnet_assembly_name** , 및를 재정의 하는 클래스의 정규화 된 이름을 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 에 대 한  **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
+    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name** 을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
-1.  **@article_resolver**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
+1.  **@article_resolver** 에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
-1.  **@publication**, **@article**, **@property**에 **article_resolver** 값, **@value**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
+1.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다.  
   
 ###  <a name="TsqlExample"></a> 예(복제 프로그래밍)  
  이 예에서는 감사 로그를 만드는 비즈니스 논리 처리기를 보여 줍니다.  

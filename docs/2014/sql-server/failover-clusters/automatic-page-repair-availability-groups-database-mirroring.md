@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137510"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>자동 페이지 복구(가용성 그룹 및 데이터베이스 미러링)
@@ -88,7 +88,7 @@ ms.locfileid: "63137510"
   
 
   
-##  <a name="ViewAPRattempts"></a> 어떻게: 자동 페이지 복구 시도 보기  
+##  <a name="ViewAPRattempts"></a> 방법: 자동 페이지 복구 시도 보기  
  다음 동적 관리 뷰는 지정된 가용성 데이터베이스 또는 미러된 데이터베이스에 대한 최근 자동 페이지 복구 시도에 해당하는 행을 데이터베이스당 최대 100개까지 반환합니다.  
   
 -   **AlwaysOn 가용성 그룹:**  

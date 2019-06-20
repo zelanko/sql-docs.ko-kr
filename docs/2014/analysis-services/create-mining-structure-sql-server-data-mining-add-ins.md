@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086814"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>마이닝 구조 만들기(SQL Server 데이터 마이닝 추가 기능)
@@ -109,7 +109,7 @@ ms.locfileid: "66086814"
   
      사용해야 할지 여부를 확실히 알 수 없는 열은 항상 마이닝 구조에 포함한 다음 해당 열을 사용하지 않는 마이닝 모델을 만듭니다. 예를 들어 나중에 참조할 수 있도록 데이터에 전화 번호 열을 포함하되 전화 번호를 무시하는 클러스터링 모델을 만들 수 있습니다. 클러스터를 만든 후에는 특정 클러스터에 속하는 사람의 전화 번호를 반환하는 쿼리를 만들 수 있습니다.  
   
--   모든 알고리즘 필요는 **키** 열입니다. Key 열의 값은 고유해야 합니다. A **Key Time** 열이 예측에 필요 또는 시계열 모델. .  
+-   모든 알고리즘 필요는 **키** 열입니다. Key 열의 값은 고유해야 합니다. A **Key Time** 열이 예측에 필요 또는 시계열 모델. 을 선택합니다.  
   
 ### <a name="requirements"></a>요구 사항  
  데이터 마이닝 구조를 만들려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결되어 있어야 합니다. 임시 구조를 사용하는 경우에도 연결이 필요합니다. 또는 연결을 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [원본 데이터에 연결 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](connect-to-source-data-data-mining-client-for-excel.md)합니다.  

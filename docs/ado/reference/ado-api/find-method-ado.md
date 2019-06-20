@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697961"
 ---
 # <a name="find-method-ado"></a>Find 메서드(ADO)
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>Remarks  
  에 단일 열 이름만 지정할 수 있습니다 *조건을*합니다. 이 메서드는 여러 열 검색을 지원 하지 않습니다.  
   
- 비교 연산자 *조건을* 될 수 있습니다 " **>** "(보다 큼)," **\<** " (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), "<>" (다음과 같지 않은 경우) 또는 "좋아요" (패턴 일치).  
+ 비교 연산자 *조건을* 될 수 있습니다 "**>**"(보다 큼),"**\<**" (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), "<>" (다음과 같지 않은 경우) 또는 "좋아요" (패턴 일치).  
   
  값 *조건을* 문자열, 부동 소수점 숫자 또는 날짜 일 수 있습니다. 문자열 값은 작은따옴표 또는 "#" (숫자 기호)를 사용 하 여 구분 기호로 분리 된 (예를 들어, "상태 '서울' =" 또는 "상태 = WA # #"). 날짜 값이 "#" (숫자 기호) 기호를 사용 하 여 구분 됩니다 (예를 들어, "start_date > #7 월 22 일/97 #"). 이러한 값 시간, 분 및 초를 나타내는 타임 스탬프를 포함할 수 있지만 시간 (밀리초)을 포함 하지 않아야 하거나 오류가 발생 합니다.  
   

@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 81d44a01e46078599fe601d672211a9d615ce528
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014055"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
@@ -86,7 +86,7 @@ ms.locfileid: "63014055"
   
     -   BCPFILECP  
   
-         대량 복사 파일의 코드 페이지를 지정합니다.   
+         대량 복사 파일의 코드 페이지를 지정합니다.  
   
     -   BCPUNICODEFILE  
   

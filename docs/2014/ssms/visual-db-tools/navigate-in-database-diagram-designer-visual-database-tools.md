@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63254455"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
   데이터베이스 다이어그램 디자이너에서 작업할 때 마우스와 키보드를 모두 사용할 수 있습니다. 데이터베이스 다이어그램 디자이너에 사용되는 특정 작업 방법에 대한 내용은 아래 표를 참조하십시오.  
   
-|**대상**|**작업 방법**|  
+|**수행할 작업**|**작업 방법**|  
 |------------|---------------|  
 |데이터베이스 다이어그램 메뉴에 액세스|Alt+M|  
 |가능한 경우 테이블과 관계 사이를 이동|Tab 키 또는 Shift+Tab|  

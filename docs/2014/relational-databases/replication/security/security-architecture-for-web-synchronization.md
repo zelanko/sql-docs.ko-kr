@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959756"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
@@ -28,7 +28,7 @@ ms.locfileid: "62959756"
   
  다음 표에서는 그림에 표시된 구성 요소와 연결에 대해 설명합니다.  
   
-## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>1. 병합 에이전트를 실행하는 Windows 사용자  
+## <a name="a-windows-user-under-which-the-merge-agent-runs"></a>1\. 병합 에이전트를 실행하는 Windows 사용자  
  동기화를 수행하는 동안 구독자에서 병합 에이전트(A)가 시작됩니다. 병합 에이전트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하거나 독립 실행형 사용자 지정 애플리케이션에서 시작할 수 있습니다. 병합 에이전트를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 시작하면 사용자가 지정하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다. Windows 사용자를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정 컨텍스트에서 병합 에이전트가 실행됩니다.  
   
 |계정 유형|계정 지정 위치|  
@@ -37,7 +37,7 @@ ms.locfileid: "62959756"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자|  
 |독립 실행형 애플리케이션|애플리케이션을 실행하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다.|  
   
-## <a name="b-connection-to-the-subscriber"></a>2. 구독자 연결  
+## <a name="b-connection-to-the-subscriber"></a>2\. 구독자 연결  
  병합 에이전트는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 구독자에 연결합니다. 지정하는 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 구독 데이터베이스에서 **dbowner** 고정 데이터베이스 역할의 멤버인 데이터베이스 사용자와 연결되어야 합니다.  
   
 > [!NOTE]  
@@ -48,14 +48,14 @@ ms.locfileid: "62959756"
 |Windows 인증|병합 에이전트(A)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 연결을 설정합니다.|  
 |다음이 지정된 경우에만[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 사용됩니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **0** 에 대 한 **SubscriberSecurityMode**합니다.|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A><br /><br /> 병합 에이전트 명령줄: **-SubscriberLogin** 및 **-SubscriberLogin**|  
   
-## <a name="c-connection-to-an-outgoing-proxy-server"></a>3. 보내는 프록시 서버 연결  
+## <a name="c-connection-to-an-outgoing-proxy-server"></a>3\. 보내는 프록시 서버 연결  
  구독자의 내부 네트워크에 대한 액세스를 제한하는 보내는 프록시 서버가 있는 경우에만 이 연결에 대해 Windows 사용자를 지정합니다.  
   
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
 |Windows 인증|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> 에 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A><br /><br /> 병합 에이전트 명령줄: **-InternetProxyServer** 에 **-InternetProxyLogin** 및 **-InternetProxyPassword**|  
   
-## <a name="d-connection-to-iis"></a>4. IIS 연결  
+## <a name="d-connection-to-iis"></a>4\. IIS 연결  
  병합 에이전트는 구독자에 연결하고 구독 데이터베이스에서 변경 내용을 추출한 다음 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)에 HTTPS 요청을 보내고 데이터 변경 내용을 XML 메시지로 업로드합니다. 병합 에이전트에는 IIS에 대한 로그온 권한이 있어야 합니다.  
   
 |인증 유형|인증 지정 위치|  
@@ -63,12 +63,12 @@ ms.locfileid: "62959756"
 |다음 중 하나가 지정된 경우에는 기본 인증이 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **0** 에 대 한 합니다 **@internet_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **0** 에 대 한 **-InternetSecurityMode**합니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@internet_login** 의 **@internet_password** 및 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)매개 변수<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A><br /><br /> 병합 에이전트 명령줄: **-InternetLogin** 및 **-InternetPassword**|  
 |통합 인증\* 다음 중 하나가 지정 된 경우 사용 됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **1** 에 대 한 합니다 **@internet_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **1** 에 대 한 **-InternetSecurityMode**합니다.|병합 에이전트(A)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 연결을 설정합니다.|  
   
- * 통합된 인증은 모든 컴퓨터가 동일한 도메인에 또는 서로 트러스트 관계에 있는 여러 도메인에 경우에 사용할 수 있습니다.  
+ \* 통합된 인증은 모든 컴퓨터가 동일한 도메인에 또는 서로 트러스트 관계에 있는 여러 도메인에 경우에 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  통합 인증을 사용하는 경우에는 위임이 필요합니다. 구독자에서 IIS로 연결하는 경우에는 기본 인증 및 SSL을 사용하는 것이 좋습니다.  
   
-## <a name="e-connection-to-the-publisher"></a>5. 게시자 연결  
+## <a name="e-connection-to-the-publisher"></a>5\. 게시자 연결  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자 구성 요소는 IIS를 실행하는 컴퓨터에 호스팅됩니다. 이러한 구성 요소는 다음 동작을 수행합니다.  
   
 -   "4. IIS 연결" 섹션에서 설명한 HTTPS 요청을 수신합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "62959756"
 |Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **1** 에 대 한 합니다 **@publisher_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **1** 에 대 한 **-PublisherSecurityMode**합니다.|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 게시자에 연결합니다. 게시자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **0** 에 대 한 합니다 **@publisher_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **0** 에 대 한 **-PublisherSecurityMode**합니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@publisher_login** 의 **@publisher_password** 및 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)매개 변수<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> 병합 에이전트 명령줄: **-PublisherLogin** 및 **-PublisherPassword**|  
   
-## <a name="f-connection-to-the-distributor"></a>6. 배포자 연결  
+## <a name="f-connection-to-the-distributor"></a>6\. 배포자 연결  
  IIS를 실행하는 컴퓨터에 호스팅되는 병합 복제 조정자는 배포자에도 연결합니다. 병합 복제 조정자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 중 하나를 사용하여 배포자에 연결합니다. 사용자가 지정하는 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 다음 사항을 따라야 합니다.  
   
 -   PAL(게시 액세스 목록)에 있어야 합니다. 자세한 내용은 [게시자 보안 설정](secure-the-publisher.md)을 참조하세요.  
@@ -102,21 +102,21 @@ ms.locfileid: "62959756"
 |Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **1** 에 대 한 합니다 **@distributor_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **1** 에 대 한 **-DistributorSecurityMode**합니다.|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 배포자에 연결합니다. 배포자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하세요.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: 값 **0** 에 대 한 합니다 **@distributor_security_mode** 매개 변수에 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)합니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: 값 **0** 에 대 한 **-DistributorSecurityMode**합니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@distributor_login** 의 **@distributor_password** 및 [@job_password](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)매개 변수<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 병합 에이전트 명령줄: **-DistributorLogin** 및 **-DistributorPassword**|  
   
-## <a name="g-connection-to-an-ftp-server"></a>7. FTP 서버 연결  
+## <a name="g-connection-to-an-ftp-server"></a>7\. FTP 서버 연결  
  구독자에 스냅숏을 적용하기 전에 UNC 위치가 아닌 FTP 서버에서 IIS를 실행하는 컴퓨터로 스냅숏 파일을 다운로드하려는 경우에만 이 연결에 대해 Windows 사용자를 지정합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../transfer-snapshots-through-ftp.md)을 참조하세요.  
   
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
 |Windows 인증|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: **@ftp_login** 의 **@ftp_password** 및 [@ftp_password](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)매개 변수<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.Publication.FtpLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.FtpPassword%2A>|  
   
-## <a name="h-access-to-the-snapshot-share"></a>8. 스냅숏 공유에 대한 액세스  
+## <a name="h-access-to-the-snapshot-share"></a>8\. 스냅숏 공유에 대한 액세스  
  스냅숏 공유는 IIS를 실행하는 컴퓨터에 호스팅되는 병합 복제 조정자에 의해 액세스됩니다.  
   
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
 |Windows 인증|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 스냅숏 공유에 액세스합니다. 스냅숏 공유와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
   
-## <a name="i-application-pool-account-for-iis"></a>9. IIS의 애플리케이션 풀 계정  
+## <a name="i-application-pool-account-for-iis"></a>9\. IIS의 애플리케이션 풀 계정  
  이 계정은 IIS를 실행하는 컴퓨터에서 [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)] 에 대해 W3wp.exe 프로세스를 시작하거나 [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]에서 Dllhost.exe 프로세스를 시작하는 데 사용됩니다. 이러한 프로세스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자와 같이 IIS를 실행하는 컴퓨터에 애플리케이션을 호스팅합니다. 이 계정에는 IIS를 실행하는 컴퓨터에서 다음 복제 DLL에 대한 읽기 및 실행 권한이 있어야 합니다.  
   
 -   Replisapi  

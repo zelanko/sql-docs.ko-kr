@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679504"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
@@ -58,7 +58,7 @@ ms.locfileid: "62679504"
 ## <a name="examples"></a>예  
  다음 예에서는 OPENXML을 사용하여 여러 행 집합 뷰를 만드는 방법을 보여 줍니다.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>1. OPENXML 행 집합 열을 메타 속성에 매핑  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>1\. OPENXML 행 집합 열을 메타 속성에 매핑  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. 특히 OPENXML 문에서 *ColPattern* 매개 변수를 사용하여 여러 가지 메타 속성 특성을 행 집합 열에 매핑할 수 있는 방법을 보여 줍니다.  
   
  OPENXML 문에서는 다음을 보여 줍니다.  
@@ -113,7 +113,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### <a name="b-retrieving-the-whole-xml-document"></a>2. 전체 XML 문서 검색  
+### <a name="b-retrieving-the-whole-xml-document"></a>2\. 전체 XML 문서 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서를 하나의 열로 된 행 집합 뷰로 만듭니다. 이 열 **Col1**은 **xmltext** 메타 속성에 매핑되며 오버플로 열이 됩니다. 그 결과 열이 소비되지 않은 데이터를 수신합니다. 이 경우에는 전체 문서입니다.  
   
  그런 다음 SELECT 문은 완전한 행 집합을 반환합니다.  
@@ -157,7 +157,7 @@ EXEC sp_xml_removedocument @idoc
   
  쿼리는 이름 루트가 포함된 루트 요소와 해당 루트 요소에 포함된 데이터를 반환합니다.  
   
-### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>3. xmltext 메타 속성을 지정하여 열에서 소비되지 않은 데이터 검색  
+### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>3\. xmltext 메타 속성을 지정하여 열에서 소비되지 않은 데이터 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. **xmltext** 메타 속성 특성을 OPENXML의 행 집합 열에 매핑하여 소비되지 않은 XML 데이터를 검색하는 방법을 설명합니다.  
   
  **comment** 열은 **\@mp:xmltext** 메타 속성에 매핑됨으로써 오버플로 열로 식별됩니다. *flags* 매개 변수는 **9** (XML_ATTRIBUTE 및 XML_NOCOPY)로 설정됩니다. 이는 **특성 중심** 매핑을 나타내며 소비되지 않은 데이터만 오버플로 열에 복사되어야 함을 나타냅니다.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067057"
 ---
 # <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
@@ -67,7 +67,7 @@ ms.locfileid: "66067057"
   
 |옵션|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다.**\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다. **\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
 |**서비스 계정**|ImpersonateServiceAccount|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
  <sup>1</sup>ImpersonationMode에 대 한 값을 지정 합니다 [DataSourceImpersonationInfo 요소 &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) 데이터 원본에 대 한 속성입니다.  

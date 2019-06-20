@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658186"
 ---
 # <a name="new-features"></a>새로운 기능
@@ -81,7 +81,7 @@ ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다
   
 -   명명 된 매개 변수입니다.  
   
--   ODBC 3 중 하나입니다. *x*-특정 **SQLGetInfo** 옵션입니다. (경우 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출을 SQL_XXX_CURSOR_ATTRIBUTES1 정보 형식인 몇 가지 ODBC 2를 대체 했습니다. *x* 정보 유형, 신뢰할 수 있는 수 정보의 일부 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   ODBC 3 중 하나입니다. *x*-특정 **SQLGetInfo** 옵션입니다. (경우 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2.*x* 드라이버 호출을 SQL_XXX_CURSOR_ATTRIBUTES1 정보 형식인 몇 가지 ODBC 2를 대체 했습니다.*x* 정보 유형, 신뢰할 수 있는 수 정보의 일부 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   오프셋을 바인딩하십시오.  
   

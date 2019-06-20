@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020732"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
@@ -33,7 +33,7 @@ ms.locfileid: "63020732"
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅숏을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
 > [!NOTE]
->  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 **@processing_order** 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 의 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **@processing_order** 의 **sp_changemergearticle**을 지정하고 **sp_changemergearticle** 의 **@processing_order** 의 **@processing_order**를 지정하며 **@article**을 참조하십시오. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+>  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 **@processing_order** 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 의 [@processing_order](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **@processing_order** 의 **sp_changemergearticle**을 지정하고 **sp_changemergearticle** 의 **@processing_order** 의 **@processing_order**를 지정하며 **@article** 을 참조하십시오. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  
   

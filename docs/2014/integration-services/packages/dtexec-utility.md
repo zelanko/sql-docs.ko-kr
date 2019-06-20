@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890243"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 실행 단계  
  이 유틸리티를 실행하면 다음 4단계가 수행됩니다.  
   
-1.  명령 읽어들이 단계: 명령 프롬프트 옵션 및 지정 된 인수 목록을 읽습니다. **/?** 또는 **/HELP** 옵션이 있으면 이후의 모든 단계를 건너뜁니다.  
+1.  명령을 읽어들이는 단계: 명령 프롬프트는 지정된 옵션 및 인수 목록을 읽습니다. **/?** 또는 **/HELP** 옵션이 있으면 이후의 모든 단계를 건너뜁니다.  
   
 2.  패키지 로드 단계: 지정 된 패키지를 `/SQL`, **파일**, 또는 `/DTS` 옵션 로드 됩니다.  
   
-3.  구성 단계: 옵션은이 순서 대로 처리 됩니다.  
+3.  구성 단계: 옵션은 다음 순서로 처리됩니다.  
   
     -   패키지 플래그, 변수 및 속성을 설정하는 옵션  
   

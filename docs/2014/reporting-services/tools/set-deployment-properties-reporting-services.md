@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099547"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099547"
     > [!NOTE]  
     >  기본 모드로 실행 중인 보고서 서버의 경우 대상 폴더에 보고서를 게시하려면 해당 폴더에 대한 **게시** 권한이 있어야 합니다. 게시 권한은 게시 작업을 포함하는 역할에 사용자 계정을 매핑하는 역할 할당을 통해 제공됩니다. 자세한 내용은 [역할 할당 만들기 및 관리](../security/create-and-manage-role-assignments.md)를 참조하세요. SharePoint 통합 모드로 실행 중인 보고서 서버의 경우 SharePoint 사이트에 대한 **멤버** 또는 **소유자** 권한이 있어야 합니다. 자세한 내용은 [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)를 참조하세요.  
   
-10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http:*//server/reportserver* 또는 https:*//server/reportserver*)을 사용합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다.  
+10. **TargetServerURL** 입력란에 대상 보고서 서버의 URL을 입력합니다. 보고서를 게시하기 전에 이 속성을 유효한 보고서 서버 URL로 설정해야 합니다. 기본 모드로 실행 중인 보고서 서버에 게시하는 경우 보고서 서버의 가상 디렉터리 URL(예: http: *//server/reportserver* 또는 https: *//server/reportserver*)을 사용합니다. 이는 보고서 관리자가 아닌 보고서 서버의 가상 디렉터리입니다.  
   
      SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트(예: http://*servername*, http://*servername*/*site* 또는 http://*servername*/*site*/*subsite*)가 사용됩니다.  
   

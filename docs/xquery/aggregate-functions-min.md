@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046967"
 ---
 # <a name="aggregate-functions---min"></a>집계 함수 - min
@@ -49,7 +49,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>1. min() XQuery 함수를 사용하여 노동 시간이 최소인 업무 센터 위치 찾기  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>1\. min() XQuery 함수를 사용하여 노동 시간이 최소인 업무 센터 위치 찾기  
  다음 쿼리는 제품 모델(ProductModelID=7)의 제조 프로세스에서 노동 시간이 최소인 모든 업무 센터 위치를 검색합니다. 일반적으로 다음과 같이 한 위치가 반환됩니다. 여러 위치에서 최소 노동 시간이 같은 경우 해당 위치가 모두 반환됩니다.  
   
 ```  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067226"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
@@ -78,7 +78,7 @@ ms.locfileid: "66067226"
   
 -   **수식 호환성:** 알려진 특정 경우에 동일한 수식에서 관계형 데이터 저장소만 사용하는 DirectQuery 모델과 비교했을 때 혼합 모델이나 캐시된 모델의 경우 다른 결과를 반환할 수 있습니다. xVelocity 메모리 내 분석(VertiPaq) 엔진과 SQL Server 간의 의미 체계 차이점 때문에 이러한 차이가 발생합니다. 이러한 차이점에 대 한 자세한 내용은이 섹션을 참조 하세요. [수식 호환성](#bkmk_FormulaCompat)합니다.  
   
--   **보안:** 배포 방법에 따라 모델 보안을 설정 하려면 다른 메서드를 사용할 수 있습니다. 테이블 형식 모델의 캐시된 데이터에는 Analysis Services 인스턴스의 보안 모델을 사용하여 보안이 설정됩니다. 역할을 사용하여 DirectQuery 모델 보안을 설정할 수 있지만 관계형 데이터 저장소에 정의된 보안을 사용할 수도 있습니다. 즉, DirectQuery 전용 모델을 기반으로 보고서를 여는 사용자가 SQL Server에서 해당 사용자의 사용 권한에 허용되는 데이터만 볼 수 있도록 모델을 구성할 수 있습니다. 자세한 내용은이 섹션을 참조 하십시오. [보안](#bkmk_Security)합니다.  
+-   **보안:** 배포 방법에 따라 모델 보안을 설정 하려면 다른 메서드를 사용할 수 있습니다. 테이블 형식 모델의 캐시된 데이터에는 Analysis Services 인스턴스의 보안 모델을 사용하여 보안이 설정됩니다. 역할을 사용하여 DirectQuery 모델 보안을 설정할 수 있지만 관계형 데이터 저장소에 정의된 보안을 사용할 수도 있습니다. 즉, DirectQuery 전용 모델을 기반으로 보고서를 여는 사용자가 SQL Server에서 해당 사용자의 사용 권한에 허용되는 데이터만 볼 수 있도록 모델을 구성할 수 있습니다. 자세한 내용은이 섹션을 참조 하십시오. [보안](#bkmk_Security).  
   
 -   **클라이언트 제한 사항:** 모델을 DirectQuery 모드일 때만 DAX를 사용 하 여 쿼리할 수 있습니다. MDX를 사용하여 쿼리를 만들 수는 없습니다. 즉, Excel에서는 MDX를 사용하기 때문에 Excel 피벗 클라이언트를 사용할 수 없습니다.  
   

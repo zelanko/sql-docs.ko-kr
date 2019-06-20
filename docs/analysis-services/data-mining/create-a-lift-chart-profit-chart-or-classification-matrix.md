@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 01d143bf8cdfd22a33ef065805930f93d00e7546
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988420"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
@@ -67,7 +67,7 @@ ms.locfileid: "62988420"
   
     -   마이닝 구조 홀드아웃 데이터 집합의 일부로 정의된 전체 테스트 사례 집합을 사용하려면 **마이닝 구조 테스트 사례 사용**옵션을 선택합니다.  
   
-    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기 (**...** ) 단추를 정확도 차트에 사용할 데이터 테이블을 선택 합니다. 자세한 내용은 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)을 참조하세요.  
+    -   외부 데이터를 사용하려는 경우 **다른 데이터 집합 지정**옵션을 선택합니다.  데이터 집합을 데이터 원본 뷰로 사용할 수 있어야 합니다.   찾아보기 ( **...** ) 단추를 정확도 차트에 사용할 데이터 테이블을 선택 합니다. 자세한 내용은 [Choose and Map Model Testing Data](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)을 참조하세요.  
   
          외부 데이터 집합을 사용하고 있는 경우 선택적으로 입력 데이터 집합을 필터링할 수 있습니다. 자세한 내용은 [모델 테스트 데이터에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)을 참조하세요.  
   

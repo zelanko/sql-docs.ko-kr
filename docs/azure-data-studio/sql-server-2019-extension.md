@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798055"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
@@ -44,7 +44,7 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
 
-## <a name="changes-in-release-0121"></a>0.12.1 릴리스의 변경 내용
+## <a name="changes-in-release-0121"></a>0\.12.1 릴리스의 변경 내용
 
 * 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을이 릴리스에서 제거 되었습니다. SQL Server 빅 데이터 클러스터 연결에서 사용할 수 없었던 모든 기능이 SQL Server 연결에서 출시 되었습니다.
 * HDFS 검색에서 찾을 수 있습니다 합니다 **Data Services** 폴더

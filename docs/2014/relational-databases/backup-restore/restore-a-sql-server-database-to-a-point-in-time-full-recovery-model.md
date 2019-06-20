@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921062"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
@@ -74,7 +74,7 @@ ms.locfileid: "62921062"
   
     -   **장치**  
   
-         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 장치 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 장치를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 장치 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 장치를 선택하려면 **추가**를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921062"
   
  **기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문**  
   
- RESTORE LOG *database_name* < backup_device > WITH STOPAT에서에서  **= *`time`*,** 복구 하는 중...  
+ RESTORE LOG *database_name* < backup_device > WITH STOPAT에서에서  **= *`time`* ,** 복구 하는 중...  
   
  복구 지점은 또는 그 전에 발생 한 최근 트랜잭션 커밋 합니다 `datetime` 하 여 지정 된 값 *시간*합니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921062"
   
 3.  데이터베이스를 복구하지 않고 마지막 전체 데이터베이스 백업과 마지막 차등 데이터베이스 백업(있는 경우)을 복원합니다(RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  각 트랜잭션 로그 백업을 적용 생성 된 동일한 순서로 지정 로그 복원을 중지할 시간입니다 (RESTORE DATABASE *database_name* < backup_device > WITH STOPAT에서에서 **= *`time`*,** RECOVERY).  
+4.  각 트랜잭션 로그 백업을 적용 생성 된 동일한 순서로 지정 로그 복원을 중지할 시간입니다 (RESTORE DATABASE *database_name* < backup_device > WITH STOPAT에서에서 **= *`time`* ,** RECOVERY).  
   
     > [!NOTE]  
     >  RECOVERY 및 STOPAT 옵션. 지정된 시간이 트랜잭션 로그에서 수용하는 시간을 초과하는 경우처럼 요청한 시간이 트랜잭션 로그 백업에 포함되지 않을 경우 경고가 생성되고 데이터베이스는 복구되지 않은 상태로 남습니다.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771029"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
@@ -29,16 +29,16 @@ ms.locfileid: "62771029"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> 로드 옵션  
  ODBC 대상은 두 액세스 로드 모듈 중 하나를 사용할 수 있습니다. [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../odbc-source-editor-connection-manager-page.md)에서 모드를 설정합니다. 두 모드는 다음과 같습니다.  
   
--   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 된 ODBC 공급자 기능에 따라 가장 효율적인 삽입 메서드를 사용 하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
+-   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 삽입 메서드를 사용하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
 -   **행 단위**: 이 모드에서는 ODBC 대상이 매개 변수가 포함된 INSERT 문을 준비하고 **SQL Execute**를 사용하여 한 번에 하나씩 행을 삽입합니다.  
   
 ## <a name="error-handling"></a>오류 처리  
  ODBC 대상에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 현재 오류에 해당 하는 수입니다. 오류 목록은 원본 데이터베이스에 대한 설명서를 참조하십시오. SSIS 오류 코드 목록은 SSIS 오류 코드 및 메시지 참조를 참조하십시오.  
+-   **오류 코드**: 현재 오류에 해당하는 숫자입니다. 오류 목록은 원본 데이터베이스에 대한 설명서를 참조하십시오. SSIS 오류 코드 목록은 SSIS 오류 코드 및 메시지 참조를 참조하십시오.  
   
--   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
+-   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
 -   표준 출력 데이터 열입니다.  
   

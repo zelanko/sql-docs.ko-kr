@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712898"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
@@ -318,7 +318,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    sudo pcs cluster start --all
    ```
 
-   > RHEL HA 추가 기능 KVM 및 VMWare에 대 한 에이전트 펜싱에 있습니다. 펜스는 다른 모든 하이퍼바이저에 서 사용할 수 없게 해야 합니다. 펜싱 에이전트를 사용 하지 않도록 설정 프로덕션 환경에서는 권장 되지 않습니다. 시간을 기준으로 HyperV 또는 클라우드 환경에 대 한 펜스 에이전트가 있습니다. 이러한 구성 중 하나를 실행 중인 경우에 펜싱을 사용 하지 않도록 설정 해야 합니다. \**이 프로덕션 시스템에서 권장 되지 않습니다.* *
+   > RHEL HA 추가 기능 KVM 및 VMWare에 대 한 에이전트 펜싱에 있습니다. 펜스는 다른 모든 하이퍼바이저에 서 사용할 수 없게 해야 합니다. 펜싱 에이전트를 사용 하지 않도록 설정 프로덕션 환경에서는 권장 되지 않습니다. 시간을 기준으로 HyperV 또는 클라우드 환경에 대 한 펜스 에이전트가 있습니다. 이러한 구성 중 하나를 실행 중인 경우에 펜싱을 사용 하지 않도록 설정 해야 합니다. \**이 프로덕션 시스템에서 권장 되지 않습니다.**
 
    다음 명령을 펜스 에이전트를 사용 하지 않도록 설정 합니다.
 

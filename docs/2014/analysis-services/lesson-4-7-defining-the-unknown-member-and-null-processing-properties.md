@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078608"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>알 수 없는 멤버 및 Null 처리 속성 정의
@@ -89,7 +89,7 @@ ms.locfileid: "66078608"
   
 9. 에 **특성** 창에서 새 특성의 이름을 변경 `Category`합니다.  
   
-10. 속성 창에서 클릭 하 여 **NameColumn** 속성 필드를 클릭 한 다음 (**...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
+10. 속성 창에서 클릭 하 여 **NameColumn** 속성 필드를 클릭 한 다음 ( **...** ) 버튼을 클릭 하 여 **이름 열** 대화 상자.  
   
 11. **원본 열** 목록에서 **EnglishProductCategoryName** 을 선택하고 **확인**을 클릭합니다.  
   

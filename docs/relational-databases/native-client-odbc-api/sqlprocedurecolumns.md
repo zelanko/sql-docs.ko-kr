@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 73a6ae0a7209eaef4438aee865f8e887af4ed176
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014295"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
@@ -28,7 +28,7 @@ ms.locfileid: "63014295"
 
   **SQLProcedureColumns** 모든 반환 값 특성을 보고 한 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를.  
   
- **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는  *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
+ **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는 * ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
   
  **SQLProcedureColumns** 정적 서버 커서에서 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100746"
 ---
 # <a name="schedules"></a>일정
@@ -66,7 +66,7 @@ ms.locfileid: "66100746"
  예약을 만들고 관리하는 방법은 [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)를 참조하세요.  
   
 > [!NOTE]  
->  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2012 버전에서 지원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473) 을 참조하세요.  
   
 ##  <a name="bkmk_compare"></a> 공유 일정과 보고서별 일정 비교  
  두 가지 유형의 일정 모두 출력 내용이 같습니다.  
@@ -148,6 +148,6 @@ ms.locfileid: "66100746"
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../report-server/cache-shared-datasets-ssrs.md)  
+ [공유 데이터 세트 캐시&#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  
   
   

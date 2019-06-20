@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917091"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
@@ -30,7 +30,7 @@ ms.locfileid: "62917091"
  데이터베이스를 복구 하는 것에 대 한 다음 모델 중 하나를 지정 합니다. **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
- 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)**,  **SQL Server 2012(110)** 및 **SQL Server 2008(100)** 입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  
+ 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)** ,  **SQL Server 2012(110)** 및 **SQL Server 2008(100)** 입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  
   
  **포함 유형**  
  없음 또는 부분을 지정하여 데이터베이스가 포함된 데이터베이스인지 여부를 나타냅니다. 포함된 데이터베이스에 대한 자세한 내용은 [Contained Databases](contained-databases.md)를 참조하십시오. 데이터베이스를 포함된 데이터베이스로 구성하려면 **포함된 데이터베이스 사용** 서버 속성을 **TRUE** 로 설정해야 합니다.  

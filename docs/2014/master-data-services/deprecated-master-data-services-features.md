@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd6342542da7528fef633ba02a430a8ba2ef5857
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483062"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 MDS(Master Data Services) 기능

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273394"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>데이터 원본 뷰 만들기(기본 데이터 마이닝 자습서)

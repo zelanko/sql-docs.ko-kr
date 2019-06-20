@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095697"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>배포 검사 목록: SharePoint 2010용 PowerPivot의 다중 서버 설치
@@ -90,7 +90,7 @@ ms.locfileid: "66095697"
   
     5.  클릭 **SQL Server Services**합니다.  
   
-    6.  마우스 오른쪽 단추로 클릭 **SQL Server (MSSQLSERVER)**, 클릭 **다시 시작**합니다.  
+    6.  마우스 오른쪽 단추로 클릭 **SQL Server (MSSQLSERVER)** , 클릭 **다시 시작**합니다.  
   
 3.  Windows 방화벽을 통한 데이터베이스 서버로의 인바운드 액세스를 사용하도록 설정합니다. 이렇게 하면 팜의 SharePoint 서버가 SharePoint 데이터베이스에 연결할 수 있습니다. 자세한 내용은 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)을 참조하세요.  
   

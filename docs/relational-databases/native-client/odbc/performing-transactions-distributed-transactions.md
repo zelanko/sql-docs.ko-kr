@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ea6c4886a3c5397777b7a65afe96ab7e1b422bd
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620546"
 ---
 # <a name="create-a-distributed-transaction"></a>분산된 트랜잭션을 만들려면
@@ -48,12 +48,12 @@ MSDTC 라고 SQL Server Native Client 드라이버에서 Open Database Connectiv
 
 1. 에 C++ Native Client ODBC 응용 프로그램 호출 하 여 트랜잭션을 시작 [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)는 자동 커밋 모드를 해제 합니다.
 
-2. 1. 컴퓨터에서 SQL Server X에서 일부 데이터를 업데이트 하는 응용 프로그램
+2. 1\. 컴퓨터에서 SQL Server X에서 일부 데이터를 업데이트 하는 응용 프로그램
 
 3. 컴퓨터 B에서 y SQL 서버의 일부 데이터를 업데이트 하는 응용 프로그램
     - SQL Server Y에 대 한 업데이트에 실패 하면 두 SQL Server 인스턴스에서 커밋되지 않은 모든 업데이트 내용이 롤백됩니다.
 
-4. 마지막으로 응용 프로그램 호출 하 여 트랜잭션을 종료 [SQLEndTran _(1)_](../../../relational-databases/native-client-odbc-api/sqlendtran.md)을 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용 하 여 합니다.
+4. 마지막으로 응용 프로그램 호출 하 여 트랜잭션을 종료 [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md)을 SQL_COMMIT 또는 SQL_ROLLBACK 옵션을 사용 하 여 합니다.
 
 _(1)_  MSDTC ODBC 않고 호출할 수 있습니다. 이러한 경우 MSDTC가 트랜잭션 관리자 및 응용 프로그램이 더 이상 사용 하지 **SQLEndTran**합니다.
 

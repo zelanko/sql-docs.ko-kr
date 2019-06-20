@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022460"
 ---
 # <a name="sql-server-replication-publication-properties"></a>SQL Server 복제 게시 속성 
@@ -47,7 +47,7 @@ ms.locfileid: "63022460"
  게시의 유형입니다(읽기 전용).  
   
  **구독 만료**  
- 구독 만료에 대 한 옵션 중 하나를 선택 합니다. 명시적 기간(**간격**)이 있는 **구독이 만료되지 않음** 또는 **구독이 만료됨**.  
+ 구독 만료에 대한 옵션 중 하나를 선택합니다. 명시적 기간(**간격**)이 있는 **구독이 만료되지 않음** 또는 **구독이 만료됨**.  
   
  스냅숏 및 트랜잭션 게시의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 기본값인 **구독이 만료되지는 않지만 다시 초기화될 때까지 비활성화될 수 있습니다**를 사용하는 것을 권장합니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "63022460"
  이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅숏 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅숏 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅숏 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅숏** 페이지에서 FTP 폴더를 스냅숏 파일의 위치로 지정합니다. 이렇게 하면 새 스냅숏이 생성될 때 스냅숏 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅숏을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  **웹 동기화**  
- 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize와 같이 정규화된 주소여야 합니다. 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
+ 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize 와 같이 정규화된 주소여야 합니다. 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
 
 ## <a name="publication-access-list"></a>게시 액세스 목록
 
@@ -167,7 +167,7 @@ ms.locfileid: "63022460"
  이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅숏 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅숏 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅숏 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅숏** 페이지에서 FTP 폴더를 스냅숏 파일의 위치로 지정합니다. 이렇게 하면 새 스냅숏이 생성될 때 스냅숏 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅숏을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  **웹 동기화**  
- 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize와 같이 정규화된 주소여야 합니다. 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
+ 병합 복제에 대해서만 사용할 수 있습니다. **구독자가 웹 서버에 연결하여 동기화하도록 허용**을 선택하고 병합 구독자가 웹 동기화를 사용할 수 있는 웹 서버 주소를 지정합니다. 웹 서버는 SSL(Secure Sockets Layer)을 사용해야 하고 웹 주소는 https://server.domain.com/synchronize 와 같이 정규화된 주소여야 합니다. 자세한 내용은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
 
 ## <a name="agent-security"></a>에이전트 보안
   **게시 속성** 대화 상자의 **에이전트 보안** 페이지를 사용하여 다음 에이전트를 실행하고 복제 토폴로지의 컴퓨터에 연결할 때 사용되는 계정의 설정에 액세스할 수 있습니다.  

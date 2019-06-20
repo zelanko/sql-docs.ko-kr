@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106423"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>식의 기본 제공 컬렉션(보고서 작성기 및 SSRS)

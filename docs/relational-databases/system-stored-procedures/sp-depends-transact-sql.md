@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047177"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends(Transact-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  개체가 속한 스키마의 이름입니다.  
   
  *object_name*  
- 종속성을 검사할 데이터베이스 개체입니다. 개체는 테이블, 뷰, 저장 프로시저, 사용자 정의 함수 또는 트리거일 수 있습니다. o*bject_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+ 종속성을 검사할 데이터베이스 개체입니다. 개체는 테이블, 뷰, 저장 프로시저, 사용자 정의 함수 또는 트리거일 수 있습니다. o*bject_name* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -86,7 +86,7 @@ sp_depends [ @objname = ] '<object>'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-dependencies-on-a-table"></a>1. 테이블에 대한 종속성 나열  
+### <a name="a-listing-dependencies-on-a-table"></a>1\. 테이블에 대한 종속성 나열  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Sales.Customer` 테이블에 종속된 데이터베이스 개체를 나열합니다. 스키마 이름 및 테이블 이름 모두를 지정합니다.  
   
 ```  
@@ -95,7 +95,7 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>2. 트리거에 대한 종속성 나열  
+### <a name="b-listing-dependencies-on-a-trigger"></a>2\. 트리거에 대한 종속성 나열  
  다음 예에서는 `iWorkOrder` 트리거가 종속된 데이터베이스 개체를 나열합니다.  
   
 ```  

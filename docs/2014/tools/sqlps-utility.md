@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187071"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
@@ -69,9 +69,9 @@ ms.locfileid: "63187071"
  실행할 PowerShell 명령 블록을 지정합니다. 명령 블록은 중괄호 {}로 묶어야 합니다. *Script_block* 때만 지정할 수는 `sqlps` 유틸리티에서 호출 된 **PowerShell** 또는 다른 `sqlps` 유틸리티 세션입니다. *argument_array* 는 *script_block*의 PowerShell 명령에 대한 인수를 포함하는 PowerShell 변수 배열입니다.  
   
  *string* [ *command_parameters* ]  
- 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. 형식을 사용 하 여 **"& {*`command`*}"** 합니다. 큰따옴표는 문자열 및 호출 연산자 (&) 원인 나타내며는 `sqlps` 명령을 실행 하는 유틸리티입니다.  
+ 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. 형식을 사용 하 여 **"& { *`command`* }"** 합니다. 큰따옴표는 문자열 및 호출 연산자 (&) 원인 나타내며는 `sqlps` 명령을 실행 하는 유틸리티입니다.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  `sqlps` 유틸리티 옵션의 구문 요약 정보를 표시합니다.  
   
 ## <a name="remarks"></a>Remarks  

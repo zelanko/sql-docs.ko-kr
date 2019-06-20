@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537360"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*시작 하기 전에*|1|  
 |*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*종료 후*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*종료 후*|  
 |*종료 후*|*종료 후*|  
   
  [1] 행 집합 크기 행을 인출 이전 호출 이후 변경 된 경우 이전 호출에 사용 된 행 집합 크기입니다.  
@@ -346,7 +346,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  **SQLFetchScroll** 설명자를 사용 하 여 동일한 방식으로 상호 작용 **SQLFetch**합니다. 자세한 내용은의 "설명자 및 SQLFetchScroll" 섹션을 참조 하세요 [SQLFetch 함수](../../../odbc/reference/syntax/sqlfetch-function.md)합니다.  
   
 ## <a name="code-example"></a>코드 예  
- 참조 [열 단위 바인딩을](../../../odbc/reference/develop-app/column-wise-binding.md), [행 단위 바인딩은](../../../odbc/reference/develop-app/row-wise-binding.md)를 [Update 및 Delete 문을 배치](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 및 [SQLSetPos를사용하여행집합의행을업데이트하는중입니다](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
+ 참조 [열 단위 바인딩을](../../../odbc/reference/develop-app/column-wise-binding.md), [행 단위 바인딩은](../../../odbc/reference/develop-app/row-wise-binding.md)를 [Update 및 Delete 문을 배치](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), 및 [SQLSetPos를사용하여행집합의행을업데이트하는중입니다.](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
   
 ## <a name="related-functions"></a>관련 함수  
   

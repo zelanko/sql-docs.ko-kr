@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66075148"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
@@ -33,11 +33,11 @@ ms.locfileid: "66075148"
 >  또는 파티션 빌드, 병합 및 삭제 태스크를 자동화하는 XMLA 스크립트를 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 또는 예약된 태스크로 실행되는 사용자 지정 SSIS 패키지에서 XMLA 스크립트를 만들고 실행할 수 있습니다. 자세한 내용은 [Automate Analysis Services Administrative Tasks with SSIS](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)를 참조하세요.  
   
 ## <a name="partition-source"></a>파티션 원본  
- 파티션의 원본 테이블 또는 명명된 쿼리를 지정합니다. 원본 테이블을 변경하려면 셀을 클릭한 다음 찾아보기 (**...**) 단추를 클릭합니다.  
+ 파티션의 원본 테이블 또는 명명된 쿼리를 지정합니다. 원본 테이블을 변경하려면 셀을 클릭한 다음 찾아보기 ( **...** ) 단추를 클릭합니다.  
   
  ![파티션 창의 원본 열](../media/ssas-partitionsource.png "파티션 창의 원본 열")  
   
- 파티션이 쿼리를 기반으로 하는 경우 찾아보기 (**...**) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [다른 팩트 테이블을 사용하도록 파티션 원본 변경](change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
+ 파티션이 쿼리를 기반으로 하는 경우 찾아보기 ( **...** ) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [다른 팩트 테이블을 사용하도록 파티션 원본 변경](change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
   
  데이터가 검색되는 외부 데이터 원본의 원래 원본 테이블과 동일한 구조를 가진 데이터 원본 뷰의 테이블을 지정할 수 있습니다. 원본은 큐브 데이터베이스의 모든 데이터 원본 또는 데이터 원본 뷰에 있을 수 있습니다.  
   

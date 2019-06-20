@@ -12,10 +12,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798099"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
@@ -88,7 +88,7 @@ ms.locfileid: "66798099"
 
 | 변경 | 설명 |
 | :----- | :------ |
-| 1.5.1 발견 된 몇 가지 문제를 해결 합니다. | 참조 [GitHub에서 핫픽스 릴리스 년 3 월](https://github.com/Microsoft/azuredatastudio/milestone/28)합니다.<br/> <br/>&bull; &nbsp; 사용자 전자 필기장 대시보드에서 "전자 필기장 열기" 작업에서 열에 닫지 못했습니다 문제 해결된 <br/>&bull; &nbsp; Notebook JSON 추가 있는 문제를 해결 함} 저장 후 <br/>&bull; &nbsp; 여기서 notebook 표 된 테마 변경에 응답 하지 문제 해결된 <br/>&bull; &nbsp; 전체 notebook 경로 탭 헤더에 표시 된 위치에 문제를 해결 합니다. 이제 파일 이름만 표시 됩니다. |
+| 1\.5.1 발견 된 몇 가지 문제를 해결 합니다. | 참조 [GitHub에서 핫픽스 릴리스 년 3 월](https://github.com/Microsoft/azuredatastudio/milestone/28)합니다.<br/> <br/>&bull; &nbsp; 사용자 전자 필기장 대시보드에서 "전자 필기장 열기" 작업에서 열에 닫지 못했습니다 문제 해결된 <br/>&bull; &nbsp; Notebook JSON 추가 있는 문제를 해결 함} 저장 후 <br/>&bull; &nbsp; 여기서 notebook 표 된 테마 변경에 응답 하지 문제 해결된 <br/>&bull; &nbsp; 전체 notebook 경로 탭 헤더에 표시 된 위치에 문제를 해결 합니다. 이제 파일 이름만 표시 됩니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 년 3 월
@@ -147,7 +147,7 @@ ms.locfileid: "66798099"
 
 | 변경 | 설명 |
 | :----- | :------ |
-| 1.3.8 발견 된 몇 가지 문제를 해결 합니다. | 참조 [GitHub에서 1 월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)합니다.<br/><br/>자세한 내용은 다음을 참조 하세요.<br/>&bull; &nbsp; [GitHub에서 로그온 변경](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)합니다.<br/>&bull; &nbsp; [GitHub의 릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다. |
+| 1\.3.8 발견 된 몇 가지 문제를 해결 합니다. | 참조 [GitHub에서 1 월 핫픽스 릴리스](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1)합니다.<br/><br/>자세한 내용은 다음을 참조 하세요.<br/>&bull; &nbsp; [GitHub에서 로그온 변경](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)합니다.<br/>&bull; &nbsp; [GitHub의 릴리스](https://github.com/Microsoft/azuredatastudio/releases)합니다. |
 | &nbsp; | &nbsp; |
 
 ## <a name="january-2019"></a>2019년 1월

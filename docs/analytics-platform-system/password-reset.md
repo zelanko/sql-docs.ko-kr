@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639942"
 ---
 # <a name="password-reset---analytics-platform-system"></a>암호 재설정-Analytics Platform System
@@ -40,7 +40,7 @@ Analytics Platform System 암호 어플라이언스 전달 될 때 제공 됩니
 도메인 관리자 자격 증명 및 시스템 관리자 자격 증명을 자격 증명의 각 형식에 대 한 암호 보안 수준 정책을 준수합니다. 도메인에 새 암호를 업데이트는 도메인 관리자 자격 증명을 변경 하는 경우 전체 SQL Server PDW에서 필요한 경우.  
   
 > [!IMPORTANT]  
-> SQL Server PDW 달러 기호 문자를 지원 하지 않습니다 (**$**) 도메인 관리자 또는 로컬 관리자 암호입니다. 하지만 문자 **^ % &** PowerShell 이러한 특수 문자를 인식 암호에 허용 됩니다. 시스템 관리자 또는 SQL Server 암호에 사용 되는 이러한 문자가**sa** 계정 (합니다 **AdminPassword** 및 **PdwSAPassword** 중 매개 변수 설치 프로그램)을 설정 하 고 설치, 업그레이드, REPLACENODE, 및 패치를 포함 하 여 실패 합니다. 현재 암호는 지원 되지 않는 문자를 포함 하는 경우 성공적인 업그레이드를 위해 업그레이드를 실행 하기 전에 이러한 문자가 포함 되지 않도록 이러한 암호를 변경 합니다. 업그레이드가 완료 된 후에 원래 값으로 다시이 암호를 설정할 수 있습니다. 암호 요구 사항에 대 한 자세한 내용은 참조 하세요. [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)합니다.  
+> SQL Server PDW 달러 기호 문자를 지원 하지 않습니다 ( **$** ) 도메인 관리자 또는 로컬 관리자 암호입니다. 하지만 문자 **^ % &** PowerShell 이러한 특수 문자를 인식 암호에 허용 됩니다. 시스템 관리자 또는 SQL Server 암호에 사용 되는 이러한 문자가**sa** 계정 (합니다 **AdminPassword** 및 **PdwSAPassword** 중 매개 변수 설치 프로그램)을 설정 하 고 설치, 업그레이드, REPLACENODE, 및 패치를 포함 하 여 실패 합니다. 현재 암호는 지원 되지 않는 문자를 포함 하는 경우 성공적인 업그레이드를 위해 업그레이드를 실행 하기 전에 이러한 문자가 포함 되지 않도록 이러한 암호를 변경 합니다. 업그레이드가 완료 된 후에 원래 값으로 다시이 암호를 설정할 수 있습니다. 암호 요구 사항에 대 한 자세한 내용은 참조 하세요. [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
 ## <a name="to-reset-a-password"></a>암호를 재설정 하려면  
   

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8058052fa1d38485ec3d2f31f53aae8886f077f5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107102"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
@@ -104,7 +104,7 @@ ms.locfileid: "66107102"
 -   **삭제** (![삭제](../../analysis-services/media/rsqdicon-delete.gif "삭제"))  
   
 ## <a name="see-also"></a>관련 항목  
- [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [RSReportDesigner 구성 파일](../report-server/rsreportdesigner-configuration-file.md)  
   
   

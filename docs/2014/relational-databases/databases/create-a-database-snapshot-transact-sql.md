@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762343"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62762343"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 데이터베이스 스냅숏 지원에 대 한 자세한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -134,9 +134,9 @@ AdventureWorks_snapshot_evening
   
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   1. [AdventureWorks 데이터베이스에 대한 스냅숏 만들기](#Creating_on_AW)  
+-   1\. [AdventureWorks 데이터베이스에 대한 스냅숏 만들기](#Creating_on_AW)  
   
--   2. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
+-   2\. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅숏 만들기  
  이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅숏을 만듭니다. 스냅숏 이름 `AdventureWorks_dbss_1800`및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  

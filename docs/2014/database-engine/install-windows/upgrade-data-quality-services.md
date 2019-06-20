@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775633"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
@@ -25,7 +25,7 @@ ms.locfileid: "62775633"
 > -   데이터 품질 태스크를 수행하기 위해 Integration Services의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] DQS 정리 변환 편집기 [나 최신 또는 이전 버전의 Data Quality 클라이언트를 사용하여](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) 버전의 Data Quality 서버에 연결할 수 있습니다.  
 > -   Data Quality Services 및 MDS(Master Data Services)를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](https://go.microsoft.com/fwlink/?LinkId=328664)서 다운로드할 수 있습니다.  
   
-##  <a name="Prerequisites"></a> 필수 구성 요소  
+##  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   

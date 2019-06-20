@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66707350"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
@@ -47,7 +47,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *암호*  
  (선택 사항) A **문자열** 필요한 경우를 확인 하는 암호가 포함 된 *UserName*합니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값을 지정 합니다 **메서드의 동작**합니다. 이 메서드의 동작을 지정 합니다.  
   
  *Async*  

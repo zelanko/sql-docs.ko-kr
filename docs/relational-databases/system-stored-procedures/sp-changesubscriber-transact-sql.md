@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997804"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` 배포 태스크가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date*됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @description = ] 'description'` 선택적인 텍스트 설명이입니다. *설명* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 선택적인 텍스트 설명이입니다. *설명* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
 `[ @security_mode = ] security_mode` 구현 된 보안 모드가입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   

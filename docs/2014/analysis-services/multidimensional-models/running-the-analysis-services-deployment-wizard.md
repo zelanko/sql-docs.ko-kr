@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073035"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 경우 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 경우 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
   
 -   **대화형으로**   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 대화형으로 실행하면 사용자 입력에 따라 변경되는 입력 파일을 기반으로 XML 배포 스크립트가 생성됩니다. 모든 사용자 수정 내용은 배포 스크립트에만 적용됩니다. 마법사가 입력 파일을 수정하지는 않습니다. 입력 파일에 대한 자세한 내용은 [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](deployment-script-files-input-used-to-create-deployment-script.md)를 참조하세요.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66073035"
   
      -또는-  
   
--   에 **프로젝트** 의 폴더를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 두 번 클릭 합니다  *\<프로젝트 이름 >*.asdatabase 파일.  
+-   에 **프로젝트** 의 폴더를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 두 번 클릭 합니다  *\<프로젝트 이름 >* .asdatabase 파일.  
   
     > [!NOTE]  
-    >  찾을 수 없는 경우는  *\<프로젝트 이름 >*.asdatabase 파일을 검색 해 보십시오.asdatabase 합니다.  
+    >  찾을 수 없는 경우는  *\<프로젝트 이름 >* .asdatabase 파일을 검색 해 보십시오.asdatabase 합니다.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>명령 프롬프트에서 Analysis Services 배포 마법사 실행  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 명령 프롬프트에서도 실행할 수 있습니다. 명령 프롬프트에서 마법사를 실행하는 경우 .asdatabase 파일의 전체 경로를 제공하고 다음 모드 중 하나로 마법사를 실행합니다.  

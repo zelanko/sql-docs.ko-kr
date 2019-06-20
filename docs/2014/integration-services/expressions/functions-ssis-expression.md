@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769129"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
@@ -47,7 +47,7 @@ ms.locfileid: "62769129"
 |[LN&#40;SSIS 식&#41;](ln-ssis-expression.md)|숫자 식의 자연 로그를 반환합니다.|  
 |[LOG&#40;SSIS 식&#41;](log-ssis-expression.md)|숫자 식의 상용 로그를 반환합니다.|  
 |[POWER&#40;SSIS 식&#41;](power-ssis-expression.md)|숫자 식의 거듭제곱을 반환합니다.|  
-|[ROUND&#40;SSIS 식&#41;](round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. .|  
+|[ROUND&#40;SSIS 식&#41;](round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. 을 선택합니다.|  
 |[SIGN&#40;SSIS 식&#41;](sign-ssis-expression.md)|숫자 식의 양수(+), 음수(-) 또는 영(0) 부호를 반환합니다.|  
 |[SQUARE&#40;SSIS 식&#41;](square-ssis-expression.md)|숫자 식의 제곱을 반환합니다.|  
 |[SQRT&#40;SSIS 식&#41;](sqrt-ssis-expression.md)|숫자 식의 제곱근을 반환합니다.|  

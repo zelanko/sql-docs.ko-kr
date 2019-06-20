@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814026"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
@@ -49,13 +49,13 @@ ms.locfileid: "62814026"
   
 -   **데이터베이스를 일시 중지하려면:**  
   
--   다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+-   [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
--   **후속편:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
+-   **후속 작업:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "62814026"
 ###  <a name="Restrictions"></a> 제한 사항  
  SUSPEND 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 일시 중지는 비동기식으로 발생합니다.  
   
-###  <a name="Prerequisites"></a> 필수 구성 요소  
+###  <a name="Prerequisites"></a> 사전 요구 사항  
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 참조 하세요. [후속 작업: 전체 트랜잭션 로그 방지](#FollowUp)이 항목의 뒷부분에 나오는.  
+ 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 꽉 찬 트랜잭션 로그 방지](#FollowUp)를 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   

@@ -25,10 +25,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cdc0ccd97fd5998241432667c2e9c4729c970a23
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980950"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
@@ -54,7 +54,7 @@ ms.locfileid: "65980950"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>1. ID 및 IDREFS 유형 지정  
+### <a name="a-specifying-id-and-idrefs-types"></a>1\. ID 및 IDREFS 유형 지정  
  다음 스키마에는  **\<고객 >** 구성 요소는  **\<순서 >** 자식 요소입니다. 합니다  **\<순서 >** 도 요소가 자식 요소에는  **\<OrderDetail >** 요소입니다.  
   
  **OrderIDList** 특성  **\<고객 >** 참조 하는 IDREFS 형식 특성을 **OrderID** 특성은  **\< 순서 >** 요소입니다.  

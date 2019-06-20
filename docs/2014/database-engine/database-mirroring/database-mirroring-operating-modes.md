@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807671"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
@@ -37,7 +37,7 @@ ms.locfileid: "62807671"
  데이터베이스 미러링 세션이 동기적으로 작동하며 필요한 경우 주 서버와 미러 서버뿐 아니라 미러링 모니터 서버도 사용합니다.  
   
  트랜잭션 보안  
- 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 두 개의 보안 수준이 있습니다. FULL 및 OFF입니다.  
+ 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 보안 수준은 FULL 및 OFF의 두 가지입니다.  
   
  미러링 모니터  
  보호 우선 모드에서만 사용할 수 있으며, 자동 장애 조치(Failover)가 시작되었는지 여부를 미러 서버에서 인식할 수 있도록 하는 SQL Server의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 장애 조치(Failover) 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "62807671"
 -   주 서버가 손실된 경우 미러 서버에 서비스를 강제하려면 미러 서버가 미러링 모니터 서버에 연결되어야 합니다.  
   
 > [!NOTE]  
->  쿼럼 유형에 대 한 정보를 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+>  쿼럼 유형에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 ###  <a name="WhenPrincipalFails"></a> 주 서버 실패에 대한 응답  
  주 서버에 장애가 발생하면 데이터베이스 소유자가 선택할 수 있는 응답은 다음과 같습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "62807671"
   
  미러링 모니터 서버는 두 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 주 서버가 작동하는지 여부만 확인하여 자동 장애 조치를 지원합니다. 미러 서버는 미러 서버 및 미러링 모니터 서버가 주 서버와 연결이 끊어진 후에도 서로 연결되어 있는 경우에만 자동 장애 조치를 시작합니다.  
   
- 미러링 모니터 서버를 설정하면 세션에 *쿼럼*이 필요합니다. 쿼럼은 데이터베이스를 사용할 수 있도록 만드는 두 개 이상 서버 인스턴스 간의 관계입니다. 자세한 내용은 [Database Mirroring Witness](database-mirroring-witness.md) 고 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ 미러링 모니터 서버를 설정하면 세션에 *쿼럼*이 필요합니다. 쿼럼은 데이터베이스를 사용할 수 있도록 만드는 두 개 이상 서버 인스턴스 간의 관계입니다. 자세한 내용은 [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md) 및 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
  자동 장애 조치(Failover)에는 다음 조건이 필요합니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "62807671"
 
   
 ####  <a name="TxnSafety"></a> Transaction Safety  
- 트랜잭션 보안은 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 두 개의 보안 수준이 있습니다. FULL 및 OFF입니다.  
+ 트랜잭션 보안은 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 보안 수준은 FULL 및 OFF의 두 가지입니다.  
   
 -   SAFETY FULL  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62807671"
   
 -   미러링 모니터가 있지만 파트너에 연결되어 있지 않으면 미러링 모니터는 해당 파트너에 대해 UNKOWN 또는 DISCONNECTED 상태가 됩니다. 이 경우 미러링 모니터와 이 파트너 간에는 쿼럼이 없으며 파트너가 서로 연결되어 있지 않으면 데이터베이스를 사용할 수 없게 됩니다.  
   
- 쿼럼에 대 한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+ 쿼럼에 대한 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
  서버 인스턴스에서 각 미러링 모니터의 상태는 **sys.database_mirroring** 카탈로그 뷰의 **mirroring_witness_state** 및 **mirroring_witness_state_desc** 열에 기록됩니다. 자세한 내용은 [sys.database_mirroring&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)을 참조하세요.  
   

@@ -12,10 +12,10 @@ author: rachel-msft
 ms.author: raagyema
 manager: jroth
 ms.openlocfilehash: f21aaa210303e88fb0f08b362277a81c1f9a5515
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778366"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기)

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81d2c60f281e439b010b8ead087e13cafa91c95e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67148995"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263343"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>추가 단원 - 동적 보안
 
@@ -25,7 +25,7 @@ ms.locfileid: "67148995"
   
 동적 보안을 구현 하려면 모델에 연결 하 고 모델 개체 및 데이터를 찾아볼 수 있는 사용자의 사용자 이름이 포함 된 모델에 테이블을 추가 합니다. 이 자습서를 사용 하 여 만든 모델은 Adventure Works;의 컨텍스트에서 그러나이 단원을 완료 하려면 사용자 고유의 도메인에서 사용자를 포함 하는 테이블을 추가 해야 합니다. 추가 된 사용자 이름의 암호 필요가 없습니다. 사용자 고유의 도메인에서 사용자의 작은 샘플을 사용 하 여 EmployeeSecurity 테이블을 만들려면 사용할 붙여넣기 기능을 Excel 스프레드시트에서 직원 데이터를 붙여 넣는 방법입니다. 실제 시나리오에서는 사용자 이름이 포함 된 테이블은 일반적으로 실제 데이터베이스에서 테이블을 데이터 원본으로 예를 들어: 실제 DimEmployee 테이블입니다.  
   
-동적 보안을 구현 하려면 두 개의 DAX 함수를 사용할 수 있습니다. [USERNAME 함수 (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) 하 고 [LOOKUPVALUE 함수 (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)합니다. 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. LOOKUPVALUE 함수를 사용 하 여 수식은 EmployeeSecurity 테이블에서 값을 지정 합니다. 수식 로그온 한 사용자의 사용자 이름을 지정 하는 USERNAME 함수에 값이이 역할에 속해 있는지를 전달 합니다. 사용자 역할의 행 필터에 지정 된 데이터만 탐색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 있는 판매 지역의 연도별 인터넷 판매 데이터를 데이터만 찾아볼 수 있도록 지정 합니다.  
+동적 보안을 구현 하려면 두 개의 DAX 함수를 사용할 수 있습니다. [USERNAME 함수 (DAX)](/dax/username-function-dax) 하 고 [LOOKUPVALUE 함수 (DAX)](/dax/lookupvalue-function-dax)합니다. 행 필터 수식에서 적용되는 이 함수는 새 역할에서 정의됩니다. LOOKUPVALUE 함수를 사용 하 여 수식은 EmployeeSecurity 테이블에서 값을 지정 합니다. 수식 로그온 한 사용자의 사용자 이름을 지정 하는 USERNAME 함수에 값이이 역할에 속해 있는지를 전달 합니다. 사용자 역할의 행 필터에 지정 된 데이터만 탐색할 수 있습니다. 이 시나리오에서는 영업 직원이 자신이 멤버로 있는 판매 지역의 연도별 인터넷 판매 데이터를 데이터만 찾아볼 수 있도록 지정 합니다.  
   
 이러한 태스크는 이 Adventure Works 테이블 형식 모델 시나리오에 해당되는 것이며 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 태스크에는 태스크의 목적을 설명하는 추가 정보가 포함되어 있습니다.  
   
@@ -188,6 +188,6 @@ FactInternetSales, DimGeography 및 DimSalesTerritory 테이블을 모두 SalesT
   
 ## <a name="see-also"></a>관련 항목  
 
-[USERNAME 함수(DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[LOOKUPVALUE 함수(DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[CUSTOMDATA 함수(DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[USERNAME 함수(DAX)](/dax/username-function-dax)  
+[LOOKUPVALUE 함수(DAX)](/dax/lookupvalue-function-dax)  
+[CUSTOMDATA 함수(DAX)](/dax/customdata-function-dax)  
