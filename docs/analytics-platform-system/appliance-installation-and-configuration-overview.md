@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276347"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>어플라이언스 설치 및 Analytics Platform System에 대 한 구성
@@ -76,7 +76,7 @@ IHV 하드웨어 설치를 수행 하지 않을 경우 하드웨어를 설치 �
 |SQL Server PDW 드라이버를 설치 하 고 연결 구성|SQL Server Data Tools, sqlcmd, 비즈니스 인텔리전스 소프트웨어 또는 다른 도구를 사용 하 여 SQL Server PDW에 다시 연결할 로컬 컴퓨터를 구성 합니다. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |로그온 및 서버 역할을 만들고 사용 권한을 할당합니다|계획 하 고 사용자가 적절 한 권한이 있는 SQL Server PDW에 로그온 할 수 있는 로그온 및 서버 역할을 만듭니다. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Azure 데이터 관리 게이트웨이 구성|게이트웨이 Azure 사용자를가 온-프레미스 AP 데이터 AP 데이터 보안 OData 피드를 노출 하 여 액세스할 수 있습니다. 게이트웨이 이미 제어 노드에 설치 됩니다. Microsoft 구성 사용 하 여 지원을 요청 합니다.|  
-|모니터 쿼리 및 어플라이언스 사용자|쿼리 및 어플라이언스 사용자를 모니터링 하는 관리 콘솔 및 기타 리소스를 사용 합니다. 참조 [관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)<!-- MISSING LINKS and [User Sessions &#40;SQL Server PDW&#41;](../sqlpdw/user-sessions-sql-server-pdw.md)-->.|  
+|모니터 쿼리 및 어플라이언스 사용자|쿼리 및 어플라이언스 사용자를 모니터링 하는 관리 콘솔 및 기타 리소스를 사용 합니다. 참조 [관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;분석 플랫폼 시스템&#41;](monitor-the-appliance-by-using-the-admin-console.md)<!-- MISSING LINKS and [User Sessions &#40;SQL Server PDW&#41;](../sqlpdw/user-sessions-sql-server-pdw.md)-->을 선택합니다.|  
 |SQL Server PDW에 대 한 데이터 로드|어플라이언스에서 데이터를 로드 합니다. <!-- MISSING LINKS See [Load &#40;SQL Server PDW&#41;](../sqlpdw/load-sql-server-pdw.md).-->|  
 |재해 복구 계획 만들기|하드웨어 오류 로부터 데이터를 보호할 방법을 계획 하거나 데이터를 덮어씁니다. 정기 백업을 사용 하는 계획을 만들고 데이터 손상 또는 손실의 경우 계획을 복원 합니다. <!-- MISSING LINKS See [Create a Disaster Recovery Plan &#40;SQL Server PDW&#41;](../sqlpdw/create-a-disaster-recovery-plan-sql-server-pdw.md).-->|  
 |어플라이언스 모니터링|시스템 뷰, 로그 및 관리 콘솔을 사용 하 여 어플라이언스 상태, 상태 및 성능을 모니터링 합니다. 수정 하거나 모든 문제를 보고 합니다. 참조 [어플라이언스 성능 상태 모니터 &#40;Analytics Platform System&#41;](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-status-transact-sql.md)합니다.|  

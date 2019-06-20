@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_8525 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 f1_keywords:
 - "8525"
 helpviewer_keywords:
@@ -15,15 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0e254e38eabc62ab3e11e7d8ab1a3396c465470
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913238"
 ---
 # <a name="mssqlserver8525"></a>MSSQLSERVER_8525
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>설명  
   
 |||  
@@ -36,9 +35,9 @@ ms.locfileid: "62913238"
 |메시지 텍스트|분산 트랜잭션이 완료되었습니다. 이 세션을 새 트랜잭션이나 NULL 트랜잭션에 참여하게 하십시오.|  
   
 ## <a name="explanation"></a>설명  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 DTC(Distributed Transaction Coordinator)를 사용하기 위한 프로그래밍 모델에서는 응용 프로그램을 명시적으로 분산 트랜잭션에 참여시키고 분산 트랜잭션에서 제거해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 함께 DTC(Distributed Transaction Coordinator)를 사용하기 위한 프로그래밍 모델에서는 응용 프로그램을 명시적으로 분산 트랜잭션에 참여시키고 분산 트랜잭션에서 제거해야 합니다.  
   
-이 오류는 다음과 같은 4가지 조건이 만족되면 발생합니다.  
+ 이 오류는 다음과 같은 4가지 조건이 만족되면 발생합니다.  
   
 -   애플리케이션이 분산 트랜잭션에 참여했습니다.  
   
@@ -48,8 +47,9 @@ ms.locfileid: "62913238"
   
 -   애플리케이션이 기존 분산 트랜잭션에서 제거하거나 새로운 분산 트랜잭션에 참여하는 작업 이외의 트랜잭션 작업(예: 쿼리 실행 또는 로컬 트랜잭션 시작)을 수행하려고 합니다.  
   
-오류 상태 1은 애플리케이션이 로컬 트랜잭션을 만드는 작업을 수행하는 경우 사용되며 상태 2는 애플리케이션이 바운드 세션에 참여하려고 하는 경우 사용됩니다.  
+ 오류 상태 1은 애플리케이션이 로컬 트랜잭션을 만드는 작업을 수행하는 경우 사용되며 상태 2는 애플리케이션이 바운드 세션에 참여하려고 하는 경우 사용됩니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-애플리케이션이 분산 트랜잭션에 참여한 다음에는 해당 애플리케이션을 명시적으로 분산 트랜잭션에서 제거하거나 다른 분산 트랜잭션에 참여시켜야 합니다. 이렇게 하면 응용 프로그램이 이전에 참여한 트랜잭션에서 암시적으로 제거됩니다. 분산 트랜잭션에서 제거하거나 분산 트랜잭션에 참여시키기 위한 정확한 구문은 애플리케이션에 대한 프로그래밍 인터페이스 매뉴얼을 참조하십시오.  
+ 애플리케이션이 분산 트랜잭션에 참여한 다음에는 해당 애플리케이션을 명시적으로 분산 트랜잭션에서 제거하거나 다른 분산 트랜잭션에 참여시켜야 합니다. 이렇게 하면 응용 프로그램이 이전에 참여한 트랜잭션에서 암시적으로 제거됩니다. 분산 트랜잭션에서 제거하거나 분산 트랜잭션에 참여시키기 위한 정확한 구문은 애플리케이션에 대한 프로그래밍 인터페이스 매뉴얼을 참조하십시오.  
+  
   

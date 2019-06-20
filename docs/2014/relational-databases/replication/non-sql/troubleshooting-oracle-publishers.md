@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021903"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
   이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle 클라이언트 및 네트워킹 소프트웨어와 관련된 오류가 발생했습니다.  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
   
  "[Microsoft OLE DB Provider for Oracle]로 서버에 연결하지 못했습니다. Oracle 클라이언트 및 네트워킹 구성 요소를 찾을 수 없습니다. 이러한 구성 요소는 Oracle 버전 7.3.3 이상의 클라이언트 소프트웨어 설치의 일부로 Oracle사에서 제공합니다. 이러한 구성 요소를 설치해야 공급자를 사용할 수 있습니다."  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021903"
   
 -   "Oracle 서버 인스턴스 '\<*OraclePublisherName*'은 '\<*SQLServerDistributorName*>'를 배포자로 사용하도록 이전에 구성되었습니다. '\<*NewSQLServerDistributorName*>'을 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
   
--   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*'에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 '*\<SynonymName>*'을 삭제하고 다시 만드세요."  
+-   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
   
  Oracle 게시자를 삭제하면 Oracle 데이터베이스의 복제 개체가 자동으로 정리됩니다. 그러나 어떤 경우에는 Oracle 복제 개체를 수동으로 정리해야 합니다. 복제에 의해 생성된 Oracle 복제 개체를 수동으로 정리하려면 다음을 수행하십시오.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021903"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>연결된 서버로의 중복 로그인과 관련된 SQL Server 오류 21642가 발생했습니다.  
  Oracle 게시자를 처음 구성하면 게시자와 배포자 간 연결에 대해 연결된 서버 항목이 생성됩니다. 연결된 서버의 이름은 Oracle TNS 서비스 이름과 동일합니다. 이름이 동일한 연결된 서버를 만들면 다음 오류 메시지가 표시됩니다.  
   
- "유형이 다른 게시자에는 연결된 서버가 필요합니다. 연결된 서버 '*\<LinkedServerName>*'가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
+ "유형이 다른 게시자에는 연결된 서버가 필요합니다. 연결된 서버 ' *\<LinkedServerName>* '가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
   
  이 오류는 연결된 서버를 직접 만들거나 이전에 삭제한 Oracle 게시자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 간 관계를 다시 구성하려고 하는 경우 발생할 수 있습니다. 게시자를 다시 구성하는 동안 이 오류가 표시되면 [sp_dropserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)를 사용하여 연결된 서버를 삭제하세요.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63021903"
   
 2.  **실행** 대화 상자에 **regedit**를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers로 이동합니다.  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers로 이동합니다.  
   
      Providers 아래에는 OraOLEDB.Oracle 폴더가 있어야 하며 이 폴더 내에 이름이 **AllowInProcess**이고 값이 **1**인 DWORD 값이 있어야 합니다.  
   
