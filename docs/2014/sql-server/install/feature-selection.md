@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095219"
 ---
 # <a name="feature-selection"></a>기능 선택
@@ -45,7 +45,7 @@ ms.locfileid: "66095219"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 네이티브 모드에는 테이블 형식, 행렬, 그래픽 및 자유 형식 보고서를 생성, 관리 및 배포하기 위한 서버/클라이언트 구성 요소가 포함되어 있습니다. 또한[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 응용 프로그램을 개발하는 데 사용할 수 있는 확장 가능 플랫폼입니다.|  
   
 > [!IMPORTANT]
->  1.  설치 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포 시 여러 노드에 대해 로드 균형 조정이나 단일 URL 주소 지정을 구성하지 않습니다. 스케일 아웃 배포를 완료하려면 Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 또는 타사 클러스터 관리 소프트웨어를 사용해야 합니다. 웹 팜 배포 설정에 대 한 자세한 내용은 참조 하세요. [스케일 아웃 배포에 대 한 Reporting Services 구성](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448)합니다.  
+>  1.  설치 프로그램은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스케일 아웃 배포 시 여러 노드에 대해 로드 균형 조정이나 단일 URL 주소 지정을 구성하지 않습니다. 스케일 아웃 배포를 완료하려면 Windows Server, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 또는 타사 클러스터 관리 소프트웨어를 사용해야 합니다. 웹 팜 배포 설정에 대 한 자세한 내용은 참조 하세요. [스케일 아웃 배포에 대 한 Reporting Services 구성](https://go.microsoft.com/fwlink/?LinkId=199448) (https://go.microsoft.com/fwlink/?LinkId=199448) 합니다.  
 > 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소의 브라우저 요구 사항은 [Reporting Services 및 파워 뷰 브라우저 지원 계획&#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
 > 3.  64비트 플랫폼 및 64비트 서버의 32비트 하위 시스템(WOW64)에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 함께 작동하도록 구성할 수 없습니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66095219"
 -   다른 파일 또는 애플리케이션을 이동하여 지정된 드라이브의 빈 공간을 늘립니다.  
   
 ## <a name="installing-adventureworks-sample-databases"></a>AdventureWorks 예제 데이터베이스 설치  
- 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스 및 예제 코드 설치에 대 한 자세한 내용은 참조는 [Microsoft SQL Server 커뮤니티 프로젝트 및 샘플](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843)합니다.  
+ 기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. 예제 데이터베이스 및 예제 코드 설치에 대 한 자세한 내용은 참조는 [Microsoft SQL Server 커뮤니티 프로젝트 및 샘플](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843) 합니다.  
   
  예제에 대한 추가 정보는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 설치한 후에 확인할 수 있습니다. **시작** 메뉴에서 클릭 **프로그램도**, 클릭 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 를 클릭 **설명서 및 자습서** 를 클릭 하 고  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 개요**합니다.  
   

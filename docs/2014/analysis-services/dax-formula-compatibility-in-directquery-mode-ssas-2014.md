@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62732475"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284965"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
@@ -85,7 +85,7 @@ DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및
 **문자열에서 날짜/시간으로 캐스팅**  
 DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datetime** 값으로 캐스팅하는 동작은 SQL Server에서와 동일합니다.  
   
-문자열에서 캐스팅을 제어 하는 규칙에 대 한 자세한 **날짜/시간** 데이터 형식 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델 참조를 [DAX 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)합니다.  
+문자열에서 캐스팅을 제어 하는 규칙에 대 한 자세한 **날짜/시간** 데이터 형식을 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델 [DAX 구문 참조]를 참조 하세요. (/ dax/dax 구문-참조
   
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
@@ -133,7 +133,7 @@ SQL Server에서는 Null과 빈 값을 xVelocity 엔진과는 다르게 처리�
   
 LOG10 및 LN 등의 다른 로그 함수에도 동일한 제한 사항이 적용됩니다.  
   
-DAX에서의 **blank** 데이터 형식에 대한 자세한 내용은 [DAX 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)를 참조하세요.  
+에 대 한 자세한 내용은 합니다 **빈** dax의 데이터 형식 [DAX 구문 참조]를 참조 하세요. (/ dax/dax 구문-참조
   
 **0으로 나누기 및 빈 값으로 나누기**  
 DirectQuery 모드에서 0으로 나누기나 빈 값으로 나누기는 항상 오류를 반환합니다. SQL Server에서는 무한대 개념이 지원되지 않으며 0으로 나누기의 자연적인 결과는 무한대이므로 결과가 오류가 됩니다. 그러나 SQL Server에서 Null로 나누기는 지원되므로 결과가 항상 Null과 같아야 합니다.  

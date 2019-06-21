@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62643382"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 클래스
@@ -30,7 +30,7 @@ ms.locfileid: "62643382"
   
  [ServerNetworkProtocolIPAddress 클래스] servernetworkprotocolipaddress-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 확인합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 이름을 확인합니다.  
   
 -   IP 주소 이름 및 프로토콜 이름을 확인합니다.  
   

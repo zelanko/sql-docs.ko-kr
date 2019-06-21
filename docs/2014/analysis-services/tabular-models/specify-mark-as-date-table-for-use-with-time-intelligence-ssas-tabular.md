@@ -10,12 +10,12 @@ ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066555"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284878"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)
   DAX 수식에 시간 인텔리전스 함수를 사용하려면 날짜 테이블 및 날짜 데이터 형식의 고유 식별자(datetime) 열을 지정해야 합니다. 날짜 테이블의 열을 고유 식별자로 지정한 후에는 날짜 테이블과 임의의 팩트 테이블에 있는 열 간에 관계를 만들 수 있습니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "66066555"
   
 ## <a name="see-also"></a>관련 항목  
  [계산&#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)   
- [시간 인텔리전스 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [시간 인텔리전스 함수 &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

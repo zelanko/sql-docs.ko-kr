@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067226"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284869"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
   Analysis Services를 사용하면 *DirectQuery 모드*를 통해 관계형 데이터베이스 시스템에서 직접 데이터 및 집계를 검색하여 테이블 형식 모델에서 데이터를 검색하고 보고서를 만들 수 있습니다. 이 항목에서는 메모리에만 있는 표준 테이블 형식 모델과 관계형 데이터 원본을 쿼리할 수 있는 테이블 형식 모델 간의 차이점을 소개하고 DirectQuery 모드에서 사용할 모델을 제작하고 배포하는 방법에 대해 설명합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067226"
   
 -   **클라이언트 제한 사항:** 모델을 DirectQuery 모드일 때만 DAX를 사용 하 여 쿼리할 수 있습니다. MDX를 사용하여 쿼리를 만들 수는 없습니다. 즉, Excel에서는 MDX를 사용하기 때문에 Excel 피벗 클라이언트를 사용할 수 없습니다.  
   
-     그러나 DirectQuery 모델에 대 한 쿼리를 만들 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DAX 테이블 쿼리를 XMLA Execute 문의 일부로 자세한를 사용 하면 참조 [DAX 쿼리 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)합니다.  
+     그러나 DirectQuery 모델에 대 한 쿼리를 만들 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 XMLA Execute 문의 일부로 DAX 테이블 쿼리를 사용 하 여 자세한 정보에 대 한 참조 [DAX 쿼리 구문 참조] (/ dax/dax 구문-참조
   
  모든 디자인 문제를 해결하고 모델을 테스트했으면 배포할 준비가 된 것입니다. 이때 모델에 대한 쿼리에 응답하는 데 기본적으로 사용되는 방법을 설정할 수 있습니다. 사용자가 캐시에 액세스할 수 있는 권한을 가지도록 할지 항상 관계형 데이터 원본만 사용하도록 할지 결정하셨습니까?  
   

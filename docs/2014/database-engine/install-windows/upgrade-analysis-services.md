@@ -21,17 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bbec3cd552434070d76913f72812b302440bcdb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775035"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드할 수 있습니다. 업그레이드 하는 자세한 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SharePoint 모드에서는 참조 [SharePoint 용 PowerPivot 업그레이드](upgrade-power-pivot-for-sharepoint.md)합니다. 인스턴스는 기존 SQL Server를 업그레이드 하는 방법에 대 한 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)합니다.  
   
 ## <a name="known-upgrade-issues"></a>알려진 업그레이드 문제  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로 업그레이드하기 전에 다음을 검토하십시오.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로 업그레이드하기 전에 다음을 검토하십시오.  
   
 -   [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   

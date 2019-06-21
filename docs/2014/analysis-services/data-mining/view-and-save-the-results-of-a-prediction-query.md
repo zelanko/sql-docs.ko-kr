@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082709"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>예측 쿼리 결과 보기 및 저장
   예측 쿼리 작성기를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 쿼리를 정의한 후에는 쿼리를 실행하고 쿼리 결과 보기로 전환하여 해당 결과를 확인할 수 있습니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 정의하는 모든 데이터 원본의 테이블에 예측 쿼리 결과를 저장할 수 있습니다. 새 테이블을 만들거나 기존 테이블에 쿼리 결과를 저장할 수 있습니다. 기존 테이블에 결과를 저장할 경우 테이블에 현재 저장되어 있는 데이터를 덮어쓰도록 선택할 수 있습니다. 덮어쓰도록 선택하지 않으면 테이블의 기존 데이터에 쿼리 결과가 추가됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 정의하는 모든 데이터 원본의 테이블에 예측 쿼리 결과를 저장할 수 있습니다. 새 테이블을 만들거나 기존 테이블에 쿼리 결과를 저장할 수 있습니다. 기존 테이블에 결과를 저장할 경우 테이블에 현재 저장되어 있는 데이터를 덮어쓰도록 선택할 수 있습니다. 덮어쓰도록 선택하지 않으면 테이블의 기존 데이터에 쿼리 결과가 추가됩니다.  
   
 ### <a name="run-a-query-and-view-the-results"></a>쿼리 실행 및 결과 확인  
   

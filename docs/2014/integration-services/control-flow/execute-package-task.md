@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831914"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284948"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -112,12 +112,8 @@ ms.locfileid: "62831914"
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>관련 작업  
-  
 ## <a name="related-content"></a>관련 내용  
-  
--   블로그 항목, [SSIS: In-process와 out-of-process-자식 패키지를 실행 해야 있습니다? ](https://go.microsoft.com/fwlink/?LinkId=220819), consultingblogs.emc.com 합니다.  
-  
--   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), andyleonard.blog에 있습니다. 
+
+블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), andyleonard.blog에 있습니다. 
   
   

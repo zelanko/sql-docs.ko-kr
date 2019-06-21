@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105221"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 함수(보고서 작성기 및 SSRS)
@@ -32,13 +32,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다.  `=Fields!ProdID.Value`) 을 입력합니다.  
+ (`Variant`) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ProdID.Value`) 을 입력합니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다.  `=Fields!ProductID.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`) 을 입력합니다.  
   
  *result_expression*  
- (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다.  `=Fields!ProductName.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!ProductName.Value`) 을 입력합니다.  
   
  *데이터 집합(dataset)*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064799"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기

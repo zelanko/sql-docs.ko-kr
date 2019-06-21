@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62911305"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조를 만들려면  
   

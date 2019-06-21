@@ -13,12 +13,12 @@ ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3730ed26ec94d64dedb0ac17cd306a3d6d75a2b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 272fdcee66a8e702ac1dfe6c2da3d408c93a5e49
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482910"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284971"
 ---
 # <a name="leaf-member-staging-table-master-data-services"></a>리프 멤버 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 리프 멤버 준비 테이블(stg.name_Leaf)을 사용하여 리프 멤버를 만들고, 업데이트하고, 비활성화하고, 삭제할 수 있습니다. 또한 리프 멤버에 대한 특성 값을 업데이트하기 위해 사용할 수도 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "65482910"
  어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 콘텐츠를 개선 하기 위해 귀하의 의견을 환영 합니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page)  
   
 ## <a name="see-also"></a>관련 항목  
- [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
  [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [준비 프로세스 오류&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

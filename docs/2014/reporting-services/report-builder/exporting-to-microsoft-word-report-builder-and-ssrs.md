@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107883"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285030"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
   Word 렌더링 확장 프로그램은 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010의 네이티브 형식으로 렌더링합니다. 형식은 Office Open XML입니다.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환됩니다. 호환 기능 팩에 대한 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](https://go.microsoft.com/fwlink/?LinkID=205622)을 참조하십시오.  
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환됩니다. 
   
  이 렌더러를 통해 생성되는 파일의 내용 유형은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 이고 파일 확장명은 .docx입니다.  
   

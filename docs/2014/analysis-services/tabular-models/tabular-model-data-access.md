@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066454"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284854"
 ---
 # <a name="tabular-model-data-access"></a>테이블 형식 모델 데이터 액세스
   Analysis Services의 테이블 형식 model 데이터베이스에는 다차원 모델에서 데이터 또는 메타데이터를 검색하는 데 사용하는 것과 동일한 대부분의 클라이언트, 인터페이스 및 언어로 액세스할 수 있습니다. 자세한 내용은 [다차원 모델 데이터 액세스&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)를 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "66066454"
   
  또한 XMLA EXECUTE 명령 문의 컨텍스트 내에서 DAX 식을 사용하여 DirectQuery 모드로 배포된 테이블 형식 모델로 쿼리를 보낼 수 있습니다.  
   
- DAX를 사용한 테이블 형식 모델의 쿼리에 대한 예는 [DAX 쿼리 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)를 참조하세요.  
+ DAX를 사용 하 여 테이블 형식 모델에 대 한 쿼리의 예 참조 [DAX 쿼리 구문 참조] (/ dax/dax 구문-참조
   
 ### <a name="mdx"></a>MDX  
  MDX를 사용하여 메모리 내 캐시를 기본 쿼리 방법으로 사용하는 테이블 모델(즉, DirectQuery 모드로 배포되지 않은 모델)에 대한 쿼리를 만들 수 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 와 같은 클라이언트는 집계를 만드는 작업과 모델을 데이터 원본으로 쿼리하는 작업 모두에 DAX를 사용하지만 MDX에 친숙한 경우 MDX에서 예제 쿼리를 만드는 것이 더욱 효율적일 수 있습니다. 자세한 내용은 [MDX로 측정값 만들기](../multidimensional-models/mdx/mdx-building-measures.md)를 참조하세요.  

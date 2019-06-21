@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066625"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284851"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "66066625"
   
  읽기 권한과 읽기 및 처리 권한을 가진 역할에 대해서만 행 필터를 정의할 수 있습니다. 기본적으로 특정 테이블에 대해 행 필터를 정의하지 않을 경우 읽기 권한 또는 읽기 및 처리 권한을 가진 역할의 멤버는 다른 테이블에서 교차 필터링이 적용되지 않는 한 테이블의 모든 행을 쿼리할 수 있습니다.  
   
- 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할의 멤버에 대 한 다음 행을 가진 Customers 테이블 필터 식, *= Customers [Country] = "USA"* , Sales 역할의 멤버는 USA의 고객만 볼 수만 있습니다.  
+ 특정 테이블에 대해 행 필터를 정의할 경우 TRUE/FALSE 값으로 평가되어야 하는 DAX 수식을 통해 해당 역할의 멤버가 쿼리할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 쿼리할 수 없습니다. 예를 들어 Sales 역할의 멤버에 대 한 다음 행을 가진 Customers 테이블 필터 식, *= Customers [Country] = "USA"*, Sales 역할의 멤버는 USA의 고객만 볼 수만 있습니다.  
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다. 예를 들면 다음과 같습니다.  
   
@@ -96,8 +96,8 @@ ms.locfileid: "66066625"
   
 |기능|Description|  
 |--------------|-----------------|  
-|[USERNAME 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
-|[CUSTOMDATA 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|연결 문자열의 CustomData 속성을 반환합니다.|  
+|[USERNAME 함수 &#40;DAX&#41;](/dax/username-function-dax)|현재 로그온한 사용자의 domain\ username을 반환합니다.|  
+|[CUSTOMDATA 함수 &#40;DAX&#41;](/dax/customdata-function-dax)|연결 문자열의 CustomData 속성을 반환합니다.|  
   
  LOOKUPVALUE 함수를 사용하여 Windows 사용자 이름이 USERNAME 함수에서 반환된 사용자 이름 또는 CustomData 함수에서 반환된 문자열과 동일한 열의 값을 반환할 수 있습니다. 그런 다음 LOOKUPVALUE에서 반환된 값이 동일한 테이블 또는 관련된 테이블의 값과 일치하는 경우로 쿼리를 제한할 수 있습니다.  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066625"
 ## <a name="see-also"></a>관련 항목  
  [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
  [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 함수 &#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 함수 &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 함수 &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

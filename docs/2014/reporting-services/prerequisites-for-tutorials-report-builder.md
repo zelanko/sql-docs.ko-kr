@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b12f87b5abcceed4ae4557c8db1e4476760f72ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108066"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
@@ -25,7 +25,7 @@ ms.locfileid: "66108066"
 ## <a name="requirements"></a>요구 사항  
  보고서 작성기 자습서를 완료하려면 다음이 필요합니다.  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기에 대한 액세스. 보고서 관리자나 SharePoint 사이트에서 사용할 수 있는 독립 실행형 버전의 보고서 작성기 또는 ClickOnce 버전을 사용하여 보고서 작성기를 실행할 수 있습니다. ClickOnce 버전의 경우 첫 번째 단계, 즉 보고서 작성기를 여는 방법만 다릅니다.  
   
      보고서 관리자를 사용 하려면 보고서 관리자를 열고 클릭 **보고서 작성기**합니다. 기본적으로 보고서 관리자 URL은 http://\<*servername*> / reports.  
   

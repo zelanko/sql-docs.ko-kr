@@ -10,12 +10,12 @@ ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064343"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284807"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 Analysis Services 기능의 동작 변경 내용
   이 항목에서는 다차원, 테이블 형식, 데이터 마이닝 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 배포에 대한 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 의 동작 변경 내용을 설명합니다. 동작 변경 내용은 이전 버전의 SQL Server와 비교해서 현재 버전에서 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "66064343"
 |문제점|Description|  
 |-----------|-----------------|  
 |SQL Server 2008 R2 PowerPivot 통합 문서가 SQL Server 2012 SP1 SharePoint 2013용 PowerPivot에서 사용 시 자동으로 업그레이드되지 않고 모델을 새로 고치지 않습니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 PowerPivot 통합 문서에 대해 작동하지 않습니다.|2008 R2 통합 문서가 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]에서 열리지만 예약된 새로 고침이 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.<br /> "통합 문서는 지원 되지 않는 PowerPivot 모델이 포함 하는 데 사용 합니다. 통합 문서에서 PowerPivot 모델은 SQL Server 2008 R2 PowerPivot for Excel 2010 형식으로 되어 있습니다. 지원되는 PowerPivot 모델은 다음과 같습니다. <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **통합 문서 업그레이드 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약 된 새로 고침이 작동 하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.<br /><br /> 통합 문서를 다운로드하고 SQL Server 2012 PowerPivot for Excel 추가 기능이 설치된 Microsoft Excel 2010에서 통합 문서를 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> 통합 문서를 다운로드하고 Microsoft Excel 2013에서 엽니다. 그런 다음 통합 문서를 저장하고 SharePoint 서버에 게시합니다.<br /><br /> <br /><br /> 통합 문서 업그레이드에 대 한 자세한 내용은 참조 하세요. [통합 문서 업그레이드 및 예약 된 데이터 새로 고침 &#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)합니다.|  
-|DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)의 동작 변경 내용입니다.|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 시간 인텔리전스에 사용하기 위해 날짜 테이블로 표시에서 [Date] 열을 지정할 때 해당 [Date] 열이 ALL 함수에 대한 인수로 전달되고, 그 후 CALCULATE 함수에 대한 필터로 전달되는 경우 날짜 열의 슬라이서에 관계 없이 테이블의 모든 열에 대한 모든 필터가 무시됩니다<br /><br /> 예:<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 ALL에 대해 인수로 전달되는 [Date] 열에 관계 없이 DateTable의 모든 열에 대해 모든 필터가 무시됩니다.<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 및 Excel 2013의 PowerPivot에서 동작은 ALL에 대해 인수로 전달된 특정 열에 대해서만 필터를 무시합니다.<br /><br /> 새로운 동작의 문제를 해결하려면 사실상 모든 열을 전체 테이블의 필터로 무시하고 인수에서 [Date] 열을 제외할 수 있습니다. 예를 들어<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 이렇게 하면 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전의 동작과 동일한 결과가 반환됩니다.|  
+|DAX [ALL Function](/dax/all-function-dax)의 동작 변경 내용입니다.|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 시간 인텔리전스에 사용하기 위해 날짜 테이블로 표시에서 [Date] 열을 지정할 때 해당 [Date] 열이 ALL 함수에 대한 인수로 전달되고, 그 후 CALCULATE 함수에 대한 필터로 전달되는 경우 날짜 열의 슬라이서에 관계 없이 테이블의 모든 열에 대한 모든 필터가 무시됩니다<br /><br /> 예:<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전에는 ALL에 대해 인수로 전달되는 [Date] 열에 관계 없이 DateTable의 모든 열에 대해 모든 필터가 무시됩니다.<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 및 Excel 2013의 PowerPivot에서 동작은 ALL에 대해 인수로 전달된 특정 열에 대해서만 필터를 무시합니다.<br /><br /> 새로운 동작의 문제를 해결하려면 사실상 모든 열을 전체 테이블의 필터로 무시하고 인수에서 [Date] 열을 제외할 수 있습니다. 예를 들어<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> 이렇게 하면 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]이전의 동작과 동일한 결과가 반환됩니다.|  
   
 ##  <a name="bkmk_sql2012"></a> 동작 변경 내용 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  이 섹션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]기능에 대해 보고된 동작 변경 내용을 설명합니다. 이러한 변경 내용은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에도 적용됩니다.  

@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 063e68b8efad6227643d6309f08bcf3c6bf9c38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65479320"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284995"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>통합 관리 기능 영역(마스터 데이터 관리자)
   통합 관리 기능 영역에서 관리자는 준비 테이블의 데이터를 가져와서 구독 시스템에 사용할 구독 뷰를 만들 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  
@@ -25,7 +25,7 @@ ms.locfileid: "65479320"
   
  [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)  
   
- [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)  
   
  [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   

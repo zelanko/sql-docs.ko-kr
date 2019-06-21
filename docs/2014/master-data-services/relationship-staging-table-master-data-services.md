@@ -13,12 +13,12 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b51cfde7e4d23d734a86955b3d639fab3e4625e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482696"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284980"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 관계 준비 테이블(stg.name_Relationship)을 사용하여 멤버 사이의 관계를 기반으로 명시적 계층의 멤버 위치를 변경할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "65482696"
 |**ErrorCode**|오류 코드를 표시합니다. **ImportStatus_ID**가 **2**인 모든 레코드의 경우 [준비 프로세스 오류&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [준비 프로세스 오류&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

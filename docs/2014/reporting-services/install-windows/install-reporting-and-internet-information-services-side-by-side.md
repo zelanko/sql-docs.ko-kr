@@ -12,12 +12,12 @@ ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108795"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285053"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)와 IIS(인터넷 정보 서비스)를 같은 컴퓨터에 설치하고 실행할 수 있습니다. 사용하는 IIS 버전에 따라 해결해야 하는 상호 운용성 문제가 결정됩니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "66108795"
   
 |예제|요청|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|전송 되는 모든 요청을 받고 http://123.234.345.456/reports 또는 http://\<컴퓨터 이름 > / 경우 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있습니다.|  
+|http:\//123.234.345.456:80/reports|Http 전송 되는 모든 요청을 수신:\//123.234.345.456/reports 또는 http://\<컴퓨터 이름 > / 경우 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있습니다.|  
 |http://+:80/reports|URL에 "reports" 가상 디렉터리 이름이 포함되어 있는 한 해당 컴퓨터에 대해 유효한 IP 주소 또는 호스트 이름으로 전송된 모든 요청을 받습니다.|  
-|http://123.234.345.456:80|지정 하는 모든 요청을 받습니다 http://123.234.345.456 또는 http://\<컴퓨터 이름 > 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
+|http:\//123.234.345.456:80|Http를 지정 하는 모든 요청을 받습니다:\//123.234.345.456 또는 http://\<컴퓨터 이름 > 도메인 이름 서비스가 해당 호스트 이름으로 IP 주소를 확인할 수 있는 경우.|  
 |http://+:80|**모두 할당됨**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
 |http://*:80|**모두 할당되지 않음**에 매핑된 응용 프로그램 엔드포인트에 대해 다른 응용 프로그램이 아직 받지 않은 요청을 받습니다.|  
   

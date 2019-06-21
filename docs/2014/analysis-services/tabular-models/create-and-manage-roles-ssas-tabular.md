@@ -13,12 +13,12 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 664f0cdc9f01bf27e8f20c6799097948b0c100c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067473"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284899"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>역할 만들기 및 관리(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 모델 프로젝트에 대해 역할을 정의합니다. 모델을 배포할 때 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "66067473"
  [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
  [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
  [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 함수 &#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA 함수 &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

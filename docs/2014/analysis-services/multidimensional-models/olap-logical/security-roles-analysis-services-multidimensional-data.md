@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725257"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
@@ -34,7 +34,7 @@ ms.locfileid: "62725257"
   
 -   데이터베이스 역할 - 관리자가 아닌 사용자의 개체와 데이터에 대한 액세스 권한을 제어하기 위해 관리자가 정의하는 역할  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 역할과 사용 권한을 사용하여 보안을 관리합니다. 역할은 사용자 그룹이고 멤버라고도 하는 사용자는 역할에 추가하거나 역할에서 제거할 수 있습니다. 개체에 대한 사용 권한은 역할로 지정되며 역할에 있는 모든 멤버는 해당 역할에 사용 권한이 지정된 개체를 사용할 수 있습니다. 역할에 있는 모든 멤버는 개체에 대해 동일한 사용 권한을 갖습니다. 사용 권한은 개체에 따라 다를 수 있습니다. 각 개체에는 해당 개체에 부여된 권한으로 구성된 권한 컬렉션이 있으며, 개체에는 여러 권한 집합을 부여할 수 있습니다. 개체의 권한 컬렉션에 있는 각 사용 권한에는 단일 역할이 할당되어 있습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 역할과 사용 권한을 사용하여 보안을 관리합니다. 역할은 사용자 그룹이고 멤버라고도 하는 사용자는 역할에 추가하거나 역할에서 제거할 수 있습니다. 개체에 대한 사용 권한은 역할로 지정되며 역할에 있는 모든 멤버는 해당 역할에 사용 권한이 지정된 개체를 사용할 수 있습니다. 역할에 있는 모든 멤버는 개체에 대해 동일한 사용 권한을 갖습니다. 사용 권한은 개체에 따라 다를 수 있습니다. 각 개체에는 해당 개체에 부여된 권한으로 구성된 권한 컬렉션이 있으며, 개체에는 여러 권한 집합을 부여할 수 있습니다. 개체의 권한 컬렉션에 있는 각 사용 권한에는 단일 역할이 할당되어 있습니다.  
   
 ## <a name="role-and-role-member-objects"></a>역할 및 역할 멤버 개체  
  역할은 사용자(멤버) 컬렉션을 포함하는 개체입니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 역할 정의는 사용자의 멤버 자격을 설정합니다. 역할에 의해 사용 권한이 할당되므로 사용자는 역할의 멤버여야 개체에 액세스할 수 있습니다.  
