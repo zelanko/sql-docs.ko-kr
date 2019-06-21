@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015500"
 ---
 # <a name="memory-management-architecture-guide"></a>메모리 관리 아키텍처 가이드
 
@@ -76,11 +76,11 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 메모리 관리로 변경
 
 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서는 5가지 메커니즘을 사용하여 메모리 할당이 수행되었습니다.
--  **단일 페이지 할당자(SPA)**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
--  **다중 페이지 할당자(MPA)**: 8KB 이상을 요청하는 메모리 할당입니다.
+-  **단일 페이지 할당자(SPA)** : [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 8KB 이하인 메모리 할당만 포함합니다. *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션은 SPA가 사용한 실제 메모리의 한계를 결정했습니다. 버퍼 풀은 SPA의 메커니즘이자 동시에 가장 큰 단일 페이지 할당 소비자였습니다.
+-  **다중 페이지 할당자(MPA)** : 8KB 이상을 요청하는 메모리 할당입니다.
 -  **CLR 할당자**: SQL CLR 힙 및 CLR 초기화 중에 생성되는 전역 할당을 포함합니다.
 -  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스에서 **[스레드 스택](../relational-databases/memory-management-architecture-guide.md#stacksizes)** 에 대한 메모리 할당.
--  **직접 Windows 할당(DWA)**: Windows에 직접 요청된 메모리 할당입니다. 여기에는 Windows 힙 사용 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스로 로드되는 모듈에 의한 직접 가상 할당이 포함됩니다. 이러한 메모리 할당 요청의 예로는 확장 저장 프로시저 DLL의 할당, 자동화 프로시저(sp_OA 호출)를 사용하여 만든 개체 및 연결된 서버 공급자의 할당이 있습니다.
+-  **직접 Windows 할당(DWA)** : Windows에 직접 요청된 메모리 할당입니다. 여기에는 Windows 힙 사용 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스로 로드되는 모듈에 의한 직접 가상 할당이 포함됩니다. 이러한 메모리 할당 요청의 예로는 확장 저장 프로시저 DLL의 할당, 자동화 프로시저(sp_OA 호출)를 사용하여 만든 개체 및 연결된 서버 공급자의 할당이 있습니다.
 
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 단일 페이지 할당, 다중 페이지 할당 및 CLR 할당은 모두 **"임의 크기" 페이지 할당자**에 통합되며 *max server memory(MB)* 및 *min server memory(MB)* 구성 옵션에 의해 제어되는 메모리 제한에 포함됩니다. 이 변경으로 인해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자를 통과하는 모든 메모리 요구 사항에 대해 보다 정확한 크기 조정 기능이 제공되었습니다. 
 
@@ -97,7 +97,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 |스레드 스택 메모리|아니오|아니오|
 |Windows에서 직접 할당|아니오|아니오|
 
-[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 max server memory 설정에 지정된 값보다 많은 메모리를 할당할 수 있습니다. 이 동작은 **_Total Server Memory (KB)_ ** 값이 이미 max server memory에 지정된 **_Target Server Memory (KB)_ ** 설정에 도달했을 때 발생할 수 있습니다. 메모리 조각화로 인해 다중 페이지 메모리 요청(8KB 이상)의 요구를 충족시키기에 연속 여유 메모리가 충분하지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 메모리 요청을 거부하는 대신 과도한 커밋을 수행할 수 있습니다. 
 
 이 할당이 수행되는 즉시 *리소스 모니터* 백그라운드 작업은 모든 메모리 소비자에게 할당된 메모리를 해제하도록 신호를 보내기 시작하고 *Target Server Memory(KB)* 사양 이하의 *Total Server Memory(KB)*  값을 아래에 가져오려 합니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 사용량이 최대 서버 메모리 설정을 잠시 초과할 수 있습니다. 이 경우 *Total Server Memory(KB)* 성능 카운터 읽기가 max server memory 및 *Target Server Memory(KB)* 설정을 초과합니다.
 
@@ -109,7 +109,7 @@ AWE와 Lock Pages in Memory 권한을 사용하면 [!INCLUDE[ssNoVersion](../inc
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터 "memory_to_reserve"로 변경
-이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)**, **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
+이전 버전의 SQL Server([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)])에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 관리자는 **MPA(Multi-Page Allocator)** , **CLR 할당자**, SQL Server 프로세스에서 **스레드 스택**에 대한 메모리 할당, **DWA(Direct Windows 할당)** 로 사용하기 위해 프로세스 VAS(가상 주소 공간)의 일부로 따로 지정했습니다. 가상 주소 공간의 이 부분은 "Mem-To-Leave" 또는 "non-Buffer Pool" 영역으로도 알려져 있습니다.
 
 이러한 할당을 위해 예약된 가상 주소 공간은 _**memory\_to\_reserve**_ 구성 옵션에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 사용하는 기본값은 256MB입니다. 기본값을 재정의하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* 시작 매개 변수를 사용합니다. *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요.
 
