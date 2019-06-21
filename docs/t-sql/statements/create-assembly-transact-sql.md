@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051507"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -149,7 +149,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  자세한 내용은 [Designing Assemblies](../../relational-databases/clr-integration/assemblies-designing.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CREATE ASSEMBLY 권한이 필요합니다.  
   
  PERMISSION_SET = EXTERNAL_ACCESS를 지정한 경우 서버에 대한 **EXTERNAL ACCESS ASSEMBLY** 권한이 있어야 합니다. PERMISSION_SET = EXTERNAL_ACCESS를 지정한 경우 서버에 대한 **UNSAFE ASSEMBLY** 권한이 있어야 합니다.  
@@ -168,7 +168,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ## <a name="examples"></a>예  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>예 1: dll에서 어셈블리 만들기  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>예제 A: dll에서 어셈블리 만들기  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database는 파일에서 어셈블리 생성을 지원하지 않습니다.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>예 2: 어셈블리 비트로부터 어셈블리 만들기  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>예제 B: 어셈블리 비트에서 어셈블리 만들기  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   

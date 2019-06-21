@@ -12,11 +12,11 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 3fa971160eb4a8d2caa4773c4a9c4ccef1b31027
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935000"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>SSMS(SQL Server Management Studio) 지원 정책
 
@@ -34,7 +34,7 @@ Microsoft에서는 연간 수 차례 SSMS(SQL Server Management Studio)의 업�
 
 예를 들어 SSMS 17.7은 2018년 5월에 릴리스되었습니다. 버전 17.7은 17.8.1이 릴리스된 경우 2018년 6월까지 완벽하게 지원됩니다. 2018년 6월에 버전 17.7은 지원되지 않습니다. 버전 17.9가 2018년 9월에 릴리스된 경우 이전 버전 모두 지원되지 않습니다. 
 
-최상의 환경을 위해 고객은 https://aka.ms/ssms를 통해 최신 버전을 설치하는 것이 좋습니다.  
+최상의 환경을 위해 고객은 https://aka.ms/ssms 를 통해 최신 버전을 설치하는 것이 좋습니다.  
 
 **완벽한 지원** 서비스 단계: 현재 분기 최신 버전의 SQL Server Management Studio를 실행하는 경우 보안 업데이트, 중요 업데이트, 새로운 기능 등 모든 업데이트를 받을 수 있습니다.
 

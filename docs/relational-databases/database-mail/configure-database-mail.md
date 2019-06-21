@@ -41,11 +41,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999515"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "54127663"
   
 -   **데이터베이스 메일을 구성하려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
@@ -93,7 +93,7 @@ ms.locfileid: "54127663"
   
     -   [프로필 보안 관리, 공개 탭](#ProfileSecurityPublic)  
   
-    -   [프로필 보안 관리, 개인 탭](#ProfileSecurityPrivate)  
+    -   [프로필 보안 관리, 프라이빗 탭](#ProfileSecurityPrivate)  
   
     -   [시스템 매개 변수 구성 페이지](#SystemParameters)  
   
@@ -356,7 +356,7 @@ ms.locfileid: "54127663"
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="ProfileSecurityPrivate"></a> 프로필 보안 관리, 개인 탭  
+###  <a name="ProfileSecurityPrivate"></a> 프로필 보안 관리, 프라이빗 탭  
  이 페이지를 사용하여 프라이빗 프로필을 구성할 수 있습니다.  
   
  프로필에는 퍼블릭 프로필과 프라이빗 프로필이 있습니다. 프라이빗 프로필은 특정 사용자나 역할만 액세스할 수 있습니다. 공개 프로필은 메일 호스트 데이터베이스(**msdb**)에 액세스할 수 있는 모든 사용자나 역할이 사용할 수 있으며 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
@@ -375,7 +375,7 @@ ms.locfileid: "54127663"
  **기본 프로필 여부**  
  이 프로필이 사용자 또는 역할의 기본 프로필인지를 선택합니다. 각각의 사용자 또는 역할은 하나의 기본 프로필만 가질 수 있습니다.  
   
- **이 사용자의 기존 개인 프로필만 표시**  
+ **이 사용자의 기존 프라이빗 프로필만 표시**  
  지정된 사용자 또는 역할이 이미 액세스 권한을 가진 프로필만 표시하려면 이 옵션을 선택합니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  

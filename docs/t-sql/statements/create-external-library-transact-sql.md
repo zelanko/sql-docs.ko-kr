@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bfaeb323e940ca2d289ddae58aaf679bed9fffa
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140795"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -128,6 +128,8 @@ WITH ( LANGUAGE = 'R' )
 
 파일은 로컬 경로 또는 네트워크 경로 형식으로 지정할 수 있습니다.
 
+**<client_library_specifier>** 에 지정된 파일에 액세스하려는 경우 SQL Server는 현재 Windows 로그인의 보안 컨텍스트를 가장합니다. **<client_library_specifier>** 에서 네트워크 위치(UNC 경로)를 지정하는 경우에는 위임 제한 때문에 현재 로그인의 가장이 해당 네트워크 위치로 전달되지 않습니다. 이 경우에는 SQL Server 서비스 계정의 보안 컨텍스트를 사용하여 액세스합니다. 자세한 내용은 [자격 증명(데이터베이스 엔진)](../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.
+
 선택적으로 파일에 대한 OS 플랫폼을 지정할 수 있습니다. 특정 언어 또는 런타임에 대해 각 OS 플랫폼당 한 개의 파일 아티팩트 또는 콘텐츠만 허용됩니다.
 
 **library_bits**
@@ -191,7 +193,7 @@ GRANT CREATE EXTERNAL LIBRARY to user
 
 ## <a name="examples"></a>예
 
-### <a name="a-add-an-external-library-to-a-database"></a>1. 데이터베이스에 외부 라이브러리 추가  
+### <a name="a-add-an-external-library-to-a-database"></a>1\. 데이터베이스에 외부 라이브러리 추가  
 
 다음 예제에서는 `customPackage`라는 외부 라이브러리를 데이터베이스에 추가합니다.
 
@@ -212,7 +214,7 @@ EXEC sp_execute_external_script
 SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으로 대체하여 작동합니다.
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>2. 종속성이 있는 패키지 설치
+### <a name="b-installing-packages-with-dependencies"></a>2\. 종속성이 있는 패키지 설치
 
 설치할 패키지가 종속성을 가지고 있는 경우, 대상 패키지의 설치를 시도하기 _전에_ 첫 번째 수준 종속성과 두 번째 수준 종속성을 모두 분석하고 모든 필요한 패키지를 사용할 수 있도록 해야 합니다.
 

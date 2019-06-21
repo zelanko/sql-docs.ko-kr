@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a768ac49603a05a9d1878bd3e64564a040d8e4a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507757"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
- 테이블 아티클을 만들 때 매개 변수가 있는 행 필터를 사용할 수 있습니다. 이러한 필터에서는 게시할 해당 데이터를 선택하기 위해 [WHERE](../../../t-sql/queries/where-transact-sql.md) 절을 사용합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 및 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md)시스템 함수를 하나 또는 둘 모두 지정합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 테이블 아티클을 만들 때 매개 변수가 있는 행 필터를 사용할 수 있습니다. 이러한 필터에서는 게시할 해당 데이터를 선택하기 위해 [WHERE](../../../t-sql/queries/where-transact-sql.md) 절을 사용합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) 및 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md) 시스템 함수를 하나 또는 둘 모두 지정합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
  **항목 내용**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "47817737"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>병합 게시에서 아티클에 대한 매개 변수가 있는 행 필터를 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication**을 지정하고 **@article**에 아티클 이름을, **@source_object**에 게시되는 테이블을, **@subset_filterclause**에 매개 변수가 있는 필터를 정의하는 WHERE 절(`WHERE` 제외)을, **@partition_options**에 매개 변수가 있는 행 필터의 결과에 따른 분할 유형을 정의하는 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@publication** 을 지정하고 **@article** 에 아티클 이름을, **@source_object** 에 게시되는 테이블을, **@subset_filterclause** 에 매개 변수가 있는 필터를 정의하는 WHERE 절(`WHERE` 제외)을, **@partition_options** 에 매개 변수가 있는 행 필터의 결과에 따른 분할 유형을 정의하는 다음 값 중 하나를 지정합니다.  
   
     -   **0** - 아티클의 필터링이 정적이거나 각 파티션에 대한 데이터의 고유 하위 집합을 생성합니다. 즉 "겹치는" 파티션을 생성하지 않습니다.  
   
@@ -120,9 +120,9 @@ ms.locfileid: "47817737"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>병합 게시에서 아티클에 대한 매개 변수가 있는 행 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. **@publication** 및 **@article**을 지정하고 **@property**에 **subset_filterclause** 값을, **@value**에 매개 변수가 있는 필터를 정의하는 식(`WHERE` 제외)을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다. **@publication** 및 **@article** 을 지정하고 **@property** 에 **subset_filterclause** 값을, **@value** 에 매개 변수가 있는 필터를 정의하는 식(`WHERE` 제외)을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
   
-2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 다시 실행합니다. **@publication** 및 **@article**을 지정하고 **@property**에 **partition_options** 값을, **@value**에 가장 적합한 분할 옵션을 다음 중 하나로 지정합니다.  
+2.  이 변경 내용으로 인해 파티션에 변화가 생기면 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 다시 실행합니다. **@publication** 및 **@article** 을 지정하고 **@property** 에 **partition_options** 값을, **@value** 에 가장 적합한 분할 옵션을 다음 중 하나로 지정합니다.  
   
     -   **0** - 아티클의 필터링이 정적이거나 각 파티션에 대한 데이터의 고유 하위 집합을 생성합니다. 즉 "겹치는" 파티션을 생성하지 않습니다.  
   

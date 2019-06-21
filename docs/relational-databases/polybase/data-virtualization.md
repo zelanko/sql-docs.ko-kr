@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775195"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 
@@ -23,7 +23,7 @@ SQL Server 2019 CTP 2.0의 주요 시나리오 중 하나는 데이터를 가상
 
 ## <a name="start-the-external-table-wizard"></a>외부 테이블 마법사 시작
 
-배포 스크립트의 끝에서 가져온 IP 주소/포트 번호(31433)를 사용하여 마스터 인스턴스에 연결합니다. 개체 탐색기에서 **데이터베이스** 노드를 확장합니다. 그런 다음, 기존 SQL Server 인스턴스에서 데이터를 가상화할 데이터베이스 중 하나를 선택합니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택하여 데이터 가상화 마법사를 시작합니다. 명령 팔레트에서 데이터 가상화 마법사를 시작할 수도 있습니다. Windows에서 Ctrl+Shift+P를 사용하거나 Mac에서 Cmd+Shift+P를 사용합니다.
+[**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 명령을 사용하여 얻은 **sql-server-master** 엔드포인트의 IP 주소/포트 번호를 사용하여 마스터 인스턴스에 연결합니다. 개체 탐색기에서 **데이터베이스** 노드를 확장합니다. 그런 다음, 기존 SQL Server 인스턴스에서 데이터를 가상화할 데이터베이스 중 하나를 선택합니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택하여 데이터 가상화 마법사를 시작합니다. 명령 팔레트에서 데이터 가상화 마법사를 시작할 수도 있습니다. Windows에서 Ctrl+Shift+P를 사용하거나 Mac에서 Cmd+Shift+P를 사용합니다.
 
 ![데이터 가상화 마법사](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>데이터 원본 선택

@@ -18,11 +18,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663347"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -211,7 +211,7 @@ GO
   
      예를 들어 한 편집자가 같은 문서를 두 번 읽는 동안 그 사이에 작성자가 문서를 다시 작성할 수 있습니다. 그러면 편집자가 같은 문서를 두 번째 읽을 때 문서가 변경되어 있습니다. 원래의 읽기는 반복되지 않습니다. 편집자가 마지막으로 문서 읽기를 마칠 때까지 작성자가 문서를 변경하지 못하게 하면 이 문제를 해결할 수 있습니다.  
   
--   **가상 읽기**   
+-   **가상 읽기**  
   
      가상 읽기는 두 개의 동일한 쿼리가 실행되고 두 번째 쿼리에서 반환된 행 컬렉션이 다른 경우 발생하는 상황입니다. 아래의 예에서는 이러한 상황이 발생하는 경우를 보여 줍니다. 아래의 두 트랜잭션이 동시에 실행되고 있다고 가정합니다. 두 번째 트랜잭션의 `SELECT` 문이 두 트랜잭션에서 사용하는 데이터를 변경하기 때문에 첫 번째 트랜잭션의 두 `INSERT` 문에서 서로 다른 결과를 반환할 수 있습니다.  
   
@@ -291,7 +291,7 @@ GO
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
 |커밋된 스냅숏 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅숏을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅숏|스냅숏 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅숏 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅숏 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅숏 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅숏 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|스냅숏|스냅숏 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅숏 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅숏 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅숏 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
@@ -453,7 +453,7 @@ GO
   
  키 범위 잠금은 가상 읽기를 방지합니다. 또한 행 사이에서 키 범위를 보호하여 트랜잭션에서 액세스하는 레코드 집합에 대한 가상 삽입을 방지합니다.  
   
- 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'** AAA **'** 및 **'** CZZ **'** 까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'**, **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
+ 키 범위 잠금은 인덱스에 배치되어 시작 키 값과 종료 키 값을 지정합니다. 이 잠금은 키 값이 해당 범위에 속하는 모든 행의 삽입, 업데이트 또는 삭제 시도를 차단합니다. 이는 이러한 작업을 수행하려면 먼저 인덱스에 대한 잠금을 획득해야 하기 때문입니다. 예를 들어 직렬화 가능 트랜잭션은 해당 키 값이 **'** AAA **'** 및 **'** CZZ **'** 까지인 모든 행을 읽는 SELECT 문을 실행할 수 있습니다. **'** AAA **'** 부터 **'** CZZ **'** 까지의 범위에 있는 키 값에 대한 키 범위 잠금은 다른 트랜잭션에서 해당 키 값이 **'** ADG **'** , **'** BBD **'** 또는 **'** CAL **'** 과 같이 해당 범위에 있는 행을 삽입하지 못하도록 합니다.  
   
 #### <a name="key_range_modes"></a> 키 범위 잠금 모드  
  키 범위 잠금에는 범위-행 형식으로 지정된 범위 및 행 구성 요소가 모두 포함됩니다.  
@@ -465,7 +465,7 @@ GO
     |범위|행|모드|설명|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|공유 범위, 공유 리소스 잠금. 직렬화 가능한 범위 검색입니다.|  
-    |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금. 직렬화 가능한 업데이트 검색입니다.|  
+    |RangeS|U|RangeS-U|공유 범위, 업데이트 리소스 잠금, 직렬화 가능한 업데이트 검색입니다.|  
     |RangeI|Null|RangeI-N|삽입 범위, null 리소스 잠금. 인덱스에 새 키를 삽입하기 전에 범위를 테스트하는 데 사용됩니다.|  
     |RangeX|X|RangeX-X|배타적 범위, 배타적 리소스 잠금. 범위 내의 키를 업데이트할 때 사용됩니다.|  
   
@@ -509,7 +509,7 @@ GO
  키 범위 잠금이 발생하려면 다음 조건을 만족해야 합니다.  
   
 -   트랜잭션 격리 수준을 SERIALIZABLE로 설정해야 합니다.  
--   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
+-   쿼리 프로세서가 인덱스를 사용하여 범위 필터 조건자를 구현해야 합니다. 예를 들어 SELECT 문의 WHERE 절은 다음 조건자를 사용하여 범위 조건을 설정할 수 있습니다. ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** . 키 범위 잠금은 **ColumnX**가 인덱스 키 내에 있는 경우에만 얻을 수 있습니다.  
   
 #### <a name="examples"></a>예  
  다음 테이블 및 인덱스는 이어지는 키 범위 잠금 예의 기준으로 사용됩니다.  
@@ -578,7 +578,7 @@ INSERT mytable VALUES ('Dan');
  [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 이상 버전에서 잠금 에스컬레이션의 동작은 `LOCK_ESCALATION` 옵션의 도입으로 변경되었습니다. 자세한 내용은 [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)의 `LOCK_ESCALATION` 옵션을 참조하세요.  
   
 ### <a name="deadlocks"></a> 교착 상태  
- 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 한 태스크에서 잠근 리소스를 다른 태스크에서 잠그려고 하여 둘 이상의 태스크가 서로 영구적으로 차단하면 교착 상태가 발생합니다. 예를 들어  
   
 -   트랜잭션 A가 1행에 대한 공유 잠금을 획득합니다.  
 -   트랜잭션 B가 2행에 대한 공유 잠금을 획득합니다.  
@@ -1236,7 +1236,7 @@ BEGIN TRANSACTION
 ##### <a name="performance-counters"></a>성능 카운터  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 카운터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 영향을 받는 시스템 성능에 대한 정보를 제공합니다. 다음 성능 카운터는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션을 모니터링합니다. 이러한 성능 카운터는 SQLServer:Transactions 성능 개체에 포함되어 있습니다.  
   
- **Free Space in tempdb (KB)**. tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅숏 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
+ **Free Space in tempdb (KB)** . tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅숏 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
   
  다음 공식을 사용하여 버전 저장소의 예상 크기를 대략적으로 계산할 수 있습니다. 장기 실행 트랜잭션의 경우 생성 및 정리 속도를 모니터링하여 버전 저장소의 예상 최대 크기를 결정하면 유용합니다.  
   
@@ -1244,11 +1244,11 @@ BEGIN TRANSACTION
   
  트랜잭션의 최장 실행 시간에는 온라인 인덱스 작성이 포함되지 않습니다. 큰 테이블의 경우 온라인 인덱스 작성 작업에 많은 시간이 소요되므로 이 작업은 별도의 버전 저장소를 사용합니다. 온라인 인덱스 작성 버전 저장소의 크기는 온라인 인덱스 작성을 수행하는 동안 모든 인덱스를 포함하여 테이블에서 수정된 전체 데이터 양과 거의 같습니다.  
   
- **Version Store Size (KB)**. 모든 버전 저장소의 크기(KB)를 모니터링합니다. 이 정보를 통해 tempdb 데이터베이스의 버전 저장소에 필요한 공간을 결정할 수 있습니다. 이 카운터를 지속적으로 모니터링하면 tempdb에 필요한 추가 공간을 예측할 수 있습니다.  
+ **Version Store Size (KB)** . 모든 버전 저장소의 크기(KB)를 모니터링합니다. 이 정보를 통해 tempdb 데이터베이스의 버전 저장소에 필요한 공간을 결정할 수 있습니다. 이 카운터를 지속적으로 모니터링하면 tempdb에 필요한 추가 공간을 예측할 수 있습니다.  
   
- `Version Generation rate (KB/s)`을 참조하세요. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
+ `Version Generation rate (KB/s)`입니다. 모든 버전 저장소의 버전 생성 속도(KB/초)를 모니터링합니다.  
   
- `Version Cleanup rate (KB/s)`을 참조하세요. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
+ `Version Cleanup rate (KB/s)`입니다. 모든 버전 저장소의 버전 정리 속도(KB/초)를 모니터링합니다.  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) 및 Version Cleanup rate (KB/s)에서 제공하는 정보를 통해 tempdb에 필요한 공간을 예측할 수 있습니다.  
@@ -1265,11 +1265,11 @@ BEGIN TRANSACTION
   
  **트랜잭션**. 활성 트랜잭션의 총 수를 모니터링합니다. 시스템 트랜잭션은 포함되지 않습니다.  
   
- `Snapshot Transactions`을 참조하세요. 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `Snapshot Transactions`입니다. 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
   
- `Update Snapshot Transactions`을 참조하세요. 업데이트 작업을 수행하는 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `Update Snapshot Transactions`입니다. 업데이트 작업을 수행하는 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
   
- `NonSnapshot Version Transactions`을 참조하세요. 버전 레코드를 생성하는 활성 비스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `NonSnapshot Version Transactions`입니다. 버전 레코드를 생성하는 활성 비스냅숏 트랜잭션의 총 수를 모니터링합니다.  
   
 > [!NOTE]  
 > Update Snapshot Transactions와 NonSnapshot Version Transactions의 합은 버전 생성에 참여하는 트랜잭션의 총 수를 나타냅니다. Snapshot Transactions와 Update Snapshot Transactions 값의 차이를 보고 읽기 전용 스냅숏 트랜잭션의 수를 알 수 있습니다.  
@@ -1277,7 +1277,7 @@ BEGIN TRANSACTION
 ### <a name="row-versioning-based-isolation-level-example"></a>행 버전 관리 기반 격리 수준 예  
  다음 예에서는 스냅숏 격리 트랜잭션과 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 동작의 차이를 보여 줍니다.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>1. 스냅숏 격리 작업  
+#### <a name="a-working-with-snapshot-isolation"></a>1\. 스냅숏 격리 작업  
  이 예에서는 스냅숏 격리에서 실행되는 트랜잭션이 다른 트랜잭션에서 수정한 데이터를 읽습니다. 스냅숏 트랜잭션은 다른 트랜잭션에서 실행하는 업데이트 작업을 차단하지 않으며 데이터 수정을 무시하고 계속 버전이 지정된 행에서 데이터를 읽습니다. 그러나 스냅숏 트랜잭션이 다른 트랜잭션에서 이미 수정한 데이터를 수정할 경우 스냅숏 트랜잭션은 오류를 생성하고 종료됩니다.  
   
  세션 1:  
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>2. 행 버전 관리를 사용한 커밋된 읽기 작업  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>2\. 행 버전 관리를 사용한 커밋된 읽기 작업  
  이 예에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 다른 트랜잭션과 동시에 실행됩니다. 커밋된 읽기 트랜잭션은 스냅숏 트랜잭션과 다르게 동작합니다. 스냅숏 트랜잭션과 마찬가지로 커밋된 읽기 트랜잭션도 다른 트랜잭션이 데이터를 수정한 이후에 버전이 지정된 행을 읽습니다. 그러나 커밋된 읽기 트랜잭션은 스냅숏 트랜잭션과 달리 다음 작업을 수행합니다.  
   
 -   다른 트랜잭션이 데이터 변경 내용을 커밋한 이후에 수정한 데이터를 읽습니다.  

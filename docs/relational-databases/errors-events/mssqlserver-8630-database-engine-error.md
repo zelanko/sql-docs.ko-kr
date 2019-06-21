@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f81fb0efe4fd44feb17e30326e206e49e48168f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62656350"
 ---
 # <a name="mssqlserver8630"></a>MSSQLSERVER_8630
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47797357"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|EXECUTION_ERR|  
-|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 예기치 않은 오류가 발생했습니다.|  
+|메시지 텍스트|내부 쿼리 프로세서 오류: 쿼리 프로세서 실행 중 오류가 발생했습니다.|  
   
 ## <a name="explanation"></a>설명  
 내부 쿼리 처리 오류입니다.  

@@ -12,17 +12,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009088"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 정책 기반 관리 정책에 대한 추가 정보 및 설명을 추가할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **범주**  
  새 정책을 만들 때 정책 범주를 선택합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "51512618"
  **추가 도움말 하이퍼링크: 주소**  
  사용자가 **결과 자세히 보기** 페이지에 나타나는 하이퍼링크 텍스트를 클릭하면 열리는 웹 페이지의 하이퍼링크를 입력합니다.  
   
- **추가 도움말 하이퍼링크: 텍스트 링크**  
+ **추가 도움말 하이퍼링크: 링크 테스트**  
  하이퍼링크를 열어 링크의 유효성을 테스트하려면 클릭합니다.  
   
  **만든 날짜**  

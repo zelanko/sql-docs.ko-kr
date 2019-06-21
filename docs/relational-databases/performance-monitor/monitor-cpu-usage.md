@@ -24,11 +24,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 0f398fc02392331a64fd5514e0e8d8e2d7e6deeb
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047467"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 사용량 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53380057"
   
      프로세서가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 사용자 프로세스를 실행하는 데 소비하는 시간의 백분율에 해당합니다.  
   
--   **System: Processor Queue Length**  
+-   **시스템: Processor Queue Length**  
   
      프로세서 시간을 기다리는 스레드 수에 해당합니다. 프로세스의 스레드에 필요한 프로세서 사이클 수가 사용할 수 있는 개수보다 많으면 프로세서 병목 상태가 발생합니다. 여러 프로세스에서 프로세서 시간을 이용하려고 하면 더 빠른 프로세서를 설치해야 합니다. 또는 다중 프로세서 시스템에서는 프로세서를 추가할 수 있습니다.  
   

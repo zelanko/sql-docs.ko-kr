@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761835"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140606"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -46,7 +46,7 @@ Always On 리소스 DLL은 내부 SQL Server 구성 요소의 상태를 모니�
 
 임대 메커니즘은 SQL Server와 Windows Server 장애 조치(failover) 클러스터 간에 동기화를 적용합니다. 장애 조치 명령이 실행될 때 클러스터 서비스는 현재 주 복제본의 리소스 DLL에 오프라인 호출을 수행합니다. 먼저 리소스 DLL은 저장 프로시저를 사용하여 AG를 오프라인으로 전환하려고 합니다. 이 저장 프로시저가 실패하거나 시간 제한을 초과하면 클러스터 서비스에 다시 오류가 보고됩니다. 그러면 종료 명령이 발급됩니다. 종료는 다시 동일한 저장 프로시저를 실행하려고 하지만 이번에 클러스터는 새 복제본에서 AG를 온라인 상태로 전환하기 전에 리소스 DLL가 성공 또는 실패를 보고하기를 기다리지 않습니다. 이 두 번째 프로시저 호출에 실패하는 경우 리소스 호스트는 인스턴스를 오프라인 상태로 전환하는 임대 메커니즘을 사용해야 합니다. 리소스 DLL을 호출하여 AG를 오프라인 상태로 전환하면 리소스 DLL은 임대 중지 이벤트에 신호를 보내며 SQL Server 임대 작업자 스레드를 다시 시작하여 AG를 오프라인 상태로 전환합니다. 이 중지 이벤트가 신호를 보내지 않더라도 임대는 만료되고 복제본은 확인 상태로 전환됩니다. 
 
-임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU, 메모리 부족 상태(가상 메모리 부족, 프로세스 페이징), 메모리 덤프를 생성하는 동안 응답하지 못하는 SQL 프로세스, 시스템 전반의 중지, 쿼럼 손실 등으로 인해 오프라인으로 전환된 클러스터(WSFC)는 SQL 인스턴스에서 임대 갱신을 방지하고 장애 조치(failover)를 발생시킬 수 있습니다. 
+임대는 주로 기본 인스턴스와 클러스터 간의 동기화 메커니즘이지만 그렇지 않으면 장애 조치하지 않아도 되는 실패 조건을 만들 수도 있습니다. 예를 들어 높은 CPU, 메모리 부족 상태(가상 메모리 부족, 프로세스 페이징), 메모리 덤프를 생성하는 동안 응답하지 못하는 SQL 프로세스, 시스템 전반의 중지, 쿼럼 손실 등으로 인해 오프라인으로 전환된 클러스터(WSFC)는 SQL 인스턴스에서 임대 갱신을 방지하고 다시 시작이나 장애 조치(failover)를 발생시킬 수 있습니다. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>클러스터 제한 시간 값에 대한 지침 
 
@@ -156,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | 시간 제한 설정 | 용도 | 사이 | 용도 | IsAlive 및 LooksAlive | 원인 | 결과 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | 임대 시간 제한 </br> **기본값: 20000** | splitbrain 방지 | 기본 클러스터 </br> (HADR) | [Windows 이벤트 개체](/windows/desktop/Sync/event-objects)| 둘 다에 사용됨 | OS 중단, 가상 메모리 부족, 덤프 생성, CPU 고정, WSFC 다운(쿼럼 손실) | AG 리소스 오프라인-온라인, 장애 조치(failover) |  
+ | 임대 시간 제한 </br> **기본값: 20000** | splitbrain 방지 | 기본 클러스터 </br> (HADR) | [Windows 이벤트 개체](/windows/desktop/Sync/event-objects)| 둘 다에 사용됨 | OS 중단, 가상 메모리 부족, 작업 세트 페이징, 덤프 생성, CPU 고정, WSFC 다운(쿼럼 손실) | AG 리소스 오프라인-온라인, 장애 조치(failover) |  
  | 세션 제한 시간 </br> **기본값: 10000** | 주 및 보조 복제본 간의 커뮤니케이션 문제 통보 | 보조 대 주 </br> (HADR) | [TCP 소켓(DBM 엔드포인트를 통해 전송된 메시지)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 둘 다 사용되지 않음 | 네트워크 통신, </br> 보조 문제 - 다운, OS 중단, 리소스 경합 | 보조 - DISCONNECTED | 
  |HealthCheck 제한 시간  </br> **기본값: 30000** | 주 복제본의 상태를 확인하는 동안 제한 시간 표시 | 기본 클러스터 </br> (FCI 및 HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 둘 다에 사용됨 | 오류 조건 충족, OS 중지, 가상 메모리 부족, 작업 집합 트림, 덤프 생성, WSFC(쿼럼 손실), 스케줄러 문제(지연된 스케줄러)| AG 리소스 오프라인-온라인 또는 장애 조치(failover), FCI 다시 시작/장애 조치(failover) |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |

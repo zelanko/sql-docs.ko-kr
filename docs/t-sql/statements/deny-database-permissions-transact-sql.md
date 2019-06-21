@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643746"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY 데이터베이스 사용 권한(Transact-SQL)
 
@@ -170,7 +170,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 이 문을 실행하는 보안 주체 또는 AS 옵션으로 지정된 보안 주체는 데이터베이스에 대한 CONTROL 권한 또는 데이터베이스에 대한 CONTROL 권한이 포함된 상위 사용 권한이 있어야 합니다.
 
@@ -178,7 +178,7 @@ AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스�
 
 ## <a name="examples"></a>예
 
-### <a name="a-denying-permission-to-create-certificates"></a>1. 인증서를 만들기 위한 사용 권한 거부
+### <a name="a-denying-permission-to-create-certificates"></a>1\. 인증서를 만들기 위한 사용 권한 거부
 
 다음 예에서는 사용자 `CREATE CERTIFICATE`에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `MelanieK` 사용 권한을 거부합니다.
 
@@ -188,7 +188,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>2. 응용 프로그램 역할에 대한 REFERENCES 사용 권한 거부
+### <a name="b-denying-references-permission-to-an-application-role"></a>2\. 응용 프로그램 역할에 대한 REFERENCES 사용 권한 거부
 
 다음 예에서는 `REFERENCES` 응용 프로그램 역할에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `AuditMonitor` 사용 권한을 거부합니다.
 

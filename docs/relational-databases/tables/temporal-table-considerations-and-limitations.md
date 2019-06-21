@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034984"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410090"
   
 -   임시 및 기록 테이블은 **FILETABLE** 이 될 수 없고 **FILESTREAM** 을 제외한 지원되는 모든 데이터 형식의 열을 포함할 수 있습니다. 그 이유는 **FILETABLE** 및 **FILESTREAM** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부에서의 데이터 조작을 허용하여 시스템 버전 관리가 보장되지 않기 때문입니다.  
   
--   **(n)varchar(max)**, **varbinary(max)**, **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 저장소 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.  
+-   **(n)varchar(max)** , **varbinary(max)** , **(n)text** 및 **image**등의 temporal 테이블은 BLOB 데이터 형식을 지원하는 반면 크기로 인해 상당한 스토리지 비용이 부과되고 성능이 저하됩니다. 따라서 이러한 데이터 유형을 사용하는 경우 시스템 설계 시 유의해야 합니다.  
   
 -   기록 테이블은 현재 테이블과 동일한 데이터베이스에 만들어야 합니다. **Linked Server** 에서의 임시 쿼리는 지원되지 않습니다.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "52410090"
   
 -   복제 기술은 제한적으로 사용됩니다.  
   
-    -   **항상 사용 가능:** 모두 지원  
+    -   **Always On:** 완벽하게 지원  
   
     -   **변경 데이터 캡처 및 변경 데이터 추적:** 현재 테이블에서만 지원  
   
-    -   **스냅숏 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다.    
+    -   **스냅샷 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다.    
         각 구독자가 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.  
   
     -   **병합 복제:** temporal 테이블에서 지원되지 않습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "52410090"
   
     -   분할 구성  
   
-    -   Permissions  
+    -   사용 권한  
   
     -   행 수준 보안 조건자  
   

@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590388"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145468"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,15 +78,15 @@ T (ProductModelID int, Instructions xml)
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 그런 다음, **xml** 데이터 형식 메서드를 사용하여 이 행 집합을 쿼리할 수 있습니다. 다음 쿼리는 생성된 각 행에 대한 컨텍스트 항목의 하위 트리를 추출합니다.  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-반환된 행 집합에는 형식 정보가 유지됩니다. **query()**, **value()**, **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
+반환된 행 집합에는 형식 정보가 유지됩니다. **query()** , **value()** , **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
   
 또한 행 집합의 컨텍스트 노드는 구체화할 수 없습니다. 즉, 이 노드를 SELECT 문에서 사용할 수 없습니다. 하지만 IS NULL 및 COUNT(*)에서는 사용할 수 있습니다.  
   
@@ -146,7 +146,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>1. xml 형식의 변수에 대해 nodes() 메서드 사용  
+### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>1\. xml 형식의 변수에 대해 nodes() 메서드 사용  
 다음 예에는 <`Root`> 최상위 요소 하나와 <`row`> 자식 요소 3개가 있는 XML 문서가 있습니다. 이 쿼리는 `nodes()` 메서드를 사용하여 각 <`row`> 요소에 대해 하나의 개별 컨텍스트 노드를 설정합니다. `nodes()` 메서드는 3개의 행이 포함된 행 집합을 반환합니다. 각 행에는 원래 문서에서 서로 다른 <`row`> 요소를 식별하는 각 컨텍스트 노드와 함께 원래 XML의 논리적 복사본이 들어 있습니다.  
   
 그런 다음 쿼리는 각 행에서 컨텍스트 노드를 반환합니다.  
@@ -199,7 +199,7 @@ go
 </Root>  
 ```  
   
-### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>2. xml 형식의 열에 대해 nodes() 메서드 지정  
+### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>2\. xml 형식의 열에 대해 nodes() 메서드 지정  
 이 예에서는 자전거 제조 지침이 사용되며 **ProductModel** 테이블에서 **xml** 형식의 Instructions 열에 저장되어 있습니다.  
   
 다음 예에서 `nodes()` 메서드는 `ProductModel` 테이블에 있는 **xml** 형식의 `Instructions` 열에 대해 지정됩니다.  
@@ -245,7 +245,7 @@ go
     ...  
     ```  
   
-### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>3. 다른 nodes() 메서드에서 반환된 행 집합에 nodes() 적용  
+### <a name="applying-nodes-to-the-rowset-returned-by-another-nodes-method"></a>3\. 다른 nodes() 메서드에서 반환된 행 집합에 nodes() 적용  
 다음 코드는 XML 문서에서 `Instructions` 테이블의 `ProductModel` 열에 있는 제조 지침을 쿼리합니다. 이 쿼리는 제품 모델 ID, 제조 위치 및 제조 단계가 포함된 행 집합을 반환합니다.  
   
 다음에 유의하세요.  

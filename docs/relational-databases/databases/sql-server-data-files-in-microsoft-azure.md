@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706741"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "57579513"
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure에서 SQL Server 데이터 파일을 사용하는 이유는 무엇인가요? 
   
--   **쉽고 빠른 마이그레이션 이점:** 이 기능은 응용 프로그램 변경 없이 온-프레미스 내 컴퓨터 간에 또는 온-프레미스와 클라우드 환경 간에 데이터베이스를 한 번에 하나씩 이동하여 마이그레이션 프로세스를 간소화합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 스토리지에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 데이터를 다른 위치로 이동하는 대신 이 새로운 향상된 기능을 사용하여 많은 데이터베이스를 Microsoft Azure BLOB으로 저장한 다음 Transact-SQL 스크립트를 실행하여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
+-   **쉽고 빠른 마이그레이션 이점:** 이 기능은 애플리케이션 변경 없이 온-프레미스 내 머신 간에 또는 온-프레미스와 클라우드 환경 간에 데이터베이스를 한 번에 하나씩 이동하여 마이그레이션 프로세스를 간소화합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 스토리지에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 데이터를 다른 위치로 이동하는 대신 이 새로운 향상된 기능을 사용하여 많은 데이터베이스를 Microsoft Azure BLOB으로 저장한 다음 Transact-SQL 스크립트를 실행하여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
   
 -   **비용 및 무제한 스토리지 이점:** 이 기능을 사용하면 온-프레미스 컴퓨팅 리소스를 활용하는 동시에 Microsoft Azure에서 무제한 오프사이트 스토리지를 사용할 수 있습니다. Microsoft Azure를 스토리지 위치로 사용하면 하드웨어 관리 오버헤드 없이 애플리케이션 논리에만 쉽게 집중할 수 있습니다. 온-프레미스에서 계산 노드가 손실되더라도 데이터를 이동하지 않고 새 계산 노드를 설정할 수 있습니다.  
   
 -   **고가용성 및 재해 복구 이점:** Microsoft Azure의 SQL Server 데이터 파일 기능을 사용하면 고가용성 및 재해 복구 솔루션을 간소화할 수 있습니다. 예를 들어 Microsoft Azure의 가상 머신 또는 SQL Server 인스턴스가 충돌할 경우 Microsoft Azure BLOB에 대한 링크를 다시 설정하여 새 SQL Server 인스턴스에 데이터베이스를 다시 만들 수 있습니다.  
   
--   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure 스토리지에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
+-   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 스토리지 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure 스토리지에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
 -   **스냅숏 백업:**  이 기능은 Azure 스냅숏을 사용하여 Azure Blob Storage 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
@@ -128,7 +128,7 @@ ON
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
- SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 스토리지 컨테이너의 URL 경로를 입력합니다(예: &gt; https://teststorageaccnt.blob.core.windows.net/testcontainer/).
+ SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 스토리지 컨테이너의 URL 경로를 입력합니다(예: &gt; https://teststorageaccnt.blob.core.windows.net/testcontainer/ ).
  
  여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   

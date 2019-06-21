@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520709"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서 이 플래그는 소비된 데이터를 오버플로 속성인 **\@mp:xmltext**로 복사할 수 없음을 나타냅니다.|  
   
  _SchemaDeclaration_  
- 다음 형식의 스키마 정의입니다. _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ 다음 형식의 스키마 정의입니다. _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  행 집합의 열 이름입니다.  
@@ -90,7 +90,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID가 나타내는 부모가 반드시 부모 요소일 필요는 없지만 해당 노드는 이 ID가 나타내는 부모 노드의 NodeType에 종속됩니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  
-|**nodetype**|**int**|노드 유형을 나타냅니다. XML DOM 노드 유형 번호에 해당하는 정수입니다.<br /><br /> 노드 유형은 다음과 같습니다.<br /><br /> 1 = 요소 노드<br /><br /> 2 = 특성 노드<br /><br /> 3 = 텍스트 노드|  
+|**nodetype**|**ssNoversion**|노드 유형을 나타냅니다. XML DOM 노드 유형 번호에 해당하는 정수입니다.<br /><br /> 노드 유형은 다음과 같습니다.<br /><br /> 1 = 요소 노드<br /><br /> 2 = 특성 노드<br /><br /> 3 = 텍스트 노드|  
 |**localname**|**nvarchar**|요소 또는 특성의 로컬 이름을 지정합니다. DOM 개체에 이름이 없는 경우에는 NULL입니다.|  
 |**prefix**|**nvarchar**|노드 이름의 네임스페이스 접두사입니다.|  
 |**namespaceuri**|**nvarchar**|노드의 네임스페이스 URI입니다. 값이 NULL이면 네임스페이스가 없는 것입니다.|  
@@ -100,7 +100,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-simple-select-statement-with-openxml"></a>1. 단순 SELECT 문에 OPENXML 사용  
+### <a name="a-using-a-simple-select-statement-with-openxml"></a>1\. 단순 SELECT 문에 OPENXML 사용  
  다음 예는 `sp_xml_preparedocument`를 사용하여 XML 이미지의 내부 표현을 만듭니다. `SELECT` 행 집합 공급자를 사용하는 `OPENXML` 문은 XML 문서의 내부 표현에 대해 실행됩니다.  
   
  *flag* 값이 `1`로 설정됩니다. 이 값은 **특성 중심** 매핑을 나타냅니다. 따라서 XML 특성이 행 집합의 열에 매핑됩니다. `/ROOT/Customer`로 지정된 *rowpattern*은 처리할 `<Customers>` 노드를 식별합니다.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>2. 열과 XML 특성 간의 매핑을 위해 ColPattern 지정  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>2\. 열과 XML 특성 간의 매핑을 위해 ColPattern 지정  
  다음 쿼리는 XML 문서에서 고객 ID, 주문 날짜, 제품 ID, 수량 특성을 반환합니다. *rowpattern*은 `<OrderDetails>` 요소를 식별합니다. `ProductID` 및 `Quantity`는 `<OrderDetails>` 요소의 특성입니다. 그러나 `OrderID`, `CustomerID` 및 `OrderDate`는 부모 요소 `<Orders>`의 특성입니다.  
   
  선택적 *ColPattern*이 지정되는 매핑은 다음과 같습니다.  

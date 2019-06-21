@@ -19,11 +19,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f08564eb8821df4d25bf352ae3afce8afbc7dae
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928668"
 ---
 # <a name="sql-server-collation-name-transact-sql"></a>SQL Server 데이터 정렬 이름(Transact-SQL)
 
@@ -71,7 +71,7 @@ WHERE name LIKE 'SQL%';
 ```
 
 > [!NOTE]
-> 정렬 순서 ID 80의 경우 코드 페이지 1250과 이진 순서를 가진 Window 데이터 정렬을 사용하세요. 예를 들어 다음과 같이 사용할 수 있습니다. Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN 등이 있습니다.
+> 정렬 순서 ID 80의 경우 코드 페이지 1250과 이진 순서를 가진 Window 데이터 정렬을 사용하세요. 예를 들어 Albanian_BIN, Croatian_BIN, Czech_BIN, Romanian_BIN, Slovak_BIN, Slovenian_BIN 등이 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

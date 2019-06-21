@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857311"
 ---
 # <a name="value-method-xml-data-type"></a>value() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ value (XQuery, SQLType)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>1. xml 유형 변수에 대해 value() 메서드 사용  
+### <a name="a-using-the-value-method-against-an-xml-type-variable"></a>1\. xml 유형 변수에 대해 value() 메서드 사용  
  다음 예에서 XML 인스턴스는 `xml` 유형의 변수에 저장됩니다. `value()` 메서드는 XML에서 `ProductID` 특성 값을 검색합니다. 그런 다음 이 값은 `int` 변수에 할당됩니다.  
   
 ```  
@@ -73,7 +73,7 @@ SELECT @ProdID
   
  XML 인스턴스에 `ProductID` 특성이 하나만 있지만 정적 형식 지정 규칙에 따라 경로 식이 단일 항목을 반환하도록 명시적으로 지정해야 합니다. 따라서 추가 항목 `[1]`은 경로 식의 끝에 지정됩니다. 정적 형식 지정에 대한 자세한 내용은 [XQuery 및 정적 형식 지정](../../xquery/xquery-and-static-typing.md)을 참조하세요.  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>2. value() 메서드를 사용하여 xml 유형 열에서 값 검색  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>2\. value() 메서드를 사용하여 xml 유형 열에서 값 검색  
  `AdventureWorks` 데이터베이스의 **xml** 유형 열(`CatalogDescription`)에 대해서는 다음 쿼리가 지정됩니다. 이 쿼리는 열에 저장된 각 XML 인스턴스로부터 `ProductModelID` 특성 값을 검색합니다.  
   
 ```  
@@ -136,7 +136,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() 메서드 대신 exist() 메서드 사용  
- 성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 성능상의 이유로 조건자에서 `value()` 메서드를 사용하여 관계형 값과 비교하는 대신 `exist()`에서 `sql:column()`를 사용하세요. 예를 들어  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

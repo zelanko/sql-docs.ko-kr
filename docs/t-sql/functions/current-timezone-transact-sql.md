@@ -26,11 +26,11 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62850379"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE(Transact-SQL)
 
@@ -57,7 +57,7 @@ CURRENT_TIMEZONE ( )
   
 ## <a name="remarks"></a>Remarks  
 
-`CURRENT_TIMEZONE` 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
+`CURRENT_TIMEZONE`은 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   
 ## <a name="example"></a>예제
 
@@ -72,4 +72,4 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>관련 항목:
 
-[SQL Database Managed Instance Time Zone(SQL Database Managed Instance 표준 시간대)](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Database Managed Instance 표준 시간대](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)

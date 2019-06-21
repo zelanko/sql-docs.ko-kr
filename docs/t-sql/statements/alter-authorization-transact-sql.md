@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026094"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION(Transact-SQL)
 
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> 데이터베이스에 대한 ALTER AUTHORIZATION  
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>SQL Server의 경우.  
-**새 소유자 요구 사항:**   
+**새 소유자 요구 사항:**    
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
 
 -   SQL Server 인증 로그인입니다.  
@@ -206,7 +206,7 @@ ALTER AUTHORIZATION ON
 **sysadmin** 고정 서버 역할의 구성원이 아닌 경우 최소한 데이터베이스에 대한 TAKE OWNERSHIP 권한과 함께 새 소유자 로그인에 대한 IMPERSONATE 권한이 있어야 합니다.   
 
 ### <a name="for-azure-sql-database"></a>Azure SQL 데이터베이스의 경우.  
-**새 소유자 요구 사항:**   
+**새 소유자 요구 사항:**    
 새 소유자 보안 주체는 다음 중 하나여야 합니다.  
 
 -   SQL Server 인증 로그인입니다.  
@@ -261,11 +261,11 @@ ON d.owner_sid = sl.sid;
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+2.  데이터베이스를 소유하고 사용자 데이터베이스에 사용자로서 추가해야 하는 Azure AD 그룹을 만듭니다. 예를 들어  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+3.  사용자 데이터베이스에서 Azure AD 그룹을 나타내는 사용자를 **db_owner** 고정 데이터베이스 역할에 추가합니다. 예를 들어  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -283,12 +283,12 @@ SELECT IS_MEMBER ('db_owner');
 반환 값 1은 사용자가 역할의 멤버라는 것을 나타냅니다.  
    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>사용 권한    
  엔터티에 대한 TAKE OWNERSHIP 권한이 필요합니다. 새 소유자가 이 문을 실행하는 사용자가 아니면 1) 새 소유자가 사용자이거나 로그인인 경우 새 소유자에 대한 IMPERSONATE 권한, 2) 새 소유자가 역할인 경우 역할의 멤버 자격이나 역할에 대한 ALTER 권한 또는 3) 새 소유자가 응용 프로그램 역할인 경우 응용 프로그램 역할에 대한 ALTER 권한도 필요합니다.    
     
 ## <a name="examples"></a>예    
     
-### <a name="a-transfer-ownership-of-a-table"></a>1. 테이블의 소유권 이전    
+### <a name="a-transfer-ownership-of-a-table"></a>1\. 테이블의 소유권 이전    
  다음 예에서는 `Sprockets` 테이블의 소유권을 `MichikoOsada` 사용자에게 이전합니다. 테이블은 `Parts` 스키마 내부에 있습니다.    
     
 ```    
@@ -303,14 +303,14 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.    
+ 개체 스키마가 문의 일부로 포함되지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 사용자 기본 스키마에서 개체를 찾게 됩니다. 예를 들어    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>2. 뷰 소유권을 스키마 소유자에게 이전    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>2\. 뷰 소유권을 스키마 소유자에게 이전    
  다음 예에서는 `ProductionView06` 뷰의 소유권을 뷰가 포함된 스키마의 소유자에게 이전합니다. 뷰는 `Production` 스키마 내부에 있습니다.    
     
 ```    

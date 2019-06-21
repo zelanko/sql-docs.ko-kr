@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145424"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>LocalDB의 공유 인스턴스에 연결
 
-LocalDB의 공유 인스턴스에 연결하려면 연결 문자열에 `.\`(점과 백슬래시)를 추가하여 공유 인스턴스에 대해 예약된 네임스페이스를 참조합니다. 예를 들어 이름이 `AppData`인 LocalDB의 공유 인스턴스에 연결하려면 연결 문자열의 일부로 `(localdb).AppData`와 같은 연결 문자열을 사용합니다. 자신이 소유하고 있지 않은 LocalDB 공유 인스턴스에 연결하는 사용자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인을 갖고 있어야 합니다.
+LocalDB의 공유 인스턴스에 연결하려면 연결 문자열에 `\.\`(백슬래시 + 점 + 백슬래시)를 추가하여 공유 인스턴스에 대해 예약된 네임스페이스를 참조합니다. 예를 들어 이름이 `AppData`인 LocalDB의 공유 인스턴스에 연결하려면 연결 문자열의 일부로 `(localdb)\.\AppData`와 같은 연결 문자열을 사용합니다. 자신이 소유하고 있지 않은 LocalDB 공유 인스턴스에 연결하는 사용자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인을 갖고 있어야 합니다.
 
 ## <a name="troubleshooting"></a>문제 해결
 

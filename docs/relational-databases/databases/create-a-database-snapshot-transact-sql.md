@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025464"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅숏 만들기를 지원하지 않습니다.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "53205942"
   
 -   [최선의 구현 방법: 데이터베이스 스냅숏에 대한 클라이언트 연결](#Client_Connections)  
   
-####  <a name="Naming"></a> 최선의 구현 방법: 데이터베이스 스냅숏 명명  
+####  <a name="Naming"></a> 최선의 구현 방법: 데이터베이스 스냅샷 명명  
  스냅숏의 이름은 중요하므로 스냅숏을 만들기 전에 고려해야 합니다. 각 데이터베이스 스냅숏에는 고유한 데이터베이스 이름이 필요합니다. 쉬운 관리를 위해 데이터베이스를 식별하는 다음과 같은 정보를 스냅숏 이름에 첨가할 수 있습니다.  
   
 -   원본 데이터베이스의 이름입니다.  
@@ -77,18 +77,18 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> 최선의 구현 방법: 데이터베이스 스냅숏 수 제한  
+#### <a name="Limiting_Number"></a> 최선의 구현 방법: 데이터베이스 스냅샷 수 제한  
  원본 데이터베이스의 순차적 스냅숏을 캡처하기 위해 일정 기간 동안 일련의 스냅숏을 만들 수 있습니다. 각 스냅숏은 명시적으로 삭제할 때까지 유지됩니다. 원본 페이지를 업데이트함에 따라 각 스냅숏의 크기도 증가하므로 새 스냅숏을 만든 후에는 디스크 공간 유지를 위해 기존의 스냅숏을 지울 수 있습니다.  
   
 
 **참고!** 데이터베이스 스냅숏으로 되돌리려면 해당 데이터베이스의 다른 스냅숏을 삭제해야 합니다.  
   
-####  <a name="Client_Connections"></a> 최선의 구현 방법: 데이터베이스 스냅숏에 대한 클라이언트 연결  
+####  <a name="Client_Connections"></a> 최선의 구현 방법: 데이터베이스 스냅샷에 대한 클라이언트 연결  
  클라이언트가 데이터베이스 스냅숏을 사용하려면 그 위치를 알아야 합니다. 사용자가 데이터베이스 스냅숏을 읽는 동안 다른 스냅숏이 생성되거나 삭제될 수 있습니다. 따라서 기존의 스냅숏을 새 스냅숏으로 대체하면 클라이언트를 새 스냅숏으로 리디렉션해야 합니다. 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 이용해 수동으로 데이터베이스 스냅숏에 연결할 수 있습니다. 하지만 프로덕션 환경을 지원하려면 보고 및 작성 클라이언트를 자동으로 데이터베이스의 최신 데이터베이스 스냅숏으로 리디렉션하는 프로그래밍 솔루션을 만들어야 합니다.  
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스를 만들 수 있는 모든 사용자는 데이터베이스 스냅숏을 만들 수 있습니다. 그러나 미러 데이터베이스의 스냅숏을 만들려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> 데이터베이스 스냅숏을 만드는 방법(Transact-SQL 사용)  
@@ -128,9 +128,9 @@ AdventureWorks_snapshot_evening
   
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   1. [AdventureWorks 데이터베이스에 대한 스냅숏 만들기](#Creating_on_AW)  
+-   1\. [AdventureWorks 데이터베이스에 대한 스냅숏 만들기](#Creating_on_AW)  
   
--   2. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
+-   2\. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅숏 만들기  
  이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅숏을 만듭니다. 스냅숏 이름 `AdventureWorks_dbss_1800`및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  

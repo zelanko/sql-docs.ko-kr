@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644377"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  커서 변수의 이름입니다. 커서 변수는 업데이트를 허용하는 커서를 참조해야 합니다.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 최적화 프로그램 힌트를 사용하여 문을 처리하는 방법을 사용자 지정한다는 것을 나타내는 키워드입니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
@@ -229,7 +229,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 DELETE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-using-delete-with-no-where-clause"></a>1. WHERE 절 없이 DELETE 사용  
+#### <a name="a-using-delete-with-no-where-clause"></a>1\. WHERE 절 없이 DELETE 사용  
  다음 예에서는 삭제되는 행 수를 제한하는 WHERE 절을 사용하지 않았기 때문에 `SalesPersonQuotaHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 모든 행을 삭제합니다.  
   
 ```sql
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a>삭제되는 행 제한  
  이 섹션의 예에서는 삭제되는 행 수를 제한하는 방법을 보여 줍니다.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2. WHERE 절을 사용하여 행 집합 삭제  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>2\. WHERE 절을 사용하여 행 집합 삭제  
  다음 예에서는 `ProductCostHistory` 열의 값이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 을 초과하는 모든 행을 `StandardCost` 데이터베이스의 `1000.00`테이블에서 삭제합니다.  
   
 ```sql
@@ -388,7 +388,7 @@ WHERE DepartmentID = 17;'
   
 ###  <a name="CaptureResults"></a> DELETE 문의 결과 캡처  
   
-#### <a name="i-using-delete-with-the-output-clause"></a>9. DELETE에 OUTPUT 절 사용  
+#### <a name="i-using-delete-with-the-output-clause"></a>9\. DELETE에 OUTPUT 절 사용  
  다음 예에서는 `DELETE` 문의 결과를 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블 변수로 저장하는 방법을 보여 줍니다.  
   
 ```sql

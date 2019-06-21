@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658317"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002372"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Windows Server 2008 R2 Server Core SP1에 SQL Server를 설치할 수 있습니�
   
 **해결 방법:** 의미 체계 언어 통계 데이터베이스를 의미 체계 인덱싱을 위한 필수 구성 요소로 설정하려면 다음 태스크를 수행합니다.  
   
-1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(https://www.microsoft.com/download/details.aspx?id=35582))에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
+1.  SQL Server 설치 미디어에서 SemanticLanguageDatabase.msi라는 Windows Installer 패키지를 찾아 실행하여 데이터베이스를 추출합니다. SQL Server 2012 Express의 경우 의미 체계 언어 통계 데이터베이스를 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=35582)(https://www.microsoft.com/download/details.aspx?id=35582) )에서 다운로드하고 Windows Installer 패키지를 실행합니다.  
   
 2.  데이터베이스를 적절한 데이터 폴더로 이동합니다. 데이터베이스를 기본 위치에 두는 경우 연결하기 전에 권한을 변경해야 합니다.  
   
@@ -133,7 +133,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         5.  설치 과정이 완료되면 **닫기**를 클릭합니다.  
   
-        방법 2: Windows PowerShell 사용  
+        방법 2 Windows PowerShell 사용  
   
         1.  **시작** | **모든 프로그램** | **보조프로그램**을 클릭합니다.  
   
@@ -203,7 +203,7 @@ SQL Server 2012는 Windows Vista SP2, Windows Server 2008 SP2, Windows 2008 R2 S
 **해결 방법:** [Microsoft 다운로드 센터 페이지](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)에서 적합한 Sync Framework 버전을 다운로드할 수 있습니다.  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Visual Studio 2010 서비스 팩 1이 제거된 경우 SQL Server 2012 인스턴스를 복구하여 특정 구성 요소를 복원해야 함  
-**문제:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치는 Visual Studio 2010 서비스 팩 1의 일부 구성 요소에 종속되어 있습니다. 서비스 팩 1을 제거하면 공유 구성 요소 중 일부가 원래 버전으로 다운그레이드되고 몇몇 다른 구성 요소가 컴퓨터에서 완전히 제거됩니다.  
+**문제:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치는 Visual Studio 2010 서비스 팩 1의 일부 구성 요소에 종속되어 있습니다. 서비스 팩 1을 제거하면 공유 구성 요소 중 일부가 원래 버전으로 다운그레이드되고 몇몇 다른 구성 요소가 컴퓨터에서 완전히 제거됩니다.  
   
 **해결 방법:** 원래 원본 미디어 또는 네트워크 설치 위치에서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 인스턴스를 복구합니다.  
   
@@ -235,7 +235,7 @@ SQL Server 인스턴스를 복구하는 방법에 대한 자세한 내용은 [�
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 SQL Server 버전을 업그레이드하려면 다시 시작해야 함  
 **문제점**: SQL Server 2012 인스턴스 버전을 업그레이드하는 경우 새 버전과 관련된 일부 기능이 즉시 활성화되지 않을 수 있습니다.  
   
-**해결 방법**: SQL Server 2012 인스턴스의 버전 업그레이드를 수행한 후 컴퓨터를 다시 시작합니다. SQL Server 2012에서 지원되는 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)를 참조하세요.  
+**해결 방법**: SQL Server 2012 인스턴스의 버전 업그레이드를 수행한 후 머신을 다시 시작합니다. SQL Server 2012에서 지원되는 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)를 참조하세요.  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 읽기 전용 파일 그룹 또는 파일이 포함된 데이터베이스를 업그레이드할 수 없음  
 **문제점**:  파일/파일 그룹이 읽기 전용으로 설정된 경우 데이터베이스를 연결하거나 백업에서 데이터베이스를 복구하는 방식으로 데이터베이스를 업그레이드할 수 없습니다.  오류 3415가 반환됩니다.  이 문제는 SQL Server 인스턴스의 전체 업그레이드를 실행하는 경우에도 적용됩니다. 즉, SQL Server 2012를 설치하여 기존 SQL Server 인스턴스를 대체하려고 하는데 하나 이상의 기존 데이터베이스가 읽기 전용으로 설정되어 있습니다.  
@@ -346,7 +346,7 @@ AS(Analysis Services)의 SSIS(SQL Server Integration Services) 구성 요소가 
 **해결 방법:** 이 문제를 해결하려면 글꼴을 더 작은 크기로 설정합니다.  
   
 ### <a name="46-screen-resolution-of-800x600-is-not-supported"></a>4.6 800x600의 화면 해상도는 지원되지 않음  
-**문제점:** 화면 해상도를 800x600으로 설정하는 경우 Data Quality Client 응용 프로그램이 올바르게 표시되지 않습니다.  
+**문제점:** 화면 해상도를 800x600으로 설정하는 경우 Data Quality Client 애플리케이션이 올바르게 표시되지 않습니다.  
   
 **해결 방법:** 이 문제를 해결하려면 화면 해상도를 더 높은 값으로 설정합니다.  
   
@@ -453,7 +453,7 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
 **해결 방법**: Visual Studio 2010 SP1을 다시 설치하고 Management Studio를 다시 시작합니다.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 x64 운영 체제에 64비트 PowerShell 2.0 필요  
-**문제점:** 64비트 운영 체제의 SQL Server 2012 인스턴스에 대해 Windows PowerShell Extensions for SQL Server의 32비트 설치가 지원되지 않습니다.  
+**문제점:** 64비트 운영 체제의 SQL Server 2012 인스턴스에 대해 Windows SQL Server용 PowerShell 확장의 32비트 설치가 지원되지 않습니다.  
   
 **해결 방법:**  
   
@@ -499,17 +499,17 @@ Data Quality 클라이언트에서 매핑 단계 중에 DQS 작업에서 SQL Ser
   
 다음 표에서는 AlwaysOn 가용성 그룹의 드라이버 지원에 대해 간략하게 설명합니다.  
   
-|드라이버|다중 서브넷 장애 조치(Failover)|애플리케이션 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(Failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(Failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
+|드라이버|다중 서브넷 장애 조치(Failover)|애플리케이션 의도|읽기 전용 라우팅|다중 서브넷 장애 조치(failover): 보다 빠른 단일 서브넷 엔드포인트 장애 조치(Failover)|다중 서브넷 장애 조치(failover): SQL 클러스터형 인스턴스에 대한 명명된 인스턴스 확인|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|예|예|예|예|예|  
 |SQL Native Client 11.0 OLEDB|아니오|예|예|아니오|아니오|  
-|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET**\&#42;**|예|예|예|예|예|  
+|연결 패치가 포함된 .NET Framework 4.0이 있는 ADO.NET **\&#42;**|예|예|예|예|예|  
 |연결 패치가 포함된 .NET Framework 3.5 SP1이 있는 ADO.NET **\&#42;\&#42;**|예|예|예|예|예|  
 |SQL Server용 Microsoft JDBC Driver 4.0|예|예|예|예|예|  
   
 **\&#42;** .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)이 있는 ADO.NET용 연결 패치 다운로드:  
   
-**\&#42;\&#42;**.NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치 다운로드:  
+**\&#42;\&#42;** .NET Framework 3.5 SP1: [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)이 있는 ADO.NET용 연결 패치 다운로드:  
   
 **MultiSubnetFailover 키워드 및 관련 기능**  
   
@@ -543,7 +543,7 @@ MultiSubnetFailover는 SQL Server 2012에서 AlwaysOn 가용성 그룹과 Always
   
     **장점:** 클라이언트 연결 제한 시간 값을 증가시키지 않아도 됩니다.  
   
-    **단점:** 서브넷 간 장애 조치(Failover)가 발생하는 경우 클라이언트 복구 시간은 HostRecordTTL 설정 및 사이트 간 DNS/AD 복제 일정의 설정에 따라 15분 이상이 될 수 있습니다.  
+    **단점:** 서브넷 간 장애 조치(failover)가 발생하는 경우 클라이언트 복구 시간은 HostRecordTTL 설정 및 사이트 간 DNS/AD 복제 일정의 설정에 따라 15분 이상이 될 수 있습니다.  
   
 **RegisterAllProvidersIP를 비활성화하고 TTL을 줄이는 샘플 PowerShell 스크립트**  
   
@@ -585,7 +585,7 @@ Oracle용 CDC 서비스는 Oracle 트랜잭션 로그를 검색하고 관련 Ora
 #### <a name="611-install-the-cdc-service-for-oracle-and-the-cdc-designer-for-oracle"></a>6.1.1 Oracle용 CDC 서비스 및 Oracle용 CDC 디자이너 설치  
 **문제점:** CDC Service 및 CDC Designer는 SQL Server 설치 프로그램으로 설치되지 않습니다. 업데이트된 도움말 파일에 설명된 대로 요구 사항 및 사전 요구 사항을 충족하는 컴퓨터에 CDC 서비스 또는 CDD 디자이너를 수동으로 설치해야 합니다.  
   
-**해결 방법:** Oracle CDC Service를 설치하려면 SQL Server 설치 미디어에서 AttunityOracleCdcService.msi를 수동으로 실행합니다. CDC 디자이너 콘솔을 설치하려면 SQL Server 설치 미디어에서 AttunityOracleCdcDesigner.msi를 수동으로 실행합니다.  X86 및 x64에 대한 설치 패키지는 SQL Server 설치 미디어의 \Tools\AttunityCDCOracle\에 있습니다.  
+**해결 방법:** Oracle CDC Service를 설치하려면 SQL Server 설치 미디어에서 AttunityOracleCdcService.msi 를 수동으로 실행합니다. CDC 디자이너 콘솔을 설치하려면 SQL Server 설치 미디어에서 AttunityOracleCdcDesigner.msi를 수동으로 실행합니다.  X86 및 x64에 대한 설치 패키지는 SQL Server 설치 미디어의 \Tools\AttunityCDCOracle\에 있습니다.  
   
 #### <a name="612-f1-help-functionality-points-to-incorrect-documentation-files"></a>6.1.2 F1 도움말 기능이 잘못된 설명서 파일을 가리킴  
 **문제점:** F1 도움말 드롭다운 목록을 사용하거나 Attunity 콘솔에서 "?"를 클릭하여 올바른 도움말 설명서에 액세스할 수 없습니다. 이러한 방법은 잘못된 chm 파일을 가리킵니다.  

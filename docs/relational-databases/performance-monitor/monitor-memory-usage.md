@@ -25,11 +25,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 84f05928f5033895e0d6b25a6461231e5a350267
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737977"
 ---
 # <a name="monitor-memory-usage"></a>메모리 사용량 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "53379072"
   
  메모리 부족 상태를 모니터링하려면 다음 개체 카운터를 사용하세요.  
   
--   **Memory: Available Bytes**  
+-   **메모리: Available Bytes**  
   
--   **Memory: Pages/sec**  
+-   **메모리: Pages/sec**  
   
  **Available Bytes** 카운터는 현재 프로세스에 사용할 수 있는 메모리의 바이트 수를 나타냅니다. **Pages/sec** 카운터는 하드 페이지 폴트 때문에 디스크에서 가져오거나 작업 집합 내의 디스크 여유 공간에 쓴 페이지 수를 나타냅니다.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "53379072"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 메모리의 양을 모니터링하려면 다음 성능 카운터를 검사하세요.  
   
--   **Process: Working Set**  
+-   **프로세스: Working Set**  
   
--   **SQL Server: Buffer Manager: 버퍼 캐시 적중률**  
+-   **SQL Server: 버퍼 관리자: 버퍼 캐시 적중률**  
   
--   **SQL Server: Buffer Manager: Database pages**  
+-   **SQL Server: 버퍼 관리자: Database pages**  
   
--   **SQL Server: Memory Manager: 총 서버 메모리(KB)**  
+-   **SQL Server: 메모리 관리자: 총 서버 메모리(KB)**  
   
  **WorkingSet** 카운터는 프로세스에서 사용하는 메모리의 양을 나타냅니다. 이 숫자가 계속 **min server memory** 및 **max server memory** 서버 옵션에 설정된 메모리의 양보다 작으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메모리를 너무 많이 사용하도록 구성된 것입니다.  
   

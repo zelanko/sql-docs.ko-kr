@@ -16,18 +16,18 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 74a14c0f28b7353a4d09eb531678450f0b26f3fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034742"
 ---
 # <a name="execute-user-defined-functions"></a>사용자 정의 함수 실행
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Transact-SQL을 사용하여 사용자 정의 함수 실행
   
 
-> **참고:** 사용자 정의 함수에 대한 자세한 내용은  [사용자 정의 함수](user-defined-functions.md) 및 [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 항목을 참고하세요. 
+> **참고:** 사용자 정의 함수에 대한 자세한 내용은 [사용자 정의 함수](user-defined-functions.md) 및 [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 항목을 참고하세요. 
   
  
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  

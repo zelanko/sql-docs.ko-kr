@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942809"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,12 +61,12 @@ SET LOCK_TIMEOUT timeout_period
   
  CREATE DATABASE, ALTER DATABASE 및 DROP DATABASE 문은 SET LOCK_TIMEOUT 설정을 인식하지 못합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>1. 잠금 시간 제한을 1800 밀리초로 설정  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: 잠금 시간 제한을 1800 밀리초로 설정  
  다음 예에서는 잠금 제한 시간을 `1800`밀리초로 설정합니다.  
   
 ```sql  
@@ -76,7 +76,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>2. 잠금이 해제될 때까지 계속 대기하도록 잠금 제한 시간을 설정합니다.  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>2\. 잠금이 해제될 때까지 계속 대기하도록 잠금 제한 시간을 설정합니다.  
  다음 예제에서는 잠금 대기 시간을 무기한 대기하고 만료되지 않도록 설정합니다. 이는 각 연결이 시작될 때 이미 설정된 기본 동작입니다.  
   
 ```sql  
