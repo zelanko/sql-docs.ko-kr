@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75d36097c8fad4f15b06497561ff52dbfcea19ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34ad7079a11823343cfd8e8ae37adc9332a12a2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800316"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>setNull 메서드(java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void setNull(java.lang.String sCol,
   
  매개 변수 이름이 들어 있는 **String**입니다.  
   
- *n 형식*  
+ *nType*  
   
  java.sql.Types에 의해 정의된 JDBC 형식 코드입니다.  
   

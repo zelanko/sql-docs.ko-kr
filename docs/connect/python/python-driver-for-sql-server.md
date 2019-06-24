@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 280667787916beade901c704c4679a14f689db6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cbcb076d33b45d8db58360c6c3741493aab2ed62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800852"
 ---
-# <a name="python-sql-driver"></a>Python SQL 드라이버
+# <a name="python-sql-driver"></a>Python SQL Driver
 
 ![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[for Python SQL 드라이버를 설치 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 

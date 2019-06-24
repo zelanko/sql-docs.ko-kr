@@ -1,5 +1,5 @@
 ---
-title: setString 메서드 (long, java.lang.String, int, int)-NClob | Microsoft Docs
+title: setString 메서드(long, java.lang.String, int, int) - NClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2d5e9f50-15b2-4c76-8bfc-3b5be49c2781
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58a26b71787e154acec6add71ecc868b438c2dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ad49b4a5e675d4ff6635583e0b64a1e57434ff22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810731"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762266"
 ---
 # <a name="setstring-method-long-javalangstring-int-int-sqlservernclob"></a>setString 메서드(long, java.lang.String, int, int)(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ int setString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setString 메서드로 java.sql.NClob 인터페이스의 setString 메서드에 의해 지정 됩니다.  
+ 이 setString 메서드는 java.sql.NClob 인터페이스의 setString 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

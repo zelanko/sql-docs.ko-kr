@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800493"
 ---
 # <a name="custom-keystore-providers"></a>사용자 지정 키 저장소 공급자
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |필드 이름|설명|
 |:--|:--|
-|`Name`|키 저장소 공급자의 이름입니다. 않아야 드라이버에 의해 또는이 라이브러리에 있는 이전에 로드 하는 다른 키 저장소 공급자와 동일 합니다. Null로 종료 되는 와이드-문자 문자열입니다.|
+|`Name`|키 저장소 공급자의 이름입니다. 않아야 드라이버에 의해 또는이 라이브러리에 있는 이전에 로드 하는 다른 키 저장소 공급자와 동일 합니다. Null로 종료된 와이드 문자*열입니다.|
 |`Init`|초기화 함수입니다. 초기화 함수를 필요 하지 않은 경우이 필드는 null 일 수 있습니다.|
 |`Read`|공급자 함수를 읽습니다. 필요 하지 않은 경우 null 일 수 있습니다.|
 |`Write`|공급자 쓰기 함수입니다. 읽기 null이 아닌 경우 필요 합니다. 필요 하지 않은 경우 null 일 수 있습니다.|
@@ -140,8 +140,8 @@ ECEK 암호 해독 공급자가 정의한 함수에 대 한 자리 표시자 이
 |:--|:--|
 |`ctx`|[입력] 작업 컨텍스트입니다.|
 |`onError`|[입력] 오류 보고 함수입니다.|
-|`keyPath`|[입력] 값을 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 지정된 ECEK가 참조에 대 한 메타 데이터 특성입니다. Null로 끝나는 와이드-문자 문자열입니다. 이 공급자가 처리 하는 CMK를 식별 하는 것이입니다.|
-|`alg`|[입력] 값을 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 지정된 ECEK에 대 한 메타 데이터 특성입니다. Null로 끝나는 와이드-문자 문자열입니다. 지정 된 ECEK 암호화에 사용 된 암호화 알고리즘을 식별 하는 것이입니다.|
+|`keyPath`|[입력] 값을 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 지정된 ECEK가 참조에 대 한 메타 데이터 특성입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리 하는 CMK를 식별 하는 것이입니다.|
+|`alg`|[입력] 값을 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 지정된 ECEK에 대 한 메타 데이터 특성입니다. Null로 종료된 와이드 문자*열입니다. 지정 된 ECEK 암호화에 사용 된 암호화 알고리즘을 식별 하는 것이입니다.|
 |`ecek`|[입력] 암호 해독 된 ECEK에 대 한 포인터입니다.|
 |`ecekLen`|[입력] ECEK의 길이입니다.|
 |`cekOut`|[출력] 공급자는 암호 해독 된 ECEK에 대 한 메모리를 할당 하 고 cekOut 가리키는 포인터에 대 한 해당 주소를 작성 됩니다. 이 블록을 사용 하 여 메모리를 확보 하려면 수 있어야 합니다 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) (Linux/Mac) 함수를 무료 또는 합니다. 공급자 설정 됩니다 메모리가 없습니다. 할당 오류로 인해 이거나 인 경우 * cekOut null 포인터입니다.|
@@ -157,8 +157,8 @@ CEK 암호화 공급자가 정의한 함수에 대 한 자리 표시자 이름�
 |:--|:--|
 |`ctx`|[입력] 작업 컨텍스트입니다.|
 |`onError`|[입력] 오류 보고 함수입니다.|
-|`keyPath`|[입력] 값을 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 지정된 ECEK가 참조에 대 한 메타 데이터 특성입니다. Null로 끝나는 와이드-문자 문자열입니다. 이 공급자가 처리 하는 CMK를 식별 하는 것이입니다.|
-|`alg`|[입력] 값을 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 지정된 ECEK에 대 한 메타 데이터 특성입니다. Null로 끝나는 와이드-문자 문자열입니다. 지정 된 ECEK 암호화에 사용 된 암호화 알고리즘을 식별 하는 것이입니다.|
+|`keyPath`|[입력] 값을 [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 지정된 ECEK가 참조에 대 한 메타 데이터 특성입니다. Null로 종료된 와이드 문자*열입니다. 이 공급자가 처리 하는 CMK를 식별 하는 것이입니다.|
+|`alg`|[입력] 값을 [알고리즘](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 지정된 ECEK에 대 한 메타 데이터 특성입니다. Null로 종료된 와이드 문자*열입니다. 지정 된 ECEK 암호화에 사용 된 암호화 알고리즘을 식별 하는 것이입니다.|
 |`cek`|[입력] CEK 암호화에 대 한 포인터입니다.|
 |`cekLen`|[입력] CEK의 길이입니다.|
 |`ecekOut`|[출력] 공급자는 암호화 된 CEK에 대 한 메모리를 할당 하 고 ecekOut 가리키는 포인터에 대 한 해당 주소를 작성 됩니다. 이 블록을 사용 하 여 메모리를 확보 하려면 수 있어야 합니다 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) (Linux/Mac) 함수를 무료 또는 합니다. 공급자 설정 됩니다 메모리가 없습니다. 할당 오류로 인해 이거나 인 경우 * ecekOut null 포인터입니다.|
@@ -187,10 +187,10 @@ void (*Free)();
 |인수|설명|
 |:--|:--|
 |`ctx`|[입력] 오류를 보고 하는 컨텍스트.|
-|`msg`|[입력] 보고서에 오류 메시지입니다. Null로 끝나는 와이드 문자 문자열입니다. 있어야 매개 변수가 있는 정보를 허용 하려면이 문자열에서 허용 하는 폼의 insert 형식 시퀀스를 포함할 수 있습니다 합니다 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) 함수입니다. 아래 설명 된 대로이 매개 변수에서 확장 된 기능을 지정할 수 있습니다.|
+|`msg`|[입력] 보고서에 오류 메시지입니다. Null로 종료된 와이드 문자열입니다. 있어야 매개 변수가 있는 정보를 허용 하려면이 문자열에서 허용 하는 폼의 insert 형식 시퀀스를 포함할 수 있습니다 합니다 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) 함수입니다. 아래 설명 된 대로이 매개 변수에서 확장 된 기능을 지정할 수 있습니다.|
 |...|[입력] 적절 하 게, 메시지의 형식 지정자에 맞게 추가 variadic 매개 변수입니다.|
 
-오류가 발생 하는 경우를 보고 하려면 드라이버 및에 서식을 지정할 선택적 추가 매개 변수를 사용 하 여 오류 메시지에서 컨텍스트 매개 변수를 제공 하는 공급자 호출 onError 공급자 함수에 전달 합니다. 공급자 하나 공급자 함수 호출 내에서 연속적으로 여러 오류 메시지를 게시 하려면이 함수의 여러 번을 호출할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+오류가 발생 하는 경우를 보고 하려면 드라이버 및에 서식을 지정할 선택적 추가 매개 변수를 사용 하 여 오류 메시지에서 컨텍스트 매개 변수를 제공 하는 공급자 호출 onError 공급자 함수에 전달 합니다. 공급자 하나 공급자 함수 호출 내에서 연속적으로 여러 오류 메시지를 게시 하려면이 함수의 여러 번을 호출할 수 있습니다. 예를 들어
 
 ```
     if (!doSomething(...))

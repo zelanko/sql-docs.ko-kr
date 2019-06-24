@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f05efc054398a9401e011258a37860aa8b8a648
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 51c3a41c0c46345efc83247e6fe45140c6054b62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799585"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>unwrap 메서드(SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

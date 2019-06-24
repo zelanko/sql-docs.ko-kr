@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060085"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316671"
 ---
 # <a name="custom-messages-for-logging"></a>로깅할 메시지 사용자 지정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지 및 여러 태스크에 대한 로그 항목 기록을 위해 다양한 사용자 지정 이벤트 집합을 제공합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  
@@ -258,12 +258,8 @@ ms.locfileid: "66060085"
   
 |로그 항목|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|태스크에서 수행한 작업에 대한 정보를 제공합니다.|  
-  
-## <a name="related-content"></a>관련 내용  
- dougbert.com의 블로그 항목 - [Integration Services 태스크에 대한 사용자 지정 이벤트 로깅](https://go.microsoft.com/fwlink/?LinkId=150580)  
+|`XMLOperation`|태스크에서 수행한 작업에 대한 정보를 제공합니다.|   
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
-  
   

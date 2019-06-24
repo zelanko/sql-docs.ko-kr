@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836303"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298222"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -233,7 +233,6 @@ CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../incl
 |`SELECT`가 쿼리 실행을 계속하기 전에 동기 통계 업데이트 작업이 완료되도록 기다리고 있는 경우 동적 관리 뷰 `sys.dm_exec_requests` 열 `command`에서는 `SELECT (STATMAN)`가 나타납니다. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |새로운 대기 유형 `WAIT_ON_SYNC_STATISTICS_REFRESH`가 `sys.dm_os_wait_stats` 동적 관리 뷰에 표시됩니다. 동기 통계 새로 고침 작업에 소요된 누적된 인스턴스 수준 시간을 보여 줍니다.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |하이브리드 버퍼 풀은 SQL Server 데이터베이스 엔진의 새로운 기능입니다. 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다.|[하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 정적 데이터 마스킹을 제공합니다. SQL Server 데이터베이스의 복사본에서 중요한 데이터를 삭제하는 정적 마스킹 데이터를 사용할 수 있습니다.|[정적 데이터 마스킹](../relational-databases/security/static-data-masking.md) |
 |그래프 일치 쿼리에서 파생된 테이블 또는 뷰 별칭 사용 |[Graph Edge 제약 조건](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

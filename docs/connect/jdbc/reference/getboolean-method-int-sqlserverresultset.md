@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b51437d4e5ea8b7177a69c2b8d848f0fbfad61a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771651"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean getBoolean(int columnIndex)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **boolean** 값입니다.  
+ **부울** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +52,7 @@ public boolean getBoolean(int columnIndex)
  이 메서드는 숫자 및 문자 데이터 형식에서만 지원됩니다. 값 "1", 1, 변환 및 "**true**"를 **true**, 및 0 값 "0" 및 "**false**"를 **false**합니다. 다른 모든 값에 대한 동작은 정의되어 있지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getBoolean 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+ [getBoolean 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

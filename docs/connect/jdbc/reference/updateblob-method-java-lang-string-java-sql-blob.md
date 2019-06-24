@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81d089b7a0cd2d052be6df55791559f4a45aa1b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1a8578fa0768fc1248cdb665130c0b73ba1f5c35
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787144"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>updateBlob 메서드(java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +49,10 @@ public void updateBlob(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정 됩니다.  
+ 이 updateBlob 메서드는 java.sql.ResultSet 인터페이스의 updateBlob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [updateBlob 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
+ [updateBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

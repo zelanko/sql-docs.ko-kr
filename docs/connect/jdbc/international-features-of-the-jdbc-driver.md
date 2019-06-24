@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66781654"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 국제화 기능에는 다음이 포함됩니다.  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 국가별 기능은 다음과 같습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동일한 언어로 완전히 지역화된 환경을 지원합니다.  
   
--   로캘 구분 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터에 대한 Java 언어 변환 지원  
+-   로캘을 구분하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터에 대해 Java 언어 변환을 지원합니다.  
   
 -   운영 체제와 상관없이 국가별 언어 지원  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52398336"
  SQL Server용 JDBC Driver 6.0에서는 IDN(Internationalized Domain Name)의 사용을 지원하고 연결 중 필요한 경우 유니코드 serverName을 ASCII 호환 인코딩(Punycode)으로 변환할 수 있습니다.  IDN이 Punycode 형식(RFC 3490에서 지정)의 ASCII 문자열로 DNS(Domain Name System)에 저장되면 serverNameAsACE 속성을 true로 설정하여 유니코드 서버 이름을 변환할 수 있습니다.  그렇지 않으면 DNS 서비스가 유니코드 문자를 사용할 수 있도록 구성된 경우 serverNameAsACE 속성을 false(기본값)로 설정합니다.  또한 이전 버전의 JDBC 드라이버의 경우 연결을 위해 해당 속성을 설정하기 전에 [Java의 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 메서드를 사용하여 serverName을 Punycode로 변환할 수 있습니다.  
   
 > [!NOTE]  
->  Windows 이외의 플랫폼용으로 작성된 대부분의 확인 프로그램 소프트웨어는 인터넷 DSN 표준 기반이므로 IDN에 대해 Punycode 형식을 사용할 가능성이 높은 반면 개인 네트워크의 Windows 기반 DNS 서버는 서버 단위로 UTF-8 문자 사용을 허용하도록 구성될 수 있습니다.  자세한 내용은 [유니코드 문자 지원](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)을 참조하세요.  
+>  Windows 이외의 플랫폼용으로 작성된 대부분의 확인 프로그램 소프트웨어는 인터넷 DSN 표준 기반이므로 IDN에 대해 Punycode 형식을 사용할 가능성이 높은 반면 프라이빗 네트워크의 Windows 기반 DNS 서버는 서버 단위로 UTF-8 문자 사용을 허용하도록 구성될 수 있습니다.  자세한 내용은 [유니코드 문자 지원](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

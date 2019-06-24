@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+manager: jroth
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841091"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ Windows 기반 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnov
 ODBC Driver 13 및 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 위의 외에도 SQL Server 2016을 지원 합니다. 
 
 ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원 위의 모든 항목 및 SQL Server 2017.
-  
+
+ODBC 드라이버 17 for SQL Server 드라이버 버전 17.3부터 SQL Server 2019를 지원 합니다.
+
 연결 문자열에서 지정 하는 드라이버 이름은 `ODBC Driver 11 for SQL Server` 나 `ODBC Driver 13 for SQL Server` (에 대 한 13 및 13.1) 또는 `ODBC Driver 17 for SQL Server`합니다.
   
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
@@ -58,13 +60,13 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 설치된 상태에서 설치될 수 있습니다.  
 
-`msodbcsql.msi`를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소를 설치하려면 명령줄에 `ADDLOCAL=ALL`을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+`msodbcsql.msi`를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 드라이버를 사용하여 개발된 애플리케이션을 실행하는 데 필요한 파일입니다. SDK 구성 요소를 설치하려면 명령줄에 `ADDLOCAL=ALL`을 지정합니다. 예를 들어  
   
 ```  
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- `/passive`, `/qn`, `/qb` 또는 `/qr` 옵션을 사용하여 설치하는 경우 `IACCEPTMSODBCSQLLICENSETERMS=YES`을 지정하여 최종 사용자 사용권에 동의하세요. 이 옵션은 모두 대문자로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ `/passive`, `/qn`, `/qb` 또는 `/qr` 옵션을 사용하여 설치하는 경우 `IACCEPTMSODBCSQLLICENSETERMS=YES`을 지정하여 최종 사용자 사용권에 동의하세요. 이 옵션은 모두 대문자로 지정해야 합니다. 예를 들어  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
@@ -76,7 +78,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-애플리케이션에서 드라이버를 사용하는 경우 애플리케이션은 설치 옵션 `APPGUID`를 통해 드라이버에 종속된 애플리케이션을 나타내야 합니다. 이렇게 하면 설치를 제거하기 전 드라이버 설치 프로그램에서 종속 애플리케이션을 보고할 수 있습니다. 드라이버에 대한 종속성을 지정하려면 드라이버를 자동으로 설치할 때 `APPGUID` 명령줄 매개 변수를 제품 코드로 설정합니다. (제품 코드는 Microsoft 설치 관리자를 사용하여 응용 프로그램 설치 프로그램 번들을 작성할 때 만들어야 합니다.) 예를 들어 다음과 같이 사용할 수 있습니다.  
+애플리케이션에서 드라이버를 사용하는 경우 애플리케이션은 설치 옵션 `APPGUID`를 통해 드라이버에 종속된 애플리케이션을 나타내야 합니다. 이렇게 하면 설치를 제거하기 전 드라이버 설치 프로그램에서 종속 애플리케이션을 보고할 수 있습니다. 드라이버에 대한 종속성을 지정하려면 드라이버를 자동으로 설치할 때 `APPGUID` 명령줄 매개 변수를 제품 코드로 설정합니다. (제품 코드는 Microsoft 설치 관리자를 사용하여 애플리케이션 설치 프로그램 번들을 작성할 때 만들어야 합니다.) 예를 들어  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  

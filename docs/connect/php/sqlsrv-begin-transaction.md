@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a7387890ef61348ed473bee7928a4bebc38d882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f01ffdced922414f83c18a86ff3d4d2c059e44d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797028"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-지정된 연결에서 트랜잭션을 시작합니다. 현재 트랜잭션에는 **sqlsrv_begin_transaction** 을 호출한 후와 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 또는 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)을 호출하기 전에 실행된 지정된 연결에 대한 모든 문이 포함됩니다.  
+지정된 연결에서 트랜잭션을 시작합니다. 현재 트랜잭션은 **sqlsrv_begin_transaction** 호출 후 및 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 또는 [sqlsrv_commit](../../connect/php/sqlsrv-commit.md)호출 전에 실행된 지정된 연결에 대한 모든 문을 포함합니다.  
   
 > [!NOTE]  
 > [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 기본적으로 자동 커밋 모드입니다. 즉, **sqlsrv_begin_transaction**을 사용하여 트랜잭션을 시작합니다.  

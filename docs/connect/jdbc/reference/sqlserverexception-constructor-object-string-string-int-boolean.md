@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 생성자 (java.lang.Object, java.lang.String, java.lang.String, int, boolean) | Microsoft Docs
+title: SQLServerException 생성자(java.lang.Object, java.lang.String, java.lang.String, int, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b8c39021b8afac5631e44cddd8874cbf22975a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670031"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66766989"
 ---
-# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 생성자 (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
+# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 생성자(java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   새 인스턴스를 초기화 합니다 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 주어 지 면 클래스는 **개체**, **문자열** 개체를 **문자열** 개체는 **int**, 및 **부울**합니다.
@@ -52,7 +52,7 @@ public SQLServerException(java.lang.Object obj,
   
  SQL 상태를 포함 하는 열거형 개체입니다.
  
- *오류 번호*  
+ *errNum*  
   
  예외에 대 한 오류 코드가 포함 된 int입니다.
  

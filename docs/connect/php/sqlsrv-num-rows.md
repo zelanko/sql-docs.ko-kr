@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500e9e48d541c3f518dc6dec0e779b90c896ee9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b8844ad89a8f0e7c1663bc8aadf8479764987b31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640627"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802364"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ sqlsrv_num_rows( resource $stmt )
 행 수를 계산하는 중 오류가 발생하면**false** 이고, 그렇지 않으면 결과 집합의 행 수를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
-sqlsrv_num_rows에는 클라이언트 쪽, 정적 또는 키 집합 커서가 필요하며 정방향 커서 또는 동적 커서를 사용하는 경우 **false**를 반환합니다. 정방향 커서가 기본값입니다. 커서에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)를 참조하세요.  
+sqlsrv_num_rows에는 클라이언트 쪽, 정적 또는 키 집합 커서가 필요하며 정방향 커서 또는 동적 커서를 사용하는 경우 **false**를 반환합니다. (정방향 커서가 기본값입니다.) 커서에 대한 자세한 내용은 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 및 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
   

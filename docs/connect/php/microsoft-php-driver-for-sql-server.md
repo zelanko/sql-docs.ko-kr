@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3da1afcd34e530b96a9be091c3f5ffe3aa247f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800250"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server
 
@@ -27,14 +27,14 @@ Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 S
 ## <a name="getting-started"></a>시작  
 * [1단계: PHP 개발을 위한 개발 환경 구성](step-1-configure-development-environment-for-php-development.md)  
 * [2단계: PHP 개발을 위한 데이터베이스 만들기](step-2-create-a-sql-database-for-php-development.md)  
-* [3단계: PHP를 사용하여 SQL에 연결하는 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [3단계: PHP를 사용하는 SQL과 연결된 개념 증명](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [4단계: PHP를 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>설명서  
 * [시작](getting-started-with-the-php-sql-driver.md)
 * [개요](overview-of-the-php-sql-driver.md)
 * [프로그래밍 가이드](programming-guide-for-php-sql-driver.md) 
-* [Security Considerations](security-considerations-for-php-sql-driver.md)
+* [보안 고려 사항](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>커뮤니티  
 * [Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스](support-resources-for-the-php-sql-driver.md)
@@ -43,7 +43,7 @@ Microsoft Drivers for PHP for SQL Server는 PHP 응용 프로그램에 대 한 S
 * ![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[for PHP sql 드라이버를 다운로드 하려면](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>샘플  
-* [Microsoft Drivers for PHP for SQL Server에 대 한 코드 샘플](code-samples-for-php-sql-driver.md)
+* [Microsoft Drivers for PHP for SQL Server 코드 샘플](code-samples-for-php-sql-driver.md)
 * [Windows에서 PHP를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [MacOS에서 PHP를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Ubuntu에서 PHP를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

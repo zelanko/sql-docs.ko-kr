@@ -1,5 +1,5 @@
 ---
-title: position 메서드 (SQLServerNClob) | Microsoft Docs
+title: position 메서드(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6882083b270825623253d4635afd3077a5a2d75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4c9634bb19ffa2194e225370f05f00f040a276dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801321"
 ---
 # <a name="position-method-sqlservernclob"></a>position 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

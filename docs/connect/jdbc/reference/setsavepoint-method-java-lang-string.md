@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d583ad2b20639f3df9d37de5180b94bb4dc692a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 41d9cf40028efb2fac732ec7f6da4a3be39095af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796802"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 91e498a1db30df380d7f2009f0fe34a9b4541467
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778030"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용
@@ -106,7 +106,7 @@ ms.locfileid: "66778030"
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|경우는 OLE DB Driver for SQL Server 로그인 유효성 검사에 대 한 Windows 인증 모드를 사용 하도록 "yes" 인 지시 합니다. 그렇지 않으면 SQL Server용 OLE DB 드라이버가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 사용하여 로그인 유효성을 검사하도록 지시하므로 UID 및 PWD 키워드를 지정해야 합니다.|  
 |**TrustServerCertificate**<a href="#table1_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|문자열 "yes" 및 "no"를 값으로 받습니다. 기본값은 "no"이며 서버 인증서의 유효성을 검사하는 것을 의미합니다.|  
 |**UID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
-|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]는  이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "yes" 및 "no"입니다. 기본값은 "no"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **UseFMTONLY** "yes"로 사용 하도록 드라이버에 지시 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
+|**UseFMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "yes" 및 "no"입니다. 기본값은 "no"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **UseFMTONLY** "yes"로 사용 하도록 드라이버에 지시 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
 |**UseProcForPrepare**|SSPROP_INIT_USEPROCFORPREP|이 키워드는 않으며, SQL Server 용 OLE DB 드라이버에서 해당 설정이 무시 됩니다.|  
 |**WSID**|SSPROP_INIT_WSID|워크스테이션 식별자입니다.|  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66778030"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열에는 OLE DB Driver for SQL Server에서 기본적으로 공급자에서 생성 된 SPN을 사용 하면 됩니다.|  
 |**서버 인증서 신뢰**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|문자열 "true" 및 "false"를 값으로 받습니다. 기본값은 "false"이며 서버 인증서의 유효성을 검사하는 것을 의미합니다.|  
 |**데이터에 대해 암호화 사용**<a href="#table2_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]는  이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **사용 하 여 FMTONLY** "true"를 사용 하 여 드라이버를 지시 하 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **사용 하 여 FMTONLY** "true"를 사용 하 여 드라이버를 지시 하 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
 |**사용자 ID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |**Workstation ID**|SSPROP_INIT_WSID|워크스테이션 식별자입니다.|  
   
@@ -221,7 +221,7 @@ ms.locfileid: "66778030"
 |**Server SPN**|SSPROP_INIT_SERVERSPN|서버의 SPN입니다. 기본값은 빈 문자열입니다. 빈 문자열에는 OLE DB Driver for SQL Server에서 기본적으로 공급자에서 생성 된 SPN을 사용 하면 됩니다.|  
 |**서버 인증서 신뢰**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|문자열 "true" 및 "false"를 값으로 받습니다. 기본값은 "false"이며 서버 인증서의 유효성을 검사하는 것을 의미합니다.|  
 |**데이터에 대해 암호화 사용**<a href="#table3_1"><sup>**1**</sup></a>|SSPROP_INIT_ENCRYPT|데이터를 네트워크를 통해 보내기 전에 암호화해야 하는지 여부를 지정합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.|  
-|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]는  이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **사용 하 여 FMTONLY** "true"를 사용 하 여 드라이버를 지시 하 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
+|**Use FMTONLY**|SSPROP_INIT_USEFMTONLY|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에 연결할 때 메타데이터를 검색하는 방법을 제어합니다. 가능한 값은 "true" 및 "false"입니다. 기본값은 "false"입니다.<br /><br />OLE DB Driver for SQL Server는 기본적으로 다음을 사용 합니다. [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 하 고 [sp_describe_undeclared_parameters](../../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md) 저장 프로시저 메타 데이터를 검색 합니다. 이러한 저장된 프로시저에는 몇 가지 제한 사항이 (예: 실패 임시 테이블에서 작동 하는 경우). 설정 **사용 하 여 FMTONLY** "true"를 사용 하 여 드라이버를 지시 하 [SET FMTONLY](../../../t-sql/statements/set-fmtonly-transact-sql.md) 메타 데이터 검색에 대 한 대신 합니다.|  
 |**사용자 ID**|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |**Workstation ID**|SSPROP_INIT_WSID|워크스테이션 식별자입니다.|  
   

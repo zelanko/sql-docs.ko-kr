@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789890"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -65,7 +65,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -k 제어 문자를 제거하거나 바꿉니다.  
   
 - **-K**_application\_intent_  
-서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 `sqlcmd`가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
+서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 `sqlcmd`가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [ODBC Driver on Linux and macOS - High Availability and Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)(Linux 및 macOS의 ODBC 드라이버 - 고가용성, 재해 복구)를 참조하세요.  
   
 > [!NOTE]  
 > **-K** 가 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **ApplicationIntent=ReadOnly** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -98,7 +98,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -s *column_separator_char* 열 구분 기호 문자를 지정 합니다.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 인스턴스를 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결할 차원 인지 또는 사용, DSN입니다. Linux 및 macOS에서 ODBC 드라이버-S. 필요 사실은 **tcp** 만 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령(또는 SQL 문)이 시간 초과까지의 시간(초)을 지정합니다.  
@@ -210,19 +210,19 @@ Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Database=**_database\_name_  
+-   **Database=** _database\_name_  
   
 -   **드라이버 ODBC Driver 11 for SQL Server =** 또는 **드라이버 기반 ODBC Driver 13 for SQL Server =**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_server\_이름\_하거나\_IP\_주소_  
+-   **Server =** _server\_이름\_하거나\_IP\_주소_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 DSN에서는 DRIVER 항목만 필요하지만 서버에 연결하려면 `sqlcmd` 또는 `bcp`에서 SERVER 항목의 값이 필요합니다.  
 
-동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름(**–U**) 및 암호(**–P**)(제공된 경우)가 무시됩니다.
+동일한 옵션이 DSN 및 `sqlcmd` 또는 `bcp` 명령줄에서 지정된 경우 명령줄 옵션이 DSN에서 사용되는 값을 재정의합니다. 예를 들어 DSN에 DATABASE 항목이 있고 `sqlcmd` 명령줄이 **-d**를 포함하는 경우 **-d**에 전달된 값이 사용됩니다. **Trusted_Connection=yes**가 DSN에서 지정된 경우 Kerberos 인증이 사용되고 사용자 이름( **–U**) 및 암호( **–P**)(제공된 경우)가 무시됩니다.
 
 다음 별칭을 정의하여 `isql`을 호출하는 기존 스크립트는 `sqlcmd`를 사용하도록 수정할 수 있습니다. `alias isql="sqlcmd -D"`  
 

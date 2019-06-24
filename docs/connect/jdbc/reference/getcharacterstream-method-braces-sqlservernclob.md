@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 메서드 () (SQLServerNClob) | Microsoft Docs
+title: getCharacterStream 메서드 ()(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cf25f858e740dcb8ec9d10467808bcd619aec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e6ce2f52a8f3326a753d1647bd865c7d6d939e45
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801781"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803422"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>getCharacterStream 메서드()(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  검색 된 **NCLOB** 데이터를 **판독기** 개체 또는 문자 스트림으로.  
+  **NCLOB** 데이터를 **Reader** 개체 또는 문자 스트림으로 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

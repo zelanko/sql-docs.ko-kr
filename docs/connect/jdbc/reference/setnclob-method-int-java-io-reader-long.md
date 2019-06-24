@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f29ca79628442087867d598ed77a2c41144175b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f21ad97e886b8fb4d3ed19ff2ed02e08a7b63fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800450"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob 메서드(int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public final void setNClob(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *된*  
+ *parameterIndex*  
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: errorcode | Microsoft Docs'
+title: PDO::errorCode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5864b1d8-6814-41cd-a88d-415124484c13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 152b8f1f0792f0680f7602a2d2f0f18c70ad9781
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: bd430e026d29d0637e3b9a1543b8a89bed556bd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798370"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

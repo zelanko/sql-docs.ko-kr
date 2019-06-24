@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf4f7df354f8aa821305e7e847a060491e0e5a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dbf1b4159d060fce122455436a3ff7b7199e583
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796307"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>isWrapperFor 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +42,9 @@ public boolean isWrapperFor(Class iface)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md) 메서드와 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) 메서드는 JDBC 4.0 사양에서 도입된 java.sql.Wrapper 인터페이스에 의해 정의됩니다.  
+ [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md) 메서드 및 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) 메서드는 JDBC 4.0 사양에서 도입된 java.sql.Wrapper 인터페이스에 의해 정의됩니다.  
   
- 이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)을 호출하면 성공합니다.  
+ 이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)을 호출하는 데 성공합니다.  
   
  자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
   

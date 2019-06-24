@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 90dbf639-c3d8-4519-9300-5447c79aec17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58390bfd2310b1cae9ce7427106c88a8e38915df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: df361da2387a053b9550c4b4e25dc94cced6579b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645371"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800634"
 ---
 # <a name="createstatement-method-int-int"></a>createStatement 메서드(int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ public java.sql.Statement createStatement(int resultSetType,
  이 createStatement 메서드는 java.sql.Connection 인터페이스의 createStatement 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [createStatement 메서드&#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
+ [createStatement 메서드(SQLServerConnection)](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection 클래스](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

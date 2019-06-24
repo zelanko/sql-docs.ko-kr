@@ -1,5 +1,5 @@
 ---
-title: length 메서드 (SQLServerBlob) | Microsoft Docs
+title: length 메서드(SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7353dd7cb01330e1403c5471adffdc6fad093197
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e176624817a67945fa68ef34b2baaad7ed35714c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803564"
 ---
 # <a name="length-method-sqlserverblob"></a>length 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

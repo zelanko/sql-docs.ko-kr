@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180276"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>SQL Server Support Matrix 용 Microsoft PHP 드라이버
 
@@ -34,10 +34,10 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 |드라이버 이름|드라이버 패키지 버전|일반 지원 종료|
 |-|:-:|-|
 |Microsoft PHP Drivers 5.6 for SQL Server|5.6|2024 2 월 21,|
-|Microsoft PHP Drivers 5.3 for SQL Server|5.3|2023 년 7 월 20,|
-|Microsoft PHP Drivers 5.2 for SQL Server|5.2|2023 년 2 월 9,|
+|Microsoft PHP Drivers 5.3 for SQL Server|5.3|2023년 7월 20일|
+|Microsoft PHP Drivers 5.2 for SQL Server|5.2|2023년 2월 9일|
 |Microsoft PHP Drivers 4.3 for SQL Server|4.3|2022 년 7 월 6,|
-|Microsoft PHP Drivers 4.0 for SQL Server|4.0|2021 년 7 월 11|
+|Microsoft PHP Drivers 4.0 for SQL Server|4.0|2021년 7월 11일|
 |Microsoft PHP Drivers 3.2 for SQL Server|3.2|2020 년 3 월 9|
 |Microsoft PHP Drivers 3.1 for SQL Server|3.1|2019년 12월 12일|
 | &nbsp; | &nbsp; | &nbsp; |
@@ -56,7 +56,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 
 |SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; SQL Server 버전|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL 관리되는 인스턴스<br/> (확장 된 비공개 미리 보기)|Y|Y|Y|Y| | | | | |
+|Azure SQL 관리되는 인스턴스<br/> (프라이빗 미리 보기 확장)|Y|Y|Y|Y| | | | | |
 |Azure SQL 데이터 웨어하우스|Y|Y|Y|Y| | | | | |
 |SQL Server 2017         |Y|Y|Y|Y| | | | | |
 |SQL Server 2016         |Y|Y|Y|Y|Y| | | | |
@@ -83,7 +83,7 @@ MSL(Microsoft 지원 수명 주기) 정책은 Microsoft 제품 지원 수명 주
 |5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-1. 7.2.1 버전 이상에서 사용할 Windows, 버전 7.2.0 하는 동안 및 나중에 Linux 및 macOS에서 지원 됩니다.
+1. 7\.2.1 버전 이상에서 사용할 Windows, 버전 7.2.0 하는 동안 및 나중에 Linux 및 macOS에서 지원 됩니다.
 
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
 

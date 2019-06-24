@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c15dcc41379a4b90f259fe2e1130396b63ac537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e64d3ae8cabd18b2c3e34e81bf0a515a64de1b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774150"
 ---
 # <a name="getsqlxml-method-int"></a>getSQLXML 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,12 +31,12 @@ public final java.sql.SQLXML getSQLXML(int parameterIndex)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *된*  
+ *parameterIndex*  
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- ASQLXMLobject 합니다.  
+ ASQLXMLobject입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

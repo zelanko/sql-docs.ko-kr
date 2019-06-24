@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa6c6e18620c0e80576e864eca246c524eb0c5d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601043"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789950"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
@@ -37,8 +37,8 @@ ms.locfileid: "51601043"
 - [RedHat 6.rpm 패키지 (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12.rpm 패키지 (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11.rpm 패키지 (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11 .rpm 패키지(msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 18.04 d e b 패키지](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
@@ -68,8 +68,8 @@ ms.locfileid: "51601043"
 - [RedHat 6.rpm 패키지 (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12.rpm 패키지 (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11.rpm 패키지 (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12 .rpm 패키지(msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11 .rpm 패키지(msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Ubuntu 17.04 d e b 패키지](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
@@ -102,6 +102,6 @@ ms.locfileid: "51601043"
 
 ### <a name="linux"></a>Linux
 
-- **Red Hat Enterprise Linux 5 및 6(64비트)** - [Microsoft ODBC Driver 11 for SQL Server 다운로드 - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
+- **Red Hat Enterprise Linux 5 및 6(64비트)**  - [Microsoft ODBC Driver 11 for SQL Server 다운로드 - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)
 
-- **SUSE Linux Enterprise 11 서비스 팩 2(64비트)** - [Microsoft ODBC Driver 11 Preview for SQL Server 다운로드 - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)
+- **SUSE Linux Enterprise 11 서비스 팩 2(64비트)**  - [Microsoft ODBC Driver 11 Preview for SQL Server 다운로드 - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)

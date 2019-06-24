@@ -1,5 +1,5 @@
 ---
-title: 커서 유형 (SQLSRV 드라이버) | Microsoft Docs
+title: 커서 형식(SQLSRV 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801485"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>커서 형식(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>클라이언트 쪽 커서 및 SQLSRV 드라이버  
 클라이언트 쪽 커서는 버전 3.0에에서 추가 된 기능을 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 메모리에 설정 하는 전체 결과 캐시할 수 있습니다. 행 개수는 클라이언트 쪽 커서를 사용 하는 경우 쿼리를 실행 한 후 사용할 수 있습니다.  
   
-소규모-결과 집합에 대 한 클라이언트 쪽 커서를 사용 해야 합니다. 큰 결과 집합에 대 한 서버 쪽 커서를 사용 합니다.  
+클라이언트 쪽 커서는 중소 규모의 결과 집합에 사용해야 합니다. 큰 결과 집합에 대 한 서버 쪽 커서를 사용 합니다.  
   
-쿼리는 버퍼를 전체 결과 집합을 보유 하기에 충분할 수 없으면 false를 반환 합니다. PHP 메모리 제한까지 버퍼 크기를 늘릴 수 있습니다.  
+쿼리는 버퍼를 전체 결과 집합을 보유 하기에 충분할 수 없으면 false를 반환 합니다. PHP 메모리 한도까지 버퍼 크기를 늘릴 수 있습니다.  
   
 SQLSRV 드라이버를 사용 하 여 결과와 ClientBufferMaxKBSize 설정 집합을 보유 하는 버퍼의 크기를 구성할 수 있습니다 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)합니다. [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) ClientBufferMaxKBSize의 값을 반환 합니다. 또한 sqlsrv 사용 하 여 php.ini 파일에서 최대 버퍼 크기를 설정할 수 있습니다. ClientBufferMaxKBSize (예를 들어 sqlsrv 합니다. ClientBufferMaxKBSize = 1024)입니다.  
   

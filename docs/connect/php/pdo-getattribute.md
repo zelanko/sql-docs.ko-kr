@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: getattribute | Microsoft Docs'
+title: PDO::getAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16a69d34bb8ae21b71831f57897811c6fc04ec93
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7a7b634b10be90b164f67eb2837a053eef3db7e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762142"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -53,7 +53,7 @@ mixed PDO::getAttribute ( $attribute )
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1부터 PHP 메모리 제한까지입니다.|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB(10MB)입니다.<br /><br />클라이언트 쪽 커서에 대한 자세한 내용은 [커서 유형&#40;SQLSRV 드라이버&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)를 참조하세요.|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|직접 또는 준비된 쿼리 실행을 지정합니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM|드라이버에서 서버와 통신하는 데 사용되는 문자 집합 인코딩을 지정합니다.<br /><br />기본값은 PDO::SQLSRV_ENCODING_UTF8입니다.|  
-|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|열에서 숫자 인출 (비트, 정수, smallint, tinyint, float 또는 real) 숫자 SQL 형식으로 처리합니다.<br /><br />연결 옵션 플래그 ATTR_STRINGIFY_FETCHES 켜져 있으면 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE가 on으로 설정 하는 경우에 반환 값은 문자열입니다.<br /><br />바인딩할 열에 반환 되는 PDO 형식은 PDO_PARAM_INT 경우 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 꺼져 있는 경우에 정수 열에서 반환 값에는 int입니다.|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 또는 false|숫자 SQL 형식(bit, integer, smallint, tinyint, float, real)의 열에서 숫자 가져오기를 처리합니다.<br /><br />연결 옵션 플래그 ATTR_STRINGIFY_FETCHES를 켜면, SQLSRV_ATTR_FETCHES_NUMERIC_TYPE이 켜져 있더라도 반환 값이 문자열입니다.<br /><br />바인딩 열에 반환된 PDO 형식이 PDO_PARAM_INT이면, SQLSRV_ATTR_FETCHES_NUMERIC_TYPE이 꺼져 있더라도 정수 열의 반환 값이 int입니다.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|쿼리 시간 제한(초)을 설정합니다.<br /><br />기본값은 0이며, 드라이버가 결과를 무한정 기다린다는 것을 의미합니다.<br /><br />음수 값은 허용되지 않습니다.|  
 
   

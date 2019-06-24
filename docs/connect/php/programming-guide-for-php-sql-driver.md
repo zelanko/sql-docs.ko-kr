@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server에 대 한 프로그래밍 가이드 | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780999"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47776501"
 |---------|---------------|  
 |[서버에 연결](../../connect/php/connecting-to-the-server.md)|SQL Server에 연결하기 위한 옵션 및 절차를 설명합니다.|  
 |[함수 실행 비교](../../connect/php/comparing-execution-functions.md)|각각에 대해 다른 사용 사례를 검토하여 쿼리를 실행하는 데 사용하는 함수를 비교합니다. 특히 이 문서는 단일 쿼리를 실행하는 것과 준비된 쿼리를 여러 번 실행하는 것을 비교합니다.|  
-|[PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)|PDO::SQLSRV_ATTR_DIRECT_QUERY 특성을 사용하여 기본값(준비된 문 실행) 대신 직접 문 실행을 지정하는 방법을 검토합니다. |  
+|[PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)|PDO::SQLSRV_ATTR_DIRECT_QUERY 특성을 사용하여 기본값(준비된 문 실행) 대신 직접 문 실행을 지정하는 방법을 검토합니다.|  
 |[데이터 검색](../../connect/php/retrieving-data.md)|데이터를 검색할 수 있는 다양한 방법을 검사합니다.|  
 |[데이터 업데이트](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)|일반적인 사용 사례를 검사하여 데이터베이스에서 데이터를 업데이트하는 방법을 다룹니다.|  
 |[데이터 형식 변환](../../connect/php/converting-data-types.md)|데이터 형식을 지정하고 기본 데이터 형식에 대한 세부 정보를 제공하는 방법을 다룹니다.|  
@@ -41,11 +41,11 @@ ms.locfileid: "47776501"
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)
 
-[시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+[예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

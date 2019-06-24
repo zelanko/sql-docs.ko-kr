@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037952"
 ---
 # <a name="report-datasets-ssrs"></a>보고서 데이터 세트(SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "66500302"
   
  쿼리를 실행하려면 디자인 타임 자격 증명이 있어야 합니다. 자세한 내용은 [보고서 데이터 원본에 대 한 연결 정보와 자격 증명 지정](specify-credential-and-connection-information-for-report-data-sources.md) 하 고 [데이터 연결, 데이터 원본 및 연결 문자열 &#40;보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자이너&#40;보고서 작성기&#41;](query-design-tools-ssrs.md)를 참조하세요.  
+ 데이터 확장 프로그램과 외부 데이터 원본 간의 통신은 데이터 공급자가 처리합니다. 쿼리 명령 구문, 쿼리 매개 변수 및 결과 집합에 있는 값의 데이터 형식에 대한 지원 여부는 각 데이터 공급자가 결정합니다. 자세한 내용은 특정 데이터 확장 프로그램 유형에 대한 항목과 [쿼리 디자인 도구&#40;SSRS&#41;](query-design-tools-ssrs.md)를 참조하세요.  
   
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
@@ -131,6 +131,6 @@ ms.locfileid: "66500302"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services 개념(SSRS)](../reporting-services-concepts-ssrs.md)
   
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca534c6b-ef4d-4ae8-8cc3-514728623cff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0839ad771e067552b6c19d3d44c5893189a2c52d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d949416f96c704cc721e8037bc022bdceac4291
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799018"
 ---
 # <a name="executeupdate-method-"></a>executeUpdate 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public int executeUpdate()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정 됩니다.  
+ 이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [executeUpdate 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)   

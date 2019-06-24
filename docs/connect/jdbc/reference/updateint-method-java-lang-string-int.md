@@ -1,5 +1,5 @@
 ---
-title: updateInt 메서드 (java.lang.String, int) | Microsoft Docs
+title: updateInt 메서드(java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b0aef8f7-057e-4b57-892c-d120f2daed77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b091d87f922fad0e613dfc0099f00a767b16e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c612b90db5a699df0b7e23c8591de8b6f79163d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797144"
 ---
 # <a name="updateint-method-javalangstring-int"></a>updateInt 메서드(java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

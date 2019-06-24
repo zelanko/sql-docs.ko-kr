@@ -30,13 +30,13 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796065"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "52391460"
   
  **ISequentialStream**은 큰 XML 문서의 검색에 사용합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [큰 값 형식을 사용 하 여](../../oledb/features/using-large-value-types.md)입니다.  
   
- 행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 응용 프로그램에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 검색의 경우와 마찬가지로 응용 프로그램에서 텍스트 문자열 또는 **ISequentialStream**을 SQL Server용 OLE DB 드라이버에 전달할 수 있습니다.  
+ 행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 애플리케이션에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 검색의 경우와 마찬가지로 애플리케이션에서 텍스트 문자열 또는 **ISequentialStream**을 SQL Server용 OLE DB 드라이버에 전달할 수 있습니다.  
   
 > [!NOTE]  
 >  문자열 형식의 XML 데이터를 **ISequentialStream** 인터페이스를 통해 보내려면 바인딩에서 DBTYPE_IUNKNOWN을 지정하고 해당 *pObject* 인수를 null로 설정하여 **ISequentialStream**을 가져와야 합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "52391460"
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|통과<sup>6,7</sup>|오류<sup>1</sup>|확인<sup>11, 6</sup>|오류<sup>8</sup>|  
 |DBTYPE_BYTES|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|확인<sup>11, 6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|OK<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_BSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_STR|확인<sup>6, 9, 10</sup>|해당 없음<sup>2</sup>|확인<sup>5, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|**ISequentialStream**을 통한 바이트 스트림<sup>7</sup>|해당 없음<sup>2</sup>|**ISequentialStream**을 통한 바이트 스트림<sup>11</sup>|해당 없음<sup>2</sup>|  
@@ -122,7 +122,7 @@ ms.locfileid: "52391460"
 > [!NOTE]  
 >  NULL XML 값에 대해서는 데이터가 반환되지 않습니다.  
   
- XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. WSTR 및 BSTR 바인딩을 사용하는 경우 인코딩이 바인딩에서 암시적으로 지정되므로 SQL Server용 OLE DB 드라이버가 BOM을 요구하거나 BOM을 추가하지 않습니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하는 경우 BOM을 추가하는 목적은 다른 XML 프로세서 및 저장소 시스템을 간편하게 다룰 수 있도록 하는 데 있습니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. SQL Server를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 응용 프로그램에서는 실제 인코딩을 확인할 필요가 없습니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하여 SQL Server용 OLE DB 드라이버에서 받은 XML 데이터는 항상 UTF-16으로 인코딩되고 BOM을 포함하며 인코딩 선언을 포함하지 않습니다.  
+ XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. WSTR 및 BSTR 바인딩을 사용하는 경우 인코딩이 바인딩에서 암시적으로 지정되므로 SQL Server용 OLE DB 드라이버가 BOM을 요구하거나 BOM을 추가하지 않습니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하는 경우 BOM을 추가하는 목적은 다른 XML 프로세서 및 저장소 시스템을 간편하게 다룰 수 있도록 하는 데 있습니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. SQL Server를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 애플리케이션에서는 실제 인코딩을 확인할 필요가 없습니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하여 SQL Server용 OLE DB 드라이버에서 받은 XML 데이터는 항상 UTF-16으로 인코딩되고 BOM을 포함하며 인코딩 선언을 포함하지 않습니다.  
   
  OLE DB 핵심 서비스에서 제공하는 데이터 변환(**IDataConvert**)은 DBTYPE_XML에 적용되지 않습니다.  
   
@@ -215,13 +215,13 @@ ms.locfileid: "52391460"
  DBTYPE_IUNKNOWN에 바인딩된 XML 값을 반환할 때 공급자는 `sizeof (IUnknown *)`의 크기 값을 보고합니다. 이 동작은 열이 DBTYPE_IUnknown 또는 DBTYPE_IDISPATCH로 바인딩되어 있는데 정확한 열 크기를 확인할 수 없는 경우 DBTYPE_IUNKNOWN/ISequentialStream이 취하는 방법과 같습니다.  
   
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange 인터페이스  
- 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 저장소 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
+ 소비자는 두 가지 방법으로 열의 XML 인스턴스를 업데이트할 수 있습니다. 하나는 공급자가 만든 스토리지 개체 **ISequentialStream**을 사용하는 것입니다. 소비자는 **ISequentialStream::Write** 메서드를 호출하여 공급자가 반환한 XML 인스턴스를 직접 업데이트할 수 있습니다.  
   
  다른 하나는 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 사용하는 것입니다. 이 방법을 사용할 경우 소비자 버퍼의 XML 인스턴스를 DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML 또는 DBTYPE_IUNKNOWN 유형의 바인딩에 지정할 수 있습니다.  
   
  DBTYPE_BSTR, DBTYPE_WSTR 또는 DBTYPE_VARIANT가 지정되는 경우 공급자가 소비자 버퍼의 XML 인스턴스를 적절한 열에 저장합니다.  
   
- DBTYPE_IUNKNOWN/ISequentialStream을 지정하면 소비자가 저장소 개체를 지정하지 않은 경우에는 소비자가 미리 **ISequentialStream** 개체를 만들어 XML 문서를 개체에 바인딩한 다음, **IRowsetChange::SetData** 메서드를 통해 개체를 공급자에 전달해야 합니다. 소비자는 저장소 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
+ DBTYPE_IUNKNOWN/ISequentialStream을 지정하면 소비자가 스토리지 개체를 지정하지 않은 경우에는 소비자가 미리 **ISequentialStream** 개체를 만들어 XML 문서를 개체에 바인딩한 다음, **IRowsetChange::SetData** 메서드를 통해 개체를 공급자에 전달해야 합니다. 소비자는 스토리지 개체를 만들고 pObject 인수를 IID_ISequentialStream으로 설정하고 **ISequentialStream** 개체를 만든 다음, 이 **ISequentialStream** 개체를 **IRowsetChange::SetData** 메서드에 전달할 수도 있습니다. 두 경우 모두 공급자는 **ISequentialStream** 개체를 통해 XML 개체를 검색하여 적절한 열에 삽입할 수 있습니다.  
   
 #### <a name="the-irowsetupdate-interface"></a>IRowsetUpdate 인터페이스  
  **IRowsetUpdate** 인터페이스는 지연된 업데이트에 사용할 수 있는 기능을 제공합니다. 소비자가 **IRowsetUpdate::Update** 메서드를 호출할 때까지 행 집합에서 사용할 수 있는 데이터를 다른 트랜잭션에서 사용할 수 없습니다.  

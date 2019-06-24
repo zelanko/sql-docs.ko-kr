@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66790284"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Azure Key Vault 키 저장소 공급자를 사용 하는 경우 Azure Key Vault에 대 한 구현의 JDBC 드라이버 응용 프로그램을 사용 하 여 포함 되어야 합니다 (GitHub)에서 이러한 라이브러리에 종속성이 있습니다.
 >
->  [java에 대 한 azure sdk](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-라이브러리-에-java 라이브러리](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Maven 프로젝트에 이러한 종속성을 포함 하는 방법의 예제를 참조 하세요. [다운로드 ADAL4J 및 AKV와의 종속성을 Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-상시 암호화는 개별 쿼리에도 사용할 수 있습니다. 자세한 내용은 [상시 암호화의 성능 영향 제어](#controlling-the-performance-impact-of-always-encrypted)입니다. 암호화 또는 암호 해독을 위해 Always Encrypted를 사용하는 것은 적절하지 않습니다. 다음을 확인해야 합니다.
+상시 암호화는 개별 쿼리에도 사용할 수 있습니다. 자세한 내용은 [Always Encrypted가 성능에 미치는 영향 제어](#controlling-the-performance-impact-of-always-encrypted)를 참조하세요. 암호화 또는 암호 해독을 위해 Always Encrypted를 사용하는 것은 적절하지 않습니다. 다음을 확인해야 합니다.
 - 애플리케이션에는 *VIEW ANY COLUMN MASTER KEY DEFINITION* 및 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 데이터베이스 권한이 있으며 데이터베이스에서 상시 암호화 키에 대한 메타데이터에 액세스하는 데 필요합니다. 자세한 내용은 [상시 암호화의 사용 권한(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)을 참조하세요.
 - 애플리케이션은 열 암호화 키를 보호하는 열 마스터 키에 액세스하여 쿼리된 데이터베이스 열을 암호화할 수 있습니다. Java 키 저장소 공급자를 사용 하려면 연결 문자열에 추가 자격 증명을 제공 해야 합니다. 자세한 내용은 [사용 하 여 Java 키 저장소 공급자](#using-java-key-store-provider)합니다.
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time 값을 서버에 보내는 방식 구성
 **sendTimeAsDatetime** 연결 속성은 java.sql.Time 값을 서버로 보내는 방식을 구성하는 데 사용됩니다. 시간 값을 false로 설정 된 경우 SQL Server 시간 형식으로 전송 됩니다. 값이 날짜/시간 형식으로 전송 되는 시간을 true로 설정 하면 됩니다. 시간 열을 암호화 합니다 **sendTimeAsDatetime** 암호화 된 열 시간에서 날짜/시간 변환을 지원 하지 않습니다 속성이 false 여야 합니다. False로 설정 해야 암호화 된 시간 열을 사용 하는 경우이 속성이 기본값인 true로 설정 하 여 이므로 참고도 선택 합니다. 그렇지 않으면 드라이버는 예외가 throw 됩니다. 드라이버의 버전 6.0 이상에서는 SQLServerConnection 클래스에이 속성의 값을 프로그래밍 방식으로 구성 하는 두 가지 방법 있습니다.
  
-* public void setSendTimeAsDatetime (부울 sendTimeAsDateTimeValue)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 이 속성에 대 한 자세한 내용은 참조 하세요. [어떻게 구성 java.sql.Time 값을 서버로 전송 됩니다](configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40a2cdd68017ff4b3e232fba1d6b63e46a3aa103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a82dec9fe68eb4220710d773d700c43751b7f18d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770871"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802271"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,7 +74,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 -   일치는 대/소문자를 구분합니다. 예를 들어 속성 이름 CustomerId가 필드 이름 CustomerID와 일치하지 않습니다. 이 경우 CustomerID 속성이 개체에 추가되고 CustomerID 필드의 값이 CustomerID 속성에 지정됩니다.  
   
--   액세스 한정자에 관계없이 일치가 발생합니다. 예를 들어 지정된 클래스에 그 이름이 결과 집합 필드 이름과 일치하는 개인 속성이 있는 경우 결과 집합 필드의 값이 속성에 적용됩니다.  
+-   액세스 한정자에 관계없이 일치가 발생합니다. 예를 들어 지정된 클래스에 그 이름이 결과 집합 필드 이름과 일치하는 프라이빗 속성이 있는 경우 결과 집합 필드의 값이 속성에 적용됩니다.  
   
 -   클래스 속성 데이터 형식은 무시됩니다. 결과 집합의 "CustomerID" 필드가 문자열이지만 클래스의 "CustomerID" 속성이 정수인 경우 결과 집합의 문자열 값이 "CustomerID" 속성에 기록됩니다.  
   
@@ -137,7 +137,7 @@ sqlsrv_close( $conn);
   
 -   일치하는 속성이 없기 때문에 *Color* 속성이 *$product* 인스턴스에 추가됩니다.  
   
--   개인 속성 *UnitPrice* 는 *UnitPrice* 필드 값으로 채워집니다.  
+-   프라이빗 속성 *UnitPrice* 는 *UnitPrice* 필드 값으로 채워집니다.  
   
 이 예제에서는 SQL Server 및 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   

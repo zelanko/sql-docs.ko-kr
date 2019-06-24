@@ -1,5 +1,5 @@
 ---
-title: updateCharacterStream 메서드 (SQLServerResultSet) | Microsoft Docs
+title: updateCharacterStream 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb5f2edcd86eedf052792384f8247e2ba26af887
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 108e3c3c48249c0cd228a8b88679e81c97c8cdb8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784033"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

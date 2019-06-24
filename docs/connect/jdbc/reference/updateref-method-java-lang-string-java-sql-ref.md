@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a07f14422a1e4d6db9c9715ac766b9265fdeb86c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778463"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef 메서드(java.lang.String, java.sql.Ref)
@@ -49,7 +49,7 @@ public void updateRef(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateInt 메서드는 java.sql.ResultSet 인터페이스의 updateInt 메서드에 의해 지정됩니다.  
+ 이 updateRef 메서드는 java.sql.ResultSet 인터페이스의 updateRef 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateRef 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   

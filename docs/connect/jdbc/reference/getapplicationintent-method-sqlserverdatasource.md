@@ -1,5 +1,5 @@
 ---
-title: getApplicationIntent 메서드 (SQLServerDataSource) | Microsoft Docs
+title: getApplicationIntent 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01fa56d2afb8465f582cf5fda5579565f04013c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cdf1c9d983a167df0fc3e0c65ba15569bdecf953
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798974"
 ---
 # <a name="getapplicationintent-method-sqlserverdatasource"></a>getApplicationIntent 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

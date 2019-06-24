@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 269392af66afc7ddc3aadc2f2f10e67a5b422859
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3ef4131bb99ab2569e4e91436174a481ecdb63d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765224"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>setAsciiStream 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public final void setAsciiStream(int parameterIndex,
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *된*  
+ *parameterIndex*  
   
  매개 변수 번호를 나타내는 **int**입니다.  
   
@@ -53,7 +53,7 @@ public final void setAsciiStream(int parameterIndex,
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   
- 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 길이를 알 수 없는 스트림에서 응용 프로그램이 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [setAsciiStream 메서드&#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)를 사용하는 것이 좋습니다.  
+ 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 길이를 알 수 없는 스트림에서 애플리케이션이 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [setAsciiStream 메서드&#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setAsciiStream 메서드(SQLServerPreparedStatement)](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   

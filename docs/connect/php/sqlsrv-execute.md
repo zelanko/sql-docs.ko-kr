@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21f88cccf3e9984f425c5e8207e6f9127d40ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a4def4047691f25c96f1e003cfc8c47e97c4276
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796904"
 ---
 # <a name="sqlsrvexecute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +47,7 @@ sqlsrv_execute( resource $stmt)
 부울 값: 문이 성공적으로 실행되면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스의 *Sales.SalesOrderDetail* 테이블에서 필드를 업데이트하는 문을 실행합니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 *AdventureWorks* 데이터베이스의 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 테이블에서 필드를 업데이트하는 문을 실행합니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  

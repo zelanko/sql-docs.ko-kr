@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d55e65eba2f83f1ba8ae65ff110e2456958a719
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff8d01b6f8d4350a2782e9660baab3d043d83582
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66784453"
 ---
 # <a name="getnclob-method-int"></a>getNClob 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *된*  
+ *parameterIndex*  
   
  매개 변수 인덱스를 나타내는 **int**입니다.  
   

@@ -214,9 +214,9 @@
             - name: 스토리지
               items:
                 - name: mssqlctl 클러스터 스토리지 풀
-                  href: ../big-data-cluster/reference-mssqlctl-storage.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
                 - name: mssqlctl 클러스터 스토리지 풀 마운트
-                  href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: 비즈니스 연속성
   items:
     - name: 개요
@@ -1382,7 +1382,7 @@
             - name: 인덱스 속성 F1 도움말
               href: ../relational-databases/indexes/index-properties-f1-help.md
         - name: columnstore 인덱스
-          hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+          href: ../relational-databases/indexes/columnstore-indexes-overview.md
           items:
             - name: 새로운 기능
               href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md

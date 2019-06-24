@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361653"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166377"
 ---
 # <a name="deny-transact-sql"></a>DENY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,8 @@ DENY
  지정된 보안 주체와 이 보안 주체가 사용 권한을 부여한 다른 모든 보안 주체에 대해 사용 권한이 거부됨을 나타냅니다. 보안 주체에 GRANT OPTION 권한이 있는 경우에 필요합니다.  
   
  AS *principal*  
-  권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 사용자 Mary가 principal_id 12이고 사용자 Raul은 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.
+권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 사용자 Mary가 principal_id 12이고 사용자 Raul은 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
   
 이 명령문에 AS를 사용한다고 해서 다른 사용자로 가장하는 기능을 의미하는 것은 아닙니다.  
   
@@ -148,7 +149,7 @@ DENY
 > [!CAUTION]  
 >  CONTROL SERVER 권한을 거부하면 암시적으로 서버에 대한 CONNECT SQL 권한이 거부됩니다. 따라서 서버에 대한 CONTROL SERVER 권한이 거부된 보안 주체는 해당 서버에 연결할 수 없게 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  호출자 또는 AS 옵션으로 지정한 보안 주체에게 보안 개체에 대한 CONTROL 권한이 있거나 보안 개체에 대한 CONTROL 권한을 포함하는 상위 사용 권한이 있어야 합니다. AS 옵션을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
  sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 권한이 부여된 사용자는 서버의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. db_owner 고정 데이터베이스 역할의 멤버와 같이 데이터베이스에 대한 CONTROL 권한이 부여된 사용자는 데이터베이스의 모든 보안 개체에 대한 모든 사용 권한을 거부할 수 있습니다. 스키마에 대한 CONTROL 권한이 부여된 사용자는 스키마의 모든 개체에 대한 모든 사용 권한을 거부할 수 있습니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  

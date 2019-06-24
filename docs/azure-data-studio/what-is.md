@@ -11,18 +11,18 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801920"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313964"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio 란?
 
 Azure 데이터 스튜디오는 플랫폼 간 도구를 온-프레미스 Microsoft 제품군을 사용 하 여 데이터 전문가 위한 데이터베이스 및 클라우드 데이터 플랫폼에서 Windows, MacOS 및 Linux입니다.
 
-SQL Operations Studio 미리 보기 이름으로 이전에 릴리스된, Azure Data Studio는 Intellisense, 코드 조각, 소스 제어 통합 및 통합된 된 터미널을 사용 하 여 최신 편집기 환경을 제공 합니다. 엔지니어링 되어 염두, 데이터 플랫폼 사용자를 사용 하 여 사용 하 여 쿼리 결과 집합을 사용자 지정 가능한 대시보드 차트에 기본 제공 합니다.
+SQL Operations Studio 미리 보기 이름으로 이전에 릴리스된, Azure Data Studio는 IntelliSense, 코드 조각, 소스 제어 통합 및 통합된 된 터미널을 사용 하 여 최신 편집기 환경을 제공 합니다. 엔지니어링 되어 염두, 데이터 플랫폼 사용자를 사용 하 여 사용 하 여 쿼리 결과 집합을 사용자 지정 가능한 대시보드 차트에 기본 제공 합니다.
 
 **[다운로드 및 설치 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

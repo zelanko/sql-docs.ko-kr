@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826911"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
 보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -28,29 +28,29 @@ ms.locfileid: "65580380"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2017 버전에서 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
+일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2017 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
 
-클라이언트 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0이 설치되어 있어야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
+클라이언트 컴퓨터에 있어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 또는 4.6.1 SSRS 2016 및 2017에 대해 각각 설치 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 이상을 사용해야 합니다.  
+사용 해야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 이상 또는 다른 최신 브라우저입니다.  
 
 보고서 작성기는 항상 완전 신뢰 수준에서 실행되며 부분 신뢰 수준에서 실행되도록 구성할 수 없습니다. 이전 릴리스에서는 보고서 작성기를 부분 신뢰 수준에서 실행할 수 있었지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 버전에서는 해당 옵션이 지원되지 않습니다.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>보고서 작성기 설정 및 해제  
 
-보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성인 **EnableReportDesignClientDownload** 를 **false**로 설정하여 보고서 작성기 기능을 해제할 수 있습니다. 이 속성을 설정하면 해당 보고서 서버에 대한 보고서 작성기 다운로드가 해제됩니다.  
+보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성인 **ShowDownloadMenu**를 **false**로 설정하여 보고서 작성기 기능을 해제할 수 있습니다. 이 속성을 설정 하면 보고서 작성기, 모바일 보고서 게시자 및 해당 보고서 서버에 대 한 Power BI Mobile을 다운로드 합니다.  
 
-보고서 서버 시스템 속성을 설정하려면 Management Studio 또는 스크립트를 사용합니다.  
+ 보고서 서버 시스템 속성을 설정하려면 Management Studio 또는 스크립트를 사용합니다.   
 
-- Management Studio를 사용하려면 보고서 서버에 연결하고 고급 서버 속성 페이지를 사용하여 **EnableReportDesignClientDownload** 를 **false**로 설정합니다. 이 페이지를 여는 방법에 대한 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)를 참조하세요.  
+ - Management Studio를 사용하려면 보고서 서버에 연결하고 고급 서버 속성 페이지를 사용하여 **ShowDownloadMenu**를 **false**로 설정합니다. 이 페이지를 여는 방법에 대한 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)를 참조하세요.      
 
-- 보고서 서버 속성을 설정하는 샘플 스크립트를 보려면 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)을 참조하세요.  
+ - 보고서 서버 속성을 설정하는 샘플 스크립트를 보려면 [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)을 참조하세요.  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 보고서 작성기 액세스 권한을 부여하는 역할 할당  
 
 기본 모드 보고서 서버에서 보고서 작성기를 사용하기 위한 태스크를 포함하는 사용자 역할 할당을 만듭니다. 항목 단위 및 사이트 수준에서 역할 정의와 역할 할당을 만들거나 수정하려면 내용 관리자 및 시스템 관리자여야 합니다.  
 
-다음 지침에서는 사용자가 미리 정의된 역할을 사용한다고 가정합니다. 역할 정의를 수정했거나 SQL Server 2000에서 업그레이드한 경우에는 필요한 태스크가 역할에 포함되어 있는지 확인합니다. 역할 할당 만들기에 대한 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.  
+다음 지침에서는 사용자가 미리 정의된 역할을 사용한다고 가정합니다. 역할 정의를 수정했거나 SQL Server 2000에서 업그레이드한 경우에는 필요한 태스크가 역할에 포함되어 있는지 확인합니다. 역할 할당 만들기에 대한 자세한 내용은[Grant user access to a report server](../../reporting-services/security/grant-user-access-to-a-report-server.md)(사용자에게 보고서 서버에 대한 액세스 권한 부여)를 참조하세요.
 
 역할 할당을 만들면 사용자에게 다음 작업을 수행할 수 있는 권한이 부여됩니다.  
 
@@ -100,7 +100,7 @@ ms.locfileid: "65580380"
 
     3. 이름에 **Report Builder**를 입력합니다.  
 
-    4. 보고서 관리자 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
+    4. 웹 포털 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
 
     5. 이 역할에 **보고서 사용**, **보고서 보기**, **모델 보기**, **리소스 보기**, **폴더 보기**및 **개별 구독 관리**태스크를 추가합니다.  
 
@@ -108,9 +108,10 @@ ms.locfileid: "65580380"
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>보고서 작성기에 대한 액세스 권한을 부여하는 역할 할당을 만들려면  
 
-1. 보고서 관리자를 시작합니다.  
+1. 웹 포털을 시작합니다.  
 
-2. **사이트 설정**을 클릭합니다.  
+2. 위쪽에 있는 기어 아이콘을 클릭 합니다. 선택한 웹 포털 홈 페이지의 오른쪽 **사이트 설정** 드롭다운 메뉴에서에서.  
+![웹 포털 기어 아이콘 및 메뉴](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. **보안**을 클릭합니다.  
 
@@ -150,5 +151,6 @@ SharePoint 통합 모드 보고서 서버에서 보고서 작성기 액세스 �
 - [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Reporting Services 및 파워 뷰 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)
-- [보고서 관리자 &#40;SSRS 기본 모드&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [보고서 서버의 웹 포털(SSRS 기본 모드)](../web-portal-ssrs-native-mode.md)
+- [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

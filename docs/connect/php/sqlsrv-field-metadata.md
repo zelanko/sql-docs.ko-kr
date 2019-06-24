@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796081"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,7 +79,7 @@ sqlsrv_field_metadata( resource $stmt)
 |text|SQL_LONGVARCHAR(-1)|||2GB|  
 |Time|SQL_SS_TIME2(-154)|8/16|0/7||  
 |TIMESTAMP|SQL_BINARY (-2)|||8바이트|  
-|tinyint|SQL_TINYINT(-6)|||1바이트|  
+|TINYINT|SQL_TINYINT(-6)|||1바이트|  
 |udt|SQL_SS_UDT(-151)|||변수|  
 |UNIQUEIDENTIFIER|SQL_GUID(-11)|||16|  
 |varbinary|SQL_VARBINARY(-3)|||0 < *n* < 8000 <sup>1</sup>|  

@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: rollback | Microsoft Docs'
+title: PDO::rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7bdeb21f1f380b11d5c007c189587657e8e0b207
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ec879876a76df2ffd72aad0145b29ceb8c98afa9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761997"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

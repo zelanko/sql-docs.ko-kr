@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66780002"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getVersionColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getVersionColumns 메서드에 의해 지정 됩니다.  
+ 이 getVersionColumns 메서드는 java.sql.DatabaseMetaData 인터페이스의 getVersionColumns 메서드에 의해 지정됩니다.  
   
  getVersionColumns 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   
@@ -67,8 +67,8 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|열 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
-|BUFFER_LENGTH|**int**|열의 길이(바이트)입니다.|  
+|COLUMN_SIZE|**ssNoversion**|열의 전체 자릿수입니다.|  
+|BUFFER_LENGTH|**ssNoversion**|열의 길이(바이트)입니다.|  
 |DECIMAL_DIGITS|**short**|열의 소수 자릿수입니다.|  
 |PSEUDO_COLUMN|**short**|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> versionColumnUnknown(0)<br /><br /> versionColumnNotPseudo(1)<br /><br /> versionColumnPseudo(2)|  
   

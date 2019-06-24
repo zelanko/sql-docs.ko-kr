@@ -16,20 +16,20 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e81c2b9b369877c28e13aa011c665bb8268c005e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802882"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 **max** 지정자를 제공하여 값을 2^31 -1바이트로 저장할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대해 **max** 지정자를 제공하여 값을 2^31 -1바이트로 스토리지할 수 있도록 합니다. 테이블 열과 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수에서 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식을 지정할 수 있습니다.  
   
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
@@ -37,21 +37,21 @@ ms.locfileid: "52393826"
  이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스를 사용 하 여 이전 버전과 호환성을 위해 OLE DB 드라이버에서 SQL Server에 대 한 DBCOLUMNFLAGS_ISLONG 플래그를 사용 하 여 유지 됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
->  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
+>  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
   
 > [!NOTE]  
 >  데이터를 복제할 경우 [최대 텍스트 복제 크기 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 -1로 구성해야 할 수 있습니다.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 
- SQL Server용 OLE DB 드라이버는 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
+ SQL Server용 OLE DB 드라이버는 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
   
- **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
+ **max** 크기가 무제한으로 설정된 열의 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
- 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 응용 프로그램이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
+ 스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   
- SQL Server용 OLE DB 드라이버에서 스트리밍을 지원하려면 가변 길이 매개 변수가 순차적으로 액세스되어야 합니다. 즉, **varchar(max)**, **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
+ SQL Server용 OLE DB 드라이버에서 스트리밍을 지원하려면 가변 길이 매개 변수가 순차적으로 액세스되어야 합니다. 즉, **varchar(max)** , **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
   
  또한 SQL Server용 OLE DB 드라이버는 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN으로 노출되는 큰 값 형식을 반환 값으로 반환하는 시나리오에 유용하도록 큰 값 데이터 형식에 대해 바인딩 출력 매개 변수를 DBTYPE_IUNKNOWN으로 지원합니다.  
   

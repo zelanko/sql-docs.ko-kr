@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797065"
 ---
 # <a name="retrieving-data"></a>데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "56676061"
 |[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)|저장 프로시저를 호출할 때 방향 매개 변수를 사용하는 방법을 설명합니다.|  
 |[커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|결과 순서에 관계 없이 액세스할 수 있는 행 집합을 만드는 방법을 보여 줍니다.|  
 |[방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색하는 방법을 설명합니다.|  
-|[방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용 하 여 개체로 날짜 및 시간 형식을 검색 하는 방법에 설명 합니다.|  
+|[방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 개체로 검색하는 방법을 설명합니다.|  
 |[SQLSRV 드라이버를 사용 하 여 10 진수 문자열 서식 지정](../../connect/php/formatting-decimals-sqlsrv-driver.md)|SQLSRV 드라이버를 사용 하 여 10 진수 또는 money 값의 서식을 지정 하는 방법에 설명 합니다.|  
 |[PDO_SQLSRV 드라이버를 사용 하 여 10 진수 문자열 서식 지정](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|PDO_SQLSRV 드라이버를 사용 하 여 10 진수 또는 money 값의 서식을 지정 하는 방법에 설명 합니다.|  
   

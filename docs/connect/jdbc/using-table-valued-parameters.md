@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57fa8d097b2a6cedc5bf96dc4ee75471c7d27266
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737024"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798503"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행은 다음 작동할 수 있는에서 TRANSACT-SQL을 사용 하 여 테이블 변수에 저장 됩니다.  
+테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도 데이터의 여러 행을 클라이언트 애플리케이션에서 SQL Server로 쉽게 마샬링할 수 있습니다. 또한 테이블 반환 매개 변수를 사용하면 클라이언트 애플리케이션에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로 데이터를 서버에 보낼 수 있습니다. 들어오는 데이터 행을 테이블 변수에 저장한 다음 Transact-SQL을 사용하여 연산할 수 있습니다.  
   
 테이블 반환 매개 변수의 열 값은 표준 TRANSACT-SQL SELECT 문을 사용 하 여 액세스할 수 있습니다. 테이블 반환 매개 변수는 강력한 형식 및 해당 구조 자동으로 유효성을 검사 합니다. 테이블 반환 매개 변수의 크기는 서버 메모리에 의해서만 제한 됩니다.  
   

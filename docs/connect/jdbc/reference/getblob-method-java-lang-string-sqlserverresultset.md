@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d22674b668fd8eb9b1ba0118a5e657f67f25e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aff8b39940b9074160167c63f264f75aa2a9b9f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799704"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ public java.sql.Blob getBlob(java.lang.String colName)
  이 getBlob 메서드는 java.sql.ResultSet 인터페이스의 getBlob 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getBlob 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

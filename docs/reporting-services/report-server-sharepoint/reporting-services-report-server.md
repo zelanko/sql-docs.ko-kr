@@ -1,20 +1,20 @@
 ---
-title: Reporting Services 보고서 서버 | Microsoft Docs
-ms.date: 09/25/2017
+title: 네이티브 및 SharePoint Reporting Services 보고서 서버를 비교 합니다. | Microsoft Docs
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c432132f856d8c83b98f718351e1ef78be98360d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67038018"
 ---
-# <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
+# <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>네이티브 및 SharePoint Reporting Services 보고서 서버를 비교합니다.
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -52,7 +52,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 |**URL 주소 지정**|예|URL 주소 지정이 SharePoint 통합 모드에서 다르게 작동합니다. SharePoint URL은 보고서, 보고서 모델, 공유 데이터 원본 및 리소스를 참조하는 데 사용됩니다. 보고서 서버 폴더 계층은 사용되지 않습니다. 사용자 지정 애플리케이션이 기본 모드 보고서 서버에서 지원되는 URL 액세스에 의존하는 경우 보고서 서버를 SharePoint 통합용으로 구성하면 해당 기능이 더 이상 작동하지 않습니다.<br /><br /> URL 액세스에 대한 자세한 내용은 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.|  
 |**사용자 지정 보안 확장 프로그램**|예|Reporting Services 사용자 지정 보안 확장 프로그램을 보고서 서버에서 배포하거나 사용할 수 없습니다. 보고서 서버에는 SharePoint 통합 모드에서 실행되도록 보고서 서버를 구성할 때마다 사용되는 특수한 용도의 보안 확장 프로그램이 포함되어 있습니다. 이 보안 확장 프로그램은 내부 구성 요소로, 통합 작업에 필요합니다.|  
 |**구성 관리자**|예|**\*\* 중요 \*\*** 구성 관리자를 사용하여 SharePoint 모드 보고서 서버를 관리할 수 없습니다. 대신 SharePoint 중앙 관리를 사용하세요.|  
-|**보고서 관리자**|예|보고서 관리자를 사용하여 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
+|**웹 포털**|예|웹 포털에서 SharePoint 모드를 관리할 수 없습니다. SharePoint 애플리케이션 페이지를 사용합니다. 자세한 내용은 [Reporting Services SharePoint Service 및 서비스 애플리케이션](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md)을 참조하세요.|  
 |**링크된 보고서**|예|아니요.|  
 |**내 보고서**|예|아니오|  
 |**내 구독** 및 일괄 처리 방법|예|아니오|  
@@ -132,14 +132,12 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
 ## <a name="related-tasks"></a>관련 작업
 
- 다음 항목에서는 보고서 서버 설치, 사용 및 유지 관리에 대한 추가 정보를 제공합니다.  
+ 다음 문서에서는 보고서 서버 설치, 사용 및 유지 관리에 관한 추가 정보를 제공합니다.  
   
 |태스크|링크|  
 |----------|----------|  
 |하드웨어 및 소프트웨어 요구 사항을 검토합니다.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99)입니다.|  
 |SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
-|웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.|[HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
-|HTML 스타일 및 CSS 스타일시트에 익숙한 웹 개발자는 이 항목의 정보를 사용하여 보고서 관리자의 모양을 사용자 지정하기 위해 수정할 수 있는 파일을 확인할 수 있습니다.|[웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

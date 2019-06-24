@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
+ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785871"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152217"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 및 macOS에서 ODBC 드라이버를 사용하여 데이터 액세스 추적
 
@@ -30,6 +30,7 @@ MacOS 및 Linux에서 unixODBC 드라이버 관리자 추적을 ODBC API 호출 
 응용 프로그램의 ODBC 동작을 추적 하려면 편집 합니다 `odbcinst.ini` 파일의 `[ODBC]` 값을 설정 하는 섹션 `Trace=Yes` 및 `TraceFile` ; 출력 추적을 포함 하는 파일의 경로를 예를 들어:
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

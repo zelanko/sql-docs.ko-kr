@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499625"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
@@ -168,7 +168,7 @@ ms.locfileid: "66499625"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 경우 서로 다른 데이터 원본이 매개 변수에 대한 서로 다른 구문을 지원합니다. 위치 또는 이름으로 쿼리에서 식별되는 매개 변수의 범위를 지원합니다. 자세한 내용은 [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)에서 특정 외부 데이터 원본 형식에 대한 항목을 참조하세요. 관계형 쿼리 디자이너에서 매개 변수가 있는 쿼리를 만들려면 필터에 대해 매개 변수 옵션을 선택해야 합니다. 자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
--   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](../report-data/query-design-tools-ssrs.md)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
+-   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자인 도구&#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> 게시된 보고서에 대한 매개 변수 관리  
  보고서를 디자인할 때는 보고서 매개 변수가 보고서 정의에 저장되고, 보고서를 게시할 때는 보고서 매개 변수가 보고서 정의와 별개로 저장되고 관리됩니다.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803807"
 ---
 # <a name="rowset-properties-and-behaviors"></a>행 집합 속성 및 동작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47754831"
 |DBPROP_COLUMNRESTRICT|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 OLE DB Driver for SQL Server 설정 속성을 variant_true로 소비자가 행 집합의 열을 변경할 수 없는 경우. 행 집합의 다른 열은 업데이트될 수 있으며 행 자체는 삭제될 수 있습니다.<br /><br /> 속성이 VARIANT_TRUE인 경우 소비자는 DBCOLUMNINFO 구조의 *dwFlags* 멤버를 검토하여 개별 열의 값을 쓸 수 있는지 여부를 확인합니다. 수정이 가능한 열의 경우 *dwFlags*는 DBCOLUMNFLAGS_WRITE를 표시합니다.|  
 |DBPROP_COMMANDTIMEOUT|R/w: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 기본적으로 OLE DB Driver for SQL Server에 제한 시간이 없음을에 **icommand:: Execute** 메서드.|  
 |DBPROP_COMMITPRESERVE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 이 속성에 의해 커밋 작업이 확인된 후의 행 집합 동작입니다.<br /><br /> VARIANT_TRUE: OLE DB 드라이버 SQL Server에 대 한 유효한 행 집합을 유지 관리합니다.<br /><br /> VARIANT_FALSE: OLE DB 드라이버 SQL Server에 대 한 커밋 작업이 완료 된 후 행 집합을 무효화 합니다. 행 집합 개체의 기능은 거의 손실됩니다. 행 집합 개체는 **IUnknown** 작업과 처리 중인 행 및 접근자 핸들의 해제만 지원합니다.|  
-|DBPROP_DEFERRED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: VARIANT_TRUE로 설정 하면 OLE DB 드라이버는 행 집합에 대해 서버 커서를 사용 하려고 하는 SQL Server에 대 한 합니다. **Text**, **ntext** 및 **image** 열은 응용 프로그램에 의해 액세스될 때까지 서버에서 반환되지 않습니다.|  
+|DBPROP_DEFERRED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: VARIANT_TRUE로 설정 하면 OLE DB 드라이버는 행 집합에 대해 서버 커서를 사용 하려고 하는 SQL Server에 대 한 합니다. **Text**, **ntext** 및 **image** 열은 애플리케이션에 의해 액세스될 때까지 서버에서 반환되지 않습니다.|  
 |DBPROP_DELAYSTORAGEOBJECTS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명:는 OLE DB Driver for SQL Server 저장소 개체에서 즉시 업데이트 모드를 지원합니다.<br /><br /> 순차 스트림 개체의 데이터에 적용된 변경 내용은 즉시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 전송됩니다. 수정은 행 집합 트랜잭션 모드를 기반으로 커밋됩니다.|  
 |DBPROP_HIDDENCOLUMNS|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> **설명:** 숨겨진 열 개수<br /><br /> DBPROP_UNIQUEROWS가 VARIANT_TRUE이면 DBPROP_HIDDENCOLUMNS 속성은 공급자가 행 집합 내의 행을 고유하게 식별하기 위해 추가한 “숨겨진” 열의 수를 반환합니다. 이러한 열은 **IColumnsInfo::GetColumnInfo** 및 **IColumnsRowset::GetColumnsRowset**에 의해 반환됩니다. 그러나 **IColumnsInfo::GetColumnInfo**에 의해 반환되는 *pcColumns* 인수가 반환하는 행 수에는 이러한 열이 포함되지 않습니다.<br /><br /> 숨겨진 열을 포함하여 **IColumnsInfo::GetColumnInfo**에 의해 반환되는 *prgInfo* 구조에 표시되는 전체 열 수를 확인하기 위해 소비자는 DBPROP_HIDDENCOLUMNS 값을 *pcColumns*의 **IColumnsInfo::GetColumnInfo**에서 반환되는 열의 수에 더합니다. DBPROP_UNIQUEROWS가 VARIANT_FALSE이면 DBPROP_HIDDENCOLUMNS는 0입니다.|  
 |DBPROP_IAccessor DBPROP_IColumnsInfo DBPROP_IConvertType DBPROP_IRowset DBPROP_IRowsetInfo|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: OLE DB 드라이버 SQL Server에 대 한 모든 행 집합에서 이러한 인터페이스를 지원합니다.|  
@@ -101,7 +101,7 @@ ms.locfileid: "47754831"
 |SSPROP_MAXBLOBLENGTH|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_I4<br /><br /> 기본값: 공급자는 서버에서 반환되는 텍스트의 크기를 제한하지 않으며 속성 값은 해당 최댓값으로 설정됩니다. 2147483647).<br /><br /> 설명: SQL Server용 OLE DB 드라이버는 SET TEXTSIZE 문을 실행하여 SELECT 문에서 반환되는 BLOB(Binary Large Object) 데이터의 길이를 제한합니다.|  
 |SSPROP_NOCOUNT_STATUS|열: NoCount<br /><br /> R/w: 읽기 전용<br /><br /> 형식: VT_BOOL<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 SET NOCOUNT ON/OFF 상태를 나타내는 부울 값입니다.<br /><br /> VARIANT_TRUE: SET NOCOUNT ON인 경우<br /><br /> VARIANT_FALSE: SET NOCOUNT OFF인 경우|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_BSTR(1-2000자 허용)<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림의 메시지 텍스트입니다. 사용자가 정의하며 정의된 형식은 없습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어 다음과 같이 사용할 수 있습니다.<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 유형: VT_BSTR<br /><br /> 기본값: 빈 문자열<br /><br /> 설명: 쿼리 알림 옵션입니다. 이러한 옵션은 `name=value`가 포함된 문자열로 지정됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다. 쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> 예를 들어<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|열: 아니요<br /><br /> R/w: 읽기/쓰기<br /><br /> 형식: VT_UI4<br /><br /> 기본값: 432000 초 (5 일)<br /><br /> 최소: 1 시간 (초)<br /><br /> 최대: 2 ^31-1 시간 (초)<br /><br /> 설명: 쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
