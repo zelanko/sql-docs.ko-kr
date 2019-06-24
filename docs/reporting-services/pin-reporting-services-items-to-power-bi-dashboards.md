@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500026"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI의 대시보드에 Reporting Services 페이지를 매긴 보고서 항목 고정
@@ -40,7 +40,7 @@ ms.locfileid: "66500026"
   
 -   고정된 항목을 새로 고치려면 저장된 자격 증명에 대한 보고서를 구성해야 합니다.  항목을 고정하면 대시보드에 대한 항목의 데이터 새로 고침을 관리하기 위해 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독이 자동으로 생성됩니다.  보고서에 저장된 자격 증명을 사용하지 않는 경우 구독이 실행될 때 **내 구독** 페이지에 다음과 유사한 오류 메시지가 표시됩니다.  
   
-    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명."
+    "PowerBI 전송 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명."
  
     [Reporting Services 데이터 원본에 자격 증명 저장](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성(기본 모드)" 섹션을 참조하세요.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66500026"
   
 ##  <a name="bkmk_to_pin"></a> 보고서 항목을 고정하려면  
   
-1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](my-settings-for-power-bi-integration-web-portal.md)을 참조하세요.
+1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)](으)로 로그인되었는지 확인합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 메뉴 항목을 선택하고 로그인합니다. 자세한 내용은 [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)(Power BI 통합을 위한 내 설정&#40;웹 포털&#41;)을 참조하세요.
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66500026"
   
 ##  <a name="bkmk-troubleshoot"></a> 문제 해결  
   
--   **보고서 뷰어 도구 모음에 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 단추 없음:** 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
+-   보고서 뷰어 도구 모음에 단추 **없음[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]:** 이 메시지는 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
   
 - **고정할 수 없음**: 항목의 고정을 시도할 때 다음과 같은 오류 메시지가 표시됩니다. [고정할 수 있는 항목](#bkmk_supported_items)섹션을 참조하세요.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66500026"
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action can't be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은  [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](my-settings-for-power-bi-integration-web-portal.md)을 참조하세요.  
+-   **만료된 Power BI 자격 증명:**  항목의 고정을 시도하는데 다음과 같은 오류 메시지가 표시됩니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]에서 **내 설정** 을 클릭하고 내 설정 페이지에서 **로그인**을 클릭합니다. 자세한 내용은 [My Settings for Power BI Integration &#40;web portal&#41;](my-settings-for-power-bi-integration-web-portal.md)(Power BI 통합을 위한 내 설정&#40;웹 포털&#41;)을 참조하세요.  
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   

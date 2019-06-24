@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771196"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -75,8 +75,8 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_TYPE|**short**|열의 유형입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureColumnUnknown(0)<br /><br /> procedureColumnIn(1)<br /><br /> procedureColumnInOut(2)<br /><br /> procedureColumnOut(4)<br /><br /> procedureColumnReturn(5)<br /><br /> procedureColumnResult(3)|  
 |DATA_TYPE|**smallint**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|PRECISION|**int**|총 유효 자릿수입니다.|  
-|LENGTH|**int**|데이터의 길이(바이트)입니다.|  
+|PRECISION|**ssNoversion**|총 유효 자릿수입니다.|  
+|LENGTH|**ssNoversion**|데이터의 길이(바이트)입니다.|  
 |SCALE|**short**|소수점 이하 자릿수입니다.|  
 |RADIX|**short**|숫자 형식의 기수입니다.|  
 |NULLABLE|**short**|열에 null 값이 포함될 수 있는지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> procedureNoNulls(0)<br /><br /> procedureNullable(1)<br /><br /> procedureNullableUnknown(2)|  
@@ -84,8 +84,8 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_DEF|**String**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다.|  
 |SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 열은 NULL입니다.|  
-|CHAR_OCTET_LENGTH|**int**|열의 최대 바이트 수입니다.|  
-|ORDINAL_POSITION|**int**|테이블 내의 열 인덱스입니다.|  
+|CHAR_OCTET_LENGTH|**ssNoversion**|열의 최대 바이트 수입니다.|  
+|ORDINAL_POSITION|**ssNoversion**|테이블 내의 열 인덱스입니다.|  
 |IS_NULLABLE|**String**|열에 null 값을 사용할 수 있는지 여부를 나타냅니다.|  
 |SS_TYPE_CATALOG_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름입니다.|  
 |SS_TYPE_SCHEMA_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 스키마의 이름입니다.|  

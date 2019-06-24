@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789751"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  비동기 상태가 요청되는 작업입니다. 다음 값을 사용 해야 합니다.  
   
- DBASYNCHOP_OPEN - 소비자가 행 집합의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 대한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
+ DBASYNCHOP_OPEN - 소비자가 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 대한 정보를 요청합니다. 공급자가 직접 URL 바인딩을 지원하는 OLE DB 2.5 규격 공급자이면 소비자는 데이터 원본, 행 집합, 행 또는 스트림 개체의 비동기 초기화나 채우기에 대한 정보를 요청합니다.  
   
  *pulProgress*[out]  
  *pulProgressMax* 매개 변수에 표시된 예상 최대값을 기준으로 비동기 작업의 현재 진행률을 반환할 메모리에 대한 포인터입니다. *pulProgress*의 의미에 대한 자세한 내용은 *peAsynchPhase*설명을 참조하십시오.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827031"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769305"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47827031"
 |기호|의미|  
 |------------|-------------|  
 |-|변환이 지원되지 않습니다. 바인딩을 iaccessor:: Createaccessor 호출 될 때 유효성이 검사 되는 경우에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 됩니다 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
-|해당 사항 없음|이 오류에는 이 작업을 적용할 수 없습니다.|  
+|해당 사항 없음|해당 사항 없음|  
 |1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  
 |3|소수 자릿수 초가 0이어야 하며 그렇지 않으면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다.|  
@@ -65,18 +65,18 @@ ms.locfileid: "47827031"
 |9|문자열이 ISO 리터럴로 구문 분석되고 대상 형식으로 변환됩니다. 실패하면 문자열이 OLE 날짜 리터럴(여기에도 시간 구성 요소가 포함되어 있음)로 구문 분석되고 OLE 날짜(DBTYPE_DATE)에서 대상 형식으로 변환됩니다.<br /><br /> 대상 유형이 DBTIMESTAMP, **smalldatetime**, **datetime**또는 **datetime2**인 경우 문자열은 날짜, 시간 또는 **datetime2** 리터럴 구문 또는 OLE에서 인식할 수 있는 구문을 준수해야 합니다. 문자열이 날짜 리터럴인 경우 모든 시간 구성 요소는 0으로 설정됩니다. 문자열이 시간 리터럴인 경우 날짜는 현재 날짜로 설정됩니다.<br /><br /> 다른 모든 대상 유형의 경우 문자열은 대상 유형의 리터럴 구문을 준수해야 합니다.|  
 |10|데이터 손실을 유발하는 소수 자릿수 초 잘림이 발생하면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다. 문자열 변환의 경우 문자열이 ISO 구문을 준수하는 경우에만 오버플로 검사가 가능합니다. 문자열이 OLE 날짜 리터럴인 경우에는 소수 자릿수 초가 반올림됩니다.<br /><br /> DBTIMESTAMP(datetime)에서 smalldatetime으로 변환하는 경우 SQL Server용 OLE DB 드라이버에서는 DBSTATUS_E_DATAOVERFLOW 오류를 발생시키는 대신 초 값을 자동으로 자릅니다.|  
 |11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
-|12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
+|12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] f이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
 |13|DBTYPE_FILETIME에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. Windows FileTimeToSystemTime API를 사용하는 경우 소수 자릿수 초의 전체 자릿수는 1밀리초로 제한됩니다.|  
-|14|**smalldatetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
-|15|**datetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
+|14|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 에 대한 **smalldatetime** 이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
+|15|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 에 대한 **datetime** 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
 |16|SSVARIANT 클라이언트 구조에 포함된 값(지정된 형식)의 변환 동작은 SSVARIANT 클라이언트 구조에 포함되지 않은 동일한 값 및 형식의 동작과 같습니다.|  
   
 ||||  
 |-|-|-|  
 |형식|길이(문자)|소수 자릿수|  
-|DBTIME2|8, 10..18|0, 1..9|  
-|DBTIMESTAMP|19, 21..29|0, 1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0, 1..9|  
+|DBTIME2|8, 10..18|0,1..9|  
+|DBTIMESTAMP|19, 21..29|0,1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
 ## <a name="see-also"></a>참고 항목  
  [바인딩 및 변환&#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  

@@ -1,5 +1,5 @@
 ---
-title: setClientInfo 메서드 (SQLServerConnection) | Microsoft Docs
+title: setClientInfo 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f12184ee5446febb9863796ea05b1536dd89201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7025abe6177e0073db09afab4833ca1844a69733
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795637"
 ---
 # <a name="setclientinfo-method-sqlserverconnection"></a>setClientInfo 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

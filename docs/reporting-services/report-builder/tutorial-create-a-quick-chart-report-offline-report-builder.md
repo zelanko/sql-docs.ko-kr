@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037965"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
@@ -105,7 +105,7 @@ ms.locfileid: "65571765"
     </Query>  
     ```  
   
-11. (옵션) **실행** 단추(**!**)를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
+11. (옵션) **실행** 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
      ![보고서 작성기 디자인 쿼리](../../reporting-services/report-builder/media/rb-designquery.png "보고서 작성기 디자인 쿼리")  
   
@@ -169,7 +169,7 @@ ms.locfileid: "65571765"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (옵션) 실행 단추(**!**)를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
+8.  (옵션) 실행 단추( **!** )를 클릭하여 차트의 기반으로 사용될 데이터를 확인합니다.  
   
 9. **다음**을 클릭합니다.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "65571765"
   
  마지막으로, 보고서를 보고서 서버나 보고서 서버와 통합된 SharePoint 사이트에 저장하려면 URL 및 해당 권한이 있어야 합니다. 만든 보고서를 사용자의 컴퓨터에서 직접 실행할 수도 있지만 보고서 서버나 SharePoint 사이트에서 실행하면 더 많은 기능을 사용할 수 있습니다. 자신이 만든 보고서나 다른 사용자의 보고서를 보고서가 게시된 보고서 서버나 SharePoint 사이트에서 실행할 수 있는 권한이 있어야 합니다. 시스템 관리자에게 액세스 권한을 요청하십시오.  
   
- 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)을 참조하세요. 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)를 참조하세요.  
+ 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. [Reporting Services 개념(SSRS)](../reporting-services-concepts-ssrs.md)을 참조하세요. 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)를 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

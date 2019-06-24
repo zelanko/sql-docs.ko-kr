@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305921"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522029"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +25,8 @@ ms.locfileid: "58305921"
 
 |키워드|값|Default|설명|
 |-|-|-|-|
-|**ConnectRetryCount**| 0에서 255 (포함) 사이의 정수|1|포기 하기 전에 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 단일 시도 분할 하는 경우 연결 다시 설정 하도록 합니다. 0 이면 없습니다 다시 연결 하려고 하는 값입니다.|
-|**ConnectRetryInterval**| 1에서 60 (포함) 사이의 정수|1| 연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결을 검색할 때 즉시 다시 연결 하려고 하 고 다음 대기할 **ConnectRetryInterval** 초 후에 다시 시도 합니다. 이 키워드는 경우 무시 됩니다 **ConnectRetryCount** 은 0과 같습니다.
+|**ConnectRetryCount**| 0과 255(포함) 사이의 정수|1|포기 하기 전에 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 단일 시도 분할 하는 경우 연결 다시 설정 하도록 합니다. 0 이면 없습니다 다시 연결 하려고 하는 값입니다.|
+|**ConnectRetryInterval**| 1과 60(포함) 사이의 정수|1| 연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결을 검색할 때 즉시 다시 연결 하려고 하 고 다음 대기할 **ConnectRetryInterval** 초 후에 다시 시도 합니다. 이 키워드는 경우 무시 됩니다 **ConnectRetryCount** 은 0과 같습니다.
 
 경우 곱한 **ConnectRetryCount** 곱한 **ConnectRetryInterval** 보다 크면 **LoginTimeout**, 클라이언트는 한 번 연결 하려고 중단 한 다음  **LoginTimeout** ;에 도달 될 때까지 다시 연결 하려고 합니다. 계속이 고, 그렇지 **ConnectRetryCount** 에 도달 합니다.
 

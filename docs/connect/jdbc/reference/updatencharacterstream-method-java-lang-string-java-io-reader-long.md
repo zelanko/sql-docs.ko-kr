@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream 메서드 문자열 판독기-long) | Microsoft Docs
+title: updateNCharacterStream 메서드 문자열 - Reader - long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ca23d9813cbcdeb73aa67b1036b6dcc4aabe82a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66798466"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   
- 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 응용 프로그램에서 길이를 알 수 없는 스트림의 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [updateNCharacterStream 메서드(java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)를 사용하는 것이 좋습니다.  
+ 스트림의 길이를 알 수 없으면 *length* 매개 변수는 드라이버에서 스트림의 길이에 상관없이 스트림을 허용해야 함을 나타내는 -1로 설정될 수 있습니다. sqljdbc4.jar을 사용하면 애플리케이션에서 길이를 알 수 없는 스트림의 열을 업데이트하려고 할 때 JDBC 4.0 메서드 [updateNCharacterStream 메서드(&#40;java.lang.String, java.io.Reader&#41;)](../../../connect/jdbc/reference/updatencharacterstream-method-java-lang-string-java-io-reader.md)를 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNCharacterStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

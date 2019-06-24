@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e3c40921343f7b762c6e844ecb2eb45581da28c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769401"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "47597402"
 |DATETIME|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
 |날짜|DBTYPE_DBDATE|133(oledb.h)|  
-|Time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
+|Time|DBTYPE_DBTIME2|145(msoledbsql.h)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146(msoledbsql.h)|  
 |Datetime2|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>데이터 형식: 문자열 및 리터럴  

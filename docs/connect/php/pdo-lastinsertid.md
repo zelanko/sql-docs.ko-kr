@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fca58e2d7e99f368e48b19bfdc0d5fb0e10c94bc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762010"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ $*name*: 시퀀스 이름을 지정할 수 있는 선택적 문자열입니다.
 ## <a name="remarks"></a>Remarks  
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
 버전 2.0과 사이의 4.3, 선택적 매개 변수는 테이블 이름 및 반환 값은 제공 된 테이블에 가장 최근에 추가 된 행의 ID입니다.
-5.0 이상에서는 선택적 매개 변수 순서 이름으로 간주 됩니다 및 반환 값은 제공 된 시퀀스 이름에 대 한 가장 최근에 추가 된 시퀀스입니다.
+5\.0 이상에서는 선택적 매개 변수 순서 이름으로 간주 됩니다 및 반환 값은 제공 된 시퀀스 이름에 대 한 가장 최근에 추가 된 시퀀스입니다.
 테이블 이름이 제공 되는 버전 4.3을 후 경우 `lastInsertId` 빈 문자열을 반환 합니다.
 시퀀스는 SQL Server 2012에만 지원 됩니다.
   

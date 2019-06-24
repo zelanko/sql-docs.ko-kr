@@ -1,5 +1,5 @@
 ---
-title: clearWarnings 메서드 (SQLServerConnection) | Microsoft Docs
+title: clearWarnings 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73a5bf732d0e18b11be6bf5e44fd00275944a0fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 47c3d8362f555f1663c98b6394ed887fbfcb91dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803615"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: prepareCall 메서드(SQLServerConnection) | Microsoft Docs
+title: getClientInfo 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 60e61e5e74a8074aec09a6eb6bc26cfd41936297
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763890"
 ---
 # <a name="getclientinfo-method-sqlserverconnection"></a>getClientInfo 메서드(SQLServerConnection)

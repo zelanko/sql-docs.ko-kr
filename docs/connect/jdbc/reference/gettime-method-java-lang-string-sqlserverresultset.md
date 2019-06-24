@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0efc0b3-4da4-45fc-9e8d-5edd9da7a42d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b70f122de7d13982b00b227a2cbe9b7e9d0e14c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd481b231c60c6bf9bba49ad039ece294d14a11a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66778824"
 ---
 # <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ public java.sql.Time getTime(java.lang.String columnName)
  이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 또는 smalldatetime 데이터 형식의 유효한 시간 부분을 반환합니다. 이때 날짜 부분은 Java 기준 날짜인 1970/01/01로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [getTime 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 클래스](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

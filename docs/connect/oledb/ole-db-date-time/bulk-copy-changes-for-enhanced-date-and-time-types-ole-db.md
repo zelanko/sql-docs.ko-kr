@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66769547"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52416252"
   
 |파일 스토리지 유형|호스트 파일 데이터 형식|메시지: "< field_name > 필드의 파일 저장 유형 입력 [\<기본 >]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|Datetime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|d|  
 |date|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -98,7 +98,7 @@ ms.locfileid: "52416252"
   
  **OLE DB 참고 사항** 다음 변환은 IBCPSession에 의해 수행됩니다. IRowsetFastLoad에 정의 된 대로 OLE DB 변환을 사용 하 여 [변환은 클라이언트에서 서버로 수행](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)합니다. datetime 값은 1/300초로 반올림되며 smalldatetime 값은 아래에 설명된 클라이언트 변환이 수행된 후 0초로 설정됩니다. datetime 반올림은 시간 및 분까지만 전파되고 날짜에는 전파되지 않습니다.  
   
-|To --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
+|대상 --><br /><br /> 보낸 사람|날짜|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|해당 사항 없음|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  

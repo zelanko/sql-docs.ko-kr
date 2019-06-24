@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620518"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263520"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 자습서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ SSMS(SQL Server Management Studio) 자습서에서는 [!INCLUDE[ssNoVersion](../
 
     이 자습서에서는 데이터베이스 및 쿼리를 포함하여 SSMS에서 다양한 개체를 스크립팅하는 방법을 알아봅니다. 
 
-- [자습서: SSMS에서 템플릿 사용](templates-ssms.md)
+- [자습서: SSMS에서 템플릿 사용](../template/templates-ssms.md)
    
     이 자습서에서는 SSMS 내에서 미리 작성된 템플릿으로 작업하는 방법을 알아봅니다. 템플릿은 다양한 데이터베이스 관리 작업을 위해 많은 Transact-SQL 코드 조각을 저장하는 잘 알려지지 않은 기능입니다. 
 

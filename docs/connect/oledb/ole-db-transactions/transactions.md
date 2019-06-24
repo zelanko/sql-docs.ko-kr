@@ -1,6 +1,6 @@
 ---
 title: 트랜잭션을 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버에서 트랜잭션
+description: SQL Server용 OLE DB 드라이버의 트랜잭션
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 30508460614d89b8b291bf4f978f2c0b4f8bc0ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0c5fc4c691902415455b2d8139b34cc39438f96d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619011"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795966"
 ---
 # <a name="transactions"></a>의
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

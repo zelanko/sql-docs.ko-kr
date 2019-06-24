@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289903"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182233"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL server 프로그래밍 하는 클라이언트에 대 한 홈 페이지
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server로의 클라이언트 프로그래밍 홈페이지
 
 
 Microsoft SQL Server와 클라우드의 Azure SQL Database와 상호 작용을 프로그래밍 하는 클라이언트에 대 한 당사의 홈페이지를 시작 합니다. 이 문서에서는 다음 정보를 제공 합니다.
@@ -54,7 +54,7 @@ Azure SQL Database에 연결 하기 위한 연결 문자열에 대 한 자세한
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![.NET Framework의 ORM Entity Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp 큰 장점][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -179,9 +179,9 @@ SQL Server 용 Node.js 연결 드라이버는 JavaScript에서 구현 됩니다.
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>C + +에 대 한 ODBC 
+## <a name="odbc-for-c"></a>에 대 한 ODBCC++ 
 
-![ODBC 로고][image-ref-350-odbc] ![cpp 큰 장점][image-ref-322-cpp]
+![ODBC 로고][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 해당.NET Framework 클래스 및 열려 있는 데이터베이스 연결 (ODBC) 1990, 개발 되었습니다. ODBC는 모든 특정 데이터베이스 시스템의 독립적 이며 운영 체제의 독립적인 되도록 설계 되었습니다.
 
@@ -191,16 +191,16 @@ SQL Server 용 Node.js 연결 드라이버는 JavaScript에서 구현 됩니다.
 
 #### <a name="code-example"></a>코드 예제
 
-- [C + + 코드 예제에서는 ODBC를 사용 하 여](../odbc/reference/sample-odbc-program.md)
+- [C++ 코드 예제, ODBC 사용](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>설명서 개요
 
-이 섹션에서는 ODBC 콘텐츠는 c + +에서 SQL Server 또는 Azure SQL Database에 액세스에 중점을 둡니다. 다음 표에서 ODBC에 대 한 주요 설명서에 대 한 대략적인 개요를 나열합니다.
+ODBC이 섹션에서에 중점을 두고에서 SQL Server 또는 Azure SQL Database에 액세스 C++입니다. 다음 표에서 ODBC에 대 한 주요 설명서에 대 한 대략적인 개요를 나열합니다.
 
 
 | 영역 | 하위 영역 | 설명 |
 | :--- | :------ | :---------- |
-| [C + +에 대 한 ODBC](./odbc/index.md) | 설명서의 루트입니다. |
+| [에 대 한 ODBCC++](./odbc/index.md) | 설명서의 루트입니다. |
 | [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux 또는 MacOS 운영 체제에서 ODBC를 사용 하는 방법에 대 한 정보입니다. |
 | [창](./odbc/windows/index.md)     | &nbsp; | Windows 운영 체제에서 ODBC를 사용 하는 방법에 대 한 정보입니다. |
 | [관리](../odbc/admin/index.md) | &nbsp; | ODBC 데이터 소스 관리에 대 한 관리 도구입니다. |
@@ -296,32 +296,32 @@ Ruby를 사용 하 여 SQL 서버와 상호 작용할 수 있습니다. Ruby 설
 #### <a name="java-on-ubuntu"></a>Ubuntu에서 Java:
 
 1. 환경 설정
-    - 1.1 단계 SQL Server 설치
-    - 1.2 단계 설치 Java
-    - 1.3 단계: Java Development Kit (JDK) 설치
-    - 1.4 단계 설치 Maven
+    - 1\.1 단계 SQL Server 설치
+    - 1\.2 단계 설치 Java
+    - 1\.3 단계: Java Development Kit (JDK) 설치
+    - 1\.4 단계 설치 Maven
 2. SQL Server를 사용 하 여 Java 응용 프로그램 만들기
-    - 2.1 단계 SQL Server에 연결 하 고 쿼리를 실행 하는 Java 앱 만들기
-    - 2.2 단계는 인기 있는 프레임 워크의 최대 절전 모드를 사용 하 여 SQL Server에 연결 하는 Java 앱 만들기
+    - 2\.1 단계 SQL Server에 연결 하 고 쿼리를 실행 하는 Java 앱 만들기
+    - 2\.2 단계는 인기 있는 프레임 워크의 최대 절전 모드를 사용 하 여 SQL Server에 연결 하는 Java 앱 만들기
 3. 최대 100 배의 Java 앱을 더 빠르게 확인
     - Columnstore 인덱스를 보여 주기 위해 Java 앱 3.1 단계 만들기
 
 #### <a name="python-on-windows"></a>Windows에 Python:
 
 1. 환경 설정
-    - 1.1 단계 SQL Server 설치
-    - 1.2 단계 Python 설치
+    - 1\.1 단계 SQL Server 설치
+    - 1\.2 단계 Python 설치
     - SQL Server 용 ODBC 드라이버 및 SQL 명령줄 유틸리티를 설치 하는 1.3 단계
 2. SQL Server를 사용 하 여 Python 응용 프로그램 만들기
-    - 2.1 단계 SQL Server 용 Python driver를 설치 합니다.
-    - 2.2 단계 응용 프로그램에 대 한 데이터베이스 만들기
-    - 2.3 단계 SQL Server에 연결 하 고 쿼리를 실행 하는 Python 앱 만들기
+    - 2\.1 단계 SQL Server 용 Python driver를 설치 합니다.
+    - 2\.2 단계 응용 프로그램에 대 한 데이터베이스 만들기
+    - 2\.3 단계 SQL Server에 연결 하 고 쿼리를 실행 하는 Python 앱 만들기
 3. 최대 100 배의 Python 앱을 더 빠르게 확인
-    - 3.1 단계 5 백만 sqlcmd를 사용 하 여 새 테이블 만들기
-    - 3.2 단계는이 테이블을 쿼리하고 걸린 시간을 측정 하는 Python 앱 만들기
-    - 3.3 단계 쿼리를 실행 하는 데 걸리는 시간을 측정합니다
-    - 3.4 단계 추가 테이블에 columnstore 인덱스
-    - 3.5 단계 columnstore 인덱스를 사용 하 여 쿼리를 실행 하는 데 걸리는 시간을 측정합니다
+    - 3\.1 단계 5 백만 sqlcmd를 사용 하 여 새 테이블 만들기
+    - 3\.2 단계는이 테이블을 쿼리하고 걸린 시간을 측정 하는 Python 앱 만들기
+    - 3\.3 단계 쿼리를 실행 하는 데 걸리는 시간을 측정합니다
+    - 3\.4 단계 추가 테이블에 columnstore 인덱스
+    - 3\.5 단계 columnstore 인덱스를 사용 하 여 쿼리를 실행 하는 데 걸리는 시간을 측정합니다
 
 다음 스크린샷은 SQL 개발 설명서 웹 사이트의 모양은의 아이디어를 제공 합니다.
 

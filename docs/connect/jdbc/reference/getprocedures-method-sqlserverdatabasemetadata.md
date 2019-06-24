@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771100"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -66,9 +66,9 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 |PROCEDURE_CAT|**String**|지정된 저장 프로시저가 있는 데이터베이스의 이름입니다.|  
 |PROCEDURE_SCHEM|**String**|저장 프로시저의 스키마입니다.|  
 |PROCEDURE_NAME|**String**|저장 프로시저의 이름입니다.|  
-|NUM_INPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
-|NUM_OUTPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
-|NUM_RESULT_SETS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_INPUT_PARAMS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_OUTPUT_PARAMS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_RESULT_SETS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |REMARKS|**String**|프로시저 열에 대한 설명입니다.<br /><br /> <br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 열의 값을 반환하지 않습니다.|  
 |PROCEDURE_TYPE|**smallint**|저장 프로시저의 형식입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> SQL_PT_UNKNOWN(0)<br /><br /> SQL_PT_PROCEDURE(1)<br /><br /> SQL_PT_FUNCTION(2)|  
   

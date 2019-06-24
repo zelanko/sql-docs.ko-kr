@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f9d2d36e523a5619b574e96c86cd3700ddc3c4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55174bc7e7a5b91910a9f76239cd0ed85ee78548
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739161"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66771598"
 ---
 # <a name="getboolean-method-javalangstring"></a>getBoolean 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

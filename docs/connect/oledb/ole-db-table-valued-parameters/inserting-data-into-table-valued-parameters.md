@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801162"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>테이블 반환 매개 변수에 데이터 삽입
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "51604593"
   
  끌어오기 모델을 사용하려면 소비자는 행 집합 개체의 자체 구현을 제공해야 합니다. 소비자는 공급자는 ITableDefinitionWithConstraints 통해 노출 되는 테이블 반환 매개 변수 행 집합 개체를 집계 하는 데 필요한 테이블 반환 매개 변수 행 집합 (CLSID_ROWSET_TVP)를 사용 하 여 끌어오기 모델을 사용 하는 경우: CreateTableWithConstraints 메서드나 iopenrowset:: Openrowset 메서드 소비자 개체는 IRowset 인터페이스 구현만 재정의해야 합니다. 다음 함수는 사용자가 재정의해야 합니다.  
   
--   Irowset:: Getnextrows  
+-   IRowset::GetNextRows  
   
--   Irowset:: Addrefrows  
+-   IRowset::AddRefRows  
   
--   Irowset:: Getdata  
+-   IRowset::GetData  
   
--   Irowset:: Releaserows  
+-   IRowset::ReleaseRows  
   
--   Irowset:: Restartposition  
+-   IRowset::RestartPosition  
   
  SQL Server용 OLE DB 드라이버는 소비자 행 집합 개체에서 한 번에 하나 이상의 행을 읽어 테이블 반환 매개 변수의 스트리밍 동작을 지원합니다. 예를 들어 사용자의 테이블 반환 매개 변수 행 집합 데이터가 메모리가 아닌 디스크에 있고 SQL Server용 OLE DB 드라이버에서 해당 데이터를 요구하는 경우 사용자가 디스크에서 데이터를 읽는 기능을 구현할 수 있습니다.  
   

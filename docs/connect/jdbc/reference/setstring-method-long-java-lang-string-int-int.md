@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66762242"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 메서드(long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 이 setString 메서드는 java.sql.Clob 인터페이스의 setString 메서드에 의해 지정 됩니다.  
+ 이 setString 메서드는 java.sql.Clob 인터페이스의 setString 메서드에 의해 지정됩니다.  
   
  문자 데이터는 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 덮어쓸 수 있습니다. 위치+1 값을 지정하면 문자열이 추가되고, 위치+2 이상(또는 0 이하)의 값을 지정하면 위치 오류가 발생합니다.  
   

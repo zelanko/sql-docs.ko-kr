@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801477"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-서버에서 데이터를 검색할 때 사용자가 PHP 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 데이터를 기본 PHP 데이터 형식으로 변환합니다.  
+서버에서 데이터를 검색할 때 사용자가 PHP 데이터 형식을 지정하지 않은 경우 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 데이터를 기본 PHP 데이터 형식으로 변환합니다.  
   
 PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이터 형식은 정수 또는 문자열입니다.  
   
@@ -46,7 +46,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
 |FLOAT|float|8비트 문자<sup>1</sup>|  
 |geography|스트림|이진<sup>3</sup>|  
 |geometry|스트림|이진<sup>3</sup>|  
-|이미지<sup>5</sup>|스트림<sup>2</sup>|이진<sup>3</sup>|  
+|image<sup>5</sup>|스트림<sup>2</sup>|이진<sup>3</sup>|  
 |ssNoversion|정수|8비트 문자<sup>1</sup>|  
 |money|String|8비트 문자<sup>1</sup>|  
 |NCHAR|String|8비트 문자<sup>1</sup>|  
@@ -59,12 +59,12 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
 |SMALLINT|정수|8비트 문자<sup>1</sup>|  
 |SMALLMONEY|String|8비트 문자<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|8비트 문자<sup>1</sup>|  
-|텍스트<sup>8</sup>|스트림<sup>2</sup>|8비트 문자<sup>1</sup>|  
+|text<sup>8</sup>|스트림<sup>2</sup>|8비트 문자<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|해당 사항 없음|  
 |TIMESTAMP|String|8비트 문자<sup>1</sup>|  
 |TINYINT|정수|8비트 문자<sup>1</sup>|  
 |UDT|스트림<sup>2</sup>|이진<sup>3</sup>|  
-|UNIQUEIDENTIFIER|문자열<sup>9</sup>|8비트 문자<sup>1</sup>|  
+|UNIQUEIDENTIFIER|String<sup>9</sup>|8비트 문자<sup>1</sup>|  
 |varbinary|스트림<sup>2</sup>|이진<sup>3</sup>|  
 |varbinary(MAX)|스트림<sup>2</sup>|이진<sup>3</sup>|  
 |varchar|String|8비트 문자<sup>1</sup>|  
@@ -90,7 +90,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
   
 9.  UNIQUEIDENTIFIER는 다음 정규식을 나타내는 GUID입니다.  
   
-    [0-9a-fA-F] {8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>기타 새로운 SQL Server 2008 데이터 형식 및 기능  

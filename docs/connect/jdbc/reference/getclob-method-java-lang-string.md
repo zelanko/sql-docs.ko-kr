@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f546a846b96b3c0d518663fbf52edb033631a7ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c070bb12da865d1a5a43d2cb5ddf9a7f6a28fc5c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647621"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763678"
 ---
 # <a name="getclob-method-javalangstring"></a>getClob 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

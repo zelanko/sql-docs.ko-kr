@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cea6bc026cecccdb362b8aef422f3f38ab8ef22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c841052f4fad09905f0aab447af9441919a23f1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779564"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public void moveToInsertRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 moveToInsertRow 메서드는 java.sql.ResultSet 인터페이스의 moveToInsertRow 메서드에 의해 지정 됩니다.  
+ 이 moveToInsertRow 메서드는 java.sql.ResultSet 인터페이스의 moveToInsertRow 메서드에 의해 지정됩니다.  
   
  현재 커서 위치는 커서가 삽입 행에 있는 동안 저장됩니다. 삽입 행은 업데이트할 수 있는 결과 집합과 연결된 특수한 행으로, 기본적으로는 결과 집합에 행을 추가하기 전에 updater 메서드를 호출하여 새 행을 생성할 수 있는 버퍼입니다.  
   

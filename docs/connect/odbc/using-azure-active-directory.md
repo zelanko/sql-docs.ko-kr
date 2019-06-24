@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801730"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Azure Active Directory에서 페더레이션된 id를 사용 하 여 사용자 �
 
 |속성|값|Default|설명|
 |-|-|-|-|
-|`Authentication`|(설정 안 함) (빈 문자열), `SqlPassword`, `ActiveDirectoryPassword`를 `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(설정 안 됨)|인증 모드를 제어합니다.<table><tr><th>값<th>설명<tr><td>(설정 안 됨)<td>다른 키워드 (기존 레거시 연결 옵션)에 의해 결정 되는 인증 모드<tr><td>(빈 문자열)<td>연결 문자열: "{0}" 재정의 설정 되지 않은 하 고는 `Authentication` 값이 DSN에서 설정 합니다.<tr><td>`SqlPassword`<td>사용자 이름 및 암호를 사용 하 여 SQL Server 인스턴스로 직접 인증 합니다.<tr><td>`ActiveDirectoryPassword`<td>사용자 이름 및 암호를 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 드라이버만_합니다. 통합된 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryInteractive`<td>_Windows 드라이버만_합니다. 대화형 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryMsi`<td>관리 서비스 id 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다. 사용자 할당 id에 대해 UID 사용자 idenity의 개체 ID로 설정 됩니다.</table>|
+|`Authentication`|(설정 안 함) (빈 문자열), `SqlPassword`, `ActiveDirectoryPassword`를 `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(설정 안 됨)|인증 모드를 제어합니다.<table><tr><th>값<th>설명<tr><td>(설정 안 됨)<td>다른 키워드 (기존 레거시 연결 옵션)에 의해 결정 되는 인증 모드<tr><td>(빈 문자열)<td>연결 문자열 재정의 설정 되지 않은 하 고는 `Authentication` 값이 DSN에서 설정 합니다.<tr><td>`SqlPassword`<td>사용자 이름 및 암호를 사용 하 여 SQL Server 인스턴스로 직접 인증 합니다.<tr><td>`ActiveDirectoryPassword`<td>사용자 이름 및 암호를 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryIntegrated`<td>_Windows 드라이버만_합니다. 통합된 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryInteractive`<td>_Windows 드라이버만_합니다. 대화형 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다.<tr><td>`ActiveDirectoryMsi`<td>관리 서비스 id 인증을 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다. 사용자 할당 ID의 경우 UID를 사용자 ID의 개체 ID로 설정합니다.</table>|
 |`Encrypt`|(설정 안 됨), `Yes`, `No`|(설명 참조)|연결의 암호화를 제어합니다. 경우 사전 특성 값을 `Authentication` 설정이 잘못 되었습니다 _none_ DSN 또는 연결 문자열에서 기본값은 `Yes`합니다. 그렇지 않은 경우 기본값은 `No`입니다. 경우 특성 `SQL_COPT_SS_AUTHENTICATION` 사전 특성 값을 재정의 `Authentication`, 명시적으로 DSN 또는 연결 문자열이 나 연결 특성에서 암호화 값을 설정 합니다. 암호화 전 특성 값이 `Yes` 값 설정 된 경우 `Yes` DSN 또는 연결 문자열입니다.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>새롭거나 수정 된 연결 특성
@@ -105,7 +105,7 @@ SQLDriverConnect 연결을 완료 하는 데 필요한 정보가 요청 될 때 
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. AAD 관리 서비스 Id 인증 연결을 설정 하려면 인증에 대 한 사용자 할당 또는 시스템 할당 id를 사용 합니다. 사용자 할당 id에 대해 UID 사용자 id의 개체 ID로 설정 됩니다.<br>
+8. AAD 관리 서비스 Id 인증 연결을 설정 하려면 인증에 대 한 사용자 할당 또는 시스템 할당 id를 사용 합니다. 사용자 할당 ID의 경우 UID를 사용자 ID의 개체 ID로 설정합니다.<br>
 시스템 할당 ID의 경우<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 개체 ID 사용 하 여 사용자 할당 id myObjectId, 같음에 대 한<br>
@@ -168,7 +168,7 @@ typedef struct AccessToken
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-다음은 Azure Active Directory 관리 서비스 Id 인증 사용에 대 한 샘플 연결 문자열입니다. UID 사용자 할당 id에 대 한 사용자 id의 개체 ID로 설정 되어 있는지 참고 합니다.
+다음은 Azure Active Directory 관리 서비스 Id 인증 사용에 대 한 샘플 연결 문자열입니다. 사용자 할당 ID의 경우 UID를 사용자 ID의 개체 ID로 설정합니다.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

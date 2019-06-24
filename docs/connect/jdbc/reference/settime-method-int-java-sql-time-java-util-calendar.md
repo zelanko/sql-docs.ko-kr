@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5b86b9aaed42c21e63734985c3f873e844eb3b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c666fda3df96e32736c4bfd8c32a92e759142c70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66773335"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime 메서드(int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

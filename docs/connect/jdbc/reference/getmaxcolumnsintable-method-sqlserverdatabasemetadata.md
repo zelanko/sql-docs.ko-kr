@@ -1,5 +1,5 @@
 ---
-title: getMaxColumnsInTable 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getMaxColumnsInTable 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dbcad2e1-7508-49ff-9f6d-db11200d87b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb14b68223193f137e06a65ddf4271d2aa0b4bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2f148968bd005d692871c8a2549687451fc3ee33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792676"
 ---
 # <a name="getmaxcolumnsintable-method-sqlserverdatabasemetadata"></a>getMaxColumnsInTable 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

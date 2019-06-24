@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3844d294c72539e752f944b604409b4967a8c166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802470"
 ---
 # <a name="position-method-byte-long"></a>position 메서드(byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

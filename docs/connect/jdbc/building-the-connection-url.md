@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770265"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
@@ -27,7 +27,7 @@ ms.locfileid: "66770265"
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   **jdbc:sqlserver://** (필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
+-   **jdbc:sqlserver://**(필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
   
 -   **serverName**(옵션)은 연결할 서버의 주소입니다. 이는 DNS나 IP 주소일 수도 있고 로컬 컴퓨터인 경우 localhost나 127.0.0.1일 수도 있습니다. 연결 URL에 지정하지 않은 경우 속성 컬렉션에 서버 이름을 지정해야 합니다.  
   
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  sqljdbc_auth.dll 파일은 다음 위치에 설치되어 있습니다.  
   
- \<*설치 디렉터리*> \sqljdbc_\<*버전*>\\<*언어*> \samples  
+ \<*설치 디렉터리*>\sqljdbc_\<*버전*>\\<*언어*>\auth\  
   
  지 원하는 운영 체제에 대 한 합니다 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 참조 하세요 [Kerberos 통합 인증을 사용 하려면 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 에 추가 된 기능에 대 한 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 응용 프로그램에 연결할 수 있도록를 유형 4 Kerberos 통합된 인증을 사용 하는 데이터베이스입니다.  
   

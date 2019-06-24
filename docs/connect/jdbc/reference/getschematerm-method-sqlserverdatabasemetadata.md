@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3e4a400f-0859-4ac3-983e-c25633b33683
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b89f687575cfb2beb3a688587ea173788855fb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f90f44319777ce0554f9fa4feeb66dc8af6b9162
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66792055"
 ---
 # <a name="getschematerm-method-sqlserverdatabasemetadata"></a>getSchemaTerm 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.lang.String getSchemaTerm()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getSchemaTerm 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSchemaTerm 메서드에 의해 지정 됩니다.  
+ 이 getSchemaTerm 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSchemaTerm 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 “스키마”를 기본 용어로 반환합니다.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c7032c175ad4f26cd11a31dc376fb240e1a8401
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e5f58118458d0591d068cedf8a99f389fe00b8f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779973"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.SQLWarning getWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getWarnings 메서드는 java.sql.ResultSet 인터페이스의 getWarnings 메서드에 의해 지정 됩니다.  
+ 이 getWarnings 메서드는 java.sql.ResultSet 인터페이스의 getWarnings 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

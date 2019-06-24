@@ -1,5 +1,5 @@
 ---
-title: length 메서드 (SQLServerNClob) | Microsoft Docs
+title: length 메서드(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f6a4dc147bad46017d772aeb02787091e904e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5fa3d153f6e36fe4eb45cc54da2326aec8e32dd8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713201"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779678"
 ---
 # <a name="length-method-sqlservernclob"></a>length 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

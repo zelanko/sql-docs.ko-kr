@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0e90f4d2ea8b98d2ecef237f04f5fe290a512c92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765894"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

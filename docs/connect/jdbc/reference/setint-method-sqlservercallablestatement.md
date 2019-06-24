@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8eb7134d07e48372dc133a92f0b44367348ad5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89741f02e9a2afa7c1dc8de6f76f599c70a5a45a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779858"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>setInt 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

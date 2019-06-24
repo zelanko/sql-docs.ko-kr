@@ -11,13 +11,13 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66772967"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47642811"
   
 |속성|설명|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|SQLServerPreparedStatement에서 상속되며, 이 CallableStatement 개체의 명령 일괄 처리에 매개 변수 집합을 추가합니다.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 명령 일괄 처리에 대한 매개 변수 세트를 추가합니다.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 현재 실행되고 있는 SQL 문을 취소합니다.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 대한 SQL 명령의 현재 목록을 비웁니다.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 현재 매개 변수 값을 즉시 지웁니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47642811"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 포함될 수 있는 최대 행 수를 검색합니다.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체가 실행될 때 반환되는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 열에 대한 정보가 들어 있는 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 개체를 검색합니다.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|SQLServerStatement에서 상속되며, 이 CallableStatement 개체의 다음 결과로 이동 합니다.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)에서 상속되며, 이 CallableStatement 개체의 다음 결과로 이동 합니다.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에서 상속되며, 이 CallableStatement 개체에 대한 매개 변수의 수, 형식 및 속성을 검색합니다.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Array 개체로 검색합니다.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "47642811"
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|지정된 JDBC Blob 매개 변수의 값을 Java 프로그래밍 언어의 Clob 개체로 검색합니다.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 검색하여 Java 프로그래밍 언어의 java.sql.Date 개체로 반환합니다.|  
 |[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|지정 된 열의 값을 검색 하는[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.|  
-|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의**double**로 검색합니다.|  
+|[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의 **double**로 검색합니다.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의**float**로 검색합니다.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의 **int**로 검색합니다.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|지정된 매개 변수의 값을 Java 프로그래밍 언어의**long**으로 검색합니다.|  

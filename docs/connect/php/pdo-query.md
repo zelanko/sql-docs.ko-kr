@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: query | Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761977"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ $*fetch_style*에 대해 다음 옵션을 지정할 수 있습니다.
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|지정된 열의 데이터에 대한 쿼리입니다. 테이블의 첫 번째 열은 0입니다.|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|클래스의 인스턴스를 만들고 열 이름을 클래스의 속성에 할당합니다. 클래스 생성자가 하나 이상의 매개 변수를 사용하는 경우 *arglist*를 전달할 수도 있습니다.|  
-|Fetch_class, '*classname*'|열 이름을 기존 클래스의 속성에 할당합니다.|  
+|PDO::FETCH_CLASS, '*classname*'|열 이름을 기존 클래스의 속성에 할당합니다.|  
   
 PDO::query를 다시 호출하기 전에 PDOStatement::closeCursor를 호출하여 PDOStatement 개체와 연결된 데이터베이스 리소스를 해제합니다.  
   
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>예제
-이 코드 샘플에는 테이블을 만드는 방법을 보여 줍니다 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 형식과 삽입 된 데이터를 인출 합니다.
+이 코드 샘플에서는 [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) 형식의 테이블을 만들고 삽입된 데이터를 가져오는 방법을 보여 줍니다.
 
 ```
 <?php
@@ -156,7 +156,7 @@ try {
 ?>
 ```
 
-예상된 된 출력은 다음과 같습니다.
+예상 출력은 다음과 같습니다.
 
 ```
 Array

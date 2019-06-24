@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789871"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>사용 가능한 옵션
 현재 릴리스에서 다음 구문 및 옵션을 사용할 수 있습니다.  
 
-[_데이터베이스_**.**] _스키마_**.** _테이블_ **에서** _data\_파일_ | **out** _데이터\_파일_
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 서버에서 전송되거나 서버로 전송되는 네트워크 패킷당 바이트 수를 지정합니다.  

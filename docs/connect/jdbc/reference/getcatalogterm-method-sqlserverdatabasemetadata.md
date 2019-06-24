@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69559cff156c66d7ebbb0bf3675c3c3a455b2e0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9a99453f869167a3804643baac750cf91dd82266
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796786"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>getCatalogTerm 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.lang.String getCatalogTerm()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getCatalogTerm 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogTerm 메서드에 의해 지정 됩니다.  
+ 이 getCatalogTerm 메서드는 java.sql.DatabaseMetaData 인터페이스의 getCatalogTerm 메서드에 의해 지정됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 “데이터베이스” 용어를 반환합니다.  
   

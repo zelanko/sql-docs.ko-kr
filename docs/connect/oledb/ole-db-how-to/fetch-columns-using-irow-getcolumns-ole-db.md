@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66791555"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns를 사용하여 열 인출(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600083"
   
 -   열 그룹을 순서대로 인출하는 방법  
   
--   한 열에 두 번 액세스하는 방법. 처음에는 실제 열 너비를 가져오고 다음에는 실제 데이터에 액세스합니다. DBCOLUMNACCESS 구조에서 **pData**가 NULL이고 **cbMaxLen**이 0이면 **IRow**-**>GetColumns()** 호출에서 실제 열 길이만 반환합니다. 이 경우 같은 열에 대해 **IRow->GetColumns()** 를 다시 호출하여 실제 데이터를 검색할 수 있습니다.  
+-   한 열에 두 번 액세스하는 방법. 처음에는 실제 열 너비를 가져오고 다음에는 실제 데이터에 액세스합니다. DBCOLUMNACCESS 구조에서 **pData**가 NULL이고 **cbMaxLen**이 0이면 **IRow**- **>GetColumns()** 호출에서 실제 열 길이만 반환합니다. 이 경우 같은 열에 대해 **IRow->GetColumns()** 를 다시 호출하여 실제 데이터를 검색할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  

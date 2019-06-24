@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b307dd027f45c54d6bd00dfc5614c12ad496544a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c00621a2fedce7d9fba4d65f248b412627ee6233
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834131"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66776661"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString 메서드(int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void updateNString(int columnIndex,
   
  열 인덱스를 나타내는 **int**입니다.  
   
- *항목이*  
+ *nString*  
   
  A **문자열** 개체입니다.  
   
@@ -44,7 +44,7 @@ public void updateNString(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateNString 메서드는 java.sql.ResultSet 인터페이스의 updateNString 메서드에 의해 지정 됩니다.  
+ 이 updateNString 메서드는 java.sql.ResultSet 인터페이스의 updateNString 메서드에 의해 지정됩니다.  
   
  이 메서드는 Java 전달 **문자열** 를 선택한 **nchar**를 **nvarchar (max)** 를 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   

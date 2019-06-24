@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795924"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,9 +96,9 @@ ms.locfileid: "47740631"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {0} [**? =**]**호출**_프로시저\_이름_[**(**[*매개 변수*] [ **하십시오**[_매개 변수_]]... **)**]}  
+ {[**?=**]**call**_procedure\_name_[**(**[*parameter*][**,**[_parameter_]]...**)**]}  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  

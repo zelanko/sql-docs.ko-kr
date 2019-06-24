@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733201"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66774183"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ public int getSQLStateType()
 ## <a name="return-value"></a>반환 값  
  다음 값 중 하나에 해당되는 SQLSTATE 형식을 나타내는 **int**입니다.  
   
--   Java Runtime environment 버전 5.0: 경우 합니다 **xopenStates** 연결 속성이로 설정 된 **true**,이 메서드가 반환 DatabaseMetaData.sqlStateXOpen 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL99 합니다.  
+-   Java Runtime environment 버전 5.0: 경우 합니다 **xopenStates** 연결 속성이로 설정 된 **true**,이 메서드가 반환 DatabaseMetaData.sqlStateXOpen 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL99를 반환합니다.  
   
--   Java Runtime environment 버전 6.0: 경우 합니다 **xopenStates** 연결 속성이로 설정 된 **true**,이 메서드가 반환 DatabaseMetaData.sqlStateXOpen 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL 합니다.  
+-   Java Runtime environment 버전 6.0: 경우 합니다 **xopenStates** 연결 속성이로 설정 된 **true**,이 메서드가 반환 DatabaseMetaData.sqlStateXOpen 합니다. 그렇지 않으면 DatabaseMetaData.sqlStateSQL을 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

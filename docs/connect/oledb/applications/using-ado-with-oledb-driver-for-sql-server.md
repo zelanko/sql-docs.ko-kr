@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778045"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 ADO 사용
@@ -33,7 +33,7 @@ ms.locfileid: "66778045"
  ADO에서 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용할 수 있도록 OLE DB의 주요 기능이 확장된 것을 비롯해 SQL Server용 OLE DB 드라이버의 기능이 향상되었습니다. 이러한 기능 향상을 통해 ADO 애플리케이션에서는 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능과 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 **xml** 및 **udt**의 두 데이터 형식을 사용할 수 있습니다. 또한 개선된 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식도 활용할 수 있습니다. SQL Server용 OLE DB 드라이버에서는 SSPROP_INIT_DATATYPECOMPATIBILITY 초기화 속성을 DBPROPSET_SQLSERVERDBINIT 속성 집합에 추가하고 ADO 애플리케이션에서 사용하여 새 데이터 형식이 ADO와 맞는 방식으로 노출되도록 할 수 있습니다. 또한는 OLE DB Driver for SQL Server 라는 새로운 연결 문자열 키워드의 정의 뿐만 **DataTypeCompatibility** 연결 문자열에서 설정 하는 합니다.  
 
 > [!NOTE]  
->  기존 ADO 응용 프로그램은 SQLOLEDB 공급자를 사용하여 XML, UDT, 큰 값 텍스트 및 이진 필드 값을 액세스하고 업데이트할 수 있습니다. 더 큰 새 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식은 각각 ADO 형식 **adLongVarChar**, **adLongVarWChar** 및 **adLongVarBinary**로 변환됩니다. XML 열은 **adLongVarChar**로 반환되고 UDT 열은 **adVarBinary**로 반환됩니다. 그러나 OLE DB 드라이버에 대 한 SQL Server (MSOLEDBSQL) SQLOLEDB 대신를 사용 하는 경우 필요한 설정 해야 합니다 **DataTypeCompatibility** 키워드를 "80" 새 데이터 형식이 ADO 데이터 형식에 올바로 매핑되도록 되도록 합니다.  
+>  기존 ADO 응용 프로그램은 SQLOLEDB 공급자를 사용하여 XML, UDT, 큰 값 텍스트 및 이진 필드 값을 액세스하고 업데이트할 수 있습니다. 더 큰 새 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식은 각각 ADO 형식 **adLongVarChar**, **adLongVarWChar** 및 **adLongVarBinary**로 변환됩니다. XML 열은 **adLongVarChar**로 반환되고 UDT 열은 **adVarBinary**로 반환됩니다. 그러나 OLE DB 드라이버에 대 한 SQL Server (MSOLEDBSQL) SQLOLEDB 대신를 사용 하는 경우 필요한 설정 해야 합니다 **DataTypeCompatibility** 키워드를 "80" 새 데이터 형식이 ADO 데이터 형식에 올바로 매핑되도록 되도록 합니다.  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>ADO에서 SQL Server 용 OLE DB 드라이버를 사용 하도록 설정  
  SQL Server용 OLE DB 드라이버를 사용하려면 ADO 애플리케이션에서 연결 문자열에 다음 키워드를 구현해야 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "66778045"
 
 -   `DataTypeCompatibility=80`  
 
- SQL Server용 OLE DB Driver의 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
+ SQL Server용 OLE DB Driver에서 지원되는 ADO 연결 문자열 키워드에 대한 내용은 [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)을 참조하세요.  
 
  다음은 MARS 기능을 비롯하여 SQL Server용 OLE DB 드라이버가 완전히 사용되도록 설정하는 ADO 연결 문자열의 설정 예입니다.  
 

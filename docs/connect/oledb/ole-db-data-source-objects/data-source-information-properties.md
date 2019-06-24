@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 328a8c247fda6d67d40426cfa0f36ac47f686f11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 18518e92896223201c24982c6b6f0955ea81aa6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66768618"
 ---
 # <a name="data-source-information-properties"></a>데이터 원본 정보 속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "52516680"
   
 |속성 ID|설명|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|형식: VT_BOOL<br /><br /> R/w: 읽기<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: 열 데이터 정렬이 지원되는지 확인하는 데 사용됩니다.<br /><br /> VARIANT_TRUE: 열 수준 데이터 정렬을 사용할 수 있습니다.<br /><br /> VARIANT_FALSE: 열 수준 데이터 정렬이 지원 되지 않습니다.|  
-|SSPROP_UNICODELCID|형식: VT_I4 R/w: 읽기<br /><br /> 설명: 유니코드 로캘 id입니다.<br /><br /> 유니코드 데이터 정렬에 사용되는 로캘입니다.|  
-|SSPROP_UNICODECOMPARISONSTYLE|형식: VT_I4 R/w: 읽기<br /><br /> 설명: 유니코드 비교 스타일입니다.<br /><br /> 유니코드 데이터 정렬에 사용되는 정렬 옵션입니다.|  
+|SSPROP_COLUMNLEVELCOLLATION|형식: VT_BOOL<br /><br /> R/W: Read<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: 열 데이터 정렬이 지원되는지 확인하는 데 사용됩니다.<br /><br /> VARIANT_TRUE: 열 수준 데이터 정렬을 사용할 수 있습니다.<br /><br /> VARIANT_FALSE: 열 수준 데이터 정렬이 지원 되지 않습니다.|  
+|SSPROP_UNICODELCID|형식: VT_I4 R/W: Read<br /><br /> 설명: 유니코드 로캘 id입니다.<br /><br /> 유니코드 데이터 정렬에 사용되는 로캘입니다.|  
+|SSPROP_UNICODECOMPARISONSTYLE|형식: VT_I4 R/W: Read<br /><br /> 설명: 유니코드 비교 스타일입니다.<br /><br /> 유니코드 데이터 정렬에 사용되는 정렬 옵션입니다.|  
   
  공급자별 속성 집합 DBPROPSET_SQLSERVERSTREAM에서 SQL Server용 OLE DB 드라이버는 다음과 같은 추가 속성을 정의합니다.  
   

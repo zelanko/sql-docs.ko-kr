@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539119"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316687"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "52539119"
 * 레이블 - 열에 저장된 데이터의 민감도 수준을 정의하는 데 사용되는 주 분류 특성.  
 * 정보 형식 – 열에 저장된 데이터의 형식에 추가 세분성을 제공합니다.
 
-<br>
 **SQL Server 데이터베이스를 분류하려면:**
 
 1. SSMS(SQL Server Management Studio)에서 SQL Server에 연결합니다.

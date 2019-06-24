@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66770654"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[ADO.NET을 다운로드 하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-원](../../ssdt/media/download.png)[ADO.NET을 다운로드하려면](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. System.Data.SqlClient 네임스페이스를 사용하여 SQL Server 또는 다른 공급업체의 공급자에 액세스하여 해당 저장소에 액세스할 수 있습니다. System.Data.Odbc 또는 System.Data.Oledb를 사용하면 다른 데이터 액세스 기술을 사용하여 .NET 언어에서 데이터에 액세스할 수 있습니다. 클라이언트 애플리케이션에서 오프라인 데이터 캐시가 필요할 때는 System.Data.Dataset을 사용합니다. 이것은 웹 서비스에서 유용할 수 있는 로컬 지속성 및 XML 기능도 제공합니다.  
   

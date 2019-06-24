@@ -1,5 +1,5 @@
 ---
-title: setApplicationIntent 메서드 (SQLServerDataSource) | Microsoft Docs
+title: setApplicationIntent 메서드(SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e164c8ac-a0ae-4638-affb-ed454e7c0708
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76f4d4eb468a50f370e86392c4534e0f4b878250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e734f838b62463b0edafc11db86dae9f035220e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66765358"
 ---
 # <a name="setapplicationintent-method-sqlserverdatasource"></a>setApplicationIntent 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

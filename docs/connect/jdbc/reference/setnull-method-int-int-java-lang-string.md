@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fe4aa2416128330a7d3e75428958360d9a8528e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 62f91e694ea655fe29c7306aeea9471ba432072d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643541"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800342"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>setNull 메서드(int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +57,7 @@ public final void setNull(int paramIndex,
  이 setNull 메서드는 java.sql.PreparedStatement 인터페이스의 setNull 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [setNull 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
+ [setNull 메서드(SQLServerPreparedStatement)](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 클래스](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

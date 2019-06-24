@@ -1,5 +1,5 @@
 ---
-title: executeUpdate 메서드 (java.lang.String) | Microsoft Docs
+title: executeUpdate 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c408098ebe1e9e732b171390eb1901f01014292
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804152"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 메서드(java.lang.String)
 
@@ -45,7 +45,7 @@ SQL 문이 포함된 **문자열**입니다.
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정 됩니다.
+이 executeUpdate 메서드는 java.sql.PreparedStatement 인터페이스의 executeUpdate 메서드에 의해 지정됩니다.
 
 SQLServerPreparedStatement 개체에 대한 SQL 문은 개체가 만들어질 때 지정되므로 이 메서드를 호출하면 예외가 발생합니다.
 

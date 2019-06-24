@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 792b09cc57fbfb1438c6c4e9d372beb6547635d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697781"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66763375"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +62,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getColumnPrivileges 메서드는 java.sql.DatabaseMetaData 인터페이스의 getColumnPrivileges 메서드에 의해 지정 됩니다.  
+ 이 getColumnPrivileges 메서드는 java.sql.DatabaseMetaData 인터페이스의 getColumnPrivileges 메서드에 의해 지정됩니다.  
   
  getColumnPrivileges 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   

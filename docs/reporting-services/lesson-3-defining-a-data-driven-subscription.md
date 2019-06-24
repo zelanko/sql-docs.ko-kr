@@ -1,22 +1,22 @@
 ---
 title: '3단원: 데이터 기반 구독 정의 | Microsoft Docs'
-ms.date: 05/26/2016
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4de4f510bcb584e0ec409f89eaba8c13ba6d8c6e
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826860"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
-이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 세트를 보고서 및 전송 옵션에 매핑합니다.  
   
 > [!NOTE]  
 > 시작하기 전에 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트** 서비스가 실행 중인지 확인합니다. 이 서비스를 실행하지 않으면 구독을 저장할 수 없습니다.  한 가지 확인 방법은 [SQL Server 구성 관리자](../relational-databases/sql-server-configuration-manager.md)를 여는 것입니다.
@@ -28,7 +28,7 @@ ms.locfileid: "54457656"
   
 2.  보고서의 상황에 맞는 메뉴 ![ssrs_tutorial_datadriven_reportmenu](../reporting-services/media/ssrs-tutorial-datadriven-reportmenu.png) 에서 **관리**를 클릭한 다음 왼쪽 창에서 **구독** 을 클릭합니다.  
   
-3.  **+ 새 구독**을 클릭합니다. 이 단추가 표시되지 않는 경우 내용 관리자 권한이 없는 것입니다. 
+3. **+ 새 구독**을 클릭합니다. 이 단추가 표시되지 않는 경우 내용 관리자 권한이 없는 것입니다.
   
 ## <a name="define-a-description"></a>설명 정의  
 1.  설명에 **Sales Order 배달** 을 입력합니다.
@@ -39,9 +39,10 @@ ms.locfileid: "54457656"
 ## <a name="schedule"></a>일정
 1. 일정 섹션에서 **보고서별 일정**을 클릭합니다.
 2. **일정 편집**을 클릭합니다.
-3.  **일정 정보**에서 **한 번**을 누릅니다.  
-4.  시작 시간을 현재 시간보다 몇 분 앞당겨 지정합니다.  
-5.  **적용**을 클릭합니다.
+3. **일정 정보**에서 **한 번**을 누릅니다.  
+4. 시작 시간을 현재 시간보다 몇 분 앞당겨 지정합니다.  
+5. 지정 된 **시작 및 종료 날짜**합니다.
+6. **적용**을 선택합니다.
 
 ## <a name="destination"></a>Destination  
 1.  대상 섹션에서 배달 방법으로 **Windows 파일 공유** 를 선택합니다.  
@@ -67,7 +68,7 @@ ms.locfileid: "54457656"
 ## <a name="query"></a>쿼리      
 1.  쿼리 상자에 다음 쿼리를 입력합니다.  
   
-    ```sql
+    ```
     Select * from OrderInfo  
     ```  
   
@@ -87,20 +88,22 @@ ms.locfileid: "54457656"
 **파일 확장명** |값 입력 |True
 **사용자 이름** | 값 입력 | 도메인 사용자 계정을 입력합니다. \<domain>\\\<account> 형식으로 입력합니다. 사용자 계정에는 사용자가 구성한 경로에 대한 권한이 있어야 합니다. 
 **암호** | 값 입력 | 암호 입력
+**파일 공유 계정 사용** | 값 입력 | False
 
 ## <a name="report-parameters"></a>보고서 매개 변수
  1. **OrderNumber** 필드에서 **데이터 세트에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. 
- 2. **구독 만들기**를 클릭합니다.
+ 2. **구독 만들기**를 선택합니다.
    
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
 구독을 실행하면 *Subscribers* 데이터 원본의 각 주문에 대해 하나씩 총 4개의 보고서 파일이 사용자가 지정한 파일 공유로 배달됩니다. 각 배달은 데이터(주문별 데이터여야 함), 렌더링 형식 및 파일 형식에 있어 고유해야 합니다. 공유 폴더에서 각 보고서를 열어 각 버전이 사용자가 정의한 구독 옵션을 기반으로 사용자 지정되었는지 확인할 수 있습니다.  
   
 ![구독으로 만드는 파일 목록](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "구독으로 만드는 파일 목록")  
   
-웹 포털의 구독 페이지에는 구독의 **마지막 실행** 날짜와 **상태** 가 표시됩니다. 
-**참고:** 업데이트된 정보를 보려면 구독을 실행한 후 페이지를 새로 고칩니다.  
+웹 포털의 구독 페이지에는 구독의 **마지막 실행** 날짜와 **상태**가 표시됩니다. 
+> [!NOTE]
+> 업데이트된 정보를 보려면 구독을 실행한 후 페이지를 새로 고칩니다.  
     
-![보고서 관리자의 구독 결과](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "보고서 관리자의 구독 결과")  
+![웹 포털의 구독 결과](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "웹 포털의 구독 결과")  
   
 이 단계는 "데이터 기반 구독 정의" 자습서의 마지막 단계입니다.   
   
@@ -110,6 +113,3 @@ ms.locfileid: "54457656"
 [데이터 기반 구독 만들기, 수정 및 삭제](../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
 [구독자 데이터에 외부 데이터 원본 사용&#40;데이터 기반 구독&#41;](../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
-  
-  
-

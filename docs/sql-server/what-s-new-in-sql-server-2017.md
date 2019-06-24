@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729439"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263501"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여
 - 테이블 형식 모델에 대한 **1400 호환성 수준** 지원 새로 만들거나 기존 테이블 형식 모델 프로젝트를 1400 호환성 수준으로 업그레이드하려면 [SSDT(SQL Server Data Tools) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)를 다운로드 및 설치합니다. (CTP 1.1)
 - 1400 호환성 수준의 테이블 모델에 대한 최신 **데이터 가져오기** 환경 [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)(Analysis Services 팀 블로그)를 참조하세요. (CTP 1.1)
 - 비정형 계층의 빈 멤버를 숨기기 위한 **멤버 숨기기** 속성 (CTP 1.1)
-- 집계 정보에 대한 **자세한 정보를 표시**하기 위한 **세부 정보 행** 최종 사용자 작업. 세부 정보 행 식을 작성하기 위한 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 및 **DETAILROWS** 함수 (CTP 1.1)
+- 집계 정보에 대한 **자세한 정보를 표시**하기 위한 **세부 정보 행** 최종 사용자 작업. 세부 정보 행 식을 작성하기 위한 [SELECTCOLUMNS](/dax/selectcolumns-function-dax) 및 **DETAILROWS** 함수 (CTP 1.1)
 - 여러 값을 지정하는 DAX **IN** 연산자 (CTP 1.1)
 
 자세한 내용은 [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)(SQL Server Analysis Services 2017의 새로운 기능)을 참조하세요.

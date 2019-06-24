@@ -1,5 +1,5 @@
 ---
-title: setAutoCommit 메서드 (SQLServerConnection) | Microsoft Docs
+title: setAutoCommit 메서드(SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 517ce61f011de7cf5915c88895b9795b08767b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9960ce0cdb07f6ea259023966e245eb7b1f333a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761571"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66764896"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

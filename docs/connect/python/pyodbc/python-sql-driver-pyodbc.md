@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1de13581ce371ed843e9290274dfcfd1a13c53c2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fb45d4df3ab054c320bb110c009e8fc4ea6edb59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66761670"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 - pyodbc
 
@@ -30,4 +30,4 @@ ms.locfileid: "51604973"
 
 ## <a name="documentation"></a>설명서
 
-* [pyodbc 설명서](https://mkleehammer.github.io/pyodbc/)  
+* [pyodbc documentation](https://mkleehammer.github.io/pyodbc/)(pyodbc 설명서)  

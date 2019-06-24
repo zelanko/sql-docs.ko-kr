@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506444"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66506444"
  쿼리 제한 시간 값은 보고서 서버에서 공유 데이터 세트를 만들거나 관리할 때 초 단위로 지정됩니다. 기본적으로 이 값은 0초로 설정되며 이것은 제한 시간 값이 없는 것과 같습니다. 자세한 내용은 [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
   
 ## <a name="setting-a-report-execution-time-out"></a>보고서 실행 제한 시간 설정  
- 보고서 실행 제한 시간 값을 설정하여 보고서 서버에서 보고서를 처리하는 데 사용하는 시간을 제한할 수 있습니다. 보고서 실행 제한 시간 값은 보고서 관리자에서 지정할 수 있습니다. 사이트 설정 페이지에서 모든 보고서에 대해 기본값을 설정한 다음 특정 보고서에 대한 실행 속성 페이지에서 해당 값을 재정의할 수 있습니다. 기본적으로 이 값은 1800초로 설정되어 있습니다. 자세한 내용은 [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)을 참조하세요.  
+ 보고서 실행 제한 시간 값을 설정하여 보고서 서버에서 보고서를 처리하는 데 사용하는 시간을 제한할 수 있습니다. 보고서 실행 제한 시간 값은 웹 포털에서 지정할 수 있습니다. 사이트 설정 페이지에서 모든 보고서에 대해 기본값을 설정한 다음 특정 보고서에 대한 실행 속성 페이지에서 해당 값을 재정의할 수 있습니다. 기본적으로 이 값은 1800초로 설정되어 있습니다. 자세한 내용은 [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)을 참조하세요.  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>보고서 실행 제한 시간 값 평가 방법  
  보고서 서버는 60초 간격으로 실행 작업을 평가합니다. 60초마다 실제 처리 시간을 보고서 실행 제한 시간 값과 비교하여 보고서 처리 시간이 보고서 실행 제한 시간 값을 초과하면 보고서 처리가 중지됩니다.  

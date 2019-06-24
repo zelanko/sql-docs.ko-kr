@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803910"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58658417"
 |5.5|       |       |       |       |       |5.5.16+ |5.5.16+ |
 |5.4|       |       |       |       |       |5.4.32  |5.4.32  |
 
-1. 7.2.1 버전 이상에서 사용할 Windows, 버전 7.2.0 하는 동안 및 나중에 Linux 및 macOS에서 지원 됩니다.
+1. 7\.2.1 버전 이상에서 사용할 Windows, 버전 7.2.0 하는 동안 및 나중에 Linux 및 macOS에서 지원 됩니다.
 
 -   드라이버 파일의 버전은 PHP 확장 디렉터리에 있어야 합니다. 참조 [드라이버 버전](#driver-versions) 다른 드라이버 파일에 대 한 정보에 대 한 합니다.  드라이버를 다운로드하려면 [Microsoft Drivers for PHP for SQL Server 다운로드](../../connect/php/download-drivers-php-sql-server.md)를 참조하세요. PHP에 대한 드라이버를 구성하는 방법에 대한 자세한 내용은 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)를 참조하세요.
 
@@ -58,7 +58,7 @@ PHP가 실행 중인 컴퓨터의 올바른 버전의 Microsoft ODBC Driver for 
 
 Windows 버전의 64 비트 버전 Windows의 드라이버를 다운로드 하는 경우 ODBC 64 비트 설치 관리자는 32 비트 및 64 비트 ODBC 드라이버를 설치 합니다. Windows의 32 비트 버전을 사용 하는 경우 x86 ODBC를 사용 하 여 설치 합니다. 비 Windows 플랫폼에서 64 비트 버전의 드라이버를 사용할 수 있습니다.
 
-|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595;ODBC 드라이버 버전|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|SQL Server 드라이버 버전에 대 한 PHP&#8594;<br />&#8595; ODBC 드라이버 버전|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC 드라이버 17+ |Y|Y|Y| | | | |
 |ODBC 드라이버 13.1|Y|Y|Y|Y|Y| | |
@@ -276,7 +276,7 @@ Linux에서는 다음 버전의 드라이버 포함 되어 있습니다.
 |php_sqlsrv_55_ts.dll<br />php_pdo_sqlsrv_55_ts.dll|5.5|예|php5ts.dll|  
 
 ## <a name="see-also"></a>참고 항목  
-[시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 

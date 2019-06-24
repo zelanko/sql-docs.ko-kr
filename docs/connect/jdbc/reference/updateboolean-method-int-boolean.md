@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f3c6aecfc512f1b3c6afa15c5881dea31e1ee60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2a1eecc932fa9230667ea71e2cae843e753f32b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66787126"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean 메서드(int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public void updateBoolean(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateBoolean 메서드는 java.sql.ResultSet 인터페이스의 updateBoolean 메서드에 의해 지정 됩니다.  
+ 이 updateBoolean 메서드는 java.sql.ResultSet 인터페이스의 updateBoolean 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateBoolean 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   

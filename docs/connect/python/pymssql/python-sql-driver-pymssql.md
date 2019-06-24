@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e6bbff25d47fb5c5a3336f24e9ce49d18c5b41b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 79d067c9221e889fdfb65f77ca18daa96a0900d9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803883"
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL 드라이버 - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -28,4 +28,4 @@ ms.locfileid: "51600703"
 * [3단계: pymssql을 사용하여 SQL과 연결된 개념 증명](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>설명서
-* [pymssql 설명서](https://pymssql.org)  
+* [pymssql documentation](https://pymssql.org)  

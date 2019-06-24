@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5c0172dd04e13775b977a93f05f2976791a2343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66779005"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 메서드(int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

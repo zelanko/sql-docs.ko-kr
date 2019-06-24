@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3a5d218a-1490-4c61-a20c-4d71f6600c97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08a58a8696dea90728637a218f405a09f3552ef2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a3dcb688b68e5bc2cbfe82124b1dc1bab2450748
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795840"
 ---
-# <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대 한 코드 샘플
+# <a name="code-samples-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 코드 샘플
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 
-* [예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-* [예제 응용 프로그램 &#40;PDO_SQLSRV 드라이버&#41;](../../connect/php/example-application-pdo-sqlsrv-driver.md)  
+* [예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
+* [예제 애플리케이션&#40;PDO_SQLSRV Driver&#41;](../../connect/php/example-application-pdo-sqlsrv-driver.md)  
   

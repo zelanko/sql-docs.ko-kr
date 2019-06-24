@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797073"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 릴리스 정보
 
@@ -50,7 +50,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | PHP 7.0에 대 한 삭제 지원입니다. | &nbsp; |
 | 모든 플랫폼에서 Microsoft ODBC Driver 17.3을 지원 합니다. | &nbsp; |
 | Mojave macOS 지원 합니다. | ODBC 드라이버 17.3 필요 이상. |
-| 18.10 Ubuntu 및 Suse Linux 15 지원 합니다. | 둘 다 필요 ODBC 드라이버 17.3 이상. |
+| 18\.10 Ubuntu 및 Suse Linux 15 지원 합니다. | 둘 다 필요 ODBC 드라이버 17.3 이상. |
 | Linux Ubuntu 17.10 및 El Capitan macOS에 대 한 지원을 삭제 합니다. | &nbsp; |
 | Azure AD 액세스 토큰을 지원 합니다. | Linux 및 macOS에서 ODBC 드라이버 17.2 + 및 unixODBC 2.3.6+ 필요합니다. |
 | 관리 Id를 사용 하 여 Azure 리소스에 대 한 Azure AD 사용 하 여 인증이 지원 됩니다. | ODBC 드라이버가 17.3 + 필요합니다. |
@@ -69,18 +69,18 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="whats-new-in-version-52"></a>버전 5.2의 새로운 기능
 
-- 7.2.1 PHP에 대 한 지원 및 Windows를 및 7.2.0 및 다른 플랫폼에서
+- 7\.2.1 PHP에 대 한 지원 및 Windows를 및 7.2.0 및 다른 플랫폼에서
 - Microsoft ODBC Driver 17에 대 한 지원
   - 버전 17 모든 플랫폼에서 기본 되었습니다.
 - Ubuntu 17.10, Debian 9 및 Suse Enterprise Linux 12에 대 한 지원
 - Ubuntu 15.10 지원 하지 않으므로
-- Windows에서 CRUD 기능을 사용 하 여 Always Encrypted에 대 한 지원. 자세한 내용은 참조 하세요. [SQL Server 용 PHP 드라이버를 사용 하 여 상시 암호화 사용](../../connect/php/using-always-encrypted-php-drivers.md)
+- Windows에서 CRUD 기능을 사용 하 여 Always Encrypted에 대 한 지원. 자세한 내용은 [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)(SQL Server용 PHP 드라이버와 함께 Always Encrypted 사용)를 참조하세요.
   - Windows 인증서 저장소에 대 한 지원
   - 상시 암호화만 지원 됩니다 Microsoft ODBC Driver 17 이상
 - Linux 및 macOS에서 UTF8 이외 로캘에 대 한 지원
   - Linux 및 macOS에서 비-UTF8 로캘에서 Microsoft ODBC Driver 17 이상 에서만 지원 됩니다.
 - Azure SQL Data Warehouse 지원
-- Azure SQL 관리 되는 인스턴스 (확장 된 비공개 미리 보기)에 대 한 지원
+- Azure SQL Managed Instance 지원(프라이빗 미리 보기 확장)
 
 ## <a name="whats-new-in-version-43"></a>버전 4.3의 새로운 기능
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 662aa55260c2fe4f09eaab3e91eb7c8e70a61aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66789734"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ HRESULT Abort(
  *eOperation*[in]  
  중단할 작업입니다. 다음 값을 사용 해야 합니다.  
   
- DBASYNCHOP_OPEN - 취소 요청이 행 집합의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
+ DBASYNCHOP_OPEN - 취소 요청이 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  S_OK  
