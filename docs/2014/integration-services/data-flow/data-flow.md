@@ -17,12 +17,12 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ab14ac049e9081e82175512a0107af446a51f37
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62827994"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343867"
 ---
 # <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "62827994"
 |원본|Description|  
 |------------|-----------------|  
 |Oracle 대상|Oracle 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
-|SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
+|SAP BI 대상|SAP BI 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)다운로드 페이지를 참조하십시오.|  
 |Teradata 대상|Teradata 대상은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 대상 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 원본도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
