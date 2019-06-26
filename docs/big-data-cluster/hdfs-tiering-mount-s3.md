@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f126620c4da759a4c56abad05bf2e989d7d1bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782065"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388765"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 S3 하는 방법
 
@@ -60,10 +60,10 @@ ms.locfileid: "66782065"
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 클러스터 저장소 풀 마운트 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
+1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl bdc 저장소 풀 마운트 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ ms.locfileid: "66782065"
 빅 데이터 클러스터의 모든 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 HDFS에서 특정 경로에 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 탑재를 삭제 합니다.
 
-탑재를 삭제 하려면 사용 합니다 **mssqlctl 클러스터 저장소 풀 마운트 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
+탑재를 삭제 하려면 사용 합니다 **mssqlctl bdc 저장소 풀 마운트 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>다음 단계

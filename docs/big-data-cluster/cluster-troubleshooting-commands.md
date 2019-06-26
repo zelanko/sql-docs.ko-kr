@@ -5,17 +5,17 @@ description: 이 문서에는 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800742"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388719"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -116,12 +116,11 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
 | **controller-svc-external** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
-| **mgmtproxy-svc-external** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털) |
 | **gateway-svc-external** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
 | **appproxy-svc-external** | 응용 프로그램 배포 시나리오를 지원 합니다. |
 
 > [!TIP]
-> 이 사용 하 여 서비스를 표시 하는 방법 **kubectl**를 사용 하 여도 가능 하지만 `mssqlctl cluster endpoint list` 이러한 끝점을 보려면 명령입니다. 자세한 내용은 [빅 데이터 클러스터 끝점 가져오기](deployment-guidance.md#endpoints)합니다.
+> 이 사용 하 여 서비스를 표시 하는 방법 **kubectl**를 사용 하 여도 가능 하지만 `mssqlctl bdc endpoint list` 이러한 끝점을 보려면 명령입니다. 자세한 내용은 [빅 데이터 클러스터 끝점 가져오기](deployment-guidance.md#endpoints)합니다.
 
 ## <a name="get-service-details"></a>서비스 세부 정보 가져오기
 
@@ -224,10 +223,6 @@ kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>클러스터 관리 포털
-
-사용 된 [클러스터 관리 포털](cluster-admin-portal.md) 빅 데이터 클러스터의 상태를 모니터링할 수 있습니다. 예를 들어, 배포 하는 동안 사용할 수는 **배포** 탭 합니다. 기다릴 필요가 합니다 **mgmtproxy svc 외부** 서비스를 배포의 시작 부분에 사용할 수 없게 되므로이 포털에 액세스 하기 전에 시작 합니다.
 
 ## <a name="kubernetes-dashboard"></a>Kubernetes 대시보드
 

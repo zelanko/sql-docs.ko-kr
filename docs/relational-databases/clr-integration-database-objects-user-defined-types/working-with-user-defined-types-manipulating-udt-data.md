@@ -29,12 +29,12 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c216b41fe7f7c4d9a8b1c5e290b07bc0fec2c3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b83088e64314c21d8a71deb1da395d40eecfdec
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635521"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351654"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>사용자 정의 형식 작업 - UDT 데이터 조작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ FROM dbo.Points;
  다음 결과가 생성됩니다.  
   
 ```  
-IDPointValue  
-----------  
-13,4  
-21,5  
-31,99  
+ID PointValue  
+-- ----------  
+ 1 3,4  
+ 2 1,5  
+ 3 1,99  
 ```  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수를 사용하여 동일한 결과를 얻을 수도 있습니다.  
@@ -93,11 +93,11 @@ FROM dbo.Points;
  X 및 Y 속성은 결과 집합에 표시되는 정수 값을 반환합니다.  
   
 ```  
-IDxValyVal  
-----------  
-134  
-215  
-3199  
+ID xVal yVal  
+-- ---- ----  
+ 1    3    4  
+ 2    1    5  
+ 3    1   99  
 ```  
   
 ## <a name="working-with-variables"></a>변수 작업  
@@ -171,11 +171,11 @@ FROM dbo.Points;
  결과에 표시 되는 **거리** 열:  
   
 ```  
-IDXYDistance  
-------------------------  
-1345  
-2155.09901951359278  
-319999.0050503762308  
+ID X  Y  Distance  
+-- -- -- ----------------  
+ 1  3  4                5  
+ 2  1  5 5.09901951359278  
+ 3  1 99 99.0050503762308  
 ```  
   
  **DistanceFrom** 의 인수를 사용 하는 메서드 **가리킨** 데이터 형식 및 지정 된 점에서 PointValue 까지의 거리를 표시 합니다.  
@@ -189,11 +189,11 @@ FROM dbo.Points;
  결과의 결과 표시 합니다 **DistanceFrom** 표의 각 행에 대 한 메서드:  
   
 ```  
-ID PntDistanceFromPoint  
----------------------  
-13,495.0210502993942  
-21,594  
-31,990  
+ID Pnt DistanceFromPoint  
+-- --- -----------------  
+ 1 3,4  95.0210502993942  
+ 2 1,5                94  
+ 3 1,9                90  
 ```  
   
  합니다 **DistanceFromXY** 메서드를 개별적으로 점을 인수로 사용 합니다.  

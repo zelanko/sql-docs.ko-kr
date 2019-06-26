@@ -1,7 +1,7 @@
 ---
 title: sys.indexes (거래 SQL) | Microsoft 문서
 ms.custom: ''
-ms.date: 04/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff8fb876ace87e26522cc19ffdc97359a9216844
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004238"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387976"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,14 @@ ms.locfileid: "63004238"
 |**has_filter**|**bit**|1 = 인덱스에 필터가 있고 포함된 모든 행이 필터 정의를 만족합니다.<br /><br /> 0 = 인덱스에 필터가 없습니다.|  
 |**filter_definition**|**nvarchar(max)**|필터링된 인덱스에 포함된 행 하위 집합에 대한 식입니다.<br /><br /> 힙 또는 필터링되지 않은 인덱스의 경우 NULL입니다.|  
 |**auto_created**|**bit**|1 = 인덱스가 자동 조정 하 여 만들어졌습니다.<br /><br />0 = 사용자가 인덱스를 만들.
+|**optimize_for_sequential_key**|**bit**|1 = 인덱스에 사용 하도록 설정 하는 마지막 페이지 삽입 최적화 합니다.<br><br>0 = 기본값입니다. 인덱스는 마지막 페이지 삽입 최적화를 사용 하지 않도록 설정 합니다.|
+
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Production.Product` 테이블에 대한 모든 인덱스를 반환합니다.  
+ 다음 예에서는 테이블의 모든 인덱스가 반환 `Production.Product` 에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
   
 ```  
   

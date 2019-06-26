@@ -5,16 +5,16 @@ description: Mssqlctl 앱 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 75ada3528ab287cf49f717f99efa2405e4aad1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1dc3830a2bdf9d8a3d4e2d65fcbb556af224d1c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800950"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388235"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl 앱
 

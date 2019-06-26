@@ -5,31 +5,31 @@ description: 구성 파일을 사용 하 여 빅 데이터 클러스터 배포�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 61e6d50de66ca7fe4a9b5f3e1c5511fc19b8cffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782256"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388797"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>빅 데이터 클러스터에 대 한 배포 설정을 구성 합니다.
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-클러스터 배포 구성 파일을 사용자 지정 하려면 VSCode와 같은 json 형식 편집기를 사용할 수 있습니다. 에서는 자동화를 위한 이러한 편집 스크립팅를 **mssqlctl 클러스터 구성 섹션** 명령입니다. 이 문서에서는 배포 구성 파일을 수정 하 여 빅 데이터 클러스터 배포를 구성 하는 방법에 설명 합니다. 다양 한 시나리오에 대 한 구성을 변경 하는 방법에 대 한 예제를 제공 합니다. 배포에서 구성 파일은 사용 하는 방법에 대 한 자세한 내용은 참조는 [배포 가이드](deployment-guidance.md#configfile)합니다.
+클러스터 배포 구성 파일을 사용자 지정 하려면 VSCode 같은 JSON 형식 편집기를 사용할 수 있습니다. 이러한 편집 자동화를 위한 스크립트를 사용 합니다 **mssqlctl bdc 구성 섹션** 명령입니다. 이 문서에서는 배포 구성 파일을 수정 하 여 빅 데이터 클러스터 배포를 구성 하는 방법에 설명 합니다. 다양 한 시나리오에 대 한 구성을 변경 하는 방법에 대 한 예제를 제공 합니다. 배포에서 구성 파일은 사용 하는 방법에 대 한 자세한 내용은 참조는 [배포 가이드](deployment-guidance.md#configfile)합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [Mssqlctl 설치](deploy-install-mssqlctl.md)합니다.
 
-- 이 섹션의 예에서는 각 가정 표준 구성 파일 중 하나의 복사본을 만들어야 합니다. 자세한 내용은 [사용자 지정 구성 파일을 만들어](deployment-guidance.md#customconfig)합니다. 예를 들어 다음 명령은 만듭니다는 **custom.json** 기본값에 따라 파일 **aks-dev-test.json** 구성:
+- 이 섹션의 예에서는 각 가정 표준 구성 파일 중 하나의 복사본을 만들어야 합니다. 자세한 내용은 [사용자 지정 구성 파일을 만들어](deployment-guidance.md#customconfig)합니다. 예를 들어 다음 명령은 라는 디렉터리를 만듭니다 `custom` 기본값을 기반으로 JSON 배포 구성 파일이 포함 된 **aks-개발-테스트** 구성:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
 ## <a id="clustername"></a> 클러스터 이름 변경
@@ -46,7 +46,7 @@ ms.locfileid: "66782256"
 다음 명령을 전송 하는 키-값 쌍을 **--json 값** 빅 데이터 클러스터 이름을 변경 하려면 매개 변수 **테스트 클러스터**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-cluster"
+mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
@@ -67,16 +67,6 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
         "name": "ServiceProxy",
         "serviceType": "LoadBalancer",
         "port": 30777
-    },
-    {
-        "name": "AppServiceProxy",
-        "serviceType": "LoadBalancer",
-        "port": 30778
-    },
-    {
-        "name": "Knox",
-        "serviceType": "LoadBalancer",
-        "port": 30443
     }
 ]
 ```
@@ -84,7 +74,7 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
 다음 예제에서는 인라인 JSON을 사용 하 여에 대 한 포트를 변경 하는 **컨트롤러** 끝점:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
 ## <a id="replicas"></a> 복제본 풀 구성
@@ -121,23 +111,35 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 수정 하 여 풀의 인스턴스 수를 구성할 수 있습니다 합니다 **복제본** 각 풀에 대 한 값입니다. 다음 예제에서는 인라인 JSON을 사용 하 여 저장소 및 데이터 풀에 대 한 이러한 값을 변경 하려면 `10` 고 `4` 각각.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4'
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
 ## <a id="storage"></a> 저장소 구성
 
-또한 저장소 클래스와 각 풀에 사용 되는 특성을 변경할 수 있습니다. 다음 예제에서는 저장소 풀에 사용자 지정 저장소 클래스를 할당 및 100 gb 데이터를 저장 하는 데는 영구적 볼륨 클레임의 크기를 업데이트 합니다. 사용 하 여 설정을 업데이트 하려면 구성 파일에서이 섹션에서는 사용 해야 합니다 *mssqlctl 클러스터 구성 집합* 명령이 패치 파일을 사용 하 여이 섹션을 추가 하는 방법을 아래를 참조 하세요:
+또한 저장소 클래스와 각 풀에 사용 되는 특성을 변경할 수 있습니다. 다음 예제에서는 저장소 풀에 사용자 지정 저장소 클래스를 할당 및 100 gb 데이터를 저장 하는 데는 영구적 볼륨 클레임의 크기를 업데이트 합니다. 이 섹션에서는 사용 하 여 설정을 업데이트 하려면 구성 파일에 있어야 합니다 *mssqlctl bdc 구성 집합* 명령이 패치 파일을 사용 하 여이 섹션을 추가 하는 방법을 아래를 참조 하세요:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
 ```
 
 > [!NOTE]
-> 구성 파일을 기반으로 **kubeadm-dev-test.json** 각 풀에 있지만 수동으로 추가할 수 있습니다 필요한 경우에 대 한 저장소 정의가 없습니다.
+> 구성 파일을 기반으로 **kubeadm-개발-테스트** 각 풀에 있지만 수동으로 추가할 수 있습니다 필요한 경우에 대 한 저장소 정의가 없습니다.
 
 저장소 구성에 대 한 자세한 내용은 참조 하세요. [빅 데이터에서 kubernetes 클러스터는 SQL Server를 사용 하 여 데이터 지 속성](concept-data-persistence.md)합니다.
+
+## <a id="sparkstorage"></a> Spark 없이 저장소 구성
+
+또한 spark 없이 실행 하 고 별도 spark 풀을 만들 저장소 풀을 구성할 수 있습니다. 이 저장소의 크기 조정 spark 계산 power 독립 수 있습니다. Spark 풀을 구성 하는 방법을 참조 하세요 합니다 [JSON 패치 파일 예제](#jsonpatch) 이 문서의 끝입니다.
+
+이 섹션에서는 사용 하 여 설정을 업데이트 하려면 구성 파일에 있어야 합니다 `mssqlctl cluster config set command`합니다. 다음 JSON 패치 파일에 추가 하는 방법을 보여 줍니다.
+
+기본적으로 **includeSpark** 설정을 추가 해야 하므로 저장소 풀을 true로 설정 되어 합니다 **includeSpark** 필드를 변경 하려면 저장소 구성:
+
+```bash
+mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+```
 
 ## <a id="podplacement"></a> Kubernetes 레이블을 사용 하 여 pod 배치 구성
 
@@ -162,7 +164,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.typ
 ```
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a id="jsonpatch"></a> JSON 패치 파일
@@ -177,6 +179,7 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
 - 제어 평면 저장소의 저장소 클래스 이름을 업데이트합니다.
 - 저장소 풀에 대 한 풀 저장소 설정을 업데이트합니다.
 - 저장소 풀에 대 한 Spark 설정을 업데이트합니다.
+- 클러스터에 대 한 복제본 2 개를 사용 하 여 spark 풀을 만듭니다.
 
 ```json
 {
@@ -199,16 +202,6 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
             "serviceType": "LoadBalancer",
             "port": 30778,
             "name": "ServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "AppServiceProxy"
-        },
-        {
-            "serviceType": "LoadBalancer",
-            "port": 30443,
-            "name": "Knox"
         }
       ]
     },
@@ -248,7 +241,6 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
             "size": "32Gi"
           }
         }
-      }
     },
     {
       "op": "replace",
@@ -260,7 +252,44 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
         "executorCores": 1,
         "executorMemory": "1536m"
       }
-    }
+    },
+    {
+      "op": "add",
+      "path": "spec.pools/-",
+      "value":
+      {
+        "metadata": {
+          "kind": "Pool",
+          "name": "default"
+        },
+        "spec": {
+          "type": "Spark",
+          "replicas": 2
+        },
+        "hadoop": {
+          "yarn": {
+            "nodeManager": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "schedulerMax": {
+              "memory": 12288,
+              "vcores": 6
+            },
+            "capacityScheduler": {
+              "maxAmPercent": 0.3
+            }
+          },
+          "spark": {
+            "driverMemory": "2g",
+            "driverCores": 1,
+            "executorInstances": 2,
+            "executorMemory": "2g",
+            "executorCores": 1
+          }
+        }
+      }
+    }   
   ]
 }
 ```
@@ -268,10 +297,10 @@ JSON 패치 파일이 한 번에 여러 설정을 구성합니다. JSON 패치�
 > [!TIP]
 > 구조 및 배포 구성 파일을 변경 하는 것에 대 한 옵션에 대 한 자세한 내용은 참조 하세요. [빅 데이터 클러스터에 대 한 배포 구성 파일 참조](reference-deployment-config.md)합니다.
 
-사용 하 여 **mssqlctl 클러스터 구성 섹션 집합** JSON 패치 파일에 변경 내용을 적용 합니다. 다음 예제에서는 적용 합니다 **patch.json** 대상 배포 구성 파일에 파일 **custom.json**합니다.
+사용 하 여 **mssqlctl bdc 구성 섹션 집합** JSON 패치 파일에 변경 내용을 적용 합니다. 다음 예제에서는 적용 합니다 **patch.json** 대상 배포 구성 파일에 파일 **custom.json**합니다.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>다음 단계

@@ -5,16 +5,16 @@ description: 단계 및 SQL Server 2019 빅 데이터 클러스터 (미리 보�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797911"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388827"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
 
@@ -39,7 +39,7 @@ ms.locfileid: "66797911"
 
 일련의 상호 관련 된 컨테이너에서 관리 되는 빅 데이터 클러스터를 구축할 [Kubernetes](https://kubernetes.io/docs/home)합니다. 다양 한 방법에서에서 Kubernetes를 호스트할 수 있습니다. 기존 Kubernetes 환경에 이미 있는 경우에 빅 데이터 클러스터에 대 한 관련된 요구 사항을 검토 해야 합니다.
 
-- **AKS (azure Kubernetes Service)**: AKS를 사용 하면 Azure에서 관리 되는 Kubernetes 클러스터를 배포할 수 있습니다. 만 관리 하 고 에이전트 노드를 유지 관리 합니다. AKS를 통해 클러스터에 대 한 고유한 하드웨어를 프로 비전 할 필요가 없습니다. 빅 데이터 클러스터를 사용 하기 쉬운 이기도 [배포 스크립트](quickstart-big-data-cluster-deploy.md) AKS 클러스터를 만들고 1 단계에서 빅 데이터 클러스터를 배포 합니다. AKS를 사용 하 여 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성](deploy-on-aks.md)합니다.
+- **AKS (azure Kubernetes Service)** : AKS를 사용 하면 Azure에서 관리 되는 Kubernetes 클러스터를 배포할 수 있습니다. 만 관리 하 고 에이전트 노드를 유지 관리 합니다. AKS를 통해 클러스터에 대 한 고유한 하드웨어를 프로 비전 할 필요가 없습니다. 빅 데이터 클러스터를 사용 하기 쉬운 이기도 [배포 스크립트](quickstart-big-data-cluster-deploy.md) AKS 클러스터를 만들고 1 단계에서 빅 데이터 클러스터를 배포 합니다. AKS를 사용 하 여 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성](deploy-on-aks.md)합니다.
 
 - **여러 컴퓨터**: Kubernetes 물리적 서버 또는 가상 컴퓨터 일 수 있는 여러 Linux 컴퓨터에 배포할 수도 있습니다. 합니다 [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) 도구는 Kubernetes 클러스터를 만드는 데 사용할 수 있습니다. 이 메서드는 빅 데이터 클러스터에 사용 하려는 기존 인프라를 이미 있는 경우에 작동 합니다. 사용에 대 한 자세한 내용은 **kubeadm** 빅 데이터 클러스터를 사용 하 여 배포 참조 [SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성](deploy-with-kubeadm.md)합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "66797911"
 
 ## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터 배포
 
-Kubernetes를 구성한 후 사용 하 여 빅 데이터 클러스터 배포는 `mssqlctl cluster create` 명령입니다. 을 배포할 때는 여러 가지 다른 방법으로 수행할 수 있습니다.
+Kubernetes를 구성한 후 사용 하 여 빅 데이터 클러스터 배포는 `mssqlctl bdc create` 명령입니다. 을 배포할 때는 여러 가지 다른 방법으로 수행할 수 있습니다.
 
 - 개발-테스트 환경에 배포 하는 경우 중 하나를 사용 하도록 선택할 수 있습니다 합니다 [기본 구성](deployment-guidance.md#deploy) 제공한 **mssqlctl**합니다.
 

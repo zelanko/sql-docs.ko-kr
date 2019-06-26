@@ -18,12 +18,12 @@ ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 12e285e4348c2fac373797d4e260ea088facaabf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 778316994f607201d45f93c60f9c57a9dce4160c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675612"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351587"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>SqlServiceType 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,11 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서비스입니다.|  
 |*6*|ReportServer는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스입니다.|  
 |*7*|SQLBrowser는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser 서비스입니다.|  
+|*8*|NsService는는 [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] 알림 서비스.|  
+|*9*|MSSQLFDLauncher 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 전체 텍스트 필터 데몬 시작 관리자 서비스입니다.|  
+|*10*|SQLPBENGINE 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 엔진 서비스입니다.|  
+|*11*|SQLPBDMS 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Polybase 데이터 이동 서비스입니다.|  
+|*12*|MSSQLLaunchpad 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 실행 패드 서비스입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

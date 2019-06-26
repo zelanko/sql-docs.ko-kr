@@ -5,26 +5,37 @@ description: Spark에서 SQL Server에 읽기 및 쓰기를 MSSQL Spark 커넥�
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770936"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388628"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>읽기 및 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 기록 하는 방법
 
 키 빅 데이터 사용 패턴은 뒤에 기간 업무 응용 프로그램에 대 한 액세스에 대 한 SQL Server로 데이터를 작성 하 여 Spark에서 대용량 데이터 처리 합니다. 이러한 사용 패턴 주요 SQL 최적화를 활용 하 고 효율적인 쓰기 메커니즘을 제공 하는 커넥터에서 활용 합니다.
 
-빅 데이터 클러스터 대량 SQL 쓰기 성능이 우수한 Spark에 대 한 Api를 작성 하는 SQL Server를 사용 하는 새 MSSQL Spark 커넥터를 제공 합니다. 이 문서를 읽고 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 쓰는 방법 보여 주는 예제를 제공 합니다. 이 예제에서는 데이터를 Spark에서 처리 하 고 새 MSSQL Spark 커넥터를 사용 하 여 클러스터에서 SQL Server 마스터 인스턴스를 작성 한 다음 빅 데이터 클러스터에서 HDFS에서 읽습니다.
+이 문서에서는 빅 데이터 클러스터 내에서 다음 위치에 읽기 및 쓰기를 MSSQL Spark 커넥터를 사용 하는 방법의 예로 제공:
+
+1. SQL Server 마스터 인스턴스
+1. SQL Server 데이터 풀
+
+   ![MSSQL Spark 커넥터 다이어그램](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+샘플에는 다음 작업을 수행합니다.
+
+- HDFS에서 파일을 읽고 몇 가지 기본 처리를 수행 합니다.
+- 데이터 프레임을 SQL 테이블을 SQL Server 마스터 인스턴스에 쓸 하 한 다음 데이터 프레임에 테이블을 읽습니다.
+- SQL 외부 테이블로 SQL Server 데이터 풀에 데이터 프레임을 쓰고 데이터 프레임에 외부 테이블을 읽습니다.
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark 커넥터 인터페이스
 
-MSSQL Spark 커넥터는 Api Spark 데이터 원본에 기초 하 고 친숙 한 Spark JDBC 커넥터 인터페이스를 제공 합니다. 인터페이스 매개 변수 참조 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)합니다. MSSQL Spark 커넥터 이름에서 참조 **com.microsoft.sqlserver.jdbc.spark**합니다.
+SQL Server 2019 미리 보기를 제공 합니다 **MSSQL Spark 커넥터** 빅 데이터에 대 한 SQL Server 대량을 사용 하는 클러스터 Api에 대 한 작성 Spark SQL 쓰기입니다. MSSQL Spark 커넥터는 Api Spark 데이터 원본에 기초 하 고 친숙 한 Spark JDBC 커넥터 인터페이스를 제공 합니다. 인터페이스 매개 변수 참조 [Apache Spark 설명서](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)합니다. MSSQL Spark 커넥터 이름에서 참조 **com.microsoft.sqlserver.jdbc.spark**합니다.
 
 다음 표에서 변경 되었거나 새 되는 인터페이스 매개 변수를 설명 합니다.
 
@@ -55,7 +66,9 @@ MSSQL Spark 커넥터는 Api Spark 데이터 원본에 기초 하 고 친숙 한
 
 1. 다운로드 [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) 로컬 컴퓨터에 있습니다.
 
-1. Azure 데이터 Studio에서 빅 데이터 클러스터에서 HDFS 폴더를 마우스 오른쪽 단추로 클릭 하 고 선택 **새 디렉터리**합니다. 디렉터리의 이름을 **spark_data**합니다.
+1. Azure Data Studio를 시작 하 고 [빅 데이터 클러스터에 연결할](connect-to-big-data-cluster.md)합니다.
+
+1. 빅 데이터 클러스터에서 HDFS 폴더를 마우스 오른쪽 단추로 클릭 하 고 선택 **새 디렉터리**합니다. 디렉터리의 이름을 **spark_data**합니다.
 
 1. 마우스 오른쪽 단추로 클릭 합니다 **spark_data** 디렉터리에 선택한 **파일을 업로드**합니다. 업로드 합니다 **AdultCensusIncome.csv** 파일입니다.
 

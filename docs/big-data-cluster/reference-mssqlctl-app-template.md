@@ -5,16 +5,16 @@ description: Mssqlctl 앱 템플릿 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e73b0ddf9e30c5e38fd54d34ab93526213fe061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20d8b332643c9ef749aae5be0ab9e778a593d6ff
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800964"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388191"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl 앱 템플릿
 

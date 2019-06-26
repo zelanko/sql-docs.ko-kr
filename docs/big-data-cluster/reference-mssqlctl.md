@@ -5,16 +5,16 @@ description: Mssqlctl 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779234"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388669"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ ms.locfileid: "66779234"
 |     |     |
 | --- | --- |
 |[mssqlctl 앱](reference-mssqlctl-app.md) | 만들기, 삭제, 실행 및 응용 프로그램을 관리 합니다. |
-|[mssqlctl cluster](reference-mssqlctl-cluster.md) | 선택 하 고, 관리 및 클러스터 작동 합니다. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | 선택 하 고, 관리 및 SQL Server 빅 데이터 클러스터에 작동 합니다. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | HDFS 모듈 HDFS에 액세스 하는 명령 파일 시스템을 제공 합니다. |
 [mssqlctl login](#mssqlctl-login) | 클러스터의 컨트롤러 끝점에 로그인 합니다.
 [mssqlctl logout](#mssqlctl-logout) | 로그 아웃 클러스터 합니다.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB CLI T-SQL을 통해 SQL Server와 상호 작용할 수가 있습니다. |
 ## <a name="mssqlctl-login"></a>mssqlctl 로그인
 사용 해야 하는 배포 하는 동안 컨트롤러 끝점을 나열 하는 클러스터에 배포 하는 경우 로그인 합니다.  할 컨트롤러 끝점을 알 수 없는 경우 로그인의 기본 위치에 시스템에서 클러스터 kube 구성 함으로써 <user home>/.kube/config 또는 KUBECONFIG env var을 사용 하 여, 즉 KUBECONFIG=path/to/.kube/config를 내보냅니다.
 ```bash

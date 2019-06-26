@@ -5,17 +5,17 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782246"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388778"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -82,14 +82,14 @@ CTP 2.5 부터는 대부분의 빅 데이터 클러스터 설정은 JSON 배포 
 
 | 배포 프로필 | Kubernetes 환경 |
 |---|---|
-| **aks-dev-test.json** | AKS (azure Kubernetes Service) |
-| **kubeadm-dev-test.json** | 여러 컴퓨터 (kubeadm) |
-| **minikube-dev-test.json** | Minikube |
+| **aks-dev-test** | AKS (azure Kubernetes Service) |
+| **kubeadm-dev-test** | 여러 컴퓨터 (kubeadm) |
+| **minikube-dev-test** | Minikube |
 
-실행 하 여 빅 데이터 클러스터를 배포할 수 있습니다 **mssqlctl 클러스터 만들기**합니다. 다음 배포 과정을 기본 구성 중 하나를 선택 하 라는 메시지가 표시 됩니다.
+실행 하 여 빅 데이터 클러스터를 배포할 수 있습니다 **mssqlctl bdc 만들기**합니다. 다음 배포 과정을 기본 구성 중 하나를 선택 하 라는 메시지가 표시 됩니다.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 이 시나리오에서는 암호와 같은 기본 구성에 포함 되지 않는 모든 설정에 대 한 라는 메시지가 표시 됩니다. Docker 정보를 SQL Server 2019의 일부로 microsoft에 제공 되는 참고 [Early Adoption Program](https://aka.ms/eapsignup)합니다.
@@ -99,35 +99,38 @@ mssqlctl cluster create
 
 ## <a id="customconfig"></a> 사용자 지정 구성
 
-고유한 배포 구성 파일 사용자 지정도 가능 합니다. 다음 단계를 사용 하 여이 수행할 수 있습니다.
+고유한 배포 구성 프로필을 사용자 지정할 수 이기도 합니다. 다음 단계를 사용 하 여이 수행할 수 있습니다.
 
-1. Kubernetes 환경과 일치 하는 표준 배포 프로필 중 하나를 사용 하 여 시작 합니다. 사용할 수는 **mssqlctl 클러스터 구성 목록** 나열 하는 명령:
+1. Kubernetes 환경과 일치 하는 표준 배포 프로필 중 하나를 사용 하 여 시작 합니다. 사용할 수는 **mssqlctl bdc 구성 목록** 나열 하는 명령:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. 배포를 사용자 지정 하려면 사용 하 여 배포 프로필의 복사본을 만듭니다는 **mssqlctl 클러스터 구성 init** 명령입니다. 예를 들어 다음 명령은의 복사본을 만듭니다는 **aks-dev-test.json** 현재 디렉터리에 배포 구성 파일:
+1. 배포를 사용자 지정 하려면 사용 하 여 배포 프로필의 복사본을 만듭니다는 **mssqlctl bdc 구성 init** 명령입니다. 예를 들어 다음 명령은의 복사본을 만듭니다는 **aks-개발-테스트** 라는 대상 디렉터리에 배포 구성 파일 `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. 배포 구성 파일에서 설정을 사용자 지정 하는 VS Code와 같은 json 문서를 편집 하기 위한 좋은 도구에서 편집할 수 있습니다. 자동화 스크립트를 편집할 수 있습니다 사용 하 여 사용자 지정 구성 파일 **mssqlctl 클러스터 구성 섹션 집합** 명령입니다. 예를 들어, 다음 명령을 변경 기본값에서 배포 된 클러스터의 이름을 변경 하려면 사용자 지정 구성 파일 (**mssql 클러스터**)를 **테스트 클러스터**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > JSON 경로 찾는 데 유용한 도구를 [JSONPath 온라인 계산기](https://jsonpath.com/)합니다.
+   > `--target` 구성 파일을 포함 하는 디렉터리를 기반으로 지정 된 `--source` 매개 변수입니다.
+
+1. 배포 구성 프로필에서 설정을 사용자 지정 하는 VS Code와 같은 JSON 파일을 편집 하기 위한 좋은 도구에서 배포 구성 파일을 편집할 수 있습니다. 자동화 스크립트를 편집할 수도 있습니다 사용 하 여 사용자 지정 배포 프로필 **mssqlctl bdc 구성 섹션 집합** 명령입니다. 다음 명령은 기본값에서 배포 된 클러스터의 이름을 변경 하는 사용자 지정 배포 프로필을 변경 하는 예를 들어, (**mssql 클러스터**)를 **테스트 클러스터**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > `--config-profile` 해당 디렉터리 내의 배포 구성 JSON 파일에서 발생 사용자 지정 배포 프로필을 하지만 실제 수정에 대 한 디렉터리 이름을 지정 합니다. JSON 경로 찾는 데 유용한 도구를 [JSONPath 온라인 계산기](https://jsonpath.com/)합니다.
 
    키-값 쌍을 전달 하는 것 외에도 JSON 값 인라인을 제공 하거나 JSON 패치 파일을 전달할 수도 있습니다. 자세한 내용은 [빅 데이터 클러스터에 대 한 배포 설정을 구성](deployment-custom-configuration.md)합니다.
 
-1. 사용자 지정 구성 파일을 전달한 **mssqlctl 클러스터 만들기**합니다. 필수 설정 해야 합니다 [환경 변수](#env), 그렇지 않으면 메시지가 표시 됩니다 값:
+1. 사용자 지정 구성 파일을 전달한 **mssqlctl bdc 만들기**합니다. 필수 설정 해야 합니다 [환경 변수](#env), 그렇지 않으면 메시지가 표시 됩니다 값:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ mssqlctl cluster create
 | **KNOX_PASSWORD** | Knox 사용자에 대 한 암호입니다. |
 | **MSSQL_SA_PASSWORD** | 마스터 SQL 인스턴스 SA 사용자의 암호입니다. |
 
-이러한 환경 변수를 호출 하기 전에 설정 해야 합니다 **mssqlctl 클러스터 만들기**합니다. 모든 변수를 설정 하지 않으면 해당 메시지가 표시 됩니다.
+이러한 환경 변수를 호출 하기 전에 설정 해야 합니다 **mssqlctl bdc 만들기**합니다. 모든 변수를 설정 하지 않으면 해당 메시지가 표시 됩니다.
 
 다음 예제에서는 Linux (bash) 및 Windows (PowerShell)에 대 한 환경 변수를 설정 하는 방법을 보여 줍니다.
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-환경 변수를 설정에 따라 실행 해야 `mssqlctl cluster create` 배포를 트리거하도록 합니다. 이 예제에서는 위에서 만든 클러스터 구성 파일을 사용 합니다.
+환경 변수를 설정한 후 실행 해야 `mssqlctl bdc create` 배포를 트리거하도록 합니다. 이 예제에서는 위에서 만든 클러스터 구성 프로필을 사용 합니다.
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 다음 지침을 note 하십시오.
@@ -182,7 +185,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 
 ## <a id="unattended"></a> 무인된 설치
 
-무인 배포의 경우 모든 필수 환경 변수, 구성 파일을 사용 및 호출을 설정 해야 합니다 `mssqlctl cluster create` 명령과 `--accept-eula yes` 매개 변수입니다. 이전 섹션의 예제에서는 무인된 설치에 대 한 구문을 보여 줍니다.
+무인 배포의 경우 모든 필수 환경 변수, 구성 파일을 사용 및 호출을 설정 해야 합니다 `mssqlctl bdc create` 명령과 `--accept-eula yes` 매개 변수입니다. 이전 섹션의 예제에서는 무인된 설치에 대 한 구문을 보여 줍니다.
 
 ## <a id="monitor"></a> 배포 모니터링
 
@@ -195,7 +198,7 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 15 ~ 30 분 이내에 있습니다 알려야 컨트롤러 pod가 실행 중인지:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ mssqlctl cluster create --config-file custom.json --accept-eula yes
 배포가 완료 되 면 출력 성공 하면 알립니다.
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-URL을 확인 합니다 **포털 끝점** 다음 섹션에서 사용 하기 위해 이전 출력에 있습니다.
 
 > [!TIP]
 > 배포 된 빅 데이터 클러스터에 대 한 기본 이름은 `mssql-cluster` 사용자 지정 구성에서 수정 하지 않는 한 합니다.
@@ -236,10 +236,10 @@ URL을 확인 합니다 **포털 끝점** 다음 섹션에서 사용 하기 위�
 
    배포 하는 동안 사용자 이름 및 컨트롤러 (CONTROLLER_USERNAME 및 CONTROLLER_PASSWORD)에 대해 구성한 암호를 지정 합니다.
 
-1. 실행할 **mssqlctl 클러스터 끝점 목록** 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 
+1. 실행할 **mssqlctl bdc 끝점 목록** 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    다음은이 명령의 샘플 출력을 보여 줍니다.
@@ -252,7 +252,6 @@ URL을 확인 합니다 **포털 끝점** 다음 섹션에서 사용 하기 위�
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

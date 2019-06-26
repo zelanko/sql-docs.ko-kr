@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783067"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387936"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
 
@@ -34,7 +34,7 @@ ms.locfileid: "66783067"
 
 * HDFS/Spark (Knox) 게이트웨이-HTTPS 기반 끝점입니다. 다른 끝점은이 통해 프록시입니다. HDFS/Spark 게이트웨이 webHDFS Livy와 같은 서비스에 액세스 하기 위해 사용 됩니다. Knox에 대 한 참조를 어디서 나 끝점입니다.
 
-* 컨트롤러 끝점-클러스터를 관리 하기 위한 REST Api를 노출 하는 빅 데이터 클러스터 관리 서비스입니다. 관리 포털와 같은 일부 도구를이 끝점을 통해 액세스도 됩니다.
+* 컨트롤러 끝점-클러스터를 관리 하기 위한 REST Api를 노출 하는 빅 데이터 클러스터 관리 서비스입니다. 일부 도구는이 끝점을 통해 액세스도 됩니다.
 
 * 마스터 인스턴스-데이터베이스 도구 및 클러스터에서 SQL Server 마스터 인스턴스에 연결할 응용 프로그램에 대 한 TDS 끝점입니다.
 

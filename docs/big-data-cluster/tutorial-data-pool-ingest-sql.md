@@ -5,17 +5,17 @@ description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44ef1a05dfe0437420b8b3a1036ed356122dcfca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aca5e5e9ccbddfebcdeb3dade057b7fb138c4d
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770933"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388608"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "66770933"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. 명명 된 외부 테이블을 만듭니다 **web_clickstream_clicks_data_pool** 데이터 풀에 있습니다.
@@ -79,7 +79,7 @@ ms.locfileid: "66770933"
       );
    ```
   
-1. CTP 3.0에서는 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 3.1에서, 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="load-data"></a>데이터 로드
 

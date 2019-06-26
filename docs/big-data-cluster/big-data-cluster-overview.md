@@ -5,17 +5,17 @@ description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801884"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388725"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터란 무엇인가요?
 
@@ -57,9 +57,7 @@ SQL Server 빅 데이터 클러스터에 AI 및 기계 학습 작업에 HDFS 저
 
 ### <a name="management-and-monitoring"></a>관리 및 모니터링
 
-관리 및 모니터링은 명령줄 도구, Api, 관리자 포털을 및 동적 관리 보기의 조합을 통해 제공 됩니다.
-
-합니다 [클러스터 관리자 포털](cluster-admin-portal.md) 클러스터의 pod의 상태를 표시 하는 웹 인터페이스입니다. 또한 log analytics 및 대시보드 모니터링을 다른 대시보드에 대 한 링크를 제공 합니다.
+관리 및 모니터링은 명령줄 도구, Api, 포털 및 동적 관리 보기의 조합을 통해 제공 됩니다.
 
 Azure 데이터 Studio를 사용 하 여 빅 데이터 클러스터에서 다양 한 작업을 수행할 수 있습니다. 새 활성화 됩니다 **SQL Server 2019 확장 (미리 보기)** 합니다. 이 확장을 제공합니다.
 

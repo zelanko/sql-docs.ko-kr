@@ -5,17 +5,17 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770889"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388560"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "66770889"
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. 명명 된 외부 테이블을 만듭니다 **web_clickstreams_spark_results** 데이터 풀에 있습니다.
@@ -74,7 +74,7 @@ ms.locfileid: "66770889"
       );
    ```
   
-1. CTP 3.0에서는 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 3.1에서, 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 

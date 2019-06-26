@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783169"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387954"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 컨트롤러 란?
 
@@ -44,17 +44,13 @@ Buildout 워크플로 Kubernetes 기반으로 레이아웃에 설명 된 모든 
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>컨트롤러 서비스를 통해 클러스터 관리
 
-순수 하 게 사용 하 여 컨트롤러 서비스를 통해 클러스터를 관리할 수 있습니다 `mssqlctl` Api 또는 클러스터 내에서 호스트 되는 클러스터 관리 포털. 동일한 네임 스페이스에 pod와 같은 추가 Kubernetes 개체를 배포 하는 경우 관리 하거나 하지 컨트롤러 서비스에 의해 모니터링 됩니다.
+사용 하 여 컨트롤러 서비스를 통해 클러스터를 관리할 수 있습니다 **mssqlctl** 명령입니다. 동일한 네임 스페이스에 pod와 같은 추가 Kubernetes 개체를 배포 하는 경우 관리 하거나 하지 컨트롤러 서비스에 의해 모니터링 됩니다. 사용할 수도 있습니다 **kubectl** Kubernetes 수준에서 클러스터를 관리 하는 명령입니다. 자세한 내용은 [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결](cluster-troubleshooting-commands.md)합니다.
 
-컨트롤러 및 빅 데이터 클러스터에 대해 생성 된 Kubernetes 개체 (상태 저장 집합, pod, 암호 등)에 전용된 Kubernetes 네임 스페이스에 상주 합니다. 컨트롤러 서비스를 해당 네임 스페이스 내의 모든 리소스를 관리 하는 Kubernetes 클러스터 관리자가 권한이 부여 됩니다.  이 시나리오에 대 한 RBAC 정책을 사용 하 여 초기 클러스터 배포의 일부로 자동으로 구성 된 `mssqlctl`합니다. 
+컨트롤러 및 빅 데이터 클러스터에 대해 생성 된 Kubernetes 개체 (상태 저장 집합, pod, 암호 등)에 전용된 Kubernetes 네임 스페이스에 상주 합니다. 컨트롤러 서비스를 해당 네임 스페이스 내의 모든 리소스를 관리 하는 Kubernetes 클러스터 관리자가 권한이 부여 됩니다.  이 시나리오에 대 한 RBAC 정책을 사용 하 여 초기 클러스터 배포의 일부로 자동으로 구성 됩니다 **mssqlctl**합니다.
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` 명령줄 유틸리티 클러스터 관리자가 부트스트랩 및 컨트롤러 서비스에 의해 노출 된 REST Api를 통해 빅 데이터 클러스터를 관리할 수 있도록 Python으로 작성 됩니다.
-
-### <a name="cluster-administration-portal"></a>클러스터 관리 포털
-
-Controller 서비스가 실행 되 면 클러스터 관리자를 사용 하 여 합니다 [클러스터 관리 포털](cluster-admin-portal.md) 배포 진행률을 모니터링 하 고 감지 하며 클러스터 내에서 서비스를 사용 하 여 문제를 해결 합니다.
+**mssqlctl** 하면 클러스터 관리자가 부트스트랩 컨트롤러 서비스에 의해 노출 된 REST Api를 통해 빅 데이터 클러스터를 관리 하는 Python으로 작성 된 명령줄 유틸리티입니다.
 
 ## <a name="controller-service-security"></a>컨트롤러 서비스 보안
 

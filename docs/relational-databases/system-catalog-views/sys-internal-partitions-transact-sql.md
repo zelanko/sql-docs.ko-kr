@@ -1,7 +1,7 @@
 ---
 title: sys.internal_partitions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537900"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388335"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   디스크 기반 테이블의 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 각 행 집합에 대해 하나의 행을 반환 합니다. 이러한 행 집합은 columnstore 인덱스의 내부 및 삭제 하는 추적 행, 행 그룹 매핑 및 델타 rowgroup을 저장 합니다. 각 테이블 파티션이;에 대해 각 데이터 추적 모든 테이블에는 하나 이상의 파티션이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore 인덱스를 다시 작성 될 때마다 행 집합을 다시 만듭니다.   
@@ -39,6 +39,7 @@ ms.locfileid: "52537900"
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수입니다.|  
 |data_compression|**tinyint**|상태 행 집합에 대 한 압축입니다.<br /><br /> 0 = 없음<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태입니다. rowstore 테이블의 가능한 값은 NONE, ROW 및 PAGE입니다. columnstore 테이블의 가능한 값은 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE입니다.|  
+|optimize_for_sequential_key|**bit**|1 = 파티션이 마지막 페이지 삽입 최적화를 설정 합니다.<br><br>0 = 기본값입니다. 파티션이 마지막 페이지 삽입 최적화를 사용 하지 않도록 설정 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -48,7 +49,7 @@ ms.locfileid: "52537900"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>1. 모든 테이블에 대 한 내부 행 집합 보기  
+### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>1\. 모든 테이블에 대 한 내부 행 집합 보기  
  이 예제에서는 모든 테이블에 대 한 내부 columnstore 행 집합을 반환합니다. 특정 행 집합에 대 한 자세한 내용을 보려면 hobt_id를 이용할 수 있습니다.  
   
 ```  
