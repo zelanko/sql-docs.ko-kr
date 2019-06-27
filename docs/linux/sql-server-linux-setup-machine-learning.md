@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705098"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399945"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>SQL Server 2019의 기계 학습 서비스 (R, Python) Linux 설치
 
@@ -28,7 +28,7 @@ Machine Learning 서비스는 Linux 컨테이너에도 지원 됩니다. Machine
 
 ## <a name="uninstall-previous-ctp"></a>이전 CTP를 제거 합니다.
 
-패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP를 제거 하는 것이 좋습니다 2.x CTP 3.0을 설치 하기 전에 모든 이전 패키지를 제거 합니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
+패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP를 제거 하는 것이 좋습니다 2.x CTP 3.1을 설치 하기 전에 모든 이전 패키지를 제거 합니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
 
 ### <a name="1-confirm-package-installation"></a>1. 패키지 설치를 확인 합니다.
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. CTP 3.0 설치를 사용 하 여 계속 합니다.
+### <a name="3-proceed-with-ctp-31-install"></a>3. CTP 3.1 설치를 사용 하 여 계속 합니다.
 
 이 문서의 지침을 사용 하 여 운영 체제에 대 한 가장 높은 패키지 수준에서 설치 합니다.
 

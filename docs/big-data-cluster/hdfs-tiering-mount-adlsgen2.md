@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388787"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400013"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 ADLS Gen2 하는 방법
 
@@ -64,17 +64,15 @@ ms.locfileid: "67388787"
 
 탑재에 대 한 자격 증명을 사용 하기 전에 5-10 분 동안 기다린 후
 
-### <a name="create-credential-file"></a>자격 증명 파일 만들기
+### <a name="set-environment-variable-for-oauth-credentials"></a>OAuth 자격 증명에 대 한 환경 변수 설정
 
-빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다.
-
-라는 로컬 파일을 만듭니다 **filename.creds** 다음 형식을 사용 하 여 Azure Data Lake 저장소 Gen2 계정 자격 증명을 포함 하는:
+빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다. 다음 형식을 사용 하 여 환경 변수를 설정 합니다. 쉼표에 자격 증명 해야 하는 구분 된 목록입니다. 'Set' 명령은 Windows에서 사용 됩니다. Linux를 사용 하는 경우 다음 '내보내기' 대신 사용 합니다.
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ Azure portal에서 ADLS 계정에 액세스할 수 있는 액세스 키를 사�
  > [!TIP]
    > 액세스 키를 찾는 방법에 대 한 자세한 내용은 (`<storage-account-access-key>`) 저장소 계정에 대 한 참조 [액세스 키 보기 및 복사](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)합니다.
 
-### <a name="create-credential-file"></a>자격 증명 파일 만들기
+### <a name="set-environment-variable-for-access-key-credentials"></a>액세스 키 자격 증명에 대 한 환경 변수 설정
 
 1. 빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다.
 
-1. 라는 로컬 파일을 만듭니다 **filename.creds** 다음 형식을 사용 하 여 Azure Data Lake 저장소 Gen2 계정 자격 증명을 포함 하는:
+1. 빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다. 다음 형식을 사용 하 여 환경 변수를 설정 합니다. 쉼표에 자격 증명 해야 하는 구분 된 목록입니다. 'Set' 명령은 Windows에서 사용 됩니다. Linux를 사용 하는 경우 다음 '내보내기' 대신 사용 합니다.
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> 원격 HDFS 저장소를 탑재 합니다.
 
-액세스 키 또는 OAuth를 사용 하 여 자격 증명 파일을 준비 했는지 여부, 했으므로 탑재를 시작할 수 있습니다. 다음 단계를 빅 데이터 클러스터의 로컬 HDFS 저장소에 Azure Data Lake에서 원격 HDFS storage를 탑재 합니다.
+액세스 키 또는 OAuth를 사용 하 여 MOUNT_CREDENTIALS 환경 변수를 사용 하도록 설정한 했으므로 탑재를 시작할 수 있습니다. 다음 단계를 빅 데이터 클러스터의 로컬 HDFS 저장소에 Azure Data Lake에서 원격 HDFS storage를 탑재 합니다.
 
 1. 사용 하 여 **kubectl** 끝점에 대 한 IP 주소를 찾으려면 **컨트롤러 svc 외부** 빅 데이터 클러스터의 서비스입니다. 검색할 합니다 **EXTERNAL-IP**합니다.
 
@@ -111,11 +109,12 @@ Azure portal에서 ADLS 계정에 액세스할 수 있는 액세스 키를 사�
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. 환경 변수 설정 MOUNT_CREDENTIALS (지침에 대해 스크롤)
 
 1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl bdc 저장소 풀 마운트 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

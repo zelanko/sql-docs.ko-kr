@@ -3,7 +3,7 @@ title: SQL Server 2019 확장 (미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 05/15/2019
+ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: aa83e92fb62f9cb0ad00830d1e78e5367112899c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798055"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400001"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -30,9 +30,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
    |플랫폼|다운로드|릴리스 날짜|버전
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092817)|2019 년 5 월 15 일 |0.13.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092816)|2019 년 5 월 15 일 |0.13.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092815)|2019 년 5 월 15 일 |0.13.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 년 6 월 25 일 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 년 6 월 25 일 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 년 6 월 25 일 |0.14.1
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -43,6 +43,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
 
 1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
+
+## <a name="changes-in-release-0141"></a>0\.14.1 릴리스의 변경 내용
+* CTP 3.1 데이터 원본 지원에 대 한 지원
 
 ## <a name="changes-in-release-0121"></a>0\.12.1 릴리스의 변경 내용
 
