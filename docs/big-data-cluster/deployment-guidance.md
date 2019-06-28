@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388778"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413108"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -192,15 +192,14 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 클러스터 부트스트랩 하는 동안 클라이언트 명령 창에는 배포 상태를 출력 합니다. 배포 과정에서 컨트롤러 pod에 대 한 기다리고 있는 일련의 메시지를 표시 됩니다.
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 15 ~ 30 분 이내에 있습니다 알려야 컨트롤러 pod가 실행 중인지:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -209,7 +208,7 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 배포가 완료 되 면 출력 성공 하면 알립니다.
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
 
 > [!TIP]
@@ -228,7 +227,7 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
    > [!TIP]
    > 사용 하 여 배포 하는 동안 기본 이름을 변경 하지 않은, 경우 `-n mssql-cluster` 이전 명령에서. **mssql 클러스터** 빅 데이터 클러스터에 대 한 기본 이름입니다.
 
-1. 사용 하 여 빅 데이터 클러스터에 로그인 **mssqlctl 로그인**합니다. 설정 된 **-컨트롤러 끝점** 컨트롤러 끝점의 외부 IP 주소 매개 변수입니다.
+1. 사용 하 여 빅 데이터 클러스터에 로그인 [mssqlctl 로그인](reference-mssqlctl.md)합니다. 설정 된 **-컨트롤러 끝점** 컨트롤러 끝점의 외부 IP 주소 매개 변수입니다.
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -236,29 +235,35 @@ mssqlctl bdc create --config-profile custom --accept-eula yes
 
    배포 하는 동안 사용자 이름 및 컨트롤러 (CONTROLLER_USERNAME 및 CONTROLLER_PASSWORD)에 대해 구성한 암호를 지정 합니다.
 
-1. 실행할 **mssqlctl bdc 끝점 목록** 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 
+1. 실행할 [mssqlctl bdc 끝점 목록](reference-mssqlctl-bdc-endpoint.md) 각 끝점 및 해당 IP 주소 및 포트 값에 대 한 설명 사용 하 여 목록을 가져올 수 있습니다. 
 
    ```bash
-   mssqlctl bdc endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    다음은이 명령의 샘플 출력을 보여 줍니다.
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
+
+다음을 실행 하 여 클러스터에 배포 된 모든 서비스 끝점을 가져올 수도 있습니다 **kubectl** 명령:
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
 
 ### <a name="minikube"></a>Minikube
 
@@ -268,11 +273,38 @@ Minikube를 사용 하는 경우에 연결 해야 합니다. IP 주소를 가져
 minikube ip
 ```
 
-플랫폼에 관계 없이 실행 하는 Kubernetes 클러스터에서 클러스터에 대해 실행 명령 다음에 배포 된 모든 서비스 끝점을 가져오려면:
+## <a id="status"></a> 클러스터 상태를 확인 합니다.
+
+배포 후 사용 하 여 클러스터의 상태를 확인할 수 있습니다 합니다 [mssqlctl bdc 상태 표시](reference-mssqlctl-bdc-status.md) 명령입니다.
 
 ```bash
-kubectl get svc -n <your-big-data-cluster-name>
+mssqlctl bdc status show -o table
 ```
+
+> [!TIP]
+> 상태 명령을 실행 하려면 하면 먼저 로그인 해야 합니다 **mssqlctl 로그인** 이전 끝점 섹션에 표시 된 명령입니다.
+
+다음은이 명령의 샘플 출력입니다.
+
+```output
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
+```
+
+이 요약 상태 외에도 다음 명령 사용 하 여 자세한 상태를 볼 수 있습니다.
+
+- [mssqlctl bdc 제어 상태](reference-mssqlctl-bdc-control-status.md)
+- [mssqlctl bdc 풀 상태](reference-mssqlctl-bdc-pool-status.md)
+
+이러한 명령의 출력에서에서 보다 자세한 분석에 대 한 Kibana 및 Grafana 대시보드에 Url을 포함 합니다. 
+
+사용 하는 것 외에도 **mssqlctl**, 끝점 및 상태 정보를 찾으려면 Azure Data Studio를 사용할 수도 있습니다. 사용 하 여 클러스터 상태를 보는 방법에 대 한 자세한 내용은 **mssqlctl** 및 Azure 데이터 Studio를 참조 하십시오 [빅 데이터 클러스터의 상태를 보는 방법](view-cluster-status.md)합니다.
 
 ## <a id="connect"></a> 클러스터에 연결
 

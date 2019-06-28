@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400013"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419048"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 ADLS Gen2 하는 방법
 
@@ -81,7 +81,7 @@ ms.locfileid: "67400013"
 Azure portal에서 ADLS 계정에 액세스할 수 있는 액세스 키를 사용 하 여 탑재할 수 있습니다.
 
  > [!TIP]
-   > 액세스 키를 찾는 방법에 대 한 자세한 내용은 (`<storage-account-access-key>`) 저장소 계정에 대 한 참조 [액세스 키 보기 및 복사](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys)합니다.
+   > 액세스 키를 찾는 방법에 대 한 자세한 내용은 (`<storage-account-access-key>`) 저장소 계정에 대 한 참조 [계정 키 및 연결 문자열 보기](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)합니다.
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>액세스 키 자격 증명에 대 한 환경 변수 설정
 

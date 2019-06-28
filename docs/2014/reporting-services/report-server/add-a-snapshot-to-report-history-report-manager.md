@@ -1,7 +1,7 @@
 ---
 title: 보고서 기록에 스냅숏 추가(보고서 관리자) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], adding
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 633ac335067f579459809264fb055ff43481f4e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63135087"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413113"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>보고서 기록에 스냅숏 추가(보고서 관리자)
 
@@ -73,7 +73,7 @@ ms.locfileid: "63135087"
   
 ## <a name="see-also"></a>관련 항목
 
-- [보고서 실행 속성 구성 &#40;보고서 관리자&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
 - [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [보고서 기록 제한&#40;보고서 관리자&#41;](../reports/limit-report-history-report-manager.md)
 - [일정](../subscriptions/schedules.md)   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797920"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412962"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -33,7 +33,7 @@ ms.locfileid: "66797920"
 |---|---|---|---|
 | **mssqlctl** | 사용자 계정 컨트롤 | 설치 하 고 빅 데이터 클러스터를 관리 하기 위한 명령줄 도구입니다. | [설치](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | 사용자 계정 컨트롤 | 기본 Kuberentes 클러스터를 모니터링 하기 위한 명령줄 도구 ([자세한 내용은](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | 사용자 계정 컨트롤 | SQL Server를 쿼리 하기 위한 플랫폼 간 그래픽 도구 ([자세한 내용은](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [설치](../azure-data-studio/download.md) |
+| **Azure Data Studio (내부)** | 사용자 계정 컨트롤 | SQL Server를 쿼리 하기 위한 플랫폼 간 그래픽 도구 ([자세한 내용은](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [설치](https://aka.ms/azdata-insiders) |
 | **SQL Server 2019 확장** | 사용자 계정 컨트롤 | 빅 데이터 클러스터에 연결을 지 원하는 Azure 데이터 Studio에 대 한 확장입니다. 또한 데이터 가상화 마법사를 제공합니다. | [설치](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS에 대 한 | Azure 서비스를 관리 하는 것에 대 한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포 사용 ([자세한 내용은](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [설치](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | 선택 사항 | SQL Server 쿼리를 위한 최신 명령줄 인터페이스 ([자세한 내용은](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

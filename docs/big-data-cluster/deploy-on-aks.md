@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797868"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412954"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -70,28 +70,44 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
    az account set --subscription <subscription id>
    ```
 
-1. 사용 하 여 리소스 그룹을 만들어야 합니다 **az 그룹 만들기** 명령입니다. 다음 예제에서는 명명 된 리소스 그룹을 만듭니다 `sqlbigdatagroup` 에 `westus2` 위치 합니다.
+1. 사용 하 여 리소스 그룹을 만들어야 합니다 **az 그룹 만들기** 명령입니다. 다음 예제에서는 명명 된 리소스 그룹을 만듭니다 `sqlbdcgroup` 에 `westus2` 위치 합니다.
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
 1. 사용 하 여 AKS에서 Kubernetes 클러스터 만들기는 [az aks 만들기](https://docs.microsoft.com/cli/azure/aks) 명령입니다. 다음 예제에서는 라는 Kubernetes 클러스터를 만듭니다 *kubcluster* 크기의 Linux 에이전트 노드 하나를 사용 하 여 **Standard_L8s**합니다. 이전 섹션에서 사용한 동일한 리소스 그룹에서 AKS 클러스터를 만든 있는지 확인 합니다.
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell:**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 사용 하려는 에이전트 노드 수입니다. 여기에 AKS에서 내부적으로 관리 되는 마스터 Kubernetes 노드를 포함 되지 않습니다. 앞의 예제만 평가 목적에 대 한 단일 노드를 사용합니다.
 
    몇 분 후 명령이 완료 되 고 클러스터에 대 한 JSON 형식 정보를 반환 합니다.
+
+   > [!TIP]
+   > 오류가 발생 하면 AKS 클러스터를 만들기, 참조를 [문제 해결 섹션](#troubleshoot) 이 문서의.
 
 1. 나중에 사용할 이전 명령의 JSON 출력을 저장 합니다.
 
@@ -100,17 +116,24 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
 1. Kubernetes 클러스터에 연결 하도록 kubectl을 구성 하려면 다음을 실행 합니다 [az aks 자격 증명 가져오기](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) 명령입니다. 이 단계는 자격 증명을 다운로드 하 고 kubectl CLI 사용을 구성 합니다.
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. 클러스터에 대 한 연결을 확인 하려면 사용 합니다 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) 클러스터 노드의 목록을 반환 하는 명령입니다.  아래 예제에서는 출력을 보여 줍니다. 1 개 마스터 및 3 개의 에이전트 노드가 있는 경우.
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> 문제 해결
+
+이전 명령을 사용 하 여 Azure Kubernetes 서비스를 만드는 데 문제가 있으면 다음 해결 방법을 시도 합니다.
+
+- 설치 해야 합니다 [최신 Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)합니다.
+- 동일한 단계를 다른 리소스 그룹 및 클러스터 이름을 사용 하 여 시도 합니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-이 문서의 단계는 AKS에서 Kubernetes 클러스터를 구성합니다. SQL Server 2019 빅 데이터 클러스터에 배포 하려면 다음 단계가입니다. 빅 데이터 클러스터를 배포 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
+이 문서의 단계는 AKS에서 Kubernetes 클러스터를 구성합니다. AKS Kubernetes 클러스터에서 SQL Server 2019 빅 데이터 클러스터를 배포 하려면 다음 단계가입니다. 빅 데이터 클러스터를 배포 하는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
 [Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법](deployment-guidance.md)

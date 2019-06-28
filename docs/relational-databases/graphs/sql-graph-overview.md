@@ -1,7 +1,7 @@
 ---
 title: SQL Server 및 Azure SQL Database에서 그래프 처리 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502503"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413073"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 그래프 처리
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ AND Person1.Name = 'John';
 합니다 [병합](../../t-sql/statements/merge-transact-sql.md) 문은 insert를 수행 하 고, 업데이트 또는 삭제 작업의 원본 테이블에 조인 결과 따라 대상 테이블에 있습니다. 예를 들어, 삽입, 업데이트 또는 원본 테이블과 대상 테이블의 차이점에 따라 대상 테이블에서 행을 삭제 하 여 두 테이블을 동기화 할 수 있습니다. MERGE 문에서 일치 조건자를 사용 하 여 Azure SQL Database 및 SQL Server vNext에서 이제 지원 됩니다. 즉, 일치 조건자를 사용 하 여 별도 INSERT/UPDATE/DELETE 문 대신 단일 문에서 그래프 관계를 지정 하는 새 데이터를 사용 하 여 현재 그래프 데이터 (노드 또는 지 테이블)를 병합할 수 되었습니다.
 
 참조 DML 병합에서 일치를 사용할 수 있는 방법을 자세히 알아보려면 [병합 문](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>가장 짧은 경로
+합니다 [SHORTEST_PATH](./sql-graph-shortest-path.md) 함수 그래프 또는 그래프의 다른 모든 노드에 지정 된 노드에서 시작 2 노드 간의 가장 짧은 경로 찾습니다. 가장 짧은 경로 수 또한 찾는 데 사용할 전이적 또는 그래프에 임의 길이 순회에 대 한 합니다. 
 
  ## <a name="next-steps"></a>다음 단계  
 읽기는 [SQL 그래프 데이터베이스-아키텍처](./sql-graph-architecture.md)
