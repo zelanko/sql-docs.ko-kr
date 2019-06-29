@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413990"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463549"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ SHORTEST_PATH 함수를 통해 찾을 수 있습니다.
 * 가장 짧은 경로 단일 소스입니다.
 * 여러 대상 노드에 여러 소스 노드에서 가장 짧은 경로입니다.
 
-입력으로는 임의 길이 패턴을 사용 하 고 두 노드 간 존재 하는 가장 짧은 경로 반환 합니다. 이 함수 일치 내 에서만 사용 될 수 있습니다. 임의 길이 패턴을 허용 하 고 해당 패턴과 일치 하는 그래프에서 최단 경로 찾습니다. 함수는 지정 된 두 노드 사이의 하나만 최단 경로 반환합니다. 경우에 있는 원본 및 대상 노드 쌍 간의 동일한 길이의 두 개 이상의 가장 짧은 경로 함수 첫 번째 통과 하는 동안 발견 된 하나의 경로 반환 됩니다. SHORTEST_PATH 함수 내에서을 임의 길이 패턴을 지정할 수는 참고 합니다. 
+입력으로는 임의 길이 패턴을 사용 하 고 두 노드 간 존재 하는 가장 짧은 경로 반환 합니다. 이 함수 일치 내 에서만 사용 될 수 있습니다. 함수는 지정 된 두 노드 사이의 하나만 최단 경로 반환합니다. 경우 있습니다가 동일한 길이 원본 및 대상 노드를 트래버스하는 동안 첫 번째 발견 된 함수 반환 하나만 경로 쌍 간의 가장 짧은 경로 두 개 이상 있습니다. SHORTEST_PATH 함수 내에서을 임의 길이 패턴을 지정할 수는 참고 합니다. 
 
 참조 된 [일치 항목 (SQL Graph)](../../t-sql/queries/match-sql-graph.md) 구문에 대 한 합니다. 
 
 ## <a name="for-path"></a>경로 대 한
-FROM 절의 패턴을 임의 길이에 참여할 모든 노드 또는 지 테이블 이름을 가진 경로 사용 해야 합니다. 경로 대 한 노드 또는 지 테이블 노드 또는 가장자리 끝 노드로 시작 노드의 경로 따라 이동의 목록을 나타내는 정렬 된 컬렉션을 반환 하도록 엔진을 지시 합니다. SELECT 절에서 직접 이러한 테이블에서 특성을 나타낼 수 없습니다. 이러한 테이블에서 특성 프로젝트 경로 집계 함수를 그래프를 사용 해야 합니다.  
+FROM 절의 패턴을 임의 길이에 참여할 모든 노드 또는 지 테이블 이름을 가진 경로 사용 해야 합니다. 경로 대 한 노드 또는 지 테이블 노드 또는 가장자리 이동 된 경로 있는 목록을 나타내는 정렬 된 컬렉션을 반환 하도록 엔진을 지시 합니다. SELECT 절에서 직접 이러한 테이블에서 특성을 나타낼 수 없습니다. 이러한 테이블에서 특성 프로젝트 경로 집계 함수를 그래프를 사용 해야 합니다.  
 
 ## <a name="arbitrary-length-pattern"></a>임의 길이 패턴
 이 패턴에는 노드를 포함 하 고 원하는 노드에 도달할 때까지 또는 최대 패턴에 지정 된 반복 될 때까지 반복적으로 이동 해야 하는 가장자리에 부합 함. 쿼리가 실행 될 때마다가이 패턴을 실행 한 결과 순서가 지정 된 컬렉션의 노드 및 가장자리 끝 노드로 시작 노드의 경로 따라 이동 됩니다. 정규식 스타일 구문 패턴 이며 다음 두 가지 패턴 수량자 지원 됩니다.

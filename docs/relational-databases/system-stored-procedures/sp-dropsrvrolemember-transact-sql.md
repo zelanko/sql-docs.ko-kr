@@ -16,38 +16,39 @@ helpviewer_keywords:
 - sp_dropsrvrolemember
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9eca631440e92f946513429ddb43d3212a109984
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: VanMSFT
+ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131943"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463569"
 ---
 # <a name="spdropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  고정 서버 역할에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 Windows 사용자 또는 그룹을 제거합니다.  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 대신 합니다.  
-  
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+고정 서버 역할에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이나 Windows 사용자 또는 그룹을 제거합니다.
+
+> [!IMPORTANT]
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 대신 합니다.
+
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="syntax"></a>구문
+
+```
 sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'  
-```  
-  
-## <a name="arguments"></a>인수  
- [ @loginame **=** ] **'**_로그인_**'**  
- 고정 서버 역할에서 제거할 로그인의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 존재 해야 합니다.  
-  
- [ @rolename **=** ] **'**_역할_**'**  
- 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 다음 값 중 하나 여야 합니다.  
-  
+```
+
+## <a name="arguments"></a>인수
+
+**[ @loginame = ]** '_login_'  
+고정 서버 역할에서 제거할 로그인의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 존재 해야 합니다.  
+
+**[ @rolename = ]** '_role_'  
+서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 다음 값 중 하나 여야 합니다.  
+
 -   sysadmin  
   
 -   securityadmin  
@@ -80,7 +81,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="examples"></a>예  
  다음 예는 `JackO` 고정 서버 역할에서 `sysadmin` 로그인을 제거합니다.  
   
-```  
+```sql
 EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';  
 ```  
   
@@ -92,5 +93,3 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
  [sp_droprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-  
-  
