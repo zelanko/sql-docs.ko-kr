@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388644"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469129"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -36,7 +36,7 @@ ms.locfileid: "67388644"
 | `mssqlctl` 명령 변경 내용 | `mssqlctl cluster` 명령으로 바뀌었습니다 `mssqlctl bdc`합니다. 자세한 내용은 참조는 [ `mssqlctl` 참조](reference-mssqlctl.md)합니다. |
 | 새 `mssqlctl` 상태 명령 및 클러스터 관리 포털을 제거 합니다. | 클러스터 관리 포털에는이 릴리스에서 제거 됩니다. 새 상태 명령에 추가 된 `mssqlctl` 해당 보수 기존 명령을 모니터링 합니다. |
 | Spark 계산 풀 | 저장소 크기를 조정 하지 않고도 Spark 계산 능력을 향상 하는 추가 노드를 만듭니다. 또한 Spark에 대 한 사용 되지 않는 저장소 풀 노드를 시작할 수 있습니다. Spark 및 저장소는 분리 됩니다. 자세한 내용은 [spark 없이 저장소 구성](deployment-custom-configuration.md#sparkstorage)합니다. |
-| MSSQL Spark 커넥터 | 읽기/쓰기 데이터 풀에 대 한 외부 테이블을 지원 합니다. 이전 릴리스에서 지원 되는 읽기/쓰기 마스터 테이블만을 인스턴스입니다. |
+| MSSQL Spark 커넥터 | 읽기/쓰기 데이터 풀에 대 한 외부 테이블을 지원 합니다. 이전 릴리스에서 지원 되는 읽기/쓰기 마스터 테이블만을 인스턴스입니다. 자세한 내용은 [읽고 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 쓰는 방법](spark-mssql-connector.md)합니다. |
 | MLeap를 사용 하 여 machine Learning | [Spark에서 MLeap 기계 학습 모델을 학습 하 고 Java 언어 확장을 사용 하 여 SQL Server의 점수를 매긴](spark-create-machine-learning-model.md)합니다. |
 
 ### <a name="known-issues"></a>알려진 문제
