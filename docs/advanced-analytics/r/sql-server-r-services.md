@@ -8,12 +8,13 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642326"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469110"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,10 +23,10 @@ R Services는 SQL Server에서 R 코드와 함수를 실행하는 데 사용되�
 
 R Services에는 Microsoft의 엔터프라이즈 R 패키지와 함께 배포되는 R의 기본 배포가 포함되어 있으므로 여러 코어에서 많은 양의 데이터를 로드 및 처리하고 그 결과를 단일 통합 출력으로 집계할 수 있습니다. Microsoft의 R 기능 및 알고리즘은 규모와 유용성을 모두 고려하여 설계되었습니다. Microsoft에서 엔지니어링 및 기술 지원하는 상용 서버 제품의 예측 분석, 통계 모델링, 데이터 시각화 및 첨단 기계 학습 알고리즘을 제공합니다. 
 
-R 라이브러리 포함 [ **RevoScaleR**](ref-r-revoscaler.md)를 [ **MicrosoftML (R)**](ref-r-microsoftml.md), 등입니다. R Services는 데이터베이스 엔진과 통합되어 있기 때문에 분석을 데이터에 가깝게 유지하고 데이터 이동과 관련된 비용 및 보안 위험을 제거할 수 있습니다.
+R 라이브러리 포함 [ **RevoScaleR**](ref-r-revoscaler.md)를 [ **MicrosoftML (R)** ](ref-r-microsoftml.md), 등입니다. R Services는 데이터베이스 엔진과 통합되어 있기 때문에 분석을 데이터에 가깝게 유지하고 데이터 이동과 관련된 비용 및 보안 위험을 제거할 수 있습니다.
 
 > [!Note]
-> SQL Server 2017에서 Python 추가를 반영하여 R Services 이름이 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)로 바뀌었습니다.
+> R Services가 되 고 나중에 SQL Server 2017에서 이름이 바뀌었습니다 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), Python의 추가 반영 합니다.
 
 ## <a name="components"></a>구성 요소
 
@@ -34,7 +35,7 @@ SQL Server 2016은 R만 있습니다. 다음 표에 SQL Server 2016의 기능을
 | 구성 요소 | Description |
 |-----------|-------------|
 | SQL Server 실행 패드 서비스 | 외부 R 런타임 및 SQL Server 인스턴스 간의 통신을 관리 하는 서비스입니다. |
-| R 패키지 | [**RevoScaleR**](ref-r-revoscaler.md)은 확장 가능한 R의 주요 라이브러리입니다. 이 라이브러리의 함수들은 가장 널리 사용됩니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 다양한 형태의 모델링 및 분석을 이러한 라이브러리에서 찾을 수 있습니다. 또한 이 라이브러리의 함수는 계산 엔진에서 조정 및 관리하는 데이터 청크 작업을 수행할 수 있는 병렬 처리를 위해 사용 가능한 코어에 작업 부하를 자동으로 배포합니다.  <br/>[**MicrosoftML (R)**](ref-r-microsoftml.md)은 텍스트 분석, 이미지 분석 및 감정 분석에 대한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가합니다. <br/>[**sqlRUtils**](ref-r-sqlrutils.md)는 T-SQL 저장 프로시저에 R 스크립트를 배치하고, 데이터베이스에 저장 프로시저를 등록하고, R 개발 환경에서 저장 프로시저를 실행하는 것에 대한 도우미 함수를 제공합니다.<br/>[**olapR** ](ref-r-olapr.md) R에서 MDX 쿼리를 지정 하는 데는|
+| R 패키지 | [**RevoScaleR**](ref-r-revoscaler.md)은 확장 가능한 R의 주요 라이브러리입니다. 이 라이브러리의 함수들은 가장 널리 사용됩니다. 데이터 변환 및 조작, 통계 요약, 시각화 및 다양한 형태의 모델링 및 분석을 이러한 라이브러리에서 찾을 수 있습니다. 또한 이 라이브러리의 함수는 계산 엔진에서 조정 및 관리하는 데이터 청크 작업을 수행할 수 있는 병렬 처리를 위해 사용 가능한 코어에 작업 부하를 자동으로 배포합니다.  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md)은 텍스트 분석, 이미지 분석 및 감정 분석에 대한 사용자 지정 모델을 만드는 기계 학습 알고리즘을 추가합니다. <br/>[**sqlRUtils**](ref-r-sqlrutils.md)는 T-SQL 저장 프로시저에 R 스크립트를 배치하고, 데이터베이스에 저장 프로시저를 등록하고, R 개발 환경에서 저장 프로시저를 실행하는 것에 대한 도우미 함수를 제공합니다.<br/>[**olapR** ](ref-r-olapr.md) R에서 MDX 쿼리를 지정 하는 데는|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open)은 R의 Microsoft의 오픈 소스 배포입니다. 패키지 및 인터프리터를 포함합니다. 항상 설치 프로그램으로 설치되는 MRO의 버전을 사용합니다. |
 | R 도구 | R 콘솔 창 및 명령 프롬프트를 R 배포에 표준 도구 이며  |
 | R 샘플 및 스크립트 |  오픈 소스 R 및 RevoScaleR 패키지 만들고 미리 설치 된 데이터를 사용 하 여 스크립트를 실행할 수 있도록 기본 제공 데이터 집합을 포함 |

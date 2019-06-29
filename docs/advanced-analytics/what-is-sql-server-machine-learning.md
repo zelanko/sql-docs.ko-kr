@@ -1,6 +1,6 @@
 ---
-title: R 언어 및 Python 통합-SQL Server Machine Learning Services 기능
-description: R 언어와 데이터 과학 및 통계 모델링, 기계 학습 모델, 예측 분석, 데이터 시각화 등에 대 한 관계형 데이터와 통합 되는 SQL Server의 Python 기능입니다.
+title: SQL Server Machine Learning Services의 SQL Server Machine Learning 서비스 (R, Python)-개요
+description: SQL server에서 관계형 데이터에 대 한 데이터 과학 및 통계를 사용 하 여 Python 및 R을 통합할 수 있는 Machine Learning Services 기능의 개요 모델링, 기계 학습 모델, 예측 분석, 데이터 시각화 및 더 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
@@ -8,19 +8,19 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 921ffc0188623335ac7e7206a02095cc11469327
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140324"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469215"
 ---
-# <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
+# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning 서비스 (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Machine Learning 서비스에에서 in-database R 및 Python 스크립트를 실행 하는 데 사용 되는 SQL Server의 기능입니다. 기능이 포함 되어 있습니다 [Microsoft R 및 Python 패키지](#components) 고성능 예측 분석 및 기계 학습에 대 한 합니다. R 및 Python 코드 포함 하는 T-SQL 또는 저장된 프로시저에 R 및 Python 문이 포함 된 T-SQL 스크립트를 통해 R 및 Python 스크립트에서 관계형 데이터를 사용할 수 있습니다.
 
-이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017의 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML의 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리 2016에 도입 합니다. 
+이전에 사용한 [SQL Server 2016 R Services](r/sql-server-r-services.md), SQL Server 2017 이상 Machine Learning 서비스는 기본 R, RevoScaleR MicrosoftML, 업데이트 된 버전을 사용 하 여 R 지원의 다음 세대 및 다른 라이브러리에 도입 된 2016 합니다.
 
 Azure SQL Database에서 [Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) 현재 공개 미리 보기로 제공 됩니다.
 

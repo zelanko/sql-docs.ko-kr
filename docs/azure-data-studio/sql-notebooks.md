@@ -3,7 +3,7 @@ title: Azure Data Studio에서 SQL Notebook을 사용 하는 방법
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에서 SQL Notebook을 사용 하는 방법 알아보기
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798040"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469074"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 사용 하는 방법
 
@@ -163,14 +163,13 @@ import <package-name>
 
 이 명령을 실행할 때 `Module not found` 반환 됩니다. 다음으로 패키지가 있으면 오류가으로 표시 됩니다.
 
-반환 하는 경우는 `Module not Found` 오류를 클릭 **패키지 관리** 터미널을 시작 합니다. 이제 패키지를 로컬로 설치할 수 있습니다. 다음 명령을 사용 하 여 패키지를 설치 합니다.
+반환 하는 경우는 `Module not Found` 오류를 클릭 **패키지 관리** 마법사 환경을 시작 합니다. 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > Mac에서 패키지를 설치 하는 것에 대 한 터미널 창에서 지침을 따르세요. 
+이 마법사에 표시 됩니다는 **설치 됨** 패키지 있습니다. 목록 및 이러한 각 패키지의 연결 된 버전을 통해 검색할 수 있습니다. 해야 할 경우 **제거할** 패키지 중 하나를 클릭 하 고 클릭 한 다음 이러한 패키지는 **선택한 패키지를 제거** 옵션입니다.
+
+클릭할 수 있습니다 **새로 추가** 패키지 **검색** 특정 패키지에 대 한 관련된 버전을 선택 하 고 클릭 **설치**합니다. 기본적으로 검색 결과 패키지의 최신 버전을 선택 합니다. 
 
 패키지를 설치한 후에 Notebook 셀에서 이동 하 고 다음 명령을 입력 하는 일을 할 해야 합니다.
 
@@ -178,11 +177,7 @@ import <package-name>
 import <package-name>
 ```
 
-패키지를 제거 하려면 터미널에서 다음 명령을 사용 합니다.
-
-```bash
-./pip uninstall <package-name>
-```
+해야 할 경우 **제거할** 하나 또는 여러 패키지에서를 클릭 하 고 클릭 한 다음 이러한 패키지는 **선택한 패키지를 제거** 옵션입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

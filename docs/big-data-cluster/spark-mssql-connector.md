@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412887"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469116"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>읽기 및 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 기록 하는 방법
 
@@ -81,7 +81,7 @@ SQL Server 2019 미리 보기를 제공 합니다 **MSSQL Spark 커넥터** 빅 
 1. PowerShell 또는 bash 명령줄에서 다운로드 하려면 다음 명령을 실행 합니다 **mssql_spark_connector.ipynb** 샘플 notebook:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
 1. Azure Data Studio에서 샘플 전자 필기장 파일을 엽니다. 빅 데이터 클러스터에 대 한 HDFS/Spark 게이트웨이에 연결 되어 있는지 확인 합니다.

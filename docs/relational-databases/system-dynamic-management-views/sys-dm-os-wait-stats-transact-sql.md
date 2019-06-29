@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499681"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469137"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ GO
 |HADR_TDS_LISTENER_SYNC |내부 Alwayson 시스템 또는 WSFC 클러스터는 수신기의 시작 또는 중지를 요청 합니다. 이 요청의 처리는 항상 비동기이며 중복 요청을 제거하는 메커니즘이 있습니다. 또한 구성 변경으로 인해 이 프로세스가 일시 중단 되는 순간이 있습니다. 이 수신기 동기화 메커니즘과 관련된 모든 대기는 이 대기 유형을 사용합니다. 내부 에서만 사용 합니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |시작 하거나 가용성 그룹 수신기를 중지 해야 하는 항상에서 TRANSACT-SQL 문의 끝에 사용 합니다. 시작/중지 작업이 비동기적으로 완료 된 후 사용자 스레드 수신기의 상황이 알려지지 될 때까지이 대기 유형을 사용 하 여 차단 됩니다., <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | 지역 복제 보조 lower를 사용 하 여 구성 된 경우 주 데이터베이스 보다 (낮은 SLO) 크기를 계산 합니다. 주 데이터베이스는 보조 복제본에서 지연 된 로그 사용으로 인해 제한 됩니다. 이 주 데이터베이스의 변경 속도를 따라갈 수 부족 하 여 계산 용량을 보유 하면 보조 데이터베이스에서 발생 합니다. <br /> **적용 대상**: Azure SQL 데이터베이스| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
