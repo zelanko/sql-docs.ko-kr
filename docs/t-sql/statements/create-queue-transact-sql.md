@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503237"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232551"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|메시지의 고유 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 큐를 만들 수 있는 권한은 기본적으로 ddl_admin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
+ 큐를 만들 수 있는 권한은 `db_ddladmin`, `db_owner` 고정 데이터베이스 역할 및 `sysadmin` 고정 서버 역할의 멤버를 사용합니다.  
   
- 큐에 대한 REFERENCES 권한은 기본적으로 큐의 소유자, ddl_admin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
+ 큐에 대한 `REFERENCES` 권한은 기본적으로 큐의 소유자, `db_ddladmin`, `db_owner` 고정 데이터베이스 역할의 멤버 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
- 큐에 대한 RECEIVE 권한은 기본적으로 큐의 소유자, db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
+ 큐에 대한 `RECEIVE` 권한은 기본적으로 큐의 소유자, `db_owner` 고정 데이터베이스 역할의 멤버 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>1\. 매개 변수 없이 큐 만들기  
  다음 예에서는 메시지를 받을 수 있는 큐를 만듭니다. 큐에 대해 지정된 활성화 저장 프로시저가 없습니다.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>2\. 사용할 수 없는 큐 만들기  
  다음 예에서는 메시지를 받을 수 없는 큐를 만듭니다. 큐에 대해 지정된 활성화 저장 프로시저가 없습니다.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. 큐 만들기 및 내부 활성화 정보 지정  
  다음 예에서는 메시지를 받을 수 있는 큐를 만듭니다. 큐에서 메시지를 받으면 큐가 `expense_procedure` 저장 프로시저를 시작합니다. 이 저장 프로시저는 `ExpenseUser` 사용자로 실행됩니다. 큐는 최대 `5`개의 저장 프로시저 인스턴스를 시작합니다.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. 특정 파일 그룹에 큐 만들기  
  다음 예에서는 `ExpenseWorkFileGroup` 파일 그룹에 큐를 만듭니다.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. 여러 매개 변수로 큐 만들기  
  다음 예에서는 `DEFAULT` 파일 그룹에 큐를 만듭니다. 이 큐는 사용할 수 없습니다. 메시지가 속한 대화가 끝날 때까지 이 큐에 메시지가 보관됩니다. ALTER QUEUE를 사용하여 큐를 사용할 수 있게 설정하면 큐가 `2008R2.dbo.expense_procedure` 저장 프로시저를 시작하여 메시지를 처리합니다. 이 저장 프로시저는 `CREATE QUEUE` 문을 실행한 사용자로 실행됩니다. 큐는 최대 `10`개의 저장 프로시저 인스턴스를 시작합니다.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314055"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419058"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -50,7 +50,7 @@ SQL Server, SQL Database, SQL Data Warehouse 또는 Analytics Platform System(�
 
 ## <a name="overview-sql-server"></a>개요: SQL Server
 
-PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원본은 연결을 설정하고 이러한 기본 사용 사례를 지원하는 데 사용됩니다.
+PolyBase 쿼리에 대한 외부 데이터 원본을 만듭니다. 외부 데이터 원본은 연결을 설정하고 다음과 같은 기본 사용 사례를 지원하는 데 사용됩니다.
 
 - [PolyBase][intro_pb]를 사용하여 데이터 가상화 및 데이터 로드
 - `BULK INSERT` 또는 `OPENROWSET`를 사용한 대량 로드 작업
@@ -458,8 +458,6 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#d-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
-
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
 `TYPE`이 `RDBMS` 또는 `SHARD_MAP_MANAGER`로 설정된 경우 이 인수를 구성합니다.
@@ -678,7 +676,7 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#e-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
+`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#a-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
 ## <a name="permissions"></a>사용 권한
 
@@ -897,7 +895,7 @@ WITH
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#e-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
+`TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#d-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -924,7 +922,7 @@ Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니�
 > [!IMPORTANT]  
 > 외부 데이터 원본을 만들 때 RESOURCE_MANAGER_LOCATION 값의 유효성이 검사되지 않습니다. 잘못된 값을 입력하면 제공된 값을 확인할 수 없으므로 푸시 다운을 시도할 때마다 실행 시 쿼리 오류가 발생할 수 있습니다.
 
-[푸시 다운이 활성화된 Hadoop을 참조하는 외부 데이터 원본 만들기](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled)는 구체적인 예제와 추가 지침을 제공합니다.
+[푸시 다운이 활성화된 Hadoop을 참조하는 외부 데이터 원본 만들기](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled)는 구체적인 예제와 추가 지침을 제공합니다.
 
 ## <a name="permissions"></a>사용 권한
 
