@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131923"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232503"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "54131923"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -52,12 +51,12 @@ CREATE SERVICE service_name
  생성할 서비스의 이름입니다. 새 서비스는 현재 데이터베이스에 생성되며 AUTHORIZATION 절에서 지정한 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *service_name*은 유효한 **sysname**이어야 합니다.  
   
 > [!NOTE]  
->  *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. CREATE BROKER PRIORITY에서 서비스 이름에 ANY를 지정하면 모든 서비스에 대해 우선 순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
+> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `CREATE BROKER PRIORITY`에서 서비스 이름에 `ANY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
  서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name*을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
   
  *contract_name*  
@@ -67,43 +66,43 @@ CREATE SERVICE service_name
  서비스가 DEFAULT 계약을 준수하는 대화의 대상이 될 수 있음을 지정합니다. 이 절의 컨텍스트에서 DEFAULT는 키워드가 아니므로 식별자로 구분해야 합니다. DEFAULT 계약을 사용하면 대화 양측이 DEFAULT 메시지 유형의 메시지를 보낼 수 있습니다. DEFAULT 메시지 유형은 유효성 검사 NONE을 사용합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 서비스는 연결된 계약에 의해 제공되는 기능을 노출시키므로 다른 서비스에서도 이 기능을 사용할 수 있습니다. CREATE SERVICE 문은 이 서비스를 대상으로 하는 계약을 지정합니다. 서비스는 서비스가 지정한 계약을 사용하는 대화에 대해서만 대상이 될 수 있습니다. 계약을 지정하지 않은 서비스는 기능을 다른 서비스에 노출시키지 않습니다.  
+ 서비스는 연결된 계약에 의해 제공되는 기능을 노출시키므로 다른 서비스에서도 이 기능을 사용할 수 있습니다. `CREATE SERVICE` 문은 이 서비스를 대상으로 하는 계약을 지정합니다. 서비스는 서비스가 지정한 계약을 사용하는 대화에 대해서만 대상이 될 수 있습니다. 계약을 지정하지 않은 서비스는 기능을 다른 서비스에 노출시키지 않습니다.  
   
  이 서비스에서 시작된 대화는 모든 계약을 사용할 수 있습니다. 이 서비스만 대화를 시작할 경우 계약을 지정하지 않고 서비스를 만들 수 있습니다.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 서비스로부터 새 대화를 허용하는 경우 Service Broker에서 대화 메시지를 넣는 큐는 대상 서비스의 이름에 의해 결정됩니다.  
   
-## <a name="permissions"></a>Permissions  
- 서비스를 만들 수 있는 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다. CREATE SERVICE 문을 실행하는 사용자에게는 큐 및 지정된 모든 계약에 대한 REFERENCES 권한이 있어야 합니다.  
+## <a name="permissions"></a>사용 권한  
+ 서비스를 만들 수 있는 권한은 기본적으로 `db_ddladmin`, `db_owner` 고정 데이터베이스 역할 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다. `CREATE SERVICE` 문을 실행하는 사용자에게는 큐 및 지정된 모든 계약에 대한 `REFERENCES` 권한이 있어야 합니다.  
   
- 서비스에 대한 REFERENCES 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다. 서비스에 대한 SEND 권한은 기본적으로 서비스 소유자, **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
+ 서비스에 대한 `REFERENCES` 권한은 기본적으로 서비스 소유자, `db_ddladmin`, `db_owner` 고정 데이터베이스 역할의 멤버 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다. 서비스에 대한 `SEND` 권한은 기본적으로 서비스 소유자, `db_owner` 고정 데이터베이스 역할의 멤버 또는 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
  서비스는 임시 개체일 수 없습니다. **#** 으로 시작되는 서비스 이름을 사용할 수 있지만 영구 개체입니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-service-with-one-contract"></a>1. 하나의 계약이 있는 서비스 만들기  
+### <a name="a-creating-a-service-with-one-contract"></a>1\. 하나의 계약이 있는 서비스 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 스키마의 `ExpenseQueue` 큐에 `dbo` 서비스를 만듭니다. 이 서비스를 대상으로 하는 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 준수해야 합니다.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE [dbo].[ExpenseQueue]  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>2. 여러 계약이 있는 서비스 만들기  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>2\. 여러 계약이 있는 서비스 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 큐에 `ExpenseQueue` 서비스를 만듭니다. 이 서비스를 대상으로 하는 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 또는 `//Adventure-Works.com/Expenses/ExpenseProcessing` 계약을 준수해야 합니다.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission],  
      [//Adventure-Works.com/Expenses/ExpenseProcessing]) ;  
 ```  
   
-### <a name="c-creating-a-service-with-no-contracts"></a>3. 계약이 없는 서비스 만들기  
+### <a name="c-creating-a-service-with-no-contracts"></a>C. 계약이 없는 서비스 만들기  
  다음 예에서는 서비스 `//Adventure-Works.com/Expenses on the ExpenseQueue`큐를 만듭니다. 이 서비스에는 계약 정보가 없습니다. 그러므로 이 서비스만 대화의 시작자가 될 수 있습니다.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   

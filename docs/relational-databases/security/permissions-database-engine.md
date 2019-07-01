@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840087"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412662"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |IMPERSONATE|로그인 및 사용자|  
 |INSERT|동의어, 테이블과 열, 뷰 및 열입니다. 데이터베이스, 스키마 또는 개체 수준에서 권한을 부여할 수 있습니다.|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐|  
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW 및<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW 및<br />XML SCHEMA COLLECTION|  
 |SELECT|동의어, 테이블과 열, 뷰 및 열입니다. 데이터베이스, 스키마 또는 개체 수준에서 권한을 부여할 수 있습니다.|  
 |TAKE OWNERSHIP|DATABASE SCOPED CONFIGURATION, LOGIN, SERVER 및 USER를 제외한 전체 개체 클래스입니다.|  
 |UPDATE|동의어, 테이블과 열, 뷰 및 열입니다. 데이터베이스, 스키마 또는 개체 수준에서 권한을 부여할 수 있습니다.|  
@@ -259,7 +259,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Delete|  
+|OBJECT|Delete|DL|SCHEMA|Delete|  
 |OBJECT|CREATE 문을 실행하기 전에|EX|SCHEMA|CREATE 문을 실행하기 전에|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -418,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>열 수준 사용 권한에 대한 특별 고려 사항
 
-*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+*<table_name>(\<column _name>)* 구문을 사용하여 열 수준 사용 권한을 부여합니다. 예를 들어
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
@@ -427,7 +427,7 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ##  <a name="_examples"></a> 예  
  이 섹션의 예에서는 사용 권한 정보를 검색하는 방법을 보여 줍니다.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1. 부여 가능한 사용 권한의 전체 목록 반환  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>1\. 부여 가능한 사용 권한의 전체 목록 반환  
  다음 문에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 함수를 사용하여 모든 `fn_builtin_permissions` 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)를 참조하세요.  
   
 ```sql  
@@ -435,7 +435,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2. 특정 개체 클래스의 사용 권한 반환  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>2\. 특정 개체 클래스의 사용 권한 반환  
  다음 예제에서는 `fn_builtin_permissions` 를 사용하여 보안 개체 범주에 사용할 수 있는 모든 사용 권한을 표시합니다. 다음 예에서는 어셈블리의 사용 권한을 반환합니다.  
   
 ```sql  
@@ -443,7 +443,7 @@ SELECT * FROM fn_builtin_permissions('assembly');
 GO    
 ```  
   
-### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>3. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
+### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>C. 개체의 실행 보안 주체에 부여된 사용 권한 반환  
  다음 예에서는 `fn_my_permissions` 를 사용하여 지정된 보안 개체에 대해 해당 보안 주체가 가진 유효 사용 권한의 목록을 반환합니다. 다음 예에서는 `Orders55`라는 개체의 사용 권한을 반환합니다. 자세한 내용은 [sys.fn_my_permissions&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)를 참조하세요.  
   
 ```sql  
@@ -451,7 +451,7 @@ SELECT * FROM fn_my_permissions('Orders55', 'object');
 GO  
 ```  
   
-### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>4. 지정된 개체에 적용할 수 있는 사용 권한 반환  
+### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. 지정된 개체에 적용할 수 있는 사용 권한 반환  
  다음 예에서는 `Yttrium`이라는 개체에 적용할 수 있는 사용 권한을 반환합니다. `OBJECT_ID` 개체의 ID를 검색하는 데 기본 제공 함수인 `Yttrium`가 사용됩니다.  
   
 ```sql  

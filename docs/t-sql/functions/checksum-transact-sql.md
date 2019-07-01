@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ee40f9b7632a388cb9b0889f40ee510c39ba34b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65946491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145503"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -62,12 +62,14 @@ CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="remarks"></a>Remarks  
 `CHECKSUM`은 인수 목록에 대해 체크섬이라고 하는 해시 값을 계산합니다. 이 해시 값을 사용하여 해시 인덱스를 작성합니다. `CHECKSUM` 함수가 열 인수인 경우 결과는 해시 인덱스이며 인덱스는 계산된 `CHECKSUM` 값을 통해 작성됩니다. 이 결과는 열에 대한 등가 검색에 사용할 수 있습니다.
   
-`CHECKSUM` 함수는 해시 함수 속성을 만족합니다. 즉 두 식 목록에 적용된 `CHECKSUM`은 두 목록의 해당 요소가 같은 데이터 형식을 갖고 해당하는 요소가 같음(=) 연산자를 사용하여 비교했을 때 동일하면 동일한 값을 반환합니다.  지정된 형식의 Null 값은 `CHECKSUM` 함수에서는 동일한 것으로 비교되게 정의됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 목록 체크섬도 변경될 수 있습니다. 그러나 이것이 보장되지는 않습니다. 따라서 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `CHECKSUM`에 비해 훨씬 낮습니다.
+`CHECKSUM` 함수는 해시 함수 속성을 만족합니다. 즉 두 식 목록에 적용된 `CHECKSUM`은 두 목록의 해당 요소가 같은 데이터 형식을 갖고 해당하는 요소가 같음(=) 연산자를 사용하여 비교했을 때 동일하면 동일한 값을 반환합니다. 지정된 형식의 Null 값은 `CHECKSUM` 함수에서는 동일한 것으로 비교되게 정의됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 목록 체크섬도 변경될 수 있습니다. 그러나 이것이 보장되지는 않습니다. 따라서 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `CHECKSUM`에 비해 훨씬 낮습니다.
   
 식 순서는 계산된 `CHECKSUM` 값에 영향을 미칩니다. `CHECKSUM(*)`에 사용되는 열의 순서는 테이블 또는 뷰 정의에 지정된 열의 순서입니다. 계산 열도 마찬가지입니다.
   
 `CHECKSUM` 값은 데이터 정렬에 따라 달라집니다. 같은 값이 다른 데이터 정렬로 저장된 경우 다른 `CHECKSUM` 값이 반환됩니다.
   
+`CHECKSUM ()`은 고유한 결과를 보장하지 않습니다.
+
 ## <a name="examples"></a>예  
 이 예에서는 `CHECKSUM`를 사용하여 해시 인덱스를 작성합니다.
   
