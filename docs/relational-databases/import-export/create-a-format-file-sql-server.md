@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946236"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219002"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "64946236"
  일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**에서 생성된 버전 11.0 서식 파일을 읽을 수 없습니다.  
+>  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**에서 생성된 버전 11.0 서식 파일을 읽을 수 없습니다.  
   
  이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션( **-n**, **-c**, **-w**또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64946236"
  **bcp** _table_or_view_ **format** NUL **-f**_format_file_name_  
   
 > [!NOTE]  
->  비 XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .fmt를 사용하는 것이 좋습니다(예: MyTable.fmt).  
+> 비 XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .fmt를 사용하는 것이 좋습니다(예: MyTable.fmt).  
   
  비 XML 서식 파일의 구조 및 필드에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)에서 원래 지원했던 서식 파일입니다.  
   
@@ -172,7 +172,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .xml을 사용하는 것이 좋습니다(예: MyTable.xml).  
+> XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .xml을 사용하는 것이 좋습니다(예: MyTable.xml).  
   
  XML 서식 파일의 구조 및 필드에 대한 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)에서 원래 지원했던 서식 파일입니다.  
   
@@ -180,7 +180,6 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
  이 섹션에는 **bcp** 명령을 사용하여 XML 서식 파일을 만드는 방법을 보여 주는 다음 예가 포함되어 있습니다.  
   
 -   1\. 문자 데이터용 XML 서식 파일 만들기  
-  
 -   2\. 네이티브 데이터용 XML 서식 파일 만들기  
   
  다음 예에서는 `HumanResources.Department` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 사용합니다. `HumanResources.Department` 테이블에는 네 개의 열, 즉 `DepartmentID`, `Name`, `GroupName`및 `ModifiedDate`가 있습니다.  
@@ -203,7 +202,7 @@ bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사�
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  생성된 `Department-c.xml`서식 파일에는 다음 XML 요소가 포함됩니다.  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  생성된 `Department-n.xml`서식 파일에는 다음 XML 요소가 포함됩니다.  
