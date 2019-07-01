@@ -2,7 +2,7 @@
 title: Azure Data Lake Analytics 태스크 | Microsoft Docs
 description: Azure Data Lake Analytics 태스크를 사용하여 U-SQL 작업을 Azure Data Lake Analytics 서비스에 제출할 수 있습니다.
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014923"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419152"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -37,7 +37,7 @@ Azure Data Lake Analytics 태스크를 사용하여 U-SQL 작업을 Azure Data L
 
 ## <a name="general-page-configuration"></a>일반 페이지 구성
 
-**일반** 페이지를 사용하여 태스크를 구성하고 태스크가 제출하는 U-SQL 스크립트를 제공합니다. U-SQL 언어에 대한 자세한 내용은 [U-SQL Language Reference](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference)(U-SQL 언어 참조)를 참조하세요.
+**일반** 페이지를 사용하여 태스크를 구성하고 태스크가 제출하는 U-SQL 스크립트를 제공합니다. U-SQL 언어에 대한 자세한 내용은 [U-SQL Language Reference](/u-sql/)(U-SQL 언어 참조)를 참조하세요.
 
 ### <a name="basic-configuration"></a>기본 구성
 

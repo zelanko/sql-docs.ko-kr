@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826929"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313986"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -1329,7 +1329,7 @@ SET QUERY_STORE = ON
 
 ### <a name="f-enabling-the-query-store-with-wait-statistics"></a>F. 대기 통계가 포함된 쿼리 저장소를 사용하도록 설정
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작)
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작)
 
 다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
 
@@ -2898,49 +2898,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
 
-> [!NOTE]
-> 많은 데이터베이스 설정 옵션은 현재 세션에 [SET 문](../../t-sql/statements/set-statements-transact-sql.md)을 사용하여 구성할 수 있으며 연결된 경우 일반적으로 애플리케이션에 의해 구성됩니다. 세션 수준 설정 옵션은 **ALTER DATABASE SET** 값을 재정의합니다. 아래에 설명된 데이터베이스 옵션은 다른 설정 옵션 값을 명시적으로 제공하지 않는 세션에 대해 설정할 수 있는 값입니다.
-
 ## <a name="syntax"></a>구문
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>인수
 
-*database_name* 수정할 데이터베이스의 이름입니다.
+*database_name*
 
-**\<auto_option> ::=**
+수정할 데이터베이스의 이름입니다.
 
-자동 옵션을 제어합니다.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+적용 대상: Azure SQL Data Warehouse(미리 보기)
 
-**권한** 다음과 같은 사용 권한이 필요합니다.
+이 명령은 `master` 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 `sys.databases`에 새 열 is_result_set_caching_on이 도입되었습니다.  
 
-- 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
-- `dbmanager` 데이터 베이스 역할의 멤버
+ON   
+이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
 
-데이터베이스의 소유자가 dbmanager 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
-
-> [!Note]
-> 이 기능이 모든 Azure 지역에 롤아웃되는 동안 인스턴스에 배포된 버전과 최신 [Azure SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0)에서 기능 가용성을 확인합니다.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }(Azure SQL Data Warehouse Gen2 미리 보기에만 적용) 이 명령은 master 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 sys.databases에 새 called is_result_set_caching_on 열이 추가되었습니다.  
-
-ON은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되도록 지정합니다.
-
-OFF은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되지 않도록 지정합니다.
-사용자는 specific request_id로 sys.pdw_request_steps를 쿼리하여 결과 캐시 적중 또는 누락을 통해 쿼리가 실행되었는지 알 수 있습니다.   캐시가 적중된 경우 쿼리 결과에는 다음 세부 정보와 함께 단일 단계가 포함됩니다.
+OFF   
+이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL Data Warehouse 스토리지에서 캐시되지 않도록 지정합니다. 사용자는 specific request_id로 sys.pdw_request_steps를 쿼리하여 결과 캐시 적중 또는 누락을 통해 쿼리가 실행되었는지 알 수 있습니다.   캐시가 적중된 경우 쿼리 결과에는 다음 세부 정보와 함께 단일 단계가 포함됩니다.
 
 |**열 이름** |**같음** |**Value** |
 |----|----|----|
@@ -2949,6 +2945,25 @@ OFF은 이 데이터베이스에서 반환된 쿼리 결과 집합이 Azure SQL 
 |location_type|=|Control|
 command|Like|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Remarks
+
+캐시된 결과 집합은 다음 요구 사항이 모두 충족되는 경우 쿼리에 다시 사용됩니다.
+
+1. 쿼리를 실행하는 사용자는 쿼리에서 참조된 모든 테이블에 액세스할 수 있습니다.
+1. 새 쿼리와 결과 집합 캐시를 생성한 이전 쿼리가 정확히 일치합니다.
+1. 캐시된 결과 집합이 생성된 테이블에는 데이터 또는 스키마 변경 내용이 없습니다.  
+
+데이터베이스에 대해 결과 집합 캐싱을 설정하면 DateTime.Now()와 같은 비결정적 함수가 있는 쿼리를 제외하고 캐시가 가득 찰 때까지 모든 쿼리에 대해 결과가 캐시됩니다.   큰 결과 집합(예: > 1 백만 행)이 있는 쿼리는 결과 캐시가 생성될 때 첫 번째 실행 중에 성능이 저하될 수 있습니다.
+
+## <a name="permissions"></a>사용 권한
+
+다음과 같은 사용 권한이 필요합니다.
+
+- 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
+- `dbmanager` 데이터 베이스 역할의 멤버
+
+데이터베이스의 소유자가 dbmanager 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
 
 ## <a name="examples"></a>예
 
