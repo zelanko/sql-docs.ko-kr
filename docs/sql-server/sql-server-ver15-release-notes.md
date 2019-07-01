@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82fc1e58ffd329a74849986b858aa25cf733dc84
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993950"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166363"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -98,6 +98,16 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
 - **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
+
+### <a name="loading-enclave-fails"></a>enclave 로드 실패
+
+- **문제 및 고객에게 미치는 영향**: Always Encrypted에 대한 enclave를 로드하면 오류 로그에 다음 메시지가 캡처되어 실패합니다.`Internal enclave error: Cannot initialize the 1 enclave`
+
+- **해결 방법**: 없음 CTP 3.1에 대한 해결이 예약되어 있습니다.
+
+- **적용 대상**: CTP 3.0
+
+### <a name="rich-computations-performance"></a>다양한 계산 성능
 
 - **문제 및 고객에게 미치는 영향**: 리치 계산은 몇 가지 성능 최적화가 보류 중이며, 제한된 기능을 포함하고(인덱싱 없음 등), 현재 기본적으로 사용하지 않도록 설정되어 있습니다.
 

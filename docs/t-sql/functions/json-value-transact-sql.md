@@ -1,7 +1,7 @@
 ---
 title: JSON_VALUE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -19,14 +19,15 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b2e4685c83c1587e43b26363c9a48af5683d33e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4552b026bbff9a7a8036fcd71954e215917b7256
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577444"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343986"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
  JSON 문자열에서 스칼라 값을 추출합니다.  
@@ -37,7 +38,7 @@ ms.locfileid: "65577444"
   
 ## <a name="syntax"></a>구문  
   
-```sql  
+```
 JSON_VALUE ( expression , path )  
 ```  
   
@@ -101,6 +102,7 @@ SET @jsonInfo=N'{
 |$.info.tags|NULL|Error|스칼라 값이 아닙니다.<br /><br /> **JSON_QUERY**를 대신 사용합니다.|  
 |$.info.type[0]|NULL|Error|배열이 아닙니다.|  
 |$.info.none|NULL|Error|속성이 없습니다.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>예  
   
@@ -127,7 +129,7 @@ DECLARE @town NVARCHAR(32)
 
 SET @jsonInfo=N'{"info":{"address":[{"town":"Paris"},{"town":"London"}]}';
 
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- Paris
+SET @town=JSON_VALUE(@jsonInfo,'$.info.address[0].town'); -- Paris
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address[1].town'); -- London
 ```  
   

@@ -4,17 +4,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services, sql-server
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: ff8293e5fa891ddcf0c5ab980e8c63799fbce9ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14aba1a63b068a3a1cbc0400c10b73ed57e3e376
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937942"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463404"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft BI(business intelligence) 도구로 분석 및 보고
 
@@ -47,5 +48,6 @@ ms.locfileid: "65937942"
 |**고급 분석**|데이터 과학자||||||  
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  *Reporting Services에는 최신 페이지를 매긴 보고서 제공과 같은 운영 보고서 및 사용자 지정 보고서 제공을 지원하는 여러 기능이 있습니다.

@@ -1,5 +1,5 @@
 ---
-title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서'
+title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047882"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP의 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목의 코드 예제는 메모리 최적화 테이블의 빠른 성능 향상을 보여줍니다. 이러한 성능 향상은 메모리 최적화 테이블의 데이터가 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 액세스될 때 두드러집니다. 이러한 성능 향상은 메모리 최적화 테이블의 데이터가 고유하게 컴파일된 저장 프로시저(NCSProc)에서 액세스될 때 더욱 커집니다.  
@@ -33,12 +33,12 @@ ms.locfileid: "51677552"
 ## <a name="code-example"></a>코드 예  
  다음 하위 섹션에서는 각 단계에 대해 설명합니다.  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하는 경우 필수 구성 요소  
  첫 번째 하위 섹션의 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 경우에 적용되고 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 실행 중인 경우에는 적용되지 않습니다. 다음을 수행합니다.  
   
 1.  SQL Server Management Studio(SSMS.exe)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하세요. 또는 SSMS.exe와 유사한 도구를 사용해도 됩니다.  
   
-2.  이름이 **C:\data\\\**인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
+2.  이름이 **C:\data\\\** 인 디렉터리를 수동으로 만듭니다. 샘플 Transact SQL 코드를 위해서는 미리 존재하는 디렉터리가 필요합니다.  
   
 3.  짧은 T-SQL을 실행하여 데이터베이스 및 메모리 최적화 파일 그룹을 생성하세요.  
   
@@ -59,7 +59,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]를 사용하는 경우 필수 구성 요소  
  이 하위 섹션은 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]를 사용하는 경우에만 적용됩니다. 다음을 수행합니다.  
   
 1.  코드 예제로 사용할 기존 테스트 데이터베이스를 결정합니다.  

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 6e27dc247648e8fd69ed372a5ddd2a8566240efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 290a3a9d307e19820af7f59cd5d6f821bcefc1a3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794903"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412778"
 ---
 # <a name="install-sql-server-servicing-updates"></a>SQL Server 서비스 업데이트 설치
 
@@ -55,7 +55,7 @@ ms.locfileid: "66794903"
 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update를 통해 업데이트를 받으면 무인 모드에서 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 최신 버전으로 업데이트합니다. 더 많은 유연성이 필요하거나 인터넷 또는 WSUS에 액세스할 수 없는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center에서 업데이트를 얻어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[설치 마법사에서 SQL Server 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-[SQL Server 인스턴스에 기능 추가 &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+[설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
+[SQL Server 인스턴스에 기능 추가&#40;설치 프로그램&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
 [실패한 SQL Server 설치 복구](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 
