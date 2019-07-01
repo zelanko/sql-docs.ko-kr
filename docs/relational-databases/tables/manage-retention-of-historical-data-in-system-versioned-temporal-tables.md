@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466808"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -193,7 +193,7 @@ COMMIT ;
   
  반복적인 파티션 유지 관리 작업 단계는 아래와 같습니다.  
   
-1.  전환: 준비 테이블을 만든 다음 SWITCH PARTITION 인수를 사용하여 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 문에서 기록 테이블과 준비 테이블 사이에서 파티션을 전환합니다(예 C. 테이블 간 파티션 전환 참조).  
+1.  스위치 아웃: 준비 테이블을 만든 다음, SWITCH PARTITION 인수를 사용하여 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 문에서 기록 테이블과 준비 테이블 사이에서 파티션을 전환합니다(예제 C. 테이블 간 파티션 전환 참조).  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
@@ -432,8 +432,8 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>임시 기록 보존 정책 접근 방식 사용
-> **참고:** Temporal 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Temporal 기록 보존 정책 접근 방식 사용
+> **참고:**  Temporal 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.  
 
 Temporal 기록 보존은 개별 테이블 수준에서 구성할 수 있으므로 사용자가 유연한 에이징 정책을 만들 수 있습니다. Temporal 보존 적용은 간단해서, 테이블을 만들거나 스키마를 변경할 때 매개 변수 하나만 설정하면 됩니다.
 
@@ -473,7 +473,7 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-DAYS, WEEKS, MONTHS 및 YEARS와 같은 여러 시간 단위를 사용하여 보존 기간을 지정할 수 있습니다. HISTORY_RETENTION_PERIOD를 생략하면 INFINITE 보존으로 간주됩니다. INFINITE 키워드를 명시적으로 사용할 수도 있습니다.
+다음과 같은 시간 단위를 사용하여 보존 기간을 지정할 수 있습니다. 일, 주, 월 및 연도 HISTORY_RETENTION_PERIOD를 생략하면 INFINITE 보존으로 간주됩니다. INFINITE 키워드를 명시적으로 사용할 수도 있습니다.
 일부 시나리오에서는 테이블을 만든 후 보존을 구성할 수도 있고 이전에 구성한 값을 변경할 수도 있습니다. 이런 경우에 ALTER TABLE 문을 사용합니다.
 ```
 ALTER TABLE dbo.WebsiteUserInfo

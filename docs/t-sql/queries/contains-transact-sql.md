@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467004"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ CONTAINS (
   
  *language_term*은 특정 언어의 LCID에 해당하는 문자열, 정수 또는 16진수 값으로 지정할 수 있습니다. *language_term*을 지정할 경우 해당 언어는 검색 조건의 모든 요소에 적용됩니다. 값을 지정하지 않으면 열의 전체 텍스트 언어가 사용됩니다.  
   
- 문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다.  
+ 문자열로 지정하는 경우 *language_term*은 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 '*language_term*'과 같이 작은따옴표로 묶어야 합니다. 정수로 지정하는 경우 *language_term*은 언어를 식별하는 실제 LCID입니다. 16진수 값으로 지정하는 경우 *language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다.  
   
  값이 DBCS(더블바이트 문자 집합) 형식인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 값을 유니코드로 변환합니다.  
   
@@ -316,7 +316,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  *\<weighted_term>* 키워드를 지정합니다.  
   
  WEIGHT(*weight_value*)  
- 0.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소는 *weight_value*를 포함할 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
+ 0\.0에서 1.0 사이의 숫자로 가중치를 지정합니다. *\<weighted_term>* 의 각 구성 요소는 *weight_value*를 포함할 수 있습니다. *weight_value*를 사용하여 쿼리의 각 부분이 쿼리와 일치하는 각 행에 할당되는 등급 값에 영향을 주는 방법을 변경할 수 있습니다. WEIGHT는 CONTAINS 쿼리 결과에는 영향을 주지 않지만 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리의 순위에는 영향을 줍니다.  
   
 > [!NOTE]  
 >  소수 구분 기호는 운영 체제 로캘에 관계없이 항상 마침표입니다.  
@@ -328,7 +328,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  두 개의 포함 검색 조건이 모두 충족되어야 일치한다는 것을 나타냅니다. AND 키워드 대신 앰퍼샌드 기호(&)를 사용하여 AND 연산자를 나타낼 수도 있습니다.  
   
  { AND NOT | &! }  
- 두 번째 검색 조건이 일치하지 않아야 한다는 것을 나타냅니다. AND NOT 키워드 대신 앰퍼샌드 다음에 느낌표 기호(&!)를 사용하여 AND NOT 연산자를 나타낼 수도 있습니다.  
+ 두 번째 검색 조건이 일치하지 않아야 한다는 것을 나타냅니다. AND NOT 키워드 대신 앰퍼샌드 다음에 느낌표 기호(&)를 사용하여 AND NOT 연산자를 나타낼 수도 있습니다.  
   
  { OR | | }  
  두 개의 포함 검색 조건 중 하나가 충족되어야 일치한다는 것을 나타냅니다. OR 키워드 대신 막대 기호(|)를 사용하여 OR 연산자를 나타낼 수도 있습니다.  
@@ -372,7 +372,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-contains-with-simpleterm"></a>1. \<simple_term>에 CONTAINS 사용  
+### <a name="a-using-contains-with-simpleterm"></a>1\. \<simple_term>에 CONTAINS 사용  
  다음 예에서는 가격이 `$80.99` 이고 `Mountain`이라는 단어가 포함된 모든 제품을 검색합니다.  
   
 ```sql  
@@ -385,7 +385,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>2. \<simple_term>에 CONTAINS 및 구 사용  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>2\. \<simple_term>에 CONTAINS 및 구 사용  
  다음 예에서는 `Mountain`이나 `Road`라는 구가 포함된 모든 제품을 반환합니다.  
   
 ```sql  
@@ -475,7 +475,7 @@ WHERE CONTAINS(Description, @SearchWord);
 GO  
 ```  
   
-### <a name="i-using-contains-with-a-logical-operator-and"></a>9. 논리 연산자(AND)에 CONTAINS 사용  
+### <a name="i-using-contains-with-a-logical-operator-and"></a>9\. 논리 연산자(AND)에 CONTAINS 사용  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 ProductDescription 테이블을 사용합니다. 이 쿼리에서는 CONTAINS 조건자를 사용하여 설명 ID가 5가 아니고 `Aluminum`과 `spindle`이라는 단어가 둘 다 포함된 설명을 검색합니다. 검색 조건에는 AND 부울 연산자가 사용됩니다.  
   
 ```sql  

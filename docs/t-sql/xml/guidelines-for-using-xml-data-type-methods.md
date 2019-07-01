@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928973"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>xml 데이터 형식 메서드를 사용하기 위한 지침
 
@@ -61,7 +61,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-예를 들어 다음과 같이 사용할 수 있습니다.
+예를 들어
 
 ```
 Msg 2396, Level 16, State 1:
@@ -70,7 +70,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>단일 항목 검사
 
-단일 항목이 필요한 위치 단계, 함수 매개 변수 및 연산자는 컴파일러가 런타임 시 단일 항목이 보장되는지 여부를 확인할 수 없는 경우 오류를 반환합니다. 이 문제는 형식화되지 않은 데이터에서 자주 발생합니다. 예를 들어 특성 조회에는 단일 부모 요소가 필요합니다. 이를 위해서는 단일 부모 노드를 선택하는 서수만으로도 충분합니다. 특성 값 추출을 위한 **node()**-**value()** 조합의 평가에는 서수 사양이 필요하지 않을 수 있습니다. 이러한 내용은 다음 예에 표시되어 있습니다.
+단일 항목이 필요한 위치 단계, 함수 매개 변수 및 연산자는 컴파일러가 런타임 시 단일 항목이 보장되는지 여부를 확인할 수 없는 경우 오류를 반환합니다. 이 문제는 형식화되지 않은 데이터에서 자주 발생합니다. 예를 들어 특성 조회에는 단일 부모 요소가 필요합니다. 이를 위해서는 단일 부모 노드를 선택하는 서수만으로도 충분합니다. 특성 값 추출을 위한 **node()** -**value()** 조합의 평가에는 서수 사양이 필요하지 않을 수 있습니다. 이러한 내용은 다음 예에 표시되어 있습니다.
 
 ### <a name="example-known-singleton"></a>예: 알려진 단일 항목
 

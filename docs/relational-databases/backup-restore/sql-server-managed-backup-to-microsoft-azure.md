@@ -12,16 +12,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397056"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008565"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob 저장소에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 스토리지에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure Blob Storage에 대한 SQL Server 백업을 관리하고 자동화합니다. SQL Server에서 데이터베이스의 트랜잭션 작업에 따라 백업 일정을 결정하도록 선택할 수 있습니다. 또는 고급 옵션을 사용하여 일정을 정의할 수 있습니다. 보존 설정은 백업이 Azure Blob 스토리지에 저장되는 기간을 결정합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.  
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 의 프로시저 및 기본 동작이 변경되었습니다. 자세한 내용은 [Migrate SQL Server 2014 Managed Backup Settings to SQL Server 2016](../../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md)을 참조하세요.  
   
@@ -29,11 +29,11 @@ ms.locfileid: "52397056"
 >  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 Microsoft Azure 가상 컴퓨터에서 실행되는 SQL Server 인스턴스에 사용하는 것이 좋습니다.  
   
 ## <a name="benefits"></a>이점  
- 현재 여러 데이터베이스에 대한 백업을 자동화하려면 백업 전략 개발, 사용자 지정 코드 작성, 백업 예약 등이 필요하지만, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 보존 기간 및 저장 위치만을 지정함으로써 백업 계획을 만들 수 있습니다. 고급 설정을 사용할 수 있지만 필요하지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 백업의 예약, 실행 및 유지 관리를 모두 처리합니다.  
+ 현재 여러 데이터베이스에 대한 백업을 자동화하려면 백업 전략 개발, 사용자 지정 코드 작성, 백업 예약 등이 필요하지만, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 보존 기간 및 스토리지 위치만을 지정함으로써 백업 계획을 만들 수 있습니다. 고급 설정을 사용할 수 있지만 필요하지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 백업의 예약, 실행 및 유지 관리를 모두 처리합니다.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 데이터베이스 수준 또는 SQL Server 인스턴스 수준에서 구성할 수 있습니다. 인스턴스 수준에서 구성할 경우 새로운 데이터베이스도 자동으로 백업됩니다. 데이터베이스 수준에서 설정을 사용하여 개별 사례에서 인스턴스 수준 기본값을 재정의할 수 있습니다.  
   
- 또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob 저장소 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ 또한, 추가 보안에 대한 백업을 암호화하고, 사용자 지정 일정을 설정하여 백업 실행 시기를 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 위한 Microsoft Azure Blob Storage 서비스의 이점에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
 ##  <a name="Prereqs"></a> 필수 구성 요소  
  Microsoft Azure Storage는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 백업 파일을 저장하는 데 사용합니다. 필요한 필수 구성 요소는 다음과 같습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "52397056"
  시스템 저장 프로시저 [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)을 참조하세요. 사용자 지정 일정을 지정하지 않을 경우 예약된 백업 유형 및 백업 주기는 데이터베이스 작업을 기준으로 결정됩니다. 보존 기간 설정은 보존 기간 내 지정 시간에 데이터베이스를 복구하는 기능과 스토리지에 보존할 백업 파일의 시간을 결정하는 데 사용됩니다.  
   
 ### <a name="backup-file-naming-conventions"></a>백업 파일 명명 규칙  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 사용자가 지정하는 컨테이너를 사용하므로, 컨테이너 이름을 제어할 수 있습니다. 백업 파일의 경우 비-가용성 데이터베이스는 다음 규칙을 사용하여 명명됩니다. 데이터베이스 이름의 첫 40자, '-'를 제외한 데이터베이스 GUID 및 타임스탬프를 사용하여 이름이 만들어집니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 사용자가 지정하는 컨테이너를 사용하므로, 컨테이너 이름을 제어할 수 있습니다. 백업 파일의 경우 다음 규칙을 사용하여 비가용성 데이터베이스의 이름을 지정합니다. 이름은 데이터베이스 이름의 첫 40자, '-'를 제외한 데이터베이스 GUID 및 타임스탬프를 사용하여 만들어집니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
   
 ### <a name="full-database-backup"></a>전체 데이터베이스 백업  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 다음을 만족할 경우 전체 데이터베이스 백업을 예약합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "52397056"
 -   트랜잭션 로그 백업이 전체 데이터베이스 백업보다 뒤처지는 경우. 목표는 로그 체인이 전체 백업을 앞서도록 유지하는 것입니다.  
   
 ## <a name="retention-period-settings"></a>보존 기간 설정  
- 백업을 사용하도록 설정할 때는 일 단위로 보존 기간을 설정해야 합니다. 최소 1일, 최대 30일입니다.  
+ 백업을 사용하도록 설정할 때는 일 단위로 보존 기간을 설정해야 합니다. 최솟값은 1일이고 최댓값은 30일입니다.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 시간 내 지정 시간에 복구하는 기능을 평가하여 보존해야 할 백업 파일과 삭제할 백업 파일을 결정합니다. 백업의 backup_finish_date는 보존 기간 설정에서 지정한 시간을 확인하고 일치시키는 데 사용됩니다.  
   

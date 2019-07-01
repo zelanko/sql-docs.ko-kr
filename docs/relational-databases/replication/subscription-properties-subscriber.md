@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751677"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "54134083"
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
  **보안**  
- **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 (**...**)를 클릭하여 배포자에서 배포 에이전트 또는 병합 에이전트가 실행되는 계정을 변경합니다. 배포 에이전트 또는 병합 에이전트가 구독자로 연결하는 계정을 변경하려면 **구독자 연결**을 클릭한 다음 속성 단추 (**...**)를 클릭합니다.  
+ **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 배포자에서 배포 에이전트 또는 병합 에이전트가 실행되는 계정을 변경합니다. 배포 에이전트 또는 병합 에이전트가 구독자로 연결하는 계정을 변경하려면 **구독자 연결**을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
   
  각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
@@ -97,13 +97,13 @@ ms.locfileid: "54134083"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자를 사용하여 이 구독을 동기화할 수 있는지 여부를 결정합니다.  
   
  **보안**  
- **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 (**...**)를 클릭하여 구독자에서 배포 에이전트 또는 병합 에이전트를 실행하는 계정을 변경합니다. 연결과 관련된 보안 옵션은 구독 유형에 따라 달라집니다.  
+ **에이전트 프로세스 계정** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 구독자에서 배포 에이전트 또는 병합 에이전트를 실행하는 계정을 변경합니다. 연결과 관련된 보안 옵션은 구독 유형에 따라 달라집니다.  
   
--   트랜잭션 게시에 대한 구독의 경우: 배포 에이전트를 배포자에 연결하는 계정을 변경하려면 **배포자 연결**을 클릭한 다음 속성 단추(**...**)를 클릭합니다.  
+-   트랜잭션 게시에 대한 구독의 경우: 배포 에이전트를 배포자에 연결하는 계정을 변경하려면 **배포자 연결**을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
   
--   트랜잭션 게시에 대한 즉시 업데이트 구독의 경우: 위에서 설명한 배포자 연결 외에도 구독자에서 게시자로 변경 내용을 전파하는 데 사용하는 방법을 변경할 수 있습니다. **게시자 연결**을 클릭한 다음 속성 단추(**...**)를 클릭합니다.  
+-   트랜잭션 게시에 대한 즉시 업데이트 구독의 경우: 위에서 설명한 배포자 연결 외에도 구독자에서 게시자로 변경 내용을 전파하는 데 사용하는 방법을 변경할 수 있습니다. **게시자 연결**을 클릭한 다음 속성 단추( **...** )를 클릭합니다.  
   
--   병합 게시에 대한 구독: **게시자 연결**을 클릭한 다음 속성 단추 (**...**)를 클릭합니다.  
+-   병합 게시에 대한 구독: **게시자 연결**을 클릭한 다음 속성 단추 ( **...** )를 클릭합니다.  
   
  각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "54134083"
  **웹 동기화 사용** 에 대해 **True**를 선택한 경우 다음을 수행하십시오.  
   
 -   **웹 서버 주소**에 IIS 서버의 전체 주소를 입력합니다.    
--   **웹 서버 연결** 행을 클릭한 다음 속성 단추 (**...**)를 클릭하여 구독자를 IIS 서버에 연결하는 계정을 설정 또는 변경합니다.    
+-   **웹 서버 연결** 행을 클릭한 다음 속성 단추 ( **...** )를 클릭하여 구독자를 IIS 서버에 연결하는 계정을 설정 또는 변경합니다.    
 -   필요한 경우 **웹 서버 제한 시간** 을 변경합니다. 제한 시간은 웹 동기화 요청이 만료되기 전까지의 시간(초)입니다. 
 
  

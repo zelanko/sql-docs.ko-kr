@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a4f5357e9645eb5ab1e55db96ae0138144ded8b9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639173"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>저장 프로시저의 종속성 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,15 +29,15 @@ ms.locfileid: "52617743"
 ##  <a name="Top"></a>   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **프로시저 종속성을 보려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **저장 프로시저의 종속성을 보려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  시스템 함수: **sys.dm_sql_referencing_entities**  
  참조된 엔터티에 대한 CONTROL 권한과 sys.dm_sql_referencing_entities에 대한 SELECT 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   

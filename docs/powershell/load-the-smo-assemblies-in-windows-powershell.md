@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 390a406196b0de0ca49940a53ef819c19b0120d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685981"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672561"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ SMO 어셈블리를 직접 로드해야 할 수 있는 두 가지 경우가 있�
   
 -   공급자 또는 cmdlet을 사용하지 않는 C# 또는 Visual Basic과 같은 다른 언어에서 SMO 코드를 이식하려는 경우  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server 관리 개체 로드  
+## <a name="example-loading-the-sql-server-management-objects"></a>예: SQL Server Management Objects 로드  
  다음 코드는 SMO 어셈블리를 로드합니다.  
   
 ```  

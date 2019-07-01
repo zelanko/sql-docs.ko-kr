@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aaf073341709e2c612f89d70f566f3b2dd09283d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665378"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 최상의 수행 방법 외에 다음의 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하십시오. [복제 관리자를 위한 질문과 대답](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
+  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제시된 모범 사례 지침을 따르는 것 외에도 자주 묻는 질문 항목을 읽고 일반적인 질문과 문제를 숙지하세요. [복제 관리자를 위한 질문과 대답](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
   
  최선의 수행 방법을 다음과 같은 두 가지 영역으로 나누면 이해가 쉽습니다.  
   

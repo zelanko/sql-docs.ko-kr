@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927744"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ select @f;
   
 -   **cast as xs:date()** 대신 **xs:date()** 생성자 함수를 사용할 수 있습니다. 자세한 내용은 [생성자 함수&#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)를 참조하세요.  
   
- 다음 예는 <`Somedate`> 요소가 있다는 점을 제외하고 앞의 예와 비슷합니다.  
+ 다음 예제는 <`Somedate`> 요소가 있다는 점을 제외하고 앞의 예와 비슷합니다.  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlser
 SELECT @f;  
 ```  
   
-### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>예: xml 형식의 열에 대해 exist() 메서드 지정  
+### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>예: xml 형식 열에 대해 exist() 메서드 지정  
  다음 쿼리에서는 카탈로그 설명에 사양 <`Specifications`> 요소가 없는 제품 모델 ID를 검색합니다.  
   
 ```  

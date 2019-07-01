@@ -13,11 +13,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047717"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52531628"
 - 메모리 액세스에 최적화된 성능 이점을 강조하는 코드 샘플
   
   
-## <a name="a-basics-of-memory-optimized-table-variables"></a>1. 메모리 최적화 테이블 변수 기본 사항  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>1\. 메모리 최적화 테이블 변수 기본 사항  
   
 메모리 최적화 테이블 변수는 메모리 최적화 테이블에서 사용하는 동일한 메모리 최적화 알고리즘 및 데이터 구조를 사용하여 훌륭한 효율성을 제공합니다. 테이블 변수가 고유하게 컴파일된 모듈 내에서 액세스될 때 효율성은 최대가 됩니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52531628"
     - `DECLARE @mytablevariable my_type;`를 참조하세요.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>2. 시나리오: 전역 tempdb &#x23;&#x23;table 바꾸기  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>2\. 시나리오: 글로벌 tempdb &#x23;&#x23;table 바꾸기  
   
 메모리 최적화 SCHEMA_ONLY 테이블이 포함된 전역 임시 테이블을 교체하는 작업은 매우 간단합니다. 런타임 시가 아니라 배포 시 테이블을 만든다는 것이 가장 큰 차이점입니다. 컴파일 시간 최적화로 인해 메모리 최적화 테이블을 만드는 시간은 기존의 테이블을 만드는 것보다 오래 걸립니다. 온라인 워크로드의 일부로 메모리 최적화 테이블을 만들고 삭제하는 작업은 워크로드의 성능뿐만 아니라 AlwaysOn 보조 데이터베이스와 데이터베이스 복구에 대한 다시 실행 성능에도 영향을 미칩니다.
 
@@ -105,7 +105,7 @@ CREATE TABLE dbo.soGlobalB
 3. T-SQL에서 **&#x23;&#x23;tempGlobalB**의 모든 멘션을 **dbo.soGlobalB**로 바꿉니다.  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>3. 시나리오: 세션 tempdb &#x23;table 바꾸기  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. 시나리오: 세션 tempdb &#x23;table 바꾸기  
   
 세션 임시 테이블을 바꾸기 위한 준비 작업에는 이전의 전역 임시 테이블 시나리오보다 더 많은 T-SQL이 포함됩니다. 다행히 변환을 수행하는 데에는 추가 T-SQL이 필요하지 않습니다.  
 
@@ -125,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-첫째, 다음과 같이 테이블 반환 함수를 만들어 **@@spid**로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
+첫째, 다음과 같이 테이블 반환 함수를 만들어 **@@spid** 로 필터링합니다. 함수는 세션 임시 테이블에서 변환하는 모든 SCHEMA_ONLY 테이블에서 사용할 수 있습니다.  
   
   
   
@@ -191,7 +191,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>4. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
   
   
 기존의 테이블 변수는 tempdb 데이터베이스에서 테이블을 나타냅니다. 훨씬 빠른 성능을 위해 테이블 변수를 메모리 액세스에 최적화할 수 있습니다.  
@@ -263,14 +263,14 @@ CREATE TYPE dbo.typeTableD
 완료되었습니다.  
   
   
-## <a name="e-prerequisite-filegroup-for-sql-server"></a>5. SQL Server에 대한 필수 구성 요소 FILEGROUP  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>E. SQL Server에 대한 필수 구성 요소 FILEGROUP  
   
 Microsoft SQL Server에서 메모리 최적화 기능을 사용하려면 데이터베이스에 **MEMORY_OPTIMIZED_DATA**로 선언된 FILEGROUP이 있어야 합니다.  
   
 - Azure SQL 데이터베이스에서는 이 FILEGROUP을 만들지 않아도 됩니다.  
   
   
-*필수 구성 요소:* FILEGROUP에 대한 다음 TRANSACT-SQL 코드는 이 문서의 뒷부분에 나오는 섹션에서 긴 T-SQL 코드 샘플에 대한 필수 구성 요소입니다.  
+*필수 구성 요소:* FILEGROUP에 대한 다음 Transact-SQL 코드는 이 문서의 뒷부분에 나오는 섹션에서 긴 T-SQL 코드 샘플에 대한 필수 구성 요소입니다.  
   
 1. SSMS.exe 또는 T-SQL을 전송할 수 있는 다른 도구를 사용해야 합니다.  
 2. SSMS에 예제 FILEGROUP T-SQL 코드를 붙여넣습니다.  
@@ -307,7 +307,7 @@ FILE 및 FILEGROUP의 `ALTER DATABASE ... ADD` 에 대한 자세한 내용은 �
 - [메모리 액세스에 최적화된 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## <a name="f-quick-test-to-prove-speed-improvement"></a>6. 속도 개선을 보여 주는 빠른 테스트  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>F. 속도 개선을 보여 주는 빠른 테스트  
   
   
 이 섹션에서는 메모리 최적화 테이블 변수를 사용하여 INSERT-DELETE에 대한 속도 향상을 테스트하고 비교하는 데 실행할 수 있는 TRANSACT-SQL 코드를 제공합니다. 코드는 처음 절반에서 테이블 형식이 메모리 최적화되었다는 점을 제외하고는 거의 동일한 두 부분으로 구성됩니다.  
@@ -416,18 +416,18 @@ Batch execution completed 5001 times.
   
   
   
-## <a name="g-predict-active-memory-consumption"></a>7. 활성 메모리 사용량 예측  
+## <a name="g-predict-active-memory-consumption"></a>7\. 활성 메모리 사용량 예측  
   
 다음 리소스를 사용하면 메모리 최적화 테이블의 활성 메모리 요구량을 예측할 수 있습니다.  
   
 - [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기: 계산 예](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [메모리 최적화 테이블의 테이블 및 행 크기: 계산 예제](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 큰 테이블 변수의 경우 비클러스터형 인덱스는 메모리 최적화 *테이블*보다 더 많은 메모리를 사용합니다. 행 개수 및 인덱스 키가 클수록 차이가 증가합니다.  
   
 메모리 최적화 테이블 변수가 액세스당 하나의 정확한 키 값에만 액세스하는 경우 비클러스터형 인덱스보다 해시 인덱스가 더 적합할 수 있습니다. 그러나 적절한 BUCKET_COUNT를 예측할 수 없는 경우 비클러스터형 인덱스가 차선책입니다.  
   
-## <a name="h-see-also"></a>8. 관련 항목:  
+## <a name="h-see-also"></a>H. 관련 항목:  
   
 - [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515990"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.  
   
--   익명 기록 테이블 이름의 형식은 *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* 입니다. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
+-   익명 기록 테이블 이름의 형식은 다음과 같습니다. *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
   
 -   기록 테이블은 rowstore 테이블로 생성됩니다. 페이지 압축은 가능하면 적용되며, 그렇지 않으면 기록 테이블을 압축하지 않습니다. 예를 들어 스파스 열과 같은 일부 테이블 구성은 압축을 허용하지 않습니다.  
   

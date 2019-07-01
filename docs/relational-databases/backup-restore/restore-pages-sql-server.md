@@ -21,11 +21,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506381"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54242266"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="WhenUseful"></a> 페이지 복원이 유용한 경우  
  페이지 복원은 격리된 손상 페이지를 복구하기 위한 기능입니다. 몇몇 페이지를 각각 복원하고 복구하면 복원 작업 도중 오프라인 상태인 데이터의 양이 줄어들어 파일 복원보다 빠를 수 있습니다. 그러나 파일에 있는 여러 페이지를 복원할 경우에는 일반적으로 전체 파일을 복원하는 것이 효율적입니다. 예를 들어 디바이스의 여러 페이지에서 디바이스 오류의 가능성을 나타내는 경우 파일을 다른 위치로 복원한 다음 해당 디바이스를 복구해 보세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "54242266"
   
     -   트랜잭션 로그  
   
-    -   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+    -   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
     -   모든 데이터 파일의 0페이지(파일 부트 페이지)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54242266"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다. FROM DATABASE_SNAPSHOT 옵션의 경우 데이터베이스가 항상 있습니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -136,8 +136,8 @@ ms.locfileid: "54242266"
     |머리글|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 **\<blank>**(트랜잭션 로그의 경우)가 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<blank>** (트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

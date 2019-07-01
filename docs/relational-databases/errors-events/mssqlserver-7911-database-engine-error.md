@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 60ebf6e5bf28c9cea19531f5d7b5bc70336402a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62866082"
 ---
 # <a name="mssqlserver7911"></a>MSSQLSERVER_7911
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
