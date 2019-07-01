@@ -1,7 +1,7 @@
 ---
 title: 메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서
 ms.custom: ''
-ms.date: 11/22/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,14 +15,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ebb953132e28a3ea0766f7d9d7cd40f3f620659
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047577"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351661"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
@@ -42,7 +43,7 @@ ms.locfileid: "63047577"
  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술입니다. 보고 및 분석 쿼리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술은 [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 물론 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 애플리케이션을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 애플리케이션을 보다 쉽게 관리할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 새로운 기능에 대한 자세한 내용은 [Columnstore 인덱스 - 새로운 기능](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)을 참조하세요.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 물론 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 애플리케이션을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 애플리케이션을 보다 쉽게 관리할 수 있습니다.
   
 > [!NOTE]  
 >  **사용해 보기**  

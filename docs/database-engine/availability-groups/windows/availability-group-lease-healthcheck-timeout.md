@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140606"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166395"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -56,7 +56,7 @@ SQL Server 클러스터의 모니터링을 적게 사용하는 경우 장단점�
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>클러스터 제한 시간과 임대 시간 제한 간의 관계 
 
-임대 메커니즘의 기본 기능은 다른 노드로 장애 조치를 수행하는 동안 클러스터 서비스가 인스턴스와 통신할 수 없는 경우에 SQL Server 리소스를 사용하는 것입니다. 클러스터거 AG 클러스터 리소스에서 오프라인 작업을 수행할 때 클러스터 서비스는 rhs.exe에 대한 RPC 호출을 통해 리소스를 오프라인으로 전환합니다. 리소스 DLL은 저장 프로시저를 사용하여 SQL Server에서 AG를 오프라인으로 전환하지만 이 저장 프로시저는 실패하거나 시간이 초과할 수 있습니다. 또한 리소스 호스트가 오프라인 호출 중에 고유한 해당 임대 갱신 스레드를 중지할 수도 있습니다. 최악의 경우에 SQL Server에서 임대가 ½ \* LeaseTimeout 내에 만료되고 인스턴스를 확인 상태로 전환하게 됩니다. 장애 조치는 여러 당사자에 의해 시작될 수 있지만 클러스터 상태 보기가 클러스터 및 SQL Server 인스턴스에서 일관적이어야 합니다. 예를 들어 기본 인스턴스가 나머지 클러스터와 연결이 끊어진 시나리오를 가정해 보세요. 클러스터의 각 노드는 클러스터 제한 시간 값으로 인해 비슷한 시간에 실패를 결정하지만 주 노드는 주 SQL Server 인스턴스와 상호작용하여 주 역할을 포기하도록 강제할 수 있습니다. 
+임대 메커니즘의 기본 기능은 다른 노드로 장애 조치를 수행하는 동안 클러스터 서비스가 인스턴스와 통신할 수 없는 경우에 SQL Server 리소스를 오프라인으로 전환하는 것입니다. 클러스터거 AG 클러스터 리소스에서 오프라인 작업을 수행할 때 클러스터 서비스는 rhs.exe에 대한 RPC 호출을 통해 리소스를 오프라인으로 전환합니다. 리소스 DLL은 저장 프로시저를 사용하여 SQL Server에서 AG를 오프라인으로 전환하지만 이 저장 프로시저는 실패하거나 시간이 초과할 수 있습니다. 또한 리소스 호스트가 오프라인 호출 중에 고유한 해당 임대 갱신 스레드를 중지할 수도 있습니다. 최악의 경우에 SQL Server에서 임대가 ½ \* LeaseTimeout 내에 만료되고 인스턴스를 확인 상태로 전환하게 됩니다. 장애 조치는 여러 당사자에 의해 시작될 수 있지만 클러스터 상태 보기가 클러스터 및 SQL Server 인스턴스에서 일관적이어야 합니다. 예를 들어 기본 인스턴스가 나머지 클러스터와 연결이 끊어진 시나리오를 가정해 보세요. 클러스터의 각 노드는 클러스터 제한 시간 값으로 인해 비슷한 시간에 실패를 결정하지만 주 노드는 주 SQL Server 인스턴스와 상호작용하여 주 역할을 포기하도록 강제할 수 있습니다. 
 
 주 노드의 관점에서 클러스터 서비스가 쿼럼을 손실하면 서비스는 자동으로 종료되기 시작합니다. 클러스터 서비스는 리소스 호스트에 대한 RPC 호출을 발급하여 프로세스를 종료합니다. 이 종료 호출은 SQL Server 인스턴스에서 AG를 오프라인으로 전환하는 작업을 담당합니다. 이 오프라인 호출은 T-SQL을 통해 수행되었지만 SQL과 리소스 DLL 간에 연결이 성공적으로 설정되도록 보장할 수 없습니다. 
 

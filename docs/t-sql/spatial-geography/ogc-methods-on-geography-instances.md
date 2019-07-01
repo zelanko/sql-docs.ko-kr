@@ -1,7 +1,7 @@
 ---
 title: Geography 인스턴스의 OGC 메서드 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2938e8d6c8bf0f3aebfbbadc0bbaa4f8ded57161
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f17f39af2923ff04510b1df2151f8c707a8ef7a3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935878"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412931"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography 인스턴스의 OGC 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "65935878"
   
 -   [STIsEmpty](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
--   [STIsValida](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+-   [STIsValid](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 -   [STLength](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   

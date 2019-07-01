@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428650"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316678"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ INCREMENT BY \<constant>
 **CACHE** 옵션을 사용하여 만들 경우 전원 오류와 같은 예기치 않은 종료로 인해 캐시에 남아 있는 시퀀스 번호가 손실될 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다.  
+ 시퀀스 번호는 현재 트랜잭션 범위 외부에서 생성되며, 시퀀스 번호를 사용하는 트랜잭션이 커밋되는지 또는 롤백되는지 여부에 관계없이 사용됩니다. 중복 유효성 검사는 레코드가 완전히 채워진 후에만 수행됩니다. 이는 생성 중에 동일한 번호가 둘 이상의 레코드에 사용되지만 중복으로 식별되는 경우가 발생할 수 있습니다. 이 상황이 발생하고 다른 자동 번호 값이 후속 레코드에 적용되면 자동 번호 값 사이의 간격이 발생하여 예상되는 동작이 될 수 있습니다.
   
 ### <a name="cache-management"></a>캐시 관리  
  성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **CACHE** 인수로 지정된 수의 시퀀스 번호를 미리 할당합니다.  
@@ -154,7 +154,7 @@ INCREMENT BY \<constant>
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  SCHEMA에 대한 **CREATE SEQUENCE**, **ALTER**또는 **CONTROL** 권한이 필요합니다.  
   
 -   db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 시퀀스 개체를 생성, 변경 및 삭제할 수 있습니다.  
