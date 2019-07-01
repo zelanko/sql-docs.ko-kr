@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e746730f0a2da408bc838e9074b9049d748a1682
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034264"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE 데이터베이스 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -198,14 +198,14 @@ permission | ALL [ PRIVILEGES ]
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 문을 실행하는 보안 주체 또는 AS 옵션으로 지정된 보안 주체는 데이터베이스에 대한 CONTROL 권한 또는 데이터베이스에 대한 CONTROL 권한이 포함된 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 지정한 보안 주체가 데이터베이스를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-permission-to-create-certificates"></a>1. 인증서를 만들기 위해 사용 권한 취소  
+### <a name="a-revoking-permission-to-create-certificates"></a>1\. 인증서를 만들기 위해 사용 권한 취소  
  다음 예에서는 사용자 `CREATE CERTIFICATE`에서 `AdventureWorks2012` 데이터베이스에 대한 `MelanieK` 사용 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -216,7 +216,7 @@ REVOKE CREATE CERTIFICATE FROM MelanieK;
 GO  
 ```  
   
-### <a name="b-revoking-references-permission-from-an-application-role"></a>2. 응용 프로그램 역할에서 REFERENCES 사용 권한 취소  
+### <a name="b-revoking-references-permission-from-an-application-role"></a>2\. 응용 프로그램 역할에서 REFERENCES 사용 권한 취소  
  다음 예에서는 응용 프로그램 역할 `REFERENCES`에서 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 사용 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
@@ -227,7 +227,7 @@ REVOKE REFERENCES FROM AuditMonitor;
 GO  
 ```  
   
-### <a name="c-revoking-view-definition-with-cascade"></a>3. CASCADE를 지정하여 VIEW DEFINITION 취소  
+### <a name="c-revoking-view-definition-with-cascade"></a>C. CASCADE를 지정하여 VIEW DEFINITION 취소  
  다음 예에서는 사용자 `VIEW DEFINITION`와 `AdventureWorks2012`가 `CarmineEs` 사용 권한을 부여한 모든 보안 주체로부터 `CarmineEs` 데이터베이스에 대한 `VIEW DEFINITION` 사용 권한을 취소합니다.  
   
 ```  
