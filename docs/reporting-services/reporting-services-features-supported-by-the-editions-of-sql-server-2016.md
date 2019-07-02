@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936549"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343874"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
 
@@ -53,7 +53,7 @@ Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL S
 |공유 구성 요소 라이브러리|예|예|||예|  
 |전자 메일 및 파일 공유 구독/일정 예약|예|예|||예|  
 |보고서 기록, 스냅숏 실행 및 캐싱|예|예|||예|  
-|SharePoint 통합|예|예|||예|  
+|SharePoint 통합<sup>2</sup>|예|예|||예|  
 |원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|예|예|||예|  
 |데이터 원본, 배달, 렌더링 및 RDCE 확장성|예|예|||예|  
 |사용자 지정 브랜딩|예||||예|  

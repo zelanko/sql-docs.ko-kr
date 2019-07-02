@@ -157,8 +157,8 @@
           items:
             - name: 빅 데이터 클러스터에 연결
               href: ../big-data-cluster/connect-to-big-data-cluster.md
-            - name: 클러스터 관리 포털
-              href: ../big-data-cluster/cluster-admin-portal.md
+            - name: 클러스터 상태 보기
+              href: ../big-data-cluster/view-cluster-status.md
             - name: Kubernetes 문제 해결
               href: ../big-data-cluster/cluster-troubleshooting-commands.md
         - name: 전자 필기장
@@ -177,56 +177,56 @@
               href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
             - name: 확장 Spark 기록 서버 사용
               href: ../big-data-cluster/spark-history-server.md
-- name: 참조
-  items:
-    - name: 배포 참조
+    - name: 참조
       items:
-        - name: 배포 구성 파일
-          href: ../big-data-cluster/reference-deployment-config.md
-    - name: mssqlctl 참조
-      items:
-        - name: mssqlctl
-          href: ../big-data-cluster/reference-mssqlctl.md
-        - name: 앱 배포
+        - name: 배포 참조
           items:
-            - name: 앱
-              href: ../big-data-cluster/reference-mssqlctl-app.md
-            - name: 앱 템플릿
-              href: ../big-data-cluster/reference-mssqlctl-app-template.md
-        - name: 클러스터
+            - name: 배포 구성 파일
+              href: ../big-data-cluster/reference-deployment-config.md
+        - name: mssqlctl 참조
           items:
-            - name: bdc
-              href: ../big-data-cluster/reference-mssqlctl-bdc.md
-            - name: bdc 구성
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
-            - name: bdc 구성 섹션
-              href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
-            - name: bdc 컨트롤
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
-            - name: bdc 제어 상태
-              href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
-            - name: bdc 디버그
-              href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
-            - name: bdc 엔드포인트
-              href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
-            - name: bdc 풀
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
-            - name: bdc 풀 상태
-              href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
-            - name: bdc 상태
-              href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
-        - name: 스토리지
-          items:
-            - name: bdc 스토리지
-              href: ../big-data-cluster/reference-mssqlctl-storage.md
-            - name: bdc 스토리지 탑재
-              href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
-            - name: hdfs
-              href: ../big-data-cluster/reference-mssqlctl-hdfs.md
-        - name: SQL
-          items:
-            - name: sql
-              href: ../big-data-cluster/reference-mssqlctl-sql.md
+            - name: mssqlctl
+              href: ../big-data-cluster/reference-mssqlctl.md
+            - name: 앱 배포
+              items:
+                - name: 앱
+                  href: ../big-data-cluster/reference-mssqlctl-app.md
+                - name: 앱 템플릿
+                  href: ../big-data-cluster/reference-mssqlctl-app-template.md
+            - name: 클러스터
+              items:
+                - name: bdc
+                  href: ../big-data-cluster/reference-mssqlctl-bdc.md
+                - name: bdc 구성
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config.md
+                - name: bdc 구성 섹션
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                - name: bdc 컨트롤
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control.md
+                - name: bdc 제어 상태
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                - name: bdc 디버그
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-debug.md
+                - name: bdc 엔드포인트
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                - name: bdc 풀
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool.md
+                - name: bdc 풀 상태
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                - name: bdc 상태
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-status.md
+            - name: 스토리지
+              items:
+                - name: bdc 스토리지
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
+                - name: bdc 스토리지 탑재
+                  href: ../big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
+                - name: hdfs
+                  href: ../big-data-cluster/reference-mssqlctl-hdfs.md
+            - name: SQL
+              items:
+                - name: sql
+                  href: ../big-data-cluster/reference-mssqlctl-sql.md
 - name: 비즈니스 연속성
   items:
     - name: 개요
@@ -1415,6 +1415,8 @@
           href: ../relational-databases/graphs/sql-graph-architecture.md
         - name: 예제
           href: ../relational-databases/graphs/sql-graph-sample.md
+        - name: SHORTEST_PATH
+          href: ../relational-databases/graphs/sql-graph-shortest-path.md
     - name: 시퀀스 번호
       href: ../relational-databases/sequence-numbers/sequence-numbers.md
       items:
@@ -1611,6 +1613,8 @@
                   href: ../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md
                 - name: 쿼리 데이터
                   href: ../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md
+                - name: 보안
+                  href: ../relational-databases/tables/temporal-table-security.md
                 - name: 스키마 변경
                   href: ../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md
                 - name: 시스템 버전 관리 중단
@@ -8759,16 +8763,10 @@
           items:
             - name: SSMS(SQL Server Management Studio)
               href: ../ssms/sql-server-management-studio-ssms.md
-        - name: 빠른 시작
+        - name: 자습서
           items:
             - name: SQL Server 연결 및 쿼리
               href: ../ssms/tutorials/connect-query-sql-server.md
-        - name: 자습서
-          items:
-            - name: 스크립트 개체
-              href: ../ssms/tutorials/scripting-ssms.md
-            - name: SSMS 구성
-              href: ../ssms/tutorials/ssms-configuration.md
         - name: 개념
           items:
             - name: SSMS의 도구 창
@@ -9045,6 +9043,10 @@
               href: ../ssms/install-other-languages.md
             - name: SSMS의 템플릿 사용
               href: ../ssms/tutorials/templates-ssms.md
+            - name: 스크립트 개체
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: SSMS 구성
+              href: ../ssms/tutorials/ssms-configuration.md
             - name: 메뉴 및 바로 가기 키 사용자 지정
               href: ../ssms/customize-menus-and-shortcut-keys.md
             - name: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
@@ -12839,6 +12841,8 @@
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md
             - name: sys.dm_os_server_diagnostics_log_configurations
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-server-diagnostics-log-configurations.md
+            - name: sys.dm_os_spinlock_stats
+              href: ../relational-databases/system-dynamic-management-views/sys-dm-os-spinlock-stats-transact-sql.md
             - name: sys.dm_os_stacks
               href: ../relational-databases/system-dynamic-management-views/sys-dm-os-stacks-transact-sql.md
             - name: sys.dm_os_sys_info

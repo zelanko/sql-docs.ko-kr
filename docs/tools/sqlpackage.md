@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269915"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400043"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ SqlPackage.exe Import 작업은 BACPAC 패키지(.bacpac 파일)의 스키마 �
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.|
 |**/p:**|VerifyCollationCompatibility (BOOLEAN ' True') =|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.
 |**/p:**|VerifyDeployment (BOOLEAN ' True') =|성공적인 게시를 차단할 수 있는 문제가 존재할 경우 게시 작업을 중단하는 검사를 게시 전에 수행할지 여부를 지정합니다. 예를 들어 데이터베이스 프로젝트에 존재하지 않고 게시할 때 오류를 일으키는 외래 키를 대상 데이터베이스에 설정한 경우 게시 작업이 중단될 수 있습니다.|
-  
+
+## <a name="exit-codes"></a>종료 코드
+
+다음 종료 코드를 반환 하는 명령:
+
+- 0 = 성공
+- 0 = 실패

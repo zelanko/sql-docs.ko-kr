@@ -1,6 +1,6 @@
 ---
 title: 보고서 서버 콘텐츠 관리(SSRS 기본 모드) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ea88e6ee9194a6cdc92693326bd156ecc7cec590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581420"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67228753"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2부터  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 보고서 관리자 및 새로운 웹 포털 환경에 대해 설명합니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. SQL Server 2016 Reporting Services 또는 이후 (SSRS) CTP 3.2부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털은 사용할 수 있습니다. 이 문서에서는 웹 포털 및 새로운 웹 포털 환경에 대해 설명합니다.  
   
 > [!NOTE]  
->  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행되는 환경을 관리하는 방법에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
+> 내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행되는 환경을 관리하는 방법에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
   
  내용 관리에는 다음 태스크가 포함됩니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65581420"
   
 -   관리 태스크를 수행할 권한은 미리 정의된 **시스템 관리자** 및 **내용 관리자**역할을 사용하여 제공합니다. 보고서 서버 내용을 효과적으로 관리하려면 두 역할을 모두 할당 받아야 합니다.  
   
- 보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], 보고서 관리자 또는 웹 포털이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 보고서 관리자는 사용자에게 보고서 서버 항목 및 작업에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다. 웹 포털은 대부분의 보고서 관리자 기능을 사용할 수 있는 업데이트된 사이트입니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
+보고서 서버 내용을 관리하기 위한 도구에는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 웹 포털이 있습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 기본값을 설정하고 기능을 활성화할 수 있습니다. 웹 포털은 사용자에게 보고서 서버 항목 및 작업 보기에 대한 액세스 권한을 부여하고, 보고서 및 기타 내용 유형을 확인 및 사용하고, 모든 공유 항목 및 보고서 배포 기능을 확인 및 사용하는 데 사용됩니다. 웹 포털은 대부분의 사용하지 않는 보고서 관리자 기능을 사용할 수 있는 업데이트된 사이트입니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
 ##  <a name="bkmk_ReportServerItems"></a> 보고서 서버 항목  
  보고서 서버 항목에는 보고서, 공유 데이터 원본, 공유 데이터 세트, 보고서 파트, 리소스(보고서 서버에 저장되어 있지만 보고서 서버에서 처리하지 않는 항목) 및 폴더가 포함됩니다. 항목이 다른 항목에 종속될 수 있습니다. 예를 들어 보고서가 참조하는 공유 데이터 원본에 종속될 수 있습니다. 종속 항목을 이동하는 경우 보고서 서버에서 참조 정보를 자동으로 업데이트합니다.  
@@ -52,27 +52,20 @@ ms.locfileid: "65581420"
  보고서 서버 항목을 보고서 서버 폴더 계층의 다른 폴더 위치로 이동할 수 있습니다. 항목을 이동하면 모든 속성(보안 설정 포함)도 항목과 함께 새 위치로 이동됩니다. 폴더를 이동하면 폴더 내의 모든 항목이 함께 이동됩니다.  
   
 > [!NOTE]  
->  CTP 3.2에서 항목의 위치를 이동하려는 경우 보고서 관리자에서 해당 작업을 수행해야 합니다. 웹 포털에서 항목을 이동하는 기능을 사용할 수 없습니다.  
+>  CTP 3.2에서 항목의 위치를 이동하려는 경우 웹 포털에서 해당 작업을 수행해야 합니다.  
   
- 보고서 관리자에서 이동할 수 있는 항목은 폴더 계층 구조에 표시됩니다. 다음 표에서는 이동 가능한 각 항목의 아이콘을 보여 줍니다.  
+ 웹 포털에서 이동할 수 있는 항목은 폴더 계층 구조에 표시됩니다. 다음 표에서는 이동 가능한 각 항목의 아이콘을 보여 줍니다.  
   
-|아이콘|이동 가능한 항목|  
-|----------|-------------------|  
-|![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.gif "보고서 아이콘")|보고서|  
-|![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "링크된 보고서 아이콘")|링크된 보고서|  
-|![폴더 아이콘](../../reporting-services/report-server/media/hlp-16folder.gif "폴더 아이콘")|Folder|  
-|![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
-|![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
-||공유 데이터 세트|  
-  
- 작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 "보고서 관리," "모델 관리," "폴더 관리" 및 "데이터 원본 관리" 태스크를 선택한 경우에만 부여됩니다.  
+  ![고정 되지 않은 항목에 대 한 보고서 서버 아이콘](media/report-server-content-management-ssrs-native-mode/report-server-content-icons.png)
+
+ 작업하는 모든 항목을 이동할 수 있는 것은 아닙니다. 구독이나 보고서 기록과 같이 보고서와 연결된 항목은 이동할 수 없습니다. 이러한 항목은 연결된 보고서와 함께 이동됩니다. 마찬가지로 공유 일정과 같이 폴더 계층 밖에 있는 항목도 이동할 수 없습니다. 항목 이동 권한이 없으면 항목을 이동할 수 없습니다. 항목 이동 권한은 해당 항목에 대한 역할 할당에서 "보고서 관리," "폴더 관리," 및 "데이터 원본 관리" 태스크를 선택한 경우에만 부여됩니다.  
   
 ##  <a name="bkmk_Folders"></a> 폴더  
  폴더 계층은 보고서 서버가 저장 및 관리하는 항목을 처리하는 데 사용됩니다.  기본적으로 폴더 구조는 홈이라는 루트 노드와 선택적인 내 보고서 기능을 지원하는 예약된 폴더로 구성됩니다. 추가 폴더는 사용자 정의됩니다. 보고서 서버 폴더는 동일한 수준의 액세스 권한을 여러 항목에 부여하려는 경우에 유용합니다. 폴더에 대해 설정된 권한은 해당 폴더의 항목과 그 하위 폴더에도 상속됩니다. 예를 들어 홈 폴더 아래에 폴더 집합을 만들고 각 폴더에 팀 권한을 할당할 수 있습니다. 그러면 팀원이 필요에 따라 팀 폴더 아래에서 폴더를 사용자 지정할 수 있습니다.  
   
  브라우저를 사용하여 보고서 서버에 직접 연결하는 경우 폴더 구조의 루트 노드는 보고서 서버 가상 디렉터리의 이름입니다. 루트 노드에서 보고서 서버 내용을 구성하기 위해 폴더를 생성, 수정 및 삭제할 수 있습니다. 내용을 폴더에 추가하고, 폴더 간에 항목을 이동하고, 폴더 이름 또는 위치를 수정하고, 필요 없는 폴더를 삭제할 수 있습니다.  
   
- 폴더는 보고서 관리자 또는 보고서 서버에 대한 브라우저 연결을 통해 액세스하는 게시된 항목에 대한 가상 컨테이너입니다. 폴더와 해당 내용 모두 실제로는 파일 시스템에 존재하지 않습니다. 대신 보고서 서버 데이터베이스에 저장되어 보고서 서버 웹 서비스 엔드포인트를 통해 액세스됩니다. 보고서 서버 폴더 네임스페이스는 루트 노드, 미리 정의된 폴더 및 사용자 정의 폴더를 포함하는 계층입니다. 네임스페이스는 보고서 서버에 저장된 항목을 고유하게 식별합니다. 또한 URL에 항목을 지정하기 위한 주소 지정 체계를 제공합니다. 보고서를 선택하거나 찾을 때 폴더 경로는 해당 보고서의 URL 중 일부가 됩니다.  
+ 폴더는 웹 포털 또는 보고서 서버에 대한 브라우저 연결을 통해 액세스하는 게시된 항목에 대한 가상 컨테이너입니다. 폴더와 해당 내용 모두 실제로는 파일 시스템에 존재하지 않습니다. 대신 보고서 서버 데이터베이스에 저장되어 보고서 서버 웹 서비스 엔드포인트를 통해 액세스됩니다. 보고서 서버 폴더 네임스페이스는 루트 노드, 미리 정의된 폴더 및 사용자 정의 폴더를 포함하는 계층입니다. 네임스페이스는 보고서 서버에 저장된 항목을 고유하게 식별합니다. 또한 URL에 항목을 지정하기 위한 주소 지정 체계를 제공합니다. 보고서를 선택하거나 찾을 때 폴더 경로는 해당 보고서의 URL 중 일부가 됩니다.  
   
  폴더 작업 방법은 역할 할당에 속하는 태스크에 따라 다릅니다. 기본 보안을 사용하는 경우 내용 관리자 및 게시자가 폴더를 만들고 관리할 수 있습니다. 사용자 지정 역할 할당을 사용하는 경우 역할 할당에 폴더 관리 지원 태스크가 포함되어야 합니다. 역할 할당 및 태스크에 대한 자세한 내용은 [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요.  
   
@@ -120,7 +113,7 @@ ms.locfileid: "65581420"
   
  폴더를 삭제하기 전에 삭제하려는 모든 보고서의 보고서 기록이나 데이터 기반 구독과 같이 보고서의 일부인 보고서별 구성을 유지할 필요가 있는지 고려해 보십시오. 이 정보 중 필요한 내용이 있으면 폴더를 삭제하기 전에 항목을 폴더 밖으로 이동하십시오.  
   
- 폴더에 포함된 항목의 표시 유형은 역할 할당(예: 항목을 볼 수 있는 권한) 및 폴더에 적용되는 보기 옵션에 따라 좌우됩니다. 보고서 관리자에서 내용 페이지를 목록 뷰나 자세히 보기로 설정할 수 있습니다. 일부 경우에 보고서나 항목이 목록 뷰에서 숨겨질 수 있습니다. 따라서 내용을 삭제하기 전에 자세한 정보 보기에서 폴더를 확인해야 합니다.  
+ 폴더에 포함된 항목의 표시 유형은 역할 할당(예: 항목을 볼 수 있는 권한) 및 폴더에 적용되는 보기 옵션에 따라 좌우됩니다. 웹 포털에서 콘텐츠 페이지를 목록 보기나 자세히 보기로 설정할 수 있습니다. 일부 경우에 보고서나 항목이 목록 뷰에서 숨겨질 수 있습니다. 따라서 내용을 삭제하기 전에 자세한 정보 보기에서 폴더를 확인해야 합니다.  
   
 ##  <a name="bkmk_Resources"></a> 리소스  
  리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 및 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)의 "지도에 데이터 추가" 섹션을 참조하세요.  
@@ -130,7 +123,7 @@ ms.locfileid: "65581420"
   
 |연산|파일 유형|  
 |---------------|---------------|  
-|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 보고서 관리자를 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 애플리케이션 페이지를 사용해야 합니다. 자세한 내용은 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) 또는 [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)를 참조하세요.|  
+|업로드|리소스를 업로드하려면 보고서 서버가 기본 모드에서 실행되는 경우 웹 포털을 사용하고 보고서 서버가 SharePoint 통합 모드에서 실행되는 경우 SharePoint 사이트의 애플리케이션 페이지를 사용해야 합니다. 자세한 내용은 [Upload a File or Report in the Report Server](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)(보고서 서버에서 파일 또는 보고서 업로드) 또는 [Upload Documents to a SharePoint Library &#40;Reporting Services in SharePoint Mode&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)(SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;)를 참조하세요.|  
 |게시|보고서, 보고서 파트, 데이터 원본 또는 데이터 세트가 아닌 프로젝트의 모든 파일이 리소스로 업로드됩니다. 리소스를 게시하려면 보고서 디자이너에서 프로젝트에 기존 항목을 추가한 다음 보고서 서버에 해당 프로젝트를 게시합니다.|  
   
  모든 리소스는 파일 시스템의 파일로 시작되어 이후에 보고서 서버에 업로드됩니다. ASP.NET의 기본 파일 크기 제한(4MB)을 제외하고 업로드할 수 있는 파일 종류에 대한 제한은 없습니다. 그러나 보고서 서버에 리소스로 게시할 경우 MIME 형식이 동일한 파일 유형이 다른 파일 유형보다 적합합니다. 예를 들어 HTML 및 JPG 파일 기반의 리소스는 사용자가 클릭할 때 각각 웹 페이지와 사용자가 볼 수 있는 이미지로 렌더링되어 브라우저 창에서 열립니다. 이와 달리 데스크톱 애플리케이션 파일처럼 동일한 MIME 형식이 없는 리소스는 브라우저 창에서 렌더링되지 않을 수 있습니다.  
@@ -149,14 +142,14 @@ ms.locfileid: "65581420"
   
  보고서에서 이미지 리소스를 사용하려면 해당 이미지 파일을 프로젝트에 추가하고 보고서와 함께 게시합니다. 이미지가 게시되면 보고서의 이미지 참조가 보고서 서버의 리소스를 가리키도록 업데이트한 다음 보고서만 다시 게시하여 변경 내용을 저장할 수 있습니다. 이후에 리소스를 다시 게시하여 보고서와 독립적으로 이미지를 업데이트할 수 있습니다. 보고서는 보고서 서버에서 사용할 수 있는 가장 최신 버전의 이미지를 사용합니다.  
   
- 자세한 내용은 [리소스 업데이트&#40;보고서 관리자&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md)를 참조하세요.  
+ 자세한 내용은 [리소스 (웹 포털) 업데이트](../../reporting-services/report-server/update-a-resource-report-manager.md)합니다.  
   
 ##  <a name="bkmk_MyReports"></a> 내 보고서  
  내 보고서 폴더는 유효한 도메인 계정으로 보고서 서버에 로그인하는 각 사용자에게 제공되는 개인 작업 영역입니다. 이 특수한 용도의 폴더에는 작업 중인 보고서, 광범위 배포용이 아닌 보고서 또는 요구에 맞게 수정된 보고서를 위한 스토리지를 제공합니다. 내 보고서 폴더에 저장된 항목 수나 크기를 제한하거나 내 보고서 폴더를 다른 사용자와 공유하도록 구성할 수 없습니다.  
   
  기술적인 측면에서 볼 때 내 보고서는 각 사용자에게 보이는 가상 폴더의 이름(내 보고서)을 마스터 사용자 폴더 폴더와 사용자 이름에 따라 고유한 하위 폴더에 매핑하는 것입니다. 사용자가 자신의 내 보고서 폴더에 액세스할 때 실제로는 사용자 폴더 아래에 있는 자신의 하위 폴더로 리디렉션됩니다. 각 하위 폴더에는 사용자가 내 보고서 폴더에 추가하는 보고서와 항목을 스토리지할 수 있습니다. 웹 포털의 루트 수준에 내 보고서가 표시되지 않습니다. 사용자 폴더를 드릴해야 합니다.  
   
- "사용자 폴더" 폴더는 보고서 서버 설치 시 생성됩니다. 이후의 사용자별 하위 폴더는 사용자가 내 보고서를 처음 열 때 생성됩니다. 예를 들면 보고서 관리자에서 내 보고서를 클릭하여 내 보고서를 열 때입니다. 각 폴더 이름의 형식은 다음과 같습니다.  
+ "사용자 폴더" 폴더는 보고서 서버 설치 시 생성됩니다. 이후의 사용자별 하위 폴더는 사용자가 내 보고서를 처음 열 때 생성됩니다. 예를 들면 웹 포털에서 보고서를 클릭하여 내 보고서를 열 때입니다. 각 폴더 이름의 형식은 다음과 같습니다.  
   
 ```  
 /Users Folders/<username>/My Reports  
@@ -176,16 +169,12 @@ ms.locfileid: "65581420"
   
 ## <a name="tasks"></a>태스크  
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
-  
- [폴더 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
-  
- [리소스 업데이트&#40;보고서 관리자&#41;](../../reporting-services/report-server/update-a-resource-report-manager.md)  
-  
+ [폴더 만들기, 삭제 또는 수정(웹 포털)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
+ [업데이트 리소스 (웹 포털)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
-  
   

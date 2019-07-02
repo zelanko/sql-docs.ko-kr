@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836316"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469153"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  애플리케이션에 있는 대화 엔드포인트를 식별하는 고유 식별자입니다. 대화 핸들은 대화의 각 엔드포인트에 고유하기 때문에 시작자 엔드포인트와 대상 엔드포인트는 서로 다른 대화 핸들을 갖습니다.  
   
- 대화 핸들은 *@dialog_handle* 문의 **@dialog_handle** 매개 변수와 **conversation_handle** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 애플리케이션에 반환됩니다.  
+ 대화 핸들은 **BEGIN DIALOG** 문의 *\@dialog_handle* 매개 변수와 **RECEIVE** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 애플리케이션에 반환됩니다.  
   
  대화 핸들은 **sys.transmission_queue** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_handle** 열에서 보고됩니다.  
   
  *conversation_group_id*  
  대화 그룹을 식별하는 고유 식별자입니다.  
   
- 대화 그룹 ID는 *@conversation_group_id* 문의 **@conversation_group_id** 매개 변수와 **conversation_group_id** 문의 결과 집합에 있는 **conversation_handle** 열에 의해 애플리케이션에 반환됩니다.  
+ 대화 그룹 ID는 **GET CONVERSATION GROUP** 문의 *\@@conversation_group_id* 매개 변수와 **RECEIVE문**의 결과 집합에 있는 **conversation_group_id** 열에 의해 애플리케이션에 반환됩니다.  
   
  대화 그룹 ID는 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_group_id** 열에서 보고됩니다.  
   
@@ -412,7 +412,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### <a name="j-monitor-the-status-of-all-conversations-between-two-databases"></a>10\. 두 데이터베이스 간의 모든 대화 상태 모니터링  
+### <a name="j-monitor-the-status-of-all-conversations-between-two-databases"></a>10. 두 데이터베이스 간의 모든 대화 상태 모니터링  
  다음 예에서는 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 있는 두 데이터베이스 간의 모든 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다.  
   
 ```  
@@ -421,7 +421,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME
 -d TargetDatabase  
 ```  
   
-### <a name="k-ignore-specific-errors"></a>11\. 특정 오류 무시  
+### <a name="k-ignore-specific-errors"></a>11. 특정 오류 무시  
  다음 예에서는 현재 테스트 시스템의 활성화 구성 방식에서 알려진 오류(303 및 304)를 무시하는 방법을 보여 줍니다.  
   
 ```  
@@ -430,7 +430,7 @@ CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target
 ON CONTRACT TextContract  
 ```  
   
-### <a name="l-redirecting-ssbdiagnose-xml-output"></a>12\. ssbdiagnose XML 출력 리디렉션  
+### <a name="l-redirecting-ssbdiagnose-xml-output"></a>12. ssbdiagnose XML 출력 리디렉션  
  다음 예에서는 **ssbdiagnose** 가 해당 출력을 파일로 리디렉션되는 XML 파일로 생성하도록 요청하는 방법을 보여 줍니다. 이 예에서 생성하는 TestDiag.xml 파일은 나중에 **ssbdiagnose** XML 파일을 분석하거나 보고하는 애플리케이션을 사용하여 열거나 XML 메모장과 같은 일반적인 XML 편집기를 사용하여 볼 수 있습니다.  
   
 ```  
@@ -438,7 +438,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target > c:\MyDiagnostics\TestDiag.xml  
 ```  
   
-### <a name="m-using-an-environment-variable"></a>13\. 환경 변수 사용  
+### <a name="m-using-an-environment-variable"></a>13. 환경 변수 사용  
  다음 예제에서는 먼저 서버 이름을 보유하는 SQLCMDSERVER 환경 변수를 설정한 후 **-S** 를 지정하지 않고 **ssbdiagnose**를 실행합니다.  
   
 ```  
