@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469137"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492762"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,11 +114,11 @@ GO
 |BACKUPTHREAD |태스크가 백업 작업이 완료될 때까지 대기하는 경우에 발생합니다. 대기 시간은 몇 분에서 몇 시간까지 걸릴 수 있습니다. 대기 중인 태스크가 I/O 프로세스에 위치하면 문제가 있는 것이 아닙니다.| 
 |BAD_PAGE_PROCESS |백그라운드의 주의 대상 페이지 로거가 5초보다 긴 간격으로 실행되는 것을 방지하려는 경우에 발생합니다. 주의 대상 페이지가 너무 많으면 로거가 자주 실행됩니다.| 
 |BLOB_METADATA |내부적으로만 사용됩니다. <br />**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BMPALLOCATION |내부적으로만 사용됩니다. <br />**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BMPBUILD |내부적으로만 사용됩니다. <br />**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BMPREPARTITION |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BMPREPLICATION |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|BPSORT |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|BMPALLOCATION |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br />**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|BMPBUILD |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br />**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|BMPREPARTITION |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|BMPREPLICATION |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|BPSORT |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_CONNECTION_RECEIVE_TASK |연결 엔드포인트에서 메시지를 받기 위한 액세스를 대기하는 경우에 발생합니다. 엔드포인트에 대한 수신 액세스는 직렬화됩니다.| 
 |BROKER_DISPATCHER |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |BROKER_ENDPOINT_STATE_MUTEX |Service Broker 연결 끝점의 상태에 액세스 하려는 경합이 있을 때 발생 합니다. 변경 내용의 상태에 대한 액세스는 직렬화됩니다.| 
@@ -361,11 +361,11 @@ GO
 |HK_RESTORE_FILEMAP |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HKCS_PARALLEL_MIGRATION |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HKCS_PARALLEL_RECOVERY |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTBUILD |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTDELETE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTMEMO |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTREINIT |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|HTREPARTITION |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HTBUILD |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HTDELETE |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HTMEMO |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HTREINIT |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
+|HTREPARTITION |일괄 처리 모드 연산자 내에서 서로 다른 처리 단계를 입력 하는 스레드 동기화 중에 발생 합니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |HTTP_ENUMERATION |시스템 시작 시에 HTTP를 시작할 HTTP 엔드포인트를 열거하기 위해 발생합니다.| 
 |HTTP_START |연결이 HTTP 초기화가 완료될 때까지 대기하는 경우에 발생합니다.| 
 |HTTP_STORAGE_CONNECTION |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 

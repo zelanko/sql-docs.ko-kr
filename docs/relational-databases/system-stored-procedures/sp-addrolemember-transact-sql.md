@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652542"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492758"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  역할은 자신의 역할 자체를 멤버로 포함할 수 없습니다. 이와 같은 "순환" 정의는 하나 이상의 중간 멤버 자격을 통해 멤버 자격이 간접적으로 유추되는 경우에도 유효하지 않습니다.  
   
- sp_addrolemember는 역할에 고정된 데이터베이스 역할, 고정된 서버 역할 또는 dbo를 추가할 수 없습니다. 사용자 정의 트랜잭션 내에서 sp_addrolemember는 실행할 수 없습니다.  
+ sp_addrolemember는 역할에 고정된 데이터베이스 역할, 고정된 서버 역할 또는 dbo를 추가할 수 없습니다.
   
  데이터베이스 역할에 멤버를 추가할 경우에만 sp_addrolemember를 사용하십시오. 사용 하 여 서버 역할에 구성원을 추가할 [sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)합니다.  
   
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-windows-login"></a>1. Windows 로그인 추가  
+### <a name="a-adding-a-windows-login"></a>1\. Windows 로그인 추가  
  다음 예제에서는 Windows 로그인에 추가 `Contoso\Mary5` 에 `AdventureWorks2012` 사용자로 데이터베이스 `Mary5`합니다. 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
@@ -88,16 +88,16 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>2. 데이터베이스 사용자 추가  
+### <a name="b-adding-a-database-user"></a>2\. 데이터베이스 사용자 추가  
  다음 예에서는 `Mary5` 데이터베이스 사용자를 현재 데이터베이스의 `Production` 데이터베이스 역할에 추가합니다.  
   
 ```  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-adding-a-windows-login"></a>3. Windows 로그인 추가  
+### <a name="c-adding-a-windows-login"></a>3\. Windows 로그인 추가  
  다음 예에서는 로그인에 추가 합니다 `LoginMary` 에 `AdventureWorks2008R2` 사용자로 데이터베이스 `UserMary`합니다. 그런 다음 `UserMary` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
@@ -111,7 +111,7 @@ GO
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-### <a name="d-adding-a-database-user"></a>4. 데이터베이스 사용자 추가  
+### <a name="d-adding-a-database-user"></a>4\. 데이터베이스 사용자 추가  
  다음 예에서는 `UserMary` 데이터베이스 사용자를 현재 데이터베이스의 `Production` 데이터베이스 역할에 추가합니다.  
   
 ```  
