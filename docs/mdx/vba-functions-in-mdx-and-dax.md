@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251545"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500049"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 
@@ -26,7 +26,7 @@ ms.locfileid: "63251545"
 |함수 이름|지원됨|참고|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|배열|지원되지 않음||  
+|Array|지원되지 않음||  
 |Asc|MDX만||  
 |AscW|MDX만||  
 |Atn|MDX만||  
@@ -53,10 +53,10 @@ ms.locfileid: "63251545"
 |CVErr|지원되지 않음||  
 |Date|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX 이름; DATE (Year, Month, Day) 함수를 지정된 된 인수에서 날짜 형식 값을 생성 하는 데 사용|  
 |DateAdd|MDX만|**경고** 같은 다른 함수를 구현 하는 DAX dateadd 이름 (\<날짜 >, < number_of_intervals >\<간격 >)의 번호로 지정 된 날짜를 이동 하는 데 사용 하는 함수를 간격 지정|  
-|DateDiff]|MDX만||  
+|DateDiff|MDX만||  
 |DatePart|MDX만||  
 |DateSerial|MDX만||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|MDX만||  
 |Dir|지원되지 않음||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251545"
 |MonthName|지원되지 않음||  
 |MsgBox|지원되지 않음||  
 |지금|DAX, MDX||  
-|NPer]|MDX만||  
+|NPer|MDX만||  
 |NPV|MDX만||  
 |Oct|MDX만||  
 |Partition|MDX만||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251545"
 |Str|MDX만||  
 |StrComp|MDX만||  
 |StrConv|MDX만||  
-|문자열]|MDX만||  
+|문자열|MDX만||  
 |StrReverse|지원되지 않음||  
 |스위치|MDX만||  
 |SYD|MDX만||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251545"
 |Timer|MDX만||  
 |TimeSerial|MDX만||  
 |TimeValue|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|MDX만||  
 |UBound|지원되지 않음||  
 |UCase|MDX만||  

@@ -284,10 +284,8 @@
     - name: 보고서 서버 콘텐츠 관리(SSRS 기본 모드)
       href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
       items:
-        - name: '폴더 만들기, 삭제 또는 수정(웹 포털)'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: '폴더 만들기, 삭제 또는 수정'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: 항목 이동 또는 삭제
           href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
         - name: 폴더에 파일 업로드
@@ -974,8 +972,6 @@
       href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
     - name: 보고서 기록 제한
       href: ../reporting-services/reports/limit-report-history-report-manager.md
-    - name: 보고서 열기 및 닫기
-      href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
     - name: 파일 또는 보고서 업로드
       href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
     - name: 링크된 보고서 만들기
