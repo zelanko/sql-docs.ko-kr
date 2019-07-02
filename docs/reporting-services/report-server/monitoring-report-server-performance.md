@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314020"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412651"
 ---
 # <a name="monitoring-report-server-performance"></a>보고서 서버 성능 모니터링
   성능 모니터링 도구를 통해 보고서 서버 성능을 모니터링하여 서버 작업을 평가하고, 추세를 살피고, 시스템 병목 현상을 진단하고, 현재 시스템 구성이 충분한지 여부를 결정하는 데 도움이 되는 데이터를 수집할 수 있습니다. 서버 성능을 튜닝하기 위해 보고서 서버 애플리케이션 도메인의 재활용 빈도를 지정할 수 있습니다. 자세한 내용은 [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
@@ -53,6 +53,8 @@ ms.locfileid: "67314020"
 -   하드웨어 업그레이드를 통해 원하는 성능 효과를 얻었는지 확인합니다.  
   
 -   시스템 구성 변경을 통해 원하는 성능 효과를 얻었는지 확인합니다.  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Reporting Services 성능 개체  
 SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 포함 됩니다.  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 
   
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 HTTP 관련 성능 카운터 및 메모리 관련 성능 카운터를 설명합니다.  
-  
- SharePoint 통합 모드의 보고서 서버 이벤트  
- SharePoint 제품을 사용하여 보고 환경을 실행할 때 기록할 유용한 진단 이벤트를 설명합니다.  
+
+::: moniker-end
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
