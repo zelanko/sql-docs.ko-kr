@@ -1,7 +1,7 @@
 - name: SQL Server Analysis Services 정보
   href: ../analysis-services/analysis-services.md
 - name: SQL Server 시작 >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 개요
   items:
     - name: SQL Server Analysis Services 2016의 새로운 기능
