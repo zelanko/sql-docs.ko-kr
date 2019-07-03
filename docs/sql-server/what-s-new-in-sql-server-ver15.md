@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019의 새로운 기능 | Microsoft Docs
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298222"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469094"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -28,15 +28,46 @@ ms.locfileid: "67298222"
 
 **[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 통해 최상의 환경에 맞는 [최신 도구](#tools)를 사용해 보세요.**
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0 2019년 5월
+## <a name="ctp-31-june-2019"></a>CTP 3.1 2019년 6월
 
-CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. 이 릴리스에는 버그를 수정하고, 보안을 개선하고, 성능을 최적화하는 이전 CTP 릴리스의 개선 사항이 포함됩니다.
+CTP(Community Technology Preview) 3.1은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다. 이 릴리스에는 버그를 수정하고, 보안을 개선하고, 성능을 최적화하는 이전 CTP 릴리스의 개선 사항이 포함됩니다.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 지원에서 제외된 특정 기능은 [릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
-또한 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0에서 추가되었거나 향상된 기능은 다음과 같습니다.
+또한 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1에서 추가되었거나 개선된 기능은 다음과 같습니다.
+
+### <a name="big-data-clusters"></a>빅 데이터 클러스터
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+| `mssqlctl` 명령 변경 내용 | `mssqlctl cluster` 명령이 `mssqlctl bdc`로 변경되었습니다. 자세한 내용은 [`mssqlctl`참조](../big-data-cluster/reference-mssqlctl.md)를 참조하세요. |
+|`mssqlsctl`에 대한 새로운 상태 명령|`mssqlctl`은(는) 기존 모니터링 명령을 보완하는 새로운 명령을 추가합니다. 이러한 명령은 이 릴리스에서 제거되는 클러스터 관리 포털을 대체합니다.|
+| Spark 컴퓨팅 풀 | 추가 노드를 생성하여 스토리지를 확장하지 않고도 Spark 컴퓨팅 성능을 향상시킬 수 있습니다. 또한 Spark에 사용되지 않는 스토리지 풀 노드를 시작할 수도 있습니다. Spark와 스토리지는 분리됩니다. 자세한 내용은 [spark없이 스토리지 구성](../big-data-cluster/deployment-custom-configuration.md#sparkstorage)을 참조하세요. |
+| MSSQL Spark 커넥터 | 데이터 풀 외부 테이블에 대한 읽기/쓰기를 지원합니다. 이전 릴리스에서는 MASTER 인스턴스 테이블에만 읽기/쓰기를 지원했습니다. 자세한 내용은 [MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server에 읽고 쓰는 방법](../big-data-cluster/spark-mssql-connector.md)을 참조하세요. |
+| MLeap를 사용하여 기계 학습 | [Spark에서 MLeap 기계 학습 모델을 교육하고 Java 언어 확장을 사용하여 SQL Server에서 평가합니다](../big-data-cluster/spark-create-machine-learning-model.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>데이터베이스 엔진
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|인덱스 암호화된 열|임의 암호화 및 enclave- 키를 사용하여 암호화된 열에 인덱스를 생성하여 리치 쿼리(`LIKE` 및 비교 연산자 사용)의 성능을 향상시킵니다. [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+|설정 시 `MIN` 및 `MAX` 서버 메모리 값을 설정합니다. |설치하는 동안 서버 메모리 값을 설정할 수 있습니다. **권장** 옵션 [서버 메모리 서버 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)을 선택한 후 기본값, 계산된 권장 값을 사용하거나 사용자 고유의 값을 수동으로 지정합니다.
+|새 그래프 함수 - `SHORTEST_PATH` | `MATCH`의 `SHORTEST_PATH`를 사용하여 그래프에서 노드 2개 사이의 최단 경로를 찾거나 임의의 길이 횡단을 수행합니다.|
+|그래프 데이터베이스의 파티션 테이블 및 인덱스|분할 테이블 및 인덱스의 데이터는 그래프 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. |
+|새로운 인덱스 옵션 `OPTIMIZE_FOR_SEQUENTIAL_KEY`|인덱스에 높은 동시성 삽입에 대한 처리량을 향상시키는 데 도움이 되는 데이터베이스 엔진 내의 최적화를 켭니다. 이 옵션은 ID 열, 시퀀스 또는 날짜/시간 열과 같은 순차 키가 있는 인덱스에서 일반적으로 볼 수 있는 마지막 페이지 삽입 경합에 취약한 인덱스를 대상으로 합니다. 자세한 내용은 [INDEX 만들기](../t-sql/statements/create-index-transact-sql.md#sequential-keys)를 참조하세요.|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>SQL Server on Linux
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:-----|:-----|
+| Tempdb 개선 사항 | 기본적으로 Linux에 SQL Server를 새로 설치하면 논리적 코어 수(최대 8개 데이터 파일 포함)에 따라 여러 tempdb 데이터 파일이 생성됩니다. 이 위치에서 부 버전 또는 주 버전 업그레이드에는 적용되지 않습니다. 각 tempdb 파일은 자동 증가 속도가 64MB인 8MB입니다. 이 동작은 Windows의 기본 SQL Server 설치와 유사합니다. |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0 2019년 5월
 
 ### <a name="big-data-clusters"></a>빅 데이터 클러스터
 
@@ -82,6 +113,7 @@ CTP(커뮤니티 기술 미리 보기) 3.0은 [!INCLUDE[sql-server-2019](../incl
 |:---|:---|
 |계산 그룹을 포함하는 테이블 형식 모델에 대해 MDX 쿼리를 지원합니다. |이 릴리스에서는 [계산 그룹](#calc-ctp24)에 적용되던 이전의 제한 사항을 제거합니다. |
 |계산 그룹을 사용하여 측정값 서식을 동적으로 지정합니다. |이 기능을 사용하면 [계산 그룹](#calc-ctp24)을 포함하는 측정값에 대한 형식 문자열을 조건부로 변경할 수 있습니다. 예를 들어 통화 변환을 통해 서로 다른 외국 통화 형식을 사용하여 측정값을 표시할 수 있습니다.|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5 2019년 4월
 
