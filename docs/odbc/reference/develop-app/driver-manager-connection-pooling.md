@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280414"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533823"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 응용 프로그램을 다시 사용할 때마다 설정할 필요가 없는 연결 풀에서 연결을 사용 합니다. 연결 생성 되었으며 풀에 배치 되 면 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "63280414"
  성능 향상 외에도 연결 풀링 아키텍처 environment 및 해당 관련된 연결이 단일 프로세스에서 여러 구성 요소에서 사용할 수 있습니다. 이 서로 인식 하지 않고 동일한 프로세스에서 독립 실행형 구성 요소가 서로 상호 작용할 수 있음을 의미 합니다. 여러 구성 요소에서 연결 풀에서 연결을 반복적으로 사용할 수 있습니다.  
   
 > [!NOTE]
->  ODBC 2를 표시 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작을 응용 프로그램에서 호출할 수 만큼 *SQLSetEnvAttr*합니다. 응용 프로그램 연결 풀링을 사용 하는 경우 데이터베이스 또는 데이터베이스를 변경 하는 등의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 합니다 \< *데이터베이스 * * 이름*>, 카탈로그에서 사용 하는 변경 내용을 데이터 원본입니다.  
+>  ODBC 2를 표시 하는 ODBC 응용 프로그램에서 연결 풀링을 사용할 수 있습니다. *x* 동작을 응용 프로그램에서 호출할 수 만큼 *SQLSetEnvAttr*합니다. 응용 프로그램 연결 풀링을 사용 하는 경우 데이터베이스 또는 데이터베이스를 변경 하는 등의 컨텍스트를 변경 하는 SQL 문을 실행 해서는 안 합니다 \< *데이터베이스 이름*>, 데이터에서 사용 하는 카탈로그를 변경 하는 소스입니다.  
 
 
  ODBC 드라이버는 완벽 하 게 스레드로부터 안전 해야 하며 연결에는 연결 풀링을 지원 하기 위해 스레드 선호도 없어야 합니다. 즉, 드라이버는 언제 든 지 모든 스레드에서 호출을 처리 하 고 스레드와 다른 스레드에서 연결을 사용 하 고 세 번째 스레드에서 연결 끊기에 연결할 수 있습니다.  
