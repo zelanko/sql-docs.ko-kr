@@ -192,7 +192,7 @@ WHERE database_id = DB_ID();
  *conversation_group_id*  
  대화 그룹을 식별하는 고유 식별자입니다.  
   
- 대화 그룹 ID는 **GET CONVERSATION GROUP** 문의 *\@@conversation_group_id* 매개 변수와 **RECEIVE문**의 결과 집합에 있는 **conversation_group_id** 열에 의해 애플리케이션에 반환됩니다.  
+ 대화 그룹 ID는 **GET CONVERSATION GROUP** 문의 *\@conversation_group_id* 매개 변수와 **RECEIVE문** 의 결과 집합에 있는 **conversation_group_id** 열에 의해 애플리케이션에 반환됩니다.  
   
  대화 그룹 ID는 **sys.conversation_groups** 및 **sys.conversation_endpoints** 카탈로그 뷰의 **conversation_group_id** 열에서 보고됩니다.  
   
