@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778381"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556896"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos Windows 인증을 사용 하 여 SQL server 
 
@@ -160,7 +160,7 @@ KDC에서 Granting을 Ticket (TGT)을 가져옵니다.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Kinit을 사용 하 여 사용 가능한 티켓을 봅니다. Kinit를 성공적으로 수행 되었으면 티켓을 표시 됩니다. 
+Klist를 사용 하 여 사용 가능한 티켓을 봅니다. Kinit를 성공적으로 수행 되었으면 티켓을 표시 됩니다. 
 
 ```bash
 klist
