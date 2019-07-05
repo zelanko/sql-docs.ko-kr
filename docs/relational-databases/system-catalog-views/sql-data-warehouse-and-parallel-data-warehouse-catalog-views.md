@@ -12,12 +12,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a0e2138938d8b982521110bd74a2e5cf1706b4a9
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 1b8cb01e4f2c892bf9c59e47e35d4ce1e7175496
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463499"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564146"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 
@@ -68,8 +68,17 @@ ms.locfileid: "67463499"
 
 > [!Note]
 > 워크로드 분류는 SQL Data Warehouse Gen2에서 미리 보기로 사용 가능합니다. 워크로드 관리 분류 및 중요도 미리 보기는 2019년 4월 9일 이후의 릴리스 날짜로 빌드됩니다.  사용자는 워크로드 관리 테스트를 위해 이 날짜 이전의 빌드를 사용하지 않는 것이 좋습니다.  자신의 빌드에서 워크로드 관리가 가능한지 알아보려면 SQL Data Warehouse 인스턴스에 연결된 경우 select  @@version을 실행합니다.
- 
-## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
+
+## <a name="includesssdwincludessssdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 카탈로그 뷰
+
+ 다음 카탈로그 뷰에 적용할 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 만:
+
+[sys.pdw_materialized_view_column_distribution_properties &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
+ [ sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
+
+## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰
+
  다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:
 
  [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  

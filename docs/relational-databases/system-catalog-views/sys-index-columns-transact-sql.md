@@ -1,7 +1,7 @@
 ---
 title: sys.index_columns (Transact SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004397"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564185"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,18 @@ ms.locfileid: "63004397"
 |**key_ordinal**|**tinyint**|키 열 집합 내에서의 서수(1부터 시작)입니다.<br /><br /> 0 = 키 열이 아니거나, XML 인덱스, columnstore 인덱스 또는 공간 인덱스입니다.<br /><br /> 참고: XML 또는 공간 인덱스 키 일 수 없습니다는 기본 열을 비교할 수 없기 때문에 즉 해당 값을 정렬할 수 없습니다.|  
 |**partition_ordinal**|**tinyint**|분할 열 집합 내에 있는 서수(1부터 시작)입니다. 클러스터형 columnstore 인덱스는 하나의 분할 열만 가질 수 있습니다.<br /><br /> 0 = 분할 열 아님|  
 |**is_descending_key**|**bit**|1 = 인덱스 키 열이 내림차순으로 정렬됩니다.<br /><br /> 0 = 인덱스 키 열이 오름차순으로 정렬되거나 열이 columnstore 또는 해시 인덱스의 일부입니다.|  
-|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이기 때문에 암시적으로 추가 된 열에 나열 되지 않은 **sys.index_columns**합니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.|  
+|**is_included_column**|**bit**|1 = 열이 CREATE INDEX INCLUDE 절을 사용하여 인덱스에 추가된 키가 아닌 열이거나 columnstore 인덱스의 일부인 열입니다.<br /><br /> 0 = 열이 포괄 열이 아닙니다.<br /><br /> 클러스터링 키의 일부 이기 때문에 암시적으로 추가 된 열에 나열 되지 않은 **sys.index_columns**합니다.<br /><br /> 분할 열이어서 암시적으로 추가된 열은 0으로 반환됩니다.| 
+|**column_store_order_ordinal**</br> 적용 대상: Azure SQL Data Warehouse (미리 보기)|**tinyint**|서 수 (1부터 시작) 내에서 순서가 지정 된 클러스터형된 columnstore 인덱스의 열 순서 지정의 집합입니다.|
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>사용 권한
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예
+
  다음 예는 `Production.BillOfMaterials` 테이블에 대한 모든 인덱스 및 인덱스 열을 반환합니다.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT i.name AS index_name  
@@ -59,7 +62,7 @@ SELECT i.name AS index_name
     ,ic.key_ordinal  
 ,ic.is_included_column  
 FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic   
+INNER JOIN sys.index_columns AS ic
     ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');  
   
@@ -67,7 +70,7 @@ WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
   
 index_name                                                 column_name        index_column_id key_ordinal is_included_column  
 ---------------------------------------------------------- -----------------  --------------- ----------- -------------  

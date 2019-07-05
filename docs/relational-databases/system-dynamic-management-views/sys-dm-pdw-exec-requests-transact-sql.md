@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836177"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564179"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,6 +44,8 @@ ms.locfileid: "65836177"
 |importance|**nvarchar(32)**|요청을 설정 하는 중요도 사용 하 여 제출 되었습니다. 낮은 중요도 사용 하 여 요청 남아 대기 중인 일시 중단 된 상태에서 더 높은 중요도 요청 제출 되 면 있습니다.  높은 중요도 사용 하 여 요청 이전에 전송 된 낮은 중요도 요청 하기 전에 실행 됩니다.  중요도에 대 한 자세한 내용은 참조 하세요. [워크 로드 중요도](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)합니다.  |NULL</br>낮음</br>below_normal</br>보통 (기본값)</br>above_normal</br>고가용성|
 |group_name| |내부 사용을 위해 예약되어 있습니다.</br>적용 대상: Azure SQL 데이터 웨어하우스|
 |resource_allocation_percentage| |내부 사용을 위해 예약되어 있습니다.</br>적용 대상: Azure SQL 데이터 웨어하우스|
+|result_set_cache|**bit**|완료 된 쿼리 결과가 캐시 적중 (1) 인지 여부를 세부 정보 (0).|0,1|
+||||
   
  이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.   
   
