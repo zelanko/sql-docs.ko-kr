@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cedb398c2cecaf65ba82bb834823edd6c237f50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1b0848b254a331c08fc6b5afaf3eaf054b63c09c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670782"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582591"
 ---
 # <a name="processing-results---process-results"></a>결과 처리 - 결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "51670782"
 5.  필요에 따라 SQL_UNBIND와 함께 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)를 호출하여 바인딩된 열 버퍼를 해제합니다.  
   
 6.  다른 결과 집합을 사용할 수 있는 경우 1단계로 이동합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하기 전에 결과 집합 처리를 취소하려면 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출합니다.  
   

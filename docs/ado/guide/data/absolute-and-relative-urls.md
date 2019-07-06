@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702656"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597497"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
-로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등 수*입니다.*  
+로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등을 수 있습니다.  
   
  *절대 URL* 리소스를 찾는 데 필요한 모든 정보를 포함 합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66702656"
   
  2\.7 이상 ADO를 사용 하 여 절대 URL에는 컨텍스트를 정의할 수도 있습니다. 예를 들어 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 절대 URL을 사용 하 여 개체를 열을 **연결** URL에서 지정 된 리소스를 나타내는 개체가 암시적으로 만들어집니다.  
   
- 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다 합니다 *ActiveConnection* 의 매개 변수를 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL 값으로 지정할 수도 있습니다는 "URL **=** " 키워드를 **연결** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드  *ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
+ 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다 합니다 *ActiveConnection* 의 매개 변수를 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL 값으로 지정할 수도 있습니다는 "URL =" 키워드를 **연결** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드 *ConnectionString* 매개 변수 및 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
   
  열어 컨텍스트를 정의할 수도 있습니다는 **레코드** 또는 **Recordset** 이미 있기 때문에 이러한 개체는 암시적 또는 명시적으로 선언 된 디렉터리를 나타내는 개체 **연결**  컨텍스트를 지정 하는 개체입니다.  
   

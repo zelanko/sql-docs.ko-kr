@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba7ff25e8f80fbdda0994b8855a30d47e4532c93
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738264"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580233"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "62738264"
 5.  **GetNextRows** 를 호출하여 다음 행을 행 집합으로 인출합니다. **GetData** 를 호출하여 행 집합에서 데이터를 읽습니다.  
   
 6.  데이터 및 길이 표시기가 포함된 스토리지 개체를 만든 다음, 해당 BLOB 열을 바인딩하는 접근자와 함께 **IRowsetChange::SetData**(또는 **IRowsetChange::InsertRow**)를 호출하여 데이터를 설정합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  이 예에서는 BLOB 데이터를 설정하는 방법을 보여 줍니다. 이 예에서는 데이터를 만들어 예제 레코드를 추가하고 행 집합에서 해당 레코드를 인출한 다음 BLOB 필드의 값을 설정합니다.  
   

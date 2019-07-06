@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5370e91aa5a8f5012a9c8f35f3fb98b3b3e726
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040074"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581921"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>주석 해석 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 대량 로드 프로세스를 **sql: 매핑된** 예상 있는 XSD 스키마에서 주석 인 매핑 스키마 지정 하는 경우 **sql: 매핑된 = "false"** 임의의 요소 또는 특성에 대 한 XML 대량 로드 하지 않습니다 해당 열에 연결 된 데이터를 저장 하려고 시도 합니다.  
   
- XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 사용 하 여 XSD 스키마에 주석이 지정 되어 **sql: 매핑된 = "false"**). 이러한 열은 사용 하 여 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
+ XML 대량 로드는 매핑되지 않은 요소 및 특성을 무시 (스키마에 설명 되지 않은 또는 사용 하 여 XSD 스키마에 주석이 지정 되어 **sql: 매핑된 = "false"** ). 이러한 열은 사용 하 여 지정 된 경우 오버플로 열에 매핑되지 않은 모든 데이터 이동 **sql:overflow-필드**합니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "56040074"
 </xsd:schema>  
 ```  
   
- 때문에 합니다 **HomePhone** 특성을 지정 **sql: 매핑된 = "false"**, XML 대량 로드가이 특성의 해당 열에 매핑되지 않는 경우. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
+ 때문에 합니다 **HomePhone** 특성을 지정 **sql: 매핑된 = "false"** , XML 대량 로드가이 특성의 해당 열에 매핑되지 않는 경우. 오버플로 열을 식별 하는 XSD 스키마 (**OverflowColumn**) XML 대량 로드는이 사용 되지 않은 데이터를 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
@@ -86,7 +86,9 @@ ms.locfileid: "56040074"
     ```  
   
 4.  XML 대량 로드를 실행하려면 이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VBScript(Visual Basic Scripting Edition) 예를 Sample.vbs로 저장한 다음 이 스크립트를 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  

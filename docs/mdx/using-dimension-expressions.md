@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125537"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597530"
 ---
 # <a name="using-dimension-expressions"></a>차원 식 사용
 
@@ -59,7 +59,7 @@ ms.locfileid: "63125537"
   
  `FROM [Adventure Works]`  
   
- 계층 식별자가 요소로 *Dimension_Name **.** Hierarchy_Name* MDX 문을 설명 하는 데 사용 되는 BNF 표기법의 합니다.  
+ 계층 식별자가 요소로 *Dimension_Name.Hierarchy_Name* MDX 문을 설명 하는 데 사용 되는 BNF 표기법의 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  

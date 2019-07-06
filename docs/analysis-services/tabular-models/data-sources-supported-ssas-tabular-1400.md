@@ -1,6 +1,6 @@
 ---
 title: SQL Server Analysis Services 테이블 형식 1400 모델에서 지 원하는 데이터 원본 | Microsoft Docs
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 246375015786cf67685c89f368f83662539da36b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159758"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597346"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>1400 테이블 형식 모델 SQL Server Analysis Services에서 지 원하는 데이터 원본
 
@@ -31,18 +31,20 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지 원
 
 |데이터 원본  |메모리 내  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL 데이터베이스     |   예      |    예      |
+|Azure SQL Database <sup>[1](#ae)</sup>    |   사용자 계정 컨트롤      |    예      |
 |Azure SQL 데이터 웨어하우스     |   예      |   예       |
 |Azure Blob Storage     |   예       |    아니요      |
 |Azure Table Storage    |   예       |    아니요      |
 |Azure Cosmos DB     |  예        |  아니요        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   사용자 계정 컨트롤       |    아니요      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   사용자 계정 컨트롤       |    아니요      |
 |Azure HDInsight HDFS    |     예     |   아니요       |
-|Azure HDInsight Spark <sup>[2](#databricks)</sup>     |   사용자 계정 컨트롤       |   아니요       |
+|Azure HDInsight Spark <sup>[3](#databricks)</sup>     |   사용자 계정 컨트롤       |   아니요       |
 ||||
 
-<a name="gen2">1</a> -ADLS Gen2 현재 지원 되지 않습니다.   
-<a name="databricks">2</a> -커넥터는 현재 지원 되지 않습니다 Spark를 사용 하 여 azure Databricks 합니다.   
+<a name="ae">1</a> -azure SQL Database Always Encrypted 지원 되지 않습니다.   
+<a name="gen2">2</a> -ADLS Gen2 현재 지원 되지 않습니다.   
+<a name="databricks">3</a> -커넥터는 현재 지원 되지 않습니다 Spark를 사용 하 여 azure Databricks 합니다.   
+
 
 
 
@@ -55,11 +57,13 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services에서 지 원
 
 |데이터 원본 | 메모리 내 공급자 | DirectQuery 공급자 |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | SQL Server Data Warehouse |SQL Server Native Client 11.0, Microsoft OLE DB Provider for SQL Server,.NET Framework Data Provider for SQL Server | .NET Framework Data Provider for SQL Server |
 | Oracle |Microsoft OLE DB Provider for Oracle에서 Oracle Data Provider for.NET |.NET 용 oracle Data Provider | |
 | Teradata |OLE DB Provider for Teradata.NET 용 Teradata Data Provider |.NET 용 Teradata Data Provider | |
 | | | |
+
+<a name="aeop">4</a> -azure SQL Database 및 SQL Server 데이터베이스를 DirectQuery로는 Always Encrypted [클라이언트 datasource](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) 1200 호환성 수준에서 SQL Server Analysis Services 테이블 형식 모델에서. Azure Analysis Services에서 azure SQL Database 및 SQL Server 데이터베이스를 Always Encrypted 지원 되지 않습니다.       
 
 > [!NOTE]
 > 메모리 내 모델에 대 한 OLE DB 공급자는 대규모 데이터에 대 한 더 나은 성능을 제공할 수 있습니다. 동일한 데이터 원본에 대 한 다양 한 공급자를 선택할 경우 OLE DB 공급자를 먼저 시도 합니다.  

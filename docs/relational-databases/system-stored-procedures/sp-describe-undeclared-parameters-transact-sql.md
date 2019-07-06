@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088501"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584606"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  두 비슷한 데이터 형식이 규칙 1에 따라 예를 들어 연결할 **varchar(8000)** 하 고 **varchar (max)** 보다 작은 데이터 형식 (**varchar(8000)** ) 선택 됩니다. 동일한 원칙이 적용 됩니다 **nvarchar** 하 고 **varbinary** 데이터 형식입니다.  
   
 4.  규칙 1의 목적상, 형식 추론 알고리즘에서 선호하는 변환에는 우선 순위가 있습니다. 가장 선호하는 변환부터 순서대로 나열하면 다음과 같습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  길이가 다른 동일한 기본 데이터 형식 간의 변환  
   
     2.  동일한 데이터 형식의 고정 길이 및 가변 길이 버전 간의 변환 (예를 들어 **char** 하 **varchar**).  

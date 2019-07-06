@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700707"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583290"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  변경 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
  *capture_instance* 현재 데이터베이스에 존재 하는 캡처 인스턴스의 이름을 지정 해야 합니다.  
   
- [ @low_water_mark =] *low_water_mark*  
+ [ @low_water_mark = ] *low_water_mark*  
  에 대 한 새 하위 워터 마크로 사용할 수 있는 로그 시퀀스 번호 (LSN)는 *캡처 인스턴스에*합니다. *low_water_mark* 됩니다 **binary(10)로 표현**, 기본값은 없습니다.  
   
  값이 null이 아닌 경우에 현재 항목의 start_lsn 값으로 나타나야 합니다는 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블입니다. cdc.lsn_time_mapping에 있는 다른 항목의 커밋 시간이 새 하위 워터마크에서 식별한 항목과 동일한 경우 해당 항목 그룹과 연결된 최소 LSN이 하위 워터마크로 지정됩니다.  
   
  값을 현재 NULL로 명시적으로 설정 된 경우 *하위 워터 마크* 에 대 한 합니다 *캡처 인스턴스* 정리 작업에 대 한 상한값을 정의 하는 데 사용 됩니다.  
   
- [ @threshold=] '*delete*'  
+ [ @threshold= ] '*delete threshold*'  
  정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 됩니다 **bigint**, 기본값은 5000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  새 하위 워터마크는 저장 프로시저 호출에 지정된 하위 워터마크가 아닐 수 있습니다. cdc.lsn_time_mapping 테이블에 있는 다른 항목이 동일한 커밋 시간을 공유하는 경우 항목 그룹에 표시된 최소 LSN이 조정된 하위 워터마크로 선택됩니다. 경우는 @low_water_mark 매개 변수는 NULL 또는 현재 하위 워터 마크가 새 하위 보다 크면, start_lsn 값 캡처 인스턴스에 그대로 대 한 변경 되지 않습니다.  
   
 2.  __$start_lsn 값이 하위 워터마크보다 작은 변경 테이블 항목이 삭제됩니다. 단일 트랜잭션에서 삭제되는 행 수를 제한하는 데 삭제 임계값이 사용됩니다. 항목을 성공적으로 삭제하지 못하는 오류가 발생하면 이 오류가 보고만 되고 캡처 인스턴스 하위 워터마크에서 호출을 기준으로 변경되었을 수 있는 내용에는 영향을 주지 않습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  다음과 같은 경우 sys.sp_cdc_cleanup_change_table을 사용합니다.  
   
 -   정리 에이전트 작업에서 삭제 실패를 보고하는 경우  

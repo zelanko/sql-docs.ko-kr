@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537315"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584058"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server의 사용자 정의 형식 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "52537315"
 4.  UDT를 구현하는 코드를 작성합니다.  
   
 5.  **빌드** 메뉴에서 **배포**합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리가 등록되고 형식이 만들어집니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL을 사용하여 UDT 배포  
  UDT를 사용할 데이터베이스에 어셈블리를 등록할 때는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 구문을 사용합니다. 등록된 어셈블리는 파일 시스템에 외부적으로 저장되는 것이 아니라 데이터베이스 시스템 테이블에 내부적으로 저장됩니다. UDT가 외부 어셈블리에 종속되어 있는 경우 해당 어셈블리도 데이터베이스에 로드해야 합니다. UDT를 사용할 데이터베이스에 UDT를 만들 때는 CREATE TYPE 문을 사용합니다. 자세한 내용은 [CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) 하 고 [CREATE TYPE &#40;Transact SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   

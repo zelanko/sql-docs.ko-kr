@@ -20,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6f4fec0762f1208af800d7070319924f02f0fcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f61b7a2a7a1dd84896db36ad6bdf771d6f20b37b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980967"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585151"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
 
@@ -107,8 +107,10 @@ ms.locfileid: "65980967"
     ```  
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 템플릿을 실행합니다.  
-  
-     자세한 내용은 [실행 SQLXML 쿼리에 ADO를 사용 하 여](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)입니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see [Using ADO to Execute SQLXML Queries](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  다음은 결과 집합의 일부입니다.  
   

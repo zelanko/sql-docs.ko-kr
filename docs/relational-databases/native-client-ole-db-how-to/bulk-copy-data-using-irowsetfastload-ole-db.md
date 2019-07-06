@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52cd97e832c73c795dc6a08e6877b70dec29f49f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 13d5383f979899bc5d610579cd2cb99004cf5520
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205111"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580448"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad를 통한 데이터 대량 복사(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,15 +54,17 @@ ms.locfileid: "53205111"
 6.  테이블에 복사할 데이터를 가져올 메모리 버퍼를 설정합니다.  
   
 7.  호출 **irowsetfastload:: Insertrow** 에서 데이터를 테이블로 대량 복사로 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  이 예에서는 10개의 레코드를 IRFLTable 테이블에 추가합니다. 이를 위해 데이터베이스에 IRFLTable 테이블을 만들어야 합니다. 이 예제는 IA64에서 지원되지 않습니다.  
   
- 첫 번째 실행 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 응용 프로그램에서 사용 하는 테이블을 만듭니다.  
+ 첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 애플리케이션에서 사용하는 테이블을 만듭니다.  
   
  ole32.lib oleaut32.lib를 사용하여 컴파일하고 다음 C++ 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 세 번째 실행 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 응용 프로그램에서 사용 하는 테이블을 삭제 합니다.  
+ 세 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록을 실행하여 애플리케이션에서 사용하는 테이블을 삭제합니다.  
   
 ```  
 USE AdventureWorks  

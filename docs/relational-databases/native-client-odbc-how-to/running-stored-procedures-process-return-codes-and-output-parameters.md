@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1541309fa19bbbf9ca4ee234c5b4831ee616ceea
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210498"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580958"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장 프로시저 실행 - 반환 코드 및 출력 매개 변수 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "53210498"
 3.  **SQLExecDirect**를 사용하여 문을 실행합니다.  
   
 4.  마지막 결과 집합을 처리하는 동안 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환하거나 **SQLMoreResults** 에서 SQL_NO_DATA를 반환할 때까지 결과 집합을 처리합니다. 이때 반환 코드 및 출력 매개 변수에 바인딩된 변수가 반환된 데이터 값으로 채워집니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  이 예제에서는 반환 코드 및 출력 매개 변수를 처리하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
   

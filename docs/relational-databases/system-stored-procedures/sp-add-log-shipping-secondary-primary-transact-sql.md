@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e907f1dd39164a4273ae994fe510de59d16c499d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494335"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583607"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,9 @@ sp_add_log_shipping_secondary_primary
 1.  지정한 주 서버 및 주 데이터베이스의 보조 ID를 생성합니다.  
   
 2.  다음을 수행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  보조 ID에 대 한 항목을 추가 **log_shipping_secondary** 제공된 된 인수를 사용 하 여 합니다.  
   
     2.  비활성화되어 있는 보조 ID에 대해 복사 작업을 만듭니다.  

@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a95705e24d2437a2a8f2695a68e97c129fd619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 578aeaeaa73cab0aff58b66c031e108b92f8658c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131068"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586391"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,9 @@ ms.locfileid: "54131068"
     -   3단계에서 만든 접근자 핸들  
   
 5.  **ICommand::Execute**를 사용하여 명령을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="methods-of-calling-a-stored-procedure"></a>저장 프로시저 호출 방법  
  저장된 프로시저를 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 지원 합니다.  
   
@@ -96,7 +98,7 @@ ms.locfileid: "54131068"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {0} [**? =**]**호출**_procedure_name_[**(**[*매개 변수*] [**합니다**[*매개 변수*]]... **)**]}  
+ {[ **?=** ]**call**_procedure_name_[ **(** [*parameter*][ **,** [*parameter*]]... **)** ]}  
   
  이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   

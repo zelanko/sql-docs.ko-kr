@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597521"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>예측 만들기(기본 데이터 마이닝 자습서)
   예측 쿼리 작성기를 사용 하 여 예측을 생성 한 다음 수 마이닝 모델의 정확도 테스트 하 고 결과 만족 했으면, 후 합니다 **마이닝 모델 예측** 데이터 마이닝에서 탭 디자이너입니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285684"
   
      이렇게 하면 `PredictProbability` 함수의 대상 열이 지정됩니다. 함수에 대 한 자세한 내용은 참조 하세요. [Data Mining Extensions &#40;DMX&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)합니다.  
   
-5.  다음 빈 행을 클릭 합니다 **소스** 열 및 TM_Decision_Tree 마이닝 모델을 선택한 후**합니다.**  
+5.  다음 빈 행을 클릭 합니다 **소스** 열을 선택한 후 **TM_Decision_Tree** 마이닝 모델입니다.  
   
 6.  에 `TM_Decision_Tree` 행의 합니다 **필드** 열을 선택 `Bike Buyer`합니다.  
   

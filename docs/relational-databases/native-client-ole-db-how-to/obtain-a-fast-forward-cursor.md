@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7c0956a505aab1043a90d29fe63b46836fbfea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 811f546511a9bb49aaf5f5e52d9cf785e99ea5f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690352"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582724"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD 커서 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "62690352"
 2.  행 집합 속성 DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT 및 DBPROP_OWNUPDATEDELETE를 VARIANT_TRUE로 설정합니다.  
   
 3.  명령을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  다음 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정된 후에 SELECT 문이 실행되어 AdventureWorks 데이터베이스에 있는 Purchasing.Vendor 테이블의 Name 열이 검색되고 표시됩니다. 이 예제는 IA64에서 지원되지 않습니다.  
   

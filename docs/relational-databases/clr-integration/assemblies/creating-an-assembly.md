@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656762"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584054"
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   호출되거나 참조되는 어셈블리가 동일한 데이터베이스에 만들어졌습니다.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>어셈블리 생성 시 보안 지정  
- 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전**를 **EXTERNAL_ACCESS**, 또는 **안전 하지 않음** . **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
+ 어셈블리를 만들 때를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스를 지정할 수 있습니다 보안 코드가 실행 될 수 있는 세 개의 다른 수준 중 하나: **안전한**, **EXTERNAL_ACCESS**, 또는 **UNSAFE**합니다. **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
   
  **SAFE** 는 기본 권한 집합이며 대부분의 시나리오에서 작동합니다. 이 보안 수준을 지정하려면 다음과 같이 CREATE ASSEMBLY 문의 구문을 수정합니다.  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  어셈블리가 서명된 강력한 이름이거나 인증서로 서명된 Authenticode입니다. 이 강력한 이름(또는 인증서)이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 비대칭 키(또는 인증서)로 생성되었고 **EXTERNAL ACCESS ASSEMBLY** 권한(외부 액세스 어셈블리의 경우) 또는 **UNSAFE ASSEMBLY** 권한(안전하지 않은 어셈블리의 경우)이 있는 해당 로그인을 가지고 있습니다.  
   
 2.  DBO(데이터베이스 소유자)에게 **EXTERNAL ACCESS ASSEMBLY** ( **EXTERNAL ACCESS** 어셈블리의 경우) 또는 **UNSAFE ASSEMBLY** ( **UNSAFE** 어셈블리의 경우) 권한이 있고 데이터베이스의 [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) 이 **ON**으로 설정되어 있습니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  위에 나열된 두 가지 조건은 어셈블리가 실행될 때는 물론 로드될 때에도 검사되며 두 가지 조건 중 적어도 하나는 만족해야 어셈블리가 로드됩니다.  
   
  서버 프로세스에서 CLR(공용 언어 런타임) 코드를 실행할 한 가지 목적으로만 데이터베이스의 [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) 을 **ON** 으로 설정하는 것은 바람직하지 않습니다. 이 경우 대신 master 데이터베이스의 어셈블리 파일에서 비대칭 키를 만드는 것이 좋습니다. 그런 다음 이 비대칭 키에 매핑된 로그인을 만들고 로그인에 **EXTERNAL ACCESS ASSEMBLY** 또는 **UNSAFE ASSEMBLY** 권한을 부여해야 합니다.  

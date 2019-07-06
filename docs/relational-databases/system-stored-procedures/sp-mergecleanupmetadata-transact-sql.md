@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017845"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582164"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  모든 수준에 관련된 모든 병합 게시에 대해 스냅숏 파일을 다시 생성합니다. 스냅숏을 먼저 다시 생성하지 않고 병합을 시도하면 스냅숏을 다시 생성하라는 메시지가 표시됩니다.  
   
 6.  게시 데이터베이스를 백업합니다. 그렇게 하지 않으면 게시 데이터베이스 복원 후 병합이 실패할 수도 있습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **연속 모드 병합에 대 한 특별 고려 사항**  
   
  연속 모드 병합을 실행하는 경우 다음 중 하나를 실행해야 합니다.  

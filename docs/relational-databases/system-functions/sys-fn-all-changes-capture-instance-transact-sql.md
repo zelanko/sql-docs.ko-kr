@@ -21,12 +21,12 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409070"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585107"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 1  
   
-     연결된 커밋 시간이 end_time과 같거나 이전인 cdc.<capture_instance>_CT 변경 테이블의 행만 결과 집합에 포함됩니다.  
+     연결 된 커밋 시간이 같거나 end_time 있는 cdc. < capture_instance > _CT 변경 테이블의 행만 결과 집합에 포함 됩니다...  
   
 -   @closed_high_end_point = 0  
   
@@ -88,19 +88,21 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
 |__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|\<열에서 @column_list>|**달라 집니다.**|식별 되는 열을 *column_list* 대 sp_cdc_generate_wrapper_function 함수 래퍼 함수를 만드는 스크립트를 생성 하 라고 하는 경우에 대 한 인수입니다.|  
+|\<열에서 @column_list>|**varies**|식별 되는 열을 *column_list* 대 sp_cdc_generate_wrapper_function 함수 래퍼 함수를 만드는 스크립트를 생성 하 라고 하는 경우에 대 한 인수입니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 인수의 값에 따라 달라 집니다 *row_filter_option* 호출에 제공 합니다.<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* 'all update old' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
 |\<열에서 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그가 항상 NULL로 설정 됩니다 \__CDC_OPERATION 했습니다는 ', 'I', 'u O'입니다. 때 \__CDC_OPERATION은 ' u N '에 업데이트를 해당 열이 변경 되는 경우 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
 ## <a name="remarks"></a>Remarks  
- fn_all_changes_<capture_instance> 함수는 cdc.fn_cdc_get_all_changes_<capture_instance> 쿼리 함수의 래퍼 역할을 합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
+ < Capture_instance > fn_all_changes_ 함수 cdc.fn_cdc_get_all_changes_ < capture_instance > 쿼리 함수의 래퍼 역할도합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
   
  래퍼 함수는 자동으로 만들어지지 않습니다. 래퍼 함수를 만들려면 다음 두 작업을 수행해야 합니다.  
   
 1.  래퍼 생성 스크립트를 만드는 저장 프로시저를 실행합니다.  
   
 2.  래퍼 함수를 실제로 만드는 스크립트를 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  래퍼 함수를 사용 하면 제한 간격 내에서 발생 한 변경 내용을 체계적으로 쿼리하려면 **날짜/시간** LSN 값 대신 값입니다. 래퍼 함수는 제공 된 간에 필요한 모든 변환을 수행 **날짜/시간** 값과 쿼리 함수에 대 한 인수로 서 내부적으로 필요한 LSN 값입니다. 변경 데이터 스트림을 처리하기 위해 래퍼 함수가 직렬로 사용된 경우 특정 호출과 연결된 간격의 @end_time 값이 후속 호출과 연결된 간격의 @start_time 값으로 제공된다는 규칙을 준수하면 데이터가 손실되거나 반복되지 않습니다.  
   
  스크립트를 만들 때 @closed_high_end_point 매개 변수를 사용하면 지정된 쿼리 창에서 닫힌 상한이나 열린 상한을 지원하는 래퍼를 생성할 수 있습니다. 즉, 커밋 시간이 추출 간격의 상한과 같은 항목을 간격에 포함할지 여부를 결정할 수 있습니다. 기본적으로 상한이 포함됩니다.  

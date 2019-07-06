@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224875"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597440"
 ---
 # <a name="generate-mdx"></a>Generate(MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  문자열 식으로 표현된 유효한 구분 기호입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 두 번째 집합을 지정 합니다 **생성** 함수를 첫 번째 집합의 각 튜플에 두 번째 집합의 튜플을 적용 하 여 생성 한 집합을 반환 합니다 *,* 집합을 union으로 결과 조인한 다음 및 합니다. 하는 경우 **모든** 지정 된 경우 함수에는 결과 집합에 중복 요소가 유지 됩니다.  
+ 두 번째 집합을 지정 합니다 **생성** 함수는 첫 번째 집합의 각 튜플에 두 번째 집합의 튜플을 적용 하 여 생성 된 집합을 반환 하 고 결과 조인한 다음 집합을 union으로 합니다. 하는 경우 **모든** 지정 된 경우 함수에는 결과 집합에 중복 요소가 유지 됩니다.  
   
- 문자열 식이 지정 하는 경우는 **생성** 함수는 첫 번째 집합의 각 튜플에 대해 지정 된 문자열 식을 계산 하 여 생성 된 문자열을 반환 *,* 계산한 다음 연결을 결과입니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  
+ 문자열 식이 지정 하는 경우는 **생성** 함수는 지정 된 문자열 식을 첫 번째 집합의 각 튜플에 대해 계산한 다음 결과 연결 하 여 생성 된 문자열을 반환 합니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  
   
 ## <a name="examples"></a>예  
   

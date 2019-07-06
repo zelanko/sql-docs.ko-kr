@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5af98bd479738785c341b2618561eaab3f43b5d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994232"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586014"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,9 @@ sp_change_log_shipping_secondary_database
 1.  설정을 변경 합니다 **log_shipping_secondary_database** 필요에 따라 기록 합니다.  
   
 2.  로컬 모니터 레코드를 변경 **log_shipping_monitor_secondary** 보조 서버에서 사용 하 여 제공 된 인수를 필요한 경우.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할에서이 프로시저를 실행할 수 있습니다.  
   

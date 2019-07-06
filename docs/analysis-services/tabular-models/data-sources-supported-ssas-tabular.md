@@ -1,6 +1,6 @@
 ---
 title: SQL Server Analysis Services 테이블 형식 1200 모델에서 지 원하는 데이터 원본 | Microsoft Docs
-ms.date: 11/07/2018
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 49c63d205d2ce1b900f3b8d4ad9a08e3bf83e2f6
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: a1ef7ae48e3d1500d08c9adba5e39db6214125c5
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597357"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1200-models"></a>테이블 형식 1200 모델 SQL Server Analysis Services에서 지 원하는 데이터 원본
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,9 +58,20 @@ Microsoft SQL Server    |  2008 이상      |       OLE DB Provider for SQL Serv
 Microsoft Azure SQL Database    |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client            
 Microsoft Azure SQL Data Warehouse     |   All     |  SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client       
 Microsoft SQL APS(분석 플랫폼 시스템)     |   All      |  OLE DB Provider for SQL Server, SQL Server Native Client OLE DB 공급자, .NET Framework Data Provider for SQL Client       
+|Microsoft SQL Server Always Encrypted <sup> [2](#ae)</sup> | 2016 이상. 2014이 하 버전 Enterprise edition만 합니다. | .NET Framework Data Provider for SQL Client
+|상시 암호화는 azure SQL Database <sup> [2](#ae)</sup>| All | .NET Framework Data Provider for SQL Client
 Oracle 관계형 데이터베이스     |  Oracle 9i 이상       |  Oracle OLE DB 공급자       
 Teradata 관계형 데이터베이스    |  Teradata V2R6 이상     | .Net Data Provider for Teradata    
 
+
+### <a name="using-sql-server-analysis-services-with-always-encrypted"></a>상시 암호화를 사용 하 여 SQL Server Analysis Services 사용 하 여
+
+<a name="ae">[2] </a> SQL Server Analysis Services 클라이언트를 사용 하 여 데이터베이스 역할도 할 수 있습니다 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 다음 조건에서 Azure SQL Database 또는 SQL Server: 
+
+*  암호화 된 열을 보호 하는 열 마스터 키에 인증서를 Windows 인증서 저장소에 저장 해야 합니다. Azure Key Vault에 저장 된 열 마스터 키가 지원 되지 않습니다.   
+*  Analysis Services가 설치 된 Windows 컴퓨터에 설치 되어 필요한 열 마스터 키 인증서를 있습니다. 자세한 내용은 참조 하세요 [Windows 인증서 저장소에 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-windows-certificate-store)합니다.
+*  SQL에 연결 하려면 Analysis Services는 데이터 원본을 기반으로.Net Framework 공급자 및 데이터 원본의 속성을 사용 하도록 설정 해야 하는 열 암호화 설정 합니다. .NET framework 4.6.1 하거나 나중에 Analysis Services 서버에 있어야 합니다.
+*  SQL Server 또는 SQL Database 데이터 원본 이어야 합니다는 *공급자* 1200 호환성 수준에서 지 원하는 데이터 원본 유형입니다. 파워 쿼리를 사용 하 여 작동 하지 것입니다 *구조적* 1400 호환성 수준에 도입 된 데이터 원본입니다.
   
 ##  <a name="bkmk_tips"></a> 데이터 원본 선택 시 유용한 정보  
   

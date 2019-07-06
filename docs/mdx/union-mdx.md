@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653463"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597378"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 함수는 두 개의의 합집합을 반환 하거나 이상 지정 된 집합*합니다.* 표준 구문을 사용 하 여 및 대체 구문 1에는 기본적으로 중복 항목이 제거 됩니다. 표준 구문을 사용 하 여 사용 하는 **모든** 조인된 된 집합에서 중복 요소를 유지 하는 플래그입니다. 중복 항목은 집합의 뒷부분부터 삭제됩니다. 대체 구문 2를 사용하면 중복 항목이 항상 유지됩니다.  
+ 이 함수는 두 개의의 합집합을 반환 하거나 이상 지정 된 집합입니다. 표준 구문을 사용 하 여 및 대체 구문 1에는 기본적으로 중복 항목이 제거 됩니다. 표준 구문을 사용 하 여 사용 하는 **모든** 조인된 된 집합에서 중복 요소를 유지 하는 플래그입니다. 중복 항목은 집합의 뒷부분부터 삭제됩니다. 대체 구문 2를 사용하면 중복 항목이 항상 유지됩니다.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는의 동작을 보여 줍니다.는 **Union** 각 구문을 사용 하 여 작동 합니다.  

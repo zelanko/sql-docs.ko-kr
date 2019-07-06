@@ -15,12 +15,12 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 794e71013b552cbd4e17b9cb37e4c8c261aeeae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702696"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597487"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 원격 공급자 개요
 Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급자를 호출 하는 클라이언트 컴퓨터에서 로컬 사용자를 수 있습니다. 원격 컴퓨터의 로컬 사용자와 원격 컴퓨터에 대 한 데이터 공급자 매개 변수를 지정 합니다. 원격 공급자는 원격 컴퓨터에 액세스 하는 데 사용할 매개 변수를 지정 합니다. 그런 다음 로컬 사용자 처럼 원격 컴퓨터를 액세스할 수 있습니다.
@@ -50,7 +50,7 @@ Microsoft OLE DB 원격 공급자에는 원격 컴퓨터에서 데이터 공급�
 |**DFMode**|DataFactory 모드를 나타냅니다. 원하는 버전을 지정 하는 문자열을 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 서버의 개체입니다. 특정 버전의 요청에 대 한 연결을 열기 전에이 속성을 설정 합니다 **DataFactory**합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하는 시도가 수행 됩니다. 이전 버전이 없는 경우 오류가 발생 합니다. 하는 경우 **DFMode** 보다 작으면 사용 가능한 버전을 오류가 발생 합니다. 연결 된 후이 속성은 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21"-버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자가 서버에 전송 하는 명령 (행 집합) 속성의 문자열에 추가 될 값을 나타냅니다. 이 문자열에 대 한 기본값은 vt_empty 합니다.|
 |**현재 DFMode**|실제 버전 번호를 나타내는 합니다 **DataFactory** 서버의 합니다. 버전에서 요청 된 경우를 확인 하려면이 속성을 확인 합니다 **DFMode** 속성 적용 되었습니다.<br /><br /> 다음 유효한 정수 (Long) 값 중 하나일 수 있습니다.<br /><br /> -25 버전 2.5 (기본값)<br />-21-버전 2.1<br />-20-버전 2.0<br />-15 버전 1.5<br /><br /> 추가 "DFMode = 20;"을 사용 하는 경우 연결 문자열을 **MSRemote** 데이터가 업데이트 될 때 공급자 서버의 성능을 향상 시킬 수 있습니다. 이 설정을 사용 합니다 **업데이트할** 서버의 개체를 덜 리소스 집약적 모드를 사용 합니다. 그러나 다음과 같은 기능이이 구성에서 사용할 수 없습니다.<br /><br /> -매개 변수가 있는 쿼리를 사용 합니다.<br />-호출 하기 전에 매개 변수 또는 열의 정보를 시작 합니다 **Execute** 메서드.<br />-설정 **업데이트 &#40;transact** 하 **True**합니다.<br />-시작 행 상태입니다.<br />-호출 된 **Resync** 메서드.<br />-새로 고침 (명시적 또는 자동으로)를 통해 합니다 **업데이트를 다시 동기화** 속성입니다.<br />-설정 **명령** 하거나 **Recordset** 속성입니다.<br />사용 하 여 **adCmdTableDirect**합니다.|
-|**Handler**|기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (또는 처리기)의 이름을 나타냅니다 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및 처리기에서 사용 되는 매개 변수 *,* 쉼표 (모든 분리 된 ","). **문자열** 값입니다.|
+|**Handler**|기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (또는 처리기)의 이름을 나타냅니다 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 쉼표로 구분 된 모든 처리기에 의해 사용 되는 매개 변수 (","). **문자열** 값입니다.|
 |**인터넷 제한 시간**|요청이 서버에서 전달 될 때까지 기다리는 시간 (밀리초)의 최대 수를 나타냅니다. (기본값은 5 분입니다.)|
 |**원격 공급자**|원격 서버에서 사용 하도록 데이터 공급자의 이름을 나타냅니다.|
 |**원격 서버**|이 연결에서 사용할 서버 이름 및 통신 프로토콜을 나타냅니다. 이 속성은 해당 하는 [rds. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체 [Server](../../../ado/reference/rds-api/server-property-rds.md) 속성입니다.|

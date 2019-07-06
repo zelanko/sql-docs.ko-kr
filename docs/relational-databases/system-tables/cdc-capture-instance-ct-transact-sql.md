@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336252"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586382"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "49336252"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN(로그 시퀀스 번호)입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어, 두 개의 행을 제거 하는 원본 테이블에서 삭제 작업을 하는 경우 변경 테이블은 포함 동일한 두 개의 행을 **__ $start_lsn** 값입니다.|  
-|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
+|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
 |**__$seqval**|**binary(10)**|트랜잭션 내 행 변경을 정렬하는 데 사용되는 시퀀스 값입니다.|  
 |**__$operation**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업을 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(이전 값)<br /><br /> 열 데이터는 update 문을 실행하기 전의 행 값을 가집니다.<br /><br /> 4 = 업데이트(새 값)<br /><br /> 열 데이터는 update 문을 실행한 후의 행 값을 가집니다.|  
 |**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다.|  
 |*\<captured source table columns>*|다양함|변경 테이블의 나머지 열은 캡처 인스턴스가 생성될 때 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 이 테이블에 포함됩니다.|  
-|**__ $ command_id** |**int** |트랜잭션 내에서 작업 순서를 추적합니다. |  
+|**__$command_id** |**int** |트랜잭션 내에서 작업 순서를 추적합니다. |  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -58,7 +58,7 @@ ms.locfileid: "49336252"
  그러나 이러한 열의 값은 원본 열 값과 같습니다.  
   
 ### <a name="large-object-data-types"></a>큰 개체 데이터 형식  
- 데이터 형식의 열 **이미지**, **텍스트**, 및 **ntext** 항상 할당 되는 **NULL** 값 __ $operation = 1 또는 \_ \_$operation = 3. 데이터 형식의 열 **varbinary (max)** 를 **varchar (max)**, 또는 **nvarchar (max)** 할당 되는 **NULL** 값 \_ \_$operation = 열 업데이트 하는 동안 변경 되지 않은 경우 3입니다. 때 \_ \_$operation = 1, 이러한 열 삭제 시 해당 값이 할당 됩니다. 항상 캡처 인스턴스에 포함 되는 계산된 열 값을 갖는 **NULL**합니다.  
+ 데이터 형식의 열 **이미지**, **텍스트**, 및 **ntext** 항상 할당 되는 **NULL** 값 __ $operation = 1 또는 \_ \_$operation = 3. 데이터 형식의 열 **varbinary (max)** 를 **varchar (max)** , 또는 **nvarchar (max)** 할당 되는 **NULL** 값 \_ \_$operation = 열 업데이트 하는 동안 변경 되지 않은 경우 3입니다. 때 \_ \_$operation = 1, 이러한 열 삭제 시 해당 값이 할당 됩니다. 항상 캡처 인스턴스에 포함 되는 계산된 열 값을 갖는 **NULL**합니다.  
   
  기본적으로 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 캡처된 열에 추가할 수 있는 최대 크기는 65,536바이트(64KB)입니다. 이 크기를 늘려 더 큰 LOB 데이터를 지원 하기를 사용 하 여 합니다 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 더 큰 최대 크기를 지정 합니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
   
@@ -74,7 +74,9 @@ ms.locfileid: "49336252"
 2.  변경 테이블에서 해당 열에 동일한 업데이트 작업을 수행합니다.  
   
 3.  새 데이터 형식을 지정하여 원본 테이블을 변경합니다. 데이터 형식 변경이 변경 테이블로 성공적으로 전파됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="data-manipulation-language-modifications"></a>데이터 조작 언어 수정  
  변경 데이터 캡처가 활성화된 원본 테이블에서 삽입, 업데이트 및 삭제 작업을 수행하면 데이터베이스 트랜잭션 로그에 이러한 DML 작업에 대한 레코드가 기록됩니다. 변경 데이터 캡처 프로세스가 트랜잭션 로그에서 이러한 변경에 대 한 정보를 검색 및 변경 내용을 기록할 변경 테이블에 하나 또는 두 개의 행을 추가 합니다. 일반적으로 변경 테이블 항목의 커밋은 단일 항목이 아니라 변경 내용 그룹에 대해 수행되어야 하지만 항목은 원본 테이블에 커밋된 순서와 동일하게 변경 테이블 추가됩니다.  
   

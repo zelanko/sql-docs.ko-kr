@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8bcf9e79e369b6242152d0b73dc11b6c1bdbdaf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 46f20ef6db68f52fa67f93553efd5d2a4bc2f188
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662392"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580906"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Microsoft Distributed Transaction Coordinator 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51662392"
   
 1.  MS DTC OLE DtcGetTransactionManager 함수를 사용하여 MS DTC에 연결합니다. MS DTC에 대한 자세한 내용은 Microsoft Distributed Transaction Coordinator를 참조하십시오.  
   
-2.  설정할 각 Microsoft® SQL Server™ 연결에 대해 SQL DriverConnect를 한 번씩 호출합니다.  
+2.  각 microsoft SQL DriverConnect를 한 번 호출? SQL Server? 연결을 설정 합니다.  
   
 3.  MS DTC OLE ITransactionDispenser::BeginTransaction 함수를 호출하여 MS DTC 트랜잭션을 시작하고 해당 트랜잭션을 나타내는 트랜잭션 개체를 가져옵니다.  
   
@@ -39,7 +39,9 @@ ms.locfileid: "51662392"
 5.  업데이트할 각 SQL Server에 대해 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 한 번씩 호출합니다.  
   
 6.  MS DTC OLE ITransaction::Commit 함수를 호출하여 MS DTC 트랜잭션을 커밋합니다. 트랜잭션 개체가 더 이상 유효하지 않게 됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  일련의 MS DTC 트랜잭션을 수행하려면 3 - 6단계를 반복합니다.  
   
  트랜잭션 개체에 대한 참조를 해제하려면 MS DTC OLE ITransaction::Return 함수를 호출합니다.  

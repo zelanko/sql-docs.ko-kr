@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c80ec6b02af9e639c04eb1e30b730bcd22b6f78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5c20129498eb439a80d4768feb9bf00da41e05c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028874"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582836"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,9 @@ ms.locfileid: "56028874"
 4.  컴퓨터에 로컬로 다시 만들려는 예제에 포함되는 XML 템플릿 또는 스키마와 같은 추가 파일을 만들었는지 확인합니다. 이러한 파일은 테스트 스크립트 파일(Sqlxml4test.vbs)을 저장한 디렉터리와 같은 디렉터리에 있어야 합니다.  
   
 5.  SQLXML 4.0 테스트 스크립트를 사용하는 방법에 대한 다음 섹션의 지침을 따릅니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-the-sqlxml-40-test-script"></a>SQLXML 4.0 테스트 스크립트 사용  
  다음 절차에서는 Sqlxml4test.vbs 파일을 사용하여 이 설명서에서 제공하는 예제 쿼리를 테스트하는 방법에 대해 설명합니다.  
   

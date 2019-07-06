@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017759"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586253"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**데이터 정렬**|**sysname**|데이터 형식의 데이터 정렬입니다. 문자가 아닌 데이터 형식의 경우 NULL입니다.|  
   
 3.  하는 경우 *이름을* 되는 데이터 형식이 아닌 임의의 데이터베이스 개체인 **sp_help** 집합과 함께 추가 결과 집합을 지정 된 개체의 유형에 따라이 결과 반환 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |열 이름|데이터 형식|Description|  
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar(** 128 **)**|테이블 이름|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**형식**|**nvarchar(** 31 **)**|테이블 유형입니다.|  
     |**Created_datetime**|**datetime**|테이블을 만든 날짜입니다.|  
   
-     지정 하면 데이터베이스 개체에 따라 **sp_help** 추가 결과 집합을 반환 합니다.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     하는 경우 *이름을* 시스템 테이블, 사용자 테이블 또는 뷰 **sp_help** 다음 결과 집합을 반환 합니다. 단, 뷰의 경우 파일 그룹에서 데이터 파일의 위치를 설명하는 결과 집합은 반환되지 않습니다.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   열 개체에 대해 반환되는 추가 결과 집합입니다.  
   

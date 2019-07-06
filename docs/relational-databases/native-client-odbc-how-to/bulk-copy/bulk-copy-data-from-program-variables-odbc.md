@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d0d377cff846bcabac999667718c5696089971
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a10ce1d483343a81ba61e9e6f39b93cb48040337
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53216052"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584708"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53216052"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름을 지정합니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을 지정합니다. 응용 프로그램에서 뷰 또는 테이블로 복사하려는 경우 DB_IN, 테이블 또는 뷰에서 응용 프로그램으로 복사하려는 경우 DB_OUT입니다.  
+    -   복사본의 방향: DB_IN 뷰 또는 테이블로 복사 하려는 경우 DB_OUT 응용 프로그램에서 테이블 또는 뷰에서 응용 프로그램입니다.  
   
 5.  호출 [bcp_bind](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 열을 프로그램 변수에 바인딩할 대량 복사에서 각 열에 대 한 합니다.  
   
@@ -57,7 +57,9 @@ ms.locfileid: "53216052"
 7.  여러 행을 보낸 후에 호출 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 검사점 행 이미 전송 합니다. 호출 하는 것이 좋습니다 [bcp_batch](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md) 행 1000 개 행당 한 번 이상.  
   
 8.  모든 행을 보낸 후에 호출 [bcp_done](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 작업을 완료 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  변경할 수 있습니다 위치와 프로그램 변수 길이 대량 복사 작업을 하는 동안 호출한 [bcp_colptr](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 하 고 [bcp_collen](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)합니다. 사용 하 여 [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 다양 한 대량 복사 옵션을 설정 합니다. 사용 하 여 [bcp_moretext](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 보낼 **텍스트**합니다 **ntext**, 및 **이미지** 서버를 세그먼트의 데이터입니다.  
   
 ## <a name="example"></a>예제  

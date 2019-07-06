@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bc775f7f857bffb5a7840d99de00fc546e71d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e67f69a6e1ce5ce18eb265fdc86eba8e8fcd0bc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943029"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585085"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>방법: Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "62943029"
   
 2. 에 **파일** 메뉴에서 클릭 **새로 만들기** 차례로 **프로젝트**합니다.  **새 프로젝트** 대화 상자가 나타납니다.   
   
-3. 에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창으로 이동 **템플릿**\\**Visual C#**\\**Windows** 선택한 **콘솔 응용 프로그램**합니다.  
+3. 에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창으로 이동 **템플릿**\\**Visual C#** \\**Windows** 선택한 **콘솔 응용 프로그램**합니다.  
   
 4. (선택 사항) 에 **이름을** 텍스트 상자에 새 응용 프로그램의 이름을 입력 합니다.  
 
@@ -54,5 +54,6 @@ ms.locfileid: "62943029"
 15. SMO의 Microsoft.SqlServer.Management.Smo 아래에는 Microsoft.SqlServer.Management.Smo.Agent와 같은 다양한 네임스페이스가 있습니다. 이러한 네임스페이스를 필요에 따라 추가합니다.  
   
 16. 이제 SMO 코드를 추가할 수 있습니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

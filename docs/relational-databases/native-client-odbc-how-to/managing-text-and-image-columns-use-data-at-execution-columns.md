@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8858ba41bf1ff3a6acf4161865c535fd5b10f412
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 54b15c11eacdd29eeea01b867f9f1c7e8a7186b4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203302"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580266"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>텍스트 및 이미지 열 관리 - Data-at-Execution 열 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53203302"
     -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) 를 한 번 이상 호출하여 길이가 전달될 때까지 열 데이터를 보냅니다.  
   
 4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) 를 호출하여 최종 실행 시 데이터 열의 모든 데이터가 전달되었음을 나타냅니다. SQL_NEED_DATA는 반환되지 않습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  이 예제에서는 SQLGetData를 사용하여 SQL_LONG 변수 문자 데이터를 읽는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
   

@@ -12,12 +12,12 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205094"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597550"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
   이 예에서는 EXPLICIT 모드를 사용하는 `SELECT` 문에서 `XMLTEXT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
@@ -98,9 +98,9 @@ FOR XML EXPLICIT;
   
  `</Parent>`  
   
- *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. *AttributeName* 에 대해 지정된 이름은 하위 요소의 이름이 됩니다.  
+ *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. 에 지정한 이름이 *AttributeName* 하위 요소의 이름이 됩니다.  
   
- 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.   
+ 이 쿼리에서 *AttributeName*, <`overflow`>을 함께 지정 된는 `xmltext` 지시문:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

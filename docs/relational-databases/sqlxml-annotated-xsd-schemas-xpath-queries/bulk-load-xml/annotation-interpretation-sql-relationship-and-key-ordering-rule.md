@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035724"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581884"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>주석 해석 - sql:relationship 및 키 순서 지정 규칙
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,9 @@ ms.locfileid: "56035724"
     ```  
   
 3.  XML 대량 로드를 실행하려면 다음 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] VBScript(Visual Basic Scripting Edition) 예제를 MySample.vbs로 저장한 다음 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035724"
     set objBL=Nothing  
     ```  
   
-     그러면 XML 대량 로드가 CustOrder 테이블의 CustomerID 외래 키 열에 NULL 값을 삽입합니다. XML 샘플 데이터를 수정 하는 경우 있도록를  **\<CustomerID >** 자식 요소 앞에 표시 된  **\<순서 >** 예상된 결과 가져오려면 자식 요소: XML 대량 로드가 지정된 외래 키 값을 열에 삽입합니다.  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  다음은 동등한 XDR 스키마입니다.  
   

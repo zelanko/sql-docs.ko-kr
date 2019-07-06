@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9801f34d1128595a2a23004327379cb213e1a0c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa47713fd51de86b2ed547f094ec407e1d7caae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584873"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,10 @@ ms.locfileid: "62714132"
     -   Microsoft ActiveX Data Objects 2.8 라이브러리  
   
 2.  SQLXML 4.0과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 배포 및 설치합니다.  
-  
-     자세한 내용은에서 참조 [SQLXML 4.0 프로그래밍 개념](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) 하 고 [SQL Server Native Client 설치](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)합니다.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information, see on [SQLXML 4.0 Programming Concepts](../../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) and [Installing SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md)  

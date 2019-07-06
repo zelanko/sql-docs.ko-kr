@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661563"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579789"
 ---
 # <a name="creating-user-defined-types---coding"></a>사용자 정의 형식 만들기 - 코딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ using Microsoft.SqlServer.Server;
  합니다 **Microsoft.SqlServer.Server** 네임 스페이스에는 UDT의 다양 한 특성에 필요한 개체를 포함 하며 **System.Data.SqlTypes** 나타내는클래스를포함하는네임스페이스[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]네이티브 데이터 형식을 어셈블리에 사용할 수 있습니다. 물론 어셈블리가 올바르게 작동하는 데 필요한 추가 네임스페이스가 있을 수도 있습니다. **지점** UDT도 사용 합니다 **System.Text** 문자열 작업을 위한 네임 스페이스입니다.  
   
 > [!NOTE]  
->  Visual c + + 데이터베이스 개체를 사용 하 여 컴파일된 Udt 등 **/clr: pure** 실행에 대 한 지원 되지 않습니다.  
+>  Visual C++ 데이터베이스 개체를 사용 하 여 컴파일된 Udt 등 **/clr: pure** 실행은 지원 되지 않습니다.  
   
 ## <a name="specifying-attributes"></a>특성 지정  
  특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
@@ -494,7 +494,7 @@ public Int32 Y
  UDT 메서드를 코딩하는 경우 사용된 알고리즘이 시간에 따라 변경될 수 있는지 여부를 고려합니다. 변경되는 경우 UDT에서 사용하는 메서드에 대해 별도의 클래스를 만들어야 할 수도 있습니다. 알고리즘이 변경되면 새 코드를 사용하여 클래스를 다시 컴파일하고 UDT에 영향을 주지 않고 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 대체로 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 문을 사용하여 UDT를 다시 로드할 수 있지만 이 경우 기존 데이터에서 문제가 발생할 수 있습니다. 예를 들어, 합니다 **통화** 포함 된 UDT를 **AdventureWorks** 샘플 데이터베이스에서는 **ConvertCurrency** 구현 되는 통화 값으로 변환 함수 별도 클래스. 변환 알고리즘이 미래에 예기치 않은 방식으로 변경되거나 새 기능이 필요할 수도 있습니다. 구분 하는 **ConvertCurrency** 에서 함수는 **통화** UDT 구현 향후 변경 사항에 대 한 계획을 수립할 때 유연성을 제공 합니다.  
   
 ### <a name="example"></a>예제  
- **지점** 거리 계산을 위한 세 가지 간단한 메서드를 포함 하는 클래스: **거리**를 **DistanceFrom** 하 고 **DistanceFromXY**합니다. 각 반환 합니다는 **double** 까지의 거리를 계산 **가리킨** 0 지정된 된 지점에서의 거리 **가리킨**, 거리 X 및 Y 좌표를 지정 하 고 하 **지점**합니다. **거리** 하 고 **DistanceFrom** 호출할 때마다 **DistanceFromXY**, 각 메서드에 다른 인수를 사용 하는 방법을 보여 줍니다.  
+ **지점** 클래스 3 개의 단순한 메서드인 거리를 계산 합니다. **거리**하십시오 **DistanceFrom** 하 고 **DistanceFromXY**합니다. 각 반환 합니다는 **double** 까지의 거리를 계산 **가리킨** 0 지정된 된 지점에서의 거리 **가리킨**, 거리 X 및 Y 좌표를 지정 하 고 하 **지점**합니다. **거리** 하 고 **DistanceFrom** 호출할 때마다 **DistanceFromXY**, 각 메서드에 다른 인수를 사용 하는 방법을 보여 줍니다.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  합니다 **Microsoft.SqlServer.Server.SqlMethodAttribute** 클래스 메서드를 변경자 (mutator) 인지 여부를 지정 하 고 null 호출 동작에 결정성을 지정 하려면 메서드 정의 표시 하기 위해 사용할 수 있는 사용자 지정 특성을 제공 합니다. 이러한 속성에 대해서는 기본값이 사용되며, 사용자 지정 특성은 기본값이 아닌 값이 필요한 경우에만 사용됩니다.  
   
 > [!NOTE]  
->  **SqlMethodAttribute** 클래스에서 상속 된 **SqlFunctionAttribute** 클래스 **SqlMethodAttribute** 상속을 **FillRowMethodName** 하 고 **TableDefinition** 에서 필드 **SqlFunctionAttribute**합니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리가 배포 되지만 오류에 대 한 합니다 **IEnumerable** 반환 형식 다음 메시지를 사용 하 여 런타임에 발생: "메서드, 속성 또는 필드 '\<이름 >' 클래스에서\<클래스 >' 어셈블리에서 '\<어셈블리 >' 반환 형식이 잘못 되었습니다. "  
+>  **SqlMethodAttribute** 클래스에서 상속 된 **SqlFunctionAttribute** 클래스 **SqlMethodAttribute** 상속을 **FillRowMethodName** 하 고 **TableDefinition** 에서 필드 **SqlFunctionAttribute**합니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리가 배포 되지만 오류에 대 한는 **IEnumerable** 형식 다음 메시지를 사용 하 여 런타임에 발생을 반환 합니다. "메서드, 속성 또는 필드 '\<이름 >'에서 클래스\<클래스 >' 어셈블리에서 '\<어셈블리 >' 반환 형식이 잘못 되었습니다."  
   
  다음 표에서 몇 가지 관련 **Microsoft.SqlServer.Server.SqlMethodAttribute** UDT 메서드에 사용할 수 있으며 해당 기본값을 나열 하는 속성입니다.  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  사용 하 여는 **작성** 에 대 한 메서드는 **통화** UDT는 UDT를 유지 하는 방법을 확인 하려면 디스크에 UDT 값은 비교 및 정렬에 대 한 방법 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 합니다.  
   
 3.  저장 된 **통화** 다음 이진 형식을 사용 하 여 UDT:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  오른쪽에 Null 문자를 채워 바이트 0-19에 대한 UTF-16 인코딩 문자열로 culture를 저장합니다.  
   
     2.  바이트 20 이상을 사용하여 통화의 10진수 값을 포함합니다.  

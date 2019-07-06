@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fcd735be7c3729f01e50a6133b5de2a6f9cfe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53ab0d5b8fde978afce5adeb3dd753da554cda4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715691"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582642"
 ---
 # <a name="scripting"></a>스크립팅
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "47715691"
 2.  목록 생성  
   
 3.  스크립트 생성  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  검색 단계에서는 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 개체를 사용합니다. 개체의 URN 목록을 제공하면 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> 메서드가 URN 목록의 개체에 대해 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 개체를 반환합니다. 부울 *fParents* 매개 변수를 사용 하는 부모 또는 자식이 지정된 된 개체의 검색 되는지 여부를 선택 합니다. 이 단계에서 종속성 트리를 수정할 수 있습니다.  
   
  목록 생성 단계에서는 트리가 전달되고 결과 목록이 반환됩니다. 이 개체 목록은 스크립팅 순서로 나열되며 조작할 수 있습니다.  

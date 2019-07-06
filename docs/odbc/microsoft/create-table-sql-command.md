@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232290"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597538"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 명령
 지정 된 필드가 있는 테이블을 만듭니다.  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  테이블에는 여러 후보 인덱스가 있을 수 있습니다.  
   
  외래 키 *eExpression4*태그 *TagName4*[NODUP]  
- 외부 (기본) 인덱스를 만들고 부모 테이블에 대 한 관계를 설정 합니다. *eExpression4* 외래 인덱스 키 식을 지정 하 고 *TagName4* 만들어지는 외래 인덱스 키 태그의 이름을 지정*합니다.* 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 후보 외래 인덱스를 만들려면 NODUP 포함 됩니다.  
+ 외부 (기본) 인덱스를 만들고 부모 테이블에 대 한 관계를 설정 합니다. *eExpression4* 외래 인덱스 키 식을 지정 하 고 *TagName4* 만들어지는 외래 인덱스 키 태그의 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 후보 외래 인덱스를 만들려면 NODUP 포함 됩니다.  
   
  테이블에 대 한 여러 외부 인덱스를 만들 수 있지만 외래 인덱스 식을 테이블의 다른 필드를 지정 해야 합니다.  
   

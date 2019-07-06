@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33860539b188af46404865738621ceaf87ebfb3c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e12e038d4128a7290e4dd848b6b2afccba8c0bb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659434"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582093"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 결과 집합 대량 복사(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,12 +48,14 @@ ms.locfileid: "51659434"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을: DB_OUT입니다.  
+    -   복사본의 방향: DB_OUT.  
   
 5.  호출 [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), eOption을 BCPHINTS로 설정 하 고 SELECT 문이 포함 된 SQLTCHAR 배열에 대 한 포인터를 iValue에 배치 합니다.  
   
 6.  [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출하여 대량 복사 작업을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  이러한 단계를 사용하면 기본 형식으로 파일이 만들어집니다. 사용 하 여 다른 데이터 형식의 데이터 값을 변환할 수 있습니다 [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)합니다. 자세한 내용은 [대량 복사 서식 파일 만들기 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)합니다.  
   
 ## <a name="example"></a>예제  

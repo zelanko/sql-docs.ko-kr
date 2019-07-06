@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6af0bf5d7226cea9a7ff42b2b4fd22c34b56f0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af64b8a622cb23ae04bcbf7dbf090be764a54882
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500440"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584856"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,9 @@ class Test
      이렇게 하면 실행 파일(DocSample.exe)이 만들어집니다.  
   
 5.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  템플릿에 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호로 시작 해야 합니다 (@); 예를 들어 p.Name= "\@ContactID", 여기서 p는 SqlXmlParameter 개체입니다.  
   
  다음은 하나의 매개 변수를 사용하는 업데이트된 템플릿입니다.  

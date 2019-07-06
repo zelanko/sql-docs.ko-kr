@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663052"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585693"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR 데이터베이스 개체 배포
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51663052"
 2.  테스트 서버에 어셈블리를 배포하기 전에 모든 빌드 오류 및 경고를 해결합니다.  
   
 3.  선택 **배포** 에서 합니다 **빌드** 메뉴. 그러면 Visual Studio에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트를 처음 만들 때 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터베이스에 어셈블리가 등록됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Transact-SQL을 사용하여 어셈블리를 배포하려면  
   
 1.  .NET Framework에 포함된 명령줄 컴파일러를 사용하여 원본 파일에서 어셈블리를 컴파일합니다.  

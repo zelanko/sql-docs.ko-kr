@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690851"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597465"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop(MDX)
 
@@ -55,7 +55,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  정렬 후 합니다 **DrilldownMemberTop** 함수에 지정 된 자식 멤버의 수 및 부모 멤버를 포함 하는 집합을 반환 *개수* 두 집합 모두에 포함 되며 가장 높은 값을 사용 하 여 .  
   
- 하는 경우 **재귀** 함수 앞에서 설명한 대로 첫 번째 집합을 정렬 한 다음 두 번째 집합에 대 한 계층에 구성 된 대로 반복 해 서 첫 번째 집합의 멤버를 비교 된*합니다.* 함수는 최상위도 두 번째 집합에 있는 첫 번째 집합의 각 멤버에 대 한 자식 수를 검색 합니다.  
+ 하는 경우 **재귀** 지정 하면 함수는 앞에서 설명한 대로 첫 번째 집합 정렬 반복 해 서 두 번째 집합에 대 한 계층에 구성 된 대로 첫 번째 집합의 멤버를 비교 합니다. 함수는 최상위도 두 번째 집합에 있는 첫 번째 집합의 각 멤버에 대 한 자식 수를 검색 합니다.  
   
  첫 번째 집합에는 멤버 대신 튜플이 포함될 수 있습니다. 튜플 드릴다운은 멤버 대신 튜플 집합을 반환하는 OLE DB의 확장 기능입니다.  
   

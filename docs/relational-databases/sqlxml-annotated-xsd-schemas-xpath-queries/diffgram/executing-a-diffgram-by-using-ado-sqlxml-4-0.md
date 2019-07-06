@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bedf38e837eec6a061be30f147616bb3d9f28c23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3880573328f7143b90033f04e84ba1bd76eed654
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019734"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583927"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,5 +104,6 @@ End Sub
 6.  코드에 DiffGram 및 XSD 파일 이름을 지정합니다. 연결 문자열 역시 적절하게 편집합니다.  
   
 7.  응용 프로그램을 실행합니다. 실행 결과는 사용자가 실행하는 DiffGram에 따라 다릅니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

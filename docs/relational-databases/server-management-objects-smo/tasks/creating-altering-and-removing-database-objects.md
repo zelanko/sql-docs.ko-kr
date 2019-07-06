@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d218c369c59d3f78ade615ed81048cc99e9a01e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c79ccb4805030cb93e67fa335e72de4d5984a62a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815991"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583572"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>데이터베이스 개체 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "47815991"
 4.  자식 개체 속성을 설정합니다.  
   
 5.  개체를 만듭니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  SMO 애플리케이션에서 SMO 개체의 인스턴스를 만들 때 이러한 인스턴스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Create **메서드가 실행되기 전까지는** 인스턴스에 존재하지 않습니다. 그러나 모든 개별 개체에 대해 **Create** 메서드를 실행할 필요는 없습니다. 개체에 자식 개체 집합이 있는 경우 부모 개체만 **Create** 메서드를 실행하면 됩니다. 예를 들어 테이블에 한 개 이상의 열이 있어야 한다는 테이블 정의가 있습니다. 또한 열은 테이블 없이 따로 존재할 수 없습니다. 테이블과 테이블의 열은 상호 종속 관계입니다.  
   
  <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> 메서드를 사용하여 개체를 변경할 수 있습니다. 개체 컬렉션 중 하나에 자식 개체를 추가하거나 속성 값을 변경하는 등의 개체에 대한 여러 변경 작업은 모두 일괄 처리되고 하나의 작업으로 실행됩니다. **Alter** 메서드를 사용하면 네트워크 트래픽을 줄이고 전반적인 성능을 개선할 수 있습니다.  

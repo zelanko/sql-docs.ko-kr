@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701869"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597460"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수화된 명령 작업
 대규모 자식을 사용 하 여 작업 하는 경우 **레코드 집합**, 특히 부모의 크기에 비해 **레코드 집합**, 하지만 몇 가지 자식 장에서 액세스할 필요가 것이 보다 효율적으로 사용할를 매개 변수가 있는 명령입니다.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 부모 및 자식 테이블에는 일반적인 cust_id에 열 이름이*합니다.* 합니다 *자식* 에 "?" 자리 표시자를 RELATE 절에서 참조 하는 (즉, "... 매개 변수 0")입니다.  
+ 부모 및 자식 테이블에는 열 이름이 공통적인 *cust_id*합니다. 합니다 *자식* 에 "?" 자리 표시자를 RELATE 절에서 참조 하는 (즉, "... 매개 변수 0")입니다.  
   
 > [!NOTE]
 >  매개 변수 절 셰이프 명령 구문은 관련이 있습니다. 두 ADO와 사용 하 여 연결 되어 있지 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
