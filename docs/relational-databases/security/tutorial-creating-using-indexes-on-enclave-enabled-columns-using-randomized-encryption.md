@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ebfac68a62ef9ddbe954ed692bf46549e07bae88
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 0c22fb10e6264420c95149bb77c2318fdf89a715
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67391343"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556972"
 ---
 # <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 Enclave 사용 열에 인덱스 만들기 및 사용
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "67391343"
 
    CREATE INDEX IX_LastName ON [Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-   GO;
+   GO
    ```
 
 1. **LastName** 열에 대해 풍부한 쿼리를 실행하고, SQL Server에서 쿼리를 실행할 때 인덱스를 사용하는지 확인합니다.
@@ -154,7 +154,7 @@ ms.locfileid: "67391343"
 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-        GO;
+        GO
         ```
 
 1. 데이터 소유자로 **LastName** 열에 대해 풍부한 쿼리를 실행하고, SQL Server에서 쿼리를 실행할 때 인덱스를 사용하는지 확인합니다.
