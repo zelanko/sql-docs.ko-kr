@@ -1,7 +1,7 @@
 ---
 title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작 | Microsoft Docs'
 ms.custom: ''
-ms.date: 04/05/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241541"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388127"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "59241541"
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server 컴퓨터 요구 사항
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상.
 - Windows 10 Enterprise 버전 1809 또는 Windows Server 2019 Datacenter
 - SQL Server 컴퓨터가 물리적 컴퓨터인 경우 SQL Server 컴퓨터는 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 충족해야 합니다.
    - SLAT(두 번째 수준 주소 변환)를 사용하는 64비트 프로세서
@@ -51,8 +51,8 @@ ms.locfileid: "59241541"
 
 대안으로 다른 머신에 SSMS를 설치할 수 있습니다.
 
->[!WARNING] 
->프로덕션 환경에서는 SSMS 또는 다른 도구를 사용하여 Always Encrypted 키를 확인하거나 SQL Server 컴퓨터에서 암호화된 데이터에 대해 쿼리를 실행하면 안 됩니다. 이렇게 하면 Always Encrypted를 사용하는 목적이 감소하거나 완전히 무산될 수 있기 때문입니다.
+> [!WARNING]
+> 프로덕션 환경에서는 SSMS 또는 다른 도구를 사용하여 Always Encrypted 키를 확인하거나 SQL Server 컴퓨터에서 암호화된 데이터에 대해 쿼리를 실행하면 안 됩니다. 이렇게 하면 Always Encrypted를 사용하는 목적이 감소하거나 완전히 무산될 수 있기 때문입니다. 자세한 내용은 [키 관리의 보안 고려 사항](encryption/overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
 ### <a name="hgs-computer-requirements"></a>HGS 컴퓨터 요구 사항
 
@@ -61,8 +61,8 @@ ms.locfileid: "59241541"
 - 8GB RAM
 - 100GB 스토리지
 
->[!NOTE]
->시작하기 전에 HGS 컴퓨터를 도메인에 가입하면 안 됩니다.
+> [!NOTE]
+> 시작하기 전에 HGS 컴퓨터를 도메인에 가입하면 안 됩니다.
 
 ## <a name="step-1-configure-the-hgs-computer"></a>1단계: HGS 컴퓨터 구성
 
@@ -93,13 +93,14 @@ ms.locfileid: "59241541"
    Get-NetIPAddress  
    ```
 
->[!NOTE]
->또는 DNS 이름으로 HGS 컴퓨터를 참조하려는 경우 회사 DNS 서버에서 새 HGS 도메인 컨트롤러로 전달자를 설정할 수 있습니다.  
+> [!NOTE]
+> 또는 DNS 이름으로 HGS 컴퓨터를 참조하려는 경우 회사 DNS 서버에서 새 HGS 도메인 컨트롤러로 전달자를 설정할 수 있습니다.  
 
 ## <a name="step-2-configure-the-sql-server-computer-as-a-guarded-host"></a>2단계: SQL Server 컴퓨터를 보호된 호스트로 구성
 이 단계에서는 호스트 키 증명을 사용하여 SQL Server 컴퓨터를 HGS에 등록된 보호된 호스트로 구성합니다.
->[!NOTE]
->호스트 키 증명은 테스트 환경에서만 사용하는 것이 좋습니다. 프로덕션 환경에서는 TPM 증명을 사용해야 합니다.
+
+> [!WARNING]
+> 호스트 키 증명은 테스트 환경에서만 사용하는 것이 좋습니다. 프로덕션 환경에서는 TPM 증명을 사용해야 합니다.
 
 1. 관리자 권한으로 SQL Server 컴퓨터에 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 연 다음, computername 변수에 액세스하여 컴퓨터의 이름을 검색합니다.
 
@@ -128,24 +129,22 @@ ms.locfileid: "59241541"
        Restart-Computer
        ```
 
-
-
-4. SQL Server 컴퓨터에 관리자 권한으로 다시 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 열고 고유한 호스트 키를 생성한 다음, 결과 공개 키를 파일로 내보냅니다.
+5. SQL Server 컴퓨터에 관리자 권한으로 다시 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 열고 고유한 호스트 키를 생성한 다음, 결과 공개 키를 파일로 내보냅니다.
 
    ```powershell
    Set-HgsClientHostKey 
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 이전 단계에서 생성한 호스트 키 파일을 HGS 머신에 수동으로 복사합니다. 아래 지침에서는 파일 이름이 hostkey.cer이고 HGS 머신의 데스크톱으로 복사 중이라고 가정합니다.
+6. 이전 단계에서 생성한 호스트 키 파일을 HGS 머신에 수동으로 복사합니다. 아래 지침에서는 파일 이름이 hostkey.cer이고 HGS 머신의 데스크톱으로 복사 중이라고 가정합니다.
 
-6. HGS 컴퓨터에서 관리자 권한의 Windows PowerShell 콘솔을 열고 HGS에 SQL Server 컴퓨터의 호스트 키를 등록합니다.
+7. HGS 컴퓨터에서 관리자 권한의 Windows PowerShell 콘솔을 열고 HGS에 SQL Server 컴퓨터의 호스트 키를 등록합니다.
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. SQL Server 컴퓨터의 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 증명할 위치를 SQL Server 컴퓨터에 알려 줍니다. 두 주소 위치 모두에서 HGS 컴퓨터의 IP 주소 또는 DNS 이름을 지정해야 합니다. 
+8. SQL Server 컴퓨터의 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 증명할 위치를 SQL Server 컴퓨터에 알려 줍니다. 두 주소 위치 모두에서 HGS 컴퓨터의 IP 주소 또는 DNS 이름을 지정해야 합니다. 
 
    ```powershell
    # use http, and not https
@@ -164,8 +163,14 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 이 단계에서는 SQL Server 인스턴스에서 보안 Enclave를 사용한 Always Encrypted 기능을 사용하도록 설정합니다.
 
-1. SSMS를 열고 SQL Server 인스턴스에 sysadmin으로 연결한 다음, 새 쿼리 창을 엽니다.
-2. 보안 enclave 유형을 VBS(가상화 기반 보안)로 설정합니다.
+1. 데이터베이스 연결에 Always Encrypted를 사용하지 **않고**, SSMS를 통해 SQL Server 인스턴스에 sysadmin으로 연결합니다.
+    1. SSMS를 시작합니다.
+    1. **서버에 연결** 대화 상자에서 서버 이름을 지정하고, 인증 방법을 선택한 다음, 자격 증명을 지정합니다.
+    1. **옵션 >>** 을 클릭하고 **Always Encrypted** 탭을 선택합니다.
+    1. **Always Encrypted 사용(열 암호화)** 확인란이 선택되어 있지 **않은지** 확인합니다.
+    1. **연결**을 선택합니다.
+
+2. 새 쿼리 창을 열고 아래 문을 실행하여 보안 enclave 유형을 VBS(가상화 기반 보안)로 설정합니다.
 
    ```sql
    EXEC sys.sp_configure 'column encryption enclave type', 1;
@@ -199,19 +204,18 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 ## <a name="step-4-create-a-sample-database"></a>4단계: 예제 데이터베이스 만들기
 이 단계에서는 나중에 암호화할 일부 예제 데이터가 포함된 데이터베이스를 만듭니다.
 
-1. SSMS를 사용하여 SQL Server 인스턴스에 연결합니다.
-2. 이름이 ContosoHR인 새 데이터베이스를 만듭니다.
+1. 이전 단계의 SSMS 인스턴스를 사용해, 쿼리 창에서 아래 문을 실행하여 **ContosoHR**이라는 새 데이터베이스를 만듭니다.
 
     ```sql
     CREATE DATABASE [ContosoHR];
     ```
 
-3. 새로 만든 데이터베이스에 연결되어 있는지 확인합니다. 이름이 Employees인 새 테이블을 만듭니다.
+1. **Employees**라는 새 테이블을 만듭니다.
 
     ```sql
     USE [ContosoHR];
     GO
-    
+
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -222,9 +226,12 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     ) ON [PRIMARY];
     ```
 
-4. Employees 테이블에 몇 개의 직원 레코드를 추가합니다.
+1. **Employees** 테이블에 몇 개의 직원 레코드를 추가합니다.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -235,7 +242,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
             , N'Catherine'
             , N'Abel'
             , $31692);
- 
+
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -252,11 +259,10 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 이 단계에서는 Enclave 계산을 허용하는 열 마스터 키 및 열 암호화 키를 만듭니다.
 
-1. SSMS를 사용하여 데이터베이스에 연결합니다.
-2. **개체 탐색기**에서 데이터베이스를 확장하고 **보안** > **Always Encrypted 키**로 이동합니다.
-3. 새 Enclave 사용 열 마스터 키를 프로비전합니다.
+1. 이전 단계의 SSMS 인스턴스를 사용해, **개체 탐색기**에서 데이터베이스를 확장하고 **보안** > **Always Encrypted 키**로 이동합니다.
+1. 새 Enclave 사용 열 마스터 키를 프로비전합니다.
     1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 마스터 키...** 를 선택합니다.
-    2. 열 마스터 키 이름을 선택합니다. CMK1.
+    2. 열 마스터 키 이름을 선택합니다. **CMK1**.
     3. **Windows 인증서 저장소(현재 사용자 또는 로컬 컴퓨터)** 또는 **Azure Key Vault**를 선택해야 합니다.
     4. **Enclave 계산 허용**을 선택합니다.
     5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
@@ -264,53 +270,51 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     7. **확인**을 선택합니다.
 
         ![Enclave 계산 허용](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-    
-4. 새 Enclave 사용 열 암호화 키를 만듭니다.
+
+1. 새 Enclave 사용 열 암호화 키를 만듭니다.
 
     1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 암호화 키**를 선택합니다.
-    2. 새 열 암호화 키의 이름을 입력합니다. CEK1.
+    2. 새 열 암호화 키의 이름을 입력합니다. **CEK1**.
     3. **열 마스터 키** 드롭다운에서 이전 단계에서 만든 열 마스터 키를 선택합니다.
     4. **확인**을 선택합니다.
 
 ## <a name="step-6-encrypt-some-columns-in-place"></a>6단계: 일부 열 미리 암호화
 
-이 단계에서는 서버 쪽 Enclave 내에서 SSN 및 Salary 열에 저장된 데이터를 암호화한 다음, 데이터의 SELECT 쿼리를 테스트합니다.
+이 단계에서는 서버 쪽 Enclave 내에서 **SSN** 및 **Salary** 열에 저장된 데이터를 암호화한 다음, 데이터에서 SELECT 쿼리를 테스트합니다.
 
-1. SSMS에서 데이터베이스 연결에 대해 Always Encrypted를 설정한 상태로 새 쿼리 창을 구성합니다.
-    1. SSMS에서 새 쿼리 창을 엽니다.
-    2. 새 쿼리 창의 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
-    3. 연결 \> 연결 변경을 선택합니다.
-    4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동하여 **Always Encrypted 사용**을 선택하고 enclave 증명 URL을 지정합니다(예: ht<span>tp://</span>hgs.bastion.local/Attestation).
-    5. **연결**을 선택합니다.
-    6. Always Encrypted 쿼리에 대한 매개 변수화를 사용할 것인지 묻는 메시지가 표시되면 **사용**을 클릭합니다.
-2. SSMS에서 데이터베이스 연결에 대해 Always Encrypted가 해제된 상태로 다른 쿼리 창을 구성합니다.
-    1. SSMS에서 새 쿼리 창을 엽니다.
-    2. 새 쿼리 창의 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
-    3. 연결 \> 연결 변경을 선택합니다.
-    4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동한 후 **Always Encrypted 사용**이 선택되어 있지 않은지 확인합니다.
-    5. **연결**을 선택합니다.
-    6. 데이터베이스 컨텍스트를 ContosoHR 데이터베이스로 변경합니다.
-1. SSN 및 Salary 열을 암호화합니다. Always Encrypted가 설정된 쿼리 창에서 아래 스크립트를 붙여넣고 실행합니다.
+1. 새 SSMS 인스턴스를 연 다음, 데이터베이스 연결에 Always Encrypted를 **사용**하여, SQL Server 인스턴스에 연결합니다.
+    1. SSMS의 새 인스턴스를 시작합니다.
+    1. **서버에 연결** 대화 상자에서 서버 이름을 지정하고, 인증 방법을 선택한 다음, 자격 증명을 지정합니다.
+    1. **옵션 >>** 을 클릭하고 **Always Encrypted** 탭을 선택합니다.
+    1. **Always Encrypted 사용(열 암호화)** 확인란을 선택하고 enclave 증명 URL(예: ht<span>tp://</span>hgs.bastion.local/Attestation)을 지정합니다.
+    1. **연결**을 선택합니다.
+    1. Always Encrypted 쿼리에 대해 매개 변수화를 사용하라는 메시지가 표시되면 **사용**을 선택합니다.
+
+1. 동일한 SSMS 인스턴스(Always Encrypted 사용)를 사용해 새 쿼리 창을 열고, 아래 쿼리를 실행하여 **SSN** 및 **Salary** 열을 암호화합니다.
 
     ```sql
+    USE [ContosoHR];
+    GO
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
-     
+
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
- 
+
     ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+
     > [!NOTE]
     > 위의 스크립트에서 데이터베이스에 대한 쿼리 계획 캐시를 지우려면 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 문을 확인합니다. 테이블을 변경한 후에는 테이블에 액세스하는 모든 일괄 처리 및 저장 프로시저에 대한 계획을 지워야 매개 변수 암호화 정보를 새로 고칠 수 있습니다. 
 
-4. SSN 및 Salary 열이 지금 암호화되었는지 확인하려면 Always Encrypted가 해제된 쿼리 창에서 아래 문을 붙여넣고 실행합니다. 쿼리 창은 SSN 및 Salary 열의 암호화된 값을 반환해야 합니다. Always Encrypted가 설정된 쿼리 창에서 동일한 쿼리를 시도하여 데이터가 암호 해독되어 있는지 확인합니다.
+1. **SSN** 및 **Salary** 열이 지금 암호화되었는지 확인하려면, 데이터베이스 연결에 대해 Always Encrypted를 사용하지 **않고** SSMS 인스턴스에서 새 쿼리 창을 열고 아래 문을 실행합니다. 쿼리 창의 **SSN** 및 **Salary** 열에 암호화된 값이 반환되어야 합니다. Always Encrypted를 사용하는 SSMS 인스턴스에서 동일한 쿼리를 실행하는 경우 암호화된 데이터가 표시되어야 됩니다.
 
     ```sql
     SELECT * FROM [dbo].[Employees];
@@ -320,13 +324,13 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 이제 암호화된 열에 대해 리치 조회를 실행할 수 있습니다. 일부 쿼리 처리는 서버 쪽 Enclave 내에서 수행됩니다. 
 
-1. [Always Encrypted에 대한 매개 변수화]가 사용되고 있는지 확인합니다.
-    1. SSMS의 주 메뉴에서 **쿼리**를 선택합니다.
-    2. **쿼리 옵션...** 을 선택합니다.
-    3. **실행** > **고급**으로 이동합니다.
-    4. [Always Encrypted에 대한 매개 변수화]가 선택되어 있는지 확인합니다.
-    5. 확인을 선택합니다.
-2. Always Encrypted가 설정된 쿼리 창에서 다음 쿼리를 붙여넣고 실행합니다. 이 쿼리는 지정된 검색 기준에 맞는 일반 텍스트 값 및 행을 반환해야 합니다.
+1. Always Encrypted를 **사용**하는 SSMS 인스턴스에서 Always Encrypted에 대해 매개 변수화도 사용하도록 설정되었는지 확인합니다.
+    1. SSMS의 주 메뉴에서 **도구** 를 선택합니다.
+    2. **옵션...** 을 선택합니다.
+    3. **쿼리 실행** > **SQL Server** > **고급**으로 이동합니다.
+    4. **Always Encrypted에 대해 매개 변수화 사용**이 선택되었는지 확인합니다.
+    5. **확인**을 선택합니다.
+2. 새 쿼리 창을 열고 아래 쿼리를 붙여넣은 다음 실행합니다. 이 쿼리는 지정된 검색 기준에 맞는 일반 텍스트 값 및 행을 반환해야 합니다.
 
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
@@ -334,10 +338,13 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
-3. Always Encrypted를 사용하도록 설정되지 않은 쿼리 창에서 동일한 쿼리를 다시 시도하고 발생하는 오류를 확인합니다.
+
+3. Always Encrypted를 사용하지 않는 SSMS 인스턴스에서 동일한 쿼리를 다시 시도하고 발생하는 오류를 확인합니다.
 
 ## <a name="next-steps"></a>Next Steps
-다른 사용 사례에 대한 내용은 [보안 Enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요. 다음을 수행해 볼 수도 있습니다.
+이 자습서에 이어진 [자습서: 임의 암호화를 사용하여 enclave 사용 열에서 인덱스 만들기 및 사용](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)으로 이동합니다.
+
+보안 enclave를 사용한 Always Encrypted의 다른 사용 사례에 대한 자세한 내용은 [보안 enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요. 예를 들어
 
 - [TPM 증명 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
 - [HGS 인스턴스에 대해 HTTPS 구성](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)

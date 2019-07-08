@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78ae465604c6f1b368cb0d1b8483025feef9d343
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a8078302624e280fa23de0401302106e867e5e0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380394"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583017"
 ---
 # <a name="modify-statistics"></a>통계 수정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "53380394"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  다음을 만족해야 합니다.  
   
 -   사용자에게 테이블이나 뷰에 대한 ALTER 권한이 있어야 합니다.  
@@ -62,10 +62,12 @@ ms.locfileid: "53380394"
   
 5.  수정하려는 통계 개체를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.   **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**또는 **아래로 이동**또는 any combination, to alter the properties of the statistics. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
+6.  **통계 속성 -** *statistics_name* 대화 상자의 **일반** 페이지에서 **추가**, **제거**, **위로 이동**또는 **아래로 이동**또는 any combination, to alter the properties of the statistics. **통계 열** 표 안에 있는 열의 위치는 통계의 유용성에 큰 영향을 미칠 수 있습니다.  
   
 7.  **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **통계를 수정하려면**  
   

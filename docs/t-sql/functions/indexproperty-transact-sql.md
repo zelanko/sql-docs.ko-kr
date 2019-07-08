@@ -1,7 +1,7 @@
 ---
 title: INDEXPROPERTY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3d0cf76dfc6225b23551ccb2ee4e55d09fb88c4
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944462"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388354"
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,10 +69,11 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsRowLockDisallowed**|ALTER INDEX의 ALLOW_ROW_LOCKS 옵션으로 설정된 행 잠금 값입니다.|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 행 잠금이 허용되지 않습니다.<br /><br /> 0 = 행 잠금이 허용됩니다.<br /><br /> NULL = 입력이 잘못되었습니다.|  
 |**IsStatistics**|*index_or_statistics_name*은 CREATE STATISTICS 문 또는 ALTER DATABASE의 AUTO_CREATE_STATISTICS 옵션으로 생성된 통계입니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
 |**IsUnique**|인덱스가 고유합니다.|1 = True<br /><br /> 0 = False 또는 XML 인덱스|  
-|**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IsColumnstore**|인덱스가 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스입니다.|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|인덱스에 대해 마지막 페이지 삽입 최적화가 사용됩니다.|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772633"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345150"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 분산 트랜잭션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 서비스 팩 2부터 분산 트랜잭션의 가용성 그룹을 변경할 수 있습니다. 서비스 팩 2 이전 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 버전인 경우 `DTC_SUPPORT = PER_DB` 설정을 사용하여 가용성 그룹을 삭제하고 다시 만들어야 합니다. 
+
+분산 트랜잭션을 사용하지 않도록 설정하려면 다음 Transact-SQL 명령을 사용합니다.
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/> 분산 트랜잭션 - 기술 개념
 

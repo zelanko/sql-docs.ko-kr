@@ -1,7 +1,7 @@
 ---
 title: 명령 프롬프트에서 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6ff0a849823978eff36e84889c8d582afafa53
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794957"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388297"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -251,7 +251,7 @@ ms.locfileid: "66794957"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 /SQLSYSADMINACCOUNTS가 필수 항목입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서 /SQLSYSADMINACCOUNTS는 원하는 경우 사용할 수 있지만 /SQLSYSADMINACCOUNTS 또는 /ADDCURRENTUSERASSQLADMIN은 반드시 사용해야 합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb 데이터 파일에 대한 디렉터리를 지정합니다. 둘 이상의 디렉터리를 지정할 경우 각 계정 이름을 공백으로 구분합니다. 여러 디렉터리가 지정된 경우 tempdb 데이터 파일은 라운드 로빈 방식으로 여러 디렉터리에 분배됩니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> **참고:** 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb 로그 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`(시스템 데이터 디렉터리)<br /><br /> 참고: 이 매개 변수는 RebuildDatabase 시나리오에도 추가됩니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **선택 사항**|설치 프로그램에서 추가할 tempdb 데이터 파일 수를 지정합니다. 이 값은 코어 수까지 증가할 수 있습니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 1<br /><br /> 8 또는 코어 수 중에서 모든 기타 버전의 경우 낮은 값<br /><br /> **중요** tempdb에 대한 주 데이터베이스 파일은 여전히 tempdb.mdf입니다. 추가 tempdb 파일은 이름이 tempdb_mssql_#.ndf로 지정됩니다(여기서 #은 설치하는 동안 만들어진 각 추가 tempdb 데이터베이스 파일의 고유 개수를 나타냄). 이 명명 규칙의 목적은 고유한 파일 이름을 지정하는 것입니다. SQL Server 인스턴스를 제거하면 tempdb_mssql_#.ndf 명명 규칙을 사용하는 파일이 삭제됩니다. 사용자 데이터베이스 파일에 tempdb_mssql_\*.ndf 명명 규칙을 사용하지 마세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILESIZE<br /><br /> **선택 사항**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 도입되었습니다. 각 tempdb 데이터 파일의 초기 크기를 지정합니다.<br/><br/>기본값 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 경우 4MB, 다른 모든 버전의 경우 8MB.<br/><br/>최솟값 = (4 또는 8MB).<br/><br/>최댓값 = 1,024MB([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 경우 262,144MB|  
@@ -262,6 +262,9 @@ ms.locfileid: "66794957"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 빠른 파일 초기화를 사용하도록 설정합니다. 보안 및 성능 고려 사항은 [데이터베이스 즉시 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)을 참조하세요.<br /><br /> 기본값: "False"<br /><br /> 선택적 값: "True"|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=매개 변수 <br /><br /> **선택 사항** 무인(자동) 설치에서 누락된 경우 MAXDOP는 [최대 병렬 처리 수준 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)과 일치합니다. |실행 중에 단일 명령문을 사용할 수 있는 프로세서 수를 결정하는 최대 병렬 수준을 지정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터만 사용할 수 있습니다. <br /><br /> 기본값은 [최대 병렬 처리 수준 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)과 일치합니다.|
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/USESQLRECOMMENDEDMEMORYLIMITS<br /><br /> **선택 사항** 무인(자동) 설치에서 /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY 및 /SQLMAXMEMORY를 생략하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 구성을 사용합니다.|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 [서버 메모리 구성 지침](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)을 따르는 계산된 메모리 설정을 사용하도록 지정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터만 사용할 수 있습니다.<br /><br /> **참고:** 이 매개 변수는 /SQLMINMEMORY 및 /SQLMAXMEMORY와 함께 사용할 수 없습니다. |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **선택 사항** 무인(자동) 설치에서 /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY 및 /SQLMAXMEMORY를 생략하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 구성을 사용합니다.|최소 서버 메모리 구성을 지정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터만 사용할 수 있습니다.<br /><br /> 기본값: 0.<br /><br /> **참고:** 이 매개 변수는 /USESQLRECOMMENDEDMEMORYLIMITS와 함께 사용할 수 없습니다. |  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXMEMORY<br /><br /> **선택 사항** 무인(자동) 설치에서 /USESQLRECOMMENDEDMEMORYLIMITS, /SQLMINMEMORY 및 /SQLMAXMEMORY를 생략하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 구성을 사용합니다.|최대 서버 메모리 구성을 지정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터만 사용할 수 있습니다.<br /><br /> 기본값: [서버 메모리 구성 지침](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)을 따라는 계산 값입니다.<br /><br /> **참고:** 이 매개 변수는 /USESQLRECOMMENDEDMEMORYLIMITS와 함께 사용할 수 없습니다. |  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  

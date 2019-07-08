@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033401"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399658"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -68,7 +68,6 @@ SSMS 18.x 설치는 SSMS 17.x 이전 버전을 업그레이드 또는 대체하�
 SQL Server Management Studio 18.1:<br>
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > SQL Server PowerShell 모듈은 PowerShell 갤러리를 통해 별도로 설치됩니다. 자세한 내용은 [SQL Server PowerShell 모듈 다운로드](download-sql-server-ps-module.md)를 참조하세요.
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1:<br>
 - **Integration Services(SSIS)** - Azure의 SSIS 카탈로그 또는 Azure의 파일 시스템에 있는 SSIS 패키지 일정 예약이 지원됩니다. 새 일정 대화 상자를 실행할 수 있는 항목은 세 가지입니다. *새 일정…* 메뉴 항목은 Azure의 SSIS 카탈로그에서 SSIS 패키지를 마우스 오른쪽 단추로 클릭하면 나타납니다. *Schedule SSIS Package in Azure* 메뉴 항목은 *도구* 메뉴 항목 아래 *Azure로 마이그레이션* 메뉴 항목에 있습니다. "Schedule SSIS in Azure"는 Azure SQL Database Managed Instance의 SQL Server 에이전트 아래 있는 작업 폴더를 마우스 오른쪽 단추로 클릭하면 표시됩니다.
 
 이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS release notes](release-notes-ssms.md)(SSMS 릴리스 정보)를 참조하세요.
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>지원되는 SQL 제품(SSMS 18.1)
 
@@ -93,7 +91,8 @@ SQL Server Management Studio 18.1:<br>
 
 - Windows 10(64비트) <sup>*</sup>
 - Windows 8.1(64비트)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019(64비트)
+- Windows Server 2016(64비트) <sup>*</sup>
 - Windows Server 2012 R2(64비트)
 - Windows Server 2012(64비트)
 - Windows Server 2008 R2(64비트)
@@ -105,7 +104,7 @@ SQL Server Management Studio 18.1:<br>
 
 ## <a name="release-notes-ssms-181"></a>릴리스 정보(SSMS 18.1)
 
-이 릴리스에는 알려진 문제점이 없습니다.
+이 릴리스에는 몇 가지 [알려진 문제](release-notes-ssms.md#known-issues-181)가 있습니다.
 
 이 릴리스에 대한 자세한 내용은 [SSMS 릴리스 정보](release-notes-ssms.md)를 참조하세요.
 

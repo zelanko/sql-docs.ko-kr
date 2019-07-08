@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413639"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388849"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  ALLOW_PAGE_LOCKS가 OFF로 설정되면 인덱스를 다시 구성할 수 없습니다.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상
+
+마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 CREATE INDEX 페이지의 [순차 키](./create-index-transact-sql.md#sequential-keys) 섹션을 참조하세요.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -686,7 +693,7 @@ ALL을 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비
 ALTER INDEX REBUILD 문 또는 CREATE INDEX WITH DROP_EXISTING 문을 사용하여 인덱스를 활성화할 수 있습니다. ONLINE 옵션이 ON으로 설정되어 있으면 비활성화된 클러스터형 인덱스를 다시 작성할 수 없습니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.  
   
 ## <a name="setting-options"></a>옵션 설정  
-지정한 인덱스에 대해 해당 인덱스를 다시 작성하거나 다시 구성하지 않고 ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY 및 STATISTICS_NORECOMPUTE 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
+지정한 인덱스에 대해 해당 인덱스를 다시 작성하거나 다시 구성하지 않고 ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY 및 STATISTICS_NORECOMPUTE 옵션을 설정할 수 있습니다. 수정된 값은 인덱스에 바로 적용됩니다. 이러한 설정을 보려면 **sys.indexes**를 사용하세요. 자세한 내용은 [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)을 참조하세요.  
   
 ### <a name="row-and-page-locks-options"></a>행 및 페이지 잠금 옵션  
 ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행 수준, 페이지 수준 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.  

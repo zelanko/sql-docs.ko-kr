@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765721"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388114"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 10. 다시 시작하라는 메시지가 표시됩니다. 즉시 다시 시작하지 않으려면 [나중에 다시 시작]을 클릭하고, 그렇지 않으면 [지금 다시 시작]을 클릭합니다.
 11. 서버가 다시 부팅된 후 [시스템]을 다시 살펴보고 공통 DNS 접미사가 구성되었는지 확인합니다.
 
-
 ![DNS 접미사의 성공적인 구성][4]
+
+  > [!NOTE]
+  > 여러 서브넷을 사용 중이며 정적 DNS가 있는 경우, 장애 조치(failover)를 수행하기 전에 수신기와 연결된 DNS 레코드를 업데이트하는 프로세스가 구현되어 있어야 합니다. 해당 프로세스가 없으면 네트워크 이름이 온라인 상태로 표시되지 않습니다.
 
 ## <a name="create-a-domain-independent-availability-group"></a>도메인 독립 가용성 그룹 만들기
 

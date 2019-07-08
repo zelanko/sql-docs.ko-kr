@@ -20,12 +20,12 @@ ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae19cf74753b07dba1e6c274f1a102e1fe745f1c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 209f11341fa8825e7c67281a8a58ccb338a1376b
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325526"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463571"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업
 
@@ -39,7 +39,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 - Analysis Services
 
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - Reporting Services
 ::: moniker-end
 
@@ -65,7 +65,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
  특정 구성 요소는 설치된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 모든 인스턴스에서 공유합니다. 이러한 구성 요소는 버전이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 같은 컴퓨터에 함께 설치하면 자동으로 최신 버전으로 업그레이드됩니다. 일반적으로 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 마지막 인스턴스가 제거되면 자동으로 제거됩니다.
   
- 예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer
+ 예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 및 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기.
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>주 버전이 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -89,7 +89,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 특정 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 관계가 없습니다. 이러한 구성 요소는 주 버전 간에 공유될 수도 있고 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공유될 수도 있습니다.  
 
-예: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
+예: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 설치에 대한 자세한 내용은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact를 제거하는 방법은 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   
@@ -116,7 +116,7 @@ SQL Server를 여러 개 설치하거나 이전 SQL Server 버전이 이미 설�
 
 ## <a name="preventing-ip-address-conflicts"></a>IP 주소 충돌 방지
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 독립 실행형 인스턴스와 함께 설치되는 경우 IP 주소의 TCP 포트 번호가 충돌하지 않도록 주의합니다. 일반적으로 충돌은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 인스턴스가 모두 기본 TCP 포트(1433)를 사용하도록 구성되는 경우 발생합니다. 충돌을 방지하려면 한 인스턴스가 기본이 아닌 고정 포트를 사용하도록 구성합니다. 고정 포트는 일반적으로 독립 실행형 인스턴스에서 더 쉽게 구성할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다른 포트를 사용하도록 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 실패하여 대기 노드가 될 때 인스턴스 시작을 차단하는 예기치 않은 IP 주소/TCP 포트 충돌이 방지됩니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 독립 실행형 인스턴스와 함께 설치되는 경우 IP 주소의 TCP 포트 번호가 충돌하지 않도록 주의합니다. 일반적으로 충돌은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 인스턴스가 모두 기본 TCP 포트(1433)를 사용하도록 구성되는 경우 발생합니다. 충돌을 방지하려면 한 인스턴스가 기본이 아닌 고정 포트를 사용하도록 구성합니다. 고정 포트는 일반적으로 독립 실행형 인스턴스에서 더 쉽게 구성할 수 있습니다. 다른 포트를 사용하도록 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 구성하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 실패하여 대기 노드가 될 때 인스턴스 시작을 차단하는 예기치 않은 IP 주소/TCP 포트 충돌이 방지됩니다.
   
 ## <a name="see-also"></a>참고 항목
 

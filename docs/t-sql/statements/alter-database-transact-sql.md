@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0753f6459ac832bd4b5564e356a62bcc8b54aa30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944706"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351719"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "65944706"
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -273,7 +273,7 @@ GO
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_ **&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -478,8 +478,8 @@ vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본�
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 
-- EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 500 MB로 설정됩니다.
-- MAXSIZE 또는 EDITION이 모두 지정되지 않았으면 EDITION이 Standard(S0)로 설정되고, MAXSIZE는 250GB로 설정됩니다.
+- EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 250MB로 설정됩니다.
+- MAXSIZE 또는 EDITION을 모두 지정하지 않으면 EDITION이 General Purpose로 설정되고, MAXSIZE는 32GB로 설정됩니다.
 
 MODIFY (SERVICE_OBJECTIVE = \<service-objective>) 성능 수준을 지정합니다. 다음 예제에서는 프리미엄 데이터베이스의 서비스 목표를 `P6`으로 변경합니다.
 
@@ -659,7 +659,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|** _\*SQL Database<br />관리되는 인스턴스\*_ ** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|** _\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -780,7 +780,7 @@ ALTER DATABASE WideWorldImporters
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System(PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -901,7 +901,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System(PDW) \*_ ** &nbsp;|
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

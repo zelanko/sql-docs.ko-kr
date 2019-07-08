@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822953"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413152"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 추적 플래그는 특정 서버 특성을 설정하거나 특정 동작을 변경하는 데 사용됩니다. 예를 들어 추적 플래그 3226은 오류 로그에서 성공적인 백업 메시지를 표시하지 못하게 하는 일반적으로 사용되는 시작 추적 플래그입니다. 추적 플래그는 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버그하는 데 자주 사용되지만, 특정 작업에 부정적인 영향을 주는 동작을 해결하기 위해 Microsoft 지원에서 권장할 수도 있습니다.  모든 문서화된 추적 플래그와 Microsoft 추적 플래그를 지시에 따라 사용하는 경우 프로덕션 환경에서 완전히 지원됩니다.  이 목록의 추적 플래그는 특정 용도와 관련하여 추가 고려 사항이 있을 수 있으므로, 본 문서 및/또는 지원 엔지니어가 제공하는 모든 권장 사항을 주의 깊게 검토하는 것이 좋습니다. 또한 SQL Server의 구성 변경과 마찬가지로 배포하기 전에 비프로덕션 환경에서 플래그를 철저히 테스트하는 것이 가장 좋습니다.
+
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 쿼리, 세션 및 전역이라는 세 가지 유형의 추적 플래그가 있습니다. 쿼리 추적 플래그는 특정 쿼리의 컨텍스트에 대해 활성화됩니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 전역으로만 설정할 수 있는 플래그도 있고 전역 또는 세션 범위에서 설정할 수 있는 플래그도 있습니다.  
+  
+ 다음 규칙이 적용됩니다.  
+-   전역 추적 플래그는 전역으로 설정해야 합니다. 그렇지 않으면 추적 플래그가 적용되지 않습니다. 시작 시 **-T** 명령줄 옵션을 사용하여 전역 추적 플래그를 사용하도록 설정하는 것이 좋습니다. 이렇게 하면 서버를 다시 시작한 후에도 추적 플래그가 활성 상태로 유지됩니다. 추적 플래그를 적용하려면 SQL Server를 다시 시작합니다. 
+-   추적 플래그에 전역, 세션 또는 쿼리 범위가 있으면 적절한 범위가 있는 추적 플래그를 사용하도록 설정할 수 있습니다. 세션 수준에서 설정된 추적 플래그는 다른 세션에 영향을 주지 않으며 해당 세션을 연 SPID가 로그아웃하면 추적 플래그의 효과가 사라집니다.  
+  
+다음 방법 중 하나를 사용하여 추적 플래그를 설정하거나 해제합니다.
+-   DBCC TRACEON 및 DBCC TRACEOFF 명령을 사용합니다.  
+     예를 들어 2528 추적 플래그를 전역으로 사용하도록 설정하려면 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)에 -1 인수를 사용합니다(예: `DBCC TRACEON (2528, -1)`). 서버를 다시 시작할 때 DBCC TRACEON을 사용하여 전역 추적 플래그를 사용하면 효과가 손실됩니다. 전역 추적 플래그를 해제하려면 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)에 -1 인수를 사용합니다.  
+-   시작 시 **-T** 시작 옵션을 사용하여 추적 플래그가 설정되도록 지정합니다.  
+     **-T** 시작 옵션을 사용하면 추적 플래그를 전역으로 사용하도록 설정됩니다. 시작 옵션을 사용하여 세션 수준 추적 플래그를 설정할 수는 없습니다. 이렇게 하면 서버를 다시 시작한 후에도 추적 플래그가 활성 상태로 유지됩니다. 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.
+-   쿼리 수준에서는 QUERYTRACEON [쿼리 힌트](https://support.microsoft.com/kb/2801413)를 사용하여 설정합니다. QUERYTRACEON 옵션은 위의 표에 설명된 쿼리 최적화 프로그램 추적 플래그에 대해서만 지원됩니다.
+  
+`DBCC TRACESTATUS` 명령을 사용하여 현재 활성 중인 추적 플래그를 확인할 수 있습니다.
+
+## <a name="trace-flags"></a>추적 플래그
+
   
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 추적 플래그와 그에 대한 설명을 보여 줍니다.
  
@@ -156,21 +175,7 @@ ms.locfileid: "66822953"
 |**11023**|샘플 속도가 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문의 일부로 명시적으로 지정되지 않은 모든 후속 통계 업데이트에 마지막 지속형 샘플 속도를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4039284)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|    
 |**11024**|모든 파티션의 수정 횟수가 로컬 [임계값](../../relational-databases/statistics/statistics.md#AutoUpdateStats)을 초과하는 경우 통계의 자동 업데이트를 트리거할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4041811)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역 또는 세션| 
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 쿼리, 세션 및 전역이라는 세 가지 유형의 추적 플래그가 있습니다. 쿼리 추적 플래그는 특정 쿼리의 컨텍스트에 대해 활성화됩니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 전역으로만 설정할 수 있는 플래그도 있고 전역 또는 세션 범위에서 설정할 수 있는 플래그도 있습니다.  
-  
- 다음 규칙이 적용됩니다.  
--   전역 추적 플래그는 전역으로 설정해야 합니다. 그렇지 않으면 추적 플래그가 적용되지 않습니다. 시작 시 **-T** 명령줄 옵션을 사용하여 전역 추적 플래그를 사용하도록 설정하는 것이 좋습니다. 이렇게 하면 서버를 다시 시작한 후에도 추적 플래그가 활성 상태로 유지됩니다.  
--   추적 플래그에 전역, 세션 또는 쿼리 범위가 있으면 적절한 범위가 있는 추적 플래그를 사용하도록 설정할 수 있습니다. 세션 수준에서 설정된 추적 플래그는 다른 세션에 영향을 주지 않으며 해당 세션을 연 SPID가 로그아웃하면 추적 플래그의 효과가 사라집니다.  
-  
-다음 방법 중 하나를 사용하여 추적 플래그를 설정하거나 해제합니다.
--   DBCC TRACEON 및 DBCC TRACEOFF 명령을 사용합니다.  
-     예를 들어 2528 추적 플래그를 전역으로 사용하도록 설정하려면 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)에 -1 인수를 사용합니다(예: `DBCC TRACEON (2528, -1)`). 서버를 다시 시작할 때 DBCC TRACEON을 사용하여 전역 추적 플래그를 사용하면 효과가 손실됩니다. 전역 추적 플래그를 해제하려면 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)에 -1 인수를 사용합니다.  
--   시작 시 **-T** 시작 옵션을 사용하여 추적 플래그가 설정되도록 지정합니다.  
-     **-T** 시작 옵션을 사용하면 추적 플래그를 전역으로 사용하도록 설정됩니다. 시작 옵션을 사용하여 세션 수준 추적 플래그를 설정할 수는 없습니다. 이렇게 하면 서버를 다시 시작한 후에도 추적 플래그가 활성 상태로 유지됩니다. 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.
--   쿼리 수준에서는 QUERYTRACEON [쿼리 힌트](https://support.microsoft.com/kb/2801413)를 사용하여 설정합니다. QUERYTRACEON 옵션은 위의 표에 설명된 쿼리 최적화 프로그램 추적 플래그에 대해서만 지원됩니다.
-  
-`DBCC TRACESTATUS` 명령을 사용하여 현재 활성 중인 추적 플래그를 확인할 수 있습니다.
+
   
 ## <a name="examples"></a>예  
  다음 예제에서는 DBCC TRACEON을 사용하여 서버 수준의 모든 세션에 대해 3205 추적 플래그를 설정합니다.  

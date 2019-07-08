@@ -1,7 +1,7 @@
 ---
 title: 자격 증명(데이터베이스 엔진) | Microsoft 문서
 ms.custom: ''
-ms.date: 02/27/2017
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,19 +23,20 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5676f28ef3dd9d72060dbc58d33967d21ac241c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2221eedc3e8a64959183c637493e2b45dfec22ee
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814959"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419175"
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   자격 증명은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]외부의 리소스에 연결하는 데 필요한 인증 정보(자격 증명)가 포함된 레코드입니다. 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. 대부분의 자격 증명에는 Windows 사용자 이름 및 암호가 들어 있습니다.  
   
- 자격 증명에 저장된 정보를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결된 사용자가 서버 인스턴스 외부의 리소스에 액세스할 수 있습니다. 외부 리소스가 Windows인 경우 사용자는 자격 증명에서 지정한 Windows 사용자로 인증됩니다. 하나의 자격 증명을 여러 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인에 매핑할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 하나의 자격 증명에만 매핑할 수 있습니다.  
+ 자격 증명에 저장된 정보를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결된 사용자가 서버 인스턴스 외부의 리소스에 액세스할 수 있습니다. 외부 리소스가 Windows인 경우 사용자는 자격 증명에서 지정한 Windows 사용자로 인증됩니다. 각 자격 증명을 하나의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인에만 매핑할 수 있습니다. 또한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 하나의 자격 증명에만 매핑할 수 있습니다.  
   
  master 데이터베이스에 저장되고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스를 통해 사용할 수 있는 자격 증명은 [CREATE CREDENTIAL&#40;Transact-SQL&#41;](../../../t-sql/statements/create-credential-transact-sql.md)을 참조하세요. 특정 데이터베이스에 사용되고 해당 데이터베이스로 이식 가능한 자격 증명은 [CREATE DATABASE SCOPED CREDENTIAL&#40;Transact-SQL&#41;](../../../t-sql/statements/create-database-scoped-credential-transact-sql.md)을 참조하세요.  
   

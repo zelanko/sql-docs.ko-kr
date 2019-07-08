@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263543"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399664"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -56,7 +56,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 | 새 항목| 세부 정보|
 | :-------| :------|
-| 데이터베이스 다이어그램 | 데이터베이스 다이어그램이 SSMS에 다시 추가되었습니다. 자세한 내용은 [데이터베이스 다이어그램](https://feedback.azure.com/forums/908035/suggestions/37507828)을 참조하세요. |
+| 데이터베이스 다이어그램 | [데이터베이스 다이어그램이 SSMS에 다시 추가됨](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |SQL Server 진단 명령줄 도구가 SSMS 패키지에 다시 추가되었습니다.|
 | Integration Services(SSIS) | Azure의 SSIS 카탈로그 또는 Azure의 파일 시스템에 있는 SSIS 패키지 일정 예약이 지원됩니다. 새 일정 대화 상자를 실행할 수 있는 항목은 세 가지입니다. *새 일정…* 메뉴 항목은 Azure의 SSIS 카탈로그에서 SSIS 패키지를 마우스 오른쪽 단추로 클릭하면 나타납니다. *Schedule SSIS Package in Azure* 메뉴 항목은 *도구* 메뉴 항목 아래 *Azure로 마이그레이션* 메뉴 항목에 있습니다. "Schedule SSIS in Azure"는 Azure SQL Database Managed Instance의 SQL Server 에이전트 아래 있는 작업 폴더를 마우스 오른쪽 단추로 클릭하면 표시됩니다.|
 
@@ -101,6 +101,12 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | SQL 에이전트 | *작업 단계 속성*의 "보기" 단추가 항상 활성화되지 않아 지정된 작업 단계의 출력을 볼 수 없게 되는 문제가 해결되었습니다. |
 | XEvent UI | 동일한 이름의 이벤트를 명확하게 하기 위해 XEvent 목록에 "Package" 열을 추가했습니다. |
 | XEvent UI | 누락된 "EXTERNAL LIBRARY" 클래스 형식 매핑이 XEventUI에 추가되었습니다. |
+
+### <a name="known-issues-181"></a>알려진 문제(18.1)
+
+- 사용자가 개체 탐색기에서 쿼리 편집기에 테이블 개체를 끌 때 오류가 표시될 수 있습니다. 문제를 인식하고 있고, 수정은 다음 릴리스에 대해 계획되어 있습니다.
+
+- 옵션 -> 텍스트 편집기 -> 편집기 탭 및 상태 표시줄 ->상태 표시줄 레이아웃 및 색상의 *그룹 연결* 및 *단일 서버 연결* 색상 옵션은 SSMS 18.1을 닫은 후에도 유지되지 않습니다. SSMS를 다시 열면 상태 표시줄 레이아웃 및 색상 옵션이 기본값(흰색)으로 돌아갑니다.
 
 ## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
 
@@ -368,9 +374,9 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 - 개체 탐색기에서 "유지 관리 > 레거시" 노드를 제거했습니다.
   - 매우 오래된 "데이터베이스 유지 관리 계획" 및 "SQL 메일" 노드에 더 이상 액세스할 수 없습니다. 최신 “데이터베이스 메일” 및 “유지 관리 계획” 노드는 계속해서 정상적으로 작동합니다.
 
-### <a name="known-issues"></a>알려진 문제
+### <a name="known-issues-180"></a>알려진 문제(18.0)
 
-SQL Server Management Studio를 실행할 수 없는 버전 18.0 설치 문제가 해결되었습니다. 이 문제가 발생하는 경우 [SSMS2018 - 설치되었지만 실행되지 않음](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) 문서의 단계를 따르세요.
+- SQL Server Management Studio를 실행할 수 없는 버전 18.0 설치 문제가 해결되었습니다. 이 문제가 발생하는 경우 [SSMS2018 - 설치되었지만 실행되지 않음](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) 문서의 단계를 따르세요.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![다운로드](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -454,7 +460,7 @@ Microsoft Azure 통합:
 - SSMS에서 처음 50개 구독만 표시하는 문제를 해결했습니다(Always Encrypted 대화 상자, URL에서 백업/복원 및 기타 대화 상자).
 - [URL에서 백업 복원] 대화 상자에서 스토리지 계정이 없는 Microsoft Azure 계정에 로그인하려고 하는 동안 SSMS에서 예외("인덱스가 범위를 벗어났습니다.")를 throw하는 문제가 해결되었습니다. 
 
-개체 스크립팅: 
+개체 스크립팅:
 
 - “Drop 및 Create”를 스크립팅할 때 SSMS에서 이제 동적 T-SQL 생성을 방지합니다.
 - 데이터베이스 개체를 스크립팅할 때 이제 SSMS에서 데이터베이스 범위 구성이 기본값으로 설정된 경우 이를 설정하기 위해 스크립트를 생성하지 않습니다.

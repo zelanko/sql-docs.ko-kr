@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4c377bbfbe4170b5631ba1ac9c017af1176b279
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0f26d2484c7626a689dd83955d1bfb498365449
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013981"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584092"
 ---
 # <a name="using-data-files-and-format-files"></a>데이터 파일 및 서식 파일 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "63013981"
 2.  호출 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 사용 하 여 *eOption* BCPHINTS로 설정 하 고 *iValue* TRANSACT-SQL 문이 포함 된 SQLTCHAR 문자열에 대 한 포인터를 설정 합니다.  
   
 3.  **bcp_exec** 를 호출하여 대량 복사 작업을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 결과 집합을 생성하는 모든 문이 될 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 첫 번째 결과 집합이 포함된 데이터 파일이 생성됩니다. 대량 복사 시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 결과 집합이 여러 개 생성될 경우 첫 번째 결과 집합 다음의 결과 집합은 모두 무시됩니다.  
   
  열에서 데이터는 테이블의 다른 형식으로 보다 저장 된 데이터 파일을 만들려면 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 개수 열은 변경 되도록 호출 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) 각 열에 대 한 형식의 변경 하려고 합니다. 호출 후 이렇게 **bcp_init** 호출 하기 전에 **bcp_exec**합니다. **bcp_colfmt** 데이터 파일에 저장 되는 열의 데이터 형식을 지정 합니다. 대량 복사 하거나 축소 하는 경우에 사용할 수 있습니다. 사용할 수도 있습니다 **bcp_colfmt** 행 및 열 종결자를 설정 합니다. 예를 들어 데이터에 탭 문자가 없는 경우 만들어야 탭으로 구분 된 파일을 사용 하 여 **bcp_colfmt** 각 열의 종결자로 탭 문자를 설정 합니다.  

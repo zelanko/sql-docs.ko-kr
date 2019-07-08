@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266004"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463594"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266004"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 사용자 정의 형식을 구현하는 어셈블리 내 클래스를 지정합니다. *class_name*은 유효한 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. *class_name*은 데이터베이스의 데이터 정렬과 무관하게 대/소문자를 구분하며 해당 어셈블리의 클래스 이름과 정확히 일치해야 합니다. 클래스 작성에 사용되는 프로그래밍 언어가 C#과 같이 네임스페이스 개념을 사용하는 경우 클래스 이름이 대괄호(**[ ]**)로 묶은 정식 네임스페이스 이름이 될 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *type_name*과 동일한 것으로 간주합니다.  
+ 사용자 정의 형식을 구현하는 어셈블리 내 클래스를 지정합니다. *class_name*은 유효한 식별자여야 하며 어셈블리 표시 유형이 있는 어셈블리의 클래스로 존재해야 합니다. *class_name*은 데이터베이스의 데이터 정렬과 무관하게 대/소문자를 구분하며 해당 어셈블리의 클래스 이름과 정확히 일치해야 합니다. 클래스 작성에 사용되는 프로그래밍 언어가 C#과 같이 네임스페이스 개념을 사용하는 경우 클래스 이름이 대괄호( **[ ]** )로 묶은 정식 네임스페이스 이름이 될 수 있습니다. *class_name*을 지정하지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 *type_name*과 동일한 것으로 간주합니다.  
   
  \<column_definition>  
  사용자 정의 테이블 형식의 열을 정의합니다.  
@@ -274,7 +276,7 @@ column_name <data_type>
 ## <a name="memory-optimized-table-types"></a>메모리 액세스에 최적화된 테이블 형식  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 테이블 형식의 데이터 처리는 디스크가 아닌 기본 메모리에서 수행될 수 있습니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요. 메모리 최적화 테이블을 만드는 방법을 보여주는 코드 샘플은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다. *assembly_name*을 지정하면 사용자는 어셈블리나 그에 대한 REFERENCES 권한을 소유해야 합니다.  
 
  CREATE TABLE 문의 열이 사용자 정의 형식으로 정의되면 해당 형식에 대한 REFERENCES 권한이 필요합니다.
@@ -285,7 +287,7 @@ column_name <data_type>
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>1. varchar 데이터 형식을 기반으로 별칭 유형 만들기  
+### <a name="a-creating-an-alias-type-based-on-the-varchar-data-type"></a>1\. varchar 데이터 형식을 기반으로 별칭 유형 만들기  
  다음 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 별칭 유형을 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -293,7 +295,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>2. 사용자 정의 형식 만들기  
+### <a name="b-creating-a-user-defined-type"></a>2\. 사용자 정의 형식 만들기  
  다음 예에서는 `utf8string` 어셈블리 내의 `utf8string`클래스를 참조하는 `Utf8String` 형식을 만드는 방법을 보여 줍니다. 형식을 만들기 전에 로컬 데이터베이스에 `utf8string` 어셈블리를 등록합니다. CREATE ASSEMBLY의 이진 부분을 올바른 유효한 설명으로 대체합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -308,7 +310,7 @@ EXTERNAL NAME utf8string.[Microsoft.Samples.SqlServer.utf8string] ;
 GO  
 ```  
   
-### <a name="c-creating-a-user-defined-table-type"></a>3. 사용자 정의 테이블 형식 만들기  
+### <a name="c-creating-a-user-defined-table-type"></a>C. 사용자 정의 테이블 형식 만들기  
  다음 예에서는 두 개의 열이 있는 사용자 정의 테이블 형식을 만듭니다. 테이블 반환 매개 변수를 만들고 사용하는 방법은 [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
   
 ```  
@@ -317,6 +319,25 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. 기본 키와 인덱스를 사용하여 사용자 정의 테이블 형식 만들기
+다음 예제에서는 세 개의 열이 있는 사용자 정의 테이블 형식을 만듭니다. `Name` 열에는 기본 키가 있고, 다른 `Price` 열에는 비클러스터형 인덱스가 있습니다.  테이블 반환 매개 변수를 만들고 사용하는 방법은 [Use Table-Valued Parameters &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)를 참조하세요.
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE ASSEMBLY&#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626697"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388359"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 
 
 OFF 페이지 잠금이 사용되지 않습니다.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.
+
+마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 [순차 키](#sequential-keys) 섹션을 참조하세요.
+
 MAXDOP = _max_degree_of_parallelism_
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -732,6 +738,13 @@ DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭
 ALLOW_ROW_LOCKS = ON이고 ALLOW_PAGE_LOCK = ON이면 인덱스에 액세스할 때 행, 페이지 및 테이블 수준 잠금이 허용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 적절한 잠금을 선택하고 행 또는 페이지 잠금에서 테이블 잠금으로 잠금을 에스컬레이션할 수 있습니다.
 
 ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스할 때 테이블 수준 잠금만 허용됩니다.
+
+## <a name="sequential-keys"></a>순차 키
+**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상
+
+마지막 페이지 삽입 경합은 다수의 동시 스레드가 순차 키를 사용하여 인덱스에 행을 삽입하려고 할 때 발생하는 일반적인 성능 문제입니다. ID 열이나 기본적으로 현재 날짜/시간으로 설정되는 날짜와 같이 항상 증가(또는 감소)하는 값이 선행 키 열에 포함되는 경우 인덱스가 순차적이라고 간주됩니다. 삽입되는 키가 순차적이므로 모든 새 행이 인덱스 구조의 끝, 즉 동일한 페이지에 삽입됩니다. 이 경우 메모리에서 페이지 경합이 발생하며, 여러 스레드가 해당 페이지의 PAGELATCH_EX를 대기하는 상황을 통해 확인할 수 있습니다.
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY 인덱스 옵션을 켜면 데이터베이스 엔진 내에서 인덱스에 대한 높은 동시성 삽입 처리량을 향상하는 데 도움이 되는 최적화 기능을 사용할 수 있습니다. 순차 키가 있어서 마지막 페이지 삽입 경합이 발생하기 쉬운 인덱스에 사용되지만, B-트리 인덱스 구조의 다른 영역에 핫 스폿이 있는 인덱스에도 도움이 될 수 있습니다.
 
 ## <a name="viewing-index-information"></a>인덱스 정보 보기
 

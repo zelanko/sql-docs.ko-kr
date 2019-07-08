@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428966"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351686"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ ms.locfileid: "66428966"
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_ ** | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** | [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ CATALOG_COLLATION
 데이터베이스의 서비스 계층을 지정합니다.
 
 단일 데이터베이스/탄력적 풀의 단일 및 풀링된 데이터베이스입니다. 사용 가능한 값은 ‘기본’, ‘표준’, ‘프리미엄’, ‘GeneralPurpose’, ‘BusinessCritical’ 및 ‘Hyperscale’입니다.
-
-EDITION이 지정되고 MAXSIZE는 지정되지 않은 경우, MAXSIZE는 버전에서 지원되는 가장 제한적인 크기로 설정됩니다.
 
 MAXSIZE     
 데이터베이스의 최대 크기를 지정합니다. MAXSIZE는 지정된 EDITION(서비스 계층)에 대해 유효해야 합니다. 지원되는 MAXSIZE 값 및 서비스 계층의 기본값(D)은 다음과 같습니다.
@@ -1038,12 +1036,12 @@ DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |최대 데이터 크기(GB)|3072|3072|3072|4096|4096|4096|4096|
 
-vCore 모델을 사용할 때 `MAXSIZE`값이 설정되지 않은 경우 기본값은 32GB입니다. vCore 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
+vCore 모델을 사용할 때 `MAXSIZE` 값을 설정하지 않으면 기본값은 32GB입니다. vCore 기반 모델에 대한 리소스 제한에 대한 자세한 내용은 [vCore 기반 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)을 참조하세요.
 
 MAXSIZE 및 EDITION 인수에는 다음과 같은 규칙이 적용됩니다.
 
 - EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 250MB로 설정됩니다.
-- MAXSIZE 또는 EDITION이 모두 지정되지 않았으면 EDITION이 Standard(S0)로 설정되고, MAXSIZE는 250GB로 설정됩니다.
+- MAXSIZE 또는 EDITION을 모두 지정하지 않으면 EDITION이 General Purpose로 설정되고, MAXSIZE는 32GB로 설정됩니다.
 
 SERVICE_OBJECTIVE     
 - **단일 및 풀링된 데이터베이스**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>에디션을 사용하는 간단한 예
-표준 데이터베이스를 만드는 간단한 예
+범용 데이터베이스를 만드는 간단한 예제
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| ** _\*SQL Database<br />관리되는 인스턴스\*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| ** _\*SQL Database<br />관리되는 인스턴스\*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ CREATE DATABASE TestDB1;
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System(PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System(PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [SQL Database<br />단일 데이터베이스/탄력적 풀](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />관리되는 인스턴스](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System(PDW) \*_** |
 
 &nbsp;
 

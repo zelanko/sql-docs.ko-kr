@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185029"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419161"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 다음 기능은 암호화된 열에서 작동하지 않습니다.
 
 - 트랜잭션 또는 병합 복제
-- 분산 쿼리(연결된 서버)
+- 분산 쿼리(연결된 서버, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 도구 요구 사항
 
-- SQL Server Management Studio는 *서버에 연결* 대화 상자의 **추가 속성** 탭에서 **열 암호화 설정=사용** 으로 설정하여 연결하는 경우 암호화된 열에서 검색된 결과의 암호를 해독할 수 있습니다. 암호화된 열을 삽입, 업데이트 또는 필터링하려면 SQL Server Management Studio 버전 17 이상이 필요합니다.
+- SQL Server Management Studio는 *서버에 연결* 대화 상자의 **추가 속성** 탭에서 **열 암호화 설정=사용** 으로 설정하여 연결하는 경우 암호화된 열에서 검색된 결과의 암호를 해독할 수 있습니다. 암호화된 열을 삽입, 업데이트 또는 필터링하려면 SQL Server Management Studio 버전 17 이상이 필요합니다. 클라이언트 애플리케이션에서 사용할 연결 문자열은 [Always Encrypted(클라이언트 개발)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.
 
 - `sqlcmd` 에서 암호화된 연결을 사용하려면 버전 13.1 이상이 필요하며 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=825643)에서 제공됩니다.
 

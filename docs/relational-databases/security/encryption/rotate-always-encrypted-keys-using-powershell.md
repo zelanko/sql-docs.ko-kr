@@ -1,7 +1,7 @@
 ---
 title: PowerShell을 사용하여 Always Encrypted 키 순환 | Microsoft 문서
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413469"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387914"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 순환
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "66413469"
 * **열 암호화 키 순환** - 현재 키로 암호화된 데이터의 암호를 해독하고 새 열 암호화 키를 사용하여 데이터를 다시 암호화합니다. 열 암호화 키를 순환하려면 키와 데이터베이스 둘 다에 액세스해야 하므로 열 암호화 키 순환은 역할이 구분되지 않는 경우에만 수행할 수 있습니다.
 * **열 마스터 키 순환** - 현재 열 마스터 키로 보호된 열 암호화 키의 암호를 해독하고 새 열 마스터 키를 사용하여 다시 암호화한 다음 두 유형의 키에 대한 메타데이터를 모두 업데이트합니다. 열 마스터 키 순환은 역할 구분에 관계없이 완료할 수 있습니다(SqlServer PowerShell 모듈 사용 시).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>역할 구분을 사용하지 않는 열 마스터 키 순환
-이 섹션에서 설명하는 열 마스터 키 순환 방법은 보안 관리자와 DBA 간의 역할 구분을 지원하지 않습니다. 아래 단계 중 일부에서는 물리적 키에 대한 작업을 키 메타데이터에 대한 작업과 결합하므로, 이 워크플로는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다. 잠재적인 악의적 사용자가 DBA에 포함되거나 또는 DBA가 중요한 데이터에 쉽게 액세스해서는 안 될 경우에는 권장되지 않습니다.  
+
+이 섹션에서 설명하는 열 마스터 키 순환 방법은 보안 관리자와 DBA 간의 역할 구분을 지원하지 않습니다. 아래 단계 중 일부에서는 물리적 키에 대한 작업을 키 메타데이터에 대한 작업과 결합하므로, 이 워크플로는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다. 잠재적인 악의적 사용자가 DBA에 포함되거나 DBA가 중요한 데이터에 액세스하면 안 되는 경우에는 권장되지 않습니다.  
 
 
 | 태스크 | 아티클 | 일반 텍스트 키/키 저장소 액세스| 데이터베이스 액세스
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 이 섹션에서 설명하는 열 마스터 키 순환 워크플로는 보안 관리자와 DBA를 구분합니다.
 
 > [!IMPORTANT]
-> 아래 표에서 *일반 텍스트 키/키 저장소 액세스*=**예** 인 단계(일반 텍스트 키 또는 키 저장소에 액세스하는 단계)를 실행하기 전에 데이터베이스를 호스트하는 컴퓨터와 다른 보안 컴퓨터에서 PowerShell 환경이 실행하는지 확인합니다. 자세한 내용은 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
-
+> 아래 표에서 *일반 텍스트 키/키 저장소 액세스*=**예** 인 단계(일반 텍스트 키 또는 키 저장소에 액세스하는 단계)를 실행하기 전에 데이터베이스를 호스트하는 컴퓨터와 다른 보안 컴퓨터에서 PowerShell 환경이 실행하는지 확인합니다. 자세한 내용은 [키 관리에 대한 보안 고려 사항](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
 ### <a name="part-1-dba"></a>1부: DBA
 
@@ -129,7 +128,6 @@ DBA가 순환할 열 마스터 키 및 현재 열 마스터 키와 연결된 영
 
 > [!NOTE]
 > 순환 후에 이전 열 마스터 키를 영구적으로 삭제하지 않는 것이 좋습니다. 대신, 이전 열 마스터 키를 현재 키 저장소에 유지하거나 다른 안전한 장소에 보관해야 합니다. 백업 파일에서 새 열 마스터 키가 구성되기 *전의* 시점으로 데이터베이스를 복원하는 경우 데이터에 액세스하려면 이전 키가 필요합니다.
-
 
 ### <a name="part-3-dba"></a>3부: DBA
 
@@ -296,12 +294,11 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>열 암호화 키 순환
 
-열 암호화 키를 순환하려면 모든 열에서 순환할 키로 암호화된 데이터의 암호를 해독하고 새 열 암호화 키를 사용하여 데이터를 다시 암호화해야 합니다. 이 순환 워크플로에서는 키와 데이터베이스 둘 다에 액세스해야 하므로 역할 구분을 사용하여 수행할 수 없습니다. 순환할 키로 암호화된 열을 포함하는 테이블이 크면 열 암호화 키를 순환하는 데 시간이 오래 걸릴 수 있습니다. 따라서 조직에서 열 암호화 키 순환을 계획할 때는 주의해야 합니다.
+열 암호화 키를 순환하려면 모든 열에서 순환할 키로 암호화된 데이터의 암호를 해독하고 새 열 암호화 키를 사용하여 데이터를 다시 암호화해야 합니다. 이 순환 워크플로는 키와 데이터베이스에 모두 액세스해야 하므로 역할 구분을 사용하여 수행할 수 없습니다. 순환할 키로 암호화된 열을 포함하는 테이블이 크면 열 암호화 키를 순환하는 데 시간이 오래 걸릴 수 있습니다. 따라서 조직에서 열 암호화 키 순환을 계획할 때는 주의해야 합니다.
 
-오프라인 또는 온라인 접근 방식을 사용하여 열 암호화 키를 회전할 수 있습니다. 오프라인 방식은 더 빠를 수 있지만 애플리케이션이 영향을 받는 테이블에 쓸 수 없습니다. 온라인 방식은 시간이 더 오래 걸릴 수 있지만 영향을 받는 테이블을 애플리케이션에 사용할 수 없는 시간 간격을 제한할 수 있습니다. 자세한 내용은 [PowerShell을 사용하여 열 암호화 구성](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 및 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) 을 참조하세요.
+오프라인 또는 온라인 접근 방식을 사용하여 열 암호화 키를 회전할 수 있습니다. 오프라인 방식이 더 빠르지만 애플리케이션에서 영향을 받는 테이블에 쓸 수 없습니다. 온라인 방식은 시간이 더 오래 걸리지만 애플리케이션에서 영향을 받는 테이블을 사용할 수 없는 시간 간격을 제한할 수 있습니다. 자세한 내용은 [PowerShell을 사용하여 열 암호화 구성](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) 및 [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/)을 참조하세요.
 
 | 태스크 | 아티클 | 일반 텍스트 키/키 저장소 액세스| 데이터베이스 액세스
 |:---|:---|:---|:---
@@ -311,12 +308,12 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 |4단계. 새 열 암호화 키를 생성하고 열 마스터 키로 암호화하고 데이터베이스에 열 암호화 키 메타데이터를 만듭니다.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**참고:** 내부적으로 열 암호화 키를 생성하고 암호화하는 cmdlet 변형을 사용합니다.<br>내부적으로 이 cmdlet은 [CREATE COLUMN ENCRYPTION KEY(Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 문을 실행하여 키 메타데이터를 만듭니다. | 예 | 예
 |5단계. 이전 열 암호화 키로 암호화된 열을 모두 찾습니다. | [SMO(SQL Server 관리 개체) 프로그래밍 가이드](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | 아니오 | 예
 |6단계. 영향을 받는 각 열에 대한 *SqlColumnEncryptionSettings* 개체를 만듭니다.  SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. 이 경우 개체는 영향을 받는 열을 새 열 암호화 키로 암호화하도록 지정해야 합니다. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | 아니오 | 아니오
-|7단계. 5단계에서 확인된 열을 새 열 암호화 키로 다시 암호화합니다. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션이 전체 작업 또는 그 일부를 통해 테이블에 액세스할 수 없게 됩니다. | 예 | 예
+|7단계. 5단계에서 확인된 열을 새 열 암호화 키로 다시 암호화합니다. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 애플리케이션에서 전체 작업이나 일부 작업 중에 테이블에 액세스할 수 없게 됩니다. | 예 | 예
 |8단계. 이전 열 암호화 키에 대한 메타데이터를 제거합니다. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | 아니오 | 예
 
 ### <a name="example---rotating-a-column-encryption-key"></a>예제 - 열 암호화 키 순환
 
-아래 스크립트는 열 암호화 키 순환을 보여 줍니다.  스크립트에서는 대상 데이터베이스에 CEK1(순환됨)이라는 열 암호화 키로 암호화된 일부 열이 있다고 가정합니다. 이 키는 CMK1이라는 열 마스터 키를 사용하여 보호됩니다(열 마스터 키는 Azure 주요 자격 증명 모음에 저장되지 않음).
+아래 스크립트는 열 암호화 키 순환을 보여 줍니다.  이 스크립트에서는 대상 데이터베이스에 CEK1(순환됨)이라는 열 암호화 키로 암호화된 일부 열이 있다고 가정합니다. 이 키는 CMK1이라는 열 마스터 키를 사용하여 보호됩니다(열 마스터 키는 Azure Key Vault에 저장되어 있지 않음).
 
 
 ```
@@ -364,7 +361,7 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
   
 ## <a name="next-steps"></a>Next Steps  
     
-- [.NET Framework Data Provider for SQL Server와 Always Encrypted를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [.NET Framework Data Provider for SQL Server와 상시 암호화를 사용하여 애플리케이션 개발](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
   
 ## <a name="additional-resources"></a>추가 리소스  
 

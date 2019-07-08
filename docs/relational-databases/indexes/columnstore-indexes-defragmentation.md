@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511539"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388143"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Columnstore 인덱스 - 조각 모음
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52511539"
 ### <a name="recommendations-for-reorganizing"></a>재구성 관련 권장 사항  
 하나 이상의 데이터 로드 후에는 최대한 빠르게 쿼리 성능 장점을 얻기 위해 columnstore 인덱스를 다시 구성합니다. 다시 구성하려면 처음에 데이터를 압축하기 위한 추가 CPU 리소스가 필요하므로 전체 시스템 성능이 느려질 수 있습니다. 하지만 데이터가 압축되는 즉시 쿼리 성능을 향상할 수 있습니다.  
   
-[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)의 예제를 사용하여 조각화를 계산합니다. 이를 통해 REORGANIZE 작업을 수행하는 것이 좋은지를 결정할 수 있습니다.  
+[sys.dm_db_column_store_row_group_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)의 예제를 사용하여 조각화를 컴퓨팅합니다. 이를 통해 REORGANIZE 작업을 수행하는 것이 좋은지를 결정할 수 있습니다.  
   
 ### <a name="example-how-reorganizing-works"></a>예: 재구성 작동 방식  
  이 예제는 ALTER INDEX REORGANIZE이 모든 deltastore rowgroup을 columnstore로 강제로 적용한 후 rowgroup을 결합하는 방법을 보여줍니다.  
@@ -55,6 +55,9 @@ ms.locfileid: "52511539"
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  

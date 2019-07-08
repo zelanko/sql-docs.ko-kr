@@ -1,7 +1,7 @@
 ---
 title: PowerShell을 사용하여 상시 암호화 키 구성 | Microsoft 문서
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327474"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387997"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>PowerShell을 사용하여 상시 암호화 키 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "54327474"
 
 ## <a name="KeyProvisionWithoutRoles"></a> 역할 구분 없이 키 프로비전
 
-이 섹션에서는 보안 관리자 및 DBA 간에 역할 구분을 지원하지 않는 키 프로비전 방법에 대해 설명합니다. 아래 단계의 일부에서는 물리적 키에 대한 작업과 키 메타데이터에 대한 작업을 조합합니다. 따라서 이 키 프로비전 방법은 데이터베이스가 클라우드에 호스트되고 중요한 데이터에 액세스하지 못하도록 클라우드 관리자(온-프레미스 DBA는 아님) 제한을 주된 목표로 하는 경우 또는 DevOps 모델을 사용하는 조직에 권장됩니다. 잠재적인 악의적 사용자가 DBA에 포함되거나 또는 DBA가 중요한 데이터에 쉽게 액세스해서는 안 될 경우에는 권장되지 않습니다.
+이 섹션에서는 보안 관리자 및 DBA 간에 역할 구분을 지원하지 않는 키 프로비전 방법에 대해 설명합니다. 아래 단계의 일부에서는 물리적 키에 대한 작업과 키 메타데이터에 대한 작업을 조합합니다. 따라서 이 키 프로비전 방법은 데이터베이스가 클라우드에 호스트되고 중요한 데이터에 액세스하지 못하도록 클라우드 관리자(온-프레미스 DBA는 아님) 제한을 주된 목표로 하는 경우 또는 DevOps 모델을 사용하는 조직에 권장됩니다. 잠재적인 악의적 사용자가 DBA에 포함되거나 DBA가 중요한 데이터에 액세스하면 안 되는 경우에는 권장되지 않습니다.
 
 일반 텍스트 키 또는 키 저장소에 대한 액세스가 관여된 모든 단계(아래 표의 **일반 텍스트 키/키 저장소 액세스** 열에서 식별됨)를 실행하기 전에 데이터베이스를 호스트하는 컴퓨터와 다른 보안 컴퓨터에서 PowerShell 환경이 실행하는지 확인합니다. 자세한 내용은 ***키 관리에 대한 보안 고려 사항***을 참조하세요.
 
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 아래 스크립트는 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성에 대한 종단 간 예제입니다.
 
-이 예제는 Microsoft 소프트웨어 키 스토리지 공급자를 사용하는 키 스토리지를 활용합니다. 하드웨어 보안 모듈 등의 다른 저장소를 사용하도록 예제를 수정할 수 있습니다. 그러려면 디바이스에 대한 CNG를 구현하는 KSP(키 저장소 공급자)가 컴퓨터에 설치되어 있고 적절하게 작동해야 합니다. "Microsoft 소프트웨어 키 스토리지 공급 기업"을 디바이스의 KSP 이름으로 바꿔야 합니다.
+이 예제는 Microsoft 소프트웨어 키 스토리지 공급자를 사용하는 키 스토리지를 활용합니다. 하드웨어 보안 모듈 등의 다른 저장소를 사용하도록 예제를 수정할 수 있습니다. 그러려면 디바이스에 대한 CNG를 구현하는 KSP(키 저장소 공급자)가 머신에 설치되어 있고 적절하게 작동해야 합니다. “Microsoft 소프트웨어 키 스토리지 공급자”를 디바이스의 KSP 이름으로 바꿔야 합니다.
 
 
 ```
@@ -186,7 +186,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 1.  PowerShell 환경이 데이터베이스를 호스트하는 컴퓨터와 다른 보안 컴퓨터에서 실행됩니다.
 2.  조직의 DBA가 역할 구분 목적을 벗어나는 컴퓨터에 대한 액세스 권한이 없습니다.
 
-자세한 내용은 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
+자세한 내용은 [키 관리에 대한 보안 고려 사항](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)을 참조하세요.
 
 
 태스크  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스  

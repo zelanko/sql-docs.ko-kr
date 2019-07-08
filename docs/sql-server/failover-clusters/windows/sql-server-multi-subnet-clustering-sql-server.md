@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516589"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388029"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 다중 서브넷 클러스터링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,11 @@ ms.locfileid: "59516589"
     > **참고:** 이 구성은 클러스터형 노드가 동일한 서브넷 집합에 있기 때문에 다중 서브넷 장애 조치(Failover) 클러스터 구성으로 간주되지 않습니다.  
   
 ##  <a name="ComponentsAndConcepts"></a> IP 주소 리소스 고려 사항  
- 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR**로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 온라인 상태로 만들 수 있습니다.  
+ 다중 서브넷 장애 조치(Failover) 클러스터 구성에서는 장애 조치(Failover) 클러스터의 일부 노드에서 IP 주소를 소유하지 않으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시작 중에 일부 IP 주소가 온라인 상태가 되지 않을 수도 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 IP 주소 리소스 종속성을 **OR**로 설정할 수 있습니다. 이를 통해 바인딩할 수 있는 유효한 IP 주소가 하나 이상 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 온라인 상태로 만들 수 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]버전에서는 다중 사이트 클러스터 구성에 V-LAN 늘이기 기술을 사용하여 사이트 간 장애 조치(Failover)에 단일 IP 주소를 제공했습니다. 이제 여러 서브넷의 노드를 클러스터링하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 새 기능을 사용하면 V-LAN 늘이기 기술을 구현하지 않고도 다중 사이트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 구성할 수 있습니다.  
+  > [!NOTE] 
+  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 버전에서는 다중 사이트 클러스터 구성에 V-LAN 늘이기 기술을 사용하여 사이트 간 장애 조치(Failover)에 단일 IP 주소를 제공했습니다. 이제 여러 서브넷의 노드를 클러스터링하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용하면 V-LAN 늘이기 기술을 구현하지 않고도 다중 사이트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 구성할 수 있습니다.  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP 주소 리소스 OR 종속성 고려 사항  
  IP 주소 리소스 종속성을 **OR**로 설정한 경우 다음 장애 조치(Failover) 동작을 고려할 수 있습니다.  
@@ -68,6 +70,9 @@ ms.locfileid: "59516589"
  레거시 클라이언트 라이브러리 또는 타사 데이터 공급자를 사용할 경우 연결 문자열에 **MultiSubnetFailover** 매개 변수를 사용할 수 없습니다. 클라이언트 애플리케이션이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 다중 서브넷 FCI와 최적으로 작동하도록 하기 위해서는 클라이언트 연결 문자열에서 각각의 추가 IP 주소에 대해 연결 제한 시간을 21초로 조정하십시오. 그러면 다중 서브넷 FCI에서 모든 IP 주소를 시도해보기 전에 클라이언트의 재연결 시도가 시간 초과되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 및 **sqlcmd** 에 대한 기본 클라이언트 연결 제한 시간은 15초입니다.  
+ 
+ > [!NOTE]
+ > - 여러 서브넷을 사용 중이며 정적 DNS가 있는 경우, 장애 조치(failover)를 수행하기 전에 수신기와 연결된 DNS 레코드를 업데이트하는 프로세스가 구현되어 있어야 합니다. 해당 프로세스가 없으면 네트워크 이름이 온라인 상태로 표시되지 않습니다.
   
    
 ##  <a name="RelatedContent"></a> 관련 내용  

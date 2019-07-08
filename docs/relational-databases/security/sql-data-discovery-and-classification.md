@@ -2,22 +2,22 @@
 title: SQL 데이터 검색 및 분류 | Microsoft Docs
 description: SQL 데이터 검색 및 분류
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316687"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351729"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67316687"
 * 매우 중요한 데이터가 포함된 데이터베이스/열에 대한 액세스를 제어하고 보안을 강화합니다.
 
 > [!NOTE]
-> 데이터 검색 및 분류는 **SQL Server 2008 이상에 지원**됩니다. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
+> 데이터 검색 및 분류는 **SQL Server 2008 이상에 지원되며, SSMS 17.5 이상에서 사용할 수 있습니다**. Azure SQL Database는 [Azure SQL Database 데이터 검색 및 분류](https://go.microsoft.com/fwlink/?linkid=866265)를 참조하세요.
 
 ## <a id="subheading-1"></a>개요
 데이터 검색 및 분류는 고급 서비스의 집합을 소개하고 데이터베이스뿐만 아니라 데이터를 보호 대상으로 지정하는 새로운 SQL Information Protection 패러다임을 형성합니다.

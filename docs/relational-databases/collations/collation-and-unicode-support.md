@@ -1,7 +1,7 @@
 ---
 title: 데이터 정렬 및 유니코드 지원 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - locales [SQL Server]
 - code pages [SQL Server]
 - SQL Server collations
+- UTF-8
+- UTF-16
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836383"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419194"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,57 +119,54 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  코드 페이지는 지정한 스크립트의 각 문자와 연결된 숫자 인덱스 또는 코드 포인트 값을 정렬한 문자 집합입니다. Windows 코드 페이지는 일반적으로 *문자 집합* 또는 *charset*이라고 합니다. 코드 페이지는 여러 다른 Windows 시스템 로캘에 사용되는 문자 집합과 자판 배열을 지원하는 데 사용됩니다.     
+ 
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 이는 데이터 비교의 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
     
 ##  <a name="Unicode_Defn"></a> 유니코드 지원    
-유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. 
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이전의 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**) 동작이 달라지지 않습니다.   
-    
-비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.    
-    
+유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 
+   
 클라이언트가 사용하는 코드 페이지는 운영 체제 설정에 따라 결정됩니다. Windows 운영 체제에서 클라이언트 코드 페이지를 설정하려면 제어판의 **국가별 설정** 을 사용하세요.    
-    
+
+비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.    
+   
 서버에서 클라이언트로 데이터를 이동할 때는 기존 클라이언트 드라이버에서 서버 데이터 정렬을 인식하지 못할 수 있습니다. 유니코드 서버에서 비유니코드 클라이언트로 데이터를 이동할 때 이러한 현상이 나타날 수 있습니다. 클라이언트 운영 체제를 업그레이드하여 기본 시스템 데이터 정렬을 업데이트하는 것이 가장 좋은 방법입니다. 클라이언트에 데이터베이스 클라이언트 소프트웨어가 설치되어 있는 경우에는 해당 데이터베이스 클라이언트 소프트웨어에 서비스 업데이트를 적용하는 것도 좋습니다.    
     
-또한 서버의 데이터에 대해 다른 데이터 정렬을 사용할 수도 있습니다. 클라이언트의 코드 페이지에 매핑되는 데이터 정렬을 선택하세요.    
-    
-일부 유니코드 문자의 검색 및 정렬 성능을 향상시키기 위해(Windows 데이터 정렬만) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공되는 UTF-16 데이터 정렬을 사용하려면, 보조 문자(\_SC) 데이터 정렬 중 하나 또는 버전 140 데이터 정렬 중 하나를 선택할 수 있습니다.    
+> [!TIP]
+> 또한 서버의 데이터에 대해 다른 데이터 정렬을 사용할 수도 있습니다. 클라이언트의 코드 페이지에 매핑되는 데이터 정렬을 선택하세요.    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar** 및 **text**) 대신 항상 유니코드 데이터 형식(**nchar**, **nvarchar** 및 **ntext**)을 사용하세요. 
+
+> [!NOTE]
+> 유니코드 데이터 형식의 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 최대 65,535자 또는 보조 문자를 사용할 경우 전체 유니코드 범위(1,114,111자)를 나타낼 수 있습니다. 보조 문자 사용에 대한 자세한 내용은 [보조 문자](#Supplementary_Characters)를 참조하세요.
+
+또는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하는 경우 이전의 비유니코드 데이터 형식(**char** 및 **varchar**)이 유니코드(UTF-8) 데이터 형식이 됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이전의 유니코드(UTF-16) 데이터 형식(**nchar**, **nvarchar** 및 **ntext**) 동작이 달라지지 않습니다. 자세한 내용은 [UTF-8과 UTF-16 간의 스토리지 차이점](#storage_differences)을 참조하세요.
+       
+일부 유니코드 문자의 검색 및 정렬 성능을 향상하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])에서 제공되는 UTF-16 데이터 정렬(Windows 데이터 정렬만 해당)을 사용하려면, 보조 문자(\_SC) 데이터 정렬 중 하나 또는 버전 140 데이터 정렬 중 하나를 선택할 수 있습니다.    
  
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 제공되는 UTF-8 데이터 정렬을 사용하여 일부 유니코드 문자의 검색 및 정렬을 향상시키려면(Windows 데이터 정렬만 해당) UTF-8 인코딩 지원 데이터 정렬(\_UTF8)을 선택해야 합니다.
  
 -   UTF8 플래그는 다음에 적용할 수 있습니다.    
-   
     -   버전 90 데이터 정렬 
-    
         > [!NOTE]
         > 보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS) 인식 데이터 정렬이 이 버전에 이미 있는 경우에만
-    
     -   버전 100 데이터 정렬    
-    
     -   버전 140 데이터 정렬   
-    
     -   BIN2<sup>1</sup> 이진 데이터 정렬
     
 -   UTF8 플래그는 다음에 적용할 수 없습니다.    
-    
     -   보충 문자(\_SC) 또는 변형 선택기 구분(\_VSS)을 지원하지 않는 버전 90 데이터 정렬    
-    
     -   BIN 또는 BIN2<sup>2</sup> 이진 데이터 정렬    
-    
     -   SQL\* 데이터 정렬  
     
-<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 시작     
-<sup>2</sup> 최대 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 사용
+<sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3부터 지원됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0에서는 UTF8_BIN2 데이터 정렬이 Latin1_General_100_BIN2_UTF8로 바뀌었습니다.     
+<sup>2</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3까지 지원됩니다. 
     
 유니코드 데이터 형식 또는 비유니코드 데이터 형식 사용과 관련된 문제점을 평가하려면 작업 시나리오를 테스트하여 사용자 환경에서 나타나는 성능 차이를 측정하세요. 조직 전반의 시스템에 사용되는 데이터 정렬을 표준화하고 유니코드 서버 및 클라이언트를 배포하는 것이 좋습니다.    
     
 대부분의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 다른 서버나 클라이언트와 상호 작용하며 조직에서는 애플리케이션과 서버 인스턴스 간에 여러 데이터 액세스 표준을 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 다음의 두 가지 주요 유형 중 하나에 해당됩니다.    
     
 -   OLE DB 및 ODBC(Open Database Connectivity) 버전 3.7 이상을 사용하는**유니코드 클라이언트**    
-    
 -   DB-Library 및 ODBC 버전 3.6 이하를 사용하는**유니코드를 지원하지 않는 클라이언트**    
     
 다음 표에서는 유니코드 서버 및 비유니코드 서버의 다양한 조합과 함께 다국어 데이터 사용에 대한 정보를 제공합니다.    
@@ -180,38 +179,34 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |비유니코드|비유니코드|다국어 데이터를 사용할 때 가장 제한이 많은 시나리오입니다. 단일 코드 페이지만 사용할 수 있습니다.|    
     
 ##  <a name="Supplementary_Characters"></a> 보조 문자    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 임의 데이터 정렬에 유니코드(UTF-16) 데이터를 저장하기 위해 **nchar** 및 **nvarchar** 같은 데이터 형식을 제공하고, UTF-8 사용 데이터 정렬(\_UTF8)에 유니코드(UTF-8) 데이터를 저장하기 위해 **char** 및 **varchar**와 같은 데이터 형식을 제공합니다. 이러한 데이터 형식은 텍스트를 *UTF-16* 및 *UTF-8*이라고 하는 형식으로 각각 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 8비트 또는 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 2~4개의 연속적인 8비트 단어(UTF-8) 또는 2개의 연속적인 16비트 단어(UTF-16)가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 연속적인 추가 8비트 또는 16비트 단어는 *서로게이트 쌍*이라고 합니다.    
-    
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 \_SC(보조 문자) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용할 수 있습니다. 예를 들어 `Latin1_General_100_CI_AS_SC`또는 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(일본어 데이터 정렬을 사용하는 경우)를 사용합니다. 
- 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 새로운 UTF-8 지원 데이터 정렬(\_UTF8)을 사용하여 보충 문자 지원을 데이터 형식 **char** 및 **varchar**로 확장합니다.   
+유니코드 컨소시엄에서는 각 문자에 000000~10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자의 코드 포인트 값은 000000~00FFFF(65,535자) 범위이며, 메모리 및 디스크에서 8비트 또는 16비트의 한 단어에 들어갑니다. 이 범위는 일반적으로 BMP(기본 다국어 평면)로 지정됩니다. 
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 새로운 모든 데이터 정렬에서 자동으로 보조 문자를 지원합니다.
+그러나 유니코드 컨소시엄에서는 각각 BMP와 동일한 크기인 16개의 문자 “평면”을 추가로 설정했습니다. 이 정의에 따라 유니코드는 코드 포인트 범위 000000~10FFFF 내에서 1,114,112자(즉, 2<sup>16</sup>x17자)를 나타낼 수 있습니다. 코드 포인트 값이 00FFFF보다 큰 문자에는 2~4개의 연속 8비트 단어(UTF-8) 또는 2개의 연속 16비트 단어(UTF-16)가 필요합니다. BMP 초과 범위에 있는 이러한 문자를 *보조 문자*라고 하고, 추가적인 연속 8비트 또는 16비트 단어를 *서로게이트 쌍*이라고 합니다. 보조 문자, 서로게이트, 서로게이트 쌍에 대한 자세한 내용은 [유니코드 표준](http://www.unicode.org/standard/standard.html)을 참조하세요.    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서 UCS-2를 사용하여 인코딩하는 BMP 범위(000000~00FFFF)에 유니코드 데이터를 저장하기 위해 **nchar**, **nvarchar** 등의 데이터 형식을 제공합니다. 
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입된 일련의 새 보조 문자(\_SC) 데이터 정렬을 **nchar**, **nvarchar** 및 **sql_variant** 데이터 형식에 사용하여 전체 유니코드 문자 범위(000000~10FFFF)를 나타낼 수 있습니다. 예를 들어 `Latin1_General_100_CI_AS_SC`또는 `Japanese_Bushu_Kakusu_100_CI_AS_SC`(일본어 데이터 정렬을 사용하는 경우)를 사용합니다. 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 새로운 UTF-8 사용 데이터 정렬([\_UTF8](#utf8))을 사용하는 **char** 및 **varchar** 데이터 형식까지 보조 문자 지원을 확장합니다. 이 데이터 정렬도 전체 유니코드 문자 범위를 나타낼 수 있습니다.   
+
+> [!NOTE]
+> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 새로운 모든 **\_140** 데이터 정렬에서 자동으로 보조 문자를 지원합니다.
 
 보조 문자를 사용하는 경우    
     
 -   데이터 정렬 버전 90 이상에서 정렬 및 비교 연산에 보조 문자를 사용할 수 있습니다.    
-    
 -   버전 100 데이터 정렬은 모두 보조 문자를 사용한 언어적 정렬을 지원합니다.    
-    
 -   데이터베이스 개체 이름 같은 메타데이터에는 보조 문자를 사용할 수 없습니다.    
-    
--   보충 문자(\_SC)를 사용하는 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 사용할 수 없습니다. 이는 복제를 위해 생성되는 시스템 테이블 및 저장 프로시저 중 일부가 보충 문자를 지원하지 않는 **ntext** 데이터 형식을 사용하기 때문입니다.  
-    
+-   보충 문자(\_SC)를 사용하는 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 사용할 수 없습니다. 복제를 위해 생성되는 시스템 테이블 및 저장 프로시저 중 일부가 보조 문자를 지원하지 않는 **ntext** 데이터 형식을 사용하기 때문입니다.  
+
 -   SC 플래그는 다음에 적용할 수 있습니다.    
-    
     -   버전 90 데이터 정렬    
-    
     -   버전 100 데이터 정렬    
     
 -   SC 플래그는 다음에 적용할 수 없습니다.    
-    
     -   버전 80 버전이 지정되지 않은 Windows 데이터 정렬    
-    
     -   BIN 또는 BIN2 이진 데이터 정렬    
-    
     -   SQL\* 데이터 정렬    
-    
     -   버전 140 데이터 정렬(이미 보조 문자를 지원하기 때문에 SC 플래그가 필요하지 않음)    
     
 다음 표에서는 보조 문자를 SCA(보조 문자 인식) 데이터 정렬과 함께 사용할 경우와 그렇지 않을 때 일부 문자열 함수 및 문자열 연산자의 동작을 비교합니다.    
@@ -224,11 +219,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|0 ~ 0x10FFFF 범위의 UTF-16 코드 포인트를 반환합니다.|0 ~ 0xFFFF 범위의 UCS-2 코드 포인트를 반환합니다.|    
 |[와일드카드 - 문자 하나와 일치](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [와일드카드 - 일치하지 않는 문자](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|모든 와일드카드 연산에 보조 문자를 사용할 수 있습니다.|이러한 와일드카드 연산에 보조 문자를 사용할 수 없습니다. 다른 와일드카드 연산자는 사용할 수 있습니다.|    
     
-##  <a name="GB18030"></a> GB18030 지원    
- GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 애플리케이션으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
+## <a name="GB18030"></a> GB18030 지원    
+GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 애플리케이션으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
     
-##  <a name="Complex_script"></a> 복합 스크립트 지원    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 복합 스크립트에는 다음 형식이 포함됩니다.    
+## <a name="Complex_script"></a> 복합 스크립트 지원    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 복합 스크립트에는 다음 형식이 포함됩니다.    
     
 -   아랍어 텍스트와 영어 텍스트의 조합과 같은 오른쪽에서 왼쪽으로 쓰는 텍스트와 왼쪽에서 오른쪽으로 쓰는 텍스트의 조합을 포함하는 양방향 텍스트    
 -   아랍어, 인도어, 태국어 문자와 같이 위치에 따라 문자 모양이 바뀌거나 다른 문자와 함께 사용되면 문자 모양이 바뀌는 양방향 텍스트    
@@ -236,7 +231,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 애플리케이션은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.    
 
-##  <a name="Japanese_Collations"></a> 일본어 데이터 정렬이  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> 일본어 데이터 정렬이  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 다양한 옵션(\_CS, \_AS, \_KS, \_WS, \_VSS) 순열을 사용하여 새 일본어 데이터 정렬 패밀리가 지원됩니다. 
 
@@ -247,19 +242,44 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-새 데이터 정렬은 모두 보조 문자를 기본 지원하므로 새 데이터 정렬에 SC 플래그가 없거나 필요하지 않습니다.
+새 데이터 정렬은 모두 보조 문자를 기본 지원하므로 새 **\_140** 데이터 정렬에 SC 플래그가 없거나 필요하지 않습니다.
 
-이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 최적화 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
+이러한 데이터 정렬은 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 인덱스, 메모리 최적화 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
 
 <a name="ctp23"></a>
 
-## <a name="utf-8-support"></a>UTF-8 지원
+## <a name="utf8"></a> UTF-8 지원
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 가져오기 또는 내보내기 인코딩 및 문자열 데이터의 데이터베이스 수준 또는 열 수준 데이터 정렬로 널리 사용되는 UTF-8 문자 인코딩이 완벽하게 지원됩니다. UTF-8은 **char** 및 **varchar** 데이터 형식에서 허용되며, `UTF8` 접미사를 사용하여 개체의 데이터 정렬을 만들거나 이 접미사를 갖는 데이터 정렬로 변경하여 설정합니다. 예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. 
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 가져오기 또는 내보내기 인코딩이나 텍스트 데이터의 데이터베이스 수준 또는 열 수준 데이터 정렬로 널리 사용되는 UTF-8 문자 인코딩이 완벽하게 지원됩니다. UTF-8은 `CHAR` 및 `VARCHAR` 데이터 형식에서 허용되며, `UTF8` 접미사를 사용하여 개체의 데이터 정렬을 만들거나 이 접미사를 갖는 데이터 정렬로 변경하여 설정합니다. 
+UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. **nchar** 및 **nvarchar**는 UCS-2 또는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
 
-예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
+### <a name="storage_differences"></a> UTF-8과 UTF-16 간의 스토리지 차이점
+유니코드 컨소시엄에서는 각 문자에 000000~10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 UTF-8 및 UTF-16 인코딩을 모두 사용해서 전체 범위를 나타낼 수 있습니다.    
+-  UTF-8 인코딩에서는 ASCII 범위(000000~00007F)의 문자에 1바이트가 필요하고, 코드 포인트 000080~0007FF에 2바이트가 필요하며, 코드 포인트 000800~00FFFF에 3바이트가 필요하고, 코드 포인트 0010000~0010FFFF에 4바이트가 필요합니다. 
+-  UTF-16 인코딩에서는 코드 포인트 000000~00FFFF에 2바이트가 필요하고, 코드 포인트 0010000~0010FFFF에 4바이트가 필요합니다. 
 
-이 기능은 사용 중인 문자 집합에 따라 스토리지 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 UTF-8 사용 데이터 정렬을 통해 ASCII(Latin) 문자열이 있는 기존 열 데이터 유형을 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
+다음 표에서는 각 문자 범위와 인코딩 형식의 인코딩 스토리지 크기(바이트)를 간략하게 설명합니다.
+
+|코드 범위(16진수)|코드 범위(10진수)|UTF-8의 스토리지 크기(바이트) <sup>1</sup>|UTF-16의 스토리지 크기(바이트) <sup>1</sup>|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000~00007F|0~127|1|2|
+|000080~00009F<br />0000A0~0003FF<br />000400~0007FF|128~159<br />160~1,023<br />1,024~2,047|2|2|
+|000800~003FFF<br />004000~00FFFF|2,048~16,383<br />16,384~65,535|3|2|
+|010000~03FFFF <sup>2</sup><br /><br />040000~10FFFF <sup>2</sup>|65,536~262,143 <sup>2</sup><br /><br />262,144~1,114,111 <sup>2</sup>|4|4|
+
+<sup>1</sup> 스토리지 크기(바이트)는 인코딩된 바이트 길이를 가리키며, 디스크 데이터 형식의 스토리지 크기가 아닙니다. 디스크 스토리지 크기에 대한 자세한 내용은 [nchar 및 nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 및 [char 및 varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)를 참조하세요.
+
+<sup>2</sup> [보조 문자](#Supplementary_Characters)의 코드 포인트 범위입니다.
+
+위에 표시된 대로, 적절한 유니코드 인코딩과 데이터 형식을 선택하면 사용 중인 문자 집합에 따라 스토리지 비용을 훨씬 절감할 수 있습니다. 예를 들어 ASCII 문자를 포함하는 기존 열 데이터 형식을 `NCHAR(10)`에서 UTF-8 사용 데이터 정렬을 사용하는 `CHAR(10)`로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`는 스토리지로 20바이트가 필요하지만 `CHAR(10)`는 동일한 유니코드 문자열 표현에 10바이트만 필요하기 때문입니다.
+
+데이터베이스나 열에 UTF-8 또는 UTF-16 인코딩을 사용할 것인지 선택하기 전에 저장되는 문자열 데이터의 분포를 고려합니다.
+-  대체로 ASCII 범위인 경우(예: 영어), UTF-8에서는 각 문자에 1바이트, UTF-16에서는 2바이트가 필요합니다. UTF-8을 사용하는 것이 스토리지 측면에서 효율적입니다. 
+-  ASCII 범위를 초과하는 거의 모든 라틴어 기반 스크립트와 그리스어, 키릴 자모, 콥트어, 아르메니아어, 히브리어, 아랍어, 시리아어, 타나 문자, 은코 문자는 UTF-8과 UTF-16에서 모두, 문자당 2바이트가 필요합니다. 이러한 경우에는 비교 가능한 데이터 형식 간(예: **char** 또는 **nchar** 사용 간)에 큰 스토리지 차이가 없습니다.
+-  대체로 동아시아 스크립트인 경우(예: 한국어, 중국어, 일본어), UTF-8에서는 각 문자에 3바이트, UTF-16에서는 2바이트가 필요합니다. UTF-16을 사용하는 것이 스토리지 측면에서 효율적입니다. 
+-  010000~10FFFF 범위의 문자는 UTF-8과 UTF-16에서 모두, 4바이트가 필요합니다. 이러한 경우에는 비교 가능한 데이터 형식 간(예: **char** 또는 **nchar** 사용 간)에 스토리지 차이가 없습니다.
+
+다른 고려 사항은 [국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)을 참조하세요.
 
 ##  <a name="Related_Tasks"></a> 관련 태스크    
     
@@ -277,7 +297,8 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 [국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server 모범 사례 유니코드로 마이그레이션"](https://go.microsoft.com/fwlink/?LinkId=113890) - 더 이상 유지 관리되지 않음   
-[유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)    
+[유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)   
+[유니코드 표준](http://www.unicode.org/standard/standard.html)      
     
 ## <a name="see-also"></a>참고 항목    
 [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     

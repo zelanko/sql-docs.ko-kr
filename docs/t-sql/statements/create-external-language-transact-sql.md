@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE(Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: t-sql
@@ -10,20 +10,20 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994981"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399966"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다.
+지정된 파일 경로 또는 바이트 스트림에서 데이터베이스의 외부 언어 확장을 등록합니다. 이 명령문은 데이터베이스 관리자가 SQL Server에서 지원되는 OS 플랫폼에 새 외부 언어를 등록하는 일반 메커니즘의 역할을 합니다. 자세한 내용은 [언어 확장](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)을 참조하세요.
 
 > [!NOTE]
-> **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다.
+> 현재, **Java**만 외부 언어로 지원됩니다. **R** 및 **Python**은 예약된 이름이며 해당 특정 이름을 사용하여 외부 언어를 만들 수 없습니다. **R** 및 **Python** 사용 방법에 대한 자세한 내용은 [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services)를 참조하세요.
 
 ## <a name="syntax"></a>구문
 

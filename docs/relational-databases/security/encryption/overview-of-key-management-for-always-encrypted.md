@@ -1,7 +1,7 @@
 ---
 title: 상시 암호화를 위한 키 관리 개요 | Microsoft 문서
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27387a217ccd6c4a48921dae88b56d6ba1832240
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535395"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388758"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52535395"
 
 - ***열 마스터 키*** 는 열 암호화 키를 암호화하는 데 사용되는 키를 보호하는 키입니다. 열 마스터 키는 Windows 인증서 저장소, Azure 주요 자격 증명 모음, 하드웨어 보안 모듈 등의 신뢰할 수 있는 키 저장소에 저장해야 합니다. 데이터베이스에는 열 마스터 키에 대한 메타데이터(키 저장소 유형 및 위치)만 포함됩니다. 열 마스터 키 메타데이터는 [sys.column_master_keys(TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) 카탈로그 뷰에 저장됩니다.  
 
-데이터베이스 시스템의 키 메타데이터에는 일반 텍스트 열 마스터 키 또는 일반 텍스트 열 암호화 키가 포함되지 않습니다. 데이터베이스에는 열 마스터 키의 유형 및 위치와 열 암호화 키의 암호화된 값에 대한 정보만 포함됩니다. 즉, 데이터베이스 시스템이 손상된 경우에도 상시 암호화를 사용하여 보호된 데이터가 안전하도록 일반 텍스트 키는 데이터베이스 시스템에 노출되지 않습니다. 데이터베이스 시스템이 일반 텍스트 키에 액세스할 수 없게 하려면 데이터베이스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 키 관리 도구를 실행해야 합니다. 자세한 내용은 아래 [키 관리에 대한 보안 고려 사항](#SecurityForKeyManagement) 섹션을 참조하세요.
+데이터베이스 시스템의 키 메타데이터에는 일반 텍스트 열 마스터 키 또는 일반 텍스트 열 암호화 키가 포함되지 않습니다. 데이터베이스에는 열 마스터 키의 유형 및 위치와 열 암호화 키의 암호화된 값에 대한 정보만 포함됩니다. 즉, 데이터베이스 시스템이 손상된 경우에도 상시 암호화를 사용하여 보호된 데이터가 안전하도록 일반 텍스트 키는 데이터베이스 시스템에 노출되지 않습니다. 데이터베이스 시스템이 일반 텍스트 키에 액세스할 수 없게 하려면 데이터베이스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 키 관리 도구를 실행해야 합니다. 자세한 내용은 아래 [키 관리에 대한 보안 고려 사항](#security-considerations-for-key-management) 섹션을 참조하세요.
 
 데이터베이스에는 암호화된 데이터(상시 암호화로 보호된 열)만 포함되며 일반 텍스트 키에 액세스할 수 없으므로 데이터 암호를 해독할 수 없습니다. 즉, 상시 암호화 열을 쿼리하면 암호화된 값만 반환되므로 보호된 데이터를 암호화하거나 암호를 해독해야 하는 클라이언트 애플리케이션이 열 마스터 키 및 관련된 열 암호화 키에 액세스할 수 있어야 합니다. 자세한 내용은 [상시 암호화(클라이언트 개발)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.
 
@@ -59,7 +59,7 @@ ms.locfileid: "52535395"
 ## <a name="managing-keys-with-role-separation"></a>역할 구분을 사용하여 키 관리
 상시 암호화 키가 역할 구분을 사용하여 관리되는 경우 조직 내의 서로 다른 사용자가 보안 관리자 및 DBA 역할을 맡습니다. 역할 구분을 사용하는 키 관리 프로세스에서는 DBA가 키 또는 실제 키를 포함하는 키 저장소에 액세스할 수 없고, 보안 관리자가 중요한 데이터를 포함하는 데이터베이스에 액세스할 수 없습니다. 역할 구분을 사용하는 키 관리는 조직의 DBA가 중요한 데이터에 액세스할 수 없도록 하려는 경우에 권장됩니다. 
 
-**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로 데이터베이스 시스템을 호스트하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 해당 태스크를 수행하면 안 됩니다. 
+**참고:** 보안 관리자는 일반 텍스트 키를 생성하고 사용하므로, 데이터베이스 시스템을 호스팅하는 컴퓨터나 DBA 또는 악의적 사용자가 될 수 있는 다른 사용자가 액세스할 수 있는 컴퓨터에서 작업을 수행하면 안 됩니다. 
 
 ## <a name="managing-keys-without-role-separation"></a>역할 구분을 사용하지 않고 키 관리
 상시 암호화 키가 역할 구분을 사용하지 않고 관리되는 경우 한 사람이 보안 관리자 및 DBA 역할을 모두 맡을 수 있으므로 해당 사용자가 키/키 저장소와 키 메타데이터를 둘 다 액세스하고 관리할 수 있어야 합니다. 역할 구분을 사용하지 않는 키 관리는 DevOps 모델을 사용하는 조직이나 데이터베이스가 클라우드에서 호스트되고 클라우드 관리자(온-프레미스 DBA 아님)가 중요한 데이터에 액세스할 수 없도록 제한하는 것이 주요 목표인 경우에 권장됩니다.
@@ -82,7 +82,7 @@ ms.locfileid: "52535395"
     - [PowerShell을 사용하여 상시 암호화 키 순환](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> 키 관리에 대한 보안 고려 사항
+## <a name="security-considerations-for-key-management"></a>키 관리에 대한 보안 고려 사항
 
 상시 암호화의 주요 목표는 데이터베이스 시스템 또는 해당 호스팅 환경이 손상된 경우에도 데이터베이스에 저장된 중요한 데이터를 안전하게 보호하는 것입니다. 상시 암호화가 중요한 데이터 누출 방지에 도움이 되는 보안 공격의 예는 다음과 같습니다.
 

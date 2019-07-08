@@ -15,12 +15,12 @@ ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 388c7c40afcf370b181378259c97fd399781e983
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d7b8389317ea7239533b98d46562fdcf9bfa6212
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560360"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583416"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅숏 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51560360"
 2.  **데이터베이스**를 확장합니다.  
   
 3.  **데이터베이스 스냅숏**을 확장한 후 표시할 스냅숏을 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **데이터베이스 스냅숏을 보려면**  
   

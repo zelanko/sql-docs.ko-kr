@@ -1,7 +1,7 @@
 ---
 title: OPENJSON(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: genemi
@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576312"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343853"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -74,33 +74,37 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 JSON 텍스트를 포함하는 유니코드 문자 식입니다.  
   
 OPENJSON은 JSON 식에 있는 배열의 요소 또는 개체의 속성을 반복하고 각 요소 또는 속성마다 하나의 행을 반환합니다. 다음 예제에서는 *jsonExpression*으로 제공된 개체의 각 속성을 반환합니다.  
-  
-```sql  
-DECLARE @json NVARCHAR(4000) = N'{  
-   "StringValue":"John",  
-   "IntValue":45,  
-   "TrueValue":true,  
-   "FalseValue":false,  
-   "NullValue":null,  
-   "ArrayValue":["a","r","r","a","y"],  
-   "ObjectValue":{"obj":"ect"}  
-}'
 
-SELECT *
-FROM OPENJSON(@json)
-```  
-  
-**결과**
-  
-|Key|value|유형|  
-|---------|-----------|----------|  
-|StringValue|John|1|  
-|IntValue|45|2|  
-|TrueValue|true|3|  
-|FalseValue|false|3|  
-|NullValue|NULL|0|  
-|ArrayValue|["a", "r", "r",”a”,"y"]|4|  
-|ObjectValue|{"obj":"ect"}|5|  
+```sql
+DECLARE @json NVarChar(2048) = N'{
+   "String_value": "John",
+   "DoublePrecisionFloatingPoint_value": 45,
+   "DoublePrecisionFloatingPoint_value": 2.3456,
+   "BooleanTrue_value": true,
+   "BooleanFalse_value": false,
+   "Null_value": null,
+   "Array_value": ["a","r","r","a","y"],
+   "Object_value": {"obj":"ect"}
+}';
+
+SELECT * FROM OpenJson(@json);
+```
+
+**Results:**
+
+| Key                                | value                 | 유형 |
+| :--                                | :----                 | :--- |
+| String_value                       | John                  | 1 |
+| DoublePrecisionFloatingPoint_value | 45                    | 2 |
+| DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
+| BooleanTrue_value                  | true                  | 3 |
+| BooleanFalse_value                 | false                 | 3 |
+| Null_value                         | NULL                  | 0 |
+| Array_value                        | ["a", "r", "r",”a”,"y"] | 4 |
+| Object_value                       | {"obj":"ect"}         | 5 |
+| &nbsp; | &nbsp; | &nbsp; |
+
+- DoublePrecisionFloatingPoint_value는 IEEE-754를 준수합니다.
 
 ### <a name="path"></a>*path*
 
@@ -228,7 +232,7 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|ssNoversion|  
+        |2|int|  
         |3|true/false|  
         |4|array|  
         |5|개체(object)|  

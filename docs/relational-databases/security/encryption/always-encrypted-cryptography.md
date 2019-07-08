@@ -1,7 +1,7 @@
 ---
 title: 상시 암호화되는 암호화 | Microsoft 문서
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007586"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388373"
 ---
 # <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 문서에서는 [및](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상시 암호화 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]기능에서 사용되는 암호화 관련 자료를 유도하기 위한 암호화 알고리즘 및 메커니즘을 설명합니다.  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>키, 키 저장소 및 키 암호화 알고리즘  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>키, 키 저장소 및 키 암호화 알고리즘
  Always Encrypted는 두 가지 유형의 키를 사용합니다. 열 마스터 키 및 열 암호화 키.  
   
- CMK(열 마스터 키)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하기 위해 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 애플리케이션(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](/windows/desktop/SecCrypto/using-certificate-stores) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 애플리케이션 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
+ CMK(열 마스터 키)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하는 데 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 애플리케이션(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](/windows/desktop/SecCrypto/using-certificate-stores) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 애플리케이션 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
   
- 열 암호화 키(CEK)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하기 위해 사용되는 키)입니다.  
+ CEK(열 암호화 키)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하는 데 사용되는 키)입니다.  
   
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 섹션 A.2.1의 RFC 8017에 의해 지정된 기본 매개 변수가 있는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다.  
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 최적 비대칭 암호화 패딩(RSA-OAEP)과 RSA를 사용하여 CEK를 암호화합니다. Microsoft CNG(Cryptography API: Next Generation)를 .NET Framework([SqlColumnEncryptionCngProvider 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx))에서 지원하는 키 저장소 공급자는 RFC 8017의 섹션 A.2.1에 지정된 기본 매개 변수를 사용합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다. 다른 모든 키 저장소 공급자는 SHA-256을 사용합니다. 
   
 ## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "57007586"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- 결정적 암호화의 경우 IV가 임의로 생성되지 않고 다음 알고리즘을 사용하여 일반 텍스트 값에서 유도됩니다.  
+ 결정적 암호화가 있는 경우, IV가 임의로 생성되지 않고 다음 알고리즘을 사용하여 일반 텍스트 값에서 유도됩니다.  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -68,7 +68,7 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- 필요한 경우 IV에서는 데이터 1블록에 맞추기 위해 HMAC 값 잘림이 수행됩니다.    
+ IV에 필요한 경우 데이터 1블록에 맞추기 위해 HMAC 값 잘림이 수행됩니다.
 결과적으로, 결정적 암호화는 지정된 일반 텍스트 값에 대하여 동일한 암호 텍스트를 생성하여 상응하는 암호 텍스트 값을 비교함으로써 두 일반 텍스트 값이 동일한지 유추할 수 있습니다. 이러한 제한된 정보 공개를 통해 데이터베이스 시스템은 암호화 열 값에서 동등 비교를 지원할 수 있습니다.  
   
  다른 방식과 비교했을 때 결정적 암호화는 미리 정의된 IV 값을 사용하는 것과 같이 패턴 숨기기에서 더 효과적입니다.  
@@ -96,12 +96,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
 ### <a name="step-4-concatenation"></a>4단계: Concatenation  
- 마지막으로, 알고리즘 버전 바이트, MAC, IV 및 AES_256_CBC 암호 텍스트를 단순히 연결하여 암호화된 값이 생성됩니다.  
+ 마지막으로, 알고리즘 버전 바이트, MAC, IV 및 AES_256_CBC 암호 텍스트를 연결하여 암호화된 값이 생성됩니다.  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
@@ -130,7 +130,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 -   4바이트 길이 **int** 일반 텍스트 값은 암호화 후 65바이트 길이의 이진 값이 됩니다.  
   

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794142"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351678"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "66794142"
 |여러 NUMA 노드가 있는 서버|NUMA 노드당 논리 프로세서 16개 초과|MAXDOP를 MAX 값이 16인 NUMA 노드당 논리 프로세스 수의 절반으로 유지|
   
 > [!NOTE]
-> 위 표의 NUMA 노드는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상의 버전에서 자동으로 생성된 소프트 NUMA 노드를 가리킵니다.   
+> 위 표의 NUMA 노드는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 버전에서 자동으로 생성되는 소프트 NUMA 노드 또는 소프트 NUMA가 사용되지 않는 경우 하드웨어 기반 NUMA 노드를 가리킵니다.   
 >  Resource Governor 작업 그룹에 대해 최대 병렬 처리 수준 옵션을 설정할 때도 동일한 지침을 사용합니다. 자세한 내용은 [작업 그룹 만들기(Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조하세요.
   
 **최대 병렬 처리 수준** 서버 구성 값을 구성할 때 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 다음 지침을 사용합니다.

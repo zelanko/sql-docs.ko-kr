@@ -12,20 +12,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101909"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400086"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 다음은 Visual Studio(VS)용 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 릴리스 정보입니다.
-
-새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
 
 <!--
 Hello.  We have switched to a newer standardized format for Release Notes articles.
@@ -72,6 +70,7 @@ _Visual Studio 2017용 SSDT._
 | :---------- | :------ |
 | SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. | 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다. |
 | Visual Studio 2017용 SSDT 15.8 이상은 Teradata 원본/대상이 포함된 패키지 디자인을 지원하지 않습니다. | Visual Studio 2017용 SSDT(15.8)를 사용하세요. |
+| 패키지 배포 모델에서 데이터 원본을 만들거나 편집할 수 없습니다. | 데이터 원본 마법사를 열지 못합니다. |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 OData v4를 지원하지 않습니다. | &nbsp; |
 | SSIS 및 SSAS가 동일한 Visual Studio 인스턴스에 설치되면 파워 쿼리 원본은 Oracle에 연결하는 데 ODBC를 사용하도록 지원하지 않습니다. | &nbsp; |
 | 파워 쿼리 원본은 지역화되지 않습니다. | &nbsp; |

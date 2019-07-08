@@ -17,12 +17,12 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 68512f8c70e27849b8517ba20967bb7719ecd312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96e7e096e9c2b59dbe5736b285d851e8b3d415e9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707871"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583629"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>테이프 드라이브에 대한 논리적 백업 디바이스 정의(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47707871"
   
      [보안](#Security)  
   
--   **다음을 사용하여 테이프 드라이브에 대한 논리적 백업 장치를 정의합니다.**  
+-   **다음을 사용하여 테이프 드라이브에 대한 논리적 백업 디바이스를 정의합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47707871"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  디스크에 대한 쓰기 권한이 필요합니다.  
@@ -64,18 +64,20 @@ ms.locfileid: "47707871"
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>테이프 드라이브에 대한 논리적 백업 디바이스를 정의하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 마우스 오른쪽 단추로 **백업 장치**를 클릭합니다.  
+2.  **서버 개체**를 확장한 다음 마우스 오른쪽 단추로 **백업 디바이스**를 클릭합니다.  
   
-3.  **새 백업 장치**를 클릭하면 **백업 장치** 대화 상자가 열립니다.  
+3.  **새 백업 디바이스**를 클릭하면 **백업 디바이스** 대화 상자가 열립니다.  
   
 4.  디바이스 이름을 입력합니다.  
   
 5.  대상에 대해 **테이프** 를 클릭하고 다른 백업 디바이스에 연결되어 있지 않은 테이프 드라이브를 선택합니다. 사용 가능한 테이프 드라이브가 없으면 **테이프** 옵션은 비활성 상태로 표시됩니다.  
   
 6.  새 디바이스를 정의하려면 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  이 새 디바이스로 백업하려면 **데이터베이스 백업** 대화 상자의 **일반** 페이지에 있는**백업할 위치:** 필드에 디바이스를 추가합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -100,8 +102,8 @@ GO
  [sys.backup_devices&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+ [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
   

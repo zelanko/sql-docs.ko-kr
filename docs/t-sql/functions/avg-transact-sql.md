@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f229584dafc8484ca4fd6e20034e6ce91446224
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945872"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413229"
 ---
 # <a name="avg-transact-sql"></a>AVG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ DISTINCT
 *expression*  
 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 집계 함수와 하위 쿼리는 허용되지 않습니다.
   
-OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**  
 *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업이 수행되는 논리적 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
@@ -62,11 +62,11 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**
   
 |식 결과|반환 형식|  
 |---|---|
-|**tinyint**|**ssNoversion**|  
-|**smallint**|**ssNoversion**|  
-|**ssNoversion**|**ssNoversion**|  
+|**tinyint**|**int**|  
+|**smallint**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** 범주(p, s)|**decimal(10, 0)** 로 나눈 **decimal(38, s)**|  
+|**decimal** 범주(p, s)|**decimal(38, min(s,6))**|  
 |**money** 및 **smallmoney** 범주|**money**|  
 |**float** 및 **real** 범주|**float**|  
   
@@ -79,7 +79,7 @@ AVG는 OVER 및 ORDER BY 절 없이 사용되는 경우 결정적 함수이고, 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>1. SUM 함수와 AVG 함수를 사용한 계산  
+### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>1\. SUM 함수와 AVG 함수를 사용한 계산  
 이 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 부사장들이 이용한 평균 휴가 시간과 병가 시간의 합계를 계산합니다. 각 집계 함수는 검색된 모든 행에 대해 단일 요약 값을 계산합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.
   
 ```sql
@@ -99,7 +99,7 @@ Average vacation hours       Total sick leave hours
 (1 row(s) affected)
 ```
   
-### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>2. GROUP BY 절과 함께 SUM 함수 및 AVG 함수 사용  
+### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>2\. GROUP BY 절과 함께 SUM 함수 및 AVG 함수 사용  
 집계 함수를 `GROUP BY` 절과 함께 사용하면 전체 테이블을 포함하는 단일 값이 아니라 각 그룹을 포함하는 단일 값을 생성합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 각각의 판매 분야에 대한 요약 값을 계산합니다. 각 분야의 영업 사원이 받은 평균 보너스와 분야별 연간 판매량 합계를 요약하여 나열합니다.
   
 ```sql

@@ -4,7 +4,7 @@ Description: 전체 메모리 덤프를 수집하여 SSMS 중단 또는 크래�
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af7f9222a5de8c0e899d22d32e53d7638a4158cb
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983124"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412897"
 ---
 # <a name="get-full-memory-dump"></a>전체 메모리 덤프 가져오기
 
@@ -31,9 +31,9 @@ ms.locfileid: "65983124"
 
 2. 폴더에서 다운로드 파일의 압축을 풉니다.
 
-3. 명령 프롬프트를 열고 다음 명령을 실행합니다.
+3. 명령 프롬프트(예: `cmd.exe`)를 열고 다음 명령을 실행합니다.
 
-    ```cmd
+    ```
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 

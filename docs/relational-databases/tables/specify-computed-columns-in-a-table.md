@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a50efc25142a78a3363959c238d87efd84de90
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 0b8cef2656c1d06e7f03f122ab96600cc5b8fea0
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072157"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351699"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>테이블에서 계산 열 지정
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   계산 열은 해당 열에 PERSISTED 표시가 없는 한 테이블에 물리적으로 저장되지 않는 가상의 열입니다. 계산 열 식에서는 이 식이 속한 열의 값을 계산하기 위해 다른 열의 데이터를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 계산 열의 식을 지정할 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "49072157"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Limitations"></a> 제한 사항  
   
@@ -50,7 +50,7 @@ ms.locfileid: "49072157"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -90,14 +90,14 @@ ms.locfileid: "49072157"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 이 예에서는 `QtyAvailable` 열의 값을 `UnitPrice` 열의 값으로 곱하는 계산 열을 포함하는 테이블을 만듭니다.  
   
-    ```  
+    ```sql
     CREATE TABLE dbo.Products   
     (  
         ProductID int IDENTITY (1,1) NOT NULL  
       , QtyAvailable smallint  
       , UnitPrice money  
       , InventoryValue AS QtyAvailable * UnitPrice  
-    );  
+    );
   
     -- Insert values into the table.  
     INSERT INTO dbo.Products (QtyAvailable, UnitPrice)  
@@ -117,11 +117,17 @@ ms.locfileid: "49072157"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 만든 테이블에 새 열을 추가합니다.  
   
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
     ```  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
+
+    필요에 따라 계산 값을 물리적으로 테이블에 저장하는 PERSISTED 인수를 추가합니다.
   
-    ```  
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5) PERSISTED;
+    ```
   
+
 #### <a name="to-change-an-existing-column-to-a-computed-column"></a>기존 열을 계산 열로 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
@@ -130,13 +136,12 @@ ms.locfileid: "49072157"
   
 3.  기존 열을 계산 열로 변경하려면 계산 열을 삭제한 후 다시 만들어야 합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣은 후 **실행**을 클릭합니다. 다음 예에서는 이전 예에서 추가한 열을 수정합니다.  
   
-    ```  
+    ```sql
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
     GO  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);  
-  
-    ```  
-  
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
+    ```
+
      자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  

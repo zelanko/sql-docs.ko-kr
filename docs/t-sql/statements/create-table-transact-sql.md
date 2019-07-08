@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bf05845ce09fab783692d6b5c63f60fd91a98997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b067d81c83f266a59bda624f118a7113acbd53fe
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66036899"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388657"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE(Transact-SQL)
 
@@ -253,8 +253,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | IGNORE_DUP_KEY = { ON | OFF }
   | STATISTICS_NORECOMPUTE = { ON | OFF }
   | STATISTICS_INCREMENTAL = { ON | OFF }
-  | ALLOW_ROW_LOCKS = { ON | OFF}
-  | ALLOW_PAGE_LOCKS ={ ON | OFF}
+  | ALLOW_ROW_LOCKS = { ON | OFF }
+  | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF }
   | COMPRESSION_DELAY= {0 | delay [Minutes]}
   | DATA_COMPRESSION = { NONE | ROW | PAGE | COLUMNSTORE | COLUMNSTORE_ARCHIVE }
        [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -805,6 +806,9 @@ ON이면 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }       
 ON이면 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. OFF이면 페이지 잠금을 사용하지 않습니다. 기본값은 ON입니다.
 
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상. <BR>
+마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 CREATE INDEX 페이지의 [순차 키](./create-index-transact-sql.md#sequential-keys) 섹션을 참조하세요.
+
 FILETABLE_DIRECTORY = *directory_name*      
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -1286,7 +1290,7 @@ CREATE TABLE dbo.mytable
     ( low int, high int, myavg AS (low + high)/2 ) ;
 ```
 
-### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>11\. 사용자 정의 형식의 열을 기반으로 계산 열 만들기
+### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>11. 사용자 정의 형식의 열을 기반으로 계산 열 만들기
 다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)** `utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 계산합니다.
 
 ```sql
@@ -1294,7 +1298,7 @@ CREATE TABLE UDTypeTable
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
 ```
 
-### <a name="l-using-the-username-function-for-a-computed-column"></a>12\. 계산 열에 USER_NAME 함수 사용
+### <a name="l-using-the-username-function-for-a-computed-column"></a>12. 계산 열에 USER_NAME 함수 사용
 다음 예에서는 `USER_NAME()` 열에 `myuser_name` 함수를 사용하는 방법을 보여 줍니다.
 
 ```sql
@@ -1302,7 +1306,7 @@ CREATE TABLE dbo.mylogintable
     ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
 ```
 
-### <a name="m-creating-a-table-that-has-a-filestream-column"></a>13\. FILESTREAM 열이 있는 테이블 만들기
+### <a name="m-creating-a-table-that-has-a-filestream-column"></a>13. FILESTREAM 열이 있는 테이블 만들기
 다음 예에서는 `FILESTREAM` 열 `Photo`가 있는 테이블을 만듭니다. 하나 이상의 `FILESTREAM` 열이 있는 테이블에는 하나의 `ROWGUIDCOL` 열이 있어야 합니다.
 
 ```sql
@@ -1315,7 +1319,7 @@ CREATE TABLE dbo.EmployeePhoto
     );
 ```
 
-### <a name="n-creating-a-table-that-uses-row-compression"></a>14\. 행 압축을 사용하는 테이블 만들기
+### <a name="n-creating-a-table-that-uses-row-compression"></a>14. 행 압축을 사용하는 테이블 만들기
 다음 예에서는 행 압축을 사용하는 테이블을 만듭니다.
 
 ```sql
@@ -1326,7 +1330,7 @@ WITH (DATA_COMPRESSION = ROW);
 
 데이터 압축 예제를 더 보려면 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
-### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>15\. 스파스 열 및 열 집합이 있는 테이블 만들기
+### <a name="o-creating-a-table-that-has-sparse-columns-and-a-column-set"></a>15. 스파스 열 및 열 집합이 있는 테이블 만들기
 다음 예에서는 스파스 열이 있는 테이블과 두 개의 스파스 열 및 열 집합이 있는 테이블을 만드는 방법을 보여 줍니다. 이 예에서는 기본 구문을 사용합니다. 더 복잡한 예제를 보려면 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md) 및 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.
 
 이 예에서는 스파스 열이 있는 테이블을 만듭니다.
@@ -1347,7 +1351,7 @@ CREATE TABLE T1
     CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
 ```
 
-### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>16\. 시스템 버전 디스크 기반 임시 테이블 만들기
+### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>16. 시스템 버전 디스크 기반 임시 테이블 만들기
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
 
 다음 예제는 새 기록 테이블에 연결된 임시 테이블을 만드는 방법 및 기존 기록 테이블에 연결된 임시 테이블을 만드는 방법을 보여 줍니다. 참고로 임시 테이블은 시스템 버전 관리를 활성화하려면 테이블에 대해 정의된 기본 키를 활성화해야 합니다. 예를 들어 기존 테이블에 대한 시스템 버전 관리를 추가 또는 제거하는 방법을 보여 주는 예제는 [예제](../../t-sql/statements/alter-table-transact-sql.md#Example_Top)의 시스템 버전 관리를 참조하세요. 사용 사례는 [임시 테이블](../../relational-databases/tables/temporal-tables.md)을 참조하세요.
@@ -1398,7 +1402,7 @@ WITH
     );
 ```
 
-### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>17\. 시스템 버전 관리 메모리 최적화 임시 테이블 만들기
+### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>17. 시스템 버전 관리 메모리 최적화 임시 테이블 만들기
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지.
 
 다음 예제는 새 디스크 기반 기록 테이블에 연결된 시스템 버전 관리 메모리 최적화 임시 테이블을 만드는 방법을 보여 줍니다.
@@ -1455,7 +1459,7 @@ WITH
     );
 ```
 
-### <a name="r-creating-a-table-with-encrypted-columns"></a>18\. 암호화된 열이 있는 테이블 만들기
+### <a name="r-creating-a-table-with-encrypted-columns"></a>18. 암호화된 열이 있는 테이블 만들기
 다음 예제에서는 암호화된 열 두 개가 있는 테이블을 만듭니다. 자세한 내용은 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
 
 ```sql
@@ -1489,7 +1493,7 @@ CREATE TABLE t1
 );
 ```
 
-### <a name="t-create-an-inline-index"></a>20\. 인라인 인덱스 만들기
+### <a name="t-create-an-inline-index"></a>20. 인라인 인덱스 만들기
 다음은 디스크 기반 테이블에 대한 NONCLUSTERED 인라인을 사용하는 방법을 보여줍니다.
 
 ```sql
@@ -1513,7 +1517,7 @@ CREATE TABLE t3
 );
 ```
 
-### <a name="u-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>21\. 익명으로 명명된 복합 기본 키로 임시 테이블 만들기
+### <a name="u-create-a-temporary-table-with-an-anonymously-named-compound-primary-key"></a>21. 익명으로 명명된 복합 기본 키로 임시 테이블 만들기
 익명으로 명명된 복합 기본 키로 테이블을 만듭니다. 이 방법은 각각 별도의 세션에 있는 두 개의 세션 범위 임시 테이블이 제약 조건에 동일한 이름을 사용할 경우 발생하는 런타임 충돌을 방지하는 데 유용합니다.
 
 ```sql
@@ -1537,7 +1541,7 @@ Could not create constraint or index. See previous errors.
 
 임시 테이블 이름의 중복이 제거되지만 제약 조건의 중복은 제거되지 않기 때문에 문제가 발생합니다.
 
-### <a name="v-using-global-temporary-tables-in-azure-sql-database"></a>22\. Azure SQL Database에서 글로벌 임시 테이블 사용
+### <a name="v-using-global-temporary-tables-in-azure-sql-database"></a>22. Azure SQL Database에서 글로벌 임시 테이블 사용
 세션 A는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1에 전역 임시 테이블 ##test를 만들고 1행을 추가합니다.
 
 ```sql

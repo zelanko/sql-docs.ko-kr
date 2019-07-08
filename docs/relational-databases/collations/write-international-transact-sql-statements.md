@@ -19,22 +19,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20e587aeb7c0ed34762bf1f90488a06cafc0ec93
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776106"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412992"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
 
 -   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 다음 중 하나를 사용합니다.
-    -   [UTF-8 사용 데이터 정렬 활성화](../../relational-databases/collations/collation-and-unicode-support.md#utf-8-support)가 있는 **char**, **varchar** 및 **varchar(최대)** 데이터 형식.
-    -   모든 데이터 정렬이 있는 **nchar**, **nvarchar** 및 **nvarchar(최대)** 데이터 형식.      
+    -   [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 사용 데이터 정렬을 사용하는 **char**, **varchar** 및 **varchar(max)** 데이터 형식.
+    -   [보조 문자](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용하는 **char**, **varchar** 및 **varchar(max)** 데이터 형식.      
 
-    이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+    이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 다른 고려 사항은 [UTF-8과 UTF-16 간의 스토리지 차이점](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)을 참조하세요.  
 
 -   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지 **char**, **varchar** 및 **varchar(max)** 데이터 형식을 사용하는 경우 모두 **nchar**, **nvarchar** 및 **nvarchar(max)** 로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. 
     > [!IMPORTANT]

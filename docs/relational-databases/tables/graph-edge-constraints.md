@@ -1,7 +1,7 @@
 ---
 title: 그래프 에지 제약 조건 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774651"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343890"
 ---
 # <a name="edge-constraints"></a>에지 제약 조건
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  에지 제약 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그래프 데이터베이스의 에지 테이블에 데이터 무결성 및 특정 의미 체계를 적용하는 데 사용할 수 있습니다. 
-  
-이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
-[에지 제약 조건](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[에지 제약 조건](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[관련 작업](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+에지 제약 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그래프 데이터베이스의 에지 테이블에 데이터 무결성 및 특정 의미 체계를 적용하는 데 사용할 수 있습니다.
+
 ##  <a name="Connection"></a> 에지 제약 조건
  그래프 기능의 첫 번째 릴리스에서 에지 테이블은 에지 엔드포인트에 대해 어떤 작업도 적용하지 않습니다. 즉, 그래프 데이터베이스의 에지는 해당 형식에 관계없이 노드를 다른 노드에 연결할 수 있습니다. 
 
@@ -66,3 +57,5 @@ ms.locfileid: "64774651"
 |에지 제약 조건을 삭제하는 방법을 설명합니다.|[에지 제약 조건 삭제](../../relational-databases/tables/delete-edge-constraint.md)|  
 |에지 제약 조건을 수정하는 방법을 설명합니다.|[에지 제약 조건 수정](../../relational-databases/tables/modify-edge-constraint.md)|  
 |에지 제약 조건 속성을 보는 방법을 설명합니다.|[에지 제약 조건 속성 보기](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| SQL Server의 Graph 기술 개요 | [SQL Server 및 Azure SQL Database를 사용한 Graph 처리](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

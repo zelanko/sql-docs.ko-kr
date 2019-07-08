@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5504030fb8d5759056ce8c5c938f81fcab207b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08813aa3faad6738bb023a0c04c92f331bf5a457
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656681"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581156"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,9 @@ ms.locfileid: "47656681"
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **게시 및 배포 해제**를 클릭합니다.  
   
 3.  게시 및 배포 해제 마법사의 단계를 완료합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 게시 및 배포를 프로그래밍 방식으로 해제할 수 있습니다.  
   

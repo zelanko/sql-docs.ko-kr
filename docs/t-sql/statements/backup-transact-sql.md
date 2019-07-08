@@ -1,7 +1,7 @@
 ---
 title: BACKUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175305"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419066"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -70,7 +70,7 @@ SQL 데이터베이스를 백업합니다.
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\*SQL Database<br />관리되는 인스턴스\*_ ** &nbsp;|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE 전체 데이터베이스 백업을 지정합니다. 데이터베이스
 > [!IMPORTANT]
 > 관리되는 인스턴스에서 생성된 데이터베이스 백업은 다른 관리되는 인스턴스에서만 복원할 수 있습니다. SQL Server 온-프레미스 인스턴스로 복원할 수 없습니다(SQL Server 2016 데이터베이스의 백업을 SQL Server 2012 인스턴스로 복원할 수 없는 방식과 비슷함).
 
-BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다  . Azure SQL Database 관리되는 인스턴스 자동 백업에서 복원하려면 [SQL Database 복원](https://docs.microsoft.com/azure/sql-database/sql-database-restore)을 참조하세요.
+BACKUP DATABASE(데이터베이스 백업)로 만든 백업을 복원하면 전체 백업이 복원됩니다  . Azure SQL Database 관리형 인스턴스 자동 백업에서 복원하려면 [관리형 인스턴스로 데이터베이스 복원](/azure/sql-database/sql-database-managed-instance-get-started-restore)을 참조하세요.
 
 { *database_name* |  **@** _database\_name\_var_ } 전체 데이터베이스를 백업하는 데이터베이스입니다. 변수( **@** _database\_name\_var_)로 제공된 경우, 이 이름은 문자열 상수( **@** _database\_name\_var_ **=** _database name_)나 **ntext** 또는 **text** 데이터 형식을 제외한 문자열 데이터 형식의 변수로 지정할 수 있습니다.
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 
 &nbsp;
 
