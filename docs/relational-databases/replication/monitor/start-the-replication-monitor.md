@@ -13,12 +13,12 @@ ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 389df9d30f4a1d1cace4f3943ba6ea22bcc846c9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 444cbddc2129d16bf8486b5c4b76a7b338fde46d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124063"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583602"
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,9 @@ ms.locfileid: "54124063"
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]인스턴스에 연결한 다음 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더 또는 하위 폴더를 마우스 오른쪽 단추로 클릭한 다음 **복제 모니터 시작**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-start-replication-monitor-from-the-command-prompt"></a>명령 프롬프트에서 복제 모니터를 시작하려면  
   
 1.  명령 프롬프트에서 도구 설치 디렉터리로 이동합니다. 기본 경로는 [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]Tools\Binn\입니다.  

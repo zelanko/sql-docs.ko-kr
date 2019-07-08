@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294451"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583165"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294451"
     ```  
   
 3.  이 작업만 수행하면 됩니다!  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  이제 애플리케이션을 변경하지 않고도 실시간 운영 분석을 실행할 준비가 완료되었습니다.  분석 쿼리는 columnstore 인덱스에 대해 실행되고 OLTP 작업은 OLTP btree 인덱스에 대해 계속 실행됩니다. OLTP 워크로드는 계속 수행되지만 columnstore 인덱스를 유지하기 위해 약간의 추가 오버헤드가 발생합니다. 다음 섹션에서 성능 최적화를 참조하세요.  
   
 ## <a name="blog-posts"></a>블로그 게시물  
@@ -120,7 +122,7 @@ ms.locfileid: "56294451"
 > [!NOTE]  
 >  필터링된 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에서만 지원됩니다. 메모리 최적화 테이블에서는 지원되지 않습니다.  
   
-### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예 1: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예제 A: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
  이 예제에서는 필터링된 조건(accountkey > 0)을 사용하여 columnstore 인덱스에 포함할 행을 설정합니다. 자주 변경되는 “핫” 데이터는 btree 인덱스에서 액세스하고 보다 안정적인 “웜” 데이터는 columnstore 인덱스에서 액세스하도록 필터링된 조건 및 후속 쿼리를 디자인하는 것이 목적입니다.  
   
  ![웜 및 핫 데이터에 대한 결합된 인덱스](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  

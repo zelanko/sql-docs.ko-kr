@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872023"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583542"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -72,7 +72,9 @@ ms.locfileid: "58872023"
 3. 개체 탐색기에서 **데이터베이스**를 확장하고, 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **이름 바꾸기**를 클릭합니다.  
   
 4. 새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스 이름 변경하기  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>SQL Server 데이터베이스를 단일 사용자 모드로 전환하여 이름을 바꾸려면

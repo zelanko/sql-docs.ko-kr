@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 41906481891908c85daf22c223e77826baa27766
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683603"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581985"
 ---
 # <a name="database-file-initialization"></a>데이터베이스 파일 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,6 +63,8 @@ ms.locfileid: "57683603"
 5.  **적용**을 클릭한 다음 모든 **로컬 보안 정책** 대화 상자를 닫습니다.  
 
 1. SQL Server 서비스를 다시 시작합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 설치하는 동안 이 권한을 서비스 계정에 부여할 수 있습니다. [명령 프롬프트 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 사용하는 경우 /SQLSVCINSTANTFILEINIT 인수를 추가하거나 [설치 마법사](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)의 *SQL Server 데이터베이스 엔진 서비스에 볼륨 유지 관리 작업 권한 부여* 확인란을 선택합니다.

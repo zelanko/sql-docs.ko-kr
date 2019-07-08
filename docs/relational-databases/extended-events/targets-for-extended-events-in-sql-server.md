@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478138"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583385"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 
@@ -521,6 +521,7 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. 대상을 검사할 때까지 일부러 COMMIT TRANSACTION을 실행하지 않습니다.
 4. 테스트한 후 나중에 COMMIT TRANSACTION을 실행했습니다.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 단순 **event_counter** 대상은 다음 출력 행을 제공합니다. 52-50=2이므로, 출력을 통해 pair-matching 대상에서 출력을 검사할 때 2개의 쌍을 이루지 않는 lock_acquired 이벤트가 있음을 알려 줍니다.
 

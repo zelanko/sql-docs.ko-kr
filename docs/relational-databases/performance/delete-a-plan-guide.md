@@ -12,12 +12,12 @@ ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac6ad15bd9b5f662eb9596cca91d48c19266eff7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652537"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585566"
 ---
 # <a name="delete-a-plan-guide"></a>계획 지침 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,9 @@ ms.locfileid: "62652537"
 3.  삭제할 계획 지침을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 4.  **개체 삭제** 대화 상자에서 올바른 계획 지침을 선택했는지 확인한 다음 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-single-plan-guide"></a>단일 계획 지침을 삭제하려면  

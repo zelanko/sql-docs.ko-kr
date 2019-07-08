@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129843"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580018"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 복제 게시자 속성 대화 상자 |
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "54129843"
   
 1.  게시자에서 게시를 해제합니다. 자세한 내용은 [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)를 참조하세요.    
 2.  게시 및 배포를 다시 구성합니다. 자세한 내용은 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="distributor"></a>배포자 
 **게시자 속성** 대화 상자를 사용하여 게시자와 이 게시자의 배포자 간 관계와 연결된 속성을 보고 수정할 수 있습니다.  
   
@@ -70,7 +72,7 @@ ms.locfileid: "54129843"
   
 ### <a name="options"></a>옵션  
  **게시자 속성**  
- **구독자** 속성 표에서는 이 게시자의 게시에서 데이터를 받도록 설정된 구독자를 표시합니다. 추가 속성을 보고 설정하려면 구독자 옆에 있는 속성 단추 (**...**)를 클릭합니다.  
+ **구독자** 속성 표에서는 이 게시자의 게시에서 데이터를 받도록 설정된 구독자를 표시합니다. 추가 속성을 보고 설정하려면 구독자 옆에 있는 속성 단추 ( **...** )를 클릭합니다.  
   
  **추가**  
  구독자를 추가하려면 **추가** 를 클릭한 다음 **SQL Server 구독자 추가** 또는 **SQL Server 이외 구독자 추가**를 클릭합니다.  

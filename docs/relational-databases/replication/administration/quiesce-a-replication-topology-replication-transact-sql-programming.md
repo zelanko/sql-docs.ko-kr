@@ -17,12 +17,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98507fe8e98cf8c12abb7423d995a2e3be34f201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97831aaa655baf2d13c27c1e7e08233ff6c61cd2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846811"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581519"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>복제 토폴로지 정지(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "47846811"
 3.  게시 데이터베이스의 게시자에서 [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)를 실행합니다.  
   
 4.  각 구독자가 추적 프로그램 토큰을 받았는지 확인합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-quiesce-a-transactional-replication-topology-with-updatable-subscriptions"></a>업데이트 가능 구독이 포함된 트랜잭션 복제 토폴로지를 정지하려면  
   
 1.  게시자 및 모든 구독자에서 게시된 모든 테이블에 대한 작업을 중지합니다.  

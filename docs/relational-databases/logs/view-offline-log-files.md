@@ -14,12 +14,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b08178a89f8678b8ad0ac9f9f2f848860bb786c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826401"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584197"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,9 @@ ms.locfileid: "47826401"
 6.  **보안**을 클릭합니다.  
   
 7.  사용할 계정에 **계정 사용** 사용 권한이 있는지 확인합니다. 이 사용 권한이 있으면 WMI 개체에 대한 읽기 액세스가 가능합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="view-log-files"></a>로그 파일 보기  
  다음 절차에서는 등록된 서버를 통해 오프라인 로그 파일을 보는 방법을 보여 줍니다. 이 절차에서는 다음과 같은 사항을 가정합니다.  
   

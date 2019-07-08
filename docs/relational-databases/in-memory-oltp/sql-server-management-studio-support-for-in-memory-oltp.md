@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665129"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579433"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665129"
 3.  새 메모리 최적화 데이터 파일 그룹을 추가하려면 **파일 그룹** 페이지를 클릭합니다. **MEMORY OPTIMIZED DATA**아래에서 **파일 그룹 추가** 를 클릭한 다음 메모리 최적화 데이터 파일 그룹의 이름을 입력합니다.  **FILESTREAM 파일** 이라는 열에는 파일 그룹에 있는 컨테이너 수가 표시됩니다. 컨테이너는 **일반** 페이지에서 추가됩니다.  
   
 4.  파일(컨테이너)를 파일 그룹에 추가하려면 **일반** 페이지를 클릭합니다. **데이터베이스 파일**아래에서 **추가**를 클릭합니다. **파일 형식** 을 **FILESTREAM 데이터**로 선택하고 컨테이너의 논리적 이름을 지정한 다음 메모리 최적화 파일 그룹을 선택하고 **자동 증가/최대 크기** 가 **제한 없음**으로 설정되어 있는지 확인합니다.  
-  
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 새 데이터베이스를 만드는 방법은 [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)를 참조하세요.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>메모리 최적화 테이블을 만들려면  
   
@@ -83,7 +85,7 @@ ms.locfileid: "51665129"
   
 1.  메모리 내 사용량에 대한 정보를 가져오려면 다음과 같이 하십시오.  
   
-    -   **개체 탐색기**에서 메모리 최적화 테이블을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **저장소** 페이지를 클릭합니다. **데이터 공간** 속성에 대한 값은 테이블에 있는 데이터가 사용하는 메모리를 나타냅니다. **인덱스 공간** 속성에 대한 값은 테이블의 인덱스가 사용하는 메모리를 나타냅니다.  
+    -   **개체 탐색기**에서 메모리 최적화 테이블을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **스토리지** 페이지를 클릭합니다. **데이터 공간** 속성에 대한 값은 테이블에 있는 데이터가 사용하는 메모리를 나타냅니다. **인덱스 공간** 속성에 대한 값은 테이블의 인덱스가 사용하는 메모리를 나타냅니다.  
   
     -   **개체 탐색기**에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **일반** 페이지를 클릭합니다. **메모리 최적화 개체에 할당된 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체에 할당된 메모리를 나타냅니다. **메모리 최적화 개체가 사용하는 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체가 사용하는 메모리를 나타냅니다.  
   

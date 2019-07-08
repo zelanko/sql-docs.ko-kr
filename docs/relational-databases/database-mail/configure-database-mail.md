@@ -40,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17dece6d010554caf94278a432c30a04d52255
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999515"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581213"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "62999515"
 3.  **데이터베이스 메일**을 마우스 오른쪽 단추로 클릭하고 **데이터베이스 메일 구성**을 클릭합니다.  
   
 4.  마법사의 대화 상자를 완료합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   [시작 페이지](#Welcome)  
   
     -   [구성 태스크 선택 페이지](#ConfigTask)  

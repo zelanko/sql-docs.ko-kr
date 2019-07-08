@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668923"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585796"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668923"
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기에 대해 적절한 권한을 설정합니다.  
   
 5.  진단 모드에서 웹 동기화를 실행하여 IIS를 실행하는 컴퓨터에 대한 연결을 테스트하고 SSL 인증서가 제대로 설치되었는지 확인합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 구성  
  SSL을 구성하려면 IIS를 실행하는 컴퓨터에서 사용할 인증서를 지정합니다. 병합 복제를 위한 웹 동기화에서는 서버 인증서를 사용할 수 있지만 클라이언트 인증서는 사용할 수 없습니다. 배포를 위해 IIS를 구성하려면 먼저 CA(인증 기관)에서 인증서를 얻어야 합니다. 인증 기관은 사용자, 컴퓨터 또는 다른 인증 기관에 속하는 공용 암호화 키의 신뢰성을 수립 및 보증하는 주체입니다. 인증서에 대한 자세한 내용은 IIS 설명서를 참조하십시오. 인증서를 설치한 다음에는 웹 동기화에서 사용하는 웹 사이트와 인증서를 연결해야 합니다.  
   

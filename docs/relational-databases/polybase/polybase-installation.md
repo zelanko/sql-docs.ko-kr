@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775050"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581235"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -91,6 +91,8 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
      또한 이 옵션은 MSDTC(Microsoft Distributed Transaction Coordinator) 방화벽 연결을 사용하도록 설정하고 MSDTC 레지스트리 설정을 수정합니다.  
    
 6. PolyBase 구성 페이지에서 6개 이상의 포트로 포트 범위를 지정합니다. SQL Server 설치 프로그램은 범위에서 처음 6개의 사용 가능한 포트를 할당합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > 설치 후 [PolyBase 기능을 사용하도록 설정](#enable)해야 합니다.
