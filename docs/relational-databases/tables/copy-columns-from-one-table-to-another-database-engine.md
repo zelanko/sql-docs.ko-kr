@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742093"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585062"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "55742093"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  별칭 데이터 형식의 열을 데이터베이스 간에 복사하면 대상 데이터베이스에서 별칭 데이터 형식을 사용하지 못할 수도 있습니다. 이 경우 해당 열에는 대상 데이터베이스에서 사용할 수 있는 가장 비슷한 기본 데이터 형식이 지정됩니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -64,7 +64,9 @@ ms.locfileid: "55742093"
 4.  열을 복사하여 넣으려는 대상 테이블에 해당하는 탭을 클릭합니다.  
   
 5.  열을 삽입하려는 위치 바로 앞의 열을 선택하고 **편집** 메뉴에서 **붙여넣기**를 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>테이블 간에 데이터를 복사하려면  
   
 1.  위에서 설명한 열 정의 복사 지침을 따릅니다.  

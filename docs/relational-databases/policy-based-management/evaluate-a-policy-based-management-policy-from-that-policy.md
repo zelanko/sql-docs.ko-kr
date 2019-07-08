@@ -13,12 +13,12 @@ ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 29db8b510faecc2b9006cba0bfec995ec78d8beb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aa2b796c505ed6f623681791d316d21bcccc3af
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63010178"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584943"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>정책 기반 관리 정책의 정책 평가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,5 +58,6 @@ ms.locfileid: "63010178"
 6.  **평가 결과**  대화 상자에 정책 평가의 결과가 표시됩니다. 정책을 따르지 않고 정책 기반 관리로 다시 구성할 수 있는 속성이 있는 대상의 경우 **적용**을 클릭하여 준수를 강제할 수 있습니다. **정책 평가** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Evaluate Policies Dialog Box, Policy Selection Page](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md) 및 [Evaluate Policies Dialog Box, Evaluation Results Page](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)를 참조하세요.  
   
 7.  완료되면 **닫기**를 클릭합니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

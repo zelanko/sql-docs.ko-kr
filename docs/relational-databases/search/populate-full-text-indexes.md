@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 577de0bc80ce718c393cf8d3691e8f8051dfe56f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042276"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586117"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,9 @@ ALTER FULLTEXT INDEX ON Production.Document
     -   기존 일정을 **제거**하려면 기존 일정을 선택하고 **삭제**를 클릭합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="crawl"></a> 전체 텍스트 채우기의 오류 문제 해결(탐색)  
 탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 기본적으로 지정된 인스턴스(이 예제에서는 기본 인스턴스)에 대한 크롤링 로그는 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 폴더에 있습니다.
  

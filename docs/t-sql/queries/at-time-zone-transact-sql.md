@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: c38cff3036b3c00897d28a1ff12e576f61bf4cfd
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836364"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564007"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   *inputdate*를 대상 표준 시간대의 해당 *datetimeoffset* 값으로 변환합니다. 오프셋 정보 없이 *inputdate*가 제공되면 이 함수는 *inputdate*가 대상 표준 시간대에서 있다고 가정하여 표준 시간대의 오프셋을 적용합니다. *inputdate*가 *datetimeoffset* 값으로 제공되는 경우 **AT TIME ZONE** 절은 표준 시간대 변환 규칙을 사용하여 대상 표준 시간대로 변환합니다.  
   

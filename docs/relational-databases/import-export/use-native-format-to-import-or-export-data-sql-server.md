@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c617d46174b44bb43add44314c5d3192bc6cd94
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946395"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579595"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "64946395"
 1.  원본 테이블에서 데이터 파일로 데이터 대량 내보내기  
   
 2.  데이터 파일에서 대상 테이블로 데이터 대량 가져오기  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 형식이 동일한 테이블에서는 네이티브 형식을 사용하여 문자 형식의 불필요한 변환을 없애고 시간과 공간을 절약할 수 있습니다. 이때 최적의 전송 속도를 얻기 위해 데이터 형식을 거의 검사하지 않습니다. 로드된 데이터와 관련된 문제를 방지하려면 다음 제한 사항 목록을 참조하십시오.  
 
 |항목 내용|

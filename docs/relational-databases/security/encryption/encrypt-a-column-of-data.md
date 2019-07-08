@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: eb7a66bd1c433843db58d64dc2ea7a5a4a217a19
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997545"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585369"
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53997545"
 
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  다음 권한은 아래 단계를 수행하는 데 필요합니다.  
   
 - 데이터베이스에 대한 CONTROL 권한.  
@@ -60,7 +60,9 @@ PASSWORD = '<some strong password>';
 2. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 3. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     USE AdventureWorks2012;  
     GO  

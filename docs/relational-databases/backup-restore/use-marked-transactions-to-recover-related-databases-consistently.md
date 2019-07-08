@@ -21,12 +21,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d90c284494fe3f351d66932c019dbc3140aac433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c025b791559fb63ba82826f112e04b6da837be1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698041"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581765"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,9 @@ ms.locfileid: "47698041"
 4.  WITH NORECOVERY로 데이터베이스 백업 복원  
   
 5.  WITH STOPATMARK로 로그 복원  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="considerations-for-using-marked-transactions"></a>표시된 트랜잭션 사용에 대한 고려 사항  
  트랜잭션 로그에 명명된 표시를 삽입하기 전에 다음 사항을 주의하십시오.  
   

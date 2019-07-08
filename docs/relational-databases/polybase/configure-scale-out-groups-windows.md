@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fc4c6ef8a84ff670feb43fafbdd239e9e9862f1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774725"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581630"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows에서 PolyBase 스케일 아웃 그룹 개선
 
@@ -42,6 +42,8 @@ ms.locfileid: "64774725"
 4. [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 사용하여 그룹에서 노드를 모니터링합니다.
 
 5. (선택 사항) [sp_polybase_leave_group&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md)을 사용하여 컴퓨팅 노드를 제거합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example-walk-through"></a>예제 연습
 

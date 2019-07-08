@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 069480b8a2afc1e88f5edbdd11775e4988e3f9f4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663347"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585775"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1074,6 +1074,9 @@ BEGIN TRANSACTION
   
 1.  `READ_COMMITTED_SNAPSHOT`과 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션 중 하나 또는 모두를 ON에 설정합니다.  
 2.  응용 프로그램에서 적절한 트랜잭션 격리 수준을 설정합니다.  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리 수준을 설정하는 트랜잭션에 행 버전 관리가 사용됩니다.  
     -   `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 트랜잭션에서 스냅숏 격리 수준을 설정할 수 있습니다.  
   

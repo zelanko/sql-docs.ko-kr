@@ -24,12 +24,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716100"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582037"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "62716100"
 4. **단어 분리기용 언어.** 드롭다운 목록에서 언어를 선택합니다. 여기에서 선택한 언어는 인덱스에 올바른 단어 분리기를 식별하는 데 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 단어 분리기를 사용하여 전체 텍스트 인덱싱된 데이터의 단어 경계를 식별합니다.  
   
 5.  **유형 열.** 전체 텍스트 인덱싱되는 열의 문서 유형을 보관하는 열 이름을 선택합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **참고:** **유형 열**은 **사용 가능한 열** 열에 이름이 지정된 열이 **varbinary(max)** 또는 **image** 유형일 경우에만 사용할 수 있습니다.  
   
 6. **통계 의미 체계.** 선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  

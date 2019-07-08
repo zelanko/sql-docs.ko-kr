@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d9fa25f4b6369db64c96d21a0591a1f8c214d61a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0cff0ce041b3b289a0937df3c05c6e0d2971559
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775255"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584632"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop에 대한 PolyBase 구성 및 보안
 
@@ -170,6 +170,8 @@ MIT KDC를 사용하여 Kerberos로 보호되는 Hadoop 클러스터에 연결�
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: yarn/_HOST@YOUR-REALM.COM|  
 
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="next-steps"></a>다음 단계  
 

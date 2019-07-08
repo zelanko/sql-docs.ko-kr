@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936431"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584696"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ MultiPolygon의 두 번째 인스턴스는 허용되는 Polygon 인스턴스가 
 1.  **MultiPolygon** 인스턴스를 구성하는 모든 인스턴스가 유효한 **Polygon** 인스턴스인 경우. 유효한 **Polygon** 인스턴스에 대한 자세한 내용은 [Polygon](../../relational-databases/spatial/polygon.md)을 참조하십시오.  
   
 2.  **Polygon** 인스턴스를 구성하는 어떤 **MultiPolygon** 인스턴스도 겹치지 않는 경우  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 다음 예에서는 유효한 **MultiPolygon** 인스턴스 두 개와 유효하지 않은 **MultiPolygon** 인스턴스 하나를 보여 줍니다.  
   
 ```sql  

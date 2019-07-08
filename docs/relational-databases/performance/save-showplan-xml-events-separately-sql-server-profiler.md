@@ -14,12 +14,12 @@ ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 964d087387c5feb9011c7e5ae3a72d311cb8060d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 625f3e2de7bc417383a8830a42067408316a97c0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375425"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579851"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,9 @@ ms.locfileid: "53375425"
 10. **모든 XML 실행 계획 일괄 처리를 단일 파일로 저장**을 선택하여 **Showplan XML** 이벤트를 단일 XML 파일로 저장합니다. 또는 **각 XML 실행 계획 일괄 처리를 개별 파일로 저장**을 선택하여 각 **Showplan XML** 이벤트에 대해 새 XML 파일을 만듭니다.  
   
 11. SQL Server Management Studio의 **Showplan XML** 이벤트 파일을 보려면 **파일** 메뉴에서 **열기**를 가리키고 **파일**을 선택합니다. **Showplan XML** 이벤트 파일을 저장한 디렉터리를 찾아보고 하나를 선택하여 엽니다. **Showplan XML** 이벤트 파일의 파일 확장자는 .SQLPlan입니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler에서 Showplan 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   

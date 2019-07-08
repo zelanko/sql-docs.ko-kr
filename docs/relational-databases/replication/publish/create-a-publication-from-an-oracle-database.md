@@ -14,12 +14,12 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62d24228267d0f5fd104a26d46d4aae721ac2663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf3cf1f23b8a18f2fc2b7586d22b7d46bb7226
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509955"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580104"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle 데이터베이스에서 게시 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ ms.locfileid: "62509955"
     >  네트워크 구성에 문제가 있는 경우 이 시점에 오류가 표시됩니다. Oracle 데이터베이스 연결에 문제가 있으면 [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)의 "SQL Server 배포자가 Oracle 데이터베이스 인스턴스에 연결할 수 없습니다" 섹션을 참조하세요.  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-publication-from-an-oracle-database"></a>Oracle 데이터베이스에서 게시를 만들려면  
   
 1.  Oracle 게시자가 배포자로 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결한 다음 해당 서버 노드를 확장합니다.  

@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454585"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579892"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454585"
 ## <a name="security-principals"></a>보안 주체  
  보안 주체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 사용하며, 작업 수행 권한을 할당 받을 수 있는 ID의 공식 이름입니다. 이들은 일반적으로 사람 또는 사람의 그룹이지만 사람을 가장하는 다른 엔터티일 수도 있습니다. 나열된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 보안 주체를 만들고 관리할 수 있습니다.  
   
- 로그인  
+##### <a name="logins"></a>로그인  
  로그인은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 로그온하기 위한 개별 사용자 계정입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 는 Windows 인증 기반의 로그인 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 기반의 로그인을 지원합니다. 두 유형의 로그인에 대한 자세한 내용은 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)를 참조하세요.  
   
- 고정 서버 역할  
+##### <a name="fixed-server-roles"></a>고정 서버 역할  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 고정 서버 역할은 편리한 서버 수준 권한 그룹을 제공하는 미리 구성된 역할 집합입니다. `ALTER SERVER ROLE ... ADD MEMBER` 문을 사용하여 역할에 로그인을 추가할 수 있습니다. 자세한 내용은 [ALTER SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 는 고정 서버 역할을 지원하지 않지만 master 데이터베이스에 서버 역할처럼 작동하는 두 가지 역할(`dbmanager` 및 `loginmanager`)이 있습니다.  
   
- 사용자 정의 서버 역할  
+##### <a name="user-defined-server-roles"></a>사용자 정의 서버 역할  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 사용자 고유의 서버 역할을 만들고 서버 수준 권한을 할당할 수 있습니다. `ALTER SERVER ROLE ... ADD MEMBER` 문을 사용하여 서버 역할에 로그인을 추가할 수 있습니다. 자세한 내용은 [ALTER SERVER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 는 사용자 정의 서버 역할을 지원하지 않습니다.  
   
- 데이터베이스 사용자  
+##### <a name="database-users"></a>데이터베이스 사용자  
  데이터베이스에서 데이터베이스 사용자를 만들고 해당 데이터베이스 사용자를 로그인에 매핑하여 데이터베이스에 대한 액세스 권한을 로그인에 부여할 수 있습니다. 일반적으로 데이터베이스 사용자 이름은 로그인 이름과 동일하지만 반드시 그래야 하는 것은 아닙니다. 각 데이터베이스 사용자는 단일 로그인에 매핑됩니다. 하나의 로그인을 데이터베이스의 한 사용자에만 매핑할 수 있지만 여러 데이터베이스에서 데이터베이스 사용자로 매핑할 수 있습니다.  
   
  해당 로그인이 없는 데이터베이스 사용자를 만들 수도 있습니다. 이를 *포함된 데이터베이스 사용자*라고 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 포함된 데이터베이스 사용자를 사용하도록 권장합니다. 데이터베이스를 다른 서버로 보다 쉽게 이동할 수 있기 때문입니다. 로그인과 마찬가지로 포함된 데이터베이스 사용자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용할 수 있습니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
  인증 방법 및 나타내는 사람이 약간 다른 12가지 유형의 사용자가 있습니다. 사용자 목록을 보려면 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
   
- 고정 데이터베이스 역할  
+##### <a name="fixed-database-roles"></a>고정 데이터베이스 역할  
  고정 데이터베이스 역할은 편리한 데이터베이스 수준 권한 그룹을 제공하는 미리 구성된 역할 집합입니다. `ALTER ROLE ... ADD MEMBER` 문을 사용하여 데이터베이스 사용자 및 사용자 정의 데이터베이스 역할을 고정 데이터베이스 역할에 추가할 수 있습니다. 자세한 내용은 [ALTER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)을 참조하세요.  
   
- 사용자 정의 데이터베이스 역할  
+##### <a name="user-defined-database-roles"></a>사용자 정의 데이터베이스 역할  
  `CREATE ROLE` 권한이 있는 사용자는 일반적인 권한이 있는 사용자 그룹을 나타내는 새 사용자 정의 데이터베이스 역할을 만들 수 있습니다. 권한 관리 및 모니터링을 간소화하기 위해 일반적으로 권한은 전체 역할에 부여되거나 거부됩니다. `ALTER ROLE ... ADD MEMBER` 문을 사용하여 데이터베이스 역할에 데이터베이스 사용자를 추가할 수 있습니다. 자세한 내용은 [ALTER ROLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)을 참조하세요.  
   
- 다른 보안 주체  
+##### <a name="other-principals"></a>다른 보안 주체  
  여기에 설명되지 않은 추가 보안 주체에는 애플리케이션 역할과 인증서 또는 비대칭 키를 기반으로 하는 로그인 및 사용자가 포함됩니다.  
   
  Windows 사용자, Windows 그룹, 로그인 및 데이터베이스 사용자 간의 관계를 보여 주는 그래픽은 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)를 참조하세요.  
@@ -66,7 +66,9 @@ ms.locfileid: "66454585"
 2.  작업 단위 및 작업 기능을 나타내는 Windows 그룹을 만듭니다.  
   
 3.  Windows 그룹에 Windows 사용자를 추가합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>연결하는 사용자를 여러 데이터베이스에 연결하는 경우  
   
 1.  Windows 그룹에 대한 로그인을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 만듭니다.  

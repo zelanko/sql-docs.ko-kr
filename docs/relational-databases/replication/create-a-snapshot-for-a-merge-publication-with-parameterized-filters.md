@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14255fde1f8d0d165e1071f95c737f60aacf5058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5064d3c2f2252137ac3b3f614e6f509bf971e85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131433"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582464"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "54131433"
 1.  새 게시 마법사를 사용하여 병합 게시를 만들고 마법사의 **필터 추가** 페이지에서 매개 변수가 있는 행 필터를 하나 이상 지정합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 2.  게시에 대한 스키마 스냅숏을 생성합니다. 기본적으로 스키마 스냅숏은 새 게시 마법사를 완료할 때 생성됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 스키마 스냅숏을 생성할 수도 있습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-generate-a-schema-snapshot"></a>스키마 스냅숏을 생성하려면  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
@@ -119,13 +121,13 @@ ms.locfileid: "54131433"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 다음 매개 변수를 지정합니다.  
   
-    -   **@publication**에 대한 게시의 이름  
+    -   **@publication** 에 대한 게시의 이름  
   
-    -   **@allow_subscriber_initiated_snapshot**에 **true** 값을 지정합니다. 이렇게 하면 구독자가 스냅숏 프로세스를 시작할 수 있습니다.  
+    -   **@allow_subscriber_initiated_snapshot** 에 **true** 값을 지정합니다. 이렇게 하면 구독자가 스냅숏 프로세스를 시작할 수 있습니다.  
   
-    -   (옵션) **@max_concurrent_dynamic_snapshots**을 참조하세요. 최대 수의 프로세스가 실행 중인 상태에서 구독자가 스냅숏 생성을 시도하면 이 프로세스는 큐에 배치됩니다. 기본적으로 동시 프로세스의 수에는 제한이 없습니다.  
+    -   (옵션) **@max_concurrent_dynamic_snapshots** 을 참조하세요. 최대 수의 프로세스가 실행 중인 상태에서 구독자가 스냅숏 생성을 시도하면 이 프로세스는 큐에 배치됩니다. 기본적으로 동시 프로세스의 수에는 제한이 없습니다.  
   
-2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication**에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password**에 [복제 스냅숏 에이전트](../../relational-databases/replication/agents/replication-snapshot-agent.md)를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password**을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
+2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication** 에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password** 에 [복제 스냅숏 에이전트](../../relational-databases/replication/agents/replication-snapshot-agent.md)를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password** 을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
@@ -140,7 +142,7 @@ ms.locfileid: "54131433"
   
 1.  [sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
-2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication**에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password**에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password**을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
+2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication** 에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password** 을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
@@ -153,18 +155,18 @@ ms.locfileid: "54131433"
   
 6.  5단계에서 얻은 **snapshot_jobid** 의 값을 **uniqueidentifier**로 변환합니다.  
   
-7.  **msdb** 데이터베이스의 게시자에서 **@job_id**에 6단계에서 얻은 변환된 값을 지정하고 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 실행합니다.  
+7.  **msdb** 데이터베이스의 게시자에서 **@job_id** 에 6단계에서 얻은 변환된 값을 지정하고 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 실행합니다.  
   
-8.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. **@publication**에 1단계의 게시 이름을, **@suser_sname**([SUSER_SNAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)이 필터 절에 사용된 경우) 또는 **@host_name**([HOST_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)이 필터 절에 사용된 경우)에 파티션을 정의하는 데 사용되는 값을 지정합니다.  
+8.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 1단계의 게시 이름을, **@suser_sname** ([SUSER_SNAME&#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)이 필터 절에 사용된 경우) 또는 **@host_name** ([HOST_NAME&#40;Transact-SQL&#41;](../../t-sql/functions/host-name-transact-sql.md)이 필터 절에 사용된 경우)에 파티션을 정의하는 데 사용되는 값을 지정합니다.  
   
-9. 게시 데이터베이스의 게시자에서 [sp_adddynamicsnapshot_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)을 실행합니다. **@publication**에 1단계의 게시 이름을 지정하고 8단계의 **@suser_sname** 또는 **@host_name** 값, 그리고 작업 일정을 지정합니다. 이렇게 하면 지정된 파티션에 대해 매개 변수가 있는 스냅숏을 생성하는 작업이 만들어집니다. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
+9. 게시 데이터베이스의 게시자에서 [sp_adddynamicsnapshot_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)을 실행합니다. **@publication** 에 1단계의 게시 이름을 지정하고 8단계의 **@suser_sname** 또는 **@host_name** 값, 그리고 작업 일정을 지정합니다. 이렇게 하면 지정된 파티션에 대해 매개 변수가 있는 스냅숏을 생성하는 작업이 만들어집니다. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
     > [!NOTE]  
     >  이 작업은 2단계에서 정의한 초기 스냅숏 작업과 동일한 Windows 계정을 사용하여 실행됩니다. 매개 변수가 있는 스냅숏 작업과 관련 데이터 파티션을 제거하려면 [sp_dropdynamicsnapshot_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)을 실행합니다.  
   
 10. 게시 데이터베이스의 게시자에서 1단계의 **@publication** 값과 8단계의 **@suser_sname** 또는 **@host_name** 값을 지정하여 [sp_helpmergepartition&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)을 실행합니다. 결과 집합에서 **dynamic_snapshot_jobid** 값을 확인합니다.  
   
-11. **msdb** 데이터베이스의 배포자에서 **@job_id**에 9단계에서 얻은 값을 지정하여 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 실행합니다. 이렇게 하면 파티션에 대한 매개 변수가 있는 스냅숏 작업이 시작됩니다.  
+11. **msdb** 데이터베이스의 배포자에서 **@job_id** 에 9단계에서 얻은 값을 지정하여 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 실행합니다. 이렇게 하면 파티션에 대한 매개 변수가 있는 스냅숏 작업이 시작됩니다.  
   
 12. 8-11단계를 반복하여 각 구독에 대해 분할된 스냅숏을 생성합니다.  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54131433"
   
 1.  [sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
-2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication**에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password**에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password**을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
+2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **@publication** 에 1단계에서 사용된 게시 이름을, **@job_login** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** 에 1단계에 사용된 게시 이름, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 에 **@publisher_password** 을 참조하세요. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다. 초기 스냅숏을 생성하고 스냅숏 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)를 참조하세요.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
@@ -305,7 +307,7 @@ PAUSE
   
     -   <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>에 대해 실행할 최대 동적 스냅숏 작업 수. 구독자가 스냅숏 요청을 언제든지 시작할 수 있으므로 이 속성은 여러 구독자가 분할된 스냅숏을 동시에 요청할 경우 동시에 실행 가능한 스냅숏 에이전트 작업 수를 제한합니다. 최대 작업 수가 실행되고 있으면 새로 추가된 분할된 스냅숏 요청은 실행 중인 작업 중 하나가 완료될 때까지 지연됩니다.  
   
-    -   비트 논리 OR 연산자(Visual C#의 경우**|** , Visual Basic의 경우 **Or** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 참조하세요.  
+    -   비트 논리 OR 연산자(Visual C#의 경우 **|** , Visual Basic의 경우 **Or** )를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot> 에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 참조하세요.  
   
     -   스냅숏 에이전트가 실행되는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 의 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드.  
   

@@ -15,12 +15,12 @@ ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ec0db9af18be44617103b15c8c66c40ef695f3d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124513"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585812"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,9 @@ ms.locfileid: "54124513"
     2.  기본으로 제공되는 스냅숏 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
 1.  **데이터 파티션** 페이지의 표에서 파티션을 선택합니다.  
@@ -102,11 +104,11 @@ ms.locfileid: "54124513"
   
 #### <a name="to-view-information-on-existing-partitions"></a>기존 파티션의 정보를 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)을 실행합니다. **@publication**에 게시의 이름을 지정합니다. (옵션) 단일 필터링 조건을 기준으로 한 정보만 반환되도록 하려면 **@suser_sname** 또는 **@host_name** 을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정합니다. (옵션) 단일 필터링 조건을 기준으로 한 정보만 반환되도록 하려면 **@suser_sname** 또는 **@host_name** 을 지정합니다.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>새 파티션을 정의하고 분할된 새 스냅숏을 생성하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. **@publication**에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
     -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
   
@@ -116,7 +118,7 @@ ms.locfileid: "54124513"
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)을 실행합니다. **@publication**에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
     -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
   

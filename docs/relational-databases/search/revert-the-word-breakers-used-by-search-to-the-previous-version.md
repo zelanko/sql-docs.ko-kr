@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e2d5c2e408b6899520aa3ec1185808ef6b0c2d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a23a4a5cab2e5528b30b4887c5fe15e5b7e0c95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716640"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582057"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ms.locfileid: "62716640"
     >  이 변경 사항은 현재 버전과 이전 버전의 NaturalLanguage6.dll을 사용하는 모든 언어에 적용됩니다.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="nl6nl6restore"></a> 현재 구성 요소를 복원하려면  
   
 1.  NaturalLanguage6.dll의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 백업한 위치로 이동합니다.  

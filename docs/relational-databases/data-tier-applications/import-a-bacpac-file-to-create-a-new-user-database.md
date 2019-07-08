@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5343d744d5b8be25a51ad48ec5ad797208a2643c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590687"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580192"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53590687"
 1.  DAC 배포 시 DAC 패키지 파일의 정의로부터 새로운 DAC가 만들어지는 것과 마찬가지로, 가져오기 프로세스에서는 내보내기 파일에 저장된 DAC 정의를 사용하여 새 DAC와 관련 데이터베이스가 만들어집니다.  
   
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
  DAC를 데이터베이스 엔진의 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 애플리케이션** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 애플리케이션**세부 정보 페이지입니다.  
   
@@ -61,7 +63,7 @@ ms.locfileid: "53590687"
 ## <a name="security"></a>보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC 내보내기 파일에 저장됩니다. 파일을 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버를 통하거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있는 로그인을 통해서만 DAC를 가져올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>데이터 계층 애플리케이션 가져오기 마법사 사용  

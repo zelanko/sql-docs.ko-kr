@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40a543a8b95853cacfb00f284e916ca216cd57b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f45e0cd36dd858105f1eb6dd01ed57c0b8ae77d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759227"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580035"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,15 @@ ms.locfileid: "47759227"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에서 아티클을 삭제하려면  
   
-1.  [sp_droparticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)을 실행하여 **@article**로 지정된 아티클을 **@publication**으로 지정된 게시에서 삭제합니다. **@force_invalidate_snapshot**에 값 **1**을 지정합니다.  
+1.  [sp_droparticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)을 실행하여 **@article** 로 지정된 아티클을 **@publication** 으로 지정된 게시에서 삭제합니다. **@force_invalidate_snapshot** 에 값 **1**을 지정합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>병합 게시에서 아티클을 삭제하려면  
   
-1.  [sp_dropmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)을 실행하여 **@article**로 지정된 아티클을 **@publication**으로 지정된 게시에서 삭제합니다. 필요한 경우 **@force_invalidate_snapshot** 값을 **@force_invalidate_snapshot** 을 지정하고 **@force_invalidate_snapshot** 값을 **@force_reinit_subscription**를 참조하세요.  
+1.  [sp_dropmergearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)을 실행하여 **@article** 로 지정된 아티클을 **@publication** 으로 지정된 게시에서 삭제합니다. 필요한 경우 **@force_invalidate_snapshot** 값을 **@force_invalidate_snapshot** 을 지정하고 **@force_invalidate_snapshot** 값을 **@force_reinit_subscription** 를 참조하세요.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   

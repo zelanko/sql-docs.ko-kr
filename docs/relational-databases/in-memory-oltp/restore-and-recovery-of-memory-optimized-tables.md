@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671322"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582983"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 최적화 테이블 복원 및 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "51671322"
     디스크 기반 테이블과 메모리 최적화 테이블에 대한 이전 작업이 완료되면 데이터베이스에 액세스할 수 있습니다.  
   
 3.  **실행 취소**. 이 단계에서는 커밋되지 않은 트랜잭션이 롤백됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>로드 시간 향상을 위한 프로세스
 메모리 최적화 테이블을 메모리에 로드하면 RTO(복구 시간 목표)의 성능에 영향을 줄 수 있습니다. 데이터 및 델타 파일에서 메모리 최적화 데이터를 로드하는 시간을 개선하기 위해 메모리 내 OLTP 엔진은 다음과 같이 데이터/델타 파일을 병렬로 로드합니다.  
   

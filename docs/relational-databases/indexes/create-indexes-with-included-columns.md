@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539717"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492871"
 ---
 # <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "52539717"
   이 항목에서는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비클러스터형 인덱스의 기능을 확장하도록 포괄 열 또는 키가 아닌 열을 추가하는 방법에 대해 설명합니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
   
 -   키가 아닌 열은 인덱스 키 열로 사용할 수 없는 데이터 형식입니다.  
-  
 -   인덱스 키 열의 수 또는 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 키가 아닌 열을 고려하지 않습니다.  
   
  쿼리의 모든 열이 키 열 또는 키가 아닌 열로 인덱스에 포함되면 키가 아닌 열이 있는 인덱스는 쿼리 성능을 상당히 향상시킬 수 있습니다. 성능이 향상되는 이유는 쿼리 최적화 프로그램이 테이블 또는 클러스터형 인덱스 데이터에 액세스하지 않고 인덱스 내에서 모든 열 값을 찾을 수 있으므로 디스크 I/O 작업을 줄어들기 때문입니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "52539717"
 > [!NOTE]  
 > 인덱스에 쿼리가 참조하는 모든 열이 들어 있으면 일반적으로 이 인덱스는 *쿼리를 포함*한다고 합니다.  
    
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="DesignRecs"></a> 디자인 권장 구성  
   
@@ -71,7 +70,7 @@ ms.locfileid: "52539717"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

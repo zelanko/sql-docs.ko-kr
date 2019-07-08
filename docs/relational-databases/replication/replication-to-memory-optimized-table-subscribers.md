@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f2b2a7a957bd964b52f4dcda847de84cdef3cbc0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129513"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581264"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "54129513"
 4.  스냅숏 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 5.  이제 새 구독을 만듭니다. **새 구독 마법사** 에서 **메모리 액세스에 최적화된 구독** 을 **true**로 설정합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  메모리 액세스에 최적화된 테이블이 이제 게시자로부터 업데이트 수신을 시작합니다.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>기존 트랜잭션 복제 다시 구성  
@@ -56,7 +58,7 @@ ms.locfileid: "54129513"
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 구성하는 경우 **sp_addsubscription** 저장 프로시저의 **@memory_optimized** 매개 변수를 true로 설정합니다.  
   
-2.  	[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 아티클 속성으로 이동한 다음 **메모리 최적화 사용** 을 true로 설정합니다.  
+2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 아티클 속성으로 이동한 다음 **메모리 최적화 사용** 을 true로 설정합니다.  
   
      [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **@schema_option** 매개 변수를   
     **0x40000000000**으로 설정합니다.  

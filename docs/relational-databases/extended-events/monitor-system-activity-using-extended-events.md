@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e44cb9ed2c5009dffce1373c57d512b8e578d025
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 584617a0932e3b2941eb8dca153caee01512a147
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478128"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585918"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>확장 이벤트를 사용하여 시스템 작업 모니터링
 
@@ -108,7 +108,9 @@ ms.locfileid: "58478128"
     ```  
   
 8.  다음 문을 실행하여 이벤트 세션을 중지하고 서버에서 제거합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     ALTER EVENT SESSION test0  
     ON SERVER  

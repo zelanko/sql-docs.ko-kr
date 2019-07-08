@@ -19,12 +19,12 @@ ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71b50aa6c27b2328833685051bcc31917f584cb3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 51bdd4d5a368bbf5b5991c57c37a2aa95a89fb97
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558900"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583400"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 스파스 파일의 크기 보기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,14 @@ ms.locfileid: "51558900"
 ## <a name="verify-that-a-database-file-is-a-sparse-file"></a>데이터베이스 파일이 스파스 파일인지 확인  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 다음을 수행합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
   
-     데이터베이스 스냅숏의 **sys.database_files** 또는 **sys.master_files** 에서 **is_sparse**열을 선택합니다. 이 값은 다음과 같이 파일이 스파스 파일인지 여부를 나타냅니다.  
+     1 = File is a sparse file.  
   
-     1 = 스파스 파일입니다.  
-  
-     0 = 스파스 파일이 아닙니다.  
+     0 = File is not a sparse file.  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>스파스 파일의 실제 크기 확인  
   

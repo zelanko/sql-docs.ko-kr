@@ -19,12 +19,12 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08abccdf7f10b2ffea795ba53a6db6fbf51a788e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e3c456dfafae92bec2cd34de1e5b9e33857d3c8e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558381"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580568"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51558381"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -52,7 +52,7 @@ ms.locfileid: "51558381"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -68,7 +68,9 @@ ms.locfileid: "51558381"
 4.  **데이터베이스 파일** 표에서 삭제할 파일을 선택하고 **제거**를 클릭합니다.  
   
 5.  **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일을 삭제하려면  

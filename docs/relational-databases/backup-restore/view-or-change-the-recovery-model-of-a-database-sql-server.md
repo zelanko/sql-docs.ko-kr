@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae91654a04921340b043518d6d5cf3363ad6a1b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65560067"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581783"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,9 @@ ms.locfileid: "65560067"
 6.  필요에 따라 복구 모델을 변경하려면 다른 모델 목록을 선택합니다. **전체**, **대량 로그**또는 **단순**을 선택할 수 있습니다.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-recovery-model"></a>복구 모델을 보려면  

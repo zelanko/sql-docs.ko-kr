@@ -11,12 +11,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: bd863e5869e820d07e67baf6094fe00a5b9b4a56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414148"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580786"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53414148"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53414148"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -85,7 +85,9 @@ ms.locfileid: "53414148"
 3.  삭제할 파티션 함수를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 4.  **개체 삭제** 대화 상자에서 올바른 파티선 함수를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>단일 파티션을 두 개의 파티션으로 분할하려면  

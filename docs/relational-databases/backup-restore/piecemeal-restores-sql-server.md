@@ -16,12 +16,12 @@ ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40062550cba47e7de36ccb5d389bae15853da026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640813"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581008"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,9 @@ ms.locfileid: "62640813"
 3.  나중에 backup_1 부분 백업에서 읽기/쓰기 보조 파일 그룹의 파일을 WITH NORECOVERY 옵션을 사용하여 복원  
   
 4.  데이터를 원래 복구 지점으로 복원하기 위한 원래 증분 복원으로 다른 모든 백업이 복원된 후 이어지는 차등 백업  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

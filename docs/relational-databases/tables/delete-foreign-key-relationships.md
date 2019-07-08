@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ebe7fa94a66482be35026b2049bdc57e357d9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac28860d9aabbf9a0d767737436345adeed00002
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515999"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580688"
 ---
 # <a name="delete-foreign-key-relationships"></a>외래 키 관계 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "62515999"
 2.  제약 조건을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>FOREIGN KEY 제약 조건을 삭제하려면  

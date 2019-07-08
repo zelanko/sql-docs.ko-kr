@@ -16,12 +16,12 @@ ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67866652e7c010a00018c394677c9d1e7e1cb8d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 128dbeaf9ae2e46c8b0376a981ab0d2c9c3dafdc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62508446"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580055"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,9 @@ ms.locfileid: "62508446"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 6.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-a-join-filter"></a>조인 필터를 수정하려면  
   
 1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  

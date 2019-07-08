@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579807"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "57974132"
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 2.  **서버 속성** 대화 상자에서 **고급** 페이지를 클릭하여 전체 텍스트 검색에 대한 서버 정보를 봅니다. 전체 텍스트 속성은 다음과 같습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **기본 전체 텍스트 언어**  
   
          전체 텍스트 인덱싱된 열에 대한 기본 언어를 지정합니다. 전체 텍스트 인덱싱된 데이터의 언어 분석은 데이터의 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 표시되는 설정에 해당하는 언어에 대한 자세한 내용은 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)를 참조하세요.  

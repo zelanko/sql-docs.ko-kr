@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025464"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584306"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,9 @@ AdventureWorks_snapshot_evening
 1.  원본 데이터베이스의 현재 크기를 기준으로 데이터베이스 스냅숏을 저장할 수 있는 충분한 디스크 공간이 있는지 확인합니다. 데이터베이스 스냅숏의 최대 크기는 스냅숏을 생성할 때의 원본 데이터베이스 크기입니다. 자세한 내용은 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.  
   
 2.  AS SNAPSHOT OF 절을 사용하여 파일에서 CREATE DATABASE 문을 실행합니다. 스냅숏을 만들려면 원본 데이터베이스를 구성하는 모든 데이터베이스 파일의 논리적 이름을 지정해야 합니다. 구문은 다음과 같습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      CREATE DATABASE *database_snapshot_name*  
   
      ON  
@@ -116,12 +118,12 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     여기서 *source_**database_name*은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name*은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name*은 데이터베이스를 되돌릴 스냅숏의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)을 사용해서만 만들 수 있습니다.  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  데이터베이스 스냅숏을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
+    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
   
-###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
 > [!NOTE]  
 >  이 예에서 사용된 `.ss` 확장명은 임의로 지정됩니다.  

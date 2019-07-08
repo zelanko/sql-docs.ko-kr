@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581195"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492845"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>웹 포털에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
   보고서 관리자는 보고서 보기 및 관리 기능을 제공하는 웹 기반 도구입니다. 이 도구는 보고서 서버를 설치할 때 함께 설치됩니다. 보고서 관리자를 열려면 브라우저 창에 보고서 관리자 URL을 입력하십시오. 브라우저 요구 사항에 대한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요. 보고서 서버에서 보고서 관리자 URL을 구성하는 방법에 대한 자세한 내용은 시스템 관리자에게 문의하십시오. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)을 참조하세요.  
@@ -40,8 +40,8 @@ ms.locfileid: "65581195"
 ## <a name="opening-a-report"></a>보고서 열기  
  보고서를 찾은 다음 보고서 이름을 클릭하면 해당 보고서가 열립니다. 보고서는 HTML로 렌더링되고 보고서 관리자의 내용 페이지에 표시됩니다. 보고서는 항상 브라우저 세션에서 캐시되기 때문에 보고서를 연 경우 **뒤로** 단추를 클릭하여 보고서로 되돌아갈 수 있습니다. 보고서 실행을 위해 사용자 이름과 암호를 입력해야 하는 경우에도 마찬가지입니다. 렌더링된 보고서를 완전히 닫으려면 브라우저를 닫아야 합니다.  
   
- 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서 열기에 대한 자세한 내용은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
-  
+ 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 
+
  보고서 작성기에서 직접 보고서 서버의 보고서를 탐색하거나 열 수도 있습니다. 
   
 ## <a name="to-search-for-items"></a>항목을 검색하려면  

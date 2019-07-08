@@ -22,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f734365cbfd8ca0b2ac1114853b0b412cb0e6d7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999649"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580983"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,6 +67,9 @@ ms.locfileid: "62999649"
 2.  **데이터베이스** 노드를 마우스 오른쪽 단추로 클릭한 다음, **데이터 계층 애플리케이션 배포…** 를 선택합니다.  
   
 3.  마법사 대화 상자를 완료하고 마침을 클릭합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 아래 마법사 페이지 중 일부에 대한 자세한 정보: 
      
 ### <a name="select-dac-package-page"></a>DAC 패키지 선택 페이지  

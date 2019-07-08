@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf3921cae772b278b66a39fa8241895d2e582c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506931"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585266"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>데이터베이스 메일로 테스트 이메일 보내기  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "66506931"
     sent_status 열은 테스트 이메일 메시지를 보냈는지 여부를 표시합니다.
 
 1. 오류가 발생한 경우 다음 명령문을 실행하여 오류 메시지를 확인합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

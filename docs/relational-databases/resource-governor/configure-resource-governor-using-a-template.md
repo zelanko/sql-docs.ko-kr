@@ -12,12 +12,12 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23b539444f2de609053d530df85edafcc58ba1f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689746"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582417"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>템플릿을 사용하여 리소스 관리자 구성
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,10 +27,10 @@ ms.locfileid: "55689746"
   
 -   **작업 그룹을 만들려면**  [템플릿을 사용합니다.](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계에 따라 리소스 풀과 해당 리소스 풀의 작업 그룹을 만드는 템플릿을 열고 수정할 수 있습니다. 또한 이 템플릿을 사용하여 새 연결을 기본 그룹 또는 만든 작업 그룹으로 라우팅하는 분류자 사용자 정의 함수를 만들 수도 있습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  템플릿에서 리소스 관리자 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ConfRGTemplate"></a> 템플릿을 사용하여 리소스 관리자 구성  
@@ -47,7 +47,9 @@ ms.locfileid: "55689746"
 5.  템플릿의 변경 내용을 저장하려면 **확인**을 클릭합니다.  
   
 6.  쿼리를 실행하려면 **실행**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   

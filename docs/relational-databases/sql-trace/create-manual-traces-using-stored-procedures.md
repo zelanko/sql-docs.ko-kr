@@ -11,12 +11,12 @@ ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e754837f27d34877df48663f57e7f9d8086b206
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f60959f3aebc7d6ff05d38f209dda48d90a6be59
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570872"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585717"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>저장 프로시저를 사용하여 수동 추적 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "51570872"
 2.  이벤트 필터를 지정합니다. 자세한 내용은 [추적 필터 설정&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md)을 참조하세요.  
   
 3.  **sp_trace_create**로 캡처된 이벤트 데이터에 대한 대상을 지정합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   
  **추적 정의 기본값 설정**  

@@ -1,9 +1,9 @@
 ---
 title: SESSION_CONTEXT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/22/2016
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -18,15 +18,15 @@ ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d875024e6f227c6ba0d65ab0346092c02e860385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59aa8de6752ead8e8b8dbef92035ad59e5995307
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945241"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559460"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   현재 세션 컨텍스트에서 지정된 키의 값을 반환합니다. 이 값은 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 프로시저를 사용하여 설정됩니다.  
   

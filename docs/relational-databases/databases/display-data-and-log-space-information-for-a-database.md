@@ -21,23 +21,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 865c830ee2a4afaffab4fc22f73143099cfaa79d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 19ce7bd0484747d4adbaaa472a0ca274625b9b56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558470"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585316"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 대한 데이터와 로그 공간 정보를 표시하는 방법에 대해 설명합니다.  
 
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **sp_spaceused** 를 실행할 수 있는 사용 권한은 **public** 역할에 부여됩니다. **db_owner** 고정 데이터베이스 역할의 멤버만 **@updateusage** 매개 변수를 지정할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -49,7 +49,9 @@ ms.locfileid: "51558470"
 2.  **데이터베이스**를 확장합니다.  
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서**, **표준 보고서**를 차례로 가리킨 다음 **디스크 사용**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-display-data-and-log-space-information-for-a-database-by-using-spspaceused"></a>sp_spaceused를 사용하여 데이터베이스에 대한 데이터 및 로그 공간 정보를 표시하려면  

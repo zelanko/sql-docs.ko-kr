@@ -23,12 +23,12 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 978588df2388f0731bccff024b46cc134e549688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 735df8e0e0aca995fd96e38da407f1acafc1f52d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027032"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586027"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "63027032"
     -   **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **일반** 탭에서 기존 관리 데이터 웨어하우스와 이 관리 데이터 웨어하우스가 설치된 서버를 지정합니다.  
   
 6.  데이터 수집기를 사용하는 데이터베이스 인스턴스가 모두 구성되어 공유 관리 데이터 웨어하우스에 데이터를 업로드할 때까지 5단계를 반복합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ####  <a name="Wizard"></a> 관리 데이터 웨어하우스 구성 마법사  
  **시작 페이지**  
   

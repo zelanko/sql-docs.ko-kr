@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513030"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579803"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 열에 전체 텍스트 검색 사용
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   XML 값의 내용을 인덱싱하지만 XML 태그는 무시하는 전체 텍스트 인덱스를 XML 열에 만들 수 있습니다. 요소 태그는 토큰 경계로 사용됩니다. 다음 항목이 인덱싱됩니다.  
   
 -   XML 요소의 내용입니다.  
@@ -34,11 +36,13 @@ ms.locfileid: "58513030"
 1.  먼저 SQL 전체 텍스트 검색을 사용하여 원하는 XML 값을 필터링합니다.  
   
 2.  그런 다음 XML 열에서 XML 인덱스를 사용하는 해당 XML 값을 쿼리합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>예: 전체 텍스트 검색과 XML 쿼리 조합  
  XML 열에 전체 텍스트 인덱스를 만든 후 다음 쿼리는 XML 값에 책 제목 중 "custom"이라는 단어가 포함되어 있는지 확인합니다.  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>예: 형태소 분석을 사용하여 XML 값에서 전체 텍스트 검색  
  이전 예에서 수행된 XQuery **contains()** 검사는 일반적으로 제거할 수 없습니다. 다음 쿼리를 살펴보십시오.  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   

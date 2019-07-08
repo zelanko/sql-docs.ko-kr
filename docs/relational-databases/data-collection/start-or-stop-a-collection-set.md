@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e425f889826a5fc9464ee8c85c88ab05043f4b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62695005"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580287"
 ---
 # <a name="start-or-stop-a-collection-set"></a>컬렉션 집합 시작 또는 중지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +70,10 @@ ms.locfileid: "62695005"
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
 2.  시작할 컬렉션 집합을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 집합 시작**을 클릭합니다.  
-  
-     메시지 상자에 이 동작의 결과가 표시되며, 컬렉션 집합의 아이콘에 초록색 화살표가 표시되어 컬렉션 집합이 시작되었음을 나타냅니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     A message box displays the results of this action, and a green arrow on the icon for the collection set indicates that the collection set has started.  
   
 #### <a name="to-stop-a-collection-set"></a>컬렉션 집합을 중지하려면  
   

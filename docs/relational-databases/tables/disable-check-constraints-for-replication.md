@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894de6f944f8e47c90cdd1338c694ab251d23d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 557136026e518d54d81bda44b9694f9fe86e7c9d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848947"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580657"
 ---
 # <a name="disable-check-constraints-for-replication"></a>복제할 때 CHECK 제약 조건 해제
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47848947"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -50,7 +50,9 @@ ms.locfileid: "47848947"
 3.  **CHECK 제약 조건** 대화 상자의 **테이블 디자이너**에서 **복제에 적용** 에 대해 **아니요**를 선택합니다.  
   
 4.  **닫기**를 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-disable-a-check-constraint-for-replication"></a>복제할 때 CHECK 제약 조건을 비활성화하려면  

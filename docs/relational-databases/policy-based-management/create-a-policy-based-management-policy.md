@@ -13,12 +13,12 @@ ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd765a3ae978c695d0a82e97edaca559f315d84b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63010168"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581656"
 ---
 # <a name="create-a-policy-based-management-policy"></a>정책 기반 관리 정책 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,5 +70,6 @@ ms.locfileid: "63010168"
      **새 정책 만들기** 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하십시오.  
   
 12. 완료되면 **확인**을 클릭합니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

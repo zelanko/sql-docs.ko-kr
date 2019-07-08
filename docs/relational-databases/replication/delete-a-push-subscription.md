@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 463a6516b70c80d9e248ddb1502f34129a8ab0e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70c609c6ace0eb56d3afc703d89e2dea25191210
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453638"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579408"
 ---
 # <a name="delete-a-push-subscription"></a>밀어넣기 구독 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "63453638"
 4.  구독을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 5.  확인 대화 상자에서 구독 정보를 삭제할 구독자에 연결할지 여부를 선택합니다. **구독자에 연결** 확인란의 선택을 취소한 경우 나중에 구독자에 연결하여 해당 정보를 삭제해야 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>구독자에서 밀어넣기 구독을 삭제하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구독자에 연결한 다음 해당 서버 노드를 확장합니다.  

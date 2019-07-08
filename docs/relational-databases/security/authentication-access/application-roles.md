@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715820"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581086"
 ---
 # <a name="application-roles"></a>애플리케이션 역할
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715820"
 4.  애플리케이션 역할 이름과 암호가 올바르면 애플리케이션 역할이 활성화됩니다.  
   
 5.  그러면 연결에서 사용자의 사용 권한이 삭제되고 애플리케이션 역할의 사용 권한이 사용됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  애플리케이션 역할을 통해 얻은 사용 권한은 연결 기간 동안 유효한 상태로 남습니다.  
   
  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 애플리케이션 역할을 시작한 후 사용자가 자신의 원래 보안 컨텍스트를 다시 얻으려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 연결을 끊고 다시 연결해야 합니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 **sp_setapprole** 에서 쿠키를 만들 수 있는 옵션을 제공합니다. 이 쿠키에는 애플리케이션 역할을 활성화하기 전 컨텍스트 정보가 들어 있습니다. 이 쿠키를 **sp_unsetapprole** 에서 사용하여 원래 컨텍스트로 세션을 되돌릴 수 있습니다. 이 새 옵션에 대한 자세한 내용과 예를 보려면 [sp_setapprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다.  

@@ -13,12 +13,12 @@ ms.assetid: 428908b8-fb6a-4d0c-8339-ee133e23aad2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 160899c8443d630038a892860a21a735c4b9e673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ab72e17446b2dde049504643c80171c0731dd6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610141"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580998"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 집합 로그 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "47610141"
      **로그 파일 뷰어**가 열립니다. 각 컬렉션 집합에 대한 모든 로그 파일이 뷰어의 **데이터 컬렉션** 노드 아래에 미리 선택되어 나열됩니다.  
   
 3.  특정 컬렉션 집합 로그를 보려면 확인하지 않으려는 로그가 있는 각 컬렉션 집합 옆의 확인란 선택을 취소합니다. 그러면 해당 컬렉션 집합에 대한 로그 정보가 **로그 파일 뷰어** 세부 정보 창에서 제거됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-view-a-specific-collection-set-log-file"></a>특정 컬렉션 집합 로그 파일을 보려면  
   
 1.  개체 탐색기에서 **관리** 폴더를 연 다음 **데이터 컬렉션**을 확장합니다.  

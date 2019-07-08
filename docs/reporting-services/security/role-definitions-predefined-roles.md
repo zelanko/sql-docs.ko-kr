@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edb599f3ae735ddc07755f73499a3e71d0c20746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270235"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500193"
 ---
 # <a name="role-definitions---predefined-roles"></a>역할 정의 - 미리 정의된 역할
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 미리 정의된 역할과 함께 설치됩니다. 미리 정의된 각 역할은 관련 태스크 모음을 설명합니다. 미리 정의된 역할에 그룹 및 사용자 계정을 할당하여 보고서 서버 작업에 즉시 액세스하도록 할 수 있습니다.  
   
 ## <a name="how-to-use-predefined-roles"></a>미리 정의된 역할을 사용하는 방법  
   
-1. 미리 정의된 역할을 검토하여 이를 그대로 사용할 수 있는지 확인합니다. 태스크를 조정하거나 추가 역할을 정의해야 하는 경우 특정 역할에 사용자를 할당하기 전에 이 작업을 수행해야 합니다.  
+1. 미리 정의된 역할을 검토하여 이를 그대로 사용할 수 있는지 확인합니다. 태스크를 조정하거나 추가 역할을 정의해야 하는 경우 특정 역할에 사용자를 할당하기 전에 이 작업을 수행해야 합니다. 사용자 지정 역할을 만들거나 편집 하려면 SQL Server Management Studio를 사용 합니다. 자세한 내용은 [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)을 참조하세요.
   
 2. 보고서 서버에 대한 액세스 권한이 필요한 사용자 및 그룹과 필요한 수준을 확인합니다. **브라우저** 역할이나 **보고서 작성기** 역할에 대부분의 사용자를 할당해야 합니다. **게시자** 역할에는 소수의 사용자를 할당하고 **내용 관리자**에는 극소수의 사용자만 할당해야 합니다.  
 

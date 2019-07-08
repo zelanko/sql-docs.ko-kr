@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 100e08cc7dcb83ad8e65b86424acb9aba4d62120
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822813"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586324"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
 
@@ -58,8 +58,9 @@ ms.locfileid: "66822813"
 12. **실행**을 클릭합니다.  
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="best"></a> 모범 사례  
   
 ###  <a name="config"></a> 물리적 구성 및 유지 관리  

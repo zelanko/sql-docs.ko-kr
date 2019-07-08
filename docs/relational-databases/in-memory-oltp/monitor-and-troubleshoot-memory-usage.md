@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 63fa87597bfb1f98fa25342d42cf5a32d0eef024
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712005"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581836"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "52712005"
 2.  **새 쿼리**를 클릭합니다.  
   
 3.  새 쿼리 창에 이 코드를 붙여 넣고 각 섹션을 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  

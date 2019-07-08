@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361593"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556918"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY 서버 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  서버에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  CASCADE  
- 사용 권한이 거부된 보안 주체에게 사용 권한을 부여 받은 다른 보안 주체의 사용 권한도 거부됨을 나타냅니다.  
+ 지정된 보안 주체와 이 보안 주체가 사용 권한을 부여한 다른 모든 보안 주체에 대해 사용 권한이 거부됨을 나타냅니다. 보안 주체에 GRANT OPTION 권한이 있는 경우에 필요합니다. 
   
  TO \<server_principal>  
  사용 권한이 거부된 보안 주체를 지정합니다.  
   
  AS \<grantor_principal >  
- 이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.  
+ 이 쿼리를 실행하는 보안 주체가 사용 권한을 거부하는 권한을 부여할 수 있는 다른 보안 주체를 지정합니다.
+권한의 거부자로서 기록된 보안 주체가 해당 문을 실행하는 사용자 이외의 다른 보안 주체여야 한다는 것을 표시하려면 AS 주절을 사용합니다. 예를 들어 사용자 Mary가 principal_id 12이고 사용자 Raul은 principal 15라고 가정해 보겠습니다. Mary는 `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`을 실행합니다. 이제 sys.database_permissions 테이블은 해당 문을 실제로 사용자 13(Mary)가 실행했지만 거부 문의 grantor_prinicpal_id가 15(Raul)임을 표시합니다.
+  
+이 명령문에 AS를 사용한다고 해서 다른 사용자로 가장하는 기능을 의미하는 것은 아닙니다.    
   
  *SQL_Server_login*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
@@ -142,12 +145,12 @@ DENY permission [ ,...n ]
  **SELECT ALL USER SECURABLES** 권한  
  허용하면 감사자 등으로 로그인하여 사용자 연결이 가능한 모든 데이터베이스에서 데이터를 볼 수 있습니다. 거부하면 개체가 **sys** 스키마에 있지 않는 한 개체에 대한 액세스를 차단합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한 또는 보안 개체의 소유권이 필요합니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>1. SQL Server 로그인 및 이 로그인이 사용 권한을 다시 부여한 보안 주체에 대해 CONNECT SQL 권한 거부  
+### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>1\. SQL Server 로그인 및 이 로그인이 사용 권한을 다시 부여한 보안 주체에 대해 CONNECT SQL 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONNECT SQL` 및 이 사용자가 사용 권한을 부여한 보안 주체에 대해 `Annika` 권한을 거부합니다.  
   
 ```  
@@ -156,7 +159,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>2. AS 옵션을 사용하여 SQL Server 로그인에 대해 CREATE ENDPOINT 권한 거부  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>2\. AS 옵션을 사용하여 SQL Server 로그인에 대해 CREATE ENDPOINT 권한 거부  
  다음 예에서는 사용자 `CREATE ENDPOINT`에 대해 `ArifS` 권한을 거부합니다. 이 예에서는 `AS` 옵션을 사용하여 이를 위해 실행 보안 주체가 권한을 부여할 수 있는 보안 주체로 `MandarP`를 지정합니다.  
   
 ```  

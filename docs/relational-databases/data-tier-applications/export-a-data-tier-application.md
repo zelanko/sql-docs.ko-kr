@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513825"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580278"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "52513825"
 1.  내보내기를 수행하면 DAC 추출 시 DAC 패키지 파일에 DAC 정의가 작성되듯이 내보내기 파일(BACPAC 파일)에 DAC 정의가 작성됩니다. 내보낸 DAC 정의에는 현재 데이터베이스의 모든 개체가 포함됩니다. DAC에서 원래 배포된 데이터베이스에 대해 내보내기 프로세스를 실행할 때 배포 후에 데이터베이스를 직접 변경한 경우 내보낸 정의는 원본 DAC에 정의된 개체 집합이 아니라 데이터베이스의 개체 집합과 일치합니다.  
   
 2.  보내기에서는 데이터베이스의 모든 테이블에서 데이터를 대량 복사한 다음 내보내기 파일에 통합합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  내보내기 프로세스에서는 DAC 버전을 1.0.0.0으로 설정하고 내보내기 파일의 DAC 설명을 빈 문자열로 설정합니다. 데이터베이스가 DAC에서 배포된 경우에는 내보내기 파일의 DAC 정의에 원본 DAC에 지정된 것과 동일한 이름이 포함되고, 그렇지 않은 경우에는 DAC 이름이 데이터베이스 이름으로 설정됩니다.  
   
 
@@ -50,13 +52,13 @@ ms.locfileid: "52513825"
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.
  
 Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 특정 테이블에 대해 VIEW DEFINITION 및 SELECT 권한을 부여해야 합니다.
 
   
-##  <a name="UsingDeployDACWizard"></a> 데이터 계층 응용 프로그램 내보내기 마법사 사용  
+##  <a name="UsingDeployDACWizard"></a> 데이터 계층 애플리케이션 내보내기 마법사 사용  
  **마법사를 사용하여 DAC를 내보내려면**  
   
 1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
@@ -117,8 +119,8 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
- **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
+##  <a name="NetApp"></a> .Net Framework 애플리케이션 사용  
+ **.Net Framework 애플리케이션에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
@@ -129,7 +131,7 @@ Azure SQL DB에서는 **각 데이터베이스에서** 모든 테이블 또는 �
 3.  **Export** 형식의 **Microsoft.SqlServer.Management.Dac.DacStore** 메서드를 사용하여 DAC를 내보냅니다. 내보낼 DAC의 이름과 내보내기 파일을 배치할 폴더의 경로를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [데이터 계층 애플리케이션](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   
   

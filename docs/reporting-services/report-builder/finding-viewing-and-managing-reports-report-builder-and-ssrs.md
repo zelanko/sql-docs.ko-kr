@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175630"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492863"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버 또는 SharePoint 사이트의 폴더를 탐색하여 보고서, 공유 데이터 원본, 모델 및 기타 관련 보고서 항목을 찾고 컴퓨터에서 로컬 보고서를 찾아볼 수 있습니다. 보고서를 쉽게 찾을 수 있도록 보고서 작성기에는 최근에 사용한 서버 및 사이트 목록이 유지되며 컴퓨터 파일 시스템의 바탕 화면, 내 문서 및 내 컴퓨터 폴더에 대한 직접 액세스 기능이 제공됩니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "66175630"
   
 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 애플리케이션의 입력으로 사용할 수도 있습니다. 보고서 내보내기 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.
   
- 보고서를 선택하여 실행하는 가장 쉬운 방법은 웹 포털을 연 다음, 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
+ 보고서를 선택하여 실행하는 가장 쉬운 방법은 웹 포털을 연 다음, 원하는 보고서를 검색하거나 직접 찾아가는 것입니다.  
   
  보고서를 실행한 후 새로 고치면 새 데이터가 표시됩니다.  
   

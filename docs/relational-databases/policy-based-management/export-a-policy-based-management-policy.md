@@ -13,12 +13,12 @@ ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6aee718961b0e9afb12de09651346d1686821adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7ac4da02b259779ef1027ad771f529ee918d12c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007604"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584916"
 ---
 # <a name="export-a-policy-based-management-policy"></a>정책 기반 관리 정책 내보내기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,5 +58,6 @@ ms.locfileid: "63007604"
 6.  **정책 내보내기** 대화 상자의 주소 표시줄에 파일의 경로와 이름을 입력합니다. 또는 이 대화 상자의 탐색 창에서 파일에 적합한 위치를 찾은 다음 **파일 이름** 상자에 XML 파일의 이름을 입력합니다.  
   
 7.  완료되면 **저장**을 클릭합니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

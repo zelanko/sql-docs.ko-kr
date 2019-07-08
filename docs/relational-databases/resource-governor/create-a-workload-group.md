@@ -13,12 +13,12 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 665e88f2b86276beb16acb043dd270d0a8cf6da5
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689836"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581827"
 ---
 # <a name="create-a-workload-group"></a>작업 그룹 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "55689836"
   
 -   **작업 그룹을 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
@@ -38,7 +38,7 @@ ms.locfileid: "55689836"
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  작업 그룹을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기  
@@ -57,7 +57,9 @@ ms.locfileid: "55689836"
 6.  기본 설정에서 변경하려는 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
 7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

@@ -14,12 +14,12 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 690e84fb754f7a50137ff6879bb8866127e2ed7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 683e916810766430d9fe1c26f5473b709bb82d0b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661105"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580137"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,8 @@ ms.locfileid: "62661105"
     연결된 서버 계정에 필요한 사용 권한에 대한 자세한 내용은 [여기에 링크 설명 입력](../../../relational-databases/replication/security/secure-the-subscriber.md)의 **지연 업데이트 구독**을 참조하세요.
 
 8. 마법사를 완료합니다.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>구독자에서 업데이트할 수 있는 구독 구성
 

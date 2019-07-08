@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: aebe81e430212a817e5ef07137a14a1453608b9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a60390a89b347f98b39a0a2dafcd40436965dc9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775472"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584652"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>SQL Server의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -81,7 +81,9 @@ ODBC 데이터 원본의 데이터를 쿼리하려면 외부 데이터를 참조
 
 1. **선택 사항:** 외부 테이블에 대한 통계를 만듭니다.
 
-    최적의 쿼리 성능을 위해서는 특히 조인, 필터 및 집계에 사용되는 외부 테이블 열에 대해 통계를 만드는 것이 좋습니다.
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    We recommend creating statistics on external table columns especially the ones used for joins, filters and aggregates,for optimal query performance.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

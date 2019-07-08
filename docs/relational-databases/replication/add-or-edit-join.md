@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665505"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585697"
 ---
 # <a name="add-or-edit-join"></a>조인 추가 또는 편집
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665505"
     -   기존 조인을 편집하는 경우 수동으로 편집해야 합니다.  
   
 3.  **조인 옵션을 지정하십시오.**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   필터링된 테이블에서 조인하는 열이 고유하면 **고유 키**를 선택합니다. 열이 고유하면 병합 프로세스에 특별한 성능 최적화 기능을 사용할 수 있습니다.  
   
         > [!CAUTION]  

@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242124"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579418"
 ---
 # <a name="file-restores-full-recovery-model"></a>파일 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242124"
      파일 백업 후에는 생성된 트랜잭션 로그 백업을 복원하여 데이터베이스와 일치하는 상태로 만들어야 합니다. 트랜잭션 로그 백업은 복원 파일에 적용된 변경 내용만 적용하므로 빨리 롤포워드할 수 있습니다. 손상되지 않은 파일은 복사되지 않고 롤포워드되므로 개별 파일 복원이 전체 데이터베이스 복원보다 나을 수 있습니다. 하지만 전체 로그 백업 체인은 읽기가 가능해야 합니다.  
   
 5.  데이터베이스를 복구합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  파일 백업은 지정 시간 이전의 시점으로 데이터베이스를 복원하는 데 사용될 수 있습니다. 이렇게 하려면 파일 백업의 전체 세트를 복원한 후 최근 복원된 파일 백업 다음에 있는 대상 지점에 이를 때까지 순서대로 트랜잭션 로그 백업을 복원해야 합니다. 지정 시간 복구에 대한 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   

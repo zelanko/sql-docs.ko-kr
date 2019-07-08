@@ -13,12 +13,12 @@ ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64f0c7006bdf5580eed6df4923ca13e8d11d33fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d77a587d943cac4844b48304d03c58c837947477
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094297"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580511"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "65094297"
     >  이 스크립트의 경우 C:\Data 디렉터리가 있어야 합니다.  
   
 3.  데이터베이스를 작성하려면 **실행**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>예제  
  다음 코드 예에서는 `Archive`라는 데이터베이스를 만듭니다. 이 데이터베이스는 3개의 파일 그룹 `PRIMARY`, `Arch1`및 `FileStreamGroup1`을 포함합니다. `PRIMARY` 및 `Arch1` 은 FILESTREAM 데이터를 포함할 수 없는 일반 파일 그룹이고, `FileStreamGroup1` 은 `FILESTREAM` 파일 그룹입니다.  
   

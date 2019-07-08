@@ -20,12 +20,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d16a118ccdf5714e0f4b5493c1c0d3266a1d33
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506381"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583736"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,9 @@ ms.locfileid: "62506381"
      **페이지**  
   
 7.  페이지 표에 나열된 페이지를 복원하려면 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  RESTORE DATABASE 문에서 페이지를 지정하려면 페이지를 포함하는 파일의 파일 ID와 해당 페이지의 페이지 ID가 필요합니다. 필요한 구문은 다음과 같습니다.  
   

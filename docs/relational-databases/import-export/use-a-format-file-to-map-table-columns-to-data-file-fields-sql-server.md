@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2858b789c9c6925c093812dc0818ac9f6604cb0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98b0c3beba33688943bdd767d29b0e9f7f0cefc4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946210"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579622"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,8 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 1.  행이 `myRemap.bcp`의 데이터와 순서가 동일하도록 서식 파일 행 순서를 다시 정렬합니다.
 2.  호스트 파일 필드 순서 값이 순차적인지 확인합니다.
 3.  마지막 서식 파일 행 다음에 캐리지 리턴이 있는지 확인합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 변경 내용을 비교합니다.     
 **이전**

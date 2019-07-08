@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514152"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584681"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ ON
 ### <a name="validating-the-last-synchronized-version"></a>마지막으로 동기화된 버전의 유효성 검사  
  변경 내용에 대한 정보는 제한된 시간 동안 유지 관리됩니다. 시간은 ALTER DATABASE의 일부로 지정할 수 있는 CHANGE_RETENTION 매개 변수로 제어됩니다.  
   
- CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 애플리케이션이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 애플리케이션의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 애플리케이션은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 애플리케이션이 CHANGETABLE(CHANGES ...)을 사용하여 변경 내용을 가져오려면 먼저 애플리케이션이 CHANGETABLE(CHANGES ...)에 전달하려고 하는 *last_synchronization_version*에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version* 의 값이 잘못된 경우 해당 응용 프로그램은 모든 데이터를 다시 초기화해야 합니다.  
+ CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 애플리케이션이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 애플리케이션의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 애플리케이션은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 애플리케이션이 CHANGETABLE(CHANGES ...)을 사용하여 변경 내용을 가져오려면 먼저 애플리케이션이 CHANGETABLE(CHANGES ...)에 전달하려고 하는 *last_synchronization_version*에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version* 의 값이 잘못된 경우 해당 애플리케이션은 모든 데이터를 다시 초기화해야 합니다.  
   
  다음 예에서는 각 테이블에 대한 `last_synchronization_version` 값의 유효성을 확인하는 방법을 보여 줍니다.  
   
@@ -207,7 +207,9 @@ ON
 3.  CHANGETABLE(CHANGES ...)을 사용하여 Sales 테이블에 대한 변경 내용을 가져옵니다.  
   
 4.  CHANGETABLE(CHANGES ...)을 사용하여 SalesOrders 테이블에 대한 변경 내용을 가져옵니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  이전 단계로 반환되는 결과에 영향을 줄 수 있는 다음 두 프로세스가 데이터베이스에서 발생합니다.  
   
 -   정리 프로세스가 백그라운드에서 실행되어 지정된 보존 기간보다 오래된 변경 내용 추적 정보가 제거됩니다.  

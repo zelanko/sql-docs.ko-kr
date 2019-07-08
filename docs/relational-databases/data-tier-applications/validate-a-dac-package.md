@@ -16,12 +16,12 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e7e22f164ba8da071a93dff1535b777993e76e2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 40db1a19c2c32db5b75e5715e7a0a051eca53b96
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590477"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580100"
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "53590477"
 1.  **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
 2.  **DAC를 업그레이드하려면 다음을 사용합니다.**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
   

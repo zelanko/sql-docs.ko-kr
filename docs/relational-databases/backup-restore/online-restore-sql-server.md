@@ -14,12 +14,12 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4c91fff761b25e1a8fa1efea65d08121d5cf03c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242206"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581066"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "54242206"
 1.  데이터를 복원합니다.  
   
 2.  최종 로그 복원에 WITH RECOVERY를 사용하여 로그를 복원합니다. 이러면 복원된 데이터가 온라인 상태가 됩니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  롤백에 필요한 데이터가 시작 시 오프라인 상태여서 커밋되지 않은 트랜잭션을 롤백할 수 없는 경우가 있습니다. 이 경우에는 트랜잭션이 지연됩니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  

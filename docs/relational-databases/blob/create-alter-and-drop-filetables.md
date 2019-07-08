@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfe7ea1c88a6d7118be63314824a479bd108f070
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 510da94cb6eb83a208c6135441b5705fdacaa760
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094351"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586336"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "65094351"
     2.  **FILETABLE_COLLATE_FILENAME**값을 제공하지 않거나 **database_default**를 지정한 경우 열은 현재 데이터베이스의 데이터 정렬을 상속합니다. 현재 데이터베이스 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 **CREATE TABLE** 작업이 실패합니다.  
   
 3.  자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름도 지정할 수 있습니다. 이름을 입력하지 않으면 시스템이 이 항목의 뒷부분에 나와 있는 이름을 생성합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  

@@ -11,12 +11,12 @@ ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 955bbdf7932516623eb09f043bd7885455155e50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0c0f69ded37422581ffedf4428b344b07968e001
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671902"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584266"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51671902"
 4.  **요약** 페이지에서 선택 항목을 검토합니다. 선택 항목을 변경하려면 **이전** 을 클릭합니다. 선택한 개체를 게시하려면 **다음** 을 클릭합니다.  
   
 5.  **스크립트 저장 또는 게시** 페이지에서 게시 진행률을 모니터링합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>참고 항목  
  [스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  

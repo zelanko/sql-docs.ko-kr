@@ -12,12 +12,12 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689756"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581795"
 ---
 # <a name="disable-resource-governor"></a>리소스 관리자 사용 안 함
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "55689756"
   
 -   **Resource Governor를 사용하지 않도록 설정하려면 다음을 사용합니다.**  [개체 탐색기](#RGOffObjEx), [Resource Governor 속성](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  리소스 관리자를 사용하지 않도록 설정하면 다음과 같은 결과가 나타납니다.  
   
 -   분류자 함수가 실행되지 않습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "55689756"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  사용자 트랜잭션에 있을 때에는 **ALTER RESOURCE GOVERNOR** 문을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 없습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  리소스 관리자를 사용하지 않도록 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="RGOffObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하지 않도록 설정  
@@ -56,7 +56,9 @@ ms.locfileid: "55689756"
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
   
 2.  **Resource Governor**를 마우스 오른쪽 단추로 클릭한 다음 **사용 안 함**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGOffProp"></a> 리소스 관리자 속성을 사용하여 리소스 관리자를 사용하지 않도록 설정  
  **리소스 관리자 속성 페이지를 사용하여 리소스 관리자를 사용하지 않도록 설정하려면**  
   

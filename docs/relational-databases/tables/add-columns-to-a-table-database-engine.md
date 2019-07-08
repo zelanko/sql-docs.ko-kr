@@ -16,26 +16,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 485a31f0f7ff230ffdedcf7aa2d889191f8a637d
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 231590b5b1d15e85bc6fb3ca062253dfc3fba9b9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801357"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585077"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.  
 
-  ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+  ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  ALTER TABLE 문을 사용하여 테이블에 열을 추가하면 해당 열이 자동으로 테이블 끝에 추가됩니다. 테이블에서 특정 순서로 열을 지정하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용합니다. 하지만 이러한 방식은 데이터베이스 설계상 최선의 방법이 아닙니다. 가장 좋은 방법은 애플리케이션 및 쿼리 수준에서 반환된 열에서 순서를 지정하는 것입니다. SELECT *를 사용해도 테이블에 정의된 순서에 따라 모든 열이 순서대로 반환된다고 가정해서는 안됩니다. 항상 열을 표시하려는 순서에 따라 쿼리 및 애플리케이션에서 이름으로 열을 지정하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -59,7 +59,9 @@ ms.locfileid: "56801357"
     >  새 열을 만들면 열 속성에 기본값이 자동으로 추가됩니다. 이러한 값은 **열 속성** 탭에서 변경할 수 있습니다.  
   
 6.  열을 모두 추가했으면 **파일** 메뉴에서 **테이블 이름** _저장_을 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-insert-columns-into-a-table"></a>테이블에 열을 삽입하려면  

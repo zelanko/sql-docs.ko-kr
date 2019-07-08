@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27d6c9f9545c9c0459af83e574f3a010dcf6c488
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: cacf73ffedbd33327eb33610ebc0d553258fb41f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400035"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583874"
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "67400035"
 2.  **테이블 디자이너**에서 기본 키로 정의하려는 데이터베이스 열의 행 선택기를 클릭합니다. 여러 열을 선택하려면 Ctrl 키를 누른 상태로 다른 열의 행 선택기를 클릭합니다.  
   
 3.  열의 행 선택기를 마우스 오른쪽 단추로 클릭하고 **기본 키 설정**을 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!CAUTION]  
 >  기본 키를 다시 정의하려면 기존의 기본 키에 대한 관계를 모두 삭제한 다음 기본 키를 새로 만들어야 합니다. 이 과정에서 기존의 관계가 자동으로 삭제된다는 경고 메시지가 나타납니다.  
   

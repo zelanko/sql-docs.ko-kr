@@ -15,12 +15,12 @@ ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: afd93dd5543d515c6dc77548f5a9f70542af9ea1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: edd786253bb39d947671757f82b240f6d7c5022f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512478"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582525"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>정책 기반 관리의 일반 속성 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "51512478"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -71,7 +71,9 @@ ms.locfileid: "51512478"
     -   이 값이 true이면 성공한 정책 평가와 실패한 정책 평가가 모두 기록됩니다.  
   
 4.  완료되었으면 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-configure-policy-based-management"></a>정책 기반 관리를 구성하려면  

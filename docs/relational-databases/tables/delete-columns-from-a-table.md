@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9d0dcecd83c38dcd42bc7512bd416bd70d743ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a78443dba90f8b75fec9e3db05c9106755b865
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515943"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580468"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "62515943"
 3.  삭제할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  열에 제약 조건 또는 기타 종속성이 포함된 경우 **개체 삭제** 대화 상자에 오류 메시지가 표시됩니다. 참조된 제약 조건을 삭제하여 오류를 해결합니다.  
   
 #### <a name="to-delete-columns-by-using-table-designer"></a>테이블 디자이너를 사용하여 열을 삭제하려면  

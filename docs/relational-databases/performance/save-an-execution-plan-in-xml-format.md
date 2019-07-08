@@ -18,12 +18,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2aa0eb5794abca24ff3bea6c4242799bf9f8e802
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4e6d654dd50890ee00c19dbc7be57966ad11a0d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349628"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586278"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,9 @@ ms.locfileid: "53349628"
 5.  **저장** \<표 또는 텍스트> **결과** 대화 상자의 **파일 형식** 상자에서 **모든 파일(\*.\*)** 을 클릭합니다.  
   
 6.  **파일 이름** 상자에 \<name **>.sqlplan** 형식으로 이름을 입력한 후 **저장**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio 옵션을 사용하여 실행 계획을 저장하려면  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 예상 실행 계획이나 실제 실행 계획을 생성합니다. 자세한 내용은 [예상 실행 계획 표시](../../relational-databases/performance/display-the-estimated-execution-plan.md) 및 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.  

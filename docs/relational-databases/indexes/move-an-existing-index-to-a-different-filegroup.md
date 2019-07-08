@@ -17,12 +17,12 @@ ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eebf51a73a6d5f4665c418b6f6b03078777bd0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0577c7f411994a175b839a222599a1f58f3f921
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686010"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579454"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>다른 파일 그룹으로 기존 인덱스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,9 @@ ms.locfileid: "62686010"
 8.  **닫기**를 클릭합니다.  
   
 9. **파일** 메뉴에서 _table_name_ **저장**을 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 이동할 인덱스가 포함된 테이블이 있는 데이터베이스를 확장합니다.  

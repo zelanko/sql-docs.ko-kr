@@ -14,12 +14,12 @@ ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9c5b2c456d29ed7226b46bac278a51dda91bde0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e0cb0e81d31afec551ba50bcc2a75d841d8a9000
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127403"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584114"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>기존 추적 수정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "54127403"
 1.  추적이 이미 실행 중이면 **@status = 0**을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
   
 2.  추적 이벤트를 수정하려면 매개 변수를 통해 변경 내용을 지정하는 **sp_trace_setevent** 를 실행합니다. 순서대로 나열된 매개 변수는 다음과 같습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **@traceid** (추적 ID)  
   
     -   **@eventid** (이벤트 ID)  

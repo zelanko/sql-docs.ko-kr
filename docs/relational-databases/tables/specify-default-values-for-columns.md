@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f60cb38a7b57ebd56d603d6041535974ec7ac7e
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 4fb94a2ae07993b1f95ab9adf97e164843aa06e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464719"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583000"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
 
@@ -66,6 +66,8 @@ ms.locfileid: "56464719"
    > 숫자 기본값을 입력하려면 숫자를 입력합니다. 개체나 함수의 경우 해당 이름을 입력합니다. 영숫자 기본값의 경우 원하는 값을 작은따옴표로 묶어 입력합니다.
 
 4. **파일** 메뉴에서 _테이블 이름_ **저장**을 클릭합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> Transact-SQL을 사용하여 기본값 지정
 

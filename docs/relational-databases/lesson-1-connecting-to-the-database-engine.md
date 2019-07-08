@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801687"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517765"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,8 @@ ms.locfileid: "56801687"
 3.  등록된 서버가 표시되지 않으면 **보기** 메뉴에서 **등록된 서버**를 클릭합니다.
 4.  등록된 서버 도구 모음에서 **데이터베이스 엔진** 을 선택한 상태로 **데이터베이스 엔진**을 확장하고 **로컬 서버 그룹**을 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **로컬 서버 등록**을 클릭합니다. 컴퓨터에 설치된 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 표시됩니다. 기본 인스턴스의 이름은 지정되지 않으며 컴퓨터 이름으로 표시됩니다. 명명된 인스턴스는 컴퓨터 이름 다음에 백슬래시(\\)가 오고 마지막으로 인스턴스 이름이 붙는 형식으로 표시됩니다. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]의 경우 설치하는 동안 이름을 변경하지 않은 한 인스턴스 이름이 *<computer_name>* \sqlexpress로 지정됩니다.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>데이터베이스 엔진이 실행 중인지 확인하려면
 
 1.  등록된 서버에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름 옆에 흰색 화살표가 포함된 녹색 원이 표시되는 경우 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 실행 중이므로 별도의 동작이 필요하지 않습니다.  
@@ -77,7 +79,7 @@ ms.locfileid: "56801687"
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 _\<computer_name\>_**\\**_\<instance_name\>_(예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
+3.  **서버 이름** 상자에 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 이름을 입력합니다. 기본 SQL Server 인스턴스의 경우 서버 이름은 컴퓨터 이름입니다. SQL Server의 명명된 인스턴스의 경우 서버 이름은 _\<computer_name\>_ **\\** _\<instance_name\>_ (예: **ACCTG_SRVR\SQLEXPRESS**)입니다. 다음 스크린샷은 'PracticeComputer' 컴퓨터에 있는 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]의 기본(명명되지 않은) 인스턴스에 연결하는 방법을 보여 줍니다. Windows에 로그인한 사용자는 Contoso 도메인의 Mary입니다. Windows 인증을 사용하는 경우 사용자 이름을 변경할 수 없습니다. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714330"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580203"
 ---
 # <a name="monitor-data-tier-applications"></a>데이터 계층 애플리케이션 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714330"
 3.  **보기/유틸리티 탐색기 정보** 메뉴를 선택합니다.  
   
 4.  **유틸리티 탐색기** 에서 **배포된 데이터 계층 애플리케이션**노드를 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **배포된 데이터 계층 애플리케이션** 세부 정보 페이지의 정보는 기본적으로 15분마다 데이터를 수집하도록 되어 있는 유틸리티 관리 데이터 웨어하우스의 데이터에서 제공됩니다. **유틸리티 관리** 세부 정보 페이지를 사용하여 이 간격을 조정할 수도 있습니다.  
   
 ## <a name="using-object-explorer"></a>개체 탐색기 사용  

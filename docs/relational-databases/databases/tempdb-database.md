@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994237"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583436"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -244,6 +244,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     ```
 3. 메모리 최적화 테이블에 대한 쿼리는 잠금 및 분리 힌트를 지원하지 않으므로 메모리 최적화 tempdb 카탈로그 보기에 대한 쿼리는 잠금 및 분리 힌트를 유지하지 않습니다. SQL Server의 다른 시스템 카탈로그 보기와 마찬가지로 시스템 보기에 대한 모든 트랜잭션은 READ COMMITTED(또는 이 경우 READ COMMITTED SNAPSHOT) 분리 내에 있습니다.
 4. 메모리 최적화 tempdb 메타데이터가 활성화된 경우 임시 테이블에 대한 columnstore 인덱스에 일부 문제가 있을 수 있습니다. 이 미리 보기 릴리스에서는 메모리 최적화 tempdb 메타데이터를 사용하는 경우 임시 테이블에 대한 columnstore 인덱스를 사용하지 않는 것이 좋습니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > 이 제한 사항은 tempdb 시스템 보기를 참조하는 경우에만 적용되며 원하는 경우 사용자 데이터베이스의 메모리 최적화 테이블을 액세스할 때 동일한 트랜잭션에서 임시 테이블을 만들 수 있습니다.

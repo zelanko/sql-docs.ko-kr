@@ -12,12 +12,12 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 4dd095f8d4a9254b88680b13bffcf319960336f3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997525"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585607"
 ---
 # <a name="restore-a-database-master-key"></a>데이터베이스 마스터 키 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53997525"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>Transact-SQL과 함께 SQL Server Management Studio 사용  
@@ -51,7 +51,9 @@ ms.locfileid: "53997525"
 3. 표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
 4. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
@@ -64,6 +66,6 @@ ms.locfileid: "53997525"
     ```  
   
     > [!NOTE]  
-    > 키의 경로와 암호(있는 경우)는 위에 나타난 것과 다릅니다. 둘 다 서버 및 키 설정에 대해 고유한지 확인하세요.  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
  자세한 내용은 [RESTORE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)를 참조하세요.  

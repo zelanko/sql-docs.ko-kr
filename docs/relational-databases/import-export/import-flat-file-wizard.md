@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836390"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585891"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL 마법사로 플랫 파일 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ PROSE는 입력 파일의 데이터 패턴을 분석하여 열 이름, 형식, �
 1. **SQL Server Management Studio**를 엽니다.
 2. SQL Server 데이터베이스 엔진의 인스턴스 또는 localhost에 연결합니다.
 3. **데이터베이스**를 확장하고, 데이터베이스(아래 예제에서는 테스트)를 마우스 오른쪽 단추로 클릭하고, **작업**을 가리킨 다음, 데이터 가져오기 위에 있는 **플랫 파일 가져오기**를 클릭합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![마법사 메뉴](media/import-flat-file-wizard/importffmenu.png)
 

@@ -1,7 +1,7 @@
 ---
 title: 메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0234a6806e63a7eec6a13d30ceeda55c0ee27a29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205582"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579587"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 표시되는 예상 실행 계획은 다음과 같습니다.  
   
- ![디스크 기반 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "디스크 기반 테이블의 조인을 위한 쿼리 계획.")  
+ ![디스크 기반 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "디스크 기반 테이블의 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블 조인을 위한 쿼리 계획.  
   
  이 쿼리 계획 정보:  
@@ -93,7 +93,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  이 쿼리의 예상 계획은 다음과 같습니다.  
   
- ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
+ ![디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.")  
 디스크 기반 테이블의 해시 조인을 위한 쿼리 계획.  
   
  이 쿼리에서 Order 테이블의 행은 클러스터형 인덱스를 사용해서 검색됩니다. **Hash Match** 물리 연산자는 이제 **Inner Join**에 사용됩니다. Order에 대한 클러스터형 인덱스가 CustomerID로 정렬되지 않았으므로 **Merge Join** 을 위해 sort 연산자가 필요하지만, 이는 성능에 영향을 줄 수 있습니다. 이전 예제에서 **Merge Join** 연산자의 비용(46%)에 대비해서 **Hash Match** 연산자의 상대적 비용(75%)에 주의하세요. 이전 예에서 최적화 프로그램에는 **Hash Match** 연산자도 고려되었겠지만 **Merge Join** 연산자가 더 나은 성능을 제공하는 것으로 결정되었습니다.  
@@ -101,7 +101,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디스크 기반 테이블에 대한 쿼리 처리  
  다음 다이어그램에서는 임시 쿼리를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 쿼리 처리 흐름을 간단히 보여줍니다.  
   
- ![SQL Server 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "SQL Server 쿼리 처리 파이프라인.")  
+ ![SQL Server 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server 쿼리 처리 파이프라인.")  
 SQL Server 쿼리 처리 파이프라인.  
   
  시나리오 내용:  
@@ -117,7 +117,9 @@ SQL Server 쿼리 처리 파이프라인.
 5.  각 index seek, index scan 및 table scan 연산자에 대해 실행 엔진이 Access Methods의 해당 인덱스 및 테이블 구조로부터 행을 요청합니다.  
   
 6.  Access Methods는 버퍼 풀에 있는 인덱스 및 데이터 페이지로부터 행을 검색하고 필요에 따라 디스크에서 버퍼 풀로 페이지를 로드합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  첫 번째 예제 쿼리에서 실행 엔진은 Access Methods에서 Customer의 클러스터형 인덱스 및 Order의 비클러스터형 인덱스에 있는 행을 요청합니다. Access Methods는 B-트리 인덱스 구조를 통과하여 요청된 행을 검색합니다. 이 경우에는 계획이 전체 인덱스 검색을 호출하므로 모든 행이 검색됩니다.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스  
@@ -125,7 +127,7 @@ SQL Server 쿼리 처리 파이프라인.
   
  해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하면 메모리 최적화 테이블 및 디스크 기반 테이블에 모두 액세스할 수 있습니다. 다음 그림에서는 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 위한 쿼리 처리를 보여 줍니다.  
   
- ![해석된 tsql을 위한 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "해석된 tsql을 위한 쿼리 처리 파이프라인.")  
+ ![해석된 tsql을 위한 쿼리 처리 파이프라인.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "해석된 tsql을 위한 쿼리 처리 파이프라인.")  
 메모리 최적화 테이블에 대한 해석된 Transact-SQL 액세스를 위한 쿼리 처리 파이프라인  
   
  그림에 표시된 것처럼 쿼리 처리 파이프라인은 대부분 변경되지 않은 상태로 유지됩니다.  
@@ -163,7 +165,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  예상 계획은 다음과 같습니다.  
   
- ![메모리 최적화 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "메모리 최적화 테이블의 조인을 위한 쿼리 계획.")  
+ ![메모리 최적화 테이블의 조인을 위한 쿼리 계획.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "메모리 최적화 테이블의 조인을 위한 쿼리 계획.")  
 메모리 최적화 테이블의 조인을 위한 쿼리 계획  
   
  디스크 기반 테이블에서 동일한 쿼리를 계획에 사용해서 다음과 같은 차이점을 관찰합니다(그림 1).  
@@ -204,7 +206,7 @@ END
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
   
- ![저장 프로시저의 네이티브 컴파일.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "저장 프로시저의 네이티브 컴파일.")  
+ ![저장 프로시저의 네이티브 컴파일.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "저장 프로시저의 네이티브 컴파일.")  
 저장 프로시저의 고유 컴파일  
   
  프로세스에 대한 설명은 다음과 같습니다.  
@@ -221,7 +223,7 @@ END
   
  고유하게 컴파일된 저장 프로시저의 호출은 DLL의 함수 호출과 같습니다.  
   
- ![고유하게 컴파일된 저장 프로시저의 실행.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "고유하게 컴파일된 저장 프로시저의 실행.")  
+ ![고유하게 컴파일된 저장 프로시저의 실행.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "고유하게 컴파일된 저장 프로시저의 실행.")  
 고유하게 컴파일된 저장 프로시저의 실행  
   
  고유하게 컴파일된 저장 프로시저의 호출에 대한 설명은 다음과 같습니다.  
@@ -243,7 +245,7 @@ END
  고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석된 저장 프로시저처럼 고유하게 컴파일된 저장 프로시저도 **OPTIMIZE FOR** 힌트를 지원합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
- 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들어  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -295,7 +297,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Customer 테이블에서 행을 하나만 남겨두고 모두 삭제한 후에는 다음과 같이 됩니다.  
   
- ![열 통계 및 조인](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "열 통계 및 조인")  
+ ![열 통계 및 조인](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "열 통계 및 조인")  
   
  이 쿼리 계획에 대한 설명은 다음과 같습니다.  
   

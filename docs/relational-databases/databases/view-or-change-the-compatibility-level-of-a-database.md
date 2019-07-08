@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559920"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583413"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준 보기 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "51559920"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -62,8 +62,10 @@ ms.locfileid: "51559920"
   
      현재 호환성 수준이 **호환성 수준** 목록 상자에 표시됩니다.  
   
-5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. 선택 항목은 **SQL Server 2008(100)**, **SQL Server 2012(110)**, **SQL Server 2014(120)**, **SQL Server 2016(130)** 및 **SQL Server 2017(140)** 입니다.  
-  
+5.  호환성 수준을 변경하려면 목록에서 다른 옵션을 선택합니다. 선택 항목은 **SQL Server 2008(100)** , **SQL Server 2012(110)** , **SQL Server 2014(120)** , **SQL Server 2016(130)** 및 **SQL Server 2017(140)** 입니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준을 보려면  

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00b42c7221971707787a7b74cd7c799b1afb58e3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632027"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580578"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "62632027"
 3.  [파일 테이블 페이지](#FileTable)  
   
 4.  [ 페이지](#Storage)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="GeneralPage"></a> 일반 페이지  
  **데이터베이스 백업**  
  이 테이블이 포함된 데이터베이스의 이름입니다.  

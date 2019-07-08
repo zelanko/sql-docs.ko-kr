@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369295"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582546"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369295"
 5.  **권장 구성** 탭 페이지의 아래쪽에 있는 **기존 개체 표시** 의 선택을 해제합니다. 이렇게 하면 권장 구성에서 참조된 데이터베이스 개체만 표에 표시됩니다. 아래 스크롤 막대를 사용하여 권장 구성 표의 가장 오른쪽 열을 보고 **정의** 열의 항목을 클릭하여 데이터베이스의 개체를 생성하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 보거나 복사합니다.  
   
 6.  이 권장 구성의 모든 데이터베이스 개체를 만들거나 삭제하는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 하나의 스크립트 파일에 저장하려면 **동작** 메뉴의 **권장 구성 저장** 을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>데이터베이스 엔진 튜닝 관리자 GUI로 튜닝 요약 및 보고서를 보려면  
   
 1.  데이터베이스 엔진 튜닝 관리자 GUI 또는 **dta** 명령줄 유틸리티를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 사용하려면 이 단계를 건너뛰고 2단계를 실행합니다.  

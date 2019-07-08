@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937245"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563994"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
 
@@ -62,16 +62,16 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
     다음 예에서는 확보해야 하는 값을 보여 줍니다. 구성 파일에 이 예를 복사하지 마세요. 키 값이 유효하지 않습니다.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`machineKey`> 요소를 <`system.web`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
+2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`MachineKey`> 요소를 <`system.web`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
   
 3. 파일을 저장합니다.  
   
 4. 스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
   
-5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`system.web`> 섹션에 동일한 <`machineKey`> 요소가 포함되어 있는지 확인합니다.  
+5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`system.web`> 섹션에 동일한 <`MachineKey`> 요소가 포함되어 있는지 확인합니다.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
     다음 예에서는 확보해야 하는 값을 보여 줍니다. 구성 파일에 이 예를 복사하지 마십시오. 올바른 키 값이 아닙니다. 보고서 서버에는 올바른 대/소문자 구분이 필요합니다.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. 파일을 저장합니다.

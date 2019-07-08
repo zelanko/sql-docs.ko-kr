@@ -13,12 +13,12 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94a559d7486263d1edf50383e3a8af39fe93689d
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: c389ed72d7aa6f49c320585ee8f23e35eaec1bc7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689806"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581823"
 ---
 # <a name="delete-a-resource-pool"></a>리소스 풀 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "55689806"
   
 -   **리소스 풀을 삭제하려면 다음을 사용합니다.** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  리소스 관리자 기본 풀 또는 내부 리소스 풀을 삭제할 수 없습니다. 작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다. 자세한 내용은 [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md)을 참조하세요.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  리소스 풀을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelRPSSMS"></a> 개체 탐색기를 사용하여 리소스 풀 삭제  
@@ -46,9 +46,11 @@ ms.locfileid: "55689806"
 2.  삭제할 리소스 풀을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 3.  **개체 삭제** 창의 **삭제할 개체** 목록에 리소스 풀이 나열됩니다. 리소스 풀을 삭제하려면 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  삭제하려고 하는 리소스 풀에 작업 그룹이 들어 있으면 해당 리소스 풀을 삭제할 수 없습니다.  
+    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
   
 ##  <a name="DelRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 삭제  
  **Transact-SQL을 사용하여 리소스 풀을 삭제하려면**  

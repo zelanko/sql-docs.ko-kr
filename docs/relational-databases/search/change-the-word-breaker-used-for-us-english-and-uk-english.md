@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5e3d1f2d0a2ad21cd7603912c81e8b8335bfa3c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305461"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586157"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "58305461"
 5.  **StemmerClass** 키 값을 **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** 으로 업데이트합니다.  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>현재 버전의 영국 영어 단어 분리기에서 이전 버전으로 전환하려면  
   
 1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  

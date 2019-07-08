@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c035ee265f913a91f49b7c9b3c9e5c562ab1477a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f32b9eaa6619ad761e5799991196fe0c04f7d78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043294"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581259"
 ---
 # <a name="republish-data"></a>데이터 다시 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "63043294"
 5.  다른 구독자에 대해 재게시 구독자에서 게시에 대한 구독을 만듭니다.  
   
 6.  구독을 초기화합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  재게시 토폴로지에서 병합 복제를 사용하는 경우 모든 재게시 구독자에서 서버 구독을 사용해야 합니다. 구독 유형에 대한 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a9120013d1a654460553bcba7a378560cef9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2677dbe1bc4a1cc45f609d98abcd0b42896231d3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749083"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582354"
 ---
 # <a name="modify-data-through-a-view"></a>뷰를 통해 데이터 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47749083"
 -   [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 '업데이트할 수 있는 뷰' 섹션을 참조하세요.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  수행하는 동작에 따라 대상 테이블에 대한 UPDATE, INSERT 또는 DELETE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -53,8 +53,10 @@ ms.locfileid: "47749083"
     > **중요!!** 뷰가 여러 개의 기본 테이블을 참조하는 경우 행을 삭제할 수 없습니다. 단일 기본 테이블에 속하는 열만 업데이트할 수 있습니다.  
   
 5.  행을 삽입하려면 행의 끝으로 스크롤하여 새 값을 삽입합니다.  
-  
-    > **중요!** 뷰가 여러 개의 기본 테이블을 참조하는 경우 행을 삽입할 수 없습니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

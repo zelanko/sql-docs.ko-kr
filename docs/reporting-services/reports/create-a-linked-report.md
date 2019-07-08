@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dad85f35be1d7fb26f4c9eef6241e01baadb692
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506638"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492799"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
   링크된 보고서는 기존 보고서에 대한 액세스 지점을 제공하는 보고서 서버 항목입니다. 개념적으로 링크된 보고서는 프로그램을 실행하거나 파일을 열 때 사용하는 프로그램 바로 가기와 비슷합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "66506638"
      ![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "링크된 보고서 아이콘")  
   
 ## <a name="see-also"></a>관련 항목:  
- [열기 및 닫기 보고서 &#40;웹 포털&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+
  [Reporting Services 개념&#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
  [보고서 서버의 웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

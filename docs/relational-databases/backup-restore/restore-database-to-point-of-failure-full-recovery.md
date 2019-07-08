@@ -15,12 +15,12 @@ ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ba2b49bf53a95836923e8016b68e2fbf7c7bbb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f47e6ca86b2172c4fe23f0660245dd854f611f1b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507096"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580306"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>실패 지점으로 데이터베이스 복원 - 전체 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62507096"
     ```  
   
 5.  다음의 RESTORE DATABASE 문을 실행하여 데이터베이스를 복구합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     RESTORE DATABASE <database_name>   
        WITH RECOVERY;  

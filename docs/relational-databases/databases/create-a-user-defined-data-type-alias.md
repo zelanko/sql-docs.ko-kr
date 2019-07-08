@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511882"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584293"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52511882"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52511882"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -71,7 +71,7 @@ ms.locfileid: "52511882"
      **길이/전체 자릿수**  
      데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이** 는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수** 는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
   
-     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
+     **nvarchar(max)** , **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
   
      **이름**  
      새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 사용할 수 있는 최대 문자 수는 시스템의 **sysname** 데이터 형식과 동일합니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "52511882"
      **스키마**  
      현재 사용자가 사용할 수 있는 모든 스키마의 목록에서 스키마를 선택합니다. 현재 사용자에 대한 기본 스키마가 기본적으로 선택되어 있습니다.  
   
-     **저장소**  
+     **스토리지**  
      사용자 정의 데이터 형식 별칭에 대한 최대 스토리지 크기를 표시합니다. 최대 스토리지 크기는 전체 자릿수에 따라 달라집니다.  
   
     |||  
@@ -95,9 +95,9 @@ ms.locfileid: "52511882"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     **nchar** 및 **nvarchar** 데이터 형식의 경우 저장소 값이 항상 **길이**값의 두 배입니다.  
+     **nchar** 및 **nvarchar** 데이터 형식의 경우 스토리지 값이 항상 **길이**값의 두 배입니다.  
   
-     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 저장소가 표시되지 않습니다.  
+     **nvarchar(max)** , **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 스토리지가 표시되지 않습니다.  
   
 2.  **새 사용자 정의 데이터 형식** 대화 상자의 **스키마** 상자에 이 데이터 형식 별칭을 소유할 스키마를 입력하거나 찾아보기 단추를 사용하여 스키마를 선택합니다.  
   
@@ -110,7 +110,9 @@ ms.locfileid: "52511882"
 6.  새 데이터 형식 별칭에 NULL 값을 허용하려면 **NULL 허용** 확인란을 선택합니다.  
   
 7.  기본값이나 규칙을 새 데이터 형식 별칭에 바인딩하려면 **바인딩** 영역에서 **기본값** 또는 **규칙** 상자를 채웁니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 기본값과 규칙을 만들 수 없으므로 대신 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 기본값과 규칙을 만드는 예제 코드는 템플릿 탐색기에서 찾을 수 있습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭을 만들려면  

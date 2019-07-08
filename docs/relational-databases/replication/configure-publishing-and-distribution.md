@@ -15,18 +15,18 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ec133a404b7485edff3e63e3c8c495ef2bc4a542
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135893"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586235"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 
+##  <a name="BeforeYouBegin"></a> 시작하기 전에 
 
 ###  <a name="Security"></a> 보안 
 자세한 내용은 [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하세요.
@@ -41,6 +41,8 @@ ms.locfileid: "54135893"
 2. **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.
 
 3. 배포 구성 마법사에 따라 다음을 수행하세요. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - 배포자를 선택합니다. 로컬 배포자를 사용하려면 **ServerName을 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.** 를 선택합니다. 원격 배포자를 사용하려면 **다음 서버를 배포자로 사용**을 선택한 다음 서버를 선택합니다. 서버는 미리 배포자로 구성되어 있어야 하며 해당 배포자를 사용하도록 게시자를 설정해야 합니다. 자세한 내용은 [배포자에서 원격 게시자 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)을 참조하세요.
 

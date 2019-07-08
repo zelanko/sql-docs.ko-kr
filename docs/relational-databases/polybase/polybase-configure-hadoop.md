@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: e9d3cee432adea10c4a92198a7e8486d2e8ee27f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd3690bf7ecdf8cb08a641d141825abbf2a01f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65198059"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585528"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
@@ -61,6 +61,8 @@ ms.locfileid: "65198059"
    ```  
 
 2. **services.msc**를 사용하여 SQL Server를 다시 시작해야 합니다. SQL Server를 다시 시작하면 다음 서비스도 다시 시작됩니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    - SQL Server PolyBase 데이터 이동 서비스  
    - SQL Server PolyBase 엔진  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0ca9273e02d32951960930f7f869aa888b78b8b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579694"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
 
@@ -181,6 +181,9 @@ SSMS에서 대상 데이터를 추가한 후에 다음을 수행하여 다양한
 
 
 1. 데이터 표시에 포커스를 둡니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     - 갑자기 확장 이벤트에 대한 새 메뉴 항목 및 새 도구 모음이 모두 표시됩니다.
 
     ![확장 이벤트 > 내보내기 > (.csv, .xel 또는 테이블로)를 통해 표시된 데이터를 내보냅니다.](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)

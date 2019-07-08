@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dfb480335b36dde5ce7faece207fb214d1dba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0454483882af5bcd55b607b63336587590d3ebf8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620682"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580681"
 ---
 # <a name="delete-tables-database-engine"></a>테이블 삭제(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47620682"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블이 속한 스키마에 대한 ALTER 권한, 테이블에 대한 CONTROL 권한 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -74,9 +74,11 @@ ms.locfileid: "47620682"
 2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제** 를 선택합니다.  
   
 3.  삭제를 확인하는 메시지 상자가 나타나면 **예**를 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  테이블을 삭제하면 테이블에 대한 모든 관계도 자동으로 제거됩니다.  
+    >  Deleting a table automatically removes any relationships to it.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

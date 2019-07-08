@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a692cb2d5862699abb68d5a0814b948a25158fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02aefc777283f98964c54e6845452bdbc739a489
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129553"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581244"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>암호화된 열의 데이터 복제(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "54129553"
 6.  ALGORITHM, KEY_SOURCE 및 IDENTITY_VALUE에 대해 1단계와 동일한 값을 사용하여 구독자에서 대칭 키를 다시 만듭니다.  
   
 7.  암호화된 열 데이터에 액세스합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  대칭 키를 사용하여 열 데이터를 암호화해야 합니다. 대칭 키 자체는 게시자와 구독자에서 다른 방법으로 보안을 설정할 수 있습니다.  
   

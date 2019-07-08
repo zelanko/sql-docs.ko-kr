@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256028"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581417"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "54256028"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **sys.sql_expression_dependencies** 를 사용하여 함수에 대한 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 있어야 합니다. OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -70,47 +70,49 @@ ms.locfileid: "54256028"
     -   Aggregate 함수  
   
 4.  속성을 볼 함수를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     다음 속성이 **함수 속성 –** _function_name_ 대화 상자에 표시됩니다.  
-  
-     **데이터베이스 백업**  
-     이 함수를 포함하는 데이터베이스의 이름입니다.  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     현재 서버 인스턴스의 이름입니다.  
+     The name of the current server instance.  
   
-     **사용자**  
-     이 연결을 사용하는 사용자의 이름입니다.  
+     **User**  
+     The name of the user of this connection.  
   
-     **만든 날짜**  
-     함수를 만든 날짜를 표시합니다.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **다음으로 실행**  
-     함수에 대한 실행 컨텍스트입니다.  
+     **Execute As**  
+     Execution context for the function.  
   
-     **이름**  
-     현재 함수의 이름입니다.  
+     **Name**  
+     The name of the current function.  
   
-     **스키마**  
-     함수를 소유하는 스키마를 표시합니다.  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **시스템 개체**  
-     함수가 시스템 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **ANSI NULL**  
-     개체가 ANSI NULL 옵션으로 생성되었는지 여부를 나타냅니다.  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **암호화됨**  
-     함수를 암호화하는지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **함수 유형**  
-     사용자 정의 함수의 유형입니다.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **따옴표 붙은 식별자**  
-     개체가 따옴표 붙은 식별자 옵션으로 생성되었는지 여부를 나타냅니다.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **스키마 바운드**  
-     스키마 바운드 함수인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다. 스키마 바운드 함수에 대한 자세한 내용은 [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)의 SCHEMABINDING 섹션을 참조하세요.  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

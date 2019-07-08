@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 920fe0f3e450448a1d8c9a262d2ae0e372e6769f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939047"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584440"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  어셈블리 및 Transact-SQL 사용자 정의 함수를 만들어서 CLR 클래스를 시작합니다.  
   
 3.  속성 테이블을 유지 관리하기 위한 사용자 정의 함수를 사용하여 삽입, 업데이트 및 삭제 트리거를 정의합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. **xml** 데이터 형식은 ADO.NET의 관리 클래스 SqlXml로 제공되며 XmlReader를 반환하는 **CreateReader()** 메서드를 지원합니다.  
   
 > [!NOTE]  

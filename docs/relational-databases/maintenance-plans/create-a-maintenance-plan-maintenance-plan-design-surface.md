@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514387"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584138"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52514387"
   
 -   [유지 관리 계획 디자인 화면을 사용하여 유지 관리 계획 만들기](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52514387"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> 유지 관리 계획 디자인 화면 사용  
@@ -162,10 +162,10 @@ ms.locfileid: "52514387"
          두 태스크 사이에서 제약 조건이 작동하는 방식을 정의합니다.  
   
          **평가 작업**  목록  
-         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
+         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
          **값** 목록  
-         제약 조건 값을 **성공**, **실패**또는 **완료**로 지정합니다. 기본값은**성공** 입니다.  
+         제약 조건 값을 지정합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다. 기본값은**성공** 입니다.  
   
         > [!NOTE]  
         >  선행 제약 조건 줄은 **성공**인 경우 녹색, **실패**인 경우 빨간색, **완료**인 경우 파란색으로 표시됩니다.  
@@ -217,7 +217,7 @@ ms.locfileid: "52514387"
   
         1.  **텍스트 파일 보고서 생성**을 선택하는 경우 **새 파일 만들기** 또는 **파일에 추가**를 선택합니다.  
   
-        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(...)** 를 클릭하고 **폴더 찾기 –**_server\_name_ 또는 **데이터베이스 파일 찾기 –**_server\_name_ 대화 상자에서 폴더 또는 파일 이름의 경로를 선택합니다.  
+        2.  위에서 선택한 내용에 따라 **폴더** 또는 **파일 이름** 상자에 정보를 입력하여 새 파일이나 추가할 파일의 이름과 전체 경로를 입력합니다. 또는 줄임표 **(...)** 를 클릭하고 **폴더 찾기 –** _server\_name_ 또는 **데이터베이스 파일 찾기 –** _server\_name_ 대화 상자에서 폴더 또는 파일 이름의 경로를 선택합니다.  
   
         3.  **전자 메일 받는 사람에게 보고서 보내기**를 선택하는 경우 **에이전트 운영자** 목록에서 전자 메일로 보낼 보고서의 받는 사람을 선택합니다.  
   
@@ -231,49 +231,51 @@ ms.locfileid: "52514387"
     5.  **보고 및 로깅** 대화 상자에서 **확인**을 클릭합니다.  
   
 12. 로그 파일 뷰어에서 이 결과를 보려면 **개체 탐색기**에서 **유지 관리 계획** 폴더 또는 특정 유지 관리 계획을 마우스 오른쪽 단추로 클릭하고 **기록 보기**를 선택합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     다음 옵션은 **로그 파일 뷰어 –**_server\_name_ 대화 상자에서 사용할 수 있습니다.  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **로그 로드**  
-     로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **내보내기**  
-     **로그 파일 요약** 표에 표시된 정보를 텍스트 파일로 내보낼 수 있는 대화 상자를 엽니다.  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **새로 고침**  
-     선택한 로그의 뷰를 새로 고칩니다. **새로 고침** 단추를 누르면 필터 설정을 적용하는 동안 대상 서버에서 선택한 로그를 다시 읽습니다.  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **필터**  
-     **연결**, **날짜**또는 기타 **일반** 필터 조건과 같이 로그 파일 필터링에 사용되는 설정을 지정할 수 있는 대화 상자를 엽니다.  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **검색**  
-     로그 파일에서 특정 텍스트를 검색합니다. 와일드카드 문자를 사용한 검색은 지원되지 않습니다.  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **중지**  
-     로그 파일 항목의 로드를 중지합니다. 예를 들어 원격 또는 오프라인 로그 파일을 로드하는 데 시간이 오래 걸리며 최근 항목만 보려는 경우 이 옵션을 사용할 수 있습니다.  
-  
-     **로그 파일 요약**  
-     이 정보 창에는 로그 파일 필터링에 대한 요약이 표시됩니다. 파일을 필터링하지 않은 경우 **적용된 필터 없음**이 표시됩니다. 로그에 필터를 적용한 경우에는 **로그 항목 필터링 조건:** \<필터 조건>이 표시됩니다.  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
      **Date**  
-     이벤트의 날짜를 표시합니다.  
+     Displays the date of the event.  
   
-     **원본**  
-     서비스의 이름(예: MSSQLSERVER)과 같이 이벤트가 생성된 원본 기능을 표시합니다. 이 열은 일부 로그 유형의 경우에만 나타납니다.  
+     **Source**  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
-     **메시지**  
-     이벤트와 관련된 메시지를 표시합니다.  
+     **Message**  
+     Displays any messages associated with the event.  
   
-     **로그 유형**  
-     이벤트가 속한 로그의 유형을 표시합니다. 선택한 모든 로그가 로그 파일 요약 창에 나타납니다.  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **로그 원본**  
-     이벤트가 캡처되는 원본 로그에 대한 설명을 표시합니다.  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **선택한 행 정보**  
-     선택한 이벤트 행에 대한 추가 정보를 페이지 아래쪽에 표시하려면 해당 행을 선택합니다. 열을 표의 새 위치로 끌어서 다시 정렬할 수 있습니다. 표 머리글의 열 구분선을 왼쪽이나 오른쪽으로 끌어 열의 크기를 조정할 수도 있습니다. 열 내용에 맞게 열 너비를 자동 조정하려면 표 머리글의 열 구분선을 두 번 클릭합니다.  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
-     **인스턴스**  
-     이벤트가 발생한 인스턴스의 이름입니다. 이 이름은 *컴퓨터 이름*\\*인스턴스 이름*으로 표시됩니다.  
+     **Instance**  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

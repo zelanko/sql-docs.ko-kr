@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efb4bcfd0ed5befc7438f5ff82747254efa8b88e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1d573c815d426d2d6084735f2492e4f679c15b11
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517007"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581608"
 ---
 # <a name="modify-primary-keys"></a>기본 키 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "52517007"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -64,7 +64,9 @@ ms.locfileid: "52517007"
     |열 순서 변경|**열**을 선택한 다음, 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. **인덱스 열** 대화 상자에서 기본 키의 열을 제거합니다. 그런 다음 이 열을 원하는 순서로 다시 추가합니다. 키에서 열을 제거하려면 **열** 이름 목록에서 열 이름을 제거하기만 하면 됩니다.|  
   
 4.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **기본 키를 수정하려면**  
   

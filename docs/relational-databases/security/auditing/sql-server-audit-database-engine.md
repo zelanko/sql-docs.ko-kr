@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba79c497f9999f263de90622b5c306d035ec823
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716088"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582002"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "62716088"
 3.  감사를 활성화합니다.  
   
 4.  Windows **이벤트 뷰어**, **로그 파일 뷰어**또는 fn_get_audit_file 함수를 사용하여 감사 이벤트를 읽습니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  자세한 내용은 [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 및 [서버 감사 및 데이터베이스 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)를 참조하세요.  
   
 ## <a name="considerations"></a>고려 사항  

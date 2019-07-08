@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d5dc099d335c0a77efc3cbcf864940d0c16f27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0871c813a70b93b1e263dcfb3b50345d57e526af
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960130"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585017"
 ---
 # <a name="delete-a-stored-procedure"></a>저장 프로시저 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,9 @@ ms.locfileid: "62960130"
 5.  올바른 프로시저가 선택되었는지 확인하고 **확인**을 클릭합니다.  
   
 6.  모든 종속 개체와 스크립트에서 참조 프로시저를 제거합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저를 제거하려면**  
   

@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099966"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584358"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
 
@@ -175,7 +175,9 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **관리**, **데이터 컬렉션**을 차례로 확장합니다. **CDC Performance Data Collector**를 마우스 오른쪽 단추로 클릭한 다음, **데이터 컬렉션 집합 시작**을 클릭합니다.  
   
 4. 1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅숏 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> 스크립트 업그레이드 모드
 
 누적 업데이트 또는 서비스 팩을 인스턴스에 적용하면 다시 시작할 때 인스턴스가 스크립트 업그레이드 모드로 입력할 수 있습니다. 이 모드에서 SQL Server는 내부 CDC 테이블을 분석하고 업그레이드하는 단계를 실행할 수 있으며, 이로 인해 캡처 테이블에 인덱스와 같은 개체를 다시 만들 수 있습니다. 관련된 데이터의 양에 따라 이 단계는 시간이 다소 소요되거나 사용 가능한 CDC 데이터베이스에 대한 높은 트랜색션 로그 사용을 유발할 수 있습니다.

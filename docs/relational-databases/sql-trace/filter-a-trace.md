@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571233"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579836"
 ---
 # <a name="filter-a-trace"></a>추적 필터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571233"
 2.  필요한 정보가 있는 데이터와 데이터 열을 확인합니다.  
   
 3.  필요한 데이터 하위 집합을 확인하고 데이터 하위 집합을 기준으로 필터를 정의합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  예를 들어 일정 시간 이상이 걸리는 이벤트만 추적하려고 할 수도 있습니다. 이 경우 **Duration** 데이터 열이 300밀리초보다 더 큰 이벤트를 포함하는 추적을 만들 수 있습니다. 그러면 300밀리초 내에 완료되는 이벤트는 추적에 포함되지 않습니다.  
   
  SQL Server Profiler 또는 Transact-SQL 저장 프로시저를 사용하여 필터를 만들 수 있습니다.  

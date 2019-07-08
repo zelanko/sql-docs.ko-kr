@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a7986803518b9227d873a303b87358829cde3cd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412100"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581457"
 ---
 # <a name="delete-user-defined-functions"></a>사용자 정의 함수 삭제
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52412100"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52412100"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  함수가 속한 스키마에 대한 ALTER 권한 또는 함수에 대한 CONTROL 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -69,9 +69,11 @@ ms.locfileid: "52412100"
 4.  삭제할 함수를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 5.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 _function\_name_**종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

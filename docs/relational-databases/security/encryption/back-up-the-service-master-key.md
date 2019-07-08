@@ -12,12 +12,12 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 6e0d1da7b4910e4d3d6268be23c36fb69b16dc62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997485"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583673"
 ---
 # <a name="back-up-the-service-master-key"></a>서비스 마스터 키 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53997485"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="using-transact-sql"></a>Transact-SQL 사용  
@@ -69,5 +69,7 @@ ms.locfileid: "53997485"
 8. 파일을 백업 미디어에 복사하고 복사본을 확인합니다.  
   
 9. 백업을 안전한 오프 사이트 위치에 저장합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) 및 [BACKUP MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)를 참조하세요.  

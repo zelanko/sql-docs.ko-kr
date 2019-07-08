@@ -13,12 +13,12 @@ ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6697f631ec0ca4c0fb2ee26529b1f0f410e36912
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0579405abb9a8b84d56e94db88a1a2a77f1d99d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63052352"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586008"
 ---
 # <a name="enable-or-disable-data-collection"></a>데이터 컬렉션 설정 또는 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "63052352"
 1.  개체 탐색기에서 **관리** 노드를 확장합니다.  
   
 2.  **데이터 컬렉션**을 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 사용**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-the-data-collector"></a>데이터 수집기를 비활성화하려면  
   
 1.  개체 탐색기에서 **관리** 노드를 확장합니다.  

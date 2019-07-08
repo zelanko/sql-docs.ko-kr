@@ -1,9 +1,9 @@
 ---
 title: DATABASE_PRINCIPAL_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -21,15 +21,15 @@ ms.assetid: 908c7dd8-c10b-4658-92f6-0224f9835dd9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3b65c8f0ed4679bcbf35d1e61483346647130ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 337e64e16e1d1c2ab1d0130fde056eb0ef22df30
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943810"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559438"
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 이 함수는 현재 데이터베이스의 보안 주체 ID를 반환합니다. 보안 주체에 대한 자세한 내용은 [보안 주체&#40;데이터베이스 엔진#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)를 참조하세요.
   
@@ -46,7 +46,7 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
 보안 주체를 나타내는 **sysname** 형식의 식입니다. *principal_name*을 생략하면 `DATABASE_PRINCIPAL_ID`가 현재 사용자의 ID를 반환합니다. `DATABASE_PRINCIPAL_ID`에는 괄호가 필요합니다.
   
 ## <a name="return-types"></a>반환 형식
-**ssNoversion**  
+**int**  
 데이터베이스 보안 주체가 없는 경우 NULL입니다.
   
 ## <a name="remarks"></a>Remarks  

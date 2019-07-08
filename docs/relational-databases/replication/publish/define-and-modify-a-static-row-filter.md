@@ -15,12 +15,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c956c5ad3e58c7d4aee84295b3cf2a7d6862e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7b50e4955677513afa8bc6a6bfca9c0c05985bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507686"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580049"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,9 @@ ms.locfileid: "62507686"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-a-static-row-filter"></a>정적 행 필터를 수정하려면  
   
 1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  

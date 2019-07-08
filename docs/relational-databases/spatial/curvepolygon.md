@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98d517c4d00d0ed69aa4a04daa4333c65fdf31de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae2897f84ad6784742b4210344c6bbd7809e901
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935263"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585547"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,9 +44,11 @@ ms.locfileid: "65935263"
 2.  4개 이상의 점이 있어야 합니다.  
   
 3.  시작점과 끝점의 X 및 Y 좌표가 동일해야 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    > Z 및 M 값이 무시되어야 합니다.  
+    > Z and M values are ignored.  
   
 다음 예에서는 허용되는 **CurvePolygon** 인스턴스를 보여 줍니다.  
   

@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d325480ad39800d28161e79cf468419278fb894f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee84d52b945ea293745ae6baae345d60faad89cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693456"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584466"
 ---
 # <a name="modify-check-constraints"></a>CHECK 제약 조건 수정
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "62693456"
 5.  **닫기**를 클릭합니다.  
   
 6.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **CHECK 제약 조건을 수정하려면**  
   
