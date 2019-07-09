@@ -10,12 +10,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468357"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624405"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 다른 방법으로 더 많은 메모리를 사용합니다. 필요 증가에 따라 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대해 설치하고 할당한 메모리의 양이 불충분해질 수 있습니다. 이 경우 메모리가 부족해질 수 있습니다. 이 항목에서는 OOM 상황에서 복구하는 방법을 설명합니다. 여러 OOM 상황을 방지하는 데 도움이 될 수 있는 지침은 [메모리 사용량 모니터링 및 문제 해결](monitor-and-troubleshoot-memory-usage.md) 을 참조하세요.  
@@ -69,7 +69,7 @@ ms.locfileid: "62468357"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결  
  물론 OOM(메모리 부족) 상황에 빠지지 않는 것이 최선입니다. 적절한 계획과 모니터링을 통해 OOM 상황을 방지할 수 있습니다. 그렇지만 최상의 계획을 세우더라도 실제 발생하는 상황을 항상 예측할 수 있는 것은 아니며 결국 메모리 부족 또는 OOM 상황에 도달할 수 있습니다. 다음 두 가지 방법으로 OOM에서 복구할 수 있습니다.  
   
-1.  [DAC (관리자 전용된 연결) 열기 ](#open-a-dac-dedicated-administrator-connection) 
+1.  [DAC(관리자 전용 연결) 열기](#open-a-dac-dedicated-administrator-connection) 
   
 2.  [수정 조치 수행](#take-corrective-action) 
   

@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064688"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624364"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 은 SQL Server 개체의 대상 집합이 하나 이상의 정책 기반 관리 정책에 지정된 조건을 준수하는지 여부를 보고하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** 는 대상 집합의 SQL Server 개체를 나타내는 개체 배열 또는 개체를 가져옵니다. 예를 들어 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스 개체의 배열을 만들어 **-TargetObjects**에서 사용됩니다.  
   
--   **-TargetExpressions** 는 대상 집합의 개체를 지정하는 쿼리 식을 포함하는 문자열을 가져옵니다. 쿼리 식은 '/' 문자로 구분된 노드 형식입니다. 각 노드의 형식은 ObjectType[Filter]입니다. 개체 유형은 SMO(SQL Server 관리 개체) 개체 계층의 개체 중 하나입니다. 필터는 해당 노드에 있는 개체에 대해 필터링하는 식입니다. 자세한 내용은 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)을(를) 참조하세요.  
+-   **-TargetExpressions** 는 대상 집합의 개체를 지정하는 쿼리 식을 포함하는 문자열을 가져옵니다. 쿼리 식은 '/' 문자로 구분된 노드 형식입니다. 각 노드의 형식은 ObjectType[Filter]입니다. 개체 형식에는 SQL Server 관리 개체 (SMO) 개체 계층 구조에 있는 개체 중 하나입니다. 필터는 해당 노드에 있는 개체에 대해 필터링하는 식입니다. 자세한 내용은 [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md)을(를) 참조하세요.  
   
  **-TargetObjects** 또는 **-TargetExpression**중에서 하나만 지정합니다.  
   

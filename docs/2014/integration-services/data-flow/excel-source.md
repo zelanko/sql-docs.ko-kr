@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856937"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624360"
 ---
 # <a name="excel-source"></a>Excel 원본
   Excel 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다.  
@@ -118,6 +118,6 @@ ms.locfileid: "62856937"
   
 -   블로그 항목, [Integration Services의 Excel, 3 부 중 3 부: 문제 및 대안](https://go.microsoft.com/fwlink/?LinkId=217676), dougbert.com 합니다.  
   
--   블로그 항목 [연결을 Excel (XLSX)에서 SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)합니다.  
+-   블로그 항목 [연결을 Excel (XLSX)에서 SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)합니다.  
   
   

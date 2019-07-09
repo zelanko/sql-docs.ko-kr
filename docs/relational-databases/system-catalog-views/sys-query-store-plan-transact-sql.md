@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542183"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652859"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "59542183"
 * 외부 테이블에 대한 참조
 * 분산 쿼리 또는 전체 텍스트 작업
 * 전역 쿼리 사용 
-* 커서
+* 동적 또는 키 집합 커서 (빨리 감기 및 정적 커서에 대해 지원 됨 계획 강제 적용)
 * 잘못된 스타 조인 사양 
 
 둘째, 계획에 사용되는 개체를 더 이상 사용할 수 없는 경우

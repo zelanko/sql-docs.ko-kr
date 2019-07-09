@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463549"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652842"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ FROM 절의 패턴을 임의 길이에 참여할 모든 노드 또는 지 테이
 ## <a name="arbitrary-length-pattern"></a>임의 길이 패턴
 이 패턴에는 노드를 포함 하 고 원하는 노드에 도달할 때까지 또는 최대 패턴에 지정 된 반복 될 때까지 반복적으로 이동 해야 하는 가장자리에 부합 함. 쿼리가 실행 될 때마다가이 패턴을 실행 한 결과 순서가 지정 된 컬렉션의 노드 및 가장자리 끝 노드로 시작 노드의 경로 따라 이동 됩니다. 정규식 스타일 구문 패턴 이며 다음 두 가지 패턴 수량자 지원 됩니다.
 
-* **‘+’** : 1 번 이상 반복 패턴을 반복 합니다. 가장 짧은 경로 찾을 수는 즉시 종료 합니다.
-* **{1,n}** : ' N '로 패턴 1 반복 시간입니다. 가장 짧은 발견 되는 즉시 종료 합니다.
+* **‘+’** : 패턴을 1번 이상 반복합니다. 최단 경로를 찾는 즉시 종료됩니다.
+* **{1,n}** : 패턴을 1~‘n’번 반복합니다. 가장 짧은 발견 되는 즉시 종료 합니다.
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE() 함수 두 임의 길이 순회 패턴의 연결을 허용 합니다. 시나리오에서 사용할 수 있는:    
@@ -94,7 +94,7 @@ STRING_AGG 함수 식과 인수로 구분 기호를 사용 하 고 문자열을 
 이 함수는 트래버스된 경로에 제공 된 노드/가장자리 특성 값 또는 표시 되는 식의 합계를 반환 합니다.
 
 ### <a name="count"></a>COUNT
-이 함수는 경로에서 원하는 노드/가장자리 특성의 null이 아닌 값의 개수를 반환합니다. COUNT 함수를 지원 합니다 ' *' 연산자 노드 또는 지 테이블 별칭을 사용 합니다. 노드 또는 지 테이블 별칭을 사용 하지 않고 * 모호 하며 오류가 발생 합니다.
+이 함수는 경로에서 원하는 노드/가장자리 특성의 null이 아닌 값의 개수를 반환합니다. COUNT 함수를 지원 합니다 '\*' 연산자 노드 또는 지 테이블 별칭을 사용 합니다. 노드 또는 지 테이블 별칭을 사용 하지 않고 \* 모호 하며 오류가 발생 합니다.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

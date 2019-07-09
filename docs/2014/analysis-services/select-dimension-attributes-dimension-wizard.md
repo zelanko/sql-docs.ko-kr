@@ -12,12 +12,12 @@ ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66069525"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624348"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>차원 특성 선택(차원 마법사)
   **차원 특성 선택** 페이지를 사용하여 차원에 대해 만들 특성을 선택하고 수정할 수 있습니다.  
@@ -53,8 +53,8 @@ ms.locfileid: "66069525"
 |사례|설정|  
 |----------|--------------|  
 |차원에 부모-자식 계층이 포함되고 **찾아보기 사용** 이 선택되지 않은 경우|마법사는 `AttributeHierarchyEnabled` 속성을 `True`로 두고, 키 특성에 대해 `AttributeHierarchyVisible` 특성을 `False`로 설정합니다.|  
-|차원 내의 테이블에 차원에 없는 테이블에 대한 외래 키가 포함된 경우|마법사는 외래 키를 포함되는 특성으로 선택하지만 **찾아보기 사용**은 선택하지 않습니다. 이 설정을 유지하면 특성의 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHieararchyVisible` 속성이 `False`로 설정됩니다.|  
-|null이 허용되는 외래 키 열을 통해 도달하는 눈송이 테이블이 차원에 포함된 경우<br /><br /> 및<br /><br /> 눈송이 테이블의 키를 기반으로 한 특성에 대해 찾아보기 사용이 선택되지 않은 경우|마법사는 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHieararchyVisible` 속성이 `False`로 설정된 새 특성을 만듭니다.|  
+|차원 내의 테이블에 차원에 없는 테이블에 대한 외래 키가 포함된 경우|마법사는 외래 키를 포함되는 특성으로 선택하지만 **찾아보기 사용**은 선택하지 않습니다. 이 설정을 유지하면 특성의 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHierarchyVisible` 속성이 `False`로 설정됩니다.|  
+|null이 허용되는 외래 키 열을 통해 도달하는 눈송이 테이블이 차원에 포함된 경우<br /><br /> 및<br /><br /> 눈송이 테이블의 키를 기반으로 한 특성에 대해 찾아보기 사용이 선택되지 않은 경우|마법사는 `AttributeHiearchyEnabled` 속성이 `True`로 설정되고 `AttributeHierarchyVisible` 속성이 `False`로 설정된 새 특성을 만듭니다.|  
   
  **특성 유형**  
  (옵션) 특성의 유형을 설정합니다. 기본값은 **Regular**입니다. 특성 유형은 특성에 포함할 정보에 대한 지침을 클라이언트 애플리케이션에 제공합니다.  
