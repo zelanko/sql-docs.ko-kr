@@ -19,7 +19,7 @@
     - name: Windows에 ML Services 설치
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
     - name: Linux에 ML Services 설치 >>
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
     - name: R Services 설치
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: '독립 실행형 서버 설치(R, Python)'
@@ -323,7 +323,7 @@
 - name: 리소스
   items:
     - name: 릴리스 정보 >>
-      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
+      href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 문제 해결
       items:
         - name: 문제 해결 개요
