@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351719"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500157"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -566,10 +566,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS 지역 복제 파트너 자격에서 보조 데�
 
 ## <a name="permissions"></a>사용 권한
 
-프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인 또는 `dbmanager` 데이터베이스 역할의 구성원만 데이터베이스를 변경할 수 있습니다.
-
-> [!IMPORTANT]
-> 데이터베이스의 소유자가 `dbmanager` 역할의 구성원인 경우 데이터베이스를 변경할 수 있습니다.
+데이터베이스를 변경하려면 로그인이 서버 수준 보안 주체 로그인(프로비저닝 프로세스에서 생성됨), 마스터의 `dbmanager` 데이터베이스 역할의 멤버, 현재 데이터베이스의 `db_owner` 데이터베이스 역할 또는 데이터베이스의 `dbo` 중 하나여야 합니다.
 
 ## <a name="examples"></a>예
 
