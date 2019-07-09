@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419161"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580705"
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,13 +84,15 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 1. SSN 열에서 데이터를 선택하고, 애플리케이션에 결과 집합으로 저장합니다. 이렇게 하면 애플리케이션(클라이언트 *드라이버*)이 열 암호를 해독할 수 있습니다.
 2. 결과 집합에서 SQL Server로 데이터를 삽입합니다. 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > 이 시나리오에서 대상 열이 암호화된 데이터를 허용하지 않는 일반 varchar이기 때문에 데이터는 서버에 다시 보낼 때 암호화됩니다. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>결정적 암호화 또는 임의 암호화 선택  
  데이터베이스 엔진은 암호화된 열에 저장된 일반 텍스트 데이터에 대해 작동하지 않지만 열의 암호화 유형에 따라 암호화된 데이터에 대한 일부 쿼리를 지원합니다. 상시 암호화는 임의 암호화와 결정적 암호화의 두 가지 암호화 유형을 지원합니다.  
   
-- 결정적 암호화는 지정된 일반 텍스트 값에 대해 항상 동일한 암호화된 값을 생성합니다. 결정적 암호화를 사용하는 경우 암호화된 열에 대한 지점 조회, 동등 조인, 그룹화 및 인덱싱이 가능합니다. 그러나 True/False 또는 북/남/동/서 지역 등 가능한 암호화된 값 집합이 작은 경우 특히 권한이 없는 사용자가 암호화된 열의 패턴을 검사하여 암호화된 값에 대한 정보를 추측할 수도 있습니다. 결정적 암호화에서는 문자 열에 대해 binary2 정렬 순서를 적용하는 열 데이터 정렬을 사용해야 합니다.
+- 결정적 암호화는 지정된 일반 텍스트 값에 대해 항상 동일한 암호화된 값을 생성합니다. 결정적 암호화를 사용하는 경우 암호화된 열에 대한 지점 조회, 동등 조인, 그룹화 및 인덱싱이 가능합니다. 그러나 True/False 또는 북/남/동/서 지역 등 가능한 암호화된 값의 집합이 작은 경우 특히 권한이 없는 사용자가 암호화된 열의 패턴을 검사하여 암호화된 값에 대한 정보를 추측할 수도 있습니다. 결정적 암호화에서는 문자 열에 대해 binary2 정렬 순서를 적용하는 열 데이터 정렬을 사용해야 합니다.
 
 - 임의 암호화는 예측하기 어려운 방식으로 데이터를 암호화하는 방법을 사용합니다. 임의 암호화는 더 안전하지만 암호화된 열에 대한 검색, 그룹화, 인덱싱 및 조인을 금지합니다.
 

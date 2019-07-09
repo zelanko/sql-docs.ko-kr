@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388127"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585096"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -88,6 +88,8 @@ ms.locfileid: "67388127"
    ```
 
 4. 다음 명령을 실행하여 HGS 컴퓨터의 IP 주소를 찾습니다. 이후 단계에 사용할 수 있게 이 IP 주소를 저장합니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  

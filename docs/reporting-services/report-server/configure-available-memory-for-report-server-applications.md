@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506584"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564030"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 모든 사용 가능한 메모리를 사용할 수 있지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 애플리케이션에 할당되는 총 메모리 리소스 양에 대한 상한값을 구성하여 기본 동작을 재정의할 수 있습니다. 메모리 가중 정도가 낮은지, 보통인지, 높은지에 따라 보고서 서버가 요청의 우선 순위를 정하고 해당 요청을 처리하는 방법을 변경하도록 하는 임계값을 설정할 수도 있습니다. 메모리 가중 정도가 낮은 수준에서 보고서 서버는 대화형 또는 요청 시 실행 보고서 처리에 약간 더 높은 우선 순위를 부여하여 응답합니다. 메모리 가중 정도가 높은 수준에서 보고서 서버는 사용 가능한 제한된 리소스를 통해 여러 기술을 사용하여 작동 상태를 유지합니다.  
@@ -77,17 +77,19 @@ ms.locfileid: "66506584"
 #### <a name="example-of-memory-configuration-settings"></a>메모리 구성 설정 예  
  다음 예에서는 사용자 지정 메모리 구성 값을 사용하는 보고서 서버 컴퓨터에 대한 구성 설정을 보여 줍니다. **WorkingSetMaximum** 또는 **WorkingSetMinimum**을 추가하려는 경우 RSReportServer.config 파일에 요소와 값을 입력해야 합니다. 두 값 모두 서버 애플리케이션에 할당하는 RAM을 KB로 표시하는 정수입니다. 다음 예에서는 보고서 서버 애플리케이션에 대한 총 메모리 할당이 4GB를 초과할 수 없음을 지정합니다. **WorkingSetMinimum** ( **WorkingSetMaximum**의 60%)에 대한 기본값이 허용되는 경우 생략하고 RSReportServer.config 파일에서 **WorkingSetMaximum** 지정할 수 있습니다. 이 예에서는 추가하는 경우 해당 값이 나타나는 방법을 보여 주기 위해 **WorkingSetMinimum** 을 포함합니다.  
   
-' ' Config 파일 <MemorySafetyMargin>80</MemorySafetyMargin>  
+```
+      Config files 
+      <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
       <WorkingSetMinimum>2400000</WorkingSetMinimum>  
 ```  
   
-#### About ASP.NET memory configuration settings  
- Although the 2016 and later Report Server Web service and web portal are HTML5 applications, previous versions are [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications, neither application responds to memory configuration settings that you specify in the **processModel** section of machine.config for [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications that run in IIS 5.0 and higher compatibility mode. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reads memory configuration settings from the RSReportServer.config file only.  
+#### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET 메모리 구성 설정 정보  
+ 이전 버전은 2016 이상 보고서 서버 웹 서비스 및 웹 포털은 HTML5 응용 프로그램 이지만 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램의 경우 모두 응용 프로그램에서 지정 하는 메모리 구성 설정에 응답 합니다 **processModel**  섹션에 대 한 machine.config의 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] IIS 5.0 및 더 높은 호환성 모드에서 실행 되는 응용 프로그램입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
   
-## See also  
- [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Modify a Reporting Services Configuration File &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
- [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+## <a name="see-also"></a>관련 항목:  
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [보고서 서버 애플리케이션을 위한 애플리케이션 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   

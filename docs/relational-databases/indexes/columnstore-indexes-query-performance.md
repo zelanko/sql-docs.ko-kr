@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343922"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583215"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343922"
     
 -   Columnstore 인덱스는 디스크에서 압축된 데이터를 읽습니다. 즉, 메모리로 읽어야 하는 데이터 바이트가 적어집니다.    
     
--   Columnstore 인덱스는 데이터를 압축된 형태로 메모리에 저장합니다. 이렇게 하면 동일한 데이터를 메모리로 읽는 횟수가 줄어 I/O도 줄어듭니다. 예를 들어 압축률이 10배인 columnstore 인덱스에서는 데이터를 압축되지 않은 형태로 저장하는 작업과 비교해 볼 때 메모리에 10배 이상의 데이터를 보관할 수 있습니다. 메모리에서 더 많은 데이터를 사용하면 columnstore 인덱스에서는 디스크에서 추가 읽기를 유도하여 메모리에 필요한 데이터를 찾을 가능성이 높아집니다.    
+-   Columnstore 인덱스는 데이터를 압축된 형태로 메모리에 저장합니다. 이렇게 하면 동일한 데이터를 메모리로 읽는 횟수가 줄어 I/O도 줄어듭니다. 예를 들어 압축률이 10배인 columnstore 인덱스에서는 데이터를 압축되지 않은 형태로 저장하는 작업과 비교해 볼 때 메모리에 10배 이상의 데이터를 보관할 수 있습니다. 메모리에서 더 많은 데이터를 사용하면 columnstore 인덱스에서는 디스크에서 추가 읽기를 하지 않고도 메모리에 필요한 데이터를 찾을 가능성이 높아집니다.    
     
 -   Columnstore 인덱스 높은 압축률을 보여 주는 데이터를 행 대신 열을 기준으로 압축하여 디스크에 저장되는 데이터 크기를 줄입니다. 각 열은 개별적으로 압축되어 저장됩니다.  한 열에 있는 데이터는 항상 형식이 동일하며, 유사한 값을 포함하려는 경향이 있습니다. 데이터 압축 기술은 값이 비슷할 경우 더 높은 압축률을 달성할 수 있습니다.    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343922"
     
  일부 쿼리 실행 연산자는 일괄 처리 모드에서 실행할 수 없습니다. 예를 들어 Insert, Delete 또는 Update와 같은 DML 작업은 한 번에 행에서 실행됩니다. 일괄 처리 모드 연산자는 쿼리 성능 속도 향상을 위해 Scan, Join, Aggregate, Sort 등과 같은 연산자를 대상으로 합니다. Columnstore 인덱스는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 처음으로 사용되었으므로 일괄 처리 모드로 실행할 수 있는 연산자를 지속적으로 확장하려고 노력합니다. 다음 표에서 제품 버전에 따라 일괄 처리 모드로 실행되는 연산자를 보여 줍니다.    
     
-|일괄 처리 모드 연산자|언제 사용하나요?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|주석|    
+|일괄 처리 모드 연산자|언제 사용하나요?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]란?|주석|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 작업(insert, delete, update, merge)||아니요|아니요|아니요|DML 병렬이 아니므로 일괄 처리 모드 작업이 아닙니다. 직렬 모드 일괄 처리를 사용하도록 설정하더라도 DML을 일괄 처리 모드로 처리함으로써 크게 향상되는 것은 없습니다.|    
 |Columnstore 인덱스 검색|SCAN|NA|예|예|Columnstore 인덱스에서 조건자를 SCAN 노드로 푸시할 수 있습니다.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343922"
 |위쪽 정렬||아니요|아니요|예||    
 |창 집계||NA|NA|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
- ¹[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+ ?[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 예를 들어 팩트는 특정 지역에서 특정 제품의 판매를 나타내는 레코드일 수 있으며, 차원은 지역, 제품 등의 집합을 나타냅니다. 팩트 테이블과 차원 테이블은 기본/외래 키 관계를 통해 연결됩니다. 가장 일반적으로 사용되는 분석 쿼리는 하나 이상의 차원 테이블을 팩트 테이블에 조인하는 것입니다.    
     
-`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다.    
+`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다. ? ?
     
 columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포함된 조인/조건자를 사용하여 분석 쿼리를 매우 효율적으로 실행합니다. 그러나 많은 고객 작업에서 팩트/차원 테이블을 연결하는 문자열 기반 열이 사용되고 있고 그 결과 columnstore 인덱스를 사용하는 쿼리 성능은 직접 수행할 때와는 다릅니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 문자열 열이 있는 조건자를 SCAN 노드로 푸시다운하여 문자열 기반의 열을 사용하는 분석 쿼리의 성능을 크게 향상시켰습니다.    
     
@@ -155,6 +155,9 @@ columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포�
 문자열 조건자 푸시다운을 사용하면 쿼리 실행 시 사전에 있는 값으로 조건자를 계산하고 조건을 충족할 경우 사전 값을 참조하는 모든 행이 자동으로 조건이 충족됩니다. 이렇게 하면 두 가지 방법으로 성능이 향상됩니다.
 1.  정규화된 행만 반환되어 SCAN 노드에서 받아야 하는 행 수를 줄입니다. 
 2.  문자열 비교 수가 상당히 줄어듭니다. 이 예제에서는 1백만 개의 비교에 대해 100개의 문자열 비교만 필요합니다. 아래 설명된 대로 몇 가지 제한 사항이 있습니다.    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   델타 행 그룹에 대한 문자열 조건자 푸시다운이 없습니다. 델타 행 그룹의 열에 대한 사전이 없습니다.    
     -   사전 항목이 64KB 항목을 초과하면 문자열 조건자 푸시다운이 없습니다.    
     -   Null을 평가하는 식이 지원되지 않습니다.    

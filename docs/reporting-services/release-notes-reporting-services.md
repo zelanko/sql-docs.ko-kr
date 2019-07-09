@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037855"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533836"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SSRS(SQL Server Reporting Services)(2017 이상)의 릴리스 정보
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 2019/07/01
+
+| 문제 해결된 | 세부 정보 |
+| :---------- | :------ |
+| 보안 업데이트 | &nbsp; |
+| 월요일부터 금요일까지 선택할 수 없습니다 공유 주별 일정을 만들 때 | &nbsp; |
+| 보고서 표시 되지 캐리지 리턴 제대로 Word 형식으로 | &nbsp; |
+| System Center Operations Manager(SCOM) 2019 없는 긴 works 최근 SSRS 2017을 사용 하 여 업그레이드 | &nbsp; |
+| 공유 데이터 집합에 대 한 권한 부여 확장 프로그램을 호출할 때 오류가 발생 했습니다. | &nbsp; |
+| SSRS 2017에 웹 서비스 끝점 ReportingService2010.GetProperties 메서드를 링크 된 보고서에 대 한 모든 데이터를 가져올 수 없습니다 그러면 PBIRS GetAllProperties 저장된 프로시저에서 변경 하는 논리 | &nbsp; |
+| 모바일 보고서의 간단한 표에서 행 머리글 사라집니다 표 내에서 항목을 클릭할 때 | &nbsp; |
+| 데이터 기반 구독 매개 변수에서 날짜 필드를 사용할 수 없습니다. | &nbsp; |
+| 중첩 된 테이블 릭 스 작은 글꼴 또는 SSRS 2016 이상 부분 글꼴 보여 줍니다. | &nbsp; |
+| 사용자가 서로 다른 로캘 편집 구독 후 오류가 발생 날짜/시간 매개 변수를 사용 하 여 구독 | &nbsp; |
+| "배달 오류가 발생 했습니다."와 함께 실패는 Null 배달 확장 프로그램을 사용 하 여 데이터 기반 구독 만들기 | &nbsp; |
+| URL 인코딩은 올바르지 Excel\Word 형식으로 값을 설정할 때 | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 2019/02/12
 
