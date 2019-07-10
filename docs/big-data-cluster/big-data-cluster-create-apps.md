@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388746"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681595"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -107,7 +107,7 @@ mssqlctl app create --spec <directory containing spec file>
 mssqlctl app create --spec ./addpy
 ```
 
-이 있다고 가정 하는 응용 프로그램에 저장 된 `addpy` 폴더입니다. 이 폴더 호출 이라는 응용 프로그램에 대 한 사양 파일도 포함 해야 `spec.yaml`합니다. 참조 하세요 [응용 프로그램 배포 페이지](concept-application-deployment.md) 대 한 자세한 내용은 `spec.yaml` 파일입니다.
+이 있다고 가정 하는 응용 프로그램에 저장 된 `addpy` 폴더입니다. 이 폴더 라는 응용 프로그램에 대 한 사양 파일도 포함 해야 `spec.yaml`합니다. 참조 하세요 [응용 프로그램 배포 페이지](concept-application-deployment.md) 대 한 자세한 내용은 `spec.yaml` 파일입니다.
 
 이 샘플 앱을 배포 하려면 라는 디렉터리에 다음 파일을 만들고 `addpy`:
 

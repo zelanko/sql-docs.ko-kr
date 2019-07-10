@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469129"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681551"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -33,11 +33,11 @@ ms.locfileid: "67469129"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| `mssqlctl` 명령 변경 내용 | `mssqlctl cluster` 명령으로 바뀌었습니다 `mssqlctl bdc`합니다. 자세한 내용은 참조는 [ `mssqlctl` 참조](reference-mssqlctl.md)합니다. |
+| `mssqlctl` 명령 변경 내용 | `mssqlctl cluster` 명령이 `mssqlctl bdc`로 변경되었습니다. 자세한 내용은 [`mssqlctl`참조](reference-mssqlctl.md)를 참조하세요. |
 | 새 `mssqlctl` 상태 명령 및 클러스터 관리 포털을 제거 합니다. | 클러스터 관리 포털에는이 릴리스에서 제거 됩니다. 새 상태 명령에 추가 된 `mssqlctl` 해당 보수 기존 명령을 모니터링 합니다. |
-| Spark 계산 풀 | 저장소 크기를 조정 하지 않고도 Spark 계산 능력을 향상 하는 추가 노드를 만듭니다. 또한 Spark에 대 한 사용 되지 않는 저장소 풀 노드를 시작할 수 있습니다. Spark 및 저장소는 분리 됩니다. 자세한 내용은 [spark 없이 저장소 구성](deployment-custom-configuration.md#sparkstorage)합니다. |
-| MSSQL Spark 커넥터 | 읽기/쓰기 데이터 풀에 대 한 외부 테이블을 지원 합니다. 이전 릴리스에서 지원 되는 읽기/쓰기 마스터 테이블만을 인스턴스입니다. 자세한 내용은 [읽고 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 쓰는 방법](spark-mssql-connector.md)합니다. |
-| MLeap를 사용 하 여 machine Learning | [Spark에서 MLeap 기계 학습 모델을 학습 하 고 Java 언어 확장을 사용 하 여 SQL Server의 점수를 매긴](spark-create-machine-learning-model.md)합니다. |
+| Spark 컴퓨팅 풀 | 추가 노드를 생성하여 스토리지를 확장하지 않고도 Spark 컴퓨팅 성능을 향상시킬 수 있습니다. 또한 Spark에 사용되지 않는 스토리지 풀 노드를 시작할 수도 있습니다. Spark와 스토리지는 분리됩니다. 자세한 내용은 [spark없이 스토리지 구성](deployment-custom-configuration.md#sparkstorage)을 참조하세요. |
+| MSSQL Spark 커넥터 | 데이터 풀 외부 테이블에 대한 읽기/쓰기를 지원합니다. 이전 릴리스에서는 MASTER 인스턴스 테이블에만 읽기/쓰기를 지원했습니다. 자세한 내용은 [MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server에 읽고 쓰는 방법](spark-mssql-connector.md)을 참조하세요. |
+| MLeap를 사용하여 기계 학습 | [Spark에서 MLeap 기계 학습 모델을 교육하고 Java 언어 확장을 사용하여 SQL Server에서 평가합니다](spark-create-machine-learning-model.md). |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -125,7 +125,7 @@ ms.locfileid: "67469129"
 | **mssqlctl** 업데이트 | 여러 **mssqlctl** [명령 및 매개 변수가 업데이트되었습니다](../big-data-cluster/reference-mssqlctl.md). 예를 들어 **mssqlctl login** 명령은 이제 컨트롤러 사용자 이름 및 엔드포인트를 대상으로 하도록 업데이트되었습니다. |
 | 스트리지 향상 | 로그 및 데이터에 대해 서로 다른 스토리지 구성을 지원합니다. 또한 빅 데이터 클러스터에 대한 영구적 볼륨 클레임 수가 감소했습니다. |
 | 여러 컴퓨팅 풀 인스턴스 | 여러 컴퓨팅 풀 인스턴스를 지원합니다. |
-| 새 풀 동작 및 기능 | 컴퓨팅 풀은 이제 **ROUND_ROBIN** 배포에서만 스토리지 풀 및 데이터 풀 작업에 대해 기본적으로 사용됩니다. 데이터 풀은 새로운 **REPLICATED** 배포 형식을 사용할 수 있습니다. 즉, 모든 데이터 풀 인스턴스에 동일한 데이터가 존재할 수 있습니다. |
+| 새 풀 동작 및 기능 | 컴퓨팅 풀은 이제 **ROUND_ROBIN** 배포에서만 스토리지 풀 및 데이터 풀 작업에 대해 기본적으로 사용됩니다. 데이터 풀 이제 새 사용할 수 있습니다 **복제 된** 데이터 풀 인스턴스를 모두에 동일한 데이터가 있는지 즉 분포 유형입니다. |
 | 외부 테이블 개선 | HADOOP 데이터 원본 형식의 외부 테이블은 이제 최대 1 MB 크기의 행 읽기를 지원합니다. 외부 테이블(ODBC, 스토리지 풀, 데이터 풀)은 이제 SQL Server 테이블만큼 폭이 넓은 행을 지원합니다. |
 
 ### <a name="known-issues"></a>알려진 문제

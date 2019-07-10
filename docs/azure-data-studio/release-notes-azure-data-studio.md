@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798099"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681610"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
@@ -367,7 +367,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 ### <a name="github-issues-fixes-june-2018"></a>GitHub 문제를 수정 하면 2018 년 6 월
 
 - 기능 요청 ([1204 발급](https://github.com/Microsoft/azuredatastudio/issues/1204)): 데이터를 결과 그리드 자동 맞춤 열 너비를 확인 하 고 동일한 쿼리를 다시 실행 하는 경우 수동으로 변경 해야 하세요.
-- 수정 [1398 발급](https://github.com/Microsoft/azuredatastudio/issues/1398): 표시는 메시지를 추가 하 고 연결 된 계정 비어 있는 경우 계정 계정 단추를 추가 해야 합니다.
+- 수정 [1398 발급](https://github.com/Microsoft/azuredatastudio/issues/1398): 표시는 메시지를 추가 하 고 연결 된 계정 비어 있는 경우 계정 단추를 추가 해야 합니다.
 - 수정 [1399 발급](https://github.com/Microsoft/azuredatastudio/issues/1399): 연결 된 계정 탭 뷰를 축소할 때 손상 되었습니다.
 - 수정 [1374 발급](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL 도구 서비스에는 디스크에서.sql 파일을 열 때 작동이 중단 됩니다.
 - 수정 [1372 발급](https://github.com/Microsoft/azuredatastudio/issues/1372): SQL 키워드가 "BETWEEN" 없습니다.

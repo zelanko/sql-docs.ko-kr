@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313836"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680265"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -181,7 +181,7 @@ dmaProcessor에 평가 파일 처리 완료 후 보고서 데이터 표에 DMARe
    ![DMAWarehouse 보고서 보기](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > 예상 했던 데이터에 표시 되지 않는 경우에 활성 책갈피를 변경해 보세요.  자세한 내용은 참조는 다음 섹션에서 세부 정보입니다.
+   > 예상 했던 데이터에 표시 되지 않는 경우에 활성 책갈피를 변경해 보세요.  자세한 내용은 다음 섹션에서 세부 정보를 참조 하세요.
 
 ## <a name="working-with-dma-reports"></a>DMA 보고서 사용
 

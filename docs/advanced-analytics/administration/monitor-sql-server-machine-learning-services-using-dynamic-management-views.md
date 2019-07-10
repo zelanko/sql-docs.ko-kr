@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645552"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681615"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -196,7 +196,7 @@ FROM sys.dm_os_sys_info;
 |--------|-------------|
 | physical_memory_kb | 컴퓨터의 실제 메모리의 총 양입니다. |
 | committed_kb | 커밋된 메모리는 메모리 관리자의 크기 (KB). 메모리 관리자의 예약된 메모리는 포함하지 않습니다. |
-| external_pool_peak_memory_kb | 합계를 사용 하는 메모리를 킬로바이트, 모든 외부 리소스 풀에 대 한 최대입니다. |
+| external_pool_peak_memory_kb | 최대 메모리 양 합한 사용 (킬로바이트), 모든 외부 리소스 풀에 대 한 합니다. |
 
 ## <a name="memory-configuration"></a>메모리 구성
 

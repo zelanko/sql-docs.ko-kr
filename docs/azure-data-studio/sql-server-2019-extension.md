@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400001"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681599"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -51,7 +51,7 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 * 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을이 릴리스에서 제거 되었습니다. SQL Server 빅 데이터 클러스터 연결에서 사용할 수 없었던 모든 기능이 SQL Server 연결에서 출시 되었습니다.
 * HDFS 검색에서 찾을 수 있습니다 합니다 **Data Services** 폴더
-* Notebook에는 PySpark 및 기타 빅 데이터 커널을 SQL Server 빅 데이터 클러스터에 마스터 SQL Server 인스턴스에 연결 하는 경우 작동 합니다.
+* Notebook에 PySpark 및 기타 빅 데이터 커널을 작동 SQL Server 빅 데이터 클러스터에 마스터 SQL Server 인스턴스에 연결 하는 경우.
 * 외부 테이블 마법사를 만듭니다.
   * 기존 외부 데이터 원본을 사용 하 여 외부 테이블 만들기를 지원 합니다.
   * 마법사에서 성능이 향상 되었습니다.
