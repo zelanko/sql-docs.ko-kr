@@ -9056,7 +9056,7 @@
               items:
                 - name: 전체 메모리 덤프 가져오기
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: 크래시 및 중단
+                - name: 진단 데이터 가져오기
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server 에이전트
               items:
