@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041544"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492581"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv`는 마지막으로 행을 읽은 시간을 나타내는 행에 대한 **rowversion** 열 값입니다. 이 값은 실제 **rowversion** 값으로 바꾸어야 합니다. 예를 들어 실제 **rowversion** 값은 0x00000000000007D3입니다.
   
-또한 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 트랜잭션에 삽입할 수도 있습니다. 트랜잭션 범위 내에서 `@t` 변수를 쿼리하면 `myKey` 테이블을 다시 쿼리하지 않고도 테이블의 업데이트된 `MyTes` 열을 검색할 수 있습니다.
+또한 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 트랜잭션에 삽입할 수도 있습니다. 트랜잭션 범위 내에서 `@t` 변수를 쿼리하면 `myKey` 테이블을 다시 쿼리하지 않고도 테이블의 업데이트된 `MyTest` 열을 검색할 수 있습니다.
   
 다음은 **timestamp** 구문을 사용하는 동일한 예입니다.
   

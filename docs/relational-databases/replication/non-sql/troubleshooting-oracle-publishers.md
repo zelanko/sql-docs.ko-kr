@@ -14,19 +14,19 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667841"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582212"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle 게시자 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 Oracle 게시자를 구성 및 사용할 때 발생할 수 있는 여러 가지 문제를 나열합니다.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Oracle 클라이언트 및 네트워킹 소프트웨어와 관련된 오류가 발생했습니다.  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 배포자에서 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한이 부여되어야 합니다. 사용 권한이 부여되지 않거나 Oracle 클라이언트 구성 요소가 제대로 설치되지 않으면 다음과 같은 오류 메시지가 표시됩니다.  
   
  "[Microsoft OLE DB Provider for Oracle]로 서버에 연결하지 못했습니다. Oracle 클라이언트 및 네트워킹 구성 요소를 찾을 수 없습니다. 이러한 구성 요소는 Oracle 버전 7.3.3 이상의 클라이언트 소프트웨어 설치의 일부로 Oracle사에서 제공합니다. 이러한 구성 요소를 설치해야 공급자를 사용할 수 있습니다."  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47667841"
   
 -   "Oracle 서버 인스턴스 '\<*OraclePublisherName*'은 '\<*SQLServerDistributorName*>'를 배포자로 사용하도록 이전에 구성되었습니다. '\<*NewSQLServerDistributorName*>'을 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
   
--   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*'에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 '*\<SynonymName>*'을 삭제하고 다시 만드세요."  
+-   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* '에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
   
  Oracle 게시자를 삭제하면 Oracle 데이터베이스의 복제 개체가 자동으로 정리됩니다. 그러나 어떤 경우에는 Oracle 복제 개체를 수동으로 정리해야 합니다. 복제에 의해 생성된 Oracle 복제 개체를 수동으로 정리하려면 다음을 수행하십시오.  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667841"
 2.  SQL 명령 `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`를 실행합니다.  
   
 3.  SQL 명령 `DROP USER <replication_administrative_user_schema>``CASCADE;`를 실행합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>PRIMARY KEY 부재와 관련된 SQL Server 오류 21663이 발생했습니다.  
  트랜잭션 게시의 아티클에는 올바른 기본 키가 있어야 합니다. 아티클에 올바른 기본 키가 없으면 아티클을 추가할 때 다음 오류 메시지가 표시됩니다.  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667841"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>연결된 서버로의 중복 로그인과 관련된 SQL Server 오류 21642가 발생했습니다.  
  Oracle 게시자를 처음 구성하면 게시자와 배포자 간 연결에 대해 연결된 서버 항목이 생성됩니다. 연결된 서버의 이름은 Oracle TNS 서비스 이름과 동일합니다. 이름이 동일한 연결된 서버를 만들면 다음 오류 메시지가 표시됩니다.  
   
- "유형이 다른 게시자에는 연결된 서버가 필요합니다. 연결된 서버 '*\<LinkedServerName>*'가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
+ "유형이 다른 게시자에는 연결된 서버가 필요합니다. 연결된 서버 ' *\<LinkedServerName>* '가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오."  
   
  이 오류는 연결된 서버를 직접 만들거나 이전에 삭제한 Oracle 게시자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 간 관계를 다시 구성하려고 하는 경우 발생할 수 있습니다. 게시자를 다시 구성하는 동안 이 오류가 표시되면 [sp_dropserver&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)를 사용하여 연결된 서버를 삭제하세요.  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667841"
   
 2.  **실행** 대화 상자에 **regedit**를 입력한 다음 **확인**을 클릭합니다.  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers로 이동합니다.  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers로 이동합니다.  
   
      Providers 아래에는 OraOLEDB.Oracle 폴더가 있어야 하며 이 폴더 내에 이름이 **AllowInProcess**이고 값이 **1**인 DWORD 값이 있어야 합니다.  
   
@@ -207,7 +209,7 @@ ms.locfileid: "47667841"
 ## <a name="oracle-error-ora-01555"></a>Oracle 오류 ORA-01555  
  다음 Oracle 데이터베이스 오류는 스냅숏 복제와는 관계가 없으며 Oracle에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성하는 방식과 관련되어 있습니다.  
   
- "ORA-01555: 너무 오래된 스냅숏"  
+ "ORA-01555: Snapshot too old"  
   
  Oracle에서는 롤백 세그먼트라는 개체를 사용하여 SQL 문이 실행된 시점에서 일관된 읽기를 수행할 수 있는 데이터 뷰를 생성합니다. 다른 동시 세션에서 롤백 정보를 덮어쓰는 경우 "snapshot too old" 오류가 발생할 수 있습니다. Oracle 9i 이전에서는 이 오류의 발생 빈도를 줄이기 위해 롤백 세그먼트의 크기 및/또는 수를 늘리고 큰 트랜잭션을 특정 롤백 세그먼트에 할당하는 방법이 권장되었습니다.  
   

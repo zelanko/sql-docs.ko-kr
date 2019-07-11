@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775136"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581429"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -136,6 +136,8 @@ SQL Server 2017에서 이 쿼리의 실행 계획(호환성 수준 140 및 그 �
 2. SQL Server도 암시적 `GROUP BY O_CUSTKEY on ORDERS`를 추론하며 IndexSpool + StreamAggregate를 사용하여 구현합니다.
 3. SQL Server에서는 이제 모든 연산자에서 병렬 처리를 사용합니다.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복잡할 수도 있습니다. 여기서 보듯이 UDF 내 연산은 더 이상 블랙 박스가 아니므로 쿼리 최적화 프로그램이 해당 연산을 희생하고 최적화할 수 있습니다. 또한 UDF가 더 이상 계획에 없으므로 반복 UDF 호출이 함수 호출 과부하를 완전히 방지하는 계획으로 바뀝니다.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>인라인 처리 가능한 스칼라 UDF 요구 사항
@@ -182,7 +184,7 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 
 ## <a name="enabling-scalar-udf-inlining"></a>스칼라 UDF 인라인 처리 사용
 
-데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
+데이터베이스에 대해 호환성 수준 150을 사용하도록 설정하여 워크로드가 스칼라 UDF 인라인 처리에 자동으로 적합하도록 만들 수 있습니다.? Transact-SQL을 사용하여 설정할 수 있습니다.? 예를 들면 다음과 같습니다.  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

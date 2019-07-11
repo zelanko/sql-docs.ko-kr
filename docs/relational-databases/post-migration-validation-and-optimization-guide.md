@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206369"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581225"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
@@ -53,7 +53,7 @@ ms.locfileid: "54206369"
 **적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]?로 있는 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 첫 컴파일 시 입력 매개 변수를 검색하고 해당 입력 데이터 분포에 최적화된 매개 변수가 있고 재사용 가능한 계획을 생성하여 저장 프로시저의 쿼리 계획을 컴파일합니다. 저장 프로시저가 아닌 경우에도 간단한 계획을 생성하는 문은 대부분 매개 변수가 가집니다. 계획이 처음 캐시된 후 이후 실행은 모두 기존에 캐시된 계획에 매핑됩니다.
 첫 번째 컴파일 시 일반 작업에 대해 가장 일반적인 매개 변수 집합을 사용하지 않았을 경우 문제가 발생할 수 있습니다. 매개 변수가 다르면 같은 실행 계획의 효율이 떨어집니다. 이 항목에 대한 자세한 내용은 [매개 변수 스니핑](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 참조하세요.
@@ -108,6 +108,9 @@ SARGable이 아닌 조건자의 몇 가지 예:
   -   이를 위해서는 데이터베이스(예: 저장 프로시저, 사용자 정의 함수 또는 뷰)에 저장된 사용자 정의 코드 구문을 기본 테이블(예: [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md))에서 사용되는 데이터 형식에 대한 정보를 저장하는 시스템 테이블과 비교해야 할 수 있습니다.
 2. 모든 코드를 이전 시점으로 트래버스할 수 없는 경우에는 같은 목적으로 테이블의 데이터 형식을 변수/매개 변수 선언과 일치하도록 변경합니다.
 3. 다음 구문을 유용성을 생각해 보세요.
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   조건자로 사용되는 함수
   -   와일드카드 검색
   -   칼럼 형식 데이터를 기반으로 하는 복잡한 식 - 인덱싱할 수 있는 지속형 컴퓨팅 열 대신 만들 필요가 있는지 평가

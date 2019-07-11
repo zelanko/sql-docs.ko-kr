@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c662d888d627b6dcce3d43161d16aee50a994ec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 25625a5340707efdf21589a735a177e0be667bd1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124853"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586422"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,14 @@ ms.locfileid: "54124853"
   
     -   **요청 시에만 실행**  
   
-    -   **\<일정 정의...>**  
+    -   **\<일정 정의?>**  
   
-2.  **\<일정 정의...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음 **확인**을 클릭합니다.  
+2.  **\<일정 정의?>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음, **확인**을 클릭합니다.  
   
 3.  마법사를 완료합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-replication-monitor"></a>복제 모니터에서 밀어넣기 구독에 대한 동기화 일정을 수정하려면  
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
@@ -169,25 +171,25 @@ ms.locfileid: "54124853"
   
 1.  트랜잭션 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 배포 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  트랜잭션 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addpushsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber** , **@subscriber_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 배포 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 배포 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 끌어오기 구독을 만듭니다. 자세한 내용은 [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
   
-2.  구독자에서 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 동기화 일정을 정의하려면  
   
 1.  병합 게시에 대한 새 밀어넣기 구독을 만듭니다. 자세한 내용은 [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)을 참조하세요.  
   
-2.  구독자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber**, **@subscriber_db**, **@publication**와 **@job_name** 및 **@password**에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
+2.  구독자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. **@subscriber** , **@subscriber_db** , **@publication** 와 **@job_name** 및 **@password** 에 대해 구독자에서 병합 에이전트가 실행되는 Windows 자격 증명을 지정합니다. 구독을 동기화하는 병합 에이전트 작업 일정을 정의하는 동기화 매개 변수(위에서 자세히 설명)를 지정합니다.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  복제에서는 SQL Server 에이전트를 사용하여 스냅숏 생성이나 구독 동기화와 같이 정기적으로 수행하는 작업의 일정을 지정합니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 복제 에이전트 작업의 일정을 지정할 수 있습니다.  

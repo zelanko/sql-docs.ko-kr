@@ -26,16 +26,16 @@ ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e70357c54b30d657eb773913abf19d7fbe78385
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 41c6710fc126dc39f5a4333c08fa4e61c3d4265c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533030"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582798"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 장치에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 디바이스에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
    
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  백업 디스크  
@@ -50,13 +50,13 @@ ms.locfileid: "52533030"
  디스크나 테이프뿐 아니라 Windows Azure Blob 스토리지 서비스에도 SQL Server 백업을 작성할 수 있습니다.  
  
   
-##  <a name="DiskBackups"></a> 디스크 백업 장치 사용  
+##  <a name="DiskBackups"></a> 디스크 백업 디바이스 사용  
   
  백업 작업에서 미디어 세트에 백업을 추가하는 동안 디스크 파일이 꽉 차면 백업 작업이 실패합니다. 백업 파일의 최대 크기는 디스크 디바이스에서 사용 가능한 디스크 공간에 의해 결정되므로 백업 디스크 디바이스에 적합한 크기는 백업 크기에 따라 달라집니다.  
   
  디스크 백업 디바이스는 ATA 드라이브와 같은 간단한 디스크 디바이스일 수 있습니다. 또는 드라이브의 전체 디스크를 빈 디스크로 투명하게 교체할 수 있는 핫 스왑 가능 디스크 드라이브를 사용할 수 있습니다. 백업 디스크는 서버의 로컬 디스크나 공유 네트워크 리소스인 원격 디스크일 수 있습니다. 원격 디스크를 사용하는 방법은 이 항목의 뒷부분에 나오는 [네트워크 공유의 파일로 백업](#NetworkShare)을 참조하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구는 디스크 파일에 타임스탬프 이름을 자동으로 생성하기 때문에 디스크 백업 장치를 유연하게 처리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구는 디스크 파일에 타임스탬프 이름을 자동으로 생성하기 때문에 디스크 백업 디바이스를 유연하게 처리할 수 있습니다.  
   
 > **중요!** 데이터베이스 데이터 및 로그 디스크가 아닌 다른 디스크를 백업 디스크로 사용하는 것이 좋습니다. 이렇게 하면 데이터 또는 로그 디스크가 실패할 경우 백업에 액세스할 수 있습니다. 
 >
@@ -67,9 +67,9 @@ ms.locfileid: "52533030"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -77,11 +77,11 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 물리적 디스크 장치를 지정하기 위한 기본 구문은 다음과 같습니다.  
+ [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 물리적 디스크 디바이스를 지정하기 위한 기본 구문은 다음과 같습니다.  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  예:  
   
@@ -92,7 +92,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="BackupFileDiskPath"></a> 디스크 백업 파일 경로 지정 
- 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup입니다.  
+ 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup입니다.  
   
  특히 스크립트에서 모호성을 피하기 위해 모든 DISK 절에 백업 디렉터리의 경로를 명시적으로 지정하는 것이 좋습니다. 그러나 쿼리 편집기를 사용할 경우 이는 그다지 중요하지 않습니다. 쿼리 편집기를 사용할 경우 백업 파일이 확실히 기본 백업 디렉터리에 있으면 DISK 절에서 경로를 생략할 수 있습니다. 예를 들어 다음 `BACKUP` 문은 기본 백업 디렉터리에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 백업합니다.  
   
@@ -102,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory**레지스트리 키에 저장되어 있습니다.  
+> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory**레지스트리 키에 저장됩니다.  
   
    
 ###  <a name="NetworkShare"></a> 네트워크 공유 파일에 백업  
@@ -117,9 +117,9 @@ GO
     > **중요!** 네트워크를 통해 데이터를 백업하면 네트워크 오류가 발생하기 쉬우므로 원격 디스크를 사용하는 경우 완료 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요.  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC(범용 명명 규칙) 이름 지정  
- 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\**_Systemname_**\\**_ShareName_**\\**_Path_**\\**_FileName_.  
+ 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -128,9 +128,9 @@ GO
 ```  
   
  
-##  <a name="TapeDevices"></a> 테이프 장치 사용  
+##  <a name="TapeDevices"></a> 테이프 디바이스 사용  
   
-> **참고:** 테이프 백업 장치에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
+> **참고:** 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.  
    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 테이프에 백업하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 운영 체제에서 지원하는 테이프 드라이브 또는 드라이브를 사용해야 합니다. 또한 지정된 테이프 드라이브에는 드라이브 제조업체가 권장하는 테이프만 사용하는 것이 좋습니다. 테이프 드라이브 설치 방법은 Windows 운영 체제 설명서를 참조하십시오.  
   
@@ -147,9 +147,9 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
 ```sql  
 BACKUP LOG AdventureWorks2012   
@@ -157,11 +157,11 @@ BACKUP LOG AdventureWorks2012
 GO  
 ```  
   
- [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 물리적 테이프 장치를 지정하기 위한 기본 구문은 다음과 같습니다.  
+ [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 물리적 테이프 디바이스를 지정하기 위한 기본 구문은 다음과 같습니다.  
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="TapeOptions"></a> 테이프와 관련된 BACKUP 및 RESTORE 옵션(Transact-SQL)  
  테이프를 편리하게 관리할 수 있도록 BACKUP 문은 다음과 같은 테이프 관련 옵션을 제공합니다.  
@@ -179,14 +179,14 @@ GO
 ###  <a name="OpenTapes"></a> 열려 있는 테이프 관리  
  열려 있는 테이프 디바이스 목록 및 탑재 요청 상태를 보려면 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 동적 관리 뷰를 쿼리합니다. 이 뷰는 다음 BACKUP 또는 RESTORE 작업을 기다리는 동안 일시적으로 유휴 상태에 있는 사용 중인 테이프를 비롯하여 열려 있는 모든 테이프를 표시합니다.  
   
- 테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 다음 명령을 사용할 수 있습니다. RESTORE REWINDONLY FROM TAPE **=**_backup_device_name_. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
+ 테이프를 실수로 열어 놓은 경우 테이프를 해제하는 가장 빠른 방법은 RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_ 명령을 사용하는 것입니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage 서비스 사용  
  Windows Azure Blob Storage Service에 SQL Server 백업을 작성할 수 있습니다.  Microsoft Azure Blob Storage 서비스를 백업에 사용하는 방법은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
-##  <a name="LogicalBackupDevice"></a> 논리적 백업 장치 사용  
- *논리적 백업 장치* 는 특정 물리적 백업 장치(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 디바이스를 사용하면 해당 물리적 백업 디바이스를 참조할 때 간접 참조를 사용할 수 있습니다.  
+##  <a name="LogicalBackupDevice"></a> 논리적 백업 디바이스 사용  
+ *논리적 백업 디바이스*는 특정 물리적 백업 디바이스(디스크 파일 또는 테이프 드라이브)를 가리키는 선택적인 사용자 정의 이름입니다. 논리적 백업 디바이스를 사용하면 해당 물리적 백업 디바이스를 참조할 때 간접 참조를 사용할 수 있습니다.  
   
  논리적 백업 디바이스를 정의하려면 물리적 디바이스에 논리적 이름을 할당합니다. 예를 들어 논리적 디바이스인 AdventureWorksBackups가 Z:\SQLServerBackups\AdventureWorks2012.bak 파일이나 \\\\.\tape0 테이프 드라이브를 가리키도록 정의할 수 있습니다. 그런 다음 백업 및 복원 명령에서 DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' 또는 TAPE = '\\\\.\tape0' 대신 AdventureWorksBackups를 백업 디바이스로 지정할 수 있습니다.  
   
@@ -200,7 +200,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **참고:** 지정된 BACKUP 또는 RESTORE 문에서 논리적 백업 장치 이름과 해당 물리적 백업 장치 이름을 바꾸어 사용할 수 있습니다.  
+> **참고:** 지정된 BACKUP 또는 RESTORE 문에서 논리적 백업 디바이스 이름과 해당 물리적 백업 디바이스 이름을 바꾸어 사용할 수 있습니다.  
   
  논리적 백업 디바이스는 긴 경로보다 사용이 편리하다는 장점이 있습니다. 동일한 경로 또는 테이프 디바이스에 일련의 백업을 작성하려는 경우 논리적 백업 디바이스를 사용하면 도움이 될 수 있습니다. 논리적 백업 디바이스는 특히 테이프 백업 디바이스를 식별하는 데 유용합니다.  
   
@@ -209,10 +209,11 @@ GO
 1.  원래의 논리적 백업 디바이스 삭제  
   
 2.  원래의 논리적 디바이스 이름을 사용하지만 다른 물리적 백업 디바이스에 매핑되는 새 논리적 백업 디바이스 정의. 논리적 백업 디바이스는 특히 테이프 백업 디바이스를 식별하는 데 유용합니다.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="MirroredMediaSets"></a> 미러된 백업 미디어 세트  
- 백업 미디어 세트를 미러링하면 백업 장치의 오작동에 따른 영향이 줄어듭니다. 데이터 손실을 방지할 수 있는 최후의 수단이 백업이므로 이러한 오작동은 특히 심각합니다. 데이터베이스의 크기가 커지면 백업 디바이스 또는 미디어의 실패로 인해 복원 불가능한 백업을 만들게 될 가능성이 커집니다. 백업 미디어를 미러링하면 물리적 백업 디바이스에 중복을 제공하여 백업의 안정성이 향상됩니다. 자세한 내용은 [미러된 백업 미디어 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)를 참조하세요.  
+ 백업 미디어 세트를 미러링하면 백업 장치의 오작동에 따른 영향이 줄어듭니다. 데이터 손실을 방지할 수 있는 최후의 수단이 백업이므로 이러한 오작동은 특히 심각합니다. 데이터베이스의 크기가 커지면 백업 디바이스 또는 미디어의 실패로 인해 복원 불가능한 백업을 만들게 될 가능성이 커집니다. 백업 미디어를 미러링하면 물리적 백업 디바이스에 중복을 제공하여 백업의 안정성이 향상됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [미러된 백업 미디어 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
   
 > **참고:** 미러된 백업 미디어 세트는 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 이상 버전에서만 지원됩니다.  
   
@@ -224,47 +225,47 @@ GO
 
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
- **디스크 장치를 지정하려면(SQL Server Management Studio)**  
+ **디스크 디바이스를 지정하려면(SQL Server Management Studio)**  
   
 -   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
- **테이프 장치를 지정하려면(SQL Server Management Studio)**  
+ **테이프 디바이스를 지정하려면(SQL Server Management Studio)**  
   
 -   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
- **논리적 백업 장치를 정의하려면**  
+ **논리적 백업 디바이스를 정의하려면**  
   
 -   [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)  
   
--   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
+-   [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
--   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
+-   [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.BackupDevice> (SMO)  
   
- **논리적 백업 장치를 사용하려면**  
+ **논리적 백업 디바이스를 사용하려면**  
   
 -   [디스크 또는 테이프를 백업 대상으로 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
--   [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
+-   [디바이스에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
 -   [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
 -   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- **백업 장치에 대한 정보를 보려면**  
+ **백업 디바이스에 대한 정보를 보려면**  
   
 -   [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
--   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+-   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
- **논리적 백업 장치를 삭제하려면**  
+ **논리적 백업 디바이스를 삭제하려면**  
   
 -   [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)  
   
--   [백업 장치 삭제&#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
+-   [백업 디바이스 삭제&#40;SQL Server&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server, Backup Device 개체](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   

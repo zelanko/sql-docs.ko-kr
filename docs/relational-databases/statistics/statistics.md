@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229044"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585024"
 ---
 # <a name="statistics"></a>통계
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * 통계 평가 시 테이블 카디널리티가 500 이하이면, 500개 수정 사항마다 업데이트합니다.
     * 통계 평가 시 테이블 카디널리티가 500 초과이면, 500+20%의 수정 사항마다 업데이트합니다.
 
-* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다.  
+* [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다. ?
 
 > [!IMPORTANT]
 > [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
@@ -162,7 +162,9 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
 1.  인덱스가 만들어진 경우 쿼리 최적화 프로그램에서 테이블 또는 뷰의 인덱스에 대한 통계를 작성합니다. 이러한 통계는 인덱스의 키 열에 대해 만들어집니다. 인덱스가 필터링된 인덱스인 경우 쿼리 최적화 프로그램은 필터링된 인덱스로 지정된 행의 동일한 하위 집합에 대해 필터링된 통계를 작성합니다. 필터링된 인덱스에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md) 및 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
 2.  [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON이면 쿼리 최적화 프로그램은 쿼리 조건자의 단일 열에 대한 통계를 작성합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 대부분의 쿼리에서 통계를 만드는 두 가지 방법을 통해 고품질의 쿼리 계획을 만들 수 있습니다. 경우에 따라서 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 추가 통계를 작성하여 쿼리 계획을 향상시킬 수 있습니다. 인덱스 또는 단일 열에 대해 통계를 작성할 때, 이러한 추가 통계를 통해 쿼리 최적화 프로그램에 설명되지 않은 통계 상관 관계를 캡처할 수 있습니다. 애플리케이션에 테이블 데이터의 추가 통계 상관 관계를 포함할 수 있으며 이를 통계 개체로 계산하는 경우 쿼리 최적화 프로그램에서 쿼리 계획을 향상하도록 할 수 있습니다. 예를 들어 데이터 행의 하위 집합에 대한 필터링된 통계 또는 쿼리 조건자 열에 대한 여러 열 통계는 쿼리 계획을 향상시킬 수 있습니다.  
   
 CREATE STATISTICS 문으로 통계를 만들 때 쿼리 최적화 프로그램에서 쿼리 조건자 열에 대한 단일 열 통계를 계속해서 정기적으로 작성할 수 있도록 AUTO_CREATE_STATISTICS 옵션을 유지하는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  

@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539728"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579879"
 ---
 # <a name="create-an-application-role"></a>애플리케이션 역할 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "52539728"
   
      [보안](#Security)  
   
--   **다음을 사용하여 응용 프로그램 역할을 만듭니다.**  
+-   **다음을 사용하여 애플리케이션 역할을 만듭니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -70,9 +70,11 @@ ms.locfileid: "52539728"
 8.  **이 역할에서 소유한 스키마**에서 이 역할이 소유할 스키마를 선택하거나 봅니다. 각 스키마는 한 개의 스키마 또는 역할에서만 소유할 수 있습니다.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>추가 옵션  
- **애플리케이션 역할 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **보안 개체** 및 **확장 속성**을 제공합니다.  
+ **애플리케이션 역할 - 신규** 대화 상자는 또한 **보안 개체** 및 **확장 속성**의 두 추가 페이지에 옵션을 제공합니다.  
   
 -   **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
   

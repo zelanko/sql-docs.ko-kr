@@ -1,9 +1,9 @@
 ---
 title: 행 수준 보안 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140593"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559447"
 ---
 # <a name="row-level-security"></a>행 수준 보안
 
@@ -38,8 +38,8 @@ ms.locfileid: "67140593"
 액세스 제한 논리는 다른 애플리케이션 계층의 데이터와 다소 떨어진 데이터베이스 계층에 위치합니다. 데이터베이스 시스템은 모든 계층에서 데이터 액세스를 시도할 때마다 액세스를 제한합니다. 이로 인해 보안 시스템의 노출 영역이 감소되어 보안 시스템이 더 안정적이고 강력해집니다.  
   
 RLS는 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 [인라인 테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)로 만들어진 조건자를 사용하여 구현합니다.  
-  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([이해하기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([이해하기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
   
 > [!NOTE]
 > Azure SQL Data Warehouse는 필터 조건자만 지원합니다. 차단 조건자는 현재 Azure SQL Data Warehouse에서 지원되지 않습니다.
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> 3. 중간 계층 애플리케이션을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오
 
 > [!NOTE]
-> 현재 SESSION_CONTEXT와 차단 조건자가 모두 지원되지 않으므로 Azure SQL Data Warehouse에는 이 예제가 적용되지 않습니다.
+> 이 예제 블록에서는 조건자 기능은 현재 Azure SQL Data Warehouse에 대해 지원되지 않으므로 잘못된 사용자 ID의 행을 삽입하면 Azure SQL Data Warehouse에서 차단됩니다.
 
 이 예는 중간 계층 애플리케이션이 애플리케이션 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(애플리케이션)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 애플리케이션이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 애플리케이션 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
   

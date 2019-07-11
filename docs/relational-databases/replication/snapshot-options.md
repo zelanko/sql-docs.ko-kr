@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aa12d4c61f8dae99a948cde69e2370665977227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 68e61f26cc33d505ec183e3d863cfa3a6f407275
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124673"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586427"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅숏 초기화 옵션 수정 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,8 @@ ms.locfileid: "54124673"
   
 2.  **확인**을 선택합니다.   
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="snapshot-folder-locations"></a>스냅숏 폴더 위치
 
 ### <a name="default-snapshot-location"></a>기본 스냅숏 위치
@@ -47,7 +49,7 @@ ms.locfileid: "54124673"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅숏 위치를 수정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경할 게시자의 속성 단추(**…**)를 클릭합니다.    
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **?** )를 클릭합니다.    
 2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
   
     > [!NOTE]  

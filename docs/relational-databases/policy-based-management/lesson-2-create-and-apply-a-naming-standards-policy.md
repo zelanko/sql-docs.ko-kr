@@ -1,5 +1,5 @@
 ---
-title: '2단원: 명명 표준 정책 만들기 및 적용 | Microsoft 문서'
+title: '2단원: 명명 표준 정책 만들기 및 적용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159041"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584903"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>2단원: 명명 표준 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,6 +40,7 @@ ms.locfileid: "52159041"
   
 2.  개체 탐색기에서 **데이터베이스**를 클릭한 다음 F5 키를 눌러 데이터베이스 목록을 새로 고칩니다.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Finance Tables 조건 만들기 
 
@@ -49,7 +50,7 @@ ms.locfileid: "52159041"
   
 2.  **새 조건 만들기** 대화 상자의 **이름** 상자에 **Finance Tables**를 입력합니다.  
     1. **패싯** 목록에서 **여러 부분으로 구성된 이름**을 선택합니다. 
-    1. **식** 영역의 **필드** 상자에서 **@Name**을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 ```'fintbl%'```를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.
+    1. **식** 영역의 **필드** 상자에서 **@Name** 을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 ```'fintbl%'```를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.
     1. **설명** 페이지에서 **Finance table names must begin with fintbl**을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
 
     ![Finance Tables 조건](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -156,7 +157,7 @@ ms.locfileid: "52159041"
 이 자습서에서는 정책 기반 관리 조건, 정책 및 정책 그룹을 만드는 방법과 필터를 적용하고 정책 기반 관리 대상의 조건 준수 여부를 검사하는 방법을 살펴보았습니다.  
   
 ## <a name="next"></a>다음  
-이 자습서를 마칩니다. 시작 부분으로 돌아가려면 [자습서: 정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)를 방문하세요.  
+이 자습서를 마칩니다. 자습서의 시작 부분으로 돌아가려면 [자습서: 정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)를 참조하세요.  
   
 자습서 목록을 보려면 [SQL Server 2016 자습서](../../sql-server/tutorials-for-sql-server-2016.md)를 참조하세요.  
   

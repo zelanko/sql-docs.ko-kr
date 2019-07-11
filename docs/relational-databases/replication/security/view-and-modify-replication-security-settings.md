@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c15f88e1bf3e7d07d09c5d92ceff5a3face1ade
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135413"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584807"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54135413"
   
 -   **후속 작업:**  [복제 보안 설정 수정 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54135413"
 ###  <a name="Security"></a> 보안  
  보안을 위해 암호의 실제 값은 복제 저장 프로시저에 의해 반환된 결과 집합에서 마스킹됩니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 대화 상자에서 보안 설정을 확인하고 수정합니다.  
@@ -71,7 +71,9 @@ ms.locfileid: "54135413"
 4.  **배포자 속성 - \<Distributor>** 및 **배포 데이터베이스 속성 - \<Database>** 대화 상자. 이러한 대화 상자에 액세스하는 방법은 [View and Modify Distributor and Publisher Properties배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
 5.  **게시자 속성 - \<Publisher>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [게시자 및 배포자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>하나 이상의 에이전트에서 사용하는 계정의 암호를 변경하려면  
   
 1.  SQL Server 계정을 사용하는 경우 이 대화 상자에서 SQL Server 계정 암호도 변경합니다. Windows 계정을 사용하는 경우에는 Windows에서 해당 암호부터 변경합니다. 자세한 내용은 Windows 설명서를 참조하십시오.  
@@ -134,7 +136,7 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Oracle 게시에 대한 게시자에 스냅숏 에이전트 및 로그 판독기 에이전트를 연결하는 컨텍스트를 변경하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 게시자 옆에 있는 속성 단추(**...**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 게시자 옆에 있는 속성 단추( **...** )를 클릭합니다.  
   
 2.  **에이전트에서 게시자 연결** 섹션에서 사용자가 구성한 복제 관리 사용자 스키마에서 사용하는 로그인 및 암호를 지정합니다. 자세한 내용은 [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
@@ -144,9 +146,9 @@ ms.locfileid: "54135413"
   
 1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   배포 에이전트를 실행하고 배포자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   배포 에이전트를 실행하고 배포자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   구독자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   구독자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
          지연 업데이트 구독을 사용할 경우 큐 판독기 에이전트도 구독자에 연결하기 위해 여기에서 지정한 컨텍스트를 사용합니다.  
   
@@ -156,11 +158,11 @@ ms.locfileid: "54135413"
   
 1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   배포 에이전트를 실행하고 구독자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   배포 에이전트를 실행하고 구독자에 배포 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **배포 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
          지연 업데이트 구독을 사용할 경우 큐 판독기 에이전트도 구독자에 연결하기 위해 여기에서 지정한 컨텍스트를 사용합니다.  
   
-    -   배포자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **배포자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   배포자에 배포 에이전트를 연결하는 컨텍스트를 변경하려면 **배포자 연결** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -168,9 +170,9 @@ ms.locfileid: "54135413"
   
 1.  게시자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   병합 에이전트를 실행하고 게시자 및 배포자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   병합 에이전트를 실행하고 게시자 및 배포자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   구독자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   구독자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **구독자 연결** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -178,15 +180,15 @@ ms.locfileid: "54135413"
   
 1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 다음과 같이 변경할 수 있습니다.  
   
-    -   병합 에이전트를 실행하고 구독자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
+    -   병합 에이전트를 실행하고 구독자에 병합 에이전트를 연결하는 계정을 변경하려면 **에이전트 프로세스 계정** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **병합 에이전트 보안** 대화 상자에서 계정과 암호를 지정합니다.  
   
-    -   게시자 및 배포자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **게시자 연결** 행을 클릭한 다음 행에 있는 속성 단추 (**...**)를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
+    -   게시자 및 배포자에 병합 에이전트를 연결하는 컨텍스트를 변경하려면 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성 단추( **?** )를 클릭합니다. **연결 정보 입력** 대화 상자에서 컨텍스트를 지정합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>큐 판독기 에이전트가 실행되는 계정을 변경하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스 옆에 있는 속성(**…**) 단추를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스 옆에 있는 속성( **?** )단추를 클릭합니다.  
   
 2.  **배포 데이터베이스 속성 - \<Database>** 대화 상자에서 **에이전트 프로세스 계정** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
@@ -203,7 +205,7 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>게시자에 큐 판독기 에이전트를 연결하는 컨텍스트를 변경하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 게시자 옆에 있는 속성 단추(**...**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 게시자 옆에 있는 속성 단추( **...** )를 클릭합니다.  
   
 2.  **에이전트에서 게시자 연결** 섹션에서 **에이전트 연결 모드** 옵션에 대해 **에이전트 프로세스 계정 가장** 또는 **SQL Server 인증** 의 값을 지정합니다. **SQL Server 인증**을 지정하면 **로그인** 및 **암호**값도 지정해야 합니다.  
   
@@ -218,7 +220,7 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>끌어오기 구독 즉시 업데이트에 대한 보안 설정을 변경하려면  
   
-1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음 행에 있는 속성(**…**) 단추를 클릭합니다.  
+1.  구독자의 **구독 속성 - \<Subscription>** 대화 상자에서 **게시자 연결** 행을 클릭한 다음, 행에 있는 속성( **?** ) 단추를 클릭합니다.  
   
 2.  **연결 정보 입력** 대화 상자에서 다음 옵션 중 하나를 선택합니다.  
   
@@ -250,10 +252,10 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>복제 서버에서 저장된 암호의 모든 인스턴스를 변경하려면  
   
-1.  master 데이터베이스의 복제 토폴로지에 있는 서버에서 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다. **@login**에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정 또는 암호를 변경할 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 지정하고 **@password**에 계정이나 로그인에 대한 새 암호를 지정합니다. 이렇게 하면 토폴로지의 다른 서버에 연결할 때 서버의 모든 에이전트에서 사용되는 암호의 모든 인스턴스가 변경됩니다.  
+1.  master 데이터베이스의 복제 토폴로지에 있는 서버에서 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)를 실행합니다. **@login** 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 계정 또는 암호를 변경할 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 지정하고 **@password** 에 계정이나 로그인에 대한 새 암호를 지정합니다. 이렇게 하면 토폴로지의 다른 서버에 연결할 때 서버의 모든 에이전트에서 사용되는 암호의 모든 인스턴스가 변경됩니다.  
   
     > [!NOTE]  
-    >  토폴로지의 특정 서버에 대한 연결(예: 배포자 또는 구독자)의 로그인과 암호만 변경하려면 **@server**를 참조하세요.  
+    >  토폴로지의 특정 서버에 대한 연결(예: 배포자 또는 구독자)의 로그인과 암호만 변경하려면 **@server** 를 참조하세요.  
   
 2.  암호를 업데이트해야 하는 복제 토폴로지의 모든 서버에서 1단계를 반복합니다.  
   
@@ -262,30 +264,30 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅숏 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자에서 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)을 실행하고 **@publication**를 참조하세요. 이렇게 하면 스냅숏 에이전트에 대한 현재 보안 설정이 반환됩니다.  
+1.  게시자에서 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 이렇게 하면 스냅숏 에이전트에 대한 현재 보안 설정이 반환됩니다.  
   
 2.  게시자에서 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)을 실행하고 **@publication** 및 다음 중 변경할 보안 설정을 하나 이상 지정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@job_login** 및 **@job_password**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@job_login** 및 **@job_password** 를 참조하세요.  
   
-    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@publisher_security_mode** 옵션에 대해 **1** 또는 **@publisher_security_mode**를 참조하세요.  
+    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@publisher_security_mode** 옵션에 대해 **1** 또는 **@publisher_security_mode** 를 참조하세요.  
   
-    -   게시자 연결할 때 사용되는 보안 모드를 **@publisher_security_mode** 에서 **1** 으로 변경하는 경우 또는 이 연결에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 변경하는 경우에는 **@publisher_login** 및 **@publisher_password**를 참조하세요.  
+    -   게시자 연결할 때 사용되는 보안 모드를 **@publisher_security_mode** 에서 **1** 으로 변경하는 경우 또는 이 연결에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 변경하는 경우에는 **@publisher_login** 및 **@publisher_password** 를 참조하세요.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>로그 판독기 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자에서 [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)을 실행하고 **@publisher**를 참조하세요. 이렇게 하면 로그 판독기 에이전트에 대한 현재 보안 설정이 반환됩니다.  
+1.  게시자에서 [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)을 실행하고 **@publisher** 를 참조하세요. 이렇게 하면 로그 판독기 에이전트에 대한 현재 보안 설정이 반환됩니다.  
   
 2.  게시자에서 [sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)을 실행하고 **@publication** 및 다음 중 변경할 보안 설정을 하나 이상 지정합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@job_login** 및 **@job_password**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@job_login** 및 **@job_password** 를 참조하세요.  
   
-    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@publisher_security_mode** 옵션에 대해 **1** 또는 **@publisher_security_mode**를 참조하세요.  
+    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@publisher_security_mode** 옵션에 대해 **1** 또는 **@publisher_security_mode** 를 참조하세요.  
   
-    -   게시자 연결할 때 사용되는 보안 모드를 **@publisher_security_mode** 에서 **1** 으로 변경하는 경우 또는 이 연결에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 변경하는 경우에는 **@publisher_login** 및 **@publisher_password**를 참조하세요.  
+    -   게시자 연결할 때 사용되는 보안 모드를 **@publisher_security_mode** 에서 **1** 으로 변경하는 경우 또는 이 연결에 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 변경하는 경우에는 **@publisher_login** 및 **@publisher_password** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
@@ -295,17 +297,17 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>밀어넣기 구독에 대한 배포 에이전트의 보안 설정을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)을 실행하고 **@publication** 및 **@subscriber**를 참조하세요. 이렇게 하면 배포자에서 실행되는 배포 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)을 실행하고 **@publication** 및 **@subscriber** 를 참조하세요. 이렇게 하면 배포자에서 실행되는 배포 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 실행하고 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**를 지정하고, **@article** 또는 **@article**값을, **@property**에 보안 속성의 이름을, **@value**를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 실행하고 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 를 지정하고, **@article** 또는 **@article** 값을, **@property** 에 보안 속성의 이름을, **@value** 를 참조하세요.  
   
 3.  변경할 다음 각 보안 속성에 대해 2단계를 반복합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   구독자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   구독자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   구독자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   구독자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
@@ -315,38 +317,38 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>끌어오기 구독에 대한 배포 에이전트의 보안 설정을 변경하려면  
   
-1.  구독자에서 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)을 실행하고 **@publication**를 참조하세요. 이렇게 하면 구독자에서 실행되는 배포 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
+1.  구독자에서 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 이렇게 하면 구독자에서 실행되는 배포 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)을 실행하고 **@publisher**또는 RMO(복제 관리 개체)를 사용하여 **@publisher_db**또는 RMO(복제 관리 개체)를 사용하여 **@publication**값을, **@property**에 보안 속성의 이름을, **@value**를 참조하세요.  
+2.  구독 데이터베이스의 구독자에서 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)을 실행하고 **@publisher** 또는 RMO(복제 관리 개체)를 사용하여 **@publisher_db** 또는 RMO(복제 관리 개체)를 사용하여 **@publication** 값을, **@property** 에 보안 속성의 이름을, **@value** 를 참조하세요.  
   
 3.  변경할 다음 각 보안 속성에 대해 2단계를 반복합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   배포자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   배포자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   배포자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   배포자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>밀어넣기 구독에 대한 병합 에이전트의 보안 설정을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)을 실행하고 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**및 **@subscriber_db**를 참조하세요. 이렇게 하면 배포자에서 실행되는 병합 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)을 실행하고 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 및 **@subscriber_db** 를 참조하세요. 이렇게 하면 배포자에서 실행되는 병합 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)을 실행하고 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**값을, **@property**에 보안 속성의 이름을, **@value**를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)을 실행하고 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 값을, **@property** 에 보안 속성의 이름을, **@value** 를 참조하세요.  
   
 3.  변경할 다음 각 보안 속성에 대해 2단계를 반복합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 계정 자체를 변경하는 경우 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   구독자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   구독자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   구독자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   구독자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   게시자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   게시자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
@@ -356,30 +358,30 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>끌어오기 구독에 대한 병합 에이전트의 보안 설정을 변경하려면  
   
-1.  구독자에서 [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)을 실행하고 **@publication**를 참조하세요. 이렇게 하면 구독자에서 실행되는 병합 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
+1.  구독자에서 [sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 이렇게 하면 구독자에서 실행되는 병합 에이전트에 대한 보안 설정을 포함하는 구독 속성이 반환됩니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)을 실행하고 **@publisher**또는 RMO(복제 관리 개체)를 사용하여 **@publisher_db**또는 RMO(복제 관리 개체)를 사용하여 **@publication**값을, **@property**에 보안 속성의 이름을, **@value**를 참조하세요.  
+2.  구독 데이터베이스의 구독자에서 [sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)을 실행하고 **@publisher** 또는 RMO(복제 관리 개체)를 사용하여 **@publisher_db** 또는 RMO(복제 관리 개체)를 사용하여 **@publication** 값을, **@property** 에 보안 속성의 이름을, **@value** 를 참조하세요.  
   
 3.  변경할 다음 각 보안 속성에 대해 2단계를 반복합니다.  
   
-    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. When changing the account itself, repeat Step 2 specifying a value of **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   에이전트가 실행되는 Windows 계정을 변경하거나 이 계정에 대한 암호만 변경하려면 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. When changing the account itself, repeat Step 2 specifying a value of **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   배포자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   배포자에 연결하는 데 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   배포자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   배포자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
-    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value**를 참조하세요.  
+    -   게시자에 연결할 때 사용되는 보안 모드를 변경하려면 **@property** 또는 **@property** 값, **@publisher_security_mode** 에 **1** (Windows 통합 인증) 또는 **@value** 를 참조하세요.  
   
-    -   게시자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value**를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value**를 참조하세요.  
+    -   게시자 보안 모드를 SQL Server 인증으로 변경하거나 SQL Server 인증에 대한 로그인 정보를 변경하는 경우 **@property** 또는 **@property** 값을 지정하고 **@value** 를 참조하세요. 2단계를 반복하고 **@property** 또는 **@property** 값을, **@value** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>구독자에 대한 필터링된 스냅숏을 생성하도록 스냅숏 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자에서 [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)을 실행하고 **@publication**를 참조하세요. 결과 집합에서 변경할 구독자 파티션의 **job_name** 값을 확인합니다.  
+1.  게시자에서 [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 결과 집합에서 변경할 구독자 파티션의 **job_name** 값을 확인합니다.  
   
-2.  게시자에서 [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)을 실행하고 **@publication**을 지정하고 **@dynamic_snapshot_jobname**에 1단계에서 얻은 값을, **@job_password** 에 새 암호를, **@job_login** 및 **@job_password**를 참조하세요.  
+2.  게시자에서 [sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)을 실행하고 **@publication** 을 지정하고 **@dynamic_snapshot_jobname** 에 1단계에서 얻은 값을, **@job_password** 에 새 암호를, **@job_login** 및 **@job_password** 를 참조하세요.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
@@ -388,7 +390,7 @@ ms.locfileid: "54135413"
   
 1.  배포자에서 [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)를 실행합니다. 이렇게 하면 큐 판독기 에이전트가 실행되는 현재 Windows 계정이 반환됩니다.  
   
-    -   배포자에서 [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)를 실행하고 **@job_login** 및 **@job_passwsord**를 참조하세요.  
+    -   배포자에서 [sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)를 실행하고 **@job_login** 및 **@job_passwsord** 를 참조하세요.  
   
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다. 각 배포 데이터베이스에 대해 하나의 큐 판독기 에이전트가 있습니다. 에이전트에 대한 보안 설정을 변경하면 이 배포 데이터베이스를 사용하는 모든 게시자의 모든 게시 설정이 영향을 받습니다.  
@@ -397,9 +399,9 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>게시자에 연결할 때 즉시 업데이트 구독자에서 사용되는 보안 모드를 변경하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 실행합니다. **@publisher**, **@publication**, **@publisher_db**에 대한 게시 데이터베이스 이름을 지정하고 **@security_mode**에 다음 값 중 하나를 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 실행합니다. **@publisher** , **@publication** , **@publisher_db** 에 대한 게시 데이터베이스 이름을 지정하고 **@security_mode** 에 다음 값 중 하나를 지정합니다.  
   
-    -   **0** - 게시자에서 업데이트할 때 SQL Server 인증을 사용합니다. 이 옵션을 사용하려면 **@login** 및 **@password**를 참조하세요.  
+    -   **0** - 게시자에서 업데이트할 때 SQL Server 인증을 사용합니다. 이 옵션을 사용하려면 **@login** 및 **@password** 를 참조하세요.  
   
     -   **1** - 게시자에 연결할 때 구독자에서 변경 작업을 수행하는 사용자의 보안 컨텍스트를 사용합니다. 이 보안 모드에 관한 제한 사항에 대해서는 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 을 참조하세요.  
   
@@ -407,12 +409,12 @@ ms.locfileid: "54135413"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>원격 배포자에 대한 암호를 변경하려면  
   
-1.  배포 데이터베이스의 배포자에서 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)를 실행하고 **@password**를 참조하세요.  
+1.  배포 데이터베이스의 배포자에서 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)를 실행하고 **@password** 를 참조하세요.  
   
     > [!IMPORTANT]  
     >  **distributor_admin** 의 암호를 직접 변경하지 마세요.  
   
-2.  이 원격 배포자를 사용하는 모든 게시자에서 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)를 실행하고 **@password**를 참조하세요.  
+2.  이 원격 배포자를 사용하는 모든 게시자에서 [sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)를 실행하고 **@password** 를 참조하세요.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   

@@ -14,19 +14,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242400"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559473"
 ---
 # <a name="performance-dashboard"></a>성능 대시보드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 버전 17.2 이상에는 성능 대시보드가 포함되어 있습니다. 이 대시보드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능 상태에 대한 빠른 인사이트를 시각적으로 제공하도록 설계되었습니다([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작). 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 버전 17.2 이상에는 성능 대시보드가 포함되어 있습니다. 이 대시보드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]부터 시작) 및 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]의 성능 상태에 대한 빠른 인사이트를 시각적으로 제공하도록 설계되었습니다. 
 
-성능 대시보드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 성능 병목 상태가 있는지 여부를 신속하게 식별하는 데 도움이 됩니다. 그리고 병목 상태가 있으면 문제를 해결하는 데 필요한 추가 진단 데이터를 쉽게 캡처할 수 있습니다. 성능 대시보드가 식별하는 데 도움이 되는 몇 가지 일반적인 성능 문제는 다음과 같습니다.
+성능 대시보드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에 성능 병목 상태가 있는지 여부를 신속하게 식별하는 데 도움이 됩니다. 그리고 병목 상태가 있으면 문제를 해결하는 데 필요한 추가 진단 데이터를 쉽게 캡처할 수 있습니다. 성능 대시보드가 식별하는 데 도움이 되는 몇 가지 일반적인 성능 문제는 다음과 같습니다.
 -  CPU 병목 상태(및 대부분의 CPU를 사용하고 있는 쿼리)
 -  I/O 병목 상태(및 대부분의 IO를 수행하고 있는 쿼리)
 -  쿼리 최적화에서 생성된 인덱스 권장 구성(누락된 인덱스)
@@ -80,8 +80,8 @@ ms.locfileid: "54242400"
 > [!NOTE]
 > 성능 대시보드는 [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602)에 대한 독립형 다운로드로 처음 릴리스되었으며, 이후 [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063)용으로 업데이트되었습니다.
 
-## <a name="permissions"></a>Permissions  
-`VIEW SERVER STATE` 및 `ALTER TRACE` 권한이 필요합니다. 
+## <a name="permissions"></a>사용 권한  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `VIEW SERVER STATE` 및 `ALTER TRACE` 권한이 필요합니다. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.
 
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135613"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579472"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>초기 스냅숏 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54135613"
   
 ### <a name="modify-the-default-snapshot-location"></a>기본 스냅숏 위치 수정  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경할 게시자의 속성 단추(**…**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **?** )를 클릭합니다.  
   
 2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
   
@@ -62,6 +62,8 @@ ms.locfileid: "54135613"
     >  스냅숏 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>스냅숏 만들기
 기본적으로 SQL Server 에이전트가 실행 중이면 새 게시 마법사로 게시를 만든 직후 스냅숏 에이전트에서 스냅숏을 생성합니다. 이렇게 생성된 스냅숏은 기본적으로 모든 구독에 대해 배포 에이전트(스냅숏 및 트랜잭션 복제의 경우)나 병합 에이전트(병합 구독의 경우)에 의해 적용됩니다. 스냅숏은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 복제 모니터를 사용하여 생성할 수도 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
@@ -90,11 +92,11 @@ ms.locfileid: "54135613"
   
 2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. 이때 **@publication** 및 다음 매개 변수를 지정합니다.  
   
-    -   배포자에서 스냅숏 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login**.  
+    -   배포자에서 스냅숏 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login** .  
   
-    -   제공된 Windows 자격 증명의 암호인 **@job_password**.  
+    -   제공된 Windows 자격 증명의 암호인 **@job_password** .  
   
-    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 **@publisher_login** 및 **@publisher_password**을 참조하세요.  
+    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 **@publisher_login** 및 **@publisher_password** 을 참조하세요.  
   
     -   (옵션) 스냅숏 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -134,10 +136,10 @@ ms.locfileid: "54135613"
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** =  **@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 트랜잭션 게시를 만들고 **sqlcmd** 스크립팅 변수를 사용하여 새 게시에 대한 스냅숏 에이전트 작업을 추가하는 방법을 보여 줍니다. 또한 추가한 작업을 시작합니다.  

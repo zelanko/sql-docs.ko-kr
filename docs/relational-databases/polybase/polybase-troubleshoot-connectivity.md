@@ -12,12 +12,12 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776007"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581223"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -31,6 +31,8 @@ PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos �
 
 1. PolyBase가 설치된 SQL Server 2016 RTM CU6/SQL Server 2016 SP1 CU3/SQL Server 2017 이상
 1. Kerberos(Active Directory 또는 MIT)로 보호된 Hadoop 클러스터(Cloudera 또는 Hortonworks)
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>소개
 

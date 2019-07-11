@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671140"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517751"
 ---
 # <a name="set-or-change-the-server-collation"></a>서버 데이터 정렬 설정 또는 변경
 
@@ -61,7 +61,7 @@ ms.locfileid: "59671140"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Managed Instance에서 서버 데이터 정렬 설정
 
-Azure SQL Managed Instance의 서버 수준 데이터 정렬(미리 보기)은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
+Azure SQL Managed Instance의 서버 수준 데이터 정렬은 인스턴스가 생성될 때 지정될 수 있고 나중에 변경될 수 없습니다. 인스턴스를 만드는 동안 [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) 또는 [PowerShell 및 Resource Manager 템플릿](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template)을 통해 서버 수준 데이터 정렬을 설정할 수 있습니다. 기본 서버 수준 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**입니다. 유니코드 전용 및 새 UTF-8 데이터 정렬은 서버 수준 데이터 정렬로 지정할 수 없습니다.
 데이터베이스를 SQL Server에서 Managed Instance로 마이그레이션하는 경우 `SERVERPROPERTY(N'Collation')` 함수를 사용하여 원본 SQL Server에서 서버 데이터 정렬을 확인하고 SQL Server의 데이터 정렬과 일치하는 Managed Instance를 만듭니다. 일치하지 않는 서버 수준 데이터 정렬을 사용하여 SQL Server에서 Managed Instance로 데이터베이스를 마이그레이션하면 쿼리에서 몇 가지 예기치 않은 오류가 발생할 수 있습니다. 기존 Managed Instance에서 서버 수준 데이터 정렬을 변경할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목

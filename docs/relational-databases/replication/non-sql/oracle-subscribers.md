@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135903"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585882"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135903"
     |데이터베이스 수신기를 식별할 호스트 정보 지정|호스트는 Oracle 수신기가 실행 중인 컴퓨터의 이름이나 DNS 별칭이며, 일반적으로 Oracle 수신기는 데이터베이스가 상주하는 컴퓨터에서 실행됩니다. 일부 프로토콜의 경우 추가 정보를 제공해야 합니다. 예를 들어 TCP를 선택할 경우 수신기가 대상 데이터베이스에 대한 연결 요청을 수신하는 포트를 지정해야 합니다. 기본 TCP 구성은 포트 1521을 사용합니다.|  
   
 3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>디렉터리 사용 권한 설정  
  배포자에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 Oracle 클라이언트 네트워킹 소프트웨어가 설치된 디렉터리 및 모든 하위 디렉터리에 대한 읽기 및 실행 권한을 부여해야 합니다.  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135903"
   
     -   빈 문자열이 게시된 테이블에 열 값으로 삽입되지 않았는지 확인합니다.  
   
-    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음 계속 처리할 수 있으면 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400(**-SkipErrors1400**)을 지정합니다.  
+    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **?SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400( **-SkipErrors1400**)을 지정합니다.  
   
     -   빈 문자열과 연결된 가능성이 있는 모든 문자 열에서 NOT NULL 특성을 제거하여 생성된 테이블 생성 스크립트를 수정하고 @creation_script sp_addarticle [의](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)매개 변수를 사용하여 수정된 스크립트를 아티클에 대한 사용자 지정 생성 스크립트로 제공합니다.  
   

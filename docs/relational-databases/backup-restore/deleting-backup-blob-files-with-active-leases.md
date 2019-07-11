@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1c027019e3232391b4d94381b550a39a078dd38a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205121"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586359"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53205121"
 ## <a name="manage-orphaned-blobs"></a>분리된 Blob 관리  
  다음 단계에서는 백업 또는 복원 작업 실패 후 정리하는 방법을 설명합니다. PowerShell 스크립트를 사용하여 모든 단계를 수행할 수 있습니다. 다음 섹션에는 예제 PowerShell 스크립트가 포함되어 있습니다.  
   
-1.  **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트가 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
+1.  **임대가 있는 Blob 식별:** 백업 프로세스를 실행하는 스크립트나 프로세스가 있는 경우 해당 스크립트나 프로세스 내에서 오류를 캡처하여 blob 정리에 사용할 수 있습니다.  LeaseStats 및 LeastState 속성을 사용하여 임대가 있는 Blob을 식별할 수도 있습니다. Blob을 식별하고 나서 목록을 검토하고 백업 파일의 유효성을 확인한 후 Blob을 삭제합니다.  
   
 2.  **임대 해제:** 권한 있는 요청은 임대 ID를 제공하지 않고 임대를 해제할 수 있습니다. 자세한 내용은 [여기](https://go.microsoft.com/fwlink/?LinkID=275664) 를 참조하십시오.  
   
@@ -39,7 +39,9 @@ ms.locfileid: "53205121"
     >  SQL Server는 복원 작업 중 임대 ID를 실행하여 단독 액세스를 설정합니다. 복원 임대 ID는 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2입니다.  
   
 3.  **Blob 삭제:** 활성 임대가 있는 Blob을 삭제하려면 먼저 임대를 해제해야 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="Code_Example"></a> PowerShell 스크립트 예  
   
 > [!IMPORTANT]

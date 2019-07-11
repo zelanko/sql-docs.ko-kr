@@ -11,12 +11,12 @@ ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d32ec82d15e8d66295a715fe62f98960fd7ad26
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2763cd39d1be3318bfa297539f56720838cde6d9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510710"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584415"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   `b`노드(XQuery 식에서`b` 노드에 대해 조건자가 적용되므로)  
   
 2.  **원칙 2**: 최상의 성능을 위해 지정된 XQuery 식을 평가하는 데 필요한 모든 노드를 인덱싱합니다. 이러한 노드 중 일부만 인덱싱할 경우 선택적 XML 인덱스가 인덱싱된 노드만 포함하는 하위 식의 평가를 향상시킵니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  위에 표시된 SELECT 문의 성능을 향상시키기 위해 다음과 같은 선택적 XML 인덱스를 만들 수 있습니다.  
   
 ```sql  

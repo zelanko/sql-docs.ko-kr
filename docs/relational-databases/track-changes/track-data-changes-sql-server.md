@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c5979aade2147d74c2ff34b5d6cc2e48771bab2
-ms.sourcegitcommit: 1968bf31c63210f7f62ea553e67aa792950c89bb
+ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725464"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585359"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -109,7 +109,9 @@ ms.locfileid: "57725464"
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 미러에서 실행 중인지 확인합니다.  
   
 2.  보안 주체가 미러로 장애 조치를 수행하면 미러에서 캡처 작업 및 정리 작업을 만듭니다. 작업을 만들려면 저장 프로시저 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)을 사용합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  데이터베이스 미러링에 대한 자세한 내용은 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
 #### <a name="transactional-replication"></a>트랜잭션 복제  
@@ -145,7 +147,7 @@ ms.locfileid: "57725464"
  ![변경 내용 추적에 대한 개념 설명](../../relational-databases/track-changes/media/cdcart2.gif "Conceptual illustration of change tracking")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>변경 내용 추적 및 Sync Services for ADO.NET  
- [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 데이터베이스 간 동기화를 사용하도록 설정하여 오프라인 및 공동 작업 시나리오를 대상으로 하는 애플리케이션을 작성할 수 있는 직관적이고 유연한 API를 제공합니다. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 변경 내용을 동기화하기 위한 API를 제공하지만 서버 또는 피어 데이터베이스에서 변경 내용을 실제로 추적하지는 않습니다. 사용자 지정 변경 내용 추적 시스템을 만들 수 있지만 일반적으로 이러한 시스템으로 인해 작업이 상당히 복잡해지며 성능 오버헤드가 발생합니다. 서버 또는 피어 데이터베이스의 변경 내용을 추적하려면 구성하기 쉽고 고성능 추적을 제공하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 내 변경 내용 추적을 사용하는 것이 좋습니다.  
+ [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 데이터베이스 간 동기화를 사용하도록 설정하여 오프라인 및 협업 시나리오를 대상으로 하는 애플리케이션을 작성할 수 있는 직관적이고 유연한 API를 제공합니다. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 은 변경 내용을 동기화하기 위한 API를 제공하지만 서버 또는 피어 데이터베이스에서 변경 내용을 실제로 추적하지는 않습니다. 사용자 지정 변경 내용 추적 시스템을 만들 수 있지만 일반적으로 이러한 시스템으로 인해 작업이 상당히 복잡해지며 성능 오버헤드가 발생합니다. 서버 또는 피어 데이터베이스의 변경 내용을 추적하려면 구성하기 쉽고 고성능 추적을 제공하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 내 변경 내용 추적을 사용하는 것이 좋습니다.  
   
  변경 내용 추적 및 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)]에 대한 자세한 내용을 보려면 다음 링크를 사용하십시오.  
   
@@ -155,7 +157,7 @@ ms.locfileid: "57725464"
   
 -   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 설명서에서 "방법: "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 설명서에 "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
   
 ## <a name="related-tasks-required"></a>관련 태스크(필수)  
   

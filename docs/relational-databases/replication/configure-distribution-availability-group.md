@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d23495f210a2c5979a5e5abecd9f43e4f5b62c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a67d663f2f0970750b30686b443538cd66358fc5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228097"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583058"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -116,6 +116,8 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
    `@working_directory` 값은 DIST1, DIST2 및 DIST3과는 별개인 네트워크 경로여야 합니다.
 
 1. DIST2 및 DIST3에서 다음을 실행합니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
@@ -238,7 +240,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>배포 데이터베이스 AG에서 게시자 제거
 
-이 예에서는 현재 배포 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다.
+이 예제에서는 현재 배포자의 데이터베이스 AG에서 게시자를 제거하며, 배포 데이터베이스 AG에서 서비스하는 나머지 게시자에는 영향이 없습니다. 이 예에서는 기존 구성이 AG에 배포 데이터베이스를 갖습니다. DIST1, DIST2 및 DIST3은 배포자, `distribution`은 AG의 배포 데이터베이스, PUB1 및 PUB2는 `distribution` 데이터베이스에서 서비스하는 게시자입니다. 이 예에서는 이러한 배포자에서 PUB1을 제거합니다.
 
 ### <a name="publisher-workflow"></a>게시자 워크플로
 
@@ -395,9 +397,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
+EXEC?master.dbo.sp_addlinkedserver?@server?=?N'SQLNODE5',?@srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC?master.dbo.sp_addlinkedsrvlogin?@rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>참고 항목  

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973942"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586175"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "57973942"
 
 -   분음 부호 설정  
   
-     지정된 동의어 사전에 대해 모든 검색 패턴은 물결표(**~**), 양음 악센트 표시(**´**) 또는 움라우트(**¨**) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어 전체 텍스트 쿼리에서 "café" 패턴을 다른 패턴으로 바꾸도록 지정한다고 가정해 보겠습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 "café" 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 "café" 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
+     지정된 동의어 사전에 대해 모든 검색 패턴은 물결표( **~** ), 양음 악센트 표시( **?** ) 또는 움라우트( **?** ) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어, 패턴 "caf?"를 전체 텍스트 쿼리에서 다른 패턴으로 바꾸도록 지정할 수 있습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 "caf?" 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 "caf?" 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
   
 ##  <a name="initial_thesaurus_files"></a> 기본 동의어 사전 파일
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지원되는 각 언어당 하나의 XML 동의어 사전 파일을 제공합니다. 이러한 파일은 기본적으로 비어 있습니다. 파일에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동의어 사전에 공통적인 최상위 XML 구조와 주석 처리된 예제 동의어 사전만 포함되어 있습니다.  
@@ -83,6 +83,8 @@ ms.locfileid: "57973942"
 동의어 사전 쿼리는 언어별 동의어 사전과 전역 동의어 사전을 모두 사용합니다.
 1.  이 쿼리는 먼저 언어별 파일을 조회한 다음 이미 로드되지 않은 경우 처리를 위해 해당 파일을 로드합니다. 이 쿼리는 동의어 사전 파일의 확장 집합 규칙과 교체 집합 규칙으로 지정된 언어별 동의어를 포함하도록 확장됩니다. 
 2.  그런 다음 전역 동의어 사전에 대해 이러한 단계가 반복됩니다. 그러나 용어가 이미 언어별 동의어 사전 파일에서 일치 항목의 일부인 경우 해당 용어는 전역 동의어 사전에서 일치 항목으로 적합하지 않습니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> 동의어 사전 파일의 구조  
  각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 분음 부호 설정, 확장 집합, 교체 집합을 정의하는 자식 요소의 샘플이 포함된 `<thesaurus>` 요소에 정의됩니다.

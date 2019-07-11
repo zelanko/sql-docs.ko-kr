@@ -15,12 +15,12 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248f4f540cffb3d1d71eda2fa23b388140745234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eef28dde084a7ec0f4a782a22e77485ca477dec5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775721"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585909"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +66,16 @@ ms.locfileid: "47775721"
 4.  **업데이트 방법 설정 - \<Subscriber>: \<SubscriptionDatabase>** 대화 상자에서 **즉시 업데이트** 또는 **지연 업데이트**를 선택합니다.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>끌어오기 구독에 대한 업데이트 모드를 설정하려면  
   
 1.  **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에서 **구독자 업데이트 방법** 옵션에 대해 **즉시 변경 내용 복제** 또는 **변경 내용 대기** 중 하나를 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스 하는 방법은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+ **구독 속성 - \<Publisher>: \<PublicationDatabase>** 대화 상자에 액세스하는 방법에 대한 자세한 내용은 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -81,7 +83,7 @@ ms.locfileid: "47775721"
   
 1.  끌어오기 구독의 경우 [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) , 밀어넣기 구독의 경우 [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) 을 실행하여 구독에서 장애 조치가 지원되는지 확인합니다. 결과 집합의 **업데이트 모드** 값이 **3** 또는 **4**이면 장애 조치가 지원됩니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 실행합니다. **@publisher**, **@publisher_db**, **@publication**를 지정하고 **@failover_mode**에 다음 값 중 하나를 지정합니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)를 실행합니다. **@publisher** , **@publisher_db** , **@publication** 를 지정하고 **@failover_mode** 에 다음 값 중 하나를 지정합니다.  
   
     -   **queued** - 연결이 일시적으로 끊어진 경우 지연 업데이트로 장애 조치합니다.  
   

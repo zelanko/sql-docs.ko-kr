@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 81ab0d79b985ee6814de82d1c9c18499ed99761c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317813"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580392"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
 ## <a name="examples"></a>예
     
-### <a name="a-restore-a-full-database-backup"></a>1. 전체 데이터베이스 백업 복원   
+### <a name="a-restore-a-full-database-backup"></a>1\. 전체 데이터베이스 백업 복원   
     
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
@@ -66,7 +66,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
     -   **디바이스**    
     
-         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
          
         -   **백업 디바이스 선택** 대화 상자  
         
@@ -78,7 +78,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
             |미디어 유형|대화 상자|설명|    
             |----------------|----------------|-----------------|    
-            |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 디바이스&amp;#40;SQL Server&amp;#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|    
+            |**최근에 사용한 파일**|**백업 파일 찾기**|이 대화 상자에서는 트리에서 로컬 파일을 선택하거나 정규화된 UNC(Universal Naming Convention) 이름을 사용하여 원격 파일을 지정할 수 있습니다. 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|    
             |**디바이스**|**백업 디바이스 선택**|이 대화 상자에서는 서버 인스턴스에 정의된 논리적 백업 디바이스의 목록에서 디바이스를 선택할 수 있습니다.|    
             |**테이프**|**백업 테이프 선택**|이 대화 상자에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터에 물리적으로 연결된 테이프 드라이브의 목록에서 백업 테이프를 선택할 수 있습니다.|    
             |**URL**|**백업 파일 위치 선택**|이 대화 상자에서 기존 SQL Server 자격 증명/Azure Storage 컨테이너를 선택하거나, 공유 액세스 서명을 사용하여 새 Azure Storage 컨테이너를 추가하거나, 기존 스토리지 컨테이너에 대한 공유 액세스 서명 및 SQL Server 자격 증명을 생성할 수 있습니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.|  
@@ -94,7 +94,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
              원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.    
     
-         **원본: 장치: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.    
+         **원본: 디바이스: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.    
     
          > [!NOTE]
          > 이 목록은 **디바이스** 를 선택한 경우에만 사용할 수 있습니다. 선택한 디바이스에 백업이 있는 데이터베이스만 사용할 수 있습니다.    
@@ -108,7 +108,9 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 7.  필요에 따라 **페이지 선택** 창에서 **파일** 을 클릭하여 **파일** 대화 상자에 액세스합니다. 여기서 **데이터베이스 파일을 다음으로 복원** 표의 각 파일에 대해 새 복원 대상을 지정하여 데이터베이스를 새 위치에 복원할 수 있습니다. 이 표에 대한 자세한 내용은 [데이터베이스 복원&#40;파일 페이지&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)을 참조하세요.    
     
 8. 고급 옵션을 보거나 선택하려면 상황에 따라 **옵션** 페이지의 **복원 옵션** 패널에서 다음 옵션 중 하나를 선택할 수 있습니다.    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  **WITH** 옵션(필요 없음):    
     
         -   **기존 데이터베이스 덮어쓰기(WITH REPLACE)**    
@@ -133,13 +135,13 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>2. 기존 데이터베이스에 이전 디스크 백업 복원
+### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>2\. 기존 데이터베이스에 이전 디스크 백업 복원
 다음 예제에서는 `Sales`의 이전 디스크 백업을 복원하고 기존 `Sales` 데이터베이스를 덮어씁니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
 7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
@@ -161,13 +163,13 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>3.  원래 데이터베이스가 있는 위치에서 이전 디스크 백업을 새 데이터베이스 이름으로 복원
+### <a name="c--restore-an-earlier-disk-backup-with-a-new-database-name-where-the-original-database-still-exists"></a>C.  원래 데이터베이스가 있는 위치에서 이전 디스크 백업을 새 데이터베이스 이름으로 복원
 다음 예제에서는 `Sales`의 이전 디스크 백업을 복원하고 `SalesTest`라는 새 데이터베이스를 만듭니다.  원본 데이터베이스인 `Sales`가 서버에 여전히 있습니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.
 7.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
@@ -189,7 +191,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 전체 백업 및 관련된 모든 트랜잭션 로그 백업으로 이동합니다.  디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 전체 백업 및 관련된 모든 트랜잭션 로그 백업으로 이동합니다.  디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스하고 복구 동작을 중지할 특정 시점을 수동으로 선택합니다.
 7.  **특정 날짜 및 시간**을 선택합니다.  

@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439845"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584484"
 ---
 # <a name="compare-execution-plans"></a>실행 계획 비교
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52439845"
 -   스키마 디자인(예: 새 인덱스)에 소개된 특정 성능 향상 변경에서 실행 계획을 효과적으로 변경하는 방법을 확인합니다.  
  
 **계획 비교** 메뉴 옵션을 사용하여 위에 명시된 모든 이유로 다양한 동작을 설명하는 유사성과 변경 내용을 쉽게 식별할 수 있도록 두 개의 다른 실행 계획을 나란히 비교할 수 있습니다. 이 옵션은 다음을 비교할 수 있습니다.
-- 두 개의 이전에 저장된 실행 계획 파일(*.sqlplan* 확장)
+- 두 개의 이전에 저장된 실행 계획 파일( *.sqlplan* 확장)
 - 하나의 활성 실행 계획 및 하나의 이전에 저장된 쿼리 실행 계획
 - [쿼리 저장소](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)에서 선택된 두 개의 쿼리 계획
 
@@ -69,11 +69,13 @@ ms.locfileid: "52439845"
      > [!TIP]
      > 실행 계획에 사용 가능한 모든 확대/축소 및 탐색 옵션은 계획 비교 모드에서 작동합니다. 자세한 내용은 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.
 
-5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자 모두에 존재하지만 차이점이 있는 속성이 쉽게 식별할 수 있도록 *같지 않음* 기호(≠) 앞에 옵니다.
+5.  기본 선택 사항의 범위에서 오른쪽에 이중 속성 창도 열립니다. 비교된 연산자 모두에 존재하지만 차이점이 있는 속성이 쉽게 식별할 수 있도록 *같지 않음* 기호(?) 앞에 옵니다.
 
     ![이중 속성 창](../../relational-databases/performance/media/plancomparison-properties.png "이중 속성 창")  
 
 6.  **실행 계획 분석** 비교 탐색 창이 아래에서 열립니다. 세 개의 탭을 사용할 수 있습니다.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  **명령문 옵션** 탭에서 기본 선택 사항은 *비슷한 작업 강조 표시*이며 비교된 계획에서 강조 표시된 동일한 연산자 또는 노드는 동일한 색과 선 패턴을 공유합니다. 선 패턴을 클릭하여 비교된 계획의 비슷한 영역 간을 이동합니다. *유사한 세그먼트와 일치하지 않는 작업 강조 표시*를 선택하여 유사점보다 계획의 차이점을 강조 표시하도록 선택할 수도 있습니다. 
     

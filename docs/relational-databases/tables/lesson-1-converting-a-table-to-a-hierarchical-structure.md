@@ -1,5 +1,5 @@
 ---
-title: '1단원: 테이블을 계층 구조로 변환 | Microsoft 문서'
+title: '1단원: 테이블을 계층 구조로 변환 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661161"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582144"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>1단원: 테이블을 계층 구조로 변환
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47661161"
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 - [AdventureWorks2017 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다.  
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요.  
 
 ## <a name="examine-the-current-structure-of-the-employee-table"></a>Employee 테이블의 현재 구조 검사
 샘플 Adventureworks2017(또는 이상) 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources.EmployeeDemo** 테이블을 쿼리하여 **hierarchyid** 데이터 형식을 사용하지 않고 한 테이블에서 데이터가 구조화되는 방식을 검토합니다.  
@@ -42,7 +42,9 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이�
 ### <a name="copy-the-employee-table"></a>Employee 테이블 복사  
   
 1.  쿼리 편집기 창에서 다음 코드를 실행하여 테이블 구조와 데이터를 **Employee** 테이블에서 **EmployeeDemo**라는 새 테이블로 복사합니다. 원래 테이블에서 hierarchyid를 이미 사용했으므로 이 쿼리는 기본적으로 계층 구조를 평면화하여 직원의 관리자를 검색합니다. 이 단원의 다음 부분에서는 이 계층 구조를 다시 구성합니다.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  

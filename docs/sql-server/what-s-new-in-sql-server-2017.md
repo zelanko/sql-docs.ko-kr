@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263501"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556935"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)의 **modified_extent_page_count** 열에서 각 데이터베이스 파일의 차등 변경 내용을 추적하므로 데이터베이스에서 변경된 페이지의 비율에 따라 차등 백업이나 전체 백업을 수행하는 스마트 백업 솔루션을 지원합니다. (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) T-SQL 구문에서는 이제 **ON** 키워드를 사용하여 테이블을 사용자의 기본값이 아닌 FileGroup으로 로드할 수 있습니다. (CTP 2.0)
 - 이제 동일한 인스턴스에 속한 데이터베이스를 비롯해 **Always On 가용성 그룹**에 속한 모든 데이터베이스에서 데이터베이스 간 트랜잭션이 지원됩니다. [Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)(트랜잭션 - Always On 가용성 그룹 및 데이터베이스 미러링)을 참조하세요. (CTP 2.0)
-- 새 **가용성 그룹** 기능에 클러스터 없는 지원, 최소 복제본 커밋 가용성 그룹 설정 및 Windows-Linux OS 간 마이그레이션 및 테스트가 포함됩니다. (CTP 1.3)
+- 새 **가용성 그룹** 기능에 클러스터 없는 읽기 확장 지원, 최소 복제본 커밋 가용성 그룹 설정 및 Windows-Linux OS 간 마이그레이션 및 테스트가 포함됩니다. (CTP 1.3)
 - 새 동적 관리 뷰:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)는 트랜잭션 로그 상태 모니터링에 유용한 요약 수준 특성 및 정보를 트랜잭션 로드 파일에 노출합니다. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md)는 데이터베이스별 버전 저장소 사용을 추적하며, 데이터베이스별 버전 저장소 사용을 기준으로 tempdb 크기를 사전에 계획하는 데 유용합니다. (CTP 2.0)

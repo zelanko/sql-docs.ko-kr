@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf26c7ea0384523370557e71069bf30233a74d6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521377"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586364"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52521377"
   
  다음 단계를 사용하여 로컬 디스크에 데이터베이스의 암호화된 백업을 만들 수 있습니다. 이 예에서는 MyTestDB라는 사용자 데이터베이스를 사용합니다.  
   
-1.  **마스터 데이터베이스의 데이터베이스 마스터 키 생성:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+1.  **master 데이터베이스의 데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
     -- Creates a database master key.   
@@ -55,7 +55,9 @@ ms.locfileid: "52521377"
     ```  
   
 3.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
@@ -74,11 +76,11 @@ ms.locfileid: "52521377"
  EKM에 의해 보호되는 백업을 암호화하는 예제를 보려면 [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
 ### <a name="backup-to-windows-azure-storage-with-encryption"></a>암호화하여 Microsoft Azure Storage에 백업  
- **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 저장소에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 저장소에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+ **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 스토리지에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 스토리지에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
  **사전 요구 사항:**  
   
--   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [Lesson 1: Create Windows Azure Storage Objects](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)입니다.  
+-   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [1단원: Microsoft Azure Storage 개체 만들기](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   
@@ -90,7 +92,7 @@ ms.locfileid: "52521377"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **데이터베이스 마스터 키 생성:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
     -- Creates a database master key.  

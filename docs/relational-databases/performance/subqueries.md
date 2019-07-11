@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579393"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500226"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ GO
 -   `EXISTS`로 시작하는 하위 쿼리의 선택 목록은 규칙에 따라 단일 열 이름 대신 별표(\*)로 구성됩니다. `EXISTS`로 시작하는 하위 쿼리는 존재 테스트를 만들며 데이터 대신 TRUE 또는 FALSE를 반환하므로 `EXISTS`로 시작하는 하위 쿼리에 대한 규칙은 표준 선택 목록의 규칙과 동일합니다.   
 
 ## <a name="qualifying"></a> 하위 쿼리의 열 이름 한정
-다음 예제에서는 외부 쿼리의 `WHERE` 절에 있는 *CustomerID* 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
+다음 예제에서는 외부 쿼리의 `WHERE` 절에 있는 *BusinessEntityID* 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
 
 ```sql
 USE AdventureWorks2016;
@@ -520,9 +520,9 @@ GO
 ```
 
 ### <a name="comparison"></a> 비교 연산자가 있는 하위 쿼리
-하위 쿼리는 비교 연산자(=, < >, >, > =, <, ! >, ! < 또는 < =).   
+하위 쿼리는 다음 비교 연산자 중 하나로 시작할 수 있습니다. (=, < >, >, > =, <, ! >, ! < 또는 < =).   
 
-수정되지 않은 비교 연산자(뒤에 `ANY` 또는 `ALL`이 나오지 않는 비교 연산자)로 시작하는 하위 쿼리는 `IN`으로 시작하는 하위 쿼리처럼 값 목록이 아닌 단일 값을 반환해야 합니다.  이러한 하위 쿼리가 둘 이상의 값을 반환하면 SQL Server는 오류 메시지를 표시합니다.    
+수정되지 않은 비교 연산자(뒤에 `ANY` 또는 `ALL`이 나오지 않는 비교 연산자)로 시작하는 하위 쿼리는 `IN`으로 시작하는 하위 쿼리처럼 값 목록이 아닌 단일 값을 반환해야 합니다. 이러한 하위 쿼리가 둘 이상의 값을 반환하면 SQL Server는 오류 메시지를 표시합니다.    
 
 수정되지 않은 비교 연산자로 시작하는 하위 쿼리를 사용하려면 하위 쿼리가 정확히 하나의 값만 반환한다는 것을 알 수 있도록 데이터와 문제의 특성을 충분히 이해해야 합니다.     
 

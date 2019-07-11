@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128353"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581331"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ ms.locfileid: "54128353"
   
 10. **에이전트 보안** 페이지에서 **스냅숏 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.   
   
-    스냅숏 에이전트에 대한 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*>**\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다.  
+    스냅숏 에이전트에 대한 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다.  
 
     !["에이전트 보안" 페이지 및 "스냅숏 에이전트 보안" 대화 상자](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. 이전 단계를 반복하여 <*Publisher_Machine_Name*>**\repl_logreader**를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정합니다. 그런 다음, **확인**을 선택합니다.  
+12. 이전 단계를 반복하여 <*Publisher_Machine_Name*> **\repl_logreader**를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정합니다. 그런 다음, **확인**을 선택합니다.  
 
     ![“로그 판독기 에이전트 보안” 대화 상자 및 “에이전트 보안” 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -116,6 +116,8 @@ ms.locfileid: "54128353"
     ![게시 이름이 있는 "마법사 완료" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. 게시를 만든 후 **닫기** 를 선택하여 마법사를 완료합니다. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 게시를 만들려고 할 때 SQL Server 에이전트가 실행되고 있지 않은 경우 다음과 같은 오류가 발생할 수 있습니다. 이 오류는 게시가 성공적으로 만들어졌지만 스냅숏 에이전트를 시작하지 못했음을 나타냅니다. 이러한 경우 SQL Server 에이전트를 시작한 다음, 스냅숏 에이전트를 수동으로 시작해야 합니다. 다음 섹션에서 지침을 제공합니다. 
 
@@ -145,8 +147,8 @@ ms.locfileid: "54128353"
   
 2. **로컬 게시** 폴더에서 **AdvWorksProductTrans**를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  **게시 속성** 대화 상자가 표시됩니다.    
   
-   1. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다.  
-   2. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*>**\repl_distribution**을 선택한 다음, **확인**을 선택합니다.
+   1\. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다.  
+   2\. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_distribution**을 선택한 다음, **확인**을 선택합니다.
    
    ![로그인을 게시 액세스 목록에 추가하기 위한 선택 항목](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -182,7 +184,7 @@ ms.locfileid: "54128353"
   
    ![구독 데이터베이스에 대한 이름 입력하기](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. **배포 에이전트 보안** 페이지에서 줄임표(**...**) 단추를 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*>**\repl_distribution**을 입력하고 이 계정의 암호를 입력한 다음, **확인**, **다음**을 차례로 선택합니다.
+8. **배포 에이전트 보안** 페이지에서 줄임표( **?** ) 단추를 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_distribution**을 입력하고 이 계정의 암호를 입력한 다음, **확인**, **다음**을 차례로 선택합니다.
 
    ![“배포 에이전트 보안” 대화 상자의 배포 계정 정보](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -192,9 +194,9 @@ ms.locfileid: "54128353"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구독자에 연결합니다. **보안**을 확장하고, **로그인**을 마우스 오른쪽 단추로 클릭한 다음, **새 로그인**을 선택합니다.     
   
-   1. **일반** 페이지의 **로그인 이름**에서 **검색**을 선택하고 <*Subscriber_Machine_Name*>**\repl_distribution**에 대한 로그인을 추가합니다.
+   1\. **일반** 페이지의 **로그인 이름**에서 **검색**을 선택하고 <*Subscriber_Machine_Name*> **\repl_distribution**에 대한 로그인을 추가합니다.
 
-   2. **사용자 매핑** 페이지에서 **ProductReplica** 데이터베이스에 대한 로그인 **db_owner** 멤버 자격을 부여합니다. 
+   2\. **사용자 매핑** 페이지에서 **ProductReplica** 데이터베이스에 대한 로그인 **db_owner** 멤버 자격을 부여합니다. 
 
    ![구독자에서 로그인을 구성하기 위한 선택 항목](media/tutorial-replicating-data-between-continuously-connected-servers/loginforsub.png)
 
@@ -224,9 +226,9 @@ ms.locfileid: "54128353"
 
 2. 왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자 인스턴스를 확장한 다음, **AdvWorksProductTrans** 게시를 선택합니다.  
   
-   1. **추적 프로그램 토큰** 탭을 선택합니다.  
-   2. **추적 프로그램 삽입**을 선택합니다.    
-   c. 다음 열에서 추적 프로그램 토큰에 대한 경과 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
+   1\. **추적 프로그램 토큰** 탭을 선택합니다.  
+   2\. **추적 프로그램 삽입**을 선택합니다.    
+   c. 다음 열에서 추적 프로그램 토큰에 대한 경과된 시간을 확인합니다. **게시자에서 배포자로 연결 시 대기 시간**, **배포자에서 구독자로 연결 시 대기 시간** 및 **총 대기 시간**. **보류 중**이라는 값은 토큰이 지정된 지점에 아직 도달하지 않았음을 나타냅니다.
 
    ![추적 프로그램 토큰에 대한 정보](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 

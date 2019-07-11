@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356476"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581398"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,12 @@ ms.locfileid: "58356476"
 2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.  
   
 3.  **작업 모드(요청)** 상자에서 **읽기/쓰기**를 선택합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
-**ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+**ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
@@ -105,7 +107,7 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 ![SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SSMS 개체 탐색기의 SQL Server 2016 쿼리 저장소 트리")   ![SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SSMS 개체 탐색기의 SQL Server 2017 쿼리 저장소 트리") 
   
-**재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 필터링합니다. **기간(밀리초)**(기본값), CPU 시간(밀리초), 논리적 읽기(KB), 논리적 쓰기(KB), 물리적 읽기(KB), CLR 시간(ms), DOP, 메모리 사용량(KB), 행 수, 사용된 메모리(KB), 사용된 임시 DB 메모리(KB), 대기 시간(밀리초).  
+**재발된 쿼리** 를 선택하여 **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]창을 엽니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 필터링합니다. **기간(밀리초)** (기본값), CPU 시간(밀리초), 논리적 읽기(KB), 논리적 쓰기(KB), 물리적 읽기(KB), CLR 시간(ms), DOP, 메모리 사용량(KB), 행 수, 사용된 메모리(KB), 사용된 임시 DB 메모리(KB), 대기 시간(밀리초).  
 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제로 적용 및 적용 해제하고, 그리드 형식과 차트 형식 간에 전환하고, 선택한 계획을 비교하고(두 개 이상 선택한 경우), 디스플레이를 새로 고칠 수 있습니다.  
   
 ![SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SSMS 개체 탐색기의 SQL Server 2016 회귀된 쿼리")  
@@ -571,7 +573,7 @@ OPTION (MERGE JOIN);
   
 또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>쿼리에 대한 계획 강제 적용(강제 적용 정책 적용)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>쿼리에 대한 계획 강제 적용(강제 적용 정책 적용)
 
 특정 쿼리에 계획을 강제로 적용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 최적화 프로그램에서 계획을 강제로 적용하려고 시도합니다. 계획을 적용하는 데 실패하면 XEvent가 발생하고, 최적화 프로그램이 일반적인 방법으로 최적화하도록 지시됩니다.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 **sp_query_store_force_plan** 을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 해당 쿼리를 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23">계획에서 빠른 전달 및 정적 커서에 대한 강제 적용 지원<a/>
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 쿼리 저장소는 빠른 전달과 정적 T-SQL 및 API 커서에 대한 쿼리 실행 계획을 강제로 적용하는 기능을 지원합니다. 강제 적용은 이제 `sp_query_store_force_plan` 또는 SQL Server Management Studio 쿼리 저장소 보고서를 통해 지원됩니다.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>쿼리에 대한 계획 강제 적용 제거
 
 다시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램 사용하여 최적의 쿼리 계획을 계산하려면 **sp_query_store_unforce_plan** 을 사용하여 쿼리에 대해 선택한 계획의 강제 적용을 취소합니다.  
@@ -588,7 +594,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
+
+
+
 ## <a name="see-also"></a>참고 항목  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   

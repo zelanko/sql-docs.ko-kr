@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518613"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582749"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518613"
   
 |항목|개요|  
 |-----------|--------------|  
-|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|“'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
+|[OOM으로 인한 데이터베이스 복원 실패 해결](#bkmk_resolveRecoveryFailures)|“' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|  
 |[메모리 부족 또는 OOM 상황이 작업에 미치는 영향 해결](#bkmk_recoverFromOOM)|메모리 부족 문제가 성능에 부정적인 영향을 미치고 있음을 발견할 경우 수행할 작업입니다.|  
-|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 '*\<databaseName>*' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
+|[사용 가능한 메모리가 충분한 경우 메모리 부족으로 인한 페이지 할당 오류 해결](#bkmk_PageAllocFailure)|작업에 사용할 수 있는 메모리가 충분한데 “' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 인해 ' *\<databaseName>* ' 데이터베이스에 대해 페이지를 할당할 수 없습니다...”라는 오류 메시지가 나타나는 경우 수행할 작업입니다.|
 |[최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](#bkmk_VMs)|가상화된 환경에서 메모리 내 OLTP를 사용할 때의 참고 사항입니다.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM으로 인한 데이터베이스 복원 실패 해결  
- 데이터베이스 복원을 시도하면 "'*\<resourcePoolName>*' 리소스 풀의 메모리 부족으로 인해 *\<databaseName>*' 데이터베이스에 대한 복원 작업이 실패했습니다"라는 오류 메시지가 나타날 수 있습니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
+ 데이터베이스를 복원하려고 할 때 "' *\<resourcePoolName>* ' 리소스 풀의 메모리 부족으로 ' *\<databaseName>* ' 데이터베이스에 대한 복원 작업이 실패했습니다."라는 오류 메시지가 나타납니다. 이 오류는 서버에 데이터베이스를 복원하는 데 충분히 사용 가능한 메모리가 없는 것을 나타냅니다. 
    
 데이터베이스를 복원할 서버에는 데이터베이스 백업 시 메모리 최적화 테이블에 대해 충분한 사용 가능한 메모리가 있어야 합니다. 그렇지 않으면 데이터베이스가 온라인 상태가 되지 않으며 주의 대상으로 표시됩니다.  
   
@@ -77,7 +77,9 @@ ms.locfileid: "52518613"
 1.  [DAC(관리자 전용 연결) 열기](#bkmk_openDAC)  
   
 2.  [수정 조치 수행](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> DAC(관리자 전용 연결) 열기  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DAC(관리자 전용 연결)를 제공합니다. DAC를 사용하면 관리자는 서버가 다른 클라이언트 연결에 응답하지 않는 경우에도 실행 중인 SQL Server 데이터베이스 엔진 인스턴스에 액세스하여 서버에서 문제를 해결할 수 있습니다. DAC는 `sqlcmd` 유틸리티 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 사용할 수 있습니다.  
   
@@ -94,9 +96,9 @@ ms.locfileid: "52518613"
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>디스크 기반 테이블로 하나 이상의 행 이동  
  다음 TechNet 문서에는 메모리 최적화 테이블에서 디스크 기반 테이블로 행을 이동하는 방법이 나와 있습니다.  
   
--   [응용 프로그램 수준 분할](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
+-   [애플리케이션 수준 분할](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
   
--   [메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
+-   [메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
 #### <a name="increase-available-memory"></a>사용 가능한 메모리 늘리기  
   

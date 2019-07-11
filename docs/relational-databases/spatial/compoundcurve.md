@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd06ad617f2e74d068209859bde6bcbe95d84b62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935388"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580544"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65935388"
 1.  적어도 하나의 **CircularString** 또는 **LineString** 인스턴스를 포함해야 합니다.  
   
 2.  **CircularString** 또는 **LineString** 인스턴스의 시퀀스는 연속적이어야 합니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 **CompoundCurve** 가 여러 **CircularString** 및 **LineString** 인스턴스 시퀀스를 포함하는 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 엔드포인트는 시퀀스에 있는 다음 인스턴스의 시작 엔드포인트가어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. **CircularString** 의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. **CompoundCurve** 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스  
@@ -138,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-그러면 4∏에 해당하는 출력 `12.5663706143592`가 생성됩니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
+그러면 4?에 해당하는 출력 `12.5663706143592`가 생성됩니다. 예에서 `CompoundCurve` 인스턴스는 반지름이 2인 원을 저장합니다. 앞의 두 코드 예에서는 `CompoundCurve`를 사용할 필요가 없었습니다. 첫 번째 예의 경우 `LineString` 인스턴스를 사용하면 더 간단했을 것이고 두 번째 예의 경우 `CircularString` 인스턴스를 사용하면 더 간단했을 것입니다. 하지만 다음 예에서는 `CompoundCurve` 를 사용하는 것이 더 좋은 경우를 보여 줍니다.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. CompoundCurve를 사용하여 반원 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 반원을 저장합니다.  
@@ -184,7 +186,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-Circle Two의 둘레는 대략 4∏로 이 값은 둘레의 실제 값입니다. 하지만 Circle One의 둘레는 매우 부정확합니다. Circle One의 `CompoundCurve` 인스턴스는 하나의 원호 세그먼트(ABC)와 두 개의 선분(CD, DA)을 저장합니다. 원을 정의하려면 `CompoundCurve` 인스턴스는 두 개의 원호 세그먼트(ABC, CDA)를 저장해야 합니다. 1 `LineString` 인스턴스는 Circle One의 `CompoundCurve` 인스턴스에 두 번째 점 집합(4 2, 2 4, 0 2)을 정의합니다. `CircularString` 내부에서 `CompoundCurve`인스턴스를 명시적으로 선언해야 합니다.  
+Circle Two의 둘레는 대략 4?로 이 값은 둘레의 실제 값입니다. 하지만 Circle One의 둘레는 매우 부정확합니다. Circle One의 `CompoundCurve` 인스턴스는 하나의 원호 세그먼트(ABC)와 두 개의 선분(CD, DA)을 저장합니다. 원을 정의하려면 `CompoundCurve` 인스턴스는 두 개의 원호 세그먼트(ABC, CDA)를 저장해야 합니다. 1 `LineString` 인스턴스는 Circle One의 `CompoundCurve` 인스턴스에 두 번째 점 집합(4 2, 2 4, 0 2)을 정의합니다. `CircularString` 내부에서 `CompoundCurve`인스턴스를 명시적으로 선언해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [STIsValid&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

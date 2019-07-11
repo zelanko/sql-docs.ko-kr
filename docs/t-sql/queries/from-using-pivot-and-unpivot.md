@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04632f7b1ef117c31701cf998b913375656e8a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928677"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559417"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-`PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식의 한 열에 포함된 여러 고유 값을 출력에서 여러 열로 변환하여 테이블 반환 식을 회전하고 최종 출력에서 남은 열 값 중 원하는 값에 대해 필요에 따라 집계를 실행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 작업을 수행합니다.  
+`PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식에 있는 한 열의 고유 값을 출력의 여러 열로 반환하여 테이블 반환 식을 순환합니다. 또한 `PIVOT`은 최종 출력에 포함하려는 나머지 열 값에 필요한 경우 집계를 실행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 작업을 수행합니다.  
   
 `PIVOT`에 대한 구문은 복잡한 일련의 `SELECT...CASE` 문에서 지정할 수 있는 구문과 달리 단순하고 읽기 쉬운 구문을 제공합니다. `PIVOT` 구문에 대한 자세한 내용은 [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
@@ -75,7 +75,6 @@ GO
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
 FROM Production.Product  
 GROUP BY DaysToManufacture;  
-  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

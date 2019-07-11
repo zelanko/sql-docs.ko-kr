@@ -20,14 +20,15 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354369"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556926"
 ---
 # <a name="linked-servers-database-engine"></a>연결된 서버(데이터베이스 엔진)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   연결된 서버를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 및 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index)가 원격 데이터 원본에서 데이터를 읽고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 외부에서 원격 데이터베이스 서버(예: OLE DB 데이터 원본)에 대해 명령을 실행할 수 있습니다. 일반적으로 연결된 서버는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 다른 인스턴스 또는 Oracle과 같은 다른 데이터베이스 제품에 있는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]문을 실행할 수 있도록 구성됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel 및 Azure CosmosDB를 포함한 많은 유형의 OLE DB 데이터 원본을 연결된 서버로 구성할 수 있습니다.

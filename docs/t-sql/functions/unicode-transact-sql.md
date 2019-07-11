@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3ebe7192142b47011864ab112d514187ead99c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec799438a384ba8bf20e8070b84703e6f1e60e6f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946794"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500220"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +42,14 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'** *ncharacter_expression* **'**  
- **nchar** 또는 **nvarchar** 식입니다.  
+**'** *ncharacter_expression* **'**  
+**nchar** 또는 **nvarchar** 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 UNICODE 함수가 0에서 0xFFFF까지 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 UNICODE가 0에서 0x10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다.  
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 UNICODE 함수는 유니코드 BMP(Basic Multilingual Plane)로 65,535개 문자를 나타낼 수 있는 000000~00FFFF 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 UNICODE가 000000에서 10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 유니코드 지원에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)을 참조하세요. 
   
 ## <a name="examples"></a>예  
   

@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744168"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556957"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |데이터베이스 복구 관리자|예|예|예|예|예|
 |암호화된 백업|예|예|아니오|아니오|아니오|
 |Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|아니오|
-|클러스터가 없는 가용성 그룹|예|예|아니오|아니오|아니오|아니오|
+|읽기 확장 가용성 그룹 구성|예|예|아니오|아니오|아니오|아니오|
 |최소 복제본 커밋 가용성 그룹|예|예|예|아니오|아니오|아니오|
   
 

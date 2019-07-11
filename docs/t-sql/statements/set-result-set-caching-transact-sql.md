@@ -1,7 +1,7 @@
 ---
-title: SET RESULT SET CACHING  (Transact-SQL) | Microsoft Docs
+title: SET RESULT_SET_CACHING(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: a9f050fd8e95a7dba255cf7aa164f1d58179182e
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313821"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564115"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -28,7 +28,7 @@ ms.locfileid: "67313821"
 
 현재 클라이언트 세션에 대한 결과 집합 동작을 제어합니다.  
 
-적용 대상: Azure SQL Data Warehouse(미리 보기) 
+적용 대상: Azure SQL Data Warehouse(미리 보기)
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,23 @@ SET RESULT_SET_CACHING { ON | OFF };
 **OFF**   
 현재 클라이언트 세션에 대한 결과 집합 캐싱을 사용하지 않도록 설정합니다.
 
+## <a name="examples"></a>예
+
+쿼리의 request_id로 [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql)의 result_cache_hit 열을 쿼리하여 이 쿼리가 결과 캐시 적중 또는 결과 캐시 누락 중 어떤 상태로 실행되었는지 확인합니다.
+
+```sql
+SELECT result_cache_hit
+FROM sys.dm_pdw_exec_requests
+WHERE request_id = 'QID58286'
+```
+
 ## <a name="permissions"></a>사용 권한
 
 public 역할의 멤버 자격이 필요
 
 ## <a name="see-also"></a>관련 항목:
 
-[SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)</br>
-[ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+[ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
+[ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
+[DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>
+[DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

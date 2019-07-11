@@ -1,5 +1,5 @@
 ---
-title: '자습서: 소유권 체인 및 컨텍스트 전환 | Microsoft 문서'
+title: '자습서: 소유권 체인 및 컨텍스트 전환 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74c768c55058f2ec17fb569c934317f550d13bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657201"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581467"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>자습서: 소유권 체인 및 컨텍스트 전환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 이 자습서에서는 시나리오를 통해 소유권 체인 및 사용자 컨텍스트 전환과 관련된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보안 개념을 설명합니다.  
   
@@ -40,7 +40,9 @@ ms.locfileid: "47657201"
 2.  구매 주문별로 데이터에 액세스하는 저장 프로시저 만들기   
 3.  저장 프로시저를 통해 데이터 액세스  
 4.  환경 다시 설정  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항

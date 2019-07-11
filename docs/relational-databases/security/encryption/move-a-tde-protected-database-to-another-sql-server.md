@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590267"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585683"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53590267"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 기본적으로 여기서 생성된 파일을 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 에 저장합니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
   
 -   데이터베이스 마스터 키를 만들려면 **master** 데이터베이스에 대한 **CONTROL DATABASE** 권한이 필요합니다.  
   
@@ -75,7 +75,9 @@ ms.locfileid: "53590267"
      데이터베이스의 TDE를 설정(선택) 또는 해제(선택 취소)로 변경합니다.  
   
 8.  완료되었으면 **확인**을 클릭합니다.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
@@ -165,7 +167,7 @@ ms.locfileid: "53590267"
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     상태 중 하나, 즉 **준비** 또는 **준비 안 됨**을 표시합니다.  
+     다음 상태 중 하나를 표시합니다. **준비** 또는 **준비 안 됨**  
   
      **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  

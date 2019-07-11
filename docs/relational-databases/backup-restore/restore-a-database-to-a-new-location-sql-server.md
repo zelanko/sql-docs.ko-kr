@@ -20,12 +20,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d05f6a469649d959e6ba68e6413ee772025a1d45
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590847"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580328"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53590847"
 ###  <a name="Security"></a> 보안  
  보안을 위해서는 알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  복원할 데이터베이스가 없으면 CREATE DATABASE 권한이 있어야 RESTORE를 실행할 수 있습니다. 데이터베이스가 있으면 RESTORE 권한은 기본적으로 **sysadmin** 및 **dbcreator** 고정 서버 역할의 멤버와 데이터베이스의 소유자(**dbo**)에 설정됩니다.  
   
  멤버 자격 정보를 서버에서 항상 사용할 수 있는 역할에 RESTORE 권한이 제공됩니다. 고정 데이터베이스 역할의 멤버 자격은 데이터베이스가 액세스 가능한 상태이며 손상되지 않은 경우에만 확인할 수 있는데, RESTORE 실행 시 데이터베이스가 항상 이러한 상태인 것은 아니므로 **db_owner** 고정 데이터베이스 역할의 멤버에게는 RESTORE 권한이 없습니다.  
@@ -75,11 +75,11 @@ ms.locfileid: "53590847"
   
     1.  **디바이스**  
   
-         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
-         **원본: 장치: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.  
+         **원본: 디바이스: 데이터베이스** 목록 상자에서 복원할 데이터베이스의 이름을 선택합니다.  
   
          **참고** 이 목록은 **디바이스** 를 선택한 경우에만 사용할 수 있습니다. 선택한 디바이스에 백업이 있는 데이터베이스만 사용할 수 있습니다.  
   
@@ -107,8 +107,10 @@ ms.locfileid: "53590847"
      이 문에는 WITH 옵션을 여러 개 지정할 수도 있습니다. 자세한 내용은 [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 참조하세요.  
   
 2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 전체 데이터베이스 백업을 복원합니다. 기본적으로 데이터 및 로그 파일은 원래 위치로 복원됩니다. 데이터베이스의 위치를 다시 지정하려면 MOVE 옵션을 사용하여 각 데이터베이스 파일 위치를 옮기고 기존 파일과의 충돌을 피합니다.  
-  
-     데이터베이스를 새 위치 및 새 이름으로 복원하는 데 사용되는 기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
   
      RESTORE DATABASE *new_database_name*  
   
@@ -128,36 +130,36 @@ ms.locfileid: "53590847"
   
      ;  
   
-    > **참고!** 데이터베이스 위치를 다른 디스크에 다시 지정할 때는 공간이 충분한지 확인하고 기존 파일과의 충돌 가능성이 있는지 확인합니다. 그러려면 RESTORE DATABASE 문에 사용하려는 것과 동일한 MOVE 매개 변수를 지정하는 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 문을 사용해야 합니다.  
+    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
   
-     다음 표에서는 새 위치로의 데이터베이스 복원과 관련된 이 RESTORE 문 인수에 대해 설명합니다. 이러한 인수에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법을 설명합니다.  
+     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
-     데이터베이스의 새 이름입니다.  
+     The new name for the database.  
   
-    >**참고:** 데이터베이스를 다른 서버 인스턴스로 복원하는 경우 새 이름 대신 원래 데이터베이스 이름을 사용할 수 있습니다.  
+    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
   
      *backup_device* [ **,**...*n* ]  
-     데이터베이스 백업 복원에 사용할 1-64개의 백업 디바이스 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 디바이스를 지정하거나, 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
+     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
   
      { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
      { **RECOVERY** | NORECOVERY }  
-     전체 복구 모델을 사용하는 데이터베이스의 경우, 데이터베이스를 복원한 후 트랜잭션 로그 백업을 적용해야 할 수도 있습니다. 이 경우 NORECOVERY 옵션을 지정하세요.  
+     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
   
-     그렇지 않은 경우에는 기본값인 RECOVERY 옵션을 사용하세요.  
+     Otherwise, use the RECOVERY option, which is the default.  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 없습니다.  
+     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
-     이 옵션이 지정되지 않은 경우에는 기본적으로 백업 디바이스의 첫 번째 백업 세트가 사용됩니다.  
+     When this option is not specified, the default is to use the first backup set on the backup device.  
   
-     자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
+     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
+     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
   
     |옵션|설명|  
     |------------|-----------------|  
@@ -168,7 +170,7 @@ ms.locfileid: "53590847"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 디바이스에 있는 첫 번째 백업 세트입니다.  
   
-> **참고:** 지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스에서 전체 복구 모델을 사용하도록 변경해야 합니다. ALTER DATABASE <database_name> SET RECOVERY FULL;  
+> **참고:** 지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스에서 전체 복구 모델을 사용하도록 변경해야 합니다. ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  
