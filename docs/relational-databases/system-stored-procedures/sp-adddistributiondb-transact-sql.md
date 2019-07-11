@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a6fb689832069ab8be4a260fecaa27b6b29f7ca5
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492556"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716735"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,15 +56,15 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>인수  
 `[ @database = ] database'` 만들 배포 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다. 지정한 데이터베이스가 이미 존재하지만 아직 배포 데이터베이스로 표시되지 않은 경우 배포를 활성화하는 데 필요한 개체가 설치되고 데이터베이스가 배포 데이터베이스로 표시됩니다. 지정한 데이터베이스가 이미 배포 데이터베이스로 활성화된 경우 오류가 반환됩니다.  
   
-`[ @data_folder = ] 'data_folder'_` 배포 데이터베이스 데이터 파일을 저장 하는 데 사용 하는 디렉터리의 이름이입니다. *data_folder* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 대한 데이터 디렉터리(예: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)가 사용됩니다.  
+`[ @data_folder = ] 'data_folder'_` 배포 데이터베이스 데이터 파일을 저장 하는 데 사용 하는 디렉터리의 이름이입니다. *data_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스에 대한 데이터 디렉터리(예: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)가 사용됩니다.  
   
-`[ @data_file = ] 'data_file'` 데이터베이스 파일의 이름이입니다. *data_file* 됩니다 **nvarchar(255)**, 기본값은 **데이터베이스**합니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
+`[ @data_file = ] 'data_file'` 데이터베이스 파일의 이름이입니다. *data_file* 됩니다 **nvarchar(255)** , 기본값은 **데이터베이스**합니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
   
 `[ @data_file_size = ] data_file_size` 초기 데이터 파일 크기 (mb)입니다. *data_file_size 있습니까*s **int**, 기본값은 5MB입니다.  
   
-`[ @log_folder = ] 'log_folder'` 데이터베이스 로그 파일에 대 한 디렉터리의 이름이입니다. *log_folder* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스(예: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)에 대한 데이터 디렉터리가 사용됩니다.  
+`[ @log_folder = ] 'log_folder'` 데이터베이스 로그 파일에 대 한 디렉터리의 이름이입니다. *log_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 해당 인스턴스(예: `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)에 대한 데이터 디렉터리가 사용됩니다.  
   
-`[ @log_file = ] 'log_file'` 로그 파일의 이름이입니다. *log_file* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
+`[ @log_file = ] 'log_file'` 로그 파일의 이름이입니다. *log_file* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 저장 프로시저는 데이터베이스 이름을 사용하여 새 파일 이름을 생성합니다.  
   
 `[ @log_file_size = ] log_file_size` 초기 로그 파일 크기 (mb)입니다. *log_file_size* 됩니다 **int**, 기본값은 0MB, 즉, 가장 작은 로그를 사용 하 여 만든 파일 크기에서 허용 파일 크기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
@@ -98,7 +98,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_adddistributiondb** 모든 유형의 복제에 사용 됩니다. 단, 이 저장 프로시저는 배포자에서만 실행합니다.  
   
  실행 하 여 배포자를 구성 해야 합니다 [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) 실행 하기 전에 **sp_adddistributiondb**합니다.  

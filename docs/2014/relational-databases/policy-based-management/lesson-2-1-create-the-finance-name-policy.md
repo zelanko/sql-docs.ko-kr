@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090622"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792909"
 ---
 # <a name="create-the-finance-name-policy"></a>Finance Name 정책 만들기
   이 태스크에서는 Finance라는 데이터베이스를 만든 다음 모든 테이블이 **fintbl**로 시작하도록 지정하는 조건을 만듭니다. 그런 다음 Finance 데이터베이스의 테이블에 대한 명명 표준을 적용하는 정책 및 정책 범주를 만듭니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "66090622"
   
 3.  **패싯** 목록에서 **여러 부분으로 구성된 이름**을 선택합니다.  
   
-4.  **식** 영역의 **필드** 상자에서 **@Name** 을 선택하고, **연산자** 상자에서 **Like**를 선택하고, **값** 상자에 **'fintbl%'** 를 입력하여 모든 테이블 이름이 **fintbl**로 시작하도록 지정합니다.  
+4.  에 **식** 영역에서 합니다 **필드** 상자에서  **\@이름**;를 **연산자** 상자에서  **와 같은**; 및는 **값** 상자에 입력 **'fintbl %'** 문자로 시작 하는 테이블 이름을 모두에 적용할 **fintbl**합니다.  
   
 5.  **설명** 페이지에서 **Finance table names must begin with fintbl**을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090622"
   
 6.  **새 조건 만들기** 대화 상자의 **이름** 상자에 **Finance Database**를 입력합니다.  
   
-7.  **식** 상자에서 **@Name = 'Finance'** 를 포함하도록 식을 완성한 다음 **확인**을 클릭하여 조건 페이지를 닫습니다.  
+7.  에 **식** 상자를 포함 하도록 식을 완성  **\@이름 = 'Finance'** 를 클릭 하 고 **확인** 조건 페이지를 닫습니다.  
   
     > [!NOTE]  
     >  **값** 상자에서 Tab 키를 눌러 **확인** 단추를 활성화해야 할 수도 있습니다.  

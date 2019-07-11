@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273311"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794099"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 및 표준 CLI
 ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (ODBC 기능은 이러한 표준의 각 상위 집합입니다.)  
@@ -33,17 +33,17 @@ ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로
   
  이 맞춤으로 인해 다음에 해당 합니다.  
   
--   Open Group 및 ISO CLI 사양을 작성 된 응용 프로그램을 ODBC 3을 사용 하 여 작동 합니다. *x* 드라이버 또는 ODBC 3을 사용 하 여 컴파일할 때 표준 규격 드라이버입니다. *x* 헤더 파일 및 연결 된 ODBC 3. *x* 라이브러리를 ODBC 3를 통해 드라이버에 대 한 액세스를 향상 하 고. *x* 드라이버 관리자입니다.  
+-   ODBC를 사용 하 여 Open Group 및 ISO CLI 사양에 작성 된 응용 프로그램 작동 *3.x* 드라이버나 ODBC를 사용 하 여 컴파일할 때 표준 규격 드라이버 *3.x* 헤더 파일 및 연결 ODBC *3.x* 라이브러리를 통해 ODBC 드라이버에 대 한 액세스를 얻을 때와 *3.x* 드라이버 관리자입니다.  
   
--   Open Group 및 ISO CLI 사양에 작성 된 드라이버는 ODBC 3 작동 *.x* 응용 프로그램 또는 ODBC 3을 사용 하 여 컴파일할 때 표준 호환 응용 프로그램 *.x* 헤더 파일 및 연결 ODBC 3 *.x* 라이브러리 및 응용 프로그램에서 ODBC 3를 통해 드라이버에 대 한 액세스를 향상 하는 경우 *.x* 드라이버 관리자입니다. (자세한 내용은 [표준 호환 응용 프로그램 및 드라이버](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)합니다.  
+-   Open Group 및 ISO CLI 사양에 작성 된 드라이버는 ODBC를 사용 하 여 작동 *3.x* 응용 프로그램 또는 ODBC를 사용 하 여 컴파일할 때 표준 호환 응용 프로그램 *3.x* 헤더 파일 및 연결 ODBC를 사용 하 여 *3.x* 라이브러리 및 응용 프로그램에서 ODBC 통해 드라이버에 대 한 액세스를 향상 하는 경우 *3.x* 드라이버 관리자입니다. (자세한 내용은 [표준 호환 응용 프로그램 및 드라이버](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)합니다.  
   
- 핵심 인터페이스 적합성 수준 ISO CLI의 모든 기능 및 열린 그룹 CLI에서 모든 nonoptional 기능을 포함합니다. 선택적 기능의 그룹 CLI를 열고 상위 인터페이스 적합성 수준에 나타납니다. 때문에 모든 ODBC 3. *x* 드라이버는 핵심 인터페이스 적합성 수준에서 기능을 지 원하는 데 필요한, 다음은 true입니다.  
+ 핵심 인터페이스 적합성 수준 ISO CLI의 모든 기능 및 열린 그룹 CLI에서 모든 nonoptional 기능을 포함합니다. 선택적 기능의 그룹 CLI를 열고 상위 인터페이스 적합성 수준에 나타납니다. 때문에 모든 ODBC *3.x* 드라이버는 핵심 인터페이스 적합성 수준에서 기능을 지 원하는 데 필요한, 다음은 true입니다.  
   
--   ODBC 3입니다. *x* 드라이버는 표준 호환 응용 프로그램에서 사용 되는 모든 기능을 지원 합니다.  
+-   ODBC *3.x* 드라이버는 표준 호환 응용 프로그램에서 사용 되는 모든 기능을 지원 합니다.  
   
--   ODBC 3입니다. *x* ISO CLI에서 기능만 및 nonoptional 기능의 열기 그룹 CLI를 사용 하 여 응용 프로그램이 표준 호환 드라이버를 사용 하 여 작동 합니다.  
+-   ODBC *3.x* ISO CLI에서 기능만 및 nonoptional 기능의 열기 그룹 CLI를 사용 하 여 응용 프로그램이 표준 호환 드라이버를 사용 하 여 작동 합니다.  
   
- ISO/IEC 및 열린 그룹 CLI 표준에 포함 된 호출 수준 인터페이스 사양, 외에도 ODBC는 다음 기능을 구현 합니다. (이러한 기능 중 일부에 있던 ODBC 3 이전 ODBC의 버전입니다. *x*.)  
+ ISO/IEC 및 열린 그룹 CLI 표준에 포함 된 호출 수준 인터페이스 사양, 외에도 ODBC는 다음 기능을 구현 합니다. (이러한 기능 중 일부 이전 ODBC는 ODBC의 버전에 존재 *3.x*.)  
   
 -   단일 함수 호출 하 여 다중 행 인출  
   

@@ -20,22 +20,22 @@ ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d91302161b236cee5634196bea33f61411f046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947a7ea107e334eb393248f7d368fe958e6229c0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259573"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792579"
 ---
 # <a name="sqlgetconnectoption-function"></a>SQLGetConnectOption 함수
 **규칙**  
  도입 된 버전: ODBC 1.0 표준 준수 합니다. 사용되지 않음  
   
  **요약**  
- ODBC 3에서 *.x*, ODBC 2 *.x* 함수 **SQLGetConnectOption** 바뀌었습니다 **SQLGetConnectAttr**합니다. 자세한 내용은 [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)합니다.  
+ Odbc에서 *3.x*, ODBC *2.x* 함수 **SQLGetConnectOption** 바뀌었습니다 **SQLGetConnectAttr**합니다. 자세한 내용은 [SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)합니다.  
   
 > [!NOTE]
->  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 2 대 한 자세한 내용은 *.x* 는 ODBC 3을 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)부록 g: 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
+>  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC에 대 한 자세한 *2.x* ODBC를 사용 하 여 응용 프로그램이 작동 *3.x* 드라이버를 참조 하세요. [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)부록 g: 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
 > 
 > [!NOTE]
 >  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성에서 지원 되지 않습니다 **SQLGetConnectOption**합니다. 연결 핸들의 비동기 작업을 사용 하는 응용 프로그램을 사용 해야 합니다 **SQLGetConnectAttr**합니다.  

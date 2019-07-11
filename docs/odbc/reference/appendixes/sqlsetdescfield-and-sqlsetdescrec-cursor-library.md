@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298265"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792828"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField 및 SQLSetDescRec(커서 라이브러리)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298265"
   
  커서 라이브러리에 대 한 호출을 실행 **SQLSetDescRec** 책갈피 열에 대 한 합니다.  
   
- ODBC 2 작업할 때. *x* 드라이버 커서 라이브러리에는 SQLSTATE HY090 반환 합니다 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLSetDescField** 하거나 **SQLSetDescRec** SQL_DESC_OCTET_를 설정 하기 위해 호출 됩니다 같지 않음 4 값으로는 카드가의 책갈피 레코드의 필드 길이입니다. ODBC 3을 사용 하는 경우 *.x* 드라이버 커서 라이브러리를 통해 버퍼 크기입니다.  
+ ODBC를 사용 하 여 작업 하는 경우 *2.x* 드라이버 커서 라이브러리에는 SQLSTATE HY090 반환 합니다 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLSetDescField** 하거나 **SQLSetDescRec** 라고 카드가의 책갈피 레코드의 SQL_DESC_OCTET_LENGTH 필드 4 같지 않은 값으로 설정 합니다. ODBC를 사용 하 여 작업 하는 경우 *3.x* 드라이버 커서 라이브러리를 통해 버퍼 크기입니다.  
   
  커서 라이브러리를 실행 **SQLSetDescField** SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE, 또는 SQL_DESC_ROW_STATUS_PTR 필드의 값을 반환 하도록 호출 되는 경우. 이러한 필드는 책갈피 행 뿐 아니라 모든 행에 대해 반환할 수 있습니다.  
   

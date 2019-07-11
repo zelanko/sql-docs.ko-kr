@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716641"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
 
@@ -31,11 +31,11 @@ ms.locfileid: "56031774"
 
   지역에서 복제 파트너 관계의 주 및 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 이 보기는 논리적 master 데이터베이스에 상주합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Sys.databases 뷰의 현재 데이터베이스의 ID입니다.|  
 |start_date|**datetimeoffset**|데이터베이스 복제를 시작한 경우 지역 SQL Database 데이터 센터의 UTC 시간|  
-|modify_date|**datetimeoffset**|데이터베이스 지역 복제를 완료 하는 경우 지역 SQL Database 데이터 센터에서 UTC 시간입니다. 새 데이터베이스는이 시간을 기준으로 주 데이터베이스와 동기화 됩니다. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.|  
+|modify_date|**datetimeoffset**|데이터베이스 지역 복제를 완료 하는 경우 지역 SQL Database 데이터 센터에서 UTC 시간입니다. 새 데이터베이스는이 시간을 기준으로 주 데이터베이스와 동기화 됩니다. 을 선택합니다.|  
 |link_guid|**uniqueidentifier**|지역에서 복제 링크의 고유 ID입니다.|  
 |partner_server|**sysname**|지역에서 복제 된 데이터베이스를 포함 하는 SQL Database 서버의 이름입니다.|  
 |partner_database|**sysname**|연결된 된 SQL Database 서버에서 지역에서 복제 된 데이터베이스의 이름입니다.|  

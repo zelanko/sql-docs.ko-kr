@@ -2,20 +2,20 @@
 title: Spark 작업을 사용 하 여 데이터를 수집 합니다.
 titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388560"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727441"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388560"
 
 이 자습서에는 Spark 작업을 사용 하 여 데이터를 로드 하는 방법을 보여 줍니다.는 [데이터 풀](concept-data-pool.md) SQL Server 2019 빅 데이터 클러스터 (미리 보기). 
 
-이 자습서에 알아봅니다 방법:
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 데이터 풀에서 외부 테이블을 만듭니다.
@@ -104,7 +104,7 @@ ms.locfileid: "67388560"
 
    다음 표에서 각 인수를 설명합니다.
 
-   | 인수 | Description |
+   | 인수 | 설명 |
    |---|---|
    | 서버 이름(server name) | 테이블 스키마를 읽는 SQL Server 사용 |
    | 포트 번호 | SQL Server 포트 (기본값 1433)에서 수신 대기 |

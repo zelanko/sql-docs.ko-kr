@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681595"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729283"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -47,7 +46,7 @@ ms.locfileid: "67681595"
 
 SQL Server 2019 (미리 보기) 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
 
-|Command |Description |
+|Command |설명 |
 |:---|:---|
 |`mssqlctl login` | SQL Server 빅 데이터 클러스터에 로그인 |
 |`mssqlctl app create` | 응용 프로그램을 만듭니다. |
@@ -111,7 +110,7 @@ mssqlctl app create --spec ./addpy
 
 이 샘플 앱을 배포 하려면 라는 디렉터리에 다음 파일을 만들고 `addpy`:
 
-- `add.py`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 이 파일에 다음 Python 코드를 복사 합니다.
+- `add.py`. 이 파일에 다음 Python 코드를 복사 합니다.
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +118,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 이 파일에 다음 코드를 복사 합니다.
+- `spec.yaml`. 이 파일에 다음 코드를 복사 합니다.
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

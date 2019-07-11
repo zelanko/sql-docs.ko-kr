@@ -1,32 +1,32 @@
 ---
-title: 배포 빠른 시작
+title: 배포 스크립트
 titleSuffix: SQL Server big data clusters
 description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 배포를 연습 합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798738"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728777"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 빠른 시작에서는 Azure Kubernetes Service (AKS)를 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 샘플 배포 스크립트를 사용 합니다. 
+이 자습서에서는 Azure Kubernetes Service (AKS)를 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 샘플 배포 스크립트를 사용 합니다. 
 
 > [!TIP]
 > AKS는 Kubernetes 빅 데이터 클러스터에 대 한 호스팅에 대 한 하나의 옵션입니다. 다른 배포 옵션 하는 옵션 배포를 사용자 지정 하는 방법을 알아보려면 [빅 데이터를 SQL Server를 배포 하는 방법에서 kubernetes 클러스터](deployment-guidance.md)합니다.
 
-여기에 기본 빅 데이터 클러스터 배포를 SQL 마스터 인스턴스를, 풀 인스턴스를 하나의 계산, 두 데이터 풀 인스턴스 및 두 개의 저장소 풀 인스턴스에 구성 됩니다. 데이터는 AKS 기본 저장소 클래스를 사용 하는 Kubernetes 영구적 볼륨을 사용 하 여 유지 됩니다. 이 빠른 시작에 사용 된 기본 구성을 개발/테스트 환경에 적합 합니다.
+여기에 기본 빅 데이터 클러스터 배포를 SQL 마스터 인스턴스를, 풀 인스턴스를 하나의 계산, 두 데이터 풀 인스턴스 및 두 개의 저장소 풀 인스턴스에 구성 됩니다. 데이터는 AKS 기본 저장소 클래스를 사용 하는 Kubernetes 영구적 볼륨을 사용 하 여 유지 됩니다. 이 자습서에 사용 된 기본 구성을 개발/테스트 환경에 적합 합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>배포 스크립트를 다운로드 합니다.
 
-이 빠른 시작이에서는 python 스크립트를 사용 하 여 AKS에서 빅 데이터 클러스터 만들기 자동화 **배포-sql-큰-데이터-aks.py**합니다. Python을 이미 설치한 경우 **mssqlctl**,이 빠른 시작에서 스크립트를 성공적으로 실행할 수 있도록 해야 합니다. 
+이 자습서는 python 스크립트를 사용 하 여 AKS에서 빅 데이터 클러스터 만들기 자동화 **배포-sql-큰-데이터-aks.py**합니다. Python을 이미 설치한 경우 **mssqlctl**,이 자습서에서 스크립트를 성공적으로 실행할 수 있도록 해야 합니다. 
 
 Windows PowerShell 또는 Linux bash 프롬프트에서 GitHub에서 배포 스크립트를 다운로드 하려면 다음 명령을 실행 합니다.
 
@@ -73,7 +73,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. 메시지가 표시 되 면 다음 정보를 입력 합니다.
 
-   | 값 | Description |
+   | 값 | 설명 |
    |---|---|
    | **Azure 구독 ID** | AKS를 사용 하 여 Azure 구독 ID입니다. 실행 하 여 모든 구독 및 해당 Id를 나열할 수 있습니다 `az account list` 다른 명령줄에서. |
    | **Azure 리소스 그룹** | AKS 클러스터를 만드는 Azure 리소스 그룹 이름입니다. |

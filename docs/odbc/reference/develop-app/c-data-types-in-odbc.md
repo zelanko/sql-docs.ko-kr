@@ -15,19 +15,19 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199215"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793979"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC의 C 데이터 형식
 ODBC 응용 프로그램 변수 및 해당 형식 식별자에서 사용 되는 C 데이터 형식을 정의 합니다. 이러한 문 매개 변수 및 결과 집합 열에 바인딩된 버퍼에 사용 됩니다. 예를 들어, 응용 프로그램에서 문자 형식으로 결과 집합 열에서 데이터를 검색 하려고 합니다. SQLCHAR 사용 하 여 변수 선언 * 데이터 형식으로이 변수를 SQL_C_CHAR의 형식 식별자를 사용 하 여 결과 집합 열에 바인딩합니다. C 데이터 형식 및 형식 식별자의 전체 목록은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  ODBC C 데이터 형식으로 각 SQL 데이터 형식에서 기본 매핑을 정의합니다. 예를 들어, 데이터 원본에는 2 바이트 정수는 2 바이트 정수 응용 프로그램에 매핑됩니다. 기본 매핑을 사용 하려면 응용 프로그램의 SQL_C_DEFAULT 형식 식별자를 지정 합니다. 그러나이 식별자의 사용은 상호 운용성의 이유로 권장 되지 않습니다.  
   
- ODBC 1에 정의 된 모든 정수 C 데이터 형식 *.x* 서명 되었습니다. 부호 없는 C 데이터 형식 및 해당 형식 식별자는 ODBC 2.0에 추가 되었습니다. 이 인해 응용 프로그램 및 드라이버 필요 1을 사용 하 여 처리 하는 경우에 특히 주의를 기울여야 *.x* 버전입니다.  
+ ODBC에 정의 된 모든 정수 C 데이터 형식 *1.x* 서명 되었습니다. 부호 없는 C 데이터 형식 및 해당 형식 식별자는 ODBC 2.0에 추가 되었습니다. 이 인해 응용 프로그램 및 드라이버 필요를 처리할 때 특히 주의를 기울여야 *1.x* 버전입니다.  
   
 ## <a name="c-data-type-extensibility"></a>C 데이터 형식 확장성  
  ODBC 3.8의 드라이버 관련 C 데이터 형식을 지정할 수 있습니다. 이렇게 하면 호출 하는 경우 SQL 형식에서 ODBC 응용 프로그램은 드라이버별 C 형식으로 바인딩할 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)를 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), 또는 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다. 이 기존 C 데이터 형식을 새 서버 데이터 형식에 제대로 나타나지 않을 수 있습니다 때문에 새 서버 유형을 지원 하기 위해 유용할 수 있습니다. 드라이버별 C 형식을 사용 하 여 드라이버를 수행할 수 있는 변환의 수를 늘릴 수 있습니다.  

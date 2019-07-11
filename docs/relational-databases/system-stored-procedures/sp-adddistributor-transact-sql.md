@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_adddistributor
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8cf36a02d81b8732d80beb7c97d025a74138cd43
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494316"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716730"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_adddistributor** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

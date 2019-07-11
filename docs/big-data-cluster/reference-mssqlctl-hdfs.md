@@ -2,19 +2,20 @@
 title: mssqlctl hdfs 참조
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl hdfs 명령에 대 한 참조 문서입니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9051c3630fce005572bc3b939ebef9ed8d111e07
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394215"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728537"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 

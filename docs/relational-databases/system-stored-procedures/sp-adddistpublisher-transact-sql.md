@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistpublisher
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b7f55d89054ff7d950921e0c6762770c6e714500
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492775"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716750"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
   
-`[ @working_directory = ] 'working_directory'` 게시용 데이터 및 스키마 파일을 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)**, 및 ReplData 폴더의이 인스턴스에 대 한 기본값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예를 들어 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`합니다. 이름은 UNC 형식으로 지정해야 합니다.  
+`[ @working_directory = ] 'working_directory'` 게시용 데이터 및 스키마 파일을 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)** , 및 ReplData 폴더의이 인스턴스에 대 한 기본값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예를 들어 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`합니다. 이름은 UNC 형식으로 지정해야 합니다.  
 
  Azure SQL database를 사용 하 여 `\\<storage_account>.file.core.windows.net\<share>`입니다.
 
@@ -80,14 +80,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @thirdparty_flag = ] thirdparty_flag` 게시자 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *thirdparty_flag* 됩니다 **비트**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
   
 `[ @publisher_type = ] 'publisher_type'` 게시자 되지 않을 때 게시자 유형을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *publisher_type* 은 sysname 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
@@ -98,7 +98,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_adddistpublisher** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에서 사용 됩니다.  
   
 ## <a name="example"></a>예제  

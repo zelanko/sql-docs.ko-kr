@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267778"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792694"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>테이블에 추적 결과 저장(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 결과를 데이터베이스 테이블에 저장하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "63267778"
   
 6.  **테이블** 목록에서 추적 결과에 대한 테이블 이름을 입력하거나 선택합니다. **확인.**  
   
-7.  **추적 속성** 대화 상자에서 **최대 행 수 설정(천 단위)** 확인란을 선택하여 저장할 최대 행 수를 지정합니다.  
+7.  에 **추적 속성** 대화 상자에서를 **(천 단위)의 최대 행 수 설정** 저장 하는 행의 최대 수를 지정 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  

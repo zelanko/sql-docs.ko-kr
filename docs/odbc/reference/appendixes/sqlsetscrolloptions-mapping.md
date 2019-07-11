@@ -14,15 +14,15 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297456"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793009"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 매핑
-응용 프로그램을 호출할 때 **SQLSetScrollOptions** 는 ODBC 3 *.x* 드라이버 및 드라이버 지원 하지 않습니다 **SQLSetScrollOptions**에 대 한 호출  
+응용 프로그램을 호출할 때 **SQLSetScrollOptions** 는 ODBC를 통한 *3.x* 드라이버 및 드라이버 지원 하지 않습니다 **SQLSetScrollOptions**에 대 한 호출  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +100,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      사용 하 여  *\*ValuePtr* 로 설정 합니다 *RowsetSize* 에서 인수 **SQLSetScrollOptions**합니다.  
   
     > [!NOTE]  
-    >  때 드라이버 관리자 매핑합니다 **SQLSetScrollOptions** 는 ODBC 3을 사용 하는 응용 프로그램에 대 한 *.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자에 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성 SQL_ROWSET_SIZE 문 옵션을 설정 합니다는 *RowsetSize* 에서 인수 **SQLSetScrollOption**합니다. 따라서 **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.
+    >  때 드라이버 관리자 매핑합니다 **SQLSetScrollOptions** ODBC를 사용 하 여 작업 하는 응용 프로그램에 대 한 *3.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자에 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성 SQL_ROWSET_SIZE 문 옵션을 설정 합니다는 *RowsetSize* 에서 인수 **SQLSetScrollOption**합니다. 따라서 **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 하거나 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.

@@ -2,19 +2,20 @@
 title: 시작
 titleSuffix: SQL Server big data clusters
 description: 단계 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 리소스에 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388827"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728961"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
 
@@ -26,7 +27,7 @@ ms.locfileid: "67388827"
 
 빅 데이터 클러스터에는 특정 클라이언트 도구 집합이 필요합니다. Kubernetes에 빅 데이터 클러스터를 배포 하기 전에 다음 도구를 설치 해야 합니다.
 
-| 도구 | Description |
+| 도구 | 설명 |
 |---|---|
 | **mssqlctl** | 배포 하 고 빅 데이터 클러스터를 관리 합니다. |
 | **kubectl** | 만들고 기본 Kubernetes 클러스터를 관리 합니다. |

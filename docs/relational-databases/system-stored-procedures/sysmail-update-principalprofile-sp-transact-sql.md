@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6e973b71b16817f3e3533544102bfeba3caeb4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472161"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793060"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  연결에 대 한 보안 주체 이름을 경우 **공용** 연결에 대 한 보안 주체 id가 아니거나 **0**이 저장된 프로시저의 공개 프로필을 변경 합니다. 기본 공개 프로필은 하나만 있을 수 있습니다.  
   
- 때 **@is_default** 는 '**1**' 보안 주체는 둘 이상의 프로필을 사용 하 여 연결을 지정한 프로필이 보안 주체의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
+ 때  **\@is_default** 는 '**1**' 보안 주체는 둘 이상의 프로필을 사용 하 여 연결을 지정한 프로필이 보안 주체의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 보안 주체와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
   
  저장된 프로시저 **sysmail_update_principalprofile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
   

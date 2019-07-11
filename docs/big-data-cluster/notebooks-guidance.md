@@ -2,20 +2,20 @@
 title: Azure Data Studio에서 노트북을 실행 합니다.
 titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 연결 하는 Azure Data Studio에서 Jupyter Notebook을 실행 하는 방법에 설명 합니다.
-author: achatter
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802821"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728761"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
 
@@ -97,7 +97,7 @@ Notebook SQL 커널에 연결 하 여 기존 텍스트 셀을 추가 하려는 �
 
 ![Jupyter 백 엔드](media/notebooks-guidance/jupyter-backend.png)
 
-|커널|Description
+|커널|설명
 |:-----|:-----
 | SQL 커널 | 관계형 데이터베이스에서 대상으로 하는 SQL 코드를 작성 합니다.
 |PySpark3 및 PySpark 커널| 클러스터에서 Spark 계산을 사용 하 여 Python 코드를 작성 합니다.

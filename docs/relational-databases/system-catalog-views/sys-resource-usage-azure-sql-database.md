@@ -16,16 +16,16 @@ helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a3a6baec134c715d5f15c0e3e45a19e17d5b5cf
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716297"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "63025420"
   
  각 사용자 데이터베이스에 대해 한 시간에 한 개의 행이 지속적으로 있습니다. 해당 시간 동안 데이터베이스가 유휴 상태인 경우라도 행이 있으며 해당 데이터베이스의 usage_in_seconds 값이 0이 됩니다. 스토리지 사용량 및 SKU 정보는 해당 시간에 대해 적절하게 롤업됩니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |Time|**datetime**|시간 단위로 시간(UTC)입니다.|  
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  
-|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> 표준<br /><br /> Premium|  
+|sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> 기본<br /><br /> 표준<br /><br /> Premium|  
 |usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고: 이 열은 V11에 대 한 않으며 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
 |storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 저장소 크기입니다.|  
   

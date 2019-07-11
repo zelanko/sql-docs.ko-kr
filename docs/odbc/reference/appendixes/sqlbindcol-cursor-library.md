@@ -13,12 +13,12 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e9e1018754977ee73ecdc21db30b3d8c2aae8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd98b39421e95254fcb052db67cbc9f9205b668
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199688"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793529"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol(커서 라이브러리)
 > [!IMPORTANT]  
@@ -30,8 +30,8 @@ ms.locfileid: "63199688"
   
  응용 프로그램에서 호출할 수 있습니다 **SQLBindCol** 호출한 후 집합 열 결과 바인딩할 **SQLExtendedFetch**하십시오 **SQLFetch**, 또는 **SQLFetchScroll**로 C 데이터 형식, 열 크기 및 연결된 된 필드의 10 진수 동일 하 게 유지 합니다. 응용 프로그램 서로 다른 주소에는 열을 바인딩할 커서를 닫지 필요.  
   
- 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindCol** 이렇게 다시 바인딩하기 위해서는 발생에 대해 호출할 필요가 없습니다.) 커서 라이브러리는 ODBC 3을 사용 하 여 사용 됩니다 *.x* 드라이버를 바인딩 오프셋이 잘못 되었습니다. 때 사용 되는 **SQLFetch** 라고 합니다. 바인딩 오프셋 하는 경우 사용 됩니다 **SQLFetch** 커서 라이브러리는 ODBC 2를 사용 하 여 사용 될 때 호출 됩니다. *x* 드라이버 때문 **SQLFetch** 다음 매핑할 **SQLExtendedFetch**합니다.  
+ 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindCol** 이렇게 다시 바인딩하기 위해서는 발생에 대해 호출할 필요가 없습니다.) ODBC 커서 라이브러리 사용 *3.x* 드라이버를 바인딩 오프셋이 잘못 되었습니다. 때 사용 되는 **SQLFetch** 라고 합니다. 바인딩 오프셋 하는 경우 사용 됩니다 **SQLFetch** 커서 라이브러리는 ODBC를 사용 하 여 사용 될 때 호출 됩니다 *2.x* 드라이버 때문 **SQLFetch** 다음 매핑할  **SQLExtendedFetch**합니다.  
   
  커서 라이브러리 호출을 지 원하는 **SQLBindCol** 책갈피 열을 바인딩합니다.  
   
- ODBC 2 작업할 때. *x* 드라이버 커서 라이브러리에는 SQLSTATE HY090 반환 합니다 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLBindCol** 4 같지 않은 값으로 책갈피 열에 대 한 버퍼 길이 설정 하기 위해 호출 됩니다. ODBC 3을 사용 하는 경우 *.x* 드라이버 커서 라이브러리를 통해 버퍼 크기입니다.
+ ODBC를 사용 하 여 작업 하는 경우 *2.x* 드라이버 커서 라이브러리에는 SQLSTATE HY090 반환 합니다 (잘못 된 문자열 또는 버퍼 길이) 때 **SQLBindCol** 책갈피 열에 대 한 버퍼 길이 값으로 설정 하기 위해 호출 됩니다 4와 같습니다. ODBC를 사용 하 여 작업 하는 경우 *3.x* 드라이버 커서 라이브러리를 통해 버퍼 크기입니다.

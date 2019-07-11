@@ -16,12 +16,12 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63265114"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792796"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>식을 통해 사용자 지정 어셈블리 액세스
   사용자 지정 어셈블리를 만들어 보고서 디자이너 또는 보고서 서버에서 사용할 수 있도록 했으며, 적절한 보안 정책을 추가하고, 보고서 정의에서 사용자 지정 어셈블리에 대한 참조를 추가했으면 보고서 식을 사용하여 어셈블리의 클래스 멤버에 액세스할 수 있습니다. 식의 사용자 지정 코드를 참조하려면 어셈블리 내에서 클래스의 멤버를 호출해야 합니다. 이 방법은 메서드가 정적인지 아니면 인스턴스 기반인지에 따라 달라집니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "63265114"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>보고서 정의 파일에서 인스턴스 멤버 호출  
  액세스해야 할 보고서 정의 내 인스턴스 멤버가 사용자 지정 어셈블리에 포함되어 있는 경우 클래스에 대한 인스턴스 이름을 보고서에 추가해야 합니다. **보고서 속성** 대화 상자의 **코드** 탭을 사용하여 클래스에 대한 인스턴스 이름을 추가할 수 있습니다. 보고서에 클래스의 인스턴스를 추가하는 데 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
- 정적 멤버를 호출하려면 =Code *.InstanceName.Method* 형식의 식으로 정적 멤버를 참조해야 합니다.  
+ 형식의 식으로 참조 해야 정적 멤버를 호출 하려면 = Code*합니다. InstanceName.Method*합니다.  
   
 #### <a name="to-call-instance-members"></a>인스턴스 멤버를 호출하려면  
   

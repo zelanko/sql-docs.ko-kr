@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에는 HDFS에 계층화 (미리 보기)는 SQL Server 2019 빅 데이터 클러스터에서 HDFS에 외부 Azure 데이터 레이크 저장소 파일 시스템 탑재를 구성 하는 방법을 설명 합니다.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782113"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728740"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 계층화 하는 HDFS 구성
 

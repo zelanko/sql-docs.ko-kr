@@ -16,12 +16,12 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306212"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792699"
 ---
 # <a name="types-of-drivers"></a>드라이버 형식
 ODBC 드라이버는 다음과 같이 분류할 수 있습니다.  
@@ -29,9 +29,9 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
 -   **32 비트 ODBC 2입니다.**  
      **_x_ 드라이버** 32 비트 드라이버입니다.  
   
-    -   ODBC 2만 내보냅니다 *.x* 함수입니다.  
+    -   ODBC만 내보냅니다 *2.x* 함수입니다.  
   
-    -   ODBC 2를 보여 줍니다.*x* 동작 변경 내용에 대 한 동작입니다.  
+    -   ODBC를 보여 *2.x* 동작 변경 내용에 대 한 동작입니다.  
   
 -   **ISO 및 열린 그룹 규격 드라이버** 32 비트 드라이버입니다.  
   
@@ -45,13 +45,13 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
   
     -   ODBC 3.0에서 뺀 값에 있는 함수만을 내보냅니다 함수를 사용 되지 않습니다.  
   
-    -   ODBC 2를 나타내는 수 있습니다.*x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 동작 변경 내용에 대해 ODBC 3.0 동작 합니다.  
+    -   ODBC를 나타내는 수 *2.x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 동작 변경 내용에 대해 ODBC 3.0 동작 합니다.  
   
 -   **ODBC 3.5 (또는 이후 버전) ANSI 드라이버** 32 비트 드라이버입니다.  
   
     -   빼기 ODBC 3.5에 있는 함수만을 내보냅니다 함수를 사용 되지 않습니다.  
   
-    -   ODBC 2를 나타내는 수 있습니다. *x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 ODBC 3.0 동작 또는 동작 변경 내용에 대해 ODBC 3.5 동작 합니다.  
+    -   ODBC를 나타내는 수 *2.x* SQL_ATTR_APP_ODBC_VERSION 환경 특성을 기반으로 동작 또는 ODBC 3.0 동작 또는 동작 변경 내용에 대해 ODBC 3.5 동작 합니다.  
   
 -   **ODBC 3.5 (또는 이상) 유니코드 드라이버** 32 비트 드라이버입니다.  
   
@@ -62,4 +62,4 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
     -   저장 하 고 데이터 원본에 유니코드 데이터를 처리할 수 있습니다.  
   
 > [!NOTE]  
->  16 비트 ODBC 드라이버는 ODBC 3와 직접 작동 하지 않습니다. *x* 드라이버 관리자입니다. 그러나 이후에 3까지 썽크를 2.0 ODBC 드라이버 관리자를 사용 하 여 작동 하는 16 비트 드라이버에 대 한 가능한 것입니다. *x* 드라이버 관리자입니다.
+>  16 비트 ODBC 드라이버는 ODBC를 사용 하 여 직접 작동 하지 것입니다 *3.x* 드라이버 관리자입니다. 그러나 있기 이후에 최대 썽크를 2.0 ODBC 드라이버 관리자를 사용 하 여 작동 하는 16 비트 드라이버는 *3.x* 드라이버 관리자입니다.

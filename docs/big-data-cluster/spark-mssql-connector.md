@@ -2,19 +2,20 @@
 title: SQL Server에 Spark 연결
 titleSuffix: SQL Server big data clusters
 description: Spark에서 SQL Server에 읽기 및 쓰기를 MSSQL Spark 커넥터를 사용 하는 방법에 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469116"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727467"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>읽기 및 MSSQL Spark 커넥터를 사용 하 여 Spark에서 SQL Server에 기록 하는 방법
 
@@ -39,9 +40,9 @@ SQL Server 2019 미리 보기를 제공 합니다 **MSSQL Spark 커넥터** 빅 
 
 다음 표에서 변경 되었거나 새 되는 인터페이스 매개 변수를 설명 합니다.
 
-| 속성 이름 | 선택 사항 | Description |
+| 속성 이름 | Optional | 설명 |
 |---|---|---|
-| **isolationLevel** | 사용자 계정 컨트롤 | 연결의 격리 수준을 설명합니다. MSSQLSpark 커넥터에 대 한 기본값은 **READ_COMMITTED** |
+| **isolationLevel** | 예 | 연결의 격리 수준을 설명합니다. MSSQLSpark 커넥터에 대 한 기본값은 **READ_COMMITTED** |
 
 커넥터는 SQL Server 대량 Api를 작성합니다. 매개 변수는 사용자가 선택적 매개 변수로 전달할 수 및으로 전달 되는 모든 대량 쓰기-커넥터는 기본 API 하는 것입니다. 쓰기 작업 대량에 대 한 자세한 내용은을 참조 하세요 [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)합니다.
 

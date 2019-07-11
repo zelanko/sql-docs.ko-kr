@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서 (미리 보기)는 SQL Server 2019 빅 데이터 클러스터에서 HDFS에 외부 S3 파일 시스템 탑재에 계층화 하는 HDFS를 구성 하는 방법에 설명 합니다.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728743"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 S3 하는 방법
 

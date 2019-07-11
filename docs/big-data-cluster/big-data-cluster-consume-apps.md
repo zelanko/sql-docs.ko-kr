@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: RESTful 웹 서비스 (미리 보기)를 사용 하 여 SQL Server 2019 빅 데이터 클러스터에 배포 된 응용 프로그램을 사용 합니다.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801895"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729300"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
 
@@ -34,7 +33,7 @@ ms.locfileid: "66801895"
 
 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 응용 프로그램을 배포한 후에 액세스 하 고 RESTful 웹 서비스를 사용 하 여 해당 응용 프로그램을 사용할 수 있습니다. 이 통해 다른 응용 프로그램 또는 서비스 (예: 모바일 앱 또는 웹 사이트)에서 해당 앱의 통합. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl** RESTful 웹 서비스 앱에 대 한 정보를 가져옵니다.
 
-|Command |Description |
+|Command |설명 |
 |:---|:---|
 |`mssqlctl app describe` | 응용 프로그램에 설명 합니다. |
 

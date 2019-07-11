@@ -2,20 +2,20 @@
 title: 빅 데이터 클러스터는 무엇 인가요?
 titleSuffix: SQL Server big data clusters
 description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장 옵션 및 HDFS 데이터를 제공 하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대해 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dd9b649dbb7bf2fc68c34ae22a1d270515756df8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388725"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729268"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터란 무엇인가요?
 

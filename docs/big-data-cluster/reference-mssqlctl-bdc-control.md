@@ -2,19 +2,20 @@
 title: mssqlctl bdc 컨트롤 참조
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc 제어 명령에 대 한 참조 문서입니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4ce2adb0f6e95a54a927efc319fd982517294963
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 87b8b095ee990e0b20e86c839e1cd6d2a1ca85bf
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394375"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728589"
 ---
 # <a name="mssqlctl-bdc-control"></a>mssqlctl bdc 컨트롤
 

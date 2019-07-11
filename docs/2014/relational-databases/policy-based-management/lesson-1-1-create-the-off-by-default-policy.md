@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064300"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792932"
 ---
 # <a name="create-the-off-by-default-policy"></a>Off By Default 정책 만들기
   이 태스크에서는 노출 영역 구성 패싯을 기반으로 하는 Mail Off라는 조건을 만듭니다. 그리고 나서 Off By Default라는 정책을 만듭니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064300"
   
 3.  **패싯** 상자에서 **노출 영역 구성** 패싯이 선택되어 있는지 확인합니다.  
   
-4.  **식** 영역의 **필드** 상자에서 **@DatabaseMailEnabled** 를 선택하고, **연산자** 상자에서 **=** 를 선택한 다음 **값**에서 **False**를 선택합니다.  
+4.  에 **식** 영역에서는 **필드** 상자에서  **\@DatabaseMailEnabled**의 **연산자** 선택상자 **=** , 및는 **값** 선택 **False**합니다.  
   
 5.  **설명** 페이지에서 조건에 대한 설명을 입력한 다음 **확인** 을 클릭하여 조건을 만듭니다.  
   

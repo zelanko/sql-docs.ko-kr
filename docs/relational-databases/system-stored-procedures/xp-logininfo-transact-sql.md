@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099955"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793615"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 `[ @acctname = ] 'account_name'` Windows 사용자 또는 액세스 권한을 부여 하는 그룹의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *account_name* 지정 하지 않으면에 로그인 권한을 부여 받은 모든 Windows 그룹 및 Windows 사용자가 명시적으로 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
   
  **'모든'**  |  **'멤버가'**  
- 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** 됩니다 **varchar(10)** , 기본값은 NULL입니다. 경우가 아니면 **모든** 지정, 첫 번째 권한 경로만 표시 됩니다.  
+ 계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **\@옵션** 됩니다 **varchar(10)** , 기본값은 NULL입니다. 경우가 아니면 **모든** 지정, 첫 번째 권한 경로만 표시 됩니다.  
   
 `[ @privilege = ] variable_name` 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수가입니다. *variable_name* 됩니다 **varchar(10)** , 'Not w'의 기본값입니다. 권한 수준을 반환 **사용자**를 **admin**, 또는 **null**합니다.  
   
@@ -57,7 +57,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**계정 이름**|**sysname**|정규화된 Windows 계정 이름입니다.|  
 |**type**|**char(8)**|Windows 계정의 유형입니다. 유효한 값은 **사용자** 하거나 **그룹**합니다.|  
@@ -65,7 +65,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**매핑된 로그인 이름**|**sysname**|사용자 권한이 있는 사용자 계정에 대 한 **로그인 이름에 매핑된** 따르면 매핑된 로그인 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 이름의 따른 매핑된 규칙을 사용 하 여이 계정으로 로그인 하기 전에 추가 될 때 사용 하려고 합니다.|  
 |**사용 권한 경로**|**sysname**|계정 액세스 권한을 부여한 그룹 멤버 자격입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 *account_name* 를 지정 하면 **xp_logininfo** 지정한 Windows 사용자 또는 그룹의 가장 높은 권한 수준을 보고 합니다. Windows 사용자가 시스템 관리자 및 도메인 사용자로서의 액세스 권한을 둘 다 갖고 있으면 시스템 관리자로서 보고됩니다. 사용자가 권한 수준이 같은 여러 Windows 그룹의 멤버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 처음 부여 받은 그룹만 보고됩니다.  
   
  하는 경우 *account_name* 유효한 Windows 사용자 또는 사용 하 여 연결 되지 않은 그룹을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 하면 빈 결과 집합이 반환 됩니다. 하는 경우 *account_name* 식별할 수 없는 유효한 Windows 사용자 또는 그룹으로 오류 메시지가 반환 됩니다.  

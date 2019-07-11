@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536267"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793729"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 함수
 **규칙**  
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE는 드라이버 통계를 무조건 검색 하는 것을 요청 합니다. (만 표준을 준수 하는 Open Group 및 ODBC 확장을 지원 하지 않는 드라이버 됩니다 SQL_ENSURE를 지원할 수 있습니다.)  
   
- SQL_QUICK 요청는 드라이버가 서버에서 쉽게 사용할 수 있는 경우에 카디널리티 및 페이지를 검색 합니다. 이 경우 드라이버는 값이 최신 값인지 확인하지 않습니다. (Open Group 표준으로 작성 된 응용 프로그램이 ODBC 3에서 SQL_QUICK 동작을 얻을 항상 *.x*-규격 드라이버입니다.)  
+ SQL_QUICK 요청는 드라이버가 서버에서 쉽게 사용할 수 있는 경우에 카디널리티 및 페이지를 검색 합니다. 이 경우 드라이버는 값이 최신 값인지 확인하지 않습니다. (Open Group 표준으로 작성 된 응용 프로그램이 ODBC에서 SQL_QUICK 동작을 얻을 항상 *3.x*-규격 드라이버입니다.)  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  
@@ -94,7 +94,7 @@ SQLRETURN SQLStatistics(
 ## <a name="diagnostics"></a>진단  
  때 **SQLStatistics** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* SQL_의 HANDLE_STMT와 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLStatistics** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  범용, 인수 및 반환 된 데이터의 ODBC 카탈로그 함수에 대 한 자세한 내용은 참조 하세요. [카탈로그 함수](../../../odbc/reference/develop-app/catalog-functions.md)합니다.  
   
- ODBC 3에 대 한 다음과 같은 열 이름이 바뀌었습니다 *.x*합니다. 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC에 대 한 다음과 같은 열 이름이 바뀌었습니다 *3.x*합니다. 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
   
-|ODBC 2.0 열|ODBC 3 *.x* 열|  
+|ODBC 2.0 열|ODBC *3.x* 열|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

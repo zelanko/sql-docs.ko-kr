@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274368"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793920"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   피어 투 피어 복제는 *노드*라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다. 트랜잭션 복제를 기반으로 구축된 피어 투 피어 복제는 트랜잭션 측면에서 일관적인 변경 내용을 거의 실시간으로 전파합니다. 따라서 읽기 작업을 확장해야 하는 애플리케이션은 클라이언트의 읽기 작업을 여러 노드에 배포할 수 있습니다. 여러 노드의 데이터가 거의 실시간으로 유지 관리되므로 피어 투 피어 복제는 데이터 중복을 제공하며 이러한 중복은 데이터의 가용성을 높여 줍니다.  
@@ -137,19 +137,19 @@ ms.locfileid: "63274368"
   
 -   배포 에이전트 매개 변수 **-SubscriptionStreams** 및 로그 판독기 에이전트 매개 변수 **-MaxCmdsInTran**  
   
--   아티클 속성 **@destination_owner** 및 **@destination_table** 라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   아티클 속성  **\@destination_owner** 하 고  **\@destination_table**합니다.  
 
 -   피어 투 피어 트랜잭션 복제에서는 피어 투 피어 게시에 대한 단방향 트랜잭션 구독을 만들 수 없습니다.
   
  다음 속성에는 특별히 고려할 사항이 있습니다.  
   
--   게시 속성 **@allow_initialize_from_backup** 의 값은 `true`합니다.  
+-   게시 속성  **\@allow_initialize_from_backup** 의 값은 `true`합니다.  
   
--   아티클 속성 **@replicate_ddl** 의 값은 `true`; **@identityrangemanagementoption** 의 값이 필요 `manual`; 하 고 **@status** 옵션에 **24** 설정 됩니다.  
+-   아티클 속성  **\@replicate_ddl** 의 값은 `true`;  **\@identityrangemanagementoption** 의 값이 필요 `manual`; 하 고  **\@상태** 옵션에 **24** 설정 됩니다.  
   
--   아티클 속성에 대 한 값 **@ins_cmd** 합니다 **@del_cmd** , 및 **@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
+-   아티클 속성에 대 한 값  **\@ins_cmd**합니다  **\@del_cmd**, 및  **\@upd_cmd** 로 설정할 수 없습니다 `SQL`합니다.  
   
--   구독 속성 **@sync_type** 의 값이 필요 `none` 또는 `automatic`합니다.  
+-   구독 속성  **\@sync_type** 의 값이 필요 `none` 또는 `automatic`합니다.  
   
 ### <a name="maintenance-considerations"></a>유지 관리 고려 사항  
  다음 동작을 수행하려면 시스템을 정지해야 합니다. 즉, 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 모두 받았는지 확인해야 합니다.  

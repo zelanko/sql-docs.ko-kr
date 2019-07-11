@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729307"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법
 
@@ -128,7 +128,7 @@ VS Code는 적절 한 끝점, 사용자 이름 및 암호를 묻습니다. 앱 �
 - 출력 매개 변수
 - 링크
   - swagger
-  - 자세히
+  - details 정보
 
 클릭 하면 `Links`, 액세스할 수 있는지 표시 됩니다는 `swagger.json` 배포 된 앱의 앱을 호출 하는 고유한 클라이언트를 작성할 수 있도록 합니다.
 

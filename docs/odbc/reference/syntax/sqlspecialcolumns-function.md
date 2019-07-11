@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536254"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793736"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 함수
 **규칙**  
@@ -112,7 +112,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSpecialColumns** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 호출 및 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLSpecialColumns** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** 범위에 따라 순서가 지정 된 표준 결과 집합으로 결과 반환 합니다.  
   
- ODBC 3에 대 한 다음과 같은 열 이름이 바뀌었습니다 *.x*합니다. 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
+ ODBC에 대 한 다음과 같은 열 이름이 바뀌었습니다 *3.x*합니다. 열 이름 변경을 응용 프로그램 열 번호로 바인딩할 수 있으므로 이전 버전과 호환성 영향을 주지 않습니다.  
   
-|ODBC 2.0 열|ODBC 3 *.x* 열|  
+|ODBC 2.0 열|ODBC *3.x* 열|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

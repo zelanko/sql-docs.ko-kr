@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462529"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716581"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -34,13 +34,13 @@ ms.locfileid: "66462529"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 요청과 관련된 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |request_id|**int**|요청의 ID입니다. 세션의 컨텍스트에서 고유합니다. Null을 허용하지 않습니다.|  
 |start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
 |상태|**nvarchar(30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
-|command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
+|command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
 |sql_handle|**varbinary(64)**|일괄 처리를 고유 하 게 식별 하는 토큰 또는 쿼리가 포함 된 저장된 프로시저입니다. Null을 허용합니다.|  
 |statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
 |statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
@@ -89,8 +89,8 @@ ms.locfileid: "66462529"
 |group_id|**int**|이 쿼리가 속한 작업 그룹의 ID입니다. Null을 허용하지 않습니다.|  
 |query_hash|**binary(8)**|쿼리에서 계산되는 이진 해시 값으로, 비슷한 논리를 가진 쿼리를 식별하는 데 사용됩니다. 쿼리 해시를 사용하여 리터럴 값만 다른 쿼리에 대한 집계 리소스 사용을 확인할 수 있습니다.|  
 |query_plan_hash|**binary(8)**|쿼리 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 쿼리 실행 계획을 식별하는 데 사용됩니다. 쿼리 계획 해시를 사용하여 비슷한 실행 계획을 가진 쿼리의 누적 비용을 찾을 수 있습니다.|  
-|statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 개별 쿼리의 SQL 핸들입니다. |  
-|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Sys.query_context_settings 선택적 외래 키입니다. |  
+|statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대 한 쿼리 저장소를 사용 하지 않는 경우이 열은 NULL입니다. |  
+|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Sys.query_context_settings 선택적 외래 키입니다.<br /><br />데이터베이스에 대 한 쿼리 저장소를 사용 하지 않는 경우이 열은 NULL입니다. |  
 |dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쿼리 병렬 처리 수준입니다. |  
 |parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리의 경우 예약 된 병렬 작업자 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
@@ -98,7 +98,7 @@ ms.locfileid: "66462529"
 |page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 바이트 16 진수 표현 페이지 리소스의 경우는 `wait_resource` 열 페이지를 포함 합니다. |  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database 대규모<br /><br /> 이 요청에서 수행 하는 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
 
-## <a name="remarks"></a>Remarks 
+## <a name="remarks"></a>설명 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
 
 병렬 요청을 실행할 때 [행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 조정 작업자 스레드를 할당 하는 작업을 완료 하는 일을 담당 하는 작업자 스레드를 할당 합니다. 이 DMV에서 코디네이터 스레드만 요청에 대해 표시 됩니다. 열 **읽습니다**, **씁니다**, **logical_reads**, 및 **row_count** 됩니다 **업데이트 되지** 에 대 한 합니다 코디네이터 스레드입니다. 열 **wait_type**, **wait_time**, **last_wait_type**하십시오 **wait_resource**, 및 **granted_query_memory** 됩니다 **만 업데이트** 코디네이터 스레드입니다. 자세한 내용은 참조는 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)합니다.

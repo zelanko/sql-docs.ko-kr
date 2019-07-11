@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681610"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794067"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="july-2019"></a>2019 년 7 월
+
+2019 년 7 월 10 일 &nbsp;  /  &nbsp; 버전: 1.9.0 
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| SentryOne 계획 탐색기 확장의 릴리스 | 값된의 Microsoft 파트너, SentryOne을 발송 해당 [Azure Data Studio에 대 한 SentryOne 계획 탐색기 확장](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio)합니다. <br> 이 최적화 된 레이아웃 알고리즘 및 쿼리 성능에 영향을 주는 가장 비용이 많이 드는 연산자를 신속 하 게 식별 하는 데 직관적인 색 구분을 사용 하 여 Azure 데이터 스튜디오에서 실행 하는 쿼리에 대 한 향상 된 계획 다이어그램을 제공 하는 무료 확장 기능입니다. 확장에 대 한 자세한 내용은 체크 아웃 SentryOne의 블로그 게시물 [여기](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio)합니다. |
+| 스키마 비교를 제공 하는 새로운 기능 | &bull; &nbsp; 스키마 비교 파일 지원 (합니다. SCMP) <br/>&bull; &nbsp; 스키마 비교 지원 취소 <br/>&bull; &nbsp; 전체 변경 내용을 확인할 수 있습니다 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Notebook의 향상 된 기능 | &bull; &nbsp; Plotly Python 지원 <br/>&bull; &nbsp; 브라우저에서 노트북 열기 <br/> &bull; &nbsp; Python 패키지 관리 대화 상자 <br/> &bull; &nbsp; 성능 및 Markdown 향상 된 기능 <br/> &bull; &nbsp; 바로 가기 키 업데이트 <br/>  &bull; &nbsp; 버그 수정 및 사소한 기능을 찾을 수 있습니다 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| SQL Server 2019 지원 |  이 릴리스는 포함 하 여 추가 SQL Server 2019 빅 데이터 클러스터 기능에 대 한 지원: <br/> &bull; &nbsp; 클러스터의 모든 주요 서비스를 나열 하는 관리 대시보드 내에서 서비스 끝점 테이블입니다. <br/> &bull; &nbsp; 클러스터 상태 Notebook에는 쿼리 및 모든 서비스 및 pod에 걸쳐 클러스터 상태를 해결할 수 있습니다 하는 방법을 보여 줍니다.| 
+| 사용 가능한 업데이트 언어 팩| 이제 가지 10 언어 팩 사용 가능한 확장 관리자 marketplace에 있습니다. 간단히 확장 marketplace를 사용 하 여 특정 언어에 대 한 검색 하 고 설치 합니다. 선택한 언어를 설치한 경우 Azure Data Studio 하 라는 메시지가 나타납니다 새 언어를 사용 하 여 다시 시작 합니다. |
+| SQL Server Profiler 업데이트 | SQL Server 프로필 확장을 포함 하 여 새 기능을 포함 하도록 업데이트 되었습니다. <br/> &bull; &nbsp; 데이터베이스 이름으로 필터링 <br/> &bull; &nbsp; 복사 및 붙여넣기 지원 <br/> &bull; &nbsp; 필터 저장/로드 <br/>SQL Server Profiler 확장에 대 한 개선의 전체 목록을 찾을 수 있습니다 [여기](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+)합니다.  |
+| Visual Studio Code 병합 1.35를 해제할 수 있습니다. | 향상 된 최신 버전을 찾을 수 있습니다 [여기](https://code.visualstudio.com/updates/v1_35)합니다. |
+| 해결 된 버그 및 문제 | Azure Data Studio의 이전 릴리스에서 연결 대화 상자에서 연결할 때 사용자 데이터베이스를 선택 하는 경우 단일 데이터베이스에 완전히 생성 되는 개체 탐색기 항목이 범위 되었습니다. 개체 탐색기에서 서버 수준 속성 또한 표시 되도록 동작이 변경 되는이 릴리스에서 시작 합니다. <br/> 수정 사항의 전체 목록을 참조 하세요 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)합니다. |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>2019 년 6 월
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681610"
 | Windows에 대 한 데이터베이스 관리 도구 확장의 릴리스 | 이 확장에 두 Azure 데이터 Studio에서 SQL Server Management Studio에서 자주 사용 하는 환경을 시작합니다. 사용자 수 많은 다른 개체 (예: 데이터베이스, 테이블, 열, 뷰 등)을 마우스 오른쪽 단추로 클릭 하 고 속성을 해당 개체에 대 한 SSMS 속성 대화 상자를 선택 합니다. 또한 사용자 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 잘 알려진 SSMS 스크립트 생성 마법사를 시작 하려면 스크립트 생성을 선택할 수 있습니다. 
 | 스키마 비교 개선 | &bull; &nbsp; 추가 제외/포함 옵션 <br/>&bull; &nbsp; 생성 후 스크립트 열립니다 스크립트를 생성 합니다. <br/>&bull; &nbsp; 이중 스크롤 막대를 제거합니다.  <br/>&bull; &nbsp; 서식 및 레이아웃 개선 <br/>&bull; &nbsp; 전체 변경 내용을 확인할 수 있습니다 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | 사용자 탭으로 이동된 Messages 섹션 | SQL 쿼리를 실행 하는 사용자가 결과 및 메시지 누적된 패널에 있었습니다. 이제 SSMS에서 같은 패널에 별도 탭에는 합니다. |
-| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 사용자가 이제 노트북에서 자신의 Python 3 또는 Anaconda 설치를 사용 하도록 선택할 수 있습니다. <br/>&bull; &nbsp; 여러 안정성 + 맞춤/완료 픽스 &bull; &nbsp; 개선의 전체 목록을 보려면 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 사용자가 이제 노트북에서 자신의 Python 3 또는 Anaconda 설치를 사용 하도록 선택할 수 있습니다. <br/>&bull; &nbsp; 여러 안정성 + 맞춤/완료 수정 <br/> &bull; &nbsp; 개선의 전체 목록을 보려면 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | Visual Studio Code 1.34 병합을 해제할 수 있습니다. | 향상 된 최신 버전을 찾을 수 있습니다 [여기](https://code.visualstudio.com/updates/v1_34) |
 | 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)합니다. |
 | &nbsp; | &nbsp; |
@@ -196,7 +216,7 @@ ms.locfileid: "67681610"
 - 수정 [#3047 발급](https://github.com/Microsoft/azuredatastudio/pull/3047): SQL Server에 연결 하기 위한 명령줄 인터페이스를 추가 합니다.
 - 수정 [#3031 발급](https://github.com/Microsoft/azuredatastudio/pull/3031): 쿼리 계획 테마 지원 추가
 
-## <a name="october-2018"></a>2018 년 10 월
+## <a name="october-2018"></a>2018년 10월
 
 2018 년 10 월 29 일 &nbsp;  /  &nbsp; 버전: 1.1.4
 
@@ -348,7 +368,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 - 수정 [1830 발급](https://github.com/Microsoft/azuredatastudio/issues/1830): Component() 호출 된 후 iconPath ButtonComponent에서 설정 아이콘 변경 되지 않습니다.
 - 수정 [1843 발급](https://github.com/Microsoft/azuredatastudio/issues/1843): 더 나은 테이블 구성
 
-## <a name="june-2018"></a>2018 년 6 월
+## <a name="june-2018"></a>2018년 6월
 
 2018 년 6 월 20 일 &nbsp;  /  &nbsp; 버전: 0.30.6 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -375,7 +395,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 - 수정 [1496 발급](https://github.com/Microsoft/azuredatastudio/issues/1496): "새 Profiler" 개체 탐색기에서 상황에 맞는 메뉴 옵션 아무 작업도 수행 합니다.
 - 수정 [1495 발급](https://github.com/Microsoft/azuredatastudio/issues/1495): 쿼리 편집기 "설명" 쿼리 계획 손상 되었습니다.
 
-## <a name="may-2018"></a>2018 년 5 월
+## <a name="may-2018"></a>2018년 5월
 
 2018 년 5 월 7 일 &nbsp;  /  &nbsp; 버전: 0.29.3 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -403,7 +423,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 - 수정 [1215를 발급](https://github.com/Microsoft/azuredatastudio/issues/1215): SQL Agent 확장 및 상태 표시줄
 - 수정 [1316 발급](https://github.com/Microsoft/azuredatastudio/issues/1316): Windows 크기 변경 후 크기 조정 SQL 에이전트 하지 않음
 
-## <a name="april-2018"></a>2018 년 4 월
+## <a name="april-2018"></a>2018년 4월
 
 2018 년 4 월 25 일 &nbsp;  /  &nbsp; 버전: 0.28.6 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -465,7 +485,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 
 자세한 내용은 참조는 [변경 로그](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)합니다.
 
-## <a name="march-2018"></a>2018 년 3 월
+## <a name="march-2018"></a>2018년 3월
 
 2018 년 3 월 28 일 &nbsp;  /  &nbsp; 버전: 0.27.3 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -510,7 +530,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
   - 수정 [225 발급](https://github.com/Microsoft/azuredatastudio/issues/225): 키워드 색 일치 하지 않습니다.
   - 수정 [60 발급](https://github.com/Microsoft/azuredatastudio/issues/60): 잘못 된 sql 구문 색 강조 from 절에서 임시 테이블을 사용 하는 경우.
 
-## <a name="january-2018"></a>2018 년 1 월
+## <a name="january-2018"></a>2018년 1월
 
 2018 년 1 월 17 &nbsp;  /  &nbsp; 버전: 0.25.4 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -530,7 +550,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 | 누락 된 Azure 계정 아이콘 브랜딩을 수정 합니다. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="december-2017"></a>2017 년 12 월
+## <a name="december-2017"></a>2017년 12월
 
 2017 년 12 월 19 일 &nbsp;  /  &nbsp; 버전: 0.24.1 &nbsp;  /  &nbsp; 공개 미리 보기
 
@@ -550,7 +570,7 @@ _0.32.8 0.32.7 있는 몇 가지 회귀에 대 한 수정 프로그램이 포함
 | "이동 N" 일괄 처리 반복 구문을 지원 합니다. | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="november-2017"></a>2017 년 11 월
+## <a name="november-2017"></a>2017년 11월
 
 2017 년 11 월 15 일 &nbsp;  /  &nbsp; 버전: 0.23.6
 

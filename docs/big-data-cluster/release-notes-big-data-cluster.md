@@ -2,20 +2,20 @@
 title: 릴리스 정보
 titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 알려진된 문제를 설명 합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681551"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794088"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -113,6 +113,11 @@ ms.locfileid: "67681551"
 - SA_PASSWORD는 (예: 코드 덤프 파일)의 일부 환경의 및 검색할 수입니다. 배포 후 마스터 인스턴스에서 SA_PASSWORD 다시 설정 해야 합니다. 이 변경은 버그 아니라 보안 단계입니다. Linux 컨테이너에서 SA_PASSWORD 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
 
 - AKS 로그는 빅 데이터 클러스터 배포에 대 한 SA 암호를 포함할 수 있습니다.
+
+#### <a name="kibana-logs-dashboards"></a>Kibana 대시보드를 기록합니다.
+
+- Aris CTP 3.0 및 3.1 간의 Kibana 버전 7.0.1를 6.3.1에서 업그레이드 되었습니다.  이 만들었습니다 Edge 브라우저를 Kibana와 호환 되지 않습니다. 사용자는 현재 버전의에 지에서 Kibana 대시보드를 로드할 때 빈 페이지가 나타납니다. 참조 [여기]( https://www.elastic.co/support/matrix#matrix_browse) Kibana.rs에 대 한 브라우저 지원에 대 한 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (월)
 

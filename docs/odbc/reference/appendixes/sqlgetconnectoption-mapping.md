@@ -14,15 +14,15 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccfebb99d6f98f1c6c2e5eea4650e1433e536d97
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188792"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792446"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption 매핑
-응용 프로그램을 호출할 때 **SQLGetConnectOption** 는 ODBC 3 *.x* 드라이버에 대 한 호출  
+응용 프로그램을 호출할 때 **SQLGetConnectOption** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -52,4 +52,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  드라이버 관리자 ODBC 정의 문자열 연결 옵션을 설정 합니다 *BufferLength* 호출에 인수 **SQLGetConnectAttr** 미리 정의 된 최대 길이 (SQL_MAX_OPTION_STRING_LENGTH); 문자열이 아닌 연결 옵션의 경우 *BufferLength* 0으로 설정 됩니다.  
   
- ODBC 3 *.x* 드라이버를 드라이버 관리자는 더 이상 있는지 확인 합니다 *옵션* SQL_CONN_OPT_MIN 사이의 SQL_CONN_OPT_MAX, 되었거나 SQL_CONNECT_OPT_DRVR_START 보다 큽니다. 드라이버 옵션 값의 유효성을 검사 해야 합니다.
+ ODBC에 대 한 *3.x* 드라이버를 드라이버 관리자는 더 이상 있는지 확인 합니다 *옵션* SQL_CONN_OPT_MIN 사이의 SQL_CONN_OPT_MAX, 되었거나 SQL_CONNECT_OPT_DRVR_START 보다 큽니다. 드라이버 옵션 값의 유효성을 검사 해야 합니다.

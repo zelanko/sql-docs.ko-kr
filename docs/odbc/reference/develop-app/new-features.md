@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658186"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794062"
 ---
 # <a name="new-features"></a>새로운 기능
-ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하는 응용 프로그램 *.x* 드라이버는이 기능을 사용할 수 없습니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하 여 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다 *.x* 드라이버입니다.  
+ODBC에는 다음과 같은 새 기능이 도입 되었습니다 *3.x*합니다. ODBC *3.x* ODBC를 사용 하는 응용 프로그램 *2.x* 드라이버는이 기능을 사용할 수 없습니다. ODBC *3.x* ODBC를 사용 하 여 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다 *2.x* 드라이버입니다.  
   
 -   설명자를 사용 하는 함수의 인수로 서 처리 합니다. **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
@@ -81,7 +81,7 @@ ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다
   
 -   명명 된 매개 변수입니다.  
   
--   ODBC 3 중 하나입니다. *x*-특정 **SQLGetInfo** 옵션입니다. (경우 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2.*x* 드라이버 호출을 SQL_XXX_CURSOR_ATTRIBUTES1 정보 형식인 몇 가지 ODBC 2를 대체 했습니다.*x* 정보 유형, 신뢰할 수 있는 수 정보의 일부 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   모든 ODBC *3.x*-특정 **SQLGetInfo** 옵션입니다. (경우 ODBC *3.x* ODBC를 사용 하는 응용 프로그램 *2.x* 드라이버는 여러 ODBC 대체가 SQL_XXX_CURSOR_ATTRIBUTES1 정보 유형, 호출 *2.x* 정보 유형 정보 중 일부 수도 신뢰할 수 있지만 일부 수 없습니다. 자세한 내용은 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   오프셋을 바인딩하십시오.  
   
@@ -103,7 +103,7 @@ ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다
   
 -   사용 **SQLDescribeCol** 하 고 **SQLColAttribute** 0 열에 있습니다.  
   
--   ODBC 3 사용 합니다. *x*-에 대 한 호출에서 특정 열 특성 **SQLColAttribute**합니다.  
+-   ODBC 활용 *3.x*-에 대 한 호출에서 특정 열 특성 **SQLColAttribute**합니다.  
   
 -   여러 환경 핸들을 사용 합니다.  
   

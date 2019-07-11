@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: dcc28a97ab7f01f4e13d3918361506113f0de24b
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494015"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716780"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,12 +64,12 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` 매개 변수에 할당할 값이입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수에 할당할 값이입니다. *parameter_value* 됩니다 **nvarchar(255)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_agent_parameter** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

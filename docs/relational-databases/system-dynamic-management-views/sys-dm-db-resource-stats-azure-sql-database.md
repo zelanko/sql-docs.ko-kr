@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716681"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT * FROM sys.dm_db_resource_stats ORDER BY end_time DESC;
   
 ```  
   
- 다음 예에서는 지난 시간 동안 사용자 데이터베이스에 대한 성능 수준에서 허용되는 최대 DTU 한도의 백분율 기준에서 평균 DTU 사용을 식별합니다.  이 비율이 일관되게 100%에 근접한다면 성능 수준 증대를 고려하는 것이 좋습니다.  
+ 다음 예에서는 지난 시간 동안 사용자 데이터베이스에 대한 성능 수준에서 허용되는 최대 DTU 한도의 백분율 기준에서 평균 DTU 사용을 식별합니다. 이 비율이 일관되게 100%에 근접한다면 성능 수준 증대를 고려하는 것이 좋습니다.  
   
 ```  
 SELECT end_time,   
@@ -85,7 +85,7 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
- 다음 예에서는 지난 시간 동안의 평균 및 최대 CPU %, 데이터 및 로그 I/O, 메모리 사용을 반환합니다.   
+ 다음 예에서는 지난 시간 동안의 평균 및 최대 CPU %, 데이터 및 로그 I/O, 메모리 사용을 반환합니다.  
   
 ```  
 SELECT    

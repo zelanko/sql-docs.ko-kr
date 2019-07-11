@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: RStudio에서 sparklyr를 사용 하 여 빅 데이터 클러스터에 연결 합니다.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994175"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728379"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 사용 하 여 sparklyr
 

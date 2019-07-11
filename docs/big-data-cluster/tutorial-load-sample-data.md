@@ -2,20 +2,20 @@
 title: 샘플 데이터 로드
 titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 빅 데이터 클러스터에 샘플 데이터를 로드 하는 방법을 보여 줍니다. 샘플 데이터를 SQL Server 마스터 인스턴스에 관계형 데이터를 포함합니다. 저장소 풀의 HDFS 데이터도 포함 합니다. 이 데이터는이 단원의 다른 자습서를 지원합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770830"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727350"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -62,7 +62,7 @@ ms.locfileid: "66770830"
 
 1. 부트스트랩 스크립트 빅 데이터 클러스터에 대해 다음 위치 매개 변수를 사용 하려면:
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 제공한 이름입니다. |
    | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |
@@ -98,7 +98,7 @@ ms.locfileid: "66770830"
 
 1. 부트스트랩 스크립트 빅 데이터 클러스터에 대해 다음 위치 매개 변수를 사용 하려면:
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |---|---|
    | <CLUSTER_NAMESPACE> | 빅 데이터 클러스터에 제공한 이름입니다. |
    | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493606"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716631"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** 시스템 프로필을 나타냅니다. **1** 은 사용자 지정 프로필을 나타냅니다. 이 저장된 프로시저를 사용 하 여만 사용자 지정 프로필을 만들 수 있습니다. 유효한 값 이므로 **1**합니다. 만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 프로필을 만듭니다.  
   
-`[ @description = ] 'description'` 프로필의 설명이입니다. *설명을* 됩니다 **nvarchar(3000)**, 기본값은 없습니다.  
+`[ @description = ] 'description'` 프로필의 설명이입니다. *설명을* 됩니다 **nvarchar(3000)** , 기본값은 없습니다.  
   
 `[ @default = ] default` 프로필에 대 한 기본값 인지 여부를 나타냅니다 *agent_type * * 합니다.* *기본* 됩니다 **비트**, 기본값은 **0**합니다. **1** 추가할 프로필 지정한 에이전트에 대 한 새 기본 프로필이 됩니다 있게 나타냅니다 *agent_type*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_agent_profile** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
  사용자 지정 에이전트 프로필은 에이전트 매개 변수의 기본값으로 추가됩니다. 사용 하 여 [sp_change_agent_parameter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) 이러한 기본값을 변경 하려면 또는 [sp_add_agent_parameter &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) 추가 매개 변수를 추가 합니다.  

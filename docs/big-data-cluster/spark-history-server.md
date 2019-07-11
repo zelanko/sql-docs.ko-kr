@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Spark 기록 서버를 사용 하 여 디버그 및 SQL Server 2019 빅 데이터 클러스터에서 실행 중인 Spark 응용 프로그램 진단.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6bc310fc856a9f2fe4a100770a5af2eed6a189e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cba788fcb61dddce54d8b0c4ad4f2ca87ea0906d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782094"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728393"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
 

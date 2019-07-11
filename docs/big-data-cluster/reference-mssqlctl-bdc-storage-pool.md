@@ -2,19 +2,20 @@
 title: mssqlctl bdc 저장소 풀 참조
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc 저장소 풀 명령에 대 한 참조 문서입니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d809e5716c52f125118f6b1862ba01c769ec1b8
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bd1b32a725e1204a09e44b44c6576d24c67e3a0d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394255"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728547"
 ---
 # <a name="mssqlctl-bdc-storage-pool"></a>mssqlctl bdc storage-pool
 

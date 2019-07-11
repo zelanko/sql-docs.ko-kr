@@ -9,12 +9,12 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cc9530b636409864e7e1b72f7417619a0fc8af
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470104"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792475"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>사례 연구: 확장성과 성능을 위해 Microsoft Dynamics ERP와 SQL Server 2014 Replication을 사용하여 엔터프라이즈 에코시스템 빌드
 
@@ -26,11 +26,11 @@ Microsoft Dynamics ERP에서 트래잭션 복제를 활용하여 확장성이 �
   
  이 콘텐츠는 개발자, 설계자 및 데이터베이스 관리자에게 적합합니다. 여기서는 이 백서의 독자가 SQL Server 관리 환경뿐만 아니라 SQL Server 2008, 2012 또는 2014에 대한 기본 지식이 있다고 가정합니다.  
   
- **기록기:** Prabhakaran Sethuraman (PRAB), Microsoft  
+ **작성자:** Prabhakaran Sethuraman (PRAB), Microsoft  
   
  **기술 검토자:** Prabhakaran Sethuraman (PRAB), Microsoft; Santosh Padhy, Microsoft; Pavel Majstrov, Microsoft; Karthik Sankaranarayanan, Microsoft; Jon Acone, Microsoft; David Stahlkopf, Microsoft; Kent Oldenburger, Microsoft; Microsoft; Mandi Ohlinger, Jason Roth, Microsoft  
   
- **게시 날짜:** 2015년 10월  
+ **게시 날짜:** 2015 년 10 월  
   
  **적용 대상:** SQL Server 2008, SQL Server 2012 및 SQL Server 2014  
   

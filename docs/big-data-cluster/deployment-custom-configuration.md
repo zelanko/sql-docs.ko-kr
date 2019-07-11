@@ -2,19 +2,20 @@
 title: 배포 구성
 titleSuffix: SQL Server big data clusters
 description: 구성 파일을 사용 하 여 빅 데이터 클러스터 배포를 사용자 지정 하는 방법을 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba2587c2effdc3242e6032a0137bbf43ac153f1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 19654422bcc57f2ad00b9ab8170d163f848f188b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388797"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728888"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>빅 데이터 클러스터에 대 한 배포 설정을 구성 합니다.
 

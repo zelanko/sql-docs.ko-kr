@@ -17,19 +17,19 @@ ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3896473a1fa08f769f13d94bd1d81f373cf67c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b4cf0ce2b2ffc15a9e450461021a9b20b1f0c3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026598"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794128"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성
-둘 다의 존재 여부 **SQLFetchScroll** 하 고 **SQLExtendedFetch** ODBC 간에 응용 프로그램 프로그래밍 인터페이스 (API) 되는 함수의 집합의에서 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 함수의 집합인 드라이버 구현 합니다. 이 분할이 반드시 있도록 ODBC 3. *x*를 사용 하는 **SQLFetchScroll**, 표준 bealigned ODBC 2와 호환 되어야 하 고. *x*를 사용 하는 **SQLExtendedFetch**합니다.  
+둘 다의 존재 여부 **SQLFetchScroll** 하 고 **SQLExtendedFetch** ODBC 간에 응용 프로그램 프로그래밍 인터페이스 (API) 되는 함수의 집합의에서 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 함수의 집합인 드라이버 구현 합니다. 이 분할이 반드시 있도록 ODBC *3.x*를 사용 하는 **SQLFetchScroll**, 표준 bealigned ODBC 호환 되어야 하 고 *2.x*를 사용하는**SQLExtendedFetch**합니다.  
   
- ODBC 3 *.x* API 집합이 응용 프로그램이 호출 함수를 포함 **SQLFetchScroll** 및 관련 문 특성입니다. ODBC 3 *.x* 집합인 SPI 함수 드라이버 구현, 포함 **SQLFetchScroll**를 **SQLExtendedFetch**, 및 관련 문 특성입니다. 있기 때문에 ODBC API 및 SPI 간의이 분할이 공식적으로 강제 적용 하지 않습니다, ODBC 3 *.x* 응용 프로그램이 호출할 **SQLExtendedFetch** 및 관련 문 특성입니다. 그러나는 ODBC 3 자로 *.x* 이렇게 하려면 응용 프로그램입니다. Spi 및 Api에 대 한 자세한 내용은 참조에 대 한 소개 [ODBC 아키텍처](../../../odbc/reference/odbc-architecture.md)합니다.  
+ ODBC *3.x* API 집합이 응용 프로그램이 호출 함수를 포함 **SQLFetchScroll** 및 관련 문 특성입니다. ODBC *3.x* 집합인 SPI 함수 드라이버 구현, 포함 **SQLFetchScroll**를 **SQLExtendedFetch**, 및 관련 문 특성입니다. 있기 때문에 ODBC API 및 SPI 간의이 분할이 공식적으로 강제 적용 하지 않습니다, odbc *3.x* 응용 프로그램이 호출할 **SQLExtendedFetch** 및 관련 문 특성입니다. 그러나 odbc 되지 않아도 됩니다 *3.x* 응용 프로그램을이 작업을 수행 합니다. Spi 및 Api에 대 한 자세한 내용은 참조에 대 한 소개 [ODBC 아키텍처](../../../odbc/reference/odbc-architecture.md)합니다.  
   
- 어떤 문과 함수에 대 한 자세한 특성을 ODBC 3. *x* 응용 프로그램 블록 및 스크롤 가능 커서를 사용 해야을 참조 하십시오 [블록 커서, 스크롤 가능 커서 및 ODBC 3.x 응용 프로그램에 대 한 이전 버전과 호환성](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)합니다.  
+ 어떤 문과 함수에 대 한 정보는 ODBC 특성에 대 한 *3.x* 응용 프로그램 블록 및 스크롤 가능 커서를 사용 해야, 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성에 대 한 ODBC 3.x 응용 프로그램](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

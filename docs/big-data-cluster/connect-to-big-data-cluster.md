@@ -2,19 +2,20 @@
 title: 마스터에 연결 하 고 HDFS
 titleSuffix: SQL Server big data clusters
 description: SQL Server 마스터 인스턴스와 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 위한 HDFS/Spark 게이트웨이 연결 하는 방법에 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 245e88034194a01908b69d545deb9fa717c19a4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4eebad10a18b98ecc5d62ab981dcb3955ae2d29
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782975"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729076"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 

@@ -2,20 +2,20 @@
 title: Curl을 사용 하 여 HDFS에서 데이터 로드 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용 합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1e8da7430048381a320936abef35cdd64bad134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40907155c819e4a1c6f9117a3b345fa8376efeb2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800712"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729018"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용
 

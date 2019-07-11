@@ -4,18 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: PySpark를 사용 하 여 학습 하 고 SQL Server 빅 데이터 클러스터 (미리 보기)에서 Spark를 사용 하 여 기계 학습 모델을 만듭니다. MLeap를 사용 하 여 내보내고 SQL Server에서 Java 사용 하 여 모델을 점수 매기기입니다.
 author: lgongmsft
 ms.author: lgong
-ms.manager: craigg
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412873"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727379"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>만들기, 내보내기 및 SQL Server 빅 데이터 클러스터에 Spark를 기계 학습 모델 점수 매기기
 

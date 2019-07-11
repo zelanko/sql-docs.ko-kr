@@ -12,16 +12,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035904"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716613"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  문이 실행 되는 외부 데이터 원본을 식별 합니다. 참조 [외부 데이터 원본 만들기 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)합니다. 외부 데이터 원본 "RDBMS" 또는 "SHARD_MAP_MANAGER" 형식일 수 있습니다.  
   
  [ \@stmt= ] *statement*  
- 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
+ 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. \+ 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
   
 > [!NOTE]  
 >  \@stmt 매개 변수는 변수 이름과 동일한 형식의 예를 들어를 포함할 수 있습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
@@ -73,7 +73,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>사용 권한  
  필요한 `ALTER ANY EXTERNAL DATA SOURCE` 권한.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `sp_execute_remote` 위의 구문 섹션에 설명 된 대로 매개 변수를 특정 순서로 입력 되어야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
   
  `sp_execute_remote` 동일한 동작 [EXECUTE &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) 이름의 범위 및 일괄 처리 합니다. TRANSACT-SQL 문 또는 일괄 처리는 sp_execute_remote  *\@stmt* sp_execute_remote 문이 실행 될 때까지 매개 변수 컴파일되지 않습니다.  
@@ -105,5 +105,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>참고 항목:
 
 [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CREATE EXTERNAL DATA SOURCE (TRANSACT-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE(Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

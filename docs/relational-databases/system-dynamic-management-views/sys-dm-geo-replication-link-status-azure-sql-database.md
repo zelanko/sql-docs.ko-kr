@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021756"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716702"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status(Azure SQL Database)
 
@@ -31,7 +31,7 @@ ms.locfileid: "56021756"
 
   지역에서 복제 파트너 관계의 주 및 보조 데이터베이스 간의 각 복제 링크에 대 한 행을 포함 합니다. 이 기본 및 보조 데이터베이스가 포함 됩니다. 지정된 된 주 데이터베이스에 대 한 둘 이상의 연속 복제 링크가 있는 경우이 테이블 각 관계에 대 한 행을 포함 합니다. 뷰 논리 마스터를 포함 한 모든 데이터베이스에 만들어집니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|복제 링크의 고유 ID입니다.|  
 |partner_server|**sysname**|연결 된 데이터베이스가 포함 된 SQL Database 서버의 이름입니다.|  

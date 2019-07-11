@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536281"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793159"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 함수
 **규칙**  
@@ -90,7 +90,7 @@ SQLRETURN SQLSetDescRec(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetDescRec** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* SQL_의 HANDLE_DESC와 *처리할* 의 *DescriptorHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLSetDescRec** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07009|잘못 된 설명자 인덱스입니다.|합니다 *RecNumber* 인수는 0으로 설정 된 하며 *DescriptorHandle* IPD 핸들을 참조 합니다.<br /><br /> 합니다 *RecNumber* 인수가 0 보다 작습니다.<br /><br /> *RecNumber* 인수가 열 또는 매개 변수 데이터 원본을 지원할 수 있는 최대 수보다 큰 및 *DescriptorHandle* 는 APD, IPD, 또는 인수 했습니다.<br /><br /> *RecNumber* 인수가 0 인 하며 *DescriptorHandle* 인수를 암시적으로 할당 된 APD 참조 합니다. (이 오류가 발생 하지 않습니다는 명시적으로 할당 된 응용 프로그램 설명자를 사용 하 여 실행 시간을 명시적으로 할당 된 응용 프로그램 설명자가 APD 또는까지 카드가 있는지 여부를 알 수 없습니다 때문입니다.)|  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|메모리 관리 오류|기본 메모리 개체에 액세스할 수 없습니다, 가능한 경우 메모리 부족으로 인해 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|합니다 *DescriptorHandle* 인수가 IRD와 사용 하 여 연결 합니다.|  
 |HY021|일관성이 없는 설명자 정보|합니다 *형식* 필드나 다른 필드의 설명자의 SQL_DESC_TYPE 필드와 연결 된 되지 않았거나 잘못 일치 합니다.<br /><br /> 설명자 정보 일관성 검사를 사용 하는 동안 체크 일관 되지 않았습니다. ("일관성 확인"을이 섹션 뒷부분에서 참조).|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) 드라이버는 ODBC 2 되었습니다 *.x* 드라이버 설명자가는 카드가 합니다 *ColumnNumber* 인수는 0이 고, 인수에 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4 같지 않음.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)는 드라이버에서 ODBC *2.x* 드라이버 설명자가는 카드가 합니다 *ColumnNumber* 인수는 0이 고, 인수에 지정 된 값으로 설정 되었습니다 *BufferLength* 되었습니다 4 같지 않음.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용으로 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 하세요. [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간 만료 됨|데이터 원본 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM) 드라이버를 사용 하 여 연결 합니다 *DescriptorHandle* 함수를 지원 하지 않습니다.|  

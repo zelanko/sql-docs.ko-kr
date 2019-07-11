@@ -2,19 +2,20 @@
 title: 새 릴리스로 업그레이드
 titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 새 릴리스로 업그레이드 하는 방법을 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 8c8b8df4dc5643febdf3ddc808f215a9c34d24fe
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388735"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728771"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 업그레이드 하는 방법
 

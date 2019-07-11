@@ -16,12 +16,12 @@ ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c27845976651b0d68b91b6269a21d1cae3518df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a87f6c365762f5b262dfbed07bbae14cb08604a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267795"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794148"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>부록 F: ODBC 커서 라이브러리
 > [!IMPORTANT]  
@@ -31,7 +31,7 @@ ms.locfileid: "63267795"
   
  커서 라이브러리는 드라이버 및 드라이버 관리자 사이 위치 하는 동적 연결 라이브러리 (DLL). 응용 프로그램 함수를 호출할 때 드라이버 관리자 함수를 실행 하거나 지정된 된 드라이버에서 호출 하는 커서 라이브러리를에서 함수를 호출 합니다. 응용 프로그램에는 지정된 된 연결에 대 한 커서 라이브러리를 항상 사용, 드라이버는 스크롤 가능 커서를 지원 하지 않는 경우 사용 또는 사용 되지 않습니다 지정 합니다.  
   
- 커서 라이브러리 드라이버를 드라이버 관리자에 표시 됩니다. 커서 라이브러리에 드라이버 관리자는 ODBC 2 사이 있는 합니다. *x* 드라이버 커서 라이브러리는 ODBC 2로 나타납니다. *x* 드라이버입니다. 드라이버 관리자는 ODBC 3 사이의 커서 라이브러리가 있는 경우 *.x* 드라이버는 ODBC 3 요소로 커서 라이브러리 *.x* 드라이버입니다. 커서 라이브러리에 의해 나타나는 동작 모두 ODBC 2에 대 한 지원 되는 바인딩 오프셋을 제외 하 고, 사용 중인 드라이버의 버전에 따라 달라 집니다. *x* 고 ODBC 3. *x* 드라이버입니다.  
+ 커서 라이브러리 드라이버를 드라이버 관리자에 표시 됩니다. 커서 라이브러리는 ODBC 드라이버 관리자 사이의 상주 *2.x* 드라이버는 ODBC 요소로 커서 라이브러리 *2.x* 드라이버입니다. 커서 라이브러리는 ODBC 드라이버 관리자 사이의 상주 *3.x* 드라이버는 ODBC 요소로 커서 라이브러리 *3.x* 드라이버입니다. 커서 라이브러리에 의해 나타나는 동작 모두 ODBC에 대 한 지원 되는 바인딩 오프셋을 제외 하 고, 사용 중인 드라이버의 버전에 따라 달라 집니다 *2.x* 및 ODBC *3.x* 드라이버입니다.  
   
  블록 커서를 구현 하 **SQLFetch** 하 고 **SQLFetchScroll**, 커서 라이브러리를 반복적으로 호출 **SQLFetch** 드라이버에서. 스크롤을 구현 하려면 메모리에서 및 디스크 파일에서 가져온 데이터를 캐시 합니다. 응용 프로그램에서 새 행 집합을 요청 하면 커서 라이브러리의 드라이버 또는 캐시에서 필요에 따라 검색 합니다.  
   

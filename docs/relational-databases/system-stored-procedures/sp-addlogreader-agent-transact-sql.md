@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7aa2fc93806bdbce244643d78930c7c9c113bf01
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716614"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'` 에 대 한 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
+`[ @job_login = ] 'job_login'` 에 대 한 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다.  
   
 > [!NOTE]
 >  에 대 한 비 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 지정 된 동일한 로그인 이어야 합니다 [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
@@ -76,7 +76,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addlogreader_agent** 트랜잭션 복제에 사용 됩니다.  
   
  실행 해야 합니다 **sp_addlogreader_agent** 이 버전의 복제를 사용 하도록 설정 된 데이터베이스를 업그레이드 하는 경우 로그 판독기 에이전트를 추가 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전에 게시 데이터베이스를 사용 합니다.  

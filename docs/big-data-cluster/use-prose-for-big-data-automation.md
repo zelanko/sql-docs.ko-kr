@@ -2,20 +2,20 @@
 title: 데이터 랭 글 링 작업에 대 한 코드를 생성 합니다.
 titleSuffix: Azure Data Studio
 description: 이 문서에서는 Azure 데이터 Studio에서 PROSE 코드 액셀러레이터 키를 사용 하 여 일반적인 데이터 랭 글 링 작업에 대 한 코드를 자동으로 생성 하는 방법을 설명 합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770781"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728319"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE 코드 Accelerator를 사용 하 여 데이터 Wrangling
 

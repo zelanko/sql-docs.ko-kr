@@ -14,15 +14,15 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841310d1e51084ae6a61c629b8782a8b84c665f8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280857"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793577"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 매핑
-응용 프로그램을 호출할 때 **SQLAllocEnv** 는 ODBC 3 *.x* 드라이버, 호출 **SQLAllocEnv**(*phenv*) 매핑되**SQLAllocHandle** 다음과 같습니다.  
+응용 프로그램을 호출할 때 **SQLAllocEnv** 는 ODBC를 통한 *3.x* 드라이버, 호출 **SQLAllocEnv**(*phenv*) 매핑되**SQLAllocHandle** 다음과 같습니다.  
   
 1.  드라이버 관리자는 환경 핸들을 할당 하 고 응용 프로그램에 반환 합니다. 드라이버 관리자 호출 **SQLSetEnvAttr** SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다.  
   

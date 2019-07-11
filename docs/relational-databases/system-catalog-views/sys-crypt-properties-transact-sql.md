@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aae950e39dd66bb08a2adbc6225358c75ad4d37
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730162"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "63049740"
 |**class_desc**|**nvarchar(60)**|속성이 존재하는 항목의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|속성이 존재하는 항목의 ID입니다. 이 ID는 해당 클래스에 따라 해석됩니다.|  
 |**thumbprint**|**varbinary(32)**|사용된 인증서 또는 비대칭 키의 SHA-1 해시입니다.|  
-|**crypt_type**|**char(4)**|암호화 유형입니다.<br /><br /> SPVC = 인증서 프라이빗 키를 사용한 암호화<br /><br /> SPVA = 비대칭 프라이빗 키를 사용한 암호화<br /><br /> CPVC = 인증서 프라이빗 키를 사용한 카운터 서명<br /><br /> CPVA = 비대칭 키를 사용한 카운터 서명|  
+|**crypt_type**|**char(4)**|암호화 유형입니다.<br /><br /> SPVC = 인증서 개인 키 서명<br /><br /> SPVA = 비대칭 개인 키 서명<br /><br /> CPVC = 인증서 프라이빗 키를 사용한 카운터 서명<br /><br /> CPVA = 비대칭 키를 사용한 카운터 서명|  
 |**crypt_type_desc**|**nvarchar(60)**|암호화 유형에 대한 설명입니다.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|부호 있는 비트 또는 암호화된 비트입니다.|  
+|**crypt_property**|**varbinary(max)**|부호 있는 비트 또는 암호화된 비트입니다. 서명된 된 모듈에 대 한 모듈의 서명이 비트 이들은입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

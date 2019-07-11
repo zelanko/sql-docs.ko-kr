@@ -2,20 +2,20 @@
 title: 배포 지침
 titleSuffix: SQL Server big data clusters
 description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 방법에 알아봅니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413108"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728798"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -51,7 +51,7 @@ SQL Server 빅 데이터 클러스터의 Kubernetes 버전을 이상이 필요 v
 
 세 가지 방법 중 하나로 Kubernetes 배포를 선택할 수 있습니다.
 
-| Kubernetes에 배포 합니다. | Description | 링크 |
+| Kubernetes에 배포 합니다. | 설명 | 링크 |
 |---|---|---|
 | **Azure Kubernetes 서비스 (AKS)** | Azure의 관리 되는 Kubernetes 컨테이너 서비스입니다. | [지침](deploy-on-aks.md) |
 | **여러 컴퓨터 (kubeadm)** | 물리적 컴퓨터 또는 가상 컴퓨터를 사용 하 여 배포 된 Kubernetes 클러스터의 **kubeadm** | [지침](deploy-with-kubeadm.md) |
@@ -140,7 +140,7 @@ mssqlctl bdc create
 
 다음 환경 변수는 배포 구성 파일에 저장 되지 않은 보안 설정에 사용 됩니다. 자격 증명을 제외 하 고 Docker 설정 구성 파일에서 설정할 수 있는 참고 합니다.
 
-| 환경 변수 | Description |
+| 환경 변수 | 설명 |
 |---|---|---|---|
 | **DOCKER_USERNAME** | 개인 저장소에 저장 됩니다 하는 경우 컨테이너 이미지에 액세스 하려면 사용자 이름입니다. |
 | **DOCKER_PASSWORD** | 위의 개인 리포지토리에 액세스 하기 위한 암호입니다. |

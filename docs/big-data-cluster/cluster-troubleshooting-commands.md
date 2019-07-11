@@ -2,20 +2,20 @@
 title: 모니터 및 문제 해결하기
 titleSuffix: SQL Server big data clusters
 description: 이 문서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결 및 모니터링에 대 한 유용한 명령을 제공 합니다.
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 404d81c8d16a6ee6c173de4ebc5a85edc070a6ca
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388719"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729212"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -112,7 +112,7 @@ kubectl get svc -n mssql-cluster
 
 다음 서비스는 빅 데이터 클러스터에 대 한 외부 연결을 지원합니다.
 
-| 서비스 | Description |
+| 서비스 | 설명 |
 |---|---|
 | **master-svc-external** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
 | **controller-svc-external** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |

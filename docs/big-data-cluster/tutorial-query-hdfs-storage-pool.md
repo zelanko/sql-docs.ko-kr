@@ -2,20 +2,20 @@
 title: 저장소 풀의 HDFS 데이터를 쿼리 합니다.
 titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 HDFS 데이터를 쿼리 하는 방법을 보여 줍니다. 저장소 풀의 데이터에 대 한 외부 테이블을 만들고 쿼리를 실행 합니다.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bcb2b036610b1ef62575d9a03043158e1b8af653
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388647"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728336"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388647"
 
 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 HDFS 데이터를 쿼리 하는 방법을 보여 줍니다.
 
-이 자습서에 알아봅니다 방법:
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 빅 데이터 클러스터에서 HDFS 데이터를 가리키는 외부 테이블을 만듭니다.

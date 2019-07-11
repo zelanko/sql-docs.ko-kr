@@ -18,21 +18,21 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181310"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793176"
 ---
 # <a name="mapping-deprecated-functions"></a>사용되지 않는 함수 매핑
-이 섹션에서는 설명 하는 방법을 사용 되지 않는 함수는 ODBC 3으로 매핑됩니다 *.x* ODBC 3의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *.x* ODBC 2를 사용 하 여 사용 되는 드라이버. *x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행합니다. 때문에 각 ODBC 2. *x* 함수를 다음 목록에는 해당 ODBC 3 매핑되 *.x* 는 ODBC 3에서 호출 된 경우 함수 *.x* 드라이버는 ODBC 3 *.x*드라이버는 ODBC 2를 구현 하지 않아도 됩니다. *x* 함수입니다.  
+이 섹션에서는 설명 하는 방법을 사용 되지 않는 함수는 ODBC로 매핑됩니다 *3.x* ODBC의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *3.x* ODBC를 사용 하 여 사용 되는 드라이버 *2.x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행합니다. 때문에 각 ODBC *2.x* 함수를 다음 목록에서 해당 ODBC에 매핑된 *3.x* ODBC에서 호출 된 경우 함수 *3.x* ODBC드라이버*3.x* 드라이버는 ODBC를 구현 하지 않아도 *2.x* 함수입니다.  
   
- 드라이버는 ODBC 3 경우 목록에서 매핑이 트리거됩니다 *.x* 드라이버 및 드라이버 매핑되는 함수를 지원 하지 않습니다.  
+ 드라이버는 ODBC 경우 목록에서 매핑이 트리거됩니다 *3.x* 드라이버 및 드라이버 매핑되는 함수를 지원 하지 않습니다.  
   
- 다음 표에서 ODBC 3에 도입 된 기능을 모든 중복된 *.x*합니다.  
+ 다음 표에서 ODBC에 도입 된 기능을 모든 중복된 *3.x*합니다.  
   
-|ODBC 2입니다. *x* 함수|ODBC 3 *.x* 함수|  
+|ODBC *2.x* 함수|ODBC *3.x* 함수|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +52,7 @@ ms.locfileid: "63181310"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1]에이 함수는 ODBC 2에 존재 하지 않았던 *.x*, Open Group 및 ISO 표준에는 것입니다.  
+ [1]에이 함수는 ODBC에 존재 하지 않았던 *2.x*, Open Group 및 ISO 표준에는 것입니다.  
   
  [2]는 ODBC 1.0 함수입니다.  
   

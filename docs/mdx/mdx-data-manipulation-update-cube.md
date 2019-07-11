@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 248605667afe073e2261585444555a1d254ffc26
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187616"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794125"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 
@@ -53,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  0에서 1 사이의 10진수 값을 반환하는 유효한 MDX 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  큐브의 지정된 리프 또는 리프가 아닌 셀의 값을 업데이트할 수 있습니다. 지정된 리프가 아닌 셀 값을 종속되는 여러 리프 셀에 할당할 수도 있습니다. 튜플 식으로 지정되는 셀은 다차원 공간의 유효한 셀일 수 있으며, 리프 셀일 필요가 없습니다. 그러나 사용 하 여 셀을 집계 해야 합니다는 [합계](../mdx/sum-mdx.md) 집계 함수 및 셀을 식별 하는 데 사용 되는 튜플의 계산된 멤버를 포함할 수 없습니다.  
   
  생각 하면 도움이 될 것을 **UPDATE CUBE** 일련의 지정된 된 합계로 롤업되는 리프 멤버 및 리프가 아닌 셀에 개별 셀 쓰기 저장 작업을 자동으로 생성 하는 하위 루틴으로 문의 합니다.  

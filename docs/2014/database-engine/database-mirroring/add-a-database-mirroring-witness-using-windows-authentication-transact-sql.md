@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754917"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792607"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
   데이터베이스에 미러링 모니터를 설정하려면 데이터베이스 소유자는 데이터베이스 엔진 인스턴스를 미러링 모니터 서버의 역할로 할당해야 합니다. 미러링 모니터 서버 인스턴스는 주 서버 인스턴스 또는 미러 서버 인스턴스와 동일한 컴퓨터에서 실행될 수 있으나 이 경우 자동 장애 조치(Failover)의 효과가 크게 저하됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62754917"
   
 ### <a name="to-establish-a-witness"></a>미러링 모니터를 설정하려면  
   
-1.  미러링 모니터 서버 인스턴스에 데이터베이스 미러링을 위한 하나의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션 수에 관계없이 서버 인스턴스는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 데이터베이스 미러링 세션에서 이 서버 인스턴스를 미러링 모니터로만 사용하려면 미러링 모니터의 역할을 엔드포인트에 할당합니다(ROLE **=** WITNESS). 이 서버 인스턴스를 하나 이상의 다른 데이터베이스 미러링 세션에서 파트너로 사용하려면 엔드포인트의 역할을 ALL로 할당합니다.  
+1.  미러링 모니터 서버 인스턴스에 데이터베이스 미러링을 위한 하나의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션 수에 관계없이 서버 인스턴스는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스의 데이터베이스 미러링 세션에서에서 미러링 모니터로 사용 하려는 경우 끝점에 대 한 미러링 모니터의 역할 할당 (역할 **=** 미러링 모니터 서버). 이 서버 인스턴스를 하나 이상의 다른 데이터베이스 미러링 세션에서 파트너로 사용하려면 엔드포인트의 역할을 ALL로 할당합니다.  
   
      SET WITNESS 문을 실행하려면 파트너 간에 데이터베이스 미러링 세션이 시작되어 있고 미러링 모니터 엔드포인트의 STATE가 STARTED로 설정되어 있어야 합니다.  
   

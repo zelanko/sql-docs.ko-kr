@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 보안 개념을 설명 합니다. 클러스터 끝점 및 클러스터 인증을 설명 하는 것이 여기 있습니다.
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387936"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729111"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
 
