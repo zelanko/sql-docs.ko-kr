@@ -1,20 +1,20 @@
 ---
 title: 개발 및 Linux 용 SQL Server 배포 데이터베이스 | Microsoft Docs
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3981071bb6f175a130444dabc588d1dba18112f7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713283"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833810"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux의 SQL Server에 대 한 데이터베이스를 만들려면
 
@@ -110,8 +110,8 @@ T-SQL을 처음 접하는 경우 [자습서: TRANSACT-SQL 문 작성] 하며 [TR
 
 SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 대 한 자세한 내용은 참조 하세요. [SSDT MSDN 문서]
 
-[다운로드 하 여 Visual Studio를 설치 합니다.]:https://www.visualstudio.com/downloads/
+[다운로드 하 여 Visual Studio를 설치 합니다.]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN 문서]:https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
-[TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx
+[SSDT MSDN 문서]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
+[자습서: Transact-SQL 문 작성]: https://msdn.microsoft.com/library/ms365303.aspx
+[TRANSACT-SQL 참조 (데이터베이스 엔진)]: https://msdn.microsoft.com/library/bb510741.aspx
