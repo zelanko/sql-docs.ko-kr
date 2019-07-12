@@ -1,20 +1,20 @@
 ---
-title: Linux에서 MSDTC를 구성 하는 방법 | Microsoft Docs
+title: Linux에서 MSDTC를 구성 하는 방법
 description: 이 문서에서는 Linux에서 MSDTC를 구성 하기 위한 연습을 제공 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2bcf87b91423ae7aa79ae6a5194aa8fc31ca71c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713268"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834020"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에는 MSDTC Microsoft Distributed Transaction Coordinator ()를 구성 하는 방법
 
@@ -28,7 +28,7 @@ ms.locfileid: "66713268"
 
 SQL Server 2019 mssql conf 유틸리티에 대 한 두 가지 구성 매개 변수를 소개합니다.
 
-| mssql conf 설정 | Description |
+| mssql conf 설정 | 설명 |
 |---|---|
 | **network.rpcport** | RPC 끝점 매퍼 프로세스에 바인딩되는 TCP 포트입니다. |
 | **distributedtransaction.servertcpport** | MSDTC 서버 수신 하는 포트입니다. 그렇지 않은 경우 설정 MSDTC 서비스가 사용 하 여 임의의 임시 포트에서 서비스를 시작 하면 및 방화벽 예외는 MSDTC 서비스가 통신 계속 실행 되도록 다시 구성 해야 합니다. |
@@ -183,7 +183,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 Linux의 SQL Server에 대 한 MSDTC RPC 통신에 인증 기본적으로 사용 하지 않습니다. 그러나 호스트 컴퓨터는 Active Directory (AD) 도메인에 가입 되어 때 인증 된 RPC 통신을 사용 하도록 MSDTC를 구성할 수 다음 사용 하 여 **mssql conf** 설정:
 
-| 설정 | Description |
+| 설정 | 설명 |
 |---|---|
 | **distributedtransaction.allowonlysecurerpccalls**          | 분산된 트랜잭션에 대 한 보안만 RPC 호출을 구성 합니다. |
 | **distributedtransaction.fallbacktounsecurerpcifnecessary** | 분산된 트랜잭션에 대 한 RPC만 호출 보안을 구성 합니다. |

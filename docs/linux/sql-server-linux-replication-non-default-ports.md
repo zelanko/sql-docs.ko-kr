@@ -1,20 +1,21 @@
 ---
-title: Linux에서 스냅숏 폴더 공유 SQL Server 복제 구성 | Microsoft Docs
+title: Linux에서 스냅숏 폴더 공유 SQL Server 복제 구성
 description: 이 문서에서는 Linux에서 스냅숏 폴더 공유 SQL Server 복제를 구성 하는 방법을 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fd7c819af4c700af17a4b85fad2a4cc75e3e820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456163bfec2324394455a5d098ef01c22d994696
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705137"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834799"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>기본이 아닌 포트를 사용 하 여 복제를 구성 합니다.
 

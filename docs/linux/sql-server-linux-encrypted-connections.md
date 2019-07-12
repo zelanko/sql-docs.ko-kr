@@ -1,22 +1,22 @@
 ---
-title: Linux의 SQL Server에 대 한 연결 암호화 | Microsoft Docs
+title: Linux의 SQL Server에 대 한 연결 암호화
 description: 이 문서에서는 Linux의 SQL Server 연결 암호화를 설명 합니다.
-author: vin-yu
 ms.date: 01/30/2018
+author: vin-yu
 ms.author: vinsonyu
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1a6b7a3530041def66ec74be9de547c6d98ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705663"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833775"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 연결 암호화
 
@@ -71,7 +71,7 @@ TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호
         - **macOS**: 
            - 에 대 한 인증서를 복사 합니다. ```/usr/local/etc/openssl/certs```
            - 해시 값을 가져오려면 다음 명령을 실행 합니다. ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 값은 인증서를 이름을 바꿉니다. 예를 들어 ```mv mssql.pem dc2dd900.0```을 참조하십시오. Dc2dd900.0에 있는지 확인 ```/usr/local/etc/openssl/certs```
+           - 값은 인증서를 이름을 바꿉니다. 예: ```mv mssql.pem dc2dd900.0```. Dc2dd900.0에 있는지 확인 ```/usr/local/etc/openssl/certs```
     
 -   **연결 문자열 예** 
 

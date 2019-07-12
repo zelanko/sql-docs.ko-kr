@@ -2,20 +2,20 @@
 title: SQL Server 용 Visual Studio Code mssql 확장 사용
 titleSuffix: SQL Server
 description: Visual Studio Code 용 mssql 확장을 사용 하 여 편집 하 여 Linux에서 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705541"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833788"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio 코드를 사용 하 여 TRANSACT-SQL 스크립트 만들기 및 실행
 
@@ -84,7 +84,7 @@ Mssql 확장을 설정 하면 mssql 명령 및 T-SQL IntelliSense 코드 편집�
 
 1. 지시에 따라 새 연결 프로필에 대 한 속성을 지정 합니다. 키를 눌러 각 값을 지정한 후 **Enter** 를 계속 합니다.
 
-   | 연결 속성 | Description |
+   | 연결 속성 | 설명 |
    |---|---|
    | **서버 이름 또는 ADO 연결 문자열** | SQL Server 인스턴스 이름을 지정 합니다. 사용 하 여 *localhost* 로컬 컴퓨터에 SQL Server 인스턴스에 연결 합니다. 원격 SQL Server에 연결 하려면 SQL Server 대상의 이름 또는 IP 주소를 입력 합니다. SQL Server 컨테이너에 연결 하려면 컨테이너의 호스트 컴퓨터의 IP 주소를 지정 합니다. 포트를 지정 하는 경우 이름에서 분리 하려면 쉼표를 사용 합니다. 예를 들어 포트 1401에서 수신 대기 하는 서버에 대 한 입력 `<servername or IP>,1401`합니다.<br/><br/>대신 여기에서 데이터베이스에 대 한 ADO 연결 문자열을 입력할 수 있습니다. |
    | **데이터베이스 이름** (선택 사항) | 사용 하려는 데이터베이스입니다. 기본 데이터베이스에 연결 하려면 여기에 데이터베이스 이름을 지정 하지 마십시오. |

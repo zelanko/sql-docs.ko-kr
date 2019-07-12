@@ -3,18 +3,19 @@ title: SQL Server Always On 가용성 그룹에서 kubernetes에 대 한 배포 
 description: 이 문서는 SQL Server Always On 가용성 그룹에서 kubernetes에 대 한 배포 스크립트를 작성 하는 방법에 설명
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 70a83efa128d8d58776907541fef9d6888af51e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfee5188c6fe54ed91172f9d83de7af6395c8956
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705678"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833646"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>SQL Server Always On 가용성 그룹에 대 한 배포 스크립트 만들기
 

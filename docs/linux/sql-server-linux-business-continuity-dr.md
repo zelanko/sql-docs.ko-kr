@@ -1,22 +1,22 @@
 ---
-title: Linux의 SQL Server에 대 한 재해 복구 | Microsoft Docs
+title: Linux의 SQL Server에 대 한 재해 복구
 description: ''
 author: MikeRayMSFT
-ms.author: mihaelab
-ms.reviewer: mikeray
-manager: craigg
+ms.author: mikeray
+ms.reviewer: mihaelab
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e617a4e9040c8c9f23e37ce7094f1f2e456da7a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 745d9bacfb629ef6d671a7b7f88b65914c9e089b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705847"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834118"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구-SQL Server on Linux
 

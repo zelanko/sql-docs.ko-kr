@@ -1,20 +1,20 @@
 ---
-title: Conf ssis를 사용 하 여 Linux의 SSIS 구성 | Microsoft Docs
+title: Conf ssis를 사용 하 여 Linux의 SSIS 구성
 description: 이 문서에서는 ssis conf 유틸리티를 사용 하 여 Linux에서 SQL Server Integration Services (SSIS)를 구성 하는 방법을 설명 합니다.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa00ec33039cd4a6e601321604ae60bd125fec7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a6fc4a73d8991626c53d9caa8671673c0164a10
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705563"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833988"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Conf ssis를 사용 하 여 Linux에서 SQL Server Integration Services 구성
 
@@ -24,7 +24,7 @@ ms.locfileid: "66705563"
 
 사용할 수도 있습니다는 `ssis-conf` 유틸리티는 다음 속성을 구성 하려면:
 
-| Command | Description |
+| Command | 설명 |
 |-------------|---------------------------------------------------------------------|
 | set-edition | SQL Server의 버전 설정                                       |
 | 원격 분석   | SQL Server Integration Services 원격 분석 서비스를 사용할지 설정 합니다. |

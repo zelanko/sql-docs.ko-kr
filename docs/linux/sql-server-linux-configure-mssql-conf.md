@@ -1,20 +1,20 @@
 ---
-title: Linux에서 SQL Server 설정 구성 | Microsoft Docs
+title: Linux에서 SQL Server 설정 구성
 description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 mssql-conf 도구를 사용 하는 방법을 설명 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719395"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833998"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
@@ -394,7 +394,7 @@ SQL Server를 수집 한다는 덤프 메모리 형식을 제어에 대 한 두 
 
     다음 표에서 가능한 **coredump.coredumptype** 값입니다.
 
-    | 형식 | Description |
+    | type | 설명 |
     |-----|-----|
     | **mini** | 미니 최소 덤프 파일 형식입니다. 스레드 및 프로세스의 모듈을 확인 하려면 Linux 시스템 정보를 사용 합니다. 덤프는 호스트 환경 스레드 스택 및 모듈을 포함합니다. 간접 메모리 참조 또는 전역 포함 되지 않습니다. |
     | **miniplus** | Mini, miniPlus 비슷합니다 있지만 추가 메모리를 포함 하는 것입니다. SQLPAL 및 덤프에는 다음과 같은 메모리 영역을 추가 하 고 호스트 환경의 내부 구조를 인식 합니다.</br></br> -다양 한 전역 변수</br> -모든 메모리 64TB 이상</br> -모든 지역에 이름이 지정 **/proc/$ pid/매핑**</br> 스레드 및 스택 간접 메모리</br> 스레드 정보</br> -Teb의 및 Peb의 연결</br> 모듈 정보</br> VMM 및 VAD 트리 |
@@ -508,7 +508,7 @@ sudo systemctl restart mssql-server
 
 가지 mssql-conf 모니터링과 MSDTC 문제 해결에 사용할 수 있는 다른 몇 가지 설정이 있습니다. 다음 테이블에는 이러한 설정이 간략하게 설명합니다. 용도에 대 한 자세한 내용은 Windows 지원 문서에서 세부 정보를 참조 하세요 [MS DTC에 대 한 진단 추적을 사용 하는 방법을](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)합니다.
 
-| mssql conf 설정 | Description |
+| mssql conf 설정 | 설명 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 분산된 트랜잭션에 대 한 보안만 RPC 호출을 구성 합니다. |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 배포에 대 한 보안만 RPC 호출 구성 |트랜잭션
@@ -614,7 +614,7 @@ outboundnetworkaccess = 1
 
 Linux에서 실행 중인 SQL Server 인스턴스에 대 한 TLS를 구성 하는 다음 옵션입니다.
 
-|옵션 |Description |
+|옵션 |설명 |
 |--- |--- |
 |**network.forceencryption** |1 인 경우 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 암호화에 대 한 모든 연결을 강제로 수행 합니다. 기본적으로이 옵션은 0입니다. |
 |**network.tlscert** |인증서에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예:   `/etc/ssl/certs/mssql.pem`  인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |

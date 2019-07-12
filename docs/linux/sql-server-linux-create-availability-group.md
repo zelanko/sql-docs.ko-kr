@@ -1,19 +1,20 @@
 ---
-title: 만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성 | Microsoft Docs
+title: 만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 description: 이 자습서에서는 만들고 Linux의 SQL Server에 대 한 가용성 그룹을 구성 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bd6f1259989c1cb0286fca546ea9e0410e0837f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719392"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833901"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 

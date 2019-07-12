@@ -1,20 +1,20 @@
 ---
-title: 연결 라이브러리 및 프레임 워크 | Microsoft Docs
+title: 연결 라이브러리 및 프레임 워크
 description: 클라이언트 앱은 다양 한 언어에서 Microsoft SQL Server 온-프레미스 또는 클라우드, Linux, Windows 나 Docker 및 Azure SQL Database 및 Azure SQL Data Warehouse에 연결 하는 데 사용할 수 있는 연결 드라이버를 나열 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713208"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833855"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 
@@ -24,7 +24,7 @@ ms.locfileid: "66713208"
 
 다음 표에서 연결 라이브러리 또는 *드라이버* 연결 하 여 온-프레미스를 실행 중인 Microsoft SQL Server를 사용 하는 언어 또는 클라우드에서 Linux, Windows 또는 Docker에서 다양 한 클라이언트 응용 프로그램에서 사용할 수 있습니다 및 또한에 Azure SQL Database 및 Azure SQL Data Warehouse. 
 
-| 언어 | 플랫폼 | 추가 리소스 | 다운로드 | 시작 |
+| 언어 | 플랫폼 | 추가 자료 | 다운로드 | 시작 |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET for SQL Server](https://msdn.microsoft.com/library/mt657768.aspx) | [다운로드](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [SQL Server용 Microsoft JDBC Driver](https://msdn.microsoft.com/library/mt484311.aspx) | [다운로드](https://go.microsoft.com/fwlink/?LinkId=245496) |  [시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)

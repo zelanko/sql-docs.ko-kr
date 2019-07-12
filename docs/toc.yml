@@ -1336,7 +1336,7 @@
       items:
         - name: 힙(클러스터형 인덱스가 없는 테이블)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: 클러스터형 및 비클러스터형 인덱스 소개
+        - name: 클러스터형 및 비클러스터형 인덱스
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: 만들기

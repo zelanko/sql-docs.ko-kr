@@ -1,20 +1,20 @@
 ---
-title: 환경 변수를 사용 하 여 SQL Server 설정 구성 | Microsoft Docs
+title: 환경 변수를 사용 하 여 SQL Server 설정 구성
 description: 이 문서에서는 Linux에서 특정 SQL Server 2017 설정을 구성 하려면 환경 변수를 사용 하는 방법을 설명 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2b32c965dfed3647484a1de54539c79af3777ce4
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400075"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834047"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux의 환경 변수를 사용 하 여 SQL Server 설정 구성
 
@@ -44,7 +44,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| 환경 변수 | Description |
+| 환경 변수 | 설명 |
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
@@ -68,7 +68,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| 환경 변수 | Description |
+| 환경 변수 | 설명 |
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
