@@ -2,9 +2,9 @@
 title: Docker에서 SQL Server Linux 컨테이너 시작
 titleSuffix: SQL Server
 description: 이 빠른 시작이에서는 Docker를 사용 하 여 SQL Server 2017 및 2019 컨테이너 이미지를 실행 하는 방법을 보여 줍니다. 그런 다음, sqlcmd 사용하여 데이터베이스를 만들고 쿼리합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
 ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e9dfbd9edbb7a363c3f88845bfe3a6331bbd7db9
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399922"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833625"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker를 사용 하 여 SQL Server 컨테이너 이미지 실행
 
@@ -124,7 +124,7 @@ any changes to one section should be duplicated in the other-->
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
@@ -243,7 +243,7 @@ SELECT @@SERVERNAME,
 
    다음 표에서는 이전 `docker run` 보기의 매개 변수에 대해 설명합니다.
 
-   | 매개 변수 | Description |
+   | 매개 변수 | 설명 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  [최종 사용자 사용권 계약](https://go.microsoft.com/fwlink/?LinkId=746388) 수락을 확인하기 위해 **ACCEPT_EULA** 변수를 어떤 값에 설정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-e ' SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |

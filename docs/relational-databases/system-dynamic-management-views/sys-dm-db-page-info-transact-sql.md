@@ -20,16 +20,16 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822239"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832999"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 데이터베이스의 페이지에 대 한 정보를 반환합니다.  페이지에서 헤더 정보를 포함 하는 하나의 행을 반환 하는 함수 등을 `object_id`, `index_id`, 및 `partition_id`합니다.  이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
 
@@ -53,7 +53,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 ## <a name="table-returned"></a>반환된 테이블  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id |ssNoversion |데이터베이스 ID |
 |file_id |ssNoversion |파일 ID |
@@ -108,7 +108,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |lsn |nvarchar(64) |로그 시퀀스 번호 / 타임 스탬프 |
 |header_version |ssNoversion |페이지 헤더 버전 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 합니다 `sys.dm_db_page_info` 동적 관리 함수 같은 페이지 정보를 반환 합니다. `page_id`를 `file_id`, `index_id`, `object_id` 페이지 머리글에 존재 하는 등입니다. 이 정보는 문제 해결 및 다양 한 성능 (잠금 및 래치 경합) 및 손상 문제를 디버깅 하는 데 유용 합니다.
 
 `sys.dm_db_page_info` 대신 사용할 수는 `DBCC PAGE` 하지만 대부분의 경우에 문이 페이지 헤더 정보만 반환, 페이지의 본문에 없습니다. `DBCC PAGE` 여기서 전체 페이지의 내용이 필요한 사용 사례에 여전히 필요 합니다.

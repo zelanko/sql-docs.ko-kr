@@ -1,20 +1,20 @@
 ---
-title: Linux에서 SQL Server로 데이터베이스 마이그레이션을 자동화 | Microsoft Docs
+title: Linux에서 SQL Server로 데이터베이스 마이그레이션을 자동화 합니다.
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: eac6c206fe34af59ba7e5f6e5a7eb2508b842766
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5af1b21ac90bb0749f36ac18ebad34e36853fda
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713229"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834868"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Linux로 데이터베이스 마이그레이션 자동화
 
@@ -39,7 +39,7 @@ SSMA는 Oracle, MySQL, Sybase, DB2 및 Microsoft SQL Server on Linux에 대 한 
 
 다음에 따라 합니다 [SQL Server Migration Assistant (SSMA)](https://msdn.microsoft.com/library/mt613434.aspx) 원본 데이터베이스에 Linux의 SQL Server로 마이그레이션하려 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [Microsoft Data Migration 블로그](https://blogs.msdn.microsoft.com/datamigration)
 - [SQL Server Migration Assistant (SSMA) 블로그](https://blogs.msdn.microsoft.com/ssma/)
 

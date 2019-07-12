@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_transaction_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_xtp_transaction_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,21 +19,21 @@ ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de6169af7c10972307a154e9830bc8e206854ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54bee97607e5fc2e09d7fd06c742760ff87aafe5
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725001"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826323"
 ---
 # <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   서버를 시작한 후 실행된 트랜잭션에 대한 통계를 보고합니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |total_count|**bigint**|메모리 내 OLTP 데이터베이스 엔진에서 실행된 총 트랜잭션 수입니다.|  
 |read_only_count|**bigint**|읽기 전용 트랜잭션 수입니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "47725001"
 |savepoint_create|**bigint**|만들어진 저장점 수입니다. 새로운 저장점은 모든 원자 블록에 대해 만들어집니다.|  
 |savepoint_rollbacks|**bigint**|이전 저장점으로의 롤백 수입니다.|  
 |savepoint_refreshes|**bigint**|내부적으로만 사용됩니다.|  
-|log_bytes_written|**bigint**|메모리 내 OLTP 로그 레코드에 기록된 전체 바이트 수입니다.|  
+|log_bytes_written|**bigint**|메모리 OLTP 로그 레코드에 기록된 전체 바이트 수입니다.|  
 |log_IO_count|**bigint**|로그 IO를 필요로 하는 총 트랜잭션 수입니다. 내구성 테이블의 트랜잭션만 고려합니다.|  
 |phantom_scans_started|**bigint**|내부적으로만 사용됩니다.|  
 |phatom_scans_retries|**bigint**|내부적으로만 사용됩니다.|  

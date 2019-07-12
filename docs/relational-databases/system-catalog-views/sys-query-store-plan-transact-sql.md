@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652859"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833570"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 각 실행 계획에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|기본 키입니다.|  
 |**query_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)합니다.|  
@@ -68,8 +68,11 @@ ms.locfileid: "67652859"
 * 외부 테이블에 대한 참조
 * 분산 쿼리 또는 전체 텍스트 작업
 * 전역 쿼리 사용 
-* 동적 또는 키 집합 커서 (빨리 감기 및 정적 커서에 대해 지원 됨 계획 강제 적용)
+* 동적 또는 키 집합 커서 
 * 잘못된 스타 조인 사양 
+
+> [!NOTE]
+> Azure SQL Database 및 SQL Server 2019 (미리 보기) 정적와 빠른 전진 커서에 대 한 계획 강제 적용을 지원 합니다.
 
 둘째, 계획에 사용되는 개체를 더 이상 사용할 수 없는 경우
 * 데이터베이스(계획이 발생한 데이터베이스가 더 이상 없는 경우)

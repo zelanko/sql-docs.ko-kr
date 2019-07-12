@@ -1,20 +1,20 @@
 ---
-title: Linux의 SQL Server 관리 | Microsoft Docs
+title: Linux의 SQL Server 관리
 description: 이 문서에서는 Linux에서 실행 중인 SQL Server에 대 한 일반 관리 작업 및 도구에 대 한 링크.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: f1f949db84689fae7e362f81cb686824f249c564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33489d1704d90d32b8b9362b1fa87f123ac17236
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705229"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834926"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux의 SQL Server 관리에 적합 한 도구 선택
 

@@ -1,19 +1,20 @@
 ---
-title: 장애 조치 클러스터 인스턴스 저장소 SMB-Linux의 SQL Server 구성 | Microsoft Docs
+title: 장애 조치 클러스터 인스턴스 저장소 SMB-Linux의 SQL Server 구성
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 7a8df4121fa71580af9596c855e0f0d6199fca46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74b8779a4654f544f8085041adeafb14a59688bf
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712870"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833178"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성
 
@@ -32,7 +33,7 @@ Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일
 
 ![05-smbsource][1]
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>지침
 
 1. FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다.
    

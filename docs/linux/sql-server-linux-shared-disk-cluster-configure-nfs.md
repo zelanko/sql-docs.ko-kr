@@ -1,19 +1,20 @@
 ---
-title: 장애 조치 클러스터 인스턴스 저장소 NFS-Linux의 SQL Server 구성 | Microsoft Docs
+title: 장애 조치 클러스터 인스턴스 저장소 NFS-Linux의 SQL Server 구성
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0e325a8f717a84ed224fa619bdb47e79cf7af80f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbac33943de34c8757d5319e5a59b049973d50c4
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719360"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833170"
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-NFS-Linux의 SQL Server 구성
 
@@ -37,7 +38,7 @@ NFS 서버에서 공유에 폴더를 구성할 때 이러한 지침의 일반 �
 
 ![05 nfsacl][1]
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>지침
 
 1. FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다. 
 

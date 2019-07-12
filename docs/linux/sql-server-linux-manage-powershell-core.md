@@ -1,20 +1,20 @@
 ---
-title: PowerShell Core를 사용 하 여 Linux에서 SQL Server 관리 | Microsoft Docs
+title: PowerShell Core를 사용 하 여 Linux에서 SQL Server 관리
 description: 이 문서에서는 Linux의 SQL Server를 사용 하 여 PowerShell Core를 사용 하는 개요를 제공 합니다.
 ms.date: 04/22/2019
-ms.reviewer: jroth
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
-manager: craigg
-ms.openlocfilehash: 242e3ab70d41df4d774400034f361b31289d97c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: e96fe471f78e02e5667431f7065a169a5c136417
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713148"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834950"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용 하 여 Linux에서 SQL Server 관리
 
@@ -269,5 +269,5 @@ SELECT Name
 - Read-SqlViewData
 - Convert-UrnToPath
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

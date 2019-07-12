@@ -1,20 +1,20 @@
 ---
-title: SSMS를 사용 하 여 Linux의 SQL Server 관리 | Microsoft Docs
+title: SSMS를 사용 하 여 Linux의 SQL Server 관리
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eba01fdd332e86327da627dd934806c1eedc9d5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713159"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834943"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용 하 여 Linux의 SQL Server 관리
 
@@ -56,7 +56,7 @@ SQL Server에서 작업할 때 항상 최신 버전의 SQL Server Management Stu
 
 1. 에 **서버에 연결** 창에서 다음 정보를 입력 (SSMS 이미 실행 중인 경우 클릭 **연결 > 데이터베이스 엔진** 열려는 **서버에 연결** window):
 
-   | 설정 | Description |
+   | 설정 | 설명 |
    |-----|-----|
    | **서버 유형** | 기본값은 데이터베이스 엔진입니다. 이 값을 변경 하지 마십시오. |
    | **서버 이름** | 대상 Linux SQL Server 컴퓨터의 IP 주소 이름을 입력 합니다. |
@@ -141,7 +141,7 @@ TRANSACT-SQL 쿼리를 사용 하 여 모든 관리 작업 거의 할 수 있지
 
 창이 확장 되 면 작업 모니터는 인스턴스에서 정보를 쿼리 합니다. 창을 축소하면 해당 창에 대한 모든 쿼리 작업이 중지됩니다. 하나 이상의 창을 동시 인스턴스에서 다른 종류의 작업 보기를 확장할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [SSMS란 무엇인가요?](../ssms/sql-server-management-studio-ssms.md)
 - [SSMS 사용 하 여 데이터베이스를 내보내고](sql-server-linux-migrate-ssms.md)
 - [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)

@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716681"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833037"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67716681"
 |end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |avg_cpu_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 컴퓨팅된 평균 컴퓨팅 활용률입니다.|  
 |avg_data_io_percent|**10 진수 (5,2)**|평균 데이터의 서비스 계층 한도의 I/O 활용률입니다.|  
-|avg_log_write_percent|**10 진수 (5,2)**|평균 쓰기 서비스 계층 한도의 백분율로 I/O 처리량 사용률입니다.|  
+|avg_log_write_percent|**10 진수 (5,2)**|서비스 계층 한도의 백분율로 평균 트랜잭션 로그 (MBps)에 씁니다.|  
 |avg_memory_usage_percent|**10 진수 (5,2)**|서비스 계층 한도의 비율로 계산된 평균 메모리 활용률입니다.<br /><br /> 여기에 메모리 버퍼 풀 페이지 및 메모리 내 OLTP 개체의 저장소에 사용 합니다.|  
 |xtp_storage_percent|**10 진수 (5,2)**|저장소 사용률을 메모리 내 OLTP에 대 한 서비스 계층 한도의 백분율 (보고 간격 끝). 여기에 다음과 같은 메모리 내 OLTP 개체의 저장에 사용 된 메모리: 메모리 액세스에 최적화 된 테이블, 인덱스 및 테이블 변수입니다. 또한 ALTER TABLE 작업 처리에 사용 되는 메모리를 포함 합니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|  
 |max_worker_percent|**10 진수 (5,2)**|데이터베이스의 서비스 계층 한도의 백분율로 최대 동시 작업자 (요청).|  

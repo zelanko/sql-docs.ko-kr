@@ -1,20 +1,21 @@
 ---
-title: SQL Server에 대 한 Red Hat Enterprise Linux 공유 클러스터 작동 | Microsoft Docs
+title: SQL Server에 대 한 Red Hat Enterprise Linux 공유 클러스터 작동
 description: SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 하 여 고가용성을 구현 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: bc453b815c0aaee7a7cd30b153101f75c1dbeacf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e20824630fa9740ba8d9bc7d1c63e87fe08d1632
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712909"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833121"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 작동
 
@@ -209,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 클러스터 문제 해결에 세 개의 디먼 함께 작동 하 클러스터 리소스를 관리 하는 방식을 이해 도움이 될 수 있습니다. 
 
-| 데몬 | Description 
+| 데몬 | 설명 
 | ----- | -----
 | Corosync | 쿼럼 멤버 자격 및 클러스터 노드 간 메시징을 제공 합니다.
 | Pacemaker | Corosync 위에 상주 하 고 리소스에 대 한 상태 시스템을 제공 합니다. 
@@ -268,7 +269,7 @@ pacemaker: active/enabled
 
 - **노드 이름 매핑**
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 * [부터 클러스터](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Pacemaker에서 가이드
 

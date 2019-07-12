@@ -10,21 +10,21 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794067"
+ms.locfileid: "67826512"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
 
-## <a name="july-2019"></a>2019 년 7 월
+## <a name="july-2019"></a>2019년 7월
 
-2019 년 7 월 10 일 &nbsp;  /  &nbsp; 버전: 1.9.0 
+2019 년 7 월 11 일 &nbsp;  /  &nbsp; 버전: 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ ms.locfileid: "67794067"
 | Visual Studio Code 병합 1.35를 해제할 수 있습니다. | 향상 된 최신 버전을 찾을 수 있습니다 [여기](https://code.visualstudio.com/updates/v1_35)합니다. |
 | 해결 된 버그 및 문제 | Azure Data Studio의 이전 릴리스에서 연결 대화 상자에서 연결할 때 사용자 데이터베이스를 선택 하는 경우 단일 데이터베이스에 완전히 생성 되는 개체 탐색기 항목이 범위 되었습니다. 개체 탐색기에서 서버 수준 속성 또한 표시 되도록 동작이 변경 되는이 릴리스에서 시작 합니다. <br/> 수정 사항의 전체 목록을 참조 하세요 [버그 및 GitHub에서 문제](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1)합니다. |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>2019 년 6 월

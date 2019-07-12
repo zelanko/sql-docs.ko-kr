@@ -3,18 +3,19 @@ title: Kubernetes 클러스터에 SQL Server Always On 가용성 그룹 배포
 description: 이 문서는 SQL Server Kubernetes Always On 가용성 그룹 연산자 글로벌 요구 사항에 대 한 매개 변수를 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 10/02/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 07d0929dbdf60c31f1518a19a2999f0845d7d2e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b3b2a8c955c628284bec59c9e9fead98e174b8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713121"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833237"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes 클러스터에 SQL Server Always On 가용성 그룹 배포
 

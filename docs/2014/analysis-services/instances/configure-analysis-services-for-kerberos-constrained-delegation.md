@@ -10,12 +10,12 @@ ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1374179c5bdac27bc7fda98d8a4675eab4ca9a18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080226"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832920"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos 제한된 위임에 대해 Analysis Services 구성
   Kerberos 인증에 대해 Analysis Services를 구성하는 경우 데이터를 쿼리할 때 Analysis Services에서 사용자 ID를 가장하도록 하거나 Analysis Services에서 하위 서비스에 사용자 ID를 위임하도록 하는 데 관심을 갖고 있을 가능성이 높습니다. 각 시나리오에는 약간 다른 구성 요구 사항이 필요합니다. 두 시나리오에 공통적으로 필요한 것은 구성이 제대로 수행되었는지 확인하는 작업입니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "66080226"
   
  철저하게 테스트하려면 네트워크에서 Kerberos  요청 및 응답을 캡처할 수 있는 네트워크 모니터링 도구를 사용해야 합니다. Kerberos에 대해 필터링된 네트워크 모니터 유틸리티(netmon.exe)가 이 작업에 사용될 수 있습니다. Netmon 3.4 및 기타 도구를 사용 하 여 Kerberos 인증을 테스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [Kerberos 인증 구성: 핵심 구성 (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)합니다.  
   
- 그리고 Active Directory 개체 속성 대화 상자에서 위임 탭의 각 옵션에 대한 자세한 설명은 [Active Directory에서 가장 많이 혼동하는 대화 상자](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) (영문)를 참조하세요. 이 문서에는 LDP를 사용하여 테스트하고 테스트 결과를 해석하는 방법도 설명되어 있습니다.  
+ 그리고 Active Directory 개체 속성 대화 상자에서 위임 탭의 각 옵션에 대한 자세한 설명은 [Active Directory에서 가장 많이 혼동하는 대화 상자](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) (영문)를 참조하세요. 이 문서에는 LDP를 사용하여 테스트하고 테스트 결과를 해석하는 방법도 설명되어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft BI 인증 및 Id 위임](https://go.microsoft.com/fwlink/?LinkID=286576)   

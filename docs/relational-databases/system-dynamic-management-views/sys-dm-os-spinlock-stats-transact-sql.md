@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,28 +18,27 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420855"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826605"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 형식별으로 구성 하는 모든 스핀 잠금 대기에 대 한 정보를 반환 합니다.  
   
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|Spinlock 형식의 이름입니다.|  
+|name|**nvarchar(256)**|Spinlock 형식의 이름입니다.|  
 |충돌|**bigint**|Spinlock을 획득 하 려 스레드와 다른 스레드가 현재 차단 된 횟수 만큼 spinlock을 보유 합니다.|  
 |회전|**bigint**|Spinlock을 획득 하는 동안 루프를 실행 하는 스레드를 다시 시도 횟수입니다.|  
 |spins_per_collision|**real**|사용자가 충돌 당 작동의 비율입니다.|  
@@ -54,7 +50,7 @@ ms.locfileid: "67420855"
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  
  sys.dm_os_spinlock_stats는 spinlock 경합 원본을 확인에 사용할 수 있습니다. 일부 상황에서을 해결 하거나 spinlock 경합을 줄일 수 있습니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고객 지원 서비스에 연락해야 할 경우도 있습니다.  
   
@@ -75,7 +71,7 @@ GO
    
  다음 표에서 가장 일반적인 spinlock 형식의 일부에 대해 간략하게 설명 합니다.  
   
-|스핀 잠금 유형|Description|  
+|스핀 잠금 유형|설명|  
 |-----------------|-----------------|  
 |ABR|내부적으로만 사용됩니다.|
 |ADB_CACHE|내부적으로만 사용됩니다.|
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|내부적으로만 사용됩니다.|
 |LIVE_TARGET_TVF|내부적으로만 사용됩니다.|
 |LOCK_FREE_LIST|내부적으로만 사용됩니다.|
-|LOCK_HASH|데이터베이스에서 대기 중인 잠금에 대 한 정보를 저장 하는 잠금 관리자 해시 테이블에 대 한 액세스를 보호 합니다. 참조 [이 문서에서는](https://support.microsoft.comkb/2926217) 자세한 내용은 합니다.|
+|LOCK_HASH|데이터베이스에서 대기 중인 잠금에 대 한 정보를 저장 하는 잠금 관리자 해시 테이블에 대 한 액세스를 보호 합니다. 참조 [이 문서에서는](https://support.microsoft.com/kb/2926217) 자세한 내용은 합니다.|
 |LOCK_NOTIFICATION|내부적으로만 사용됩니다.|
 |LOCK_RESOURCE_ID|내부적으로만 사용됩니다.|
 |LOCK_RW_ABTX_HASH_SET|내부적으로만 사용됩니다.|

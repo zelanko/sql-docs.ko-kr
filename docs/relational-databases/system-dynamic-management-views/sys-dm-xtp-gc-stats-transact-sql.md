@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ab8e21dd9c4a475f635573ff913d230d0e6fe7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10c58086a6d7e562548024273c71ef36664dff11
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730941"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826622"
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 가비지 수집 프로세스의 현재 동작에 대한 정보(전체 통계)를 제공합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47730941"
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|서버 시작 이후 가비지 수집 하위 시스템에 의해 검사되는 행의 수입니다.|  
 |rows_no_sweep_needed|**bigint**|불량 영역 검색 없이 제거된 행 수입니다.|  

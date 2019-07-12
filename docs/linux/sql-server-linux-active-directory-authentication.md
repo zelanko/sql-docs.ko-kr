@@ -4,21 +4,21 @@ titleSuffix: SQL Server
 description: 이 자습서에서는 Linux의 SQL Server에 대 한 AD 인증에 대 한 구성 단계를 제공 합니다.
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: cf5a4c2f51d394a0322540a1651aa2549fedf8c5
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166386"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833019"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 합니다.
 

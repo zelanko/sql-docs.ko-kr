@@ -1,20 +1,20 @@
 ---
-title: Linux의 SQL Server로 데이터베이스 마이그레이션 | Microsoft Docs
+title: Linux에서 SQL Server로 데이터베이스 마이그레이션
 description: 이 문서에서는 Linux의 데이터베이스 마이그레이션 및 SQL Server로 데이터에 대 한 다양 한 옵션을 설명합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
-ms.openlocfilehash: 2443611a63bee3f62ae8225384d79d34dfcb18e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 325c492018f5afc41c660490e6210f06496247e4
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705296"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834899"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux의 SQL Server로 데이터베이스 및 구조화 된 데이터 마이그레이션 
 

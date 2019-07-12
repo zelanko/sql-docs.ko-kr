@@ -1,20 +1,21 @@
 ---
-title: Linux에서 Windows SQL Server 데이터베이스 마이그레이션 | Microsoft Docs
+title: Linux에서 Windows SQL Server 데이터베이스 마이그레이션
 description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 여 SQL Server를 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ec273a58c2a907b6059972816736382e10df883
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713129"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834895"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용 하 여 Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션
 

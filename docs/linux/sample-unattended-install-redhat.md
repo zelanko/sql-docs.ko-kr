@@ -2,19 +2,19 @@
 title: Red Hat Enterprise Linux에서 SQL Server의 무인된 설치
 titleSuffix: SQL Server
 description: SQL Server 스크립트 샘플-Red Hat Enterprise Linux에서 무인된 설치
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e72c027f9426376ab79f29067385d2c4a8910a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8a58ecebdbd8f5ffb8b03a06f44ab85d5281245
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713539"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834968"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux에 대 한 SQL Server 설치 스크립트를 무인된
 

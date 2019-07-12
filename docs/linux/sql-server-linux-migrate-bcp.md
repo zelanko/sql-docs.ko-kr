@@ -1,20 +1,20 @@
 ---
-title: 대량으로 Linux에서 SQL Server로 데이터 복사 | Microsoft Docs
+title: Linux에서 SQL Server로 데이터 대량 복사
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ad1299d665a7c15aac3a657623d03d48d2fbac
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713140"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834909"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux의 SQL Server bcp 사용 하 여 데이터 대량 복사
 
@@ -135,7 +135,7 @@ cat ~/test_export.txt
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [bcp 유틸리티](../tools/bcp-utility.md)
 - [Bcp를 사용 하는 경우 호환성에 대 한 데이터 형식](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [BULK INSERT를 사용 하 여 데이터 대량 가져오기](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)

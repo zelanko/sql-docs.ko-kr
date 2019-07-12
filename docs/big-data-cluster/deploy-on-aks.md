@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728914"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826526"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -76,9 +76,39 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>사용 가능한 Kubernetes 버전 확인
+
+Kubernetes의 사용 가능한 최신 버전을 사용 합니다. 사용 가능한 최신 버전의 클러스터 배포 하는 위치에 따라 달라 집니다. 다음 명령은 특정 위치에 사용 가능한 Kubernetes 버전을 반환합니다.
+
+이 명령은 실행 하기 전에 스크립트를 업데이트 합니다. 대체 `<Azure data center>` 클러스터의 위치입니다.
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+클러스터에서 사용 가능한 최신 버전을 선택 합니다. 버전 번호를 기록 합니다. 다음 단계에서이 사용 합니다.
+
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. 사용 하 여 AKS에서 Kubernetes 클러스터 만들기는 [az aks 만들기](https://docs.microsoft.com/cli/azure/aks) 명령입니다. 다음 예제에서는 라는 Kubernetes 클러스터를 만듭니다 *kubcluster* 크기의 Linux 에이전트 노드 하나를 사용 하 여 **Standard_L8s**합니다. 이전 섹션에서 사용한 동일한 리소스 그룹에서 AKS 클러스터를 만든 있는지 확인 합니다.
+1. 사용 하 여 AKS에서 Kubernetes 클러스터 만들기는 [az aks 만들기](https://docs.microsoft.com/cli/azure/aks) 명령입니다. 다음 예제에서는 라는 Kubernetes 클러스터를 만듭니다 *kubcluster* 크기의 Linux 에이전트 노드 하나를 사용 하 여 **Standard_L8s**합니다.
+
+   스크립트를 실행 하기 전에 대체 `<version number>` 이전 단계에서 확인 된 버전 번호를 사용 하 여 합니다.
+
+   이전 섹션에서 사용한 동일한 리소스 그룹에서 AKS 클러스터를 만든 있는지 확인 합니다.
 
    **bash:**
 
@@ -88,7 +118,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 사용 하려는 에이전트 노드 수입니다. 여기에 AKS에서 내부적으로 관리 되는 마스터 Kubernetes 노드를 포함 되지 않습니다. 앞의 예제만 평가 목적에 대 한 단일 노드를 사용합니다.

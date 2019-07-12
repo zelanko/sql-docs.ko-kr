@@ -1,20 +1,20 @@
 ---
-title: PowerShell 사용 하 여 Linux에서 SQL Server 관리 | Microsoft Docs
+title: PowerShell 사용 하 여 Linux에서 SQL Server 관리
 description: 이 문서에서는 Linux의 SQL Server를 사용 하 여 Windows에서 PowerShell을 사용 하는 개요를 제공 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 8398db9e03aabf6863bd770f8be6657b58be1591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21ce61a823281c5e6688bcfb8aee96d296cb671d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718078"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834928"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Linux의 SQL Server를 관리 하는 Windows에서 PowerShell을 사용 하 여
 
@@ -152,6 +152,6 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)
 - [SqlServer cmdlet](https://docs.microsoft.com/powershell/module/sqlserver)

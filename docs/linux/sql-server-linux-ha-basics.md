@@ -1,19 +1,20 @@
 ---
-title: Linux 배포에 대 한 SQL Server 가용성 기본 사항 | Microsoft Docs
+title: Linux 배포에 대 한 SQL Server 가용성 기본 사항
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719365"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833560"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -83,7 +84,7 @@ Windows 기반 SMB 공유를 사용할 수도 있습니다. SMB 공유를 호스
 ### <a name="configure-the-firewall"></a>방화벽 구성
 Windows와 마찬가지로 Linux 배포는 기본 제공 방화벽입니다. 회사 외부 방화벽 서버를 사용 하는 경우에 Linux에서 방화벽을 사용 하지 않도록 설정 허용 될 수 있습니다. 그러나는 방화벽이 사용 되는 위치에 관계 없이 열려는 포트 해야 합니다. 다음 표에서 문서에 필요한 공통 포트 항상 사용 가능한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에 배포 합니다.
 
-| 포트 번호 | 형식     | Description                                                                                                                 |
+| 포트 번호 | type     | 설명                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | (사용) 하는 경우 samba-끝점 매퍼                                                                                          |
@@ -163,7 +164,7 @@ Ubuntu는 가용성에 대 한 가이드는 없습니다.
 #### <a name="node"></a>노드
 노드는 클러스터에 참여 하는 서버입니다. Pacemaker 클러스터를 최대 16 개의 노드를 고유 하 게 지원합니다. Corosync는 추가 노드에서 실행 되 고 있지 않지만 Corosync는 필요한 경우이 수를 초과 되었을 수 있습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 노드는 클러스터에 대 한 수의 최대 수에 따라서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-기반 구성은 16; Pacemaker 제한을 이며는 Ag 또는 Fci 따른에 대 한 최대 제한은 사용 하 여 관련이 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 
 
-#### <a name="resource"></a>리소스
+#### <a name="resource"></a>Resource
 WSFC와 Pacemaker 클러스터 리소스의 개념이 있습니다. 리소스는 디스크 또는 IP 주소와 같은 클러스터의 컨텍스트에서 실행 되는 특정 기능입니다. 예를 들어, Pacemaker에서 FCI와 AG 리소스 만들 수 있습니다. 이것이 표시 되는 wsfc에서 수행 되는 서로 다른를 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 중 하나는 FCI에 대 한 리소스 또는 AG를 구성 하는 경우에 AG 리소스가 하지만 동일 정확 하 게 하는 방법의 기본 차이로 인해 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pacemaker 통합 합니다.
 
 Pacemaker에 리소스가 표준 및 복제 합니다. 복제 리소스는 모든 노드에서 동시에 실행 되는 것입니다. 예제 IP 주소 부하 분산 목적으로 여러 노드에서 실행 되는 것입니다. Fci에 대 한 생성 되는 모든 리소스는 하나의 노드만 언제 든 지 FCI를 호스팅할 수 있으므로 표준 리소스를 사용 합니다.

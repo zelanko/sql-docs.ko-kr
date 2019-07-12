@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402648"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826500"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 인증 및 권한 부여
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "52402648"
 ## <a name="see-also"></a>관련 항목  
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
