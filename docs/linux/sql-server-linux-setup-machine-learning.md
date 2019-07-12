@@ -1,20 +1,21 @@
 ---
-title: SQL Server Machine Learning 서비스 (R, Python) linux 설치 | Microsoft Docs
+title: Linux에서 SQL Server Machine Learning 서비스 (R, Python)를 설치 합니다.
 description: Red Hat, Ubuntu 및 SUSE에서 SQL Server Machine Learning Services (R, Python)를 설치 하는 방법에 알아봅니다.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399945"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834680"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>SQL Server 2019의 기계 학습 서비스 (R, Python) Linux 설치
 
@@ -158,7 +159,7 @@ zypper update
 
 인터넷에 연결 된 장치에서 패키지는 다운로드 되 고 각 운영 체제에 대 한 패키지 설치 관리자를 사용 하 여 데이터베이스 엔진 독립적으로 설치 합니다. 다음 표에서 사용 가능한 모든 패키지를 설명 하지만 전체 기능을 설치 또는 최소 기능을 설치 하는 패키지를 지정 하면 R 및 Python에 대 한 합니다.
 
-| 패키지 이름 | 에 적용 됩니다. | Description |
+| 패키지 이름 | 에 적용 됩니다. | 설명 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | All | R 및 Python 코드를 실행 하는 데 확장성 프레임 워크입니다. |
 | microsoft-openmpi  | Python, R | Linux에서 병렬화 Revo * 라이브러리에서 사용 되는 인터페이스를 전달 하는 메시지입니다. |
@@ -278,7 +279,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. 오픈 소스 R 및 Python에 대 한 사용권 계약에 동의 합니다. 이 작업을 수행 하는 방법은 여러 가지가 있습니다. 이전에 SQL Server 라이선스를 수락 하 고 추가 하는 R 또는 Python 확장 이제, 다음 명령은 다음과 같습니다. 해당 약관에 동의
+2. 오픈 소스 R 및 Python에 대 한 사용권 계약에 동의 합니다. 다음과 같은 여러 가지 방법으로 이 작업을 수행할 수 있습니다. 이전에 SQL Server 라이선스를 수락 하 고 추가 하는 R 또는 Python 확장 이제, 다음 명령은 다음과 같습니다. 해당 약관에 동의
 
    ```bash
    # Run as SUDO or root
@@ -515,7 +516,7 @@ Linux에서 R 및 Python 통합은 아직 활성 개발 합니다. 다음 기능
 
 Linux 및 Windows에 대 한 사이 패리티가 [리소스 거 버 넌 스](../t-sql/statements/create-external-resource-pool-transact-sql.md) 외부 리소스 풀에 대 한 통계 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 현재 Linux에서 서로 다른 단위입니다. 단위는 예정 된 CTP에 정렬 됩니다.
  
-| 열 이름   | Description | Linux의 값 | 
+| 열 이름   | 설명 | Linux의 값 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 최대 리소스 풀에 사용 되는 메모리 양입니다. | Linux에서이 통계 값은 memory.max_usage_in_bytes CGroups 메모리 하위 시스템을에서 소싱 된 |
 |write_io_count | 총 쓰기 Io 리소스 관리자 통계를 다시 설정한 후 실행 합니다. | Linux에서이 통계 CGroups blkio 하위 시스템 쓰기 행의 값은 blkio.throttle.io_serviced에서에서 소싱 된 | 

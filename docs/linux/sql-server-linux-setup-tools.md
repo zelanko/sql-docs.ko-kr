@@ -2,21 +2,21 @@
 title: Linux의 SQL Server 명령줄 도구를 설치 합니다.
 titleSuffix: SQL Server
 description: 이 문서에서는 Linux의 SQL Server 도구를 설치 하는 방법을 설명 합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: d6e10c384d799ee416facee150e5e2318b381ea6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b93530b54f2f51f2c00b9d651fcae970507a4cf
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66810271"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834657"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 및 bcp을 Linux의 SQL Server 명령줄 도구 설치
 

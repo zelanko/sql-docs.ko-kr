@@ -1,20 +1,21 @@
 ---
-title: Linux에서 SQL Server 언어 확장 (Java)를 설치 합니다. | Microsoft Docs
+title: Linux에서 SQL Server 언어 확장 (Java)를 설치 합니다.
 description: Red Hat, Ubuntu 및 SUSE에서 SQL Server 언어 확장 (Java)를 설치 하는 방법에 알아봅니다.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399932"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834704"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux에서 SQL Server 2019 언어 확장 (Java)를 설치 합니다.
 
@@ -80,7 +81,7 @@ ls /opt/microsoft/mssql/bin
 
 인터넷에 연결 된 장치에서 패키지는 다운로드 되 고 각 운영 체제에 대 한 패키지 설치 관리자를 사용 하 여 데이터베이스 엔진 독립적으로 설치 합니다. 다음 표에 사용 가능한 모든 패키지 있습니다.
 
-| 패키지 이름 | 에 적용 됩니다. | Description |
+| 패키지 이름 | 에 적용 됩니다. | 설명 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | 모든 언어 | Java 코드를 실행 하는 데 확장성 프레임 워크입니다. |
 |mssql-server-extensibility-java | Java | Java 실행 환경에 로드 하기 위한 Java 확장입니다. 추가 라이브러리 없거나 Java에 대 한 패키지 있습니다. |
@@ -294,7 +295,7 @@ Linux의 언어 확장 및 Java 확장성 여전히 활성 개발입니다. 다�
 
 Linux 및 Windows에 대 한 사이 패리티가 [리소스 거 버 넌 스](../t-sql/statements/create-external-resource-pool-transact-sql.md) 외부 리소스 풀에 대 한 통계 [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) 현재 Linux에서 서로 다른 단위입니다. 단위는 예정 된 CTP에 정렬 됩니다.
  
-| 열 이름   | Description | Linux의 값 | 
+| 열 이름   | 설명 | Linux의 값 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 최대 리소스 풀에 사용 되는 메모리 양입니다. | Linux에서이 통계 값은 memory.max_usage_in_bytes CGroups 메모리 하위 시스템을에서 소싱 된 |
 |write_io_count | 총 쓰기 Io 리소스 관리자 통계를 다시 설정한 후 실행 합니다. | Linux에서이 통계 CGroups blkio 하위 시스템 쓰기 행의 값은 blkio.throttle.io_serviced에서에서 소싱 된 | 

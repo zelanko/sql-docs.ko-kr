@@ -1,20 +1,21 @@
 ---
-title: 가용성 그룹 장애 조치-Linux의 SQL Server 관리 | Microsoft Docs
+title: 가용성 그룹 장애 조치-Linux의 SQL Server 관리
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f758b70e0b518418a95a79ebb4e9b7322f33f31f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713458"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834255"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 

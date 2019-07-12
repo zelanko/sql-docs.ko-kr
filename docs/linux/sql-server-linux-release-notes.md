@@ -1,20 +1,20 @@
 ---
-title: SQL Server 2017 on Linux에 대한 릴리스 정보 | Microsoft Docs
+title: Linux의 SQL Server 2017 릴리스 정보
 description: 이 항목에서는 Linux에서 동작하는 SQL Server 2017에 대한 릴리스 정보 및 지원하는 기능을 포함합니다. 릴리스 정보는 가장 최신 릴리스 및 몇 가지 이전 릴리스를 포함합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705148"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834809"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -25,7 +25,7 @@ ms.locfileid: "66705148"
 > [!TIP]
 > 이러한 릴리스 정보는 특히 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 해제 합니다. 새에 대 한 자세한 내용은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 참조 하세요 [Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)합니다.
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|

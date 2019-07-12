@@ -1,20 +1,21 @@
 ---
-title: Linux의 SQL Server 데이터베이스 백업 및 복원 | Microsoft Docs
+title: Linux에서 SQL Server 데이터베이스를 백업 및 복원
 description: Linux의 SQL Server 데이터베이스 백업 및 복원 하는 방법에 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722afd669893dc4bfa9cad23a7c97cdef5cc182
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713350"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834200"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스를 백업 및 복원
 
@@ -107,7 +108,7 @@ SQL Server 데이터베이스 백업을 완료 합니다.
 
 1. SQL Server 데이터베이스를 복원합니다. 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 * [전체 데이터베이스 백업 (SQL Server) 만들기](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [트랜잭션 로그 (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

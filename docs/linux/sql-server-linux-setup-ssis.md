@@ -1,20 +1,20 @@
 ---
-title: Linux에서 SQL Server Integration Services 설치 | Microsoft Docs
+title: Linux에서 SQL Server Integration Services 설치
 description: 이 문서에서는 Linux의 SQL Server Integration Services (SSIS)를 설치 하는 방법을 설명 합니다.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e85755cd794f5c7f61f63579b65ed294ee4d893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c142b9b06e18acc3a97e6ae8b8fb7aa57a17ec1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705081"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834667"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux의 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -132,7 +132,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>무인된 설치에 대 한 환경 변수
 
-| 환경 변수 | Description |
+| 환경 변수 | 설명 |
 |---|---|
 | **ACCEPT_EULA** | 허용 값으로 설정 된 경우 SQL Server 사용권 계약 (예를 들어 `Y`).|
 | **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>제품 키<br/><br/>제품 키 제품 키를 지정 하는 경우 폼 묶어야 `#####-#####-#####-#####-#####`여기서 `#` 문자 또는 숫자입니다.  |

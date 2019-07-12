@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: SUSE Linux Enterprise Server (SLES) SQL Server에 대 한 가용성 그룹 클러스터를 만드는 방법 알아보기
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705600"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834395"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -143,7 +144,7 @@ Linux 서버에서 가용성 그룹을 구성 하 고 그런 다음 클러스터
 
 ## <a name="add-nodes-to-the-existing-cluster"></a>기존 클러스터에 노드 추가
 
-하나 이상의 노드를 사용 하 여 실행 하는 클러스터를 사용 하는 경우 ha 클러스터-가입 부트스트랩 스크립트를 사용 하 여 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 액세스 하 고 현재 컴퓨터의 기본 설치를 자동으로 완료 됩니다. 다음 단계를 사용 합니다.
+하나 이상의 노드를 사용 하 여 실행 하는 클러스터를 사용 하는 경우 ha 클러스터-가입 부트스트랩 스크립트를 사용 하 여 더 많은 클러스터 노드를 추가 합니다. 만 필요한 스크립트는 기존 클러스터 노드에 액세스 하 고 현재 컴퓨터의 기본 설치를 자동으로 완료 됩니다. 다음 단계를 사용합니다.
 
 사용 하 여 기존 클러스터 노드를 구성한 경우 합니다 `YaST` 모듈을 클러스터를 실행 하기 전에 다음 필수 조건이 충족 되는지 확인 `ha-cluster-join`:
 - 기존 노드에서 루트 사용자 암호 없는 로그인에 대 한 위치에 SSH 키 

@@ -1,20 +1,20 @@
 ---
-title: SQL Server 2017 및 2019에 대 한 Linux 리포지토리 구성 | Microsoft Docs
+title: SQL Server 2017 및 2019에 대 한 Linux 리포지토리 구성
 description: 확인 하 고 SQL Server 2019 및 Linux의 SQL Server 2017에 대 한 소스 리포지토리를 구성 합니다. 소스 리포지토리에 설치 및 업그레이드 하는 동안 적용 되는 SQL Server의 버전에 적용 됩니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713339"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834081"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
@@ -39,7 +39,7 @@ ms.locfileid: "66713339"
 
 Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 합니다. 이 리포지토리는 데이터베이스 엔진 패키지를 얻는 데 **mssql server**, 및 관련 SQL Server 패키지 있습니다. 현재 세 가지 주요 리포지토리는:
 
-| 리포지토리 | 이름 | Description |
+| 리포지토리 | 이름 | 설명 |
 |---|---|---|
 | **미리 보기 (2017)** | **mssql-server** | SQL Server 2017 CTP 및 RC 리포지토리 (중단). |
 | **미리 보기 (2019)** | **mssql-server-preview** | SQL Server 2019 미리 보기 및 RC 리포지토리입니다. |
@@ -50,7 +50,7 @@ Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 
 
 두 가지 유형인 각 배포 리포지토리는 두는 것이 반드시 합니다.
 
-- **누적 업데이트 (CU)**: CU (누적 업데이트) 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함합니다. 누적 업데이트 등 SQL Server 2017의 버전에 적용 됩니다. 이러한 일반 주기로 릴리스됩니다.
+- **누적 업데이트 (CU)** : CU (누적 업데이트) 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함합니다. 누적 업데이트 등 SQL Server 2017의 버전에 적용 됩니다. 이러한 일반 주기로 릴리스됩니다.
 
 - **GDR**: GDR 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및만 중요 한 수정 사항 및 보안 업데이트 패키지를 포함합니다. 이러한 업데이트는 다음 CU 릴리스에 추가 됩니다.
 

@@ -1,20 +1,21 @@
 ---
-title: VDI 백업 사양-Linux의 SQL Server | Microsoft Docs
+title: VDI 백업 사양-Linux의 SQL Server
 description: SQL Server 가상 백업 장치 인터페이스 사양입니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713463"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834195"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server Linux VDI 클라이언트 SDK 사양
 
@@ -65,7 +66,7 @@ Linux에서 POSIX 기본 형식 및 해당 기본 그룹을 만드는 사용자�
 - 함수 구문
 - 매개 변수 목록
 - 반환 값
-- Remarks
+- 설명
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 

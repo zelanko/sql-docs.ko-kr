@@ -1,21 +1,22 @@
 ---
-title: Linux에서 SQL Server 복제 구성 | Microsoft Docs
+title: Linux에서 SQL Server 복제 구성
 description: 이 문서에서는 Linux의 SQL Server 복제를 구성 하는 방법을 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c8dd4ef4898796722e1c54eeaff94afef1c0c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705338"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834787"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제 구성
 

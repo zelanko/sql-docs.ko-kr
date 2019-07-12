@@ -2,21 +2,21 @@
 title: Linux의 SQL Server에 대 한 active Directory 인증
 titleSuffix: SQL Server
 description: 이 문서에서는 Linux의 SQL Server에 대 한 Active Directory 인증 개요를 제공 합니다.
-author: rothja
 ms.date: 04/01/2019
-ms.author: jroth
-manager: craigg
+author: Dylan-MSFT
+ms.author: dygray
+ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 906dd961bcfbb7ea6d8868fdf6eb51cc7bc814aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713597"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834419"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 active Directory 인증
 

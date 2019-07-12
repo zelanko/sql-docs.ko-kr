@@ -1,20 +1,21 @@
 ---
-title: SQL Server에 대 한 SLES 공유 디스크 클러스터 구성 | Microsoft Docs
+title: SQL Server에 대 한 SLES 공유 디스크 클러스터 구성
 description: SQL Server 용 SUSE Linux Enterprise Server (SLES) 공유 디스크 클러스터를 구성 하 여 고가용성을 구현 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: e7f315e65702eab373430ede3adb23199f4edc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b65c2cca781dc077e72ff06fb7de5ae8ee2e8c5
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712847"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834653"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터 구성
 
@@ -260,6 +261,6 @@ crm resource
 migrate mssqlha SLES2
 ```
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 [SUSE Linux Enterprise 고가용성 확장-관리 가이드](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 

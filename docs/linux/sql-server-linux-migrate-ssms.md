@@ -1,20 +1,20 @@
 ---
-title: Linux에서 데이터베이스를 내보내고 | Microsoft Docs
+title: 내보내기 및 Linux에서 데이터베이스 가져오기
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: 428af4498fc45a32909e424aecc99b8f6fc3aadb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f676cf8c4ed6c5659074e422b3e01a6019e592e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705279"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834839"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>SSMS 또는 Windows에서 SqlPackage.exe를 사용 하 여 Linux에서 데이터베이스 가져오기 및 내보내기
 
@@ -80,5 +80,5 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 SSMS를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [사용 하 여 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)합니다. SqlPackage.exe에 대 한 자세한 내용은 참조는 [SqlPackage 참조 설명서](https://msdn.microsoft.com/library/hh550080.aspx)합니다.

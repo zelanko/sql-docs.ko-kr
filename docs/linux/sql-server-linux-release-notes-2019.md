@@ -1,20 +1,20 @@
 ---
-title: Linux에서 SQL Server 2019 미리 보기 릴리스 정보 | Microsoft Docs
+title: Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스 정보
 description: 이 문서에서는 Linux에서 실행 되는 SQL Server 2019 미리 보기에 대 한 지원 되는 기능과 릴리스 정보를 포함 합니다. 릴리스 정보는 가장 최신 릴리스 및 몇 가지 이전 릴리스를 포함합니다.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533839"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834823"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스 정보
 
@@ -25,7 +25,7 @@ ms.locfileid: "67533839"
 > [!TIP]
 > SQL Server 2019의 새로운 Linux 기능을 알아보려면 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux)합니다.
 
-## <a name="supported-platforms"></a>지원 플랫폼
+## <a name="supported-platforms"></a>지원되는 플랫폼
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|

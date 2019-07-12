@@ -1,20 +1,20 @@
 ---
-title: Linux에서 SQL Server의 성능 기능을 사용 하 여 시작 | Microsoft Docs
+title: Linux에서 SQL Server의 성능 기능 시작
 description: 이 문서에서는 SQL Server에 새 Linux 사용자에 게 SQL Server 성능 기능 소개를 제공 합니다. 모든 플랫폼에서 작동 하는 다양 한 이러한 예제 이지만이 문서의 컨텍스트에서 Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713325"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834827"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 성능 기능에 대 한 연습
 
@@ -158,7 +158,7 @@ SQL Server 메모리 액세스에 최적화 된 테이블에 액세스 하는 �
 ### <a name="learn-more-about-in-memory-oltp"></a>메모리 내 OLTP에 자세히 알아보기
 메모리 내 OLTP에 대 한 자세한 내용은 다음 항목을 참조 하세요.
 
-- [빠른 시작 1: 더 빠른 TRANSACT-SQL 성능 위한 메모리 내 OLTP 기술](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [메모리 내 OLTP로 마이그레이션](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [메모리 사용량 모니터링 및 문제 해결](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
