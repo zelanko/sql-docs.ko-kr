@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530584"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866267"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|단계의 고유 식별자입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
@@ -81,13 +81,13 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|예약되어 있습니다.|  
 |**output_file_name**|**nvarchar(200)**|출력 기록 되어야 하는 명령 파일 ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, 및 **PowerShell** 단계에 적용).|  
 |**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = Retry<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
-|**last_run_duration**|**int**|단계를 마지막으로 실행했을 때의 기간(초)입니다.|  
+|**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|단계를 마지막으로 실행했을 때 명령을 재시도할 횟수입니다.|  
 |**last_run_date**|**int**|단계가 마지막으로 실행을 시작했을 때의 날짜입니다.|  
 |**last_run_time**|**int**|단계가 마지막으로 실행을 시작했을 때의 시간입니다.|  
 |**proxy_id**|**int**|작업 단계에 대한 프록시입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_jobstep** 에 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -105,7 +105,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>1. 특정 작업의 모든 단계에 관한 정보 반환  
+### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>1\. 특정 작업의 모든 단계에 관한 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업의 모든 작업 단계를 반환합니다.  
   
 ```  
@@ -117,7 +117,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-### <a name="b-return-information-about-a-specific-job-step"></a>2. 특정 작업 단계에 관한 정보 반환  
+### <a name="b-return-information-about-a-specific-job-step"></a>2\. 특정 작업 단계에 관한 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업의 첫 번째 작업 단계에 대한 정보를 반환합니다.  
   
 ```  
