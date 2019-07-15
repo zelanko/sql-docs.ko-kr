@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 38f4f27f87208614c5779cdecb070da3043b0472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 9b9bd1972dd86ddde4d58b66fb88b9a38a721c0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105187"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688523"
 ---
 # <a name="customize-commands-page"></a>사용자 지정(명령 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

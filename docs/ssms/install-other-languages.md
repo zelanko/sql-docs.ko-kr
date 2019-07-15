@@ -7,15 +7,15 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 43b7135881d6c4b7917725771426a1180e5ab7e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec728563c80965acbc922505ffa925d9932ef685
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500270"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680248"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c576d4adb09ee1bd50c23c29d490cb15c829744f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06ca642ac496897eeb4d9eeea5eaa2bfcb6470df
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096590"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687859"
 ---
 # <a name="delete-one-or-more-jobs"></a>하나 이상의 작업 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

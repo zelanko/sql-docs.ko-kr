@@ -2,18 +2,18 @@
 title: PolyBase를 사용한 형식 매핑 | Microsoft Docs
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 490b00717d16e4ca101ea591c22e71a2d228e659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67ecc3a75da04849d6b23d0b07f6e650c2825b0b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731795"
 ---
 # <a name="type-mapping-with-polybase"></a>PolyBase를 사용한 형식 매핑
 
@@ -36,7 +36,7 @@ PolyBase로 외부 테이블을 만들 때 데이터 형식 및 열 수를 포�
 | ------------- | ------------------------- | -------------- | --------------------- | ------------------------------ |
 | TINYINT       | Byte                      | TINYINT        | ByteWritable          | 부호 없는 숫자의 경우만.     |
 | SMALLINT      | Int16                     | SMALLINT       | ShortWritable         |
-| ssNoversion           | Int32                     | ssNoversion            | IntWritable           |
+| int           | Int32                     | int            | IntWritable           |
 | BIGINT        | Int64                     | BIGINT         | LongWritable          |
 | bit           | Boolean                   | boolean        | BooleanWritable       |
 | FLOAT         | Double                    | double         | DoubleWritable        |

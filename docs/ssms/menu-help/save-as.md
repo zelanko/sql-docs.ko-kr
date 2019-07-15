@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c9a1ab29b09722882394e323d63666eb1b1b7fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 0bb404256c0cc8b36005eb071be573e01cab599b
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106317"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682639"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

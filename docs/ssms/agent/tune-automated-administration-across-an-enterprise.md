@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1df873096698a1101fadf401904b9cefb367b9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 671b2e98cf9e9969af68612d75af97bb17984c99
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089337"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681421"
 ---
 # <a name="tune-automated-administration-across-an-enterprise"></a>기업 내의 자동화된 관리 튜닝
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

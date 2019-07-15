@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1940edae255d84d55a879479ef94cb14e87360a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e3f780017ca9894e4372b0286dda8856324f977d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104297"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683925"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>등록된 서버 제거(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
