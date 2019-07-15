@@ -46,7 +46,7 @@ ms.locfileid: "63243373"
 
 |                                   | 모든 서버 개체와 VNN 필요 | 모든 서버 개체와 VNN 필요 | 서버 개체/VNN이 필요하지 않음\* | 서버 개체/VNN이 필요하지 않음\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_가용성 그룹? (예/아니요)_ **                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
+| **_가용성 그룹? (예/아니요_)**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **클러스터에서 SQL FCI만 사용**         | [시나리오 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [시나리오 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [시나리오 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [시나리오 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [시나리오 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [시나리오 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
