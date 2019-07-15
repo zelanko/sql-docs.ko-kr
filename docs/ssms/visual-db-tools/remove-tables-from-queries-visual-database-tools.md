@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 05484ea82d0bb29f7e8822966224e850500e2756
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 6e7546f57fa03e75dcd09cc90db4c1b656f7e018
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095578"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679487"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>쿼리에서 테이블 제거(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "65095578"
   
     -또는-  
   
--    **SQL 창**에서 개체에 대한 모든 참조를 제거합니다.  
+-   **SQL 창**에서 개체에 대한 모든 참조를 제거합니다.  
   
 테이블이나 테이블 반환 개체를 제거할 때 쿼리 및 뷰 디자이너에서는 해당 테이블이나 테이블 반환 개체가 관련된 조인을 자동으로 제거하고 **SQL 창** 과 **조건 창**에서 개체의 열에 대한 참조를 제거합니다. 그러나 해당 개체가 관련된 복합 식이 쿼리에 포함되어 있으면 개체가 자동으로 제거되지 않습니다. 이 경우 개체를 제거하려면 해당 개체에 대한 모든 참조를 제거해야 합니다.  
   

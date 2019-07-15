@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100758"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728077"
 ---
 # <a name="sqllogship-application"></a>sqllogship 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 애플리케이션인 SqlLogShip.exe는 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 디렉터리에 설치됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sqllogship** 은 Windows 인증을 사용합니다. 명령이 실행될 Windows 인증 계정에는 Windows 디렉터리 액세스 권한 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 권한이 필요합니다. 요구 사항은 **sqllogship** 명령이 **-backup**, **-copy**또는 **-restore** 옵션을 지정하는지에 따라 다릅니다.  
   
-|옵션|디렉터리 액세스 권한|Permissions|  
+|옵션|디렉터리 액세스 권한|사용 권한|  
 |------------|----------------------|-----------------|  
 |**-backup**|백업 디렉터리에 대한 읽기/쓰기 권한이 필요합니다.|BACKUP 문과 같은 권한이 필요합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)을 참조하세요.|  
 |**-copy**|백업 디렉터리에 대한 읽기 권한과 복사 디렉터리에 대한 쓰기 권한이 필요합니다.|[sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 저장 프로시저와 같은 권한이 필요합니다.|  

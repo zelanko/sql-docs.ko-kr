@@ -23,27 +23,27 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 549b08a7237492064cc6cf50470521ce3be804ee
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439895"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729734"
 ---
-# <a name="sql-server-profiler"></a>SQL Server 프로파일러
+# <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
   
 > [!IMPORTANT]
-> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 사용 되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
+> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 확장 이벤트를 대신 사용하세요. 대 한 자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조 하세요 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 하 고 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)합니다.
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Analysis Services 작업에는 되지 않으며, 계속 지원 됩니다.
+> Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
 
  ## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
  
@@ -58,8 +58,8 @@ ms.locfileid: "52439895"
 |**추적 캡처**|[확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
-## <a name="sql-server-profiler"></a>SQL Server 프로파일러  
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]은 다음과 같은 작업에 사용됩니다.  
+## <a name="sql-server-profiler"></a>SQL Server Profiler  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 다음과 같은 작업에 사용됩니다.  
   
 -   문제가 발생한 원인을 찾기 위해 문제 쿼리 실행  
   

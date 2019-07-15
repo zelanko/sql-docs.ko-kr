@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a469266b493e1da741738984c1f99b2c1f755699
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 4441e281c207d94a062da45967a1724221977a56
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095680"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683298"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

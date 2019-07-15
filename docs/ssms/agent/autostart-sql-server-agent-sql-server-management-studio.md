@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 96867c41a5423cf15a72585ad6213b52c5d4f868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 646a6f33bbde9b81b4f30dfb1157a720b6b65eb2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65100281"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688838"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5a777892097f2e53befe32f9ad44961534fcfefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3a588fdc285a3a882b654ee86e8238f04bda5baf
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105029"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689887"
 ---
 # <a name="create-a-new-solution"></a>새 솔루션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

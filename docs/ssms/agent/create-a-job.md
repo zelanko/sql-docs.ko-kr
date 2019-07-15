@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 993debfc18e7722e517e07b42e335aa7f4f29457
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9cbe3418e783a936893d40974cae013daa41cce
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095604"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682450"
 ---
 # <a name="create-a-job"></a>작업 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

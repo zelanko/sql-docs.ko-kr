@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b999b7a06f07df346f9fd38f8118913321d893fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b3f9dc320e6ac2a74700abd36a9e5bdc2af0e94
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095551"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681206"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

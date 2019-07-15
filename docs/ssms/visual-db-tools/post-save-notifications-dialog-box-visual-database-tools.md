@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0304fa200ad3da5f7100b694653d5571abb32979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 00f32f0ef4f037d92fbf6848b88495609275bca9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098402"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680887"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

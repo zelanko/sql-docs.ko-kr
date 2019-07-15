@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3b6ea4040b7f6126cc5b8582eefa332d28a8f1b7
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095650"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682478"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

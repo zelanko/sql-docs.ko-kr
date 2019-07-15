@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6416bc03407e1256a12116fd5d837b00a570ee43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f6cb262c611c16bfea052b8151fb27d9bc37fa02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095232"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681029"
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

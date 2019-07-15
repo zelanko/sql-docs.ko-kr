@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75cfa4ee4a51e1113537d677c47104be215b6b7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 72eb437cf92f0a9b6271e3c609a58af204e89eee
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096629"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682209"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

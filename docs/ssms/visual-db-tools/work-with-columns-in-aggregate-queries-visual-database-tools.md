@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a5c8d11835de375adc6994edb0c26ac0991afc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1f6929ff23ab9c1f75d683f79b08d632611e7f66
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104950"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689221"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

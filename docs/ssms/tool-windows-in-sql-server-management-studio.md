@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 656eb21e7b6ebb1d263bd42df0b2fc97ae457373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e89faa976798cb1242d8b813ffa6fe5baf8fbcdc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102676"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687214"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 도구 창
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

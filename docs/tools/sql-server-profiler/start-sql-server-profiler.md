@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Profiler, running
 - running SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ef08bcecf3bf5478a8e6d076f8bed0d25e91754
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3ccffd3ad298d6c9a6bacca3e060d4fc7a5ed24
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012974"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729681"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

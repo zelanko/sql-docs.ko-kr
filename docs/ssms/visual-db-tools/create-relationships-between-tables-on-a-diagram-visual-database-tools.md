@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a6722dcbc9f9052803ef32a3b1bdb75a9e06de31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 8e62bf6708674185c5afe9a0f527058e5075d9e0
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090020"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690521"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

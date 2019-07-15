@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c71c3bea45a89350f4532b4a801a02fc3cfd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 055fc49fe02b1fe17e9140e391f3c790fb74108f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821823"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679714"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

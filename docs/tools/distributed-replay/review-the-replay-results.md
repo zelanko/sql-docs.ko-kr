@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a491f61544e89883a46632aca17c80d8f883dee8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729334"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ ms.locfileid: "62715668"
 |TextData|**ntext**|TextData의 내용은 EventClass에 따라 달라집니다.<br /><br /> Audit Login 및 ExistingConnection의 경우 연결에 대한 집합 옵션입니다.<br /><br /> SQL:BatchStarting의 경우 일괄 처리 요청의 본문입니다.<br /><br /> RPC:Starting의 경우 호출된 저장 프로시저입니다.<br /><br /> Replay Settings Event의 경우 재생 구성 파일에 정의된 설정이 이 열에 포함됩니다.<br /><br /> Replay Statistics Event의 경우 이 열에 다음 정보가 포함됩니다.<br /><br /> -재생 대상 SQL Server<br /><br /> -재생된 총 이벤트 수<br /><br /> -공급자 오류 수<br /><br /> -내부 오류 수<br /><br /> -내부 경고 수<br /><br /> -총 오류 수<br /><br /> -전체 통과율<br /><br /> -재생 시간(HH:MM:SS:MMM)<br /><br /> Replay Result Set Event의 경우 반환 결과의 열 머리글 목록을 보여 줍니다.<br /><br /> Replay Result Row Event의 경우 해당 행에 대한 모든 열의 반환 값을 보여 줍니다.<br /><br /> Replay Internal Warning 및 Replay Provider Error의 경우 공급자 경고나 오류가 이 열에 포함됩니다.|4|  
 |Attention|**bigint**|이벤트의 주의 기간(마이크로초)입니다. 이 값은 캡처 추적의 Attention 이벤트에서 계산됩니다. 이벤트에 대해 쿼리 제한 시간이 지정되어 있지 않으면 이 열이 채워지지 않습니다(Null).|5|  
 |SubmitTime|**datetime**|이벤트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전송된 시간입니다.|6|  
-|IsSuccessful|**ssNoversion**|특정 이벤트가 성공적으로 실행되었는지 여부 및 결과 집합이 클라이언트 쪽에 반환되었는지 여부를 나타내는 부울 플래그입니다.<br /><br /> 경고를 생성하는 이벤트(예: Attention 또는 사용자가 지정한 제한 시간으로 인해 이벤트가 취소되는 경우)는 성공한 것으로 간주됩니다.<br /><br /> IsSuccessful은 다음 중 하나일 수 있습니다.<br /><br /> 1 = 성공<br /><br /> 0 = 실패|7|  
+|IsSuccessful|**int**|특정 이벤트가 성공적으로 실행되었는지 여부 및 결과 집합이 클라이언트 쪽에 반환되었는지 여부를 나타내는 부울 플래그입니다.<br /><br /> 경고를 생성하는 이벤트(예: Attention 또는 사용자가 지정한 제한 시간으로 인해 이벤트가 취소되는 경우)는 성공한 것으로 간주됩니다.<br /><br /> IsSuccessful은 다음 중 하나일 수 있습니다.<br /><br /> 1 = 성공<br /><br /> 0 = 실패|7|  
 |Duration [microsec]|**bigint**|이벤트의 응답 기간(마이크로초)입니다. 측정은 logon/log off/RPC/Language 이벤트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송될 때 시작됩니다.<br /><br /> 이벤트가 이어지는 경우 전체 결과 집합이 모두 사용되었을 때 측정이 끝납니다.<br /><br /> 이벤트가 이어지지 않는 경우 이벤트가 실패하거나 취소될 때 측정이 끝납니다.|8|  
 |RowCount|**bigint**|재생 구성 파일의 `<RecordRowCount>` 값에 따라 채워집니다.<br /><br /> `<RecordRowCount>` 가 Yes이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 반환한 결과 집합의 행 수가 이 셀에 포함됩니다.<br /><br /> `<RecordRowCount>` 가 No이면 이 셀이 채워지지 않습니다(Null).|9|  
-|CaptureSPID|**ssNoversion**|이벤트 캡처 세션의 ID입니다.|10|  
-|ConnectionID|**ssNoversion**|이벤트 캡처 연결의 ID입니다.|11|  
-|ReplaySPID|**ssNoversion**|이벤트 재생 세션의 ID입니다.|12|  
+|CaptureSPID|**int**|이벤트 캡처 세션의 ID입니다.|10|  
+|ConnectionID|**int**|이벤트 캡처 연결의 ID입니다.|11|  
+|ReplaySPID|**int**|이벤트 재생 세션의 ID입니다.|12|  
 |DatabaseName|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|13|  
 |LoginName|**nvarchar**|사용자 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] domain_name *user_name*\\*형식의 Microsoft Windows 로그인 자격 증명 또는*보안 로그인일 수 있습니다.|14|  
 |CaptureHostName|**nvarchar**|캡처하는 동안 클라이언트 서비스를 실행 중인 컴퓨터의 이름입니다.|15|  

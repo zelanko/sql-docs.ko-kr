@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c7f65ad3957280953faa58792ea39e48ce16f20e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e13b9a9729072b0e53d03cf6ecdf3913c2122483
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089713"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681648"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

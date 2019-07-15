@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 601f077b8ebeb5971526c6f9f25978e09078fb83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 5abf4fb0713e96dde95d8ac0a1be390e6bcc9b3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099468"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686528"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>다이어그램에 테이블 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

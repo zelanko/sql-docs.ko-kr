@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2a7e8f97feb6823df6f72ff62bc5b1ecf585bb56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 367741f6c4bf5f824b0245e9dbcf3ad3762d204f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096847"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686951"
 ---
 # <a name="job-categories---manage-job-categories"></a>작업 범주 - 작업 범주 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
