@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e126769f0dbaa149915553b425bb79d0fb04d59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b889f2a3b318862b504101c1fbdb01f582a75078
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105208"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690258"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>옵션(디자이너 - 유지 관리 계획 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

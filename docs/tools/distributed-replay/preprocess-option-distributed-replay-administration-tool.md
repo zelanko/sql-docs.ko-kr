@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad198e96c24431ab51f0ab89517530598bfb1ced
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7cebe288fe7400c671bfb45833e5a7c6399c192f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729398"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>전처리 옵션(Distributed Replay Utility Administration Tool)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ dreplay preprocess [-m controller] -i input_trace_file
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들어  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  
@@ -100,7 +100,7 @@ dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  관리 도구는 로컬 사용자 또는 도메인 사용자 등의 대화형 사용자 계정으로 실행해야 합니다. 로컬 사용자 계정을 사용하려면 관리 도구와 컨트롤러가 동일한 컴퓨터에서 실행되고 있어야 합니다.  
   
  자세한 내용은 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)을 참조하세요.  

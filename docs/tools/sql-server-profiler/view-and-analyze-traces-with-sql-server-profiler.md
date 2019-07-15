@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c299b42cd29d0e52ba6996e787a9e8ffc0c19718
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a12d2eb4cc55ad815b47442f3bba7840c292b35e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827891"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729591"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 추적 보기 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47827891"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적을 열 때 추적 파일이 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 또는 SQL 추적 시스템 저장 프로시저로 생성된 경우 추적 파일에 .trc 파일 확장명이 없어도 됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 SQL 추적 .log 파일 및 일반 SQL 스크립트 파일도 읽을 수 있습니다. trace.txt와 같이 .log 파일 확장명을 가지지 않은 SQL 추적 .log 파일을 열 때는 **SQLTrace_Log** 를 파일 형식으로 지정하세요.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 SQL 추적 .log 파일 및 일반 SQL 스크립트 파일도 읽을 수 있습니다. trace.txt와 같이 .log 파일 확장명을 가지지 않은 SQL 추적 .log 파일을 열 때는 **SQLTrace_Log** 를 파일 형식으로 지정하세요.  
   
  추적 분석에 유용한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 날짜 및 시간 표시 형식을 구성하여 추적 분석을 도울 수 있습니다.  
   

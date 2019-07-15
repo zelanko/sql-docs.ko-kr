@@ -13,19 +13,19 @@ helpviewer_keywords:
 - SQL Server Agent, starting
 - command prompt utilities [SQL Server], sqlagent90
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 25758924ace9a03da1e885e0af637262e80cde2a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 904380b39faa1a520294487e80a632e0761cfde5
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670132"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729568"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **sqlagent90** 응용 프로그램을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작할 수 있습니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 애플리케이션에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  
+  **sqlagent90** 애플리케이션을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작할 수 있습니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 애플리케이션에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ sqlagent90
   
 ## <a name="arguments"></a>인수  
  **-c**  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 명령 프롬프트에서 실행되고 Microsoft Windows 서비스 제어 관리자와 관계 없음을 나타냅니다. **-c** 를 사용하면 관리 도구의 서비스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 제어할 수 없습니다. 이 인수는 필수입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 명령 프롬프트에서 실행되고 Microsoft Windows 서비스 제어 관리자와 관계 없음을 나타냅니다. **-c** 를 사용하면 관리 도구의 서비스 애플리케이션 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 제어할 수 없습니다. 이 인수는 필수입니다.  
   
  **-v**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 자세한 정보 표시 모드로 실행하며 명령 프롬프트 창에 진단 정보를 기록합니다. 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 오류 로그에 기록되는 정보와 같습니다.  

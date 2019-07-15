@@ -2,8 +2,6 @@
 title: PolyBase란? | Microsoft Docs
 ms.date: 06/10/2019
 ms.prod: sql
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: polybase
 ms.topic: overview
 f1_keywords:
@@ -16,16 +14,17 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: 4cea1e73dc2bc19add94a24c7a4f504c4d9e1224
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d1c2cb27a2046f95ee250f16016488d30aa7929
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836329"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730305"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 

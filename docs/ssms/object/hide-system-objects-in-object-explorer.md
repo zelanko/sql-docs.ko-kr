@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c01d8804-838c-4f75-b78c-80e41e4fffdc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b36198aba754f8424e29ba529fe936516213cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 14e86dd976b86e61f7789d176998f9df0d70b47f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102921"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689995"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체 숨기기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

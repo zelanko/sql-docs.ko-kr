@@ -7,13 +7,13 @@ ms.technology: ssms
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 582267d58a3e1ac87d64f52727bab7977882bb0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 2f0a49af4e808c24530ce1eac4d01594044d58b5
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102733"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682657"
 ---
 # <a name="options-environment---startup-page"></a>옵션(환경-시작 페이지)
 

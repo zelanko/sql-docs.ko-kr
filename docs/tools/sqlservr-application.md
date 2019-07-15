@@ -20,19 +20,19 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656913"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733361"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-   **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
+  **sqlservr** 애플리케이션은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,7 +48,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 명명된 인스턴스를 지정하지 않으면 **sqlservr** 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 인스턴스를 시작합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 때는 해당 인스턴스에 적합한 디렉터리에 있는 **sqlservr** 응용 프로그램을 사용해야 합니다. 기본 인스턴스의 경우 \MSSQL\Binn 디렉터리에서 **sqlservr** 을 실행합니다. 명명된 인스턴스의 경우 \MSSQL$ **instance_name** \Binn 디렉터리에서*sqlservr*을 실행합니다.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 때는 해당 인스턴스에 적합한 디렉터리에 있는 **sqlservr** 애플리케이션을 사용해야 합니다. 기본 인스턴스의 경우 \MSSQL\Binn 디렉터리에서 **sqlservr** 을 실행합니다. 명명된 인스턴스의 경우 \MSSQL$ **instance_name** \Binn 디렉터리에서*sqlservr*을 실행합니다.  
   
  **-c**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 Windows 서비스 제어 관리자와 별개로 시작됨을 나타냅니다. 이 옵션을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 시작하기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 시작하는 데 걸리는 시간을 줄일 수 있습니다.  
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.  
   
  **-e** *error_log_path*  
- 오류 로그 파일의 정규화된 경로를 나타냅니다. 이 옵션을 지정하지 않으면 기본 위치는 기본 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog이고 명명된 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
+ 오류 로그 파일의 정규화된 경로를 나타냅니다. 이 옵션을 지정하지 않으면 기본 위치는 기본 인스턴스의 경우 *\<Drive>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog이고 명명된 인스턴스의 경우 *\<Drive>* :\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
   
  **-l** *master_log_path*  
  **master** 데이터베이스 트랜잭션 로그 파일의 정규화된 경로를 나타냅니다. **-l** 와 *master_log_path*사이에 공백이 없어야 합니다.  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  
   
  **-T** *trace#*  
- 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
+ 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  추적 플래그를 지정할 때는 **-T**를 사용하여 추적 플래그 번호를 전달합니다. **에서 소문자 t(**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])를 사용할 수는 있습니다. 그러나 **-t** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지원 엔지니어에게 필요한 다른 내부 추적 플래그를 설정합니다.  
+>  추적 플래그를 지정할 때는 **-T**를 사용하여 추적 플래그 번호를 전달합니다. **에서 소문자 t(** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])를 사용할 수는 있습니다. 그러나 **-t** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지원 엔지니어에게 필요한 다른 내부 추적 플래그를 설정합니다.  
   
  **-v**  
  서버 버전 번호를 표시합니다.  

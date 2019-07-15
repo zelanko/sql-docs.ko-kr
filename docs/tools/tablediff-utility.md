@@ -16,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5a8612dc30a39a033d32daac158799fb3868ae65
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128513"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733538"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,8 +81,8 @@ tablediff
  [ **-?** ]  
  지원되는 매개 변수 목록을 반환합니다.  
   
- **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
- 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ 원본 서버의 이름입니다. *의 기본 인스턴스에 대해* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_ **\\** _source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   
  **-sourcedatabase** _source_database_  
  원본 데이터베이스의 이름입니다.  
@@ -105,8 +105,8 @@ tablediff
  **-sourcelocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
- **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. _의 명명된 인스턴스에 대해_ **\\** _destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다.  
   
  **-destinationdatabase** _subscription_database_  
  대상 데이터베이스의 이름입니다.  
@@ -130,7 +130,7 @@ tablediff
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 대상 테이블이 잠깁니다.  
   
  **-b** _large_object_bytes_  
- 큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. 이 데이터 형식에는 **text**, **ntext**, **이미지**, **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 가 포함됩니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
+ 큰 개체 데이터 형식 열에 대해 비교할 바이트 수입니다. 이 데이터 형식에는 **text**, **ntext**, **이미지**, **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 가 포함됩니다. *large_object_bytes* 는 기본적으로 열 크기로 설정됩니다. *large_object_bytes* 에 지정한 바이트 수를 초과하는 데이터는 비교되지 않습니다.  
   
  **-bf**  _number_of_statements_  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
@@ -215,7 +215,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  테이블을 비교하려면 비교할 테이블 개체에 대한 SELECT ALL 권한이 있어야 합니다.  
   
  **-et** 옵션을 사용하려면 db_owner 고정 데이터베이스 역할의 멤버이거나 적어도 구독 데이터베이스에 대한 CREATE TABLE 권한과 대상 서버의 대상 소유자 스키마에 대한 ALTER 권한이 있어야 합니다.  

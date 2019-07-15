@@ -11,16 +11,16 @@ helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
-ms.translationtype: HT
+ms.openlocfilehash: 1d5d24c9a1fa4527ca199d649318c0c927a9c821
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732058"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,9 +72,9 @@ sqlps
  실행할 PowerShell 명령 블록을 지정합니다. 명령 블록은 중괄호 {}로 묶어야 합니다. *Script_block* 은 **sqlps** 유틸리티가 **PowerShell** 또는 다른 **sqlps** 유틸리티 세션에서 호출된 경우에만 지정할 수 있습니다. *argument_array* 는 *script_block*의 PowerShell 명령에 대한 인수를 포함하는 PowerShell 변수 배열입니다.  
   
  *string* [ *command_parameters* ]  
- 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. **"&{**_command_**}"** 형식을 사용합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
+ 실행할 PowerShell 명령을 포함하는 문자열을 지정합니다. **"&{** _command_ **}"** 형식을 사용합니다. 큰따옴표는 문자열을 나타내며 호출 연산자(&)는 **sqlps** 유틸리티가 명령을 실행하도록 합니다.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  **sqlps** 유틸리티 옵션의 구문 요약 정보를 표시합니다.  
   
 ## <a name="remarks"></a>Remarks  

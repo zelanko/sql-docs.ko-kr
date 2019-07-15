@@ -9041,11 +9041,13 @@
             - name: 영어 이외의 SSMS 설치
               href: ssms/install-other-languages.md
             - name: SSMS의 템플릿 사용
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: 스크립트 개체
               href: ssms/tutorials/scripting-ssms.md
             - name: SSMS 구성
               href: ssms/tutorials/ssms-configuration.md
+            - name: 다른 팁 및 트릭 사용
+              href: ssms/tutorials/ssms-tricks.md
             - name: 메뉴 및 바로 가기 키 사용자 지정
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: WMI를 구성하여 SQL Server 도구에 서버 상태 표시
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: 리소스
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: SSMS 지원 정책
               href: ssms/support-policy.md
             - name: 비즈니스 사용자에 대한 지원 옵션
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: 자습서
       items:
-        - name: 1_Windows에서 마이그레이션
+        - name: Windows에서 마이그레이션
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 2_Docker로 마이그레이션
+        - name: Docker로 마이그레이션
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_작업 만들기
+        - name: 작업 만들기
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 4_AD 인증 설정
+        - name: AD 인증 설정
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 5_장애 조치(Failover) 클러스터 인스턴스 만들기
+        - name: 장애 조치(Failover) 클러스터 인스턴스 만들기
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 6_장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
+        - name: 장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_Pacemaker 클러스터 배포
+        - name: Pacemaker 클러스터 배포
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_가용성 그룹 생성 및 구성
+        - name: 가용성 그룹 생성 및 구성
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_Kubernetes에서 배포
+        - name: Kubernetes에서 배포
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_복제 구성
+        - name: 복제 구성
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: 컨테이너에서 기계 학습
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: 개념
       items:
         - name: 설치

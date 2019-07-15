@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 35ce645577ca276f4f5ec6a5792d27859369a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 53a414f189479f5f9c965729c27e32ea9e052a39
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102764"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690011"
 ---
 # <a name="delete-objects"></a>개체 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

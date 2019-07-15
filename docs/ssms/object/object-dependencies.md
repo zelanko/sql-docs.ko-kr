@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d78edce14b7e88648ce134c2bb3d7def7003f516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f5b0e56972485cb14597dfdffc4a1e9e53935105
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102978"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689972"
 ---
 # <a name="object-dependencies"></a>개체 종속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
