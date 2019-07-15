@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73130efac268afb0d80cf144fb3f2bbcbe5efeba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: fc1335fce17eaf3f51f3a33a00e386782f801acd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099262"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679284"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

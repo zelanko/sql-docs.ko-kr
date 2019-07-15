@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 850d349760d28d57b7ffe14eb3791cd038be2c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3985b9afb8c461f1a74b93ea86111b923f0f86be
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099923"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679287"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 선택한 테이블 저장(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

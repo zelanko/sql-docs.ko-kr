@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 666e492aa507e3a4ba79e1905eddc9885b12ec1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 52803db358a4a43ec7b5dc9064f940247f9515a2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099451"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686565"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>테이블 추가 대화 상자(데이터베이스 디자이너)(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

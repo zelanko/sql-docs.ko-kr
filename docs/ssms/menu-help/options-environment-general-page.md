@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 417b3203cc6e09f3918e2156ac6f676cad381368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 507eff6484b11ff978e56450b9504f441af85670
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104450"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682678"
 ---
 # <a name="options-environment---general-page"></a>옵션(환경 - 일반 페이지)
 

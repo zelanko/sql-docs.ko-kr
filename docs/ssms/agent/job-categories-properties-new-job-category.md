@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac9ce3c3def4341fd653d7e4c750890c58a77c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e307373645e5ac41fb5e4e39601f73abf855a2d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096849"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686931"
 ---
 # <a name="job-categories-properties---new-job-category"></a>작업 범주 속성 - 새 작업 범주
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

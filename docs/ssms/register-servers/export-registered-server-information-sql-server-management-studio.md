@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9d1a853c5469fc30ef9545c0a062fdd1933f5c9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b737566d1584bc08210ba6df400951cea638e8ee
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104408"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683974"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 내보내기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "65104408"
      서버 그룹은 현재 등록된 서버 트리의 서버 그룹만 표시합니다.  
   
      **내보낼 파일**  
-     입력란에 내보낼 파일 이름을 입력하거나 찾아보기 단추(**...**)를 사용하여 클라이언트 컴퓨터에서 내보낼 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. .regsrvr 확장명을 사용합니다. 등록된 서버 정보를 다른 사용자나 컴퓨터도 사용할 수 있게 하려면 네트워크에 해당 파일을 저장하면 됩니다. 다른 사용자는 해당 파일에 액세스하여 등록된 서버 정보의 일부 또는 전체를 가져올 수 있습니다. 파일을 내보낼 때 기존 파일을 선택하면 파일 내용을 새 서버 등록 정보로 덮어씁니다.  
+     입력란에 내보낼 파일 이름을 입력하거나 찾아보기 단추( **...** )를 사용하여 클라이언트 컴퓨터에서 내보낼 파일을 찾습니다. 기존 파일을 선택하면 등록된 서버 정보가 파일에 추가됩니다. .regsrvr 확장명을 사용합니다. 등록된 서버 정보를 다른 사용자나 컴퓨터도 사용할 수 있게 하려면 네트워크에 해당 파일을 저장하면 됩니다. 다른 사용자는 해당 파일에 액세스하여 등록된 서버 정보의 일부 또는 전체를 가져올 수 있습니다. 파일을 내보낼 때 기존 파일을 선택하면 파일 내용을 새 서버 등록 정보로 덮어씁니다.  
   
      **파일 내보내기에 사용자 이름 및 암호 포함 안 함**  
      파일을 내보낼 때 사용자 이름을 제외합니다.  

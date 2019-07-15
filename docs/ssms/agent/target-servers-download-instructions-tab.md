@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 15341e02e6e34f82470d3cf687884023f36adacd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 498e7a5fbf892d622b814b0350e9a8f38d6e78f1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089403"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681441"
 ---
 # <a name="target-servers-download-instructions-tab"></a>대상 서버(다운로드 명령 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

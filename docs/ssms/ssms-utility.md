@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d740d7bd8eeb2a273e74053f76dd98a1a77f0975
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102617"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688494"
 ---
 # <a name="ssms-utility"></a>Ssms 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

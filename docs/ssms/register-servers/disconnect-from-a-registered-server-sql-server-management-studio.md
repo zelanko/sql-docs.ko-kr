@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 748892527caa3e943c2b7c067184cc31d99935d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 29fdd586004d866c3f662f69777510931359b135
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105020"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681638"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>등록된 서버에서 연결 끊기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85125ef01d299c34081578bd38eb6ac3fdb328a4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 74f0746d3b69183702ef2a9d0609c39e25b28e95
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582715"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860478"
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "67582715"
   
 1.  **에이전트 프로필** 대화 상자에 둘 이상의 에이전트에 대한 프로필이 표시되면 에이전트를 선택합니다.  
   
-2.  프로필 옆에 있는 속성 단추( **?** )를 클릭합니다.  
+2.  프로필 옆에 있는 속성 단추( **...** )를 클릭합니다.  
   
 3.  **\<ProfileName> 프로필 속성** 대화 상자에서 매개 변수 및 값을 봅니다.  
   
