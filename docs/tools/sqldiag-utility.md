@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100948"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728108"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sqldiag
  **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
  구성 파일에 지정된 컴퓨터를 재정의합니다. 기본적으로 구성 파일은 SQLDiag.Xml이거나 **/I** 매개 변수를 사용하여 설정됩니다. 둘 이상의 컴퓨터를 지정할 경우 각 컴퓨터 이름을 공백으로 구분하십시오.  
   
- *@machinelistfile*을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
+ *@machinelistfile* 을 사용하면 구성 파일에 저장할 컴퓨터 목록 파일 이름이 지정됩니다.  
   
  **/C** _file_compression_type_  
  **SQLdiag** 출력 폴더 파일에서 사용되는 파일 압축 유형을 설정합니다. 사용 가능한 옵션은 다음과 같습니다.  
@@ -125,7 +125,7 @@ sqldiag
   
  1 = NTFS 압축을 사용합니다.  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  진단 데이터 수집 시작 날짜와 시간을 다음 형식으로 지정합니다.  
   
  YYYYMMDD_HH:MM:SS  
@@ -140,7 +140,7 @@ sqldiag
   
  **SQLdiag** 는 유틸리티를 실행하는 컴퓨터의 현지 시간을 사용합니다.  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  진단 데이터 수집 종료 날짜와 시간을 다음 형식으로 지정합니다.  
   
  YYYYMMDD_HH:MM:SS  
@@ -160,11 +160,11 @@ sqldiag
   
  *SQLdiag_application_name* 은 특정 **SQLdiag** 서비스 인스턴스를 시작하거나 중지하는 데 사용할 수 있습니다.  
   
- 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 예를 들어  
   
  **SQLDIAG START /A**  _SQLdiag_application_name_  
   
- 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 또한 **/R** 옵션과 함께 사용하여 특정 **SQLdiag** 인스턴스를 서비스로 등록할 수 있습니다. 예를 들어  
   
  **SQLDIAG /R /A** _SQLdiag_application_name_  
   
@@ -223,11 +223,11 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
   
- 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 이러한 서비스 제어 인수를 사용할 때는 명령줄에서 첫 번째 인수로 사용해야 합니다. 예를 들어  
   
  **SQLDIAG START**  
   
- 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 명명된 **SQLdiag** 인스턴스를 지정하는 **/A**인수만 **START**, **STOP**또는 **STOP_ABORT** 와 함께 사용하여 특정 **SQLdiag** 서비스 인스턴스를 제어할 수 있습니다. 예를 들어  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   

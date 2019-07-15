@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 5b35a8027608cc2b250e37078b9c44971e9bb106
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100438"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728126"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  **sqlmaint** 에 대한 구문 다이어그램이 반환되도록 지정합니다. 이 매개 변수는 단독으로 사용해야 합니다.  
   
- **-S** _server_name_[ **\\**_instance\_name_]  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_**\\**_instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
+ **-S** _server_name_[ **\\** _instance\_name_]  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 대상 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 연결하려면 _server\_name_을 지정합니다. 해당 서버에 있는 명명된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결하려면 _server\_name_ **\\** _instance\_name_을 지정합니다. 서버를 지정하지 않으면 **sqlmaint** 가 로컬 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 연결됩니다.  
   
  **-U** _login_ID_  
  서버에 연결할 때 사용할 로그인 ID를 지정합니다. 이 인수를 제공하지 않으면 **sqlmaint** 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증을 사용합니다. *login_ID* 에 특수 문자가 포함된 경우 큰따옴표(")로 묶어야 합니다. 그렇지 않은 경우 큰따옴표는 선택 사항입니다.  
@@ -136,12 +136,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  **-D**에 지정된 데이터베이스에서 사용하지 않는 공간을 제거하도록 지정합니다. 이 옵션은 자동으로 증가하도록 정의된 데이터베이스에서만 유용합니다. *Threshold_percent* 는 데이터베이스 크기가 몇 MB에 도달하면 **sqlmaint** 가 사용하지 않는 데이터 공간을 제거할지를 지정합니다. 데이터베이스가 *threshold_percent*보다 작으면 동작이 수행되지 않습니다. *Free_percent* 는 사용하지 않는 공간 중 데이터베이스에 유지해야 할 공간을 최종 데이터베이스 크기의 백분율로 지정합니다. 예를 들어 200MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 최종 데이터베이스 크기는 110MB가 됩니다. 데이터베이스가 *free_percent* 와 데이터베이스의 데이터 양을 더한 크기보다 작으면 데이터베이스가 확장되지 않습니다. 예를 들어 108MB의 데이터베이스에 100MB 데이터가 포함된 경우 *free_percent* 에 10을 지정하면 데이터베이스가 110MB로 확장되지 않고 108MB로 유지됩니다.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  **-D**에 지정된 데이터베이스에서 NOINDEX 옵션으로 DBCC CHECKDB 문 또는 DBCC CHECKDB 문을 실행하도록 지정합니다. 자세한 내용은 DBCC CHECKDB를 참조하십시오.  
   
  *sqlmaint* 를 실행할 때 데이터베이스가 사용 중인 경우 **text_file** 에 경고가 기록됩니다.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  **-D**에 지정된 데이터베이스에서 NOINDEX 옵션으로 DBCC CHECKALLOC 문을 실행하도록 지정합니다. 자세한 내용은 [DBCC CHECKALLOC&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)를 참조하세요.  
   
  **-CkCat**  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  백업 미디어로 테이프를 사용하도록 지정합니다.  
   
  **-BkUpOnlyIfClean**  
- 지정된 **-Ck** 검사를 통해 데이터에 문제가 발견되지 않을 경우에만 백업이 수행되도록 지정합니다. 유지 관리 동작은 명령 프롬프트에 표시되는 것과 같은 순서로 실행됩니다. **-BkUpOnlyIfClean**을 지정할 계획인 경우 **-BkUpDB**-BkUpLog **매개 변수 전에 매개 변수**-CkDB **,**-CkDBNoIdx **,**-CkAl **,** -CkAlNoIdx **,**/**-CkTxtAl** 또는 **-CkCat**를 지정합니다. 이 매개 변수를 지정하지 않으면 검사 보고서 문제가 있는지 여부에 상관없이 백업이 수행됩니다.  
+ 지정된 **-Ck** 검사를 통해 데이터에 문제가 발견되지 않을 경우에만 백업이 수행되도록 지정합니다. 유지 관리 동작은 명령 프롬프트에 표시되는 것과 같은 순서로 실행됩니다. **-BkUpOnlyIfClean**을 지정할 계획인 경우 **-BkUpDB**-BkUpLog **매개 변수 전에 매개 변수**-CkDB **,** -CkDBNoIdx **,** -CkAl **,** -CkAlNoIdx **,** / **-CkTxtAl** 또는 **-CkCat**를 지정합니다. 이 매개 변수를 지정하지 않으면 검사 보고서 문제가 있는지 여부에 상관없이 백업이 수행됩니다.  
   
  **-VrfyBackup**  
  백업이 완료되면 백업에서 RESTORE VERIFYONLY를 실행하도록 지정합니다.  
@@ -240,26 +240,26 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   일반 오류가 발생한 경우  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sqlmaint** 유틸리티는 **에 대한** 읽기 및 실행 `sqlmaint.exe`권한이 있는 Windows 사용자라면 누구나 실행할 수 있습니다. 이 파일은 기본적으로 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 폴더에 저장되어 있습니다. 또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **로 지정된** 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다. Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하는 경우 인증된 Windows 사용자에 매핑된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인에는 지정된 동작을 수행하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용 권한이 있어야 합니다.  
   
  예를 들어 **-BkUpDB** 를 사용하려면 BACKUP 문을 실행할 수 있는 권한이 있어야 합니다. 또한 **-UpdOptiStats** 인수를 사용하려면 UPDATE STATISTICS 문을 실행할 수 있는 권한이 있어야 합니다. 자세한 내용은 온라인 설명서에서 해당 항목의 "사용 권한" 섹션을 참조하십시오.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-performing-dbcc-checks-on-a-database"></a>1. 데이터베이스에서 DBCC 검사를 수행합니다.  
+### <a name="a-performing-dbcc-checks-on-a-database"></a>1\. 데이터베이스에서 DBCC 검사를 수행합니다.  
   
 ```  
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>2. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>2\. 계획의 모든 데이터베이스에서 15% 샘플을 사용하여 통계를 업데이트합니다. 또한 110MB에 도달한 데이터베이스를 축소하여 빈 공간이 10%가 되도록 합니다.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  
 ```  
   
-### <a name="c-backing-up-all-the-databases-in-a-plan-to-their-individual-subdirectories-in-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory-also-delete-any-backups-older-than-2-weeks"></a>3. 계획의 모든 데이터베이스를 기본 x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup 디렉터리에 있는 개별 하위 디렉터리에 백업합니다. 또한 2주가 지난 백업을 삭제합니다.  
+### <a name="c-backing-up-all-the-databases-in-a-plan-to-their-individual-subdirectories-in-the-default-xprogram-filesmicrosoft-sql-servermssql13mssqlservermssqlbackup-directory-also-delete-any-backups-older-than-2-weeks"></a>C. 계획의 모든 데이터베이스를 기본 x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup 디렉터리에 있는 개별 하위 디렉터리에 백업합니다. 또한 2주가 지난 백업을 삭제합니다.  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -CrBkSubDir -DelBkUps 2weeks  

@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981665"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832961"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 유틸리티 문 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981665"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  ODBC 또는 OLE DB API를 기반으로 하는 응용 프로그램에서 GO 명령을 실행하려고 하면 구문 오류가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 GO 명령을 서버로 보내지 않습니다.  
   
- GO 후에는 문 종결자로 세미콜론을 사용하지 마십시오.  
-  
-## <a name="permissions"></a>사용 권한  
- GO는 사용 권한이 필요 없는 유틸리티 명령입니다. 모든 사용자가 실행할 수 있습니다.  
-  
-```  
+ GO 후에는 문 종결자로 세미콜론을 사용하지 마십시오.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>사용 권한  
+ GO는 사용 권한이 필요 없는 유틸리티 명령입니다. 모든 사용자가 실행할 수 있습니다.    
   
 ## <a name="examples"></a>예  
  다음 예에서는 일괄 처리를 두 개 만듭니다. 첫 번째 일괄 처리에는 데이터베이스 컨텍스트를 설정하는 `USE AdventureWorks2012` 문만 있습니다. 나머지 문에는 지역 변수를 사용합니다. 따라서 모든 지역 변수 선언을 단일 일괄 처리로 그룹화해야 합니다. 변수를 참조하는 마지막 문 다음까지 `GO` 명령을 사용하지 않으면 됩니다.  

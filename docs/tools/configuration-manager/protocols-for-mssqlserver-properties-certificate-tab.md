@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 85e7e9cbc454785379fac029cbe970a492e0fffd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2da05501cca599f3aa22e083d07424f54715cca9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760101"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731274"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47760101"
  **MSSQLSERVER에 대한 프로토콜 속성**  
  보안 공급자가 결정하는 인증서 이름입니다. 속성 표에서 세부 정보를 보려면 인증서를 선택합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  만료 날짜  
  인증서 유효 기간의 마지막 날짜입니다.  
   

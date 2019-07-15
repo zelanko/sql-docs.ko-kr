@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f12202dce1c617fd94bd9470aea330e6a1c4a765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 66c2c23882aeede60687d59fbc81301369be8274
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095703"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683366"
 ---
 # <a name="select-object-types-object-explorer"></a>개체 유형 선택(개체 탐색기)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

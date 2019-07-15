@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c61134ff7824d4cbcca72bb6fbac0dfb2be85e34
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585882"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860611"
 ---
 # <a name="oracle-subscribers"></a>Oracle 구독자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "67585882"
   
     -   빈 문자열이 게시된 테이블에 열 값으로 삽입되지 않았는지 확인합니다.  
   
-    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **?SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400( **-SkipErrors1400**)을 지정합니다.  
+    -   오류에 대한 알림을 배포 에이전트 기록 로그에 받은 다음, 계속 처리하도록 허용되는 경우 배포 에이전트에 **–SkipErrors** 매개 변수를 사용합니다. Oracle 오류 코드 1400( **-SkipErrors1400**)을 지정합니다.  
   
     -   빈 문자열과 연결된 가능성이 있는 모든 문자 열에서 NOT NULL 특성을 제거하여 생성된 테이블 생성 스크립트를 수정하고 @creation_script sp_addarticle [의](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)매개 변수를 사용하여 수정된 스크립트를 아티클에 대한 사용자 지정 생성 스크립트로 제공합니다.  
   

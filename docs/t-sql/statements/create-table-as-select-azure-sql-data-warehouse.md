@@ -8,16 +8,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12c2d8393f77a26e8537a7f3c4a13baaddf2bb2f
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503961"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716712"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -601,7 +601,7 @@ DROP TABLE CTAS_acs
 
 <a name="ctas-replace-ansi-joins-bk"></a>
 
-### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>11\. DELETE 문의 FROM 절에 ANSI 조인을 사용하는 대신에 CTAS를 사용하여 보관할 데이터 지정  
+### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>11. DELETE 문의 FROM 절에 ANSI 조인을 사용하는 대신에 CTAS를 사용하여 보관할 데이터 지정  
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
 
 `CTAS`를 사용하는 것이 데이터를 삭제하기 위한 최선의 방법일 때가 있습니다. 단순히 데이터를 삭제하는 것이 아니라 보관할 데이터를 선택합니다. SQL Data Warehouse는 `DELETE` 문의 `FROM` 절에 ANSI 조인을 지원하지 않으므로 이 방법은 ANSI 조인 구문을 사용하는 `DELETE` 문에 특히 유용합니다.
@@ -629,7 +629,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 
 <a name="ctas-simplify-merge-bk"></a>
 
-### <a name="l-use-ctas-to-simplify-merge-statements"></a>12\. CTAS를 사용하여 MERGE 문 단순화  
+### <a name="l-use-ctas-to-simplify-merge-statements"></a>12. CTAS를 사용하여 MERGE 문 단순화  
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
 
 `CTAS`을 사용하여 MERGE 문을 적어도 부분적으로 대체할 수 있습니다. `INSERT`과 `UPDATE`를 단일 명령문으로 통합할 수 있습니다. 삭제된 레코드는 두 번째 문에서 닫혀야 합니다.
@@ -668,7 +668,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>13\. 출력의 데이터 형식 및 NULL 허용 여부를 명시적으로 서술  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>13. 출력의 데이터 형식 및 NULL 허용 여부를 명시적으로 서술  
 적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse  
 
 SQL Server 코드를 SQL Data Warehouse로 마이그레이션하는 경우 이 형식의 코딩 패턴을 발견할 것입니다.

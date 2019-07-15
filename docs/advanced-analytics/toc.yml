@@ -3,6 +3,7 @@
 - name: SQL Server 시작 >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 개요
+  expanded: true
   items:
     - name: 'Machine Learning Services(R, Python)'
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
@@ -18,8 +19,8 @@
       href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Windows에 ML Services 설치
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: Linux에 ML Services 설치 >>
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
+    - name: Linux에 ML Services 설치
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: R Services 설치
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: '독립 실행형 서버 설치(R, Python)'

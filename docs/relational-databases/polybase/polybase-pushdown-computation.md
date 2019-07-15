@@ -1,23 +1,22 @@
 ---
 title: PolyBase의 푸시다운 계산 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: aboke
 manager: craigg
-ms.openlocfilehash: 24320f6f60d336df54093dd761d2b8bc872e3cc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 4cfaa18c314358c290fb06cfad23527a42e0369b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731133"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase의 푸시다운 계산
-
 
 ## <a name="dmv"></a>DMV
 
@@ -35,7 +34,7 @@ ms.locfileid: "53211462"
 
 조건자 푸시다운을 사용하여 외부 테이블에서 행 하위 집합을 선택하는 쿼리의 성능을 향상시킬 수 있습니다.
 
-이 예에서 SQL Server 2016은 Hadoop에서 `customer.account_balance < 200000` 조건자와 일치하는 행을 검색하는 맵 감소 작업을 시작합니다. 테이블의 모든 행을 검색하지 않고 쿼리가 성공적으로 완료될 수 있으므로 조건자 조건에 맞는 행만 SQL Server에 복사됩니다. 이렇게 하면 잔액 < 200000인 고객 수가 계정 잔액 >= 200000인 고객 수에 비해 작은 경우 상당한 시간이 절약되며 필요한 임시 저장소 공간이 줄어듭니다.
+이 예에서 SQL Server 2016은 Hadoop에서 `customer.account_balance < 200000` 조건자와 일치하는 행을 검색하는 맵 감소 작업을 시작합니다. 테이블의 모든 행을 검색하지 않고 쿼리가 성공적으로 완료될 수 있으므로 조건자 조건에 맞는 행만 SQL Server에 복사됩니다. 이렇게 하면 잔액 &lt; 200000인 고객 수가 계정 잔액 &gt;= 200000인 고객 수에 비해 작은 경우 상당한 시간이 절약되며 필요한 임시 스토리지 공간이 줄어듭니다.
 
 ```sql
 SELECT * FROM customer WHERE customer.account_balance < 200000

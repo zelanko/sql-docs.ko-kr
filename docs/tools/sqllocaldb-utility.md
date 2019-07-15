@@ -12,15 +12,15 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538761"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728150"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,14 +83,14 @@ SqlLocalDB.exe
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-instance-of-localdb"></a>1. LocalDB의 인스턴스 만들기  
+### <a name="a-creating-an-instance-of-localdb"></a>1\. LocalDB의 인스턴스 만들기  
  다음 예에서는 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**바이너리를 사용하여** 라는 `DEPARTMENT` LocalDB [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 인스턴스를 만든 다음 인스턴스를 시작합니다.  
   
 ```  
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### <a name="b-working-with-a-shared-instance-of-localdb"></a>2. LocalDB의 공유 인스턴스 작업  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>2\. LocalDB의 공유 인스턴스 작업  
  관리자 권한을 사용하여 명령 프롬프트를 엽니다.  
   
 ```  

@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581331"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860676"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "67581331"
   
    ![구독 데이터베이스에 대한 이름 입력하기](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. **배포 에이전트 보안** 페이지에서 줄임표( **?** ) 단추를 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_distribution**을 입력하고 이 계정의 암호를 입력한 다음, **확인**, **다음**을 차례로 선택합니다.
+8. **배포 에이전트 보안** 페이지에서 줄임표( **...** ) 단추를 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_distribution**을 입력하고 이 계정의 암호를 입력한 다음, **확인**, **다음**을 차례로 선택합니다.
 
    ![“배포 에이전트 보안” 대화 상자의 배포 계정 정보](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

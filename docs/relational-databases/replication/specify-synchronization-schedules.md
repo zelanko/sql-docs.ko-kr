@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25625a5340707efdf21589a735a177e0be667bd1
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 0ce840b73741bcb36868ab8d80cbb3113ffdd510
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586422"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860532"
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "67586422"
   
     -   **요청 시에만 실행**  
   
-    -   **\<일정 정의?>**  
+    -   **\<일정 정의...>**  
   
-2.  **\<일정 정의?>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음, **확인**을 클릭합니다.  
+2.  **\<일정 정의...>** 를 선택하면 **작업 일정 속성** 대화 상자에서 일정을 지정한 다음, **확인**을 클릭합니다.  
   
 3.  마법사를 완료합니다.  
 

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70df13e2f61b5514e100163bafe9ae2b76fdacf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 8e30986a085f76d8daf3fb65c52eb63b305b69fb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099947"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688190"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>다이어그램 속성 표시(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

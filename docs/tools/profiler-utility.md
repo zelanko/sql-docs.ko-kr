@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291305"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731578"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,10 +71,10 @@ profiler
  현재 사용자의 자격 증명으로 Windows 인증을 사용하는 연결을 지정합니다.  
   
  **/S**  *sql_server_name*  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
   
  **/A**  *analysis_services_server_name*  
- Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
+ Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
   
  **/D** *database*  
  연결에 사용할 데이터베이스 이름을 지정합니다. 데이터베이스를 지정하지 않으면 이 옵션은 지정된 사용자의 기본 데이터베이스를 선택합니다.  
@@ -83,7 +83,7 @@ profiler
  프로파일러를 시작할 때 로드할 추적 테이블을 지정합니다. 데이터베이스, 사용자나 스키마 및 테이블을 지정해야 합니다.  
   
  **/T"** *template_name* **"**  
- 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 추적을 구성하기 위해 로드할 템플릿을 지정합니다. 템플릿 이름을 따옴표로 묶어야 합니다. 또한 템플릿 이름은 시스템 템플릿 디렉터리나 사용자 템플릿 디렉터리에 있어야 합니다. 두 디렉터리에 이름이 같은 템플릿 두 개가 있을 경우 시스템 디렉터리의 템플릿이 로드됩니다. 지정한 이름의 템플릿이 없을 경우 표준 템플릿이 로드됩니다. *template_name*에 템플릿의 파일 확장명(.tdf)을 포함하지 마세요. 예를 들어  
   
 ```  
 /T "standard"  

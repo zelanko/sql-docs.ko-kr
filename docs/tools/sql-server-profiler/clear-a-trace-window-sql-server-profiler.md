@@ -11,15 +11,15 @@ helpviewer_keywords:
 - trace window [SQL Server]
 - clearing trace window
 ms.assetid: 8a9f0892-d812-4173-a498-abc36b230147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: da8b9eab71add7caae2eb39b6da1727f15ac116d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06b01efe47f01fe895f5ded00941871a37b359df
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731541"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>추적 창 지우기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
