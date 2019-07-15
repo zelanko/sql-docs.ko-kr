@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 51f08bdc67a47e8cad46a4badfc95f910757c2d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: a5c856145c0fbc40317c3e8e4710e8c0b5570756
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095736"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689939"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

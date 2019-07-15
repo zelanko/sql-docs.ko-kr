@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a918855-efb8-44dc-9e6b-df0a2dac3651
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d743f79951f55b713ec1104fa1bfd15b3bdfc93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: f4c830e7b0364853a2aef6c60fbd2e220ed78c9a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102896"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680489"
 ---
 # <a name="arguments-dialog-box"></a>인수 대화 상자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

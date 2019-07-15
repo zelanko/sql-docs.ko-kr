@@ -1,22 +1,23 @@
 ---
 title: PolyBase의 질문과 대답 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 author: Abiola
 ms.author: aboke
-manager: ''
-ms.openlocfilehash: 52fbf35d5896d602755431516c1cf93ee4949b2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.reviewer: mikeray
+manager: craigg
+ms.openlocfilehash: 0d2afed9961881fe46ae9fcd4ebe2441910deee7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730329"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## <a name="polybase-vs-linked-servers"></a>PolyBase 및 연결된 서버
 다음 표에서는 PolyBase와 연결된 서버 기능 간의 차이점을 보여 줍니다.

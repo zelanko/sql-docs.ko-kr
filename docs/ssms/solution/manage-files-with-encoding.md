@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6eb55e8cd2fa2e0dcc402e850530ebb2cf89047e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 10a15337989da83395ff1bfea5c0ffd13bec8cbe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105368"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689845"
 ---
 # <a name="manage-files-with-encoding"></a>인코딩으로 파일 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

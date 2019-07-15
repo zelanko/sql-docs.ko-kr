@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ab35a363-421d-4665-946b-ae3f6397af50
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: af4e07deb25b6839e3a086f15242d6fd432a00af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ebf4db69052620f7504c06b788d91d9e3d9a3a44
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105203"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682405"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>중복 행 제외(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

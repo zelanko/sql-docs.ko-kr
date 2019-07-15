@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: fe99e6044963f9591614b331df0238658744af63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af26d1dd64b859be94693f98579e0e48b793ae20
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947529"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624378"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
 
@@ -55,7 +55,7 @@ STRING_ESCAPE( text , type )
 |특수 문자|인코딩된 시퀀스|  
 |-----------------------|----------------------|  
 |따옴표(")|\\"|  
-|백슬래시(\\)|\\\|  
+|백슬래시(\\)| \\\\ |  
 |슬래시(/)|\\/|  
 |백스페이스|\b|  
 |용지 공급|\f|  

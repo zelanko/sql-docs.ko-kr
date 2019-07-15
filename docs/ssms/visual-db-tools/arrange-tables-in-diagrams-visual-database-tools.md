@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fc276c25c9a30af485aab6fc29c3b56f3a8a14f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e5ea210e24027ac130aedfc2ccb9d5b235f798ea
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099412"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682930"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

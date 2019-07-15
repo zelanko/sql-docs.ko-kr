@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57175bc18d82971e6707a9791953bd760d517e10
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 25a92152f7fc32fefd38569ecf9cf20945a76b5d
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581153"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860728"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>배포자에서 원격 게시자 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67581153"
   
 4.  **배포자 암호** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   
-5.  게시자에 대한 설정을 보고 수정하려면 속성 단추( **?** )를 클릭합니다.  
+5.  게시자에 대한 설정을 보고 수정하려면 속성 단추( **...** )를 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -51,7 +51,7 @@ ms.locfileid: "67581153"
   
 4.  **게시자** 페이지에서 **암호** 및 **암호 확인** 입력란에 관리 태스크를 수행하기 위해 게시자에서 배포자로 연결할 때 복제에서 사용하는 **distributor_admin** 계정에 대한 강력한 암호를 지정합니다.  
   
-5.  게시자에 대한 설정을 보고 수정하려면 속성 단추( **?** )를 클릭합니다.  
+5.  게시자에 대한 설정을 보고 수정하려면 속성 단추( **...** )를 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

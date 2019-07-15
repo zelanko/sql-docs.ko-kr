@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 03a434a9482f8cb426815407b1b85519744c9331
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 4b455fee7632f243493a85baf81950b48135f889
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105003"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683126"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>쿼리를 프로젝트의 연결 정보로 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

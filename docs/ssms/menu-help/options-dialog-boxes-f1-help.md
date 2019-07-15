@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a118d533e19272e43b8ec1955616ef51261512f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3be1b71a037b5607748424d348dca44d660cdd03
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104826"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690241"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

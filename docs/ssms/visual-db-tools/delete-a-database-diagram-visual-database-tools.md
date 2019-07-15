@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2e558164-f1cb-4e43-b966-3567ed0190ee
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2930098c36a18ce74c23b6505c431e743c68e491
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 912a8e010ce84b421f5ba12b8a98384b0fb91cf1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095322"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690439"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 삭제(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

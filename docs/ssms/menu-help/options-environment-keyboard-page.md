@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 62320cd1341f5405bf01363f5b74724bd6467ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ae8839a91f83fa9e84661976643e40dc61d05a88
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102046"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682675"
 ---
 # <a name="options-environment---keyboard-page"></a>옵션(환경 - 키보드 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

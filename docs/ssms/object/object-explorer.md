@@ -26,13 +26,13 @@ helpviewer_keywords:
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 809715300971040cada71e08df2465eb93ac4ca2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: be4d9a8be28f84bb401a5895be479c1e90cb3a67
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102918"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689942"
 ---
 # <a name="object-explorer"></a>개체 탐색기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581225"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860495"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>마이그레이션 후 유효성 검사 및 최적화 가이드
 
@@ -53,7 +53,7 @@ ms.locfileid: "67581225"
 **적용 대상:** 외래 플랫폼(예: Oracle, DB2, MySQL 및 Sybase)을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]으로 마이그레이션합니다.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]?로 있는 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로의 마이그레이션은 이 문제가 원본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 있는 경우 최신 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 그대로 마이그레이션해도 이 시나리오가 해결되지 않습니다. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 첫 컴파일 시 입력 매개 변수를 검색하고 해당 입력 데이터 분포에 최적화된 매개 변수가 있고 재사용 가능한 계획을 생성하여 저장 프로시저의 쿼리 계획을 컴파일합니다. 저장 프로시저가 아닌 경우에도 간단한 계획을 생성하는 문은 대부분 매개 변수가 가집니다. 계획이 처음 캐시된 후 이후 실행은 모두 기존에 캐시된 계획에 매핑됩니다.
 첫 번째 컴파일 시 일반 작업에 대해 가장 일반적인 매개 변수 집합을 사용하지 않았을 경우 문제가 발생할 수 있습니다. 매개 변수가 다르면 같은 실행 계획의 효율이 떨어집니다. 이 항목에 대한 자세한 내용은 [매개 변수 스니핑](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)을 참조하세요.
