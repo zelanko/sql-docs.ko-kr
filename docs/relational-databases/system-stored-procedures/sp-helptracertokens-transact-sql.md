@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 83d5789fed1ee9ff8d92d549feeb1ae47a8ed38c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048228"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**tracer_id**|**int**|추적 프로그램 토큰 레코드를 식별합니다.|  
 |**publisher_commit**|**datetime**|게시 데이터베이스의 게시자에서 토큰 레코드가 커밋된 날짜와 시간입니다.|  
@@ -59,7 +58,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helptracertokens** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_helptracertokens** 실행할 때 추적 프로그램 토큰 Id를 가져오는 데 사용 됩니다 [sp_helptracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)합니다.  

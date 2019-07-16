@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d8f3684f4b01a17b6c0ce41ddb8e2fc1ab63e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e52ecc471255db772fddc46585f635fbc6cb182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987555"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>SQL Server Native Client와 함께 ADO 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47794361"
  ADO에서 최신 버전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새 기능을 사용할 수 있도록 OLE DB의 주요 기능이 확장된 것을 비롯해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 기능이 향상되었습니다. 이러한 기능 향상을 통해 ADO 애플리케이션에서는 최신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능과 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 **xml** 및 **udt**의 두 데이터 형식을 사용할 수 있습니다. 또한 개선된 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식도 활용할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 DBPROPSET_SQLSERVERDBINIT 속성을 새 데이터 형식이 ADO와 호환 되는 방식으로 노출 되는 ADO 응용 프로그램 사용에 대 한 설정에 SSPROP_INIT_DATATYPECOMPATIBILITY 초기화 속성을 추가 합니다. 또한 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 또한 라는 새로운 연결 문자열 키워드 정의 **DataTypeCompatibility** 연결 문자열에서 설정 하는 합니다.  
   
 > [!NOTE]  
->  기존 ADO 응용 프로그램은 SQLOLEDB 공급자를 사용하여 XML, UDT, 큰 값 텍스트 및 이진 필드 값을 액세스하고 업데이트할 수 있습니다. 더 큰 새 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식은 각각 ADO 형식 **adLongVarChar**, **adLongVarWChar** 및 **adLongVarBinary**로 변환됩니다. XML 열은 **adLongVarChar**로 반환되고 UDT 열은 **adVarBinary**로 반환됩니다. 그러나 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB 대신 Native Client OLE DB 공급자 (SQLNCLI11)로 설정 해야 해야 합니다 **DataTypeCompatibility** 키워드를 "80" 새 데이터 형식이 ADO 데이터에 올바로 매핑되도록 있도록 형식입니다.  
+>  기존 ADO 응용 프로그램은 SQLOLEDB 공급자를 사용하여 XML, UDT, 큰 값 텍스트 및 이진 필드 값을 액세스하고 업데이트할 수 있습니다. 더 큰 새 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식은 각각 ADO 형식 **adLongVarChar**, **adLongVarWChar** 및 **adLongVarBinary**로 변환됩니다. XML 열은 **adLongVarChar**로 반환되고 UDT 열은 **adVarBinary**로 반환됩니다. 그러나 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB 대신 Native Client OLE DB 공급자 (SQLNCLI11)로 설정 해야 해야 합니다 **DataTypeCompatibility** 키워드를 "80" 새 데이터 형식이 ADO 데이터에 올바로 매핑되도록 있도록 형식입니다.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>AOD에서 Server Native Client 사용  
  사용 하도록 설정 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 경우 ADO 응용 프로그램은 연결 문자열에 다음 키워드를 구현 해야 합니다.  

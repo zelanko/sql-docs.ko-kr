@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba7fe546f7ac8e1a036fc8fe7e5f523ebf09d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918662"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 [Field 개체](../../../ado/reference/ado-api/field-object.md)합니다.  
   
  합니다 **adFieldPending\***  값을 설정할 수 상태를 발생 하 고 다른 상태 값과 결합 될 수 있는 작업을 나타냅니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|지정된 된 필드 이미 있음을 나타냅니다.|  
 |**adFieldBadStatus**|12|OLE DB 공급자에 잘못 된 상태 값을 ADO에서 전송 된 것을 나타냅니다. 가능한 원인은 OLE DB 1.0 또는 1.1 공급자의 잘못 된 조합이 [값](../../../ado/reference/ado-api/value-property-ado.md) 하 고 [상태](../../../ado/reference/ado-api/status-property-ado-field.md)합니다.|  

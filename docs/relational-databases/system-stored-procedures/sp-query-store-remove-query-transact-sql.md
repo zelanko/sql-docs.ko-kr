@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb6c495252d0ed8a312b8e7727385e8eb21ad4ed
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cb65ba60dc99be491cffcd70a0eb442bfe61d580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896405"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **EXECUTE** 데이터베이스에 대 한 권한 및 **삭제** 의 쿼리 저장소 카탈로그 뷰 사용 권한.  

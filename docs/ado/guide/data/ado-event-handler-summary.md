@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926192"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
 두 ADO 개체 이벤트를 발생 시킬 수 있습니다: 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체와 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. **ConnectionEvent** 제품군 관련 작업에는 **연결** 개체 및 **RecordsetEvent** 제품군 관련 작업에는  **레코드 집합** 개체입니다.
@@ -30,14 +29,14 @@ ms.locfileid: "66702648"
 
  다음 표에서 이벤트 및 해당 설명이 요약 되어 있습니다.
 
-|ConnectionEvent|Description|
+|ConnectionEvent|설명|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**트랜잭션 관리** -연결에서 현재 트랜잭션이 시작 되었음을 나타내는 알림이 커밋되거나 롤백됩니다.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**연결 관리** -현재 연결을 시작 하는 알림 시작 또는 종료 되었습니다.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**실행 관리 명령을** -알림 연결에서 현재 명령의 실행 시작 또는 종료 되었습니다.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**정보 제공 용 이므로** -현재 작업에 대 한 추가 정보는 알림입니다.|
 
-|RecordsetEvent|Description|
+|RecordsetEvent|설명|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**검색 상태** -데이터 검색 작업의 진행률에 대 한 알림 또는 검색 작업을 완료 합니다. 이러한 이벤트는만 사용할 수 있는 경우는 **레코드 집합** 클라이언트 쪽 커서를 사용 하 여 열린 합니다.|
 |[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**필드 변경 관리** -현재 필드의 값이 변경 또는 변경 하는 알림입니다.|

@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea8e6825a2019667734a9d68f5798da00084c71b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 04f40d4d788e391026bd981f8be7218062282c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005065"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   연결된 데이터베이스 암호화 키 및 데이터베이스의 암호화 상태에 대한 정보를 반환합니다. 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.  
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스의 ID입니다.|  
 |encryption_state|**int**|데이터베이스가 암호화되었는지 여부를 나타냅니다.<br /><br /> 0 = 데이터베이스 암호화 키가 없고 암호화되지 않음<br /><br /> 1 = 암호화되지 않음<br /><br /> 2 = 암호화 진행 중<br /><br /> 3 = 암호화됨<br /><br /> 4 = 키 변경 진행 중<br /><br /> 5 = 해독 진행 중<br /><br /> 6 = 보호 변경 진행 중. 데이터베이스 암호화 키를 암호화하는 인증서 또는 비대칭 키를 변경하고 있습니다.|  
@@ -47,15 +46,15 @@ ms.locfileid: "59583046"
 |encryptor_thumbprint|**varbinary(20)**|암호기의 손도장을 표시합니다.|  
 |encryptor_type|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 암호기를 설명합니다.|  
 |percent_complete|**real**|데이터베이스 암호화 상태 변경의 완료 비율입니다. 상태 변경이 없으면 0이 됩니다.|
-|encryption_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상.<br><br> 데이터베이스의 암호화 되지 않은 암호화 여부를 나타내는 문자열입니다.<br><br>없음<br><br>암호화 되지 않은<br><br>암호화<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상.<br><br>암호화 검색의 현재 상태를 나타냅니다. <br><br>0 = 아니요 검사가 시작 되었습니다, TDE를 사용 하지 않습니다<br><br>1 = 검색 진행에서 중입니다.<br><br>2 = 검색 진행 중 일시 중단 된 하지만 사용자를 다시 시작할 수 있습니다.<br><br>3 = 검색을 성공적으로 완료 한 TDE를 사용 하 고 암호화가 완료 합니다.<br><br>4 = 이유로 검색이 중단 되었습니다, 수동 개입이 필요 합니다. 자세한 내용은 Microsoft 지원에 문의 합니다.|
-|encryption_scan_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상.<br><br>암호화 검색의 현재 상태를 나타내는 문자열입니다.<br><br> 없음<br><br>RUNNING<br><br>SUSPENDED<br><br>완료<br><br>ABORTED|
-|encryption_scan_modify_date|**datetime**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상.<br><br> 날짜 (UTC) 암호화 검사 상태를 마지막으로 수정 된 합니다.|
+|encryption_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 데이터베이스의 암호화 되지 않은 암호화 여부를 나타내는 문자열입니다.<br><br>없음<br><br>암호화 되지 않은<br><br>암호화<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타냅니다. <br><br>0 = 아니요 검사가 시작 되었습니다, TDE를 사용 하지 않습니다<br><br>1 = 검색 진행에서 중입니다.<br><br>2 = 검색 진행 중 일시 중단 된 하지만 사용자를 다시 시작할 수 있습니다.<br><br>3 = 검색을 성공적으로 완료 한 TDE를 사용 하 고 암호화가 완료 합니다.<br><br>4 = 이유로 검색이 중단 되었습니다, 수동 개입이 필요 합니다. 자세한 내용은 Microsoft 지원에 문의 합니다.|
+|encryption_scan_state_desc|**nvarchar(32)**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br>암호화 검색의 현재 상태를 나타내는 문자열입니다.<br><br> 없음<br><br>RUNNING<br><br>SUSPENDED<br><br>완료<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상<br><br> 날짜 (UTC) 암호화 검사 상태를 마지막으로 수정 된 합니다.|
   
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="see-also"></a>관련 항목  
 

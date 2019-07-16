@@ -16,14 +16,13 @@ helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: jroth
 author: VanMSFT
-ms.openlocfilehash: efed12f21dd3413108849124d1326d7ec2c8540c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055311"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin(Transact-SQL)
 
@@ -48,7 +47,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_grantlogin** 추가 옵션을 지 원하는 CREATE LOGIN을 호출 합니다. SQL Server 로그인을 만드는 방법에 대 한 정보를 참조 하세요 [CREATE LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  

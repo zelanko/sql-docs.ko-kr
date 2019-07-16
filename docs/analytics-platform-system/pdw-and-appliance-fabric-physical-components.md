@@ -2,19 +2,18 @@
 title: 어플라이언스 물리적 구성 요소-Analytics Platform System | Microsoft Docs
 description: 이름 및 PDW 및 어플라이언스 패브릭 물리적 구성 요소에 대해 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960421"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>어플라이언스 물리적 구성 요소-Analytics Platform System
 이름 및 PDW 및 어플라이언스 패브릭 물리적 구성 요소에 대해 설명 합니다. 
@@ -24,7 +23,7 @@ ms.locfileid: "62639925"
 ## <a name="diagrams"></a>구성 요소 다이어그램  
 물리적 구성 요소 및 6-Compute 노드 어플라이언스의 첫 번째 랙에 위치 이름을 표시 합니다.  
   
-![PDW Region Component Names - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
+![PDW 영역 구성 요소 이름-HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
 PDW 구성 요소에 대 한 실제 이름에는 구성 요소 이름 뒤에 대시를 뒤에, PDW 영역 이름이입니다. 예를 들어 PDW 영역 이름을 PDW123 이면 실제 이름이 됩니다 **PDW123 CTL01**를 **PDW123-CMP01**등입니다.  
   
@@ -65,7 +64,7 @@ Virtual Machine Manager (VMM) 가상 컴퓨터에서 실행 되며 HST02에 장�
 각 호스트에 연결 된 저장소 (HSA01 HSA06)를 사용 하 여 ISCSI 가상 머신 하나를 실행합니다. 이 VM에 장애 조치 되지 않습니다.  
   
 ### <a name="hosts"></a>호스트  
-*appliance_domain*-HST01 through *appliance_domain*-HST06  
+*appliance_domain*-통해 HST01 *appliance_domain*-HST06  
 PDW 제어 노드 및 어플라이언스 패브릭 가상 머신에 대 한 호스트입니다. HST03 선택적 수동 호스트 됩니다.  
   
 *appliance_domain*-통해 HSA01 *appliance_domain*-HSA08  

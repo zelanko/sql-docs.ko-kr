@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82b85c42b56c97a59d34c0ed9a98fe5d4bc73e0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9efe0f39ce304501096d9dcc682a0ea5d5137ee7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926994"
 ---
 # <a name="capture-ado-error-codes"></a>ADO 오류 코드 캡처
 반환 되는 공급자 오류 외에 [오류](../../../ado/reference/ado-api/error-object.md) 의 개체를 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션 자체 ADO 런타임 환경의 예외 처리 메커니즘에 오류를 반환할 수 있습니다. 와 같은 오류 트래핑 메커니즘은 프로그래밍 언어를 사용 합니다 **오류 발생 시** 문 Microsoft® Visual Basic에서 또는 **try / catch** ADO 오류 캡처합니다 Microsoft Visual C++®에서 차단 합니다.

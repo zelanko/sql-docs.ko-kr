@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 685d4ce90312e9f34dcf9b8a6e0c94b419f37ee4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210169"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>마이닝 모델의 뷰 복사
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "34014240"
   
 5.  **노드 정보** 창을 마우스 오른쪽 단추로 다시 클릭한 다음 **복사**를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016968"
 ---
 # <a name="bitwise-operators"></a>비트 연산자
 
@@ -23,7 +22,7 @@ ms.locfileid: "63284937"
   
  MDX는 다음 테이블에 나열된 논리 연산자를 지원합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
 |[IS](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  

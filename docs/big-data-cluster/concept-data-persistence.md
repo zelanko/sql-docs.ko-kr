@@ -5,17 +5,16 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 701be4a352066ab0c80e0269b16114e8e279998a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 754477bc8e88bb5c687fe2b15d23460fea7ee23f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958759"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 

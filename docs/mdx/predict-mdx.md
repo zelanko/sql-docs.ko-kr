@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 165d03b886ad8e9beeb09bf5a835c879cc23a2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055577"
 ---
 # <a name="predict-mdx"></a>Predict(MDX)
 
@@ -41,7 +40,7 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  지정한 마이닝 모델에 대해 유효한 DMX 식으로 계산되는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Predict** 함수는 지정한 마이닝 모델의 컨텍스트 내에서 지정 된 문자열 식을 계산 합니다.  
   
  데이터 마이닝 구문과 함수는 DMX(Data Mining Expression) 참조에 설명되어 있습니다.  

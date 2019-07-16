@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947590"
 ---
 # <a name="guid-escape-sequences"></a>GUID 이스케이프 시퀀스
 ODBC는 GUID 리터럴의 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -29,17 +28,17 @@ ODBC는 GUID 리터럴의 이스케이프 시퀀스를 사용합니다. 이 이�
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  BNF 표기법의 구문은 다음과 같습니다.  
   
  *ODBC-guid-escape* ::=  
      *ODBC esc 시작자 guid* '*guid 값*' *ODBC esc 종결자*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 시작자* :: = {  
   
  *ODBC esc 종결자* :: =}  
   
- *guid-value* ::= *clock-low-value guid-separator clock-middle-value guid-separator clock-high-value guid-separator clock-seq-value guid-separator node-value*  
+ *guid 값* :: = *클록-낮은 값 guid 구분 기호 값-중간-클록 guid 구분 기호 클록 높은 가치의 guid 구분 기호 클록-seq 값 guid 구분 기호 노드 값*  
   
  *guid-separator* ::= -  
   

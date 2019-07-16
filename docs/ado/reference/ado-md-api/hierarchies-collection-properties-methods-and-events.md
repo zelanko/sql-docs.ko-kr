@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d7221f349b4ef94bad376488f2d073c0319da91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949749"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

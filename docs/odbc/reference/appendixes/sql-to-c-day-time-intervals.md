@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056863"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL에서 C로: 날짜-시간 간격
 
@@ -42,11 +41,11 @@ ms.locfileid: "63270427"
 
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|모든 날짜-시간 C 간격 유형|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 저장할 만큼 충분히 크지 않습니다 대상의 전체 자릿수를 유도|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|간격 정밀도 단일 필드 및 잘림 없이 데이터 변환 되었습니다.<br /><br /> 간격 정밀도 단일 필드를 되었으며 소수 잘림<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 단일 필드 간격 정밀도가 없습니다.|data<br /><br /> 잘린된 데이터<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 데이터의 길이<br /><br /> 데이터의 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|모든 날짜-시간 C 간격 유형|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 저장할 만큼 충분히 크지 않습니다 대상의 전체 자릿수를 유도|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|데이터의 길이<br /><br /> 데이터의 길이<br /><br /> Undefined|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|[B] [b] [b] [b] [b] [b] [b] [b] SQL_C_BIGINT SQL_C_NUMERIC SQL_C_ULONG SQL_C_SLONG SQL_C_SHORT SQL_C_USHORT SQL_C_UTINYINT SQL_C_STINYINT|간격 정밀도 단일 필드 및 잘림 없이 데이터 변환 되었습니다.<br /><br /> 간격 정밀도 단일 필드를 되었으며 소수 잘림<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 단일 필드 간격 정밀도가 없습니다.|data<br /><br /> 잘린된 데이터<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> 데이터의 길이<br /><br /> 데이터의 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> Undefined|데이터의 길이<br /><br /> Undefined|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
   
  SQL 형식 [a]는 날짜-시간 간격 날짜-시간 간격 C 형식으로 변환할 수 있습니다.  
   

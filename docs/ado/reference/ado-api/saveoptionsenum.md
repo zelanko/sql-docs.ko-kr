@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537c5bfa6e1da125b562d4cc26820a2fcb5618fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931141"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 파일을 생성 또는 덮어쓸에서 저장 하는 경우 지정 된 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. 값이 될 수 있습니다 **adSaveCreateNotExist** 하거나 **adSaveCreateOverWrite**...  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|기본. 파일을 지정 하 여 새 파일을 만듭니다는 *FileName* 매개 변수가 이미 존재 하지 않습니다.|  
 |**adSaveCreateOverWrite**|2|현재 열려에서 데이터를 사용 하 여 파일을 덮어씁니다 **Stream** 개체를 지정 하는 파일을 *Filename* 매개 변수가 이미 있습니다. 하 여 파일을 지정 합니다 *Filename* 매개 변수가 없는 경우, 새 파일이 만들어집니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069098"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +47,8 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
- 데이터베이스 메일 메시지 및 첨부 파일에 저장 되는 **msdb** 데이터베이스입니다. 메시지를 방지 하려면에 주기적으로 삭제 해야 **msdb** 예상 보다 커지는 및 조직의 문서 보존 프로그램 사용을 준수 하도록 합니다. 사용 된 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다 합니다 **sent_status** 인수입니다. 인수에 대해 제공 해야 합니다 **@sent_before** 하거나 **@sent_status**합니다. 모든 메시지를 삭제 하려면 사용 하 여  **@sent_before getdate () =** 합니다.  
+## <a name="remarks"></a>설명  
+ 데이터베이스 메일 메시지 및 첨부 파일에 저장 되는 **msdb** 데이터베이스입니다. 메시지를 방지 하려면에 주기적으로 삭제 해야 **msdb** 예상 보다 커지는 및 조직의 문서 보존 프로그램 사용을 준수 하도록 합니다. 사용 된 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다 합니다 **sent_status** 인수입니다. 인수에 대해 제공 해야 합니다 **@sent_before** 하거나 **@sent_status** 합니다. 모든 메시지를 삭제 하려면 사용 하 여  **@sent_before getdate () =** 합니다.  
   
  전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도의 해당 항목은 삭제 되지 않습니다 **sysmail_event_log**합니다. 사용 하 여 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 로그에서 항목을 삭제 합니다.  
   
@@ -58,7 +57,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-deleting-all-e-mails"></a>1. 모든 전자 메일 삭제  
+### <a name="a-deleting-all-e-mails"></a>A. 모든 전자 메일 삭제  
  다음 예에서는 데이터베이스 메일 시스템의 모든 전자 메일을 삭제합니다.  
   
 ```  
@@ -68,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>2. 오래된 전자 메일 삭제  
+### <a name="b-deleting-the-oldest-e-mails"></a>2\. 오래된 전자 메일 삭제  
  다음 예에서는 데이터베이스 메일 로그에서 `October 9, 2005` 이전의 전자 메일을 삭제합니다.  
   
 ```  
@@ -77,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>3. 특정 유형의 모든 전자 메일 삭제  
+### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>3\. 특정 유형의 모든 전자 메일 삭제  
  다음 예에서는 데이터베이스 메일 시스템에서 모든 실패한 전자 메일을 삭제합니다.  
   
 ```  

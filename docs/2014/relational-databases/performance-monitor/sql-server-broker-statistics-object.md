@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f500429659f7f2960140286e102fbf252e86a448
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206549"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker Statistics 개체
   SQLServer:Broker Statistics 성능 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스에 대한 일반 [!INCLUDE[ssDE](../../includes/ssde-md.md)]정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
-|SQL Server Broker Statistics 카운터|Description|  
+|SQL Server Broker Statistics 카운터|설명|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화 저장 프로시저가 오류로 인해 종료된 횟수입니다.|  
 |**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)](예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  

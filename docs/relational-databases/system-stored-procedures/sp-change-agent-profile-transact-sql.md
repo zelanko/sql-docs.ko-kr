@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46aeaafce338d3ffdb9b6d4cb3d827fbbefde82d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62993892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045845"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  이 표에서는 변경할 수 있는 프로필 속성에 대해 설명합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**description**|프로필에 관한 설명입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_change_agent_profile** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

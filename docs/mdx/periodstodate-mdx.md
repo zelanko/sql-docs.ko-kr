@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e33ac5562e7304b71779134b02488733b9d576a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055634"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate(MDX)
 
@@ -35,7 +34,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정 된 수준의 범위 내에서 **PeriodsToDate** 함수는 첫 번째 기간으로 시작 하 고 지정 된 멤버로 끝나는 지정된 된 멤버와 동일한 수준의 기간 집합을 반환 합니다.  
   
 -   수준이 지정 된 계층의 현재 멤버는 유추 *계층 구조*. **CurrentMember**, 여기서 *계층*지정 된 수준의 계층 구조입니다.  

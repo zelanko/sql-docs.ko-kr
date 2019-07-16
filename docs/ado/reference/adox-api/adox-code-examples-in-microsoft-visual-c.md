@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 518677742431aa2283c1613c7f8e78d25a31e091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952124"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++의 ADOX 코드 예제
 이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual를 사용 하 여 작성 된 C++입니다.  

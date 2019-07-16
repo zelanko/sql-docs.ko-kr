@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757715"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211085"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52757715"
   
 7.  **실행** 을 클릭하여 추적을 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)   

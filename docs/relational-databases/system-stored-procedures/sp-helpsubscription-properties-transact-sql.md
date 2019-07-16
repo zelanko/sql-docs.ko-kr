@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e9da98ffc01d7ee62ac89a516a7eabe52cae3df1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048382"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자의 정보를 반환 하는 합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 **%** , 모든 게시자의 정보를 반환 하는 합니다.  
   
-`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자 데이터베이스에서 정보를 반환 하는 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 **%** , 모든 게시자 데이터베이스에서 정보를 반환 하는 합니다.  
   
-`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 모든 게시의 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%** , 모든 게시의 정보를 반환 하는 합니다.  
   
 `[ @publication_type = ] publication_type` 게시의 유형이입니다. *publication_type* 됩니다 **int**, 기본값은 NULL입니다. 제공 된 경우 *publication_type* 다음 값 중 하나 여야 합니다.  
   
@@ -57,7 +56,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
@@ -65,11 +64,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publication_type**|**int**|게시 유형입니다.<br /><br /> **0** = 트랜잭션<br /><br /> **1** = 스냅숏<br /><br /> **2** = 병합|  
 |**publisher_login**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**publisher_password**|**nvarchar(524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용하는 암호입니다(암호화됨).|  
-|**publisher_security_mode**|**int**|게시자에서 사용하는 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
+|**publisher_security_mode**|**int**|게시자에서 사용하는 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**distributor**|**sysname**|배포자의 이름입니다.|  
 |**distributor_login**|**sysname**|배포자 로그인입니다.|  
 |**distributor_password**|**nvarchar(524)**|배포자 암호입니다(암호화됨).|  
-|**distributor_security_mode**|**int**|배포자에서 사용하는 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
+|**distributor_security_mode**|**int**|배포자에서 사용하는 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**ftp_address**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다. 배포자용 FTP(파일 전송 프로토콜) 서비스의 네트워크 주소입니다.|  
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다. FTP 서비스에 연결하는 데 필요한 사용자 이름입니다.|  
@@ -94,7 +93,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpsubscription_properties** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

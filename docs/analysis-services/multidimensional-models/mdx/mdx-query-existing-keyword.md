@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d41b49e4585d2a256250a009b09ffa9ed94ea925
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208728"
 ---
 # <a name="mdx-query---existing-keyword"></a>MDX 쿼리 - EXISTING 키워드
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ Existing Set_Expression
  *Set_Expression*  
  유효한 MDX 집합 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본적으로 집합은 집합의 멤버가 포함된 큐브의 컨텍스트 내에서 계산됩니다. 그러나 **Existing** 키워드는 지정된 집합이 현재 컨텍스트 내에서 계산되도록 합니다.  
   
 ## <a name="example"></a>예제  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016744"
 ---
 # <a name="static-sql"></a>정적 SQL
 Embedded SQL 에서처럼 [Embedded SQL 예제](../../odbc/reference/embedded-sql-example.md) 정적 SQL 이라고 합니다. 프로그램에서 SQL 문은 정적; 때문에 정적 SQL 라고 즉, 프로그램이 실행 될 때마다를 변경 하지 마십시오. 이전 섹션에서 설명한 대로, 프로그램의 나머지 부분을 컴파일하면 이러한 문이 컴파일됩니다.  

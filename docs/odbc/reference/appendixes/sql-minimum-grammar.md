@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057014"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 최소 문법
 이 섹션에서는 ODBC 드라이버를 지원 해야 하는 최소 SQL 구문을 설명 합니다. 이 섹션에 설명 된 구문은 SQL-92의 항목 수준 구문의 하위 집합입니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "63270501"
 > [!IMPORTANT]  
 >  로 *데이터 형식* 에 *테이블 생성-문*, 응용 프로그램에서 반환 된 결과 집합의 TYPE_NAME 열에서 데이터 형식을 사용 해야 합니다 **SQLGetTypeInfo**합니다.  
   
- *delete-statement-searched* ::=  
+ *delete 문은 검색* :: =  
   
  DELETE FROM *table-name* [WHERE *search-condition*]  
   
@@ -56,13 +55,13 @@ ms.locfileid: "63270501"
   
  *테이블 참조 목록*  
   
- [WHERE *search-condition*]  
+ [여기서 *검색 조건*]  
   
  [*order-by-clause*]  
   
  *statement* ::= *create-table-statement*  
   
- &#124; *delete-statement-searched*  
+ &#124;*delete 문은 검색*  
   
  &#124; *drop-table-statement*  
   
@@ -70,7 +69,7 @@ ms.locfileid: "63270501"
   
  &#124; *select-statement*  
   
- &#124; *update-statement-searched*  
+ &#124;*업데이트-문-검색*  
   
  *update-statement-searched*  
   
@@ -80,7 +79,7 @@ ms.locfileid: "63270501"
   
  [, *열 식별자* = {*식을* &#124; NULL}]...  
   
- [WHERE *search-condition*]  
+ [여기서 *검색 조건*]  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2b5f416d1f2989cd9392ecac0279e792477cca8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909180"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |**account_id**|**int**|계정의 ID입니다.|  
 |**name**|**sysname**|계정 이름입니다.|  
 |**description**|**nvarchar(256)**|계정에 대한 설명입니다.|  
@@ -66,7 +65,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**use_default_credentials**|**bit**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 자격 증명을 사용하여 메일을 SMTP 서버로 보낼지 여부를 지정합니다. **use_default_credentials** 는 bit 이며 기본값은 없습니다. 이 매개 변수가 1이면 데이터베이스 메일에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스의 자격 증명을 사용합니다. 이 매개 변수가 0 인 경우 데이터베이스 메일이 사용 하는 **@username** 하 고 **@password** SMTP 서버에서 인증에 대 한 합니다. 하는 경우 **@username** 하 고 **@password** 가, NULL 이면 데이터베이스 메일은 익명 인증을 사용 합니다. 이 매개 변수를 지정하기 전에 해당 SMTP 관리자에게 문의하십시오.|  
 |**enable_ssl**|**bit**|데이터베이스 메일에서 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화할지 여부를 지정합니다. SMTP 서버에 SSL이 필요한 경우 이 옵션을 사용합니다. **enable_ssl** 는 bit 이며 기본값은 없습니다. 1은 데이터베이스 메일에서 SSL을 사용하여 통신을 암호화함을 나타냅니다. 0은 데이터베이스 메일에서 SSL 암호화 없이 메일을 보냄을 나타냅니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  없는 경우 *account_id* 하거나 *account_name* 제공 됩니다 **sysmail_help_account** 는 Microsoft SQL Server 인스턴스의 모든 데이터베이스 메일 계정에 대 한 정보를 나열 합니다.  
   
  저장된 프로시저 **sysmail_help_account_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  

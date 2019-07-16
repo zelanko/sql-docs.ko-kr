@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: a360c86edc08916f1e28157a54503f64c152dec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058869"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
@@ -91,7 +90,7 @@ Data Migration Assistant 마이그레이션합니다 동시에 여러 데이터�
 
 - databaseLockTimeout
 
-   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (Default=5000)
+   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -142,6 +141,6 @@ Data Migration Assistant v2.0부터 recommendedNumberOfRows 구성 값을 사용
 ```
 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Data Migration Assistant 다운로드](https://www.microsoft.com/download/details.aspx?id=53595)

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 248605667afe073e2261585444555a1d254ffc26
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003532"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 

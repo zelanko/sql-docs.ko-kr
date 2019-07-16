@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931360"
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체(ADO)
 기본 테이블 또는 실행 된 명령의 결과 레코드의 전체 집합을 나타냅니다. 언제 든 지 합니다 **레코드 집합** 개체를 현재 레코드로 집합 내에서 단일 레코드만 가리킵니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용할 **레코드 집합** 공급자에서 데이터를 조작 하는 개체입니다. 거의 전적으로 사용 하 여 데이터를 조작 하는 ADO를 사용 하면 **레코드 집합** 개체입니다. 모든 **레코드 집합** 레코드 (행)의 개체를 구성 하 고 필드 (열). 공급자가 지 원하는 기능에 따라 일부 **레코드 집합** 메서드나 속성을 사용할 수 있습니다.  
   
  ADODB 합니다. 레코드 집합을 만들려면 사용할 ProgID를 **레코드 집합** 개체입니다. 오래 된 ADOR 참조 하는 기존 응용 프로그램입니다. 작업을 다시 컴파일하지 않고도 레코드 집합 ProgID는 계속 되지만 새로운 개발 ADODB 참조 해야 합니다. 레코드 집합입니다.  

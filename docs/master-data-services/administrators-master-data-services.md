@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047815"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -65,7 +64,7 @@ ms.locfileid: "65486384"
   
 ## <a name="comparing-administrator-types"></a>관리자 유형 비교  
   
-|관리자 유형|Description|  
+|관리자 유형|설명|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 슈퍼 사용자|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 할당된 사용 권한은 관리자의 액세스 권한 아무런 영향을 주지 않습니다.<br /><br /> 명시적으로 할당된 기능 영역 권한 또는 그룹에서 상속된 권한에 따라 슈퍼 사용자로 지정될 수 있습니다.<br /><br /> 모든 모델에 대한 모든 권한이 자동으로 부여됩니다.<br /><br /> 모든 기능 영역에 대한 액세스 권한을 자동으로 가집니다.|  
 |모델 관리자|명시적으로 할당된 관리 권한 또는 그룹에서 상속된 사용 권한에 따라 모델 관리자로 지정될 수 있습니다.<br /><br /> 액세스 권한이 부여된 기능 영역에 대해서만 액세스 권한을 가집니다.<br /><br /> 특정 모델의 모든 개체 및 멤버에 대한 모든 권한이 자동으로 부여됩니다.|  

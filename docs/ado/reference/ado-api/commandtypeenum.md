@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09874df6d9e09da8b6dc0df3e9670e4ff130c511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919685"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 명령 인수를 해석 하는 방법을 지정 합니다.  
   
  사용자가 제공한 유효성을 검사 하는 것이 반드시 *CommandString* 응용 프로그램 사용자에 게 실행 하는 ADO에 대 한 잠재적으로 위험한 명령을 삽입 하는 기회를 제공 하지 않으려면 값입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|명령 유형 인수를 지정 하지 않습니다.|  
 |**adCmdText**|1|평가 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 명령 또는 저장된 프로시저의 텍스트 정의로 호출 합니다.|  

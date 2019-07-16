@@ -3,18 +3,17 @@ title: Linux의 SQL Server 2017 릴리스 정보
 description: 이 항목에서는 Linux에서 동작하는 SQL Server 2017에 대한 릴리스 정보 및 지원하는 기능을 포함합니다. 릴리스 정보는 가장 최신 릴리스 및 몇 가지 이전 릴리스를 포함합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f59495ffe4bc58ec673e643b0d011a501c51ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896171"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 

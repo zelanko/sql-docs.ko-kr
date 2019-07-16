@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 996bf79c296ff11c708c687f5a084d73b0bcde95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b97ed315b8266c165a14a7f2b05912a7ae530b1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054677"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Power BI를 사용 하 여 Data Migration Assistant에서 만든 통합된 평가 보고서 분석
 
@@ -137,7 +136,7 @@ Power BI에서 데이터 원본을 변경 하 여 사용자 환경에 맞게 이
 
 ![읽기 전용 데이터베이스 수 없는 업그레이드 문제](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Data Migration Assistant 개요](../dma/dma-overview.md)
 

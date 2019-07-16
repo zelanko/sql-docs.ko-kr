@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196715"
 ---
 # <a name="table-properties"></a>Table Properties
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 테이블 속성 편집 대화 상자에 표시된 테이블 속성에 대해 설명합니다. 이러한 속성을 표시하는 방법은 [테이블 정의 보기](view-the-table-definition.md)를 참조하세요.  

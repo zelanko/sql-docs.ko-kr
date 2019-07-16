@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995519"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Sp_changearticlecolumndatatype** 지원 되는 게시자 유형 간의 기본 데이터 형식 매핑을 재정의 하는 데 사용 됩니다 (Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). 이러한 기본 데이터 형식 매핑을 보려면 실행 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)합니다.  
   
  **sp_changearticlecolumndatatype** Oracle 게시자에 대해서만 지원 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에 대해 이 저장 프로시저를 실행하면 오류가 발생합니다.  

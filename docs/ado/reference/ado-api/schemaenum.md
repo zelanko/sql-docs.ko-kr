@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931115"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 스키마의 유형을 지정 **레코드 집합** 하는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드 검색 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  함수 및 열에 대 한 자세한 내용은 각 ADO 상수 항목에서 확인할 수 있습니다 반환 [부록 b: 스키마 행 집합](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) OLE DB 프로그래머 참조입니다. 각 항목의 이름은 다음 표의 설명 섹션의 괄호 안에 나열 됩니다.  
   
  함수 및 열에 대 한 추가 정보가 반환 ADO MD 상수 각 항목에서 확인할 수 있습니다 [OLAP 개체 및 스키마 행 집합에 대 한 OLE DB](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) OLE DB에 대 한 분석 처리 OLAP (온라인) 설명서. 각 항목의 이름은 다음 표의 설명 열에 대 한 괄호 안에 나열 됩니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66711309"
   
  상수에 대 한 스키마 같은 결과 생성 하는 ADO **adSchemaDBInfoKeywords** 하 고 **adSchemaDBInfoLiterals**합니다. ADO 만듭니다는 **레코드 집합**, 후 각각 반환 하는 값을 사용 하 여 각 행을 채우는 합니다 **IDBInfo::GetKeywords** 및 **IDBInfo::GetLiteralInfo** 메서드. 이러한 메서드에 대 한 추가 정보를 찾을 수 있습니다 합니다 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) 는 OLE DB Programmer's Reference 부분입니다.  
   
-|상수|값|Description|제약 조건 열|  
+|상수|값|설명|제약 조건 열|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|지정된 된 사용자가 소유 하는 카탈로그에 정의 된 어설션을 반환 합니다.<br /><br /> (어설션 행 집합)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|DBMS에서 액세스 가능한 카탈로그와 연결 된 실제 특성을 반환 합니다.<br /><br /> (카탈로그 행 집합)|CATALOG_NAME|  
@@ -75,7 +74,7 @@ ms.locfileid: "66711309"
 |**adSchemaTranslations**|21|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 문자 변환을 반환 합니다.<br /><br /> (번역 행 집합)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|나중에 사용하도록 예약되어 있습니다.||  
 |**adSchemaUsagePrivileges**|15|가 사용할 수 있거나 지정된 된 사용자가 승인한 카탈로그에서 정의 하는 개체에 대 한 USAGE 권한을 반환 합니다.<br /><br /> (USAGE_PRIVILEGES 행 집합)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE GRANTOR 피부 여자|  
-|**adSchemaViewColumnUsage**|24|테이블을 볼, 카탈로그에서 정의 및 지정된 된 사용자가 소유 하 고 열을 반환 하는 것은 다릅니다.<br /><br /> (VIEW_COLUMN_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewColumnUsage**|24|테이블을 볼, 카탈로그에서 정의 및 지정된 된 사용자가 소유 하 고 열을 반환 하는 것은 다릅니다.<br /><br /> (VIEW_COLUMN_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|지정된 된 사용자에 액세스할 수 있는 카탈로그에 정의 된 뷰를 반환 합니다.<br /><br /> (뷰 행 집합)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|반환 테이블을 볼, 카탈로그에 정의 및 지정 된 사용자가 소유 하는 테이블에 따라 달라 집니다.<br /><br /> (VIEW_TABLE_USAGE 행 집합)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   

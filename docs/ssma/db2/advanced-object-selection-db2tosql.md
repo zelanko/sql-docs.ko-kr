@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 46e1bdc5b9fdfbbe9c804b4bf2214b9c04b6cdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927785"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>고급 개체 선택 (DB2ToSQL)
 합니다 **고급 개체 섹션** 대화 상자를 사용 하면 개체 이름에 문자열 및 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 선택 하거나 해당 개체의 선택을 취소 합니다. SSMA는 선택한 개체에 대 한 변환 및 마이그레이션 작업을 수행합니다.  

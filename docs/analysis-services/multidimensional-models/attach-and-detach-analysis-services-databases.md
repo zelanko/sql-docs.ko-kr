@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180262"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services 데이터베이스 연결 및 분리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144858"
   
 |읽기/쓰기 데이터베이스 분리|읽기 전용 데이터베이스 분리|  
 |--------------------------------------|-------------------------------------|  
-|1) 서버가 데이터베이스에 대한 CommitExclusive 잠금 요청을 실행합니다.<br /><br /> 2) 서버가 진행 중인 모든 트랜잭션이 커밋되거나 롤백될 때까지 기다립니다.<br /><br /> 3) 서버가 데이터베이스 분리를 위해 필요한 모든 메타데이터를 작성합니다.<br /><br /> 4) 데이터베이스가 삭제된 것으로 표시됩니다.<br /><br /> 5) 서버가 트랜잭션을 커밋합니다.|1) 데이터베이스가 삭제된 것으로 표시됩니다.<br /><br /> 2) 서버가 트랜잭션을 커밋합니다.<br /><br /> 참고: 읽기 전용 데이터베이스에 대한 분리 암호는 변경할 수 없습니다. 암호를 이미 포함하고 있는 연결된 데이터베이스에 암호 매개 변수를 제공하면 오류가 발생합니다.|  
+|1) 서버가 데이터베이스에 대한 CommitExclusive 잠금 요청을 실행합니다.<br /><br /> 2) 서버가 진행 중인 모든 트랜잭션이 커밋되거나 롤백될 때까지 기다립니다.<br /><br /> 3) 서버가 데이터베이스 분리를 위해 필요한 모든 메타데이터를 작성합니다.<br /><br /> 4) 데이터베이스가 삭제된 것으로 표시됩니다.<br /><br /> 5) 서버가 트랜잭션을 커밋합니다.|1) 데이터베이스가 삭제된 것으로 표시됩니다.<br /><br /> 2) 서버가 트랜잭션을 커밋합니다.<br /><br /> 참고: 읽기 전용 데이터베이스에 대 한 분리 암호는 변경할 수 없습니다. 암호를 이미 포함하고 있는 연결된 데이터베이스에 암호 매개 변수를 제공하면 오류가 발생합니다.|  
   
  **Attach** 및 **Detach** 명령은 단일 작업으로 실행해야 하며 동일 트랜잭션 내 다른 작업과 결합할 수 없습니다. 또한 **Attach** 및 **Detach** 명령은 원자성 트랜잭션 명령이므로 작업이 성공하거나 실패하거나 둘 중 하나입니다. 완료되지 않은 상태로 남는 데이터베이스는 없습니다.  
   

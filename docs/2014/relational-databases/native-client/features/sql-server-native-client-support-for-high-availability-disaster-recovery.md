@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206638"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 지원([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가됨)에 대해 설명합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)를 [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), 및 [활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "56040234"
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   `MultiSubnetFailover` 연결 속성을 사용하는 응용 프로그램의 동작은 인증 유형([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따른 영향을 받지 않습니다.  
+-   사용 하는 응용 프로그램의 동작을 `MultiSubnetFailover` 연결 속성이 인증의 유형에 따라 영향을 받지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증입니다.  
   
 -   장애 조치(Failover) 시간을 수용하고 응용 프로그램 연결 재시도 횟수를 줄이기 위해 `loginTimeout` 값을 늘릴 수 있습니다.  
   

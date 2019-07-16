@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962298"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "58645495"
 
 [에너지 수요 예측 템플릿 SQL Server R Services를 사용 하 여](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**:**: 수요 예측 하는 것은 에너지, 소매 및 서비스 등 다양 한 도메인에는 중요 한 문제입니다. 정확한 수요 예측 기업이 더 나은 프로덕션 계획, 리소스 할당을 수행 하 고 다른 중요 한 비즈니스 결정을 내릴 수 있습니다. 에너지 분야의 수요 예측은 에너지 저장소 비용을 줄이고 공급과 수요 균형 조정에 대 한 중요 합니다.
+**:** : 수요 예측 하는 것은 에너지, 소매 및 서비스 등 다양 한 도메인에는 중요 한 문제입니다. 정확한 수요 예측 기업이 더 나은 프로덕션 계획, 리소스 할당을 수행 하 고 다른 중요 한 비즈니스 결정을 내릴 수 있습니다. 에너지 분야의 수요 예측은 에너지 저장소 비용을 줄이고 공급과 수요 균형 조정에 대 한 중요 합니다.
 
 **방법:** 이 템플릿은 전기 수요를 예측 하도록 SQL Server R Services를 사용 합니다. 예측에 사용 된 모델은 기반으로 하는 임의 포리스트 회귀 모델 **rxDForest**, 고속 기계 학습 알고리즘 Microsoft R Server에 포함 합니다. 솔루션에는 수요 시뮬레이터, 모델 학습에 필요한 모든 R 및 T-SQL 코드, 예측 생성 및 보고에 사용할 수 있는 저장 프로시저가 포함되어 있습니다. 
 

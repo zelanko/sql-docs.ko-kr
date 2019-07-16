@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68bde5e78c746579bcb34166469569fb594c129f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913919"
 ---
 # <a name="value-property-ado"></a>Value 속성(ADO)
 
@@ -32,7 +31,7 @@ ms.locfileid: "66710272"
 
 설정 하거나 반환을 **Variant** 개체의 값을 나타내는 값입니다. 기본값에 따라 달라 집니다 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성입니다.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용 합니다 **값** 속성을 설정 하거나 데이터를 반환 **필드** 개체를 설정 하거나 매개 변수 값을 반환 **매개 변수** 개체를 설정 하거나 사용 하 여 속성 설정을 반환 하려면 또는 **속성** 개체입니다. 여부는 **값** 속성이 읽기/쓰기 또는 읽기 전용으로 다양 한 요인에 따라 다릅니다. 자세한 내용은 해당 개체 항목을 참조 하세요.
 

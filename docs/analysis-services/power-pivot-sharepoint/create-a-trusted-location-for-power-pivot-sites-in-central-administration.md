@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24a779a751ac93c4c132c2dbf8ae63987de2666a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208229"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "34027350"
   
 ## <a name="see-also"></a>관련 항목:  
  [파워 피벗 갤러리](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
- [만들기 및 파워 피벗 갤러리에 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Power Pivot 갤러리 만들기 및 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Power Pivot 갤러리 사용](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

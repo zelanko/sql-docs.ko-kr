@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056216"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62817133"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|아티클에 대해 고유한 ID를 제공하는 ID 열입니다.|  
 |**name**|**sysname**|아티클과 관련된 이름이며 게시 내에서 고유합니다.|  

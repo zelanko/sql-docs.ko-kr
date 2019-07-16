@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061598"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>스크롤 가능 커서 및 트랜잭션 격리
 다음 표에서 변경 내용의 표시 유형을 제어 하는 요소를 나열 합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "62468598"
   
  다음 표에서 자체적으로, 해당 트랜잭션의 다른 작업 및 다른 트랜잭션에 의해 변경 내용을 검색 하는 각 커서 유형의 기능을 보여 줍니다. 두 번째 변경 내용 표시 커서 유형 및 커서가 있는 트랜잭션의 격리 수준에 따라 달라 집니다.  
   
-|커서 type\action|자체|소유<br /><br /> Txn|수도<br /><br /> Txn<br /><br /> (RU[a])|수도<br /><br /> Txn<br /><br /> (RC[a])|수도<br /><br /> Txn<br /><br /> (RR[a])|수도<br /><br /> Txn<br /><br /> (S[a])|  
+|커서 type\action|자체|소유<br /><br /> 트랜잭션 수|수도<br /><br /> 트랜잭션 수<br /><br /> (RU[a])|수도<br /><br /> 트랜잭션 수<br /><br /> (RC[a])|수도<br /><br /> 트랜잭션 수<br /><br /> (RR[a])|수도<br /><br /> 트랜잭션 수<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |정적|||||||  
 |Insert|Maybe [b]|아니요|아니요|아니요|아니요|아니요|  
@@ -46,12 +45,12 @@ ms.locfileid: "62468598"
 |DELETE|Maybe [b]|아니요|아니요|아니요|아니요|아니요|  
 |키 집합|||||||  
 |Insert|Maybe [b]|아니요|아니요|아니요|아니요|아니요|  
-|Update|사용자 계정 컨트롤|예|예|예|아니오|아니요|  
-|DELETE|Maybe [b]|사용자 계정 컨트롤|예|예|아니오|아니요|  
+|Update|예|예|예|예|아니오|아니요|  
+|DELETE|Maybe [b]|예|예|예|아니오|아니요|  
 |Dynamic|||||||  
-|Insert|사용자 계정 컨트롤|예|예|예|예|아니요|  
-|Update|사용자 계정 컨트롤|예|예|예|아니오|아니요|  
-|DELETE|사용자 계정 컨트롤|예|예|예|아니오|아니요|  
+|Insert|예|예|예|예|예|아니요|  
+|Update|예|예|예|예|아니오|아니요|  
+|DELETE|예|예|예|예|아니오|아니요|  
   
  [a] 괄호 문자는 커서를 포함 하는 트랜잭션의 격리 수준을 나타냅니다 (에 변경 된) 다른 트랜잭션 격리 수준을 관련이 없습니다.  
   

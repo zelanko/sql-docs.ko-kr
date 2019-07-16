@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d3ecb5de4c70c09bc367b9008f5d62c6a23faef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162295"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]

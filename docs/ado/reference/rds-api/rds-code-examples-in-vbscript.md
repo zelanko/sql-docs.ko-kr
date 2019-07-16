@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0dcfa547b880f58b86c34bd80c313ee4adfaad7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963792"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript의 RDS 코드 예제
 > [!IMPORTANT]

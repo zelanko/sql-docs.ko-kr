@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042904"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ CHANGETABLE (
  *last_sync_version* 아닌지 너무 오래 일부 또는 모든 변경 내용은 수 정리 된 데이터베이스에 대해 구성 된 보존 기간에 따라 있으므로 되도록 유효성을 검사 해야 합니다. 자세한 내용은 [CHANGE_TRACKING_MIN_VALID_VERSION &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) 하 고 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  버전 *테이블*, {< primary_key_values >}  
- 지정된 행에 대한 최신 변경 내용 추적 정보를 반환합니다. 기본 키 값은 행을 식별해야 합니다. <primary_key_values>는 기본 키 열을 식별하고 값을 지정합니다. 기본 키 열 이름은 지정되는 순서에 제한을 받지 않습니다.  
+ 지정된 행에 대한 최신 변경 내용 추적 정보를 반환합니다. 기본 키 값은 행을 식별해야 합니다. < primary_key_values > 기본 키 열을 식별 하 고 값을 지정 합니다. 기본 키 열 이름은 지정되는 순서에 제한을 받지 않습니다.  
   
  *테이블*  
  변경 내용 추적 정보를 가져올 사용자 정의 테이블입니다. 테이블에서 변경 내용 추적을 사용할 수 있어야 합니다. 한 부분, 두 부분, 세 부분 또는 네 부분으로 이루어진 테이블 이름을 사용할 수 있습니다. 테이블 이름은 테이블에 대한 동의어가 될 수 있습니다.  
@@ -95,7 +94,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  CHANGES를 지정하면 다음 열이 있는 0개 이상의 행이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|행의 마지막 변경 내용과 연관된 버전 값입니다.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|마지막 삽입 작업과 연관된 버전 값입니다.|  
@@ -107,13 +106,13 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  VERSION을 지정하면 다음 열이 있는 하나의 행이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|행과 연관된 현재 변경 버전 값입니다.<br /><br /> 변경 내용 추적 보존 기간보다 긴 기간 동안 변경된 내용이 없거나, 변경 내용 추적이 사용된 이후 변경된 행이 없을 경우 이 값은 NULL입니다.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|WITH 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용하여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경합니다.|  
 |\<기본 키 열 값 >|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  CHANGETABLE 함수는 일반적으로 쿼리의 FROM 절에서 테이블인 것처럼 사용할 수 있습니다.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -151,7 +150,7 @@ CHANGETABLE (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>1. 데이터의 초기 동기화에 대한 행 반환  
+### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. 데이터의 초기 동기화에 대한 행 반환  
  다음 예제에서는 테이블 데이터의 초기 동기화에 대한 데이터를 가져오는 방법을 보여 줍니다. 쿼리는 모든 행 데이터 및 연관된 버전을 반환합니다. 그러면 동기화된 데이터를 포함하는 시스템에 이 데이터를 추가하거나 삽입할 수 있습니다.  
   
 ```sql  
@@ -163,7 +162,7 @@ CROSS APPLY CHANGETABLE
     (VERSION Employees, ([Emp ID], SSN), (e.[Emp ID], e.SSN)) AS c;  
 ```  
   
-### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>2. 특정 버전 이후의 모든 변경 내용 나열  
+### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>2\. 특정 버전 이후의 모든 변경 내용 나열  
  다음 예에서는 지정된 버전(`@last_sync_version)` 이후에 테이블에서 변경된 내용을 모두 나열합니다. [Emp ID] 및 SSN은 복합 기본 키에 있는 열입니다.  
   
 ```sql  
@@ -175,7 +174,7 @@ SELECT [Emp ID], SSN,
 FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;  
 ```  
   
-### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>3. 동기화를 위해 변경된 모든 데이터 가져오기  
+### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>3\. 동기화를 위해 변경된 모든 데이터 가져오기  
  다음 예에서는 변경된 모든 데이터를 가져오는 방법을 보여 줍니다. 이 쿼리는 변경 내용 추적 정보를 사용자 테이블과 조인하여 사용자 테이블 정보가 반환되게 합니다. 삭제된 행에 대해 하나의 행이 반환되도록 `LEFT OUTER JOIN`이 사용됩니다.  
   
 ```sql  
@@ -190,7 +189,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
         ON e.[Emp ID] = c.[Emp ID] AND e.SSN = c.SSN;  
 ```  
   
-### <a name="d-detecting-conflicts-by-using-changetableversion"></a>4. CHANGETABLE(VERSION...)을 사용하여 충돌 검색  
+### <a name="d-detecting-conflicts-by-using-changetableversion"></a>4\. CHANGETABLE(VERSION...)을 사용하여 충돌 검색  
  다음 예에서는 행에 마지막 동기화 이후의 변경 내용이 없는 경우에만 행을 업데이트하는 방법을 보여 줍니다. 특정 행의 버전 번호는 `CHANGETABLE`을 사용하여 얻습니다. 행이 업데이트되었으면 변경 내용이 적용되지 않으며 쿼리가 행의 최근 변경 내용에 대한 정보를 반환합니다.  
   
 ```sql  

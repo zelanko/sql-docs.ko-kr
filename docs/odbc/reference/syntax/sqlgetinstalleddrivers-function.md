@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ff675a184ea0804988972ef10e9a383cdd45230
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061517"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 함수
 **규칙**  
@@ -60,7 +59,7 @@ BOOL SQLGetInstalledDrivers(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetInstalledDrivers** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|합니다 *lpszBuf* 인수가 NULL 이거나 잘못 되었거나, 또는 *cbBufMax* 인수가 0 보다 작거나 합니다.|  

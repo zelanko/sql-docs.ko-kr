@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f4bd21ab1463d40b0eb9b83e5686951e43dee885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049296"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel(MDX)
 
@@ -42,7 +41,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (선택 사항) 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **DrilldownLevel** 함수 일련의 자식 멤버 계층적 순서로 반환 된, 지정 된 집합에 포함할 멤버를 기준으로 합니다. 이때 함수의 결과 집합에 포함되는 모든 자식 구성원이 해당 부모 구성원 바로 아래에 포함된다는 점만 제외하고 지정된 집합의 원래 구성원 순서가 유지됩니다.  
   
  여러 수준 계층적 데이터 구조의 경우, 드릴다운할 수준을 명시적으로 선택할 수 있습니다. 수준을 지정하는 두 가지 상호 배타적인 방법이 있습니다. 첫 번째 방법을 설정 하는 것을 **level_expression** 또 다른 방법은 수준을 반환 하는 MDX 식을 사용 하 여 인수를 지정 하는 것을 **인덱스** 인수를 숫자 식을 사용 하 여는 번호로 수준을 지정합니다.  
