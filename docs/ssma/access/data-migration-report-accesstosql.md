@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006589"
 ---
 # <a name="data-migration-report-accesstosql"></a>데이터 마이그레이션 보고서 (AccessToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "63138896"
 **상태**  
 대상 데이터베이스에 원본에서 데이터 마이그레이션 상태를 보여 줍니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **수행할 작업**  

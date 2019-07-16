@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022420"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @loginame **=** ] **'**_로그인_**'**  
+ [ @loginame **=** ] **'** _로그인_ **'**  
  고정 서버 역할에 추가할 로그인의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 합니다. Windows 로그인에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한이 부여되어 있지 않으면 자동으로 부여됩니다.  
   
- [ @rolename **=** ] **'**_역할_**'**  
+ [ @rolename **=** ] **'** _역할_ **'**  
  로그인을 추가할 고정 서버 역할의 이름입니다. *역할* 은 **sysname**, 기본값은 NULL 이며 다음 값 중 하나 여야 합니다.  
   
 -   sysadmin  
@@ -69,7 +68,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로그인을 고정 서버 역할에 추가하면 이 역할과 연결된 사용 권한을 얻게 됩니다.  
   
  공용 및 sa 로그인의 역할 멤버 자격을 변경할 수 없습니다.  

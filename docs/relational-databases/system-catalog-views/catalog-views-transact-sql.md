@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4679c8dbc853f0bc902a59cb653330a638b2f685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c0bbdf6ddd65621eff80301ec01f650ea1ca011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050858"
 ---
 # <a name="system-catalog-views-transact-sql"></a>시스템 카탈로그 뷰 (트랜잭션 SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "62960005"
 -   파생된 뷰에는 열의 상위 집합과 행의 하위 집합이 포함됩니다.  
   
 > [!IMPORTANT]  
->  이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 열 목록의 끝에 열을 추가하여 시스템 카탈로그 뷰의 정의를 보강할 수 있습니다.  SELECT 구문을 사용 하 여에 대 한 것이 좋습니다 \* FROM *sys.catalog_view_name* 프로덕션 환경에서 코드 반환 된 열 수가 수 변경 하 고 응용 프로그램을 중단 합니다.  
+>  이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 열 목록의 끝에 열을 추가하여 시스템 카탈로그 뷰의 정의를 보강할 수 있습니다. SELECT 구문을 사용 하 여에 대 한 것이 좋습니다 \* FROM *sys.catalog_view_name* 프로덕션 환경에서 코드 반환 된 열 수가 수 변경 하 고 응용 프로그램을 중단 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 카탈로그 뷰는 다음 범주로 구성됩니다.  
   

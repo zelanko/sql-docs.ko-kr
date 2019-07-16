@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6981a3ae7808f727ed3a2d246f21f3159bbeac6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 017bb1a123c7465efd7ad895bb34fec8b87a707e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938302"
 ---
 # <a name="assessment-report-db2tosql"></a>평가 보고서 (DB2ToSQL)
 평가 보고서 창에 데이터베이스 개체의 변환 결과 보여 줍니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 마이그레이션 프로젝트의 비용과 복잡성을 예측할 수 있습니다.  

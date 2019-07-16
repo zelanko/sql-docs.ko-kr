@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048398"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,12 +54,12 @@ sp_helpstats[ @objname = ] 'object_name'
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서는 결과 집합의 열을 설명합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**statistics_name**|통계의 이름입니다. 반환 **sysname** 이며 null 일 수 없습니다.|  
 |**statistics_keys**|통계가 기반을 두고 있는 키입니다. 반환 **nvarchar(2078)** 이며 null 일 수 없습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  특정 인덱스 또는 통계에 대한 자세한 통계 정보를 표시하려면 DBCC SHOW_STATISTICS를 사용합니다. 자세한 내용은 [DBCC SHOW_STATISTICS &#40;TRANSACT-SQL&#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 하 고 [sp_helpindex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>사용 권한  

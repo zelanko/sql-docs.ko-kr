@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942389"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'` 경고의 이름입니다. 이름은 경고에 대한 응답으로 메시지가 전달된 전자 메일 또는 호출기에 표시됩니다. 고유 해야 하며 퍼센트 (**%**) 문자입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 경고의 이름입니다. 이름은 경고에 대한 응답으로 메시지가 전달된 전자 메일 또는 호출기에 표시됩니다. 고유 해야 하며 퍼센트 ( **%** ) 문자입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @message_id = ] message_id` 경고를 정의 하는 메시지 오류 번호입니다. (일반적으로 오류 번호에 해당 합니다 **sysmessages** 테이블입니다.) *message_id* 됩니다 **int**, 기본값은 **0**합니다. 하는 경우 *심각도* 경고를 정의 하는 데 사용 됩니다 *message_id* 여야 **0** 또는 NULL입니다.  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  이 값을 설정함으로써 단기간에 경고가 반복적으로 발생하는 경우, 원하지 않는 전자 메일 메시지가 전달되지 않도록 하는 등의 작업을 할 수 있습니다.  
   
-`[ @notification_message = ] 'notification_message'` 전자 메일의 일부로 운영자에 게 전송 하는 선택적 추가 메시지는 **net send**, 또는 호출기 알림의 합니다. *notification_message* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. 지정 *notification_message* 교정 프로시저와 같은 특별 한 메모를 추가 하는 데 유용 합니다.  
+`[ @notification_message = ] 'notification_message'` 전자 메일의 일부로 운영자에 게 전송 하는 선택적 추가 메시지는 **net send**, 또는 호출기 알림의 합니다. *notification_message* 됩니다 **nvarchar(512)** , 기본값은 NULL입니다. 지정 *notification_message* 교정 프로시저와 같은 특별 한 메모를 추가 하는 데 유용 합니다.  
   
 `[ @include_event_description_in = ] include_event_description_in` 가 있는지 여부를 대 한 설명을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 알림 메시지의 일부로 포함 해야 합니다. *include_event_description_in*됩니다 **tinyint**, 기본값은 **5** (전자 메일 및 **net send**), 하나를 가질 수와 함께 다음이 값 중 더는 **또는** 논리 연산자입니다.  
   
@@ -89,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'` 데이터베이스 오류는 경고가 발생 해야 합니다. 하는 경우 *데이터베이스*제공 되지 않으면 오류가 발생 하는 것에 관계 없이 경고가 발생 합니다. *데이터베이스* 됩니다 **sysname**합니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 문자 시퀀스에 대 한 설명을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 같아야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword_pattern* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다. 이 매개 변수는 개체 이름을 필터링 하는 데 (예를 들어 **%customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 문자 시퀀스에 대 한 설명을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 같아야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword_pattern* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다. 이 매개 변수는 개체 이름을 필터링 하는 데 (예를 들어 **%customer_table%** ).  
   
 `[ @job_id = ] job_id` 이 경고에 대 한 응답에서 실행 작업의 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
@@ -112,7 +111,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @wmi_namespace = ] 'wmi_namespace'` 이벤트에 대 한 쿼리는 WMI 네임 스페이스입니다. *wmi_namespace* 됩니다 **sysname**, 기본값은 NULL입니다. 로컬 서버의 네임스페이스만 지원됩니다.  
   
-`[ @wmi_query = ] 'wmi_query'` WMI 이벤트 경고를 지정 하는 쿼리. *wmi_query* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다.  
+`[ @wmi_query = ] 'wmi_query'` WMI 이벤트 경고를 지정 하는 쿼리. *wmi_query* 됩니다 **nvarchar(512)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -173,7 +172,7 @@ GO
  [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysperfinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

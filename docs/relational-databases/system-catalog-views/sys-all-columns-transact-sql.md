@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40e04fe9-0b64-4799-84c0-57f128b2bdc2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb9fedb07a1e09f975c1012367a43f3f4d992028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7f0cf9b75dce672c2d1c61ad86723c4954372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018171"
 ---
 # <a name="sysallcolumns-transact-sql"></a>sys.all_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47843721"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.|  
-|NAME|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  
+|name|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  
 |column_id|**int**|열의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 열 ID는 순차적이지 않을 수 있습니다.|  
 |system_type_id|**tinyint**|열의 시스템 유형 ID입니다.|  
 |user_type_id|**int**|열의 유형에 대한 사용자 정의 ID입니다.<br /><br /> 연결할 형식의 이름을 반환할 합니다 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 카탈로그 뷰에이 열입니다.|  
-|max_length|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열의 경우 max_length 값은 16 이거나 sp_tableoption 'text in row'에서 설정한 값입니다.|  
+|max_length|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열의 경우 max_length 값은 16 이거나 sp_tableoption 'text in row'에서 설정한 값입니다.|  
 |전체 자릿수|**tinyint**|숫자 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 0입니다.|  
 |소수 자릿수|**tinyint**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 0입니다.|  
 |collation_name|**sysname**|문자 기반일 경우에는 열의 데이터 정렬 이름이고, 그렇지 않으면 NULL입니다.|  

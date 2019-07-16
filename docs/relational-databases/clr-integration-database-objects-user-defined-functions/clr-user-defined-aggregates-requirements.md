@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009751"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 사용자 정의 집계 - 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약의 구성 합니다 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 네 가지 방법 중 구성 된 새 값을 누적 하는 메커니즘을 포함 합니다. **Init**를 **Accumulate**합니다  **병합**, 및 **종료**합니다. 이러한 요구를 충족 하는 경우 수의 사용자 정의 집계의 활용 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  
+  공용 언어 런타임(CLR) 어셈블리의 형식이 필요한 집계 계약을 구현한다면 해당 형식을 사용자 정의 집계 함수로 등록할 수 있습니다. 이 계약의 구성 합니다 **SqlUserDefinedAggregate** 특성과 집계 계약 메서드로 합니다. 집계 계약은 집계의 중간 상태를 저장 하는 메커니즘 및 네 가지 방법 중 구성 된 새 값을 누적 하는 메커니즘을 포함 합니다. **Init**, **누적**합니다 **병합**, 및 **종료**합니다. 이러한 요구를 충족 하는 경우 수의 사용자 정의 집계의 활용 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 항목의 다음 섹션에서는 사용자 정의 집계를 만드는 방법과 사용하는 방법에 대한 자세한 정보를 제공합니다. 예를 들어 참조 [Invoking CLR User-Defined 집계 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)합니다.  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  자세한 내용은 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)합니다.  

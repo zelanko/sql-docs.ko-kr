@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
-ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: bb9eb4d706b37501a1919ea3b2178525a6026af3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962410"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>R Server 또는 SQL Server Machine Learning에 대 한 업그레이드 및 설치 FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -162,7 +161,7 @@ Revolution Analytics 제품의 이전 설치 또는 SQL Server R Services 시험
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (7.5.0의 경우)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
  [SQL Server Machine Learning Services (In-database)](../r/sql-server-r-services.md)
 

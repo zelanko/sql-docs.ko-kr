@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8f3fc746660b1382d8c06f5ffc343fd52ecf024
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949411"
 ---
 # <a name="members-example-vbscript"></a>Members 예제(VBScript)
 이 샘플 MDX 쿼리 문자열을 사용 하 여 OLAP 데이터를 검색 하 고 열 확장 기능을 사용 하 여 다차원에 대 한 HTML 테이블 구조 결과 셀 집합을 씁니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bd5dc3b6e3d491be6cde3dff8a362ca076359d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941946"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>정책 기반 관리 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

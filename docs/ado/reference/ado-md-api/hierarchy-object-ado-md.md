@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5915102164afccd8e2055e14d0ef9d63b2cf5937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949691"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체(ADO MD)
 한 가지 방식을의 멤버는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 집계 되거나 "롤업 합니다." 차원 하나 이상의 계층 구조에 따라 집계할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 및 속성을 사용 하 여는 **계층** 개체를 다음을 수행할 수 있습니다.  
   
 -   식별 된 **계층** 사용 하 여는 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 및 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) 속성입니다.  
@@ -39,13 +38,13 @@ ms.locfileid: "66709148"
   
  합니다 **속성** 공급자가 제공한 속성을 포함 하는 컬렉션입니다. 다음 표에서 사용할 수 있는 속성을 보여 줍니다. 실제 속성은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록에 대 한 공급자에 대 한 설명서를 참조 하세요.  
   
-|이름|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |AllMember|계층 구조에서 롤업의 가장 높은 수준에서 멤버입니다.|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CubeName|큐브 이름입니다.|  
 |DefaultMember|이 계층에 대 한 기본 멤버의 고유 이름입니다.|  
-|Description|계층의 의미 있는 설명입니다.|  
+|설명|계층의 의미 있는 설명입니다.|  
 |DimensionType|이 계층이 속한 차원의 형식입니다.|  
 |DimensionUniqueName|차원의 모호 하지 않은 이름입니다.|  
 |HierarchyCaption|계층과 연결된 레이블 또는 캡션입니다.|  

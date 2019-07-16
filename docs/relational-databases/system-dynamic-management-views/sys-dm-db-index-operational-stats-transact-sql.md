@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004890"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  기본 테이블 또는 뷰의 모든 인덱스에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*에 NULL을 지정 해야 *partition_number*합니다.    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* | NULL | 0 | 기본    
  개체의 파티션 번호입니다. *partition_number* 됩니다 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 경우 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
  인덱스 또는 힙의 모든 파티션에 대한 캐시된 정보를 반환하려면 NULL을 지정합니다.    
@@ -81,7 +80,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>반환된 테이블    
     
-|열 이름|데이터 형식|Description|    
+|열 이름|데이터 형식|설명|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|데이터베이스 ID입니다.|    
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
@@ -129,7 +128,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|테이블, 인덱스 또는 인덱싱된 뷰의 특정 파티션에 대한 PAGE 수준 압축을 계산한 페이지 수입니다. 공간 절약 효과가 크지 않기 때문에 압축되지 않은 페이지도 포함됩니다. columnstore 인덱스의 경우 항상 0입니다.|    
 |**page_compression_success_count**|**bigint**|테이블, 인덱스 또는 인덱싱된 뷰의 특정 파티션의 PAGE 압축을 사용하여 압축된 데이터 페이지 수입니다. columnstore 인덱스의 경우 항상 0입니다.|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
  이 동적 관리 개체는 CROSS APPLY 및 OUTER APPLY의 상호 관련된 매개 변수를 받지 않습니다.    
     
  사용할 수 있습니다 **sys.dm_db_index_operational_stats** 사용자 읽기 또는 테이블, 인덱스 또는 파티션에 쓰기 및 테이블이 나 인덱스는 상당한 I/O 작업을 발생 하는 또는 핫 식별 하기 위해 대기 해야 하는 시간의 길이 추적 하려면 스폿 합니다.    
@@ -200,7 +199,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="examples"></a>예    
     
-### <a name="a-returning-information-for-a-specified-table"></a>1\. 지정된 테이블에 대한 정보 반환    
+### <a name="a-returning-information-for-a-specified-table"></a>A. 지정된 테이블에 대한 정보 반환    
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스 및 파티션에 대한 정보를 반환합니다. 이 쿼리를 실행하려면 적어도 `Person.Address` 테이블에 대한 CONTROL 권한이 필요합니다.    
     
 > [!IMPORTANT]    
@@ -241,7 +240,7 @@ GO
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [sys.dm_os_latch_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     

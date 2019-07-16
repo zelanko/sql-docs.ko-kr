@@ -2,19 +2,18 @@
 title: Analytics Platform System에서 사용자 세션 | Microsoft Docs "
 description: Analytics Platform System의 병렬 데이터 웨어하우스에서 사용자 세션입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49c8ea2479c0114364958b18ac299794511154d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959793"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System에서 사용자 세션
 적절 한 권한이 있는 로그인에는 이러한 작업을 수행 하는 포함 하 여 SQL Server PDW 어플라이언스에 대 한 모든 로그인의 세션을 관리할 수 있습니다.  

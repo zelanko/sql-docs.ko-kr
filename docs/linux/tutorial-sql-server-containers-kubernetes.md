@@ -4,18 +4,17 @@ description: 이 자습서에서는 Azure Kubernetes Service에서 Kubernetes �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032056"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 

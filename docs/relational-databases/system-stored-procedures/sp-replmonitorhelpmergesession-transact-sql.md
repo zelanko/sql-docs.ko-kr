@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950624"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours` 기록 에이전트 세션 정보를 반환할 수 있는 시간에서 시간 범위가입니다. *시간* 됩니다 **int**, 다음 범위 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |< **0**|이전에 실행된 에이전트 세션에 대한 정보를 최대 100개까지 반환합니다.|  
 |**0** (기본값)|이전에 실행된 모든 에이전트 세션에 대한 정보를 반환합니다.|  
@@ -55,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type` 세션 종료 결과에 따라 결과 집합을 필터링 합니다. *session_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|다시 시도 또는 성공한 에이전트 세션입니다.|  
 |**0**|실패한 에이전트 세션입니다.|  
@@ -68,10 +67,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|에이전트 작업 세션의 ID입니다.|  
-|**상태**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = Start<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = Retry<br /><br /> **6** = Fail|  
+|**상태**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**StartTime**|**datetime**|에이전트 작업 세션이 시작된 시간입니다.|  
 |**EndTime**|**datetime**|에이전트 작업 세션이 완료된 시간입니다.|  
 |**기간**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
@@ -87,7 +86,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replmonitorhelpmergesession** 병합 복제를 모니터링 하는 데 사용 됩니다.  
   
  구독자에서 실행 될 때 **sp_replmonitorhelpmergesession** 만 마지막 다섯 개 병합 에이전트 세션에 대 한 정보를 반환 합니다.  

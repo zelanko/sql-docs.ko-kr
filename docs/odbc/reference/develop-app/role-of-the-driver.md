@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020385"
 ---
 # <a name="role-of-the-driver"></a>드라이버의 역할
 모든 오류 및 경고 드라이버 관리자에서 확인 하지 확인 하 고 생성 하는 상태 레코드를 정렬 하는 드라이버. (ODBC 2입니다. *x* 드라이버 상태 레코드 순서를 지정 하지 않습니다.) 이 오류 및 경고 데이터 잘림, 데이터 변환, 구문 및 상태 전환에 포함합니다. 드라이버는 오류 및 경고 드라이버 관리자에 의해 부분적으로 검사를 검사할 수 있습니다. 예를 들어 드라이버 관리자를 확인 하지만 여부를 값 *작업* 에 **SQLSetPos** 는 드라이버가 지원 되는지 여부를 확인 해야 합니다.  

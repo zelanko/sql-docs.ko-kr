@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93b8bd226ca5b29af534c856e394c98b4466ec25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963404"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 속성(RDS)
 레코드를 정렬 하려면 열을 나타냅니다.  

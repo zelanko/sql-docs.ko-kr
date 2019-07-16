@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ca8ed2bc61c75657f8a9ddf95e56df67f84889e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1c0c36b0e9985a0dee38603d150eecb44c17957d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043278"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,14 +66,14 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|잘못된 인수입니다.|  
 |**E_OUTOFMEMORY**|메모리 부족 오류가 발생했습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  IBCPSession2::BCPSetBulkMode 대량 쿼리 또는 테이블에서 복사를 사용할 수 있습니다. 쿼리 문을 대량 복사하는 데 사용되는 IBCPSession2::BCPSetBulkMode는 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)`를 호출하여 쿼리 문을 지정하기 전에 호출해야 합니다.  
   
  단일 명령 텍스트에서 RPC 호출 구문을 일괄 처리 쿼리 구문(예:`{rpc func};SELECT * from Tbl`)과 결합하지 마십시오.  이렇게 하면 오류를 반환 하 고 메타 데이터를 검색할 수 없도록 하려면 icommandprepare:: Prepare 합니다. 단일 명령 텍스트에서 저장 프로시저 실행 및 일괄 처리 쿼리를 결합해야 할 경우 ODBC CALL 구문(예:`{call func}; SELECT * from Tbl`)을 사용합니다.  
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|property|Description|  
+|property|설명|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP의-c 옵션에 해당합니다. EXE를 사용 하 여 ibcpsession:: Bcpcolfmt *eUserDataType* 속성으로 설정 **BCP_TYPE_SQLCHARACTER**합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP의-w 옵션에 해당합니다. EXE 및 사용 하 여 ibcpsession:: Bcpcolfmt *eUserDataType* 속성으로 설정 **BCP_TYPE_SQLNCHAR**합니다.|  
@@ -363,7 +362,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IBCPSession2 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

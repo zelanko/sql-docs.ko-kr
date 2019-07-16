@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8761bf7f14e662ce8a0944c0d4f8b2c6d3605e08
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941854"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>보안 저장 프로시저(Transact-SQL)
 

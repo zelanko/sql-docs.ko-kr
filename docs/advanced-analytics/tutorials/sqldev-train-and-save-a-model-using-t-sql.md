@@ -7,13 +7,12 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a76a3a77f3c258372e6ff3a7e472b472fcc2f073
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1953e2a5cfa1671a81630a66a4e6c3589929d1bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961830"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>3단원: 학습 및 T-SQL을 사용 하는 모델 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

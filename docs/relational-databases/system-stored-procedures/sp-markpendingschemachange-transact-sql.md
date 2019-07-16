@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67377f638459a37f25fbc78b9acff395192a2f3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4d8864c28cb3569d4177103d10dd4d3da9b2e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029977"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_markpendingschemachange** 병합 복제에 사용 됩니다.  
   
  **sp_markpendingschemachange** 저장된 프로시저는 병합 복제의 지원 가능성을 위한 하 고 다시 초기화와 같은 다른 수정 동작으로 상황을 해결 하지 못한 또는에서 비용이 큰 경우에 사용 해야 성능 조건입니다.  

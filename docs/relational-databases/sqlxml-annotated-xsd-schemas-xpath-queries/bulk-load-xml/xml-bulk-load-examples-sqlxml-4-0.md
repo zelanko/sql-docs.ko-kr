@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2b536b6f1bc22e15948dfb1a0d4df539c099f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005270"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>1\. 테이블에 XML 대량 로드  
+## <a name="a-bulk-loading-xml-in-a-table"></a>A. 테이블에 XML 대량 로드  
  인스턴스에 대 한 연결을 설정 하는이 예제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ConnectionString 속성 (MyServer)에 지정 된 합니다. 또한이 예제에서는 ErrorLogFile 속성을 지정합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. Execute 메서드 매개 변수로 매핑 스키마 파일 (SampleSchema.xml)와 XML 데이터 파일 (SampleXMLData.xml)에 확인 합니다. 대량 로드를 실행할 때, Cust 테이블에서 만든 **tempdb** 데이터베이스에 XML 데이터 파일의 내용을 기반으로 하는 새 레코드가 포함 됩니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
@@ -566,7 +565,7 @@ OrderDetail (OrderID, ProductID)
   
 -   CheckConstraints 합니다. 이 속성을 TRUE로 설정하면 테이블에 삽입되는 데이터가 테이블에 지정된 제약 조건을 위반하지 않도록 보장할 수 있습니다(이 예에서는 Cust와 CustOrder 테이블 간에 지정된 PRIMARY KEY/FOREIGN KEY 제약 조건). 제약 조건 위반이 발생하면 대량 로드는 실패합니다.  
   
--   XMLFragment. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
+-   XMLFragment 합니다. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
   
  다음은 VBScript 코드입니다.  
   
@@ -1244,7 +1243,7 @@ End Sub
 </Schema>  
 ```  
   
-## <a name="j-bulk-loading-in-xml-data-type-columns"></a>10\. xml 데이터 형식 열에 대량 로드  
+## <a name="j-bulk-loading-in-xml-data-type-columns"></a>10. xml 데이터 형식 열에 대량 로드  
  매핑 스키마 지정 하는 경우는 [xml 데이터 형식](../../../t-sql/xml/xml-transact-sql.md) 사용 하 여 열을 **sql: datatype = "xml"** 주석, XML 대량 로드는 원본 문서에서이 매핑된 필드에 대 한 XML 자식 요소를 복사할 수 열입니다.  
   
  AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 테이블에서의 CatalogDescription 필드 **xml** 데이터 형식에 매핑되는  **\<Desc >** 요소를 사용 하 여 합니다 **sql: field** 및 **sql: 데이터 형식 = "xml"** 주석입니다.  

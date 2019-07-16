@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053441"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "62690252"
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rows**|**int**|기준 데이터 수준 행 개수 **indid** = 0 및 **indid** = 1, 및 값에 대해 반복 됩니다 **indid** > 1.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  예약된 것으로 정의된 열은 사용할 수 없습니다.  
   
  열 **dpages**를 **예약**, 및 **사용 되는** 테이블이 나 인덱스에 ROW_OVERFLOW 할당 단위의 데이터가 있으면 정확한 결과 반환 하지 것입니다. 또한 각 인덱스에 대한 페이지 수는 개별적으로 추적되고 기본 테이블에서 집계되지 않습니다. 페이지 수를 보려면 다음을 사용 합니다 [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 또는 [sys.partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) 카탈로그 뷰 또는 [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 동적 관리 뷰.  

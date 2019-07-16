@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e2ad81b1d92bb45d9ab15ca11897804cc0d333a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 337697ec5a0ce842d3ade808db885a671b6adcc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010704"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어느 *collection_set_id* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다.  
   
  이 절차는 컬렉션을 시작 하 고 지정된 된 컬렉션 집합 및 컬렉션 집합에 있는 경우 컬렉션 에이전트 작업을 즉시 시작 됩니다에 대 한 작업을 업로드 해당 **@collection_mode** 캐시 되지 않은 (1)로 설정 합니다. 자세한 내용은 참조 하십시오 [sp_syscollector_create_collection_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)합니다.  

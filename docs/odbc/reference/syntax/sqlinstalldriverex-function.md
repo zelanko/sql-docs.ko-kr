@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030597"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
@@ -86,7 +85,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="diagnostics"></a>진단  
  때 **SQLInstallDriverEx** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|합니다 *lpszPathOut* 인수가 출력 경로 포함 하기에 충분 합니다. 버퍼의 잘린된 경로 포함합니다.<br /><br /> 합니다 *cbPathOutMax* 인수가 0, 및 *문제점과* ODBC_INSTALL_COMPLETE 되었습니다.|  
@@ -100,7 +99,7 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>주석  
  합니다 *lpszDriver* 인수는 키워드 / 값 쌍의 형태로 특성 목록입니다. 각 쌍을 null 바이트를 사용 하 여 종료 됩니다 하 고 전체 목록을 null 바이트를 사용 하 여 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 이 목록의 형식은 아래와 같습니다.  
   
- _driver-desc_ **\\** 0Driver **=** _driver-DLL-filename_ **\\** 0[Setup **=** _setup-DLL-filename_<b>\\</b>0]  
+ _드라이버 desc_ **\\** 0Driver **=** _드라이버-DLL-filename_ **\\** 0 [설치 **=** _설치-DLL-filename_<b>\\</b>0]  
   
  [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
   

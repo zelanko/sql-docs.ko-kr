@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939802"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>시스템 요구 사항(Visual FoxPro ODBC 드라이버)
 설치에 대 한 시스템 요구 사항의 최소 운영 체제 및 드라이버를 성공적으로 설치 하는 데 필요한 디스크 공간을 제공 합니다. 드라이버를 설치한 후 Visual FoxPro 데이터에 액세스 하는 데 사용할 특정 응용 프로그램 소프트웨어를 선택할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62633751"
   
 -   ODBC 클라이언트 소프트웨어 (드라이버를 사용 하 여 자동으로 설치 됨)  
   
--   Microsoft Visual FoxPro ODBC Driver  
+-   Microsoft Visual FoxPro ODBC 드라이버  
   
 -   응용 프로그램 소프트웨어는 다음 형식 중 하나:  
   
@@ -51,7 +50,7 @@ ms.locfileid: "62633751"
   
     -   Visual FoxPro [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 의 디렉터리나 [테이블 있음](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro 2.0, 2.5, 2.6 [table](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro 2.0, 2.5에서 2.6 [테이블](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
  Visual FoxPro ODBC 드라이버는 더블 바이트 문자 집합 (DBCS)를 지원합니다. 자세한 내용은 [다국어 기능 지원](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)합니다.  
   

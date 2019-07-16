@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 701ced4f5e0ad511f4a1c5b39c9775e285d1f751
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933570"
 ---
 # <a name="connection-object-ado"></a>연결 개체(ADO)
 데이터 원본에 대해 열린 연결을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **연결** 개체 데이터 소스를 사용 하 여 고유한 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템에서 서버는 실제 네트워크 연결에 해당 하는 수 있습니다. 공급자, 몇 가지 컬렉션, 메서드 또는 속성을 지 원하는 기능에 따라 한 **연결** 개체를 사용할 수 없습니다.  
   
  컬렉션, 메서드 및 속성을 사용 하 여는 **연결** 개체를 다음을 수행할 수 있습니다.  

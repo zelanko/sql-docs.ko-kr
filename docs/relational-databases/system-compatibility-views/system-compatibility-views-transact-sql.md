@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dbc4f4f1fb55603a6918357e4c6aa16e4a819f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018027"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>시스템 호환성 뷰 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

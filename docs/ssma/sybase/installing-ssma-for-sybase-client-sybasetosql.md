@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029024"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Sybase용 SSMA 클라이언트 설치(SybaseToSQL)
 SSMA 클라이언트 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 서버 및 인스턴스에 연결 하는 데 사용 되는 프로그램 파일 이루어져 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB, ASE 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 구문, 로드를 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 및 데이터를 마이그레이션하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQLDB 합니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 756300f1efc93e47a7af3913b34d9318cbe5e559
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016827"
 ---
 # <a name="case-statement-mdx"></a>CASE 문(MDX)
 
@@ -60,7 +59,7 @@ END
  *Boolean_expression*  
  스칼라 값으로 계산되는 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ELSE 절이 없고 WHEN 절이 모두 false를 반환한 경우 결과는 빈 셀이 됩니다.  
   
 ## <a name="simple-case-expression"></a>단순 CASE 식  
