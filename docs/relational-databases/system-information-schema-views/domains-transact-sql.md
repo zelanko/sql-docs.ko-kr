@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abd00bbc8b9ee63edb8846ea5968edbbdd21bd5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cb602bf26b20ea916a46655cf813f4c1a6ab4f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950733"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54126863"
   
  이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA.** _view_name_합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|별칭 데이터 형식이 들어 있는 스키마의 이름입니다.<br /><br /> **&#42;&#42;중요 &#42; &#42;**  데이터 형식의 스키마를 확인할 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  
@@ -43,16 +42,16 @@ ms.locfileid: "54126863"
 |**때**|**int**|이진 데이터, 문자 데이터 또는 텍스트와 이미지 데이터의 최대 길이(문자)입니다.<br /><br /> -1 **xml** 및 큰 값 형식의 데이터입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|  
 |**CHARACTER_OCTET_LENGTH**|**int**|이진 데이터, 문자 데이터 또는 텍스트와 이미지 데이터의 최대 길이(바이트)입니다.<br /><br /> -1 **xml** 및 큰 값 형식의 데이터입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|항상 NULL을 반환합니다.|  
-|**COLLATION_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
+|**COLLATION_SCHEMA**|**varchar(** 3 **)**|항상 NULL을 반환합니다.|  
 |**데이터 정렬 이름**|**nvarchar(** 128 **)**|열이 문자 데이터 정렬에 대 한 고유 이름을 반환 하거나 **텍스트** 데이터 형식입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|반환 **마스터**합니다. 이 이면 문자 집합이 있는 데이터베이스는 열이 문자 데이터 나 **텍스트** 데이터 형식입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
-|**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|항상 NULL을 반환합니다.|  
+|**CHARACTER_SET_SCHEMA**|**varchar(** 3 **)**|항상 NULL을 반환합니다.|  
 |**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|이 열이 문자 데이터를 설정 하는 문자에 대 한 고유 이름을 반환 하거나 **텍스트** 데이터 형식입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**NUMERIC_PRECISION**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 전체 자릿수 기수입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**NUMERIC_SCALE**|**tinyint**|근사 숫자 데이터, 정확한 숫자 데이터, 정수 데이터 또는 통화 데이터의 소수 자릿수입니다. 다른 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |**DATETIME_PRECISION 에서처럼**|**smallint**|하위 형식 코드입니다 **날짜/시간** 및 ISO **간격** 데이터 형식입니다. 다른 데이터 형식에 대해서는 이 열이 NULL을 반환합니다.|  
-|**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 정의 문의 실제 텍스트입니다.|  
+|**DOMAIN_DEFAULT**|**nvarchar(** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 정의 문의 실제 텍스트입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6f74c53c7b7380308ee0c620bcf07c1a8ddbc8f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016555"
 ---
-# <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (Transact-SQL)
+# <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   장치를 설명 하는 속성을 저장 합니다. 장치 상태를 표시 하는 일부 속성 및 일부 속성은 장치 자체에 대해 설명 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|구성 요소 속성의 고유 식별자입니다.<br /><br /> 속성 id와 component_id이이 보기에 대 한 키를 형성합니다.|NOT NULL|  
 |component_id|**int**|ID 구성 요소입니다. 참조 [sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.<br /><br /> 속성 id와 component_id이이 보기에 대 한 키를 형성합니다.|NOT NULL|  

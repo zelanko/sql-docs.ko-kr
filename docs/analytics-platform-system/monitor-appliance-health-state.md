@@ -2,19 +2,18 @@
 title: Analytics Platform System appliance 상태-모니터링
 description: 관리 콘솔을 사용 하 여 또는 병렬 데이터 웨어하우스 동적 관리 뷰를 직접 쿼리하여 분석 플랫폼 시스템 어플라이언스의 상태를 모니터링 하는 방법입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960610"
 ---
 # <a name="monitor-appliance-health-state"></a>어플라이언스 성능 상태 모니터
 이 문서에서는 관리 콘솔을 사용 하 여 또는 병렬 데이터 웨어하우스 동적 관리 뷰를 직접 쿼리하여 분석 플랫폼 시스템 어플라이언스의 상태를 모니터링 하는 방법에 설명 합니다. 

@@ -7,13 +7,12 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: e5f88beb2c429091fcea8ce66e4defa291e718d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961840"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장된 프로시저에 포함 된 Python을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -355,6 +354,6 @@ GO
 
 [학습 및 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [SQL Server의 Python 확장](../concepts/extension-python.md)

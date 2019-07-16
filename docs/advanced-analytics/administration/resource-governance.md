@@ -7,13 +7,12 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e8b3122f4083d419797abeef5ff96944bac3e6a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e6063f8367e5b91e7e935d6f92515a6dd452dc56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963130"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL server에서 machine learning 위한 리소스 거 버 넌 스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "58512990"
 > [!NOTE]
 > 리소스 관리자를 사용 하 여 실행 패드 서비스에 대 한 직접 관리 지원 되지 않습니다. 실행 패드는 Microsoft에서 제공한 호스트 시작 관리자만 수행할 수 있는 신뢰할 수 있는 서비스. 신뢰할 수 있는 시작 관리자는 과도 한 리소스 사용을 방지 하려면 명시적으로 구성 됩니다.
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [Machine learning 통합 관리](../r/managing-and-monitoring-r-solutions.md)
 + [기계 학습을 위한 리소스 풀 만들기](../r/how-to-create-a-resource-pool-for-r.md)

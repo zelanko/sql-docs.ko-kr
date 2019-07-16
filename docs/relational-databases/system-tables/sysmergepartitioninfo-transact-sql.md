@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cea1f26a93627d2a3719ad362d2bd62ee1e3ba1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c188cf1ad72033976136496914844c14c3a35867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029833"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 아티클의 파티션에 대한 정보를 제공합니다. 로컬 데이터베이스에 정의된 각 병합 아티클에 대해 한 행을 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artid**|**uniqueidentifier**|지정된 아티클의 고유한 ID입니다.|  
 |**pubid**|**uniqueidentifier**|이 게시의 고유한 ID이며 게시가 추가될 때 생성됩니다.|  

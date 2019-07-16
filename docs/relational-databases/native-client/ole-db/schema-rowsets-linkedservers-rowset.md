@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee680d645c40a8471920ce8f8e259f45a9401306
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13d79325c37debce2a394734735c6e6cf6c430d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031946"
 ---
 # <a name="schema-rowsets---linkedservers-rowset"></a>스키마 행 집합 - LINKEDSERVERS 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47760401"
   
  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|Description|  
+|열 이름|유형 표시기|설명|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|연결된 서버의 이름입니다.|  
 |SVR_PRODUCT|DBTYPE_WSTR|연결된 서버 이름이 나타내는 데이터 저장소 유형을 식별하는 제조업체 또는 기타 이름입니다.|  

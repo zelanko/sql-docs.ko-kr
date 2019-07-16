@@ -2,19 +2,18 @@
 title: Analytics Platform System Configuration Manager-시작 | Microsoft Docs
 description: Analytics Platform System 어플라이언스에 대 한 Configuration Manager 도구를 시작 하는 것에 대 한 지침입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960723"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Configuration Manager 시작
 이 항목에서는 시작 지침을 제공 합니다 **Configuration Manager** Analytics Platform System 어플라이언스에 대 한 합니다.  
@@ -39,7 +38,7 @@ Configuration Manager를 실행 하려면 PDW 제어 노드에 연결 하려면 
   
 2.  명령 프롬프트에서 디렉터리를 변경 하려면 다음 명령을 입력: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`합니다.  
   
-3.  명령 프롬프트에서 입력 `dwconfig.exe`합니다.  
+3.  명령 프롬프트에 `dwconfig.exe`를 입력합니다.  
   
 후 합니다 **Configuration Manager** 는 시작 나타납니다 왼쪽된 창에 나열 된 사용 가능한 모든 기능입니다. 이 섹션의 나머지 부분에는 도구에서 사용할 수 있는 각 작업을 수행 하는 방법을 설명 합니다.  
   

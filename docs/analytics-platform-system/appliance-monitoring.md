@@ -2,19 +2,18 @@
 title: 어플라이언스 모니터링-Analytics Platform System | Microsoft Docs
 description: 이 어플라이언스 모니터링 가이드는 도구 및 분석 플랫폼 시스템 어플라이언스를 모니터링 하는 것에 대 한 작업을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961503"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스 모니터링
 이 어플라이언스 모니터링 가이드는 도구 및 분석 플랫폼 시스템 어플라이언스를 모니터링 하는 것에 대 한 작업을 설명 합니다.  
@@ -63,7 +62,7 @@ SQL Server PDW는 Systems Center Operations Manager를 사용 하 여 광범위 
    
 ## <a name="Tasks"></a>관련 태스크를 모니터링 합니다.  
   
-|작업 모니터링|Description|  
+|작업 모니터링|설명|  
 |-------------------|---------------|  
 |관리자 콘솔을 사용 하 여 어플라이언스를 모니터링 합니다.|[관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |시스템 뷰를 사용 하 여 어플라이언스를 모니터링 합니다.|[시스템 뷰를 사용 하 여 어플라이언스 모니터링 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  

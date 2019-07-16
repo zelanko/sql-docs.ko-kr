@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962791"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server의 기본 R 및 Python 패키지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67141402"
 
 R 패키지와 함께 설치 되 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 하 고 [SQL Server 2017의 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 설치 하는 동안 R 기능을 선택 하면 됩니다. 
 
-|패키지         | 2016 | 2017 | Description |
+|패키지         | 2016 | 2017 | 설명 |
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | 원격 계산 컨텍스트를 스트리밍 데이터 가져오기 및 변환, 모델링, 시각화 및 분석에 대 한 rx 함수의 병렬 실행에 사용 됩니다. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |저장된 프로시저에서 R 스크립트를 포함 하는 데 사용 합니다. |
@@ -37,7 +36,7 @@ MicrosoftML 및 olapR SQL Server 2017의 Machine Learning 서비스에서 기본
 
 설치할 때 Python 패키지는 SQL Server 2017 에서만 사용할 수 있습니다 [SQL Server 2017의 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) Python 기능을 선택 합니다.
 
-| 패키지         | 2017    |  Description |
+| 패키지         | 2017    |  설명 |
 | -----------------|-------------|------------|
 | [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | 원격 계산 컨텍스트를 스트리밍 데이터 가져오기 및 변환, 모델링, 시각화 및 분석에 대 한 rx 함수의 병렬 실행에 사용 됩니다. |
 | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Python에서 기계 학습 알고리즘을 추가합니다. |
@@ -53,7 +52,7 @@ R 지원 포함 오픈 소스 기본 R 함수를 호출 하 고 추가 타사 �
 |릴리스             | R 버전       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [SQL Server 2017 Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
 직접 웹에서 최신 버전을 사용 하 여 SQL Server 설치 프로그램에서 설치 된 R 버전을 덮어써야 합니다. Microsoft R 패키지 기반 R. 수정 하는 특정 버전에 설치 불안정 해질 수 있습니다 것입니다.
 
@@ -65,7 +64,7 @@ SQL Server 2017의 Machine Learning은 R 및 Python을 지원 하도록 첫 번�
 
 |릴리스             | Anaconda 버전| Microsoft 패키지    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 Machine Learning Services  | Python 3.5를 통해 4.2 | revoscalepy, microsoftml |
+| SQL Server 2017 Machine Learning Services  | Python 3.5를 통해 4.2 | revoscalepy를 microsoftml |
 
 직접 웹에서 최신 버전을 사용 하 여 SQL Server 설치 프로그램에서 설치 하는 Python 버전을 덮어써야 합니다. Microsoft Python 패키지는 Anaconda의 특정 버전을 기반으로 합니다. 설치를 수정 하는 불안정 해질 수 있습니다.
 
@@ -91,7 +90,7 @@ SQL Server를 사용 하 여 기계 학습을 설치할 때 단일 패키지 라
 |----------------------|------------|
 | SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
 | R 사용 하 여 SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 with Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+| Python 사용 하 여 SQL Server 2017 |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>독립 실행형 서버 설치에 대 한 파일 경로

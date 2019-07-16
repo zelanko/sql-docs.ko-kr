@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032887"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>행 정보에 대한 결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|행 버전 항목을 만든 데이터베이스를 호스팅하는 서버의 이름입니다.|  
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
@@ -63,7 +62,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-column-information"></a>열 정보에 대한 결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|열 버전 항목을 만든 데이터베이스를 호스팅하는 서버의 이름입니다.|  
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
@@ -75,7 +74,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>두 가지 모두에 대한 결과 집합  
  경우 값 **둘 다** 에 대 한 선택 됩니다 *표시*를 행과 열 결과 집합이 반환 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_showrowreplicainfo** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

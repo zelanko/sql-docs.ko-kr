@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029143"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 완료(SybaseToSQL)
 마법사의 마지막 페이지를 테스트 사례 설명 및 테스트에 관련 된 개체에 대 한 정보를 표시합니다. 또한이 페이지에서 설정할 수 있습니다 테스트 실행 옵션.  

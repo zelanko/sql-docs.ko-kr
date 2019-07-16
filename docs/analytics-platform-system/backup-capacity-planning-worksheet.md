@@ -2,19 +2,18 @@
 title: 백업 서버 용량 계획-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 이 용량 계획 워크시트 및 복원 작업을 병렬 데이터 웨어하우스 데이터베이스 백업을 수행 하기 위한 백업 서버에 대 한 요구 사항을 확인할 수 있습니다. 서버에 대 한 구매 또는 프로 비전 하는 새 기존 백업 계획을 만들려면이 사용 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 500bebab375a0d0b94032a1855af3844bc2e6fa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e7b1f43f586ae2db81fd3bc87563511a17c46ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63295055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961323"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>백업 서버 용량 계획 워크시트-병렬 데이터 웨어하우스
 이 용량 계획 워크시트를 사용 하면 SQL Server PDW 데이터베이스 백업을 수행 하기 위한 백업 서버에 대 한 요구 사항을 확인 및 복원 작업을 수 있습니다. 서버에 대 한 구매 또는 프로 비전 하는 새 기존 백업 계획을 만들려면이 사용 합니다.  

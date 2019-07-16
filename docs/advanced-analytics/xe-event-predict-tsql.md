@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961621"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>PREDICT 문 모니터링에 대한 확장 이벤트
 
@@ -34,7 +33,7 @@ ms.locfileid: "63142315"
 
 예측 하는 T-SQL 문은 SQL Server 2017에서 도입 되었습니다. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |이벤트  |기본 제공 실행 시간 중단점|
 |predict_model_cache_hit |이벤트|모델을 PREDICT 함수 모델 캐시에서 검색 될 때 발생 합니다. PREDICT 함수 모델 캐시에서 발생 하는 문제를 해결 하려면 다른 predict_model_cache_ * 이벤트와 함께이 이벤트를 사용 합니다.|

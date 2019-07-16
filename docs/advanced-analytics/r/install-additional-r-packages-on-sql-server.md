@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962622"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새로운 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ R 및 Python 기능 모두 동일한 컴퓨터에 공존할 수 여러 Microsoft
 
 R_SERVER 라이브러리에 설치 된 패키지를 독립 실행형 서버 에서만 사용 되 고 (In-database) SQL Server 인스턴스에서 액세스할 수 없습니다. 항상 사용은 `R_SERVICES` 라이브러리 데이터베이스에서 SQL Server를 사용 하려는 패키지를 설치 하는 경우. 경로 대 한 자세한 내용은 참조 하세요. [패키지 라이브러리 위치](../package-management/default-packages.md)합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)
 + [자습서, 샘플, 솔루션](../tutorials/machine-learning-services-tutorials.md)

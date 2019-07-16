@@ -2,19 +2,18 @@
 title: T-SQL 문-병렬 데이터 웨어하우스 | Microsoft Docs
 description: T-SQL 문에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959941"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse의 T-SQL 문
 TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -28,9 +27,9 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [외부 데이터 원본 만들기](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
-* [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)
+* [외부 테이블 만들기](../t-sql/statements/create-external-table-transact-sql.md)
 * [함수 만들기](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE  INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
@@ -101,7 +100,7 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [역할 만들기](../t-sql/statements/create-role-transact-sql.md)
 * [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)
-* [DROP CERTIFICATE](../t-sql/statements/drop-certificate-transact-sql.md)
+* [인증서 삭제](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)

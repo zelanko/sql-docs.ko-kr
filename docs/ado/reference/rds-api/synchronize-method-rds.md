@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d780c6140c1c1d09a21f7d643d7c274986b0268d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963261"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드(RDS)
 ADO 2.5 이상에서 사용할 연결 문자열에서 지정 된 데이터베이스를 사용 하 여 지정 된 레코드 집합을 동기화 합니다.  

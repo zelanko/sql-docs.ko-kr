@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961814"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 작성 하 고 SQL Server (연습)에 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +65,7 @@ GO
 
 모델은 택시 기사가 특정 여정에서 팁을 받을 가능성이 있는지 여부를 예측 하는 이진 분류자 됩니다. 지난 과정(lesson)에서 만들었던 데이터 소스(data source)를  사용하여 이 팁 예측 모델을 학습하고, 이때 로지스틱 회귀(logistic regression)를 사용합니다.
 
-1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다.  
+1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) 패키지에 들어있는 **rxLogit** 함수를 호출하여 로지스틱 회귀 모델을 만들어 봅시다. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -154,7 +153,7 @@ GO
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    이 호출은 ROC 차트를 계산할 때 사용되는 값을 반환합니다. 라벨(Label) 열은 _tipped_ 이고 예측하려는 실제 결과를 가지고 있으며 _Score_ 열에는 예측이 들어 있습니다. 
+    이 호출은 ROC 차트를 계산할 때 사용되는 값을 반환합니다. 라벨(Label) 열은 _tipped_ 이고 예측하려는 실제 결과를 가지고 있으며 _Score_ 열에는 예측이 들어 있습니다.
 
 2. 그릴 실제로 차트 ROC 개체를 저장할 수 있으며 다음 그리기 함수를 사용 하 여 그릴 수 있습니다. 그래프는 원격 계산 컨텍스트에 생성되고 R 환경에 반환됩니다.
 

@@ -2,19 +2,18 @@
 title: 잠금 동작-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 어떻게 병렬 데이터 웨어하우스 잠금을 사용 하 여 트랜잭션의 무결성을 보장 하는 데 동시에 여러 사용자가 데이터를 액세스 하는 경우 데이터베이스의 일관성을 유지 관리에 대해 알아봅니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960640"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 잠금 동작
 어떻게 병렬 데이터 웨어하우스 잠금을 사용 하 여 트랜잭션의 무결성을 보장 하는 데 동시에 여러 사용자가 데이터를 액세스 하는 경우 데이터베이스의 일관성을 유지 관리에 대해 알아봅니다.  
@@ -85,13 +84,13 @@ SQL Server에는 다음과 같은 유형의 잠금 지원합니다. 모든 잠�
   
 -   RangeI_S. RangeI_N 잠금과 S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_U. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_U 합니다. RangeI_N 잠금과 U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeI_X. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeI_X 합니다. RangeI_N 잠금과 X 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
 -   RangeX_S. RangeI_N 잠금과 RangeS_S 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
--   RangeX_U. RangeI_N 잠금과 RangeS_U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
+-   RangeX_U 합니다. RangeI_N 잠금과 RangeS_U 잠금의 겹쳐진 부분에 의해 생성된 키 범위 변환 잠금입니다.  
   
 -   RangeX_X (배타적 키 범위 및 배타 리소스 잠금). 범위 내에서 키를 업데이트할 때 사용되는 변환 잠금입니다.  
   

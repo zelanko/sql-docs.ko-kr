@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af4b2b5546e8b084afbdd769fb93c416964b0c13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0e62e7aaba276643a2874a22e74a08214cfe51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030663"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 함수
 **규칙**  
@@ -76,7 +75,7 @@ SQLRETURN SQLGetInfo(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetInfo** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 연관된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 SQL_HANDLE_DBC와 *처리할* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLGetInfo** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *InfoValuePtr* 충분히 요청된 된 모든 정보를 반환할 수 없습니다. 따라서 정보가 잘렸습니다. 잘리지 않은 형태의 요청 된 정보의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -121,7 +120,7 @@ SQLRETURN SQLGetInfo(
  0  
   
  SQLUINTEGER 비트 마스크 또는 SQLUINTEGER 이진 값  
- 0L  
+ 0 L  
   
  예를 들어, 데이터 원본 프로시저를 지원 하지 않는 경우 **SQLGetInfo** 의 값에 대해 다음 표에 나열 된 값을 반환 *정보 항목* 프로시저에 관련 된 합니다.  
   
@@ -566,7 +565,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME(ODBC 1.0)  
+ SQL_CORRELATION_NAME (ODBC 1.0)  
  테이블 상관 관계 이름을 지원 되는지 여부를 나타내는 SQLUSMALLINT 값:  
   
  SQL_CN_NONE = 상관 관계 이름이 지원 되지 않습니다.  
@@ -1387,7 +1386,7 @@ SQLRETURN SQLGetInfo(
  SQL_PROCEDURE_TERM(ODBC 1.0)  
  프로시저; 데이터 원본 공급 업체의 이름 사용 하 여 문자열 예를 들어 "데이터베이스 프로시저", "저장된 프로시저", "procedure", "패키지" 또는 "저장된 쿼리"입니다.  
   
- SQL_PROCEDURES(ODBC 1.0)  
+ SQL_PROCEDURES (ODBC 1.0)  
  문자열: 프로시저 및 드라이버 데이터 원본에서 지 원하는 경우 "Y" ODBC 프로시저 호출 구문; 지원 "N"이 고 그렇지 합니다.  
   
  SQL_POS_OPERATIONS(ODBC 2.0)  
@@ -1439,7 +1438,7 @@ SQLRETURN SQLGetInfo(
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_OWNER_USAGE 합니다.  
   
- SQL_SCROLL_OPTIONS(ODBC 1.0)  
+ SQL_SCROLL_OPTIONS (ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 비트 마스크는 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  스크롤 가능 커서에 대 한 지원 되는 스크롤 옵션을 열거 SQLUINTEGER 비트 마스크입니다.  

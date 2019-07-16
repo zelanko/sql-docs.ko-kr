@@ -7,14 +7,13 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cbe617ea7732468732555bf6f0bba8ebaec2c17a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962303"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "67141382"
 
 ## <a name="reference"></a>참조
 
-| 패키지 | 언어 | Description |
+| 패키지 | 언어 | 설명 |
 |:--------|:---------|:------------|
 | [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) | R | R 작업에 대한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석 |
 | [MicrosoftML](/machine-learning-server/r-reference/microsoftml/microsoftml-package) | R | Microsoft의 AI 알고리즘을 기준으로 하는 함수로, R용으로 조정되었습니다. |

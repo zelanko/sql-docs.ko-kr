@@ -2,19 +2,18 @@
 title: 하드웨어 설치-Analytics Platform System | Microsoft Docs
 description: 이 문서에서는 이동, 압축을 풀려면, SQL Server PDW 어플라이언스에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 문서는 정보 제공 용 이므로 하 고 프로세스를 이해 하는 데 사용 됩니다. 어플라이언스에서 압축을 푼, 설치 되어 있고를 설정 하기 전에 확인 합니다. 고객 참여가 데이터와 같은 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 센터.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960871"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>분석 플랫폼 시스템 어플라이언스 하드웨어 설치
 이 문서에서는 이동, 압축을 풀려면, SQL Server PDW 어플라이언스에 대 한 하드웨어를 설치 하는 방법을 설명 합니다. 이 문서는 정보 제공 용 이므로 하 고 프로세스를 이해 하는 데 사용 됩니다. 어플라이언스에서 압축을 푼, 설치 되어 있고를 설정 하기 전에 확인 합니다. 고객 참여가 데이터와 같은 항목에 대 한 필수 액세스, 전력, 및 이더넷 연결 센터.  
@@ -22,7 +21,7 @@ ms.locfileid: "63157321"
 ## <a name="BeforeMoving"></a>로드 도킹 스테이션에서 모든 구성 요소를 이동 하기 전에  
 이동, 개봉, 랙 어플라이언스 구성 요소 또는 하기 전에 다음 작업을 수행 합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |--------|---------------|  
 |모든 구성 요소 도착 한 확인|자재 청구 (BOM)를 사용 하 여 모든 구성 요소를 방문 했 고 데이터 센터에 대 한 수신 도킹 스테이션에서 자신의 책장에 있는지 확인 합니다.|  
 |데이터 센터 어플라이언스에 대 한 모든 요구 사항을 충족 하는지 확인|하드웨어 사양 검토 및 IHV에서 제공 하는 다이어그램 케이블 연결 하 여이 작업을 시작 합니다. 다음 단계는 공간 및 연결 요구 사항 랙에 대 한 구체적인 정보를 제공합니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "63157321"
 >   
 > 리프트 또는 어플라이언스 노드 또는 적절 한 장비 지원 없이 다른 많은 구성 요소를 이동 하지 않음. 어떤 지원, 장비 및 손상 없이 안전 하 고 각 구성 요소를 처리 해야 하는 도구를 미리 확인할 수 있도록 각 구성 요소 가중치는 방법은 IHV에 게 문의 합니다.  
   
-|태스크|Description|  
+|태스크|설명|  
 |--------|---------------|  
 |팔레트는 수준 인지 확인|이동 하거나는 팔레트의 압축을 풀려면를 시작 하기 전에 수준 땅에 해야 합니다.|  
 |팔레트에서 노드 unbolt|팔레트에서 최상위 노드를 unbolt는 팔레트의 맨 위에 있는 starting, 합니다.|  
@@ -54,7 +53,7 @@ ms.locfileid: "63157321"
 ## <a name="AfterMoving"></a>추가 구성 요소를 설치 합니다.  
 추가 구성 요소를 설치 하려면 다음 검사 목록을 사용 합니다.  
   
-|태스크|Description||  
+|태스크|설명||  
 |--------|---------------|-|  
 |압축을 풀고 랙 배전 장치 및 네트워크 스위치|랙에 적절 한 위치에서 네트워크 스위치와 배전 장치를 랙에 다이어그램을 사용 합니다.||  
 |케이블 레이블에 따라 Infiniband 및 이더넷 케이블을 연결|케이블 연결 다이어그램을 참조 하세요. 각 케이블에 연결 해야 하는 것을 지정 하는 양 끝에는 레이블이 있습니다.||  

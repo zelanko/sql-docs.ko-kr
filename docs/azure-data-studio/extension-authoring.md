@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7628634ded2b3b8245e69d3f3697864e0982c850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959604"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능을 확장 합니다.
 

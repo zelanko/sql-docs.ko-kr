@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946385"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51674242"
 ## <a name="literals"></a>리터럴  
  XQuery 리터럴은 숫자 또는 문자열 리터럴이 될 수 있습니다. 문자열 리터럴에는 미리 정의된 엔터티 참조를 포함할 수 있는데 엔터티 참조는 문자 시퀀스입니다. 이 시퀀스는 구문상의 의미를 내포할 수도 있는 단일 문자를 나타내는 앰퍼샌드로 시작됩니다. 다음은 XQuery에 대해 미리 정의된 엔터티 참조입니다.  
   
-|엔터티 참조|나타내는 대상|  
+|엔터티 참조|표현|  
 |----------------------|----------------|  
 |&lt;|\<|  
 |&gt;|>|  
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 기본 제공 부울 함수를 **true ()** 하 고 **false ()**, 다음 예와에서 같이 부울 값을 나타내기 위해 사용할 수 있습니다.  
+ 기본 제공 부울 함수를 **true ()** 하 고 **false ()** , 다음 예와에서 같이 부울 값을 나타내기 위해 사용할 수 있습니다.  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>컨텍스트 항목 식  
  컨텍스트 항목은 현재 경로 식의 컨텍스트에서 처리 중인 항목입니다. 이 항목 식은 문서 노드가 있는 NULL이 아닌 XML 데이터 형식 인스턴스에서 초기화됩니다. XPath 식의 컨텍스트 또는 조건자 nodes () 메서드에서 변경할 수도 있습니다.  
   
- 컨텍스트 항목은 점(.)이 포함된 식에 의해 반환됩니다. 예를 들어 다음 쿼리는 각 <`a`> 요소를 평가하여 `attr` 특성이 있는지 확인합니다. 특성이 존재하면 요소가 반환됩니다. 조건부의 조건은 컨텍스트 노드가 하나의 마침표로 지정되도록 지정합니다.  
+ 컨텍스트 항목은 점(.)이 포함된 식에 의해 반환됩니다. 다음 쿼리는 각 요소를 평가 하는 예를 들어, <`a`> 특성의 존재에 대 한 `attr`합니다. 특성이 존재하면 요소가 반환됩니다. 조건부의 조건은 컨텍스트 노드가 하나의 마침표로 지정되도록 지정합니다.  
   
 ```  
 DECLARE @var XML  

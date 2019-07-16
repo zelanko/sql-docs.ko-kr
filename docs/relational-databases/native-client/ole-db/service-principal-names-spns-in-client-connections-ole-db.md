@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e212010e-a5b6-4ad1-a3c0-575327d3ffd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62073e1618d4ab43acbbfbaad1fb6e2ff16c7658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23f0f32e07430dcb9829be48fea9f966dd1b453f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031923"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62631701"
 ## <a name="provider-initialization-string-keywords"></a>공급자 초기화 문자열 키워드  
  다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 응용 프로그램에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  
   
-|키워드|Description|값|  
+|키워드|설명|값|  
 |-------------|-----------------|-----------|  
 |ServerSPN|서버 SPN|서버의 SPN입니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
 |FailoverPartnerSPN|장애 조치(Failover) 파트너 SPN|장애 조치(failover) 파트너의 SPN입니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
@@ -52,7 +51,7 @@ ms.locfileid: "62631701"
 ## <a name="ole-db-api-support-for-spns"></a>SPN에 대한 OLE DB API 지원  
  다음 표에서는 클라이언트 연결에서 SPN을 지원하는 OLE DB 멤버 함수에 대해 설명합니다.  
   
-|멤버 함수|Description|  
+|멤버 함수|설명|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString* new 키워드를 포함할 수 있습니다 **ServerSPN** 하 고 **FailoverPartnerSPN**합니다.|  
 |IDataInitialize::GetInitializationString|SSPROP_INIT_SERVERSPN 및 SSPROP_INIT_FAILOVERPARTNERSPN이 기본값이 아닌 경우 *ppwszInitString*을 통해 **ServerSPN** 및 **FailoverPartnerSPN**에 대한 키워드 값으로 초기화 문자열에 포함됩니다. 기본값인 경우에는 초기화 문자열에 포함되지 않습니다.|  

@@ -2,19 +2,18 @@
 title: PDW 방화벽 구성-Analytics Platform System | Microsoft Docs
 description: SQL Server PDW 구성 관리자의 방화벽 페이지를 허용 하거나 Analytics Platform System appliance에서 특정 포트에 대 한 액세스를 방지 하는 방화벽 규칙을 사용할지 수 있습니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960416"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System의 병렬 데이터 웨어하우스 방화벽 구성
 
