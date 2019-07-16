@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059204"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|데이터베이스 ID입니다.|  
 |**FileId**|**smallint**|파일의 ID입니다.|  
@@ -67,7 +66,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|파일 핸들의 값입니다.|  
 |**BytesOnDisk**|**bigint**|디스크에 있는 파일의 실제 크기(바이트)입니다.<br /><br /> 데이터베이스 파일에 대 한 동일한 값으로 이것이 **크기** 에서 **sys.database_files**, 하지만 페이지가 아닌 바이트 단위로 표현 됩니다.<br /><br /> 데이터베이스 스냅숏 스파스 파일의 경우 이 값은 운영 체제에서 파일에 사용 중인 공간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **fn_virtualfilestats** 는 I/o의 총 수와 같은 통계 정보를 제공 하는 테이블 반환 함수는 파일에서 수행 하는 시스템입니다. 이 함수는 사용자가 파일에 읽기/쓰기를 수행할 때 대기해야 하는 시간의 길이를 추적하는 데 사용됩니다. I/O 작업이 빈번하게 이루어지는 파일을 식별하는 데 사용되기도 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -75,7 +74,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-statistical-information-for-a-database"></a>1. 데이터베이스에 대한 통계 정보 표시  
+### <a name="a-displaying-statistical-information-for-a-database"></a>A. 데이터베이스에 대한 통계 정보 표시  
  다음 예에서는 ID가 `1`인 데이터베이스의 파일 ID 1에 대한 통계 정보를 표시합니다.  
   
 ```sql  
@@ -84,7 +83,7 @@ FROM fn_virtualfilestats(1, 1);
 GO  
 ```  
   
-### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>2. 명명된 데이터베이스 및 파일에 대한 통계 정보 표시  
+### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>2\. 명명된 데이터베이스 및 파일에 대한 통계 정보 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 로그 파일에 대한 통계 정보를 표시합니다. 시스템 함수 `DB_ID` 지정 하는 데 사용 되는 *database_id* 매개 변수입니다.  
   
 ```sql  
@@ -93,7 +92,7 @@ FROM fn_virtualfilestats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>3. 모든 데이터베이스 및 파일에 대한 통계 정보 표시  
+### <a name="c-displaying-statistical-information-for-all-databases-and-files"></a>3\. 모든 데이터베이스 및 파일에 대한 통계 정보 표시  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 모든 데이터베이스의 모든 파일에 대한 통계 정보를 표시합니다.  
   
 ```sql  

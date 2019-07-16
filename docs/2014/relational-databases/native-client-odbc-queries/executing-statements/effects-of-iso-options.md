@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206765"
 ---
 # <a name="effects-of-iso-options"></a>ISO 옵션의 효과
   ODBC 표준은 ISO 표준과 거의 일치하며, ODBC 응용 프로그램은 ODBC 드라이버가 표준 동작을 수행할 것으로 예상합니다. ODBC 표준에서 정의 하는 동작이 좀 더 밀접 하 게 준수 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버 연결 된 SQL Server 버전에서 사용할 수 있는 ISO 옵션을 항상 사용 합니다.  

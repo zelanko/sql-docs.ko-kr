@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933829"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
 
@@ -54,7 +53,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우에 *remoteserver* 지정 된 경우 해당 원격 서버에 대 한 모든 원격 로그인이 로컬 서버에서 제거 됩니다. 하는 경우 *로그인* 에서 지정 된 모든 원격 로그인 이기도 *remoteserver* 특정에 매핑된 로컬 로그인이 로컬 서버에서 제거 됩니다. 하는 경우 *remote_name* 도 지정 되어 해당 원격 사용자의 원격 로그인만 *remoteserver* 로컬 서버에서 제거 됩니다.  
   
  로컬 서버 사용자를 추가 하려면 사용 하 여 **sp_addlogin**합니다. 로컬 서버 사용자를 제거 하려면 사용 하 여 **sp_droplogin**합니다.  
@@ -68,7 +67,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>1\. 원격 서버에 대한 모든 원격 로그인 삭제  
+### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. 원격 서버에 대한 모든 원격 로그인 삭제  
  다음 예에서는 `ACCOUNTS`라는 원격 서버의 항목을 제거하여 로컬 서버의 로그인과 원격 서버의 원격 로그인 간의 모든 매핑을 제거합니다.  
   
 ```sql

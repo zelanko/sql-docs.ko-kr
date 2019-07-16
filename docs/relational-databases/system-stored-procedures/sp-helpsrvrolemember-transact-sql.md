@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010757"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  *역할* 다음 값 중 하나일 수 있습니다.  
   
-|고정 서버 역할|Description|  
+|고정 서버 역할|설명|  
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
@@ -60,13 +59,13 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|서버 역할의 이름입니다.|  
 |MemberName|**sysname**|서버 역할의 멤버 이름|  
 |MemberSID|**varbinary(85)**|MemberName의 보안 식별자|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Sp_helprolemember를 사용 하 여 데이터베이스 역할의 멤버를 표시 합니다.  
   
  모든 로그인은 public의 멤버입니다. sp_helpsrvrolemember 때문에 public 역할을 인식 하지 못하는, 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공용 역할로 구현 하지 않습니다.  

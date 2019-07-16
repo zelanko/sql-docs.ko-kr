@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca24fdce036c4f63e49e7d0eb12054d2d67aa6aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997273"
 ---
 # <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSsnapshot_history** 테이블은 로컬 배포자와 연관 된 스냅숏 에이전트에 대 한 기록 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|스냅숏 에이전트의 ID입니다.|  
 |**runstatus**|**int**|실행 상태는 다음과 같습니다.<br /><br /> **1** = 시작 합니다.<br /><br /> **2** = 성공 합니다.<br /><br /> **3** = 진행 중입니다.<br /><br /> **4** = 유휴 상태입니다.<br /><br /> **5** = 다시 시도 합니다.<br /><br /> **6** = 실패.|  

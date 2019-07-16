@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_partitions (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001141"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   모든 테이블 및 대부분의 인덱스의 각 파티션에 대해 행을 포함 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스입니다. 모든 테이블 및 인덱스는 명시적으로 분할 여부 또는 하나 이상의 파티션을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |partition_id|`bigint`|파티션의 id입니다. 데이터베이스 내에서 고유합니다.|  
 |object_id|`int`|이 파티션이 속한 개체의 id입니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
@@ -42,13 +41,13 @@ ms.locfileid: "56012554"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예 1: 각 배포 내에서 각 파티션에 있는 행을 표시 합니다. 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예제 A: 각 배포 내에서 각 파티션에 있는 행을 표시 합니다. 
 
 적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 각 배포 내에서 각 파티션에 있는 행의 수를 표시 하려면 사용 하 여 [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) 합니다.
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>예 2: 시스템 뷰를 사용 하 여 테이블의 각 배포의 각 파티션에 있는 행을 보려면
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>예제 B: 시스템 뷰를 사용 하 여 테이블의 각 배포의 각 파티션에 있는 행을 보려면
 
 적용 대상: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91aa9973d7d65b555fe1d01d077420d49e2f32ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949583"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 속성(ADO MD)
 수준의 이름을 나타냅니다.는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66709121"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 읽기 전용입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **LevelName** 는 멤버가 속한 수준의 이름을 검색 하는 속성입니다. 이에 해당 합니다 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 의 속성을 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체.  
   
 ## <a name="applies-to"></a>적용 대상  

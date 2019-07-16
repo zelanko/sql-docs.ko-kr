@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e2806d42e58bbd60b962f83e8ab58fbe4511e44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010605"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syscollector_create_collection_set는 SQL Server 에이전트가 활성화되어 있는 상태에서 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  이 프로시저는 일정이 없는 컬렉션 집합에 대해 실행하면 실패합니다. 경우 컬렉션 집합 일정 않은 (해당 컬렉션 모드 설정 되어 있기 때문에 캐시 되지 않은, 예를 들어)를 사용 합니다 [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) 컬렉션 집합을 시작 하는 절차를 저장 합니다.  

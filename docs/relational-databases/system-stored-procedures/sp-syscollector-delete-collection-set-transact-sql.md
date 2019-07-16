@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000879"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syscollector_delete_collection_set은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  어느 *collection_set_id* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다. 이러한 값을 확인하려면 syscollector_collection_set 시스템 뷰를 쿼리합니다.  

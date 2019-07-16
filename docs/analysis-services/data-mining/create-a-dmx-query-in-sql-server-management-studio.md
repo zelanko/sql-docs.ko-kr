@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183998"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio에서 DMX 쿼리 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예측 쿼리, 내용 쿼리 및 마이닝 모델과 마이닝 구조에 대 한 데이터 정의 쿼리를 만드는 데 도움이 되는 기능 집합을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 마이닝 모델 및 마이닝 구조에 대해 예측 쿼리, 내용 쿼리 및 데이터 정의 쿼리를 작성하는 데 유용한 기능 집합이 있습니다.  
   
 -   그래픽 예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 예측 쿼리를 작성하고 데이터 집합을 모델에 매핑하는 프로세스를 간소화하는 데 사용됩니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014570"
  자주 실행하는 쿼리나 명령에 대한 사용자 지정 템플릿을 만들 수도 있습니다.  
   
 ## <a name="xmla-query-templates"></a>XMLA 쿼리 템플릿  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]또한 XMLA 쿼리에 대 한 템플릿을 제공합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 XMLA 쿼리에 대한 템플릿도 제공합니다.  
   
  XMLA와 DMX를 사용하여 수행할 수 있는 쿼리 유형은 일부 중첩됩니다. 예를 들어 DMX 또는 데이터 마이닝 스키마 행 집합을 사용하여 몇 가지 모델 내용 쿼리를 만들 수 있지만 스키마 행 집합에 DMX 내용 쿼리에 노출되지 않는 정보가 포함되어 있는 경우도 있습니다.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "34014570"
   
  템플릿에서 특정 쿼리 유형을 만드는 방법에 대한 예는 다음 항목을 참조하십시오.  
   
- [템플릿에서 단일 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [템플릿에서 단일 예측 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
  [마이닝 모델에 내용 쿼리 만들기](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Data Mining Extensions & #40; DMX & #41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

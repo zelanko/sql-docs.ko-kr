@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951807"
 ---
 # <a name="using-data-sources"></a>데이터 원본 사용
 데이터 원본을 일반적으로 최종 사용자가 만든 또는 프로그램을 사용 하 여 기술자 라는 합니다 *ODBC 관리자*합니다. ODBC 관리자를 사용 하는 드라이버에 대 한 라는 하 고 해당 드라이버를 호출 합니다. 드라이버는 데이터 원본에 연결 하는 데 필요한 정보를 요청 하는 대화 상자를 표시 합니다. 사용자가 정보를 입력 한 후 드라이버 시스템에 저장 합니다.  

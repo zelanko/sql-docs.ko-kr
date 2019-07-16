@@ -7,13 +7,12 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c0284577d8e30871b354607cf9af978e6d53df63
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: abf7028c8b55f4f97770586f2a678a538f01b29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963031"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ SQL Server Python 실행 파일을 수정 하지 않습니다 하지만 해당 �
 
 Microsoft에서 병렬 및 분산 워크 로드에 대 한 추가 Python 패키지는 다음과 같은 라이브러리를 포함 합니다.
 
-| 라이브러리 | Description |
+| 라이브러리 | 설명 |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 데이터 원본 개체 및 데이터 탐색, 조작, 변환 및 시각화를 지원합니다. 와 같은 원격 계산 컨텍스트 뿐만 아니라 다양 한 확장성 있는 기계 학습 모델을 만드는 지 원하는 **rxLinMod**합니다. 자세한 내용은 [SQL Server를 사용 하 여 revoscalepy 모듈](../python/ref-py-revoscalepy.md)합니다.  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 속도 및 정확성을 위해 최적화 된 뿐만 아니라 줄 텍스트 및 이미지 작업에 대 한 변환 하는 기계 학습 알고리즘을 포함 합니다. 자세한 내용은 [SQL Server를 사용 하 여 microsoftml 모듈](../python/ref-py-microsoftml.md)합니다. |
@@ -92,7 +91,7 @@ Microsoftml 및 revoscalepy는 밀접 하 게 됩니다. microsoftml의 사용 �
 8. SQL Satellite는 SQL Server 및 관련된 작업 개체의 정리를 사용 하 여 통신을 관리 합니다.
 9. SQL Server 클라이언트에 다시 결과 전달합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [SQL Server에서 revoscalepy 모듈](../python/ref-py-revoscalepy.md)
 + [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 

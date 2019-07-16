@@ -11,25 +11,24 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899207"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   표시에서 모든 리소스 유형에 대 한 정보를 대기 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|대기 목록에서 위치 요청입니다.|0부터 시작 서 수입니다. 이 고유 하지 않습니다 모든 대기 항목.|  
 |session_id|**nvarchar(32)**|대기 상태에서 발생 한 세션의 ID입니다.|Session_id를 참조 하세요 [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)합니다.|  
-|유형|**nvarchar(255)**|이 항목을 나타내는 대기 유형입니다.|가능한 값:<br /><br /> 연결<br /><br /> 로컬 쿼리 동시성<br /><br /> 분산된 쿼리 동시성<br /><br /> DMS 동시성<br /><br /> 백업 동시성|  
+|type|**nvarchar(255)**|이 항목을 나타내는 대기 유형입니다.|가능한 값:<br /><br /> 연결<br /><br /> 로컬 쿼리 동시성<br /><br /> 분산된 쿼리 동시성<br /><br /> DMS 동시성<br /><br /> 백업 동시성|  
 |object_type|**nvarchar(255)**|대기 영향을 받는 개체의 형식입니다.|가능한 값:<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **응용 프로그램**|  
 |object_name|**nvarchar(386)**|이름 또는 영향을 받은 대기 지정된 된 개체의 GUID입니다.|테이블 및 뷰는 세 부분으로 된 이름을 사용 하 여 표시 됩니다.<br /><br /> 인덱스와 통계는 네 부분으로 된 이름으로 표시 됩니다.<br /><br /> 이름, 주체 및 데이터베이스는 문자열 이름입니다.|  
 |request_id|**nvarchar(32)**|대기 상태에서 발생 한 요청의 ID입니다.|QID 요청의 식별자입니다.<br /><br /> 로드 요청에 대 한 GUID 식별자입니다.|  

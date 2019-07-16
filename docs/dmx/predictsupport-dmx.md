@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efe9fb0222dc745e48c248214c42ce706ea18d89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041876"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>반환 형식  
  지정 된 유형의 스칼라 값을 *\<* 스칼라 열 참조 *>* 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 된 상태 버킷을 포함 하려면 설정 합니다 \<예측 상태별 > 하 **INCLUDE_NULL**합니다.  
   
  누락 된 상태에 대 한 지원을 반환 된 \<예측 상태별 > NULL로 합니다.  

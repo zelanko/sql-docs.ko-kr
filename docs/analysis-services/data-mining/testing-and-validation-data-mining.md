@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182311"
 ---
 # <a name="testing-and-validation-data-mining"></a>테스트 및 유효성 검사(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34018410"
  *유용성* 에는 모델이 유용한 정보를 제공하는지 여부를 알려 주는 다양한 메트릭이 포함됩니다. 예를 들어 매장 위치와 판매량 간 상관 관계를 찾는 데이터 마이닝 모델은 정확하면서 안정적일 수 있지만 동일한 위치에 있는 다른 매장을 추가하여 결과를 일반화할 수 없으므로 유용하지 않을 수 있습니다. 또한 이 모델로는 특정 위치에서 판매량이 왜 더 많은가라는 기본적인 비즈니스 질문에 대한 답을 얻을 수 없습니다. 성공적으로 보이는 모델이 데이터의 교차 상관 관계를 기반으로 하고 있기 때문에 실제로는 의미가 없을 수도 있습니다.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>마이닝 모델의 테스트 및 유효성 검사 도구  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 마이닝 솔루션의 유효성을 여러 방법으로 검사하여 데이터 마이닝 테스트 방법의 모든 단계를 지원합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터 마이닝 솔루션의 유효성을 여러 방법으로 검사하여 데이터 마이닝 테스트 방법의 모든 단계를 지원합니다.  
   
 -   데이터를 학습 및 테스트 집합으로 분할합니다.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "34018410"
   
 |항목|링크|  
 |------------|-----------|  
-|마법사 또는 DMX 명령을 사용하여 테스트 데이터 집합을 설정하는 방법 배우기|[학습 및 테스트 데이터 집합](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|마법사 또는 DMX 명령을 사용하여 테스트 데이터 집합을 설정하는 방법 배우기|[데이터 집합 학습 및 테스트](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
 |마이닝 구조에서 데이터의 배포 및 대표성을 테스트하는 방법 배우기|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|제공 되는 정확도 차트 종류에 알아봅니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [산 점도 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|제공 하는 정확도 차트 종류에 알아봅니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [산점도&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |여러 참과 거짓의 긍정 및 부정을 평가할 수 있는 분류 행렬(혼동 행렬이라고도 함)을 만드는 방법 배우기.|[분류표&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   
- [테스트 및 유효성 검사 작업과 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

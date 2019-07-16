@@ -7,24 +7,23 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962318"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>예측 T-SQL 함수를 사용 하 여 네이티브 점수 매기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-사용 하 여 점수 매기기 네이티브 [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 및 예측 값을 생성 하려면 SQL Server 2017의 c + +는 네이티브 확장 기능 또는 *점수* 거의 실시간으로 새 데이터 입력에 대 한 합니다. 이 방법론 예측 및 예측 작업의 가장 가능한 처리 속도 제공 하지만 플랫폼과 라이브러리 요구 사항: RevoScaleR 및 revoscalepy 함수 c + + 구현이 합니다.
+사용 하 여 점수 매기기 네이티브 [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 네이티브 및 C++ 예측 값을 생성 하기 위해 SQL Server 2017의 확장 기능 또는 *점수* 거의 실시간으로 새 데이터 입력에 대 한 합니다. 이 방법론 예측 및 예측 작업 처리 가능한 가장 빠른 속도 제공 하지만 플랫폼과 라이브러리 요구 사항: RevoScaleR 및 revoscalepy에서 함수에 C++ 구현입니다.
 
 네이티브 점수 매기기 이미 학습 된 모델을가 있어야 합니다. SQL Server 2017 Windows 또는 Linux에서 또는 Azure SQL Database에서 호출할 수 있습니다 PREDICT 함수를 호출 하는 Transact sql에서 입력된 매개 변수로 제공 하는 새 데이터 점수를 매길 네이티브. PREDICT 함수는 제공 하는 데이터 입력에 대해 점수를 반환 합니다.
 
 ## <a name="how-native-scoring-works"></a>어떻게 네이티브 점수 매기기 작업
 
-네이티브 점수 매기기는 네이티브 c + + 라이브러리를 이미 학습 된 모델을 읽을 수 있는 Microsoft 이전에 특수 이진 형식으로 저장 또는 원시 바이트 스트림, 디스크에 저장 하 고 사용자가 제공한 새 데이터 입력에 대 한 점수를 생성 합니다. 모델을 학습 하기 때문에 게시 및 저장을 사용할 수 R 또는 Python 인터프리터를 호출 하지 않고도 점수 매기기에 대 한 합니다. 이와 같이 여러 프로세스 상호 작용 하는 오버 헤드 감소, 엔터프라이즈 프로덕션 시나리오에서 예측 성능이 훨씬 더 빠릅니다.
+기본 사용 하 여 네이티브 점수 매기기 C++ 라이브러리는 이미 학습 된 읽을 수 있는 Microsoft에서 특수 이진 형식으로 저장 또는 원시 바이트 스트림, 디스크에 저장 된 이전에 모델 및 사용자가 제공한 새 데이터 입력에 대 한 점수를 생성 합니다. 모델을 학습 하기 때문에 게시 및 저장을 사용할 수 R 또는 Python 인터프리터를 호출 하지 않고도 점수 매기기에 대 한 합니다. 이와 같이 여러 프로세스 상호 작용 하는 오버 헤드 감소, 엔터프라이즈 프로덕션 시나리오에서 예측 성능이 훨씬 더 빠릅니다.
 
 네이티브 점수 매기기를 사용 하려면 예측 T-SQL 함수를 호출 하 고 다음 필요한 입력을 전달 합니다.
 

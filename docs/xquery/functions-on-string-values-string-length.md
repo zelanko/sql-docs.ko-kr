@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004656"
 ---
 # <a name="functions-on-string-values---string-length"></a>문자열 값 함수 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  길이를 계산할 원본 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 값 *$arg* 가 빈 시퀀스에는 **xs: integer** 0 값이 반환 됩니다.  
   
  XQuery 함수에서 서로게이트 쌍의 동작은 데이터베이스 호환성 수준에 따라 달라집니다. 호환성 수준이 110 이상인 경우 각 서로게이트 쌍은 단일 문자로 계산됩니다. 호환성 수준이 110보다 낮으면 각 서로게이트 쌍을 두 문자로 간주합니다. 자세한 내용은 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) 하 고 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
  값에 두 개의 서로게이트 문자로 표현된 4바이트 유니코드 문자가 포함된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 서로게이트 문자 개수를 별개로 셉니다.  
   
- 합니다 **string-length ()** 없이 매개 변수는 조건자 내 에서만 사용 될 수 있습니다. 예를 들어 다음 쿼리는 <`ROOT`> 요소를 반환합니다.  
+ 합니다 **string-length ()** 없이 매개 변수는 조건자 내 에서만 사용 될 수 있습니다. 예를 들어 다음 쿼리에서 반환 된 <`ROOT`> 요소:  
   
 ```  
 DECLARE @x xml;  
@@ -61,8 +60,8 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>1. string-length() XQuery 함수를 사용하여 긴 요약 설명이 포함된 제품 검색  
- 요약 설명이 50자 이상인 제품에 대해 다음 쿼리는 제품 ID, 요약 설명 길이 및 요약 자체인 <`Summary`> 요소를 검색합니다.  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. string-length() XQuery 함수를 사용하여 긴 요약 설명이 포함된 제품 검색  
+ 요약 설명이 50 자 이상인 제품에 대 한 다음 쿼리는 제품 ID와 요약 설명 및 요약 자체인의 길이 검색 합니다 <`Summary`> 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,10 +98,10 @@ Result
 ...  
 ```  
   
-### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>2. string-length() XQuery 함수를 사용하여 보증 설명이 짧은 제품 검색  
- 보증 설명이 20자 미만인 제품의 경우 다음 쿼리는 제품 ID, 길이, 보증 설명 및 <`Warranty`> 요소 자체가 포함된 XML을 검색합니다.  
+### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>2\. string-length() XQuery 함수를 사용하여 보증 설명이 짧은 제품 검색  
+ 보증 설명이 20 자는 제품에 대 한 다음 쿼리는 제품 ID, 길이, 보증 설명에 포함 된 XML을 검색 하며 <`Warranty`> 요소 자체입니다.  
   
- 보증은 제품 기능 중 하나입니다. <`Features`> 요소 다음에는 선택 항목인 <`Warranty`> 자식 요소가 옵니다.  
+ 보증은 제품 기능 중 하나입니다. 선택적 <`Warranty`> 자식 요소 다음의 <`Features`> 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019051"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>데이터 형식 식별자 및 설명자
 데이터 형식에 나열 된 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 및 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 이 부록 앞부분에서의 섹션은 "간결 하 게" 데이터 형식: 각 식별자 단일 데이터 형식을 참조 합니다. 식별자 및 데이터 형식 간의 한 일 대응이 됩니다. 그러나 설명자, 수행 되지 모든 사례 데이터 형식을 식별 하려면 단일 값을 사용 합니다. 경우에 따라 "verbose" 데이터 형식 및 형식 하위 코드를 사용합니다. 날짜/시간 및 간격 데이터 형식 제외한 모든 데이터 형식에 대 한 자세한 정보 표시 형식 식별자 간결한 형식 식별자와 동일 이며 SQL_DESC_DATETIME_INTERVAL_CODE의 값은 0과 같습니다. 그러나 날짜/시간 및 간격 데이터 형식에 대해 (SQL_DATETIME 또는 sql_interval 인) 형식을 verbose SQL_DESC_TYPE에 저장 됩니다, 간결한 형식 SQL_DESC_CONCISE_TYPE에 저장 됩니다 및 하위 코드가 각 간결한 형식에 대 한 값을 SQL_DESC_DATETIME_INTERVAL_CODE에 저장 됩니다. 이러한 필드 중 하나를 설정 다른 영향을 줍니다. 이러한 필드에 대 한 자세한 내용은 참조는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명 합니다.  

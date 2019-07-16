@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165832"
 ---
-# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 쿼리 및 Slicer 축-축을 사용 하 여 간단한 예제
+# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>MDX 쿼리 및 Slicer 축 - 간단한 예에서 축 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   이 항목에 제시된 예에서는 쿼리 및 slicer 축을 지정 및 사용하는 기본적인 방법을 설명합니다.  
   
@@ -44,8 +44,8 @@ WHERE ( [Measures].[Packages] )
 |1st quarter|60|50|  
 |2nd quarter|45|45|  
   
-## <a name="see-also"></a>관련 항목:  
- [쿼리 축 & #40;의 내용을 지정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Slicer 축 & #40;의 내용을 지정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>관련 항목  
+ [쿼리 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Slicer 축의 내용 지정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

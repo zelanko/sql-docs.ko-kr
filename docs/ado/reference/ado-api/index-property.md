@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932431"
 ---
 # <a name="index-property"></a>Index 속성
 적용에 대 한 현재 인덱스의 이름을 나타내는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66694797"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **문자열** 값은 인덱스의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  명명 된 인덱스는 **인덱스** 속성이 이전에 선언 해야 기본 기본 테이블에는 **레코드 집합** 개체입니다. 즉, 인덱스 선언 해야 프로그래밍 방식으로 ADOX로 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체 또는 기본 테이블을 만들 때.  
   
  인덱스를 설정할 수 없는 경우 런타임 오류가 발생 합니다. 합니다 **인덱스** 다음과 같은 속성을 설정할 수 없습니다.  
