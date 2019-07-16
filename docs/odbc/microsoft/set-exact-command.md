@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997730"
 ---
 # <a name="set-exact-command"></a>SET EXACT 명령
 서로 다른 길이의 두 문자열을 비교 하는 것에 대 한 규칙을 지정 합니다.  
@@ -37,7 +36,7 @@ SET EXACT ON | OFF
  OFF  
  (기본값) 해당 일에 식 일치 해야 한다는 문자에 대 한 문자 오른쪽에 있는 식의 끝에 도달할 때까지 지정 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 문자열 길이가 같은 경우에 설정을 정확 하 게 설정 효과가 없습니다.  
   
 ## <a name="string-comparisons"></a>문자열 비교  

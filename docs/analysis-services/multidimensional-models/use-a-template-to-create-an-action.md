@@ -1,5 +1,5 @@
 ---
-title: 템플릿을 사용 하 여 동작 만들려면 | Microsoft Docs
+title: 템플릿을 사용 하 여 작업 만들기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7f01398b9fc847277ec5655aeae2eb538e56ce64
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208427"
 ---
 # <a name="use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34026622"
   
 -   필수 정보를 입력하여 템플릿 기반의 동작 작성을 완료합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동작&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
   
   

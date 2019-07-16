@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d12ff5f349d5b7328af7e47dbfc7724420d6fb15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060104"
 ---
 # <a name="save-metadata-db2tosql"></a>메타 데이터 (DB2ToSQL)를 저장 합니다.
 합니다 **메타 데이터 저장** SSMA 프로젝트를 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일이이 있습니다.  

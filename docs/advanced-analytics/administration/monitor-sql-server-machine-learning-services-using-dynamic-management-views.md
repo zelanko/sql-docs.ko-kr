@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963148"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>동적 관리 뷰 (Dmv)를 사용 하 여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ Dmv에 대 한 일반적인 내용은 참조 하세요. [시스템 동적 관리
 
 SQL server에서 machine learning 워크 로드를 모니터링 하는 경우 다음과 같은 동적 관리 뷰를 사용할 수 있습니다. 필요한 Dmv를 쿼리하려면 `VIEW SERVER STATE` 는 인스턴스에 대 한 권한이 있습니다.
 
-| 동적 관리 뷰 | 형식 | Description |
+| 동적 관리 뷰 | type | 설명 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 실행 | 외부 스크립트를 실행 중인 각 활성 작업자 계정 행을 반환합니다. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 실행 | 외부 스크립트 요청의 각 유형에 대해 하나의 행을 반환합니다. |
@@ -78,7 +77,7 @@ WHERE name = 'external scripts enabled';
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | IsMLServicesInstalled | SQL Server Machine Learning Services 인스턴스에 대 한 설치 되어 있으면 1을 반환 합니다. 그렇지 않으면 0을 반환합니다. |
 | ExternalScriptsEnabled | 인스턴스에 대 한 외부 스크립트 사용 하는 경우 1을 반환 합니다. 그렇지 않으면 0을 반환합니다. |
@@ -106,7 +105,7 @@ ON s.session_id = r.session_id;
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | session_id | 각각의 기본 활성 연결과 연결된 세션을 식별합니다. |
 | blocking_session_id | 요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음). |
@@ -142,7 +141,7 @@ ORDER BY language, counter_name;
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | language | 등록된 외부 스크립트 언어의 이름입니다. |
 | counter_name | 등록된 외부 스크립트 함수의 이름입니다. |
@@ -164,7 +163,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** 외부 스크립트에 대 한 다음 성능 카운터를 출력 합니다.
 
-| 카운터 | Description |
+| 카운터 | 설명 |
 |---------|-------------|
 | 모든 실행 | 로컬 또는 원격 호출에 의해 시작 되는 외부 프로세스의 수입니다. |
 | 병렬 실행 | 스크립트를 포함 하는 횟수를 _@parallel_ 사양과 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 생성 하 고 병렬 쿼리 계획을 사용 하는 데 수 있었습니다. |
@@ -192,7 +191,7 @@ FROM sys.dm_os_sys_info;
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | physical_memory_kb | 컴퓨터의 실제 메모리의 총 양입니다. |
 | committed_kb | 커밋된 메모리는 메모리 관리자의 크기 (KB). 메모리 관리자의 예약된 메모리는 포함하지 않습니다. |
@@ -221,9 +220,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
-| NAME | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
+| name | 외부 리소스 풀 또는 SQL Server의 이름입니다. |
 | max_memory_percent | SQL Server 또는 외부 리소스 풀을 사용할 수 있는 최대 메모리입니다. |
 
 ## <a name="resource-pools"></a>리소스 풀
@@ -246,7 +245,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 쿼리는 다음 열을 반환합니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | pool_name | 리소스 풀의 이름입니다. SQL Server 리소스 풀 붙습니다 `SQL Server` 외부 리소스 풀은 접두사가 붙은 `External Pool`합니다.
 | total_cpu_usage_hours | 리소스 관리자 통계를 다시 설정한 후 시간 (밀리초)의 누적 CPU 사용량입니다. |
@@ -275,11 +274,11 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 열이 반환 됩니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | 패키지 | 설치 된 패키지의 이름입니다. |
 | 버전 | 패키지의 버전입니다. |
-| 개체 | 설치 된 패키지에 종속 된 패키지를 나열 합니다. |
+| 종속 | 설치 된 패키지에 종속 된 패키지를 나열 합니다. |
 | 라이선스 | 설치 된 패키지에 대 한 라이선스입니다. |
 | LibPath | 패키지를 찾을 수 있는 디렉터리입니다. |
 
@@ -301,7 +300,7 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 열이 반환 됩니다.
 
-| Column | Description |
+| Column | 설명 |
 |--------|-------------|
 | 패키지 | 설치 된 패키지의 이름입니다. |
 | 버전 | 패키지의 버전입니다. |

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e29fac8b9cdb955ddaff6643eacae352e9c39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020909"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>마이그레이션된 데이터베이스 개체 테스트(SybaseToSQL)
 Microsoft SQL Server Migration Assistant (SSMA 테스터) Sybase 테스터를 위한 자동으로 테스트 SSMA 수행한 데이터 마이그레이션 및 데이터베이스 개체를 변환 합니다. 모든 SSMA 마이그레이션 단계가 완료 되 면 모든 데이터가 제대로 전송 된 및 변환 된 개체가 동일한 방식으로 작동 하는지 확인 하려면 SSMA 테스터를 사용 합니다.  

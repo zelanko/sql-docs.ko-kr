@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: b6cd4013d3126442b02c660c54215c0b0b17e157
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941792"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

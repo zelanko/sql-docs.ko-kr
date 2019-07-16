@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 170e2f8b565f8b3d9d5e385b2bba9f183e743ace
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008352"
 ---
 # <a name="lag-dmx"></a>Lag(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +30,7 @@ Lag()
 ## <a name="return-type"></a>반환 형식  
  정수 형식의 스칼라 값  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 **지연** 함수는 KEY TIME 열이 중첩된 테이블 내에 모델에는 문의 sub-select 내에 있어야 합니다.  
   
 ## <a name="examples"></a>예  

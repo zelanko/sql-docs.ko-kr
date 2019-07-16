@@ -2,19 +2,18 @@
 title: 폴링 빈도-Analytics Platform System 결정 | Microsoft Docs
 description: 이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961077"
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
 이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.  

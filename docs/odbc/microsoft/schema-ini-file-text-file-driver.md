@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987942"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 파일(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 스키마 정보 파일을 사용 하 여 텍스트 파일의 형식이 결정 됩니다. 스키마 정보 파일을 항상 Schema.ini 라는 이며 항상 텍스트 데이터 원본 동일한 디렉터리에 유지 됩니다. 스키마 정보 파일을 파일, 열 이름 및 데이터 형식 정보 및 기타 여러 데이터 특성의 일반 형식에 대 한 정보를 사용 하 여 IISAM을 제공합니다. Schema.ini 파일은 항상 고정 길이 데이터에 액세스 하기 위한 필수입니다. 날짜/시간, 통화 또는 10 진수 데이터 또는 테이블의 데이터를 처리 하 여 더 많은 제어를 하려는 경우 텍스트 테이블에 포함 된 경우에 Schema.ini 파일을 사용 해야 합니다.  
@@ -54,9 +53,9 @@ ms.locfileid: "63127903"
   
 |형식 지정자|테이블 형식|Schema.ini 형식 문|  
 |----------------------|------------------|---------------------------------|  
-|**탭으로 구분**|파일의 필드는 탭으로 구분 됩니다.|Format=TabDelimited|  
+|**탭으로 구분**|파일의 필드는 탭으로 구분 됩니다.|형식 = TabDelimited|  
 |**CSV 구분**|파일의 필드는 쉼표 (쉼표로 구분 된 값)으로 구분 됩니다.|형식 = CSVDelimited|  
-|**사용자 지정 구분**|파일의 필드 대화 상자에 입력 하려는 모든 문자로 구분 됩니다. 큰따옴표 (")를 제외한 모든 수를 포함 하 여 빈.|형식 = 구분 기호로 분리 됨 (*사용자 지정 문자*)<br /><br /> -또는-<br /><br /> 구분 기호를 사용 하 여 다음을 지정 합니다.<br /><br /> Format=Delimited( )|  
+|**사용자 지정 구분**|파일의 필드 대화 상자에 입력 하려는 모든 문자로 구분 됩니다. 큰따옴표 (")를 제외한 모든 수를 포함 하 여 빈.|형식 = 구분 기호로 분리 됨 (*사용자 지정 문자*)<br /><br /> 또는<br /><br /> 구분 기호를 사용 하 여 다음을 지정 합니다.<br /><br /> Format=Delimited( )|  
 |**고정된 길이**|파일의 필드는 고정된 길이입니다.|Format=FixedLength|  
   
 ## <a name="specifying-the-fields"></a>필드를 지정합니다.  
@@ -94,13 +93,13 @@ Col2=CustomerName Text Width 30
 n=ColumnNametype [#]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서 각 부분을 설명 합니다 **Col**_n_ 항목입니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*ColumnName*|텍스트 열의 이름입니다. 열 이름에 공백이 포함 된 경우 큰따옴표로 묶습니다 해야 있습니다.|  
-|*type*|데이터 형식 아래와 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> 비트<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> 텍스트 모드<br /><br /> 메모<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short 동일)<br /><br /> LongChar (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
+|*type*|데이터 형식 아래와 같습니다.<br /><br /> **Microsoft Jet 데이터 형식**<br /><br /> 비트<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> Datetime<br /><br /> 텍스트 모드<br /><br /> Memo<br /><br /> **ODBC 데이터 형식** Char (텍스트와 동일)<br /><br /> Float (Double과 동일)<br /><br /> 정수 (Short 동일)<br /><br /> LongChar (메모와 동일)<br /><br /> 날짜 *날짜 형식*|  
 |**너비**|리터럴 문자열 값 `Width`합니다. 다음 지정 된 열의 너비는 나타냅니다 (문자 구분 된 파일에 대 한 선택적; 고정 길이 파일에 필요).|  
 |*#*|열의 너비를 지정 하는 정수 값 (필요한 경우 **너비** 지정).|  
   
@@ -114,7 +113,7 @@ CharacterSet=ANSI
 ## <a name="specifying-data-type-formats-and-conversions"></a>데이터 유형 형식 지정 및 변환  
  Schema.ini 파일 데이터를 변환 하거나 표시 하는 방법을 지정 하는 데 사용할 수 있는 몇 가지 옵션을 포함 합니다. 다음 표에서 이러한 각 옵션을 나열합니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
 |**DateTimeFormat**|날짜 및 시간을 나타내는 형식 문자열을 설정할 수 있습니다. 동일한 형식으로 가져오거나 내보낼 모든 날짜/시간 필드를 처리 하는 경우에이 항목을 지정 해야 합니다. 오전을 제외한 모든 Microsoft Jet 형식 오후 지원 됩니다. 형식 문자열이 없는 경우 Windows 제어판 간단한 날짜 및 시간 옵션이 사용 됩니다.|  
 |**DecimalSymbol**|숫자의 소수 부분과에서 정수를 구분 하는 데 사용 되는 모든 단일 문자를 설정할 수 있습니다.|  
@@ -123,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|텍스트 파일에서 통화 값에 사용할 수 있는 통화 기호를 나타냅니다. 달러 기호 ($) 및 Dm을 예로 들 수 있습니다.|  
 |**CurrencyPosFormat**|다음 값 중 하나로 설정할 수 있습니다.<br /><br /> -구분 기호가 없는 ($1) 통화 기호 접두사<br />-구분 기호가 없는 통화 기호 접미사 (1$)<br />한 문자 구분 ($ 1)를 사용 하 여 통화 기호 접두사<br />한 문자 구분을 사용 하 여 통화 기호 접미사 (1 $)|  
 |**CurrencyDigits**|통화 금액의 소수 부분에 사용 되는 자릿수를 지정 합니다.|  
-|**CurrencyNegFormat**|다음 값 중 하나입니다.<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> 이 예제에는 달러 기호를 보여 주지만 적절 한 바꿔야 **CurrencySymbol** 실제 프로그램에는 값입니다.|  
+|**CurrencyNegFormat**|다음 값 중 하나입니다.<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-$1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-$-1<br />-   -1 $<br />-   -$ 1<br />-$-1<br />-   $ 1-<br />-   $ -1<br />-$ 1<br />-   ($ 1)<br />-   (1 $)<br /><br /> 이 예제에는 달러 기호를 보여 주지만 적절 한 바꿔야 **CurrencySymbol** 실제 프로그램에는 값입니다.|  
 |**CurrencyThousandSymbol**|텍스트 파일의 통화 값을 구분 하 여 사용할 수 있는 단일 문자 기호를 나타냅니다.|  
 |**CurrencyDecimalSymbol**|전체 통화 금액의 소수 부분에서 분리 하는 데 사용 되는 모든 단일 문자를 설정할 수 있습니다.|  
   

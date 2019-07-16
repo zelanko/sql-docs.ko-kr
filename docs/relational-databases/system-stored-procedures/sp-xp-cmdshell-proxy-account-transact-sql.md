@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f807c373-7fbc-4108-a2bd-73b48a236003
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83525324b328a688713418835b353e4a72892a0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950456"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프록시 자격 증명 호출할 **# # xp_cmdshell_proxy_account # #** 합니다.  
   
  NULL 옵션을 사용 하 여 실행 될 때 **sp_xp_cmdshell_proxy_account** 프록시 자격 증명을 삭제 합니다.  
@@ -67,7 +66,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-the-proxy-credential"></a>1. 프록시 자격 증명 만들기  
+### <a name="a-creating-the-proxy-credential"></a>A. 프록시 자격 증명 만들기  
  다음 예에서는 `ADVWKS\Max04` 암호를 사용하여 `ds35efg##65`라는 Windows 계정에 대한 프록시 자격 증명을 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -75,7 +74,7 @@ EXEC sp_xp_cmdshell_proxy_account 'ADVWKS\Max04', 'ds35efg##65';
 GO  
 ```  
   
-### <a name="b-dropping-the-proxy-credential"></a>2. 프록시 자격 증명 삭제  
+### <a name="b-dropping-the-proxy-credential"></a>2\. 프록시 자격 증명 삭제  
  다음 예에서는 자격 증명 저장소에서 프록시 자격 증명을 제거합니다.  
   
 ```  

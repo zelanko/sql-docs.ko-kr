@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926363"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등을 수 있습니다.  

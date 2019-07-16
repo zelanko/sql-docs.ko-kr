@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920012"
 ---
 # <a name="clone-method-ado"></a>Clone 메서드(ADO)
 복제본을 만듭니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 기존 개체 **Recordset** 개체입니다. 필요에 따라 읽기 전용 복제본 수를 지정 합니다.  
@@ -47,7 +46,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  (선택 사항) A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 원래 잠금 형식을 지정 하는 값 **레코드 집합**, 또는 읽기 전용 **레코드 집합**합니다. 유효한 값은 **adLockUnspecified** 하거나 **adLockReadOnly**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **복제** 메서드를 여러 중복 **레코드 집합** 개체에 지정된 된 레코드 집합에서 현재 둘 이상의 레코드를 유지 하려는 경우에 특히 합니다. 사용 하는 **복제** 메서드를 만들고 새 열 보다 더 효율적입니다 **레코드 집합** 원본과 동일한 정의 사용 하는 개체입니다.  
   
  합니다 [필터](../../../ado/reference/ado-api/filter-property.md) 속성의 원래 **레코드 집합**복제본에 적용 되지 것입니다 있는 경우. 설정 된 **필터** 새 속성 **레코드 집합** 결과를 필터링 합니다. 기존 복사 하는 가장 간단한 방법은 **필터** 값을 다음과 같이 직접 할당 하는 것입니다.  
@@ -73,12 +72,12 @@ rsNew.Filter = rsOriginal.Filter
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|아니요|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|아니요|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|아니요|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|사용자 계정 컨트롤|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|사용자 계정 컨트롤|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|사용자 계정 컨트롤|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|사용자 계정 컨트롤|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
   

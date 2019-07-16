@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959544"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -83,49 +82,49 @@ Azure Data Studio 및 해당 데이터 공급자에 대 한 소스 코드는 Git
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure Sign-In|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|대시보드|사용자 계정 컨트롤| |
-|확장 프로그램|사용자 계정 컨트롤| |
-|통합된 터미널|사용자 계정 컨트롤||
-|개체 탐색기|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|개체 스크립팅|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|프로젝트 시스템|사용자 계정 컨트롤||
-|테이블에서 선택|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|소스 코드 제어|사용자 계정 컨트롤||
-|작업 창|사용자 계정 컨트롤||
-|테마 설정|사용자 계정 컨트롤||
-|어두운 모드|사용자 계정 컨트롤||
+|Azure 로그인|예|예|
+|대시보드|예| |
+|확장 프로그램|예| |
+|통합된 터미널|예||
+|개체 탐색기|예|예|
+|개체 스크립팅|예|예|
+|프로젝트 시스템|예||
+|테이블에서 선택|예|예|
+|소스 코드 제어|예||
+|작업 창|예||
+|테마 설정|예||
+|어두운 모드|예||
 |Azure 리소스 탐색기|미리 보기||
-|스크립트 생성 마법사||사용자 계정 컨트롤
-|DACPAC 가져오기 \||사용자 계정 컨트롤|
-|개체 속성||사용자 계정 컨트롤|
-|테이블 디자이너||사용자 계정 컨트롤|
+|스크립트 생성 마법사||예
+|DACPAC 가져오기 \||예|
+|개체 속성||예|
+|테이블 디자이너||예|
 
 ### <a name="query-editor"></a>쿼리 편집기
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|차트 뷰어|사용자 계정 컨트롤||
-|CSV, JSON, XLSX 결과 내보내기|사용자 계정 컨트롤||
-|IntelliSense|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|코드 조각|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|실행 계획|미리 보기|사용자 계정 컨트롤|
-|클라이언트 통계||사용자 계정 컨트롤|
-|활성 쿼리 통계||사용자 계정 컨트롤|
-|쿼리 옵션||사용자 계정 컨트롤|
-|파일로 결과 저장||사용자 계정 컨트롤|
-|텍스트로 결과 표시||사용자 계정 컨트롤|
-|공간 뷰어||사용자 계정 컨트롤|
-|SQLCMD||사용자 계정 컨트롤|
-|T-SQL 디버거||사용자 계정 컨트롤|
+|차트 뷰어|예||
+|CSV, JSON, XLSX 결과 내보내기|예||
+|IntelliSense|예|예|
+|코드 조각|예|예|
+|실행 계획|미리 보기|예|
+|클라이언트 통계||예|
+|활성 쿼리 통계||예|
+|쿼리 옵션||예|
+|파일로 결과 저장||예|
+|텍스트로 결과 표시||예|
+|공간 뷰어||예|
+|SQLCMD||예|
+|T-SQL 디버거||예|
 
 ### <a name="operating-system-support"></a>운영 체제 지원
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|macOS|사용자 계정 컨트롤||
-|Linux|사용자 계정 컨트롤||
+|Windows|예|예|
+|macOS|예||
+|Linux|예||
 
 ### <a name="data-engineering"></a>데이터 엔지니어링
 
@@ -139,29 +138,29 @@ Azure Data Studio 및 해당 데이터 공급자에 대 한 소스 코드는 Git
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|백업/복원|사용자 계정 컨트롤|사용자 계정 컨트롤|
-|플랫 파일 가져오기|미리 보기|사용자 계정 컨트롤|
-|SQL 에이전트|미리 보기|사용자 계정 컨트롤|
-|SQL 프로파일러|미리 보기|사용자 계정 컨트롤|
-|Always On||사용자 계정 컨트롤|
-|항상 암호화||사용자 계정 컨트롤|
-|데이터 복사 마법사||사용자 계정 컨트롤|
-|튜닝 관리자 데이터||사용자 계정 컨트롤|
-|데이터베이스 다이어그램||사용자 계정 컨트롤|
-|오류 로그 뷰어||사용자 계정 컨트롤|
-|유지 관리 계획||사용자 계정 컨트롤|
-|다중 서버 쿼리||사용자 계정 컨트롤|
-|정책 기반 관리||사용자 계정 컨트롤|
-|PolyBase||사용자 계정 컨트롤|
-|쿼리 저장소||사용자 계정 컨트롤|
-|등록된 서버||사용자 계정 컨트롤|
-|복제||사용자 계정 컨트롤|
-|보안 관리||사용자 계정 컨트롤|
-|Service Broker||사용자 계정 컨트롤|
-|SQL 메일||사용자 계정 컨트롤|
-|Template Explorer||사용자 계정 컨트롤|
-|취약성 평가||사용자 계정 컨트롤|
-|XEvent 관리||사용자 계정 컨트롤|
+|백업/복원|예|예|
+|플랫 파일 가져오기|미리 보기|예|
+|SQL 에이전트|미리 보기|예|
+|SQL 프로파일러|미리 보기|예|
+|Always On||예|
+|항상 암호화||예|
+|데이터 복사 마법사||예|
+|튜닝 관리자 데이터||예|
+|데이터베이스 다이어그램||예|
+|오류 로그 뷰어||예|
+|유지 관리 계획||예|
+|다중 서버 쿼리||예|
+|정책 기반 관리||예|
+|PolyBase||예|
+|쿼리 저장소||예|
+|등록된 서버||예|
+|복제||예|
+|보안 관리||예|
+|Service Broker||예|
+|SQL 메일||예|
+|Template Explorer||예|
+|취약성 평가||예|
+|XEvent 관리||예|
 
 
 ## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio SSMS/SSDT에는 기능이 없습니다. 추가 하 시겠습니까?

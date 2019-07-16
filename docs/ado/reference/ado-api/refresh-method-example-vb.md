@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c44797b663007600b66db3d40d910d7f2459ad89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917307"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh 메서드 예제(VB)
 이 예제에서는 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 새로 고침 하는 방법의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체.  

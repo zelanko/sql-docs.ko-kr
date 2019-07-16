@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924438"
 ---
 # <a name="recordset-positioning"></a>레코드 집합 위치 지정
 사용 하 여는 **AbsolutePosition** 서 수 위치를 기반으로 레코드를 이동 하는 속성을 **레코드 집합** 개체 또는 현재 레코드의 서 수 위치를 결정. 공급자 사용 가능 하도록이 속성에 대 한 적절 한 기능을 지원 해야 합니다.  

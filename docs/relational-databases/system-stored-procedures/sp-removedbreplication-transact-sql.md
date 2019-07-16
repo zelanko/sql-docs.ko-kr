@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d3931ff867ef1475165eb6cbac97f4ba4564bf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006961"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_removedbreplication** 모든 유형의 복제에 사용 됩니다.  
   
  **sp_removedbreplication** 복원할 필요가 없는 복제 개체를 가진 복제 된 데이터베이스를 복원 하는 경우에 유용 합니다.  

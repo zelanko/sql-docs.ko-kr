@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6eb91bb43407311a58e495b5f9391186821d3a67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037945"
 ---
 # <a name="value-mdx"></a>Value(MDX)
 
@@ -32,7 +31,7 @@ Member_Expression[.Value]
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **값** 함수에 문자열로 지정된 된 멤버의 값을 반환 합니다. 합니다 **값** 때문에 멤버의 값 멤버인의 기본 속성 값 없는 다른 값을 지정 하는 경우 멤버에 대해 반환 되는 인수는 선택 사항입니다. 멤버 속성에 대 한 자세한 내용은 참조 하세요. [내장 멤버 속성 &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 하 고 [사용자 정의 멤버 속성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="examples"></a>예  

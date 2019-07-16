@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923600"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 이동 하다가 특정 레코드에 직접 반환할 유용 합니다 **레코드 집합** 모든 레코드를 스크롤하고 값을 비교 하지 않고도 합니다. 예를 들어, 사용 하 여 레코드를 검색 하려는 경우는 **찾을** 메서드이지만 검색 레코드가 반환, 양쪽 끝에 자동으로 배치 됩니다 합니다 **레코드 집합**합니다. 공급자가 지 원하는, 경우 책갈피를 사용 하기 전에 사용자의 위치를 표시 하려면 사용할 수 있습니다 합니다 **찾을** 메서드 위치로 반환할 수 있습니다. 책갈피는를 **Variant** 의 레코드를 고유 하 게 식별 하는 값을 입력 한 **레코드 집합** 개체입니다.  

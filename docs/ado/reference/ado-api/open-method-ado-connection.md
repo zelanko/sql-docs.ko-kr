@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01d18e643dd769daa22309bb6c3df6407ab9043f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931938"
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드(ADO 연결)
 데이터 원본에 연결을 엽니다.  
@@ -48,7 +47,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *옵션*  
  (선택 사항) A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 후이 메서드를 반환할지 여부를 결정 하는 값 (동기적으로) 비동기적으로 연결이 설정 되기 전에 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **열려** 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 데이터 원본에 물리적 연결을 설정 합니다. 이 메서드가 성공적으로 완료 된 후 연결이 라이브 및에 대해 명령을 실행 하 고 결과 처리할 수 있습니다.  
   
  사용 하 여 선택적 *ConnectionString* 계열이 포함 된 연결 문자열을 지정 하는 인수 *인수* *= value* 세미콜론으로 구분 된 문 또는 파일 또는 디렉터리 리소스를 식별 하는 url입니다. 합니다 **ConnectionString** 속성에 사용 된 값을 자동으로 상속 합니다 *ConnectionString* 인수입니다. 설정 하거나 있습니다 따라서 합니다 **ConnectionString** 의 속성을 **연결** 사용할지를 열기 전에 개체를 *ConnectionString* 설정 하거나 재정의 하는 인수 중 현재 연결 매개 변수를 **열려** 메서드를 호출 합니다.  

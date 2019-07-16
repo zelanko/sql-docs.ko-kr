@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a7dbb125c3a320ac380d91b71aff7826c17e15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adbfc4e56c49447d88fb354d1e67c2c5e3e30b71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922622"
 ---
 # <a name="internet-server-error-access-denied"></a>인터넷 서버 오류: 액세스 거부됨
 이 오류가 발생할 경우에 일반적으로 Microsoft 인터넷 정보 서비스 (IIS) 다음 상태를 반환 하는 의미 합니다.  

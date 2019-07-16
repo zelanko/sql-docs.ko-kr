@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017178"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers(MDX)
 
@@ -32,7 +31,7 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본적으로 MDX는 집합 함수를 확인할 때 계산 멤버를 제외시킵니다. 합니다 **AddCalculatedMembers** 함수에 지정 된 집합 식을 검사 *Set_Expression,* 하 고 해당 집합의 범위 내에 포함 된 멤버의 형제인 계산된 멤버를 포함 합니다. 식입니다.  
   
 > [!NOTE]  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dbc6e9e78fc08be2bba08d0fbeb897496a2058b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918251"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 편집 하는 동안 기록에 배치 하는 잠금 유형을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|낙관적 일괄 처리 업데이트를 나타냅니다. 일괄 업데이트 모드에 필요합니다.|  
 |**adLockOptimistic**|3|낙관적 잠금, 레코드를 나타냅니다. 공급자를 사용 하 여 낙관적 잠금 호출 하는 경우에 레코드 잠금 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.|  

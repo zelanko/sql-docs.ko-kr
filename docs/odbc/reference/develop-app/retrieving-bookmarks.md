@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020567"
 ---
 # <a name="retrieving-bookmarks"></a>책갈피 검색
 응용 프로그램에서 책갈피에 사용 하면 SQL_ATTR_USE_BOOKMARKS 문 특성 준비 하거나 문을 실행 하기 전에 SQL_UB_VARIABLE로 설정 합니다. 그 중 빌드 및 책갈피를 만들 수 있으므로 좋은 경우에 책갈피를 사용 해야 하므로 비용이 많이 드는 작업 수를 유지 관리에 사용 하기 때문에 이것이 필요한입니다.  

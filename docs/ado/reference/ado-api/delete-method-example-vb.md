@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e147c308c3070084fc74ea285bf724dded59a9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2906515b09eb32caf6def6e84d3b2bbd21dd15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933110"
 ---
 # <a name="delete-method-example-vb"></a>Delete 메서드 예제(VB)
 이 예제에서는 합니다 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 에서 지정 된 레코드를 제거 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997439"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'` 서버를 설명 하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)** , 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**데이터 정렬 호환**|연결된 서버에 대한 분산 쿼리 실행에 영향을 미칩니다. 이 옵션이 true로 설정되어 있는 경우|  
 |**데이터 액세스**|분산 쿼리 액세스에 대해 연결된 서버의 사용 여부를 설정합니다.|  
@@ -77,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|연결된 서버에 대한 연결 시간 제한 값입니다.|  
 |**query_timeout**|**int**|연결된 서버에 대한 쿼리 시간 제한 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 상태가 두 개 이상일 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -85,7 +84,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-information-about-all-servers"></a>1\. 모든 서버에 관한 정보 표시  
+### <a name="a-displaying-information-about-all-servers"></a>A. 모든 서버에 관한 정보 표시  
  다음 예에서는 매개 변수 없이 `sp_helpserver`를 사용하여 모든 서버에 관한 정보를 표시합니다.  
   
 ```  

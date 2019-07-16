@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933814"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 데이터베이스 역할만 제거할 수 있습니다 **sp_droprole**합니다.  
   
  기존 멤버가 있는 데이터베이스 역할은 제거할 수 없습니다. 데이터베이스 역할을 제거하려면 먼저 데이터베이스 역할의 모든 멤버를 제거해야 합니다. 사용 하 여 사용자 역할에서 제거할 **sp_droprolemember**합니다. 모든 사용자 역할의 멤버는 계속 하는 경우 **sp_droprole** 해당 멤버를 표시 합니다.  

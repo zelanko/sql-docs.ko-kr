@@ -20,23 +20,22 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6babc4d32782e6bf7321deb0a1778fff644bd14
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6623d6b95dfe0ebd4e45b13d190d8176bcab1a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942613"
 ---
 # <a name="sysavailabilityreplicas-transact-sql"></a>sys.availability_replicas(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-각 WSFC 장애 조치 클러스터의 Always On 가용성 그룹에 속해 있는 가용성 복제본에 대 한 행을 반환 합니다.  
+WSFC 장애 조치(failover) 클러스터의 모든 Always On 가용성 그룹에 속해 있는 각 가용성 복제본에 대해 하나의 행을 반환합니다.  
   
 클러스터가 다운되거나 쿼럼이 손실되는 등의 이유로 로컬 서버 인스턴스에서 WSFC  장애 조치(failover)  클러스터에 연결할 수 없는 경우에는 로컬 가용성 복제본에 대한 행만 반환됩니다. 이러한 행에는 메타데이터에 로컬로 캐시된 데이터의 열만 포함됩니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|복제본의 고유 ID입니다.|  
 |**group_id**|**uniqueidentifier**|복제본이 속한 가용성 그룹의 고유 ID입니다.|  
@@ -51,11 +50,11 @@ ms.locfileid: "54257078"
 |**session\_timeout**|**int**|제한 시간(초)입니다. 제한 시간은 복제본이 주 복제본과 보조 복제본 간의 연결이 실패한 것으로 간주하기 전에 복제본에서 다른 복제본의 메시지를 받기 위해 기다리는 최대 시간입니다. 세션 제한 시간은 보조 복제본이 주 복제본에 연결되어 있는지 여부를 검색합니다.<br /><br /> 보조 복제본을 사용 하 여 실패 한 연결을 검색 하 고, 한 주 복제본은 되도록 보조 복제본\_동기화 합니다. 주 복제본과의 실패한 연결을 검색할 경우 보조 복제본에서는 단순히 다시 연결을 시도합니다.<br /><br /> **참고:** 세션 제한 시간은 자동 장애 조치(failover)를 발생시키지 않습니다.<br /><br /> 이 값을 변경 하려면 SESSION_TIMEOUT 옵션을 사용 하 여 [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|  
 |**primary\_role\_allow\_connections**|**tinyint**|가용성이 모든 연결을 허용하는지 읽기/쓰기 연결만 허용하는지를 나타내며,  다음 중 하나입니다.<br /><br /> 2  =  모두(기본값)<br /><br /> 3  =  읽기/쓰기|  
 |**primary\_role\_allow\_connections\_desc**|**nvarchar(60)**|에 대 한 설명을 **주\_역할\_허용\_연결**하나씩의:<br /><br /> ALL<br /><br /> 읽을\_작성|  
-|**secondary\_role\_allow\_connections**|**tinyint**|보조 역할을 수행하는 가용성 복제본,  즉 보조 복제본이 클라이언트로부터의 연결을 허용할 수 있는지 여부를 나타내며,  다음 중 하나입니다.<br /><br /> 0 = 아니요 보조 복제본의 데이터베이스에 대한 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.<br /><br /> 1  =  읽기 전용. 보조 복제본의 데이터베이스에 대해 읽기 전용 연결만 허용됩니다. 복제본의 모든 데이터베이스에 대한 읽기 액세스가 가능합니다.<br /><br /> 2  =  모두. 보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.<br /><br /> 자세한 내용은 [활성 보조 복제본 을 참조하세요. 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.|  
+|**secondary\_role\_allow\_connections**|**tinyint**|보조 역할을 수행하는 가용성 복제본,  즉 보조 복제본이 클라이언트로부터의 연결을 허용할 수 있는지 여부를 나타내며,  다음 중 하나입니다.<br /><br /> 0 = 아니요 보조 복제본의 데이터베이스에 대한 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.<br /><br /> 1  =  읽기 전용. 보조 복제본의 데이터베이스에 대해 읽기 전용 연결만 허용됩니다. 복제본의 모든 데이터베이스에 대한 읽기 액세스가 가능합니다.<br /><br /> 2  =  모두. 보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.<br /><br /> 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.|  
 |**secondary_role_allow_connections_desc**|**nvarchar(60)**|에 대 한 설명을 **secondary_role_allow_connections**하나씩입니다.<br /><br /> 아니요<br /><br /> READ_ONLY<br /><br /> ALL|  
 |**create_date**|**datetime**|복제본을 만든 날짜입니다.<br /><br /> NULL  =  복제본이 이 서버 인스턴스에 없습니다.|  
 |**modify_date**|**datetime**|복제본이 마지막으로 수정된 날짜입니다.<br /><br /> NULL  =  복제본이 이 서버 인스턴스에 없습니다.|  
-|**backup_priority**|**int**|이 복제본에 대한 백업을 수행하기 위한 사용자 지정 우선 순위를 나타내며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100  사이의 정수입니다.<br /><br /> 자세한 내용은 [활성 보조 복제본 을 참조하세요. 보조 복제본에 백업 &#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.|  
+|**backup_priority**|**int**|이 복제본에 대한 백업을 수행하기 위한 사용자 지정 우선 순위를 나타내며 동일한 가용성 그룹의 다른 복제본을 기준으로 합니다. 이 값은 0에서 100  사이의 정수입니다.<br /><br /> 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업&#40;Always On 가용성 그룹&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)을 참조하세요.|  
 |**read_only_routing_url**|**nvarchar(256)**|읽기 전용 가용성 복제본의 연결 엔드포인트(URL)입니다. 자세한 내용은 이 항목 뒷부분에 있는 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.|  
   
 ## <a name="security"></a>보안  

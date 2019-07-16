@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f028885e91dd67869e15bab4d7b64cc97b64f9bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208877"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34024370"
   
 2.  다음 단계인 큐브 사용 권한 설정을 계속 진행합니다.  
   
-     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이러한 권한 수준에 대한 자세한 내용은 [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 를 참조하세요.  
+     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이러한 권한 수준에 대한 자세한 내용은 [Grant permissions on a data source object &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 를 참조하세요.  
   
 #### <a name="step-3-set-cube-permissions"></a>3단계: 큐브 사용 권한 설정  
   
@@ -93,9 +93,9 @@ ms.locfileid: "34024370"
 ## <a name="next-step"></a>다음 단계  
  큐브 권한을 구체화하여 셀 또는 차원 데이터에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services에서 지원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

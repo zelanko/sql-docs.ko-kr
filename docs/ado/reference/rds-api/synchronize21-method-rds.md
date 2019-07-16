@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d731738938eab5732dcbfa86c0d624ae7941ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963257"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 메서드(RDS)
 ADO 2.1 사용에 대 한 연결 문자열에서 지정 된 데이터베이스를 사용 하 여 지정 된 레코드 집합을 동기화 합니다.  
@@ -58,7 +57,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  행 상태에 영향을 받는 행의 안전 배열을 반환 하는 데 사용 하는 variant를 동기화 합니다. 다음 동기화 옵션을 설정 하 고 설정할 수 없음: *RefreshWithUpdate*하십시오 *새로 고침* 하 고 *RefreshConflicts*합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 *HandlerString* 매개 변수는 null 일 수 있습니다. 이 경우 어떻게 되나요 RDS 서버를 구성 하는 방법에 따라 달라 집니다. "MSDFMAP.handler" 처리기 문자열 (Msdfmap.dll) Microsoft 제공 된 처리기를 사용 해야 함을 나타냅니다. "MASDFMAP.handler,sample.ini" 처리기 문자열 Msdfmap.dll 처리기를 사용 해야 함을 나타내고 "sample.ini" 인수는 처리기에 전달 해야 합니다. 그런 다음 Msdfmap.dll는 sample.ini를 사용 하 여 연결 및 쿼리 문자열을 확인 하는 방향으로 인수를 해석 합니다.  
   
 > [!NOTE]

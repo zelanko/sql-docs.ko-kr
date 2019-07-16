@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054303"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @functname = ] 'procedure'` 삭제할 확장된 저장된 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
+`[ @functname = ] 'procedure'` 삭제할 확장된 저장된 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(517)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -51,7 +50,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 **sp_dropextendedproc** 에서 사용자 정의 확장된 저장된 프로시저 이름을 삭제 합니다 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에에서 항목을 제거 하 고는 [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에 있습니다. 이 저장된 프로시저 에서만 실행할 수 있습니다 합니다 **마스터** 데이터베이스입니다.  
   
 **sp_dropextendedproc** 시스템 확장 저장된 프로시저를 삭제 하지 않습니다. 시스템 관리자에 확장된 저장된 프로시저에 EXECUTE 권한을 거부 해야 대신 합니다 **공용** 역할입니다.  

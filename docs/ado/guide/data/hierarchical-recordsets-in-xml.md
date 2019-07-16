@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71b28233d8b687eff803a5897b31b2bc59bbd4e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925102"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML의 계층적 레코드 집합
 ADO는 계층적 레코드 집합 개체의 지 속성 xml을 허용합니다. 계층적 레코드 집합 개체를 부모 레코드 집합에서에서 필드의 값이 다른 레코드 집합입니다. 이러한 필드는 특성 대신 XML 스트림을에 자식 요소로 표시 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 예제에서는이 사례를 보여 줍니다.  
   
 ```  

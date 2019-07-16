@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936799"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "49806693"
   
 이 DMV를 사용 하 여 USE HINT 표기법에서 모든 지원 되는 힌트 목록을 참조 하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|힌트의 이름입니다.|
+|name|**sysname**|힌트의 이름입니다.|
 
 참조 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 각 힌트에 대 한 설명입니다.
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aa9801d312e5f862cb6274659496aff10c774ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010501"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_configure는 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  이러한 설정의 현재 값을 보려면 msdb.dbo.syspolicy_configuration 시스템 뷰를 쿼리합니다.  

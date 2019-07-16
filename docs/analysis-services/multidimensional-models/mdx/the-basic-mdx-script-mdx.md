@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bebee1057180259c9813d7a650594c0c6d4736d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208704"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34023010"
   
  또한 기본 MDX 스크립트에는 큐브 디자이너에서 만든 명명된 집합, 대입 식 및 계산 멤버를 만드는 스크립트 명령도 포함됩니다.  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 MDX 스크립트에 스크립트 명령을 직접 추가합니다.  
   
 -   큐브에 있는 각각의 명명된 집합의 경우 해당 CREATE SET 문이 기본 MDX 스크립트에 존재합니다.  
   
@@ -47,18 +47,18 @@ ms.locfileid: "34023010"
  모든 MDX 스크립팅 문  
  MDX 스크립트에서 MDX 스크립팅 문은 계산의 컨텍스트 및 범위를 제어하고 MDX 스크립트에 있는 다른 문의 동작을 관리합니다. 이 범주에는 다음 문이 포함됩니다.  
   
--   [계산](../../../mdx/mdx-scripting-calculate.md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [고정](../../../mdx/mdx-scripting-freeze.md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [범위](../../../mdx/mdx-scripting-scope.md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  MDX 스크립팅 문에 대한 자세한 내용은 [MDX 스크립팅 문&#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md)을 참조하세요.  
   
- [멤버 만들기](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
  CREATE MEMBER 문은 계산 멤버를 만듭니다. 계산 멤버 작성 방법에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
- [집합 만들기](../../../mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
  CREATE SET 문은 명명된 집합을 만듭니다. 명명된 집합을 만드는 방법에 대한 자세한 내용은 [명명된 집합을 MDX로 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)을 참조하세요.  
   
  조건문  
@@ -84,8 +84,8 @@ ms.locfileid: "34023010"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

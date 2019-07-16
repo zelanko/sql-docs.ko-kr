@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951673"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51664873"
  호출자의 id를 통해서만 제공 됩니다 **SqlContext.WindowsIdentity** 저장 프로시저 또는 함수의 실행을 시작한 클라이언트의 경우 Windows 인증을 사용 하 여 서버에 연결 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용된 경우 이 속성은 Null이며 코드는 호출자를 가장할 수 없습니다.  
   
 ### <a name="example"></a>예제  
- 다음 예에서는 호출 클라이언트의 Windows ID를 얻고 클라이언트를 가장하는 방법을 보여 줍니다.  
+ 다음 예제에서는 호출 클라이언트의 Windows id를 가져오고 클라이언트를 가장 하는 방법을 보여 줍니다.  
   
  C#  
   

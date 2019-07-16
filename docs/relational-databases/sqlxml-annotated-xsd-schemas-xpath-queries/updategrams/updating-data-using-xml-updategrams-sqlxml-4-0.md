@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b9dada396889ebad2342e8bcb6e46f60663079d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7da3eda9962feae31a07048f2ed1f14cd1a296f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018484"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 업데이트(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "67585897"
   
 -   대부분의 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다. AdventureWorks 데이터베이스를 복원할 수 있습니다.  
   
-### <a name="a-updating-a-record"></a>1\. 레코드 업데이트  
+### <a name="a-updating-a-record"></a>A. 레코드 업데이트  
  다음 Updategram은 AdventureWorks 데이터베이스의 Person.Contact 테이블에서 직원 성을 Fuller로 업데이트합니다. Updategram은 매핑 스키마를 지정하지 않으므로 기본 매핑을 사용합니다.  
   
 ```  

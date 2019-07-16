@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c9195a6c2b9a2192e9d8fd04ce3e5d2592b1b23e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962363"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>성능 향상을 위해 R 코드 프로 파일링 함수 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ help("Sys.time")
 
 Microsoft R Open을 기본적으로 설치 된 설명서에 설명 하는 R 언어에 대 한 확장 개발 매뉴얼이 포함 됩니다 [프로 파일링 및 디버깅](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) 자세히 설명에서 합니다. C:\Program Files\Microsoft SQL Server\MSSQL13 시 컴퓨터에 동일한 설명서를 찾을 수 있습니다. MSSQLSERVER\R_SERVICES\doc\manual 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [R 유틸리티 패키지](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
 + ["고급 R" Hadley wickham](http://adv-r.had.co.nz)

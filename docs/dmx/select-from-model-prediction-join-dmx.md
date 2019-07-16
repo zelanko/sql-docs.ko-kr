@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928338"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +56,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ON 절은 원본 쿼리의 열 및 마이닝 모델의 열 간의 매핑을 정의합니다. 이 매핑은 예측을 만들 때 원본 쿼리의 열을 입력으로 사용할 수 있도록 원본 쿼리의 열을 마이닝 모델의 열로 전송하는 데 사용됩니다. 열에는 \< *조인 매핑 목록*> 다음 예와에서 같이 등호 (=)를 사용 하 여 관련:  
   
 ```  
@@ -78,7 +77,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  ORDER BY 절에는 단일 열만 인수로 사용할 수 있으므로 둘 이상의 열에 따라 정렬할 수는 없습니다.  
   
-## <a name="example-1-singleton-query"></a>예 1: 단일 쿼리  
+## <a name="example-1-singleton-query"></a>예제 1: 단일 쿼리  
  다음 예에서는 특정 개인이 자전거를 구입할지 여부를 실시간으로 예측하는 쿼리를 만드는 방법을 보여 줍니다. 이 쿼리에서는 데이터가 테이블이나 다른 데이터 원본에 저장되지 않으며 쿼리에 직접 입력됩니다. 쿼리에 사용되는 개인의 특성은 다음과 같습니다.  
   
 -   35세  
@@ -105,7 +104,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>예 2: OPENQUERY 사용  
+## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
  다음 예에서는 외부 데이터 집합에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  
@@ -187,7 +186,7 @@ NATURAL PREDICTION JOIN
  예측 가능한 특성이 들어 있는 열인 `[v Assoc Seq Line Items]`가 테이블 열이므로 중첩 테이블이 들어 있는 단일 열이 반환됩니다. 기본적으로 중첩 테이블 열의 이름은 `Expression`입니다. 공급자에서 계층적 행 집합을 지원 하지 않습니다, 경우 사용할 수 있습니다 합니다 **FLATTENED** 키워드와 같이이 예제에서는 결과 보다 쉽게 볼 수 있도록 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  

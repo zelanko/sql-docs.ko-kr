@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 003cd318d6db54c7547375219805c63cfc4ce249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7faab41bd52397ac0d352e04a9ec153571e93f1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948769"
 ---
 # <a name="string-limitations"></a>문자열 제한 사항
 SQL 문 문자열의 최대 길이 65,000 개 문자입니다.  

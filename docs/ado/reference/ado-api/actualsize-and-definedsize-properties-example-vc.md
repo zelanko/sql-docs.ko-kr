@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6597d6a834771872abab75d9be3fbf3127eca539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921478"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 및 DefinedSize 속성 예제 (VC + +)
 이 예제에서는 합니다 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 크기와 필드의 실제 크기를 표시 합니다.  
@@ -138,7 +137,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **저장소 이름: 뉴스 및 맥주**  
 **정의 된 크기: 40**  
 **실제 크기: 12**  
-**저장소 이름: Doc-U-Mat: 품질 세탁 및 온라인 설명서**  
+**저장소 이름: 문서-U-하 게 접지 되도록 합니다. 품질 세탁 및 온라인 설명서**  
 **정의 된 크기: 40**  
 **실제 크기: 36**  
 **저장소 이름: Fricative Bookshop**  

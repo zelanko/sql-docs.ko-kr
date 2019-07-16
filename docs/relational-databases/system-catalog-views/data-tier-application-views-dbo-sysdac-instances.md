@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033119"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>데이터 계층 응용 프로그램 보기-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 응용 프로그램) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서 sysdac_instances 뷰에서 열을 설명 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 인스턴스의 식별자입니다.|  
 |instance_name|**sysname**|DAC를 배포할 때 지정된 DAC 인스턴스의 이름입니다.|  
@@ -45,7 +44,7 @@ ms.locfileid: "51660683"
 |created_by|**sysname**|DAC 인스턴스를 만든 사람의 로그인 정보입니다.|  
 |database_name|**sysname**|DAC 인스턴스에 대해 만든 데이터베이스의 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  DAC는 응용 프로그램에 사용되는 테이블 및 뷰 같은 논리 데이터 계층 개체의 정의인 DAC 유형을 포함합니다. DAC 패키지는 DAC를 배포하는 데 사용되는 파일입니다. DAC 패키지는 DAC 유형에 포함된 모든 논리 개체의 표현을 포함합니다. DAC 패키지를 사용하여 하나 이상의 DAC 복사본 또는 인스턴스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포할 수 있습니다. 동일한 DAC 패키지에서 배포된 각 DAC 인스턴스는 동일한 유형을 공유하지만 고유한 인스턴스 이름 및 식별자가 할당됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

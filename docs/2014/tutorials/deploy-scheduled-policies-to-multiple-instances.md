@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185813"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>여러 인스턴스에 예약된 정책 배포
   등록된 서버를 사용하면 중앙 위치에서 관리되는 서버로 예약된 정책을 배포할 수 있습니다. 로컬 서버 그룹 또는 중앙 관리 서버에서 예약된 정책을 배포할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016724"
     > [!NOTE]  
     >  마우스 오른쪽 단추로 **로컬 서버 그룹** 또는 중앙 관리 서버 자체의 정책이 모든 관리 서버에 배포 됩니다. 특정 서버 그룹을 마우스 오른쪽 단추로 클릭하면 해당 그룹의 서버에만 정책이 배포됩니다. 등록된 특정 서버를 마우스 오른쪽 단추로 클릭하면 해당 서버에만 정책이 배포됩니다.  
   
-3.  옆에 **가져올 파일**, 줄임표 단추 (**...** ).  
+3.  옆에 **가져올 파일**, 줄임표 단추 ( **...** ).  
   
 4.  에 **정책 선택** 대화 상자에서 예약된 된 정책을 저장 한 폴더 위치를 찾습니다. 예를 들어 위치를 찾습니다 **C:\Scheduled_BP_Policies**합니다.  
   

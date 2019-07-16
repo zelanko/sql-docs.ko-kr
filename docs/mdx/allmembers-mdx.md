@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 92cde0acf07f62d0678da6dd96efa707dedc1a1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63066251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017154"
 ---
 # <a name="allmembers-mdx"></a>AllMembers(MDX)
 
@@ -39,7 +38,7 @@ Level_Expression.AllMembers
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **AllMembers** 함수는 지정 된 계층 이나 수준의 계산된 멤버를 포함 하는 모든 멤버가 포함 된 집합을 반환 합니다. 합니다 **AllMembers** 함수는 지정 된 계층 이나 수준에 표시 가능한 멤버가 없는 경우에 계산된 멤버를 반환 합니다.  
   
 > [!IMPORTANT]  

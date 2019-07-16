@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943769"
 ---
 # <a name="rowset-size"></a>행 집합 크기
 응용 프로그램에서 사용 하는 행 집합 크기에 따라 달라 집니다. 일반적으로 화면 기반 응용 프로그램 두 가지 전략 중 하나를 수행 합니다. 첫 번째는 화면에 표시 되는 행 수의 행 집합 크기를 설정 하려면 사용자의 화면 크기를 조정, 응용 프로그램 그에 따라 행 집합 크기를 변경 합니다. 두 번째 큰 숫자로 100 같은 데이터 원본에 대 한 호출의 수를 줄일 행 집합 크기를 설정 하는 것입니다. 응용 프로그램 로컬 가능한 경우 행 집합 내의 스크롤하고 외부 행 집합으로 스크롤될 때에 새 행을 인출 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sp_dropanonymousagent (Transact-SQL) | Microsoft Docs
+title: sp_dropanonymousagent (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 2128e980384561a128eb4c2683043190f27a84b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911950"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent(Transact-SQL)
 
@@ -45,7 +44,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropanonymousagent** 모든 유형의 복제에 사용 됩니다.  
   
  이 저장 프로시저는 익명 구독 에이전트를 삭제할 때에만 사용하며 잘 알려진 구독 삭제에는 사용할 수 없습니다.  

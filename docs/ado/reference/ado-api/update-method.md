@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e48185f0524a920d52092540f5e3ed6d8546edfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938847"
 ---
 # <a name="update-method"></a>Update 메서드
 현재 행에 수행한 변경 내용 저장을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  
@@ -41,7 +40,7 @@ record.Fields.Update
  *값*  
  (선택 사항) A **Variant** 단일 값을 나타내는 또는 **Variant** 새 레코드의 필드에 대 한 값을 나타내는 배열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="recordset"></a>레코드 집합  
  사용 하 여는 **업데이트** 의 현재 레코드에 변경 내용을 저장 하는 방법을 **레코드 집합** 호출한 후 개체를 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드에서 모든 필드 값을 변경 이후 또는 기존 레코드입니다. 합니다 **레코드 집합** 개체 업데이트를 지원 해야 합니다.  
@@ -62,7 +61,7 @@ record.Fields.Update
   
  현재 레코드를 호출한 후 계속 합니다 **업데이트** 메서드.  
   
-## <a name="record"></a>레코드  
+## <a name="record"></a>녹음  
  **업데이트** 메서드를 추가, 삭제 및 업데이트의 필드를 종료 합니다 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 **레코드** 개체입니다.  
   
  예를 들어, 필드를 사용 하 여 삭제 합니다 **삭제** 메서드는 즉시 삭제로 표시 하지만 컬렉션에 유지 됩니다. 합니다 **업데이트** 실제로 공급자의 컬렉션에서 이러한 필드를 삭제 하려면 메서드를 호출 해야 합니다.  

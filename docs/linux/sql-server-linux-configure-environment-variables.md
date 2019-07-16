@@ -3,18 +3,17 @@ title: 환경 변수를 사용 하 여 SQL Server 설정 구성
 description: 이 문서에서는 Linux에서 특정 SQL Server 2017 설정을 구성 하려면 환경 변수를 사용 하는 방법을 설명 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967495"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux의 환경 변수를 사용 하 여 SQL Server 설정 구성
 
@@ -48,7 +47,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어가 있습니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 최대 메모리 (MB) SQL Server에서 사용할 수 있는 설정입니다. 기본적으로 총 실제 메모리의 80%는 것입니다. |
@@ -72,7 +71,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어가 있습니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 최대 메모리 (MB) SQL Server에서 사용할 수 있는 설정입니다. 기본적으로 총 실제 메모리의 80%는 것입니다. |

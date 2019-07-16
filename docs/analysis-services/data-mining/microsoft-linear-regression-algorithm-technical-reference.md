@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183055"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34019380"
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
 |NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
-|REGRESSOR|분석 중 잠재적 독립 변수로 처리될 연속 숫자 값이 열에 포함되도록 지정합니다. 마이닝 모델 열에 적용됩니다.<br /><br /> 참고: 열에 회귀 변수 플래그를 설정한다고 해서 해당 열이 항상 최종 모델에서 회귀 변수로 사용되는 것은 아닙니다.|  
+|REGRESSOR|분석 중 잠재적 독립 변수로 처리될 연속 숫자 값이 열에 포함되도록 지정합니다. 마이닝 모델 열에 적용됩니다.<br /><br /> 참고: 열에 회귀 변수 플래그 열 최종 모델에서 회귀 변수로 사용할는 보장 하지 않습니다.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>선형 회귀 모델의 회귀 변수  
  선형 회귀 모델은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않더라도 의사 결정 트리에 연속 특성에 대한 회귀를 나타내는 트리나 노드가 포함될 수 있습니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "34019380"
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous, Cyclical, Key, Table 및 Ordered|  
 |예측 가능한 특성|Continuous, Cyclical 및 Ordered|  

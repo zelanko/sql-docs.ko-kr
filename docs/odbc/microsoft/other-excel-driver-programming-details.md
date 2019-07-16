@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15710b867c5d766787480b1830de3257f54da6be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63024324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043775"
 ---
 # <a name="other-excel-driver-programming-details"></a>기타 Excel 드라이버 프로그래밍 세부 정보
 > [!NOTE]  

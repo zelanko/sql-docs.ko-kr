@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921413"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 사용 하 여 데이터 소스 행의 낙관적 업데이트 하는 동안 충돌을 검색 하는 필드를 사용할 수 있습니다 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체.  
   
  사용 하 여 이러한 상수를 사용 하 여는 **레코드 집합** "**업데이트 기준을**"에서 참조 하는 동적 속성을 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 는에설명되어있습니다[ OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|데이터 원본 행의 모든 열이 변경 된 경우 충돌을 검색 합니다.|  
 |**adCriteriaKey**|0|키 열 데이터의 원본 행이 변경 된 경우 충돌, 행이 삭제 된 것을 의미 하는 것을 검색 합니다.|  

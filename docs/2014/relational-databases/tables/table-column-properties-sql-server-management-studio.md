@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211791"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
   이러한 속성은 테이블 디자이너의 아래쪽 창에 나타납니다. 별도로 언급하지 않는 한 열을 선택하면 속성 창에서 이러한 속성을 편집할 수 있습니다. **열 속성** 을 범주 또는 사전순으로 표시할 수 있습니다. 많은 속성의 경우 특정 데이터 형식에 대해서만 나타나거나 변경할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "52758585"
  **소수 자릿수**  
  현재 열의 값의 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
- **정밀도**  
+ **전체 자릿수**  
  현재 열의 값에 대한 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
  **테이블 디자이너**  

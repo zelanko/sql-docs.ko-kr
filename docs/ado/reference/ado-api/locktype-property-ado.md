@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a53c6e6e0164b404fdd5b106bae83137d56f319e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932252"
 ---
 # <a name="locktype-property-ado"></a>LockType 속성(ADO)
 편집 하는 동안 기록에 배치 하는 잠금 유형을 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66697632"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 값입니다. 기본값은 **adLockReadOnly**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  설정 된 **LockType** 열기 전에 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 공급자 잠금 유형을 열 때 사용 하도록 지정 하려면. 개방적이 고 사용 중인 잠금 형식을 반환 하도록 속성을 읽습니다 **레코드 집합** 개체입니다.  
   
  공급자는 모든 잠금 유형을 지원 하지 않습니다. 공급자가 요청한 지원할 수 없습니다 **LockType** 설정을 대체 합니다 다른 잠금 유형입니다. 사용할 수 있는 실제 잠금 기능을 확인 하는 **레코드 집합** 개체를 사용 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드 **adUpdate** 및 **adUpdateBatch**.  

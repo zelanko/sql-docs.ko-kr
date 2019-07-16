@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a98d750a42692c10a083a1a953e81f274fca7dd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965596"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 속성 예제(VB)
 다음 코드를 사용 하는 방법에 설명 합니다 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 카탈로그에 테이블을 추가 하기 전에 공급자별 속성에 액세스 하는 속성입니다. 속성은 **AutoIncrement**, Microsoft Jet 데이터베이스에 자동 증가 필드를 만듭니다.  

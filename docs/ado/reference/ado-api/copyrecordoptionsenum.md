@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a944d3f82940d9364312fb8033ec8b8937b0c49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919377"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 동작을 지정 합니다 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) 메서드.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|나타내는 *소스* 공급자로 인해이 방법이 실패 하면 작업을 업로드 및 다운로드를 사용 하 여 복사본을 시뮬레이션 하려고 *대상*다른 서버의 되거나 다른에서 처리 공급자 *원본*합니다. 서로 다른 공급자 기능 성능이 제한 될 수도 있고 데이터가 손실 있음을 참고 합니다.|  
 |**adCopyNonRecursive**|2|현재 디렉터리에 있지만 하위 디렉터리의 대상에 복사합니다. 복사 작업은 재귀적이 아님.|  

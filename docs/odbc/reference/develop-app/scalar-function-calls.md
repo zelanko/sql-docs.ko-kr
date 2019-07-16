@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897745"
 ---
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어, 절대 값 스칼라 함수는 숫자 열을 인수로 받고 열의 각 값의 절대값을 반환 합니다. 스칼라 함수 호출에 대 한 이스케이프 시퀀스는  

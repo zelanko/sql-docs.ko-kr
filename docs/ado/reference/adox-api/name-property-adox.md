@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f7b61dd2c1dc5899852234d23148969dad9c3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965769"
 ---
 # <a name="name-property-adox"></a>Name 속성(ADOX)
 개체의 이름을 나타냅니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "66706379"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이름은은 컬렉션 내에서 고유할 필요가 없습니다.  
   
  **이름을** 속성을 읽기/쓰기 [열](../../../ado/reference/adox-api/column-object-adox.md)를 [그룹](../../../ado/reference/adox-api/group-object-adox.md), [키](../../../ado/reference/adox-api/key-object-adox.md)를 [인덱스](../../../ado/reference/adox-api/index-object-adox.md), [ 테이블](../../../ado/reference/adox-api/table-object-adox.md), 및 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체입니다. **이름을** 속성은 읽기 전용 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md), [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md), 및 [보기](../../../ado/reference/adox-api/view-object-adox.md) 개체입니다.  

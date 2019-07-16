@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039359"
 ---
 # <a name="translation-dll-function-summary"></a>변환 DLL 함수 요약
 다음 표에서 변환 DLL 함수에 설명 합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 하세요. [변환 DLL 함수 참조](../../../odbc/reference/syntax/translation-dll-api-reference.md)합니다.  

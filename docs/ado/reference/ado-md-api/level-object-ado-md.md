@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949607"
 ---
 # <a name="level-object-ado-md"></a>Level 개체(ADO MD)
 계층에서 순위가 동일한 멤버 집합이 포함 되어 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 및 속성을 사용 하 여는 **수준** 개체를 다음을 수행할 수 있습니다.  
   
 -   식별 된 **수준** 사용 하 여는 [이름](../../../ado/reference/ado-md-api/name-property-ado-md.md) 및 [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) 속성입니다.  
@@ -43,11 +42,11 @@ ms.locfileid: "62740193"
   
  합니다 **속성** 공급자가 제공한 속성을 포함 하는 컬렉션입니다. 다음 표에서 사용할 수 있는 속성을 보여 줍니다. 실제 속성은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록에 대 한 공급자에 대 한 설명서를 참조 하세요.  
   
-|이름|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CubeName|큐브 이름입니다.|  
-|Description|수준의 의미 있는 설명입니다.|  
+|설명|수준의 의미 있는 설명입니다.|  
 |DimensionUniqueName|모호 하지 않은 이름의 합니다 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)합니다.|  
 |HierarchyUniqueName|계층의 명확한 이름입니다.|  
 |LevelCaption|레이블 또는 캡션입니다 수준과 사용 하 여 연결 합니다.|  

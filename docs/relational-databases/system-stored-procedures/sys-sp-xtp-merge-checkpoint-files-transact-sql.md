@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041018"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725411"
   
 ||  
 |-|  
-|**참고**:이 저장된 프로시저에서 사용 되지 않습니다 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 더 이상 필요 하 고 사용할 수 없습니다, 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다.|  
+|**참고**: 이 저장된 프로시저에서 사용 되지 않습니다 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다. 더 이상 필요 하 고 사용할 수 없습니다, 시작 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다.|  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +64,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 및 db_owner 고정 데이터베이스 역할이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  단일 데이터 및 델타 파일을 생성하려면 유효한 범위에 있는 모든 데이터 및 델타 파일을 병합합니다. 이 프로시저는 병합 정책을 준수하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  

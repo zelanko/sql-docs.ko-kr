@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3410a8b26b9b9e26046a39f8ed5250ae9b82e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165158"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 스토리지 설정(Analysis Services - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 캐싱 옵션 선택 저장소 모드에 대 한 여러 가지 표준 저장소 구성을 제공 합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대한 여러 가지 표준 저장소 구성을 제공합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 저장소를 지정할 수 있습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34022900"
   
  **차원에 설정 적용** 확인란을 선택하면 측정값 그룹과 관련된 차원에 동일한 저장소 설정이 적용됩니다. 처음에는 차원 값이 파티션 값과 같습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 파티션](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

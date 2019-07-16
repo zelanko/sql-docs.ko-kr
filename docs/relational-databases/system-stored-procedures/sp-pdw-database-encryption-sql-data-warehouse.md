@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a2ab88ca9a65d65e80f715ff4f8eb13c31b2d903
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008917"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>가 sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  TDE를 사용 하 여 사용 하는 경우 **가 sp_pdw_database_encryption**, tempdb 데이터베이스 삭제, 다시 생성 및 암호화 합니다. Tempdb를 사용 하 여 다른 활성 세션이 있는 동안 따라서 TDE는 기기에서 사용할 수 없습니다. 사용 하도록 설정 하거나 기기에서 TDE를 사용 하지 않도록 설정 되며 대부분의 경우에서 어플라이언스의 상태를 변경 하는 동작 어플라이언스 수명에서 한 번 수행 해야 하는 어플라이언스에 트래픽이 없는 경우 실행 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

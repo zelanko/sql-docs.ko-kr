@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19024aecd7061b1e1fdb66d766f3dfa704cd245c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966429"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 속성(ADOX)
 기본 키 삭제 될 때 수행 되는 작업을 나타냅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66718893"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환을 **긴** 값 중 하나일 수 있는 합니다 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) 상수입니다. 기본값은 **adRINone**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성은 읽기 전용 [키](../../../ado/reference/adox-api/key-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

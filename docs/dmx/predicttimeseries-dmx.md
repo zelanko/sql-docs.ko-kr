@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60c55373a1647f6a2f12526e308d6ca45aeebb7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041705"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +67,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>반환 형식  
  A \< *식 테이블*>.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  
   
  PREDICTION JOIN에서 예측 프로세스는 항상 원래 학습 계열이 끝난 직후의 시간 단계에서 시작됩니다. 이는 새 데이터를 추가하는 경우에도 마찬가지입니다. 따라서 합니다 *n* 매개 변수 및 *n 시작* 매개 변수 값에는 0 보다 큰 정수 여야 합니다.  
@@ -90,7 +89,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 > [!NOTE]  
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>예 1: 시간 조각의 수 예측  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>예제 1: 시간 조각의 수 예측  
  다음 예제에서는 합니다 **PredictTimeSeries** 다음에 대 한 예측을 반환 하는 함수 세 시간 단계 및 결과를 Europe 및 Pacific 지역의 M200 계열로 제한 합니다. 이 모델에서 예측 가능한 특성은 Quantity 이므로 사용 해야 `[Quantity]` PredictTimeSeries 함수에 첫 번째 인수입니다.  
   
 ```  
@@ -116,7 +115,7 @@ OR [Model Region] = 'M200 Pacific'
   
  이 예에서는 결과를 읽기 쉽도록 FLATTENED 키워드가 사용되었습니다.  FLATTENED 키워드를 사용하지 않고 계층적 행 집합을 반환하면 이 쿼리에서 두 열을 반환합니다. 첫 번째 열에는 [ModelRegion]에 대한 값이 포함되고 두 번째 열에는 두 개의 열(예측되는 시간 조각을 보여 주는 $TIME 및 예측되는 값을 포함하는 Quantity)이 있는 중첩 테이블이 포함됩니다.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예제 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
  특정 지역에 대한 데이터가 잘못된 것을 발견하고 모델의 패턴을 사용하여 새 데이터와 일치하도록 예측을 조정하려 한다고 가정합니다. 다른 지역의 추세가 더 안정적이라는 것을 발견하고 가장 안정적인 모델을 여러 지역의 데이터에 적용하려고 할 수도 있습니다.  
   
  이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오의 전체 연습을 참조 하세요 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  

@@ -5,19 +5,18 @@ description: Mssqlctl bdc 명령에 대 한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958173"
 ---
-# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
+# <a name="mssqlctl-bdc-config"></a>mssqlctl bdc 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,8 +26,8 @@ ms.locfileid: "67728685"
 |     |     |
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | 빅 데이터 클러스터의 현재 구성을 가져옵니다.
-[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | 클러스터와 함께 사용할 수 있는 구성 프로필 만들기 빅 데이터 클러스터를 초기화 합니다.
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | 사용 가능한 구성 프로필 선택 항목을 나열합니다.
+[mssqlctl bdc 구성 초기화](#mssqlctl-bdc-config-init) | 클러스터와 함께 사용할 수 있는 구성 프로필 만들기 빅 데이터 클러스터를 초기화 합니다.
+[mssqlctl bdc 구성 목록](#mssqlctl-bdc-config-list) | 사용 가능한 구성 프로필 선택 항목을 나열합니다.
 [mssqlctl bdc 구성 섹션](reference-mssqlctl-bdc-config-section.md) | 빅 데이터 클러스터 구성 프로필의 개별 섹션을 사용 하 여 작업에 대 한 명령입니다.
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 빅 데이터 클러스터의 현재 구성 프로필 가져와 대상 디렉터리에 출력 하거나 매우 콘솔에 출력 합니다.
@@ -91,7 +90,7 @@ mssqlctl bdc config init --source aks-dev-test --target custom
 JMESPath 쿼리 문자열입니다. 참조 [ http://jmespath.org/ ](http://jmespath.org/]) 자세한 내용 및 예제에 대 한 합니다.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 사용-전체 디버그 로그에 대 한 디버그 합니다.
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc 구성 목록
 목록에서 사용 하 여 사용 가능한 구성 프로필 선택 `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

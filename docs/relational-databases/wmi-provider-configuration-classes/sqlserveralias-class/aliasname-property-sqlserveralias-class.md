@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2cb100265cdb49fba1728900829344e024190db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38d845e9864535e8e0fb308d1dc2ed42030ff340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052465"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 속성(SqlServerAlias 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,5 +41,5 @@ object.AliasName [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 연결 별칭의 이름을 지정하는 **string** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156e8a2cd2ee6e0d2789526615b7236b26874dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022608"
 ---
 # <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47791980"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|추적 이벤트의 ID입니다. 이 열은 또한에 **sys.trace_events** 카탈로그 뷰에 있습니다.|  
 |**trace_column_id**|**smallint**|추적 열의 ID입니다. 이 열은 또한에 **sys.trace_columns** 카탈로그 뷰에 있습니다.|  

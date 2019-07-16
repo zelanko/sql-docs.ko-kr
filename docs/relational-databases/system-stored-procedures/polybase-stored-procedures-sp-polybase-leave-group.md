@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f155de0eb81918d5129d404e7cd2f236957152
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941920"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  만 그룹에서 계산 노드를 제거할 수 있습니다.  
   
  저장된 프로시저를 실행 한 후 PolyBase 엔진 및 PolyBase 데이터 이동 서비스를 컴퓨터에서 다시 시작 합니다. 확인 하려면 헤드 노드에서 다음 DMV를 실행 합니다. **sys.dm_exec_compute_nodes**합니다.  

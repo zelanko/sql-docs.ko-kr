@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907410"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "62817159"
 |**publication**|**sysname**|게시의 이름입니다.|  
 |**subscriber_id**|**smallint**|잘 알려진 에이전트에서만 사용하는 구독자의 ID입니다. 익명 에이전트를 위해 이 열이 예약됩니다.|  
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
-|**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = Push.<br /><br /> **1** = 끌어오기.<br /><br /> **2** = Anonymous.|  
+|**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기 합니다.<br /><br /> **1** = 끌어오기.<br /><br /> **2** = 익명입니다.|  
 |**local_job**|**bit**|로컬 배포자에는 SQL Server 에이전트 작업이 있는지 여부를 나타냅니다.|  
 |**job_id**|**binary(16)**|작업 ID입니다.|  
 |**subscription_guid**|**binary(16)**|이 에이전트의 구독 ID입니다.|  

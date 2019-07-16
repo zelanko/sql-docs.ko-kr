@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a3b80fd34aa93fad4735edb623a154e6fa225
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937982"
 ---
 # <a name="network-example"></a>네트워크 예제
 이 그림에서는 단일 네트워크에 나타날 수 있습니다 각 이전 구성 하는 방법을 보여 줍니다.  

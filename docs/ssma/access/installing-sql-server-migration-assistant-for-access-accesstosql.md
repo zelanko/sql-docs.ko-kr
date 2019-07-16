@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 128c83e0fd63b2724311aec046bdb9683c569a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cd58a535836a82dc6cca660ba745aed58e2c84c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986329"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>액세스 (AccessToSQL)에 대 한 SQL Server Migration Assistant 설치
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 위한 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 최신 버전의 SSMA 연결할 설치 필수 구성 요소에 대 한 정보 및 설치, 라이선스, 제거 및 SSMA 업그레이드에 대 한 지침을 제공 합니다.  
@@ -88,7 +87,7 @@ Access 용 SSMA의 이후 버전으로 업그레이드 하려는 경우 먼저 S
   
 Access 용 SSMA의 이전 버전에서 만든 프로젝트를 열면 SSMA 프로젝트를 최신 버전으로 변환 하려는 경우 요청 합니다. 클릭 **예** 최신 버전의 SSMA에서 프로젝트를 사용 하 여 작동 합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [Access 데이터베이스 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [SQL Server에 대 한 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

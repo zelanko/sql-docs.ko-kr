@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 34fb8bbfbda3f6fcab865697749aca3f76ae2603
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905900"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember(MDX)
 
@@ -32,7 +31,7 @@ KPICurrentTimeMember(KPI_Name)
  *KPI_Nam*e  
  KPI의 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  KPI는 시간 차원의 기본 멤버와 다른 시간 멤버를 가질 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
