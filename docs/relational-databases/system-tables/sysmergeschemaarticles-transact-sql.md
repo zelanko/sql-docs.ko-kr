@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029816"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52802815"
 |**type**|**tinyint**|스키마 전용 아티클의 유형을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0x20** = 저장 프로시저 스키마 전용 아티클입니다.<br /><br /> **0x40** = 뷰 스키마 전용 아티클 또는 인덱싱된 뷰 스키마 전용 아티클입니다.|  
 |**objid**|**int**|아티클 기준 개체의 개체 식별자입니다. 프로시저, 뷰, 인덱싱된 뷰, 사용자 정의 함수 등의 개체 식별자일 수 있습니다.|  
 |**artid**|**uniqueidentifier**|아티클 ID입니다.|  
-|**description**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클 설명입니다.|  
 |**pre_creation_command**|**tinyint**|아티클이 구독 데이터베이스에서 만들어질 때 수행되는 기본 동작입니다.<br /><br /> **0 =** none-구독자에서 테이블이 이미 있는 경우 아무 작업도 수행 합니다.<br /><br /> **1** = drop-테이블 다시 만들기 전에 삭제 합니다.<br /><br /> **2** = delete-하위 집합 필터의 WHERE 절을 기반으로 하 여 삭제를 실행 합니다.<br /><br /> **3** = Truncate-동일 **2**, 하지만 행 대신 페이지를 삭제 합니다. 단, WHERE 절은 사용하지 않습니다.|  
 |**pubid**|**uniqueidentifier**|게시의 고유 식별자입니다.|  
 |**상태**|**tinyint**|스키마 전용 아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = Unsynced-다음에 스냅숏 에이전트가 실행 될 테이블을 게시 하는 초기 처리 스크립트가 있습니다.<br /><br /> **2** = active-테이블 게시를 위한 초기 처리 스크립트가 실행 됩니다.<br /><br /> **5** = New_inactive-추가 합니다.<br /><br /> **6** = New_active-추가 합니다.|  

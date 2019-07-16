@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061381"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log(Azure SQL Database)
 
@@ -39,7 +38,7 @@ ms.locfileid: "56041534"
   
  `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -77,7 +76,7 @@ ms.locfileid: "56041534"
 |**connectivity**|**connection_failed**|9|**reconfiguration**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 당시에 데이터베이스가 재구성 중이었으므로 연결이 실패했습니다.|  
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
 |**connectivity**|**connection_terminated**|1|**reconfiguration**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
-|**connectivity**|**throttling**|*\<reason code>*|**reason_code**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 [엔진 제한](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
+|**connectivity**|**throttling**|*\<이유 코드 >*|**reason_code**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  정체 이유 코드:  *\<이유 코드 >* 합니다. 자세한 내용은 [엔진 제한](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)합니다.|  
 |**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
 |**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11에만 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)합니다.|  
@@ -89,7 +88,7 @@ ms.locfileid: "56041534"
 
  액세스할 수 있는 권한이 있는 사용자를 **마스터** 데이터베이스에는이 보기에 읽기 전용으로 액세스할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ### <a name="event-aggregation"></a>이벤트 집계
 
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>관련 항목
 
- [Azure SQL Database의 확장된 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database의 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15e4643baed45b04bff003c6f0fcb25b2e8951a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921193"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic의 ADO 코드 예제
 ADO 메서드, 속성 및 Visual Basic에서 작성 하는 경우 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  

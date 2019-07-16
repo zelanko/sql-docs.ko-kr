@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539738"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208595"
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>부모-자식 차원 특성 - 단항 연산자
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 부모-자식 관계가 포함된 차원에서 부모 특성의 모든 계산되지 않은 멤버에 대한 사용자 지정 롤업을 결정하는 단항(또는 사용자 지정 롤업) 연산자 열을 지정하세요. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다. 부모 특성( **Usage** =Parent)에서**UnaryOperatorColumn**은 데이터 원본 뷰에서 단항 연산자가 있는 테이블 열을 지정합니다. 이 열에 저장되어 있는 사용자 지정 롤업 연산자 값이 특성의 각 멤버에 적용됩니다.  
   
  데이터 원본 뷰의 차원 테이블에서 명명된 계산을 만들고 단항 연산자 열로 지정할 수 있습니다. '+'와 같은 단순한 식은 모든 멤버에 동일한 연산자를 반환합니다. 그러나 모든 멤버에 연산자를 반환하기만 하면 어떤 식도 사용할 수 있습니다.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "52539738"
   
  부모 특성에서 **UnaryOperatorColumn** 속성의 기본 설정은 (none)이며 사용자 지정 롤업 연산자를 해제합니다. 다음 표에서는 단항 연산자를 나열하며 각 연산자가 수준에 적용될 때 어떻게 동작하는지 설명합니다.  
   
-|단항 연산자|Description|  
+|단항 연산자|설명|  
 |--------------------|-----------------|  
 |+(더하기 기호)|멤버 값을 멤버 이전에 발생하는 형제 멤버의 집계 값에 추가합니다. 이 연산자는 특성에 단항 연산자 열이 정의되지 않은 경우의 기본 연산자입니다.|  
 |-(빼기 기호)|멤버 값을 멤버 이전에 발생하는 형제 멤버의 집계 값에서 뺍니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "52539738"
   
  차원 디자이너의 **찾아보기** 탭에서 계층의 각 멤버 옆에 있는 단항 연산자를 볼 수 있습니다. 쓰기 가능 차원으로 작업할 때 단항 연산자를 변경할 수도 있습니다. 쓰기 가능한 차원이 아니면 도구를 사용하여 데이터 원본을 직접 수정해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [부모-자식 차원의 사용자 지정 롤업 연산자](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [차원 디자이너에서 비즈니스 인텔리전스 마법사 시작](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  

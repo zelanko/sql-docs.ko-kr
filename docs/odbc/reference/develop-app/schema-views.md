@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943752"
 ---
 # <a name="schema-views"></a>스키마 보기
 ODBC 카탈로그 함수를 호출 하 여 또는 INFORMATION_SCHEMA 뷰를 사용 하 여 응용 프로그램 DBMS에서 메타 데이터 정보를 검색할 수 있습니다. 뷰는 ANSI SQL-92 표준에서 정의 됩니다.  

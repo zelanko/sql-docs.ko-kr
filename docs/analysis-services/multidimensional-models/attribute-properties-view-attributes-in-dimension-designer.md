@@ -1,5 +1,5 @@
 ---
-title: 차원 디자이너에서 특성 보기 | Microsoft Docs
+title: 차원 디자이너에서 특성을 보려면 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179408"
 ---
-# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>특성 속성-차원 디자이너에서 특성 보기
+# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>특성 속성 - 차원 디자이너에서 특성 보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   특성은 차원 개체에 대해 생성됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 디자이너를 사용하여 특성을 보고 구성할 수 있습니다. 차원 디자이너의 **차원 구조** 탭에 있는 **특성** 창에 차원에 포함된 특성이 나열됩니다. 이 창에서 특성을 추가하거나 제거하고 구성할 수 있습니다. 또한 새 계층에서 수준으로 사용하거나 기존 계층에 수준으로 추가할 특성을 선택할 수도 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34022960"
 |![키 특성 아이콘](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "키 특성 아이콘")|Key|  
 |![부모 특성 아이콘](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "부모 특성 아이콘")|Parent|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

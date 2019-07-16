@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b061a14b5bd3876d19ac51cb8cd208c97fdf7309
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919453"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)
 이 예제를 사용 하 여 여러 가지 방법을 보여 줍니다는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 열려는 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체. 또한 사용 하 여는 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) 연결 시간 제한 기간을 설정 하는 속성 및 [상태](../../../ado/reference/ado-api/state-property-ado.md) 연결의 상태를 확인할 속성입니다. GetState 함수는이 절차를 실행 하려면 필요 합니다.  

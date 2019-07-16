@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26975562f3617742cbcc3bfb3a47e41af09ba8b3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208920"
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "34026670"
 |**EstimatedCount**|특성의 예상 멤버 수를 지정합니다. 집계 디자인 마법사를 실행할 때까지 기본값은 0입니다. 마법사에서 레코드 수를 계산하도록 하거나 예상 값을 직접 입력할 수 있습니다. 멤버 수를 알고 있으며 데이터베이스에 멤버 수를 쿼리하는 시간을 단축하고 싶은 경우 값을 직접 입력합니다. 프로덕션 데이터의 테스트 하위 집합으로 작업하는 경우에는 집계 디자인이 테스트 데이터 대신 프로덕션 데이터에 맞게 최적화될 수 있도록 프로덕션 데이터의 멤버 수를 사용합니다.|  
 |**GroupingBehavior**|특성을 그룹화하는 방법에 대한 힌트를 클라이언트 애플리케이션에 제공하는 사용자 정의 값입니다.|  
 |**ID**|차원의 고유 ID를 포함합니다.|  
-|**InstanceSelection**|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 애플리케이션에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이 값은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
+|**InstanceSelection**|목록의 예상 항목 수를 기반으로 항목 목록의 표시 방법에 대한 힌트를 클라이언트 애플리케이션에 제공합니다. 다음과 같은 옵션을 사용할 수 있습니다.<br /><br /> **None** 클라이언트 응용 프로그램에 힌트를 제공하지 않습니다. 이것은 기본값입니다.<br /><br /> **DropDown** 항목 수가 드롭다운 목록에 표시할 수 있을 만큼 적습니다.<br /><br /> **List** 항목 수가 드롭다운 **목록**에 표시하기에는 너무 많지만 필터링이 필요한 정도는 아닙니다.<br /><br /> **FilteredList** 항목 수가 많아 표시할 항목을 사용자가 필터링해야 합니다.<br /><br /> **MandatoryFilter** 항목 수가 너무 많아 표시 항목을 항상 필터링해야 합니다.|  
 |**IsAggregatable**|특성 멤버 값을 집계할 수 있는지 여부를 지정합니다. 기본값은 **True**이며 특성 계층에 (All) 수준이 포함됨을 의미합니다. 이 속성 값이 **False**이면 특성 계층에 (All) 수준이 포함되지 않습니다.|  
 |**KeyColumns**|특성의 키를 나타내는 열을 포함합니다. 이러한 열은 특성이 바인딩된 데이터 원본 뷰의 기본 관계형 테이블에 있는 열을 나타냅니다. **NameColumn** 속성 값을 지정하지 않는 한 각 멤버의 이 열 값이 사용자에게 표시됩니다.|  
 |**MemberNamesUnique**|특성 계층의 멤버 이름이 고유해야 하는지 여부를 결정합니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "34026670"
 > [!NOTE]  
 >  특성의 기본 멤버는 쿼리에 계층 멤버가 명시적으로 포함되어 있지 않을 때 식을 평가하는 데 사용됩니다. 특성의 기본 멤버는 해당 특성의 **DefaultMember** 속성으로 지정됩니다. 차원의 계층이 쿼리에 포함될 때는 항상 계층의 수준에 해당되는 특성의 모든 기본 멤버가 무시됩니다. 쿼리에 포함된 차원의 계층이 없으면 기본 멤버가 차원의 모든 특성에 사용됩니다. 기본 멤버에 대한 자세한 내용은 [기본 멤버 정의](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

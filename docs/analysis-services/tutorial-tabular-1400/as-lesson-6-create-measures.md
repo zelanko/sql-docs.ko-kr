@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207337"
 ---
 # <a name="create-measures"></a>측정값 만들기
 
@@ -29,11 +29,11 @@ ms.locfileid: "57685650"
   
 이 단원에서는 입력 하 여 둘 다 DAX 수식을 수식 입력줄 및 자동 합계 기능을 사용 하 여 측정값을 만듭니다.  
   
-이 단원에 소요되는 예상 시간: **30 분**  
+예상이 단원을 완료 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [5단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [5단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  
   
@@ -89,7 +89,7 @@ ms.locfileid: "57685650"
 
     |Column|측정값 이름|자동 합계(∑)|수식|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|개수|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|합계|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|합계|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|합계|=SUM([TotalProductCost])|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046201"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **sp_attach_db** 명시적인 사용 하 여 데이터베이스 서버에서 이전에 분리 된 데이터베이스에서 저장된 프로시저 에서만 실행 해야 **sp_detach_db** 작업 데이터베이스나 복사 합니다. 16 개 이상의 파일을 지정 해야 할 경우 CREATE DATABASE를 사용 *database_name* FOR ATTACH 또는 CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
  지정되지 않은 모든 파일은 마지막으로 알려진 위치에 있는 것으로 가정합니다. 다른 위치에서 파일을 사용하려면 새 위치를 지정해야 합니다.  

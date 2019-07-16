@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047114"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember(MDX)
 
@@ -32,7 +31,7 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  계층 멤버 집합에서 반복하는 동안 반복의 각 단계에서 작업이 수행되는 대상 멤버가 현재 멤버입니다. 합니다 **CurrentMember** 함수는 멤버를 반환 합니다.  
   
 > [!IMPORTANT]  

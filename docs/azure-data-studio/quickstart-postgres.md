@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959462"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 하 고 사용 하 여 PostgreSQL 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작에 사용 하는 방법을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres에 연결한 다음 SQL 문을 사용 하 여 데이터베이스를 만들 *tutorialdb* 하 고 쿼리 하 합니다.
@@ -44,7 +43,7 @@ ms.locfileid: "66778327"
 
    ![새 연결 화면](media/quickstart-postgresql/new-connection-screen.png)  
 
-   | 설정       | 예를 들어 값 | Description |
+   | 설정       | 예제 값 | 설명 |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | localhost | 정규화된 서버 이름 |
    | **사용자 이름** | postgres | 사용 하 여 로그인 하려는 사용자 이름입니다. |

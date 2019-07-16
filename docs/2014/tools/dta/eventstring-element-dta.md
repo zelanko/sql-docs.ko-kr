@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769515"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211113"
 ---
 # <a name="eventstring-element-dta"></a>EventString 요소(DTA)
   XML 입력 파일에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 작업을 직접 지정합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52769515"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|attribute|Description|  
+|attribute|설명|  
 |---------------|-----------------|  
 |`Weight`|(선택 사항) 지정한 이벤트에 대한 쿼리 가중치 요인(중요도 요인)을 지정합니다. `float` 데이터 형식을 사용하여 가중치를 지정할 수 있습니다(예: `Weight`="100.01"). `Weight`에 지정할 수 있는 최소값은 "0"입니다.|  
   

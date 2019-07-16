@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048292"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'name'` 사용자 정의 스키마 범위 개체의 이름 또는 정규화 되지 않은 이름이입니다. 따옴표는 정규화된 개체를 지정하는 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. 개체는 반드시 현재 데이터베이스에 있어야 합니다. *이름* 는 **nvarchar(776)**, 기본값은 없음입니다.  
+`[ @objname = ] 'name'` 사용자 정의 스키마 범위 개체의 이름 또는 정규화 되지 않은 이름이입니다. 따옴표는 정규화된 개체를 지정하는 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. 개체는 반드시 현재 데이터베이스에 있어야 합니다. *이름* 는 **nvarchar(776)** , 기본값은 없음입니다.  
   
 `[ @columnname = ] 'computed_column_name'` 정의 정보를 표시할 계산 열의 이름이입니다. 로 열이 포함 된 테이블을 지정 해야 *이름*. *column_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
@@ -50,11 +49,11 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**텍스트 모드**|**nvarchar(255)**|개체 정의|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_helptext는 여러 행에 개체를 만드는 데 사용하는 정의를 표시합니다. 각 행은 255자의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다. Definition 합니다 **정의** 열에는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -62,7 +61,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-the-definition-of-a-trigger"></a>1. 트리거의 정의 표시  
+### <a name="a-displaying-the-definition-of-a-trigger"></a>A. 트리거의 정의 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `dEmployee` 트리거 정의를 표시합니다.  
   
 ```  
@@ -72,7 +71,7 @@ EXEC sp_helptext 'HumanResources.dEmployee';
 GO  
 ```  
   
-### <a name="b-displaying-the-definition-of-a-computed-column"></a>2. 계산 열의 정의 표시  
+### <a name="b-displaying-the-definition-of-a-computed-column"></a>2\. 계산 열의 정의 표시  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `TotalDue` 테이블에 있는 `SalesOrderHeader` 계산 열의 정의를 표시하는 방법을 보여 줍니다.  
   
 ```  

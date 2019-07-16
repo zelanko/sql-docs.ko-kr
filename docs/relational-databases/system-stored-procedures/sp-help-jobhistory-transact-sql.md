@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054934"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` 가장 오래 된 작업을 사용 하 여 결과 먼저 표시할지 여부입니다. *oldest_first* 됩니다 **int**, 기본값은 **0**, 최신 작업을 먼저 표시 하는 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
   
-`[ @server = ] 'server'` 작업이 수행 된 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` 작업이 수행 된 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)** , 기본값은 NULL입니다.  
   
-`[ @mode = ] 'mode'` SQL Server 결과 집합의 모든 열을 출력 하는 여부는 (**전체**) 또는 열을 요약 합니다. *모드* 됩니다 **varchar(7)**, 기본값은 **요약**합니다.  
+`[ @mode = ] 'mode'` SQL Server 결과 집합의 모든 열을 출력 하는 여부는 (**전체**) 또는 열을 요약 합니다. *모드* 됩니다 **varchar(7)** , 기본값은 **요약**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -99,7 +98,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>결과 집합  
  실제 열 목록 값에 따라 달라 집니다 *모드*합니다. 가장 포괄적인 열 집합은 다음과 같으며이 반환 됩니다 *모드* FULL입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|기록 항목 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업 ID입니다.|  
@@ -119,7 +118,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|단계를 다시 시도하는 횟수입니다. 작업 기록의 경우에는 항상 0입니다.|  
 |**server**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**로컬**).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_jobhistory** 는 지정한 예약 된 작업의 기록 사용 하 여 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -137,7 +136,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-job-information-for-a-job"></a>1. 작업에 대한 모든 정보 나열  
+### <a name="a-listing-all-job-information-for-a-job"></a>A. 작업에 대한 모든 정보 나열  
  다음 예에서는 `NightlyBackups` 작업에 대한 모든 작업 정보를 나열합니다.  
   
 ```  
@@ -149,7 +148,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>2. 특정 조건에 일치하는 작업에 대한 정보 나열  
+### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>2\. 특정 조건에 일치하는 작업에 대한 정보 나열  
  다음 예에서는 실패한 작업과 실패한 작업 단계에 대한 모든 열과 모든 작업 정보를 `50100`(사용자 정의 오류 메시지) 오류 메시지 및 `20`의 심각도와 함께 출력합니다.  
   
 ```  

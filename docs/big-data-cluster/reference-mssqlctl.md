@@ -5,17 +5,16 @@ description: Mssqlctl 명령에 대 한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957895"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -29,8 +28,8 @@ ms.locfileid: "67728538"
 |[mssqlctl 앱](reference-mssqlctl-app.md) | 만들기, 삭제, 실행 및 응용 프로그램을 관리 합니다. |
 |[mssqlctl bdc](reference-mssqlctl-bdc.md) | 선택 하 고, 관리 및 SQL Server 빅 데이터 클러스터에 작동 합니다. |
 |[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | HDFS 모듈 HDFS에 액세스 하는 명령 파일 시스템을 제공 합니다. |
-[mssqlctl login](#mssqlctl-login) | 클러스터의 컨트롤러 끝점에 로그인 합니다.
-[mssqlctl logout](#mssqlctl-logout) | 로그 아웃 클러스터 합니다.
+[mssqlctl 로그인](#mssqlctl-login) | 클러스터의 컨트롤러 끝점에 로그인 합니다.
+[mssqlctl 로그 아웃](#mssqlctl-logout) | 로그 아웃 클러스터 합니다.
 |[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB CLI T-SQL을 통해 SQL Server와 상호 작용할 수가 있습니다. |
 ## <a name="mssqlctl-login"></a>mssqlctl 로그인
 사용 해야 하는 배포 하는 동안 컨트롤러 끝점을 나열 하는 클러스터에 배포 하는 경우 로그인 합니다.  할 컨트롤러 끝점을 알 수 없는 경우 로그인의 기본 위치에 시스템에서 클러스터 kube 구성 함으로써 <user home>/.kube/config 또는 KUBECONFIG env var을 사용 하 여, 즉 KUBECONFIG=path/to/.kube/config를 내보냅니다.
@@ -61,7 +60,7 @@ mssqlctl login -n ClusterName
 #### `--controller-endpoint -e`
 클러스터 컨트롤러 끝점 "https://host:port"입니다. 이 인수를 사용 하지 않을 경우 kube 구성 컴퓨터에 사용할 수 있습니다. 기본 위치 구성에 위치한를 확인 하세요 <user home>/.kube/config 또는 KUBECONFIG env 변수에 사용
 #### `--accept-eula -a`
-사용 약관 수락 하 시겠습니까? [yes/no]. '예'로 ACCEPT_EULA 환경 변수를 설정할 수 있습니다이 인수를 사용.
+사용 약관 수락 하 시겠습니까? [예/아니요]입니다. '예'로 ACCEPT_EULA 환경 변수를 설정할 수 있습니다이 인수를 사용.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 모든 디버그 로그 표시 로깅의 자세한 정도를 늘립니다.

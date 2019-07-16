@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f9c03794ce375e902773f6d0231bf76e2031b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965536"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 및 Unique 속성 예제(VC++)
 이 예제에서는 합니다 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 두 개의 열을 사용 하 여 새 테이블을 만듭니다. 합니다 **PrimaryKey** 하 고 **Unique** 속성을 사용 하는 중복 값이 허용 되지 기본 키 열이 하나를 확인 합니다.  

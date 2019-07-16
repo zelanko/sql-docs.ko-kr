@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028840"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>마이그레이션 Sybase ASE 데이터를 SQL Server-Azure SQL DB (SybaseToSQL)
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 성공적으로 로드 한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL DB, ASE에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
@@ -64,7 +63,7 @@ Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 성공적�
   
 **데이터를 마이그레이션**  
   
-1.  다음을 확인합니다.  
+1.  다음 사항을 확인합니다.  
   
     -   ASE 공급자 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

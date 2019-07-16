@@ -1,5 +1,5 @@
 ---
-title: 집계 디자인 (Analysis Services-다차원) | Microsoft Docs
+title: 집계 (Analysis Services-다차원) 디자인 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c720b45a0ac674282ad78bafd5dcd67bba8b60cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178290"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34021067"
   
  마법사가 디자인할 집계 수의 제어 방법을 선택한 다음 마법사가 집계를 디자인하게 둡니다.  
   
- 여기서 목표는 최적의 집계 수를 디자인하는 것입니다. 최적의 집계 수란 응답 시간을 빠르게 할 뿐만 아니라 파티션 크기가 필요 이상으로 커지는 것도 막을 수 있어야 합니다. 집계 수가 커질수록 응답 속도는 빨라지지만 그에 따라 스토리지 공간도 많이 필요하고 계산하는 데 시간이 오래 걸릴 수 있습니다. 뿐만 아니라 마법사가 점점 더 많은 집계를 디자인함에 따라 후반 집계보다 초반 집계에서 훨씬 많은 성능 향상이 이루어집니다. 자주 사용하지 않는 집계를 줄이면 성능이 향상됩니다. 마법사에서 사용할 수 있는 다음과 같은 방법 중 하나를 사용하면 마법사가 디자인하는 집계 수를 제어할 수 있습니다.  
+ 여기서 목표는 최적의 집계 수를 디자인하는 것입니다. 최적의 집계 수란 응답 시간을 빠르게 할 뿐만 아니라 파티션 크기가 필요 이상으로 커지는 것도 막을 수 있어야 합니다. 집계 수가 커질수록 응답 속도는 빨라지지만 그에 따라 스토리지 공간도 많이 필요하고 컴퓨팅하는 데 시간이 오래 걸릴 수 있습니다. 뿐만 아니라 마법사가 점점 더 많은 집계를 디자인함에 따라 후반 집계보다 초반 집계에서 훨씬 많은 성능 향상이 이루어집니다. 자주 사용하지 않는 집계를 줄이면 성능이 향상됩니다. 마법사에서 사용할 수 있는 다음과 같은 방법 중 하나를 사용하면 마법사가 디자인하는 집계 수를 제어할 수 있습니다.  
   
 -   집계에 대한 스토리지 공간 제한을 지정합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34021067"
   
  마법사의 마지막 단계에서는 처리를 시작하거나 지연할 수 있습니다. 처리하는 경우에는 마법사로 디자인한 집계가 생성되며, 연기하는 경우에는 디자인된 집계를 나중에 처리할 수 있도록 저장하여 처리 과정 없이 디자인 동작을 계속할 수 있습니다. 파티션 크기에 따라 처리 시간이 오래 걸릴 수도 있습니다. 필요한 경우 파티션 처리를 중단할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212059"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "54135833"
   
 -   **게시 속성을 보고 수정하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135833"
 1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@property](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)매개 변수에 변경할 게시 속성, **@property** 매개 변수에 이 속성의 새 값을 지정하여 **@value** 을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_invalidate_snapshot**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_reinit_subscription**를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_invalidate_snapshot** 로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 확인하려면  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135833"
 1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)매개 변수에 변경할 게시 속성, **@property** 매개 변수에 이 속성의 새 값을 지정하여 **@value** 을 실행합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_reinit_subscription**에 값 **1**을 지정해야 합니다. 변경 시 새 스냅숏 또는 재초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_reinit_subscription** 에 값 **1**을 지정해야 합니다. 변경 시 새 스냅숏 또는 재초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>스냅숏의 속성을 확인하려면  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135833"
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [게시에서 아티클 및 삭제 추가](add-articles-to-and-drop-articles-from-a-publication.md)   
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [아티클 속성 보기 및 수정](view-and-modify-article-properties.md)  
   
   

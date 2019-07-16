@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62634554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939895"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>지원되는 옵션(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

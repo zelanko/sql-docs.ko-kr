@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7aecff691139b1041a928c42c3df2987c992cd91
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199313"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>병합 게시에 대한 호환성 수준 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 병합 복제는 게시 호환성 수준을 사용하여 지정된 데이터베이스에서 게시에 사용할 수 있는 기능을 확인합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "52781965"
   
 -   **다음을 사용하여 병합 게시에 대한 호환성 수준을 설정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "52781965"
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>병합 게시에 대한 게시 호환성 수준을 설정하려면  
   
-1.  게시가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전과 호환되도록 하려면 **@publication_compatibility_level**에 값을 지정하여 게시자에서 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
+1.  게시가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전과 호환되도록 하려면 **@publication_compatibility_level** 에 값을 지정하여 게시자에서 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 변경하려면  
   
-1.  **@property**에 **publication_compatibility_level**, **@value**에 적절한 게시 호환성 수준을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
+1.  **@property** 에 **publication_compatibility_level**, **@value** 에 적절한 게시 호환성 수준을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>병합 게시의 게시 호환성 수준을 확인하려면  
   

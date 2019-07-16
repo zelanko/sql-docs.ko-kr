@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061358"
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (TRANSACT-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 서버에 대 한 신뢰할 수 있는 각 어셈블리에 대 한 행을 포함 합니다.
@@ -34,7 +33,7 @@ ms.locfileid: "47710721"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|열 이름 |데이터 형식 |Description |
+|열 이름 |데이터 형식 |설명 |
 |--- |--- |--- |
 |해시 |varbinary(8000) |어셈블리 콘텐츠 SHA2_512 해시입니다. |
 |description |nvarchar(4000) |사용자 정의 설명을 어셈블리입니다. 단순한 이름, 버전 번호, 문화권, 공개 키 및 신뢰 어셈블리의 아키텍처를 인코딩하는 정식 이름을 사용 하는 것이 좋습니다. 이 값은 고유 하 게 공용 언어 런타임 (CLR) 쪽에서 어셈블리를 식별 되며 동일 sys.assemblies clr_name 값. |
@@ -43,7 +42,7 @@ ms.locfileid: "47710721"
 | | | |
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 사용 하 여 **sp_add_trusted_assembly를 추가 해야** 하 고 **sys.trusted_assemblies를 추가 해야** 에서 어셈블리 추가 또는 제거 `sys.trusted_assemblies`합니다.
 

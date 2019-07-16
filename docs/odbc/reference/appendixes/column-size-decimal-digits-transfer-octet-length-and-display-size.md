@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d7f1b8ec5647a34b09f0636fc8fcc2ad070f72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019246"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>열 크기, 십진수, 8 진수 길이 전송 및 표시 크기-ODBC
 데이터 형식 열 (또는 매개 변수) 크기, 소수 자릿수, 길이 따라 구분 됩니다 및 크기를 표시 합니다. 다음 ODBC 함수는 데이터 원본에 대해 SQL 문에서 매개 변수 또는 SQL 데이터 형식을 위한 이러한 특성을 반환합니다. 각 ODBC 함수는 다음과 같은 다양 한 이러한 특성을 반환합니다.  

@@ -2,19 +2,18 @@
 title: dwloader 명령줄 로더-병렬 데이터 웨어하우스 | Microsoft Docs
 description: dwloader 병렬 데이터 웨어하우스 (PDW) 명령줄 도구는 기존 테이블에 테이블 행을 대량 로드 하는 경우
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961022"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
 **dwloader** 는 기존 테이블에 테이블 행을 대량 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가할 수 있습니다 (*추가 모드* 하거나 *fastappend 모드*) 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*), 모든 또는 삭제 행 로드 하기 전에 기존 및 빈 테이블에 모든 행을 삽입 한 다음 (*모드를 다시 로드*).  
@@ -554,20 +553,20 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 |테이블 형식|다중 트랜잭션<br />모드 (-m)|테이블이 비어 있음|지원 되는 동시성|로깅|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|힙|사용자 계정 컨트롤|예|사용자 계정 컨트롤|최소|  
-|힙|사용자 계정 컨트롤|아니요|사용자 계정 컨트롤|최소|  
+|힙|예|예|예|최소|  
+|힙|예|아니요|예|최소|  
 |힙|아니요|사용자 계정 컨트롤|아니요|최소|  
 |힙|아니요|아니요|아니요|최소|  
-|Cl|사용자 계정 컨트롤|예|아니요|최소|  
-|Cl|사용자 계정 컨트롤|아니요|사용자 계정 컨트롤|전체|  
+|Cl|예|예|아니요|최소|  
+|Cl|예|아니요|예|전체|  
 |Cl|아니요|사용자 계정 컨트롤|아니요|최소|  
-|Cl|아니요|아니요|사용자 계정 컨트롤|전체|  
+|Cl|아니요|아니요|예|전체|  
   
 위의 표와 **dwloader** 힙 또는 클러스터형된 인덱스 (CI) 테이블 없이 다중 트랜잭션 플래그를 사용 하 여 로드 하 고 빈 테이블 또는 비어 있지 않은 테이블로 로드 추가 모드를 사용 합니다. 잠금 및 부하의 이러한 조합은 각각의 동작을 로깅 테이블에 표시 됩니다. 예를 들어, (2) 단계 추가 모드를 사용 하 여 로드 빈 및 다중 트랜잭션 모드 없이 클러스터형 인덱스로 테이블은 PDW 테이블에 배타적 잠금을 만들 있고 로깅을 최소화 됩니다. 즉, 고객은 빈 테이블로 (2) 단계 및 쿼리를 동시에 로드할 수 없습니다. 그러나 테이블에 대 한 배타적 잠금을 비어 있지 않은 테이블에 동일한 구성을 사용 하 여 로드할 때 PDW 발행할 수 없습니다 및 동시성 가능 합니다. 그러나 전체 로깅이 발생 프로세스 속도 저하.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-dwloader-example"></a>1\. 간단한 dwloader 예제  
+### <a name="a-simple-dwloader-example"></a>A. 간단한 dwloader 예제  
 다음 예제에서는 시작 합니다 **로더** 선택한 필수 옵션을 사용 하 여 합니다. 전역 구성 파일에서 사용 되는 기타 옵션 *loadparamfile.txt*합니다.  
   
 SQL Server 인증을 사용 하는 예입니다.  

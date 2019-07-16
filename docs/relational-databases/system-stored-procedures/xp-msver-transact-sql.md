@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898372"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +42,18 @@ xp_msver [ optname ]
  *optname*  
  옵션의 이름이며 다음 값 중 하나를 사용할 수 있습니다.  
   
-|옵션/열 이름|Description|  
+|옵션/열 이름|설명|  
 |-------------------------|-----------------|  
 |**ProductName**|제품 이름입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**ProductVersion**|제품 버전입니다.|  
 |**언어**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 언어 버전입니다.|  
 |**플랫폼**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 운영 체제 이름, 제조업체 이름 및 칩 패밀리 이름입니다.|  
 |**설명**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 기타 정보입니다.|  
-|**회사 이름**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 생산한 회사 이름입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation 등입니다.|  
+|**CompanyName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 생산한 회사 이름입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation 등입니다.|  
 |**FileDescription**|운영 체제입니다.|  
 |**파일 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 버전입니다.|  
 |**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 이름입니다. 예를 들어 SQLSERVR 등이 있습니다.|  
-|**LegalCopyright**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 필요한 법률적 저작권 정보입니다. 예를 들어 Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005 등입니다.|  
+|**LegalCopyright**|에 필요한 법률적 저작권 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 예를 들어 Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005 합니다.|  
 |**LegalTrademarks**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 필요한 법률적 상표 정보입니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation의 등록 상표입니다.|  
 |**원본 파일 이름**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 실행되는 파일 이름입니다. 예를 들어 Sqlservr.exe 등입니다.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

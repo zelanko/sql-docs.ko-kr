@@ -7,13 +7,12 @@ ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962477"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62641756"
 
 다음 섹션에서 호출할 수 있는 함수의 개요를 제공 합니다 **sqlrutils** 포함 하는 저장된 프로시저를 개발 하는 패키지는 R 코드를 포함 합니다. 각 메서드 또는 함수에 대 한 매개 변수의 세부 정보를 패키지에 대 한 R 도움말을 참조 하세요. `help(package="sqlrutils")`
 
-|기능 | Description |
+|함수 | 설명 |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL 저장 프로시저를 실행 합니다.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 저장된 프로시저에 입력된 매개 변수의 목록을 가져옵니다.| 
@@ -104,7 +103,7 @@ R 세션에 로드 **sqlrutils** 입력 하 여 명령줄에서 `library(sqlruti
 > [!NOTE]
 > *executeStoredProcedure* 함수에는 SQL Server용 ODBC 드라이버 13과 같은 ODBC 3.8 공급자가 필요합니다.  
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [sqlrutils를 사용하여 저장 프로시저를 만드는 방법](how-to-create-a-stored-procedure-using-sqlrutils.md)
 

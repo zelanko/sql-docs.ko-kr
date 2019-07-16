@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e8d02cd90000a3a473a2e864345c483e5fda9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8b46b6dd56744d0c55a7276e000db2a49889d1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005267"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 XML 서식 지정 아키텍처(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "56028944"
   
  ![클라이언트 쪽 XML 서식 지정의 아키텍처입니다. ](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "아키텍처의 XML 클라이언트 쪽 서식 지정 합니다.")  
   
- 이 예에서 클라이언트는 SQLXMLOLEDB 공급자를 사용합니다. 연결 문자열에서 데이터 공급자 속성은 SQLOLEDB로 설정 되어야 합니다. 이 값이 SQLXML 4.0에서 허용되는 유일한 값입니다. 클라이언트에서 실행된 명령은 서버로 전송되고, 서버에서 생성된 행 집합은 클라이언트로 전송됩니다. 행 집합의 XML 문서 서식은 클라이언트에서 지정됩니다.  
+ 이 예에서 클라이언트는 SQLXMLOLEDB 공급자를 사용합니다. 연결 문자열에서 데이터 공급자 속성은 SQLOLEDB로 설정 되어야 합니다. (SQLXML 4.0에서 허용 되는 유일한 값입니다.) 클라이언트에서 실행 되는 명령이 서버로 전송 됩니다. 서버에서 생성된 행 집합은 클라이언트로 전송됩니다. 행 집합의 XML 문서 서식은 클라이언트에서 지정됩니다.  
   
  SQLXML 4.0에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11) 또는 SQLOLEDB 공급자를 데이터 공급자로 사용할 수 있습니다. 잠재적으로 모든 데이터 원본에 액세스할 수 있습니다. 쿼리에서 단일 행 집합을 반환하는 경우 클라이언트에 XML 변환을 적용할 수 있습니다.  
   

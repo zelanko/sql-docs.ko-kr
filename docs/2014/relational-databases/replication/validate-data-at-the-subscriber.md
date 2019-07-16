@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8698ef84d74c98d02f0a8df0d59077fe0c7ac7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212032"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54131193"
   트랜잭션 및 병합 복제를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 게시에 대한 특정 구독 또는 모든 구독에 대해 유효성 검사를 수행할 수 있습니다. 다음 유효성 검사 유형 중 하나를 지정합니다. 배포 에이전트 또는 병합 에이전트가 다음에 실행될 때 해당 유형에 따라 데이터의 유효성을 검사합니다.  
   
 -   **행 개수만**합니다. 이 유형은 구독자에 있는 테이블의 행 개수가 게시자에 있는 테이블의 행 개수와 동일한지 여부의 유효성만 검사하고 행 내용 일치 여부의 유효성은 검사하지 않습니다. 행 개수 유효성 검사에서는 최소 수준의 데이터 문제 인식을 위한 검사만 수행됩니다.    
--   **행 개수 및 이진 체크섬**합니다. 게시자 및 구독자에서 행 개수의 유효성을 검사할 뿐만 아니라 체크섬 알고리즘을 사용하여 모든 데이터의 체크섬을 계산합니다. 행 개수 확인을 실패하면 체크섬 계산이 수행되지 않습니다.  
+-   **행 개수와 이진 체크섬**. 게시자 및 구독자에서 행 개수의 유효성을 검사할 뿐만 아니라 체크섬 알고리즘을 사용하여 모든 데이터의 체크섬을 계산합니다. 행 개수 확인을 실패하면 체크섬 계산이 수행되지 않습니다.  
   
  구독자의 데이터와 게시자의 데이터가 일치하는지에 대한 유효성 검사 외에도 병합 복제는 각 구독자에 대해 데이터가 올바르게 분할되었는지에 대한 유효성을 검사하는 기능을 제공합니다. 자세한 내용은 [병합 구독자의 파티션 정보 유효성 검사](validate-partition-information-for-a-merge-subscriber.md)를 참조하세요.  
 
@@ -79,7 +79,7 @@ ms.locfileid: "54131193"
   
  유효성 검사 실패를 처리하려면 다음 사항을 살펴보십시오.  
   
--   **복제: 구독자가 데이터 유효성 검사를 실패 했습니다** 는 실패의 알림이 표시 됩니다. 자세한 내용은 참조 하세요. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
+-   **복제: 구독자가 데이터 유효성 검사에 실패했습니다**라는 복제 경고를 구성하여 검사 실패에 대한 알림을 받도록 합니다. 자세한 내용은 참조 하세요. [미리 정의 된 복제 경고 구성 &#40;SQL Server Management Studio & #41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) 합니다.  
   
 -   유효성 검사 실패가 애플리케이션에 문제가 됩니까? 유효성 검사 실패가 문제가 되는 경우 수동으로 데이터를 업데이트하여 동기화하거나 구독을 다시 초기화합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54131193"
     -   다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](reinitialize-subscriptions.md)를 참조하세요.   
  
   
-## <a name="articles-in-transactional-replication"></a>트랜잭션 복제에 대 한 문서 
+## <a name="articles-in-transactional-replication"></a>트랜잭션 복제의 아티클 
 
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
   
@@ -108,11 +108,11 @@ ms.locfileid: "54131193"
   
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL)을 사용 하 여
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL(T-SQL) 사용
 
-#### <a name="all-articles"></a>모든 문서
+#### <a name="all-articles"></a>모든 아티클
   
-1.  게시 데이터베이스의 게시자에서 [sp_publication_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)을 실행합니다. **@publication**를 지정하고 **@rowcount_only**에 다음 값 중 하나를 지정합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_publication_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql)을 실행합니다. **@publication** 를 지정하고 **@rowcount_only** 에 다음 값 중 하나를 지정합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "54131193"
 2.  (옵션) 각 구독에 대해 배포 에이전트를 아직 실행하지 않은 경우 배포 에이전트를 시작합니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 및 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)를 참조하세요.    
 3.  유효성 검사의 결과에 대한 에이전트 출력을 확인합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](validate-data-at-the-subscriber.md)를 참조하세요.  
   
-#### <a name="single-article"></a>단일 문서 
+#### <a name="single-article"></a>단일 아티클 
   
-1.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. **@publication**과 **@article**에 아티클 이름을 지정하고, **@rowcount_only**에 다음 값 중 하나를 지정합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. **@publication** 과 **@article** 에 아티클 이름을 지정하고, **@rowcount_only** 에 다음 값 중 하나를 지정합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -137,9 +137,9 @@ ms.locfileid: "54131193"
 #### <a name="single-subscriber"></a>단일 구독자
   
 1.  게시 데이터베이스의 게시자에서 [BEGIN TRANSACTION&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)을 사용하여 명시적 트랜잭션을 엽니다.    
-2.  게시 데이터베이스의 게시자에서 [sp_marksubscriptionvalidation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)을 실행합니다. **@publication**에 게시를 지정하고 **@subscriber**에 구독자 이름을 지정한 후 **@destination_db**에 구독 데이터베이스 이름을 지정합니다.    
+2.  게시 데이터베이스의 게시자에서 [sp_marksubscriptionvalidation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql)을 실행합니다. **@publication** 에 게시를 지정하고 **@subscriber** 에 구독자 이름을 지정한 후 **@destination_db** 에 구독 데이터베이스 이름을 지정합니다.    
 3.  (옵션) 유효성을 검사할 각 구독에 대해 2단계를 반복합니다.    
-4.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. **@publication**과 **@article**에 아티클 이름을 지정하고, **@rowcount_only**에 다음 값 중 하나를 지정합니다.    
+4.  게시 데이터베이스의 게시자에서 [sp_article_validation&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql)을 실행합니다. **@publication** 과 **@article** 에 아티클 이름을 지정하고, **@rowcount_only** 에 다음 값 중 하나를 지정합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다(기본값).    
     -   **2** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "54131193"
 
 ##  <a name="all-push-subscriptions-to-a-transactional-publication"></a>트랜잭션 게시에 대 한 모든 밀어넣기 구독 
 
-### <a name="using-replication-monitor"></a>복제 모니터를 사용 하 여
+### <a name="using-replication-monitor"></a>복제 모니터 사용
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.    
 2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **구독 유효성 검사**를 클릭합니다.    
@@ -169,7 +169,7 @@ ms.locfileid: "54131193"
     3.  **선택한 세션의 동작** 텍스트 영역에 있는 **배포자에서 구독자로의 연결 기록** 탭의 정보를 확인합니다.  
   
 
-## <a name="for-a-single-subscription-to-a-merge-publication"></a>병합 게시에 단일 구독에 대 한
+## <a name="for-a-single-subscription-to-a-merge-publication"></a>병합 게시에 대한 단일 구독의 경우
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용
   
@@ -185,9 +185,9 @@ ms.locfileid: "54131193"
   
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL)을 사용 하 여
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL(T-SQL) 사용
 
-1.  게시 데이터베이스의 게시자에서 [sp_validatemergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)을 실행합니다. **@publication**을 지정하고 **@subscriber**에 구독자 이름을 지정하고 **@subscriber_db**에 구독 데이터베이스 이름을 지정한 후 **@level**에 다음 값 중 하나를 지정합니다.   
+1.  게시 데이터베이스의 게시자에서 [sp_validatemergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql)을 실행합니다. **@publication** 을 지정하고 **@subscriber** 에 구독자 이름을 지정하고 **@subscriber_db** 에 구독 데이터베이스 이름을 지정한 후 **@level** 에 다음 값 중 하나를 지정합니다.   
     -   **1** - 행 개수의 유효성만 검사합니다.    
     -   **3** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "54131193"
 >  **Replication Merge Agent** 를 실행할 때 [-Validate](agents/replication-merge-agent.md)매개 변수를 지정하여 동기화가 끝날 때 병합 게시에 대한 구독의 유효성을 검사할 수도 있습니다.  
 
   
-## <a name="for-all-subscriptions-to-a-merge-publication"></a>병합 게시에 대 한 모든 구독에 대 한
+## <a name="for-all-subscriptions-to-a-merge-publication"></a>병합 게시에 대한 모든 구독의 경우
 
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용 
   
@@ -216,9 +216,9 @@ ms.locfileid: "54131193"
   
      유효성 검사와 관련된 메시지가 나타나지 않는 경우 에이전트가 이미 이어서 나타나는 메시지를 로깅한 것입니다. 이 경우 복제 모니터에서 유효성 검사 결과를 확인합니다. 자세한 내용은 이 항목의 복제 모니터 사용 방법을 참조하세요.  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL)을 사용 하 여
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL(T-SQL) 사용
 
-1.  게시 데이터베이스의 게시자에서 [sp_validatemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)을 실행합니다. **@publication**를 지정하고 **@level**에 다음 값 중 하나를 지정합니다.    
+1.  게시 데이터베이스의 게시자에서 [sp_validatemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql)을 실행합니다. **@publication** 를 지정하고 **@level** 에 다음 값 중 하나를 지정합니다.    
     -   **1** - 행 개수의 유효성만 검사합니다.    
     -   **3** - 행 개수 및 이진 체크섬의 유효성을 검사합니다.  
   
@@ -228,9 +228,9 @@ ms.locfileid: "54131193"
 3.  유효성 검사의 결과에 대한 에이전트 출력을 확인합니다. 자세한 내용은 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)을 참조하세요.  
 
 
-## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>병합 게시에 대 한 단일 밀어넣기 구독에 대 한 
+## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 단일 밀어넣기 구독의 경우 
 
-### <a name="using-replication-monitor"></a>복제 모니터를 사용 하 여
+### <a name="using-replication-monitor"></a>복제 모니터 사용
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.    
 2.  **모든 구독** 탭을 클릭합니다.    
@@ -244,9 +244,9 @@ ms.locfileid: "54131193"
     2.  해당 구독을 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.    
     3.  **선택한 세션에 대한 마지막 메시지** 텍스트 영역에 있는 **동기화 기록** 탭의 정보를 확인합니다.  
   
-## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>모든 밀어넣기 구독의 경우 병합 게시에 대 한 
+## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>병합 게시에 대한 모든 밀어넣기 구독의 경우 
 
-### <a name="using-replication-monitor"></a>복제 모니터를 사용 하 여
+### <a name="using-replication-monitor"></a>복제 모니터 사용
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.    
 2.  구독 유효성을 검사할 게시를 마우스 오른쪽 단추로 클릭한 다음 **모든 구독 유효성 검사**를 클릭합니다.    
