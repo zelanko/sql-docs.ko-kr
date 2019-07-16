@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020403"
 ---
 # <a name="role-of-the-driver-manager"></a>드라이버 관리자의 역할
 드라이버 관리자를 생성 하는 상태 레코드를 반환 하는 최종 순서를 결정 합니다. 특히 레코드 가장 높은 순위 있고 먼저 반환 될 결정 합니다. 드라이버는 생성 하는 상태 레코드를 정렬 하는 일을 담당 합니다. 상태 레코드 드라이버 관리자와 드라이버에서 게시 되는 경우 드라이버 관리자는 순서를 지정 하는 일을 담당 합니다. 자세한 내용은 [상태 레코드의 시퀀스](../../../odbc/reference/develop-app/sequence-of-status-records.md)합니다.  

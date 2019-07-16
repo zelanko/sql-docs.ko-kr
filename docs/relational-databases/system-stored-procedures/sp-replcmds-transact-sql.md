@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006895"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**문서 id**|**int**|아티클의 ID입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
@@ -62,7 +61,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replcmds** 트랜잭션 복제 로그 판독기 프로세스에서 사용 됩니다.  
   
  복제 처리를 실행 하는 첫 번째 클라이언트가 **sp_replcmds** 로그 판독기로 지정된 된 데이터베이스 내에서.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8dc6f15406ae5d89c7aeb3d69d4f63806172b65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017378"
 ---
 # <a name="validation-statuses-master-data-services"></a>유효성 검사 상태(Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485540"
 
   **버전 유효성 검사** 페이지의 **버전 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |유효성 검사 대기 중|유효성 검사를 받기 위해 대기 중인 새로 만든 모든 멤버입니다.|  
 |유효성 재검사 대기 중|유효성 검사를 받기 위해 대기 중인 기존 멤버입니다.|  
