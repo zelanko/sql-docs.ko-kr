@@ -5,17 +5,16 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958483"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service 구성
 

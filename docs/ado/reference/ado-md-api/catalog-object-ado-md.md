@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9db4bed718f60cbc9a5331d241b9cc8556718e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930370"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 개체(ADO MD)
 다차원 스키마 정보 (큐브 기본 차원, 계층, 수준 및 멤버)는 다차원 데이터 (MDP 공급자)를 포함합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 및 속성을 사용 하 여는 **카탈로그** 개체를 다음을 수행할 수 있습니다.  
   
 -   카탈로그를 설정 하 여 엽니다는 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 속성을 표준 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 유효한 연결 문자열입니다.  

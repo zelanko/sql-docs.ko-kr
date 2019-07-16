@@ -2,19 +2,18 @@
 title: 사용 권한 부여 T-SQL-병렬 데이터 웨어하우스 | Microsoft Docs
 description: Parallel Data Warehouse에서 데이터베이스 작업에 대 한 권한 부여 T-SQL입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960942"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Parallel Data Warehouse에 대 한 권한 부여 T-SQL
 Parallel Data Warehouse에서 데이터베이스 작업에 대 한 권한 부여 T-SQL입니다.
@@ -245,7 +244,7 @@ GO
   
 참조 관리자 로그인을 만들려면 [고정 서버 역할](pdw-permissions.md#fixed-server-roles)입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)  
 [역할 만들기](../t-sql/statements/create-role-transact-sql.md)  

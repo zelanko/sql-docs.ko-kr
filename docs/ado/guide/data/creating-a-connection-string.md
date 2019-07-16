@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ed1a2ec745b1e1ca961c71c81d44ff659789efea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925762"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
 연결 문자열 (즉, 매개 변수) 인수/값 쌍의 세미콜론으로 구분 된 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66700863"
   
  ADO 연결 문자열에는 다음 5 개 인수를 인식합니다.  
   
-|인수|Description|  
+|인수|설명|  
 |--------------|-----------------|  
 |*공급자*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예를 들어 지속형된 데이터 원본 개체)의 이름을 지정 합니다.|  

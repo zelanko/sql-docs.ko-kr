@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020866"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>사용자 인터페이스 참조(SybaseToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[고급 개체 선택 &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|평가 보고서를 사용 하 여 Sybase 적응형 Server Enterprise (ASE) 개체의 변환 결과 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 및 예측 시간 및 복잡성에 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.|  

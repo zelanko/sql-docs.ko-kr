@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f654bc1ccd913c5fc31f81cae67ffdb84e80f952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922053"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>5단계: DataControl을 사용 가능하도록 만듭니다(RDS 자습서).
 반환 된 **레코드 집합** 개체는 사용할 수 있습니다. 검사, 탐색 하거나 다른 대로 편집할 수 있습니다 **레코드 집합**합니다. 사용 하 여 수행할 수 있는 작업은 **레코드 집합** 사용자 환경에 따라 달라 집니다. Visual Basic 및 Visual C++ 에서 사용할 수 있는 시각적 컨트롤을 **레코드 집합** 직접 또는 간접적으로 사용 하도록 설정 하면 데이터 컨트롤을 사용 하 여 합니다.  

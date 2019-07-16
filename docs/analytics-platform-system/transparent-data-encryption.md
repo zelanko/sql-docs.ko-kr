@@ -2,19 +2,18 @@
 title: 투명 한 데이터 암호화-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 투명 한 데이터 암호화 (TDE) 병렬 데이터 웨어하우스 (PDW)에 대 한 실시간 I/O 암호화 및 수행 특수 PDW 로그 파일 데이터 및 트랜잭션 로그 파일의 암호 해독 합니다. "
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959987"
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 보안 시스템 디자인, 중요한 자산 암호화 및 데이터베이스 서버에 대한 방화벽 구축과 같은 데이터베이스의 보안을 설정하기 위해 여러 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어 (예: 드라이브 또는 백업 테이프)가 도난 된 경우 악의적인 사용자만 복원 또는 데이터베이스를 연결 하 고 수 데이터를 찾아볼 합니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.  

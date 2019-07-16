@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c0b5847cb5d4b4d6643edceadbd4d95cec5f152
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946541"
 ---
 # <a name="numeric-values-functions---round"></a>숫자 값 함수 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  함수가 적용되는 번호입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 유형의 *$arg* 세 가지 숫자 기본 유형 중 하나인 **xs: float**, **xs: double**, 또는 **xs: decimal**, 반환 형식은 동일 합니다 *$arg* 형식입니다. 경우 유형의 *$arg* 숫자 유형 중 하나에서 파생 된 형식인 반환 형식은 기본 숫자 형식입니다.  
   
  경우 입력 합니다 **fn: floor**, **fn: ceiling**, 또는 **fn: round** 기능은 **xdt: untypedatomic**, 형식화 되지 않은 데이터를 암시적으로 캐스팅 됩니다에 **xs: double**합니다.  

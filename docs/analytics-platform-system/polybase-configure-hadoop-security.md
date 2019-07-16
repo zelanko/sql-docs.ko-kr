@@ -2,19 +2,18 @@
 title: 분석 플랫폼 시스템에 PolyBase Hadoop 보안 구성 | Microsoft Docs
 description: 외부 Hadoop 연결할 Parallel Data Warehouse에서 PolyBase를 구성 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cef02b909d533d8cf0e5bc870c524c204885a6eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1aebac3f63a105f0276e676ccc807aaebdbf097d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960295"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop에 대한 PolyBase 구성 및 보안
 

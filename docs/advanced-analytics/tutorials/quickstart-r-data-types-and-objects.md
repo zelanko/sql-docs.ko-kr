@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962021"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>빠른 시작: 데이터 형식 및 SQL Server에서 R을 사용 하 여 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "54046929"
 
 + 데이터 형식이 일치하지 않는 경우가 있음
 + 암시적 변환이 일어날 수 있음
-+ CAST 및 Convert 연산이 필요함 
++ CAST 및 Convert 연산이 필요함
 + R 및 SQL이 서로 다른 데이터 개체를 사용함
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -37,7 +36,7 @@ ms.locfileid: "54046929"
 
 첫째, 일부 R 기본 R 개체인 벡터, 행렬 및 목록-를 사용 하 여 실험 하 고 데이터 프레임으로 변환 SQL Server로 전달 되는 출력이 어떻게 변경 되는지 확인 하겠습니다.
 
-R에서 다음 두 "Hello World" 스크립트를 비교하세요. 스크립트는 거의 동일 하지만 첫 번째는 세 개의 값을 단일 열로 반환하는 반면, 두 번째는 각각 단일 값을 가진 3개의 열을 반환합니다. 
+R에서 다음 두 "Hello World" 스크립트를 비교하세요. 스크립트는 거의 동일 하지만 첫 번째는 세 개의 값을 단일 열로 반환하는 반면, 두 번째는 각각 단일 값을 가진 3개의 열을 반환합니다.
 
 **예제 1**
 
@@ -88,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-이제 **Message**에 텍스트를 검토하여 출력이 다른 이유를 확인합니다. 
+이제 **Message**에 텍스트를 검토하여 출력이 다른 이유를 확인합니다.
 
 **결과 - 예제 1**
 
@@ -177,7 +176,7 @@ execute sp_execute_external_script
 
 R은 다양한 크기의 벡터로 작업하고 이러한 열과 같은 구조를 데이터 프레임에 결합하는데 뛰어난 유연성을 제공합니다. 벡터 리스트는 테이블처럼 보일 수 있지만 데이터베이스 테이블을 관리하는 모든 규칙을 따르지 않습니다.
 
-예를 들어 다음 스크립트는 길이가 6인 숫자 배열을 정의하고 R 변수 `df1`에 저장합니다. 그런 다음 숫자 배열에는 3개의 값이 포함된 RTestData 테이블의 정수와 결합하여 세 데이터 프레임 `df2`를 만듭니다. 
+예를 들어 다음 스크립트는 길이가 6인 숫자 배열을 정의하고 R 변수 `df1`에 저장합니다. 그런 다음 숫자 배열에는 3개의 값이 포함된 RTestData 테이블의 정수와 결합하여 세 데이터 프레임 `df2`를 만듭니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -272,9 +271,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 데이터를 미리 테스트해서 R 코드에 전달할 때 문제가 될 수 있는 스키마의 열 혹은 값을 검사합니다.
 + `SELECT *`를 사용하지 않고 입력 데이터 원본에서 열을 개별적으로 지정하고 각 열이 어떻게 처리되는지 알아봅니다.
 + 문제를 방지하려면 입력 데이터를 준비할 때 필요에 따라 명시적 Cast를 수행합니다.
-+ 오류를 유발하거나 모델링에 유용하지 않은 데이터 열(예: GUID 또는 rowguids)은 전달하지 않습니다. 
++ 오류를 유발하거나 모델링에 유용하지 않은 데이터 열(예: GUID 또는 rowguids)은 전달하지 않습니다.
 
-지원되는 혹은 지원되지 않는 데이터 형식에 대한 추가 정보는 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조하십시오. 
+지원되는 혹은 지원되지 않는 데이터 형식에 대한 추가 정보는 [R 라이브러리 및 데이터 형식](../r/r-libraries-and-data-types.md)을 참조하십시오.
 
 런타임에 문자열에서 숫자 팩터로의 변환이 성능에 미치는 영향에 대한 정보는 [SQL Server R Services 성능 튜닝](../r/sql-server-r-services-performance-tuning.md)을 참조하십시오.
 

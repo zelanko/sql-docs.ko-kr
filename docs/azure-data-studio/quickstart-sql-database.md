@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959432"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL database에 연결하고 쿼리하기
 

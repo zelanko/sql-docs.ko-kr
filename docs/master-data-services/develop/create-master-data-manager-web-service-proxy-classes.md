@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4d71d15ada91055b7aff128bd750e1fd192b6e8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 062a3bc03c85a4dc0d4fe5c6cca08b30429cd284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006325"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>마스터 데이터 관리자 웹 서비스에 대한 프록시 클래스 만들기
 
@@ -40,7 +39,7 @@ ms.locfileid: "65480212"
     시작하는 페이지가 표시됩니다.  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Visual Studio를 사용하여 프록시 클래스 만들기  
- Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예를 들어 `https://yourserver/MDS/service/service.svc`을 참조하십시오. 자세한 내용은 [방법: 추가, 업데이트 또는 서비스 참조를 제거](https://go.microsoft.com/fwlink/?LinkId=221167)합니다.  
+ Visual Studio 2010이 설치된 경우 프로젝트에 **서비스 참조**를 추가하면 가장 간단하게 프록시 클래스를 생성할 수 있습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL에 /service/service.svc를 추가하면 서비스 참조의 주소가 됩니다. 예: `https://yourserver/MDS/service/service.svc`. 자세한 내용은 [방법: 추가, 업데이트 또는 서비스 참조를 제거](https://go.microsoft.com/fwlink/?LinkId=221167)합니다.  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Svcutil.exe를 사용하여 프록시 클래스 만들기  
  컴퓨터에서 Svcutil.exe를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK가 설치되어 있어야 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 사용하는 경우에는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 명령 프롬프트를 사용하여 명령을 실행해야 합니다. 자세한 내용은 [ServiceModel Metadata 유틸리티 도구(Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) 및 [서비스 메타데이터에서 WCF 클라이언트 생성](https://go.microsoft.com/fwlink/?LinkId=164821)을 참조하십시오.  

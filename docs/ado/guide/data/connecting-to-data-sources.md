@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99ced09e841e4a778b9920ced4023336a1668d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925794"
 ---
 # <a name="connecting-to-data-sources"></a>데이터 원본에 연결
 ADO **연결** 개체 DBMS, 파일 저장소에 또는 쉼표로 구분 된 텍스트 파일을 포함 하 여 데이터 원본 사용 하 여 고유한 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우 ADO 연결 서버에 실제 네트워크 연결을 수 있습니다.  

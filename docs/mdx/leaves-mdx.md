@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905731"
 ---
 # <a name="leaves-mdx"></a>Leaves(MDX)
 
@@ -32,7 +31,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  차원을 반환하는 유효한 MDX(Multidimensional Expressions) 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  리프 멤버는 모든 특성 계층에 대한 가장 낮은 수준의 크로스 조인으로 형성된 튜플입니다. 계산 멤버는 제외됩니다.  
   
 -   차원 이름이 지정 된 경우는 **둡니다** 함수는 지정 된 차원에 대 한 키 특성의 리프 멤버를 포함 하는 집합을 반환 합니다.  

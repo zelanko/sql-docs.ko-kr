@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0a4cfa0178b04a53c3d5ea8419d063d636507a39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019934"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **sysmail_delete_log_sp** 저장 프로시저를 데이터베이스 메일 로그에서 항목을 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 항목만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 이벤트는 삭제됩니다. 선택적 인수를 사용 하면 특정 형식으로 지정 된 이벤트만 삭제할 수 있습니다 합니다 **event_type** 인수입니다.  
   
  데이터베이스 메일 로그에서 항목을 삭제해도 데이터베이스 메일 테이블의 전자 메일 항목은 삭제되지 않습니다. 사용 하 여 [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) 데이터베이스 메일 테이블에서 전자 메일을 삭제 합니다.  
@@ -59,7 +58,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-deleting-all-events"></a>1. 모든 이벤트 삭제  
+### <a name="a-deleting-all-events"></a>A. 모든 이벤트 삭제  
  다음 예에서는 데이터베이스 메일 로그의 모든 이벤트를 삭제합니다.  
   
 ```  
@@ -67,7 +66,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>2. 오래된 이벤트 삭제  
+### <a name="b-deleting-the-oldest-events"></a>2\. 오래된 이벤트 삭제  
  다음 예에서는 데이터베이스 메일 로그에서 2005년 10월 9일 이전의 이벤트를 삭제합니다.  
   
 ```  
@@ -76,7 +75,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-### <a name="c-deleting-all-events-of-a-certain-type"></a>3. 특정 유형의 모든 이벤트 삭제  
+### <a name="c-deleting-all-events-of-a-certain-type"></a>3\. 특정 유형의 모든 이벤트 삭제  
  다음 예에서는 데이터베이스 메일 로그의 성공 메시지를 삭제합니다.  
   
 ```  

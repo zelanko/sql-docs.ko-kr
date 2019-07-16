@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 882082d503bf88f21566ac79ea4393a24ee551e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afc3a73b958062bd6472153b2452bc0e3fa6cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020624"
 ---
 # <a name="-range-mdx"></a>: (범위) (MDX)
 
@@ -35,7 +34,7 @@ Member_Expression : Member_Expression
 ## <a name="return-value"></a>반환 값  
  지정된 멤버를 포함하는 집합과 지정된 멤버 사이의 모든 멤버입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 매개 변수는 모두 특정 차원과 동일한 수준 및 계층 내에서 멤버를 지정해야 합니다. 매개 변수가 모두 동일한 멤버를 지정 하는 경우는 **: (범위)**  연산자는 지정 된 멤버만 포함 된 집합을 반환 합니다. 첫 번째 매개 변수가 Null인 경우 집합에는 두 번째 매개 변수에 지정된 멤버 수준의 처음부터 해당 멤버까지 포함하여 모든 멤버가 들어 있습니다. 두 번째 매개 변수가 Null인 경우 집합에는 첫 번째 매개 변수에 지정된 멤버에서 동일한 수준의 마지막 멤버까지 포함하여 모든 멤버가 들어 있습니다.  
   
  MDX에는 이 집합 연산자에 해당하는 기능이 없습니다.  

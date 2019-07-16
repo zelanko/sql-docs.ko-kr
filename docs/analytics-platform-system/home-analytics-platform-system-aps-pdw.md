@@ -2,19 +2,18 @@
 title: Analytics Platform System 설명서 | Microsoft Docs
 description: 데이터 웨어하우징 및 빅 데이터 분석을 위해 설계된 데이터 플랫폼인 Microsoft APS(Analytics Platform System)는 완벽한 데이터 통합, 고속 쿼리 처리, 확장성이 우수한 스토리지, 종단 간 비즈니스 인텔리전스 솔루션에 대한 간단한 유지 관리를 제공합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/18/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bc8765d0bc8fe4b5b9ab3b4bcc98ce940f99400c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0f4fc55632b4effbe04776542b35aa54dcd9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960849"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
 

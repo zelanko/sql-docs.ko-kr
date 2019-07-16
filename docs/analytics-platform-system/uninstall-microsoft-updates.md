@@ -2,19 +2,18 @@
 title: Microsoft 업데이트-Analytics Platform System 제거 | Microsoft Docs "
 description: Microsoft Analytics Platform System (APS)에서 업데이트를 제거 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4739d05b1878c8b7fc9f66f2e0b8145ff1044e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f910eeb7f3b38d29f7ae7b084de981c22a6f3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959839"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Analytics Platform System의 Microsoft 업데이트를 제거 합니다.
 이 문서에서는 Analytics Platform System appliance에서 이전에 설치 된 Microsoft 업데이트를 제거 하는 방법을 설명 합니다.  

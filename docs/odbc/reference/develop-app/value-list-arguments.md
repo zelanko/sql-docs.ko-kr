@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a971da68a8f2a35df8fa513e68d1eba127e9c430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022108"
 ---
 # <a name="value-list-arguments"></a>값 목록 인수
 값 목록 인수를 일치 하는 데 사용할 쉼표로 구분 된 값 목록으로 구성 됩니다. ODBC 카탈로그 함수에 하나의 값만 목록 인수: 합니다 *TableType* 에서 인수 **SQLTables**합니다. 설정 *TableType* null 포인터로 동일 값 목록의 모든 가능한 멤버를 열거 하는 SQL_ALL_TABLE_TYPES로 설정 된 경우. 이 인수 SQL_ATTR_METADATA_ID 문 특성을 받지 않습니다. 자세한 내용은 참조는 [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) 함수 설명 합니다.

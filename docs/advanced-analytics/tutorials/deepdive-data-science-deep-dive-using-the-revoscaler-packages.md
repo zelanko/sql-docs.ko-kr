@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28f3ebe1887e188513c01881f68d5d7f323e31f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962242"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 사용 하 여 SQL Server 데이터를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "62641306"
 
 - **Visual Studio 용 R 도구** (RTVS)는 무료 Microsoft r 지원과 Intellisense, 디버깅, 제공 하는 플러그 인 R Server와 SQL Server Machine Learning Services를 사용 하 여 사용할 수 있습니다. 다운로드하려면 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) 를 참조하세요.
 
-- **RStudio**는 R 개발용으로 인기있는 환경 중 하나입니다. 자세한 내용은 [ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)합니다.
+- **RStudio**는 R 개발용으로 인기있는 환경 중 하나입니다. 자세한 내용은 [https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)를 참조하세요.
 
 - 기본 R 도구(R.exe, RTerm.exe, RScripts.exe)는 SQL Server 또는 R 클라이언트에 R을 설치할 때 기본적으로 설치됩니다. IDE를 설치하지 않고도 기본으로 설치되는 R 도구를 사용해 이 자습서의 코드를 실행할 수 있습니다.
 

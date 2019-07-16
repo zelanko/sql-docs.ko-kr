@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962493"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,6 +51,6 @@ Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 <sup>1</sup> R 통합 SQL Server에서는 선택 사항입니다. VM 구성 하는 동안 Machine Learning 또는 R 기능을 추가 하면 olapR 라이브러리 설치 됩니다.
 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [OlapR을 사용 하 여 MDX 쿼리를 만드는 방법](how-to-create-mdx-queries-using-olapr.md)

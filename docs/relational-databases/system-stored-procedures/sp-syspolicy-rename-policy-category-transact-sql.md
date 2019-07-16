@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a9993591bf1073ef5c72636571e9127496f3d3ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7deb06c004b1c961a3e9bb61b77ad333fd71308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997302"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_rename_policy_category는 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  에 대 한 값을 지정 해야 합니다 *이름을* 하거나 *policy_category_id*합니다. 둘 다 NULL일 수는 없습니다. 이러한 값을 가져오려면 msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리합니다.  

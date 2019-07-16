@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934553"
 ---
 # <a name="automatic-tuning"></a>자동 튜닝
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54226620"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 모니터는 데이터베이스에 자동으로 실행 되는 쿼리 작업의 성능이 향상 됩니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 에 자동으로 조정 하 고 데이터베이스 워크 로드를 동적으로 적용 하 여 쿼리의 성능을 향상 시킬 수 있는 기본 제공 인텔리전스 메커니즘이 있습니다. 사용할 수 있는 두 가지 자동 튜닝 기능을 가지 있습니다.
 
- -  **자동 계획 수정** 문제가 있는 쿼리 실행 계획 및 쿼리 실행 계획 성능 문제를 수정 하 게 식별 합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **자동 계획 수정** 문제가 있는 쿼리 실행 계획 및 쿼리 실행 계획 성능 문제를 수정 하 게 식별 합니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **자동 인덱스 관리** 데이터베이스에 추가 해야 하는 인덱스 및 제거 되어야 하는 인덱스를 식별 합니다. **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>왜 자동 튜닝?
@@ -96,7 +95,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 쿼리 저장소 시스템 뷰를 사용 하 여 계획 선택 회귀를 찾을 수 있습니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 검색 하 고 잠재적 계획 선택 회귀 및에 적용 해야 하는 권장된 작업을 표시 합니다 [sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 보기. 문제, 재발 된 계획의 ID를 기준으로 비교에 사용 된 계획의 ID 식별된 된 쿼리 등의 세부 정보와 문제를의 중요성에 대 한 정보를 표시 하는 뷰 및 [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 문제를 해결 하려면 실행 될 수 있는 문에 문제가 발생 했습니다.
 
-| 유형 | description | Datetime | score | 자세히 | ... |
+| type | description | datetime | score | details 정보 | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | 14 ms 4ms에서 변경 하는 CPU 시간 | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | 84 ms 37 ms에서 변경 하는 CPU 시간 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -133,7 +132,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | 스크립트(script) | 쿼리\_id | 현재 계획\_id | 계획 권장\_id | 예상\_얻기 | 오류\_발생 하기 쉬운
+| 이유 | score | 스크립트(script) | 쿼리\_id | 현재 계획\_id | 계획 권장\_id | 예상\_얻기 | 오류\_발생 하기 쉬운
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 3 밀리초에서 46 밀리초로 변경 하는 CPU 시간 | 36 | EXEC sp\_쿼리\_저장할\_강제로\_계획 12, 17; | 12 | 28 | 17 | 11.59 | 0
 

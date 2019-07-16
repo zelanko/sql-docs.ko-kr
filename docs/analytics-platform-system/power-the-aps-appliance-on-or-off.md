@@ -2,19 +2,18 @@
 title: 전원을 켜거나-분석 플랫폼 시스템 어플라이언스 | Microsoft Docs
 description: Analytics Platform System에 대 한 어플라이언스를 끄거나 전원
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960242"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스를 끄거나 전원
 이 항목에서는 어떻게 전원에 Analytics 플랫폼 Systemappliance 해제 전원 켜 짐 또는 실행 하 병렬 데이터 웨어하우스를 설명 합니다. 사용 하 여이 항목에서는 분석 플랫폼 시스템 어플라이언스를 이동 하면 하거나 전원 어플라이언스에서 심각한 전원 오류가 발생 한 후입니다.  

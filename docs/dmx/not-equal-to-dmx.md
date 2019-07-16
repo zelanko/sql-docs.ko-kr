@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58675993b909c439b402a64ba77b8511466eaa68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d8a7d790f55e955b92621caa1b1e729486eca19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008224"
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; (같지 않음) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

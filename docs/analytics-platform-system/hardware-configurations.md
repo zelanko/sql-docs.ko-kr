@@ -2,19 +2,18 @@
 title: 하드웨어 구성-Analytics Platform System | Microsoft Docs
 description: Analytics Platform System (APS) 어플라이언스 하드웨어 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위를 사용 하 여 설계 됩니다. 6 또는 페타바이트 단위의 데이터 테라바이트에서 Parallel Data Warehouse에 대 한 저장소를 확장 하는 어플라이언스입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960890"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>하드웨어 구성-Analytics Platform System
 Analytics Platform System (APS) 하드웨어는 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위를 사용 하 여 설계 됩니다. 어플라이언스에 대 한 SQL Server 데이터 Wareouse PDW (병렬) 테라바이트에서 6 또는 페타바이트 단위의 데이터 저장소를 확장합니다.  

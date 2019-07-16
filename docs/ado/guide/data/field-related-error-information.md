@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925318"
 ---
 # <a name="field-related-error-information"></a>필드 관련 오류 정보
 경우는 오류는 필드에 직접 연관 됩니다 예를 들어, 데이터를 사용할 수 없는 경우 또는-필드에 대 한 잘못 된 경우 검색할 수 있습니다 문제의 원인에 대 한 자세한 내용은 검사 하 여 합니다 **필드** 개체의 **상태**  속성입니다. 이 속성 문제에 대 한 특정 정보를 제공 하도록 향상 되었습니다. 따라서 예를 들어 호출 하 여 **UpdateBatch** 실패 하면 문제의 원인을 검사 하 여 확인할 수 있습니다 합니다 **상태** 속성을 **필드** 는 영향을 받는 각 기록 합니다. 속성의 값 중 하나가 포함 됩니다는 **FieldStatusEnum** 상수입니다. 다음 표에서 관심 있는 특정 오류가 발생 하면 해당 값을 포함 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|필드 검색 하거나 데이터의 손실 없이 저장할 수 없습니다 나타냅니다.|  
 |**adFieldDataOverflow**|6|공급자에서 반환 되는 데이터 필드의 데이터 형식을 오버플로 나타냅니다.|  

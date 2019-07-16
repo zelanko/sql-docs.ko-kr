@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924512"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열, 해당 소스에서 현재 열려 있는 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 개방적이 고와 함께에서 상대 URL 또는 절대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
@@ -56,7 +55,7 @@ ms.locfileid: "66700446"
 ## <a name="resource-recordset-columns"></a>리소스 레코드 집합 열  
  A *리소스 레코드 집합* 다음 열으로 구성 됩니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|읽기 전용입니다. 리소스의 URL을 나타냅니다.|  
 |RESOURCE_PARENTNAME|AdVarWChar|읽기 전용입니다. 부모 레코드의 절대 URL을 나타냅니다.|  
@@ -73,7 +72,7 @@ ms.locfileid: "66700446"
 |RESOURCE_ISCOLLECTION|adBoolean|읽기 전용입니다. 리소스가 디렉터리 같은 컬렉션에 있으면 true입니다. 리소스는 간단한 파일을 false로 지정 합니다.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|리소스는 구조화 된 문서 이면 true입니다. 리소스 구조화 된 문서가 아닌 경우 false입니다. 또는 간단한 파일 컬렉션 수 있습니다.|  
 |DEFAULT_DOCUMENT|AdVarWChar|읽기 전용입니다. 이 리소스에는 폴더의 기본 단순 문서 또는 구조화 된 문서에 대 한 URL이 포함 되어 있음을 나타냅니다. 기본 스트림에 리소스에서 요청 될 때 사용 합니다. 이 속성은 간단한 파일에 대 한 비어 있습니다.|  
-|CHAPTERED_CHILDREN|AdChapter|읽기 전용입니다. (선택 사항) 리소스의 자식을 포함 하는 행 집합의 장을 나타냅니다. (합니다 *OLE DB Provider for Internet Publishing* 이 열을 사용 하지 않습니다.)|  
+|CHAPTERED_CHILDREN|adChapter|읽기 전용입니다. (선택 사항) 리소스의 자식을 포함 하는 행 집합의 장을 나타냅니다. (합니다 *OLE DB Provider for Internet Publishing* 이 열을 사용 하지 않습니다.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|읽기 전용입니다. 리소스의 표시 이름을 나타냅니다.|  
 |RESOURCE_ISROOT|adBoolean|읽기 전용입니다. 리소스 컬렉션 또는 구조화 된 문서 루트 이면 true입니다.|  
   

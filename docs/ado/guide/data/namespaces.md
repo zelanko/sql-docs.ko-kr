@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e04ffd13183462b0d2a5e68ebc177b8b342b570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924812"
 ---
 # <a name="namespaces"></a>네임스페이스
 ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  
   
-|접두사|Description|  
+|접두사|설명|  
 |------------|-----------------|  
 |s|현재 레코드 집합의 스키마를 정의 하는 특성 및 요소를 포함 하는 "XML 데이터" 네임 스페이스를 가리킵니다.|  
 |dt|데이터 형식 정의 사양을 나타냅니다.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 11c704413f9668a5da99ded7d269d05b8e3f2c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e21096971b9a0891d2c51c5fce34c119b454f0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010592"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 데이터 수집기 차원의 구성을 변경하기 전에 데이터 수집기를 해제해야 합니다. 데이터 수집기를 사용하는 경우 이 프로시저가 실패합니다.  
   
  현재 인스턴스 이름을 쿼리 합니다 [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) 시스템 뷰.  

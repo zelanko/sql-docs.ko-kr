@@ -7,13 +7,12 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961862"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>4단원: 저장된 프로시저에 포함 된 R을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -132,7 +131,7 @@ GO
 
 > [!TIP]
 > 
-> "yes-tip" 및 "no-tip" 결과만 반환하는 대신 예측에 대한 확률 점수를 반환하고 _Score_ 열 값에 WHERE 절을 적용하여 점수를 0.5 또는 0.7과 같은 임계 값을 사용한 "팁을 줄 가능성이 높음" 또는 "주지 않을 가능성이 있음"으로 분류 할 수 있습니다.  이 단계는 저장 프로시저에 포함되지 않지만 쉽게 구현할 수 있습니다.
+> "yes-tip" 및 "no-tip" 결과만 반환하는 대신 예측에 대한 확률 점수를 반환하고 _Score_ 열 값에 WHERE 절을 적용하여 점수를 0.5 또는 0.7과 같은 임계 값을 사용한 "팁을 줄 가능성이 높음" 또는 "주지 않을 가능성이 있음"으로 분류 할 수 있습니다. 이 단계는 저장 프로시저에 포함되지 않지만 쉽게 구현할 수 있습니다.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>여러 입력의 단일 행 점수 매기기
 
@@ -167,7 +166,7 @@ GO
 
 2. 수동으로 값을 제공하여 시험해 보세요.
   
-    새 **쿼리** 창을 열고 저장 프로시저를 호출하여 각 매개변수의 값을 제공합니다.  매개변수는 모델에서 사용하는 특성 열을 나타내며 필수 항목입니다.
+    새 **쿼리** 창을 열고 저장 프로시저를 호출하여 각 매개변수의 값을 제공합니다. 매개변수는 모델에서 사용하는 특성 열을 나타내며 필수 항목입니다.
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',

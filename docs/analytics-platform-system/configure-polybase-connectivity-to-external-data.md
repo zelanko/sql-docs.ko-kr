@@ -2,19 +2,18 @@
 title: Analytics Platform System-PolyBase 연결 구성 | Microsoft Docs
 description: 외부 Hadoop 또는 Microsoft Azure storage blob 데이터 원본에 연결할 Parallel Data Warehouse에서 PolyBase를 구성 하는 방법을 설명 합니다. PolyBase를 사용 하 여 Hadoop, Azure blob storage 및 병렬 데이터 웨어하우스를 포함 하 여 여러 원본에서 데이터를 통합 하는 쿼리를 실행 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961241"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 PolyBase에 Analytics Platform System (APS)에서 데이터를 읽고 외부 데이터 원본에 데이터를 쓸 수 있는 TRANSACT-SQL 쿼리를 처리할 수 있습니다. 외부 데이터에 액세스 하는 동일한 쿼리에 AP에서 관계 테이블을 포함할 수도 있습니다. 이 통해 높은 가치의 AP 데이터베이스에서 관계형 데이터를 사용 하 여 외부 원본의 데이터를 결합할 수 있습니다.

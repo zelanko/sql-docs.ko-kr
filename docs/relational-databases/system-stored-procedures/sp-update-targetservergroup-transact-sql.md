@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57642ccd61a13379495b934f5b52cce7f7f77404
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946620"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>사용 권한  
  이 저장된 프로시저를 실행 하려면 사용자에 부여 해야 합니다 **sysadmin** 고정된 서버 역할입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_update_targetservergroup** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
 ## <a name="examples"></a>예  

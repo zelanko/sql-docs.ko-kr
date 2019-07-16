@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939771"
 ---
 # <a name="table-name-limitations"></a>테이블 이름 제한 사항
 테이블 이름 (예를 들어, 공백) 유효한 문자를 포함할 수 있습니다. 테이블 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있는 경우 백 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  

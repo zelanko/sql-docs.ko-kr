@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 28e08e6a62eaa631e5a1e476207b47e39cf75032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931762"
 ---
 # <a name="pagesize-property-ado"></a>PageSize 속성(ADO)
 구성 하는 레코드 수를 나타내는에서 한 페이지의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66706950"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **긴** 페이지에는 레코드 수를 나타내는 값입니다. 기본값은 **10**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **PageSize** 데이터의 논리 페이지를 구성 하는 레코드 수를 결정 하는 속성입니다. 사용할 수 있도록 페이지 크기를 설정 합니다 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성을 특정 페이지의 첫 번째 레코드를 이동 합니다. 이 특정 수의 레코드를 한 번에 보기를 사용자 데이터의 페이지 수 있도록 하려는 경우 웹 서버 시나리오에서 유용 합니다.  
   
  언제 든 지가이 속성을 설정할 수 있습니다 하 고 해당 값이 특정 페이지의 첫 번째 레코드의 위치를 계산 하는 데 사용 됩니다.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029775"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   알려진 각 구독자당 한 개의 행을 포함합니다. 게시자에서는 로컬 테이블에 해당합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|서버의 ID입니다. 구독 데이터베이스의 사본을 다른 서버로 마이그레이션하는 경우 서버 지정 값에 srvid 필드를 매핑할 때 사용합니다.|  
 |db_name|**sysname**|구독 데이터베이스의 이름입니다.|  
@@ -65,7 +64,7 @@ ms.locfileid: "52802796"
 |subscriber_number|**int**|내부적으로만 사용됩니다.|  
 |last_makegeneration_datetime|**datetime**|마지막 **날짜/시간** makegeneration 프로세스가 게시자에 대해 실행 된 합니다. 자세한 내용은-MakeGenerationInterval 매개 변수를 참조 하세요 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -5,17 +5,16 @@ description: Mssqlctl hdfs 명령에 대 한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957913"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -37,7 +36,7 @@ ms.locfileid: "67728537"
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | 재귀적으로 파일 또는 디렉터리를 제거 합니다.
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | 지정 된 파일 또는 디렉터리에 사용 권한을 변경 합니다.
 [mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | 소유자 또는 지정된 된 파일의 그룹을 변경 합니다.
-## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs shell
+## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs 셸
 HDFS 셸은 HDFS 파일 시스템에 대 한 간단한 대화형 명령 셸입니다.
 ```bash
 mssqlctl hdfs shell 
@@ -160,7 +159,7 @@ mssqlctl hdfs mv --source-path '/tmp' --target-path '/dest'
 JMESPath 쿼리 문자열입니다. 참조 [ http://jmespath.org/ ](http://jmespath.org/]) 자세한 내용 및 예제에 대 한 합니다.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 사용-전체 디버그 로그에 대 한 디버그 합니다.
-## <a name="mssqlctl-hdfs-create"></a>mssqlctl hdfs create
+## <a name="mssqlctl-hdfs-create"></a>mssqlctl hdfs 만들기
 지정된 된 위치에 텍스트 파일을 만듭니다.  데이터 매개 변수를 통해 간단한 텍스트 콘텐츠를 추가할 수 있습니다.
 ```bash
 mssqlctl hdfs create --path -p 

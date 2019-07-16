@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7d9c899f5ae956f9e434bb7374d95aaa186a2923
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49bf433969d72e253afed2a87837ad2ca03fb94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022414"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @agent_type = ] agent_type` 에이전트의 유형이입니다. *agent_type* 됩니다 **smallint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|배포 에이전트|  
 |**1**|병합 에이전트|  
@@ -76,7 +75,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 배포 에이전트의 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|Second|  
@@ -113,7 +112,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addsubscriber_schedule** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

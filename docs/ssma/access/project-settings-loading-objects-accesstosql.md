@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929422"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>프로젝트 설정 (개체 로드) (AccessToSQL)
 개체 로드 프로젝트 설정에는 SQL Server 데이터베이스 개체를 사용 하 여 Access 데이터베이스 개체는 동기화 하는 방법을 구성할 수 있습니다.  

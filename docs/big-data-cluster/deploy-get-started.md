@@ -5,17 +5,16 @@ description: 단계 및 SQL Server 2019 빅 데이터 클러스터 (미리 보�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8583610606e5d554f039a69688af3ddff8dc8bb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958537"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
 

@@ -5,17 +5,16 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957810"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 

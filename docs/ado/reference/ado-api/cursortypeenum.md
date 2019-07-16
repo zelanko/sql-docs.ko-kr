@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd3469b826ac4f577ff0e883b1a92a3acec4a981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6333934997c9de38b8df1dd08849886ff3dd7f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933279"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 사용 되는 커서의 형식을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|동적 커서를 사용 합니다. 추가, 변경 및 다른 사용자가 삭제 표시 되는 모든 유형의 통해 이동 합니다 **레코드 집합** 허용 되는 책갈피를 제외 하 고 해당 공급자를 지원 하지 않는 경우.|  
 |**adOpenForwardOnly**|0|기본. 정방향 전용 커서를 사용 합니다. 동일 하 게 정적 커서를 제외 하 고 레코드를 통해 앞으로 스크롤하여만 있습니다. 하나만 통과 해야 하는 경우 성능이 향상 됩니다는 **레코드 집합**합니다.|  

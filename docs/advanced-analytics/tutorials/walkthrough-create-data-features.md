@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 609896357845aa4f466e874524b8136b34e32b9a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5a17eb0c39e45080de83e39d002d8f6693131688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961793"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server (연습)를 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "58511700"
 > * 사용자 지정 R 함수 사용하기
 > * 사용자 지정 T-SQL 함수를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)]
 
-목표는 원본 열과 더불어 새로운 numeric 특성인  *direct_distance*를 포함하는 새로운[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만드는 것입니다. 
+목표는 원본 열과 더불어 새로운 numeric 특성인  *direct_distance*를 포함하는 새로운[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만드는 것입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -43,7 +42,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
 
 우선, R 사용자가 익숙한 방식으로 해 봅니다. 데이터를 랩톱에 가져온 다음 위도와 경도 값으로 지정된 두 점 간의 직선 거리를 계산하는 사용자 지정 R 함수 *ComputeDist*를 실행합니다.
 
-1. 이전에 만든 데이터 원본 개체는 상위 1000개 행만 가져옵니다. 그래서 모든 데이터를 가져오는 쿼리를 정의해 보겠습니다. 
+1. 이전에 만든 데이터 원본 개체는 상위 1000개 행만 가져옵니다. 그래서 모든 데이터를 가져오는 쿼리를 정의해 보겠습니다.
 
     ```R
     bigQuery <- "SELECT tipped, fare_amount, passenger_count,trip_time_in_secs,trip_distance, pickup_datetime, dropoff_datetime,  pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude FROM nyctaxi_sample";
@@ -55,9 +54,9 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     featureDataSource <- RxSqlServerData(sqlQuery = bigQuery,colClasses = c(pickup_longitude = "numeric", pickup_latitude = "numeric", dropoff_longitude = "numeric", dropoff_latitude = "numeric", passenger_count  = "numeric", trip_distance  = "numeric", trip_time_in_secs  = "numeric", direct_distance  = "numeric"), connectionString = connStr);
     ```
 
-    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 는 _sqlQuery_ 매개변수의 인수로 제공되는 유효한 SELECT 쿼리 혹은 _table_ 매개변수로 제공되는 테이블 개체 이름으로 구성할 수 있습니다. 
+    - [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) 는 _sqlQuery_ 매개변수의 인수로 제공되는 유효한 SELECT 쿼리 혹은 _table_ 매개변수로 제공되는 테이블 개체 이름으로 구성할 수 있습니다.
     
-    - 테이블에서 데이터를 샘플링하고 싶은 경우 _sqlQuery_ T-SQL TABLESAMPLE 절을 사용해서 샘플 매개변수를 정의하며,   _rowBuffering_ 인수를 FALSE로 설정해야 합니다. 
+    - 테이블에서 데이터를 샘플링하고 싶은 경우 _sqlQuery_ T-SQL TABLESAMPLE 절을 사용해서 샘플 매개변수를 정의하며,   _rowBuffering_ 인수를 FALSE로 설정해야 합니다.
 
 3. 다음 코드를 실행해서 사용자 지정 R 함수를 만듭니다. ComputeDist는 두 쌍의 위도와 경도 값을 받아서 직선 거리를 계산하고 마일 단위 거리를 반환합니다.
 
@@ -81,10 +80,10 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     }
     ```
   
-    + 첫 번째 줄은 새 환경을 정의합니다.  R에서는 패키지와 같은 이름 공간을 캡슐화하는 데 환경을 사용할 수 있습니다. `search()` 함수를 사용하여 작업 영역의 환경을 볼 수 있습니다.  특정 환경의 개체를 보려면 `ls(<envname>)`를 입력합니다. 
+    + 첫 번째 줄은 새 환경을 정의합니다. R에서는 패키지와 같은 이름 공간을 캡슐화하는 데 환경을 사용할 수 있습니다. `search()` 함수를 사용하여 작업 영역의 환경을 볼 수 있습니다. 특정 환경의 개체를 보려면 `ls(<envname>)`를 입력합니다.
     + `$env.ComputeDist` 로 시작하는 줄에는 haversine 공식을 정의하는 코드가 포함되어 있으며, 구(sphere)의 두 점간 *거리*를 계산합니다.
 
-4. 함수를 정의한 후 새로운 특성 열인 *direct_distance*를 생성하기 위해 함수를 데이터에 적용합니다. 변환을 실행하기 전에 계산 컨텍스트를 로컬로 변경합니다. 
+4. 함수를 정의한 후 새로운 특성 열인 *direct_distance*를 생성하기 위해 함수를 데이터에 적용합니다. 변환을 실행하기 전에 계산 컨텍스트를 로컬로 변경합니다.
 
     ```R
     rxSetComputeContext("local");
@@ -114,7 +113,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     
     다른 데이터 원본에서는 *varsToKeep* 과 *varsToDrop*, 인수를 사용할 수 있지만 SQL Server 데이터 원본에는 지원되지 않습니다. 따라서 이 예제에서는 _transform_ 인수를 사용해서 통과(pass-through) 열과 변환 열 모두를 지정했습니다. 또한 SQL Server 계산 컨텍스트에서 실행할 때 _inData_ 인수에는 SQL Server 데이터 원본만 사용할 수 있습니다.
 
-    이전 코드는 큰 데이터 집합에서 실행할 때 경고 메시지를 생성할 수도 있습니다. 행과 열의 수가 설정된 값(기본 3,000,000)을 초과하는 경우 rsDataStep은 경고를 반환하고 결과 데이터 프레임의 행 수가 잘립니다. 경고를 제거하려면 rxDataStep 함수의 _maxRowsByCols_ 인수를 수정할 수 있습니다. 그러나 _maxRowsByCols_ 가 너무 큰 경우 데이터 프레임을 메모리로 로드할 때 문제가 발생할 수 있습니다. 
+    이전 코드는 큰 데이터 집합에서 실행할 때 경고 메시지를 생성할 수도 있습니다. 행과 열의 수가 설정된 값(기본 3,000,000)을 초과하는 경우 rsDataStep은 경고를 반환하고 결과 데이터 프레임의 행 수가 잘립니다. 경고를 제거하려면 rxDataStep 함수의 _maxRowsByCols_ 인수를 수정할 수 있습니다. 그러나 _maxRowsByCols_ 가 너무 큰 경우 데이터 프레임을 메모리로 로드할 때 문제가 발생할 수 있습니다.
 
 7. 선택적으로 변환된 데이터 원본의 스키마를 검사하기 위해 [rxGetVarInfo](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetvarinfo) 를 호출할 수 있습니다.
 
@@ -189,7 +188,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     ```
   
     > [!TIP]
-    > 위 쿼리는 연습을 더 빨리하기 위해 더 적은 샘플 데이터를 얻도록 수정되었습니다. 모든 데이터를 가져오려면 TABLESAMPLE 절을 제거할 수 있습니다. 그러나 환경에 따라서는 전체 데이터를 R에 로딩할 수 없어서 오류가 발생할 수 있습니다. 
+    > 위 쿼리는 연습을 더 빨리하기 위해 더 적은 샘플 데이터를 얻도록 수정되었습니다. 모든 데이터를 가져오려면 TABLESAMPLE 절을 제거할 수 있습니다. 그러나 환경에 따라서는 전체 데이터를 R에 로딩할 수 없어서 오류가 발생할 수 있습니다.
   
 5. 다음 코드 줄을 사용하여 R 환경에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 호출하고 이를 *featureEngineeringQuery*에 정의된 데이터에 적용합니다.
   

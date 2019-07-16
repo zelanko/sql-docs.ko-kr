@@ -5,17 +5,16 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 076cc40c09d4b086ae7a416ac1cc5ccbcc16a20a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1ef2424ae5a1c41821d47f033329c0c53121b59b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958743"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 컨트롤러 란?
 

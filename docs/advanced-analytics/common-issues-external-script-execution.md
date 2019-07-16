@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963127"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ SQL Server Machine Learning 서비스를 설치 하는 동안 Windows 사용자 
 
 문제를 해결하려면 그룹 **SQLRUserGroup**에 시스템 권한 **로컬 로그온 허용**이 있는지 확인합니다.
 
-자세한 내용은 [구성 하는 Windows 서비스 계정 및 권한](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)합니다.
+자세한 내용은 [Windows 서비스 계정 및 권한 구성](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.
 
 ## <a name="permissions-to-run-external-scripts"></a>외부 스크립트를 실행 하는 권한
 
@@ -178,7 +177,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
+*[1] "c:\\프로그램 파일\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
 
 *[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 

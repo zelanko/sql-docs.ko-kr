@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017902"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>인수  
 `[ @type = ] 'type'` 사용자 지정 저장된 프로시저 또는 스크립트의 유형을 제거할 수 있습니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
@@ -56,7 +55,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_unregister_custom_scripting** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019472"
 ---
 # <a name="index-command"></a>INDEX 명령
 인덱스 파일을 표시 및 액세스용 논리적 순서에 따라 테이블 레코드를 만듭니다.  
@@ -62,7 +61,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  복합 인덱스 파일이 이미 생성 되어 열, 하는 경우 태그를 사용 하 여 인덱스를 발급 *TagName* 복합 인덱스 파일에 태그를 추가 합니다.  
   
- FOR *lExpression*  
+ 에 대 한 *lExpression*  
  여기서는 조건을 지정 필터 식을 만족 하는 레코드만 *lExpression* 표시 및 액세스에 사용할 수 있는 인덱스 키 일치 필터 식 해당 레코드에 대 한 인덱스 파일이 만들어집니다.  
   
  Visual FoxPro Rushmore 기술 인덱스를 최적화 하는 중... 에 대 한 *lExpression* 명령 *lExpression* 최적화할 수 있는 식입니다. 최상의 성능을 최적화할 수 있는 식을 FOR 절에 사용 합니다.  
@@ -91,7 +90,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  가산 성  
  계속 이전에 열린된 인덱스 파일을 엽니다. 인덱스를 사용 하 여 인덱스 파일 또는 테이블에 대 한 파일을 만들 때 가산적 절을 생략 하면 모든 이전에 열린된 인덱스 파일 구조 복합 인덱스) (제외 닫힙니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인덱스 파일에 있는 테이블의 레코드 표시 되 고 인덱스 식으로 지정 된 순서 대로 액세스 합니다. 테이블의 레코드의 물리적 순서는 인덱스 파일이 변경 되지 않습니다.  
   
 ## <a name="index-types"></a>인덱스 유형  

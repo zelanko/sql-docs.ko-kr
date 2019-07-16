@@ -2,19 +2,18 @@
 title: 시스템 뷰-분석 플랫폼 시스템 병렬 데이터 웨어하우스 | Microsoft Docs
 description: 시스템 보기에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c459b3656f4b7a2d61cbe0109a78848894600fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63252619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959964"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 Parallel Data Warehouse에 대 한 시스템 뷰
 시스템 보기에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).

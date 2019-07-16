@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931474"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 속성(ADO)
 
@@ -33,7 +32,7 @@ ms.locfileid: "66712024"
 
 반환을 **긴** 의 레코드 수를 나타내는 값을 **레코드 집합**합니다.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용 합니다 **RecordCount** 속성을 레코드 수에 **레코드 집합** 개체입니다. 속성 공급자 또는 커서 유형을 지원 하지 않는 경우 또는 ADO 레코드의 수를 확인할 수 없는 경우-1을 반환 **RecordCount**합니다. 읽기를 **RecordCount** 속성에 닫힌 **레코드 집합** 오류가 발생 합니다.
 

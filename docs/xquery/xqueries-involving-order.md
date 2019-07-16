@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946119"
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52524067"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>1. 제품에 대한 두 번째 작업 센터 위치에서 제조 단계 검색  
+### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. 제품에 대한 두 번째 작업 센터 위치에서 제조 단계 검색  
  특정 제품 모델에 대해 다음 쿼리는 두 번째 작업 센터 위치에서 제조 프로세스에 있는 작업 센터 위치의 시퀀스에 따라 제조 단계를 검색합니다.  
   
 ```sql
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 두 번째 작업 센터 위치의 모든 특성을 검색합니다.  
   
--   FLWOR 반복문(FOR ... RETURN)은 두 번째 작업 센터 위치의 모든 <`step`> 자식 요소를 검색합니다.  
+-   FLWOR 반복문 (에 대 한... 반환)를 모두 검색 합니다 <`step`> 자식 요소가 두 번째 작업 센터 위치입니다.  
   
 -   합니다 [1!s!sql:column () 함수 (XQuery)](../xquery/xquery-extension-functions-sql-column.md) 생성 되는 XML의 관계형 값이 포함 됩니다.  
   
@@ -84,7 +83,7 @@ WHERE ProductModelID=7
   
  이전 쿼리에서는 단지 텍스트 노드만 검색합니다. 전체를 하려는 경우 <`step`> 요소 대신 반환 된 제거 합니다 **string ()** 쿼리에서 함수:  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>2. 제품 제조의 두 번째 작업 센터 위치에서 사용되는 모든 자재 및 도구 찾기  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>2\. 제품 제조의 두 번째 작업 센터 위치에서 사용되는 모든 자재 및 도구 찾기  
  특정 제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 두 번째 작업 센터 위치에서 사용되는 도구와 자재를 검색합니다.  
   
 ```sql
@@ -137,8 +136,8 @@ where ProductModelID=7
 </Location>  
 ```  
   
-### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>3. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
- 특정 제품 모델에 대해 다음 쿼리는 제품 모델 카탈로그에 있는 <`Features`> 요소로부터 처음 두 개의 기능 설명을 검색합니다.  
+### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>3\. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
+ 특정 제품 모델에 대 한 쿼리는에서 첫 번째 두 개의 기능 설명을 검색 합니다 <`Features`> 제품 모델 카탈로그에는 요소입니다.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
- 이 쿼리 본문에서는 ProductModelID 및 ProductModelName 특성이 있는 <`ProductModel`> 요소가 포함된 XML을 생성합니다.  
+ 쿼리 본문에 포함 된 XML을 생성 합니다 <`ProductModel`> ProductModelID 및 ProductModelName 특성이 있는 요소입니다.  
   
--   이 쿼리에서는 FOR ... RETURN 루프를 사용하여 제품 모델 기능 설명을 검색합니다. 합니다 **position ()** 함수를 사용 하는 처음 두 기능을 검색 합니다.  
+-   쿼리는 FOR... 제품 모델 기능 설명 검색 루프를 반환 합니다. 합니다 **position ()** 함수를 사용 하는 처음 두 기능을 검색 합니다.  
   
  다음은 결과입니다.  
   
@@ -181,7 +180,7 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>4. 제품 제조 프로세스의 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구 찾기  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>4\. 제품 제조 프로세스의 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구 찾기  
  제품 모델에 대해 다음 쿼리는 제조 프로세스의 작업 센터 위치 시퀀스에 따라 첫 번째 작업 센터 위치에서 사용되는 처음 두 개의 도구를 반환합니다. 에 저장 된 제조 지침에 대해 쿼리가 지정 됩니다 합니다 **지침** 열을 **Production.ProductModel** 테이블입니다.  
   
 ```sql
@@ -217,7 +216,7 @@ where ProductModelID=7
 </Location>   
 ```  
   
-### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>5. 특정 제품 제조의 첫 번째 작업 센터 위치에서 마지막 두 개의 제조 단계 찾기  
+### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>5\. 특정 제품 제조의 첫 번째 작업 센터 위치에서 마지막 두 개의 제조 단계 찾기  
  쿼리에서 사용 합니다 **last ()** 마지막 두 제조 단계 검색을 위한 함수입니다.  
   
 ```sql

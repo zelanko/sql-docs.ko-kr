@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016721"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 함수
 **규칙**  
@@ -70,7 +69,7 @@ BOOL ConfigDSN(
 ## <a name="diagnostics"></a>진단  
  때 **ConfigDSN** 연결 된 FALSE를 반환  *\*pfErrorCode* 값을 호출 하 여 설치 관리자 오류 버퍼에 게시 됩니다 **SQLPostInstallerError** 및 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|합니다 *hwndParent* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|잘못 된 키워드-값 쌍|합니다 *lpszAttributes* 인수 구문 오류를 포함 합니다.|  
@@ -96,7 +95,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
  대화 상자를 표시할 *hwndParent* null이 아니어야 합니다.  
   
-## <a name="adding-a-data-source"></a>데이터 원본 추가  
+## <a name="adding-a-data-source"></a>데이터 소스 추가  
  데이터 원본 이름에 전달 되 면 **ConfigDSN** 에 *lpszAttributes*합니다 **ConfigDSN** 이름이 올바른지 확인 합니다. 데이터 원본 이름은 기존 데이터 원본 이름과 일치 하는 경우 및 *hwndParent* 가 null **ConfigDSN** 기존 이름을 덮어씁니다. 기존 이름과 일치 하는 경우 및 *hwndParent* null이 아니면 **ConfigDSN** 기존 이름을 덮어쓰지 하 라는 메시지를 표시 합니다.  
   
  하는 경우 *lpszAttributes* 데이터 원본에 연결할 정보가 충분히 포함 된 **ConfigDSN** 데이터 원본 또는 사용자 연결 정보를 변경할 수 있는 대화 상자를 표시에 추가할 수 있습니다. 하는 경우 *lpszAttributes* 데이터 원본에 연결 하려면 충분 한 정보를 포함 하지 **ConfigDSN** 하는 경우 필요한 정보를 확인 해야 합니다 *hwndParent* null이 아니면 사용자 로부터 정보를 검색 하는 대화 상자가 표시 됩니다.  

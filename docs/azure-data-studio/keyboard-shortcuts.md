@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b5a07ce70b57f5d62d53bf8ae9b570edcc78d7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959478"
 ---
 # <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>바로 가기 키 [!INCLUDE[name-sos](../includes/name-sos.md)]
 

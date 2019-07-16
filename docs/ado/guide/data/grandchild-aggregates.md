@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81a2d2274d557bf722a3762f7a3e039dfcc5d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac0b06479b3ad4feedaa63bdac227d028b7a9e09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925234"
 ---
 # <a name="grandchild-aggregates"></a>최하위 집계
 셰이프 명령의 절에서 생성 된 장 열을 지정할 수 있습니다는 *장-별칭* (일반적으로 사용 하 여 AS 키워드). 장에서 모양의의 모든 열을 식별할 수 있습니다 **레코드 집합** 열이 포함 된 자식을 식별 하는 정규화 된 이름을 사용 합니다. 예를 들어 chap1, 부모 장에서 자식 장에서 chap2, 포함 된 경우 amt amount 열도 포함 다음 정규화 된 이름이 chap1.chap2.amt 표시 됩니다. 그런 다음 정규화 된 이름 (SUM, AVG, MAX, MIN, 개수, STDEV, 또는) 집계 함수 중 하나에 대 한 인수로 사용할 수 있습니다.  

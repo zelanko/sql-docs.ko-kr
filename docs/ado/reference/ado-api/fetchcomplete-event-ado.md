@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b5fb32f567dcfffb6112e843b53cb99a3b106bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932831"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트(ADO)
 **FetchComplete** 긴 비동기 작업의 모든 레코드에 검색 된 후 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,7 +45,7 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 검색 된 레코드는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하도록 **FetchComplete** with Microsoft Visual Basic, Visual Basic 6.0 이상가 필요 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

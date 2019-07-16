@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2f1b5f896c4a4884d4474c3c27c3435f7783292
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e689eea8a641e42633d179d14e3b59d88dd3dec4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941891"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>복제 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

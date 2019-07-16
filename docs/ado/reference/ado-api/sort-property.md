@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 092eb49216874a59e4bcba09431fcc01dc3679a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930940"
 ---
 # <a name="sort-property"></a>Sort 속성
 하나 이상의 필드 이름을 나타냅니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 정렬 되어 각 필드를 오름차순 또는 내림차순으로 정렬 되는지 합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66711152"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **문자열** 이름 필드를 나타내는 값을 **레코드 집합** 정렬할 합니다. 각 이름에 쉼표를 분리 되 고 필요에 따라 뒤에 빈 값 및 키워드 **ASC**를 오름차순으로 필드를 정렬 하는 또는 **DESC**, 필드를 내림차순으로 정렬 하는 합니다. 기본적으로 키워드를 지정 하지, 필드 오름차순 정렬 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성을 입력 해야 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 설정할 **adUseClient**합니다. 에 지정 된 각 필드에 대 한 임시 인덱스가 생성 됩니다는 **정렬** 속성 인덱스 아직 없는 경우.  
   
  정렬 작업을 효율적으로 데이터 실제로 다시 정렬 하지 않지만 인덱스로 지정 된 순서 대로 액세스 하기만 하면 됩니다.  

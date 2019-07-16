@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8c271409657aa48ea1187c719254f2eef6b89b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930813"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제(VB)
 이 예제에서는 하는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 계층적 구조에서 액세스할 행을 용이 하 게 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

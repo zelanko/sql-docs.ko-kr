@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931869"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  
@@ -47,7 +46,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  *SchemaID*  
  OLE DB 사양에 정의 되지 않은 공급자 스키마 쿼리에 대 한 GUID입니다. 이 매개 변수는 필요한 경우 *QueryType* 로 설정 된 **adSchemaProviderSpecific**고, 그렇지 않으면 사용 되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **OpenSchema** 메서드 데이터 원본에 테이블의 열에 있는 테이블 같은 데이터 원본에 대 한 정보를 반환 하 고 데이터 형식을 지원 합니다.  
   
  합니다 *QueryType* 인수가 반환 되는 열 (스키마)를 나타내는 GUID입니다. OLE DB 사양에는 스키마의 전체 목록입니다.  

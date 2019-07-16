@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_space_usage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bd4a98d25526a189e62e9458d9e28baea74347f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0f844237d4181a883beedf58b84b5134c4c529c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004845"
 ---
-# <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
+# <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 공간 트랜잭션 로그에 대 한 사용량 정보를 반환 합니다. 
@@ -36,7 +35,7 @@ ms.locfileid: "62719463"
 > [!NOTE]
 > 모든 트랜잭션 로그 파일을 결합 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|데이터베이스 ID입니다.|  
 |total_log_size_in_bytes |**bigint** |로그의 크기  |
@@ -48,11 +47,11 @@ ms.locfileid: "62719463"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
   
 ## <a name="examples"></a>예  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>1\. 사용 가능한 로그 공간 tempdb에서 확인   
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. 사용 가능한 로그 공간 tempdb에서 확인   
 다음 쿼리는 메가바이트 (MB) tempdb에서 사용 가능한 총 사용 가능한 로그 공간을 반환합니다.
 
 ```sql

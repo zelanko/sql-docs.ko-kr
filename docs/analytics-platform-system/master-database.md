@@ -2,19 +2,18 @@
 title: Master 데이터베이스-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 병렬 데이터 웨어하우스에서 master 데이터베이스에 알아봅니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960658"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 데이터베이스-병렬 데이터 웨어하우스
 SQL Server PDW master 데이터베이스 수준 어플라이언스 로그인 정보 및 데이터베이스 카탈로그에 저장합니다. 제어 노드에 있는 SQL Server 마스터 데이터베이스는 것입니다. 따라서 마스터 SQL Server를 제공 하는 대로 SQL Server PDW에 유사한 기능을 제공 합니다.  
@@ -42,7 +41,7 @@ SQL Server PDW master 데이터베이스 수준 어플라이언스 로그인 정
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|Description|  
+|태스크|설명|  
 |--------|---------------|  
 |마스터의 전체 백업을 만듭니다.|예:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)합니다.|  
 |master 데이터베이스 복원|Master 데이터베이스를 복원 하려면 사용 합니다 [Master 데이터베이스를 복원](restore-the-master-database.md) 구성 관리자 도구에는 페이지입니다.|  

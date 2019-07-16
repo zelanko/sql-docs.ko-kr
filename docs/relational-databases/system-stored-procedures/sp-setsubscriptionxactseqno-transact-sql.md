@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021077"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
+|**원래 XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
 |**UPDATED XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
 |**구독 스트림 수**|**int**|마지막 동기화 중에 사용된 구독 스트림의 수입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_setsubscriptionxactseqno** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_setsubscriptionxactseqno** 피어 투 피어 트랜잭션 복제 토폴로지를 사용할 수 없습니다.  

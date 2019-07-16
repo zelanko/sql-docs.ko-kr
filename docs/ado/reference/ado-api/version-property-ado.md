@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3691de816fb442ea1e0d94d2918829ab6cbb0e5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938732"
 ---
 # <a name="version-property-ado"></a>Version 속성(ADO)
 ADO 버전 번호를 나타냅니다.  
@@ -31,7 +30,7 @@ ADO 버전 번호를 나타냅니다.
 ## <a name="return-value"></a>반환 값  
  반환 된 **문자열** 버전을 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **버전** ADO 구현의 버전 번호를 반환 하는 속성입니다.  
   
  버전의 공급자에 동적 속성으로 사용할 수는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션입니다.  

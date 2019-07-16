@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4f2c778a6e922477cd8b21251a638d430ce15480
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931585"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 속성-동적(ADO)
 OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.  
@@ -27,7 +26,7 @@ OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하�
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 [ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **프롬프트** 에 추가할 수 있습니다는 동적 속성은 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) OLE DB 공급자를 사용 하 여 컬렉션입니다. OLE DB 공급자는 초기화 정보를 묻는 메시지를 사용자에 게 대화 상자를 일반적으로 표시 됩니다.  
   
  동적 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 손실 되는 경우를 **연결** 닫혀 있습니다. **프롬프트** 다시 열기 전에 속성 다시 설정 해야 합니다 **연결** 기본값 이외의 값을 사용 하도록 합니다.  

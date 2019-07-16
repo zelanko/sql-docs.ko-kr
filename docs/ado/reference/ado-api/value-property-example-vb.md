@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db0fd5dca7768e5e75664c1247d916d27766bb9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938788"
 ---
 # <a name="value-property-example-vb"></a>Value 속성 예제(VB)
 이 예제에서는 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성과 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 에 대 한 필드 및 속성 값을 표시 하 여 개체를 ***직원*** 테이블입니다.  

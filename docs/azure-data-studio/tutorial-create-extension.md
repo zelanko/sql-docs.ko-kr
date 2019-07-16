@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
-manager: jroth
-ms.openlocfilehash: 2f031ec68cc6ae342b8bac51c450ee40a9df0555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959081"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>자습서: Azure Data Studio 확장 만들기
 
@@ -82,7 +81,7 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 
 ![바로 가기 키](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
+![keybindings.json 확장](./media/tutorial-create-extension/keybindings-json.png)
 
 
 **2단계: 확장에 바로 가기 추가**

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18b57d2d1c4ccf846137be730cb1c1e3c7d88f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20226c4c9c8d25541cee7fac786b85af5c12859f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931482"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider 및 DefaultDatabase 속성 예제(VC++)
 이 예제에서는 합니다 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다른 공급자를 사용 하 여 개체입니다. 또한를 사용 합니다 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 하는 속성입니다.  

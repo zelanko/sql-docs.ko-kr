@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b80838ce47bdb74878efb2918fd79b057abce216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933218"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
 데이터 용량을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66718476"
   
 4.  데이터 형식의 길이가 없는 경우이 설정은 ~ 0 (비트, 값이 0, 모든 비트가 1로 설정 됩니다).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **DefinedSize** 속성의 데이터 용량을 확인 하는 **필드** 개체.  
   
  합니다 **DefinedSize** 하 고 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 속성이 다릅니다. 예를 들어를 **필드** 개체의 선언 형식과 **집합이 있으므로 필요** 와 **DefinedSize** 50으로 단일 문자가 포함 된 속성 값입니다. 합니다 **ActualSize** 반환 하는 속성 값이 단일 문자의 길이 (바이트)에서입니다.  

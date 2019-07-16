@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 777624a6dc7bf85ee618f586319aa6dc0c719e56
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9cbb01b20e8f1d627adb9dbdad59fef798d3ac28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937171"
 ---
 # <a name="prepared-execution"></a>준비된 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "51662462"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 준비된 실행을 기본으로 지원합니다. 실행 계획에 빌드되어 **SQLPrepare** 나중에 실행 될 때 **SQLExecute** 라고 합니다. 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 임시 저장된 프로시저를 작성할 필요가 없습니다 **SQLPrepare**에서 시스템 테이블에는 추가 오버 헤드 없이 **tempdb**합니다.  
   
- 성능상의 이유로 문 준비 될 때까지 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (같은 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)ODBC에서) 수행 됩니다. 이것이 기본 동작입니다. 따라서 준비 중인 문에서 발생하는 모든 오류는 문이 실행되거나 메타 속성 작업이 수행될 때까지 알 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 문 특성 SQL_SOPT_SS_DEFER_PREPARE를 SQL_DP_OFF로 설정하면 이 기본 동작을 해제할 수 있습니다.  
+ 성능상의 이유로 문 준비 될 때까지 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (같은 [SQLDescribeCol](../../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md)ODBC에서) 수행 됩니다. 이는 기본 동작입니다. 따라서 준비 중인 문에서 발생하는 모든 오류는 문이 실행되거나 메타 속성 작업이 수행될 때까지 알 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 관련 문 특성 SQL_SOPT_SS_DEFER_PREPARE를 SQL_DP_OFF로 설정하면 이 기본 동작을 해제할 수 있습니다.  
   
  지연 된 경우 준비, 호출 **SQLDescribeCol** 하거나 **SQLDescribeParam** 호출 하기 전에 **SQLExecute** 서버에 대 한 추가 왕복을 생성 합니다. 온 **SQLDescribeCol**, 드라이버 쿼리에서 WHERE 절을 제거 하 고 쿼리에서 반환 된 첫 번째 결과 집합에서 열의 설명을 가져올 SET FMTONLY ON을 사용 하 여 서버에 보냅니다. 온 **SQLDescribeParam**, 식 또는 쿼리에서 매개 변수 표식에 참조 되는 열에 대 한 설명을 가져오려면 서버를 호출 하는 드라이버입니다. 이 메서드에는 하위 쿼리의 매개 변수는 확인할 수 없는 등의 몇 가지 제한이 있습니다.  
   

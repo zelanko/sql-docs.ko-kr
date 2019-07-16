@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005899"
 ---
 # <a name="generate-mdx"></a>Generate(MDX)
 
@@ -45,7 +44,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *구분 기호*  
  문자열 식으로 표현된 유효한 구분 기호입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  두 번째 집합을 지정 합니다 **생성** 함수는 첫 번째 집합의 각 튜플에 두 번째 집합의 튜플을 적용 하 여 생성 된 집합을 반환 하 고 결과 조인한 다음 집합을 union으로 합니다. 하는 경우 **모든** 지정 된 경우 함수에는 결과 집합에 중복 요소가 유지 됩니다.  
   
  문자열 식이 지정 하는 경우는 **생성** 함수는 지정 된 문자열 식을 첫 번째 집합의 각 튜플에 대해 계산한 다음 결과 연결 하 여 생성 된 문자열을 반환 합니다. 연결된 문자열에서 각 결과를 구분하여 문자열을 구분할 수도 있습니다.  

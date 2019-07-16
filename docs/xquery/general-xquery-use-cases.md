@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb95142a49fffef666be2e775e6e419c4df55290
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004527"
 ---
 # <a name="general-xquery-use-cases"></a>일반 XQuery 사용 사례
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "54256218"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>1. 제품 및 중량 검색을 위한 카탈로그 설명 쿼리  
+### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>A. 제품 및 중량 검색을 위한 카탈로그 설명 쿼리  
  다음 쿼리는 제품 카탈로그 설명에서 제품 모델 ID와 중량(있는 경우)을 반환합니다. 쿼리는 다음 형식의 XML을 생성합니다.  
   
 ```  
@@ -59,7 +58,7 @@ WHERE CatalogDescription is not null
   
 -   쿼리 본문은 필요한 XML을 생성합니다.  
   
--   WHERE 절에는 **exist ()** 메서드 제품 카탈로그 설명이 포함 된 행만을 찾는 데 사용 됩니다. 즉, <`ProductDescription`> 요소가 포함된 XML을 검색합니다.  
+-   WHERE 절에는 **exist ()** 메서드 제품 카탈로그 설명이 포함 된 행만을 찾는 데 사용 됩니다. 즉, 포함 된 XML은 <`ProductDescription`> 요소입니다.  
   
  다음은 결과입니다.  
   
@@ -72,7 +71,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 다음 쿼리는 카탈로그 설명에서 사양을 나타내는 <`Specifications`> 요소에 있는 중량을 나타내는 <`Weight`> 요소가 포함된 제품 모델에 대해서만 같은 정보를 검색합니다. 이 예에서는 WITH XMLNAMESPACES를 사용하여 pd 접두사와 해당 네임스페이스 바인딩을 선언합니다. 이러한 방식으로 바인딩을 모두에서 설명 되지 않은 합니다 **query ()** 메서드 및 합니다 **exist ()** 메서드.  
+ 다음 쿼리는 같은 정보를 검색 하지만 해당 제품 모델에 대해서만 카탈로그 설명이 포함 되어 있습니다, 두께 <`Weight`> 요소 사양에는 <`Specifications`> 요소입니다. 이 예에서는 WITH XMLNAMESPACES를 사용하여 pd 접두사와 해당 네임스페이스 바인딩을 선언합니다. 이러한 방식으로 바인딩을 모두에서 설명 되지 않은 합니다 **query ()** 메서드 및 합니다 **exist ()** 메서드.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -89,8 +88,8 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  이전 쿼리에서 **exist ()** 메서드의 **xml** 데이터 형식을 WHERE 절 있는지를 확인을 <`Weight`> 요소에는 <`Specifications`> 요소입니다.  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>2. 카탈로그 설명에 소형 전면 사진이 포함된 제품 모델의 제품 모델 ID 검색  
- XML 제품 카탈로그 설명에는 <`Picture`> 요소에 제품 사진이 포함됩니다. 각 사진은 몇 가지 속성을 갖고 있습니다. 여기에는 사진 각도를 나타내는 <`Angle`> 요소와 크기를 나타내는 <`Size`> 요소가 포함됩니다.  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>2\. 카탈로그 설명에 소형 전면 사진이 포함된 제품 모델의 제품 모델 ID 검색  
+ XML 제품 카탈로그 설명에 제품 사진이 포함 된 <`Picture`> 요소입니다. 각 사진은 몇 가지 속성을 갖고 있습니다. 여기에 사진 각도 나타내는 포함 됩니다.는 <`Angle`> 요소와 크기를 <`Size`> 요소입니다.  
   
  카탈로그 설명에 소형 전면 사진이 포함된 제품 모델에 대해 이 쿼리는 다음과 같은 형식의 XML을 생성합니다.  
   
@@ -136,8 +135,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>3. 제품의 기본 목록 모델 이름과 기능이 쌍 묶인 각 쌍을 사용 하 여 만들기는 \<기능 > 요소  
- 제품 모델 카탈로그 설명에서 XML에는 몇 가지 제품 기능이 포함됩니다. 이러한 모든 기능은 <`Features`> 요소에 포함됩니다. 쿼리 사용 [XML 생성 (XQuery)](../xquery/xml-construction-xquery.md) 에 필요한 XML을 생성 합니다. 중괄호에 있는 식은 결과로 대체됩니다.  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>3\. 제품의 기본 목록 모델 이름과 기능이 쌍 묶인 각 쌍을 사용 하 여 만들기는 \<기능 > 요소  
+ 제품 모델 카탈로그 설명에서 XML에는 몇 가지 제품 기능이 포함됩니다. 이러한 모든 기능 포함 되는 <`Features`> 요소입니다. 쿼리 사용 [XML 생성 (XQuery)](../xquery/xml-construction-xquery.md) 에 필요한 XML을 생성 합니다. 중괄호에 있는 식은 결과로 대체됩니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -156,7 +155,7 @@ WHERE ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   $pd/p1:Features/*는 <`Features`>의 요소 노드 자식만 반환하지만 $pd/p1:Features/node()는 모든 노드를 반환합니다. 여기에는 요소 노드, 텍스트 노드, 처리 명령 및 주석이 포함됩니다.  
+-   $pd / p1:Features / *만 요소 노드 자식을 반환 <`Features`>, 하지만 $pd p1:Features/node() 모든 노드를 반환 합니다. 여기에는 요소 노드, 텍스트 노드, 처리 명령 및 주석이 포함됩니다.  
   
 -   두 개의 FOR 루프는 제품 이름 및 개별 기능이 반환되는 카티션 곱을 생성합니다.  
   
@@ -187,7 +186,7 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>4. 제품 모델 카탈로그 설명에서 목록의 제품 모델 이름, 모델 ID 및 내에 그룹화 된 기능을 \<제품 > 요소  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>4\. 제품 모델 카탈로그 설명에서 목록의 제품 모델 이름, 모델 ID 및 내에 그룹화 된 기능을 \<제품 > 요소  
  다음 쿼리는 제품 모델 이름, 모델 ID, 표시 및 기능 내에 그룹화 된 제품 모델 카탈로그 설명에 저장 된 정보를 사용 하는 \<제품 > 요소입니다.  
   
 ```  
@@ -223,8 +222,8 @@ WHERE ProductModelID=19
    ...  
 ```  
   
-### <a name="e-retrieve-product-model-feature-descriptions"></a>5. 제품 모델 기능 설명 검색  
- 다음 쿼리를 포함 하는 XML 생성을 <`Product`> 요소 **ProducModelID**를 **ProductModelName** 특성 및 처음 두 개의 제품 기능입니다. 특히 처음 두 개의 제품 기능은 <`Features`> 요소에 대한 처음 두 개의 자식 요소입니다. 기능이 더 많은 경우 빈 <`There-is-more/`> 요소를 반환합니다.  
+### <a name="e-retrieve-product-model-feature-descriptions"></a>5\. 제품 모델 기능 설명 검색  
+ 다음 쿼리를 포함 하는 XML 생성을 <`Product`> 요소 **ProducModelID**를 **ProductModelName** 특성 및 처음 두 개의 제품 기능입니다. 특히 처음 두 개의 제품 기능은의 처음 두 명의 자식 요소는 <`Features`> 요소입니다. 더 많은 기능이 없으면 빈 반환 <`There-is-more/`> 요소입니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -250,10 +249,10 @@ WHERE CatalogDescription is not NULL
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   FOR ... RETURN 루프 구조는 처음 두 개의 제품 기능을 검색합니다. 합니다 **position ()** 함수는 시퀀스에서 요소의 위치를 찾는 데 사용 됩니다.  
+-   FOR... RETURN 루프 구조는 처음 두 개의 제품 기능을 검색합니다. 합니다 **position ()** 함수는 시퀀스에서 요소의 위치를 찾는 데 사용 됩니다.  
   
-### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>6. 제품 카탈로그 설명에서 "ons"로 끝나는 요소 이름 찾기  
- 다음 쿼리는 카탈로그 설명을 검색하고 이름이 "ons"로 끝나는 <`ProductDescription`> 요소에 있는 모든 요소를 반환합니다.  
+### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>6\. 제품 카탈로그 설명에서 "ons"로 끝나는 요소 이름 찾기  
+ 다음 쿼리는 카탈로그 설명을 검색 하 고 모든 요소를 반환 합니다 <`ProductDescription`> 이름이 "ons"로 끝나는 요소입니다.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -280,7 +279,7 @@ ProductModelID   Result
                    </Root>          
 ```  
   
-### <a name="g-find-summary-descriptions-that-contain-the-word-aerodynamic"></a>7. "Aerodynamic"이라는 단어가 포함된 요약 설명 찾기  
+### <a name="g-find-summary-descriptions-that-contain-the-word-aerodynamic"></a>7\. "Aerodynamic"이라는 단어가 포함된 요약 설명 찾기  
  다음 쿼리는 제품 카탈로그의 요약 설명에 "Aerodynamic"이라는 단어가 포함된 제품 모델을 검색합니다.  
   
 ```  
@@ -300,7 +299,7 @@ WHERE CatalogDescription.value('
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   WHERE 절을 사용하여 카탈로그 설명에서 <`Summary`> 요소에 "Aerodynamic"이라는 단어가 들어 있는 행만 검색합니다.  
+-   WHERE 절은 카탈로그 설명에 "aerodynamic 이라는" 단어를 포함 하는 행만 검색 하는 데 사용 되는 <`Summary`> 요소입니다.  
   
 -   합니다 **contains ()** 함수는 사용 하는 경우 단어 텍스트에 포함 되어 있는지 확인 합니다.  
   
@@ -321,8 +320,8 @@ ProductModelID Result
       </Prod>    
 ```  
   
-### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>8. 카탈로그 설명에 제품 모델 사진이 포함되지 않은 제품 모델 찾기  
- 다음 쿼리는 카탈로그 설명에 <`Picture`> 요소가 포함되지 않은 제품 모델에 대한 ProductModelID를 검색합니다.  
+### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>8\. 카탈로그 설명에 제품 모델 사진이 포함되지 않은 제품 모델 찾기  
+ 다음 쿼리는 Productmodelid 제품 모델 카탈로그 설명 수행 된 이상에 대 한 포함 하는 검색 된 <`Picture`> 요소입니다.  
   
 ```  
 SELECT  ProductModelID  
@@ -337,7 +336,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   경우는 **exist ()** 메서드가 False (0)을 반환 하는 WHERE 절, 제품 모델 ID가 반환 됩니다. 그렇지 않으면 제품 모델 ID가 반환되지 않습니다.  
   
--   모든 제품 설명에는 <`Picture`> 요소가 포함되기 때문에 이 경우 결과 집합이 비어 있습니다.  
+-   모든 제품 설명에 포함 하기 때문에 <`Picture`> 요소를 결과 집합이 비어이 경우.  
   
 ## <a name="see-also"></a>관련 항목  
  [계층 구조와 관련 된 XQueries](../xquery/xqueries-involving-hierarchy.md)   

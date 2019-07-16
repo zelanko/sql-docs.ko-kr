@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942833"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE, DELETE 및 INSERT 문
 SQL 기반 응용 프로그램 실행 하 여 테이블에 변경 내용을 확인 합니다 **업데이트**, **삭제**, 및 **삽입** 문입니다. 이러한 문은 SQL 최소 문법 규칙 수준은의 일부 이며 모든 드라이버 및 데이터 원본에서 지원 되어야 합니다.  

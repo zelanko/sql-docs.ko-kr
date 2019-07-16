@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64e683ebe83da31f678f1a5ec1e6c97abf1e601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936972"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47824811"
 ## <a name="permissions"></a>사용 권한  
  보안 주체에 있어야 **선택** 권한. 기본적으로 이 권한은 Public에 부여됩니다.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]항목을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

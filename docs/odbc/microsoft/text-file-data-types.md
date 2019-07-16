@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23416cb067507d821701e57255fdc6f81ee607c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939718"
 ---
 # <a name="text-file-data-types"></a>텍스트 파일 데이터 형식
 다음 표에서 텍스트 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. 일부 ODBC SQL 데이터 형식이 텍스트 ODBC 드라이버에서 지원 하는지 참고 합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62633008"
   
  다음 표에서 텍스트 데이터 형식의 제한 사항 보여 줍니다.  
   
-|데이터 형식|Description|  
+|데이터 형식|설명|  
 |---------------|-----------------|  
 |CHAR|0 CHAR 열을 만들 지정 되지 않은 길이 실제로 255 bit 열을 반환 합니다.<br /><br /> 구분 기호로 분리 된 파일에 CHAR 열 수도 있고 있습니다 처음과 끝; 큰따옴표 구분 기호 고정 길이 파일에서 큰따옴표를 구분 기호로 사용 되지 않습니다.|  
 |DATETIME|MM-DD-YY (예: 92-01-17)<br /><br /> MMM DD YY (예를 들어 1 월 1 일-17-92)<br /><br /> DD-MMM-YY (예를 들어 17-월-92)<br /><br /> YYYY-월-일 (예: 1992-01-17)<br /><br /> YYYY-MMM-일 (예: 1992-월-17)<br /><br /> 혼합된 날짜 구분 기호 테이블 내에서 허용 되지 않습니다.<br /><br /> 텍스트 ISAM Windows 제어판의 국가별 설정에 따라 미국 또는 유럽 형식으로 DATETIME 필드에 서식을 지정 합니다.|  

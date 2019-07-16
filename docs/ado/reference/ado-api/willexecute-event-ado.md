@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 571c63e0b8e06c08fb066c3bb6b2d42a019895e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936610"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
 합니다 **WillExecute** 이벤트 연결에서 보류 중인 명령이 실행 되기 전에 호출 됩니다.  
@@ -59,7 +58,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  합니다 [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) 이 이벤트 알림이 적용 되는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **WillExecute** 이벤트를 연결으로 인해 발생할 수 있습니다.  [Execute 메서드 (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [Execute 메서드 (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md), 또는 [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 *pConnection* 매개 변수는 항상 올바른 참조를 포함 한 **연결** 개체입니다. 이벤트로 인해 이면 **Connection.Execute**, *pRecordset* 하 고 *pCommand* 매개 변수를 설정 **Nothing**합니다. 이벤트로 인해 이면 **Recordset.Open**의 *pRecordset* 매개 변수는 참조를 **레코드 집합** 개체와 *pCommand* 매개 변수가 **Nothing**합니다. 이벤트로 인해 이면 **Command.Execute**, *pCommand* 매개 변수는 참조를 **명령** 개체와 *pRecordset* 매개 변수가 **Nothing**합니다.  
   
  **WillExecute** 검사 하 고 보류 중인 실행 매개 변수를 수정할 수 있습니다. 이 이벤트는 보류 중인 명령을 취소 요청을 반환할 수 있습니다.  

@@ -2,19 +2,18 @@
 title: Analytics Platform System의 워크 로드 관리 | Microsoft Docs
 description: Analytics Platform System의 워크 로드 관리 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959743"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System의 워크 로드 관리
 
@@ -58,7 +57,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>리소스 클래스 설명  
 다음 표에서 리소스 클래스 및 해당 시스템 리소스 할당에 설명합니다.  
   
-|리소스 클래스|중요도 요청 합니다.|최대 메모리 사용 *|동시성 슬롯 수 (최대 32 =)|Description|  
+|리소스 클래스|중요도 요청 합니다.|최대 메모리 사용 *|동시성 슬롯 수 (최대 32 =)|설명|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |기본|보통|400MB|1|기본적으로 각 로그인에는 적은 양의 메모리 및 동시성 리소스의 요청에 대 한 허용 됩니다.<br /><br />로그인은 리소스 클래스에 추가 되 면 새 클래스는 우선 합니다. 모든 리소스 클래스에서 로그인을 삭제 하면 기본 리소스 할당에 다시 로그인이 되돌립니다.|  
 |MediumRC|보통|1200 MB|3|중간 리소스 클래스를 필요로 할 수 있는 요청 예제:<br /><br />크게는 CTAS 작업 해시 조인 합니다.<br /><br />더 많은 메모리를 디스크에 캐시 하지 않도록 해야 하는 작업을 선택 합니다.<br /><br />클러스터형된 columnstore 인덱스에 데이터를 로드 합니다.<br /><br />빌드, 다시 작성 및 10 ~ 15 개 열이 있는 작은 테이블에 클러스터형된 columnstore 인덱스 다시 구성 합니다.|  
@@ -131,7 +130,7 @@ SQL 문 및 리소스 클래스에 의해 제어 되는 작업:
   
 -   UPDATE  
   
--   Delete  
+-   DELETE  
   
 -   RESTORE DATABASE 더 많은 계산 노드를 사용 하 여 어플라이언스로 복원 하는 경우.  
   
@@ -140,7 +139,7 @@ SQL 문 및 리소스 클래스에 의해 제어 되는 작업:
 ## <a name="Limits"></a>제한 사항  
 리소스 클래스 할당 메모리 및 동시성을 제어합니다.  입/출력 작업을 제어 하지 않는다는 점에서 합니다.  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="Metadata"></a>메타 데이터  
 리소스 클래스 및 리소스 클래스 멤버에 대 한 정보를 포함 하는 Dmv 합니다.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

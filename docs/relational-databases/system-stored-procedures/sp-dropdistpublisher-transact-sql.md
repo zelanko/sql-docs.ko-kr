@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acc73e057ff8b91987406e74a28563fecfc9278
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fcb1487d4291116bfb6fc0ad266b147e0fd69981
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927832"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropdistpublisher** 모든 유형의 복제에 사용 됩니다.  
   
  게시자를 삭제할 수 없는 경우 Oracle 게시자를 삭제 하는 경우 **sp_dropdistpublisher** 반환 오류 및 게시자에 대 한 배포자 개체가 제거 됩니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3122b3aa2f53da69f88e6ffad508f12c8e10da1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017063"
 ---
 # <a name="ascendants-mdx"></a>Ascendants(MDX)
 
@@ -32,7 +31,7 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **상위 항목** 함수 멤버의 계층의 최상위까지 멤버 자체부터 멤버의 상위 항목 모두 반환 합니다; 지정된 된 멤버에 대 한 계층의 후 위 순회 수행 보다 구체적으로, 한 다음 자체를 포함 하 여 집합의 멤버에 관련 된 모든 상위 항목 멤버를 반환 합니다. 이 달리는 합니다 [상위](../mdx/ancestor-mdx.md) 특정 상위 항목 멤버 또는 특정 수준에서 상위 항목을 반환 하는 함수입니다.  
   
 ## <a name="examples"></a>예  

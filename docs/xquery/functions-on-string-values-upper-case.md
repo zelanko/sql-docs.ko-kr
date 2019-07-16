@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9d20e638fbbedfe1985ac66ee1cfd336fa291196
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004611"
 ---
 # <a name="functions-on-string-values---upper-case"></a>문자열 값 함수 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +41,12 @@ fn:upper-case($arg as xs:string?) as xs:string
 |용어|정의|  
 |*$arg*|대문자로 변환될 문자열 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 값 *$arg* 는 비어 있는 경우 길이가 0 인 문자열 반환 됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-a-string-to-upper-case"></a>1. 문자열을 대문자로 변경  
+### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
  다음 예제에서는 입력된 문자열을 변경 ' abcDEF! @4'를 대문자로 변환 합니다.  
   
 ```  
@@ -55,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>2. 특정 문자열 검색  
+### <a name="b-search-for-a-specific-character-string"></a>2\. 특정 문자열 검색  
  다음 예에서는 upper-case 함수를 사용하여 대/소문자를 구분하지 않는 검색을 수행하는 방법을 보여 줍니다.  
   
 ```  

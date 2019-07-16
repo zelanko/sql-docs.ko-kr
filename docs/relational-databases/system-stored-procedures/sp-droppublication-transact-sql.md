@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b8cda79919c318b6bee5817731e4ca83aea17aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: da51093c6d2c5eb670a35a8cce09b6727b3507f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933850"
 ---
 # <a name="spdroppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_droppublication** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_droppublication** 재귀적으로 게시와 연결 된 모든 문서를 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 정보를 참조 하세요 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) 하 고 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)합니다.  

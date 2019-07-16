@@ -2,19 +2,18 @@
 title: PDW 서비스 상태-Analytics Platform System | Microsoft Docs
 description: Analytics Platform System에 대 한 상태를 서비스 하는 병렬 데이터 웨어하우스 (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960361"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Analytics Platform System에 대 한 병렬 데이터 웨어하우스 서비스 상태
 병렬 데이터 웨어하우스 **서비스 상태** 페이지는 Microsoft Analytics Platform System Configuration Manager에서 모든 SQL Server PDW 서비스의 현재 상태가 표시 되며 PDW 서비스 중지 및 시작 하는 기능을 제공 합니다. 이것이 PDW 서비스 시작 및 중지에 대 한 지원 되는 유일한 방법입니다. 개별 구성 요소 또는 서비스를 시작할 수 없습니다 독립적으로 참고 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14f06b98896a63f8e19ce22fb9cd1eb5b181f481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921932"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>ODBC 연결 풀링에서 RDS 사용
 ODBC 데이터 소스를 사용 하는 경우의 연결 풀링 옵션에서 인터넷 정보 서비스 (IIS)를 사용 하 여 클라이언트 부하의 처리 성능을 향상 시킬 수 있습니다. 연결 풀링은 자주 사용 되는 연결에서 열려 있는 상태를 유지 관리 연결에 대 한 리소스에 대 한 관리자입니다.  
@@ -84,7 +83,7 @@ ODBC 데이터 소스를 사용 하는 경우의 연결 풀링 옵션에서 인�
   
 4.  변경 내용을 저장 하 고 유틸리티를 종료 완료를 클릭 합니다.  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
   
 1.  시작 메뉴에서 Microsoft SQL Server 7.0, 프로그램, 가리키고 클라이언트 네트워크 유틸리티를 클릭 합니다.  
   
@@ -112,7 +111,7 @@ ODBC 데이터 소스를 사용 하는 경우의 연결 풀링 옵션에서 인�
   
 6.  완료를 클릭 합니다.  
   
-### <a name="for-microsoft-sql-server-70"></a>For Microsoft SQL Server 7.0:  
+### <a name="for-microsoft-sql-server-70"></a>Microsoft SQL server 7.0:  
   
 1.  시작 메뉴에서 Microsoft SQL Server 7.0, 프로그램, 가리키고 클라이언트 구성 유틸리티를 클릭 합니다.  
   

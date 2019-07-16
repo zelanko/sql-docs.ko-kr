@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 96e2bee47c97e85421b074e870c9dab1dd46220a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028933"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(SybaseToSQL)
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스 개체를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 결과 데이터베이스 개체를 로드할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 개체를 만드는 SSMA를 포함할 수 있습니다 또는 개체를 스크립팅 합니다 하 고 직접 스크립트를 실행할 수 있습니다. SSMA의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스.  

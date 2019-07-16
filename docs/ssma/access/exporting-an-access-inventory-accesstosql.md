@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006558"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이션하려면 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트의 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 검토 하 고 데이터베이스 및 마이그레이션하려면 해당 데이터베이스 내의 개체가 결정 인벤토리 메타 데이터를 쿼리할 수 있습니다. 이 인벤토리 사용 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  

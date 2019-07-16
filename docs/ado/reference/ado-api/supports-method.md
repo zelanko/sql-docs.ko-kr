@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d1df1d780cf9e1e631f6b146e45cc0a34da9438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936701"
 ---
 # <a name="supports-method"></a>Supports 메서드
 지정 된 결정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 특정 종류의 기능을 지원 합니다.  
@@ -41,7 +40,7 @@ boolean = recordset.Supports(CursorOptions )
  *CursorOptions*  
  A **긴** 하나 이상의 구성 된 식 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **지원** 기능의 유형을 확인 하는 방법을 **레코드 집합** 지원 개체입니다. 경우는 **레코드 집합** 개체에 있는 해당 상수는 기능을 지원 합니다 *CursorOptions*의 **지 원하는** 메서드가 반환 되는 **True**. 그렇지 **False**합니다.  
   
 > [!NOTE]

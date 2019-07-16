@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12d6c57e59ee37443b9ec600d8eb760c7f53018a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010752"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

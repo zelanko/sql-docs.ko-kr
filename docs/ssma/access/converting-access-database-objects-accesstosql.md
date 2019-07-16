@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006624"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
 Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음 스키마를 변환할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마입니다.  
@@ -56,11 +55,11 @@ Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion]
   
 |개체 액세스|결과 SQL Server 개체|  
 |-----------------|-------------------------------|  
-|테이블|테이블|  
+|table|table|  
 |column|column|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
-|쿼리|뷰<br /><br />가장 선택 쿼리 보기로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />크로스탭 쿼리 매개 변수를 사용 하는 SELECT 쿼리가 없으며 변환 되지 않습니다.|  
+|query|뷰<br /><br />가장 선택 쿼리 보기로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />크로스탭 쿼리 매개 변수를 사용 하는 SELECT 쿼리가 없으며 변환 되지 않습니다.|  
 |보고서|변환 되지 않음|  
 |폼|변환 되지 않음|  
 |매크로|변환 되지 않음|  
@@ -88,7 +87,7 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환 하 고을 SS
   
     -   를 변환 하거나 개별 테이블을 생략 하려면 데이터베이스를 확장 **테이블**, 다음을 선택 하거나 표 옆의 확인란의 선택을 취소 합니다.  
   
-3.  다음 중 하나를 수행합니다.  
+3.  다음 작업 중 하나를 수행합니다.  
   
     -   스키마로 변환 하려면 마우스 오른쪽 단추로 클릭 **데이터베이스** 선택한 **스키마 변환**합니다.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899169"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|미러된 데이터베이스의 이름입니다.|  
 |**role**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
@@ -100,7 +99,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|미러 데이터베이스가 현재 동기화되는 주 서버의 대략적인 시스템 클럭 시간입니다. 이 값은 주 서버 인스턴스에서만 의미가 있습니다.|  
 |**local_time**|**datetime**|이 행이 업데이트된 로컬 서버 인스턴스의 시스템 클럭 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dbmmonitorresults** 의 컨텍스트에서만 실행할 수 있습니다 합니다 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  

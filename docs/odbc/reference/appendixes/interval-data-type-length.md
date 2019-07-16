@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947593"
 ---
 # <a name="interval-data-type-length"></a>간격 데이터 형식 길이
 다음 규칙은 문자에서 간격 데이터 형식의 길이 확인 하는 데 사용 됩니다. 길이 문자의 수로 표시 됩니다. 문자 집합을 따라 바이트 수가 달라 집니다. 길이 함께 추가 하는 다음과를 같습니다.  

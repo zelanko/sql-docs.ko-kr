@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006610"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>서버 연결 파일 (AccessToSQL) 만들기
 서버 정보 수 스크립트 파일의 서버 섹션에서 중 하나를 지정 합니다. 별도 서버 연결 파일에 서버 정보를 지정할 수도 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트와 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
@@ -67,6 +66,6 @@ ms.locfileid: "63138845"
 ## <a name="next-step"></a>다음 단계  
 운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SSMA 콘솔 (Access)를 실행합니다.](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

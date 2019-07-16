@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926791"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 모든 데이터 공급자에서 상대적으로 균일 한 기능입니다.
@@ -57,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  기본 데이터 공급자가 지원 되는 경우에 동적 속성 DBPROP_SERVERDATAONINSERT 커서 서비스에서 지원 되지 않습니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |자동 다시 계산 (DBPROP_ADC_AUTORECALC)|이 값을 얼마나 자주 나타냅니다 Data Shaping Service를 사용 하 여 만든 레코드 집합에 대 한 계산 및 집계 열이 계산 됩니다. 기본값 (값 = 1) Data Shaping Service 값이 변경 되었는지 확인 될 때마다 다시 계산 합니다. 값이 0 이면 계층을 처음으로 빌드될 때 계산 또는 집계 열만 계산 됩니다.|
 |일괄 처리 크기 (DBPROP_ADC_BATCHSIZE)|데이터 저장소에 전송 되기 전에 일괄 처리할 수 있는 update 문의 수를 나타냅니다. 일괄 처리에서 더 많은 문이 데이터에 더 적은 왕복을 저장합니다.|
@@ -83,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>기본 제공 속성 동작
  OLE DB에 대 한 커서 서비스는 특정 기본 제공 속성의 동작을도 영향을 줍니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형의 보완을 **레코드 집합**합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|에 대 한 사용 가능한 잠금의 종류를 보완을 **레코드 집합**합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|

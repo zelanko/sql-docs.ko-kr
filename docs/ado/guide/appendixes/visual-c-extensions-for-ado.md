@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccd783bdb7bf266bfdc83c3a02520345d707ceea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926371"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO용 Visual C++ 확장
 시각적 개체를 사용 하 여 ADO 프로그래밍의 기본 메서드를 C++ 을 사용 하는 **#import** 지시문에 설명 된 대로 [Microsoft Visual C++ ADO 프로그래밍](../../../ado/guide/appendixes/visual-c-ado-programming.md). 이전 버전의 ADO 시각적 개체를 사용 하 여 프로그래밍 하는 대체 방법을와 함께 제공 되는 반면 C++: 시각적 개체 C++ 확장 합니다. 이 섹션에서는 시각적 개체를 유지 해야 하는 사람에 게이 기능을 설명 C++ 확장 코드 이지만, 새 ADO 코드 써야 #을 사용 하 여**가져올**합니다.

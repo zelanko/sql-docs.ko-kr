@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a2971ef09877a3a6e86334563913941282244f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005747"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 함수(SQLProcedureColumns Function)
 **규칙**  
@@ -92,7 +91,7 @@ SQLRETURN SQLProcedureColumns(
 ## <a name="diagnostics"></a>진단  
  때 **SQLProcedureColumns** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 호출 및 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLProcedureColumns** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 앞 드라이버에서 반환 된 Sqlstate 설명은 관리자입니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
@@ -114,7 +113,7 @@ SQLRETURN SQLProcedureColumns(
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하려면 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
 ## <a name="comments"></a>주석  
- 이 함수는 대개 프로시저 매개 변수 및 있으면 프로시저에서 반환 된 집합을 결과 집합을 구성 하는 열에 대 한 정보를 검색할 문 실행 하기 전에 사용 됩니다. 자세한 내용은 [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)합니다.  
+ 이 함수는 대개 프로시저 매개 변수 및 있으면 프로시저에서 반환 된 집합을 결과 집합을 구성 하는 열에 대 한 정보를 검색할 문 실행 하기 전에 사용 됩니다. 자세한 내용은 [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)를 참조하세요.  
   
 > [!NOTE]  
 >  **SQLProcedureColumns** 프로시저를 사용 하는 모든 열을 반환 하지 않을 수 있습니다. 예를 들어, 드라이버는 프로시저를 생성 하는 결과 집합의 열으로 사용 된 매개 변수에 대 한 유일한 정보를 반환할 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_file_space_usage (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b803b86c216d877c0e056dd4892931575ca91010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e43751672a9ddf3f518514a7f3a3aa034264c026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004945"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62741939"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_file_space_usage**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|데이터베이스 ID입니다.|  
 |file_id|**smallint**|파일의 ID입니다.<br /><br /> file_id에서 file_id 매핑됩니다 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 하에서 fileid [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)합니다.|  
@@ -52,7 +51,7 @@ ms.locfileid: "62741939"
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
 |distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 배포와 관련 된 고유 숫자 id입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  페이지 수는 항상 익스텐트 수준에 대한 값입니다. 따라서 페이지 수는 항상 8의 배수입니다. GAM(Global Allocation Map) 및 SGAM(Shared Global Allocation Map) 할당 페이지를 포함하는 익스텐트는 할당된 단일 익스텐트로, 앞서 설명된 페이지 수에 포함되지 않습니다. 페이지 및 익스텐트에 대 한 자세한 내용은 참조 하세요. [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)합니다. 
   
  현재 버전 저장소의 콘텐츠가 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)합니다. 버전 저장소 페이지는 전역 리소스이기 때문에 세션 및 태스크 수준이 아닌 파일 수준에서 추적됩니다. 세션에서 버전을 생성할 수 있지만 버전은 세션 종료 시 제거할 수 없습니다. 버전 저장소를 정리할 때는 특정 버전에 대한 액세스가 필요한 가장 오래 실행 중인 트랜잭션을 고려해야 합니다. elapsed_time_seconds 열을 확인 하 여 버전 저장소 정리와 관련 된 가장 오래 실행 중인 트랜잭션을 검색할 수 있습니다 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)합니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "62741939"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="examples"></a>예  
   

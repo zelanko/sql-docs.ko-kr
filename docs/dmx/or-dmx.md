@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4a57d0b1c7f1fa75504e786712029326fc958135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76b1f8ac9a5f7ad584f42110f2c3b22e5c1918ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008138"
 ---
 # <a name="or-dmx"></a>OR(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>반환 값  
  인수 중 하나 또는 둘 모두가 TRUE로 계산되면 TRUE를 반환하고 그렇지 않으면 FALSE를 반환하는 부울 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 두 인수는 연산자가 논리 분리를 수행하기 전에 부울 값(0은 FALSE, 0이 아닌 경우 TRUE)으로 처리됩니다. 인수 중 하나 또는 둘 모두가 TRUE로 계산되는 경우 이 연산자는 TRUE를 반환합니다. 경우 *Expression1* TRUE로 평가 되 고 *Expression2* FALSE로 평가 연산자 TRUE를 반환 합니다.  
   
  다음 표에서는 논리 분리가 수행되는 방법을 설명합니다.  

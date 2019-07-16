@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937902"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_lookupcustomresolver** 병합 복제에 사용 됩니다.  
   
  **sp_lookupcustomresolver** 에 대 한 NULL 값을 반환 *resolver_clsid* 경우 구성 요소에 등록 되지 않았습니다 "00000000-0000-0000-0000-000000000000"의 값과 분포 등록에 속하는 경우는 .NET 어셈블리 비즈니스 논리 처리기로 등록 합니다.  

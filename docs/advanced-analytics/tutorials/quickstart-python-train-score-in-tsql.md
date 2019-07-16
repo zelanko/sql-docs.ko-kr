@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e8bacc383eba1148c1b357c344bc483e824df99b
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962059"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>빠른 시작: 만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 83db7cfc6cac6dde34ca8d2a974c9d926ba9f086
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938466"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 속성(ADO MD)
 자식 즉시 따르는지 여부를 나타냅니다 합니다 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 축의 합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66709450"
 ## <a name="return-values"></a>반환 값  
  반환 된 **부울** 값 및 읽기 전용입니다. **DrilledDown** 반환 **True** 축에 현재 멤버의 자식 멤버가 없으면입니다. **DrilledDown** 반환 **False** 현재 멤버에 축에 하나 이상의 자식 멤버가 있는 경우.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **DrilledDown** 축이이 멤버 바로 다음에이 멤버의 자식이 하나 이상 있는지 여부를 결정 하는 속성입니다. 이 정보는 멤버를 표시할 때 유용 합니다.  
   
  이 속성 에서만 지원 됩니다 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 에 속하는 개체를 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체입니다. 이 속성에서 참조 되는 동안 오류가 발생 **멤버** 에 속하는 개체를 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체입니다.  

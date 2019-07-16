@@ -2,19 +2,18 @@
 title: Azure Blob storage에서 외부 데이터에 액세스 하는 PolyBase 구성 | Microsoft Docs
 description: 외부 Hadoop 연결할 Parallel Data Warehouse에서 PolyBase를 구성 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82c57ef57a01cabf2786c71fc53aed3660289451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960283"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage에서 외부 데이터에 액세스 하는 PolyBase를 구성 합니다.
 

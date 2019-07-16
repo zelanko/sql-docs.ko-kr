@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933379"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드(ADO)
 지정한 개수의 문자 또는 바이트 복사 (에 따라 [형식](../../../ado/reference/ado-api/type-property-ado-stream.md))에 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 간 **Stream** 개체입니다.  
@@ -44,7 +43,7 @@ Stream.CopyTo DestStream, NumChars
  *NumChars*  
  (선택 사항) **정수** 바이트 또는 원본의 현재 위치에서 복사할 문자 수를 지정 하는 값 **Stream** 대상으로 **Stream**합니다. 기본값은-1로, 모든 문자 또는 바이트를 현재 위치에서 복사 되도록 지정 [EOS](../../../ado/reference/ado-api/eos-property.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 지정한 수의 문자 또는 지정 된 현재 위치에서 시작 하는 바이트를 복사 합니다 [위치](../../../ado/reference/ado-api/position-property-ado.md) 속성입니다. 지정된 된 수까지 바이트 수를 사용할 수 있는 보다 크면 **EOS**, 다음만 문자 또는 바이트를 현재 위치의 **EOS** 복사 됩니다. 경우 값 *NumChars* -1 이거나 생략 하면 모든 문자 또는 현재 위치에서 시작 하는 바이트 복사 됩니다.  
   
  기존 경우 문자 또는 대상 스트림에 바이트를 복사 끝나는 지점 이후의 모든 내용이 그대로 남아 있고 잘리지 않습니다. **위치** 은 바로 다음의 마지막 바이트가 복사 바이트입니다. 이러한 바이트를 잘라내려면 원한다 면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  

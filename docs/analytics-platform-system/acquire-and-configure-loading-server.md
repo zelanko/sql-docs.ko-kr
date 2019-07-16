@@ -2,19 +2,18 @@
 title: 획득 및 병렬 데이터 웨어하우스 로드 서버-구성 | Microsoft Docs
 description: 이 문서에서는 획득 및 병렬 데이터 웨어하우스 (PDW)에 데이터 로드를 제출 하는 것에 대 한 비 어플라이언스 Windows 시스템으로 로드 서버를 구성 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961617"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>획득 및 병렬 데이터 웨어하우스 로드 서버 구성
 이 문서에서는 획득 및 병렬 데이터 웨어하우스 (PDW)에 데이터 로드를 제출 하는 것에 대 한 비 어플라이언스 Windows 시스템으로 로드 서버를 구성 하는 방법을 설명 합니다.  

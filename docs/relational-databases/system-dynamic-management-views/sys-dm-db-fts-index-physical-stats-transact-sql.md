@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c783eaf32e0f1ca37e14022ab981864747ca171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004936"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "62742029"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="examples"></a>예  
  다음 예에서는 연결된 전체 텍스트 또는 의미 체계 인덱스가 있는 모든 테이블에서 각 전체 텍스트 또는 의미 체계 인덱스의 논리적 크기를 쿼리하는 방법을 보여 줍니다.  

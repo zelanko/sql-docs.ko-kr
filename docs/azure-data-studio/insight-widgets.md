@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: jroth
-ms.openlocfilehash: 1be7f5b9fdc53f013908dc22464c28cbc219bd78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959520"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>서버 및 데이터베이스에 대 한 정보 위젯 사용 하 여 관리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

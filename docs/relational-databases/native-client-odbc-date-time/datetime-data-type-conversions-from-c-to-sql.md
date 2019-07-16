@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030434"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>날짜/시간 데이터 형식을 C에서 SQL로 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417224"
 
   이 항목에서는 C 형식에서 변환 하는 경우 고려해 야 할 문제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식입니다.  
   
- 다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 여기서 클라이언트 서버에서 정의 하는 다른 매개 변수의 소수 두 번째 정밀도 지정 하는 경우에 클라이언트 변환이 성공할 수도 있지만 서버에서 오류를 반환 할 때 **SQLExecute** 또는  **SQLExecuteDirect** 라고 합니다. 특히 ODBC 취급 소수로 나타낸 초는 잘림 오류가 발생 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반올림 동작은 등에서 이동할 때 발생 반올림; **datetime2(6)** 를 **datetime2(2)**. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
+ 다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 여기서 클라이언트 서버에서 정의 하는 다른 매개 변수의 소수 두 번째 정밀도 지정 하는 경우에 클라이언트 변환이 성공할 수도 있지만 서버에서 오류를 반환 할 때 **SQLExecute** 또는  **SQLExecuteDirect** 라고 합니다. 특히 ODBC 취급 소수로 나타낸 초는 잘림 오류가 발생 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반올림 동작은 등에서 이동할 때 발생 반올림; **datetime2(6)** 를 **datetime2(2)** . datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417224"
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
--   **-**: 변환이 지원되지 않습니다. SQLSTATE 07006 및 "제한된 데이터 형식 특성을 위반했습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.  
+-   **-** : 변환이 지원되지 않습니다. SQLSTATE 07006 및 "제한된 데이터 형식 특성을 위반했습니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
 -   **1**: 지정된 데이터가 유효하지 않으면 SQLSTATE 22007 "잘못된 날짜 시간 형식입니다"라는 메시지가 표시되고 진단 레코드가 생성됩니다.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417224"
   
     ||||  
     |-|-|-|  
-    |형식|암시된 소수 자릿수<br /><br /> 0|암시된 소수 자릿수<br /><br /> 1..9|  
+    |type|암시된 소수 자릿수<br /><br /> 0|암시된 소수 자릿수<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      그러나 SQL_C_TYPE_TIMESTAMP의 경우에는 소수 자릿수 초를 데이터 손실 없이 3자리로 나타낼 수 있고 열 크기가 23 이상인 경우 소수 자릿수 초의 자릿수는 정확히 3자리로 생성됩니다. 이 동작은 이전 ODBC 드라이버를 사용하여 개발된 응용 프로그램과의 호환성을 보장합니다.  
@@ -94,7 +93,7 @@ ms.locfileid: "52417224"
   
 -   **해당 없음**: 기존 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 이전 동작이 유지됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

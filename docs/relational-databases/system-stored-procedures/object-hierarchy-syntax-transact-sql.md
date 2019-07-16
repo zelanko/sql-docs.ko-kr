@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3fe5e6b71836854fc6cdcc409e61ef1936641def
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941982"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>개체 계층 구조 구문(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "47679651"
   
  큰따옴표(")가 필요합니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 *TraversedObject* 지정 하지 않으면 *PropertyOrMethod* 필요 합니다.  
   
  하는 경우 *PropertyOrMethod* 지정 하지 않으면 합니다 *TraversedObject* OLE Automation 저장 프로시저에서 개체 토큰 출력 매개 변수로 반환 됩니다. 경우 *PropertyOrMethod* 지정 된 속성 또는 메서드의 *TraversedObject* 호출 되 고 속성 값 또는 메서드 반환 값은 OLE Automation에서 출력 매개 변수로 반환 됩니다 저장된 프로시저입니다.  

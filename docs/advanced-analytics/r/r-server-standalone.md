@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407a4c87101b2d422afbb982c7a07d92e84d26f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962513"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (독립 실행형) 및 SQL server에서 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -89,7 +88,7 @@ SQL Server 누적 업데이트는 정기적으로 해제합니다. 기존 설치
 
 기존 인스턴스에 업데이트를 적용 하는 방법에 대 한 자세한 내용은 참조 하세요. [업데이트를 적용할](../install/sql-machine-learning-standalone-windows-install.md#apply-cu) 설치 지침에서.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
  [R Server (독립 실행형) 또는 Machine Learning Server (독립 실행형) 설치](../install/sql-machine-learning-standalone-windows-install.md)
 

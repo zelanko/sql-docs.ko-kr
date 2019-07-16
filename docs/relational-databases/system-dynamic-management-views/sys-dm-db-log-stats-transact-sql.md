@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004829"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ ms.locfileid: "47846321"
 
 *database_id* | NULL | **DEFAULT**
 
-데이터베이스의 ID입니다. `database_id`은 `int`입니다. 올바른 입력은 데이터베이스의 ID 번호 `NULL`, 또는 `DEFAULT`합니다. 기본값은 `NULL`입니다. `NULL` 및 `DEFAULT` 는 현재 데이터베이스의 컨텍스트에서 동등한 값입니다.  
+데이터베이스의 ID입니다. `database_id`가 `int`인 경우 올바른 입력은 데이터베이스의 ID 번호 `NULL`, 또는 `DEFAULT`합니다. 기본값은 `NULL`입니다. `NULL` 및 `DEFAULT` 는 현재 데이터베이스의 컨텍스트에서 동등한 값입니다.  
 기본 제공 함수 [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 지정할 수 있습니다. 사용 하는 경우 `DB_ID` 데이터베이스 이름을 지정 하지 않고 현재 데이터베이스의 호환성 수준을 90 이상 이어야 합니다.
 
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |데이터베이스 ID |  
 |recovery_model |**nvarchar(60)**   |   데이터베이스의 복구 모델입니다. 가능한 값은 다음과 같습니다. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
@@ -62,7 +61,7 @@ ms.locfileid: "47846321"
 |total_log_size_mb  |**float**  |   총 트랜잭션 로그 크기 (mb)입니다. |  
 |active_vlf_count   |**bigint** |   총 활성 [가상 로그 파일 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그에 있습니다.|  
 |active_log_size_mb |**float**  |   총 활성 트랜잭션 로그 크기 (mb)입니다.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   로그 잘림 느려지는 이유입니다. 값이 동일 `log_reuse_wait_desc` 열의 `sys.databases`합니다.  (이러한 값의 설명, 자세한 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />복제<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 일시적 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   로그 잘림 느려지는 이유입니다. 값이 동일 `log_reuse_wait_desc` 열의 `sys.databases`합니다.  (이러한 값의 설명, 자세한 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICATION<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 일시적 |  
 |log_backup_time    |**datetime**   |   마지막 트랜잭션 로그 백업 시간입니다.|   
 |log_backup_lsn |**nvarchar(24)**   |   마지막 트랜잭션 로그 백업 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)합니다.|   
 |log_since_last_log_backup_mb   |**float**  |   마지막 트랜잭션 로그 백업 이후 로그 크기 (mb) [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)합니다.|  
@@ -73,7 +72,7 @@ ms.locfileid: "47846321"
 |recovery_vlf_count |**bigint** |   총 수 [가상 로그 파일 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 를 장애 조치 또는 서버 재시작 발생 한 경우 복구할 수 있습니다. |  
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 실행 하는 경우 `sys.dm_db_log_stats` 보조 복제본으로 가용성 그룹에 참여 하는 데이터베이스에 대해 위에서 설명 하는 필드의 하위 집합만 반환 됩니다.  현재만 `database_id`하십시오 `recovery_model`, 및 `log_backup_time` 보조 데이터베이스에 대해 실행 하는 경우 반환 됩니다.   
 
 ## <a name="permissions"></a>사용 권한  
@@ -81,7 +80,7 @@ ms.locfileid: "47846321"
   
 ## <a name="examples"></a>예  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>1. 데이터베이스를 결정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 많은 Vlf 사용 하 여 인스턴스   
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. 데이터베이스를 결정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 많은 Vlf 사용 하 여 인스턴스   
 다음 쿼리는 로그 파일에 100 개가 넘는 Vlf 사용 하 여 데이터베이스를 반환합니다. 많은 Vlf 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수입니다.
 
 ```sql  
@@ -91,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>2. 데이터베이스를 결정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4 시간 보다 오래 된 트랜잭션 로그 백업 사용 하 여 인스턴스   
+### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>2\. 데이터베이스를 결정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4 시간 보다 오래 된 트랜잭션 로그 백업 사용 하 여 인스턴스   
 다음 쿼리는 인스턴스에서 데이터베이스에 대 한 마지막 로그 백업 시간을 결정합니다.
 
 ```sql  

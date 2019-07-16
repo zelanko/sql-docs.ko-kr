@@ -2,7 +2,6 @@
 title: 자동 통계 (분석 플랫폼 시스템)
 description: 분석 플랫폼 시스템 AU7에 도입 된 자동 통계 기능을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961276"
 ---
 # <a name="configure-auto-statistics"></a>자동 통계 다시 계산 구성
 

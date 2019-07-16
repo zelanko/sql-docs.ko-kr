@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950405"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -186,19 +185,19 @@ ms.locfileid: "58528815"
 >  이 정보는 경계 상자에서 미세한 차이로 누락된 개체가 있는지 여부를 확인하는 경우에만 사용됩니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- 경계 상자에 접한 수준 0에 있는 개체의 수입니다. Cell_attribute 값은 0입니다.  값이 **bigint**합니다.  
+ 경계 상자에 접한 수준 0에 있는 개체의 수입니다. (Cell_attribute 값은 0입니다.)  값이 **bigint**합니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- 공간 분할 수준 1에서 표 셀 경계 접한 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
+ 공간 분할 수준 1에서 표 셀 경계 접한 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- 표 셀 경계 공간 분할 수준 2에 접한 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
+ 표 셀 경계 공간 분할 수준 2에 접한 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- 표 셀 경계 공간 분할 수준 3에 접한 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
+ 표 셀 경계 공간 분할 수준 3에 접한 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- 공간 분할 수준 4에서 표 셀 경계에 접한 개체 셀의 수입니다. Cell_attribute 값은 0입니다. 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
+ 공간 분할 수준 4에서 표 셀 경계에 접한 개체 셀의 수입니다. (Cell_attribute 값은 0입니다.) 이 속성은 핵심 속성입니다. 값이 **bigint**합니다.  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  하나의 개체에 포함된 리프 셀을 포함하는 표의 전체 영역(전체 리프 셀) 비율입니다.  
@@ -301,7 +300,7 @@ ms.locfileid: "58528815"
 ## <a name="permissions"></a>사용 권한  
  사용자의 구성원 이어야 합니다 **공용** 역할입니다. 서버 및 개체에 대한 READ ACCESS 권한이 필요합니다. 모든 공간 인덱스 저장 프로시저에 적용됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  NULL 값이 포함된 속성은 반환 집합에 포함되지 않습니다.  
   
 ## <a name="examples"></a>예  

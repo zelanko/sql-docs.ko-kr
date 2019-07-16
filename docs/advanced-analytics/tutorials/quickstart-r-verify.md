@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961961"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>빠른 시작: SQL Server에 R이 있는지 확인 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

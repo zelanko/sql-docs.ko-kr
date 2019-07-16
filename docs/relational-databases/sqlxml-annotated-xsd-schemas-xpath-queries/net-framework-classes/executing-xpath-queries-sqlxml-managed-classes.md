@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fe2d8d88d2b12b2b0eac2e0a23644d1866dff2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1402886d70447a5bf0324d101136cb7c8f5ce065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934223"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>XPath 쿼리 실행(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

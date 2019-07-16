@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48554e48d09822b23320d36080084d4947882736
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936892"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 
 합니다 *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.    
   
--   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
 -   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|데이터베이스의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |**objectid**|**int**|개체의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
@@ -86,7 +85,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 임시 쿼리를 SQL 핸들 서버로 전송 되는 SQL 텍스트 기반의 해시 값 이며 데이터베이스에서 발생할 수 있습니다. 
 
 저장 프로시저, 트리거, 함수 등의 데이터베이스 개체용 SQL 핸들은 데이터베이스 ID, 개체 ID 및 개체 번호에서 파생됩니다. 
@@ -98,7 +97,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="examples"></a>예 
 
-### <a name="a-conceptual-example"></a>1. 개념적 예제
+### <a name="a-conceptual-example"></a>A. 개념적 예제
 다음은 전달 설명 하기 위해 기본 예제는 **sql_handle** 직접적으로 또는 사용 하 여 **CROSS APPLY**합니다.
   1.  활동을 만듭니다.  
 새 쿼리 창에서 다음 T-SQL을 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.   
@@ -133,7 +132,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>2. 평균 CPU 시간별 상위 5 개 쿼리에 대 한 정보  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>2\. 평균 CPU 시간별 상위 5 개 쿼리에 대 한 정보  
  다음 예에서는 상위 5개 쿼리에 대한 SQL 문 텍스트와 평균 CPU 시간을 반환합니다.  
   
 ```sql  
@@ -148,7 +147,7 @@ CROSS APPLY sys.dm_exec_sql_text(qs.sql_handle) AS st
 ORDER BY total_worker_time/execution_count DESC;  
 ```  
   
-### <a name="c-provide-batch-execution-statistics"></a>3. 일괄 처리 실행 통계 제공  
+### <a name="c-provide-batch-execution-statistics"></a>3\. 일괄 처리 실행 통계 제공  
  다음 예에서는 일괄 처리에서 실행되는 SQL 쿼리 텍스트를 반환하고 이에 대한 통계 정보를 제공합니다.  
   
 ```sql  
@@ -179,13 +178,13 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [sys.dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys.dm_exec_cursors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys.dm_exec_xml_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [적용을 사용 하 여](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

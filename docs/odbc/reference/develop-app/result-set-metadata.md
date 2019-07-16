@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d8da8c15c861fff4767aa598e1b989d8f699c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020593"
 ---
 # <a name="result-set-metadata"></a>결과 집합 메타데이터
 *메타 데이터* 데이터가 다른 데이터에 설명 합니다. 예를 들어 결과 집합 메타 데이터는 결과 집합의 열 수, 열, 이름, 전체 자릿수, null 허용 여부 및 등의 데이터 형식 같은 결과 집합을 설명합니다.  

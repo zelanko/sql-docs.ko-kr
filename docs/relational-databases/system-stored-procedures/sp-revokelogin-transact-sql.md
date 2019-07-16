@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944728"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_revokelogin** 지정 하는 계정을 사용 하 여 연결을 사용 하지 않도록 설정 합니다 *로그인* 매개 변수입니다. 그러나 Windows 그룹의 멤버 자격을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한이 부여된 Windows 사용자는 개별 액세스 권한이 취소된 후에도 그룹 멤버 자격으로 계속 연결할 수 있습니다. 마찬가지로, 경우 합니다 *로그인* Windows 그룹의 이름을 지정 하는 매개 변수를 별도로 된 해당 그룹의 구성원의 인스턴스에 대 한 액세스를 부여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결할 수 있습니다.  
   
  예를 들어, 경우 Windows 사용자 **ADVWORKS\john** Windows 그룹의 멤버인 **ADVWORKS\Admins**, 및 **sp_revokelogin** 의 액세스 권한도 해지 `ADVWORKS\john`:  

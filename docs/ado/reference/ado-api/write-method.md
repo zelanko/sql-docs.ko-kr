@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 59a89db47036129e3c345d26ded57ecf4e26fc84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945904"
 ---
 # <a name="write-method"></a>Write 메서드
 이진 데이터를 쓰는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -38,7 +37,7 @@ Stream.Write Buffer
  *Buffer*  
  A **Variant** 쓸 바이트의 배열을 포함 하는 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정 된 바이트는 **Stream** 각 바이트 사이 공백 넣지 않고 개체입니다.  
   
  현재 [위치](../../../ado/reference/ado-api/position-property-ado.md) 바이트 기록된 된 데이터를 다음으로 설정 됩니다. 합니다 **쓰기** 메서드 스트림에서 데이터의 나머지 부분을 잘라내지 않습니다. 이러한 바이트를 잘라내려면 원한다 면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  

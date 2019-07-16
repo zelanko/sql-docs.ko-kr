@@ -5,17 +5,16 @@ description: RESTful 웹 서비스 (미리 보기)를 사용 하 여 SQL Server 
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958888"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
 

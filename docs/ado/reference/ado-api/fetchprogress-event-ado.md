@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932825"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress 및(ADO)
 합니다 **FetchProgress**이벤트에 현재으로 가져온 보다 많은 행을 보고 하려면 시간이 오래 걸리는 비동기 작업을 하는 동안에 주기적으로 호출 됩니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -47,7 +46,7 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 레코드는 검색 되는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하는 경우 **FetchProgress** 자식이 있는 **레코드 집합**를 주의 하는 합니다 *진행률* 및 *MaxProgress* 매개 변수 값에서 파생 됩니다 기본 [커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 행 집합입니다. 반환 되는 값에는 현재 챕터에 레코드의 수 뿐만 아니라 기본 행 집합의 레코드 총 수를 나타냅니다.  
   
 > [!NOTE]

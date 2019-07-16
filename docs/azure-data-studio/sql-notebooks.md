@@ -10,13 +10,12 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959267"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 사용 하는 방법
 
@@ -83,12 +82,12 @@ PostgreSQL 서버 인스턴스에 연결 하려면 SQL 커널
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|커널|Description
+|커널|설명
 |:-----|:-----
 | SQL 커널 | 관계형 데이터베이스에서 대상으로 하는 SQL 코드를 작성 합니다.
 |PySpark3 및 PySpark 커널| 클러스터에서 Spark 계산을 사용 하 여 Python 코드를 작성 합니다.
 |Spark 커널|클러스터에서 Spark 계산을 사용 하 여 Scala 및 R 코드를 작성 합니다.
-|Python Kernel|로컬 개발에 대 한 Python 코드를 작성 합니다.
+|Python 커널|로컬 개발에 대 한 Python 코드를 작성 합니다.
 
 `Attach to` 연결할 커널에 대 한 컨텍스트를 제공 합니다. SQL 커널을 사용 하는 경우 있습니다 `Attach to` SQL Server 인스턴스 중 하나입니다.
 

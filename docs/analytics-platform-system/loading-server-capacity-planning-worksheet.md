@@ -2,19 +2,18 @@
 title: 로드 서버 용량 계획-Analytics Platform System | Microsoft Docs
 description: 이 용량 계획 워크시트를 사용 하면 로드 서버에 대 한 분석 플랫폼 시스템 Parallel Data Warehouse로 데이터 로드 요구 사항을 확인 합니다. "
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb15fdd3b20c538237b3e012df4217ad5568bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960662"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Analytics Platform System에 대 한 서버 용량 계획 워크시트에 로드
 이 용량 계획 워크시트를 사용 하면 로드 서버에 대 한 SQL Server PDW 데이터 로드 요구 사항을 확인할 수 있습니다. 이 사용 하 여 구입 하거나 기존 서버를 로드 하는 프로 비전에 대 한 계획을 작성 합니다.  

@@ -2,19 +2,18 @@
 title: 분석 플랫폼 시스템 어플라이언스 관리 작업 | Microsoft Docs
 description: 이 가이드에서는 Analytics Platform System (APS)에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a24c7fe3d167775845ea6360aefdd1172eeaa72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961499"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스 관리 작업
 이 가이드에서는 Analytics Platform System (APS)에 대 한 어플라이언스 관리 작업을 수행 하는 방법을 설명 합니다.  

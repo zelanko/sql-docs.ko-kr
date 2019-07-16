@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 662fdd55fc5929fe56734b9894bf971962ff2a7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182601"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "34017650"
   
  예를 들어 다음 표에서는 Bike Buyer 자습서에서 사용하기 위해 만든 의사 결정 트리 모델에 있는 (All) 노드에 대한 값의 분포를 보여 줍니다. 예제 시나리오에서 [Bike Buyer] 열은 예측 가능한 특성이며, 여기서 1은 "예"를 나타내고 0은 "아니요"를 나타냅니다.  
   
-|Value|사례|  
+|값|사례|  
 |-----------|-----------|  
 |0|9296|  
-|1.|9098|  
+|1|9098|  
 |Missing|0|  
   
  이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 **Missing** 값의 수가 0입니다. 그러나 [Bike Buyer] 필드에 Null이 있는 사례가 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 해당 행을 **Missing** 값을 가진 사례로 간주합니다.  
   
- 입력이 연속 열인 경우 모델은 특성에 대한 **Existing** 및 **Missing**의 두 가지 가능한 상태를 표 형식으로 만듭니다. 즉, 열에 숫자 데이터 형식 값이 포함되거나 값이 포함되지 않습니다. 값이 있는 사례의 경우 모델은 평균, 표준 편차 및 기타 의미 있는 통계를 계산합니다. 값이 없는 사례의 경우에는 모델에서 **Missing** 값의 수를 제공하고 그에 따라 예측을 조정합니다. 예측을 조정하는 방법은 알고리즘에 따라 다르며 다음 섹션에 설명되어 있습니다.  
+ 입력이 연속 열인 경우 모델 특성에 대 한 두 가지 가능한 상태를 표로 작성 합니다. **기존** 하 고 **누락**합니다. 즉, 열에 숫자 데이터 형식 값이 포함되거나 값이 포함되지 않습니다. 값이 있는 사례의 경우 모델은 평균, 표준 편차 및 기타 의미 있는 통계를 계산합니다. 값이 없는 사례의 경우에는 모델에서 **Missing** 값의 수를 제공하고 그에 따라 예측을 조정합니다. 예측을 조정하는 방법은 알고리즘에 따라 다르며 다음 섹션에 설명되어 있습니다.  
   
 > [!NOTE]  
 >  중첩 테이블에 있는 특성의 경우에는 누락 값이 정보를 제공하지 못합니다. 예를 들어 고객이 제품을 구입하지 않은 경우 중첩 **Products** 테이블에는 해당 제품에 해당하는 행이 없으며 마이닝 모델에서 누락 제품에 대한 특성을 만들지 않습니다. 그러나 특정 제품을 구입하지 않은 고객에게 관심이 있는 경우 모델 필터에 NOT EXISTS 문을 사용하여 중첩 테이블에 존재하지 않는 제품을 기준으로 필터링된 모델을 만들 수 있습니다. 자세한 내용은 [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)을 참조하세요.  
@@ -57,10 +57,10 @@ ms.locfileid: "34017650"
 ## <a name="adjusting-probability-for-missing-states"></a>누락 상태에 대한 확률 조정  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 값의 개수를 계산할 뿐 아니라 데이터 집합 값의 확률도 계산합니다. **Missing** 값의 경우에도 마찬가지입니다. 예를 들어 다음 표에서는 위의 예에 있는 사례에 대한 확률을 보여 줍니다.  
   
-|Value|사례|Probability|  
+|값|사례|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|1.|9098|49.42%|  
+|1|9098|49.42%|  
 |Missing|0|0.03%|  
   
  사례 수가 0인 경우 **Missing** 값의 확률이 0.03%로 계산된다는 사실이 이상해 보일 수 있습니다. 사실 이 동작은 의도적으로 설계된 동작이며 모델에서 알 수 없는 값을 정상적으로 처리할 수 있도록 하는 조정을 나타냅니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "34017650"
   
  StateProbability = (NodePriorProbability)* (StateSupport + 1) / (NodeSupport + TotalStates)  
   
-의사 결정 트리 알고리즘은 알고리즘에 많은 상태가 제외 학습 하는 동안 발생할 수 있습니다. 모델에 필터가 있는지 보정할 수 있는 추가 조정을 제공 합니다.  
+의사 결정 트리 알고리즘은 때 알고리즘으로 학습 하는 동안 제외할에 많은 상태가 발생할 수 있는 모델에 필터가 있는지 여부에 대 한 보정 하는 추가 조정을 제공 합니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 학습 중에는 있는 상태가 특정 노드에서 지지도가 0인 경우 표준 조정이 이루어집니다. 그러나 학습 중에 상태가 발생하지 않으면 알고리즘은 확률을 정확히 0으로 설정합니다. 이러한 조정은 **Missing** 상태뿐만 아니라 학습 데이터에는 있지만 모델 필터링 결과 지지도가 0인 다른 상태에도 적용됩니다.  
   
@@ -103,11 +103,11 @@ ms.locfileid: "34017650"
 |-----------|-----------|  
 |개별 모델 열에 누락 값의 처리를 제어하는 플래그를 추가|[모델링 플래그 & #40; 데이터 마이닝 & #41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |마이닝 모델에 누락 값의 처리를 제어하는 속성을 설정|[마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|DMX에서 모델링 플래그를 지정하는 방법|[모델링 플래그 & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
-|마이닝 구조에서 누락 값을 처리하는 방법 변경|[마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
+|DMX에서 모델링 플래그를 지정하는 방법|[모델링 플래그&#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
+|마이닝 구조에서 누락 값을 처리하는 방법 변경|[마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [모델링 플래그 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [모델링 플래그&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

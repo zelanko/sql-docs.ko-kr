@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008015"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>반환 형식  
  테이블입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  히스토그램은 통계 열을 생성합니다. 사용 되는 열 참조 유형에 따라 달라 집니다 반환된 된 히스토그램의 열 구조를 **PredictHistogram** 함수입니다.  
   
 ## <a name="scalar-columns"></a>스칼라 열  
