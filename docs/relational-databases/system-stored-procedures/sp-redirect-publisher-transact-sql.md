@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002514"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_redirect_publisher
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_redirect_publisher** 복제 게시자는 가용성 그룹 수신기를 사용 하 여 게시자/데이터베이스 쌍을 연결 하 여 Always On 가용성 그룹의 현재 주 복제본에 리디렉션되어야 하는 데 사용 됩니다. 실행할 **sp_redirect_publisher** AG 수신기를 구성한 후에 게시 된 데이터베이스를 포함 하는 가용성 그룹에 대 한 합니다.  
   
  원래 게시자의 게시 데이터베이스의 주 복제본에서 가용성 그룹에서 제거 되 면 실행 **sp_redirect_publisher** 에 대 한 값을 지정 하지 않고 합니다 *@redirected_publisher* 게시자/데이터베이스 쌍에 대 한 리디렉션을 제거 매개 변수입니다. 게시자 리디렉션에 대 한 자세한 내용은 참조 하십시오 [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)합니다.  

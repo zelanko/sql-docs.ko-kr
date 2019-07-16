@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064405"
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스에는 데이터베이스에 데이터를 저장 하는 방법에 대해 간략하게 설명 하는 구조체입니다. 예를 들어, 간단한 판매 주문 데이터베이스 테이블에 연결할 사용 되는 ID 열, 다음 그림에 표시 되는 구조가 있을 수 있습니다.  

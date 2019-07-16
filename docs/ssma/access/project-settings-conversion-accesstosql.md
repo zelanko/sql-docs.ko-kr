@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929454"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>프로젝트 설정 (변환) (AccessToSQL)
 변환 프로젝트 설정을 통해 개체에서 Access 데이터베이스 개체를 변환 하는 방법을 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  
@@ -60,29 +59,29 @@ SQL Azure 연결할 때 기본적으로 True입니다. **타임 스탬프 열 �
 **기본 키에 null 허용 열에 포함 된 경우 메시지 유형**  
 SSMA null 허용 열을 사용 하 여 기본 키를 발견 하면 출력 창에 표시 하는 메시지 (경고, 오류 또는 아무 것도)의 형식을 지정 합니다.  
   
--   **기본 모드**: 경고  
+-   **기본 모드**: Warning  
   
 -   **낙관적 모드**: 메시지 없음  
   
--   **전체 모드**: Error  
+-   **전체 모드**: 오류  
   
 **외래 키 열 다양 한 크기의 경우 메시지 유형**  
 SSMA는 잘못 된 텍스트 외래 키를 발견 하면 출력 창에 표시 하는 메시지 (경고, 오류 또는 아무 것도)의 형식을 지정 합니다.  
   
--   **기본 모드**: 경고  
+-   **기본 모드**: Warning  
   
 -   **낙관적 모드**: 메시지 없음  
   
--   **전체 모드**: Error  
+-   **전체 모드**: 오류  
   
 **메모 열이 인덱싱 될 때 메시지 형식**  
 SSMA를 포함 하는 인덱스를 발견 하면 출력 창에서 보여 주는 메시지 (경고, 오류 또는 아무 것도)의 형식을 지정 된 **메모** 열입니다.  
   
--   **기본 모드**: 경고  
+-   **기본 모드**: Warning  
   
 -   **낙관적 모드**: 메시지 없음  
   
--   **전체 모드**: Error  
+-   **전체 모드**: 오류  
   
 **복잡 한 쿼리를 와일드 카드를 사용 하는 경우 경고 (\&#42;)**  
 SELECT 문에서 열 이름을 와일드 카드 (*) 하는 경우 출력 창과 오류 목록에서 경고를 표시 합니다.  

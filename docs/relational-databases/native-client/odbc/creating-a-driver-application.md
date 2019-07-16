@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20fdea1dd7a182ae3925880e1dded6537e297de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a2ca81717dcf7d5794683a33f2f3f5d080d3f1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044935"
 ---
 # <a name="creating-a-driver-application"></a>드라이버 애플리케이션 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "51661322"
   
 -   대량 복사 작업 수행  
   
--   대용량 데이터 관리 (**(는) 트랜잭션**, **nvarchar(max)**, 및 **varbinary (max)** 열) 작업  
+-   대용량 데이터 관리 ( **(는) 트랜잭션**, **nvarchar(max)** , 및 **varbinary (max)** 열) 작업  
   
 -   데이터베이스 미러링이 구성되어 있는 경우 다시 연결 논리를 사용하여 효과적인 장애 조치(failover) 수행  
   
@@ -105,7 +104,7 @@ ms.locfileid: "51661322"
   
 -   연결된 서버와 해당 카탈로그의 목록을 위해 분산 쿼리 메타데이터 API 함수 호출  
   
- 대량 복사 기능을 사용 하 여 C 또는 c + + ODBC 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlncli11.lib 파일을 사용 하 여 네이티브 클라이언트 ODBC 드라이버를 연결 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 응용 프로그램도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli.h 및 sqlncli11.lib 파일의 일부로 배포 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
+ 모든 C 또는 C++ 의 대량 복사 기능을 사용 하는 ODBC 응용 프로그램을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는은 sqlncli11.lib 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 응용 프로그램도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli.h 및 sqlncli11.lib 파일의 일부로 배포 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

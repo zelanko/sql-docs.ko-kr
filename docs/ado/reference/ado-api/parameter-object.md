@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 152186c0bb1c2fb75197a920e06e0b6bb96dadd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931668"
 ---
 # <a name="parameter-object"></a>Parameter 개체
 매개 변수 또는 연결 된 인수를 나타내는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 매개 변수가 있는 쿼리 또는 저장된 프로시저를 기반으로 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대부분의 공급자에 매개 변수가 있는 명령을 지원합니다. 이러한 명령을 원하는 작업을 한 번 정의는 되지만 변수 (또는 매개 변수)는 명령의 일부 세부 정보를 변경 하는 데 사용 합니다. 예를 들어 SQL SELECT 문을 WHERE 절 및 정렬 기준 절에 열 이름을 정의 하는 다른 일치 하는 조건을 정의 하는 매개 변수를 사용할 수 없습니다.  
   
  **매개 변수** 입/출력 인수 및 반환 값에 대 한 저장 프로시저 또는 개체 매개 변수가 있는 쿼리를 사용 하 여 연결 된 매개 변수를 나타냅니다. 공급자, 몇 가지 컬렉션, 메서드 또는 속성의 기능에 따라 한 **매개 변수** 개체를 사용할 수 없습니다.  

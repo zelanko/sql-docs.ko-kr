@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211652"
 ---
 # <a name="rename-views"></a>뷰 이름 바꾸기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 이름을 바꿀 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52393707"
   
  자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql) 및 [DROP VIEW&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)를 참조하세요.  
   
-##  <a name="FollowUp"></a> 후속편: 뷰 이름을 바꾼 후  
+##  <a name="FollowUp"></a> 후속 작업: 뷰 이름을 바꾼 후  
  뷰의 이전 이름을 참조하는 모든 개체, 스크립트 및 애플리케이션이 이제 새 이름을 사용하는지 확인합니다.  
   
   

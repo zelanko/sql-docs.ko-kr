@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017016"
 ---
 # <a name="avg-mdx"></a>Avg(MDX)
 
@@ -35,7 +34,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  집합의 빈 튜플 또는 빈 집합이 지정 된 경우는 **Avg** 함수는 빈 값을 반환 합니다.  
   
  합니다 **Avg** 에서 먼저 지정된 된 집합의 전체 셀에서 값의 합계를 계산 하 고 다음 계산 된 합계를 비어 있지 않은 셀 개수로 나눠서 지정된 된 집합에서 셀의 비어 있지 않은 값의 평균을 계산 하는 함수 지정 된 집합입니다.  

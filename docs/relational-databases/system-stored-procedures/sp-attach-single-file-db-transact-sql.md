@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046173"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 **sp_attach_single_file_db** 명시적인 사용 하 여 서버에서 이전에 분리 된 데이터베이스 에서만 **sp_detach_db** 작업 데이터베이스나 복사 합니다.  
   
  **sp_attach_single_file_db** 단일 로그 파일에 있는 데이터베이스 에서만 작동 합니다. 때 **sp_attach_single_file_db** 데이터베이스 연결 서버에 새 로그 파일을 작성 합니다. 데이터베이스가 읽기 전용이면 이전 위치에 로그 파일이 만들어집니다.  

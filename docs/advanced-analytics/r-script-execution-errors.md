@@ -6,13 +6,12 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2df4fa2fd9ef52fe5edbca9440f73f351553f1ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49ac7419988df86d18f8e44edc8ef9fddacc7f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962723"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server에서 R 스크립트 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +38,7 @@ R 런타임을 작동 하는 스크립트 오류를 반환 합니다. 그러나 
 검토 하 고 약간 데이터베이스 엔진과 R 간에 데이터를 이동할 때 발생할 수 있는 데이터 형식 사용 하 여 문제를 해결 하려면 스크립트를 다시 작성 하는 것이 좋습니다. 자세한 내용은 [R 라이브러리 및 데이터 형식](r/r-libraries-and-data-types.md)합니다.
 
 또한 저장된 프로시저를 보다 쉽게 사용 되는 형식에서 R 스크립트 번들로 묶는 sqlrutils 패키지를 사용할 수 있습니다. 참조 항목:
-* [sqlrutils package](r/ref-r-sqlrutils.md)
+* [sqlrutils 패키지](r/ref-r-sqlrutils.md)
 * [Sqlrutils를 사용 하 여 저장된 프로시저 만들기](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>스크립트 일관 되지 않은 결과 반환합니다.

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d390cff9bf101167db277c1c7614ee68d10edb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62995681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046097"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,15 +66,15 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  하는 경우 *stats_flag* 지정 하지 않으면 **sp_autostats** 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**Index Name**|**varchar(60)**|인덱스 또는 통계의 이름입니다.|  
-|**AUTOSTATS**|**varchar(3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
+|**AUTOSTATS가**|**varchar(3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
 |**마지막으로 업데이트**|**datetime**|가장 최근의 통계 업데이트 날짜입니다.|  
   
  테이블 또는 인덱싱된 뷰의 인덱스, AUTO_CREATE_STATISTICS 옵션을 사용 하 여 생성 하는 단일 열 통계에 대 한 생성 된 통계를 포함 하 고 작성 된 통계에 대 한 결과 집합을 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 인덱스가 비활성화되었거나 지정된 테이블에 비활성화된 클러스터형 인덱스가 있는 경우에는 오류 메시지가 표시됩니다.  
   
  메모리 최적화 테이블의 AUTO_UPDATE_STATISTICS는 항상 OFF입니다.  
@@ -85,7 +84,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>1\. 테이블의 모든 통계에 대한 상태 표시  
+### <a name="a-display-the-status-of-all-statistics-on-a-table"></a>A. 테이블의 모든 통계에 대한 상태 표시  
  다음은 `Product` 테이블의 모든 통계에 대한 상태를 표시합니다.  
   
 ```  

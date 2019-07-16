@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f52e461a6f7f0cb318a58cb439d7b15b9d780a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1faec789d9b0da874415fb06fa69b972e5b46fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937113"
 ---
 # <a name="data-type-usage"></a>데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47686611"
 |**tinyint**|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** 부호 없는 데이터 형식입니다. A **tinyint** 열은 기본적으로 SQL_C_UTINYINT 데이터 형식의 변수에 바인딩됩니다.|  
 |별칭 데이터 형식|인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, ODBC 드라이버는 열의 null 허용 여부가 명시적으로 선언 하지 않는 열 정의에 NULL을 추가 합니다. 따라서 별칭 데이터 형식의 정의에 저장된 Null 허용 여부는 무시됩니다.<br /><br /> 인스턴스에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, 기본 데이터가 있는 별칭 데이터 형식이 있는 열 형식의 **char** 하거나 **이진** 및 없는 null 허용 여부는 선언 된 데이터 형식으로 만들어집니다 **varchar** 하거나 **varbinary**합니다. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), 및 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) SQL_VARCHAR 또는 이러한 열에 대 한 입력 데이터와 SQL_VARBINARY를 반환 합니다. 해당 열에서 검색한 데이터는 채워지지 않습니다.<br /><br /> 참고: 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 연결에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전입니다.|  
 |LONG 데이터 형식|*실행 시 데이터* 매개 변수는 SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 데이터 형식에 대 한 제한 됩니다.|  
-|큰 값 형식|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 노출 **varchar (max)** 를 **varbinary (max)**, 및 **nvarchar (max)** SQL_VARCHAR, SQL_VARBINARY 및 SQL_ 형식 받아들이거나 ODBC SQL 데이터 형식을 반환 하는 각각의 Api WVARCHAR입니다.|  
+|큰 값 형식|합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 노출 **varchar (max)** 를 **varbinary (max)** , 및 **nvarchar (max)** SQL_VARCHAR, SQL_VARBINARY 및 SQL_ 형식 받아들이거나 ODBC SQL 데이터 형식을 반환 하는 각각의 Api WVARCHAR입니다.|  
 |UDT(사용자 정의 형식)|UDT 열은 SQL_SS_UDT로 매핑됩니다. UDT의 ToString() 또는 ToXMLString() 메서드를 사용하거나 CAST/CONVERT 함수를 통해 SQL 문에서 명시적으로 UDT 열이 다른 형식에 매핑되어 있으면 결과 집합의 열 형식은 해당 열이 변환된 실제 형식을 반영합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 이진 형식으로 UDT 열에만 바인딩할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SQL_SS_UDT 및 SQL_C_BINARY 데이터 형식 간의 변환만 지원합니다.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 XML을 유니코드 텍스트로 변환합니다. XML 유형은 SQL_SS_XML로 매핑됩니다.|  
   

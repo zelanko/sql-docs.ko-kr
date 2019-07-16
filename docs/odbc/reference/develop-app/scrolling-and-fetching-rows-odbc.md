@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061580"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>행 스크롤 및 페치(ODBC)
 스크롤 가능 커서를 사용 하는 경우 응용 프로그램 호출 **SQLFetchScroll** cursor와 fetch 행의 위치입니다. **SQLFetchScroll** 상대 스크롤을 지 원하는 (다음, 이전, 및 상대 *n* 행)을 절대 스크롤 (이름, 성 및 행 *n*), 및 책갈피에서 위치 지정 합니다. *FetchOrientation* 하 고 *FetchOffset* 에서 인수 **SQLFetchScroll** 다음 다이어그램에 나와 있는 것 처럼를 인출 하는 행 집합을 지정 합니다.  

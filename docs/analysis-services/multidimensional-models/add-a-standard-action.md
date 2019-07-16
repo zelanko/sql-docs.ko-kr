@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a6af04d1ed2b8db53425ad0aaf83d95d73dd6f8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180272"
 ---
 # <a name="add-a-standard-action"></a>표준 동작 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "34020640"
   
     -   **유형** 드롭다운 목록에서 만들 동작의 유형을 선택합니다. 다음 표에서는 사용 가능한 동작의 유형을 보여 줍니다.  
   
-        |유형|Description|  
+        |형식|Description|  
         |----------|-----------------|  
         |데이터 세트|데이터 세트를 검색합니다.|  
         |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "34020640"
         > [!NOTE]  
         >  클라이언트 애플리케이션이 **애플리케이션**에 지정된 이름과 일치하는 동작만 반환하도록 스키마 행 집합을 명시적으로 제한하지 않으면 소유 동작이 서버에 반환되지 않습니다.  
   
-    -   **동작 내용**URL 유형을 사용 하는 경우, 예를 들어 인터넷 주소를 따옴표를 묶습니다 "http://www.adventure-works.com"입니다.  
+    -   **동작 내용**URL 유형을 사용 하는 경우, 예를 들어 인터넷 주소 따옴표를 묶습니다 " http://www.adventure-works.com " 입니다.  
   
     -   **설명**에 동작에 대한 설명을 입력합니다.  
   

@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199247"
 ---
 # <a name="view-and-modify-article-properties"></a>아티클 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52792355"
   
 -   **다음을 사용하여 아티클 속성을 보고 수정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52792355"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
   
-1.  테이블 아티클에 대해 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행하고 **@publication** 매개 변수에 게시의 이름을, **@article** 매개 변수에 아티클의 이름을 지정합니다. **@article**을 지정하지 않으면 게시의 모든 아티클에 대한 정보가 반환됩니다.  
+1.  테이블 아티클에 대해 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행하고 **@publication** 매개 변수에 게시의 이름을, **@article** 매개 변수에 아티클의 이름을 지정합니다. **@article** 을 지정하지 않으면 게시의 모든 아티클에 대한 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) 를 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52792355"
 1.  테이블 아티클에 대해 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행하고 **@property** 매개 변수에 변경되는 아티클 속성을, **@value** 매개 변수에 아티클의 이름을 지정합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot**값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription**를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 보려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52792355"
 1.  테이블 아티클에 대해 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행하고 **@property** 매개 변수에 변경되는 아티클 속성을, **@value** 매개 변수에 아티클의 이름을 지정합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot**값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription**를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예에서는 게시된 아티클의 속성을 반환합니다.  

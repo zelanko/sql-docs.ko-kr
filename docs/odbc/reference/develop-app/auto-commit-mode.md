@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8a02d58309f123e6cc8b29d41188ba5bebb26f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909897"
 ---
 # <a name="auto-commit-mode"></a>자동 커밋 모드
 *자동 커밋 모드로* 모든 데이터베이스 작업이 수행 하는 경우 커밋된 트랜잭션입니다. 이 모드는 단일 SQL 문으로 구성 된 여러 실제 트랜잭션에 적합 합니다. 구분 하거나 이러한 트랜잭션의 완료를 지정할 필요는 없습니다. 트랜잭션 지원 하지 않는 데이터베이스에서 자동 커밋 모드로 지원 되는 모드가입니다. 이러한 데이터베이스에서는 문이 커밋되는 경우 실행 되 고 롤백; 방법이 있습니다. 되므로 항상 자동 커밋 모드에 있습니다.  

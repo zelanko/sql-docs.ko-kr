@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8638449e89701638e215ebfd79eae2ab216a56e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c6930cd849ca7d0dd8b8905d52fd8355a38b66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966466"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize 속성 예제(VC++)
 이 예제에서는 합니다 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 코드의 FirstName 열 크기를 다시 정의 됩니다 합니다 **직원** 목차 합니다 *Northwind* 데이터베이스입니다. 그런 다음는 FirstName의 값을 변경 [필드](../../../ado/reference/ado-api/field-object.md) 의 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블이 표시 됩니다. 기본적으로 FirstName 필드 됩니다 공백으로 채워집니다 재정의 하면 후 확인 합니다 **DefinedSize** 속성입니다.  

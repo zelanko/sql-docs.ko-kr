@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a9bc9e99600fdc2aa80e04fc7af3fb5de362453
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 158203b7dedfec3228821f6368c8f6c92b8041f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050876"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingtables"></a>변경 내용 추적 카탈로그 뷰-sys.change_tracking_tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   변경 내용 추적이 설정된 현재 데이터베이스의 각 테이블에 대해 한 개의 행을 반환합니다.  
    
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|변경 업무 일지가 있는 테이블의 ID입니다. 변경 내용 추적이 현재 해제되어 있는 경우에도 테이블에 변경 업무 일지가 있을 수 있습니다.<br /><br /> 테이블 ID는 데이터베이스 내에서 고유합니다.|  
 |is_track_columns_updated_on|**bit**|테이블에서 변경 내용 추적의 현재 상태입니다.<br /><br /> 0 = OFF<br /><br /> 1 = ON|  

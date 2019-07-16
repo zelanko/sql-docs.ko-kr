@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 574246d7587a15d5d13efcbc2f2cb48108907c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52ef0cfa67e476110097ae5cf3a4680acbd0377b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63262292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043707"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Paradox 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  

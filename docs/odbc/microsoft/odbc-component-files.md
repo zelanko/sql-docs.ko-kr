@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abe6a9bf7f2f336ffe612057dd6db05f74b4adea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044948"
 ---
 # <a name="odbc-component-files"></a>ODBC 구성 요소 파일
 ODBC 데스크톱 데이터베이스 드라이버 4.0의 각 구성 요소에 ODBC 드라이버 파일이 필요 합니다.  

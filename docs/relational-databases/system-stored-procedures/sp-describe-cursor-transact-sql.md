@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053070"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  다음 표에서는 sp_describe_cursor를 사용하여 반환된 커서의 형식을 보여 줍니다. 커서의 형식은 sp_cursor_list를 사용하여 반환되는 형식과 같습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|커서를 지칭할 때 사용하는 이름입니다. DECLARE CURSOR 문에서 지정한 이름으로 커서를 참조하는 경우 참조 이름과 커서 이름이 동일합니다. 변수로 커서를 참조하는 경우 변수 이름이 참조 이름이 됩니다.|  
 |cursor_name|**sysname**|DECLARE CURSOR 문에서 지정된 커서 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 커서 변수를 커서로 설정하여 커서를 만든 경우 cursor_name은 커서 변수의 이름을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 출력 열은 시스템 생성 이름을 반환합니다.|  
@@ -87,10 +86,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |fetch_status|**smallint**|해당 커서의 마지막 인출 상태입니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.<br /><br /> 0 = 인출 성공입니다.<br /><br /> -1 = 인출이 실패하였거나 커서의 범위 밖입니다.<br /><br /> -2 = 요청된 행이 누락되었습니다.<br /><br /> -9 = 커서에 대한 인출이 없습니다.|  
 |column_count|**smallint**|커서 결과 집합 내의 열 수입니다.|  
 |row_count|**decimal(10,0)**|커서의 마지막 작업에 의해 영향을 받는 행 수입니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.|  
-|last_operation|**tinyint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = 열기<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
+|last_operation|**tinyint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = OPEN<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
 |cursor_handle|**int**|서버 범위에서 고유한 커서의 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_describe_cursor는 스크롤 및 업데이트 허용 여부 등과 같은 서버 커서에 대한 전역 특성을 설명합니다. 커서가 반환한 결과 집합의 특성 설명을 보려면 sp_describe_cursor_columns를 사용하십시오. 커서가 참조하는 기본 테이블의 보고서를 보려면 sp_describe_cursor_tables를 사용하십시오. 연결 시 표시될 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 보고서를 얻으려면 sp_cursor_list를 사용하십시오.  
   
  DECLARE CURSOR 문에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 DECLARE CURSOR에 포함된 SELECT 문으로 지원할 수 없는 커서 유형을 요청하는 경우가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SELECT 문을 사용하여 커서를 지원할 수 있는 형식으로 암시적으로 변환합니다. DECLARE CURSOR 문에 TYPE_WARNING이 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 응용 프로그램에 변환이 완료되었다는 정보 메시지를 전송합니다. sp_describe_cursor에 구현 된 커서의 형식을 확인 하려면 다음 호출할 수 있습니다.  

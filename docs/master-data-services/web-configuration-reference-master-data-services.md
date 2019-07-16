@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017274"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>웹 구성 참조(Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65477227"
 ## <a name="webconfig-elements"></a>Web.Config 요소  
  Web.config 파일에는 표준 IIS, .NET Framework, ASP.NET 및 WCF(Windows Communication Foundation) 구성 요소 외에도 사용자 지정 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 요소인 **\<masterDataServices>** 가 포함되어 있습니다. 다음 표에서는 Web.config 파일에 포함된 요소에 대해 설명합니다.  
   
-|구성 요소|Description|  
+|구성 요소|설명|  
 |---------------------------|-----------------|  
 |**masterDataServices**|사용자 지정 요소. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.|  
 |**connectionStrings**|ASP.NET 요소. 자세한 내용은 MSDN Library에서 [connectionStrings 요소(ASP.NET 설정 스키마)](https://go.microsoft.com/fwlink/?LinkId=178347) 를 참조하세요.|  
@@ -56,7 +55,7 @@ ms.locfileid: "65477227"
   
 ### <a name="elements-and-attributes"></a>요소 및 특성  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |**instance**|자식 요소. 웹 서비스와 데이터베이스 연결 문자열에 대한 정보를 지정하는 특성을 포함합니다.|  
 |**virtualPath**|특성. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션 및 서비스의 가상 경로를 지정합니다. 이 값은 IIS ApplicationHost.config 파일에서 **\<site>** 요소 아래에 있는 **\<application>** 요소의 **path** 특성에 해당합니다.|  

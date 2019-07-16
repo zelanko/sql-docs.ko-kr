@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6ae9dd941ecf13d05b62b1b5f8bcdd3d3784188
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179230"
 ---
-# <a name="attribute-relationships---define-the-relationship-type"></a>특성 관계-관계 유형 정의
+# <a name="attribute-relationships---define-the-relationship-type"></a>특성 관계 - 관계 형식 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   **에서 액세스할 수 있는 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 특성 관계의 관계 유형을 정의할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34022130"
   
      유연한 관계에서 멤버 간의 관계는 시간이 지나면서 달라질 수 있습니다. 고정된 관계에서는 멤버 간의 관계가 시간이 지나면서 달라지지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
   
   

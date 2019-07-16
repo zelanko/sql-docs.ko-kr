@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60b30e74ab58e5fd6a7bb122ba7e1b247e21273b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060445"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 XSD 정의 XML 네임스페이스에 대해 행을 반환합니다. 다음 튜플은 고유: **collection_id**를 **namespace_id**, 및 **collection_id**, 및 **이름**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|이 네임스페이스를 포함하는 XML 스키마 컬렉션의 ID입니다.|  
 |**name**|**nvarchar(4000)**|XML 네임스페이스의 이름입니다. 빈 **이름을** 대상 네임 스페이스를 나타냅니다.|  

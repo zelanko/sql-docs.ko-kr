@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899187"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +65,11 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="result-sets"></a>결과 집합  
  반환되는 각 경고에 대해 다음 열이 포함된 행을 반환합니다.  
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|목록은 아래 표는 **alert_id** 각 성능 메트릭 및에 표시 되는 메트릭의 측정 단위에 대 한 값을 **sp_dbmmonitorresults** 결과 집합:|  
 |**threshold**|**int**|경고에 대한 임계값입니다. 미러링 상태를 업데이트할 때 이 임계값 위의 값이 반환되면 Windows 이벤트 로그에 항목이 입력됩니다. 이 값은 경고에 따라 KB, 분 또는 밀리초를 나타냅니다. 임계값이 현재 설정되어 있지 않으면 이 값은 NULL입니다.<br /><br /> **참고:** 현재 값을 보려면를 실행 합니다 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저입니다.|  
-|**enabled**|**bit**|0 = 이벤트를 사용할 수 없습니다.<br /><br /> 1 = 이벤트를 사용할 수 있습니다.<br /><br /> **참고:** 보존 기간이 항상 활성화 됩니다.|  
+|**enabled**|**bit**|0 = 이벤트를 사용할 수 없습니다.<br /><br /> 1 = 이벤트를 사용할 수 있습니다.<br /><br /> **참고:** 보존 기간은 항상 사용됩니다.|  
   
 |값|성능 메트릭|단위|  
 |-----------|------------------------|----------|  

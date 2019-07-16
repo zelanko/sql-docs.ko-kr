@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9620f5d92393578493b4867a81cf462798319046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965351"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 속성(ADOX)
 관련 된 이름을 나타냅니다 [열 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) 관련 테이블 (키 열에만 해당).  
@@ -33,7 +32,7 @@ ms.locfileid: "66705979"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **문자열** 값은 관련된 테이블에 있는 관련 열의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 빈 문자열("")입니다.  
   
  이 속성은 읽기 전용 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  

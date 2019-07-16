@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a9f60b324a706d28145fb9e843957b20da5ed90a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208418"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>스키마 생성 마법사 사용(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34022810"
 > [!NOTE]  
 >  이전에 생성된 개체에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원과 큐브의 바인딩을 해제하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브와 차원이 바인딩된 데이터 원본 뷰를 삭제한 다음 스키마 생성 마법사를 사용하여 큐브와 차원에 대해 새 데이터 원본 뷰를 정의합니다.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>3단계: 주제 영역 데이터베이스에 대한 스키마 옵션 지정  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>3단계: 주제 영역 데이터베이스에 대 한 스키마 옵션 지정  
  스키마 생성 마법사는 주제 영역 데이터베이스에 대해 생성되는 스키마를 정의하는 데 사용할 수 있는 많은 옵션을 제공합니다. 마법사의 **주제 영역 데이터베이스 스키마 옵션** 페이지에서 이러한 옵션을 지정할 수 있습니다.  
   
 ### <a name="specifying-the-schema-owner"></a>스키마 소유자 지정  

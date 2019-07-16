@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019311"
 ---
 # <a name="c-to-sql-numeric"></a>C에서 SQL로: 숫자
 숫자 ODBC C 데이터 형식에 대 한 식별자 다음과 같습니다.  

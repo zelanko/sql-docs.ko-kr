@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947553"
 ---
 # <a name="interval-data-types"></a>간격 데이터 형식
 간격 두 날짜 및 시간 간의 차이 따라 정의 됩니다. 간격으로 두 가지 방법 중 하나로 표현 됩니다. 하나는 *연-월* 간격 연도 및 월의 정수가 측면에서 표현 하는 간격입니다. 다른 하나는 한 *날짜-시간* 간격 (일), 분 및 초를 기준으로 표현 하는 간격입니다. 이러한 두 가지 유형의 간격 명확 하 고 월 일의 다양 한 숫자를 포함할 수 있으므로 혼합할 수 없습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "63188895"
   
  13 간격 SQL 데이터 형식 및 13 간격 C 데이터 형식이 있습니다. 각 C는 interval 데이터 형식을 데이터 간격을 포함 하도록 SQL_INTERVAL_STRUCT, 동일한 구조를 사용 합니다. (자세한 내용은 다음 섹션을 참조 하세요 [C 간격 구조](../../../odbc/reference/appendixes/c-interval-structure.md).) SQL 데이터 형식에 대 한 자세한 내용은 참조 하세요. [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md); C 데이터 형식에 대 한 자세한 내용은 참조 하십시오 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md)합니다.  
   
-|유형 식별자|클래스|Description|  
+|유형 식별자|클래스|설명|  
 |---------------------|-----------|-----------------|  
 |MONTH|년-월|두 날짜 사이의 개월 수입니다.|  
 |YEAR|년-월|두 날짜 사이의 연도 수입니다.|  

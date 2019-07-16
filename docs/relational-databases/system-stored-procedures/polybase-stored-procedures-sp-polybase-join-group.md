@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 878afb5f16c988ee98908030695e0f03c7e2f7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b7be2bb99a92794ed8c1b5971edca47522c2552
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941932"
 ---
 # <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  저장된 프로시저를 실행 한 후 PolyBase 엔진을 종료 하 고 컴퓨터에 PolyBase 데이터 이동 서비스를 다시 시작 합니다. 확인 하려면 헤드 노드에서 다음 DMV를 실행 합니다. **sys.dm_exec_compute_nodes**합니다.  
   
 ## <a name="example"></a>예제  

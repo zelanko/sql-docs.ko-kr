@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3b5ab8c21ee02f646bf4b8e4f4941fafd6edfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966273"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 메서드(ADOX)
 에 있는 개체의 소유자를 반환 합니다는 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다.  
@@ -47,7 +46,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  *ObjectTypeId*  
  (선택 사항) A **Variant** OLE DB 사양에 정의 되지 공급자 개체 형식의 GUID를 지정 하는 값입니다. 이 매개 변수는 필요한 경우 *ObjectType* 로 설정 된 **adPermObjProviderSpecific**고, 그렇지 않으면 사용 되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공급자 개체 소유자 반환을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

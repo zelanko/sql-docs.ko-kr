@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016952"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount(MDX)
 
@@ -38,7 +37,7 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정된 경우 이 함수는 지정된 집합에 대해 지정된 숫자 식을 계산한 값에 따라 해당 집합의 튜플을 오름차순으로 정렬합니다. 합니다 **BottomCount** 함수는 튜플 가장 낮은 값을 사용 하 여 지정 된 수를 반환 합니다.  
   
 > [!IMPORTANT]  

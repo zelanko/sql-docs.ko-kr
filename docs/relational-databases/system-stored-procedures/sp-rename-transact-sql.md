@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006938"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 변경할 개체가 테이블의 열 이면 *object_name* 형식에서 이어야 합니다 *테이블. 열* 하거나 *schema.table.column*합니다. 이름을 바꿀 수는 인덱스 *object_name* 형식에서 이어야 합니다 *table.index* 하거나 *schema.table.index*합니다. 이름을 변경할 개체가 제약 조건을 *object_name* 형식에서 이어야 합니다 *schema.constraint*합니다.  
   
- 정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+ 정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
- [ @newname =] '*new_name*'  
+ [ @newname = ] '*new_name*'  
  지정한 개체의 새 이름입니다. *new_name* 한 부분으로 이루어진 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 됩니다 **sysname**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  트리거 이름은 # 또는 ##로 시작될 수 없습니다.  
   
  [ @objtype =] '*object_type*'  
- 이름을 바꾸는 개체의 유형입니다. *object_type* 됩니다 **varchar(13)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+ 이름을 바꾸는 개체의 유형입니다. *object_type* 됩니다 **varchar(13)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |COLUMN|이름을 바꿀 열입니다.|  
 |DATABASE|사용자 정의 데이터베이스입니다. 이 개체 유형은 데이터베이스 이름을 바꿀 경우 필요합니다.|  
@@ -74,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 데이터베이스에서만 개체 또는 데이터 형식의 이름을 변경할 수 있습니다. 대부분의 시스템 데이터 형식 및 시스템 개체의 이름은 변경할 수 없습니다.  
   
  sp_rename은 PRIMARY KEY 또는 UNIQUE 제약 조건의 이름을 바꿀 때마다 연결된 인덱스의 이름을 자동으로 바꿉니다. 이름을 바꾼 인덱스가 PRIMARY KEY 제약 조건과 연결된 경우 PRIMARY KEY 제약 조건의 이름도 sp_rename에 의해 자동으로 바뀝니다.  
@@ -90,7 +89,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-renaming-a-table"></a>1. 테이블 이름 바꾸기  
+### <a name="a-renaming-a-table"></a>A. 테이블 이름 바꾸기  
  다음 예에서는 `SalesTerritory` 스키마에 있는 `SalesTerr` 테이블의 이름을 `Sales` 로 바꿉니다.  
   
 ```  
@@ -100,7 +99,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>2. 열 이름 바꾸기  
+### <a name="b-renaming-a-column"></a>2\. 열 이름 바꾸기  
  다음 예제에서는 이름을 바꿉니다는 `TerritoryID` 열에는 `SalesTerritory` 테이블 `TerrID`합니다.  
   
 ```  
@@ -110,7 +109,7 @@ EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
 GO  
 ```  
   
-### <a name="c-renaming-an-index"></a>3. 인덱스 이름 바꾸기  
+### <a name="c-renaming-an-index"></a>3\. 인덱스 이름 바꾸기  
  다음 예에서는 `IX_ProductVendor_VendorID` 인덱스의 이름을 `IX_VendorID`로 변경합니다.  
   
 ```  
@@ -120,7 +119,7 @@ EXEC sp_rename N'Purchasing.ProductVendor.IX_ProductVendor_VendorID', N'IX_Vendo
 GO  
 ```  
   
-### <a name="d-renaming-an-alias-data-type"></a>4. 별칭 데이터 형식 이름 바꾸기  
+### <a name="d-renaming-an-alias-data-type"></a>4\. 별칭 데이터 형식 이름 바꾸기  
  다음 예에서는 `Phone` 별칭 데이터 형식의 이름을 `Telephone`으로 변경합니다.  
   
 ```  
@@ -130,7 +129,7 @@ EXEC sp_rename N'Phone', N'Telephone', N'USERDATATYPE';
 GO  
 ```  
   
-### <a name="e-renaming-constraints"></a>5. 제약 조건 이름 바꾸기  
+### <a name="e-renaming-constraints"></a>5\. 제약 조건 이름 바꾸기  
  다음 예에서는 PRIMARY KEY 제약 조건, CHECK 제약 조건 및 FOREIGN KEY 제약 조건의 이름을 바꿉니다. 제약 조건 이름을 바꿀 때는 제약 조건이 속한 스키마를 지정해야 합니다.  
   
 ```  
@@ -192,7 +191,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
   
 ```  
   
-### <a name="f-renaming-statistics"></a>6. 통계 이름 바꾸기  
+### <a name="f-renaming-statistics"></a>6\. 통계 이름 바꾸기  
  다음 예제에서는 contactMail1 라는 통계 개체를 만들고 NewContact에 통계 sp_rename을 사용 하 여 이름을 바꿉니다. 통계 이름을 바꾸면 개체를 schema.table.statistics_name 형식으로 지정해야 합니다.  
   
 ```  

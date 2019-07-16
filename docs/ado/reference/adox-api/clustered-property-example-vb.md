@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ddcc576731091596b8efa00c9473a7d167c9ee99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966958"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제(VB)
 이 예제에서는 합니다 [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. Microsoft Jet 데이터베이스에이 예제에서는 반환은 클러스터형된 인덱스를 지원 하지 않습니다 **False** 에 대 한 합니다 **클러스터형** 의 모든 인덱스의 속성을 **Northwind** 데이터베이스입니다.  

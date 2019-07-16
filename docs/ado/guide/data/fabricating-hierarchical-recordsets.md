@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5dc84c5bacca8951576e572b90fa28a8408e48d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925321"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>계층적 레코드 집합 구성
 다음 예제는 데이터 셰이핑 부모, 자식 및 손자에 대 한 열을 정의 하는 문법을 사용 하 여 기본 데이터 원본 사용 하지 않고 계층적 레코드 집합을 구성 하는 방법을 보여 줍니다 **레코드 집합**합니다.  

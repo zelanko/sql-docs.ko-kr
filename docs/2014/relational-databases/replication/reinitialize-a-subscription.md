@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199224"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "52771395"
   
 -   **다음을 사용하여 구독을 다시 초기화하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -107,19 +107,19 @@ ms.locfileid: "52771395"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_reinitpullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_reinitpullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql)을 실행합니다. **@publisher** , **@publisher_db** 및 **@publication** 를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
 2.  필요에 따라 구독자에서 배포 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)을 참조하세요.  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 밀어넣기 구독을 다시 초기화하려면  
   
-1.  게시자에서 [sp_reinitsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**및 **@destination_db**를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  게시자에서 [sp_reinitsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql)을 실행합니다. **@publication** , **@subscriber** 및 **@destination_db** 를 지정합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
 2.  필요에 따라 배포자에서 배포 에이전트를 시작하여 구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)을 참조하세요.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)을 실행합니다. **@publisher**, **@publisher_db**및 **@publication**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_reinitmergepullsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)을 실행합니다. **@publisher** , **@publisher_db** 및 **@publication** 를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first** 합니다. 이렇게 하면 다음 병합 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -128,7 +128,7 @@ ms.locfileid: "52771395"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독을 다시 초기화하려면  
   
-1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber**및 **@subscriber_db**를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first**합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
+1.  게시자에서 [sp_reinitmergesubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)을 실행합니다. **@publication** , **@subscriber** 및 **@subscriber_db** 를 지정합니다. 다시 초기화 하기 전에 구독자에서 변경 내용을 업로드 하려면 값을 지정 `true` 에 대 한 **@upload_first** 합니다. 이렇게 하면 다음 배포 에이전트 실행 시 구독을 다시 초기화하도록 표시됩니다.  
   
     > [!IMPORTANT]  
     >  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
@@ -137,7 +137,7 @@ ms.locfileid: "52771395"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>새 병합 게시를 만들 때 다시 초기화 정책을 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [@automatic_reinitialization_policy](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)에 다음 중 한 가지 값을 지정하고 **@automatic_reinitialization_policy**을 실행합니다.  
+1.  게시 데이터베이스의 게시자에서 [@automatic_reinitialization_policy](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)에 다음 중 한 가지 값을 지정하고 **@automatic_reinitialization_policy** 을 실행합니다.  
   
     -   **1** - 게시의 변경으로 의해 구독이 자동으로 다시 초기화되기 전에 구독자의 변경 내용이 업로드됩니다.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52771395"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>기존 병합 게시에 대한 다시 초기화 정책을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)에 **automatic_reinitialization_policy** @upload_first **@property** 에는 다음 값 중 하나를 지정하여 **@value**을 실행합니다.  
+1.  게시 데이터베이스의 게시자에서 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)에 **automatic_reinitialization_policy** @upload_first **@property** 에는 다음 값 중 하나를 지정하여 **@value** 을 실행합니다.  
   
     -   **1** - 게시의 변경으로 의해 구독이 자동으로 다시 초기화되기 전에 구독자의 변경 내용이 업로드됩니다.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "52771395"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [구독 다시 초기화](reinitialize-subscriptions.md)   
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)  

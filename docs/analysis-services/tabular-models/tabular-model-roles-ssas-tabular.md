@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 460f5e8605e7a855430231083bf9a0bd0477542b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162481"
 ---
 # <a name="tabular-model-roles"></a>테이블 형식 모델 역할 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53071860"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |[SSMS를 사용하여 역할 관리](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|역할을 만들고 역할의 멤버를 추가 및 제거하고 역할의 사용 권한을 변경하고 DAX를 사용하여 행 수준 필터를 추가, 편집 또는 제거하는 방법을 설명합니다.|  
   

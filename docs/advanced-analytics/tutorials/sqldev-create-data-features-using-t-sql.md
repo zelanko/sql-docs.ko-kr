@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961928"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "58511970"
 
 ## <a name="about-feature-engineering"></a>특성 엔지니어링 정보
 
-데이터 탐색을 여러 번 수행한 후 데이터에서 몇 가지 유용한 정보를 수집했으며 *특성 엔지니어링*으로 넘어갈 준비가 되었습니다.  원시 데이터에서 의미 있는 특성을 만드는 이 과정은 분석 모델을 만드는 중요한 단계입니다.
+데이터 탐색을 여러 번 수행한 후 데이터에서 몇 가지 유용한 정보를 수집했으며 *특성 엔지니어링*으로 넘어갈 준비가 되었습니다. 원시 데이터에서 의미 있는 특성을 만드는 이 과정은 분석 모델을 만드는 중요한 단계입니다.
 
 이 데이터 집합에 보고된 미터 거리를 기반으로 하며 이동한 지리적 거리 또는 실제 거리를 나타내는 것은 아닙니다. 따라서 NYC 택시 데이터 소스에서 사용 가능한 좌표를 사용하여 승차 위치와 하차 위치 사이의 직접 거리를 계산해야 합니다. 이렇게 하려면 사용자 지정 [함수에](https://en.wikipedia.org/wiki/Haversine_formula) Haversine 수식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용합니다.
 

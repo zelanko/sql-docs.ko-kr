@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054883"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_help_jobserver
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|대상 서버의 ID입니다.|  
 |**server_name**|**nvarchar(30)**|대상 서버의 컴퓨터 이름입니다.|  
@@ -66,7 +65,7 @@ sp_help_jobserver
   
  경우 **sp_help_jobserver** 실행 하는 *show_last_run_details* 로 설정 **1**, 결과 집합에 이러한 추가 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**int**|해당 대상 서버에서 작업이 마지막으로 실행을 시작한 날짜입니다.|  
 |**last_run_time**|**int**|해당 서버에서 작업이 마지막으로 실행을 시작한 시간입니다.|  

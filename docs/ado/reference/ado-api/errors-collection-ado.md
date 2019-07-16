@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 109b7ff83e6b3f722560dae0a034c4bf37da137f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932973"
 ---
 # <a name="errors-collection-ado"></a>Errors 컬렉션(ADO)
 모든 포함 된 [오류](../../../ado/reference/ado-api/error-object.md) 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO 개체와 관련 된 모든 작업이 하나 이상의 공급자 오류를 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치할 수 있습니다 합니다 **오류** 의 컬렉션을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 다른 ADO 작업에서 오류를 생성 하는 경우는 **오류** 컬렉션의 선택을 취소 하 고 새 집합입니다 **오류** 개체에 배치할 수 있습니다를 **오류** 컬렉션.  
   
  각 **오류** 개체는 ADO 오류가 아니라 특정 공급자 오류를 나타냅니다. ADO 오류는 런타임 예외 처리 메커니즘에 노출 됩니다. 예를 들어, Microsoft Visual Basic의 ADO 관련 오류가 발생 트리거할를 [onError](../../../ado/reference/rds-api/onerror-event-rds.md) 이벤트에 표시 합니다 **Err** 개체입니다.  

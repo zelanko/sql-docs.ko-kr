@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5417fb01208e7811985dc7f27fd41cf9d23ee9c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925163"
 ---
 # <a name="handling-errors-in-other-languages"></a>다른 언어로 오류 처리
 지금까지이 섹션에서는 Microsoft® Visual Basic®의 관점에서 오류에 설명 했습니다. 이 섹션의 나머지 부분에서 Visual Basic 이외의 언어로 오류 처리의 개요를 제공 합니다.  

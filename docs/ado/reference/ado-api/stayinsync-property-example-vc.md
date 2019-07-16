@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4a198b1e74e0f6fad93525cbebd5c2c66faee161
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930750"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 속성 예제(VC++)
 이 예제에서는 하는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 계층적 구조에서 액세스할 행을 용이 하 게 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

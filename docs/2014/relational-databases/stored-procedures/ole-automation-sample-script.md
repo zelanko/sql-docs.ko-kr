@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4cfe904cc6a808efc6c8a7208b3825117b2909d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197128"
 ---
 # <a name="ole-automation-sample-script"></a>OLE 자동화 예제 스크립트
   이 항목에는 OLE 자동화 저장 프로시저를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 로컬 인스턴스에서 SQL-DMO SQLServer 개체를 만들고 사용하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]문 일괄 처리의 예가 포함되어 있습니다. 코드의 일부는 OLE 자동화 시스템 저장 프로시저에 대한 참조 항목에서 예로 사용됩니다.  

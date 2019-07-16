@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c1f772b041aa5f7be2c1fc0c7aeb7c69189b5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967221"
 ---
 # <a name="append-method-adox-users"></a>Append 메서드(ADOX 사용자)
 새로 추가 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체를 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션입니다.  
@@ -41,7 +40,7 @@ Users.Append User[,Password]
  *암호*  
  (선택 사항) A **문자열** 사용자 암호를 포함 하는 값입니다. *암호* 매개 변수에서 지정한 값에 해당 합니다 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) 메서드를 **사용자** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **사용자** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. 합니다 **사용자** 에 대 한 컬렉션을 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 멤버 자격이 있는 사용자만을 나타냅니다.  
   
  공급자를 만드는 사용자를 지원 하지 않는 경우 오류가 발생 합니다.  

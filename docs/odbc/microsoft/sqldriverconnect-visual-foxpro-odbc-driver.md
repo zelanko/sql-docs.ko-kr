@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053893"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -41,7 +40,7 @@ ms.locfileid: "63238085"
 |-------------------------------------------------|---------------------|  
 |BackgroundFetch|"Yes" 또는 "No"|  
 |한 부씩 인쇄|"컴퓨터" 또는 다른 데이터 정렬 시퀀스입니다. 지원 되는 데이터 정렬 시퀀스의 목록을 참조 하세요 [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)합니다.|  
-|Description||  
+|설명||  
 |전용|"Yes" 또는 "No"|  
 |SourceDB|정규화 된 경로 포함 하는 디렉터리 0 개 이상의 [테이블 무료](../../odbc/microsoft/visual-foxpro-terminology.md), 또는 절대 경로 및 파일 이름에 대 한를 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.|  
 |SourceType|"Dbc 입니다" 또는 "DBF"|  

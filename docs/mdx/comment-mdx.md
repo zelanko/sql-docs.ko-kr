@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006277"
 ---
 # <a name="comment-mdx"></a>주석 (MDX)
 
@@ -32,7 +31,7 @@ ms.locfileid: "63181573"
  *Comment_Text*  
  주석 텍스트를 포함하는 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버는 주석 문자 사이 텍스트를 평가 하지 않습니다 / * 및 \*/입니다. 주석은 별도의 줄 또는 MDX 문에 입력될 수 있습니다. 여러 줄 주석으로 표시 되어야 합니다 /\* 고 \*/입니다.  
   
  주석의 길이에는 제한이 없습니다. 주석은 `/* Test /*Comment*/ Text*/`와 같이 중첩될 수 있습니다.  

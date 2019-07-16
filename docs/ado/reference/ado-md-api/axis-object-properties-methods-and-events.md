@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930505"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
- [DimensionCount Property](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
+ [DimensionCount 속성](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
   
  [Name 속성](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   

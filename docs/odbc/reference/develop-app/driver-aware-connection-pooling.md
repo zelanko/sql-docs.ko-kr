@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dee7ee2b08e4b3b0249ede7f999cfb23d8db944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047048"
 ---
 # <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링
 드라이버 인식 연결 풀링는 Windows 8의 드라이버 관리자의 새로운 기능입니다. 드라이버 인식 연결 풀링 드라이버 작성자를 연결 풀링 해당 ODBC 드라이버의 동작을 사용자 지정할 수 있습니다.  

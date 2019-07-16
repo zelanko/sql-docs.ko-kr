@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020993"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>영향을 받는 개체 선택 및 구성(SybaseToSQL)
 이 페이지에서 테이블을 선택할 수 있습니다 하 고 SSMA 이전 단계에서 선택한 개체에 대 한 실행 결과 확인 하는 경우 외래 키에는 변경 내용 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  

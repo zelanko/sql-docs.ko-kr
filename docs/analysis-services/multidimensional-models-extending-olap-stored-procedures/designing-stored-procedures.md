@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a617df9d88bde17c08fb4d2235ad751a5609e2d2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181092"
 ---
 # <a name="designing-stored-procedures"></a>저장 프로시저 디자인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34020910"
 ## <a name="dependent-assemblies"></a>종속 어셈블리  
  모든 종속 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 로드되어 CLR(공용 언어 런타임)에서 참조할 수 있어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 종속 어셈블리를 주 어셈블리와 같은 폴더에 저장하므로 CLR에서 이러한 어셈블리의 함수에 대한 모든 함수 참조가 자동으로 해결됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
  [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

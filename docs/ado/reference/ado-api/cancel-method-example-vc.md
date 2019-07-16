@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8dd06dd603d37c8099d5f0ce30036cef1290aec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920172"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel 메서드 예제(VC++)
 이 예제에서는 합니다 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 에서 명령 실행을 취소 하는 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 연결이 사용 중인 경우 개체.  

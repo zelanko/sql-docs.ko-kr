@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e696e97de78272f9d19091c9238bc9555f949361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918030"
 ---
 # <a name="name-property-ado"></a>Name 속성(ADO)
 개체의 이름을 나타냅니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66707302"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 개체의 이름을 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **이름을** 속성에 이름을 할당의 이름을 검색 하는 **명령**, **속성**, **필드**, 또는 **매개 변수**  개체입니다.  
   
  값은 읽기/쓰기를 **명령** 개체에서 읽기 전용으로 설정 하 고는 **속성** 개체입니다.  

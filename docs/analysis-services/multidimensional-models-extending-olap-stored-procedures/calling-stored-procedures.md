@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저를 호출 | Microsoft Docs
+title: 저장된 프로시저를 호출 합니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181164"
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,25 +58,25 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ```  
   
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Call 문으로 저장 프로시저 호출  
- MDX를 사용 하 여 MDX 쿼리 컨텍스트 외부에서 저장된 프로시저를 호출할 수 **호출** 문.  
+ MDX를 사용 하 여 MDX 쿼리 컨텍스트 외부에서 저장된 프로시저를 호출할 수 있습니다 **호출** 문입니다.  
   
- 이 방법을 사용하면 저장 쿼리의 파생 작업을 인스턴스화하거나 애플리케이션에서 저장 쿼리의 결과를 얻을 수 있습니다. 일반적인 용도 **호출** 문을 Analysis Management Objects (AMO)를 사용 하 여 반환 결과 갖지 않는 관리 기능을 수행 하는 것입니다. 예를 들어 다음 명령에서는 저장 프로시저를 호출합니다.  
+ 이 방법을 사용하면 저장 쿼리의 파생 작업을 인스턴스화하거나 애플리케이션에서 저장 쿼리의 결과를 얻을 수 있습니다. 일반적인 용도 **호출** 문을 Analysis Management Objects (AMO)를 사용 하 여 결과 반환 되지 않은 관리 기능을 수행 하는 것입니다. 예를 들어 다음 명령에서는 저장 프로시저를 호출합니다.  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- 지원 되는 유일한 종류의 저장된 프로시저에서 반환 되는 **호출** 문의 행 집합입니다. 행 집합 직렬화는 XML for Analysis에 의해 정의됩니다. 경우의 저장된 프로시저는 **호출** 문은 다른 형식을 반환, 무시 되 고 호출 응용 프로그램에 XML에 반환 되지 않습니다. XML for Analysis 행 집합에 대한 자세한 내용은 XML for Analysis Schema Rowsets를 참조하십시오.  
+ 지원 되는 유일한 저장된 프로시저에서 반환 되는 형식에 **호출** 문의 행 집합입니다. 행 집합 직렬화는 XML for Analysis에 의해 정의됩니다. 경우에 저장된 프로시저를 **호출** 다른 형식을 반환 하는 명령문, 무시 되 고 호출 응용 프로그램 XML에서는 반환 되지 않음. XML for Analysis 행 집합에 대한 자세한 내용은 XML for Analysis Schema Rowsets를 참조하십시오.  
   
  저장 프로시저에서 .NET 행 집합을 반환하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 서버의 결과를 XML for Analysis 행 집합으로 변환합니다. XML for Analysis 행 집합은 항상 저장된 프로시저에 의해 반환 된 **호출** 함수입니다. 데이터 세트에 XML for Analysis 행 세트로 표현할 수 없는 기능이 있다면 실패합니다.  
   
- Void 값을 반환하는 프로시저(예: Visual Basic의 서브루틴)를 CALL 키워드와 함께 사용할 수 있습니다.  예를 들어 MDX 문에서 MyVoidFunction() 함수를 사용하려면 다음과 같은 구문을 사용합니다.  
+ Void 값을 반환하는 프로시저(예: Visual Basic의 서브루틴)를 CALL 키워드와 함께 사용할 수 있습니다. 예를 들어 MDX 문에서 MyVoidFunction() 함수를 사용하려면 다음과 같은 구문을 사용합니다.  
   
 ```  
 CALL(MyVoidFunction)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델 어셈블리 관리](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
  [저장된 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
