@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64f77ccc8a1e4fdc6bb2aa35aa2b4d4d7b0d5de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047414"
 ---
 # <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
 

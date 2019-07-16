@@ -18,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056244"
 ---
 # <a name="extended-events-tables---tracexeeventmap"></a>확장 이벤트 테이블 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트마다 하나의 행을 포함합니다. 이 표에서 sys 스키마에 master 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |trace_event_id|**smallint**|매핑될 SQL 추적 이벤트 클래스의 ID입니다.|  
 |package_name|**nvarchar(60)**|매핑된 이벤트가 있는 Extended Events 패키지의 이름입니다.|  
 |xe_event_name|**nvarchar(60)**|SQL 추적 이벤트 클래스에 매핑된 Extended Events 이벤트의 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 쿼리를 사용하여 SQL 추적 이벤트 클래스에 해당하는 Extended Events 이벤트를 식별할 수 있습니다.  
   
 ```  

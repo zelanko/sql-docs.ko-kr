@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4242698409de26264c83e04ae95daa277f517689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c335307dd5785ddf6ce6973a7dd0623617e95357
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964922"
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Users 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

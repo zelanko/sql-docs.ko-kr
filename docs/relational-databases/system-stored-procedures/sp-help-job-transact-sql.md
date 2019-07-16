@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054995"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` 표시할 작업 특성입니다. *job_aspect* 됩니다 **varchar(9)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**ALL**|작업 항목 정보입니다.|  
 |**JOB**|작업 정보입니다.|  
@@ -106,7 +105,7 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>결과 집합  
  지정 된 인수가 없는 경우 **sp_help_job** 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
 |**originating_server**|**nvarchar(30)**|작업을 가져온 서버의 이름입니다.|  
@@ -116,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
 |**category**|**sysname**|작업 범주입니다.|  
 |**owner**|**sysname**|작업 소유자입니다.|  
-|**notify_level_eventlog**|**int**|**비트 마스크** 나타내는 어떤 상황에서 Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업을 완료할 때마다 =|  
+|**notify_level_eventlog**|**int**|**비트 마스크** 나타내는 어떤 상황에서 Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록 합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업을 완료할 때마다 =|  
 |**notify_level_email**|**int**|**비트 마스크** 어떤 상황에서 알림 전자 메일을 보내야 나타내는 작업을 완료 하는 경우. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
 |**notify_level_netsend**|**int**|**비트 마스크** 어떤 상황에서 네트워크 메시지를 보내야 나타내는 작업을 완료 하는 경우. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
 |**notify_level_page**|**int**|**비트 마스크** 어떤 상황에서 페이지를 보내야 나타내는 작업을 완료 하는 경우. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
@@ -145,7 +144,7 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 단계에 관한 결과 집합입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|해당 작업에 관한 단계의 고유 ID입니다.|  
 |**step_name**|**sysname**|단계의 이름입니다.|  
@@ -173,12 +172,12 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 일정에 관한 결과 집합입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|모든 작업에서 고유한 일정의 ID입니다.|  
 |**schedule_name**|**sysname**|해당 작업에 대해서만 고유한 일정의 이름입니다.|  
 |**enabled**|**int**|일정이 활성 상태 인지 여부 (**1**) 여부 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**정수**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -197,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 대상 서버의 결과 집합입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|대상 서버의 ID입니다.|  
 |**server_name**|**nvarchar(30)**|대상 서버의 컴퓨터 이름입니다.|  
@@ -224,7 +223,7 @@ sp_help_job { [ @job_id = ] job_id
   
 ## <a name="examples"></a>예  
   
-### <a name="a-list-information-for-all-jobs"></a>1\. 모든 작업에 관한 정보 나열  
+### <a name="a-list-information-for-all-jobs"></a>A. 모든 작업에 관한 정보 나열  
  다음 예에서는 매개 변수 없이 `sp_help_job` 프로시저를 실행하여 `msdb` 데이터베이스에 현재 정의되어 있는 모든 작업에 대한 정보를 반환합니다.  
   
 ```  
@@ -266,7 +265,7 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

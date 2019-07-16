@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209474"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>SharePoint용 파워 피벗 설치 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "34017510"
 ## <a name="verify-integration-at-the-site-level"></a>사이트 수준에서 통합 확인  
  SharePoint 사이트와 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 통합을 확인하려면 다음 단계를 수행합니다.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용한 경우에 http://을 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 http://를 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에서입니다.  
   
 2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34017510"
   
 7.  서버 유형에서 **Analysis  Services**를 선택합니다.  
   
-8.  서버 이름에 입력  **\<서버 이름 > \powerpivot**여기서  **\<서버 이름 >** 있는 컴퓨터의 이름에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 대 한 설치 합니다.  
+8.  서버 이름을 입력  **\<서버 이름 > \powerpivot**여기서  **\<서버 이름 >** 되어 있는 컴퓨터의 이름인는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 용 설치 합니다.  
   
 9. **연결**을 클릭합니다. Analysis Services 서버를 사용할 수 있는지 확인합니다.  
   

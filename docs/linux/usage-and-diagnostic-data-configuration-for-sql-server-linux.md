@@ -3,17 +3,16 @@ title: Linux에서 사용량 및 SQL Server에 대 한 진단 데이터 컬렉�
 description: SQL Server 고객 사용량 및 진단 데이터는 수집 방법과 linux 구성에 대해 설명 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ab0b00013c09c5328ad711307558e67adc784d05
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 36c5194df015b26e5c9925575a9e524ef17ce602
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057234"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Linux에서 사용량 및 SQL Server에 대 한 진단 데이터 컬렉션 구성
 

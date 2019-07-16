@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061609"
 ---
 # <a name="scrollable-cursors"></a>스크롤 가능 커서
 최신 화면 기반 응용 프로그램에서 사용자 데이터를 뒤로 및 앞으로 스크롤합니다. 이러한 응용 프로그램에 대 한 이전에 인출된 된 행을 반환 합니다. 문제가 있는 경우 한 가지 방법은 닫습니다 하 고 커서를 닫은 후 커서 필요한 행에 도달할 때까지 행을 인출 하는 것입니다. 다른 방법은 결과 집합을 읽고, 로컬로 캐시 하 고, 응용 프로그램에서 스크롤을 구현 하는 것입니다. 모두 가능성 결과 집합이 작은 경우 에서만 잘 작동 하 고 두 번째 가능성은 구현 하기가 어렵습니다. 더 나은 방법은 사용 하는 *스크롤 가능 커서* 뒤로 이동할 수 있으며 결과 집합에 전달 합니다.  

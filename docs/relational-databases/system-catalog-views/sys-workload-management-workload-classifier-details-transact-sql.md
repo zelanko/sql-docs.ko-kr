@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d5494cb7e8fc49e9aa6e8335d0c65e6415375a1a
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061290"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact SQL)
 
@@ -26,7 +25,7 @@ ms.locfileid: "67413090"
 
   각 분류자에 대 한 세부 정보를 반환 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|분류자의 ID입니다. 에 조인 가능 [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md)합니다. Null을 허용하지 않습니다.|
 |classifier_type|**sysname**|분류 수행 되는 엔터티입니다. Null을 허용하지 않습니다.|MEMBERNAME|

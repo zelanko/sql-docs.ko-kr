@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016869"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue(MDX)
 
@@ -50,7 +49,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  ALL  
  이 플래그가 설정되면 저장소 엔진에서 로드되는 값을 제외하고 모든 값이 Null입니다. 이 플래그가 설정되지 않으면 계산이 적용되지 않고 값이 집계됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정된 경우 이 함수는 지정된 계산 패스에서 특정 MDX 숫자 식을 계산하여 숫자 값을 반환합니다. 선택적으로 액세스 플래그 및 액세스 플래그 한정자에 의해 계산 패스가 한정될 수도 있습니다.  
   
  문자열 식이 지정 된 함수 지정한 계산 패스에서 특정된 MDX 문자열 식을 계산 하 여 문자열 값을 반환 하 고 선택적으로 액세스 플래그 및 액세스 플래그 한정자에 의해 수정*합니다.*  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cfdd0babe84d309391b3e1ca546c4e05fdf1331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049171"
 ---
 # <a name="why-was-odbc-created"></a>ODBC가 만들어진 이유
 지금까지 회사는 단일 DBMS를 사용 합니다. 데이터베이스에 대 한 모든 액세스는 해당 시스템에만 작동 하도록 작성 된 응용 프로그램 또는 해당 시스템의 프런트 엔드를 통해 수행 되었습니다. 그러나 컴퓨터의 사용 증가 자세한 컴퓨터 하드웨어 및 소프트웨어를 사용할 수 있게 되었습니다 회사 다른 Dbms를 획득 하기 시작 했습니다. 이유는 여러 다음과 같습니다. 있도록 이미 던 저렴, fastest, 던 구입 하는 사용자가 알고 된 단일 응용 프로그램에 대 한 가장 잘 작동 새로운 시장의 최신 내용입니다. 다른 이유는 단일 DBMS를 이전에 있던 부서 했 고 여러 재구성 및 합병 있었습니다.  

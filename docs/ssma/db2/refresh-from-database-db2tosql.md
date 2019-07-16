@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a53c3005aca2e599d8ceb0b973a58bcf2ca5e14c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060134"
 ---
 # <a name="refresh-from-database-db2tosql"></a>데이터베이스 (DB2ToSQL)에서 새로 고침
 합니다 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 DB2 데이터베이스에서 새로 고칠 개체를 선택 합니다. 대화 상자에서 행은 색으로 구분 된 메타 데이터의 상태를 기반으로 합니다.  

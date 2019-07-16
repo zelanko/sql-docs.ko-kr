@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206846"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
   프로그램 변수에서 직접 대량 복사를 수행할 수 있습니다. 행의 데이터를 보유할 변수를 할당하고 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 대량 복사를 시작한 후 각 열에 대해 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출하여 열과 연결될 프로그램 변수의 위치와 서식을 지정합니다. 각 변수에 데이터를 채운 다음 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출하여 데이터 행 하나를 서버에 전송합니다. 모든 행을 서버에 전송할 때까지 변수에 데이터를 채우고 **bcp_sendrow** 를 호출하는 과정을 반복한 후 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 을 호출하여 작업이 완료되었음을 지정합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054981"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|에이전트 세션 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
@@ -76,7 +75,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|통해 알림을 받는 운영자의 ID 번호 **net send** 작업이 완료 될 때입니다.|  
 |**operator_id_paged**|**int**|작업이 완료되었을 때 호출기를 통해 알림을 받는 운영자의 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 프로시저는 작업의 현재 상태에 대한 스냅숏을 제공합니다. 반환된 결과는 요청을 처리하는 당시의 정보를 나타냅니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id를 테이블에 저장 됩니다 **msdb.dbo.syssessions**합니다.  

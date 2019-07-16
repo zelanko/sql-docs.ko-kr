@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 8efef6f081395265f641197058b7920162cdde46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9166265dad077d4a3e83cc300868607d001ef233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058970"
 ---
 # <a name="configure-replay-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 재생 구성
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056484"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 `[ @ignore_distributor = ] ignore_distributor` 이 저장된 프로시저는 배포자에 연결 하지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다.  
   
-`[ @reserved = ] reserved` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다.  
+`[ @reserved = ] reserved` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **nvarchar(20)** , 기본값은 NULL입니다.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏 무효화 하는 기능을 사용할지 설정 합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
   
@@ -69,7 +68,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropmergearticle** 병합 복제에 사용 됩니다. 아티클을 삭제 하는 방법에 대 한 자세한 내용은 참조 하세요. [아티클 추가 및 기존 게시에서 아티클을 삭제](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)합니다.  
   
  실행 **sp_dropmergearticle** 게시에서 아티클을 삭제 하려면에서 제거 되지는 않습니다 개체 게시 데이터베이스나 구독 데이터베이스에서 해당 하는 개체입니다. 필요한 경우 `DROP <object>`를 사용하여 수동으로 이러한 개체를 제거하십시오.  

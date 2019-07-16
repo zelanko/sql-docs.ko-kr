@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63258822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056868"
 ---
 # <a name="sql-to-c-guid"></a>SQL에서 C로: GUID
 GUID ODBC SQL 데이터 형식에 대 한 식별자가 있습니다.  
@@ -32,11 +31,11 @@ GUID ODBC SQL 데이터 형식에 대 한 식별자가 있습니다.
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*BufferLength* > 문자 바이트 길이|data|36|n/a|  
-||*BufferLength* < 37|정의되지 않음|정의되지 않음|22003|  
+||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_WCHAR|*BufferLength* > 문자 길이|data|36|n/a|  
-||*BufferLength* < 37|정의되지 않음|정의되지 않음|22003|  
+||*BufferLength* < 37|Undefined|Undefined|22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 \< =  *BufferLength*|data|데이터의 바이트 길이|n/a|  
-||데이터의 바이트 길이 > *BufferLength*|정의되지 않음|정의되지 않음|22003|  
+||데이터의 바이트 길이 > *BufferLength*|Undefined|Undefined|22003|  
 |SQL_C_GUID|[A] 없음|data|16[b]|n/a|  
   
  [a] 값 *BufferLength* 이 변환에 대해 무시 됩니다. 드라이버 가정 크기 **TargetValuePtr* C 데이터 형식의 크기입니다.  

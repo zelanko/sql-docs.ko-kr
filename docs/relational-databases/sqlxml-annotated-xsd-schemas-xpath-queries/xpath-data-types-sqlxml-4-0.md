@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9f66bf1ded94b0877309917e9f03e71512ac8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051596"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,11 +130,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X는 알 수 없는 형식입니다.|X가 **문자열**|X가 **수**|X는 **부울**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) &GT; 0|X != 0|-|  
+|boolean(X)|-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-convert-a-data-type-in-an-xpath-query"></a>1\. XPath 쿼리에서 데이터 형식 변환  
+### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. XPath 쿼리에서 데이터 형식 변환  
  주석이 추가 된 XSD 스키마에 대해 지정 된 다음 XPath 쿼리에서 쿼리 모두 선택 **직원** 사용 하 여 노드를 **EmployeeID** 특성 1 인 "E-"가 사용 하 여 지정 된 접두사의 값을 **그것이-접두사** 주석입니다.  
   
  `Employee[@EmployeeID="E-1"]`  

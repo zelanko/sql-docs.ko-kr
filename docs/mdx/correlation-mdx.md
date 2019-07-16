@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0140cc76a47df26ee42701152794f2ef9ec0f51e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35227d129f70a505a33157d1aa945da5acb219d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045210"
 ---
 # <a name="correlation-mdx"></a>Correlation(MDX)
 
@@ -38,7 +37,7 @@ Correlation( Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  X축 값을 나타내는 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **상관 관계** 함수는 첫 번째 y 값을 가져올 첫 번째 숫자 식에 대해 지정된 된 집합을 평가 하 여 값의 두 쌍의 상관 계수를 계산 합니다. 그런 다음 두 번째 숫자 식(지정된 경우)에 대해 지정된 집합을 계산하여 X축 값 집합을 구합니다. 두 번째 숫자 식이 지정되지 않은 경우 이 함수는 지정된 집합의 현재 셀 컨텍스트를 X축 값으로 사용합니다.  
   
 > [!NOTE]  

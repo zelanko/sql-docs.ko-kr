@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a257f63328fe0abcf121b82b619bc58b70b7c6f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 714d0ca36bc48206ee7431454a61b51d2c31afb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060557"
 ---
 # <a name="sysserverassemblymodules-transact-sql"></a>sys.server_assembly_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   TA 유형의 서버 수준 트리거에 대한 어셈블리 모듈마다 한 행씩 포함합니다. 이 뷰에서는 어셈블리 트리거를 기본 CLR 구현으로 매핑합니다. 이 관계를 조인할 수 있습니다 **sys.server_triggers**합니다. 어셈블리에 로드 해야 합니다 **마스터** 데이터베이스입니다. 튜플(object_id)은 관계에 대한 키입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 어셈블리 모듈이 정의되는 개체에 대한 FOREIGN KEY 역참조입니다.|  
 |**assembly_id**|**int**|이 모듈이 생성된 어셈블리의 ID입니다. 어셈블리는 master 데이터베이스에 로드되어야 합니다.|  

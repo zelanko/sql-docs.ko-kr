@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181930"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services 액세스를 허용하도록 Windows 방화벽 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53211582"
   
 -   실행할 **netstat ao-p TCP** TCP 보려면 명령줄에서 해당 PID에 대 한 정보를 포트입니다.  
   
--   SQL Server Management Studio를 사용하여 포트를 확인하고 \<Ip 주소 >:\<portnumber >.  
+-   SQL Server Management Studio를 사용 하 여 포트를 확인 하 고이 형식으로 Analysis Services 서버에 연결 합니다. \<Ip 주소 >:\<portnumber >.  
   
  애플리케이션이 특정 포트에서 수신 대기하고 있더라도 방화벽에서 액세스를 차단하면 연결에 성공할 수 없습니다. 명명된 Analysis Services 인스턴스에 연결하려면 msmdsrv.exe 또는 msmdsrv.exe가 방화벽에서 수신 대기하고 있는 고정 포트에 대한 액세스 차단을 해제해야 합니다. 이 항목의 남은 섹션에서는 액세스 차단을 해제하는 방법에 대한 지침을 제공합니다.  
   

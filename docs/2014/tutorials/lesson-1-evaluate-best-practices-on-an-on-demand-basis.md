@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185752"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>1단원: 요청 시 최선의 구현 방법 평가
   요청 시(또는 "임시") 정책 평가 방법을 사용하여 최선의 구현 방법 정책을 신속히 평가함으로써 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스가 최선의 구현 방법 지침과 권장 사항을 충족하는지 여부를 확인할 수 있습니다.  

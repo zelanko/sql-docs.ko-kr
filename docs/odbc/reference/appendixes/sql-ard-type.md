@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057048"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 형식 식별자는 버퍼의 데이터는 카드가 SQL_DESC_CONCISE_TYPE 필드에 지정 된 형식의 될 것임을 나타내려면 됩니다. SQL_ARD_TYPE에 입력 합니다 *TargetType* 에 대 한 호출의 인수 **SQLGetData** 특정 데이터 형식 및 데이터를 변경 하는 응용 프로그램 설명자를 변경 하 여 버퍼의 입력을 사용 하도록 설정 하는 대신 필드입니다. 이 값의 데이터 형식을 연결 합니다  *\*TargetValuePtr* 버퍼 설명자 필드입니다. (SQL_ARD_TYPE에 대 한 호출에 입력 되지 않았습니다 **SQLBindCol** 하거나 **SQLBindParameter** 바인딩된 버퍼 유형의 SQL_DESC_TYPE 및 SQL_DESC_CONCISE_TYPE 필드를 이미 연결 되어 있고 변경할 수 있습니다 때문에 언제 든 지 이러한 필드 중 하나를 변경 합니다.)  

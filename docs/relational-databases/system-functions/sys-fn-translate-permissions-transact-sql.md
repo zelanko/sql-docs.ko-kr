@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055368"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>반환 값  
  **table**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환 되는 값을 **사용 권한** SQL 추적의 열에서 사용 하는 비트 마스크의 정수 표현 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유효 권한을 계산 하 합니다. 25가지 종류의 보안 개체에는 각각 해당 숫자 값을 가진 사용 권한 집합이 있습니다. **sys.fn_translate_permissions** 이 비트 마스크의 사용 권한 이름 테이블로 변환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
