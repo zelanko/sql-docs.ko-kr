@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5994201f7e6b2b859ef85a7a24e0c0465f59ec31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056490"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropdynamicsnapshot** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

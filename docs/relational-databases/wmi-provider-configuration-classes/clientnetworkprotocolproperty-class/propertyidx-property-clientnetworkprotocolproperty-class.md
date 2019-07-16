@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b8a088c5a02f010bda32da9b67b962e5445c02ab
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 1b9c9f1adde1e60ffaae8186691daee051c9e56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040783"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.PropertyIdx [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  A **uint32** 현재 속성의 배열 인덱스 값을 지정 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  

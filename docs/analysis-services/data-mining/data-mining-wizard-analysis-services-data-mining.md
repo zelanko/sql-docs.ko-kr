@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210076"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>데이터 마이닝 마법사(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사는 데이터 마이닝 프로젝트에 새 마이닝 구조를 추가할 때마다 시작됩니다. 이 마법사를 사용하면 데이터 원본을 선택하고, 분석에 사용할 데이터를 정의하는 데이터 원본 뷰를 설정한 다음 초기 모델을 만들 수 있습니다.  
   
  마법사의 마지막 단계에서는 원하는 경우 데이터를 학습 및 테스트 집합으로 나누고 드릴스루와 같은 기능을 사용하도록 설정할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "52511475"
   
 -   예측에 사용할 열 또는 특성은 무엇입니까? 분석에 대한 입력으로 사용하기에 적합한 열 또는 특성은 무엇입니까?  
   
--   어떤 알고리즘을 사용해야 합니까?  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
+-   어떤 알고리즘을 사용해야 합니까? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 제공되는 알고리즘은 모두 다른 특징을 가지고 있으며 생성되는 결과도 다릅니다. 각 데이터 집합에 대해 하나의 모델만 사용할 수 있는 것은 아니므로 원하는 대로 다양한 모델을 추가해 볼 수 있습니다.  
   
 -   통합된 데이터 집합에서 모델을 테스트할 수 있어야 합니까? 그런 경우 일부 데이터를 테스트용으로 따로 떼어놓는 옵션을 사용하는 것이 좋습니다. 백분율을 선택할 수 있으며 원하는 경우 지정된 행 수로 상한을 정할 수 있습니다.  
   
@@ -77,13 +77,13 @@ ms.locfileid: "52511475"
 ### <a name="additional-features"></a>추가 기능  
  적절한 데이터를 선택하고 데이터 원본을 올바르게 구성할 수 있도록 데이터 마이닝 마법사는 다음과 같은 추가 기능을 제공합니다.  
   
--   **자동 데이터 형식 검색**: 마법사는 열 값의 고유성 및 분포를 검사한 다음 최적의 데이터 형식을 추천하고 데이터의 사용 유형을 제안합니다. 목록에서 값을 선택하여 이러한 제안을 무시할 수 있습니다.  
+-   **자동 데이터 형식 검색**: 마법사를 한 다음 최적의 데이터 형식을 권장 및 데이터에 대 한 사용 유형을 제안 고유성 및 열 값의 분포를 검사 됩니다. 목록에서 값을 선택하여 이러한 제안을 무시할 수 있습니다.  
   
--   **변수 제안**: 대화 상자를 클릭하여 현재까지의 모델 구성을 기준으로 모델에 포함된 열 사이의 상관 관계를 계산하고 결과 특성을 예측하는 요소가 될 수 있는 열을 결정하는 분석기를 시작할 수 있습니다. 다른 값을 입력하여 이러한 제안을 무시할 수 있습니다.  
+-   **변수 제안**: 대화 상자를 클릭 하 고 모델에 포함 된 열 사이의 상관 관계를 계산 하 고 모든 열은 현재 까지의 모델 구성을 제공 하 고 결과 특성을 예측 하는 요소가 가능성이 있는지 여부를 결정 하는 분석기를 시작할 수 있습니다. 다른 값을 입력하여 이러한 제안을 무시할 수 있습니다.  
   
--   **기능 선택**: 대부분의 알고리즘은 좋은 예측 요소가 될 수 있는 열을 자동으로 검색하여 이러한 열을 우선적으로 사용합니다. 값이 너무 많이 포함된 열의 경우 데이터 카디널리티를 줄이고 의미 있는 패턴을 찾는 기회를 늘리기 위해 *기능 선택* 이 적용됩니다. 모델 매개 변수를 사용하여 기능 선택 동작을 조정할 수 있습니다.  
+-   **기능 선택**: 대부분의 알고리즘은 자동으로 좋은 예측 요소가 될 열을 우선적으로 사용 하는 열을 검색 하 고 있습니다. 값이 너무 많이 포함된 열의 경우 데이터 카디널리티를 줄이고 의미 있는 패턴을 찾는 기회를 늘리기 위해 *기능 선택* 이 적용됩니다. 모델 매개 변수를 사용하여 기능 선택 동작을 조정할 수 있습니다.  
   
--   **자동 큐브 조각화**: 마이닝 모델이 OLAP 데이터 원본을 기반으로 하는 경우 큐브 특성을 사용하여 모델을 조각화하는 기능이 자동으로 제공됩니다. 이 기능은 큐브 데이터의 하위 집합을 기반으로 모델을 만드는 데 유용합니다.  
+-   **자동 큐브 조각화**: 마이닝 모델이 OLAP 데이터 원본에 따라 하는 경우 큐브 특성을 사용 하 여 모델을 조각화 하는 기능이 자동으로 제공 됩니다. 이 기능은 큐브 데이터의 하위 집합을 기반으로 모델을 만드는 데 유용합니다.  
   
 ### <a name="completing-the-wizard"></a>마법사 완료  
  마법사의 마지막 단계는 마이닝 구조 및 관련 마이닝 모델의 이름을 지정하는 것입니다. 만들어진 모델의 유형에 따라 다음과 같은 옵션을 선택할 수도 있습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "52511475"
   
  [마이닝 모델에 대한 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040026"
 ---
 # <a name="describing-parameters"></a>매개 변수 설명
 **SQLBindParameter** 매개 변수를 설명 하는 인수가: 해당 SQL 형식, 전체 자릿수 및 소수입니다. 이 정보를 사용 하는 드라이버 또는 *메타 데이터를* 매개 변수 값을 데이터 소스에서 필요한 형식으로 변환 합니다. 얼핏 보기에 것 보다 응용 프로그램 매개 변수 메타 데이터를 알고 있는 더 나은 위치에서 드라이버는 어쨌든 드라이버는 결과 집합 열에 대 한 메타 데이터를을 쉽게 검색할 수 있습니다. 결과적으로, 대/소문자 아닙니다. 첫째, 대부분의 데이터 원본 드라이버 매개 변수 메타 데이터를 검색 하는 방법을 제공 하지 않습니다. 둘째, 대부분의 응용 프로그램 메타 데이터를 이미 알고 있습니다.  

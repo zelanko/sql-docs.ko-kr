@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 13b2ed97932a1548cf4f20e07f514134ce209b4a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4cd3ba42974c65591f7920d5df8d7dd8a937d352
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040828"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ object.SupportAlias [= value]
   
  False인 경우 클라이언트 네트워크 프로토콜이 별칭을 지원하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  

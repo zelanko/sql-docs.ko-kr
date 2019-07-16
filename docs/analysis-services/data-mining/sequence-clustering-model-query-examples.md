@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e14fd39a1e917532b61b9f55415281e53598e564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209677"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34019260"
 ##  <a name="bkmk_ContentQueries"></a> 시퀀스 클러스터링 모델에 대한 정보 찾기  
  마이닝 모델의 콘텐츠에 대한 의미 있는 쿼리를 만들려면 모델 콘텐츠의 구조와 노드 유형에 따라 저장되는 정보의 종류를 이해해야 합니다. 자세한 내용은 [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)를 참조하세요.  
   
-###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용하여 모델 매개 변수 반환  
+###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델 매개 변수를 반환 합니다.  
  데이터 마이닝 스키마 행 집합을 쿼리하면 기본적인 메타데이터, 모델이 만들어진 날짜 및 시간, 모델이 마지막으로 처리된 날짜 및 시간, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 사용된 열 등을 비롯하여 모델에 대한 다양한 종류의 정보를 찾을 수 있습니다.  
   
  다음 쿼리는 `[Sequence Clustering]`모델의 작성 및 학습에 사용된 매개 변수를 반환합니다. 이 모델은 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)의 5단원에서 만들 수 있습니다.  
@@ -62,7 +62,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  클러스터 수를 줄이면 대부분의 사용자가 데이터의 그룹화를 쉽게 찾아보고 이해할 수 있으므로 기본적으로 값 10이 사용됩니다. 그러나 각 모델 및 데이터 집합은 서로 다릅니다. 클러스터 수를 다르게 하여 시험해 보면 어떤 매개 변수 값이 가장 정확한 모델을 생성하는지 확인할 수 있습니다.  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 상태에 대한 시퀀스 목록 가져오기  
+###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 상태에 대 한 시퀀스 목록 가져오기  
  마이닝 모델 콘텐츠에는 학습 데이터에서 찾은 시퀀스가 첫 번째 상태에 관련된 모든 두 번째 상태의 목록이 결합되어 저장됩니다. 첫 번째 상태는 시퀀스의 레이블로 사용되며, 관련된 두 번째 상태는 전환이라고 합니다.  
   
  예를 들어 다음 쿼리는 시퀀스가 클러스터로 그룹화되기 전에 모델의 첫 번째 상태가 모두 들어 있는 목록을 반환합니다.  모델 루트 노드를 부모(PARENT_UNIQUE_NAME = 0)로 갖는 시퀀스(NODE_TYPE = 13) 목록을 반환하면 이 목록을 가져올 수 있습니다. FLATTENED 키워드는 결과를 읽기 쉽게 해 줍니다.  
@@ -180,7 +180,7 @@ SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')
  자세한 내용은 [SELECT FROM &#60;model&#62;.SAMPLE_CASES&#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md)를 참조하세요.  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>클러스터 특징 및 클러스터 차원  
- **클러스터 특징** 탭에는 각 클러스터의 주요 특성이 확률에 따라 순위가 지정되어 요약됩니다. 여기에서 클러스터에 속하는 사례의 수와 클러스터의 사례 분포를 확인할 수 있습니다. 각 특징에는 특정 지지도가 있습니다. 특정 클러스터의 특징을 보려면 해당 클러스터의 ID를 알고 있어야 합니다.  
+ **클러스터 특징** 탭에는 각 클러스터의 주요 특성이 확률에 따라 순위가 지정되어 요약됩니다. 클러스터에 속하는 사례의 수와 클러스터의 사례 분포 어떤는 찾을 수 있습니다. 각 특징에는 특정 지지도 있습니다. 특정 클러스터의 특징을 보려면 해당 클러스터의 ID를 알고 있어야 합니다.  
   
  다음 예에서는 시스템 저장 프로시저인 `GetClusterCharacteristics`를 사용하여 클러스터 12의 특징 중 확률 점수가 지정된 임계값 0.0005를 초과하는 모든 특징을 반환합니다.  
   
@@ -228,7 +228,7 @@ AS t
   
 |Expression.$Sequence|Expression.Line Number|Expression.Model|  
 |--------------------------|----------------------------|----------------------|  
-|1.||Cycling Cap|  
+|1||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
 |4||Long-Sleeve Logo Jersey|  
@@ -267,10 +267,10 @@ AS t
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

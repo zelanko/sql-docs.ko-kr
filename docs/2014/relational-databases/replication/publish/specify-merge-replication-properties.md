@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199293"
 ---
 # <a name="specify-merge-replication-properties"></a>병합 복제 속성 지정
 이 항목에서는 병합 복제의 다양한 속성을 지정하는 방법을 설명합니다. 
@@ -52,7 +52,7 @@ ms.locfileid: "59582696"
 ###  <a name="using-transact-sql"></a>Transact-SQL 사용  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>새 병합 테이블 아티클을 다운로드 전용으로 지정하려면    
-1.  매개 변수 **@subscriber_upload_options**에 **1** 또는 **2**의 값을 지정하여 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 다음은 숫자 값과 이에 해당하는 동작입니다.  
+1.  매개 변수 **@subscriber_upload_options** 에 **1** 또는 **2**의 값을 지정하여 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 다음은 숫자 값과 이에 해당하는 동작입니다.  
   
     -   **0** - 제한이 없습니다(기본값). 구독자의 변경 내용이 게시자에 업로드됩니다.    
     -   **1** - 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.    
@@ -64,7 +64,7 @@ ms.locfileid: "59582696"
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>기존의 병합 테이블 아티클을 다운로드 전용으로 수정하려면  
   
 1.  아티클이 다운로드 전용인지 확인하려면 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행합니다. 결과 집합에서 아티클의 **upload_options** 값을 확인합니다.    
-2.  1단계에서 반환된 값이 **0**이면 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)매개 변수에 값을 **subscriber_upload_options** 값, **@property**및 **1** 값, **@force_invalidate_snapshot** 및 **@force_reinit_subscription**에 다음 동작에 해당하는 **1** 을 사용하여 **2** 값, **@value**을 실행합니다.  
+2.  1단계에서 반환된 값이 **0**이면 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)매개 변수에 값을 **subscriber_upload_options** 값, **@property** 및 **1** 값, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 에 다음 동작에 해당하는 **1** 을 사용하여 **2** 값, **@value** 을 실행합니다.  
   
     -   **1** - 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.    
     -   **2** - 구독자에서 변경이 허용되지 않습니다.  
@@ -101,13 +101,13 @@ ms.locfileid: "59582696"
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>대화형 해결 프로그램을 사용하는 병합 끌어오기 구독 만들기  
   
-1.  게시 데이터베이스의 게시자에서 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 지정하고 **@publication**에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다. 대화형 해결 프로그램을 사용할 결과 집합의 각 아티클에 대해 **allow_interactive_resolver** 값을 확인합니다.    
+1.  게시 데이터베이스의 게시자에서 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 지정하고 **@publication** 에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다. 대화형 해결 프로그램을 사용할 결과 집합의 각 아티클에 대해 **allow_interactive_resolver** 값을 확인합니다.    
     -   이 값이 **1**이면 대화형 해결 프로그램이 사용됩니다.    
-    -   값이 **0**이면 각 아티클에서 먼저 대화형 해결 프로그램을 설정해야 합니다. 이렇게 하려면 [@publication](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 지정하고 **@publication**을 지정하고 **@article**에 **allow_interactive_resolver** 값, **@property**에 **true** 값, **@value**에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.    
+    -   값이 **0**이면 각 아티클에서 먼저 대화형 해결 프로그램을 설정해야 합니다. 이렇게 하려면 [@publication](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 지정하고 **@publication** 을 지정하고 **@article** 에 **allow_interactive_resolver** 값, **@property** 에 **true** 값, **@value** 에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.    
 2.  구독 데이터베이스의 구독자에서 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. 자세한 내용은 [끌어오기 구독 만들기](../create-a-pull-subscription.md)를 참조하세요.    
 3.  구독 데이터베이스의 구독자에서 다음 매개 변수를 지정하여 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)를 실행합니다.  
   
-    -   **@publisher**을 지정하고 **@publisher_db** (게시된 데이터베이스) 및 **@publication**에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.    
+    -   **@publisher** 을 지정하고 **@publisher_db** (게시된 데이터베이스) 및 **@publication** 에서 병합 아티클에 대한 상호 충돌 추적 및 해결 수준을 지정하는 방법에 대해 설명합니다.    
     -   **@enabled_for_syncmgr** - **true** 값    
     -   **@use_interactive_resolver** - **true** 값    
     -   병합 에이전트에 필요한 보안 계정 정보. 자세한 내용은 [Create a Pull Subscription](../create-a-pull-subscription.md)을 참조하세요.    
@@ -115,7 +115,7 @@ ms.locfileid: "59582696"
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>대화형 해결 프로그램을 지원하는 문서 정의  
   
-게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체 및 **@allow_interactive_resolver**에 **true** 값을 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
+게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시 이름, **@article** 에 아티클 이름, **@source_object** 에 게시할 데이터베이스 개체 및 **@allow_interactive_resolver** 에 **true** 값을 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
 
 ## <a name="specify-the-conflict-tracking-and-resolution-level"></a>충돌 추적 및 해결 수준 지정 
 병합 게시에 대한 구독이 동기화되면 복제 시 게시자와 구독자에 있는 동일 데이터가 변경되서 발생하는 충돌이 있는지 확인합니다. 충돌을 행 수준에서 검색할지(행이 변경되면 충돌로 간주) 아니면 열 수준에서 검색할지(동일 행 및 열이 변경되는 경우에만 충돌로 간주)를 지정할 수 있습니다. 아티클에 대한 충돌 해결은 행 수준에서 수행됩니다. 논리적 레코드를 사용하는 경우의 충돌 감지 및 해결에 대한 자세한 내용은 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)을 참조하세요.  
@@ -141,7 +141,7 @@ ms.locfileid: "59582696"
   
 #### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>새 병합 아티클에 대 한 옵션을 추적 하는 충돌 지정  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 실행하고 **@column_tracking**에 대해 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 실행하고 **@column_tracking** 에 대해 다음 값 중 하나를 지정합니다.  
   
     -   **true** - 아티클에 대해 열 수준 추적을 사용합니다.    
     -   **false** - 행 수준 추적을 사용합니다(기본값).  
@@ -149,7 +149,7 @@ ms.locfileid: "59582696"
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>병합 문서에 대한 충돌 추적 옵션 변경  
   
 1.  병합 아티클에 대한 충돌 추적 옵션을 확인하려면 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행합니다. 결과 집합에서 아티클에 대한 **column_tracking** 옵션의 값을 확인합니다. 값이 **1** 이면 열 수준 추적을 사용 중이고 **0** 이면 행 수준 추적을 사용 중입니다.    
-2.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property**에 **column_tracking** 값을 지정하고 **@value**에 다음 값 중 하나를 지정합니다.
+2.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property** 에 **column_tracking** 값을 지정하고 **@value** 에 다음 값 중 하나를 지정합니다.
     -   **true** - 아티클에 대해 열 수준 추적을 사용합니다.
     -   **false** - 행 수준 추적을 사용합니다(기본값).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "59582696"
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>새 병합 문서에 대해 삭제가 무시되도록 지정  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 값을 지정 `false` 에 대 한 **@delete_tracking**합니다. 자세한 내용은 [아티클을 정의](../publish/define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 값을 지정 `false` 에 대 한 **@delete_tracking** 합니다. 자세한 내용은 [아티클을 정의](../publish/define-an-article.md)을 참조하세요.  
   
     > [!NOTE]  
     >  아티클의 원본 테이블이 이미 다른 게시에 게시된 경우 **delete_tracking** 값은 두 아티클에 대해 동일해야 합니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "59582696"
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>기존 병합 문서에 대해 삭제가 무시되도록 지정  
   
 1.  아티클에 대해 오류 보정이 설정되어 있는지 확인하려면 [sp_helpmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행하고 결과 집합에서 **delete_tracking**의 값을 확인합니다. 이 값이 **0**이면 삭제가 이미 무시되고 있는 것입니다.    
-2.  1단계의 값이 **1**이면 게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **delete_tracking** 에 대 한 **@property**에 값 `false` 에 대 한 **@value**합니다.  
+2.  1단계의 값이 **1**이면 게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 값을 지정 **delete_tracking** 에 대 한 **@property** 에 값 `false` 에 대 한 **@value** 합니다.  
   
     > [!NOTE]  
     >  아티클의 원본 테이블이 이미 다른 게시에 게시된 경우 **delete_tracking** 값은 두 아티클에 대해 동일해야 합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "59582696"
 ## <a name="processing-order"></a>처리 순서
   병합 복제를 사용하면 동기화 프로세스 중에 병합 에이전트에서 아티클을 처리하는 순서를 지정할 수 있습니다. 아티클을 작성할 때 복제 저장 프로시저를 사용하여 각 아티클 순서를 프로그래밍 방식으로 할당할 수 있습니다. 아티클은 최하위에서 최상위의 순서로 처리됩니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 복제 속성 지정](../publish/specify-merge-replication-properties.md)을 참조하세요.  
 
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다. 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 병합 게시에 대한 아티클의 기본 처리 순서를 덮어쓸 수 있게 되었습니다. 트리거를 통해 참조 무결성을 정의하고 이러한 트리거가 특정 순서로 발생해야 할 경우 이러한 작업이 유용할 수 있습니다. 
 
 ### <a name="how-processing-order-is-determined"></a>처리 순서 결정 방식  
  병합 동기화 중 아티클은 기본적으로 기본 테이블에 정의된 DRI(선언적 참조 무결성) 제약 조건을 포함하여 개체 간 종속 관계에 필요한 순서대로 처리됩니다. 아티클 처리 시 테이블에 변경 내용을 열거한 다음 이들 변경 내용을 적용합니다. DRI가 없지만 조인 필터 또는 논리적 레코드가 테이블 아티클 사이에 존재할 경우 아티클은 필터 및 논리적 레코드에 필요한 순서대로 처리됩니다. DRI, 조인 필터, 논리적 레코드 또는 기타 종속 관계를 통해 다른 아티클과 관련되어 있지 않은 아티클은 [sysmergearticles&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/sysmergearticles-transact-sql) 시스템 테이블에서의 아티클 애칭에 따라 처리됩니다.  
@@ -196,7 +196,7 @@ ms.locfileid: "59582696"
 
 ### <a name="new-article"></a>새 문서
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 이때 **@processing_order**을 참조하세요. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 이때 **@processing_order** 을 참조하세요. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
     > [!NOTE]  
     >  정렬된 아티클을 만들려면 아티클 순서 값 사이에 간격을 두어야 합니다. 그러면 나중에 새 값을 쉽게 설정할 수 있습니다. 예를 들어 3개 아티클의 고정 처리 순서를 지정해야 하는 경우 **@processing_order** 값을 각각 1, 2, 3이 아닌 10, 20, 30으로 설정합니다.  
@@ -205,7 +205,7 @@ ms.locfileid: "59582696"
   
 1.  아티클의 처리 순서를 결정하려면 [sp_helpmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행하고 결과 집합에서 **processing_order** 값을 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 이때 **processing_order** 에 **@property** 값을 지정하고 **@value**을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 이때 **processing_order** 에 **@property** 값을 지정하고 **@value** 을 참조하세요.  
 
 
 

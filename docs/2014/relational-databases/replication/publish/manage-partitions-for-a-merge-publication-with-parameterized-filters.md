@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199410"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
@@ -32,7 +32,7 @@ ms.locfileid: "52763185"
   
 -   **다음을 사용하여 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "52763185"
   
 3.  선택적으로 스냅숏을 새로 고칠 일정을 지정합니다.  
   
-    1.   **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
+    1.  **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
   
     2.  기본으로 제공되는 스냅숏 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
@@ -100,11 +100,11 @@ ms.locfileid: "52763185"
   
 #### <a name="to-view-information-on-existing-partitions"></a>기존 파티션의 정보를 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)을 실행합니다. **@publication**에 게시의 이름을 지정합니다. (옵션) 단일 필터링 조건을 기준으로 한 정보만 반환되도록 하려면 **@suser_sname** 또는 **@host_name** 을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)을 실행합니다. **@publication** 에 게시의 이름을 지정합니다. (옵션) 단일 필터링 조건을 기준으로 한 정보만 반환되도록 하려면 **@suser_sname** 또는 **@host_name** 을 지정합니다.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>새 파티션을 정의하고 분할된 새 스냅숏을 생성하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)을 실행합니다. **@publication**에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
     -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에 의해 반환된 값으로 정의된 경우  
   
@@ -114,7 +114,7 @@ ms.locfileid: "52763185"
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)을 실행합니다. **@publication**에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_dropmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql)을 실행합니다. **@publication** 에 게시의 이름을 지정하고 다음 중 하나에 파티션을 정의하는 매개 변수가 있는 값을 지정합니다.  
   
     -   **@suser_sname** - 매개 변수가 있는 필터가 [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql)에 의해 반환된 값으로 정의된 경우  
   

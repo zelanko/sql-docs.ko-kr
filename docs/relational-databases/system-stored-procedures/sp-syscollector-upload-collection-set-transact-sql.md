@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d246e2817c34449ab6d4dd5d3def62feba92b196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010535"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어느 *collection_set_id* 하거나 *이름* 해야 값이 있어야 하며 둘 다 NULL 일 수 없습니다.  
   
  이 프로시저는 실행 중인 컬렉션 집합에 대한 요청 시 업로드를 시작하는 데 사용될 수 있습니다. 또한 데이터 컬렉션 및 업로드가 캐시된 모드로 구성된 컬렉션 집합에만 사용할 수 있습니다. 이를 통해 사용자는 예약된 업로드를 기다리지 않고 분석에 사용할 데이터를 가져올 수 있습니다.  

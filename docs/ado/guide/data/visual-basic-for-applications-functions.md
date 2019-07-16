@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923469"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
 다음 Visual Basic for Applications 기능 데이터 셰이핑 계산 식에서에서 사용할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66699710"
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
-|Error|Error$|Exp|Fix|형식|Format$|  
+|오류|Error$|Exp|Fix|형식|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|왼쪽|  

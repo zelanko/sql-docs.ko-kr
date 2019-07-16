@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33f037f4d82cbf5bbdebde01a5c4492128ecc8ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775835"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206022"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
   **SQL Server 에이전트 작업 실행 태스크** 대화 상자를 사용하여 유지 관리 계획 내의 Microsoft SQL Server 에이전트 작업을 실행할 수 있습니다. 선택한 연결에 SQL Server 에이전트 작업이 없으면 이 옵션을 사용할 수 없습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52775835"
  이 태스크에서는 **sp_start_job** 문을 사용합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
  **새로 만들기**  
@@ -59,7 +59,7 @@ ms.locfileid: "52775835"
  Microsoft Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d4f819a92885cf5d173bcdda53ebf3291c958eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060091"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>SSMA 용 DB2 구성 요소 제거 (DB2ToSQL)
 완료 했을 때를 DB2에서 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 확장 팩을 제거 하면 안 되는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하지 않는 한는 **ssma_DB2** 의 스키마를 **sysdb** 데이터베이스입니다.  

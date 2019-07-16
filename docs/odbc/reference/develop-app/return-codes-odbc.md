@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020424"
 ---
 # <a name="return-codes-odbc"></a>반환 코드 ODBC
 ODBC에서 각 함수 라고 하는 코드를 반환 합니다. 해당 *반환 코드,* 전반적인 성공 또는 실패 함수를 나타냅니다. 프로그램 논리는 일반적으로 반환 코드에 기반을 둡니다.  
@@ -45,7 +44,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  다음 표에서 반환 코드를 정의합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|성공적으로 완료 하는 함수입니다. 응용 프로그램 호출 **SQLGetDiagField** 헤더 레코드에서 추가 정보를 검색 합니다.|  
 |SQL_SUCCESS_WITH_INFO|성공적으로 치명적이 지 않은 오류 (경고)를 사용 하 여 가능한 경우 완료 하는 함수입니다. 응용 프로그램 호출 **SQLGetDiagRec** 하거나 **SQLGetDiagField** 추가 정보를 검색 합니다.|  

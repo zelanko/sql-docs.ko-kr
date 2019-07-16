@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184427"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52540657"
   
      다음 표에는 예상 결과가 나와 있습니다.  
   
-    |Bike Buyer|$Cluster|별칭|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|클러스터 8|954|953.948638926372|  
   

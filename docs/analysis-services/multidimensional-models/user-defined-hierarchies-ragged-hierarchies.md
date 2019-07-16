@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cf8844188330a408c29c8b959994637e097f7043
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164850"
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>사용자 정의 계층 구조 - 비정형 계층 구조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

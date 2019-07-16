@@ -2,19 +2,18 @@
 title: 어플라이언스 네트워크 구성-Analytics Platform System | Microsoft Docs
 description: Analytics Platform System (APS) 어플라이언스 빌드되어 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소 수정 집합으로 구성 됩니다. 어플라이언스의 배달 시 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소로 다시 구성 해야 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961465"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스 네트워크 구성
 Analytics Platform System (APS) 어플라이언스 빌드되어 모든 서버 및 IHV의 공장 현장에서 적용 가능한 장치 전체에서 IP 주소 수정 집합으로 구성 됩니다. 어플라이언스의 배달 시 특정 고객의 데이터 센터 요구 사항에 맞게 (이더넷) 외부 IP 주소로 다시 구성 해야 합니다.  

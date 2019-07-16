@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002048"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>커서 특징 및 커서 형식
 응용 프로그램 (정방향 전용, 정적, 키 집합 커서 또는 동적) 커서 유형을 지정 하는 대신 커서의 특징을 지정할 수 있습니다. 이렇게 하려면 응용 프로그램 선택 (SQL_ATTR_CURSOR_SCROLLABLE 문 특성 설정) 하 여 커서의 스크롤 가능 여부 및 민감도 (으로 SQL_ATTR_CURSOR_SENSITIVITY 문 특성 설정) 문에서 커서를 열기 전에 핸들입니다. 드라이버는 다음는 특징을 가장 효율적으로 제공 하는 커서 유형을 요청한 응용 프로그램을 선택 합니다.  

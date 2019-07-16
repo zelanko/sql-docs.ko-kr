@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055236"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'` 에 대 한 정보를 요청 하는 클래스입니다. *클래스* 됩니다 **varchar(8)** , 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**JOB**|작업 범주에 관한 정보를 제공합니다.|  
 |**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
-|**OPERATOR**|운영자 범주에 관한 정보를 제공합니다.|  
+|**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
   
 `[ @type = ] 'type'` 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**LOCAL**|로컬 작업 범주입니다.|  
 |**다중-서버**|다중 서버 작업 범주입니다.|  
@@ -69,21 +68,21 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>결과 집합  
  때 **@suffix** 됩니다 **0**를 **sp_help_category** 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
-|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = Local<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
+|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
  때 **@suffix** 됩니다 **1**를 **sp_help_category** 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
 |**category_type**|**sysname**|범주의 유형입니다. 중 하나 **로컬**하십시오 **MULTI-SERVER**, 또는 **NONE**|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  매개 변수가 지정되지 않은 경우에는 결과 집합이 모든 작업 범주에 관한 정보를 제공합니다.  
@@ -101,7 +100,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-local-job-information"></a>1\. 로컬 작업 정보 반환  
+### <a name="a-returning-local-job-information"></a>A. 로컬 작업 정보 반환  
  다음 예에서는 로컬로 관리되는 작업에 대한 정보를 반환합니다.  
   
 ```  

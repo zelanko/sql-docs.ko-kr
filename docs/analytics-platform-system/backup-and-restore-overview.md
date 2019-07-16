@@ -2,19 +2,18 @@
 title: 백업 및 복원-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 데이터 백업 및 복원에 대 한 병렬 데이터 웨어하우스 (PDW)을 작동 하는 방법을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원 하나의 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사를 사용할 수 있습니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961409"
 ---
 # <a name="backup-and-restore"></a>Backup 및 Restore 메서드
 

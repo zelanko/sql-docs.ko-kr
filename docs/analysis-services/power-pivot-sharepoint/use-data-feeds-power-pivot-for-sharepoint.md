@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979871"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207981"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38979871"
 ##  <a name="prereq"></a> 필수 구성 요소  
  데이터 피드를 Excel 2010으로 가져오려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel이 있어야 합니다.  
   
- Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다.  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010 모두 이러한 형식으로 데이터를 제공할 수 있습니다.  
+ Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010 모두 이러한 형식으로 데이터를 제공할 수 있습니다.  
   
  SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)을 참조하세요.  
   

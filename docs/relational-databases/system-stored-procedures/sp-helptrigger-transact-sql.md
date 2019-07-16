@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048224"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tabname = ] 'table'` 트리거 정보를 반환할 현재 데이터베이스에서 테이블의 이름이입니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @tabname = ] 'table'` 트리거 정보를 반환할 현재 데이터베이스에서 테이블의 이름이입니다. *테이블* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
-`[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형이입니다. *형식* 됩니다 **char(6)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형이입니다. *형식* 됩니다 **char(6)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**DELETE**|DELETE 트리거 정보를 반환합니다.|  
 |**INSERT**|INSERT 트리거 정보를 반환합니다.|  
@@ -58,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서는 결과 집합에 포함된 정보를 보여 줍니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|트리거의 이름입니다.|  
 |**trigger_owner**|**sysname**|트리거가 정의된 테이블의 소유자 이름입니다.|  

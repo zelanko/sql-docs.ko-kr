@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190993"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731600"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL 도구 및 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190993"
 (쿼리, 모니터 등)를 관리 하려면 데이터베이스 도구가 필요 합니다. 데이터베이스는 Windows, 또는 클라우드에서 실행 될 수 있습니다 하는 동안 [Linux](../linux/sql-server-linux-overview.md), 도구는 데이터베이스와 동일한 플랫폼에서 실행할 필요가 없습니다. 
 
 많은 도구가 있습니다 데이터베이스를 사용할 수 있도록이 문서에서는 SQL database를 사용 하 여 작업에 대 한 설명 및 사용 가능한 도구 중 일부에 대 한 포인터를 제공 합니다. 어떤 도구를 결정 합니다. 도움이 필요한 경우에 표시 [어떤 도구 사용 해야 합니까?](#which-tool-should-i-choose)합니다.
-
 
 ## <a name="gui-tools-to-manage-databases"></a>데이터베이스를 관리 하는 GUI 도구  
 
@@ -45,13 +44,13 @@ ms.locfileid: "52190993"
 
 | 도구 | 설명 | 실행 |
 |:--|:--|:--|
-|[**mssql-cli(미리 보기)**](mssql-cli.md)|**mssql cli** 는 SQL Server 쿼리는 대화형 명령줄 도구가 있습니다. | Windows, macOS 및 Linux|
+|[**mssql-cli(미리 보기)** ](mssql-cli.md)|**mssql cli** 는 SQL Server 쿼리는 대화형 명령줄 도구가 있습니다. | Windows, macOS 및 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** 는 여러 데이터베이스 개발 태스크를 자동화 하는 명령줄 유틸리티입니다. macOS 및 Linux 버전의 sqlpackage는 현재 미리 보기. | Windows, macOS 및 Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** SQL을 사용 하 여 작업에 대 한 cmdlet을 제공 합니다.| Windows, macOS 및 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 명령 프롬프트에서 스크립트 파일을 입력 합니다. | Windows, macOS 및 Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다.|Windows, macOS 및 Linux|
-|[**mssql-scripter (미리 보기)**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter** 은 SQL Server 데이터베이스를 스크립팅 하는 것에 대 한 다중 플랫폼 명령줄 환경|Windows, macOS 및 Linux|
-|[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux에서 실행 중인 SQL Server를 구성 합니다.|Linux|
+|[**mssql-scripter (미리 보기)** ](https://github.com/Microsoft/mssql-scripter)|**mssql scripter** 은 SQL Server 데이터베이스를 스크립팅 하는 것에 대 한 다중 플랫폼 명령줄 환경|Windows, macOS 및 Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux에서 실행 중인 SQL Server를 구성 합니다.|Linux|
 
 
 

@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211011"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
-   **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
+  **sqlservr** 응용 프로그램은 명령 프롬프트에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53591867"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 최소 구성으로 시작합니다. 예를 들어 오버 커밋 메모리 같은 구성 값의 설정 때문에 서버를 시작할 수 없을 경우에 유용합니다.  
   
  **-e** _error_log_path_  
- 오류 로그 파일의 정규화된 경로를 나타냅니다. 이 옵션을 지정하지 않으면 기본 위치는 기본 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog이고 명명된 인스턴스의 경우 *\<Drive>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
+ 오류 로그 파일의 정규화된 경로를 나타냅니다. 이 옵션을 지정하지 않으면 기본 위치는 기본 인스턴스의 경우 *\<Drive>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog이고 명명된 인스턴스의 경우 *\<Drive>* :\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog입니다. **-e** 와 *error_log_path*사이에 공백이 없어야 합니다.  
   
  **-l** _master_log_path_  
  **master** 데이터베이스 트랜잭션 로그 파일의 정규화된 경로를 나타냅니다. **-l** 와 *master_log_path*사이에 공백이 없어야 합니다.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591867"
  명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.  
   
  **-T** _trace#_  
- 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.  
+ 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)를 참조하세요.  
   
 > [!IMPORTANT]  
->  추적 플래그를 지정할 때는 **-T**를 사용하여 추적 플래그 번호를 전달합니다. **에서 소문자 t(**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])를 사용할 수는 있습니다. 그러나 **-t** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지원 엔지니어에게 필요한 다른 내부 추적 플래그를 설정합니다.  
+>  추적 플래그를 지정할 때는 **-T**를 사용하여 추적 플래그 번호를 전달합니다. **에서 소문자 t(** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])를 사용할 수는 있습니다. 그러나 **-t** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지원 엔지니어에게 필요한 다른 내부 추적 플래그를 설정합니다.  
   
  **-v**  
  서버 버전 번호를 표시합니다.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591867"
   
  **오류 로그에서 다음 경고가 표시되지 않으면** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 매개 변수의 기본값을 사용해야 합니다.  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<크기 > "  
+-   "실패 한 가상 바이트를 할당 합니다. FAIL_VIRTUAL_RESERVE \<size>"  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<크기 > "  
+-   "실패 한 가상 바이트를 할당 합니다. FAIL_VIRTUAL_COMMIT \<size>"  
   
  이 메시지에 따르면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 확장 저장 프로시저 dll 파일이나 OLE 자동화 개체 등의 항목에 필요한 공간을 찾기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀의 일부를 없애려고 합니다. 이 경우 **-g**``스위치로 예약되는 메모리 양을 늘려 보세요.  
   

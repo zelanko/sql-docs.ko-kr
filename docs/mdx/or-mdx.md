@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055713"
 ---
 # <a name="or-mdx"></a>OR(MDX)
 
@@ -38,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>반환 값  
  반환 하는 부울 값 **true** 인수 중 하나 또는 둘 다로 평가 되 면 **true**이 고, 그렇지 않으면 **false**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **또는** 연산자는 두 인수가 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리 분리를 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **또는** 연산자로 논리 분리를 수행 합니다.  
   
 |*Expression1*|*Expression2*|반환 값|  

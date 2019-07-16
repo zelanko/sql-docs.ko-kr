@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186149"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 템플릿
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적에 포함할 이벤트 클래스와 데이터 열을 정의하는 템플릿을 만들 수 있습니다. 템플릿을 정의하고 저장한 후 선택한 각 이벤트 클래스에 대한 데이터를 기록하는 추적을 실행할 수 있습니다. 하나의 템플릿을 많은 추적에 사용할 수 있지만 템플릿 자체는 실행되지 않습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52779595"
 ## <a name="default-template"></a>기본 템플릿  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 **Standard** 템플릿을 새 추적에 적용되는 기본 템플릿으로 자동 지정합니다. 하지만 미리 정의된 템플릿 또는 사용자 정의 템플릿으로 기본 템플릿을 변경할 수 있습니다. 기본 템플릿을 변경하려면 템플릿을 만들거나 편집할 때 **추적 템플릿 속성** 대화 상자의 **일반** 탭에서 **선택한 서버 유형에 대한 기본 템플릿으로 사용** 확인란을 선택합니다.  
   
-  **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
+ **추적 템플릿 속성** 대화 상자는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 선택한 다음 **새 템플릿** 또는 **템플릿 편집**을 클릭하면 열 수 있습니다.  
   
 > [!NOTE]  
 >  기본 템플릿은 지정된 서버 유형에만 사용할 수 있습니다. 한 가지 서버 유형의 기본값을 변경해도 다른 서버 유형의 기본 템플릿에는 영향을 미치지 않습니다. 특정 서버용 기본 템플릿을 설정하는 방법은 [추적 정의 기본값 설정&#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)을 참조하세요.  

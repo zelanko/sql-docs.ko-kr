@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bd552b6d364bcfd2ccc9f2b9505c54df38a4fae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918345"
 ---
 # <a name="item-property-example-vb"></a>Item 속성 예제(VB)
 이 예제에서는 하는 방법을 [항목](../../../ado/reference/ado-api/item-property-ado.md) 속성 컬렉션의 멤버에 액세스 합니다. 예제 열립니다는 ***작성자*** 목차 합니다 ***Pubs*** 매개 변수가 있는 명령 사용 하 여 데이터베이스입니다.  

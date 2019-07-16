@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210010"
 ---
 # <a name="export-and-import-data-mining-objects"></a>데이터 마이닝 개체 내보내기 및 가져오기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "34018940"
   
  **Restore** 명령을 사용하여 마이닝 구조 또는 마이닝 모델을 가져올 수도 있습니다. 이러한 모델이나 구조를 내보낸 데이터베이스와 같은 이름의 데이터베이스에 해당 모델이나 구조가 복원됩니다. 자세한 내용은 [Restore Options](../../analysis-services/multidimensional-models/restore-options.md)을(를) 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  서버에 이름이 같은 모델이나 구조가 이미 있으면 해당 서버로 모델이나 구조를 가져올 수 없습니다. 또한 데이터 마이닝 개체를 내보낸 다음 내보내기 파일에서 해당 개체의 이름을 수정할 수 없습니다. 따라서 이름이 충돌할 것으로 예상되는 경우 대상 서버에서 데이터 마이닝 개체를 삭제하거나 정의를 내보내기 전에 데이터 마이닝 개체의 이름을 바꿔야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

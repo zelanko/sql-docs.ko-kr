@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163880"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "53207502"
   
 ##  <a name="bmkm_start_tool"></a> 파워 피벗 구성 도구 중 하나 시작  
   
-1.   **시작** 화면에서 **powerpivot**입력  
+1.  **시작** 화면에서 **powerpivot**입력  
   
      **시작** 화면에서 **powerpivot** 을 입력하거나 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**및 다음 중 하나를 차례로 클릭합니다.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53207502"
   
      ![두 개의 파워 피벗 구성 도구](../../analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
-     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
+     **참고:** 도구는 사용할 수 있는 경우에만 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 로컬 서버에 설치 됩니다.  
   
 2.  시작 시 구성 도구는 설치 상태를 확인하고 설치에 유효한 태스크를 제공합니다.  
   

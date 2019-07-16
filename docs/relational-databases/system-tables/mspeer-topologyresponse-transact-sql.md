@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: 1bc5c0c6-c432-405c-89fd-e953d173a247
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 701cac875a9870de840f7955c3c327aee4133a3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4d64e4aa90aadb45e7f3c2aa09d23e06e5bda187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026639"
 ---
 # <a name="mspeertopologyresponse-transact-sql"></a>MSpeer_topologyresponse(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   피어 투 피어 복제에서 토폴로지 상태 요청에 대한 각 노드의 응답을 저장하기 위해 사용됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|토폴로지 상태 요청 항목을 식별 합니다 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) 테이블입니다.|  
 |peer|**sysname**|응답을 생성한 서버 인스턴스의 이름입니다.|  

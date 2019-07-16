@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a7527fe3fb4e250e0cf884e17ee6e53eeba7b8b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945992"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56042954"
 ||[floor](../xquery/numeric-values-functions-floor.md)|  
 ||[round](../xquery/numeric-values-functions-round.md)|  
 |[문자열 값의 XQuery 함수](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
-||[포함](../xquery/functions-on-string-values-contains.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
 ||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[lower-case 함수 &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[string-length](../xquery/functions-on-string-values-string-length.md)|  

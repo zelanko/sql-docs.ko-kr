@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43083d569ca8f06571ce52445b2a2d9c2bb6178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 446153c734b5f014ce55a1a8607c94f37e9248a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900162"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63047857"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_hosts**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|호스트 개체의 내부 메모리 주소입니다.|  
 |**type**|**nvarchar(60)**|호스팅된 구성 요소의 유형입니다. 예:<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server 네이티브 인터페이스<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 공급자<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access 런타임|  
@@ -50,9 +49,9 @@ ms.locfileid: "63047857"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 일부가 아닌 OLE DB 공급자와 같은 구성 요소가 메모리를 할당하고 비선점형 일정에 참여할 수 있습니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 호스팅되며 이러한 구성 요소에서 할당된 모든 리소스는 추적됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 외부 구성 요소에서 사용하는 리소스를 효과적으로 관리할 수 있습니다.  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  

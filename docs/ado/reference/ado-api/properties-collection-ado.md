@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76e619e3bcdc4dc45fd8929aa1046d895b86f013
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917572"
 ---
 # <a name="properties-collection-ado"></a>Properties 컬렉션(ADO)
 모든 포함 된 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체의 특정 인스턴스에 대 한 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  일부 ADO 개체를 **속성** 컬렉션으로 이루어져 **속성** 개체입니다. 각 **속성** 개체 공급자와 관련 된 ADO 개체의 특징에 해당 합니다.  
   
 > [!NOTE]

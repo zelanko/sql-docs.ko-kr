@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a98aa3752259fe93fff7086c7918a31532a7d7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906691"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
 

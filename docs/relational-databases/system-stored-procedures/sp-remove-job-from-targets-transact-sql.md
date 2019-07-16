@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006972"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 `[ @job_name = ] 'job_name'` 지정 된 대상 서버나 대상 서버 그룹을 제거 하는 작업의 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @target_server_groups = ] 'target_server_groups'` 지정된 된 작업에서 제거할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 됩니다 **nvarchar(1024)**, 기본값은 NULL입니다.  
+`[ @target_server_groups = ] 'target_server_groups'` 지정된 된 작업에서 제거할 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 됩니다 **nvarchar(1024)** , 기본값은 NULL입니다.  
   
-`[ @target_servers = ] 'target_servers'` 지정된 된 작업에서 제거할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers* 됩니다 **nvarchar(1024)**, 기본값은 NULL입니다.  
+`[ @target_servers = ] 'target_servers'` 지정된 된 작업에서 제거할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers* 됩니다 **nvarchar(1024)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

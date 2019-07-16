@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048165"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서 설정 하지 않으면 결과 보여 줍니다. 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 Windows 사용자를 지정 하거나 *security_account*합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|현재 데이터베이스의 사용자입니다.|  
 |**RoleName**|**sysname**|역할입니다 **UserName** 속합니다.|  
@@ -63,21 +62,21 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  다음 표에서는 사용자 계정이 지정되어 있지 않고 현재 데이터베이스에 별칭이 있는 경우의 결과 집합을 보여 줍니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|현재 데이터베이스에서 사용자의 별칭인 로그인입니다.|  
 |**UserNameAliasedTo**|**sysname**|현재 데이터베이스에서 로그인을 별칭으로 사용하는 사용자 이름입니다.|  
   
  다음 표에서 결과 집합에 대 한 역할을 지정 하는 경우를 보여 줍니다 *security_account*합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**Role_name**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**Role_id**|**smallint**|현재 데이터베이스에 있는 역할의 역할 ID입니다.|  
 |**Users_in_role**|**sysname**|현재 데이터베이스에 있는 역할의 멤버입니다.|  
-|**Userid**|**smallint**|역할 멤버의 사용자 ID입니다.|  
+|**사용자 Id**|**smallint**|역할 멤버의 사용자 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 역할의 멤버 자격에 대 한 정보를 보려면 사용 하 여 [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)합니다. 서버 역할 멤버에 대 한 정보를 보려면 사용 하 여 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)를 사용 하 여 서버 수준 보안 주체에 대 한 정보를 보려면 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -87,21 +86,21 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-users"></a>1. 모든 사용자 나열  
+### <a name="a-listing-all-users"></a>A. 모든 사용자 나열  
  다음 예에서는 현재 데이터베이스에 있는 사용자를 모두 나열합니다.  
   
 ```  
 EXEC sp_helpuser;  
 ```  
   
-### <a name="b-listing-information-for-a-single-user"></a>2. 단일 사용자에 관한 정보 나열  
+### <a name="b-listing-information-for-a-single-user"></a>2\. 단일 사용자에 관한 정보 나열  
  다음 예에서는 사용자 데이터베이스 소유자(`dbo`)에 대한 정보를 나열합니다.  
   
 ```  
 EXEC sp_helpuser 'dbo';  
 ```  
   
-### <a name="c-listing-information-for-a-database-role"></a>3. 데이터베이스 역할에 관한 정보 나열  
+### <a name="c-listing-information-for-a-database-role"></a>3\. 데이터베이스 역할에 관한 정보 나열  
  다음 예에서는 `db_securityadmin` 고정 데이터베이스 역할에 대한 정보를 나열합니다.  
   
 ```  

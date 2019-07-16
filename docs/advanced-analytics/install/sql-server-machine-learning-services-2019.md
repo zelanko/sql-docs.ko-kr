@@ -7,14 +7,13 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 43d427129cae773fc17a0d73f57a26144b7cd09f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 017dd29a8dc3077ea7c91b6cd3e49699855f987e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962830"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019에 SQL Server Machine Learning Services 설치의 차이점  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ AppContainers 이동의 일부로, 가지 AppContainer Sid에 따라 새 방화�
 기호화 된 링크를 현재 기본값으로 만들어집니다 **R_SERVICES** 하 고 **PYTHON_SERVICES** SQL Server 설치의 일부로. 이 링크를 만들려면 않으려면 대안 폴더에 이르는 계층에 '모든 응용 프로그램 패키지' 읽기 권한을 부여 하는 것입니다.
 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [SQL Server Machine Learning에서 Windows 서비스를 설치 합니다.](sql-machine-learning-services-windows-install.md)
 

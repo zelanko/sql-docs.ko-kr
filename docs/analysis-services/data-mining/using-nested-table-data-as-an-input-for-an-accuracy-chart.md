@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4217962e6bb899cbf2a838c5214eb35bb576be0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505308"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209567"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cfbe8f17c14518b2acf41bdb9ecf64b1679ffb2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182346"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>모델에서 회귀 변수로 사용할 열 지정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "34016550"
   
      뷰어에서 모델은 회귀 수식을 포함하는 단일 노드로 나타납니다. **마이닝 범례**에서 수식을 보거나 쿼리를 사용하여 수식에 대한 계수를 추출할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [선형 회귀 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

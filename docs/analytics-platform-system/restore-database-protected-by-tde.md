@@ -2,19 +2,18 @@
 title: 병렬 데이터 웨어하우스-TDE로 보호 되는 데이터베이스를 복원 합니다. | Microsoft Docs
 description: 분석 플랫폼 시스템 Parallel Data Warehouse의 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960161"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 TDE로 보호 되는 데이터베이스를 복원 합니다.
 투명 한 데이터 암호화를 사용 하 여 암호화 된 데이터베이스를 복원 하려면 다음 단계를 사용 합니다.  

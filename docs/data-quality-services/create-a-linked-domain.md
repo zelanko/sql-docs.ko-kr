@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: a7ad04719883f6674d3656d56ce8df6519c0d29e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e193aa9cec02e47a98973b6ae1c8381634fdbe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992258"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
 

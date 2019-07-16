@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207849"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>디자인 모드에서 DirectQuery 모델에 샘플 데이터 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

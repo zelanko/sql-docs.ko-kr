@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7903de787a1b63627bca8da23369fbee9014c6e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 3ad5bed93bf69f004276fd751f7f2fdef1ea9997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210271"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 이전 버전과 호환성 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -65,5 +65,5 @@ A *동작 변경* 이전 릴리스에서 비교해 서 현재 릴리스의 동�
 MDSCHEMA_MEASUREGROUP_DIMENSIONS 및 DISCOVER_CALC_DEPENDENCY, 변경 내용에 자세히 설명 합니다 [Analysis Services 용 SQL Server 2017 CTP 2.1의 새로운 기능](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) 알림.
 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 [Analysis Services 이전 버전과 호환성 (SQL Server 2016)](analysis-services-backward-compatibility.md)

@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188508"
 ---
 # <a name="options-environment-general-page"></a>옵션(환경-일반 페이지)
-   **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 동작, 일반 창 관리 옵션 및 기타 일반 설정을 구성할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **일반**을 클릭합니다.  
+  **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 시작 동작, 일반 창 관리 옵션 및 기타 일반 설정을 구성할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **환경** 폴더를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **시작 시**  

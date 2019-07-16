@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b57ce165337dc2cef87daf8c2a835bde0c5f85b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918680"
 ---
 # <a name="field-object"></a>Field 개체
 일반적인 데이터 형식 사용 하 여 데이터의 열을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  각 **필드** 개체의 열에 해당 합니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용할 합니다 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성을 **필드** 현재 레코드에 대 한 데이터를 반환 하는 개체입니다. 기능에 따라 공급자가 제공 몇 가지 컬렉션, 메서드 또는 속성을 **필드** 개체를 사용할 수 없습니다.  
   
  컬렉션, 메서드 및 속성을 사용 하 여는 **필드** 개체를 다음을 수행할 수 있습니다.  

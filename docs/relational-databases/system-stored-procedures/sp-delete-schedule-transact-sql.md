@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008952"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본적으로 작업에 연결된 일정은 삭제할 수 없습니다. 작업에 연결 된 일정을 삭제 하려면 값을 지정 **1** 에 대 한 *force_delete*합니다. 일정을 삭제해도 현재 실행 중인 작업은 중지되지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -77,7 +76,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 ## <a name="examples"></a>예  
   
-### <a name="a-deleting-a-schedule"></a>1. 일정 삭제  
+### <a name="a-deleting-a-schedule"></a>A. 일정 삭제  
  다음 예에서는 `NightlyJobs`이라는 일정을 삭제합니다. 이 예에서는 작업에 연결된 일정을 삭제하지 않습니다.  
   
 ```  
@@ -89,7 +88,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>2. 작업에 연결된 일정 삭제  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>2\. 작업에 연결된 일정 삭제  
  다음은 일정이 작업에 연결되었는지 여부에 관계없이 `RunOnce`라는 일정을 삭제하는 예입니다.  
   
 ```  

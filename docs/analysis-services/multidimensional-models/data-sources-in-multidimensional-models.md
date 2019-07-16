@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 149ac1e36eb07d40223ffc97fba1646932ab0093
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178949"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34022830"
 |[데이터 원본 속성 설정 & #40; SSAS 다차원 & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)|각 속성과 각 속성을 설정하는 방법에 대해 설명합니다.|  
 |[가장 옵션 설정 & #40; SSAS-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)|가장 정보 대화 상자에서 옵션을 구성하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [논리적 아키텍처 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

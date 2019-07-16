@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc977fdfd8f3b5ca4ee808f998ce4a32921b9d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f6a51569d83e1ac0c8e6be6d756b70ac85ece51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966852"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Columns 및 Tables Append 메서드, Name 속성 예제(VC++)
 다음 코드를 새 테이블을 만드는 방법을 보여 줍니다.  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32c641afad155955f5b6aaba890c29a05b6ae3d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c086c70541cf7a5a8140dfb38795b404e247c466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62692211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895128"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

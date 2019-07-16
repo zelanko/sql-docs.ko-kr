@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc34bb3dc275e325163d8113db1a3b38c954840b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947745"
 ---
 # <a name="cell-object-ado-md"></a>Cell 개체(ADO MD)
 셀 집합에 포함 된 축 좌표의 교집합에서 데이터를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **셀** 개체를 반환 합니다 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성을 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체.  
   
  컬렉션 및 속성을 사용 하 여는 **셀** 개체를 다음을 수행할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66709791"
   
  합니다 **속성** 공급자가 제공한 속성을 포함 하는 컬렉션입니다. 다음 표에서 사용할 수 있는 속성을 보여 줍니다. 실제 속성은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록에 대 한 공급자에 대 한 설명서를 참조 하세요.  
   
-|이름|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |BackColor|셀을 표시할 때 사용 되는 배경색입니다.|  
 |FontFlags|글꼴 효과 자세하게 비트 마스크입니다.|  

@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210777"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
   스냅숏 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "54125233"
   
     1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터를 사용하거나 배포 데이터베이스에서 [MSdistribution_status](/sql/relational-databases/system-views/msdistribution-status-transact-sql) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. b 단계로 이동합니다.  
   
-    2.   [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
+    2.  [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
   
          **tablediff** 유틸리티에 대한 자세한 내용은 [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](compare-replicated-tables-for-differences-replication-programming.md)를 참조하세요.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125233"
   
 9. 복원 후에 **A** 데이터베이스의 각 테이블에 할당한 ID 범위는 **B** 데이터베이스에서도 사용됩니다. 복원된 **B** 데이터베이스가 실패한 **B** 데이터베이스의 모든 변경 내용(**A** 데이터베이스와 **C** 데이터베이스로 전파됨)을 받았는지 확인한 다음 각 테이블의 ID 범위에 대한 초기값을 다시 설정합니다.  
   
-    1.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)를 실행하고 출력 매개 변수 **@request_id**를 검색합니다. b 단계로 이동합니다.  
+    1.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)를 실행하고 출력 매개 변수 **@request_id** 를 검색합니다. b 단계로 이동합니다.  
   
     2.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md) 또는 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요. c 단계로 이동합니다.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125233"
   
     1.  피어 투 피어 토폴로지의 게시된 테이블에 대한 모든 작업을 중지합니다. b 단계로 이동합니다.  
   
-    2.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)를 실행하고 출력 매개 변수 **@request_id**를 검색합니다. c 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql)를 실행하고 출력 매개 변수 **@request_id** 를 검색합니다. c 단계로 이동합니다.  
   
     3.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. d 단계로 이동합니다.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125233"
   
 2.  최신 구독 데이터베이스 백업을 복원합니다. 3단계로 이동합니다.  
   
-3.  구독 데이터베이스에 밀어넣기 구독만 있는 경우 4단계로 이동합니다. 구독 데이터베이스에 끌어오기 구독이 있는 경우에는 구독 정보가 최신 정보인지, 이 데이터베이스에 오류 발생 시 설정된 테이블과 옵션이 모두 포함되어 있는지 확인합니다. 그렇다면 4단계로 이동합니다. 그렇지 않으면 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
+3.  구독 데이터베이스에 밀어넣기 구독만 있는 경우 4단계로 이동합니다. 구독 데이터베이스에 끌어오기 구독이 있으면 다음 사항을 확인 합니다. 구독 정보는 최신 것 입니까? 이 데이터베이스에 오류 발생 시 설정된 테이블과 옵션이 모두 포함되어 있는지 확인합니다. 그렇다면 4단계로 이동합니다. 그렇지 않으면 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
 4.  구독자를 동기화하려면 배포 에이전트를 실행합니다. 복구가 완료되었습니다.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181627"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services 및 KCD(Kerberos 제한 위임) 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52811155"
 ### <a name="domain-controller"></a>도메인 컨트롤러  
  다음은 DC(도메인 컨트롤러)에 대해 설치할 항목에 대한 요약입니다.  
   
--   **역할:** Active Directory Domain Services입니다. 개요는 [Windows Server 2012에서 Active Directory(AD DS) 구성](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)을 참조하세요.  
+-   **역할:** Active Directory Domain Services. 개요는 [Windows Server 2012에서 Active Directory(AD DS) 구성](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)을 참조하세요.  
   
 -   **역할:** DNS 서버  
   

@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9521cfd6e2b9ec0d08f290c60167c682c98e46f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209658"
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   마이닝 구조 및 관련된 클러스터링 모델에 대한 교차 유효성 검사 정확도 메트릭을 반환합니다.  
   
- 이 저장 프로시저는 전체 데이터 집합에 대한 메트릭을 하나의 파티션으로 반환합니다. 데이터 집합을 교집합 영역으로 분할하여 각 파티션에 대한 메트릭을 반환하려면 [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)를 사용합니다.  
+ 이 저장 프로시저는 전체 데이터 집합에 대한 메트릭을 하나의 파티션으로 반환합니다. 데이터 세트를 교집합 영역으로 분할하여 각 파티션에 대한 메트릭을 반환하려면 [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)을 사용합니다.  
   
 > [!NOTE]  
 >  이 저장 프로시저는 클러스터링 모델에 대해서만 사용할 수 있습니다. 클러스터링 이외의 모델의 경우 [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)를 사용합니다.  
@@ -65,14 +65,14 @@ SystemGetClusterAccuracyResults(
  *테스트 목록*  
  테스트 옵션을 지정하는 문자열입니다. 이 매개 변수는 나중에 사용하도록 예약되어 있습니다.  
   
- (옵션)  
+ (선택 사항)  
   
 ## <a name="return-type"></a>반환 형식  
  각 개별 파티션의 점수와 모든 모델에 대한 집계가 포함된 표입니다.  
   
  다음 표에는 **SystemGetClusterAccuracyResults**에서 반환하는 열이 나열되어 있습니다. 저장 프로시저에서 반환된 정보를 해석하는 방법은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |ModelName|테스트한 모델의 이름입니다. **All** 은 결과가 모든 모델의 집계임을 나타냅니다.|  
 |AttributeName|클러스터링 모델에는 적용되지 않습니다.|  
@@ -81,14 +81,14 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|테스트된 사례 수를 나타내는 정수입니다.|  
 |테스트|수행한 테스트 유형입니다.|  
 |이름|테스트에서 반환한 측정값의 이름입니다. 각 모델의 측정값은 모델 유형 및 예측 가능한 값의 유형에 따라 달라집니다.<br /><br /> 각 예측 가능 유형에 대해 반환된 측정값 목록은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.<br /><br /> 각 측정값의 정의는 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.|  
-|Value|클러스터 사례 유사도를 나타내는 확률 점수입니다.|  
+|값|클러스터 사례 유사도를 나타내는 확률 점수입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  다음 표에서는 교차 유효성 검사에 사용되는 마이닝 구조의 데이터를 지정하는 데 사용할 수 있는 값의 예를 보여 줍니다. 교차 유효성 검사에 테스트 사례를 사용하려면 마이닝 구조에 테스트 데이터 집합이 이미 포함되어 있어야 합니다. 마이닝 구조를 만들 때 테스트 데이터 집합을 정의하는 방법에 대한 자세한 내용은 [데이터 집합 학습 및 테스트](../../analysis-services/data-mining/training-and-testing-data-sets.md)를 참조하세요.  
   
-|정수 값|Description|  
+|정수 값|설명|  
 |-------------------|-----------------|  
-|1.|학습 사례만 사용합니다.|  
+|1|학습 사례만 사용합니다.|  
 |2|테스트 사례만 사용합니다.|  
 |3|학습 사례와 테스트 사례를 모두 사용합니다.|  
 |4|잘못된 조합입니다.|  
@@ -111,7 +111,7 @@ CALL SystemGetClusterAccuracyResults (
   
  예제 결과:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|값|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |클러스터 1|||0|5545|Clustering|사례 유사도|0.796514342249313|  
 |클러스터 2|||0|5545|Clustering|사례 유사도|0.732122471228572|  
@@ -119,10 +119,10 @@ CALL SystemGetClusterAccuracyResults (
 ## <a name="requirements"></a>요구 사항  
  교차 유효성 검사는 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 해당)에서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SystemGetCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)를 삭제 | Microsoft Docs
+title: Data Source View (Analysis Services)를 삭제 합니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b3486aacb727f002b004d079f5e4a17f235ef9c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178533"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>데이터 원본 뷰 삭제(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "34022380"
   
  DSV를 삭제하면 이 뷰에 종속된 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체도 무효화되므로 DSV를 삭제하기 전에 DSV를 제거할 경우 무효화될 개체 목록이 표시됩니다. 이 목록을 신중하게 검토하여 계속 사용할 개체가 목록에 포함되지 않는지 확인합니다.  
   
- ![개체 삭제 대화 상자](../../analysis-services/multidimensional-models/media/ssas-olapdsv-deleteobjects.gif "개체 삭제 대화 상자")  
+ ![9883-207af62efab8">delete Objects dialog box](../../analysis-services/multidimensional-models/media/ssas-olapdsv-deleteobjects.gif "개체 삭제 대화 상자")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 & #40;의 속성 변경 Analysis Services & #41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

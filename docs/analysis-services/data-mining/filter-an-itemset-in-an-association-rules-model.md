@@ -1,5 +1,5 @@
 ---
-title: 필터 항목 집합에 연결 규칙 모델 | Microsoft Docs
+title: 필터 항목 집합을 연결에서 규칙 모델 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cb507be05ae8f8ad3b25b386d55785c966f14f7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183241"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>연결 규칙 모델에서 항목 집합 필터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34014200"
   
  이렇게 하면 항목 집합이 필터링되어 선택한 항목을 포함하는 항목 집합만 표시됩니다. 상자는 대/소문자를 구분하지 않습니다. 목록에서 이전 필터를 선택할 수 있도록 필터가 메모리에 저장됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

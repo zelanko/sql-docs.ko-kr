@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060369"
 ---
 # <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 집합 인스턴스가 아닌 전체 데이터 수집기에 적용되는 속성을 반환합니다. 이 뷰의 각 행은 관리 데이터 웨어하우스의 이름, 관리 데이터 웨어하우스가 위치한 인스턴스 이름과 같은 특정 데이터 수집기 속성을 설명합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |parameter_name|**nvarchar(128)**|속성의 이름입니다. Null을 허용하지 않습니다.|  
 |parameter_value|**sql_variant**|실제 속성 값입니다. Null을 허용합니다.|  
@@ -39,10 +38,10 @@ ms.locfileid: "62761348"
 ## <a name="permissions"></a>사용 권한  
  뷰에 대한 SELECT 권한이나 dc_operator, dc_proxy 또는 dc_admin 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 가능한 속성 목록은 고정되어 있으며 해당 값은 적절한 저장 프로시저를 사용해서만 변경할 수 있습니다. 다음 표에서는 이 뷰를 통해 표시되는 속성에 대해 설명합니다.  
   
-|속성 이름|Description|  
+|속성 이름|설명|  
 |-------------------|-----------------|  
 |CacheDirectory|수집기 유형 패키지가 임시 정보를 저장하는 파일 시스템의 디렉터리 이름입니다.<br /><br /> NULL = 기본 임시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 디렉터리가 사용됩니다.|  
 |CacheWindow|실패한 데이터 업로드를 위한 캐시 디렉터리의 데이터 보존 정책을 나타냅니다.<br /><br /> -1 = 실패한 모든 업로드의 데이터를 보존합니다.<br /><br /> 0 = 실패한 업로드의 데이터를 보존하지 않습니다.<br /><br /> *n* = 보존 데이터로 *n* 실패 한 이전 업로드 위치 *n* > = 1입니다.<br /><br /> 이 값을 변경하려면 sp_syscollector_set_cache_window 저장 프로시저를 사용하십시오.|  

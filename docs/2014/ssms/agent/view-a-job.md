@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a732ccf71e0b52b83ae1fabdef88235595d4c194
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188755"
 ---
 # <a name="view-a-job"></a>View a Job
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 보는 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "53366435"
   
 -   **작업을 보려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   

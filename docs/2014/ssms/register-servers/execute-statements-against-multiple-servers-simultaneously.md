@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2747b7b13d2eda5aeda1677631ba04d3ed840d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211238"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>여러 서버에 대해 동시에 문 실행(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 로컬 서버 그룹 또는 중앙 관리 서버와 하나 이상의 서버 그룹 및 그룹 내의 하나 이상의 등록된 서버를 만든 다음 전체 그룹을 쿼리하여 여러 서버를 동시에 쿼리하는 방법에 대해 설명합니다. 쿼리에서 반환되는 결과는 단일 결과 창으로 결합되거나 별도의 결과 창에 반환될 수 있습니다. 결과 집합에는 각 서버에 대한 쿼리에서 사용하는 서버 이름 및 로그인에 대한 추가 열이 포함되어 있습니다. 중앙 관리 서버와 하위 서버는 Windows 인증을 사용해서만 등록할 수 있습니다. Windows 인증 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 로컬 서버 그룹의 서버를 등록할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "52796192"
   
 -   **사용 하 여 여러 서버에 대해 문을 실행 합니다.**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52796192"
   
 3.  **다중 서버 결과** 페이지에서 원하는 옵션 설정을 지정한 다음 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [중앙 관리 서버를 사용하여 여러 서버 관리](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

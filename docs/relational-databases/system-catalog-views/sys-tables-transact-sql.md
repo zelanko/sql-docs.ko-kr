@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94dc9ca5d83530db97607bd21e9fee4a2dc3dbf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cce3b4f08fcb55530ffd7abf6da3011c325478f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055383"
 ---
 # <a name="systables-transact-sql"></a>sys.tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 사용자 테이블마다 하나의 행을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |lob_data_space_id|**int**|0이 아닌 값은 이 테이블의 BLOB(Binary Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다. LOB 데이터 형식의 예로 **varbinary (max)** 를 **varchar (max)** 를 **geography**, 또는 **xml**합니다.<br /><br /> 0 = 테이블에 LOB 데이터가 없습니다.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47618021"
 |is_remote_data_archive_enabled|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 스트레치 사용 테이블 인지를 나타냅니다.<br /><br /> 0 = 테이블은 스트레치 지원 되지 않습니다.<br /><br /> 1 = 테이블이 스트레치 지원 합니다.<br /><br /> 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.|  
 |is_external|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], 및 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]합니다.<br /><br /> 테이블이 외부 테이블을 나타냅니다.<br /><br /> 0 = 테이블을 외부 테이블이 아닙니다.<br /><br /> 1 = 테이블이 외부 테이블입니다.| 
 |history_retention_period|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>History_retention_period_unit를 사용 하 여 지정 된 단위로 temporal 기록 보존 기간의 지속 시간을 나타내는 숫자 값입니다. |  
-|history_retention_period_unit|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>유형의 temporal 기록 보존 기간 단위를 나타내는 숫자 값입니다. <br /><br />-1: 무한 <br /><br />3: 날짜 <br /><br />4: 주 <br /><br />5: 월 <br /><br />6: 연도 |  
+|history_retention_period_unit|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>유형의 temporal 기록 보존 기간 단위를 나타내는 숫자 값입니다. <br /><br />-1: 무한 <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Temporal 기록 보존 기간 단위 유형의 텍스트 설명입니다. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프 노드 테이블입니다. <br /><br />0 =이 그래프 노드 테이블이 아닙니다. |  
 |is_edge|**bit**|**적용 대상**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = 그래프에 지 테이블입니다. <br /><br />0 =이 그래프에 지 테이블이 아닙니다. |  

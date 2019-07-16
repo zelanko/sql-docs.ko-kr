@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179011"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>온라인 모드로 Analysis Services 데이터베이스에 연결
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "34021310"
   
      이제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 모든 개체를 직접 편집할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Analysis Services 작업 프로젝트 및 데이터베이스 개발 단계](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [SQL Server 데이터 도구 & #40;를 사용 하 여 다차원 모델 만들기 SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+## <a name="see-also"></a>관련 항목  
+ [개발 단계 중의 Analysis Services 프로젝트 및 데이터베이스 작업](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

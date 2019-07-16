@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181523"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

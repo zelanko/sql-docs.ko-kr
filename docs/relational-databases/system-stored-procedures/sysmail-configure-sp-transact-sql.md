@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017726"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@parameter_name** =] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'** _parameter_name_ **'**  
  변경할 매개 변수의 이름입니다.  
   
- [**@parameter_value** =] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'** _parameter_value_ **'**  
  매개 변수의 새 값입니다.  
   
- [**@description** =] **'**_설명을_**'**  
+ [ **@description** =] **'** _설명을_ **'**  
  매개 변수에 대한 설명입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -57,12 +56,12 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 메일은 다음과 같은 매개 변수를 사용합니다.  
   
 ||||  
 |-|-|-|  
-|매개 변수 이름|Description|기본값|  
+|매개 변수 이름|설명|Default Value|  
 |*AccountRetryAttempts*|외부 메일 프로세스에서 지정된 프로필의 각 계정을 사용하여 전자 메일 메시지를 보내려고 시도하는 횟수입니다.|**1**|  
 |*AccountRetryDelay*|외부 메일 프로세스가 메시지 보내기를 시도하는 사이에 대기하는 시간(초)입니다.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|외부 메일 프로세스가 활성 상태로 유지되는 최소 시간(초)입니다. 데이터베이스 메일에서 많은 메시지를 보내려면 이 값을 늘려 데이터베이스 메일을 활성 상태로 유지하고 자주 시작하고 중지하는 오버헤드를 방지합니다.|**600**|  
@@ -95,7 +94,7 @@ EXECUTE msdb.dbo.sysmail_configure_sp
     'MaxFileSize', '2097152' ;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [sysmail_help_configure_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)   
  [데이터베이스 메일 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

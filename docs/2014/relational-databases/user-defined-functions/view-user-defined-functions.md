@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100558"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211684"
 ---
 # <a name="view-user-defined-functions"></a>사용자 정의 함수 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 사용자 정의 함수의 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 함수 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 함수에서 정의한 데이터를 볼 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "54100558"
   
 -   **함수에 대한 정보를 얻으려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

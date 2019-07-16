@@ -1,5 +1,5 @@
 ---
-title: 이 통합 문서를 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함 | Microsoft Docs
+title: 이 통합 문서에는 외부 데이터를 새로 고치는 하나 이상의 쿼리가 포함 되어 있습니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61056ecc8b49e7d21cd15702116da511a517ef31
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208000"
 ---
-# <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>이 통합 문서를 외부 데이터를 새로 고치는 쿼리가 하나 이상 포함
+# <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>이 통합 문서에는 외부 데이터를 새로 고치는 하나 이상의 쿼리가 포함 되어 있습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 Excel 통합 문서의 경우 Excel Services는 연결 정보가 검색되면 이 경고를 표시하고 이 통합 문서에 대해 쿼리를 사용할지 여부를 묻는 메시지를 표시합니다.  
   

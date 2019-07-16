@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8fbf20597cc037f0ac8835cd476cb380b020d339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4a59bc73be89222fef49aa9e779232cd3548e8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945011"
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
 

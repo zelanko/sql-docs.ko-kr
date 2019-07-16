@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b26f4644c7c922b58f884352ce52b3c572f469f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cfc7b44672554fc810b54ef0c554d2a570b8325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950868"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62865722"
   
  이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA.** _view_name_합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|별칭 데이터 형식이 존재하는 데이터베이스입니다.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|별칭 데이터 형식이 포함된 스키마의 이름입니다.<br /><br /> **&#42;&#42;중요 &#42; &#42;**  데이터 형식의 스키마를 확인할 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 형식의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 TYPEPROPERTY 함수를 사용하는 것입니다.|  

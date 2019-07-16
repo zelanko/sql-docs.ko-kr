@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205956"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>데이터베이스 백업 태스크(유지 관리 계획)
   **데이터베이스 백업 태스크** 대화 상자를 사용하여 유지 관리 계획에 백업 작업을 추가할 수 있습니다. 데이터베이스 백업은 시스템이나 하드웨어 상의 장애 또는 사용자의 오류로 인해 데이터베이스가 손상되어 백업 복사본을 복원해야 하는 경우를 대비하기 위한 중요한 작업입니다. 이 태스크를 통해 전체 백업, 차등 백업, 파일 및 파일 그룹 백업, 트랜잭션 로그 백업을 수행할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52774655"
  이 태스크를 수행할 때 사용할 새 서버 연결을 만듭니다. 아래에서는 **새 연결** 대화 상자에 대해 설명합니다.  
   
  **데이터베이스**  
- 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 옵션을 선택하면 **모든 데이터베이스**, **모든 시스템 데이터베이스**를 **모든 사용자 데이터베이스**를 **다음 데이터베이스**합니다.  
+ 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 옵션을 선택 하면 드롭다운 목록 옵션을 제공 합니다. **모든 데이터베이스**, **모든 시스템 데이터베이스**를 **모든 사용자 데이터베이스**를 **다음 데이터베이스**합니다.  
   
  **모든 데이터베이스**  
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "52774655"
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

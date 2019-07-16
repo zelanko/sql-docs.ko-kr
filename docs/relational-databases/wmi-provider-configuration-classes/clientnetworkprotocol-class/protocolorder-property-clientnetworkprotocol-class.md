@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa09b8ab-37db-4406-8973-acf503855fd2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5f0112546c356c8523392a63c4dcefa65769861a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b855e75cc2d541604d6a2e5417c63b2f3f03e86e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040885"
 ---
 # <a name="protocolorder-property-clientnetworkprotocol-class"></a>ProtocolOrder 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.ProtocolOrder [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  A **uint32** 에서 설정한 대로 현재 참조 되는 클라이언트 네트워크 프로토콜의 순서 번호를 지정 하는 값을 **OrderValue** 메서드. 클라이언트 네트워크 프로토콜이 해제된 경우 이 값은 0입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211324"
 ---
 # <a name="start-a-job"></a>Start a Job
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행을 시작하는 방법에 대해 설명합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "53376625"
   
 -   **작업을 시작하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce34e46a49e88167606543a341aaef55591493ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016749"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 함수
 **규칙**  
@@ -84,7 +83,7 @@ BOOL ConfigDriver(
 ## <a name="diagnostics"></a>진단  
  때 **ConfigDriver** 연결 된 FALSE를 반환  *\*pfErrorCode* 값을 호출 하 여 설치 관리자 오류 버퍼에 게시 됩니다 **SQLPostInstallerError** 및 호출 하 여 가져올 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|합니다 *hwndParent* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|합니다 *문제점과* 인수 중 하나 였습니다.<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> 드라이버 관련 옵션 ODBC_CONFIG_DRIVER_MAX 보다 작거나 했습니다.|  

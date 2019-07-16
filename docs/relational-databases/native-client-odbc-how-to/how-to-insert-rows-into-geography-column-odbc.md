@@ -10,20 +10,19 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1941580667de39b4370df531aa4e82a1b50fdbfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898471"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 응용 프로그램은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
+  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 이 테이블에서 하나의 행을 선택 하 고 사용 하 여:: stastext () 표시 합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0 이며 응용 프로그램 콘솔에 출력 합니다. 점 (56.4595-2.9842)입니다.  
   
  이 예제는 ODBC 데이터 원본을 필요로 하지는 않지만 기본적으로 SQL Server의 로컬 인스턴스에서 실행됩니다.  
   

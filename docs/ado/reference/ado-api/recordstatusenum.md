@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c57878b73c3c6a20f8dc0a8abd422c12a0446a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233b2f84b6a60c7b5162edce6c1b76b63946ae81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931281"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 처리 업데이트 및 기타 대량 작업 관련 레코드의 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|작업 취소 되었기 때문에 레코드가 저장 되지 않았음을 나타냅니다.|  
 |**adRecCantRelease**|0x400|새 레코드가 기존 레코드 잠겨 있으므로 저장 되지 않았습니다 나타냅니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043695"
 ---
 # <a name="paradox-data-types"></a>Paradox 데이터 형식
 ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식을 매핑합니다. 다음 표에서 모든 Paradox 데이터 형식을 나열 하 고 ODBC SQL 데이터 형식에 매핑되는지를 보여 줍니다.  
@@ -33,16 +32,16 @@ ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식�
 |ALPHANUMERIC|SQL_VARCHAR|  
 |AUTOINCREMENT [1]|SQL_INTEGER|  
 |BCD[1]|SQL_DOUBLE|  
-|BYTES[1]|SQL_BINARY|  
+|바이트 [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE[2]|SQL_LONGVARBINARY|  
-|LOGICAL[1]|SQL_BIT|  
-|LONG[1]|SQL_INTEGER|  
-|MEMO[2]|SQL_LONGVARCHAR|  
+|논리 [1]|SQL_BIT|  
+|장기 [1]|SQL_INTEGER|  
+|[2] 메모|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |짧은|SQL_SMALLINT|  
-|TIME[1]|SQL_TIMESTAMP|  
+|시간 [1]|SQL_TIMESTAMP|  
 |TIMESTAMP[1]|SQL_TIMESTAMP|  
   
  Paradox 버전 5에만 유효 [1]입니다. *x*합니다.  
@@ -54,7 +53,7 @@ ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식�
   
  다음 표에서 Paradox 데이터 형식의 제한 사항 보여 줍니다.  
   
-|데이터 형식|Description|  
+|데이터 형식|설명|  
 |---------------|-----------------|  
 |ALPHANUMERIC|0의 영숫자 열 만들기 또는 실제로 지정 되지 않은 길이 255 바이트 열을 반환 합니다.|  
 |BYTES|Paradox5 드라이버를 사용 하 여 이진 열에 NULL을 삽입 하면 0으로 변경 됩니다.|  

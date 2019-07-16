@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: abcdc75ceb7418276f315d52c24575b5b37db373
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "63768888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212193"
 ---
 <Token>**적용 대상:** ![예](media/yes.png)SQL Server ![아니요](media/no.png)Azure SQL Database ![아니요](media/no.png)Azure SQL Data Warehouse ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
 

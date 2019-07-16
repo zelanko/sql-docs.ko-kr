@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying trace templates
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7ca5a8fff488f827360f02a96992e01dcc3accb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MTE75
+ms.openlocfilehash: 34d3b69a345a9d7575cc850d4416695206b11a5e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747511"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733063"
 ---
 # <a name="modify-trace-templates"></a>추적 템플릿 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,5 +51,5 @@ ms.locfileid: "47747511"
 [추적 만들기](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Transact-SQL을 사용하여 기존 추적 수정](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [SQL Server Profiler를 사용하여 추적에 대한 이벤트 및 데이터 열 지정](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[sp-추적-setevent-transact sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

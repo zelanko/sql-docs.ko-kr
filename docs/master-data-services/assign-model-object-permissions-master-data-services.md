@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4daf79842158cabf8dc42f5f544a6bb0f3d8b62b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21b3f21b33922a8967d800bf94db70e82a018e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047599"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 할당(Master Data Services)
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210137"
 ---
 # <a name="data-definition-queries-data-mining"></a>데이터 정의 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "50148278"
 |예측 쿼리 작성기를 사용하여 모든 종류의 쿼리를 디자인합니다.|[예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |SQL Server Profiler를 사용하여 쿼리 정의를 캡처하고 추적을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 모니터링합니다.|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 제공되는 스크립트 언어와 프로그래밍 언어에 대해 자세히 알아봅니다.|[XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT&#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT&#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [가져오기 &#40; DMX &#41;](../../dmx/import-dmx.md)|  
 |외부 데이터를 쿼리하기 위한 OPENROWSET 및 다른 방법에 대해 자세히 알아봅니다.|[&#60;원본 데이터 쿼리&#62;](../../dmx/source-data-query.md).|  
   
 ## <a name="see-also"></a>관련 항목  

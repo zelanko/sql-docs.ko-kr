@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022454"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @scriptfile = ] 'scriptfile'` SQL 스크립트 파일에 전체 경로가입니다. *scriptfile* 됩니다 **nvarchar(4000)**, 기본값은 없습니다.  
+`[ @scriptfile = ] 'scriptfile'` SQL 스크립트 파일에 전체 경로가입니다. *scriptfile* 됩니다 **nvarchar(4000)** , 기본값은 없습니다.  
   
 `[ @skiperror = ] 'skiperror'` 배포 에이전트 또는 병합 에이전트가 스크립트 처리 하는 동안 오류가 발생 하는 경우 중지 해야 하는지 여부를 나타냅니다. *SkipError* 됩니다 **비트**, 기본값은 0입니다.  
   
@@ -59,7 +58,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addscriptexec** 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
  **sp_addscriptexec** 스냅숏 복제에 사용 되지 않습니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055686"
 ---
 # <a name="order-mdx"></a>Order(MDX)
 
@@ -45,7 +44,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  문자열로 표현된 숫자를 반환하는 셀 좌표의 유효한 문자열 식으로서, 일반적으로 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **순서** 함수 계층적 일 수 있습니다 (사용 하 여 지정 된 대로 합니다 **ASC** 또는 **DESC** 플래그) 비계층적일 또는 (사용 하 여 지정 된 대로 **BASC**  또는 **BDESC** 플래그를 **B** "break 계층"는 의미). 하는 경우 **ASC** 또는 **DESC** 를 지정 합니다 **순서** 함수는 먼저 계층의 해당 위치에 따라 멤버를 정렬 하 고 다음 각 수준을 정렬 합니다. 경우 **BASC** 또는 **BDESC** 를 지정 합니다 **순서** 함수는 계층과 관계 없이 집합에서 멤버를 정렬 합니다. 플래그가 지정 경우 **ASC** 가 기본값입니다.  
   
  경우는 **순서** 함수는 집합을 사용 하 여 둘 이상의 계층이 크로스 조인 되 고 **DESC** 플래그를 사용 하는 집합의 마지막 계층의 멤버만 정렬 됩니다. 이 사항은 집합에 있는 모든 계층이 정렬되는 Analysis Services 2000에서 변경되었습니다.  
