@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0fe23c41f6a22a05e6a4c1d61f94a357f3c28c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966180"
 ---
 # <a name="groups-collection-adox"></a>Groups 컬렉션(ADOX)
 모든 포함 저장 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 카탈로그 또는 사용자의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **그룹** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 모든 카탈로그의 그룹 계정을 나타냅니다. 합니다 **그룹** 에 대 한 컬렉션을 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 사용자가 속한 그룹에만 나타냅니다.  
   
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-groups.md) 에 대 한 메서드는 **그룹** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  

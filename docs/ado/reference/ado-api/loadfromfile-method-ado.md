@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff7c5a2a2817fbe93d626ca7883107103edc58cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918277"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile 메서드(ADO)
 에 기존 파일의 내용을 로드를 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)합니다.  
@@ -37,7 +36,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  A **문자열** 에 로드할 파일의 이름을 포함 하는 값을 **Stream**합니다. *FileName* 모든 유효한 경로 UNC 형식에서 이름을 포함할 수 있습니다. 지정 된 파일이 없으면 런타임 오류가 발생 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로컬 파일의 내용을 로드 하려면이 메서드를 사용할 수는 **Stream** 개체입니다. 이 서버에 로컬 파일의 콘텐츠를 업로드할 수 있습니다.  
   
  합니다 **Stream** 개체를 호출 하기 전에 열려 있어야 이미 **LoadFromFile**합니다. 이 메서드는 바인딩을 변경 하지는 **Stream** 개체 URL에서 지정 된 개체에 여전히 바인딩되어 됩니다 또는 **레코드** 있는 **Stream** 원래 열립니다.  

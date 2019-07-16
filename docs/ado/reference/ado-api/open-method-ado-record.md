@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917918"
 ---
 # <a name="open-method-ado-record"></a>Open 메서드(ADO 레코드)
 기존 열립니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 또는 새 항목으로 표시를 **레코드**, 예: 파일 또는 디렉터리입니다.  
@@ -47,7 +46,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *CreateOptions*  
  (선택 사항) A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 기존 파일 또는 디렉터리를 열어야 합니다 또는 새 파일 또는 디렉터리를 만들어야 하는지 여부를 지정 하는 값입니다. 기본값은 **adFailIfNotExists**합니다. 기본 값으로 설정 하는 경우 액세스 모드에서 가져온은 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 속성입니다. 이 매개 변수가 무시 됩니다 때 합니다 *원본* 매개 변수를 URL 없습니다.  
   
- *Options*  
+ *옵션*  
  (선택 사항) A [함께 사용할 수](../../../ado/reference/ado-api/recordopenoptionsenum.md) 열기 위한 옵션을 지정 하는 값을 **레코드**합니다. 기본값은 **adOpenRecordUnspecified**합니다. 이러한 값을 결합할 수 있습니다.  
   
  *UserName*  
@@ -56,7 +55,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *암호*  
  (선택 사항) A **문자열** 필요한 경우를 확인 하는 암호가 포함 된 값 *UserName*합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *원본* 될 수 있습니다.  
   
 -   URL입니다. Http URL에 대 한 프로토콜을 사용 하는 경우 인터넷 공급자가 기본적으로 호출 됩니다. URL는 실행 가능한 스크립트를 포함 하는 노드를 가리키는 경우 (예는 합니다. ASP 페이지의 경우)를 **레코드** 실행 하는 대신 소스를 포함 하는 내용을 기본적으로 열립니다. 사용 된 *옵션* 이 동작을 수정 하는 인수입니다.  

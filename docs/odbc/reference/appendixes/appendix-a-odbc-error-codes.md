@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c06902e4-721d-42e2-b818-05f0e18e4ce0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c16ec959f847f1b2dba5bdfbea8f886bb00545a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996240"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>부록 A: ODBC 오류 코드
 이 항목에서는 ODBC 3에 대 한 SQLSTATE 값을 설명합니다. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값을 참조 하십시오 [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "63026788"
 > [!NOTE]  
 >  함수의 성공적으로 실행은 일반적으로 표시 된 관계 없이 SQL_SUCCESS 반환 값 이지만 00000 SQLSTATE는 또한 성공을 나타냅니다.  
   
-|SQLSTATE|Error|반환 될 수 있습니다.|  
+|SQLSTATE|오류|반환 될 수 있습니다.|  
 |--------------|-----------|--------------------------|  
 |01000|일반 경고|제외한 모든 ODBC 함수가:<br /><br /> **SQLError**<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
 |01001|커서 작업이 충돌 합니다.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  

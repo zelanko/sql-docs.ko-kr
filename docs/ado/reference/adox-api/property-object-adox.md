@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f07d14d30f3fd87be8fc61552716a931ed86d68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965394"
 ---
 # <a name="property-object-adox"></a>속성 개체(ADOX)
 ADOX 개체의 특성을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADOX 개체에는 두 가지 유형의 속성: 기본 제공 및 동적입니다.  
   
  기본 제공 속성은 해당 속성을 즉시 MyObject.Property 구문을 사용 하 여 모든 새 개체를 사용할 수 있습니다. 개체의 속성 개체로 표시 되지 않습니다 [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)이므로 해당 값을 변경할 수 있지만 해당 특성을 수정할 수 없습니다.  

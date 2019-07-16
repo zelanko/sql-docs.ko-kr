@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab33bfdef2b633cd5a7a3e215a3f6522d8d664ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915707"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource(Excel 드라이버)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "63233596"
   
  합니다 **SQLConfigDataSource** 함수를 추가 하는 데 사용 되는 수정 또는 데이터 원본 삭제 동적으로 다음과 같은 키워드를 사용 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |DBQ|Microsoft Excel 드라이버의 Microsoft Excel 5.0 또는 이후 파일에 액세스할 때 통합 문서 파일의 이름입니다.<br /><br /> 동일한 옵션을 설정 **데이터베이스** 설정 대화 상자에서.|  
 |DEFAULTDIR|디렉터리에 경로 지정 합니다.<br /><br /> 동일한 옵션을 설정 **디렉터리 선택** 또는 **통합 문서 선택** 설정 대화 상자에서.|  

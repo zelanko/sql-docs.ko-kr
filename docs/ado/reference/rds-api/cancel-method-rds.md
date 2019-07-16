@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13ebe9f58be71a4bf7396e7305a94375dbcfd41b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d3e60a77df15d1b2db302df8a3c1d4a39de245
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964610"
 ---
 # <a name="cancel-method-rds"></a>Cancel 메서드(RDS)
 실행을 취소를 보류 중인 비동기 메서드를 호출 합니다.  

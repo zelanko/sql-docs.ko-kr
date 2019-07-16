@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918372"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 에 대 한 트랜잭션 격리 수준을 지정 된 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|공급자가 지정 하는 보다 다양 한 격리 수준을 사용 하지만 수준을 확인할 수 없습니다 나타냅니다.|  
 |**adXactChaos**|16|보류 중인 변경 내용을 격리 수준이 높은 트랜잭션에서 덮어쓸 수 없습니다 나타냅니다.|  

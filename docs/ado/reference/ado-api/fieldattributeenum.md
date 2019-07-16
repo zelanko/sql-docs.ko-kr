@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0f6984c464c08518c7b3143986a041b195cce69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918700"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 하나 이상의 특성을 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|필드 값을 캐시 하는 공급자 및 후속 읽기는 캐시에서 수행 함을 나타냅니다.|  
 |**adFldFixed**|0x10|고정 길이 데이터를 필드에 포함 되어 있는지를 나타냅니다.|  

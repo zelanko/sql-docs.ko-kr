@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995492"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>결과 집합  
  결과 보고 **sp_post_msx_operation** 작업 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_resync_targetserver** 대상 서버에 대 한 명령의 현재 집합을 삭제 하 고 다운로드 하려면 대상 서버에 대 한 새 집합을 게시 합니다. 새로운 집합은 모든 다중 서버를 삭제하는 명령과 서버에서 현재 대상이 되는 각 작업에 대한 삽입으로 구성됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

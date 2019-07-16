@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928509"
 ---
 # <a name="adox-objects"></a>ADOX 개체
 ## <a name="adox-object-summary"></a>ADOX 개체 요약  
   
-|Object|Description|  
+|Object|설명|  
 |------------|-----------------|  
 |[Catalog](../../../ado/reference/adox-api/catalog-object-adox.md)|스키마 카탈로그는 데이터 원본을 설명 하는 컬렉션을 포함 합니다.|  
 |[열](../../../ado/reference/adox-api/column-object-adox.md)|테이블, 인덱스 또는 키에서 열을 나타냅니다.|  

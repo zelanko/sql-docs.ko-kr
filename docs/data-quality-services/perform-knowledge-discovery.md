@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 64841ad2cc0613c7774263a985e098e8c7d4cbd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be28b40ad4c967f057c5d47f1a1db37db76d1e00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991813"
 ---
 # <a name="perform-knowledge-discovery"></a>기술 자료 검색 수행
 

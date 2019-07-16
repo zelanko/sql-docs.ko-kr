@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d7b6a8a48bedfc2ecd17660eb8743e89ee94e978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989514"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>(DB2ToSQL) SQL Server에 SSMA 구성 요소 설치
 이 버전의 SSMA 별도 설치 하지 않아도에 있는지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이그레이션 및 DB2 공급자 서버-투-서버 연결을 사용 하도록 지 원하는 고 SSMA 확장 팩입니다.  

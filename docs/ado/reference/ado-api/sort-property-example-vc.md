@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6234ca377497ad3f03bd0d05441ae361b80bc220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930964"
 ---
 # <a name="sort-property-example-vc"></a>Sort 속성 예제(VC++)
 이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 **Pubs** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  

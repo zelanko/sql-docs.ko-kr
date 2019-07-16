@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23b67141c7c07845438ed43f00d3124043a53c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917698"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션(ADO)
 모두 포함 합니다 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **명령** 개체에는 **매개 변수** 컬렉션으로 이루어져 **매개 변수** 개체입니다.  
   
  사용 하 여 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 **명령** 개체의 **매개 변수** 컬렉션 저장된 프로시저 또는 매개 변수가 있는 쿼리를 실행 하는 것에 대 한 공급자 매개 변수 정보를 검색 합니다. 에 지정 된 **명령** 개체입니다. 저장된 프로시저 호출 또는 매개 변수가 있는 쿼리에 일부 공급자를 지원 하지 않습니다. 호출을 **새로 고침** 메서드는 **매개 변수** 컬렉션 이러한 공급자를 사용 하는 경우 오류가 반환 됩니다.  

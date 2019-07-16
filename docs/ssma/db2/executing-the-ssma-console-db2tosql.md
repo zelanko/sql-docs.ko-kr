@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989685"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA 콘솔 (DB2ToSQL) 실행
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다. 이 섹션에 열거로 특정 표준 스크립트 파일 명령을 사용 하는 콘솔 응용 프로그램 합니다.  
@@ -35,7 +34,7 @@ create-new-project
   
 -   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
--   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {boolean}  
+-   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {부울}  
   
 -   `project-type:`선택적 특성입니다. 프로젝트 형식 즉, "sql server 2005" 프로젝트 또는 프로젝트 "sql server 2008" 또는 "sql server 2012" 또는 "sql server 2014" 프로젝트 프로젝트나 "sql azure" 나타냅니다. 기본값은 "sql server 2014"입니다.  
   
@@ -361,7 +360,7 @@ convert-schema
 ```  
 **Command**  
   
-migrate-data: 대상에 원본 데이터를 마이그레이션합니다.  
+마이그레이션 데이터: 대상에 원본 데이터를 마이그레이션합니다.  
   
 **스크립트**  
   
@@ -479,7 +478,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+동기화 대상  
   
 -   대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
   
@@ -544,7 +543,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 -   데이터베이스에서 원본 개체를 새로 고칩니다.  
   

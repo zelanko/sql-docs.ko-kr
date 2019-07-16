@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918632"
 ---
 # <a name="filter-property"></a>Filter 속성
 데이터에 대 한 필터를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66697967"
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용 하 여는 **필터** 레코드에 선택적으로 화면에 속성을 **레코드 집합** 개체입니다. 필터링 **레코드 집합** 현재 커서 됩니다. 현재 값을 반환 하는 다른 속성 기반 **커서** 영향을 받는 같은 [AbsolutePosition 속성 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)를 [AbsolutePage 속성 (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)를 [ RecordCount 속성 (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), 및 [PageCount 속성 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)합니다. 설정 된 **필터** 속성을 특정 새 값을 새 값을 충족 하는 첫 번째 레코드를 현재 레코드를 이동 합니다.
   

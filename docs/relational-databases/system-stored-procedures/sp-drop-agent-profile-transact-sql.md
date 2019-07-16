@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5852bfb2842406e8fa33ca9d99e294c6974e44cd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6ac93ebe2bc9c0ec63e22b3273592005873efac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001079"
 ---
 # <a name="spdropagentprofile-transact-sql"></a>sp_drop_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_drop_agent_profile** 모든 유형의 복제에 사용 됩니다.  
   
  지정된 된 프로필의 매개 변수에서도 삭제 됩니다 합니다 **MSagent_parameters** 테이블입니다.  

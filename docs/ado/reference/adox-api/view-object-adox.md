@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d87b56716ed1876acc6ac139e7804036d5cdfb86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964842"
 ---
 # <a name="view-object-adox"></a>보기 개체(ADOX)
 가상 테이블을 레코드의 필터링 된 집합을 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 **보기** 개체 추가, 삭제 또는 뷰 수정에 사용할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  뷰는 다른 데이터베이스 테이블 또는 뷰에서 생성 하는 가상 테이블. 합니다 **보기** 개체를 사용 하면 알고 있거나 공급자의 "CREATE VIEW" 구문을 사용 하지 않고 뷰를 만들 수 있습니다.  
   
  속성을 사용 하 여는 **보기** 개체를 할 수 있습니다.  

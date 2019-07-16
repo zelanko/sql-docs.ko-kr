@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001461"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr(MDX)
 
@@ -32,7 +31,7 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 멤버의 고유 이름을 포함한 문자열을 반환합니다. 일반적으로 멤버의 고유 이름을 외부 함수에 전달 하는 것이 됩니다.  
   
 ## <a name="example"></a>예제  

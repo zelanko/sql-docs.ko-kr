@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cefa6ac39d68040106d38e5f1cfbec8a6eff8358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cead84eed4e7689d6b5df907b6a61ef07ab74e8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924921"
 ---
 # <a name="jumping-to-a-record"></a>레코드로 이동
 합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하면에서 앞 이나 뒤로 이동할 수 있습니다 합니다 **레코드 집합** 다음 구문을 사용 하 여 레코드의 지정 된 수:  
@@ -28,7 +27,7 @@ ms.locfileid: "66700697"
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **이동** 메서드는 모든 지원 **레코드 집합** 개체입니다.  
   
  경우는 *NumRecords* 인수가 0 보다 큰 레코드의 현재 위치를 앞으로 이동 (의 끝에 다가가 합니다 **Recordset**). 하는 경우 *NumRecords* 가 현재 레코드 위치 뒤로 이동 0 보다 작은 (의 시작 부분을 향해 합니다 **레코드 집합**).  

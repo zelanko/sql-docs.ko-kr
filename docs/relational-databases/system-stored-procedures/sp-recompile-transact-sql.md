@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002558"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,12 +41,12 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>인수  
  [ @objname=] '*개체*'  
- 현재 데이터베이스에 있는 저장 프로시저, 트리거, 테이블, 뷰 또는 사용자 정의 함수의 정규화된 이름 또는 정규화되지 않은 이름입니다. *개체* 됩니다 **nvarchar(776)**, 기본값은 없습니다. 하는 경우 *개체* 함수를 실행 하는 다음에 다시 또는 저장 프로시저, 트리거 또는 사용자 정의 함수, 저장된 프로시저, 트리거 이름입니다. 하는 경우 *개체* 테이블 또는 뷰를 참조 하는 사용자 정의 함수를 실행 하는 다음에 다시 또는 테이블이 나 뷰의 모든 저장된 프로시저, 트리거 이름입니다.  
+ 현재 데이터베이스에 있는 저장 프로시저, 트리거, 테이블, 뷰 또는 사용자 정의 함수의 정규화된 이름 또는 정규화되지 않은 이름입니다. *개체* 됩니다 **nvarchar(776)** , 기본값은 없습니다. 하는 경우 *개체* 함수를 실행 하는 다음에 다시 또는 저장 프로시저, 트리거 또는 사용자 정의 함수, 저장된 프로시저, 트리거 이름입니다. 하는 경우 *개체* 테이블 또는 뷰를 참조 하는 사용자 정의 함수를 실행 하는 다음에 다시 또는 테이블이 나 뷰의 모든 저장된 프로시저, 트리거 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_recompile은 현재 데이터베이스에서만 개체를 찾습니다.  
   
  저장 프로시저 또는 트리거 및 사용자 정의 함수에 사용되는 쿼리는 컴파일되는 경우에만 최적화됩니다. 데이터베이스에 통계에 영향을 주는 인덱스 또는 다른 변경 내용이 생기면 데이터베이스, 컴파일된 저장 프로시저, 트리거 및 사용자 정의 함수가 효율성을 잃을 수도 있습니다. 테이블에서 사용되는 저장 프로시저 및 트리거를 다시 컴파일하면 쿼리를 다시 최적화할 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1aac155aef874303f3281893db021b9492eef289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3c1a54ea3f101449d18fcae00373344b7ecf11c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966739"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command 및 CommandText 속성 예제(VC++)
 다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 프로시저의 텍스트를 업데이트 하는 속성입니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f8e397482833c54d9ed58604720e7bbd6321f26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917936"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open 및 Close 메서드 예제(VC++)
 이 예제에서는 합니다 **열기** 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에서 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  

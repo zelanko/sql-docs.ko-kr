@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003538"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX 데이터 조작 - SELECT
 
@@ -110,7 +109,7 @@ FROM
  *MemberProperty_Name*  
  멤버 속성을 나타내는 유효한 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `<SELECT slicer axis clause>` 식에는 지정된 `<SELECT query axis clause>` 식에서 참조되는 것 이외의 멤버가 차원 및 계층에 포함되어 있어야 합니다.  
   
  지정된 `<SELECT query axis clause>` 식과 `<SELECT slicer axis clause>` 값에 큐브의 특성이 생략되어 있으면 특성의 기본 멤버가 slicer 축에 암시적으로 추가됩니다.  

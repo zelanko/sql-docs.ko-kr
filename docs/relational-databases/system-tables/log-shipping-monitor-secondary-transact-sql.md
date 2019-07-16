@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b29942520092a39f218cf7673930682afe78f660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989953"
 ---
 # <a name="logshippingmonitorsecondary-transact-sql"></a>log_shipping_monitor_secondary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62719344"
   
  기록 및 모니터링과 연관된 테이블은 주 서버와 보조 서버에서도 사용됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**secondary_server**|**sysname**|보조 인스턴스의 이름을 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성에서 합니다.|  
 |**secondary_database**|**sysname**|로그 전달 구성의 보조 데이터베이스의 이름입니다.|  
@@ -51,7 +50,7 @@ ms.locfileid: "62719344"
 |**last_restored_latency**|**int**|로그 백업이 주 서버 또는 데이터베이스에서 생성되어 보조 서버 또는 데이터베이스에서 복원될 때까지 경과한 시간(분)입니다.<br /><br /> 초기 값은 NULL입니다.|  
 |**history_retention_period**|**int**|지정된 보조 데이터베이스에서 로그 전달 기록 레코드가 삭제되기까지 보관되는 기간(분)입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보조 서버와 관련 된 정보가의 보조 서버에도 저장 됩니다 및 원격 모니터 서버에 저장 될 뿐만 아니라 해당 **log_shipping_monitor_secondary** 테이블입니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997590"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  모든 Always On 가용성 그룹 수신기와 Windows Server 장애 조치 클러스터링 (WSFC) 클러스터에 연결 된 모든 IP 주소에 대 한 행을 반환 합니다.  
+  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 Always On 가용성 그룹 수신기에 연결되는 모든 IP 주소에 대해 하나의 행을 반환합니다.  
   
  기본 키: **listener_id** + **ip_address** + **ip_sub_mask**  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 리소스 GUID입니다.|  
 |**ip_address**|**nvarchar(48)**|가용성 그룹 수신기에 대해 구성된 가상 IP 주소입니다. 단일 IPv4 또는 IPv6 주소를 반환합니다.|  

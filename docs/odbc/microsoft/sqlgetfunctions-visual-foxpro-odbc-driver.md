@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003326"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -36,20 +35,20 @@ ms.locfileid: "63313064"
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|아니요|  
 |SQL_API_SQLCOLUMNPRIVELEGES|아니요|  
-|SQL_API_SQLDATASOURCES|사용자 계정 컨트롤|  
+|SQL_API_SQLDATASOURCES|예|  
 |SQL_API_SQLDESCRIBEPARAM|아니요|  
-|SQL_API_SQLDRIVERS|사용자 계정 컨트롤|  
-|SQL_API_SQLEXTENDEDFETCH|사용자 계정 컨트롤|  
+|SQL_API_SQLDRIVERS|예|  
+|SQL_API_SQLEXTENDEDFETCH|예|  
 |SQL_API_SQLFOREIGNKEYS|아니요|  
-|SQL_API_SQLMORERESULTS|사용자 계정 컨트롤|  
+|SQL_API_SQLMORERESULTS|예|  
 |SQL_API_SQLNATIVESQL|아니요|  
-|SQL_API_SQLNUMPARAMS|사용자 계정 컨트롤|  
-|SQL_API_SQLPARAMOPTIONS|사용자 계정 컨트롤|  
-|SQL_API_SQLPRIMARYKEYS|사용자 계정 컨트롤|  
+|SQL_API_SQLNUMPARAMS|예|  
+|SQL_API_SQLPARAMOPTIONS|예|  
+|SQL_API_SQLPRIMARYKEYS|예|  
 |SQL_API_SQLPROCEDURECOLUMNS|아니요|  
 |SQL_API_SQLPROCEDURES|아니요|  
-|SQL_API_SQLSETPOS|사용자 계정 컨트롤|  
-|SQL_API_SQLSETSCROLLOPTIONS|사용자 계정 컨트롤|  
+|SQL_API_SQLSETPOS|예|  
+|SQL_API_SQLSETSCROLLOPTIONS|예|  
 |SQL_API_SQLTABLEPRIVILEGES|아니요|  
   
  자세한 내용은 [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) 에 *ODBC 프로그래머 참조*합니다.

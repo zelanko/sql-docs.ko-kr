@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58e94b5128760dfd1d179ecad3cae7bbf065ee10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905775"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods(MDX)
 
@@ -35,7 +34,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정 된 기간 개수가 양수인 경우 합니다 **LastPeriods** 큼 이전에 있는 멤버를 사용 하 여 시작 하는 멤버 집합을 반환 *인덱스* -지정 된 멤버 식에서 끝나는 1는 지정 된 멤버입니다. 함수에서 반환 하는 멤버 개수 값과 같음 *인덱스*합니다.  
   
  지정 된 기간 개수가 음수인 경우 합니다 **LastPeriods** 함수는 지정된 된 멤버를 사용 하 여 시작 하는 멤버 집합을 반환 하 고 이후에 있는 멤버로 끝나는 (- *인덱스* -1)에서 지정 된 멤버입니다. 절대 값 함수에서 반환 하는 멤버 수가 같은지 *인덱스*합니다.  

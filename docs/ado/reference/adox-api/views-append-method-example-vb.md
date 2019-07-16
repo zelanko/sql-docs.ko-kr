@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc555b4c464f064a3b92091cfc7443110ccbd6d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964798"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append 메서드 예제(VB)
 다음 코드를 사용 하는 방법에 설명를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-views.md) 기본 데이터 원본에 새 보기를 만드는 방법.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8229d107a84dad47ca0cf83703a8cfb5dd3b5501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907291"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSlogreader_history** 테이블은 로컬 배포자와 연결 된 로그 판독기 에이전트에 대 한 기록 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|로그 판독기 에이전트의 ID입니다.|  
 |**runstatus**|**int**|실행 상태는 다음과 같습니다.<br /><br /> 1 = 시작<br /><br /> 2 = 성공<br /><br /> 3 = 진행 중<br /><br /> 4 = 유휴 상태입니다.<br /><br /> 5 = 다시 시도<br /><br /> 6 = 실패|  

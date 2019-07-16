@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990338"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **IHpublications** 시스템 테이블은 현재 배포자를 사용 하 여 각 SQL Server 이외 게시에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**int**|게시에 고유한 ID를 제공하는 ID 열입니다.|  
 |**name**|**sysname**|게시에 연결된 고유한 이름입니다.|  
@@ -57,8 +56,8 @@ ms.locfileid: "52802785"
 |**allow_anonymous**|**bit**|게시에서 익명 구독이 허용 되는지 여부를 나타냅니다. 여기서 **1** 허용 됨을 의미 합니다.|  
 |**centralized_conflicts**|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.<br /><br /> *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
 |**conflict_retention**|**int**|충돌 보존 기간(일)을 지정합니다. *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
-|**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.<br /><br /> *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
-|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq를 사용 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **2** =를 사용 하는 sql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 이 열이 비-에서 사용 되지[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.<br /><br /> 참고: MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)는 더 이상 사용되지 않으며 지원되지 않습니다.<br /><br /> *이 열에는 SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
+|**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.<br /><br /> *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
+|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = msmq를 사용 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **2** =를 사용 하는 sql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 이 열이 비-에서 사용 되지[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.<br /><br /> 참고: 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 사용 되지 않으며 더 이상 지원 되지.<br /><br /> *이 열에는 SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 전역적으로 고유 식별자 (GUID)에서 게시를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 및 GUID는 해당 Active Directory 게시 개체인 **objectGUID**합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
 |**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *SQL 이외 게시자에 대 한 지원 되지 않습니다.*|  
 |**description**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920895"
 ---
 # <a name="ado-properties"></a>ADO 속성
 
@@ -79,7 +78,7 @@ ms.locfileid: "66696629"
 |[공급자](../../../ado/reference/ado-api/provider-property-ado.md)|에 대 한 공급자의 이름을 나타내는 **연결** 개체입니다.|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|레코드 수가 표시를 **레코드 집합** 개체입니다.|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|유형을 나타냅니다 **레코드** 개체입니다.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행** 간에에서 개체를 **ADORecordConstruction** 개체입니다.|  
+|[행](../../../ado/reference/ado-api/row-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행** 간에에서 개체를 **ADORecordConstruction** 개체입니다.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **RowPosition** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다.|  
 |[행 집합](../../../ado/reference/ado-api/rowset-property-ado.md)|OLE DB를 가져오거나 설정 합니다. **행 집합** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다.|  
 |[원본 (ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)|개체 또는 원래 오류를 생성 한 응용 프로그램의 이름을 나타냅니다.|  

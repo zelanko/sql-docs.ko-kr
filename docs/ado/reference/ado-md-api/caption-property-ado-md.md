@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15b2bd52481aa3f4e6ac44912e85d0a924ae18fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930481"
 ---
 # <a name="caption-property-ado-md"></a>Caption 속성(ADO MD)
 표시할 때 사용할 텍스트 캡션을 나타냅니다는 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 하거나 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  

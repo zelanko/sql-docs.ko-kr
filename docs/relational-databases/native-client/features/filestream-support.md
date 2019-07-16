@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 030f2e002c4dba8148a1e4bbcbb9eff9033308f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47ea988c3c9ec2b784109e46ce30d1a0ed56dc61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987518"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47689012"
 
   FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상 된 FILESTREAM 지원에 대 한 자세한 내용은 참조 하세요. [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md)합니다.  
   
- 데이터베이스 연결을 열면 **@@TEXTSIZE**가 기본적으로 -1("제한 없음")로 설정됩니다.  
+ 데이터베이스 연결을 열면 **@@TEXTSIZE** 가 기본적으로 -1("제한 없음")로 설정됩니다.  
   
  Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47689012"
   
  FILESTREAM 열을 만들거나 FILESTREAM 열인 기존 열을 검색하려면 [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 카탈로그 뷰의 **is_filestream** 열을 사용할 수 있습니다.  
   
- 다음은 이에 대한 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 -- Create a table with a FILESTREAM column.  

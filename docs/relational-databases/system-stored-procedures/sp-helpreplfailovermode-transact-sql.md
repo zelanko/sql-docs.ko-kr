@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997559"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  구독자에서 데이터가 수정되는 모드를 반환합니다. *failover_mode* 되는 **nvarchar(10)** 이며 기본값은 NULL입니다. **출력** 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**immediate**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
 |**queued**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
@@ -61,7 +60,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpreplfailovermode** 구독 즉시 업데이트를 사용 하도록 설정 된 장애 조치로 지연 업데이트에 오류가 발생 한 경우에 대 한 스냅숏 복제 또는 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

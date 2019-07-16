@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f118f4234e1939855b76afc6b6f3d1f45718908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921298"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew 메서드 예제(JScript)
 이 예제에서는 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지정된 된 이름을 가진 새 레코드를 만듭니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **붙여 넣고 AddNewJS.asp**합니다.  

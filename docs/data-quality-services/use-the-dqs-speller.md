@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 46512588ec2263c1ad8e170accf2e5b37d49dd59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0840057f6f4437b10416265eeb78b1ae4eec2d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991771"
 ---
 # <a name="use-the-dqs-speller"></a>DQS 맞춤법 검사기 사용
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb1fcf2a88824a2ddef2e8b896b2ee585fa2623a
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: c544668ebadab4a20b07f53fca9e1b501f6b1cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003170"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel에 대한 SQLGetInfo 반환 값
 다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  

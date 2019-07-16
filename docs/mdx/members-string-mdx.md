@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 302445cadc829de35eca28db2888aaa01673ca75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001498"
 ---
 # <a name="members-string-mdx"></a>Members(문자열)(MDX)
 
@@ -32,7 +31,7 @@ Members(Member_Name)
  *Member_Name*  
  멤버 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Members (String)** 함수 이름이 지정 된 단일 멤버를 반환 합니다. 일반적으로 사용 합니다 **Members (String)** 를 제공 하는 외부 함수를 사용 하 여 함수를 **Members (String)** 함수 멤버를 식별 하는 문자열 및 **Members (String)**  함수는 지정 된이 멤버에 대 한 값을 반환 합니다.  
   
 ## <a name="example"></a>예제  

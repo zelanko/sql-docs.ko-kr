@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000937"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_help_log_shipping_monitor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**상태**|**bit**|로그 전달 데이터베이스 에이전트의 전체 상태입니다.<br /><br /> **0** = 정상 및 에이전트 없는 오류입니다.<br /><br /> **1** = otherwise.|  
 |**is_primary**|**bit**|이 행이 주 데이터베이스에 대한 행인지 여부를 나타냅니다.<br /><br /> **1** = 주 데이터베이스에 대 한 행이 있습니다.<br /><br /> **0** = 보조 데이터베이스에 대 한 행이 있습니다.|  
@@ -65,7 +64,7 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|복원 작업 간 허용되는 시간(분)입니다. 이 시간이 지나면 경고가 발생합니다. **restore_threshold** NULL 일 수 없습니다.|  
 |**is_restore_alert_enabled**|**bit**|경고가 발생 하는지 여부를 지정 하면 **restore_threshold** 를 초과 합니다. 하나의 값 (**1**), 기본값, 경고가 발생 된다는 의미입니다.<br /><br /> NULL = 정보를 사용할 수 없거나 관련이 없습니다.<br /><br /> 복원 임계값을 설정 하려면 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_log_shipping_monitor** 에서 실행 해야 합니다 **마스터** 모니터 서버의 데이터베이스.  
   
 ## <a name="permissions"></a>사용 권한  

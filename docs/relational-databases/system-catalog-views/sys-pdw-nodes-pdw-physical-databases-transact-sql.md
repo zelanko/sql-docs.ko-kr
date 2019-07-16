@@ -11,29 +11,28 @@ dev_langs:
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e01ca29eec9062f6dd7592e4c3b1d4bb2125d999
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001139"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   계산 노드에서 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 가져오려면 실제 데이터베이스 정보를 집계 합니다. 정보를 결합, 조인 합니다 `sys.pdw_nodes_pdw_physical_databases` 에 `sys.pdw_database_mappings` 및 `sys.databases` 테이블.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스에 대 한 개체 ID입니다. 이 값은에서 database_id 동일 하지는 [sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 뷰.|  
 |physical_name|**sysname**|셸/계산 노드에서 데이터베이스에 대 한 물리적 이름입니다. 이 값은 physical_name 열에 있는 값으로 동일한 합니다 [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰.|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>1. 반환  
+### <a name="a-returning"></a>A. 반환  
  다음 쿼리 각 계산 노드에서 마스터 및 해당 데이터베이스 이름에서 이름 및 각 데이터베이스의 ID를 반환합니다.  
   
 ```  
@@ -47,7 +46,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>2. 세부 개체 정보를 수집할 sys.pdw_nodes_pdw_physical_databases를 사용 하 여  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>2\. 세부 개체 정보를 수집할 sys.pdw_nodes_pdw_physical_databases를 사용 하 여  
  다음 쿼리는 인덱스에 대 한 정보를 표시 하 고 개체는 데이터베이스의 개체에 속하는 데이터베이스에 대 한 유용한 정보를 포함 합니다.  
   
 ```  
@@ -64,7 +63,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>3. Sys.pdw_nodes_pdw_physical_databases를 사용 하 여 암호화 상태를 확인 하려면  
+### <a name="c-using-syspdwnodespdwphysicaldatabases-to-determine-the-encryption-state"></a>3\. Sys.pdw_nodes_pdw_physical_databases를 사용 하 여 암호화 상태를 확인 하려면  
  다음 쿼리는 AdventureWorksPDW2012 데이터베이스의 암호화 상태를 제공합니다.  
   
 ```  
@@ -87,7 +86,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

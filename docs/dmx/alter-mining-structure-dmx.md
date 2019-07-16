@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913847"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>인수  
- *구조*  
+ *structure*  
  마이닝 모델을 추가할 마이닝 구조의 이름입니다.  
   
  *model*  
@@ -52,7 +51,7 @@ USING <algorithm> [(<parameter list>)]
  *중첩 된 필터 조건*  
  중첩 테이블의 열에 적용되는 필터 식입니다.  
   
- *알고리즘*  
+ *algorithm*  
  공급자가 정의한 데이터 마이닝 알고리즘의 이름입니다.  
   
 > [!NOTE]  
@@ -64,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *필터 조건*  
  사례 테이블의 열에 적용되는 필터 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  마이닝 구조에 복합 키가 포함된 경우 이 구조에서 정의한 모든 키 열이 마이닝 모델에 포함되어야 합니다.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성한 모델과 같이 모델에 예측 가능한 열이 필요하지 않을 경우에는 문에 열 정의를 포함하지 않아도 됩니다. 결과 모델의 모든 특성은 입력으로 처리됩니다.  
@@ -128,7 +127,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>필터 조건 식  
  마이닝 모델에 사용되는 사례를 제한하는 필터를 정의할 수 있습니다. 필터는 사례 테이블의 열 또는 중첩 테이블의 행에 적용하거나 둘 다에 적용할 수 있습니다.  
   
- 필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 조건자는 일반 논리 연산자(AND, OR 및 NOT)를 사용하여 결합할 수 있습니다.  
+ 필터 조건 식은 간단한 DMX 조건자로서 WHERE 절과 비슷합니다. 필터 식은 기본 수치 연산자, 스칼라 및 열 이름을 사용하는 수식으로 제한됩니다. 단, EXISTS 연산자는 예외입니다. 이 연산자는 하위 쿼리에 대해 반환되는 행이 한 개 이상일 경우 True로 평가됩니다. 조건자는 일반 논리 연산자를 사용 하 여 결합할 수 있습니다. AND, OR 및 NOT입니다.  
   
  마이닝 모델을 사용 하는 필터에 대 한 자세한 내용은 참조 하세요. [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
@@ -146,7 +145,7 @@ USING <algorithm> [(<parameter list>)]
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
-## <a name="example-1-add-a-model-to-a-structure"></a>예 1: 구조에 모델 추가  
+## <a name="example-1-add-a-model-to-a-structure"></a>예제 1: 구조에 모델 추가  
  다음 예에서는 Naive Bayes 마이닝 모델을 추가 합니다 **New Mailing** 마이닝 구조 및 한도 최대 특성 상태 수를 50입니다.  
   
 ```  
@@ -161,7 +160,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>예 2: 구조에 필터링된 모델 추가  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>예제 2: 구조에 필터링된 된 모델 추가  
  다음 예에서는 마이닝 모델을 추가 `Naive Bayes Women`를 **New Mailing** 마이닝 구조입니다. 새 모델의 기본 구조는 예 1에서 추가한 마이닝 모델과 같지만 이 모델에서는 마이닝 구조의 사례를 51세 이상의 여성 고객으로 제한합니다.  
   
 ```  
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>예 3: 중첩 테이블이 포함된 구조에 필터링된 모델 추가  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>예제 3: 중첩된 테이블이 포함 된 구조에 필터링된 된 모델 추가  
  다음 예에서는 시장 바구니 마이닝 구조의 수정된 버전에 마이닝 모델을 추가합니다. 예제에서 사용 되는 마이닝 구조에 추가할 수정한를 **지역** 고객 지역에 대 한 특성을 포함 하는 열 및 **Income Group** 를 사용 하 여 고객의 소득을 분류 하는 열 값 **높은**하십시오 **보통**, 또는 **낮은**.  
   
  이 마이닝 구조에는 고객이 구매한 항목을 나열하는 중첩 테이블도 포함되어 있습니다.  

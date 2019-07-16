@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 515f9de1c1b3856758b9e0cd2892e059667cfbb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001806"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47647531"
   표시되어 있는 각각의 커밋된 트랜잭션에 대해 하나의 행을 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|표시된 트랜잭션이 일어나는 로컬 데이터베이스입니다.|  
 |**mark_name**|**nvarchar(128)**|표시된 트랜잭션에 대한 사용자 제공 이름입니다.|  

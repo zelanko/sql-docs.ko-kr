@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1946db63ffaf4193a776c7ead9b70e76b729bc26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967110"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 속성 예제(VB)
 설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효 하 고 열린 연결을 "열립니다" 카탈로그입니다. 열린 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  

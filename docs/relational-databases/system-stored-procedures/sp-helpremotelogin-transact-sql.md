@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997573"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +54,14 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |서버|**sysname**|로컬 서버에서 정의된 원격 서버의 이름입니다.|  
 |local_user_name|**sysname**|서버의 원격 로그인이 매핑되는 로컬 서버의 로그인입니다.|  
 |remote_user_name|**sysname**|Local_user_name 매핑되는 원격 서버의 로그인입니다.|  
 |옵션|**sysname**|Trusted = 원격 서버에서 로컬 서버로 연결할 때 원격 로그인 암호를 제공할 필요가 없습니다.<br /><br /> Untrusted(또는 공백) = 원격 서버에서 로컬 서버로 연결할 때 원격 로그인 암호를 제공해야 합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로컬 서버에 정의 된 원격 서버의 이름을 나열 하려면 sp_helpserver를 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -70,7 +69,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-reporting-help-on-a-single-server"></a>1\. 단일 서버에 관한 도움말 보고  
+### <a name="a-reporting-help-on-a-single-server"></a>A. 단일 서버에 관한 도움말 보고  
  다음 예에서는 `Accounts`라는 원격 서버의 모든 원격 사용자에 대한 정보를 표시합니다.  
   
 ```  

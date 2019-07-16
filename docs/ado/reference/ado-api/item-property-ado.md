@@ -45,13 +45,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6be26e9c174c1911a0c2c7210552c8e8a0e44a2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918362"
 ---
 # <a name="item-property-ado"></a>Item 속성(ADO)
 이름 또는 서 수로 컬렉션의 특정 멤버를 나타냅니다.  
@@ -69,7 +68,7 @@ Set object = collection.Item ( Index )
  *Index*  
  A **Variant** 이름 또는 컬렉션에 있는 개체의 서 수를 계산 되는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **항목** 컬렉션의 특정 개체를 반환 하도록 속성입니다. 하는 경우 **항목** 에 해당 하는 컬렉션에서 개체를 찾을 수 없습니다는 *인덱스* 인수 오류가 발생 합니다. 또한 일부 컬렉션 명명 된 개체를 지원 하지 않습니다. 이러한 컬렉션에 대 한 서 수 참조를 사용 해야 합니다.  
   
  합니다 **항목** 속성은 모든 컬렉션에 대 한 기본 속성; 따라서 다음 구문 형식 바꾸어 사용할 수 있습니다.  

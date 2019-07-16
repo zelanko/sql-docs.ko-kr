@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 400c55cdfcea35ae60859fb66489384870172744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905940"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf(MDX)
 
@@ -32,7 +31,7 @@ IsLeaf(Member_Expression)
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **IsLeaf** 함수에서 반환 **true** 지정 된 멤버가 리프 멤버인 경우. 반환이 고, 그렇지 **false**합니다.  
   
 ## <a name="example"></a>예제  

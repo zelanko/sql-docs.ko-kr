@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003515"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 데이터 조작 문(MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63187652"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[CALL 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|현재 범위 또는 지정된 큐브에서 void를 반환하는 저장 프로시저를 실행합니다.|  
 |[CLEAR CALCULATIONS 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|큐브에서 모든 계산을 제거하고 큐브를 계산 패스 0으로 되돌립니다.|  

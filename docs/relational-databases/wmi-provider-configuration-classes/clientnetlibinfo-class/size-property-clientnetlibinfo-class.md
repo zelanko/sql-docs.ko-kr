@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 41dc797179e3e2b8ae84384119d5000439c01847
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f3d6827bd88172cb24e42cf3b3b63ae6f7ba2317
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995428"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 속성(ClientNetLibInfo 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.Size [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  클라이언트 네트워크 라이브러리의 크기(KB)를 지정하는 uint32 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  

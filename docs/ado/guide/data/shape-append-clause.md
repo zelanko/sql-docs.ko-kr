@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cc89f54dd030604e5d5d842aabb68713e46fd4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924189"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령은 APPEND 절을 **레코드 집합**합니다. 이러한 열은 자식 참조 하는 장 열을 자주 **레코드 집합**합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66718670"
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 절의 일부는 다음과 같습니다.  
   
  *parent-command*  
@@ -65,7 +64,7 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *child-recordset*  
  -   중괄호로 묶인 공급자 명령을 ("{}")을 반환 하는 **레코드 집합** 개체. 기본 데이터 공급자에 게 명령을 실행 하 고 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO 특별 한 쿼리 언어 필요 하지 않지만 SQL 언어에서 일반적으로 됩니다.  
   
@@ -96,7 +95,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  추가 키워드 뒤에 절을 실제로 목록, 각 절 쉼표로 구분 됩니다 하 고 부모에 추가할 다른 열을 정의 하는 위치입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  셰이프 명령의 일부로 공급자 명령에서 사용자 입력을 생성 하는 경우 셰이프를 사용자가 제공한 공급자 명령으로 처리 하는 불투명 문자열 공급자를 정확 하 게 전달 합니다. 예를 들어, 다음 셰이프의 명령에서  
   
 ```  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917601"
 ---
 # <a name="positionenum"></a>PositionEnum
 내에서 레코드 포인터의 현재 위치를 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|현재 레코드 포인터 BOF 임을 나타냅니다 (즉, 합니다 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성은 **True**).|  
 |**adPosEOF**|-3|EOF에 현재 레코드 포인터 임을 나타냅니다 (즉, 합니다 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성은 **True**).|  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1fa87ff82d9fb47cc51f5add1380ae26270cd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913077"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54255388"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 _linked_server_name_**.** _카탈로그_ 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
+ 연결된 된 서버 이름 및 카탈로그 이름을 설정한 후 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보를 가져오는 지원 _linked_server_name_ **.** _카탈로그_ 에 대 한 *CatalogName* 에서 다음 ODBC 카탈로그 함수:  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54255388"
   
 -   **SQLTables**  
   
- 두 부분 _linked_server_name_**.** _카탈로그_ 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)합니다.  
+ 두 부분 _linked_server_name_ **.** _카탈로그_ 에 지원 됩니다 *FKCatalogName* 하 고 *PKCatalogName* 온 [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)합니다.  
   
  SQLLinkedServers 및 SQLLinkedCatalogs를 사용하려면 다음 파일이 필요합니다.  
   

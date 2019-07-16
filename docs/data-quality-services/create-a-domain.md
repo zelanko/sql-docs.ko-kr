@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0f580d8181030cba996e18b25e60b0dc9f1309af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83de355138f694c6c0414362f41676012817d497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992320"
 ---
 # <a name="create-a-domain"></a>도메인 만들기
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917008"
 ---
 # <a name="seek-method"></a>Seek 메서드
 인덱스를 검색 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 신속 하 게 지정 된 값과 일치 하 고 행에 현재 행 위치를 변경 하는 행을 찾을 수 있습니다.  
@@ -41,8 +40,8 @@ recordset.Seek KeyValues, SeekOption
  *SeekOption*  
  A [SeekEnum](../../../ado/reference/ado-api/seekenum.md) 인덱스의 열과 해당 간의 비교의 형식을 지정 하는 값 *KeyValues*합니다.  
   
-## <a name="remarks"></a>Remarks  
- 사용 하 여는 **Seek** 메서드와 함께 [인덱스](../../../ado/reference/ado-api/index-property.md) 기본 공급자의 인덱스를 지 원하는 경우 속성을 **레코드 집합** 개체입니다. 사용 된 [지원](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 기본 공급자를 지원 하는지 여부를 결정 하는 방법 **Seek**, 및 **Supports(adIndex)** 공급자가 인덱스를 지원 하는지 여부를 결정 하는 메서드. (예를 들어 합니다 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) 지원 **Seek** 및 **인덱스**.)  
+## <a name="remarks"></a>설명  
+ 사용 하 여는 **Seek** 메서드와 함께 [인덱스](../../../ado/reference/ado-api/index-property.md) 기본 공급자의 인덱스를 지 원하는 경우 속성을 **레코드 집합** 개체입니다. 사용 된 [지원](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** 기본 공급자를 지원 하는지 여부를 결정 하는 방법 **Seek**, 및 **Supports(adIndex)** 공급자가 인덱스를 지원 하는지 여부를 결정 하는 메서드. (예를 들어 합니다 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) 지원 **Seek** 및 **인덱스**.)  
   
  하는 경우 **Seek** 않습니다 찾을 원하는 행에 오류가 발생 하 고 행의 끝에 배치 됩니다 합니다 **레코드 집합**합니다. 설정 된 **인덱스** 이 메서드를 실행 하기 전에 원하는 인덱스에는 속성입니다.  
   

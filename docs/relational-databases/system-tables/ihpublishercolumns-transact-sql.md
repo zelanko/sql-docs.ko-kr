@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f965bb76f13c01531ba5007d82de9e42c8138f05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a5e2f64294652586a87fcd25fda3c29517dc295d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990263"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>IHpublishercolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52802495"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|게시된 열을 식별합니다.|  
 |**table_id**|**int**|원본 테이블을 식별 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 열이 속한 합니다.|  

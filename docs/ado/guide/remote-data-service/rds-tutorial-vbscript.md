@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5384bfc186427231ed34e855e2fedc845aca6a66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922421"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS 자습서(VBScript)
 Microsoft Visual Basic Scripting Edition에서 작성 하는 RDS 자습서입니다. 이 자습서의 목적에 대 한 참조를 [RDS 자습서](../../../ado/guide/remote-data-service/rds-tutorial.md)합니다.  
