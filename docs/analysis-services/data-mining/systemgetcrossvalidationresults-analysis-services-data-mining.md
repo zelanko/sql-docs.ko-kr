@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209777"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ SystemGetCrossValidationResults(
 > [!NOTE]  
 >  클러스터링 모델의 교차 유효성 검사를 실행하려면 별도의 저장 프로시저인 [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)를 사용하여 클러스터링 모델의 교차 유효성 검사를 실행할 수 있습니다.  
   
- (옵션)  
+ (선택 사항)  
   
  *접기 개수(fold count)*  
  데이터 집합을 분할할 파티션 수를 지정하는 정수입니다. 최소값은 2입니다. 최대 접기 수는 **maximum integer** 와 사례 수 중 더 작은 값입니다.  
@@ -92,11 +92,11 @@ SystemGetCrossValidationResults(
   
  값을 지정하지 않거나 값이 **null**이면 각 예측에서 가능성이 가장 높은 상태에 대해 메트릭이 계산됩니다.  
   
- 기본값은 **null**입니다.  
+ 기본값은 **null**합니다.  
   
  지정한 특성에 대해 지정한 값이 유효하지 않거나 수식의 유형이 올바르지 않으면 유효성을 검사하는 동안 오류가 발생합니다.  
   
- (옵션)  
+ (선택 사항)  
   
  *대상*  *임계값*  
  0보다 크고 1보다 작은**Double** 이며, 지정된 대상 상태에 대한 예측을 올바른 것으로 간주하기 위해 얻어야 하는 최소 확률 점수를 나타냅니다.  
@@ -105,10 +105,10 @@ SystemGetCrossValidationResults(
   
  값을 지정하지 않거나 값이 **null**이면 확률 점수에 관계없이 가능성이 가장 높은 상태가 사용됩니다.  
   
- 기본값은 **null**입니다.  
+ 기본값은 **null**합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 설정 하는 경우 오류가 발생 하지 것입니다 *상태 임계값* 를 0.0으로이 값에 절대 사용 하지만 합니다. 실제로 임계값이 0.0이면 확률이 0%인 예측이 올바른 것으로 간주됨을 의미합니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 오류가 발생하지 않지만( *state threshold* 를 0.0으로 설정한 경우) 이 값은 사용해서는 안 됩니다. 실제로 임계값이 0.0이면 확률이 0%인 예측이 올바른 것으로 간주됨을 의미합니다.  
   
  (옵션)  
   
@@ -117,14 +117,14 @@ SystemGetCrossValidationResults(
   
  **참고** 이 매개 변수는 나중에 사용하기 위해 예약되어 있습니다.  
   
- (옵션)  
+ (선택 사항)  
   
 ## <a name="return-type"></a>반환 형식  
  반환되는 행 집합에는 각 모델의 각 파티션에 대한 점수가 포함됩니다.  
   
  다음 표에서는 이 행 집합의 열을 설명합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |ModelName|테스트한 모델의 이름입니다.|  
 |AttributeName|예측 가능한 열의 이름입니다.|  
@@ -133,9 +133,9 @@ SystemGetCrossValidationResults(
 |PartitionSize|각 파티션에 포함된 사례 수를 나타내는 정수입니다.|  
 |테스트|수행된 테스트의 범주입니다. 범주 및 각 범주에 포함된 테스트에 대한 설명은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.|  
 |이름|테스트에서 반환한 측정값의 이름입니다. 각 모델의 측정값은 예측 가능한 값의 유형에 따라 달라집니다. 각 측정값의 정의는 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.<br /><br /> 각 예측 가능 유형에 대해 반환된 측정값 목록은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.|  
-|Value|지정된 테스트 측정값의 값입니다.|  
+|값|지정된 테스트 측정값의 값입니다.|  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  전체 데이터 집합에 대한 정확도 메트릭을 반환하려면 [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)를 사용하여 클러스터링 모델의 교차 유효성 검사를 실행할 수 있습니다.  
   
  마이닝 모델이 접기로 이미 분할된 경우에는 [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)를 사용하여 클러스터링 모델의 교차 유효성 검사를 실행할 수 있습니다.  
@@ -162,30 +162,30 @@ NULL
   
  예제 결과:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|테스트|이름|값|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|참 긍정|144|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|거짓 긍정|105|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|참 부정|186|  
-|Target Mail DT|Bike Buyer|1.|1.|500|분류|거짓 부정|65|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|로그 점수|-0.619042807138345|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|리프트|0.0740963734002671|  
-|Target Mail DT|Bike Buyer|1.|1.|500|Likelihood|제곱 평균 오차|0.346946279977653|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|참 긍정|162|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|거짓 긍정|86|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|참 부정|165|  
-|Target Mail DT|Bike Buyer|1.|2|500|분류|거짓 부정|87|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|로그 점수|-0.654117781086519|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|리프트|0.038997399132084|  
-|Target Mail DT|Bike Buyer|1.|2|500|Likelihood|제곱 평균 오차|0.342721344892651|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|참 긍정|144|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|거짓 긍정|105|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|참 부정|186|  
+|Target Mail DT|Bike Buyer|1|1|500|분류|거짓 부정|65|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|로그 점수|-0.619042807138345|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|리프트|0.0740963734002671|  
+|Target Mail DT|Bike Buyer|1|1|500|Likelihood|제곱 평균 오차|0.346946279977653|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|참 긍정|162|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|거짓 긍정|86|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|참 부정|165|  
+|Target Mail DT|Bike Buyer|1|2|500|분류|거짓 부정|87|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|로그 점수|-0.654117781086519|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|리프트|0.038997399132084|  
+|Target Mail DT|Bike Buyer|1|2|500|Likelihood|제곱 평균 오차|0.342721344892651|  
   
 ## <a name="requirements"></a>요구 사항  
  교차 유효성 검사는 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 해당)에서만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

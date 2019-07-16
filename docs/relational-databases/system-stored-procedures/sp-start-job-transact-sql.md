@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032834"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` 대상 서버의 작업을 시작 합니다. *server_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. *server_name* 작업은 현재 대상으로 하는 대상 서버 중 하나 여야 합니다.  
+`[ @server_name = ] 'server_name'` 대상 서버의 작업을 시작 합니다. *server_name* 은 **nvarchar (128)** , 기본값은 NULL입니다. *server_name* 작업은 현재 대상으로 하는 대상 서버 중 하나 여야 합니다.  
   
 `[ @step_name = ] 'step_name'` 작업 실행을 시작 하는 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여  
   
@@ -64,7 +63,7 @@ sp_start_job
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장된 프로시저에는 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -95,7 +94,7 @@ GO
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

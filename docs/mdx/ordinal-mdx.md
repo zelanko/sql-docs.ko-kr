@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 83036ec2ee0fa69c9ebb8cc2a905361eeae0aafa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b22cc6d5a609f8e1f585ccc1229e0e1cd67e1796
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055642"
 ---
 # <a name="ordinal-mdx"></a>Ordinal(MDX)
 
@@ -32,7 +31,7 @@ Level_Expression.Ordinal
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **서 수** 함수는와 함께 자주 사용 합니다 **IIF** 및 **CurrentMember** 조건에 따라 다른에 다른 값을 표시 하는 함수 계층 수준, 쿼리 결과의 각 특정 셀의 서 수 위치를 기준으로 합니다. 예를 들어 사용할 수 있습니다 합니다 **서** 특정 수준에서 계산을 수행 하 여 다른 수준에서 기본값은 "n/A"를 표시 하는 함수입니다.  
   
 ## <a name="example"></a>예제  

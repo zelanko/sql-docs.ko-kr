@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055052"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합이 시스템 구성 요소에 대해 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> filter<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
@@ -77,7 +76,7 @@ sp_help_fulltext_system_components
   
  경우에 다음 결과 집합 반환 되거나 둘 이상의 전체 텍스트 카탈로그에 사용 하는 존재 *component_type*합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|데이터베이스의 ID입니다.|  
 |**ftcatid**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
@@ -85,12 +84,12 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>사용 권한  
  멤버 자격이 필요 합니다 **공용** 역할; 사용자가 VIEW DEFINITION 권한을 가지는 전체 텍스트 카탈로그에 대 한 정보를 볼만 수 있지만. **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 메서드는 업그레이드를 준비할 때 특히 중요합니다. 특정 데이터베이스 내에서 저장 프로시저를 실행하고, 출력을 사용하여 특정 카탈로그가 업그레이드에 영향을 받는지 여부를 지정합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-full-text-system-components"></a>1\. 모든 전체 텍스트 시스템 구성 요소 나열  
+### <a name="a-listing-all-full-text-system-components"></a>A. 모든 전체 텍스트 시스템 구성 요소 나열  
  다음 예에서는 서버 인스턴스에 등록된 모든 전체 텍스트 시스템 구성 요소를 나열합니다.  
   
 ```  

@@ -7,13 +7,12 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962777"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새로운 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -109,7 +108,7 @@ Successfully installed cntk-2.1
 
 설치가 완료 되 면 다음 단계에 설명 된 대로 패키지를 사용 하 여 바로 시작할 수 있습니다.
 
-CNTK를 사용 하 여 딥 러닝의 예로, 이러한 자습서를 참조 하세요. [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
+CNTK를 사용 하 여 딥 러닝의 예로, 이러한 자습서를 참조 하세요. [CNTK Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 스크립트에 패키지에서 함수를 사용 하려면 표준 삽입 `import <package_name>` 스크립트의 초기 줄에서 문:
 
@@ -125,7 +124,7 @@ cntk._version_
 
 Python 명령줄을 사용 하는 경우 중 하나를 사용할 수 있습니다 **Pip** 또는 **conda** SQL Server 설치 프로그램에서 추가 Anaconda Python 환경에 포함 된 패키지 관리자입니다.
 
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+1. C:\Program Files\Microsoft SQL Server\MSSQL14로 이동 합니다. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 1. 마우스 오른쪽 단추로 클릭 **conda.exe** > **관리자 권한으로 실행**를 입력 하 고 `conda list` 현재 환경에 설치 된 패키지 목록을 반환 합니다.
 

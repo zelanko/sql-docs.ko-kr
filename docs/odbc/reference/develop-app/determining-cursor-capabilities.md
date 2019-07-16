@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040000"
 ---
 # <a name="determining-cursor-capabilities"></a>커서 기능 확인
 다음 네 가지 옵션 **SQLGetInfo** 지 원하는 커서의 형식 및 해당 기능에 설명 합니다.  

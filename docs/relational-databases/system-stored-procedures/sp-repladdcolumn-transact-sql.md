@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b01a48e15c06f021b41b3bded35a0cd2739313c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006920"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  복제용으로 추가될 테이블에 있는 열의 이름입니다. *열* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [ @typetext =] '*typetext*'  
- 추가되는 열의 정의입니다. *typetext* 됩니다 **nvarchar(3000)**, 기본값은 없습니다. 예를 들어 열 order_filled 추가, 하는 단일 문자 필드에 NULL이 아닌의 기본값이 **N**, order_filled는 것은 *열* 매개 변수를 정의 하는 동안는 열 **char(1) 없습니다 NULL CONSTRAINT constraint_name DEFAULT ' n '** 것은 *typetext* 매개 변수 값입니다.  
+ 추가되는 열의 정의입니다. *typetext* 됩니다 **nvarchar(3000)** , 기본값은 없습니다. 예를 들어 열 order_filled 추가, 하는 단일 문자 필드에 NULL이 아닌의 기본값이 **N**, order_filled는 것은 *열* 매개 변수를 정의 하는 동안는 열 **char(1) 없습니다 NULL CONSTRAINT constraint_name DEFAULT ' n '** 것은 *typetext* 매개 변수 값입니다.  
   
  [ @publication_to_add =] '*publication_to_add*'  
- 새 열을 추가할 게시의 이름입니다. *publication_to_add* 됩니다 **nvarchar(4000)**, 기본값은 **모든**합니다. 하는 경우 **모든**, 다음이 테이블이 포함 된 모든 게시에 영향을 받습니다. 하는 경우 *publication_to_add* 지정 하면이 게시에만 새 열이 추가 됩니다.  
+ 새 열을 추가할 게시의 이름입니다. *publication_to_add* 됩니다 **nvarchar(4000)** , 기본값은 **모든**합니다. 하는 경우 **모든**, 다음이 테이블이 포함 된 모든 게시에 영향을 받습니다. 하는 경우 *publication_to_add* 지정 하면이 게시에만 새 열이 추가 됩니다.  
   
  [ @from_agent =] *from_agent*  
  복제 에이전트에서 저장 프로시저를 실행하는 경우 *from_agent* 됩니다 **int**, 기본값은 **0**, 여기서 값 **1** 이 저장된 프로시저를 실행할 때 복제 에이전트에서 사용 됩니다 모든 다른 경우 기본값인 **0**사용 해야 합니다.  
   
  [ @schema_change_script =] '*schema_change_script*'  
- 시스템 생성 사용자 지정 저장 프로시저를 수정하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트의 이름과 경로를 지정합니다. *schema_change_script* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다. 복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. *schema_change_script* 스키마 변경 sp_repladdcolumn을 사용 하 여 복제 된 테이블 아티클에 하려고 하 고 다음 중 하나를 수행할 수 후에 실행 됩니다.  
+ 시스템 생성 사용자 지정 저장 프로시저를 수정하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트의 이름과 경로를 지정합니다. *schema_change_script* 됩니다 **nvarchar(4000)** , 기본값은 NULL입니다. 복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. *schema_change_script* 스키마 변경 sp_repladdcolumn을 사용 하 여 복제 된 테이블 아티클에 하려고 하 고 다음 중 하나를 수행할 수 후에 실행 됩니다.  
   
 -   사용자 지정 저장된 프로시저는 자동으로 다시 생성 하는 경우 *schema_change_script* 이러한 사용자 지정 저장된 프로시저를 삭제 하 고 그것을 사용자 정의 사용자 지정 저장된 프로시저가 새 스키마를 지 원하는 데 사용할 수 있습니다.  
   

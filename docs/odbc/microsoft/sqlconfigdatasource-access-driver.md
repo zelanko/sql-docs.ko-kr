@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985240"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource(Access 드라이버)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665408"
   
  합니다 **SQLConfigDataSource** 함수를 추가 하는 데 사용 되는 수정 또는 데이터 원본 삭제 동적으로 다음과 같은 키워드를 사용 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|필드 정렬 되는 시퀀스입니다.<br /><br /> 동일한 옵션을 설정 **데이터 정렬 시퀀스** 설정 대화 상자에서.|  
 |COMPACT_DB|데이터베이스 파일에서 데이터 압축을 수행합니다. 다음 형식은 같습니다. COMPACT_DB < path_name >< optionaL_sort_order > =\<선택적 암호화 키워드 >.<br /><br /> DSN 키워드를 사용 하 여 동일한 문에서 COMPACT_DB 키워드를 사용 하는 경우이 드라이버는 DSN 키워드를 무시 합니다. 따라서 데이터베이스를 압축 하 고 DSN을 지정 하는 두 단계로 이루어집니다.|  

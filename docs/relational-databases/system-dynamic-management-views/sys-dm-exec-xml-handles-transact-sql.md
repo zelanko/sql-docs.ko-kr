@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7479109ef50ee3744b3a9acafc17a799670cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936781"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,7 +47,7 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|이 XML 문서 핸들을 보유한 세션의 세션 ID입니다.|  
 |**document_id**|**int**|반환 된 XML 문서 핸들 ID **sp_xml_preparedocument**합니다.|  
@@ -63,7 +62,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**row_count**|**bigint**|이 문서 핸들에 대해 이전의 모든 OPENXML 호출에서 반환된 행 수입니다.|  
 |**dormant_duration_ms**|**bigint**|마지막 OPENXML 호출 이후의 시간(밀리초)입니다. OPENXML 호출 되지 않았습니다, 이후의 밀리초를 반환 합니다 **sp_xml_preparedocumen**호출 합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수명을 **sql_handles** 호출을 실행 하는 SQL 텍스트를 검색 하는 데 **sp_xml_preparedocument** 쿼리를 실행 하는 데 사용 하는 캐시 된 계획 보다 깁니다. 캐시에서 쿼리 텍스트를 사용할 수 없는 경우에는 함수 결과에 제공된 정보를 사용하여 데이터를 검색할 수 없습니다. 많은 대용량 일괄 처리를 실행할 때 이러한 문제가 발생할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -80,7 +79,7 @@ SELECT * FROM sys.dm_exec_xml_handles(0);
  <br>[동적 관리 뷰 및 함수 (TRANSACT-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
  <br>[실행 관련 동적 관리 뷰 및 함수 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
  <br>[sp_xml_preparedocument (Transact-SQL)](../system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
- <br>[sp_xml_removedocument (Transact-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+ <br>[sp_xml_removedocument (TRANSACT-SQL)](../system-stored-procedures/sp-xml-removedocument-transact-sql.md)
 
 
  

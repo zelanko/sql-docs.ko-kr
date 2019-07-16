@@ -6,13 +6,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3c9d8d6cc8c0a5cfdc697c5daaa3b56631d74116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963023"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning 위한 데이터 수집 문제 해결
 
@@ -302,6 +301,6 @@ SQL Server 프로세스 및 해당 기능에 필요한 모든 폴더를 제외�
 
 2. SQL Server에 대 한 방화벽 규칙을 만들어졌는지 여부를 결정 합니다. 기본 설치의 경우 보안상의 이유로 하지 못할 수도 있습니다는 인스턴스에 연결 하려면 원격 R 또는 Python 클라이언트에 대 한 합니다. 자세한 내용은 [SQL Server에 연결 문제 해결](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [SQL Server에서 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)

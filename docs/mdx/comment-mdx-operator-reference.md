@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006288"
 ---
 # <a name="comment---mdx-operator-reference"></a>주석-MDX 연산자 참조
 
@@ -32,7 +31,7 @@ ms.locfileid: "63208752"
  *Comment_Text*  
  주석 텍스트를 포함하는 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  설명은 별도의 줄에 삽입하거나 MDX 스크립트 줄 끝에 중첩하거나 MDX 문 내에 중첩할 수 있습니다. 서버는 주석을 평가하지 않습니다.  
   
  이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다. --으로 입력된 주석은 새 줄 문자로 구분됩니다.  

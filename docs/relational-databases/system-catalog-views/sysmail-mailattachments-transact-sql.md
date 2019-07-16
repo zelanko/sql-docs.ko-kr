@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060198"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 메일로 제출된 각 첨부 파일당 한 개의 행을 포함합니다. 이 뷰를 사용하여 데이터베이스 메일 첨부 파일에 대한 정보를 볼 수 있습니다. 데이터베이스 메일 사용 하 여 처리 하는 모든 전자 메일을 검토 [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|첨부 파일의 ID입니다.|  
 |**mailitem_id**|**int**|첨부 파일을 포함하는 메일 항목의 식별자입니다.|  
@@ -40,7 +39,7 @@ ms.locfileid: "47627311"
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결할 때 이 뷰를 사용하여 첨부 파일을 속성을 확인할 수 있습니다.  
   
  첨부 파일 시스템 테이블에 저장 될 수 있습니다 합니다 **msdb** 데이터베이스 증가 합니다. 사용 하 여 **sysmail_delete_mailitems_sp** 메일 항목 및 관련된 첨부 파일을 삭제 합니다. 자세한 내용은 [보관 데이터베이스 메일 메시지 및 이벤트 로그에 SQL Server 에이전트 작업을 만드는](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)합니다.  

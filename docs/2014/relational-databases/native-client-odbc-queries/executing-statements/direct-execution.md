@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207073"
 ---
 # <a name="direct-execution"></a>직접 실행
   직접 실행은 가장 기본적인 문 실행 방법입니다. 응용 프로그램 빌드에 포함 된 문자열을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 하 여 실행에 대 한 전송 및 합니다 **SQLExecDirect** 함수입니다. 서버에서 문이 수신되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 문을 실행 계획으로 컴파일한 다음 실행 계획을 즉시 실행합니다.  

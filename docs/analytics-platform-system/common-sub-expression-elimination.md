@@ -2,7 +2,6 @@
 title: Analytics Platform System의 공통 부분식 설명 | Microsoft Docs
 description: 분석 플랫폼 시스템 CU7.3에 도입 된 표시 예제 쿼리 개선
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2dd02bed55f3d3781428eae3ec4bc2d0655819ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 604f95e42cee59fb17f73b8f9e242c6466e60e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961311"
 ---
 # <a name="common-subexpression-elimination-explained"></a>공용 부분식 제거 설명
 

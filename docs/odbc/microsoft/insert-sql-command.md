@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019455"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL 명령
 지정 된 필드 값이 포함 된 테이블의 끝에 레코드를 추가 합니다.  
@@ -47,7 +46,7 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
  VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  새 레코드를 삽입 하 여 필드 값을 지정 합니다. 필드 이름을 생략 하면 테이블 구조에 정의 된 순서 대로 필드 값을 지정 해야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  새 레코드를 VALUES 절에 나열 된 데이터를 포함 합니다.  
   
 ## <a name="driver-remarks"></a>드라이버 설명  

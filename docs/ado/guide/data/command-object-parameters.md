@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925872"
 ---
 # <a name="command-object-parameters"></a>명령 개체 매개 변수
 이전에 설명 된 항목 [만들고 간단한 명령 실행](../../../ado/guide/data/creating-and-executing-a-simple-command.md)합니다. 더 흥미로운 하는 데는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체는 SQL 명령의 매개 변수가 다음 예제에 표시 됩니다. 이 수정 될 때마다 매개 변수에 대해 다른 값에서 전달 하는 명령은 다시 사용할 수 있습니다. 때문에 합니다 [준비 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 속성을 **명령** 개체로 설정 됩니다 **true**, ADO 공급자에 지정 된 명령을 걸립니다 [ CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 처음으로 실행 하기 전에 합니다. 또한 메모리에서 컴파일된 명령 또한 유지 합니다. 이 속도 느려집니다 명령의 실행 약간는 첫 번째 있지만 명령 이후에 호출 될 때마다 향상 된 성능이에서 결과 준비 하는 데 필요한 오버 헤드로 인해 실행 됩니다. 따라서 여러 번 사용 될 경우에 명령 준비 해야 합니다.  

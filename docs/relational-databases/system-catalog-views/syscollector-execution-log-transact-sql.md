@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060347"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   실행 로그의 컬렉션 집합 또는 패키지에 대한 정보를 제공합니다.   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|각 컬렉션 집합의 실행을 식별합니다. 이 뷰와 자세한 다른 로그를 조인하는 데 사용됩니다. Null을 허용하지 않습니다.|  
 |parent_log_id|**bigint**|부모 패키지 또는 컬렉션 집합을 식별합니다. Null을 허용하지 않습니다. ID는 부모-자식 관계로 연결되어 있으므로 어떤 패키지가 어떤 컬렉션 집합에서 시작되었는지 파악할 수 있습니다. 이 뷰는 로그 항목을 부모-자식 연결로 그룹화하고 패키지의 이름을 들여쓰기로 처리하여 호출 체인을 명확히 볼 수 있도록 합니다.|  

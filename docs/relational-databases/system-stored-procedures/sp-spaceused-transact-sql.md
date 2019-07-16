@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032872"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,23 +50,23 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  공간 사용 정보가 요청된 테이블, 인덱싱된 뷰 또는 큐의 정규화되거나 정규화되지 않은 이름입니다. 정규화된 개체 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함하는 정규화된 개체 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다.  
 하는 경우 *objname* 지정 하지 않으면 전체 데이터베이스에 대 한 결과 반환 합니다.  
-*objname* 됩니다 **nvarchar(776)**, 기본값은 NULL입니다.  
+*objname* 됩니다 **nvarchar(776)** , 기본값은 NULL입니다.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 만 데이터베이스 및 테이블 개체를 지원 합니다.
   
-`[ @updateusage = ] 'updateusage'` 공간 사용 정보를 업데이트 하려면 DBCC UPDATEUSAGE를 실행 해야 나타냅니다. 때 *objname* 는 지정 하지 않으면 문이 전체 데이터베이스에서 실행 될; 명령문을 실행 하는 고, 그렇지 *objname*합니다. 값은 **true** 하거나 **false**합니다. *updateusage* 됩니다 **varchar(5)**, 기본값은 **false**합니다.  
+`[ @updateusage = ] 'updateusage'` 공간 사용 정보를 업데이트 하려면 DBCC UPDATEUSAGE를 실행 해야 나타냅니다. 때 *objname* 는 지정 하지 않으면 문이 전체 데이터베이스에서 실행 될; 명령문을 실행 하는 고, 그렇지 *objname*합니다. 값은 **true** 하거나 **false**합니다. *updateusage* 됩니다 **varchar(5)** , 기본값은 **false**합니다.  
   
 `[ @mode = ] 'mode'` 결과의 범위를 나타냅니다. 스트레치 된 테이블 또는 데이터베이스를 *모드* 매개 변수를 사용 하면 포함 하거나 원격 개체 부분을 제외 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
  합니다 *모드* 인수는 다음 값을 가질 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ALL|개체 또는 로컬 부분과 원격 부분 모두를 포함 하 여 데이터베이스의 저장소 통계를 반환 합니다.|  
 |LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분만의 저장소 통계를 반환합니다. 개체 또는 데이터베이스를 없는 경우 스트레치가 활성화 된 경우와 동일한 통계를 반환 합니다. @mode = ALL입니다.|  
 |REMOTE_ONLY|개체 또는 데이터베이스의 원격 부분에 저장소 통계를 반환합니다. 이 옵션은 다음 조건 중 하나가 true 인 경우 오류를 발생 시킵니다.<br /><br /> 테이블은 스트레치에 대해 사용 되지 않습니다.<br /><br /> 테이블에는 Stretch를 활성화 하지만 하지 하도록 설정한 경우 데이터 마이그레이션. 이 경우 원격 테이블이 아직 없는 스키마.<br /><br /> 사용자가 원격 테이블을 삭제 수동으로.<br /><br /> 원격 데이터 보관의 프로 비전 성공, 상태를 반환 했지만 사실 실패 했습니다.|  
   
- *모드* 됩니다 **varchar(11)**, 기본값은 **N'ALL'** 합니다.  
+ *모드* 됩니다 **varchar(11)** , 기본값은 **N'ALL'** 합니다.  
   
 `[ @oneresultset = ] oneresultset` 단일 결과 집합을 반환할지 여부를 나타냅니다. 합니다 *oneresultset* 인수는 다음 값을 가질 수 있습니다.  
   
@@ -89,13 +88,13 @@ sp_spaceused [[ @objname = ] 'objname' ]
 ## <a name="result-sets"></a>결과 집합  
  하는 경우 *objname* 생략 된 값과 *oneresultset* 0 인 현재 데이터베이스 크기 정보를 제공 하는 다음 결과 집합 반환 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다.|  
 |**할당 되지 않은 공간**|**varchar(18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
 |**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
@@ -104,7 +103,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  경우 *objname* 생략 된 값과 *oneresultset* 가 1 이면 현재 데이터베이스 크기 정보를 제공 하는 다음 단일 결과 집합이 반환 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다.|  
@@ -127,7 +126,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
  
 매개 변수 없이 지정 된 경우 이것이 기본 모드입니다. 다음 결과 집합에는 세부 디스크에 데이터베이스 크기 정보를 반환 됩니다. 
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 경우 파일 그룹의 모든 검사점 파일의 총 디스크 크기 포함 됩니다.|  
@@ -135,7 +134,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 데이터베이스의 테이블에 사용 된 공간: (이 결과 집합 반영 하지 않습니다 메모리 최적화 테이블에는 디스크 사용량의 테이블당 계정 없음) 
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
 |**data**|**varchar(18)**|데이터가 사용하는 총 공간입니다.|  
@@ -144,7 +143,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 다음 결과 집합이 반환 됩니다 **경우에만** 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 하나 이상의 컨테이너를 사용 하 여: 
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar(18)**|PRECREATED, 기술 자료의 상태를 사용 하 여 검사점 파일의 총 크기입니다. 전체 데이터베이스에 할당 되지 않은 공간으로 개수 됩니다. [예를 들어 600, 000 KB 다시 만들어진된 검사점 파일의 경우이 열 포함 ' 600000 KB']|  
 |**xtp_used**|**varchar(18)**|상태 UNDER CONSTRUCTION, ACTIVE, 및 MERGE TARGET (kb)를 사용 하 여 검사점 파일의 총 크기입니다. 메모리 최적화 테이블의 데이터에 대 한 현재 사용 중인 디스크 공간입니다.|  
@@ -152,7 +151,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 하는 경우 *objname* 는 생략 oneresultset의 값은 1 및 *include_total_xtp_storage* 이 1 이면 현재 데이터베이스 크기 정보를 제공 하는 다음 단일 결과 집합이 반환 됩니다. 경우 `include_total_xtp_storage` 은 0 (기본값), 마지막 세 열은 생략 됩니다. 
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|현재 데이터베이스의 이름입니다.|  
 |**database_size**|**varchar(18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 데이터와 로그 파일이 포함 되어 있습니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 경우 파일 그룹의 모든 검사점 파일의 총 디스크 크기 포함 됩니다.|
@@ -165,7 +164,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar(18)**|상태 UNDER CONSTRUCTION, ACTIVE, 및 MERGE TARGET (kb)를 사용 하 여 검사점 파일의 총 크기입니다. 메모리 최적화 테이블의 데이터에 대 한 현재 사용 중인 디스크 공간입니다. 데이터베이스에 하나 이상의 컨테이너를 사용 하 여 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. *이 열은만 포함 된 경우 @include_total_xtp_storage= 1*합니다.| 
 |**xtp_pending_truncation**|**varchar(18)**|Kb에서 WAITING_FOR_LOG_TRUNCATION 상태를 사용 하 여 검사점 파일의 총 크기입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다. 데이터베이스에 하나 이상의 컨테이너를 사용 하 여 memory_optimized_data 파일 그룹이 없는 경우 NULL을 반환 합니다. 이 열은만 포함 된 경우 `@include_total_xtp_storage=1`합니다.|
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **database_size** 의 합계 보다 항상 큽니다 **예약** + **할당 되지 않은 공간이** 로그 파일의 크기를 포함 하기 때문에 있지만 **예약**하 고 **unallocated_space** 데이터 페이지만 고려 합니다.  
   
  XML 인덱스 및 전체 텍스트 인덱스에서 사용 되는 페이지에 포함 된 **index_size** 모두 결과 집합에 대 한 합니다. 때 *objname* 지정 된 경우 XML 인덱스 및 개체에 대 한 전체 텍스트 인덱스에 대 한 페이지 합계에도 계산 됩니다 **예약** 하 고 **index_size** 결과입니다.  
@@ -182,7 +181,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-disk-space-information-about-a-table"></a>1. 테이블에 관한 디스크 공간 정보 표시  
+### <a name="a-displaying-disk-space-information-about-a-table"></a>A. 테이블에 관한 디스크 공간 정보 표시  
  다음 예에서는 `Vendor` 테이블 및 해당 인덱스의 디스크 공간 정보를 알려 줍니다.  
   
 ```sql  
@@ -192,7 +191,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-### <a name="b-displaying-updated-space-information-about-a-database"></a>2. 데이터베이스에 관한 업데이트된 공간 정보 표시  
+### <a name="b-displaying-updated-space-information-about-a-database"></a>2\. 데이터베이스에 관한 업데이트된 공간 정보 표시  
  다음 예에서는 현재 데이터베이스에서 사용하는 공간을 요약하고 선택적 매개 변수 `@updateusage`를 사용하여 현재 값이 반환되도록 합니다.  
   
 ```sql  
@@ -202,7 +201,7 @@ EXEC sp_spaceused @updateusage = N'TRUE';
 GO  
 ```  
   
-### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>3. 스트레치 사용 테이블을 사용 하 여 연결 된 원격 테이블에 대 한 공간 사용량 정보를 표시 합니다.  
+### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>3\. 스트레치 사용 테이블을 사용 하 여 연결 된 원격 테이블에 대 한 공간 사용량 정보를 표시 합니다.  
  다음 예제를 사용 하 여 스트레치 사용 테이블을 사용 하 여 연결 된 원격 테이블에서 사용 된 공간을 요약 합니다 **@mode** 원격 대상 지정 하는 인수입니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
 ```sql  
@@ -211,7 +210,7 @@ GO
 EXEC sp_spaceused N'Purchasing.Vendor', @mode = 'REMOTE_ONLY'  
 ```  
   
-### <a name="d-displaying-space-usage-information-for-a-database-in-a-single-result-set"></a>4. 집합에서 단일 결과 데이터베이스에 대 한 공간 사용 정보를 표시  
+### <a name="d-displaying-space-usage-information-for-a-database-in-a-single-result-set"></a>4\. 집합에서 단일 결과 데이터베이스에 대 한 공간 사용 정보를 표시  
  다음 예에서는 현재 데이터베이스를 단일 결과 집합의 공간 사용량을 요약합니다.  
   
 ```sql  
@@ -220,7 +219,7 @@ GO
 EXEC sp_spaceused @oneresultset = 1  
 ```  
 
-### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memoryoptimized-file-group-in-a-single-result-set"></a>5. 단일 결과 집합에서 하나 이상의 메모리 액세스에 최적화 파일 그룹을 사용 하 여 데이터베이스에 대 한 공간 사용 정보를 표시합니다. 
+### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memoryoptimized-file-group-in-a-single-result-set"></a>5\. 단일 결과 집합에서 하나 이상의 메모리 액세스에 최적화 파일 그룹을 사용 하 여 데이터베이스에 대 한 공간 사용 정보를 표시합니다. 
  다음 예제에서는 단일 결과 집합에서 하나 이상의 메모리 액세스에 최적화 파일 그룹을 사용 하 여 현재 데이터베이스에 대 한 공간 사용량을 요약합니다.
  
 ```sql
@@ -230,7 +229,7 @@ EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @i
 GO
 ``` 
 
-### <a name="f-displaying-space-usage-information-for-a-memoryoptimized-table-object-in-a-database"></a>6. 데이터베이스에 MEMORY_OPTIMIZED 테이블 개체에 대 한 공간 사용량 정보를 표시 합니다.
+### <a name="f-displaying-space-usage-information-for-a-memoryoptimized-table-object-in-a-database"></a>6\. 데이터베이스에 MEMORY_OPTIMIZED 테이블 개체에 대 한 공간 사용량 정보를 표시 합니다.
  다음 예제에서는 하나 이상의 메모리 액세스에 최적화 파일 그룹을 사용 하 여 현재 데이터베이스의 MEMORY_OPTIMIZED 테이블 개체에 대 한 공간 사용량을 요약합니다.
  
 ```sql

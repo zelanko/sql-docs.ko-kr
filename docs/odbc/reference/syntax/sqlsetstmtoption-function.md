@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d472b36b62a8b3142a0127f29d013e8ebfce38de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039576"
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption 함수
 **규칙**  
@@ -37,7 +36,7 @@ ms.locfileid: "62742181"
 > [!NOTE]
 >  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 2 대 한 자세한 내용은 *.x* 는 ODBC 3을 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)부록 g: 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  참조 [ODBC 64-Bit 정보](../../../odbc/reference/odbc-64-bit-information.md)이면 응용 프로그램을 64 비트 운영 체제에서 실행 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196838"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 관계의 외래 키 측을 수정할 수 있습니다. 테이블의 외래 키를 수정하면 주 키 테이블의 열과 관련된 열이 변경됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "54129623"
   
 -   **외래 키를 수정하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54129623"
      제약 조건을 만들거나 다시 활성화하기 전부터 테이블에 있던 모든 데이터를 제약 조건에 대해 검사합니다.  
   
      **테이블 및 열 사양 범주**  
-     확장하여 어떠한 테이블의 어떠한 열이 관계에서 외래 키와 기본 키(또는 고유 키)로 사용되는지에 대한 정보를 표시합니다. 이러한 값을 편집하거나 정의하려면 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다.  
+     확장하여 어떠한 테이블의 어떠한 열이 관계에서 외래 키와 기본 키(또는 고유 키)로 사용되는지에 대한 정보를 표시합니다. 이러한 값을 편집하거나 정의하려면 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다.  
   
      **외래 키 기본 테이블**  
      선택한 관계에서 외래 키로 사용되는 열이 포함된 테이블을 표시합니다.  

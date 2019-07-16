@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b9ff1d51d762ea50a81f5542b88dd83e767060b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965568"
 ---
 # <a name="precision-property-adox"></a>Precision 속성(ADOX)
 데이터 값의 최대 전체 자릿수를 나타내는 합니다 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66706139"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환을 **긴** 열의 데이터 값의 최대 전체 자릿수 값 때 합니다 [형식](../../../ado/reference/adox-api/type-property-column-adox.md) 속성은 숫자 형식입니다. **전체 자릿수** 다른 모든 데이터 형식에 대해 무시 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 0 (**0**).  
   
  이 속성은 읽기 전용 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  

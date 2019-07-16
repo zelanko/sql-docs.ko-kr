@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016795"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod(MDX)
 
@@ -35,7 +34,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 주로 Time 형식의 차원에 대해 사용되지만 모든 차원에 대해 사용할 수도 있습니다.  
   
 -   수준 식이 지정 하는 경우는 **ClosingPeriod** 함수는 지정된 된 수준이 들어 및 지정된 된 수준에서 기본 멤버의 하위 항목 중 마지막 형제 항목을 반환 하는 차원을 사용 합니다.  
@@ -46,7 +45,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
  합니다 **ClosingPeriod** 함수는 다음 MDX 문과 동일 합니다.  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`.  
   
 > [!NOTE]  
 >  합니다 [OpeningPeriod](../mdx/openingperiod-mdx.md) 함수는 비슷합니다는 **ClosingPeriod** 함수와 합니다 **OpeningPeriod** 마지막 대신 첫 번째 형제를 반환 합니다 형제입니다.  

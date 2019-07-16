@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33bfe1d6e46a7687736afd837614eec350a941ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165758"
 ---
 # <a name="tuples"></a>튜플
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,10 +65,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  특성 멤버는 멤버 이름이나 멤버 키로 참조할 수 있습니다. 앞의 예에서 [CY 2004]에 대한 참조는 &[2004]로 바꿀 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
- [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

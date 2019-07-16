@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044525"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +57,14 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |**principal_id**|**int**|데이터베이스 사용자의 ID입니다.|  
 |**principal_name**|**sysname**|데이터베이스 사용자의 이름입니다.|  
 |**profile_id**|**int**|데이터베이스 메일 프로필의 ID입니다.|  
 |**profile_name**|**sysname**|데이터베이스 메일 프로필의 이름입니다.|  
 |**is_default**|**bit**|프로필이 해당 사용자의 기본 프로필인지 여부를 나타내는 플래그입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 **sysmail_help_principalprofile_sp** 호출 되는 반환 된 결과 집합 나열 모든 인스턴스의 연결 매개 변수 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 그렇지 않으면 결과 집합은 제공된 매개 변수와 일치하는 연결에 대한 정보를 포함합니다. 예를 들어 프로필 이름이 제공된 경우 프로시저가 해당 프로필에 대한 모든 연결을 나열합니다.  
   
  **sysmail_help_principalprofile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  
@@ -75,7 +74,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-a-specific-association"></a>1. 특정 연결에 대한 정보 나열  
+### <a name="a-listing-information-for-a-specific-association"></a>A. 특정 연결에 대한 정보 나열  
  다음 예에서는 `AdventureWorks Administrator` 데이터베이스에 있는 `ApplicationLogin` 프로필과 `msdb` 보안 주체 간의 모든 연결에 대한 정보 목록을 보여 줍니다.  
   
 ```  
@@ -92,7 +91,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-### <a name="b-listing-information-for-all-associations"></a>2. 모든 연결에 대한 정보 나열  
+### <a name="b-listing-information-for-all-associations"></a>2\. 모든 연결에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 연결에 대한 정보 목록을 보여 줍니다.  
   
 ```  

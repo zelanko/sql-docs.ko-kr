@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d9a0d746d88423c699907e266a93a2b3a08e031
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911549"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 속성(ADO MD)
 멤버 수를 나타내는 현재 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체가 계층의 부모입니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66709567"
 ## <a name="return-values"></a>반환 값  
  반환 된 **긴** 정수 읽기 전용 이며 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **ChildCount** 자녀 수의 추정치를 반환 하도록 속성을 **멤버** 에. 실제 자식의 **멤버** 에서 반환 될 수는 [자식을](../../../ado/reference/ado-md-api/children-property-ado-md.md) 속성입니다.  
   
  에 대 한 **멤버** 에서 개체를 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체를 반환 하는 최대는 65536입니다. 자식의 실제 수가 65536를 초과 하면, 반환 되는 값은 여전히 65536 됩니다. 따라서 응용 프로그램 해석 해야는 **ChildCount** 자식 65536 보다 크거나 같음으로.  

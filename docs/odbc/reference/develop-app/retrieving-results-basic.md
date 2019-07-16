@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020474"
 ---
 # <a name="retrieving-results-basic"></a>결과 검색(기본)
 A *결과 집합* 특정 조건과 일치 하는 데이터 원본에 대 한 행의 집합이 있습니다. 이 쿼리에서 결과 사용할 수 있는 응용 프로그램에 테이블 형식에서 및 개념적 테이블입니다. **선택** 문, 카탈로그 함수 및 일부 프로시저의 결과 집합을 만듭니다. 다음 예에서 첫 번째 SQL 문 결과 행을 모두 Orders 테이블의 모든 열이 포함 된 집합을 만들고 두 번째 SQL 문을 만듭니다 Orders 테이블의 행에 대 한 OrderID, SalesPerson 및 상태 열이 포함 된 resultset 상태는 OPEN입니다.  

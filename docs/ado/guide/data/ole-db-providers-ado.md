@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 926e5abc1c65db152c5ca5927c5acd2c932d6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924753"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 공급자(ADO)
 OLE DB 균일 한 액세스를 사용 하 여 응용 프로그램을 다양 한 소스에 저장 된 데이터를 제공 하는 COM 인터페이스 집합을 정의 합니다. 이 방법을 통해 데이터 원본을 지 원하는 DBMS 기능은 데이터 원본에 적절 한 인터페이스를 통해 데이터를 공유할 수 있습니다. 기본적으로 OLE DB의 고성능 아키텍처는 유연 하 고 구성 요소 기반 서비스 모델의 용도 기준으로 합니다. OLE DB에는 응용 프로그램과 데이터 간의 중간 계층의 수를 지정된 대신 하는 데 필요한 만큼의 구성에는 특정 태스크를 수행 하는 때에 필요 합니다.  

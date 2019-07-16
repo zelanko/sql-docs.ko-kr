@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 976992cfe5d68659b95a62cc0b4e839f19f8cdd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017910"
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>데이터베이스 미러링-sys.dm_db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 인스턴스의 미러된 데이터베이스에 대한 각 자동 페이지 복구 시도당 하나의 행을 반환합니다. 이 뷰에는 미러된 해당 데이터베이스의 최신 자동 페이지 복구 시도에 대한 행이 포함됩니다(데이터베이스당 최대 100개 행). 데이터베이스가 최대값에 도달하는 즉시 다음 자동 페이지 복구 시도에 대한 행이 기존 항목 중 하나를 대체합니다. 다음 표에서는 다양한 열의 의미를 정의합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|이 행이 해당하는 데이터베이스의 ID입니다.|  
 |**file_id**|**int**|해당 페이지가 있는 파일의 ID입니다.|  

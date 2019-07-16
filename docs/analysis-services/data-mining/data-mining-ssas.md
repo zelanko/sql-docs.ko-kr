@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210119"
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "54185099"
   
 -   통합 데이터 정리, 데이터 관리 및 보고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 데이터 프로파일링 및 정리를 위한 도구를 제공합니다. 모델링 준비 과정에서 데이터 정리를 위한 ETL 프로세스를 작성할 수 있으며, ssISnoversion은 쉽게 모델을 다시 학습하고 업데이트할 수도 있습니다.  
   
--   사용자 지정 가능한 다양한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘 제공 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 고유의 사용자 지정 플러그 인 알고리즘의 개발을 지원 합니다.  
+-   여러 사용자 지정 가능한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘 제공 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝은 고유의 사용자 지정 플러그 인 알고리즘의 개발을 지원 합니다.  
   
--   모델 테스트 인프라: 교차 유효성 검사, 분류 행렬, 리프트 차트 및 산점도와 같은 중요한 통계 도구를 사용하여 모델과 데이터 집합을 테스트합니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
+-   모델 테스트 인프라: 모델을 테스트 하 고 중요 한 통계 도구를 사용 하 여 교차 유효성 검사로는 데이터 집합, 분류표, 리프트 차트, 산 점도입니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
   
 -   쿼리 및 드릴스루: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝 예측 쿼리를 응용 프로그램에 통합 하기 위한 DMX 언어를 제공 합니다. 모델에서 자세한 통계 및 패턴을 검색하고 사례 데이터로 드릴스루할 수도 있습니다.  
   
--   클라이언트 도구: SQL Server에서 제공하는 개발 및 디자인 스튜디오 외에도 Excel용 데이터 마이닝 추가 기능을 사용하여 모델을 만들고 쿼리하며 찾아볼 수 있습니다. 또한 웹 서비스를 포함한 사용자 지정 클라이언트를 만듭니다.  
+-   클라이언트 도구: SQL Server에서 제공 된 개발 및 디자인 스튜디오 외에도 쿼리를 만들고 모델을 탐색 하려면 Excel 용 데이터 마이닝 추가 기능을 사용할 수 있습니다. 또한 웹 서비스를 포함한 사용자 지정 클라이언트를 만듭니다.  
   
--   스크립팅 언어 지원 및 관리되는 API: 모든 데이터 마이닝 개체는 완전히 프로그래밍할 수 있습니다. 스크립팅은 MDX, XMLA, 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 PowerShell 확장을 통해 가능합니다. 빠른 쿼리 및 스크립팅을 위해 DMX(Data Mining Extensions) 언어를 사용합니다.  
+-   스크립팅 언어 지원 및 관리 되는 API: 모든 데이터 마이닝 개체는 완전히 프로그래밍할 수 있습니다. 스크립팅은 MDX, XMLA, 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 PowerShell 확장을 통해 가능합니다. 빠른 쿼리 및 스크립팅을 위해 DMX(Data Mining Extensions) 언어를 사용합니다.  
   
--   보안 및 배포: 모델 및 구조 데이터의 드릴스루에 대한 별도의 사용 권한을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 통해 역할 기반 보안을 제공합니다. 사용자가 패턴에 액세스하거나 예측을 수행할 수 있도록 다른 서버에 모델을 간편하게 배포  
+-   보안 및 배포: 역할 기반 보안을 통해 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 모델 및 구조 데이터로 드릴스루에 대 한 별도 사용 권한을 포함 합니다. 사용자가 패턴에 액세스하거나 예측을 수행할 수 있도록 다른 서버에 모델을 간편하게 배포  
   
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝의 주요 기능 및 관련 태스크를 소개합니다.  

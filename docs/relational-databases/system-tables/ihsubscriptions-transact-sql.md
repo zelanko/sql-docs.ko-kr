@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990150"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62719610"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|게시된 아티클을 고유하게 식별합니다.|  
 |**srvid**|**smallint**|구독자의 서버 ID입니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "62719610"
 |**timestamp**|**timestamp**|구독을 만든 날짜와 시간입니다.|  
 |**queued_reinit**|**bit**|아티클을 초기화 또는 다시 초기화하도록 표시할지 여부를 지정합니다. 값이 **1** 구독된 아티클을 초기화 또는 다시 초기화 하도록 표시 되도록 지정 합니다.|  
 |**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 구독 합니다.<br /><br /> **2** = 활성입니다.|  
-|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = Automatic.<br /><br /> **2** = none입니다.|  
+|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = automatic.<br /><br /> **2** = none입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기-배포 에이전트가 구독자에서 실행 됩니다.<br /><br /> **1** = 끌어오기-배포 에이전트가 배포자에서 실행 됩니다.|  
 |**update_mode**|**tinyint**|업데이트 모드입니다.<br /><br /> **0** = 읽기 전용입니다.<br /><br /> **1** = 즉시 업데이트 합니다.|  
 |**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** 않습니다 = 다시 보내지 않습니다.|  

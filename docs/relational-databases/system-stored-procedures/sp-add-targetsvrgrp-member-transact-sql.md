@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b41cc93b9f7158ab682a1a8569901899c258328
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cf0feb3b7747f7488c8688c902760e90cbe66838
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033026"
 ---
 # <a name="spaddtargetsvrgrpmember-transact-sql"></a>sp_add_targetsvrgrp_member(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="arguments"></a>인수  
 `[ @group_name = ] 'group_name'` 그룹의 이름입니다. *group_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @server_name = ] 'server_name'` 지정된 된 그룹에 추가 해야 하는 서버의 이름입니다. *server_name* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
+`[ @server_name = ] 'server_name'` 지정된 된 그룹에 추가 해야 하는 서버의 이름입니다. *server_name* 됩니다 **nvarchar(30)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -50,7 +49,7 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대상 서버는 두 개 이상의 대상 서버 그룹의 멤버가 될 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  

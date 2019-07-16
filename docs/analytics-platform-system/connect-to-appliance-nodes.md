@@ -2,19 +2,18 @@
 title: Analytics Platform System appliance 노드에서 연결할 | Microsoft Docs
 description: 이 문서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 여러 가지를 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae40d38768f081ea6c439c40059065d695ebee23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66186800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961083"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 어플라이언스 노드에 연결
 이 문서는 분석 플랫폼 시스템 어플라이언스의 각 노드에 연결 하는 여러 가지를 설명 합니다.  

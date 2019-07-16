@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: be150cce4e4dcdec19f2369e058a9283d8d137a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbd4679502b433f6d25eacf51570e24ec50f649a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944972"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services에 대한 설치 작업
 

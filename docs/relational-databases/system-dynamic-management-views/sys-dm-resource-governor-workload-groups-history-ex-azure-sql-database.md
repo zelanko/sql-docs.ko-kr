@@ -18,25 +18,24 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-manager: craigg
-ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac776813cb817d1357948091bfc48c981fa8e730
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053265"
 ---
 # <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Azure SQL Database에 대 한 통계를 풀 하는 리소스의 마지막 30 분 15 초 간격으로 스냅숏을 반환 합니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pool_id**| ssNoversion |리소스 풀의 ID입니다. Null을 허용하지 않습니다.|
 |**group_id**| ssNoversion |작업 그룹의 ID입니다. Null을 허용하지 않습니다.|
 |**name**| nvarchar(256) |작업 그룹의 이름입니다. Null을 허용하지 않습니다.|
-|**snapshot_time**| Datetime |생성 된 리소스 그룹 통계 스냅숏의 날짜/시간입니다.|
+|**snapshot_time**| datetime |생성 된 리소스 그룹 통계 스냅숏의 날짜/시간입니다.|
 |**duration_ms**| ssNoversion |현재 및 이전 스냅숏 간에 기간입니다.|
 |**active_worker_count**| ssNoversion |현재 스냅숏의 총 작업자입니다.|
 |**active_request_count**| ssNoversion |현재 요청 수입니다. Null을 허용하지 않습니다.|
@@ -80,7 +79,7 @@ Azure SQL Database에 대 한 통계를 풀 하는 리소스의 마지막 30 분
 
 이 보기에는 VIEW SERVER STATE 권한이 필요합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용자는 거의 실시간 리소스 사용량 사용자 워크 로드 풀 뿐만 아니라 Azure SQL Database 인스턴스의 시스템 내부 풀에 대 한 모니터링이 동적 관리 뷰를 액세스할 수 있습니다.
 

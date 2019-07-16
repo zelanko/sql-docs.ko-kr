@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053029"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_describe_parameter_encryption
   
  첫 번째 결과 집합의 각 행의 키 쌍을 설명합니다. 암호화 된 열 암호화 키 및 해당 열 마스터 키입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**int**|결과 집합에서 행의 id입니다.|  
 |**database_id**|**int**|데이터베이스 id입니다.|  
@@ -75,7 +74,7 @@ sp_describe_parameter_encryption
   
  두 번째 결과 집합의 각 행에는 하나의 매개 변수에 대 한 암호화 메타 데이터 포함 되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|결과 집합에서 행의 id입니다.|  
 |**parameter_name**|**sysname**|지정 된 매개 변수 중 하나의 이름을 합니다  *\@params* 인수입니다.|  
@@ -84,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|코드의 첫 번째 결과의 행을 설정합니다. 에 해당 하는 매개 변수, 참조 되는 행의 열에 대해 구성 된 열 암호화 키를 설명 합니다.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|버전 번호 형식 정규화 알고리즘입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 상시 암호화 지원 클라이언트 드라이버를 자동으로 호출 **sp_describe_parameter_encryption** 응용 프로그램에서 발급 한 매개 변수가 있는 쿼리에 대 한 암호화 메타 데이터를 검색 합니다. 이후에, 드라이버 암호화 메타 데이터를 사용 하 여 상시 암호화로 보호 된 데이터베이스 열에 해당 하는 매개 변수의 값을 암호화 하 고 암호화를 사용 하 여 응용 프로그램에 제출 된 일반 텍스트 매개 변수 값을 대체 데이터베이스 엔진에 쿼리를 보내기 전에 매개 변수 값입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -164,7 +163,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [상시 암호화&#40;클라이언트 개발&#41;](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

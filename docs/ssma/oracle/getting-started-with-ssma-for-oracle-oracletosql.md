@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220600"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Oracle용 SSMA 시작(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) Oracle 사용 하면 신속 하 게에 대 한 Oracle 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마의 경우 결과 스키마를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle에서 데이터를 마이그레이션하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -65,7 +65,7 @@ Oracle 메타 데이터 탐색기는 Oracle 스키마에 대 한 정보를 표�
 자세한 내용은 [SQL Server로 변환 된 데이터베이스 개체 로드 &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)합니다.  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어, Oracle 메타 데이터 탐색기에서 테이블을 선택 하면 6 개의 탭 표시 됩니다: **테이블**, **SQL**하십시오 **형식 매핑, 보고서**, **속성**, 및 **데이터**입니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시 됩니다. **테이블**, **SQL**, 및 **데이터**.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어, Oracle 메타 데이터 탐색기에서 테이블을 선택 하면 6 개의 탭이 표시 됩니다. **테이블**, **SQL**합니다 **형식 매핑, 보고서**를 **속성**, 및 **데이터**합니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시 됩니다. **테이블**하십시오 **SQL**, 및 **데이터**입니다.  
   
 대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   
@@ -84,7 +84,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 #### <a name="migration-toolbar"></a>마이그레이션 도구 모음  
 다음 표에서 마이그레이션 도구 모음 명령을 보여 줍니다.  
   
-|단추|기능|  
+|단추|함수|  
 |------|--------|  
 |**보고서 만들기**|선택한 Oracle 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문을 다음 얼마나 성공적인 변환 된 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 Oracle 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
 |**스키마 변환**|선택한 Oracle 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체입니다.<br /><br />이 명령은 Oracle 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
@@ -94,12 +94,12 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 ### <a name="menus"></a>메뉴  
 다음 표에서 SSMA 메뉴를 보여 줍니다.  
   
-|메뉴|Description|  
+|메뉴|설명|  
 |----|-----------|  
 |**최근에 사용한 파일**|프로젝트를 사용 하 고 Oracle에 연결에 연결 하기 위한 명령을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**편집**|찾기 및 텍스트 세부 정보 페이지를 복사 하는 등의 작업에 대 한 명령을 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 세부 정보 창에서. 도 포함 되어 있습니다 합니다 **책갈피 관리** 옵션을 여기서 기존 책갈피의 목록을 볼 수는 있습니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **메타 데이터 탐색기 동기화** 명령입니다. Oracle 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다. 표시 하거나 숨기려면 명령도 포함 됩니다는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 관리 합니다.|  
-|**Tools**|보고서를 만들고, 개체 및 데이터를 마이그레이션하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정** 하 고 **프로젝트 설정** 대화 상자.|  
+|**도구**|보고서를 만들고, 개체 및 데이터를 마이그레이션하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정** 하 고 **프로젝트 설정** 대화 상자.|  
 |**테스터**|만들기 및 테스트 사례, 리포지토리 및 백업 관리 시스템을 사용 하 여 작업에 대 한 명령을 포함 합니다.|  
 |**도움말**|SSMA 데 및에 대 한 액세스를 제공 합니다 **에 대 한** 대화 상자.|  
   

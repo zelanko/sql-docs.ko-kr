@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6cf64c8300e1bf60c0384bfc8283008d38c666ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 753a3ddfe1e7d808380464ef5010bbe5a18ac18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040893"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>ProtocolName 속성(ClientNetworkProtocol 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 클라이언트의 이름을 지정 하는 문자열 값에서 참조 네트워크 프로토콜을 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](https://technet.microsoft.com/library/ms179295.aspx)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  

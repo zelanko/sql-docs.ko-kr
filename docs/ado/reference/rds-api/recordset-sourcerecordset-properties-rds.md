@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ec8dbdce6a813663f7909adb2a9ec1edacee9b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963579"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset, SourceRecordset 속성(RDS)
 나타냅니다 합니다 **레코드 집합** 사용자 지정 비즈니스 개체에서 반환 된 개체입니다.  
@@ -41,7 +40,7 @@ Recordset = DataControl.Recordset
  *DataControl*  
  나타내는 개체 변수는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
- *Recordset*  
+ *레코드 집합*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211491"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하려면 다음 단계를 수행하십시오.  
@@ -73,7 +73,7 @@ ms.locfileid: "53367908"
  [SQL Server 장애 조치(Failover) 클러스터 설치](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [빠른 시작의 SQL Server 2014 설치](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [고가용성 솔루션&#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   

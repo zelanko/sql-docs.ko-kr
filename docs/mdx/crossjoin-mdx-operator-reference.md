@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047143"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 연산자 참조
 
@@ -35,7 +34,7 @@ Set_Expression * Set_Expression
 ## <a name="return-value"></a>반환 값  
  지정된 두 매개 변수의 교차곱을 포함하는 집합입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다  **\* (Crossjoin)** 연산자는 기능적으로 동일 합니다 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 297c856cc2481a6d3266d7654797f81b9b9f5c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005806"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect Function
 **규칙**  
@@ -63,7 +62,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>진단  
  비슷합니다 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 드라이버 관리자를 사용 한다는 점을 제외 하면 모든 입력 유효성 검사 오류에 대 한를 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의와 **처리** 의 *hDbcInfoToken*합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  드라이버 관리자 부모 HENV 처리 보장 *hDbc* 하 고 *hDbcInfoToken* 동일 합니다.  
   
  달리 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), 방법이 없습니다 *DriverCompletion* 인수 연결 정보를 입력 하 라는 메시지가 표시 됩니다. 묻는 대화 상자가 풀링 시나리오에서 허용 되지 않습니다.  

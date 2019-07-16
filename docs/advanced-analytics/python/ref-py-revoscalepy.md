@@ -7,13 +7,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e0cded793f6017398641ffa055deec62010b2b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3482a15392fa04f7f10d2acbb0843d124e27dc21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962740"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server에서 Python 모듈)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62642467"
 
 합니다 **revoscalepy** 모듈은 Python 3.5에 기반 하 고 사용할 수 있는 다음과 같은 Microsoft 제품 또는 다운로드 중 하나를 설치 하는 경우에:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning 서비스](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [데이터 과학 클라이언트에 대 한 Python 클라이언트 라이브러리](setup-python-client-tools-sql.md)
 
@@ -52,7 +51,7 @@ ms.locfileid: "62642467"
 
 SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다. SQL 및 Python 데이터 형식 간의 매핑 목록을 참조 하세요 [Python-SQL 데이터 형식](python-libraries-and-data-types.md)합니다.
 
-| 기능| Description|
+| 함수| 설명|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  푸시 계산을 원격 인스턴스를 SQL Server 계산 컨텍스트 개체를 만듭니다. 몇 가지 **revoscalepy** 함수 인수로 계산 컨텍스트를 고려 합니다. 컨텍스트 전환 예제를 보려면 [revoscalepy를 사용 하 여 모델을 만드는](../tutorials/use-python-revoscalepy-to-create-model.md)합니다.|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | SQL Server 쿼리 또는 테이블 기반 데이터 개체를 만듭니다. |
@@ -64,7 +63,7 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 
 ## <a name="2-data-manipulation-etl"></a>2-데이터 조작 (ETL)
 
-| 기능 | Description |
+| 함수 | 설명 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | .Xdf 파일 또는 데이터 프레임으로 데이터를 가져옵니다.|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 출력 데이터 집합에는 입력된 데이터 집합에서 데이터를 변환 합니다.|
@@ -73,7 +72,7 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 
 ## <a name="3-training-and-summarization"></a>3-학습 및 요약
 
-| 기능| Description|
+| 함수| 설명|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 적합된 한 stochastic 그라데이션 승격 의사 결정 트리|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 적합된 한 분류 및 회귀 의사 결정 포리스트|
@@ -88,7 +87,7 @@ SQL Server 및 Python에 따라서는 다른 데이터 형식을 사용합니다
 
 ## <a name="4-scoring-functions"></a>4-점수 매기기 함수
 
-| 기능| Description|
+| 함수| 설명|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 학습된 된 모델에서 예측을 생성 합니다.|) | 학습된 된 모델에서 예측을 생성 하 고 실시간 점수 매기기에 사용할 수 있습니다. |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | 예측된 값 및 rx_lin_mod 및 rx_logit 개체를 사용 하 여 오차를 계산 합니다. |
@@ -117,7 +116,7 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [Python 자습서](../tutorials/sql-server-python-tutorials.md)
 + [자습서: T-sql로 Python 코드를 포함 합니다.](../tutorials/run-python-using-t-sql.md)

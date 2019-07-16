@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209008"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023630"
 > [!NOTE]  
 >  새로 고침을 사용할 수 없기 때문에 대부분의 Analysis Services 개발자는 차원을 연결하는 대신 복사합니다. 동일한 솔루션 내에서 프로젝트 간에 차원을 복사할 수 있습니다. 자세한 내용은 [SSAS에서 연결된 차원의 새로 고침](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx)을 참조하십시오.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  차원을 제공하는 원본 데이터베이스와 차원을 사용하는 현재 데이터베이스는 버전 및 호환성 수준이 같아야 합니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)을 참조하십시오.  
   
  원본 데이터베이스가 배포되고 온라인 상태여야 합니다. 연결된 개체를 게시하거나 사용하는 서버가 작업을 허용하도록 구성되어야 합니다(아래 참조).  
@@ -72,9 +72,9 @@ ms.locfileid: "34023630"
 ## <a name="next-steps"></a>다음 단계  
  연결된 차원의 구조는 변경할 수 없으므로 차원 디자이너의 **차원 구조** 탭에서 볼 수 없습니다. 연결된 차원을 처리한 후에는 **브라우저** 탭에서 볼 수 있습니다. 이름을 변경하고 이름에 대한 번역을 만들 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 데이터베이스의 호환성 수준&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [연결 된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
+ [연결된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
  [차원 관계](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

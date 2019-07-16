@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946016"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51662272"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 지정 된 열 참조를 **1!s!sql:column ()** XQuery 내의 함수는 처리 중인 행의 열을 참조 합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 참조할 수 있습니다는 **xml** XML-DML 원본 식의 컨텍스트에서 인스턴스 insert 문 형식의 열을 참조할 수 없습니다이 고, 그렇지 않으면 **xml** 또는 CLR 사용자 정의 형식입니다.  
@@ -48,7 +47,7 @@ sql:column("columnName")
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>1. sql:column()을 사용하여 XML 내의 관계형 값 검색  
+### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. sql:column()을 사용하여 XML 내의 관계형 값 검색  
  XML을 생성할 때 다음 예는 비-XML 관계형 열의 값을 검색하여 XML 및 관계형 데이터에 바인딩하는 방법을 보여 줍니다.  
   
  쿼리는 다음 형식의 XML을 생성합니다.  

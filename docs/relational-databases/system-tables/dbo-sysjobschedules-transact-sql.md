@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061185"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62470811"
   
 > **참고:** 합니다 **sysjobschedules** 테이블을 반환 하는 값에 영향을 줄 수 있는 20 분 마다 새로 고칩니다 합니다 **sp_help_jobschedule** 저장 프로시저입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정의 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  

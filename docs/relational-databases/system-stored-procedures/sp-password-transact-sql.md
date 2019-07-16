@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008925"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_password** ALTER LOGIN을 호출 합니다. 이 문에서는 추가 옵션을 지정할 수 있습니다. 암호 변경에 대 한 내용은 참조 하세요 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
  **sp_password** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
@@ -69,7 +68,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>1. 이전 암호를 모른 채 로그인의 암호 변경  
+### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. 이전 암호를 모른 채 로그인의 암호 변경  
  다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`으로 변경하는 방법을 보여 줍니다. 이것은 기본적으로 사용되는 방법입니다. 이 명령을 실행하고 있는 사용자는 CONTROL SERVER 권한을 가져야 합니다.  
   
 ```  
@@ -77,7 +76,7 @@ ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';
 GO  
 ```  
   
-### <a name="b-changing-a-password"></a>2. 암호 변경  
+### <a name="b-changing-a-password"></a>2\. 암호 변경  
  다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`에서 `V1cteAmanti55imE`로 변경하는 방법을 보여 줍니다. 이것은 기본적으로 사용되는 방법입니다. `Victoria` 사용자는 추가 사용 권한 없이도 이 명령을 실행할 수 있습니다. 다른 사용자는 ALTER ANY LOGIN 권한을 가져야 합니다.  
   
 ```  

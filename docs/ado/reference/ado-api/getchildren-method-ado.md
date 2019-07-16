@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d29618fbacfbd4ba3becd222ef8a063e59e2cc70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932505"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드(ADO)
 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 컬렉션의 자식을 나타내는 행이 있는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -37,7 +36,7 @@ Set recordset = record.GetChildren
 ## <a name="return-value"></a>반환 값  
  A **Recordset** 개체는 각 행이 나타내는 현재 자식 **레코드** 개체입니다. 예를 들어 자식을 **레코드** 나타냅니다 디렉터리는 되도록 파일과 하위 디렉터리의 부모 디렉터리 내에 포함 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  열에 반환 되는 공급자에 따라 결정 **레코드 집합**합니다. 예를 들어, 문서 소스 공급자 리소스를 항상 반환 **레코드 집합**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28fe1f158a34aa599fcadba2f8921aa5c4adacc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 62f4cf0f471a17c927d1eb8ad2801a378657b0cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006912"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_replcounters
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**데이터베이스 백업**|**sysname**|데이터베이스의 이름입니다.|  
 |**복제 된 트랜잭션**|**int**|배포 데이터베이스에 전달되기 위해 대기하고 있는 로그의 트랜잭션 수입니다.|  
@@ -49,7 +48,7 @@ sp_replcounters
 |**Replbeginlsn**|**binary(10)**|로그에서 현재 잘라낼 지점의 LSN(로그 시퀀스 번호)입니다.|  
 |**Replnextlsn**|**binary(10)**|배포 데이터베이스로 전달되기 위해 대기하고 있는 다음 커밋 레코드의 LSN입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replcounters** 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5962889f38043e675b70558e7561bfc3f63b39ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209051"
 ---
 # <a name="cubes-in-multidimensional-models"></a>다차원 모델의 큐브
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "34020150"
 |파티션|[다차원 모델의 파티션](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)|  
 |큐브 뷰|[다차원 모델의 큐브 뷰](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
 |계층 구조|[사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
-|작업|[다차원 모델의 동작](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
+|동작|[다차원 모델의 동작](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
 |KPI(핵심 성과 지표)|[핵심 성과 지표 & #40; Kpi & #41; 다차원 모델의](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|계산|[다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
+|새 명명된 집합|[다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
 |번역|[다차원 모델의 번역&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  

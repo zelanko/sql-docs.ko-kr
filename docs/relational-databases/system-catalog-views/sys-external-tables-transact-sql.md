@@ -10,21 +10,20 @@ dev_langs:
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fd6b9c144df14f9480ff825726fc918deb86f6cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054308"
 ---
 # <a name="sysexternaltables-transact-sql"></a>sys.external_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   현재 데이터베이스의 각 외부 테이블에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.||  
 |max_column_id_used|**int**|이 테이블에 대 한 적이 사용 되는 최대 열 ID입니다.||  
