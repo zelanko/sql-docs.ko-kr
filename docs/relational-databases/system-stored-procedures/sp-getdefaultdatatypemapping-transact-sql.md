@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123986"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>인수  
 `[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑된 DBMS의 이름이입니다. *source_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
   
  이 매개 변수를 지정해야 합니다.  
   
-`[ @source_version = ] 'source_version'` 원본 DBMS의 버전입니다. *source_version* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
+`[ @source_version = ] 'source_version'` 원본 DBMS의 버전입니다. *source_version* 됩니다 **varchar(10)** , 기본값은 NULL입니다.  
   
 `[ @source_type = ] 'source_type'` 원본 DBMS의에서 데이터 형식이입니다. *source_type* 됩니다 **sysname**, 기본값은 없습니다.  
   
@@ -75,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름이입니다. *destination_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
@@ -84,7 +83,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  이 매개 변수를 지정해야 합니다.  
   
-`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전이입니다. *destination_version* 됩니다 **varchar(10)**, 기본값은 NULL입니다.  
+`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전이입니다. *destination_version* 됩니다 **varchar(10)** , 기본값은 NULL입니다.  
   
 `[ @destination_type = ] 'destination_type' OUTPUT` 대상 DBMS에에서 나열 된 데이터 형식입니다. *destination_type* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -101,7 +100,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_getdefaultdatatypemapping** 간 복제의 모든 형식에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS 합니다.  
   
  **sp_getdefaultdatatypemapping** 기본 대상 데이터 형식에 지정 된 원본 데이터 형식이 가장 일치는를 반환 합니다.  

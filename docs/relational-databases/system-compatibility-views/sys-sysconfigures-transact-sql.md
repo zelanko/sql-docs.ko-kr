@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089199"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47635321"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**value**|**int**|사용자 수정이 가능한 변수 값입니다. RECONFIGURE가 실행된 경우에만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용합니다.|  
 |**config**|**int**|구성 변수 번호입니다.|  
-|**주석**|**nvarchar(255)**|구성 옵션에 대한 설명입니다.|  
+|**comment**|**nvarchar(255)**|구성 옵션에 대한 설명입니다.|  
 |**상태**|**smallint**|옵션의 상태를 표시하는 비트맵입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정적. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 1 = 동적. RECONFIGURE 문이 실행될 때 변수가 적용됩니다.<br /><br /> 2 = 고급. 변수가 표시 됩니다 경우에만 합니다 **고급 옵션 표시** 설정 됩니다. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 3 = 동적 및 고급입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

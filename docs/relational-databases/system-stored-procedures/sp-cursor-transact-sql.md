@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108569"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 다음 중 하나 필요로 **int** 값을 입력 합니다.  
   
-|값|이름|Description|  
+|값|이름|설명|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  에 지정 된 행 *rownum* 다시 액세스 하 고 업데이트 합니다.|  
-|0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. 에 지정 된 행 *rownum* 다시 액세스 및 삭제 합니다.|  
+|0x0002|DELETE|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. 에 지정 된 행 *rownum* 다시 액세스 및 삭제 합니다.|  
 |0X0004|INSERT|SQL을 작성 하지 않고 데이터를 삽입 **삽입** 문입니다.|  
 |0X0008|REFRESH|기본 테이블로 버퍼를 다시 채우는 데 사용되며, 낙관적 동시성 제어로 인해 업데이트나 삭제가 실패하는 경우 또는 UPDATE 후에 행을 새로 고치는 데 사용할 수 있습니다.|  
 |0X10|LOCK|SQL Server U-잠금을 얻기 위해 지정된 된 행이 포함 된 페이지에 발생 합니다. 이 잠금은 S 잠금과는 호환되지만 X 잠금 또는 기타 U 잠금과는 호환되지 않습니다. 단기 잠금을 구현하는 데 사용할 수 있습니다.|  
@@ -99,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>반환 코드 값  
  RPC를 사용할 때는 버퍼 번호가 0 사용 하 여 위치 지정된 DELETE 또는 UPDATE 작업 인 DONE 메시지를를 반환 합니다는 *rowcount* 인출 버퍼의 모든 행에 대해 1 (성공) 또는 0 (실패).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="optype-parameter"></a>optype 매개 변수  
  SETPOSITION UPDATE, DELETE, 새로 고침 또는 LOCK과 조합을 제외 하 고 UPDATE 또는 DELETE를 사용 하 여 절대 또는 합니다 *optype* 값은 함께 사용할 수 없습니다.  

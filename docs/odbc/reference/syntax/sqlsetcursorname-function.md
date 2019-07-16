@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a976d7caad790c80b15c17d65686ee1f6308f415
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092994"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 함수
 **규칙**  
@@ -48,7 +47,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *CursorName*  
+ *cursorName*  
  [입력] 커서 이름입니다. 효율적인 처리를 위해 커서 이름 커서 이름에 선행 또는 후행 공백을 모두를 포함 하지 않아야 하 고 커서 이름에서 첫 번째 문자로 구분 기호를 배치 해야 커서 이름이 구분된 식별자에 포함 된 경우.  
   
  *NameLength*  
@@ -60,7 +59,7 @@ SQLRETURN SQLSetCursorName(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetCursorName** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 호출 및 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLSetCursorName** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|커서 이름 이므로, 최대 한도 초과 합니다만 허용 되는 최대 문자 사용 되었습니다.|  

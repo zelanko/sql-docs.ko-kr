@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a246a8eb014301cf7308f8b5dc523a345546303
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5f02678aa73e207558fbd361a6a29892398c25cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116543"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue 속성(SqlServiceAdvancedProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.PropertyStrValue [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  고급 속성의 값을 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

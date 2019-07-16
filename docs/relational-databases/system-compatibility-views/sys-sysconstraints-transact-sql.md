@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fce3ca4a2055d7f4eb10cfdcac7f09c7fd004282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089190"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47806881"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|제약 조건 번호입니다.|  
 |**id**|**int**|제약 조건을 소유한 테이블의 ID입니다.|  

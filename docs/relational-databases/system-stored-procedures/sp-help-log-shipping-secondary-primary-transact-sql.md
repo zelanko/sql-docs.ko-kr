@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8ffdc8782951fcee5e94cb4af0467636150ad79a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066765"
 ---
 # <a name="sphelplogshippingsecondaryprimary-transact-sql"></a>sp_help_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_log_shipping_secondary_primary
 ## <a name="result-sets"></a>결과 집합  
  결과 집합 열이 포함 **secondary_id**, **primary_server**, **primary_database**하십시오 **backup_source_directory**, **backup_destination_directory**, **file_retention_period**, **copy_job_id**하십시오 **restore_job_id**를 **monitor_server**하십시오 **monitor_server_security_mode** 에서 **log_shipping_secondary**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_log_shipping_secondary_primary** 에서 실행 해야 합니다 **마스터** 보조 서버의 데이터베이스.  
   
 ## <a name="permissions"></a>사용 권한  

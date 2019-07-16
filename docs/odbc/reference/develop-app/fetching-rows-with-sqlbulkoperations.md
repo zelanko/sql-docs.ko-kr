@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069838"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>SQLBulkOperations로 행 페치
 에를 호출 하 여 책갈피를 사용 하 여 행 집합에 데이터를 따라 다시 인출 될 수 있습니다 **SQLBulkOperations 합니다.** 인출할 행 바인딩된 책갈피 열 책갈피도 식별 됩니다. SQL_COLUMN_IGNORE 값을 사용 하 여 열 페치 하지 않은 합니다.  

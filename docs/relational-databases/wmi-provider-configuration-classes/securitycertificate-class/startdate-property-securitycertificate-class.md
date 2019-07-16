@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8e70839-37e7-43fb-ba0f-3a6d51bbce35
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2606401e86a37592976f7fe9912e0b3b4be1468d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 779b37dca89f1bcacf44e96755ca12a4ccd8ce6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071637"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 속성(SecurityCertificate 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.StartDate [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  보안 인증서의 유효 기간 시작 날짜를 지정하는 uint32 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [서버 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

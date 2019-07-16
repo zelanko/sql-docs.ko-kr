@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072748"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @functname = ] 'procedure'` 동적 연결 라이브러리 (DLL)에서 호출할 함수의 이름이입니다. *프로시저* 됩니다 **nvarchar(517)**, 기본값은 없습니다. *프로시저* 필요에 따라 폼의 소유자 이름을 포함할 수 있습니다 *owner.function*합니다.  
+`[ @functname = ] 'procedure'` 동적 연결 라이브러리 (DLL)에서 호출할 함수의 이름이입니다. *프로시저* 됩니다 **nvarchar(517)** , 기본값은 없습니다. *프로시저* 필요에 따라 폼의 소유자 이름을 포함할 수 있습니다 *owner.function*합니다.  
   
-`[ @dllname = ] 'dll'` 함수를 포함 하는 DLL의 이름이입니다. *dll* 됩니다 **varchar(255)**, 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
+`[ @dllname = ] 'dll'` 함수를 포함 하는 DLL의 이름이입니다. *dll* 됩니다 **varchar(255)** , 기본값은 없습니다. DLL의 전체 경로를 지정하는 것이 좋습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -54,7 +53,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  확장된 저장된 프로시저를 만든 후에 추가 되어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 **sp_addextendedproc**합니다. 자세한 내용은 [확장 저장 프로시저를 SQL Server에 추가](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)합니다.  
   
  이 절차를 에서만 실행할 수 있습니다 합니다 **마스터** 데이터베이스입니다. 이외의 다른 데이터베이스에서 확장된 저장된 프로시저를 실행할 **마스터**를 사용 하 여 확장된 저장된 프로시저 이름을 한 정하는 **마스터**.  

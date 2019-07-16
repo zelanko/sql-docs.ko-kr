@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 18e7a0fd-cc5d-4109-b542-cac6893a29c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be67ec64680a2e608381835668fe06415fe1eece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28b6487b725a5579cc966399f8e76c7cf897df8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071740"
 ---
 # <a name="set-functions-limitations"></a>집합 함수 제한 사항
 집합 함수 (AVG, MAX, MIN 및 SUM)는 DISTINCT 키워드를 지원 하지 않습니다.

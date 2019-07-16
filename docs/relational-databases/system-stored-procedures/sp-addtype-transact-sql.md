@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117930"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  소수점 오른쪽에 저장할 수 있는 최대 십진 자릿수를 표시하는 음이 아닌 정수이며 전체 자릿수보다 작거나 같아야 합니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
-`[ @nulltype = ] 'null_type'` 별칭 데이터 형식의 null 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (** 8 **)**, 기본값은 NULL 사용 하 여 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 하 고 있습니다. 하는 경우 *null_type* 하 여 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 하는 경우 **@phystype** 는 **비트**, 및 **@nulltype** 지정 하지 않으면 기본값은 NULL입니다.  
+`[ @nulltype = ] 'null_type'` 별칭 데이터 형식의 null 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (** 8 **)** , 기본값은 NULL 사용 하 여 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 하 고 있습니다. 하는 경우 *null_type* 하 여 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 하는 경우 **@phystype** 는 **비트**, 및 **@nulltype** 지정 하지 않으면 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  합니다 *null_type* 매개 변수에이 데이터 형식의 기본 null 허용 여부를 정의 합니다. 테이블을 만드는 동안 별칭 데이터 형식을 사용할 때 NULL 허용 여부를 명시적으로 정의하면 정의된 NULL 허용 여부보다 우선적으로 적용됩니다. 자세한 내용은 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) 하 고 [CREATE TABLE &#40;Transact SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -82,7 +81,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  별칭 데이터 형식 이름은 데이터베이스 내에서 고유해야 하지만 이름이 서로 다른 별칭 데이터 형식은 같은 정의를 사용할 수 있습니다.  
   
  실행 **sp_addtype** 에 표시 되는 별칭 데이터 형식을 만듭니다 합니다 **sys.types** 카탈로그 뷰는 특정 데이터베이스에 대 한 합니다. 별칭 데이터 형식에는 모든 새 사용자 정의 데이터베이스에서 사용할 수 있어야 하면 추가 되도록 **모델**합니다. 별칭 데이터 형식을 만든 다음 이 형식을 CREATE TABLE 또는 ALTER TABLE에서 사용할 수 있으며 별칭 데이터 형식에 기본값 및 규칙을 바인딩할 수 있습니다. 사용 하 여 만든 모든 스칼라 별칭 데이터 형식은 **sp_addtype** 에 포함 된 합니다 **dbo** 스키마입니다.  
@@ -99,7 +98,7 @@ sp_addtype [ @typename = ] type,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>1. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
+### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
  다음 예제에서는 명명 된 별칭 데이터 형식 `ssn` (사회 보장 번호) 기반으로 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-제공 **varchar** 데이터 형식입니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
  `varchar(11)`는 문장 부호(괄호)를 포함하고 있으므로 작은따옴표로 묶어야 합니다.  
@@ -111,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>2. NULL 값을 허용하는 별칭 데이터 형식 만들기  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>2\. NULL 값을 허용하는 별칭 데이터 형식 만들기  
  다음 예에서는 NULL 값을 허용하는 `datetime`라는 별칭 데이터 형식(`birthday` 기반)을 만듭니다.  
   
 ```  
@@ -120,7 +119,7 @@ GO
 EXEC sp_addtype birthday, datetime, 'NULL';  
 ```  
   
-### <a name="c-creating-additional-alias-data-types"></a>3. 추가 별칭 데이터 형식 만들기  
+### <a name="c-creating-additional-alias-data-types"></a>3\. 추가 별칭 데이터 형식 만들기  
  다음 예에서는 국내 및 국제 전화 및 팩스 번호 모두에 대해 두 개의 추가 별칭 데이터 형식인 `telephone` 및 `fax`를 만듭니다.  
   
 ```  

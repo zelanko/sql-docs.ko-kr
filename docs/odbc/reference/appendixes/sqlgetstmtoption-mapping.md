@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2973455ff4ee7e8dc51b2cd07a6423c9b1c36346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073809"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption 매핑
 응용 프로그램을 호출할 때 **SQLGetStmtOption** 는 odbc *3.x* 것에 대 한 호출을 지원 하지 않는 드라이버  

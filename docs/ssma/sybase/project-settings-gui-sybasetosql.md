@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 34fe42a645965f141a7250ea5f272cfdbabc6bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9a324d30790ac8a96b286ec658334d81884cfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028735"
 ---
 # <a name="project-settings-gui-sybasetosql"></a>프로젝트 설정(GUI)(SybaseToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수는 **데이터** 여부 변환 후 평가 보고서를 표시 하려면 여부와 탭 합니다.  

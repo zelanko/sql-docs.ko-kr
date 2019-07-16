@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030909"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_addrolemember를 사용하여 역할에 추가된 멤버는 해당 역할의 사용 권한을 상속합니다. 새 멤버가 해당 데이터베이스 사용자가 없는 Windows 수준의 보안 주체인 경우에는 데이터베이스 사용자가 생성되지만 로그인에 완전히 매핑되지 않을 수 있습니다. 로그인이 있고 데이터베이스에 액세스할 수 있는지 항상 확인하세요.  
   
  역할은 자신의 역할 자체를 멤버로 포함할 수 없습니다. 이와 같은 "순환" 정의는 하나 이상의 중간 멤버 자격을 통해 멤버 자격이 간접적으로 유추되는 경우에도 유효하지 않습니다.  
@@ -75,7 +74,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-windows-login"></a>1\. Windows 로그인 추가  
+### <a name="a-adding-a-windows-login"></a>A. Windows 로그인 추가  
  다음 예제에서는 Windows 로그인에 추가 `Contoso\Mary5` 에 `AdventureWorks2012` 사용자로 데이터베이스 `Mary5`합니다. 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  

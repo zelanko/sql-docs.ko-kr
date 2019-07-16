@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d42a94ce4e878a3f4ac0ef14a48872bf5d32a144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77731495eb058da05f6c61be391591a40725e579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088390"
 ---
 # <a name="nametoset-mdx"></a>NameToSet(MDX)
 
@@ -32,7 +31,7 @@ NameToSet(Member_Name)
  *Member_Name*  
  멤버 이름을 나타내는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정 된 멤버 이름이 있는 경우는 **NameToSet** 해당 멤버를 포함 하는 집합을 반환 합니다. 그렇지 않으면 빈 집합을 반환합니다.  
   
 > [!NOTE]  

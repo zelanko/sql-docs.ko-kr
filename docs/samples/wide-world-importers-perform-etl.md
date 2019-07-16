@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067617"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL 워크플로
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51674112"
 
 다음으로, 일련의 데이터 흐름 작업을 각 차원을 로드합니다. 그런 다음 각 팩트를 로드 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - SQL Server 2016 (이상), WideWorldImporters 및 WideWorldImportersDW 데이터베이스 (동일한 또는 다른 인스턴스의 SQL Server)
 - SQL Server Management Studio
@@ -49,7 +48,7 @@ ms.locfileid: "51674112"
 
 샘플 데이터베이스를 다시 만들려면 소스 코드를 보려면 [importers-world wide-](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)합니다.
 
-## <a name="install"></a>설치
+## <a name="install"></a>Install
 
 1. Integration Services 패키지를 배포 합니다.
    1. Windows 탐색기에서 엽니다는 *일일 ETL.ispac* 패키지 있습니다. SQL Server Integration Services 배포 마법사가 시작 됩니다.

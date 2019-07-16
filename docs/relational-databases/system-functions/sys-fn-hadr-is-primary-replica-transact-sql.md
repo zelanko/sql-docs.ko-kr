@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f6a70ce4ec31dafb2d02179ed36919030cedefff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a000db8f64fc5895b1f82150e8786341d0c13e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082708"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>반환 값  
  현재 인스턴스의 데이터베이스가 주 복제본이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수를 사용하여 로컬 인스턴스에서 지정된 가용성 데이터베이스의 주 복제본을 호스팅하는지 여부를 편리하게 확인합니다. 예제 코드는 다음과 비슷할 수 있습니다.  
   
 ```  
@@ -63,7 +62,7 @@ END
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sysfnhadrisprimaryreplica"></a>1. sys.fn_hadr_is_primary_replica 사용  
+### <a name="a-using-sysfnhadrisprimaryreplica"></a>A. sys.fn_hadr_is_primary_replica 사용  
  다음 예에서는 로컬 인스턴스에 지정된 데이터베이스가 주 복제본인 경우 1을 반환합니다.  
   
 ```  

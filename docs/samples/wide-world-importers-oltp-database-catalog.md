@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091250"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ WideWorldImporters, 데이터를 저장 하 고, 사용자 데이터에 액세�
 |Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|시스템 수준 구성 가능한 매개 변수를 포함합니다.|
-|사용자|사용자 이름, 고객의 조직에서 사용 하 여 Wide World Importers를 처리 하는 사용자 및 모든 응용 프로그램을 사용 하 여 사용자에 대 한 연락처 정보를 포함 합니다. 직원, 고객, 공급 업체 및 기타 연락처 포함 됩니다. 정보는 시스템 또는 웹 사이트를 사용할 수 있는 권한이 부여 된 사람들에 게 로그인 세부 정보를 포함 합니다.|
+|피플|사용자 이름, 고객의 조직에서 사용 하 여 Wide World Importers를 처리 하는 사용자 및 모든 응용 프로그램을 사용 하 여 사용자에 대 한 연락처 정보를 포함 합니다. 직원, 고객, 공급 업체 및 기타 연락처 포함 됩니다. 정보는 시스템 또는 웹 사이트를 사용할 수 있는 권한이 부여 된 사람들에 게 로그인 세부 정보를 포함 합니다.|
 |도시|사용자, 고객 조직 배달 주소, 공급 업체 등에서 픽업 주소에 대 한 시스템에 저장 된 주소의 있습니다. 주소는 저장할 때마다이 테이블의 도시에 대 한 참조가 있습니다. 각 도시에 대 한 공간 위치 이기도합니다.|
 |StateProvinces|도시는 국가 또는 시/도의 일부입니다. 이 테이블에는 각 시 /도 경계를 설명 하는 공간 데이터를 비롯 한 이러한 세부 정보입니다.|
 |Countries|국가 또는 국가에 속합니다. 이 테이블에는 각 국가의 경계를 설명 하는 공간 데이터를 비롯 한 이러한 세부 정보가 있습니다.|

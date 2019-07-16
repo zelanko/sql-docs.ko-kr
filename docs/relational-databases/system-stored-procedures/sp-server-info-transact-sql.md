@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104447"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|특성의 ID 번호입니다.|  
 |**ATTRIBUTE_NAME**|**varchar(** 60 **)**|특성 이름입니다.|  
@@ -60,7 +59,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x.xx.xxxx*|  
 |**10**|OWNER_TERM|owner|  
-|**11**|TABLE_TERM|테이블|  
+|**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> 테이블 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> 테이블 한정자 이름(세 부분으로 구성된 테이블 이름의 첫 번째 부분)에 사용할 수 있는 최대 길이를 나타냅니다.|128|  
@@ -87,7 +86,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> DB-Library의 원격 저장 프로시저 기능을 통해 저장 프로시저를 실행할 수 있는지 나타냅니다.|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> 저장 프로시저가 현재 구현하고 있는 카탈로그의 버전을 나타냅니다.|현재 버전 번호|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_server_info** 에서 제공 된 정보의 하위 집합을 반환 **SQLGetInfo** ODBC에서.  
   
 ## <a name="permissions"></a>사용 권한  
