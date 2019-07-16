@@ -1,5 +1,5 @@
 ---
-title: 만들기, 수정 또는 Delete an Attribute | Microsoft Docs
+title: 만들기, 수정 또는 특성 관계를 삭제 합니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f209670d9d51e62e457d86507f1c2d11cc10fa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209156"
 ---
-# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>특성 관계-만들기, 수정 또는 관계 삭제
+# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>특성 관계 - 관계 만들기, 수정 또는 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   **에서 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 차원 특성 간의 특성 관계를 만들거나 수정 또는 삭제할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34027473"
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [특성 관계](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+## <a name="see-also"></a>관련 항목  
+ [에서 차원 디자이너의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

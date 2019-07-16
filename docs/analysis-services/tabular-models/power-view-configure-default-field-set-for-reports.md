@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162707"
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>파워 뷰-보고서에 대 한 기본 필드 집합 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

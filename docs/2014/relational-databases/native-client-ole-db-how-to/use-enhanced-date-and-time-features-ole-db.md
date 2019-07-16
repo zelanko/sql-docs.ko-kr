@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363815"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207017"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 도입된 날짜/시간 기능을 사용하는 방법을 보여 줍니다. 이 샘플에서는 네 가지 새로운 날짜 및 시간 형식 사용 (`date`, **시간**, `datetime2`, 및 `datetimeoffset`) 매개 변수를 사용 하 여 명령을 실행 하 여 행 집합 결과 검색 합니다.  

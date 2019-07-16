@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b6fd63de0b6147b86aa0d6b548669c56aefdcf20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966085"
 ---
 # <a name="index-object-adox"></a>인덱스 개체(ADOX)
 데이터베이스 테이블에서 인덱스를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 코드를 만듭니다 **인덱스**:  
   
 ```  

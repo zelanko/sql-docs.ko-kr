@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178639"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "34023440"
   
 -   First Nonempty Child  
   
--   InclusionThresholdSetting  
+-   없음  
   
- 이 옵션은 **Sum**, **Min**, **Max**, **Count**또는 **Distinct****Count**와 같은 일반 집계 함수로 측정값을 변경하지 않습니다.  
+ 이 옵션에는와 같은 일반 집계 함수로 측정값을 변경 되지 않습니다. **합계**, **Min**, **Max**, **개수**, 또는 **고유 * * * 수**.  
   
  **마법사에서 반가산적 멤버가 포함된 'Account' 계정 차원을 검색했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
  시스템에서 계정 유형 차원별로 차원이 구분된 측정값 그룹의 모든 측정값을 By Account 집계 함수로 설정하도록 하며 서버는 각 계정 유형에 지정된 반가산적 동작에 따라 차원의 멤버를 집계합니다.  
@@ -66,15 +66,15 @@ ms.locfileid: "34023440"
 |---------------------------|-----------------|  
 |Average of Children|멤버 자식의 평균을 집계합니다.|  
 |ByAccount|시스템에서 계정 유형에 지정된 반가산적 동작을 읽습니다.|  
-|Count|멤버 개수를 집계합니다.|  
+|개수|멤버 개수를 집계합니다.|  
 |Distinct Count|고유 멤버의 개수를 집계합니다.|  
 |First Child|멤버 값이 시간 차원에 따른 첫 번째 자식의 값으로 계산됩니다.|  
 |FirstNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 첫 번째 자식의 값으로 계산됩니다.|  
 |LastChild|멤버 값이 시간 차원에 따른 마지막 자식의 값으로 계산됩니다.|  
 |LastNonEmpty|멤버 값이 시간 차원에 따른 데이터를 포함하는 마지막 자식의 값으로 계산됩니다.|  
-|Max|표준 최대 집계 함수가 적용됩니다.|  
-|Min|표준 최소 집계 함수가 적용됩니다.|  
-|InclusionThresholdSetting|집계가 적용되지 않습니다.|  
+|최대값|표준 최대 집계 함수가 적용됩니다.|  
+|최소값|표준 최소 집계 함수가 적용됩니다.|  
+|없음|집계가 적용되지 않습니다.|  
 |SUM|표준 합계 함수가 적용됩니다.|  
   
  마법사를 완료하면 기존의 모든 반가산적 동작을 덮어씁니다.  

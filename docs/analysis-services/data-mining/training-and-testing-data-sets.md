@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209598"
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "50145618"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>테스트 데이터 집합을 만들기 위한 구조 속성 수정  
  마이닝 구조를 만들고 처리한 다음 나중에 테스트 데이터 집합을 새로 만들려는 경우 마이닝 구조의 속성을 수정할 수 있습니다. 데이터가 분할되는 방식을 변경하려면 다음 속성을 편집합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**HoldoutMaxCases**|테스트 집합에 포함할 최대 사례 수를 지정합니다.|  
 |**HoldoutMaxPercent**|테스트 집합에 포함할 사례 수를 전체 데이터 집합의 비율로 지정합니다. 데이터 집합을 갖지 않으려면 0을 지정합니다.|  

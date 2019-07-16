@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210798"
 ---
 # <a name="manage-policy-categories"></a>정책 범주 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스에 한 범주의 사용 가능한 정책을 임의로 또는 모두 적용하는 방법에 대해 설명합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52817980"
   
 -   **다음을 사용하여 SQL Server 인스턴스에 범주 정책을 적용하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

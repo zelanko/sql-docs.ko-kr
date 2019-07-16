@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791915"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185967"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
   **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -76,8 +76,8 @@ ms.locfileid: "52791915"
  [ **-?** ]  
  지원되는 매개 변수 목록을 반환합니다.  
   
- **-sourceserver** *source_server_name*[**\\**_instance_name_]  
- 원본 서버의 이름입니다. 지정할 _소스\_server\_이름_ 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 지정할 _소스\_server\_이름_**\\**_인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** *source_server_name*[ **\\** _instance_name_]  
+ 원본 서버의 이름입니다. 지정할 _소스\_server\_이름_ 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 지정할 _소스\_server\_이름_ **\\** _인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  원본 데이터베이스의 이름입니다.  
@@ -100,8 +100,8 @@ ms.locfileid: "52791915"
  **-sourcelocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
- **-destinationserver** *destination_server_name*[**\\**_인스턴스\_이름_]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 지정할 _대상\_server\_이름_**\\**_인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** *destination_server_name*[ **\\** _인스턴스\_이름_]  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 지정할 _대상\_server\_이름_ **\\** _인스턴스\_이름_ 의명명된인스턴스에대해[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  대상 데이터베이스의 이름입니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "52791915"
  **-bf**  *number_of_statements*  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] 옵션을 사용할 경우 현재 **스크립트 파일에 쓸** 문의 수입니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 수가 *number_of_statements*를 초과하면 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 파일이 생성됩니다.  
   
- **-c**  
+ **-t**  
  열 수준에서 차이점을 비교합니다.  
   
  **-dt**  
@@ -168,7 +168,7 @@ ms.locfileid: "52791915"
 |**1**|오류|  
 |**2**|테이블 차이|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **이외 서버에서는** tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
   
  데이터 형식이 `sql_variant`인 열이 있는 테이블은 지원되지 않습니다.  
@@ -219,7 +219,7 @@ ms.locfileid: "52791915"
   
  **-o** 또는 **-f** 옵션을 사용하려면 지정된 파일 디렉터리 위치에 대한 쓰기 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

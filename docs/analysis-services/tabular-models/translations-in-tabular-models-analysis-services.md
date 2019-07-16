@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044177"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162390"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>테이블 형식 모델 번역(Analysis Services )
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "34044177"
     |-|-|  
     |기존 번역 덮어쓰기|동일 언어의 모든 기존 캡션 또는 설명을 가져올 파일로 대체합니다.|  
     |잘못된 개체 무시|메타 데이터 불일치를 무시하거나 오류로 표시할지의 여부를 지정합니다.|  
-    |로그 파일에 가져오기 결과 쓰기|로그 파일은 기본적으로 프로젝트 폴더에 저장됩니다. 가져오기를 완료한 후에 정확한 파일 경로를 입력합니다. 로그 파일 이름이 SSDT_Translations_Log_\<타임 스탬프 > 합니다.|  
+    |로그 파일에 가져오기 결과 쓰기|로그 파일은 기본적으로 프로젝트 폴더에 저장됩니다. 가져오기를 완료한 후에 정확한 파일 경로를 입력합니다. 로그 파일 이름은 SSDT_Translations_Log_\<타임 스탬프 >.|  
     |JSON 파일에 번역 백업 후 가져오기|가져올 문자열의 문화권과 일치하는 기존 번역을 백업합니다.  모델에 가져올 문화권이 없는 경우 백업은 비어있게 됩니다.<br /><br /> 나중이 이 파일을 복구해야 하는 경우 model.bim의 내용을 이 JSON 파일로 교체할 수 있습니다.|  
   
 4.  **가져오기**를 클릭합니다.  

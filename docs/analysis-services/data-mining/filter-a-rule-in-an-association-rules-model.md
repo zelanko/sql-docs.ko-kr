@@ -1,5 +1,5 @@
 ---
-title: 필터 규칙에 연결 규칙 모델 | Microsoft Docs
+title: 필터 규칙을 연결에서 규칙 모델 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28d3601b18f792b957627e63630806453d971110
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209999"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34014490"
   
 5.  **최소 중요도**에서 결과 규칙 수를 줄이려면 중요도 값을 늘리고 결과 규칙 수를 늘리려면 중요도 값을 줄입니다.  
   
-6.  **표시**에서 **특성 이름 및 값 표시**, **특성 이름만 표시**또는 **특성 값만 표시**옵션 중 하나를 선택합니다.  
+6.  에 대 한 **표시**, 다음 옵션 중 하나를 선택 합니다. **특성 이름 및 값 표시**하십시오 **특성 이름만 표시**, 또는 **특성 값만 표시**합니다.  
   
 7.  **최대 행 수**에서 지정한 조건을 만족하는 총 규칙 수를 늘리려면 값을 늘리고 반환되는 규칙 수를 제한하려면 값을 줄입니다. 확률을 기준으로 규칙이 정렬되므로 확률 또는 중요도에 대해 지정한 조건을 만족하는 추가 규칙을 제거할 수도 있습니다.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "34014490"
   
 -   [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [3 단원: 시장 바구니 시나리오 & #40; 중급 데이터 마이닝 자습서 & #41; 구축](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [3단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

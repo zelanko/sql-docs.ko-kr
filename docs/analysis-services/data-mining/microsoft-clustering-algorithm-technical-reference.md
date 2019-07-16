@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183120"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34018360"
   
  EM  클러스터링 메서드의 결과는 확률적입니다. 즉,  각 데이터 요소는 모든 클러스터에 속해 있지만 데이터 요소를 클러스터에 할당할 때마다 확률은 다릅니다. 이 메서드는 클러스터 중복을 허용하므로 모든 클러스터에 있는 항목의 합계가 학습 집합에 있는 총 항목 수를 초과할 수 있습니다. 마이닝 모델 결과에서 지지도를 나타내는 점수는 이를 설명하기 위해 조정됩니다.  
   
- EM  알고리즘은 Microsoft  클러스터링 모델에 사용되는 기본 알고리즘으로, K-Means  클러스터링에 비해 다음과 같은 여러 이점을 제공하기 때문에 기본 알고리즘으로 사용됩니다.  
+ EM  알고리즘은 Microsoft  클러스터링 모델에 사용되는 기본 알고리즘으로, K-Means 클러스터링에 비해 다음과 같은 여러 이점을 제공하기 때문에 기본 알고리즘으로 사용됩니다.  
   
 -   데이터베이스 검색은 최대 한 번만 필요합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34018360"
   
 |ID|메서드|  
 |--------|------------|  
-|1.|Scalable  EM|  
+|1|Scalable  EM|  
 |2|Non-scalable  EM|  
 |3|Scalable  K-Means|  
 |4|Non-scalable  K-Means|  
@@ -148,8 +148,8 @@ ms.locfileid: "34018360"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열이 Missing 및 Existing 상태를 갖는 것으로 간주됩니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
-|NOT  NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열 상태를 가진 것으로 간주 됩니다. Missing 및 Existing 합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  클러스터링 모델은 키 열 및 입력 열을 포함해야 합니다. 입력 열을 예측 가능한 열로 정의할 수도 있습니다. **Predict Only** 로 설정된 열은 클러스터를 작성하는 데 사용되지 않습니다. 클러스터의 이러한 값 분포는 클러스터가 작성된 다음에 계산됩니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "34018360"
 ### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다. 마이닝 모델에 사용되는 경우 콘텐츠 형식의 의미에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)을 참조하세요.  
   
-|열|내용 유형|  
+|Column|내용 유형|  
 |------------|-------------------|  
 |입력 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Key,  Table,  Ordered|  
 |예측 가능한 특성|Continuous,  Cyclical,  Discrete,  Discretized,  Table,  Ordered|  
@@ -165,7 +165,7 @@ ms.locfileid: "34018360"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
  [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)   
  [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  

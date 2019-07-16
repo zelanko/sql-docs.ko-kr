@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c3794d9ed2927cf86b9aada08588f71b3a55b8a
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163018"
 ---
 # <a name="create-and-manage-measures"></a>측정값 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072610"
   
 ## <a name="see-also"></a>관련 항목  
  [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [계산된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   

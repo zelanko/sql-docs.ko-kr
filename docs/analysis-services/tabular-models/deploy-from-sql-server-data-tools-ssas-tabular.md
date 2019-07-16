@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162864"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>SQL Server Data Tools에서 배포
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "53072140"
  **배포 중지**  
  배포 작업을 중지하려면 클릭합니다. 이 옵션은 배포 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)   
  [기본 데이터 모델링 및 배포 속성 구성](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
   

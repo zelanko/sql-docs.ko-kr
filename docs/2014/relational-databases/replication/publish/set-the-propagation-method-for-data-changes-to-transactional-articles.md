@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 661ec0fca03349f4b833a9fa3128bd539a2cc267
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199285"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하는 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "54127203"
   
 -   **트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법을 설정하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54127203"
   
 #### <a name="to-create-an-article-that-uses-transact-sql-commands-to-propagate-data-changes"></a>Transact-SQL 명령을 사용하여 데이터 변경 내용을 전파하는 아티클을 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체를 지정하고 다음 매개 변수 중 하나 이상에 **SQL** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시 이름, **@article** 에 아티클 이름, **@source_object** 에 게시할 데이터베이스 개체를 지정하고 다음 매개 변수 중 하나 이상에 **SQL** 값을 지정합니다.  
   
     -   **@ins_cmd** - [INSERT](/sql/t-sql/statements/insert-transact-sql) 명령의 복제를 제어합니다.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "54127203"
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>데이터 변경 내용을 전파하지 않는 아티클을 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체를 지정하고 다음 매개 변수 중 하나 이상에 **NONE** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시 이름, **@article** 에 아티클 이름, **@source_object** 에 게시할 데이터베이스 개체를 지정하고 다음 매개 변수 중 하나 이상에 **NONE** 값을 지정합니다.  
   
     -   **@ins_cmd** - [INSERT](/sql/t-sql/statements/insert-transact-sql) 명령의 복제를 제어합니다.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "54127203"
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>사용자가 수정한 사용자 지정 저장 프로시저를 포함하는 아티클을 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시 이름, **@article** 에 아티클 이름, **@source_object** 에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** -값을 지정 <strong>CALL sp_MSins_*article_name*</strong>여기서 **_article_name_** 값에 대 한 지정 **@article**.  
+    -   **@ins_cmd** -값을 지정 <strong>CALL sp_MSins_*article_name*</strong>여기서 **_article_name_** 값에 대 한 지정 **@article** .  
   
     -   **@del_cmd** -값을 지정 <strong>CALL sp_MSdel_*article_name*</strong>  하거나 <strong>XCALL sp_MSdel_*article_name*</strong>여기서 **_article_name_** _ *에 대 한 지정 된 값은@article* * 합니다.  
   
-    -   **@upd_cmd** -값을 지정 <strong>SCALL sp_MSupd_*article_name*</strong>하십시오 <strong>call*article_name*</strong>, <strong>XCALL sp_MSupd__ article_name*</strong>, 또는 <strong>MCALL sp_MSupd_* article_name *</strong>여기서 _**article_name**_ 값인 에 대해 지정 된 **@article**합니다.  
+    -   **@upd_cmd** -값을 지정 <strong>SCALL sp_MSupd_*article_name*</strong>하십시오 <strong>call*article_name*</strong>, <strong>XCALL sp_MSupd__ article_name *</strong>, 또는 <strong>MCALL sp_MSupd_* article_name *</strong>여기서 _**article_name**_ 값인 에 대해 지정 된 **@article** 합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -134,13 +134,13 @@ ms.locfileid: "54127203"
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>데이터 변경 내용을 전파하기 위해 사용자 지정 저장 프로시저의 사용자 지정 스크립팅을 포함하는 아티클을 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시 이름, **@article**에 아티클 이름, **@source_object**에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시 이름, **@article** 에 아티클 이름, **@source_object** 에 게시할 데이터베이스 개체, **0x02** 값(사용자 지정 저장 프로시저의 자동 생성 설정)을 포함하는 **@schema_option** 비트마스크에 값을 지정하고 다음 매개 변수 중 하나 이상을 지정합니다.  
   
-    -   **@ins_cmd** -값을 지정 <strong>CALL sp_MSins_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article**.  
+    -   **@ins_cmd** -값을 지정 <strong>CALL sp_MSins_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article** .  
   
-    -   **@del_cmd** -값을 지정 <strong>CALL sp_MSdel_*article_name*</strong>  하거나 <strong>XCALL sp_MSdel_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article**합니다.  
+    -   **@del_cmd** -값을 지정 <strong>CALL sp_MSdel_*article_name*</strong>  하거나 <strong>XCALL sp_MSdel_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article** 합니다.  
   
-    -   **@upd_cmd** -값을 지정 <strong>SCALL sp_MSupd_*article_name*</strong>하십시오 <strong>call*article_name*</strong>, <strong>XCALL sp_MSupd_ *article_name*</strong>하십시오 <strong>MCALL sp_MSupd_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article**합니다.  
+    -   **@upd_cmd** -값을 지정 <strong>SCALL sp_MSupd_*article_name*</strong>하십시오 <strong>call*article_name*</strong>, <strong>XCALL sp_MSupd_ *article_name*</strong>하십시오 <strong>MCALL sp_MSupd_*article_name*</strong>여기서 _**article_name**_ 값에 대 한 지정 **@article** 합니다.  
   
     > [!NOTE]  
     >  위 명령 매개 변수마다 복제 시 생성되는 저장 프로시저의 이름을 고유하게 지정할 수 있습니다.  
@@ -154,7 +154,7 @@ ms.locfileid: "54127203"
   
 #### <a name="to-change-the-method-of-propagating-changes-for-an-existing-article"></a>기존 아티클에 대한 변경 내용 전파 방법을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행합니다. **@publication**, **@article**, **@property**에 **ins_cmd**, **upd_cmd** 또는 **del_cmd** 값, **@value**에 적절한 전파 방법을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행합니다. **@publication** , **@article** , **@property** 에 **ins_cmd**, **upd_cmd** 또는 **del_cmd** 값, **@value** 에 적절한 전파 방법을 지정합니다.  
   
 2.  변경하려는 각 전파 방법에 대해 1단계를 반복합니다.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207490"
 ---
 # <a name="tables-and-columns"></a>테이블 및 열 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "53072160"
   
  매우 큰 데이터 집합을 작업하는 경우 특정 데이터가 표시되지 않도록 필터링할 수 있습니다. 다른 순서로 데이터를 정렬할 수도 있습니다. 모델 디자이너를 사용하면 필터, 정렬 및 숨기기 기능을 사용하여 전체 열 또는 특정 데이터를 표시하거나 표시하지 않을 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[테이블에 열 추가](../../analysis-services/tabular-models/add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
 |[열 삭제](../../analysis-services/tabular-models/delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 962b6b90de6d95107d1a4cdd3484a44205afb630
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162984"
 ---
 # <a name="create-and-manage-perspectives"></a>큐브 뷰를 만들고 설정 합니다. 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "53071850"
   
 -   큐브 뷰 열 머리글을 가리키면 합니다 **복사** 단추가 나타납니다. 큐브 뷰의 복사본을 만들려면 **복사** 단추를 클릭합니다. 그러면 선택한 큐브 뷰의 복사본이 기존 큐브 뷰의 오른쪽에 새 큐브 뷰로 추가됩니다. 새 큐브 뷰는 복사 원본 큐브 뷰의 이름을 상속하며, 이름 끝에 *- 복사본* 이라는 주석이 추가됩니다. 예를 들어, 복사본을 *Sales* 큐브 뷰를 만든, 새 큐브 뷰의 이름은 *Sales-복사본*합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)  
   

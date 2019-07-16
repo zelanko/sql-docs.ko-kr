@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c65762dc69ee1a5f84a22984995fac5e909629c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184457"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>마이닝 구조에 중첩 테이블 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34014680"
   
      키 열을 포함하는 새 테이블 열이 마이닝 구조에 추가됩니다. 열을 추가하는 방법에 대한 자세한 내용은 [마이닝 구조에 열 추가](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6e415c0b82738ec153b20cb79e19af59bacba16
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210178"
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -73,7 +73,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Cluster Model|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|모두|  
+|NODE_DESCRIPTION|All|  
   
  클러스터링 모델에서 이러한 열의 의미에 대한 정의는 [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -159,13 +159,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|1.|0.109354156|  
+|001|1|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Missing|0|  
 |002|0|0.576980023|  
-|002|1.|0.406623939|  
+|002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -173,7 +173,7 @@ WHERE NODE_TYPE = 5
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 시스템 저장 프로시저를 사용하여 클러스터 프로필 반환  
+###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 저장 프로시저를 시스템을 사용 하 여 클러스터 프로필 반환  
  DMX를 사용하여 직접 쿼리를 작성하는 것보다는 클러스터 작업을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용하는 시스템 저장 프로시저를 호출하는 것이 더 간단할 수 있습니다. 다음 예에서는 내부 저장 프로시저를 사용하여 ID가 002인 클러스터에 대한 프로필을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -199,7 +199,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 클러스터에 대한 판별 요소 찾기  
+###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 클러스터에 대 한 판별 요소 찾기  
  **클러스터 뷰어** 의 **클러스터 판별** 탭에서는 손쉽게 한 클러스터와 다른 클러스터를 비교하거나, 한 클러스터와 나머지 모든 사례(나머지 클러스터)를 비교할 수 있습니다.  
   
  그러나 이러한 정보를 반환하는 쿼리를 만드는 것이 복잡할 수 있으며 임시 결과를 저장하고 둘 이상의 쿼리 결과를 비교하기 위해서는 클라이언트에서 약간의 추가 처리가 필요할 수 있습니다. 이 경우 간단하게 시스템 저장 프로시저를 사용할 수 있습니다.  
@@ -271,13 +271,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|식|  
 |----------------|----------------|  
-|1.|0.592924735740338|  
+|1|0.592924735740338|  
   
  열 사용법이 **PredictOnly** 로 설정되어 있고 모델이 다시 처리된 경우의 예제 결과는 다음과 같습니다.  
   
 |Bike Buyer|식|  
 |----------------|----------------|  
-|1.|0.55843544003102|  
+|1|0.55843544003102|  
   
  이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
   
@@ -305,8 +305,8 @@ NATURAL PREDICTION JOIN
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> 예제 쿼리 3: 클러스터 멤버 자격 결정  
- 이 예에서는 [Cluster&#40;DMX&#41;](../../dmx/cluster-dmx.md) 함수를 사용하여 새로운 사례가 속해 있을 가능성이 가장 높은 클러스터를 반환하고, [ClusterProbability&#40;DMX&#41;](../../dmx/clusterprobability-dmx.md) 함수를 사용하여 해당 클러스터의 멤버 자격에 대한 확률을 반환합니다.  
+###  <a name="bkmk_Query9"></a> 예제 쿼리 9: 클러스터 멤버 자격 결정  
+ 이 예에서는 [Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md) 함수를 사용하여 새로운 사례가 속해 있을 가능성이 가장 높은 클러스터를 반환하고, [ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md) 함수를 사용하여 해당 클러스터의 멤버 자격에 대한 확률을 반환합니다.  
   
 ```  
 SELECT Cluster(), ClusterProbability()  
@@ -352,7 +352,7 @@ NATURAL PREDICTION JOIN
 |클러스터 7|0.979081275926724|0.0209187240732763|  
 |클러스터 1|0.999169044818624|0.000830955181376364|  
 |클러스터 9|0.999831227795894|0.000168772204105754|  
-|클러스터 8|1.|0|  
+|클러스터 8|1|0|  
   
  기본적으로 결과는 확률 순으로 순위가 지정됩니다. 결과를 통해 Cluster 2의 확률이 매우 낮지만 그래도 Cluster 2가 새 데이터 요소에 가장 적합하다는 것을 알 수 있습니다.  
   
@@ -383,7 +383,7 @@ NATURAL PREDICTION JOIN
   
  특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

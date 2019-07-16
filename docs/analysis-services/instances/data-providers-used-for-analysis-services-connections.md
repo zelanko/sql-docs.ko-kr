@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5ba97f90b877896d68cd62598f11d0845fb698e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209528"
 ---
 # <a name="client-libraries-data-providers-used-for-analysis-services-connections"></a>Analysis Services 연결에 사용 되는 클라이언트 라이브러리 (데이터 공급자)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -28,7 +28,7 @@ Analysis Services는 세 가지 클라이언트 라이브러리 라고도 제공
 
 최신 정보를 얻기를 참조 하세요 [클라이언트 라이브러리가 Azure Analysis Services에 연결 하기 위한](https://docs.microsoft.com/azure/analysis-services/analysis-services-data-providers)합니다. 
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

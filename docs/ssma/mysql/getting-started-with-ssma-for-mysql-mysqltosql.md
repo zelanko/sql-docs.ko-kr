@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984541"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL 사용 하 여 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환, SQL Server 또는 Azure SQL DB에 결과 스키마를 업로드 및 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  
@@ -112,7 +111,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 |**최근에 사용한 파일**|프로젝트를 사용 하 여 작업, MySQL에 연결 및 SQL Server 또는 Azure SQL DB에 연결 하는 명령을 포함 합니다.|  
 |**편집**|찾기 및 세부 정보 페이지에서 텍스트를 사용 하 여 작업에 대 한 명령을 포함 합니다. 열려는 **책갈피 관리** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피 목록으로 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **메타 데이터 탐색기 동기화** 명령입니다. MySQL 메타 데이터 탐색기와 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기 간에 개체를 동기화 하는 합니다. 표시 하거나 숨기려면 명령도 포함 됩니다는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 사용 하 여 관리 합니다.|  
-|**Tools**|보고서를 만들고, 스키마 변환, 데이터베이스에서 새로 고침, 개체 및 데이터 마이그레이션 스크립트로 저장 하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정, 기본 프로젝트 설정** 하 고 **프로젝트 설정** 대화 상자.|  
+|**도구**|보고서를 만들고, 스키마 변환, 데이터베이스에서 새로 고침, 개체 및 데이터 마이그레이션 스크립트로 저장 하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정, 기본 프로젝트 설정** 하 고 **프로젝트 설정** 대화 상자.|  
 |**도움말**|SSMA 데 및에 대 한 액세스를 제공 합니다 **에 대 한** 대화 상자.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>출력 창과 오류 목록 창  

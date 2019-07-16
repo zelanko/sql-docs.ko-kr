@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205467"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   비슷합니다는 [메모리에 모든](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저, 테이블 반환 매개 변수에 대해 하지만 실행 시 데이터를 사용 합니다.  
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 하나의 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 샘플에서는 행 스트리밍을 ODBC TVP를 데이터베이스에 데이터를 로드 BCP.exe를 사용 하는 방법을 비슷합니다를 사용 하 여 SQLPutData 호출당 여러 행을 사용할 수 있는 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  

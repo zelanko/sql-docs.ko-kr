@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a2c275604d9c74699eeb2b3c77a90e2d819fb6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199326"
 ---
 # <a name="replicate-schema-changes"></a>스키마 변경 내용 복제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마 변경 내용을 복제하는 방법에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52778705"
   
 -   **다음을 사용하여 스키마 변경을 복제하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -69,29 +69,29 @@ ms.locfileid: "52778705"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 스냅숏 또는 트랜잭션 게시를 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 **@replicate_ddl**에 **0** 값을 지정하여 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 **@replicate_ddl** 에 **0** 값을 지정하여 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 병합 게시를 만들려면  
   
-1.  게시 데이터베이스의 게시자에서 **@replicate_ddl**에 **0** 값을 지정하여 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 **@replicate_ddl** 에 **0** 값을 지정하여 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대해 스키마 변경 내용 복제를 일시적으로 해제하려면  
   
-1.  스키마 변경 내용을 복제하는 게시에서 **@property**에 **replicate_ddl** 값, **@value**에 **0** 값을 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다.  
+1.  스키마 변경 내용을 복제하는 게시에서 **@property** 에 **replicate_ddl** 값, **@value** 에 **0** 값을 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다.  
   
 2.  게시된 개체에서 DDL 명령을 실행합니다.  
   
-3.  (옵션) **@property**에 **replicate_ddl** 값, **@value**에 **1** 값을 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행하면 스키마 변경 내용 복제가 다시 설정됩니다.  
+3.  (옵션) **@property** 에 **replicate_ddl** 값, **@value** 에 **1** 값을 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행하면 스키마 변경 내용 복제가 다시 설정됩니다.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>병합 게시에 대한 스키마 변경 내용 복제를 일시적으로 해제하려면  
   
-1.  스키마 변경 내용을 복제하는 게시의 경우 **@property**에 **replicate_ddl** 값, **@value**에 **0** 값을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
+1.  스키마 변경 내용을 복제하는 게시의 경우 **@property** 에 **replicate_ddl** 값, **@value** 에 **0** 값을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행합니다.  
   
 2.  게시된 개체에서 DDL 명령을 실행합니다.  
   
-3.  (옵션) **@property**에 **replicate_ddl** 값, **@value**에 **1** 값을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행하면 스키마 변경 내용 복제가 다시 설정됩니다.  
+3.  (옵션) **@property** 에 **replicate_ddl** 값, **@value** 에 **1** 값을 지정하여 [sp_changemergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행하면 스키마 변경 내용 복제가 다시 설정됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)  
   

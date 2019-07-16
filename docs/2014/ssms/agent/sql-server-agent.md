@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188824"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  

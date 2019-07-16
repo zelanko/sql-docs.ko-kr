@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165463"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "52509469"
 |MOLAP(모든 버전)|아니요|  
 |테이블 형식 - 1050|아니요|  
 |테이블 형식 - 1100|아니요|  
-|테이블 형식-1130 이상|사용자 계정 컨트롤|  
+|테이블 형식-1130 이상|예|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  
   

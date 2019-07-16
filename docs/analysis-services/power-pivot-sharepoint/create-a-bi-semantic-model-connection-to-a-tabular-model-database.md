@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d17f5d68c1ea60c413a631ba0d734768c61fa5b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208272"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "34024300"
 ##  <a name="bkmk_BISM"></a> 테이블 형식 model 데이터베이스에 대한 읽기 권한 부여  
  데이터베이스가 팜 외부에 있는 서버에서 실행 중이므로 연결을 설정하려면 백 엔드 Analysis Services 서버에 대한 데이터베이스 사용자 권한을 부여해야 합니다. Analysis Services에서는 역할 기반 권한 모델을 사용합니다. model 데이터베이스에 연결하는 사용자는 해당 멤버에게 읽기 권한을 부여하는 역할을 통해 읽기 권한 이상을 사용하여 연결해야 합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 만들 때 역할 또는 역할 멤버 자격이 정의됩니다. SQL Server Management Studio로 역할을 만들 수 있지만, 이미 정의된 역할에 멤버를 추가할 수는 없습니다. 역할을 만드는 방법에 대 한 자세한 내용은 참조 [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 만들 때 역할 또는 역할 멤버 자격이 정의됩니다. SQL Server Management Studio로 역할을 만들 수 있지만, 이미 정의된 역할에 멤버를 추가할 수는 없습니다. 역할을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [만들기 및 관리 역할](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)입니다.  
   
 #### <a name="assign-role-membership"></a>역할 멤버 자격 할당  
   

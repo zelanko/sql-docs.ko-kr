@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4776dffb30382c58ceb63ec0c2b55f8e4fcb42a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210123"
 ---
 # <a name="cross-validation-formulas"></a>교차 유효성 검사 수식
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34014970"
 ## <a name="formulas-used-for-cross-validation-measures"></a>교차 유효성 검사 측정값에 사용되는 수식  
   
 > [!NOTE]  
->  **중요:** 이러한 정확도 측정값은 각 대상 특성에 대해 계산됩니다. 각 특성에 대해 대상 값을 지정하거나 생략할 수 있습니다. 데이터 집합의 사례에 대상 특성의 값이 없는 경우 이러한 사례는 *누락 값*이라는 특수한 값을 가지고 있는 것으로 간주됩니다. 값이 누락된 행은 특정 대상 특성에 대한 정확도 측정값을 계산할 때 계산되지 않습니다. 점수는 각 특성에 대해 개별적으로 계산되므로 대상 특성의 값은 있지만 다른 특성의 값은 누락된 경우 대상 특성의 점수가 영향을 받지 않습니다.  
+>  **중요:** 이러한 정확도 측정값은 각 대상 특성에 대해 계산 됩니다. 각 특성에 대해 대상 값을 지정하거나 생략할 수 있습니다. 데이터 집합의 사례에 대상 특성의 값이 없는 경우 이러한 사례는 *누락 값*이라는 특수한 값을 가지고 있는 것으로 간주됩니다. 값이 누락된 행은 특정 대상 특성에 대한 정확도 측정값을 계산할 때 계산되지 않습니다. 점수는 각 특성에 대해 개별적으로 계산되므로 대상 특성의 값은 있지만 다른 특성의 값은 누락된 경우 대상 특성의 점수가 영향을 받지 않습니다.  
   
 |이름|적용 대상|구현|  
 |-------------|----------------|--------------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "34014970"
 |**제곱 평균 오차**|불연속 특성. 대상 값을 지정할 수 있지만 대상 값이 필수 항목은 아닙니다.|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 행은 제외됩니다.|  
 |**제곱 평균 오차**|불연속 특성(지정된 대상 없음)|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 사례는 제외됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

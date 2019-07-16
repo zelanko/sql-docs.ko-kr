@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997483"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**MemberName**|**sysname**|멤버의 이름을 **DbRole 합니다.**|  
 |**MemberSID**|**varbinary(85)**|보안 식별자 **MemberName 합니다.**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스에 있는 경우 중첩 된 역할이 **MemberName** 역할의 이름일 수 있습니다. **sp_helprolemember** 중첩 된 역할을 통해 얻은 멤버 자격이 표시 되지 않습니다. 예를 들어, User1이 Role1의 멤버이고 Role1이 Role2의 멤버인 경우 `EXEC sp_helprolemember 'Role2'`에서는 Role1을 반환하고 Role1의 멤버는 반환하지 않습니다(이 예제에서는 User1). 실행 중첩 된 멤버 자격을 반환 해야 합니다 **sp_helprolemember** 중첩 된 각 역할에 대해 반복적으로 합니다.  
   
  사용 하 여 **sp_helpsrvrolemember** 고정된 서버 역할의 멤버를 표시 합니다.  

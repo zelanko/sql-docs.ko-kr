@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408563"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208061"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>예약 데이터 새로 고침 및 데이터 원본-Windows 인증 안 함
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "52408563"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013|  
   
- **개요:** 보안 저장소 대상 응용 프로그램을 두 개 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 애플리케이션(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 애플리케이션을 구성합니다. 두 번째 대상 애플리케이션도 무인 데이터 새로 고침 계정에는 첫 번째 대상 애플리케이션을 사용합니다.  
+ **개요:** 두 보안 저장소 대상 응용 프로그램을 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 애플리케이션(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 애플리케이션을 구성합니다. 두 번째 대상 애플리케이션도 무인 데이터 새로 고침 계정에는 첫 번째 대상 애플리케이션을 사용합니다.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** Windows 인증으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
+-   **(1) PowerPivotDatarefresh:** 보안 저장소 대상 응용 프로그램 ID는 windows 인증을 사용 하 여 설정 됩니다.  
   
--   **(2) OracleAuthentication:** Oracle 자격 증명으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
+-   **(2) OracleAuthentication:** 보안 저장소 대상 응용 프로그램 ID Oracle 자격 증명을 사용 하 여 설정 됩니다.  
   
 -   **(3)**  는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 대상 응용 프로그램 "PowerPivotDataRefresh"를 사용 하도록 구성에 대 한 합니다 **무인 데이터 새로 고침 계정**합니다.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "52408563"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh를 입력합니다.  
+    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh.  
   
-    -   **표시 이름:** PowerPivotDataRefresh를 입력합니다.  
+    -   **표시 이름:** PowerPivotDataRefresh.  
   
     -   **담당자 메일:** ?  
   
-    -   **대상 응용 프로그램 형식:** 그룹  
+    -   **대상 응용 프로그램 형식:** 그룹입니다.  
   
     -   **대상 응용 프로그램 페이지 URL:** 없음  
   
@@ -88,13 +88,13 @@ ms.locfileid: "52408563"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** OracleAuthentication  
+    -   **대상 응용 프로그램 ID:** OracleAuthentication 합니다.  
   
-    -   **표시 이름:** OracleAuthentication  
+    -   **표시 이름:** OracleAuthentication 합니다.  
   
     -   **담당자 메일:** ?  
   
-    -   **대상 응용 프로그램 형식:** 그룹  
+    -   **대상 응용 프로그램 형식:** 그룹입니다.  
   
     -   **대상 응용 프로그램 페이지 URL:** 없음  
   
@@ -114,7 +114,7 @@ ms.locfileid: "52408563"
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
- 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx)합니다.  
+ 자세한 내용은 SQL Server 인증에 대 한 대상 응용 프로그램을 만들려면"" 섹션에서 참조 하세요 [SQL Server 인증 (SharePoint Server 2013)를 사용 하 여 보안 저장소 사용](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx) 합니다.  
   
 ## <a name="to-configure-the-power-pivot-service-application"></a>파워 피벗 서비스 애플리케이션을 구성하려면  
   

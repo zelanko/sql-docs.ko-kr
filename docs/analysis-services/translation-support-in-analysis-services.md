@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd727b56649ce9ffc237575b0311db256ec9b2fc
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207423"
 ---
 # <a name="translation-support-in-analysis-services"></a>Analysis Services에서의 번역 지원
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "54184929"
   
 -   [다차원 모델의 번역](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [언어 및 데이터 정렬 & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [열 데이터 정렬 설정 또는 변경](../relational-databases/collations/set-or-change-the-column-collation.md)   

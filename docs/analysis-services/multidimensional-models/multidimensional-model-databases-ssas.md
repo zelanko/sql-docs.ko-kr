@@ -1,5 +1,5 @@
 ---
-title: 다차원 모델 데이터베이스 (SSAS) | Microsoft Docs
+title: 다차원 Model 데이터베이스 (SSAS) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ec839c9638b3baf79cba0148cc932ead7820f7b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208679"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>다차원 model 데이터베이스(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34022066"
   
  [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [온라인 모드로 Analysis Services 데이터베이스에 연결](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)   
  [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [MDX를 사용하여 다차원 데이터 쿼리](../../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)  

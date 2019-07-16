@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165192"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>가장 옵션 설정(SSAS - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52533808"
  대화 상자에서 모든 옵션을 사용할 수는 있지만 일부 경우에는 일부 옵션이 적절하지 않을 수 있습니다. 다음 정보를 사용하여 상황에 가장 적합한 옵션을 선택하십시오.  
   
  **특정 사용자 이름 및 암호 사용**  
- 다음 형식으로 지정된 Windows 사용자 계정의 보안 자격 증명을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 사용하려면 이 옵션을 선택합니다. *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
+ 이 옵션을 선택 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 형식으로 지정 된 Windows 사용자 계정의 보안 자격 증명을 사용 합니다. *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
   
  데이터 액세스용으로 특별히 만든 전용, 최소 권한 Windows 사용자 ID를 사용하려면 이 옵션을 선택합니다. 예를 들어 보고서에 사용되는 데이터를 검색하기 위한 일반 용도의 계정을 정기적으로 만들 경우 여기에서 해당 계정을 지정할 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52533808"
 
  다차원 데이터베이스의 경우 **기본값** 은 서비스 계정을 사용하고 데이터 마이닝 작업에 현재 사용자를 사용함을 의미합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207084"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 서버 커서를 사용 하 여 ODBC 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램을 사용 하 여 커서 동작을 제어 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 다른 문 특성을 설정할 수 있습니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
   
-|attribute|Default|  
+|attribute|기본값|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

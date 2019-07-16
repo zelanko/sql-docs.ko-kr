@@ -1,5 +1,5 @@
 ---
-title: 마이닝 연결 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 마이닝 모델 연결에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182784"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34017580"
 ## <a name="understanding-the-structure-of-an-association-model"></a>연결 모델의 구조 이해  
  연결 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 항목 집합과 규칙에 대한 기본 목록이 있습니다. 항목 집합과 규칙은 트리로 구성되어 있지 않으며 다음 다이어그램에서와 같이 항목 집합 및 규칙 순으로 정렬됩니다.  
   
- ![연결 모델에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "한 연결 모델에 대 한 모델 콘텐츠 구조")  
+ ![연결 모델에 대 한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "연결 모델에 대 한 모델 콘텐츠 구조")  
   
  각 항목 집합은 자체 노드(NODE_TYPE = 7)에 포함되어 있습니다. *노드* 에는 항목 집합의 정의, 이 항목 집합을 포함하는 사례 수 및 기타 정보가 포함되어 있습니다.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "34017580"
  NODE_TYPE  
  연결 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|형식|  
+|노드 유형 ID|type|  
 |------------------|----------|  
 |1(모델)|루트 또는 부모 노드입니다.|  
-|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 또는<br /><br /> `Gender = Male`를 참조하세요.|  
+|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예를 들면 다음과 같습니다.<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 로 구분하거나 여러<br /><br /> `Gender = Male`를 참조하세요.|  
 |8(규칙)|항목 간의 관련 방식을 정의하는 규칙입니다.<br /><br /> 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`를 참조하세요.|  
   
  NODE_CAPTION  
@@ -89,7 +89,7 @@ ms.locfileid: "34017580"
   
  **부모 노드** 다음과 같은 모델 정보 목록을 쉼표로 구분하여 포함합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |----------|-----------------|  
 |ITEMSET_COUNT|모델에 있는 모든 항목 집합 수입니다.|  
 |RULE_COUNT|모델에 있는 모든 규칙 수입니다.|  
@@ -99,8 +99,8 @@ ms.locfileid: "34017580"
 |MAX_ITEMSET_SIZE|발견된 가장 큰 항목 집합의 크기를 나타냅니다.<br /><br /> **참고** 이 값은 모델을 만들 때 *MAX_ITEMSET_SIZE* 매개 변수에 설정한 값에 따라 제약을 받습니다. 즉, 해당 매개 변수 값보다 작거나 같아야 합니다. 기본값은 3입니다.|  
 |MIN_PROBABILITY|모델에 있는 단일 항목 집합 또는 규칙에 대해 발견된 최소 확률입니다.<br /><br /> 예: 0.400390625<br /><br /> **참고** 항목 집합의 경우 이 값은 모델을 만들 때 *MINIMUM_PROBABILITY* 매개 변수에 설정한 값보다 항상 큽니다.|  
 |MAX_PROBABILITY|모델에 있는 단일 항목 집합 또는 규칙에 대해 발견된 최대 확률입니다.<br /><br /> 예: 1<br /><br /> **참고** 항목 집합의 최대 확률을 제약하는 매개 변수는 없습니다. 너무 자주 사용되는 항목을 제거하려면 *MAXIMUM_SUPPORT* 매개 변수를 대신 사용하세요.|  
-|MIN_LIFT|모델이 항목 집합에 제공하는 최소 리프트 양입니다.<br /><br /> 예: 0.14309369632511<br /><br /> 참고: 최소 리프트를 알면 한 항목 집합에 대한 리프트가 중요한지 여부를 확인할 수 있습니다.|  
-|MAX_LIFT|모델이 항목 집합에 제공하는 최대 리프트 양입니다.<br /><br /> 예: 1.95758227647523 **참고** 최대 리프트를 알면 한 항목 집합에 대한 리프트가 중요한지 여부를 확인할 수 있습니다.|  
+|MIN_LIFT|모델이 항목 집합에 제공하는 최소 리프트 양입니다.<br /><br /> 예: 0.14309369632511<br /><br /> 참고: 최소 리프트를 알면 한 항목 집합에 대 한 리프트가 중요 한지 여부를 확인할 수 있습니다 수 있습니다.|  
+|MAX_LIFT|모델이 항목 집합에 제공하는 최대 리프트 양입니다.<br /><br /> 예: 1.95758227647523 **참고** 최대 리프트를 알면 도움이 한 항목 집합에 대 한 리프트가 중요 한지 여부를 결정 합니다.|  
   
  **항목 집합 노드** 항목 집합 노드는 항목 목록을 포함하며 쉼표로 구분된 텍스트 문자열로 표시됩니다.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "34017580"
  MSOLAP_NODE_SHORT_CAPTION  
  비어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)  

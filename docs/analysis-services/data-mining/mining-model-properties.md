@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ba834b497950357b83a4ec052654b5a4998b928
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209791"
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,26 +33,26 @@ ms.locfileid: "34015810"
 ## <a name="properties-of-models"></a>모델의 속성  
  다음 표에서는 마이닝 모델에 특정한 속성에 대해 설명합니다. 또한 마이닝 시 개별 열에 대해 설정할 수 있는 속성도 나와 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**알고리즘**|마이닝 모델에 대한 알고리즘 유형을 설정합니다.|  
 |**AlgorithmParameters**|각 알고리즘 유형에 사용할 수 있는 알고리즘 매개 변수의 값을 설정합니다.|  
-|**필터**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
+|**Assert**|마이닝 모델을 학습하고 테스트할 때 사용하는 데이터에 적용되는 필터를 설정합니다. 필터 정의는 모델에 저장되며 예측 쿼리를 만들거나 모델의 정확도를 테스트할 때 선택적으로 사용할 수 있습니다.<br /><br /> 모델을 학습할 경우 모델 필터는 선택 사항이 아닙니다.|  
 |**이름**|마이닝 모델의 이름을 설정합니다.|  
 |**AllowDrillThrough**|드릴스루를 마이닝 모델에 설정할지 여부를 지정합니다.|  
   
 ## <a name="properties-of-model-columns"></a>모델 열의 속성  
  마이닝 모델의 각 열에 대해 다음 데이터 마이닝 속성을 설정할 수 있습니다. 마이닝 구조의 각 마이닝 모델에 대해 이러한 속성을 서로 다른 값으로 설정할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
-|**Description**|마이닝 열의 목적을 설명합니다.|  
+|**설명**|마이닝 열의 목적을 설명합니다.|  
 |**이름**|마이닝 모델 열의 이름을 설정합니다. 새 이름을 입력하여 마이닝 모델 열의 별칭을 제공할 수 있습니다.|  
 |**ModelingFlags**|열에 대해 알고리즘별 플래그를 설정합니다.|  
 |**SourceColumnID**|모델 열의 기반이 되는 마이닝 구조 열의 이름을 나타냅니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
-|**사용법**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
+|**Usage**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)   
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   

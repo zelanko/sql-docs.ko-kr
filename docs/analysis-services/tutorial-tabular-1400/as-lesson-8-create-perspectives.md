@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c74e457d29f39201601a3a62d651cce97c52fa70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207308"
 ---
 # <a name="create-perspectives"></a>큐브 뷰 만들기
 
@@ -27,11 +27,11 @@ ms.locfileid: "57684940"
   
 이 단원의 목표는 큐브 뷰를 만드는 방법을 설명하고 테이블 형식 모델 제작 도구를 파악하도록 돕는 데 있습니다. 나중에 추가 테이블을 포함 하도록이 모델을 확장 하는 경우에 예를 들어, 인벤토리 및 Sales 모델의 다양 한 뷰포인트를 정의 하는 추가 큐브 뷰를 만들 수 있습니다.  
   
-이 단원에 소요되는 예상 시간: **5분**  
+예상이 단원을 완료 시간: **5분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [7단원: 핵심 성과 지표 만들기](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [7단원: 핵심 성과 지표 만들기](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)합니다.  
   
 ## <a name="create-perspectives"></a>큐브 뷰 만들기  
   

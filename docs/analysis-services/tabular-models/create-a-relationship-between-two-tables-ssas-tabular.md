@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207738"
 ---
 # <a name="create-a-relationship"></a>관계 만들기 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "53072100"
   
 6.  **만들기**를 클릭합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [관계 삭제](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

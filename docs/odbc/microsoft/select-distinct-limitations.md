@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf0f9c907a77df2508a8c38d47509dc25778169
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a69e43bd98e9421e3197439c9f0376884c23ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987899"
 ---
 # <a name="select-distinct-limitations"></a>SELECT DISTINCT 제한 사항
 DISTINCT 키워드 이진 데이터에 적용 되지 않습니다.

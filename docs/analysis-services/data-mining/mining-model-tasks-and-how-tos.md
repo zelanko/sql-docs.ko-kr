@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95e532cb288591b54c4f622c9aa81c8273dc5de5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182637"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>마이닝 모델 태스크 및 방법
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,31 +30,31 @@ ms.locfileid: "34015320"
   
 -   [모델 열의 별칭 만들기](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
--   [마이닝 모델에 있는 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [마이닝 모델에서 열의 분할 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [모델링 플래그 & #40; 데이터 마이닝 & #41; 확인 또는 변경](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
--   [모델에서 회귀 변수로 사용할 열을 지정 합니다.](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
+-   [모델에서 회귀 변수로 사용할 열 지정](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)  
   
 -   [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [마이닝 모델에 필터를 적용 합니다.](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
+-   [마이닝 모델에 필터 적용](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)  
   
 -   [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
 -   [마이닝 모델에 드릴스루 사용](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)  
   
--   [보기 또는 변경 알고리즘 매개 변수](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
+-   [알고리즘 매개 변수 보기 또는 변경](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
--   [마이닝 모델의 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
+-   [마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)  
   
 -   [마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)  
   
 -   [데이터 마이닝 차원 만들기](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
- [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [데이터 마이닝 개념](../../analysis-services/data-mining/data-mining-concepts.md)  
   
   

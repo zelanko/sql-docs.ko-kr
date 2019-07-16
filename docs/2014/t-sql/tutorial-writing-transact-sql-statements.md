@@ -1,5 +1,5 @@
 ---
-title: '자습서: TRANSACT-SQL 문 작성 | Microsoft Docs'
+title: '자습서: Transact-SQL 문 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807585"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211193"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 쓰기
+# <a name="tutorial-writing-transact-sql-statements"></a>자습서: Transact-SQL 문 작성
   [!INCLUDE[tsql](../includes/tsql-md.md)] 문 작성 자습서를 시작합니다. 이 자습서는 SQL 문을 처음 작성하는 사용자를 위해 제공됩니다. 이 자습서는 새로운 사용자가 테이블을 만들고 데이터를 삽입하는 몇 가지 기본 문을 통해 작업을 시작하는 데 도움이 될 것입니다. 이 자습서에서는 [!INCLUDE[tsql](../includes/tsql-md.md)]가 구현하는 SQL 표준인 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 사용합니다. 이 자습서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 클래스를 대체하는 것이 아니라 [!INCLUDE[tsql](../includes/tsql-md.md)] 언어를 간략하게 소개하는 데 목적이 있습니다. 의도적으로 간단한 문을 이 자습서에서 사용하고 있으므로 일반적인 프로덕션 데이터베이스에서 볼 수 있는 복잡한 문은 다루지 않습니다.  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "52807585"
   
  이 자습서는 다음 3개의 단원으로 이루어져 있습니다.  
   
- [1 단원: 데이터베이스 개체 만들기](lesson-1-creating-database-objects.md)  
+ [1단원: 데이터베이스 개체 만들기](lesson-1-creating-database-objects.md)  
  이 단원에서는 데이터베이스 작성, 데이터베이스에서 테이블 작성, 테이블에 데이터 삽입, 데이터 업데이트, 데이터 읽기 등을 수행합니다.  
   
- [2단원: 데이터베이스 개체의 사용 권한 구성](lesson-2-configuring-permissions-on-database-objects.md)  
+ [2단원: 데이터베이스 개체에 대한 사용 권한 구성](lesson-2-configuring-permissions-on-database-objects.md)  
  이 단원에서는 로그인 및 사용자를 만듭니다. 또한 뷰와 저장 프로시저를 만든 다음 저장 프로시저에 대한 사용 권한을 사용자에게 부여합니다.  
   
- [3 단원: 데이터베이스 개체 삭제](lesson-3-1-deleting-database-objects.md)  
+ [3단원: 데이터베이스 개체 삭제](lesson-3-1-deleting-database-objects.md)  
  이 단원에서는 데이터 액세스 권한 제거, 테이블에서 데이터 삭제, 테이블 삭제, 데이터베이스 삭제 등을 수행합니다.  
   
 ## <a name="requirements"></a>요구 사항  

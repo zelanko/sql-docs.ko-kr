@@ -4,19 +4,18 @@ description: 사용 하 여 SQL Server 2017 및 2019 미리 보기 컨테이너 
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 34320ca5f0e969443ecd60eae64ca80a6aeaec63
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: a376e566327c8c78a02dc61ffbbb5c37ce946f04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967506"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 

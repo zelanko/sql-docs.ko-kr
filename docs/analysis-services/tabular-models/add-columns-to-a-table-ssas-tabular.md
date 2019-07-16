@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a726f7dd8ef72ad30bd055d2f76cc58c7db6183d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163114"
 ---
 # <a name="add-columns-to-a-table"></a>테이블에 열 추가
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53072710"
   
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [테이블 속성 편집 대화 상자](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [테이블, 열 또는 행 필터 매핑 변경](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

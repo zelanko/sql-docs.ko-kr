@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b2d0004204829225d7767c53a7d2406ff557f36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899875"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 > [!NOTE]
 > 이 DMV에서 호출할 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_nodes**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|노드의 ID입니다.|  
 |node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값이 4 개. 해당 설명과 함께 아래 나열 됩니다.<br /><ul><li>ONLINE: 노드가는 온라인 상태입니다.<li>OFFLINE: 노드가 오프 라인 상태입니다.<li>IDLE: 노드에 보류 중인 작업 요청이 없으면 있으며 유휴 상태가 되었습니다.<li>IDLE_READY: 노드와 이상 보류 중인 작업 요청에 유휴 상태로 진입할 준비가 되었습니다.</li></ul><br />세 가지 combinable node_state_desc 값을 설명과 함께 아래에 나열 합니다.<br /><ul><li>DAC: 이 노드에서 예약 됩니다 합니다 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)합니다.<li>THREAD_RESOURCES_LOW: 새 스레드가 메모리 부족 상태로 인해이 노드에서 만들 수 있습니다.<li>핫 추가: 노드에 대 한 응답으로 추가 되었음을 나타냅니다는 hot add CPU 이벤트입니다.</li></ul>|  
@@ -65,7 +64,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="see-also"></a>관련 항목    
  [SQL Server 운영 체제 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

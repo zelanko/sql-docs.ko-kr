@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965139"
 ---
 # <a name="tables-collection-adox"></a>Tables 컬렉션(ADOX)
 모든 포함 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 카탈로그의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-tables.md) 에 대 한 메서드는 **테이블** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 테이블을 사용 하 여 컬렉션에 추가 합니다 **Append** 메서드.  

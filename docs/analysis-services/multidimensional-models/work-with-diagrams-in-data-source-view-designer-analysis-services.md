@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd5ddc549be0750d2476673511bab4de9cdf411
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164900"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

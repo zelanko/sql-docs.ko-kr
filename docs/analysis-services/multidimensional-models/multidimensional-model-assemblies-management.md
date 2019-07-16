@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165722"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53215792"
   
  새 프로시저와 함수가 포함된 어셈블리는 서버에 추가할 수 있습니다. 어셈블리를 사용하여 서버에서 제공하지 않는 사용자 지정 기능을 향상시키거나 추가할 수 있으며, MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 또는 저장 프로시저에 새 함수를 추가할 수도 있습니다. 어셈블리는 사용자 지정 애플리케이션이 실행되는 위치에서 로드되며 어셈블리 이진 파일의 복사본은 서버에 데이터베이스 데이터와 함께 저장됩니다. 어셈블리가 제거되면 복사된 어셈블리도 서버에서 제거됩니다.  
   
- 어셈블리는 COM 또는 CLR 유형일 수 있습니다. CLR 어셈블리는 C#, Visual Basic .NET, Managed C++ 등의 .NET Framework 프로그래밍 언어로 개발됩니다. COM 어셈블리는 서버에 등록해야 하는 COM 라이브러리입니다.  
+ 어셈블리는 두 가지 형식의 수 있습니다. COM 및 CLR입니다. CLR 어셈블리는 C#, Visual Basic .NET, Managed C++ 등의 .NET Framework 프로그래밍 언어로 개발됩니다. COM 어셈블리는 서버에 등록해야 하는 COM 라이브러리입니다.  
   
  어셈블리는 <xref:Microsoft.AnalysisServices.Server> 또는 <xref:Microsoft.AnalysisServices.Database> 개체에 추가할 수 있습니다. 서버 어셈블리는 서버에 연결된 사용자나 서버에 있는 개체가 호출할 수 있습니다. 데이터베이스 어셈블리는 데이터베이스에 연결된 <xref:Microsoft.AnalysisServices.Database> 개체 또는 사용자만 호출할 수 있습니다.  
   

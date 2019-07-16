@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: de109d4b02d203c6b3bbac5f1ee7d7ccb5cd8753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb7ed3d3c86ff4a6a5ca0d83f33c28c7990e1f88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991946"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드
 

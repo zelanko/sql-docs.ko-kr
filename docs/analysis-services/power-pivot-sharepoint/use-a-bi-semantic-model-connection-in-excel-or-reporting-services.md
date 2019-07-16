@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bfd1bde3a39af9954437c6f777d82db1f1ffe187
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34035464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163609"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34035464"
   
 -   라이브러리에서 BI 의미 체계 모델 연결을 마우스 오른쪽 단추로 클릭하고 **Excel 시작**을 선택합니다.  
   
- ![빠른 시작 명령의 스크린 샷의 BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 실행 명령")  
+ ![빠른 시작 명령의 스크린 샷의 BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 시작 명령")  
   
  데이터 연결을 사용하도록 설정할지를 묻는 메시지가 표시되면 **사용** 을 클릭합니다. 기본 데이터 원본의 필드로 채워진 피벗 테이블 필드 목록이 포함된 통합 문서가 Excel에서 열립니다.  
   

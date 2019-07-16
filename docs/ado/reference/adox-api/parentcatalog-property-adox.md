@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c146e53379f1a81948135d9d993150f4e1e4046e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965589"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 속성(ADOX)
 공급자별 속성에 대 한 액세스를 제공 하는 테이블, 사용자 또는 열 개체의 부모 카탈로그를 지정 합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66706348"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 개체입니다. 설정 **ParentCatalog** 열린 **카탈로그** 테이블 또는 열을 추가 하기 전에 공급자별 속성에 액세스할 수는 **카탈로그** 컬렉션입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  일부 데이터 공급자는 공급자별 속성 값을 만들 때만 기록 허용: 테이블 또는 열에 추가 되 면에, 해당 **카탈로그** 컬렉션입니다. 이러한 개체를 추가 하기 전에 이러한 속성에 액세스 하는 **카탈로그**를 지정 합니다 **카탈로그** 에서 **ParentCatalog** 속성 첫 번째.  
   
  오류가 발생할 때 다른 테이블 또는 열을 추가할 때 **카탈로그** 보다는 **ParentCatalog**합니다.  

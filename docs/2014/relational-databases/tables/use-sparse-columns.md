@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196670"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
   스파스 열은 Null 값에 대해 최적화된 스토리지가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 최소 20%에서 40% 사이의 공간이 절약되는 경우에는 스파스 열을 사용하십시오. 스파스 열 및 열 집합은 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 또는 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 문을 사용하여 정의합니다.  

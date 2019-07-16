@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2e1beebcb250f6a12ba612784ccb335c7b036774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f4cf3945ed026a311e8e8dc0ab37f95ec8aabb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986501"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47780331"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 ID입니다.|  
 |kpid|**smallint**|Windows 스레드 ID입니다.|  
@@ -54,7 +53,7 @@ ms.locfileid: "47780331"
 |last_batch|**datetime**|클라이언트 프로세스가 원격 저장 프로시저 호출 또는 EXECUTE 문을 마지막으로 실행한 시간입니다.|  
 |ecid|**smallint**|단일 프로세스 대신 작업하고 있는 하위 스레드를 고유하게 식별하는 데 사용하는 실행 컨텍스트 ID입니다.|  
 |open_tran|**smallint**|프로세스의 열려 있는 트랜잭션 수입니다.|  
-|상태|**nchar(30)**|프로세스 ID 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 다시 설정 됩니다.<br /><br /> **실행** = 세션이 실행 되는 하나 이상의 일괄 처리 합니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **백그라운드** = 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행 됩니다.<br /><br /> **롤백** = 세션 트랜잭션 롤백을 진행에서 합니다.<br /><br /> **보류 중인** = 세션이 작업자 스레드를 사용할 수 있게 기다리고 있습니다.<br /><br /> **실행 가능한** = 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock을 무료 대기 합니다.<br /><br /> **일시 중단** = 세션이 I/O가 완료와 같은 이벤트를 기다리고 있습니다.|  
+|상태|**nchar(30)**|프로세스 ID 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **유휴**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 다시 설정 됩니다.<br /><br /> **실행** = 세션이 실행 되는 하나 이상의 일괄 처리 합니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **백그라운드** = 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행 됩니다.<br /><br /> **롤백** = 세션 트랜잭션 롤백을 진행에서 합니다.<br /><br /> **보류 중인** = 세션이 작업자 스레드를 사용할 수 있게 기다리고 있습니다.<br /><br /> **실행 가능한** = 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock을 무료 대기 합니다.<br /><br /> **일시 중단** = 세션이 I/O가 완료와 같은 이벤트를 기다리고 있습니다.|  
 |sid|**binary(86)**|사용자의 GUID(Globally Unique Identifier)입니다.|  
 |hostname|**nchar(128)**|워크스테이션의 이름입니다.|  
 |program_name|**nchar(128)**|응용 프로그램의 이름입니다.|  
@@ -72,7 +71,7 @@ ms.locfileid: "47780331"
 |request_id|**int**|요청의 ID입니다. 특정 세션에서 실행 중인 요청을 식별하는 데 사용됩니다.|
 |page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8 바이트 16 진수 표현 페이지 리소스의 경우는 `waitresource` 열 페이지를 포함 합니다. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자가 서버에 대한 VIEW SERVER STATE 권한을 가지고 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 현재 세션만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

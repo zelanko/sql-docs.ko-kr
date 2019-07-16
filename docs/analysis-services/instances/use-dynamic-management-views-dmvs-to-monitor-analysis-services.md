@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209410"
 ---
 # <a name="dynamic-management-views-dmvs"></a>동적 관리 뷰(DMV) 
 
@@ -103,7 +103,7 @@ DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버 오류
 
 ### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>행 집합 [MS-SSAS-T]에서 설명 합니다. SQL Server Analysis Services 테이블 형식 프로토콜
 
-|행 집합  |Description  |
+|행 집합  |설명  |
 |---------|---------|
 |[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|주석 개체 모델에 대 한 정보를 제공 합니다.|
 |[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   열에 대해 AttributeHierarchy 개체에 대 한 정보를 제공합니다.      |
@@ -136,7 +136,7 @@ DMV는 지정 된 행 집합에 대해 사용할 수 없는 경우 서버 오류
 
 ### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>행 집합 [MS-SSAS]에서 설명 합니다. SQL Server Analysis Services 프로토콜
 
-|행 집합|Description|  
+|행 집합|설명|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|서버에 액세스할 수 있는 카탈로그를 설명 합니다.|  
 |[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|각 측정값, 각 큐브 차원의 특성 및 열으로 노출 된 각 스키마 행 집합 열에 대 한 행을 반환 합니다.|  

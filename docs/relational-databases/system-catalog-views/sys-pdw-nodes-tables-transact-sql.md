@@ -11,23 +11,22 @@ dev_langs:
 ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fcef927616bf90dcbf66639553d34ceaa78bb9e9
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001117"
 ---
-# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
+# <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   보안 주체에 일부 권한이 부여 또는 보안 주체를 소유 하는 각 테이블 개체에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|\<inherited columns>||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.||  
+|\<열을 상속 >||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.||  
 |lob_data_space_id|**int**||항상 0입니다.|  
 |filestream_data_space_id|**int**|FILESTREAM 파일 그룹에 대 한 데이터 공간 ID 또는 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|이 테이블에서 사용 되는 최대 열 ID입니다.||  

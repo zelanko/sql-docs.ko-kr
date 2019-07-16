@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ce366acc4244db16f0b58bbdc8226e9327416c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164274"
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>최대 파일 업로드 크기 구성(SharePoint용 파워 피벗)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

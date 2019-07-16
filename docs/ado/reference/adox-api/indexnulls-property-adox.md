@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b6fbb2dd87568f0d40705b6ab76e83cd825afbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966007"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls 속성(ADOX)
 인덱스 필드에 null 값이 있는 레코드 인덱스 항목이 있는지 여부를 나타냅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66706609"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) 값입니다. 기본값은 **adIndexNullsDisallow**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성은 읽기 전용 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb4265ac502aa5d8a90cf4df3060b1d10d5b4f36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cfd9fe1aba63e5b63c6878d0332bd3a4a8eaff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987548"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>SQL Server Native Client 헤더 및 라이브러리 파일 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47778023"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 사용하는 OLE DB 응용 프로그램은 sqlncli.h만 참조하면 됩니다. MDAC(SQLOLEDB)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 모두 사용하는 응용 프로그램은 sqloledb.h 및 sqlncli.h를 모두 참조할 수 있지만 sqloledb.h를 먼저 참조해야 합니다.  
   
 ## <a name="using-the-sql-server-native-client-header-file"></a>SQL Server Native Client 헤더 파일 사용  
- 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 해야 Native Client 헤더 파일을 **포함** C/c + + 프로그래밍 코드 내에 있는 문의. 다음 섹션에서는 OLE DB 및 ODBC 응용 프로그램에서 이를 수행하는 방법을 설명합니다.  
+ 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용 해야 Native Client 헤더 파일을 **포함** C 프로그램 내에서 문을 /C++ 프로그래밍 코드입니다. 다음 섹션에서는 OLE DB 및 ODBC 응용 프로그램에서 이를 수행하는 방법을 설명합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일은 Visual Studio C++ 2002 이상을 사용해야 컴파일할 수 있습니다.  
@@ -84,7 +83,7 @@ include "sqlncli.h";
   
 ## <a name="component-names-and-properties-by-version"></a>버전별 구성 요소 이름 및 속성  
   
-|속성|SQL Server Native Client <br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
+|속성|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
 |ODBC 드라이버 이름|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
 |ODBC 헤더 파일 이름|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  

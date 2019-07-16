@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209609"
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY 0.1, MINIMUM_SUPPORT = = 10, PERIODICITY_HINT ={1,3},...|  
+|COMPLEXITY_PENALTY=0.1,MINIMUM_SUPPORT=10,PERIODICITY_HINT={1,3},....|  
   
  기본 주기 힌트는 {1}이고 모든 모델에 나타납니다. 이 예제 모델은 최종 모델에 존재하지 않을 수도 있는 추가 힌트를 사용하여 만들어졌습니다.  
   
@@ -90,14 +90,14 @@ WHERE NODE_NAME = 'TA00000007'
   
 |약식 수식|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24...|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24....|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
  이 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: ARTXP 모델에 대한 수식 검색  
+###  <a name="bkmk_Query3"></a> 예제 쿼리 3: ARTXP 모델에 대 한 수식 검색  
  ARTxp 모델의 경우 트리의 각 수준에 다른 정보가 저장됩니다. ARTxp 모델의 구조에 대한 자세한 내용과 수식에서 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
  다음 DMX 문은 유럽에서 R250 모델의 판매 수량을 나타내는 ARTxp 트리의 일부에 대한 정보를 검색합니다.  
@@ -128,7 +128,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_ReplaceExtend"></a> 바꾸기 및 확장 작업의 동작 이해  
  시계열 모델에 새 데이터를 추가할 때 학습 데이터를 확장할지 또는 대체할지 지정할 수 있습니다.  
   
--   **확장:** 데이터 계열을 확장하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 기존 학습 데이터의 끝에 새 데이터를 추가합니다. 학습 사례의 수도 증가합니다.  
+-   **확장:** 데이터 계열을 확장 하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기존 학습 데이터의 끝에 새 데이터를 추가 합니다. 학습 사례의 수도 증가합니다.  
   
      모델 사례 확장은 새 데이터로 계속해서 모델을 업데이트하는 경우 유용합니다. 예를 들어 시간이 지남에 따라 학습 집합이 증가하도록 하려는 경우 모델을 확장하면 됩니다.  
   

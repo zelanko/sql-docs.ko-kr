@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205576"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>반환 코드 및 출력 매개 변수 처리(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되므로 [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) 에서 SQL_NO_DATA를 반환할 때까지 애플리케이션에서 사용할 수 없습니다. 오류가 저장된 프로시저에서 반환 되 면 호출 SQLMoreResults SQL_NO_DATA가 반환 될 때까지를 다음 결과로 이동 합니다.  

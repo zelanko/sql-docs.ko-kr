@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210745"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
   복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
@@ -89,14 +89,14 @@ ms.locfileid: "56028064"
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-SubscriberDB** _subscriber_database_  
  구독자 데이터베이스의 이름입니다.  
@@ -230,7 +230,7 @@ ms.locfileid: "56028064"
  **-QuotedIdentifier** _quoted_identifier_  
  사용할 따옴표 붙은 식별자 문자를 지정합니다. 값의 첫 번째 문자는 배포 에이전트에서 사용하는 값을 나타냅니다. 값을 지정하지 않고 **QuotedIdentifier** 를 사용하면 배포 에이전트에서는 공백을 사용합니다. **QuotedIdentifier** 를 사용하지 않는 경우 배포 에이전트에서는 구독자가 지원하는 따옴표 붙은 식별자를 사용합니다.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  이 에이전트에서 건너뛸 오류 번호를 지정하는 콜론으로 구분된 목록입니다.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -248,7 +248,7 @@ ms.locfileid: "56028064"
  **-SubscriberType** [ **0**| **1**| **3**]  
  배포 에이전트에서 사용하는 구독자 연결 유형을 지정합니다.  
   
-|SubscriberType 값|Description|  
+|SubscriberType 값|설명|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC 데이터 원본|  
@@ -284,7 +284,7 @@ ms.locfileid: "56028064"
  **-UseOledbStreaming**  
  이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 배포 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다. 보안 계정을 변경하는 방법에 대한 자세한 내용은 [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)을 참조하십시오.  

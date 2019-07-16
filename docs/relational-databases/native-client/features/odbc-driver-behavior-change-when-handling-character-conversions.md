@@ -9,14 +9,13 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38a7eb08d65717b20891225e6f4ff61e4fbcb99b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7261034941efe60c2aa755cad75b43b70cbb129b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987403"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|6|드라이버는 CHAR를 WCHAR로 변환하면 길이 * 2로 수행될 수 있다고 잘못 가정합니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버가 더 이상 CHAR에서 WCHAR 또는 WCHAR로 변환 이라고 가정 된 (곱하기) \*2 또는 (나누기) / 2 동작 합니다.<br /><br /> 호출 **SQLGetData** 하면 예상한 변환 길이가 더 이상 반환 합니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
@@ -85,7 +84,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|20|**SQLFetch** 데이터의 오른쪽에 잘림이 있는지 보고 합니다.<br /><br /> 길이는 저장된 데이터가 아니라 반환된 데이터의 길이입니다(문자에 적합하지 않을 수 있는 *2 CHAR에서 WCHAR 변환을 가정).<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터의 오른쪽에 잘림이 있는지 보고 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 -4 (SQL_NO_TOTAL)를 나타냅니다.<br /><br /> 버퍼에 저장된 데이터는 123\0입니다. - 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
@@ -99,7 +98,7 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|2468|**SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> 길이는 버퍼에 저장된 데이터가 아니라 서버에서 반환된 데이터의 크기를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|**SQLFetch** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> **SQLMoreResults** 데이터가 더 이상 사용할 수를 반환 합니다.<br /><br /> 나머지 데이터가 변환되지 않았기 때문에 길이는 (-4) SQL_NO_TOTAL를 나타냅니다.<br /><br /> 원래 버퍼는 63바이트와 NULL 종결자를 포함합니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  

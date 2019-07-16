@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964541"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드(RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들고에 대 한 포인터를 반환 합니다. 인터넷을 통해 요청 및 데이터를 보낼 비즈니스 개체와의 통신에 대 한 서버 쪽 스텁에 프록시 패키징하고 데이터입니다. In-process 구성 요소 개체에 대 한 프록시 사용 되 고, 개체에 대 한 포인터만 제공 됩니다.  
@@ -30,11 +29,11 @@ ms.locfileid: "66712316"
 ## <a name="syntax"></a>구문  
  원격 데이터 서비스는 다음 프로토콜을 지원합니다. HTTP, HTTPS (HTTP over Secure Socket Layer), DCOM 및 진행 합니다.  
   
-|프로토콜|구문|  
+|Protocol|구문|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|DCOM|Set 개체 DataSpace.CreateObject ("ProgId", "computername") =|  
 |In-process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>매개 변수  

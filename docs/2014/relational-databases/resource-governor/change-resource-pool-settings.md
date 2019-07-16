@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6392c8211e073183b68d2d04e9c949317d6a33a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198946"
 ---
 # <a name="change-resource-pool-settings"></a>리소스 풀 설정 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀 설정을 변경할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **리소스 풀에 대 한 설정을 변경 하려면 사용 합니다.**  [SQL Server Management Studio](#ChgRPProp), [TRANSACT-SQL](#ChgRPTSQL)  
+-   **리소스 풀 설정을 변경하려면 다음을 사용합니다.**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52763315"
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.   **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="ChgRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 설정 변경  
  **을 사용하여 리소스 풀 설정을 변경하려면(!!) [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

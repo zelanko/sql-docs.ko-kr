@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3ecd392bbcbbf310d5960ec42d7799a36c2ebac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208080"
 ---
 # <a name="the-data-connection-path-is-invalid"></a>데이터 연결 경로가 올바르지 않습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34028444"
 |적용 대상|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|Excel 서비스가 신뢰할 수 있는 데이터 연결 라이브러리에 있는 .odc 파일로부터의 데이터 연결만 허용하도록 구성되어 있습니다.|  
-|메시지 텍스트|통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결을 새로 고치지 못했습니다.|  
+|메시지 텍스트|통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다. PowerPivot 데이터 연결을: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터|  
   
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에는 포함된 데이터 연결이 들어 있습니다. 슬라이서 및 필터를 통한 통합 문서 상호 작용을 지원하려면 포함된 연결 정보를 통한 외부 데이터 액세스를 허용하도록 Excel 서비스를 구성해야 합니다. 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 로드된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 검색하려면 외부 데이터에 액세스해야 합니다.  

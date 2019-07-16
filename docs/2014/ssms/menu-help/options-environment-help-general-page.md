@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188536"
 ---
 # <a name="options-environment-help-general-page"></a>옵션 (환경-도움말-일반 페이지)
-   **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
+  **옵션** 대화 상자를 사용하여 설명서 집합을 선택하고 항목을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 내부에 표시할지 또는 별도의 창으로 외부에 표시할지 여부를 지정할 수 있습니다. 이 대화 상자에 액세스하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 노드의 **도움말** 을 확장한 다음 **일반**을 클릭합니다.  
   
 > [!NOTE]  
 >  이 페이지에서 수행한 옵션 변경 내용은 환경을 다시 시작해야만 적용됩니다.  

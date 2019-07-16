@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 92745085a408503a2b435eb160daf431c7fdaa32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905917"
 ---
 # <a name="item-member-mdx"></a>Item(멤버)(MDX)
 
@@ -35,7 +34,7 @@ Tuple_Expression.Item( Index )
  *Index*  
  반환할 튜플 내의 위치로 특정 멤버를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **항목** 함수는 지정 된 튜플 로부터 멤버를 반환 합니다. 함수에 지정 된 0부터 시작 위치에서 발견 된 멤버를 반환 합니다. *인덱스*합니다.  
   
 ## <a name="example"></a>예제  

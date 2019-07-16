@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 87d0a3bf82f94a8076e9528f846a40787e4e0aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3521c85e8666ee5386ac38c3158331c3f882cb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966238"
 ---
 # <a name="group-object-properties-methods-and-events"></a>그룹 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

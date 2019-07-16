@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5a6f5046c93355b3b1359c59d2e935c9aa6288a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209920"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34017190"
   
 -   **단일 예측 가능한 열** 연결 모델은 예측 가능한 열을 한 개만 포함할 수 있습니다. 일반적으로 이 열은 구매한 제품을 나열하는 필드와 같은 중첩 테이블의 키 열로, 값은 Discrete 또는 Discretized여야 합니다.  
   
--   **입력 열**    입력 열은 불연속 열이어야 합니다. 연결 모델에 대한 입력 데이터가 두 개의 테이블에 포함되는 경우가 자주 있습니다. 예를 들어 한 테이블은 고객 정보를 포함하고 다른 테이블은 고객 구매 내역을 포함할 수 있습니다. 중첩 테이블을 사용하여 이 데이터를 모델에 입력할 수 있습니다. 중첩 테이블에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)을 참조하세요.  
+-   **입력 열** 입력 열은 불연속 열이어야 합니다. 연결 모델에 대한 입력 데이터가 두 개의 테이블에 포함되는 경우가 자주 있습니다. 예를 들어 한 테이블은 고객 정보를 포함하고 다른 테이블은 고객 구매 내역을 포함할 수 있습니다. 중첩 테이블을 사용하여 이 데이터를 모델에 입력할 수 있습니다. 중첩 테이블에 대한 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md)을 참조하세요.  
   
  연결 모델에 대해 지원되는 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [Microsoft 연결 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)의 요구 사항 섹션을 참조하세요.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34017190"
   
  처리 시간을 최소화하고 항목 집합의 복잡성을 줄이려면 데이터를 분석하기 전에 관련 항목을 범주별로 그룹화해 보십시오.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   PMML(Predictive Model Markup Language)을 사용한 마이닝 모델 생성은 지원하지 않습니다.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "34017190"
   
 -   데이터 마이닝 차원의 생성을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 연결 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)  
   

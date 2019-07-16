@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208218"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "52544273"
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
- [사전 요구 사항: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인](#bkmk_classic)  
+ [필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인](#bkmk_classic)  
   
- [1 단계: 팜 솔루션 배포](#bkmk_farm)  
+ [1단계: 팜 솔루션 배포](#bkmk_farm)  
   
  [2단계: 중앙 관리에 Power Pivot 웹 응용 프로그램 솔루션 배포](#deployCA)  
   
- [3 단계: 다른 웹 응용 프로그램에 Power Pivot 웹 응용 프로그램 솔루션 배포](#deployUI)  
+ [3단계: 다른 웹 응용 프로그램에 Power Pivot 웹 응용 프로그램 솔루션 배포](#deployUI)  
   
  [솔루션 다시 배포 또는 취소](#retract)  
   
  [Power Pivot 솔루션 정보](#intro)  
   
-##  <a name="bkmk_classic"></a> 필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용하는지 확인  
+##  <a name="bkmk_classic"></a> 필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (SharePoint용)은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**, 대체 **http://\<최상위 사이트 이름 >** 사용 하 여 SharePoint 사이트의 이름:  
   
 ```  
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  반환 값은 **false**여야 합니다. 값이 **true**이면 이 웹 애플리케이션으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 액세스할 수 없습니다.  
   
-##  <a name="bkmk_farm"></a> 1 단계: 팜 솔루션 배포  
+##  <a name="bkmk_farm"></a> 1단계: 팜 솔루션 배포  
  이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
   
  이 태스크는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을(를) 설치한 후 한 번만 수행해야 합니다.  
@@ -68,7 +68,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 2 단계: 중앙 관리에 Power Pivot 웹 응용 프로그램 솔루션 배포  
+##  <a name="deployCA"></a> 2단계: 중앙 관리에 Power Pivot 웹 응용 프로그램 솔루션 배포  
  팜 솔루션을 배포한 후 중앙 관리에 웹 애플리케이션 솔루션을 배포해야 합니다. 이 단계에서는 중앙 관리에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드를 추가합니다.  
   
 1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint  2010  관리 셸을 엽니다.  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  이제 중앙 관리에 웹 애플리케이션 솔루션이 배포되었으므로 중앙 관리를 사용하여 모든 나머지 구성 단계를 완료할 수 있습니다.  
   
-##  <a name="deployUI"></a> 3 단계: 다른 웹 응용 프로그램에 Power Pivot 웹 응용 프로그램 솔루션 배포  
+##  <a name="deployUI"></a> 3단계: 다른 웹 응용 프로그램에 Power Pivot 웹 응용 프로그램 솔루션 배포  
  앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하는 각각의 기존 웹 애플리케이션에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 애플리케이션을 더 많이 추가하는 경우 추가 웹 애플리케이션에 대해 이 단계를 반복해야 합니다.  
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  

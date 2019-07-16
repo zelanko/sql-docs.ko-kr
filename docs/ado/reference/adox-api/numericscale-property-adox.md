@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba72974f9531d328a40244d4ec4ee736ab162fa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16fdefcb06d2b1b90dfc3da39aaf6b1c9659debc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965740"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 속성(ADOX)
 열에 숫자 값의 소수 자릿수를 나타냅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66706270"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환을 **바이트** 열의 데이터 값의 소수 자릿수 값 때 합니다 [형식](../../../ado/reference/adox-api/type-property-column-adox.md) 속성은 **adNumeric** 또는 **adDecimal**. **NumericScale** 다른 모든 데이터 형식에 대해 무시 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 영 (0).  
   
  **NumericScale** 에 대 한 읽기 전용입니다 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  

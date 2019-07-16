@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbbfc1a1d37c069a49a090fbef1006e80d2bf998
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209593"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>테스트 및 유효성 검사 태스크 및 방법(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "34014510"
   
 -   [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
--   [테스트 데이터를 모델에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
+-   [모델 테스트 데이터에 필터 적용](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
 -   [마이닝 모델 테스트에 사용할 열 선택](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
   
--   [사용 하 여 중첩 테이블 데이터를 입력으로 정확도 차트에 대 한](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
+-   [정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210005"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410670"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>데이터 마이닝 디자이너를 사용하여 모델 필터 만들기  
  데이터 마이닝 디자이너에서 마이닝 모델의 **Filter** 속성을 변경하여 모델을 필터링합니다. 필터 식을 **속성** 창에 직접 입력하거나 필터 대화 상자를 열어 조건을 작성할 수 있습니다.  
   
- 두 개의 필터 대화 상자가 있습니다. 첫 번째 대화 상자를 사용하면 사례 테이블에 적용되는 조건을 만들 수 있습니다. 데이터 원본에 여러 테이블이 포함되어 있는 경우 먼저 테이블을 선택한 다음 열을 선택하고 해당 열에 적용할 연산자와 조건을 지정합니다. **AND**/**OR** 연산자를 사용하여 여러 조건을 연결할 수 있습니다. 값을 정의하는 데 사용할 수 있는 연산자는 열에 불연속 값이 포함되어 있는지, 아니면 연속 값이 포함되어 있는지에 따라 달라집니다. 예를 들어 연속 값의 경우 **greater than** 및 **less than** 연산자를 사용할 수 있습니다. 그러나 불연속 값의 경우에는 **=(같음)**, **!=(같지 않음)** 및 **is null** 연산자만 사용할 수 있습니다.  
+ 두 개의 필터 대화 상자가 있습니다. 첫 번째 대화 상자를 사용하면 사례 테이블에 적용되는 조건을 만들 수 있습니다. 데이터 원본에 여러 테이블이 포함되어 있는 경우 먼저 테이블을 선택한 다음 열을 선택하고 해당 열에 적용할 연산자와 조건을 지정합니다. **AND**/**OR** 연산자를 사용하여 여러 조건을 연결할 수 있습니다. 값을 정의하는 데 사용할 수 있는 연산자는 열에 불연속 값이 포함되어 있는지, 아니면 연속 값이 포함되어 있는지에 따라 달라집니다. 예를 들어 연속 값의 경우 **greater than** 및 **less than** 연산자를 사용할 수 있습니다. 그러나 불연속 값의 경우에는 **=(같음)** , **!=(같지 않음)** 및 **is null** 연산자만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  **LIKE** 키워드는 지원되지 않습니다. 여러 불연속 특성을 포함하려는 경우 별도의 조건을 만들고 **OR** 연산자를 사용하여 연결해야 합니다.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7afeb1685951e0947af02e5309a25dd0a395a61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211142"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser(SQL Server 구성 관리자)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser를 지원하는 서비스입니다. 이 서비스의 속성을 보려면 세부 정보 창에서 해당 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  

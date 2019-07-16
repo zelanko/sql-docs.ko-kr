@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185763"
 ---
-# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>1단원: Analysis Services 데이터베이스 준비(기본 데이터 마이닝 자습서)
+# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>1단원: Analysis Services 데이터베이스 (기본 데이터 마이닝 자습서) 준비
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 에서 비즈니스 인텔리전스 애플리케이션을 디자인하는 태스크를 수행한 사용자가 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새 직원이라고 가정합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 활용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 사용 경험을 찾고자 하는 사람에 대 한 흥미 있고 동작 가능한 정보를 검색 합니다. 그런 다음 앞으로 자전거를 구매할 가능성이 높은 잠재 고객을 예측할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이 애플리케이션을 디자인하는 과정은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 다차원 모델링 및 데이터 마이닝을 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만드는 단계로 시작합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 하나 이상의 데이터 원본을 정의합니다. 그런 다음 데이터 원본에서 선택한 테이블과 뷰에서 *데이터 원본 뷰*라는 메타데이터 뷰를 정의합니다.  

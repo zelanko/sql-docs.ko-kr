@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fb3ebf1921bf0e61fe9d5a8dcf9fc2cd0dce6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964973"
 ---
 # <a name="user-object-adox"></a>사용자 개체(ADOX)
 보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. 합니다 **사용자** 에 대 한 컬렉션을 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 사용자만을 나타냅니다.  
   
  속성, 컬렉션 및의 메서드를 사용 하 여는 **사용자** 개체를 할 수 있습니다.  
