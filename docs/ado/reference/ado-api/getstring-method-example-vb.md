@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14c96d71-46a8-4782-b474-80ce348e8bff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5dcbeb7f9fbdb8cb1ab3306f88eed351572e17d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6928d870c00fce0f712e7a9fc01cc2a2a33a57d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918506"
 ---
 # <a name="getstring-method-example-vb"></a>GetString 메서드 예제(VB)
 이 예제에서는 합니다 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드.  

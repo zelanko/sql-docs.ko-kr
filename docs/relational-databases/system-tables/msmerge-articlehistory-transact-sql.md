@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256a2c3ca6801e09bed0a96a63cc6d6540d466ff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907250"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSmerge_articlehistory** 테이블은 변경 내용이 각 아티클당 하나의 행을 사용 하 여 병합 에이전트 동기화 세션 중에 아티클에 적용 된 변경 내용을 추적 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|병합 에이전트 작업 세션의 ID를 [MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 시스템 테이블입니다.|  
 |**phase_id**|**int**|동기화 세션의 단계이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 업로드 합니다.<br /><br /> **2** = 다운로드 합니다.<br /><br /> **4** = 정리 합니다.<br /><br /> **5** = 종료 합니다.<br /><br /> **6** = 스키마 변경 합니다.<br /><br /> **7** = BCP 합니다.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904900"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA 프로젝트 작업(MySQLToSQL)
 SQL Server 또는 SQL Azure MySQL 데이터베이스를 마이그레이션하려면 먼저 SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904891"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>작업 샘플 콘솔 스크립트 파일 (MySQLToSQL)
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품와 함께 제공 되었습니다. 이 섹션에서는 최종 사용자 요구에 맞게 이러한 스크립트를 쉽게 사용자 지정 하는 방법은 설명 합니다.  

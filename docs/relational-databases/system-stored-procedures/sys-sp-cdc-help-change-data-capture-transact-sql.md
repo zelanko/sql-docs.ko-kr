@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aabd005381dc2e18b01fb88d125ddeeb3f8b6428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905172"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|원본 테이블 스키마의 이름입니다.|  
 |source_table|**sysname**|원본 테이블의 이름입니다.|  
@@ -83,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|원본 테이블의 행을 고유하게 식별하는 데 사용되는 인덱스 열의 목록입니다.|  
 |captured_column_list|**nvarchar(max)**|캡처된 원본 열 목록입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  때 둘 다 *source_schema* 하 고 *source_name* 기본적으로 NULL 또는 NULL을 명시적으로 설정 되어이 저장된 프로시저 호출자가 선택 하는 캡처 인스턴스의 모든 데이터베이스에 대 한 정보를 반환 에 대 한 액세스. 때 *source_schema* 하 고 *source_name* 는 NULL이 아닌 명명된 된 특정 설정 된 테이블에 대 한 정보만 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -91,7 +90,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-change-data-capture-configuration-information-for-a-specified-table"></a>1. 지정된 테이블에 대한 변경 데이터 캡처 구성 정보 반환  
+### <a name="a-returning-change-data-capture-configuration-information-for-a-specified-table"></a>A. 지정된 테이블에 대한 변경 데이터 캡처 구성 정보 반환  
  다음 예에서는 `HumanResources.Employee` 테이블에 대한 변경 데이터 캡처 구성을 반환합니다.  
   
 ```  
@@ -103,7 +102,7 @@ EXECUTE sys.sp_cdc_help_change_data_capture
 GO  
 ```  
   
-### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>2. 모든 테이블에 대한 변경 데이터 캡처 구성 정보 반환  
+### <a name="b-returning-change-data-capture-configuration-information-for-all-tables"></a>2\. 모든 테이블에 대한 변경 데이터 캡처 구성 정보 반환  
  다음 예에서는 호출자에게 액세스 권한이 부여된 변경 데이터가 포함된 데이터베이스에서 사용하도록 설정된 모든 테이블에 대한 구성 정보를 반환합니다.  
   
 ```  

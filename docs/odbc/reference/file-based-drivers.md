@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915378"
 ---
 # <a name="file-based-drivers"></a>파일 기반 드라이버
 파일 기반 드라이버는 드라이버 사용에 대 한 독립 실행형 데이터베이스 엔진을 제공 하지 않는 dBASE와 같은 데이터 원본 사용 됩니다. 이러한 드라이버는 실제 데이터에 직접 액세스 및 SQL 문 처리할 하는 데이터베이스 엔진을 구현 해야 합니다. 파일 기반 드라이버에서 데이터베이스 엔진을 표준 사례로 최소 SQL 적합성 수준에서 정의 하는 ODBC SQL의 하위 집합을 구현 이 규칙 수준에서 SQL 문의 목록을 참조 하세요. [부록 c: SQL 문법을](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  

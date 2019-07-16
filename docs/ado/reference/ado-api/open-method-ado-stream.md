@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917833"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드(ADO 스트림)
 열립니다는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 이진 또는 텍스트 데이터의 스트림을 조작 하는 개체입니다.  
@@ -50,7 +49,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *암호*  
  (선택 사항) A **문자열** 코드는 필요한 경우에 액세스 하는 암호를 포함 하는 값을 **Stream** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 **레코드** 개체가 원본 매개 변수로 전달 됩니다 합니다 *UserID* 및 *암호* 때문에 매개 변수가 사용 되지 않습니다에 대 한 액세스는 **레코드** 개체를 이미 사용할 수 있습니다. 마찬가지로 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 **레코드** 개체에 전송 되는 **Stream** 개체입니다. 때 *원본* 지정 하지 않으면는 **Stream** 열려 있고 데이터가 포함 되지 않은 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 영 (0). 이 작성 된 데이터를 손실 하지 않으려면 **Stream** 때를 **Stream** 는 닫힌 저장 합니다 **Stream** 사용 하 여는 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 또는 [ SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) 메서드 또는 다른 메모리 위치에 저장 합니다.  
   
  *OpenOptions* 의 값 **adOpenStreamFromRecord** 내용의 하 게 식별 하는 *원본* 매개 변수는 이미 열려 있어야 **레코드**개체입니다. 기본 동작을 처리 하는 것 *원본* 파일과 같은 트리 구조에서 노드로 직접 가리키는 url입니다. 해당 노드와 연결 된 기본 스트림이 열려 있습니다.  

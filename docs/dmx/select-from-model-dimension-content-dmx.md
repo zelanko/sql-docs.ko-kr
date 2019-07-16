@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928365"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *식 목록*  
  관련 열 식별자의 쉼표로 구분된 목록이며 내용 스키마 행 집합에서 파생됩니다.  
   
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
  *조건 식*  
@@ -46,7 +45,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  알고리즘 공급자는 반환되는 내용과 이 내용의 구성 방법을 정의합니다. 예를 들어 공급자는 차원 내용에 설명된 노드 수를 제한할 수 있습니다.  
   
  다음 표에서는 차원 내용에 대해 쿼리할 수 있는 열 및 각 열이 데이터 마이닝 차원으로서 수행하는 함수를 나열합니다.  
@@ -69,7 +68,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>예  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 예에서는 `[TM Decision Tree]` 모델 내용에서 모델을 차원으로 사용하는 데 적합한 모든 열을 선택합니다.  
   
 ### <a name="code"></a>코드  
@@ -80,7 +79,7 @@ FROM [TM Decision Tree].Dimension_Content
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  

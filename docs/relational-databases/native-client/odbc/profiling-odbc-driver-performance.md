@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913156"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>응용 프로그램 프로필 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |TimerResolution|서버 클럭 시간의 최소 인식 값(밀리초)입니다. 일반적으로 0으로 보고되며, 보고된 수가 큰 경우에만 고려되어야 합니다. 서버 클럭의 최소 인식 값이 시간 기반 통계의 적정 간격보다 클 경우 해당 통계는 과장될 수 있습니다.|  
 |SQLidu|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
@@ -117,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>시간 통계  
   
-|SQLPERF 필드|Description|  
+|SQLPERF 필드|설명|  
 |-------------------|-----------------|  
 |msExecutionTime|SQL_PERF_START 이후 드라이버가 처리를 위해 소요한 누적 시간으로, 서버의 응답을 대기하는 데 보낸 시간도 포함됩니다.|  
 |msNetworkServerTime|드라이버가 서버의 응답을 대기하는 데 보낸 누적 시간입니다.|  

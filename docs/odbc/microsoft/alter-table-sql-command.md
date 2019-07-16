@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901374"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL 명령
 프로그래밍 방식으로 테이블의 구조를 수정합니다.  
@@ -166,7 +165,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  추가 외래 키 [ *eExpression5*] 태그 *TagName4*  
  테이블에 외래 (비기본) 인덱스를 추가합니다. *eExpression5* 외래 인덱스 키 식을 지정 하 고 *TagName4* 외래 인덱스 태그의 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
   
- REFERENCES *TableName2*[TAG *TagName5*]  
+ 참조 *TableName2*[태그 *TagName5*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그가 *TagName5* 부모 테이블에 대 한 기존 인덱스 태그에 따라 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 태그를 생략 *TagName5*, 부모 테이블의 기본 인덱스 태그를 사용 하 여 관계가 성립 합니다.  
   
  DROP 외래 키 태그 *TagName6*[저장]  
@@ -181,7 +180,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Visual FoxPro 테이블의 구조에 대 한 변경 내용을 허용 하는지 지정 합니다. 이러한 변경 테이블의 데이터의 무결성을 위반할 수 있습니다. Visual FoxPro 기본적으로 ALTER TABLE을 테이블의 데이터의 무결성을 위반 하는 변경 하지 못하도록 방지 합니다. 이 기본 동작을 재정의 하려면 NOVALIDATE 포함 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스에 추가 되지 않은 테이블의 구조를 수정 하려면 ALTER TABLE는 사용할 수 있습니다. 그러나 Visual FoxPro는 기본, 외래 키, 기본 키, 참조 또는 빈 테이블을 수정할 때 SET 절의 경우 오류가 발생 합니다.  
   
  ALTER TABLE 테이블 머리글을 새로 만들고 테이블 머리글에 레코드를 추가 하 여 테이블을 다시 빌드할 수 있습니다. 예를 들어, 필드의 형식 또는 너비를 변경 하면 다시 작성은 발생할 수 있습니다.  

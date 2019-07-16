@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908778"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>프로젝트 설정(GUI)(MySQLToSQL)
 GUI 프로젝트 설정 수에 나타나는 데이터를 구성 합니다 **데이터** 탭 및 평가 보고서를 사용 하 여 데이터 보고서를 포함 하는 경우.  

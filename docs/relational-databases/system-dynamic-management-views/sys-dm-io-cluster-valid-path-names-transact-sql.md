@@ -22,26 +22,25 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ea5453465fe27cfe4456f7da1fdb2690c6953c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2348efe62929bdfbe03b4c92b5d411f57c2b99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900353"
 ---
 # <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   클러스터된 공유 볼륨을 비롯한 모든 유효한 공유 디스크에서 SQL Server 장애 조치(failover) 클러스터 인스턴스에 대한 정보를 반환합니다. 인스턴스가 클러스터되지 않은 경우 빈 행 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar(512)**|데이터베이스 및 로그 파일의 루트 디렉터리로 사용할 수 있는 볼륨 탑재 지점 또는 드라이브 경로입니다. Null을 허용하지 않습니다.|  
 |**cluster_owner_node**|**Nvarchar(64)**|드라이브의 현재 소유자입니다. CSV(클러스터 공유 볼륨)의 경우 소유자는 메타데이터 서버를 호스팅하는 노드입니다. Null을 허용하지 않습니다.|  
 |**is_cluster_shared_volume**|**Bit**|이 경로가 위치한 드라이브가 클러스터 공유 볼륨이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)는 데이터 및 로그 파일 저장을 위해 FCI의 모든 노드 간에 공유 저장소를 사용해야 합니다. 이 뷰에 나열된 디스크는 인스턴스와 연결된 클러스터 리소스 그룹에 있는 디스크이며 데이터 또는 로그 파일 저장에 사용할 수 있는 유일한 디스크입니다.  
   
 > [!NOTE]  

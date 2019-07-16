@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1feb7d741a867f729df83442ba4d9f407a062710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917330"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>레코드 집합 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
@@ -58,13 +57,13 @@ ms.locfileid: "66711970"
   
  [MaxRecords 속성](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
- [PageCount Property](../../../ado/reference/ado-api/pagecount-property-ado.md)  
+ [PageCount 속성](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
  [PageSize 속성](../../../ado/reference/ado-api/pagesize-property-ado.md)  
   
  [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [RecordCount Property](../../../ado/reference/ado-api/recordcount-property-ado.md)  
+ [RecordCount 속성](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
  [Sort 속성](../../../ado/reference/ado-api/sort-property.md)  
   

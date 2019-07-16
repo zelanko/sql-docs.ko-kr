@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f84f89b1ace38350261d461993bf6f89bc155c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919574"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 및 Disconnect 이벤트(ADO)
 합니다 **ConnectComplete** 이벤트 연결이 시작 된 후 호출 됩니다. 합니다 **연결 끊기** 이벤트 연결이 종료 된 후 호출 됩니다.  

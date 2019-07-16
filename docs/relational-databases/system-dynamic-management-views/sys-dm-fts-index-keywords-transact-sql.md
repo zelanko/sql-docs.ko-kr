@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900945"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**keyword**|**nvarchar(4000)**|전체 텍스트 인덱스에 저장되는 키워드의 16진수 표현입니다.<br /><br /> 참고: OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |**display_term**|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식입니다. 이 형식은 16진수 형식에서 파생됩니다.<br /><br /> 참고: 합니다 **display_term** OxFF "END OF FILE."에 대 한 값|  
 |**column_id**|**int**|현재 키워드가 전체 텍스트 인덱싱된 열의 ID입니다.|  
 |**document_count**|**int**|현재 용어가 들어 있는 문서 또는 행 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환 된 정보 **sys.dm_fts_index_keywords** 무엇 보다도 다음을 찾는 데 유용 합니다.  
   
 -   키워드가 전체 텍스트 인덱스에 포함되어 있는지 여부  
@@ -82,7 +81,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-high-level-full-text-index-content"></a>1\. 상위 수준의 전체 텍스트 인덱스 내용 표시  
+### <a name="a-displaying-high-level-full-text-index-content"></a>A. 상위 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 테이블에 상위 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
   
 ```  

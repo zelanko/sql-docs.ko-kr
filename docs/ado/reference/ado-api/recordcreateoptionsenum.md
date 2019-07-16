@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d57f1bc241e5e27618a9598895ea7be089ce20dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917339"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 지정 기존 여부를 **레코드** 열거나 새 해야 **레코드** 에 대해 생성 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. AND 연산자를 사용 하 여 값을 결합할 수 있습니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|만듭니다 **레코드** 로 지정 된 노드에서 *원본* 매개 변수를 기존를 여는 대신 **레코드**합니다. 소스를 가리키는 경우 기존 노드를 다음 런타임 오류가 발생 하는 경우가 아니면 **adCreateCollection** 와 결합 됩니다 **adOpenIfExists** 하거나 **adCreateOverwrite**합니다.|  
 |**adCreateNonCollection**|0|새로 만듭니다 **레코드** 형식의 [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)합니다.|  

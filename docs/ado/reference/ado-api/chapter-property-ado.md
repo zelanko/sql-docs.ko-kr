@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37d1fe31524d245da2a6bac9b90ab2e680fab450
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920102"
 ---
 # <a name="chapter-property-ado"></a>Chapter 속성(ADO)
 OLE DB를 가져오거나 설정 합니다. **장** 간에에서 개체를 [ADORecordsetConstruction 인터페이스](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Chapter** 설정 하는 **장** 개체를 행의 하위 집합 ADO로 바뀝니다 [레코드 집합 개체](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이 설정의 현재 장 합니다 **행 집합**개체입니다. 이 속성은 읽기/쓰기가 가능합니다.  

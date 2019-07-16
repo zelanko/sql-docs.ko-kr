@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_external_work (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,27 +11,26 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899496"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 외부 작업에 대 한 모든 데이터 이동 서비스 (DMS) 단계에 대 한 정보를 포함 하는 시스템 뷰.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 DMS 작업자를 사용 하는 쿼리입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|request_id 동일 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|이 DMS 작업자를 호출 하는 쿼리 단계입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|step_index 동일 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
 |dms_step_index|**int**|DMS 계획의 현재 단계입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|dms___step_index 동일 [sys.dm_pdw_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md)합니다.|  
 |pdw_node_id|**int**|DMS 작업자를 실행 하는 노드입니다.|에 대 한 node_id 동일 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
-|유형|**nvarchar(60)**|이 노드가 실행 되는 외부 작업의 형식입니다.<br /><br /> 파일 분할은 여러 작은 됩니다도 나눠진 외부 Hadoop 파일 작업 합니다.|' 파일 분할 '|  
+|type|**nvarchar(60)**|이 노드가 실행 되는 외부 작업의 형식입니다.<br /><br /> 파일 분할은 여러 작은 됩니다도 나눠진 외부 Hadoop 파일 작업 합니다.|' 파일 분할 '|  
 |work_id|**int**|파일 분할 id입니다.|보다 크거나 0입니다.<br /><br /> 계산 노드 당 고유 합니다.|  
 |input_name|**nvarchar(60)**|읽는 중인 입력에 대 한 이름을 문자열입니다.|Hadoop 파일에 대 한 Hadoop 파일 이름입니다.|  
 |read_location|**bigint**|읽기 위치 오프셋입니다.||  

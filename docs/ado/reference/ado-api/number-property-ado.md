@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ef1665bf96688fba5fc7d157b73d2df2fcd2c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce027747c843e02998f4845db7075e70cf8733b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917991"
 ---
 # <a name="number-property-ado"></a>Number 속성(ADO)
 고유 하 게 식별 하는 숫자를 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66705602"
 ## <a name="return-value"></a>반환 값  
  반환 된 **긴** 값 중 하나에 해당 하는 [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) 상수.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **수** 발생 한 오류를 확인 하는 속성입니다. 속성의 값에는 오류 조건에 해당 하는 고유 번호입니다.  
   
  합니다 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션 16 진수 형식 (예를 들어 0x80004005) 또는 long 값 (예를 들어 2147467259) HRESULT를 반환 합니다. 이러한 Hresult는 OLE DB 또는 자체에 OLE와 같은 기본 구성 요소에 의해 발생할 수 있습니다. 이러한 번호에 대 한 자세한 내용은 참조 하세요. [오류 (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) 에 [OLE DB Programmer's Reference](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*합니다.*  

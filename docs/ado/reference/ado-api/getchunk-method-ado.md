@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5dc09043d780c2a743059773eed56e16a799bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918561"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 메서드(ADO)
 큰 텍스트 또는 이진 데이터의 내용 중 일부 또는 모두 반환 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -41,7 +40,7 @@ variable = field.GetChunk(Size)
  *크기*  
  A **긴** 검색 하려는 문자 또는 바이트의 수와 같은 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 합니다 **GetChunk** 메서드를 **필드** 긴 이진 또는 문자 데이터의 일부 또는 전체를 검색할 개체입니다. 시스템 메모리가 제한 된 상황에서 사용할 수 있습니다 합니다 **GetChunk** 부분을 대신 전체적으로 긴 값을 조작 하는 방법입니다.  
   
  데이터는 한 **GetChunk** 호출 반환에 할당 된 *변수*합니다. 하는 경우 *크기* 나머지 데이터를 보다는 **GetChunk** 메서드 패딩 나머지 데이터만 반환 *변수* 빈 공간을 사용 하 여 합니다. 필드가 비어 있으면 합니다 **GetChunk** 메서드는 null 값을 반환 합니다.  

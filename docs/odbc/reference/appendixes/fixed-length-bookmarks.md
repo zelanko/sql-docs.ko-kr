@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21af6ef1be21e000d25582151650f274fe3561a4
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913581"
 ---
 # <a name="fixed-length-bookmarks"></a>고정 길이 책갈피
 경우 ODBC *3.x* 드라이버는 ODBC를 사용 하 여 작동 해야 *2.x* 드라이버를 사용 하 여 고정 길이 책갈피 다음을 지원 해야 하는 응용 프로그램:  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eb89353c29ae58194f89b48502f0a9cc5522b58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919161"
 ---
 # <a name="defaultdatabase-property"></a>DefaultDatabase 속성
 에 대 한 기본 데이터베이스 지정을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66695446"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 공급자에서 사용할 수 있는 데이터베이스의 이름으로 계산 되는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **DefaultDatabase** 속성을 설정 하거나 특정 기본 데이터베이스의 이름을 반환할 **연결** 개체입니다.  
   
  기본 데이터베이스의 경우 SQL 문자열 개체는 데이터베이스에 액세스 하는 비 정규화 된 구문을 사용할 수 있습니다. 개체에 지정 된 것과 다른 데이터베이스에 액세스 하는 **DefaultDatabase** 속성을 원하는 데이터베이스 이름으로 개체 이름을 정규화 해야 합니다. 공급자 연결 시 기본 데이터베이스 정보를 작성 합니다 **DefaultDatabase** 속성입니다. 일부 공급자는 연결당 하나의 데이터베이스만 허용, 변경할 수 없습니다 경우에 **DefaultDatabase** 속성입니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 982c379f24731f80f30249b98ed2a571111de1f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920722"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>추가 및 CreateParameter 메서드 예제 (JScript)
 이 예제에서는 합니다 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수를 사용 하 여 저장된 프로시저를 실행 하는 방법입니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **붙여 넣고 AppendJS.asp**합니다.  

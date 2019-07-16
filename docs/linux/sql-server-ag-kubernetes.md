@@ -5,18 +5,17 @@ description: 이 문서에서는 SQL Server 컨테이너에서 가용성 그룹�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e778af484881ae26669d2bac952b568532300c93
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910476"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 always On 가용성 그룹
 
@@ -67,7 +66,7 @@ Kubernetes에서 가용성 그룹을 배포 합니다.
 
 StatfulSet 포함 되어 있습니다.
 
-* mssql-server container
+* mssql server 컨테이너
 
 * mssql-ha-supervisor container
 

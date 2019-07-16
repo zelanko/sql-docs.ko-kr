@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901265"
 ---
 # <a name="executing-batches"></a>일괄 처리 실행
 응용 프로그램의 문 일괄 처리를 실행 하기 전에 지원 되는지 여부를 확인 먼저 해야 합니다. 이렇게 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, 및 SQL_PARAM_ARRAY_SELECTS 옵션을 사용 하 여 합니다. 첫 번째 옵션은 행 개수 생성 하 고 결과 집합 생성 문은 명시적 일괄 처리는 후자의 두 가지 옵션에 설정 하는 행 개수 및 결과의 가용성에 대 한 정보를 반환 하는 동안 프로시저에 지원 매개 변수화 여부를 반환 합니다. 실행 합니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ccaa2b12229077d21cd50ce73d55ff287507f0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920435"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF, EOF 및 책갈피 속성 예제(VB)
 이 예제에서는 합니다 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 사용자의 첫 번째 또는 마지막 레코드를 지 나 이동 하려고 하는 경우 메시지를 표시 하는 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 하 여는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 사용자가 레코드 플래그 속성을 **레코드 집합** 하 고 나중에 반환 합니다.  

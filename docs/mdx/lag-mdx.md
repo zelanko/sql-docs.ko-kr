@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3c5479aa3ce855b554f34f72c5c86aa86eb04b9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905773"
 ---
 # <a name="lag-mdx"></a>Lag(MDX)
 
@@ -35,7 +34,7 @@ Member_Expression.Lag(Index)
  *Index*  
  지정한 멤버와의 간격을 나타내는 멤버 위치 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수준 내의 멤버 위치는 특성 계층의 일반적인 순서에 따라 결정됩니다. 위치를 나타내는 번호는 0부터 시작합니다.  
   
  지정한 간격이 0 이면 합니다 **지연** 함수는 지정한 멤버를 반환 합니다.  

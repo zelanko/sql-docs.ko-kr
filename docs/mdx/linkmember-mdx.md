@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 71235953f592572bd7ac0dcb2493d97dd509f8b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905598"
 ---
 # <a name="linkmember-mdx"></a>LinkMember(MDX)
 
@@ -35,7 +34,7 @@ LinkMember(Member_Expression, Hierarchy_Expression)
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **LinkMember** 함수 관련된 계층에 지정된 된 멤버의 각 수준에서 키 값과 일치 하는 지정된 된 계층에서 멤버를 반환 합니다. 각 수준의 특성은 키 카디널리티와 데이터 형식이 동일해야 합니다. 비자연 계층에서 특성의 키 값에 대해 일치하는 항목이 둘 이상 있을 경우 오류가 발생하거나 결과를 알 수 없게 됩니다.  
   
 ## <a name="examples"></a>예  

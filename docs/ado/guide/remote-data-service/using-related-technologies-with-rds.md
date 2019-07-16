@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e774d1a5534d3c35c51c4c3ac248e894ecf8bfd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921890"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS에서 관련 기술 사용
 이 섹션에서는 다음 항목을 다룹니다.  

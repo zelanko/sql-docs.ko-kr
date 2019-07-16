@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900915"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser(Transact-SQL)
 
@@ -66,7 +65,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |키워드(keyword)|**varbinary(128)**|단어 분리기에서 반환된 특정 키워드의 16진수 표현입니다. 이러한 표현은 키워드를 전체 텍스트 인덱스에 저장하는 데 사용됩니다. 이 값은 사용자가 읽을 수 없습니다. 하지만 같은 전체 텍스트 인덱스의 콘텐츠를 반환 하는 다른 동적 관리 뷰에서 반환 되는 출력에 지정된 된 키워드와 관련 된 유용 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) 고 [ sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)합니다.<br /><br /> **참고:** OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |group_id|**int**|지정된 용어가 생성된 논리 그룹을 차별화하는 데 유용한 정수 값을 포함합니다. 예를 들어 '`Server AND DB OR FORMSOF(THESAURUS, DB)"`'는 다음 group_id 값을 영어로 생성합니다.<br /><br /> 1: 서버<br />2: DB<br />3: DB|  
@@ -77,7 +76,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |expansion_type|**int**|지정된 용어의 확장 특성에 대한 정보를 포함합니다. 예를 들면 다음과 같습니다.<br /><br /> 0 = 단일 단어<br /><br /> 2 = 활용 형태상의 확장<br /><br /> 4 = 동의어 사전 확장/대체<br /><br /> 예를 들어 동의어 사전이 다음과 같이 run을 `jog`의 확장으로 정의하는 경우를 고려해 보십시오.<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> `FORMSOF (FREETEXT, run)` 용어는 다음 출력을 생성합니다.<br /><br /> `run`, expansion_type=0<br /><br /> `runs`, expansion_type=2<br /><br /> `running`, expansion_type=2<br /><br /> `ran`, expansion_type=2<br /><br /> `jog`, expansion_type=4|  
 |source_term|**nvarchar(4000)**|지정된 용어가 생성되거나 구문 분석되는 용어 또는 구입니다. 예를 들어 '"`word breakers" AND stemmers'`에 대한 쿼리는 다음 source_term 값을 영어로 생성합니다.<br /><br /> `word breakers` display_term에 대 한`word`<br />`word breakers` display_term에 대 한`breakers`<br />`stemmers` display_term에 대 한`stemmers`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sys.dm_fts_parser** 같은 구문과 전체 텍스트 조건자의 기능을 지원 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), 및 함수와 같은 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)하 고 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)합니다.  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>유니코드를 사용하여 특수 문자 구문 분석  
@@ -129,7 +128,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>1\. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
+### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>A. 키워드 또는 구에 대해 지정된 단어 분리기의 출력 표시  
  다음 예에서는 아래의 쿼리 문자열에 대해 LCID가 1033인 영어 단어 분리기를 사용하여 출력을 반환합니다. 여기서 중지 목록은 사용되지 않습니다.  
   
  `The Microsoft business analysis`  

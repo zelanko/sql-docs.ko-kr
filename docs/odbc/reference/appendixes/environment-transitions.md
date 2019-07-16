@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910430"
 ---
 # <a name="environment-transitions"></a>환경 전환
 ODBC 환경에는 다음 세 가지 상태에 있습니다.  
   
-|State|Description|  
+|State|설명|  
 |-----------|-----------------|  
 |E0|할당 되지 않은 환경|  
 |E1|연결 할당 되지 않은 할당 된 환경|  
@@ -35,10 +34,10 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |E1[1]|--[4]|--[4]|  
-|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
+|(IH)[2]|E2[5]<br />(HY010) [6]|--[4]|  
 |(IH)[3]|(IH)|--[4]|  
   
  [1]이이 행 표시 전환 때 *HandleType* SQL_HANDLE_ENV 되었습니다.  
@@ -55,7 +54,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources 및 SQLDrivers  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
   
@@ -65,7 +64,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
 |(IH)[2]|(IH)|--|  
@@ -80,7 +79,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)[1]|E0|(HY010)|  
 |(IH)[2]|(IH)|--[4]<br />E1[5]|  
@@ -98,7 +97,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagRec 및 SQLGetDiagField  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)[1]|--|--|  
 |(IH)[2]|(IH)|--|  
@@ -109,7 +108,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />(HY010)[2]|--|  
   
@@ -119,7 +118,7 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|--[1]<br />(HY010)[2]|(HY011)|  
   
@@ -129,6 +128,6 @@ ODBC 환경에는 다음 세 가지 상태에 있습니다.
   
 ## <a name="all-other-odbc-functions"></a>다른 모든 ODBC 함수  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|(IH)|--|

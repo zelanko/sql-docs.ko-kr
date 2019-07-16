@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 42c703e703e8c557b4de8466a0cd1b686217fd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905527"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2(MDX)
 
@@ -38,7 +37,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  X축 값을 나타내는 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  최소 제곱법을 사용하는 선형 회귀는 일련의 점에 대해 가장 적합한 선인 회귀선의 수식을 계산합니다. 회귀선은 다음 수식을 여기서는 기울기 하 고 b는 절편입니다.  
   
  y = ax+b  

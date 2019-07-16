@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922794"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 합니다 **sql** 섹션 클라이언트 명령 문자열을 대체 하는 새 SQL 문자열을 포함할 수 있습니다. 섹션에서 SQL 문자열이 없을 경우 섹션 무시 됩니다.  

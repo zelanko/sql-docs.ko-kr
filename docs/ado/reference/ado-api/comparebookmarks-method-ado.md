@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0c0e9e2debfc33d8bb51d4797215155247f3a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919593"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 메서드(ADO)
 두 개의 책갈피를 비교 하 여 상대 값 표시를 반환 합니다.  
@@ -45,7 +44,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  두 번째 행의 책갈피입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  책갈피는 동일 하 게 적용 해야 합니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 **레코드 집합** 개체 및 해당 [복제](../../../ado/reference/ado-api/clone-method-ado.md)합니다. 서로 다른 책갈피를 안정적으로 비교할 수 없습니다 **레코드 집합** 동일한 원본 또는 명령에서 만들어진 경우에 개체입니다. 책갈피를 비교할 수 나는 **레코드 집합** 개체의 기본 공급자 비교를 지원 하지 않습니다.  
   
  책갈피 행을 고유 하 게 식별 하는 **레코드 집합** 개체입니다. 사용 된 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 해당 책갈피를 가져오려면 현재 행의 속성입니다.  

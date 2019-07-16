@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 370ea53d652f88f1870d81440e6a676cbc29da26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922964"
 ---
 # <a name="address-book-navigation-buttons"></a>주소록 탐색 단추
 주소록 응용 프로그램 웹 페이지의 맨 아래에 있는 탐색 단추를 표시합니다. 데이터의 첫 번째 또는 마지막 행 또는 현재 선택 영역에 인접 한 행 중 하나를 선택 하 여 HTML 눈금 표시의 데이터를 탐색할 수 있는 탐색 단추를 사용할 수 있습니다.  

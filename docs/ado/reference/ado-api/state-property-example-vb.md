@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8b52a60f9d2a026d0bb8d934a6cb1af6af23824a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9c497d8e417ccfcc74df2b21043446c2ce9860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916850"
 ---
 # <a name="state-property-example-vb"></a>State 속성 예제(VB)
 이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/state-property-ado.md) 비동기 연결을 여는 비동기 명령을 실행 하는 동안 메시지를 표시 하는 속성입니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f04b786aaef8a994cff1051a289bbdad3b3fd5ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909000"
 ---
 # <a name="managing-passwords-mysqltosql"></a>암호 관리(MySQLToSQL)
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -48,7 +47,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
             서버 정의 id 및 해당 하는 암호화 된 암호는 로컬 컴퓨터의 파일에 저장 됩니다.  
             
-            예 1:
+            예제 1:
             
                 Specify password
                 
@@ -58,7 +57,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            예 2:
+            예제 2:
             
                 C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for MySQL\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 

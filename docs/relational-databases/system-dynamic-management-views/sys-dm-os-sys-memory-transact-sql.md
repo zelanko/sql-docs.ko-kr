@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899709"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62636292"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_sys_memory**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**total_physical_memory_kb**|**bigint**|운영 체제에서 사용할 수 있는 실제 메모리의 총 크기(KB)입니다.|  
 |**available_physical_memory_kb**|**bigint**|사용할 수 있는 실제 메모리의 크기(KB)입니다.|  

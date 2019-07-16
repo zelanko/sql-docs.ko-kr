@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26edefab1a81aebaa9bf63e69e24067428266de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906047"
 ---
 # <a name="extract-mdx"></a>Extract(MDX)
 
@@ -38,7 +37,7 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **추출** 함수 추출 된 계층 요소의 튜플로 구성 된 집합을 반환 합니다. 지정된 집합에 있는 각 튜플에 대해 지정된 계층의 멤버가 결과 집합의 새 튜플로 추출됩니다. 항상 중복된 튜플을 제거합니다.  
   
  합니다 **추출** 의 반대 작업을 수행 하는 함수는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  

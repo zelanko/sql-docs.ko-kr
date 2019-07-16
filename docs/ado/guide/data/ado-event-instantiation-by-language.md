@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a4faf70fa96eaf31ed518cbd9b679dc7ea66390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926173"
 ---
 # <a name="ado-event-instantiation-by-language"></a>언어별 ADO 이벤트 인스턴스
 각 프로그래밍 언어는 다르게 ADO 이벤트 인스턴스를 만듭니다. 다음 예제에서는 모든 작성 하는 **ConnectComplete** 이벤트 처리기입니다.  

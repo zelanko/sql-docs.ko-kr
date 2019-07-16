@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921087"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소에는 동적 속성을 추가할 수는 **속성** 컬렉션을 아직 열지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 하 고 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 개체를 열 때 지정된 된 공급자 추가 속성을 삽입할 수도 수 있습니다. 에 나열 된 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션입니다. 자세히가 특정 공급자에 나열 된 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션입니다.  
@@ -151,7 +150,7 @@ ms.locfileid: "66696740"
 |찾기 작업|DBPROP_FINDCOMPAREOPS|  
 |숨겨진된 열 (개수)|DBPROP_HIDDENCOLUMNS|  
 |행 고정|DBPROP_CANHOLDROWS|  
-|Immobile Rows|DBPROP_IMMOBILEROWS|  
+|부동 행|DBPROP_IMMOBILEROWS|  
 |초기 반입 크기|DBPROP_ASYNCHPREFETCHSIZE|  
 |리터럴 책갈피|DBPROP_LITERALBOOKMARKS|  
 |리터럴 행 Id|DBPROP_LITERALIDENTITY|  

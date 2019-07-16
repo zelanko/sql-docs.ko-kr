@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7b99a0848101ca0fad4844c51e44f1ccc628cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918192"
 ---
 # <a name="move-method-ado"></a>Move 메서드(ADO)
 현재 레코드의 위치를 이동 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -41,7 +40,7 @@ recordset.Move NumRecords, Start
  *시작*  
  (선택 사항) A **문자열** 값 또는 **Variant** 책갈피로 계산 되는 합니다. 사용할 수도 있습니다는 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **이동** 메서드는 모든 지원 **레코드 집합** 개체입니다.  
   
  경우는 *NumRecords* 인수가 0 보다 큰 레코드의 현재 위치를 앞으로 이동 (의 끝에 다가가 합니다 **Recordset**). 하는 경우 *NumRecords* 가 현재 레코드 위치 뒤로 이동 0 보다 작은 (의 시작 부분을 향해 합니다 **레코드 집합**).  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4393f1cc0baab6fd10899b18cac763363d9af89
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7a9a493d7f8dc5b4305638eb1ac5ffdcb6d0858a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905202"
 ---
 # <a name="spmschangelogreaderagentproperties-transact-sql"></a>sp_MSchange_logreader_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +58,13 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_password = ] 'publisher_password'` 게시자에 연결할 때 암호가 사용 됩니다. *publisher_password* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 없습니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @publisher_type = ] 'publisher_type'` 게시자 인스턴스에서 실행 중이지 않을 때 게시자 유형을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *publisher_type* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
@@ -73,7 +72,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  Oracle 게시자와 Oracle Gateway 게시자의 차이점에 대 한 자세한 내용은 참조 하세요. [Oracle 게시 개요](../../relational-databases/replication/non-sql/oracle-publishing-overview.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_MSchange_logreader_agent_properties** 트랜잭션 복제에 사용 됩니다.  
   
  실행 하는 경우에 모든 매개 변수를 지정 해야 합니다 **sp_MSchange_logreader_agent_properties**합니다. 실행할 [sp_helplogreader_agent &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) 로그 판독기 에이전트 작업의 현재 속성을 반환 합니다.  

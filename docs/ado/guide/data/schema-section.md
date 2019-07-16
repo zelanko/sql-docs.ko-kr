@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924298"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션은 필수입니다. 이전 예제에서 알 수 있듯이, ADO 데이터 값의 의미 체계를 업데이트 하기 위한 최대한 유지 하기 위해 각 열에 대 한 자세한 메타 데이터를 작성 합니다. 그러나 XML을 로드 하려면 ADO 하기만 열 및 속해 있는 행 집합의 이름입니다. 최소 스키마의 예는 다음과 같습니다.  

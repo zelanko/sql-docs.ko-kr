@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899589"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "51663142"
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|Windows, 릴리스 번호를 반환합니다. 값 및 설명의 목록을 참조 하세요 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)합니다. NULL이 될 수 없습니다.|  
-|**windows_service_pack_level**|**nvarchar(256)**| Windows, 서비스 팩 번호를 반환합니다. NULL이 될 수 없습니다. |  
+|**windows_release**|**nvarchar(256)**|Windows, 릴리스 번호를 반환합니다. 값 및 설명의 목록을 참조 하세요 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)합니다. NULL일 수 없습니다.|  
+|**windows_service_pack_level**|**nvarchar(256)**| Windows, 서비스 팩 번호를 반환합니다. NULL일 수 없습니다. |  
 |**windows_sku**|**int**|Windows, Windows 재고 유지 단위 (SKU) ID를 반환합니다. SKU Id 및 설명의 목록을 참조 하세요 [GetProductInfo 함수](https://msdn.microsoft.com/library/ms724358.aspx)합니다. 이 null을 허용 합니다. |  
-|**os_language_version**|**int**| Windows를 운영 체제의 Windows 로캘 식별자 (LCID)를 반환합니다. LCID 값 및 설명의 목록을 참조 하세요 [Microsoft에서 할당 한 로캘 Id](https://go.microsoft.com/fwlink/?LinkId=208080)합니다. NULL이 될 수 없습니다.|  
+|**os_language_version**|**int**| Windows를 운영 체제의 Windows 로캘 식별자 (LCID)를 반환합니다. LCID 값 및 설명의 목록을 참조 하세요 [Microsoft에서 할당 한 로캘 Id](https://go.microsoft.com/fwlink/?LinkId=208080)합니다. NULL일 수 없습니다.|  
   
   
 ## <a name="permissions"></a>사용 권한  

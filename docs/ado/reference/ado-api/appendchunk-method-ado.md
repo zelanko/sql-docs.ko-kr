@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e4b7b7a97af9059e944d2d2d9e7d19afedf4234d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920562"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드(ADO)
 큰 텍스트 또는 이진 데이터에 데이터 추가 [필드](../../../ado/reference/ado-api/field-object.md), 또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  
@@ -41,7 +40,7 @@ object.AppendChunk Data
  *데이터*  
  A **Variant** 개체에 추가할 데이터를 포함 하는 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **AppendChunk** 메서드를 **필드** 또는 **매개 변수** 긴 이진 또는 문자 데이터로 채울 개체입니다. 시스템 메모리가 제한 된 상황에서 사용할 수 있습니다 합니다 **AppendChunk** 부분에서 아니라 온전히에서 long 값을 조작 하는 방법입니다.  
   
 ## <a name="field"></a>필드  

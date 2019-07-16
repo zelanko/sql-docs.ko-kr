@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 51724ea4c0adf1a98d7972898d15e20e626b7c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee63fa1a3521af7d8fb0679df3b0521486e7b8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906531"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services) 만들기 및 실행
 
@@ -96,7 +95,7 @@ ms.locfileid: "65489525"
 ## <a name="sync-relationship-information"></a>동기화 관계 정보  
  각 만들어진 동기화 관계에 대해 열이 열 개인 행 하나가 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |상태|동기화 관계 상태입니다.<br /><br /> **저장** 을 클릭하거나 동기화 관계를 실행하는 경우 동기화 관계가 업데이트되고 있음을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 동기화 관계를 생성, 편집 또는 실행할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |원본 모델|원본 모델 이름입니다.|  

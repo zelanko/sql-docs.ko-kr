@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71f0da7bbd7ef1a37a1f48539c7230bff0ceda15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909909"
 ---
 # <a name="attribute-conformance"></a>특성 적합성
 다음 표에서이 방법이 잘 정의 된 각 ODBC 환경 특성의 규칙 수준은 보여 줍니다.  
   
-|기능|적합성 수준|  
+|함수|적합성 수준|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -37,7 +36,7 @@ ms.locfileid: "62672526"
   
  다음 표에서 각 ODBC 연결 특성에이 잘 정의 된 규칙 수준을 나타냅니다.  
   
-|기능|적합성 수준|  
+|함수|적합성 수준|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Core|  
 |SQL_ATTR_ASYNC_ENABLE|수준 1/수준 2 [1]|  
@@ -62,7 +61,7 @@ ms.locfileid: "62672526"
   
  다음 표에서이 방법이 잘 정의 된 각 ODBC 문 특성의 규칙 수준은 보여 줍니다.  
   
-|기능|적합성 수준|  
+|함수|적합성 수준|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Core|  
 |SQL_ATTR_APP_ROW_DESC|Core|  

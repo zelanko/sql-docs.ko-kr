@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb835a84d83730e291afcfdf83910f9b520daea6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920345"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark 속성(ADO)
 현재 레코드를 고유 하 게 식별 하는 책갈피를 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 현재 레코드를 설정 하거나를 **레코드 집합** 유효한 책갈피에서 식별 되는 레코드 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66696298"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **Variant** 유효한 책갈피로 계산 되는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **책갈피** 속성을 현재 레코드의 위치를 저장 하 고 언제 든 지 해당 레코드를 반환 합니다. 책갈피에만 사용할 수 있습니다 **레코드 집합** 책갈피 기능을 지 원하는 개체입니다.  
   
  여는 경우를 **레코드 집합** 개체 이면 각 레코드의 고유 책갈피입니다. 현재 레코드에 대 한 책갈피를 저장 하려면 값을 할당 합니다 **책갈피** 변수에 속성입니다. 언제 든 지 다른 레코드로 이동 후에 해당 레코드를 신속 하 게 반환 하려면 설정 합니다 **Recordset** 개체의 **책갈피** 속성을 해당 변수의 값입니다.  

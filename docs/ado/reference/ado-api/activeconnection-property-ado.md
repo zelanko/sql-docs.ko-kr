@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f423eb2d06ccdc925402d0db5d8a459f7ffdd5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921518"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection 속성(ADO)
 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 지정 된 개체 [명령](../../../ado/reference/ado-api/command-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 현재 속한.  
@@ -31,7 +30,7 @@ ms.locfileid: "66698924"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **문자열** 연결이 닫혀 있는 경우 또는 연결에 대 한 정의 포함 하는 값 **Variant** 현재 포함 된 **연결** 경우 개체는 연결이 열려 있습니다. 기본값은 null 개체 참조입니다. 참조 된 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **ActiveConnection** 속성을는 **연결** 개체는 지정 된 **명령** 개체는 실행 또는 지정 된  **레코드 집합** 열립니다.  
   
 ## <a name="command"></a>Command  
@@ -60,7 +59,7 @@ ms.locfileid: "66698924"
 > [!NOTE]
 >  **원격 데이터 서비스 사용** 클라이언트 쪽에서 사용 되 면 **레코드 집합** 개체를 연결 문자열 또는 (Microsoft Visual Basic 또는 Visual Basic Scripting Edition)에이 속성을 설정할 수 있습니다 *Nothing* .  
   
-## <a name="record"></a>레코드  
+## <a name="record"></a>녹음  
  이 속성은 읽기/쓰기 경우 합니다 **레코드** 개체가 닫혀 있고 연결 문자열 또는 개방적이 고에 대 한 참조를 포함할 수 있습니다 **연결** 개체입니다. 이 속성이 읽기 전용인 경우 합니다 **레코드** 개체를 열면 및 개방적이 고에 대 한 참조를 포함 **연결** 개체입니다.  
   
  A **연결** 개체는 암시적으로 생성 하면 합니다 **레코드** URL에서 개체를 열입니다. 엽니다는 **레코드** 기존의 엽니다 **연결** 할당 하 여 개체를 **연결** 또는이 속성에 개체를 사용 하 여는 **연결** 매개 변수로 개체를 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드를 호출 합니다. 경우는 **레코드** 기존에서 열리는 **레코드** 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에 자동으로 연관 됩니다 **레코드** 또는  **레코드 집합** 개체의 **연결** 개체입니다.  

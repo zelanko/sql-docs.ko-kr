@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909019"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 및 SQL Server 문자 집합 매핑(MySQLToSQL)
 MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지정할 수 있습니다.  
@@ -101,14 +100,14 @@ MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지�
     |gbk|GBK 중국어 간체|NCHAR/NVARCHAR (기본값)|  
     |latin5|ISO 8859-9 터키어|CHAR/VARCHAR (기본값)|  
     |armscii8|ARMSCII 8 아르메니아어|CHAR/VARCHAR (기본값)|  
-    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (기본값)|  
-    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (기본값)|  
+    |utf8|Utf-8 유니코드|NCHAR/NVARCHAR (기본값)|  
+    |ucs2|Ucs-2 유니코드|NCHAR/NVARCHAR (기본값)|  
     |cp866|DOS 러시아어|CHAR/VARCHAR (기본값)|  
     |keybcs2|DOS Kamenicky 체코어-Slovak|CHAR/VARCHAR (기본값)|  
     |macce|Mac 중앙 유럽어|CHAR/VARCHAR (기본값)|  
     |macroman|Mac 서 부 유럽|CHAR/VARCHAR (기본값)|  
     |cp852|DOS 중앙 유럽|CHAR/VARCHAR (기본값)|  
-    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (기본값)|  
+    |latin7|ISO 8859-13 발트어|CHAR/VARCHAR (기본값)|  
     |cp 1251|Windows Cyrillic|CHAR/VARCHAR (기본값)|  
     |cp 1256|Windows 아랍어|CHAR/VARCHAR (기본값)|  
     |cp 1257|Windows Baltic|CHAR/VARCHAR (기본값)|  

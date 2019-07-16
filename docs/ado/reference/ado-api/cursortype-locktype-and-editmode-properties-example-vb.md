@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 915be581cf6f75d4909b586d368cb12749358e2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4556a243206d373a110aaab6a56bd43bf487abff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919274"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType, LockType, EditMode 속성 예제 (VB)
 이 예제에서는 설정 합니다 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 열기 전에 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 값도 표시 합니다 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 다양 한 조건 속성입니다. EditModeOutput 함수는이 절차를 실행 하려면 필요 합니다.  

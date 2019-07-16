@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900416"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "58511390"
   
 -   여러 SQL Server 인스턴스가 동일한 WSFC 노드에 호스팅되는 경우 리소스 DLL이 이 동적 관리 뷰를 사용하여 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확인합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|WSFC에서 리소스로 가용성 그룹의 고유 ID입니다.|  
 |**instance_name**|**nvarchar(256)**|이름-*server*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스.|  

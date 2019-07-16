@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 17f279af526a9e1f5b2c8deff4b4092e7949c5ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42888190dcd7b5e41987e6e8ec7194242549aa9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918027"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError 속성(ADO)
 에 대 한 공급자 관련 오류 코드를 나타냅니다.는 주어진 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66707270"
 ## <a name="return-value"></a>반환 값  
  반환 된 **긴** 오류 코드를 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **NativeError** 특정 데이터베이스 관련 오류 정보를 검색할 속성 **오류** 개체입니다. 예를 들어, Microsoft SQL Server 데이터베이스를 사용 하 여 OLE DB에 대 한 Microsoft ODBC 공급자를 사용 하는 경우 SQL Server에서 발생 하는 원시 오류 코드 통과 ODBC 및 ODBC 공급자는 ADO **NativeError** 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

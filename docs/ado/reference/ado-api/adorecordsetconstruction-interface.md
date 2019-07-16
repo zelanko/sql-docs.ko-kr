@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f08d007395c85ef6b423c7db6c1aed5b39cb27ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920791"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 합니다 **ADORecordsetConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드 집합** OLE DB 개체 **행 집합** 개체 c에서 /C++ 응용 프로그램입니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66718553"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OLE DB를 제공 **행 집합** 개체 (`pRowset`), ADO 생성 **레코드 집합** 개체 (`adoRs`) 다음 세 가지 기본 작업에 금액:  
   
 1.  ADO를 만듭니다 **레코드 집합** 개체:  

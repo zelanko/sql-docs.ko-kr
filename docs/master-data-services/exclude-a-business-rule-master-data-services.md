@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6f5cfa2b6bb4566f42dfe7f5049cb9d55282f8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 333e147ebf74b8062852f838db4d1797ef6e457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915959"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>비즈니스 규칙 제외(Master Data Services)
 

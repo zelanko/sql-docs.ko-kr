@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31f90836b26d9551cc3e5a1200208cc51e3ef30a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d58525ec4bcedc4249466be93628a7c1baa21bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910142"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **sysdatatypemappings** 보기가 사용 되는 SQL Server 데이터 형식 및 SQL Server 이외 데이터베이스 관리 시스템 (DBMS)의 데이터 형식 간의 매핑을 보여 줍니다. 이 보기에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|데이터 형식 매핑의 ID입니다.|  
 |**source_dbms**|**sysname**|데이터 형식이 매핑된 DBMS의 이름을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **MSSQLSERVER** = 원본이 SQL Server 데이터베이스입니다.<br /><br /> **ORACLE** = 원본이 Oracle 데이터베이스입니다.|  

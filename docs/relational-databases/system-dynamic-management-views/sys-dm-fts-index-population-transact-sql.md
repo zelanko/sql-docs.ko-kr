@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 223277050e7c758d2fcd5d46e62cf171fc2a1cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9abc42027d991697d13a135fb30a78258d8577f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900935"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 진행 중인 전체 텍스트 인덱스 및 의미 키 구 채우기에 대한 정보를 반환합니다.  
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|채우기가 진행되고 있는 전체 텍스트 인덱스를 포함하는 데이터베이스의 ID입니다.|  
 |**catalog_id**|**int**|이 전체 텍스트 인덱스를 포함하는 전체 텍스트 카탈로그의 ID입니다.|  
@@ -55,13 +54,13 @@ ms.locfileid: "65947308"
 |**start_time**|**datetime**|채우기가 시작된 시간입니다.|  
 |**incremental_timestamp**|**timestamp**|전체 채우기의 시작 타임스탬프를 나타냅니다. 다른 모든 채우기 유형의 경우 이 값은 마지막으로 커밋된 검사점으로, 채우기의 진행 상태를 나타냅니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 인덱싱뿐 아니라 통계 의미 인덱싱을 사용하도록 설정하면 전체 텍스트 인덱싱에서 키 구의 의미 추출 및 채우기와 문서 유사 데이터의 추출이 동시에 발생합니다. 문서 유사 인덱스의 채우기는 나중에 두 번째 단계에서 발생합니다. 자세한 내용은 [관리 및 모니터링 의미 체계 검색](../../relational-databases/search/manage-and-monitor-semantic-search.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
   
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "이 동적 관리 뷰의 유효 조인")  

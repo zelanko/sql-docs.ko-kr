@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: 이 빠른 시작에는 SUSE Linux Enterprise Server에서 SQL Server 2017 또는 SQL Server 2019 설치 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 19f74067db365fd9bdc867b97cef6ee5aa5162d8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: b878e76546642ee9b9792ece31029c0640eb8864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910491"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 

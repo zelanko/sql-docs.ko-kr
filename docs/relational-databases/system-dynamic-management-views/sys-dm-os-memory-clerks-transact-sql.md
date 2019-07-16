@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03c1f06133257543a20ba70edce801faba0ae92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899936"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725901"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_memory_clerks**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|메모리 클럭의 고유 메모리 주소를 지정합니다. 이것은 기본 키 열입니다. Null을 허용하지 않습니다.|  
 |**type**|**nvarchar(60)**|메모리 클럭의 유형을 지정합니다. 모든 클럭은 CLR 클럭 MEMORYCLERK_SQLCLR와 같은 특정한 유형을 가지고 있습니다. Null을 허용하지 않습니다.|  
@@ -58,9 +57,9 @@ ms.locfileid: "47725901"
 ## <a name="permissions"></a>사용 권한 
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 계층 구조는 세 계층으로 이루어져 있습니다. 계층 구조의 맨 아래에는 메모리 노드가 있습니다. 중간 수준은 메모리 클럭, 메모리 캐시 및 메모리 풀로 구성됩니다. 맨 위 계층은 메모리 개체로 구성됩니다. 이러한 개체는 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 메모리를 할당하는 데 사용됩니다.  
   
  메모리 노드는 하위 수준 할당자에 대한 인터페이스와 구현을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서는 메모리 클럭만 메모리 노드에 액세스할 수 있습니다. 메모리 클럭은 메모리 노드 인터페이스에 액세스하여 메모리를 할당합니다. 또한 진단을 위해 메모리 노드는 클럭을 사용하여 할당된 메모리를 추적합니다. 상당량의 메모리를 할당하는 모든 구성 요소는 자체 메모리 클럭을 만들고 클럭 인터페이스를 사용하여 메모리를 모두 할당해야 합니다. 대개 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작될 때 해당 클럭을 만듭니다.  

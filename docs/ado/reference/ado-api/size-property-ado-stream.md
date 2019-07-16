@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 42a4725efde507112d51b4f9c41af4ba83f63da4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916934"
 ---
 # <a name="size-property-ado-stream"></a>Size 속성(ADO 스트림)
 바이트 수가 스트림의 크기를 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66719092"
 ## <a name="return-values"></a>반환 값  
  반환 된 **긴** 바이트 수에서를 스트림의 크기를 지정 하는 값입니다. 기본값 스트림의 크기를 알 수 없는 경우를 스트림 또는-1의 크기는 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **크기** 오픈 에서만 사용할 수 있습니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
 > [!NOTE]

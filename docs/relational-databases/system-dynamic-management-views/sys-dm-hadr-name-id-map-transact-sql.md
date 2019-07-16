@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9560225279793efc290cae216f7757e0262e2357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900428"
 ---
 # <a name="sysdmhadrnameidmap-transact-sql"></a>sys.dm_hadr_name_id_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Always On 가용성 그룹의 매핑을 보여 줍니다 현재 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세 가지 고유한 Id에 조인 된: 가용성 그룹 ID, WSFC 리소스 ID 및 WSFC 그룹 ID가 이 매핑의 목적은 WSFC 리소스/그룹의 이름이 바뀐 시나리오를 처리하기 위한 것입니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**ag_name**|**nvarchar(256)**|가용성 그룹의 이름으로, WSFC(Windows Server 장애 조치(Failover) 클러스터) 클러스터 내에서 고유해야 하는 사용자 지정 이름입니다.|  
 |**ag_id**|**uniqueidentifier**|가용성 그룹의 GUID(Globally Unique Identifier)입니다.|  

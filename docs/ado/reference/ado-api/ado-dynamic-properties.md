@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ad6c2804b70011380a12b5b9e0cd1f52fd56398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921091"
 ---
 # <a name="ado-dynamic-properties"></a>ADO 동적 속성
 동적 속성에 추가할 수 있습니다는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션의 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [명령](../../../ado/reference/ado-api/command-object-ado.md), 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 이러한 속성에 대 한 원본이 두 데이터 공급자와 같은 합니다 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), 또는 서비스 공급자와 같은 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)합니다. 적절 한 데이터 공급자 또는 특정 동적 속성에 대 한 자세한 내용은 서비스 공급자 설명서를 참조 하십시오.  
@@ -31,7 +30,7 @@ ms.locfileid: "66696870"
 |||  
 |-|-|  
 |[최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|이 필드에 인덱스를 만들어야 하는지 여부를 지정 합니다.|  
-|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.|  
+|[프롬프트](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.|  
 |[변형 이름](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|이름을 지정 합니다 **레코드 집합** 개체입니다.|  
 |[다시 동기화 명령](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|사용자가 제공한 명령 문자열을 지정 합니다 **다시 동기화** 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 **고유 테이블** 동적 속성입니다.|  
 |[고유 테이블, 고유 스키마, 고유 카탈로그](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**고유 테이블** 기반이 업데이트, 삽입 및 삭제를 수행할 기본 테이블의 이름을 지정 합니다.<br /><br /> **고유한 스키마** 스키마 또는 테이블 소유자의 이름을 지정 합니다.<br /><br /> **고유 카탈로그** 카탈로그 또는 테이블이 포함 된 데이터베이스의 이름을 지정 합니다.|  

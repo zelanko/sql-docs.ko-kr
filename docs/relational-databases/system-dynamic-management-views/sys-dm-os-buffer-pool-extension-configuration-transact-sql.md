@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900220"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration(Transact-SQL)
 
@@ -34,7 +33,7 @@ ms.locfileid: "62503803"
   
 
   
-| 열 이름 | 데이터 형식 | Description |
+| 열 이름 | 데이터 형식 | 설명 |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|버퍼 풀 확장 캐시의 경로 및 파일 이름입니다. Null을 허용합니다.|  
 |file_id|**int**|버퍼 풀 확장 파일의 ID입니다. Null을 허용하지 않습니다.|  
@@ -48,7 +47,7 @@ ms.locfileid: "62503803"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-configuration-buffer-pool-extension-information"></a>1\. 구성 버퍼 풀 확장 정보 반환  
+### <a name="a-returning-configuration-buffer-pool-extension-information"></a>A. 구성 버퍼 풀 확장 정보 반환  
  다음 예에서는 sys.dm_os_buffer_pool_extension_configruation DMV에서 모든 열을 반환합니다.  
   
 ```sql  

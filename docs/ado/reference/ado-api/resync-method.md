@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917166"
 ---
 # <a name="resync-method"></a>Resync 메서드
 현재 데이터를 새로 고칩니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 의 컬렉션을 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 기본 데이터베이스 개체입니다.  
@@ -43,7 +42,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  (선택 사항) A [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 원본 값을 덮어쓸지 여부를 지정 하는 값입니다. 기본값은 **adResyncAllValues**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="recordset"></a>레코드 집합  
  사용 합니다 **Resync** 현재에서 레코드를 다시 동기화 하는 방법 **레코드 집합** 기본 데이터베이스를 사용 하 여 합니다. 정적 또는 정방향 전용 커서를 사용 하지만 기본 데이터베이스의 변경 내용을 확인 하려는 경우에 유용 합니다.  

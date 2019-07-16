@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926052"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
 Microsoft® C++®에서 ADO 이벤트를 인스턴스화하는 방법에 도식 설명입니다. 참조 [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 설명은 합니다.  

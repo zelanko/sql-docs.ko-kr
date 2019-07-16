@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31693cb3635a226bdc7bdde767ce5bd781e525e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918477"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 검색할 레코드 수를 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|레코드의 나머지 부분을 검색 합니다 **레코드 집합**, 현재 위치 또는 지정 된 책갈피에서는 *시작* 의 매개 변수는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 메서드.|  
   

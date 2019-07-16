@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8239a5f9069212b9413216bc3535e3c90e2d5316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920443"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete, CommitTransComplete, 및 RollbackTransComplete 이벤트 (ADO)
 이러한 이벤트에서 연결된 된 작업 후 호출 되는 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 실행이 완료 합니다.  
@@ -63,7 +62,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  합니다 **연결** 이 이벤트가 발생 한 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시각적 개체의 C++, multiple **연결** 동일한 이벤트 처리 메서드를 공유할 수 있습니다. 메서드를 사용 하 여 반환 된 **연결** 이벤트를 발생 시킨 개체를 결정 하는 개체입니다.  
   
  경우는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성이 **adXactCommitRetaining** 또는 **adXactAbortRetaining**, 새 트랜잭션을 커밋 또는 트랜잭션 롤백 후 시작 합니다. 사용 된 **BeginTransComplete** 이벤트를 모두 무시 하지만 첫 번째 트랜잭션 시작 이벤트입니다.  

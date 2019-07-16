@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901665"
 ---
 # <a name="managing-data-sources"></a>데이터 원본 관리
 드라이버의 설치 프로그램에서 ODBC 드라이버를 설치한 후에 대 한 하나 이상의 데이터 원본을 정의할 수 있습니다. 데이터 원본 이름 (DSN)에 데이터의 고유한 설명을 제공 해야 예를 들어 *급여* 하거나 *Accounts Payable*합니다. 현재 설치 된 모든 드라이버에 대해 정의 된 사용자 및 시스템 데이터 원본에 나열 됩니다는 **사용자 DSN** 또는 **시스템 DSN** 탭을 **ODBC 데이터 원본 관리자**대화 상자. 지정된 된 디렉터리의 파일 데이터 원본에 나열 됩니다는 **파일 DSN** 탭을 표시할 디렉터리에 입력를 **찾는 위치** 상자에 **파일 DSN** 탭 합니다.  
@@ -40,7 +39,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  데이터 원본에 해당 드라이버를 통해 액세스 하려는 데이터를 사용 하 여 특정 ODBC 드라이버를 연결 합니다. 예를 들어 ODBC dBASE 드라이버 특정 디렉터리 하드 디스크 또는 네트워크 드라이브에 있는 하나 이상의 dBASE 파일 액세스를 사용 하는 데이터 소스를 만들 수 있습니다. ODBC 데이터 원본 관리자를 사용 하 여, 있습니다 수 추가, 수정 및 삭제 데이터 원본에 다음 표에 설명 된 대로 합니다.  
   
-|작업|Description|  
+|Action|설명|  
 |------------|-----------------|  
 |데이터 원본 추가|드라이버는 드라이버를 사용 하 여 액세스 하려는 일부 데이터를 사용 하 여 연결 각각 여러 데이터 소스를 추가 하는 것이 가능 합니다. 각 데이터 원본의 해당 데이터 소스를 고유 하 게 식별 하는 이름을 지정 합니다. 예를 들어 고객 정보를 포함 하는 dBASE 파일 집합에 대 한 데이터 소스를 만드는 경우 이름을 지정할 수 있습니다 데이터 원본 "고객"을 선택 합니다. 응용 프로그램에는 일반적으로 사용자가 선택할 수에 대 한 데이터 원본 이름이 표시 됩니다.<br /><br /> 파일 데이터 원본을 추가 하는 것은 사용자 또는 시스템 데이터 원본 추가에서 약간 다릅니다. 자세한 내용은 ODBC 데이터 원본 관리자 도움말 파일을 참조 하세요.|  
 |데이터 원본 수정|요구 사항에 따라 필요할 수 있습니다이 데이터 원본을 다시 구성 합니다. 클릭 하 여 옵션을 다시 설정할 수 있습니다 **구성** 모든 드라이버 설치 대화 상자에서.|  

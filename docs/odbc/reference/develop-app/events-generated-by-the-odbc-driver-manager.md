@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901357"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 드라이버 관리자에 의해 생성된 이벤트
 > [!IMPORTANT]  
@@ -27,9 +26,9 @@ ms.locfileid: "63061641"
   
  ODBC 드라이버 관리자에 의해 생성 된 이벤트는 Visual Studio Analyzer 시작 단추를 클릭할 때 등록 됩니다. 도구 자체 시스템에 정의 된 이벤트 및 사용자 지정 이벤트를 만들 수 있는 기능을 제공 합니다. 이벤트에 대 한 자세한 내용은 참조는 *Visual Studio 분석기 참조 가이드* 설명서의 Visual Studio 제품군 내에서.  
   
-|Visual Studio Analyzer 이벤트|Description|  
+|Visual Studio Analyzer 이벤트|설명|  
 |----------------------------------|-----------------|  
-|**호출**|모든 ODBC API 항목에서 생성 됩니다.|  
+|**Call**|모든 ODBC API 항목에서 생성 됩니다.|  
 |**ReturnException**|반환 코드는 SQL_ERROR 하는 경우 모든 ODBC API 반환 시 생성.|  
 |**ReturnNormal**|반환 코드를 SQL_ERROR 되지 않으면 모든 ODBC API 반환 시 생성.|  
 |**연결 시작**|연결을 시작; 나타냅니다. ODBC 드라이버 관리자가 드라이버의 연결 Api를 호출할 때 생성 됩니다.|  

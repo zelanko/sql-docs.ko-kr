@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb15d3b64496374bed5b16f2661528c7ba1f9aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 524c4b8f8c9467358a3868f191f8a0d527ca3d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909823"
 ---
 # <a name="basic-odbc-application-steps"></a>기본 ODBC 애플리케이션 단계
 이 섹션에서는 ODBC 응용 프로그램의 일반적인 흐름을 설명 합니다. 그럴 가능성은 모든 응용 프로그램이 순서 대로 이러한 모든 함수 호출을 합니다. 그러나 대부분의 응용 프로그램에는 다음이 단계 중 일부 변형을 사용합니다. 기본 응용 프로그램 단계는 다음 그림에 표시 됩니다.  

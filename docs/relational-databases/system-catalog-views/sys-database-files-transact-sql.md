@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ec05a27421b8b55fb0085dbac97ab564bc5bff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915090"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 자체에 저장되어 있는 각 데이터베이스 파일당 한 개의 행을 포함합니다. 이 뷰는 데이터베이스별 뷰입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|데이터베이스 내 파일의 ID입니다.|  
 |**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드되었습니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "56032304"
 |**state_desc**|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
 |**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅숏의 경우 size는 스냅숏이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너에 대 한 크기는 현재 사용 된 컨테이너의 크기를 반영 합니다.|  
 |**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> Max_size는 FILESTREAM 파일 그룹 컨테이너에 대 한 컨테이너의 최대 크기를 반영합니다.<br /><br /> 참고는 무제한 로그 파일 크기를 사용 하 여 업그레이드 된 데이터베이스에 로그 파일의 최대 크기에 대 한-1를 보고 합니다.|  
-|**growth**|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> >0 = 파일이 자동으로 증가합니다.<br /><br /> is_percent_growth = 0인 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
+|**growth**|**int**|0 = 파일 크기가 고정되어 증가하지 않습니다.<br /><br /> > 0 = 파일이 자동으로 증가 합니다.<br /><br /> is_percent_growth = 0인 경우 증분은 8KB 페이지 단위로 표시되며 64KB 단위로 반올림됩니다.<br /><br /> is_percent_growth = 1이면 증분은 정수 백분율로 표시됩니다.|  
 |**is_media_read_only**|**bit**|1 = 파일이 읽기 전용 미디어에 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기 미디어에 있습니다.|  
 |**is_read_only**|**bit**|1 = 파일이 읽기 전용으로 표시되어 있습니다.<br /><br /> 0 = 파일이 읽기/쓰기로 표시되어 있습니다.|  
 |**is_sparse**|**bit**|1 = 스파스 파일입니다.<br /><br /> 0 = 스파스 파일이 아닙니다.<br /><br /> 자세한 내용은 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.|  

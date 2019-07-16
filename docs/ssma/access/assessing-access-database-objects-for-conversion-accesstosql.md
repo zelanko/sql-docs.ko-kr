@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910696"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>(AccessToSQL) 변환을 위해 Access 데이터베이스 개체를 평가
 개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 결정 얼마나 또는 마이그레이션의 성공 하면 되며 변환 시간 걸릴 수 있습니다. SSMA를 성공적으로 변환 된 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문과 시간 마이그레이션을 수행 하는 것에 대 한 예상치입니다. 또한 SSMA 변환 실패를 야기 하는 특정 문제를 볼 수 있습니다.  

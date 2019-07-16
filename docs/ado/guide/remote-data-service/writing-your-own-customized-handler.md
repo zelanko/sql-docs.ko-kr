@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921882"
 ---
 # <a name="writing-your-own-customized-handler"></a>고유한 사용자 지정된 처리기 작성
 기본 RDS를 지원 하려는 IIS 서버 관리자 인 경우 사용자 고유의 처리기를 작성 하는 것이 좋습니다 하지만 사용자 요청을 보다 세부적으로 제어할 사용 권한과 액세스 합니다.  

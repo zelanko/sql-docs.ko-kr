@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907539"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSdbms_datatype_mapping** 테이블 대상 DBMS의에서 하나 이상의 특정 데이터 형식으로 원본 데이터베이스 관리 시스템 (DBMS) 데이터 형식에서 허용 되는 데이터 형식 매핑을 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스 및 다른 유형의 데이터베이스 복제에 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|고유한 각 데이터 형식 매핑을 식별합니다.|  
 |**map_id**|**int**|원본 데이터 형식을 식별합니다.|  
@@ -39,7 +38,7 @@ ms.locfileid: "62817052"
 |**dest_scale**|**int**|여기서 NULL 값 확장은 사용 되지 않음을 의미, 대상 데이터 형식의 소수 자릿수 및 값 정의 **-1** 원본 데이터 형식의 소수 자릿수 사용 됨을 의미 합니다.|  
 |**dest_length**|**bigint**|여기서 NULL 값은 길이가 사용 되지 않음을 의미, 대상 데이터 형식, 길이 및 값 정의 **-1** 원본 데이터 형식의 길이가 사용 됨을 의미 합니다.|  
 |**dest_nullable**|**bit**|매핑의 대상 열이 NULL 값을 허용하는지 여부를 나타냅니다. 여기서 NULL 값은 이 정의가 필요하지 않음을 의미합니다.|  
-|**dest_createparams**|**int**|각 데이터 형식에 적용할 수 있는 길이, 전체 자릿수, 소수 자릿수의 조합을 설명하는 비트맵이며 다음을 포함합니다.<br /><br /> **0x1** = PRECISION.<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = LENGTH.|  
+|**dest_createparams**|**int**|각 데이터 형식에 적용할 수 있는 길이, 전체 자릿수, 소수 자릿수의 조합을 설명하는 비트맵이며 다음을 포함합니다.<br /><br /> **0x1** = 전체 자릿수입니다.<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = 길이입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

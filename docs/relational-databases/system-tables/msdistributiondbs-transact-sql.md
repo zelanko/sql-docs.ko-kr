@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 173e1a32b986e750ee924c1950fd12cc5ded0ab2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907341"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52817246"
 |**max_distretention**|**int**|트랜잭션을 삭제하기 전의 최대 보존 기간(시)입니다.|  
 |**history_retention**|**int**|기록을 보존할 시간입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

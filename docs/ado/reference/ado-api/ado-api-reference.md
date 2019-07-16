@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6436ca3b67587751757ae01b4248c1ce8b35722d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921226"
 ---
 # <a name="ado-api-reference"></a>ADO API 참조
 ADO 설명서의이 섹션에서는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목을 포함합니다. 또한, Microsoft Visual을 사용 하 여 사용할 ADO 구문 인덱스의 목록을 포함 C++ 및 Windows Foundation 클래스 (WFC).  

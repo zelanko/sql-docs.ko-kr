@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 231d9ced5bf370b8ee7c507e930e6961cfbed5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924942"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>기본 데이터 공급자에 명령 발급
 셰이프를 사용 하 여 시작 하지 않는 모든 명령은 통해 데이터 공급자에 전달 됩니다. "모양 {공급자 명령}" 형태로 셰이프 명령을 실행 하는 것과 같습니다. 이러한 명령 *되지* 생성 해야를 **레코드 집합**합니다. 예를 들어 "{DROP TABLE MyTable} 도형은 완벽 하 게 유효한 셰이프 명령 DROP TABLE 데이터 공급자가 지 원하는 것으로 가정 합니다.  

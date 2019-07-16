@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5c1c3869b144bb770ca893595986288b07aa596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917007"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 내에서 레코드 검색 방향을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adSearchBackward**|-1|시작 부분에서 중지, 검색 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  
 |**adSearchForward**|1|끝날 때 중지, 검색에서 전달 된 **레코드 집합**합니다. 일치 하는 항목이 없으면 레코드 포인터의 위치가 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)합니다.|  

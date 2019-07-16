@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 449e0e54605fd7ee145333d749e48621dcda3b6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15a188a912d9338b6e786248e9242914d5759196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905078"
 ---
-# <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact-SQL)
+# <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   확인 하려면 원격 Azure 데이터베이스를 전체 복원 지정 시간 복원은 필요한 경우 준비 테이블의 SQL Server 유지 하는 마이그레이션된 데이터의 시간 수를 가져옵니다. 
@@ -48,11 +47,11 @@ sp_rda_get_rpo_duration @durationinhours output
 ## <a name="permissions"></a>사용 권한    
  Db_owner 권한이 필요합니다.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
  실행 하 여 값을 변경 [sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)합니다.    
     
 ## <a name="see-also"></a>관련 항목    
- [sys.sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [스트레치 사용 데이터베이스 (Stretch Database)를 복원 합니다.](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 63416f019cfde8ec47029cf962e4aa29643c40c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77d4bd0bfab8b2c1a7337cae1f5d96300b7f3625
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910001"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65485981"
 ##  <a name="TableColumns"></a> 테이블 열  
  다음 표에서는 간계 준비 테이블에 나오는 각 필드의 용도에 대해 설명합니다.  
   
-|열 이름|Description|값|  
+|열 이름|설명|값|  
 |-----------------|-----------------|-----------|  
 |**ID**|자동으로 할당된 식별자입니다.|이 필드에 값을 입력하지 마십시오. 일괄 처리를 처리하지 않은 경우 이 필드가 비어 있습니다.|  
 |**RelationshipType**|필수<br /><br /> 설정하려는 관계의 유형입니다.|가능한 값은<br /><br /> **1**: 부모<br /><br /> **2**: 형제 (같은 수준)|  
@@ -40,7 +39,7 @@ ms.locfileid: "65485981"
 |**HierarchyName**|필수<br /><br /> 명시적 계층의 이름입니다. 각 통합 멤버는 하나의 계층에만 속할 수 있습니다.||  
 |**ParentCode**|필수<br /><br /> 부모-자식 관계의 경우 자식 리프 또는 통합 멤버의 부모가 될 통합 멤버의 코드입니다.<br /><br /> 형제 관계의 경우 형제 중 하나의 코드입니다.||  
 |**ChildCode**|필수<br /><br /> 부모-자식 관계의 경우 자식이 될 통합 또는 리프 멤버의 코드입니다.<br /><br /> 형제 관계의 경우 형제 중 하나의 코드입니다.||  
-|**정렬 순서**|선택 사항<br /><br /> 부모 아래에 있는 다른 멤버와 관련하여 해당 멤버의 순서를 나타내는 정수입니다. 각 자식 멤버마다 고유한 식별자를 지정해야 합니다.||  
+|**정렬 순서**|Optional<br /><br /> 부모 아래에 있는 다른 멤버와 관련하여 해당 멤버의 순서를 나타내는 정수입니다. 각 자식 멤버마다 고유한 식별자를 지정해야 합니다.||  
 |**ErrorCode**|오류 코드를 표시합니다. **ImportStatus_ID**가 **2**인 모든 레코드의 경우 [준비 프로세스 오류&#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)를 참조하세요.||  
   
 ## <a name="see-also"></a>관련 항목  

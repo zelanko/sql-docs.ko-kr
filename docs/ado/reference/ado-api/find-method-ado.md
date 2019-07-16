@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918624"
 ---
 # <a name="find-method-ado"></a>Find 메서드(ADO)
 검색을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 지정된 된 조건을 만족 시키는 행에 대 한 합니다. 필요에 따라 검색, 시작 행 및 오프셋을 시작할 행의 방향을 지정할 수 있습니다. 현재 행 위치가 찾은 레코드;에 설정 된 조건이 충족 되 면 하는 경우 끝 (또는 시작) 위치 설정 되어이 고, 그렇지 합니다 **레코드 집합**합니다.  
@@ -47,7 +46,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *시작*  
  (선택 사항) A **Variant** 검색 시작 위치와 작동 하는 책갈피입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 단일 열 이름만 지정할 수 있습니다 *조건을*합니다. 이 메서드는 여러 열 검색을 지원 하지 않습니다.  
   
  비교 연산자 *조건을* 될 수 있습니다 " **>** "(보다 큼)," **\<** " (보다 작음), "=" (같음), "> =" (보다 크거나 같음), "< =" (작거나 같음), "<>" (다음과 같지 않은 경우) 또는 "좋아요" (패턴 일치).  

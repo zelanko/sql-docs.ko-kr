@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cf7cd81-1750-46ee-80ed-be70f57e8569
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5399ff5fa98b98665cea3e7fa67eb94eee693a63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf983af92c8d4677657a369e520709b39196bde8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903991"
 ---
 # <a name="from-clause-limitations"></a>FROM 절 제한 사항
 FROM 절에서 테이블의 최대 수는 16입니다.

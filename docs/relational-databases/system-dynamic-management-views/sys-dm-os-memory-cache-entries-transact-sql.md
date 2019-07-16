@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2d00a5e39057f6c1410cb170095bc9c0d5f322fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04abb6062986e17f4f84c9d4ac6f6bd1ef6d2204
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899984"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63048067"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_memory_cache_entries**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|캐시 주소입니다. Null을 허용하지 않습니다.|  
 |**name**|**nvarchar(256)**|캐시의 이름입니다. Null을 허용하지 않습니다.|  
@@ -57,7 +56,7 @@ ms.locfileid: "63048067"
 ## <a name="permissions"></a>사용 권한 
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="see-also"></a>관련 항목  
  

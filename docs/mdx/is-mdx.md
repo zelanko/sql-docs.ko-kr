@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 29d251c05639d928f3ea5a9925a4cc21935e0529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905985"
 ---
 # <a name="is-mdx"></a>IS(MDX)
 
@@ -38,7 +37,7 @@ Expression1 IS ( Expression2 | NULL )
 ## <a name="return-value"></a>반환 값  
  반환 하는 부울 값 **true** 인수가 모두 동일한 개체;를 참조 하는 경우이 고, 그렇지 **false**합니다. 경우는 **NULL** 키워드를 지정 하는 연산자를 반환 합니다 **true** 하는 경우 *Expression1* 됩니다 **null**고, 그렇지 않으면 **false** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **IS** 연산자는 대개 지 여부를 확인할 튜플 및 멤버가 멱 등 원, 정확히 동일한 지를 의미 합니다.  
   
 ## <a name="examples"></a>예  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc4cc6f10a48f48cc15e8309794563cd1585bd6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd44c5154668513d695071c23619e650497c8a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907479"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSdbms** 테이블에 다른 유형의 데이터베이스 복제에 대 한 지원 되는 데이터베이스 관리 시스템 (DBMS)의 모든 버전의 마스터 목록을 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**dbms_id**|**int**|고유한 DBMS 및 버전을 식별합니다.|  
 |**dbms**|**sysname**|DBMS 이름입니다.<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  

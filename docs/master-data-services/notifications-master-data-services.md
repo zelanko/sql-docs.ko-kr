@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de89d59c6205dd2ab0789492a746b925fa74b5c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 265c285781484ab06a329a617f5a0f9433a6b4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904030"
 ---
 # <a name="notifications-master-data-services"></a>알림(Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "65486033"
 ## <a name="when-notifications-are-sent"></a>알림을 보내는 경우  
  알림이 구성된 후 다음 인스턴스에 자동화된 전자 메일 알림을 보낼 수 있습니다.  
   
-|인스턴스|Description|  
+|인스턴스|설명|  
 |--------------|-----------------|  
 |데이터가 비즈니스 규칙 유효성 검사를 통과하지 못할 경우|특성 값이 비즈니스 규칙 유효성 검사를 통과하지 못하는 경우 전자 메일을 보내도록 개별 비즈니스 규칙을 구성해야 합니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> Model<br /><br /> 버전<br /><br /> 엔터티<br /><br /> 멤버 코드<br /><br /> 비즈니스 규칙 실패<br /><br /> 비즈니스 규칙이 실패하는 특성 값의 멤버에 연결<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)에서 알림을 구성합니다.|  
 |모델 버전 상태가 변경될 경우|모델 버전의 상태가 변경될 때마다 모델 관리자인 사용자가 알림을 자동으로 받습니다. 이 알림에는 다음과 같은 정보가 포함되어 있습니다.<br /><br /> Model<br /><br /> 버전<br /><br /> 버전의 이전 및 새 상태<br /><br /> 알림 발급 시간<br /><br /> 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.|  

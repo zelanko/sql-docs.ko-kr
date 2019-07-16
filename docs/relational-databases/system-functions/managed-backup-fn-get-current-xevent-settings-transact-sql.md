@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 95d3adaa-bb9d-4833-b8b4-3d9fd4f9c82a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fa350d9ff9d5e90eb595f1f693b8e62a46fa555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4133f8bb64d5d7e2e2b511c2128b9ddbca1fa550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910241"
 ---
 # <a name="managedbackupfngetcurrentxeventsettings-transact-sql"></a>managed_backup.fn_get_current_xevent_settings (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ smart_admin.fn_get_current_xevent_settings ()
 ## <a name="table-returned"></a>반환된 테이블  
  확장 이벤트의 Admin, Analytic 및 Operational 채널은 기본적으로 사용하도록 설정되며 구성할 수 없습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |Event_name|NVARCHAR(128)|확장 이벤트 유형|  
 |is_configurable|NVARCHAR(128)|이 설정은 **True** 이벤트를 구성할 수 있는 경우 다른 것으로 설정 **False**합니다.|  

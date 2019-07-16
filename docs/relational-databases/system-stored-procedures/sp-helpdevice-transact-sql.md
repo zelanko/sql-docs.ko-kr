@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902988"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|논리적 장치 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|물리적 파일 이름입니다.|  
@@ -59,7 +58,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|장치의 컨트롤러 유형입니다.<br /><br /> 2 = 디스크 장치<br /><br /> 5 = 테이프 장치|  
 |**size**|**int**|장치 크기(2KB 페이지)입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 *이름을* 를 지정 하면 **sp_helpdevice** 지정 된 덤프 장치에 대 한 정보를 표시 합니다. 경우 *이름* 지정 하지 않으면 **sp_helpdevice** 에서 모든 덤프 장치에 대 한 정보를 표시 합니다 **sys.backup_devices** 카탈로그 뷰.  
   
  덤프 장치를 사용 하 여 시스템에 추가 됩니다 **sp_addumpdevice**합니다.  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe2a6cc350291ac2304e2f00825bef76e37e75cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926840"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 개체 오류 코드
 다음 표에서 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 오류 코드 개체입니다. 낮은 2 바이트의 양의 10 진수 변환, 전체 오류 코드 및 16 진수 값은 음수 10 진수 변환 표시 됩니다.
 
-|RDS. DataControl 오류 코드|Number|Description|
+|RDS. DataControl 오류 코드|Number|설명|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|비동기 작업이 보류 중인 동안에 작업을 수행할 수 없습니다.|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|잘못 된 인라인 테이블 그램입니다.|

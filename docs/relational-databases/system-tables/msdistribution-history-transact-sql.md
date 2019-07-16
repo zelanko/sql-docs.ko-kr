@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907390"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.locfileid: "62903700"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|배포 에이전트의 ID입니다.|  
 |**runstatus**|**int**|실행 상태는 다음과 같습니다.<br /><br /> **1** = 시작 합니다.<br /><br /> **2** = 성공 합니다.<br /><br /> **3** = 진행 중입니다.<br /><br /> **4** = 유휴 상태입니다.<br /><br /> **5** = 다시 시도 합니다.<br /><br /> **6** = 실패.|  
 |**start_time**|**datetime**|작업 실행을 시작할 시간입니다.|  
 |**time**|**datetime**|메시지가 기록되는 시간입니다.|  
 |**duration**|**int**|메시지 세션의 기간(초)입니다.|  
-|**comments**|**nvarchar(4000)**|메시지 텍스트입니다.|  
+|**주석**|**nvarchar(4000)**|메시지 텍스트입니다.|  
 |**xact_seqno**|**varbinary(16)**|마지막에 처리된 트랜잭션 시퀀스 번호입니다.|  
 |**current_delivery_rate**|**float**|마지막 기록 항목 이후에 초당 전달된 평균 명령 수입니다.|  
 |**current_delivery_latency**|**int**|마지막 기록 항목 이후 배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 밀리초.|  

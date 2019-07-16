@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 이 빠른 시작에는 SQL Server 2017 또는 SQL Server 2019 Ubuntu에 설치 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 9454affd6d6c60efc31e46c575cc575227cf05f3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910460"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: SQL Server를 설치 하 고 Ubuntu에서 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

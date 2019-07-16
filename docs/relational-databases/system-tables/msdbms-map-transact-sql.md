@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: df67e691-3a50-450a-99c5-8c4a041749ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad9106bb9cde64953643e86bf81e72684858bd65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fffa30d0e252392c41cee34c1875b12b5b7a53b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907497"
 ---
 # <a name="msdbmsmap-transact-sql"></a>MSdbms_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSdbms_map** 테이블 원본 및 대상 DBMS 쌍에 대 한 기본 대상 데이터 형식 정보에 대 한 링크 뿐만 아니라 원본 데이터 형식 정보를 포함 합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스 및 다른 유형의 게시에 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**map_id**|**int**|데이터 형식 매핑을 고유하게 식별합니다.|  
 |**src_dbms_id**|**int**|지정 하 여 원본 DBMS를 식별 합니다. 해당 **dbms_id** 에 [MSdbms](../../relational-databases/system-tables/msdbms-transact-sql.md) 테이블입니다.|  

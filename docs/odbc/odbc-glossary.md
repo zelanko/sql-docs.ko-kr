@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911366"
 ---
 # <a name="odbc-glossary"></a>ODBC 용어 설명
 ## <a name="a"></a>변수를 잠그기 위한  
@@ -66,7 +65,7 @@ ms.locfileid: "67794174"
  **바인딩 오프셋**  
  모든 바인딩된 열 또는 매개 변수를 생성 하는 데이터를 새 주소에 대 한 데이터 버퍼 주소 및 길이/표시기 버퍼 주소를 추가 하는 값입니다.  
   
- **block cursor**  
+ **블록 커서**  
  한 번에 둘 이상의 데이터 행을 인출 수 있는 커서입니다.  
   
  **buffer**  
@@ -86,7 +85,7 @@ ms.locfileid: "67794174"
  데이터베이스의 카탈로그에서 정보를 검색 하는 데 사용 되는 ODBC 함수입니다.  
   
  **CLI**  
- *See* API.  
+ *참조* API.  
   
  **client/server**  
  하나 이상의 클라이언트가 서버를 통해 데이터에 액세스 하는 데이터베이스 액세스 전략입니다. 클라이언트는 일반적으로 서버 컨트롤 데이터베이스 액세스 하는 동안 사용자 인터페이스를 구현 합니다.  
@@ -119,7 +118,7 @@ ms.locfileid: "67794174"
  부분 응용 프로그램에 데이터 행을 반환 하는 소프트웨어입니다. 아마도 깜박이 커서 터미널; 컴퓨터의 이름을 딴 해당 커서 화면에 현재 위치를 나타내는, 처럼 결과 집합에서 커서 결과 집합의 현재 위치를 나타냅니다.  
   
 ## <a name="d"></a>D  
- **data buffer**  
+ **데이터 버퍼**  
  데이터를 전달 하는 데 사용 되는 버퍼입니다. 연결 버퍼 된 데이터를 *데이터 길이가 버퍼*합니다.  
   
  **데이터 사전**  
@@ -134,10 +133,10 @@ ms.locfileid: "67794174"
  **데이터 형식**  
  형식 데이터의 일부입니다. ODBC C 및 SQL 데이터 형식을 정의합니다. *참고* 형식 표시기입니다.  
   
- **data-at-execution column**  
+ **실행 시 데이터 열**  
  후 데이터는 전송 하는 열 **SQLSetPos** 라고 합니다. 데이터 행 집합 버퍼에 배치 하는 것이 아니라 실행 시간에 전송 되기 때문에 그렇게 명명 된 합니다. Long 데이터 실행 시 부분에서 일반적으로 전송 됩니다.  
   
- **data-at-execution parameter**  
+ **실행 시 데이터 매개 변수**  
  매개 변수는 데이터가 후 보내집니다 **SQLExecute** 또는 **SQLExecDirect** 라고 합니다. 이라는 매개 변수 버퍼에 배치 하는 대신 SQL 문이 실행 될 때 전송 됩니다. Long 데이터 실행 시 부분에서 일반적으로 전송 됩니다.  
   
  **database**  
@@ -155,7 +154,7 @@ ms.locfileid: "67794174"
  **DDL**  
  데이터 정의 언어입니다. 데이터를 조작 하이 아니라 정의 SQL 문입니다. 예를 들어 **CREATE TABLE**를 **CREATE INDEX**를 **부여**, 및 **해지**합니다.  
   
- **delimited identifier**  
+ **구분된 식별자**  
  특수 문자를 포함 하거나 키워드 (따옴표 붙은 식별자 라고도 함)와 일치 수 있도록 따옴표 식별자에에서 포함 된 식별자입니다.  
   
  **descriptor**  
@@ -182,7 +181,7 @@ ms.locfileid: "67794174"
  **dynamic cursor**  
  행을 검색할 수 있으므로 스크롤 가능 커서를 업데이트, 삭제 또는 결과 집합에 삽입 합니다.  
   
- **dynamic SQL**  
+ **동적 SQL**  
  Embedded sql는 SQL 문을 생성 되 고 런타임에 컴파일되는 형식입니다. *참고* 정적 SQL입니다.  
   
 ## <a name="e"></a>E  
@@ -300,7 +299,7 @@ ms.locfileid: "67794174"
  **octet**  
  8 비트 또는 1 바이트입니다. *참고* 바이트입니다.  
   
- **octet length**  
+ **8 진수 길이**  
  포함 된 데이터 버퍼의 8 진수 길이입니다.  
   
  **ODBC**  
@@ -334,7 +333,7 @@ ms.locfileid: "67794174"
  **매개 변수 상태 배열**  
  호출한 후에 매개 변수의 상태를 포함 하는 배열을 **SQLExecDirect** 하거나 **SQLExecute**합니다.  
   
- **pessimistic concurrency**  
+ **비관적 동시성**  
  다른 트랜잭션에서 변경할 수 있도록 행을 잠그는 순차성을 구현 하기 위한 전략을 합니다. *참고 항목* 낙관적 동시성 *고* 순차성 합니다.  
   
  **위치 지정된 작업**  
@@ -378,7 +377,7 @@ ms.locfileid: "67794174"
  **결과 집합**  
  실행 하 여 생성 된 행 집합을 **선택** 문입니다.  
   
- **return code**  
+ **반환 코드**  
  ODBC 함수에서 반환 된 값입니다.  
   
  **롤백**  
@@ -460,10 +459,10 @@ ms.locfileid: "67794174"
  **statement handle**  
  문에 대 한 정보를 포함 하는 데이터 구조에 대 한 핸들입니다.  
   
- **static cursor**  
+ **정적 커서**  
  업데이트를 검색할 수 없는 스크롤 가능 커서를 삭제 하거나 결과 집합에 삽입 합니다. 일반적으로 결과 집합의 복사본을 만들어 구현 합니다.  
   
- **static SQL**  
+ **정적 SQL**  
  포함 된 sql 문 SQL에서 하드 코드 및 컴파일된 프로그램의 나머지 컴파일될 때 사용 되는 형식입니다. *참고* 동적 SQL입니다.  
   
  **저장된 프로시저**  

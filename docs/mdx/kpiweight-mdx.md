@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 325942d8bd0b4aa674266b2f3e40941fc401b277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47e68a956595a1f2ac42cfbfe28d0b93a1e7a694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905812"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight(MDX)
 
@@ -32,7 +31,7 @@ KPIWeight(KPI_Name)
  *KPI_Name*  
  KPI의 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환된 값은 부모에 대한 KPI의 기여도입니다.  
   
 ## <a name="see-also"></a>관련 항목  

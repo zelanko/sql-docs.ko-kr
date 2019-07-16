@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_population_ranges (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_population_ranges (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ ms.assetid: 58d8564b-9c43-4965-a31c-2893890334ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d41e7ce0353d45752896286dc27e59494efbc9c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc84437f0742dae068769485be951be98b8338c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900894"
 ---
 # <a name="sysdmftspopulationranges-transact-sql"></a>sys.dm_fts_population_ranges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 진행 중인 전체 텍스트 인덱스 채우기와 관련된 특정 범위에 대한 정보를 반환합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**memory_address**|**varbinary(8)**|전체 텍스트 인덱스 채우기의 해당 하위 범위와 관련된 작업에 할당된 메모리 버퍼의 주소입니다.|  
 |**parent_memory_address**|**varbinary(8)**|전체 텍스트 인덱스와 관련된 모든 채우기 범위의 부모 개체를 나타내는 메모리 버퍼의 주소입니다.|  
@@ -45,7 +44,7 @@ ms.locfileid: "65947179"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
  
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-population-ranges-1.gif "이 동적 관리 뷰의 유효 조인")  

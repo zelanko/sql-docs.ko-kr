@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b259bcb9228cbc42c2626ce6f750918073af65d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ee0aa11dcc9b73f6c0a174714852f76f383fb45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923170"
 ---
 # <a name="programming-with-ado-md"></a>ADO MD를 사용한 프로그래밍
 개발 도구를 사용 하 여 ADO MD를 사용 하려면 ADO MD 형식 라이브러리에 대 한 참조를 설정 해야 합니다. ADO MD 라이브러리에 대 한 설명을 Microsoft ActiveX Data Objects (다차원) 라이브러리입니다. ADO MD 라이브러리 파일 이름을 msadomd.dll, 이며 (progid 프로그램)의 프로그램 ID "ADOMD"입니다. 라이브러리에 대 한 참조를 설정 하는 방법에 대 한 자세한 내용은 개발 도구 설명서를 참조 하세요.  

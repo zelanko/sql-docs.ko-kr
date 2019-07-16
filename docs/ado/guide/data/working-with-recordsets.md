@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923411"
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 작업
 합니다 **레코드 집합** 개체에 결과 집합의 데이터를 제공 하는 조건에 따라 특정 레코드를 검색 하 고 인덱스를 사용 하 여 해당 검색 작업을 최적화 하기 위해도 순서를 다시 정렬할 수 있는 기본 제공 기능이 있습니다. 이러한 기능에 사용할 수 있는지 여부 등 일부 경우에서 공급자에 따라 달라 집니다 합니다 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성-데이터 원본 자체의 구조입니다.  
@@ -112,7 +111,7 @@ ms.locfileid: "66704435"
 ### <a name="filtering-with-a-constant"></a>상수를 사용 하 여 필터링  
  다음 상수는 필터링에 사용 가능한 **레코드 집합**합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|마지막 영향을 받는 레코드만 보기에 대 한 필터 **삭제**, **Resync**를 **UpdateBatch**, 또는 **CancelBatch** 호출 합니다.|  
 |**adFilterConflictingRecords**|마지막 일괄 처리 업데이트를 실패 한 레코드를 보기 위한 필터입니다.|  

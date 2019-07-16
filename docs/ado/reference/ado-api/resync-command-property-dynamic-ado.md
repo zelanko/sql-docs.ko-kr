@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917143"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
 사용자가 제공한 명령 문자열을 지정 합니다 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성입니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66711669"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 명령 문자열 값.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가 여러 기본 테이블에서 실행 하는 조인 작업의 결과입니다. 영향을 받는 행에 따라 달라 집니다 합니다 *AffectRecords* 의 매개 변수를 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드. 표준 **Resync** 경우 메서드가 실행 되기 합니다 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 **Resync Command** 속성이 설정 되지 않습니다.  
   
  명령 문자열을 **Resync Command** 매개 변수가 있는 명령 또는 저장된 프로시저를 새로 고쳐 행을 고유 하 게 식별 하는 속성과 같은 개수 및 열 순서를 행으로 포함 된 단일 행을 반환 새로 고쳐집니다. 명령 문자열의 각 기본 키 열에 대 한 매개 변수를 포함 합니다 **고유 테이블**고, 그렇지 않으면 런타임에 오류가 반환 됩니다. 매개 변수를 자동으로 새로 고쳐져 야 하는 행의 기본 키 값으로 채웁니다.  

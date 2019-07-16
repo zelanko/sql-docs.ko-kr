@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52d2a0284666c7b26c40fad62e8fdf9455379b49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900245"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62506060"
   
 > **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_buffer_descriptors**합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|버퍼 풀에 있는 페이지와 연결된 데이터베이스의 ID입니다. Null을 허용합니다.|  
 |file_id|**int**|페이지의 지속형 이미지를 저장하는 파일의 ID입니다. Null을 허용합니다.|  
@@ -56,9 +55,9 @@ ms.locfileid: "62506060"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.dm_os_buffer_descriptors는 리소스 데이터베이스에서 사용 중인 페이지를 반환 합니다. sys.dm_os_buffer_descriptors는 사용 가능한 페이지나 빼앗긴 페이지 또는 읽을 때 오류가 있던 페이지에 대 한 정보를 반환 하지 않습니다.  
   
 |보낸 사람|수행할 작업|켜짐|관계|  
@@ -70,7 +69,7 @@ ms.locfileid: "62506060"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>1\. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
+### <a name="a-returning-cached-page-count-for-each-database"></a>A. 각 데이터베이스에 대해 캐시된 페이지 수 반환  
  다음 예에서는 각 데이터베이스에 대해 로드된 페이지 수를 반환합니다.  
   
 ```  

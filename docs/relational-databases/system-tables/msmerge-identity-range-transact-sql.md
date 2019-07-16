@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27906e593020d45a9fb5e79be6ac53bc0e7fafcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e62d2e8cf46de73bf8f0881b398437ab4ef58fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62904795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909041"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSmerge_identity_range** 테이블 게시를 구독에 대 한 id 열에 할당 된 숫자 범위 추적을 사용 하는 복제에서 자동으로 관리 하는 이러한 범위 할당 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|지정된 구독의 고유 ID입니다.|  
 |**artid**|**uniqueidentifier**|지정된 아티클의 고유한 ID입니다.|  

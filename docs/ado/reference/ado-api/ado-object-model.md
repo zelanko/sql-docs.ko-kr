@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bc17d9eb083f2805da98f65097acbbccabeed29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 603b0a95dbf469041247a2b73da67b6ebe272079
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920910"
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
 다음 그림에서는 ADO 개체 및 해당 컬렉션을 표시 합니다.  

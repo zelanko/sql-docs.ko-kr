@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b7a039fe3053e5ab55f7485fde2c426e3ff8b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd291d1615920c3b576386b3f026a4b4d7f29dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901671"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>사용자 지정 워크플로 만들기 - XML 설명
 
@@ -66,7 +65,7 @@ ms.locfileid: "65488324"
   
  다음 표에서는 이 XML에 포함되는 태그 일부에 대해 설명합니다.  
   
-|태그|Description|  
+|태그|설명|  
 |---------|-----------------|  
 |\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 유형** 입력란에 입력한 텍스트입니다.|  
 |\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  

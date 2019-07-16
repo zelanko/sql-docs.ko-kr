@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906004"
 ---
 # <a name="head-mdx"></a>Head(MDX)
 
@@ -35,7 +34,7 @@ Head(Set_Expression [ ,Count ] )
  *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Head** 함수는 지정된 된 집합의 시작 부분에서 지정 된 튜플 수가 반환 합니다. 요소의 순서는 유지됩니다. Count의 기본값은 1입니다. 지정 된 튜플 수가 1 보다 작은 경우는 **Head** 함수는 빈 집합을 반환 합니다. 지정된 튜플 수가 집합의 튜플 수를 초과할 경우에는 원래 집합을 반환합니다.  
   
 ## <a name="example"></a>예제  

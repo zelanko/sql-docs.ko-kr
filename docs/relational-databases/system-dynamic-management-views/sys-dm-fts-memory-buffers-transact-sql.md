@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfca7379336d07b9e5a7099c6c8075c0f959b7ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900928"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "65947262"
 > 이후 릴리스에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**합니다. 향후 개발 작업에서는 이 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 응용 프로그램은 수정하십시오.  
 
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|할당된 메모리 풀의 ID입니다.<br /><br /> 0 = 작은 버퍼<br /><br /> 1 = 큰 버퍼|  
 |**memory_address**|**varbinary(8)**|할당된 메모리 풀의 주소입니다.|  
@@ -50,7 +49,7 @@ ms.locfileid: "65947262"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
   
 ## <a name="physical-joins"></a>물리적 조인  
  ![이 동적 관리 뷰의 유효 조인](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "이 동적 관리 뷰의 유효 조인")  

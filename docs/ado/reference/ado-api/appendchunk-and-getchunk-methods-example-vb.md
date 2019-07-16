@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be7e0a83f7624dc471eb8c47108fa4886b7e09ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920621"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 및 GetChunk 메서드 예제 (VB)
 이 예제에서는 합니다 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 하 고 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 이미지 필드를 다른 레코드의 데이터로 채우는 방법입니다.  

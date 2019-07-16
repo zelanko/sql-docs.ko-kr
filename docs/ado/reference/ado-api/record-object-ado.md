@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 859bf3f53051a500e86742cb681885b8067f6a0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917366"
 ---
 # <a name="record-object-ado"></a>레코드 개체(ADO)
 행을 나타내며를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 데이터 공급자 또는 파일 또는 디렉터리와 같은 반 구조화 된 데이터 공급자를 반환 하는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **레코드** 개체는 데이터의 한 행을 나타냅니다 있고 한 행을 사용 하 여 개념적 느낄 **Recordset**합니다. 공급자 기능에 따라 **레코드** 개의 행 대신 공급자에서 직접 개체를 반환할 수 있습니다 **Recordset**예를 들어 경우 하나의 행을 선택 하는 SQL 쿼리, 실행 합니다. 또는, **레코드** 에서 직접 개체를 얻을 수는 **Recordset** 개체입니다. 또는, **레코드** Microsoft Exchange OLE DB 공급자와 같은 반 구조화 된 데이터 공급자에서 직접 반환 될 수 있습니다.  
   
  와 연결 된 필드를 볼 수는 **레코드** 의 방식으로 개체를 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에는 **레코드** 개체입니다. ADO 포함 하 여 개체 반환 열 수 있습니다 **레코드 집합**를 **SafeArray**, 및에서 스칼라 값을 **필드** 컬렉션 **레코드** 개체입니다.  

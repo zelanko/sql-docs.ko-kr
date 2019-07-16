@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6c09ebcf6b161f7b294e1cb70bff4c0f6137126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917271"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh 메서드 예제(VC++)
 이 예제에서는 합니다 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 새로 고침 하는 방법의 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 저장된 프로시저에 대 한 컬렉션 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체.  

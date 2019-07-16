@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257d9c604d441d8fae9fb34da5ddfce816336f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925352"
 ---
 # <a name="examining-data"></a>데이터 검사
 합니다 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 섹션에는 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **Recordset** 개체입니다. 이 섹션에서는 설명 **레코드 집합** 자세히 탐색 하는 방법 등을 **레코드 집합** 해당 데이터를 봅니다.  

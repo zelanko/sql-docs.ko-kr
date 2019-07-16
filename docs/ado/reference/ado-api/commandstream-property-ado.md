@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef6830a02fc7e82d88645e2380d0fc5239793bfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919741"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream 속성(ADO)
 에 대 한 입력으로 사용 되는 스트림을 나타내며를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66695804"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 입력으로 사용 되는 스트림을 반환 된 **명령** 개체입니다. 이 스트림에 대 한 형식으로 공급자별으로 다릅니다. 자세한 내용은 해당 공급자의 설명서를 참조 하세요. 이 속성은 비슷합니다는 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 의 입력에 대 한 문자열을 지정 하는 데 사용 하는 속성을 **명령**입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **CommandStream** 하 고 **CommandText** 함께 사용할 수 없습니다. 사용자 설정 하는 경우는 **CommandStream** 속성을 **CommandText** 속성을 빈 문자열로 설정 됩니다 (""). 사용자 설정 하는 경우는 **CommandText** 속성을 **CommandStream** 속성으로 설정 됩니다 **Nothing**.  
   
  동작을 **Command.Parameters.Refresh** 하 고 **Command.Prepare** 메서드 공급자에 의해 정의 됩니다. 스트림에서 매개 변수의 값을 새로 고칠 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924113"
 ---
 # <a name="static-cursors"></a>정적 커서
 정적 커서는 결과 집합 커서를 처음 연 경우 처럼 항상 표시 합니다. 구현에 따라 정적 커서는 읽기 전용 또는 읽기/쓰기 및 앞으로 및 뒤로 스크롤을 제공 합니다. 정적 커서는 멤버 자격, 순서 또는 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 일반적으로 검색 하지 않습니다. 정적 커서는 자체 업데이트, 삭제 및 삽입을 검색할 수 있지만 필수 사항은 아닙니다.  

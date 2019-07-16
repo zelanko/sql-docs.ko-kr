@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903016"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**dbid**|**smallint**|데이터베이스 ID입니다.|  
 |**created**|**nvarchar(11)**|데이터베이스가 만들어진 날짜입니다.|  
 |**상태**|**nvarchar(600)**|현재 데이터베이스에 설정된 데이터베이스 옵션의 값을 쉼표로 분리하여 나열한 것입니다.<br /><br /> 부울 값 옵션은 활성화된 경우에만 나열됩니다. 부울이 아닌 옵션의 형태로 해당 값을 사용 하 여 나와 *option_name*=*값*합니다.<br /><br /> 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
-|**compatibility_level**|**tinyint**|데이터베이스 호환성 수준이며 60, 65, 70, 80 또는 90입니다.|  
+|**compatibility_level**|**tinyint**|데이터베이스 호환성 수준: 60, 65, 70, 80 또는 90입니다.|  
   
  하는 경우 *이름을* 이 지정 되어 있는 지정된 된 데이터베이스에 대 한 파일 할당을 보여 주는 추가 결과 집합은입니다.  
   
@@ -70,7 +69,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**growth**|**nvarchar(18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
 |**usage**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **상태** 결과의 열을 데이터베이스에는 옵션이 ON으로 설정 되어 있는 보고서를 설정 합니다. 가 모든 데이터베이스 옵션을 보고 하지 않는 합니다 **상태** 열입니다. 현재 데이터베이스 옵션 설정의 전체 목록을 보려면를 사용 합니다 **sys.databases** 카탈로그 뷰.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -80,14 +79,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-information-about-a-single-database"></a>1. 단일 데이터베이스에 대한 정보 반환  
+### <a name="a-returning-information-about-a-single-database"></a>A. 단일 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 정보를 표시합니다.  
   
 ```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
-### <a name="b-returning-information-about-all-databases"></a>2. 모든 데이터베이스에 대한 정보 반환  
+### <a name="b-returning-information-about-all-databases"></a>2\. 모든 데이터베이스에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 서버에 있는 모든 데이터베이스에 대한 정보를 표시합니다.  
   
 ```sql  

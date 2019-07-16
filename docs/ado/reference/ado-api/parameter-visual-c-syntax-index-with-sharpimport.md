@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f72224b917d3101efa7fe9470462be358c5b85ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917759"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>매개 변수 (Visual C++ #import 구문 인덱스)
 ## <a name="methods"></a>메서드  

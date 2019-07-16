@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a21f833f72dc008c1af3a2d9d326fa73d650c274
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 046499b3169ab73db9592952f2a71506960c2cbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929731"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ object.AdvancedProperties [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  배열을 [SqlServiceAdvancedProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 에 대 한 고급 속성이 포함 된 개체를 **SqlService** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

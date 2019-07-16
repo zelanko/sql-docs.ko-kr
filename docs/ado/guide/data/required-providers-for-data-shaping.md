@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 98b34b985650f92fb840b14daba8d5bf16d8454a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924364"
 ---
 # <a name="required-providers-for-data-shaping"></a>데이터 셰이프에 필요한 공급자
 두 공급자를 해야 일반적으로 데이터 모양 지정 합니다. 서비스 공급자 [OLE db Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)데이터를 셰이핑 기능 및 OLE DB Provider for SQL Server 같은 데이터 공급자를 제공, 모양을 채우는 데이터의 행을 제공 [레코드 집합 ](../../../ado/reference/ado-api/recordset-object-ado.md).  

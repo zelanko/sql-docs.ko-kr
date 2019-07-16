@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f270d31e18edadd2c30003c3615e232d36d23ba4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899743"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 사용할 수 있고 소비하는 리소스 및 컴퓨터에 대한 기타 유용한 정보를 반환합니다.  
   
-> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 이름을 사용 하 여 **sys.dm_pdw_nodes_os_sys_info**합니다.  
+> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_sys_info**합니다.  
   
 |열 이름|데이터 형식|설명 및 버전 관련 정보 |  
 |-----------------|---------------|-----------------|  
@@ -74,17 +73,17 @@ ms.locfileid: "51663592"
 |**softnuma_configuration**|**int**|**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 방식으로 NUMA 노드가 구성 되어을 지정 합니다. Null을 허용하지 않습니다.<br /><br /> 0 = OFF 하드웨어 기본값을 나타냅니다.<br /><br /> 1 = 자동 소프트 NUMA<br /><br /> 2 = 레지스트리를 통해 수동 SOFT-NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 소프트 NUMA를 = OFF 기능은 해제<br /><br /> ON = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소프트 NUMA에 대 한 NUMA 노드 크기를 자동으로 결정 합니다.<br /><br /> 수동 수동으로 구성 된 소프트 NUMA =|
 |**process_physical_affinity**|**nvarchar(3072)** |**적용 대상:** 부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]합니다.<br /><br />제공 하는 정보입니다. |
-|**sql_memory_model**|**int**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br />사용 되는 메모리 모델을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당 합니다. Null을 허용하지 않습니다.<br /><br />1 = 기본 메모리 모델<br />2 = lock Pages in Memory<br /> 3 = 메모리의 큰 페이지|
-|**sql_memory_model_desc**|**nvarchar(120)**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br />사용 되는 메모리 모델을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당 합니다. Null을 허용하지 않습니다.<br /><br />**기존의**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 메모리 모델을 사용 하 여 메모리를 할당 됩니다. 이 기본 sql 메모리 모델 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 없는 페이지 잠금 메모리 권한에서 시작 하는 동안.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당할 메모리의 페이지 잠금 사용 합니다. SQL Server 서비스 계정 SQL Server 시작 하는 동안 Lock Pages in Memory 권한을 보유 하는 경우 이것이 기본 sql memory manager입니다.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당할 메모리의 큰 페이지를 사용 합니다. SQL Server 큰 페이지 할당자를 사용 하 여 SQL Server 서비스 계정 서버 시작 시와 추적 플래그 834 켜지 면 Lock Pages in Memory 권한을 보유 하는 경우 Enterprise edition에만 메모리를 할당할 수 있습니다.|
+|**sql_memory_model**|**int**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br />사용 되는 메모리 모델을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당 합니다. Null을 허용하지 않습니다.<br /><br />1 = 기본 메모리 모델<br />2 = lock Pages in Memory<br /> 3 = 메모리의 큰 페이지|
+|**sql_memory_model_desc**|**nvarchar(120)**|**적용 대상:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br /><br />사용 되는 메모리 모델을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당 합니다. Null을 허용하지 않습니다.<br /><br />**기존의**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 메모리 모델을 사용 하 여 메모리를 할당 됩니다. 이 기본 sql 메모리 모델 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 없는 페이지 잠금 메모리 권한에서 시작 하는 동안.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당할 메모리의 페이지 잠금 사용 합니다. SQL Server 서비스 계정 SQL Server 시작 하는 동안 Lock Pages in Memory 권한을 보유 하는 경우 이것이 기본 sql memory manager입니다.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리를 할당할 메모리의 큰 페이지를 사용 합니다. SQL Server 큰 페이지 할당자를 사용 하 여 SQL Server 서비스 계정 서버 시작 시와 추적 플래그 834 켜지 면 Lock Pages in Memory 권한을 보유 하는 경우 Enterprise edition에만 메모리를 할당할 수 있습니다.|
 |**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
-|**socket_count** |**int** | **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 프로세서 소켓 수를 지정합니다. |  
-|**cores_per_socket** |**int** | **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 소켓 당 프로세서의 수를 지정합니다. |  
-|**numa_node_count** |**int** | **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 numa 노드의 수를 지정합니다. 이 열에는 소프트 numa 노드 뿐만 아니라 물리적 numa 노드에 포함 됩니다. |  
+|**socket_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 프로세서 소켓 수를 지정합니다. |  
+|**cores_per_socket** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 소켓 당 프로세서의 수를 지정합니다. |  
+|**numa_node_count** |**int** | **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br />시스템에서 사용 가능한 numa 노드의 수를 지정합니다. 이 열에는 소프트 numa 노드 뿐만 아니라 물리적 numa 노드에 포함 됩니다. |  
   
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

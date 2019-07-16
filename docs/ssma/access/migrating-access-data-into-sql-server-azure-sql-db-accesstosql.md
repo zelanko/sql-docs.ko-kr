@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907140"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>SQL Server-Azure SQL DB (AccessToSQL)에 마이그레이션 데이터에 액세스
 데이터베이스 개체를 성공적으로 만들었으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대 한 액세스에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  

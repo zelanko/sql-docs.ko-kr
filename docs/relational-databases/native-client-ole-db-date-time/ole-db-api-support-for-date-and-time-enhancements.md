@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c8a474665e65588b2aead4aa6f21394ec76770c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f99055c13cf04f15d652f79258b10654410e98c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909240"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>날짜 및 시간 기능 향상을 위한 OLE DB API 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47656471"
 
   다음 OLE DB API는 향상된 날짜/시간 기능을 지원합니다.  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |IAccessor::CreateAccessor|플래그를 구별 하는 응용 프로그램을 사용 하도록 설정 하려면 DBBINDING 구조에 추가 됩니다 **날짜/시간**를 **datetime2**, 및 **smalldatetime** 값입니다. 자세한 내용은 [매개 변수 및 행 집합 메타 데이터](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)입니다.|  
 |IBCPSession::BCPColFmt|자세한 내용은 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  

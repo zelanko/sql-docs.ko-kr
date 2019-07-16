@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 162cac52920b076e4388a74a251cd347137f49cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925220"
 ---
 # <a name="handling-ado-events"></a>ADO 이벤트 처리
 ADO 이벤트 모델을 실행 하는 특정 동기 및 비동기 ADO 작업을 지원 *이벤트*, 또는 알림을 작업이 시작 되기 전에 또는 완료 된 후 발생 합니다. 이벤트는 실제로 응용 프로그램에서 정의 하는 이벤트 처리기 루틴을 호출 합니다.  

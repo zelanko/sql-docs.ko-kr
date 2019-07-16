@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs
+title: sys.sp_rda_reconcile_batch (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54bdac5237ff190f3620bb29dabbf684868c0b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905093"
 ---
-# <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
+# <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   원격 Azure 테이블에 저장 된 일괄 처리 ID를 사용 하 여 SQL Server 스트레치 사용 테이블에 저장 된 일괄 처리 ID를 조정 합니다.  
@@ -50,7 +49,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Azure로 이미 마이그레이션된 데이터를 삭제 하려는 경우에 다음 작업을 수행 합니다.  
   
 1.  데이터 마이그레이션 일시 중지 합니다. 자세한 내용은 [데이터 마이그레이션 일시 중지 및 다시 계속&#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)을 참조하세요.  

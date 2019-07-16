@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d225fa7af71b905ebe2de383af92156ba12fc74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4e4b071b8c62d3110d9d732d4cc63be3cce084d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920889"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 구문 인덱스
 ADO 메서드 및 속성을 호출 하는 구문은 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에서는 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 Microsoft Visual Basic을 사용 합니다. 그러나 프로그래밍 언어 및 방법론에 따라 구체적인 구문 예는 다음 섹션을 참조 하세요.  

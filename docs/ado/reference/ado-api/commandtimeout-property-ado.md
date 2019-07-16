@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 556474c3b038f40e21467a4bbc945fc8f29fd5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919706"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)
 시도 종료 하 고 오류를 생성 하기 전에 명령을 실행 하는 동안 대기할 시간을 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66695982"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **긴** 명령을 실행 하는 데 대기 하는 초 단위로 나타내는 값입니다. 기본값은 30입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **CommandTimeout** 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 또는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 취소를 허용 하는 개체는 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드 네트워크 트래픽 또는 많은 서버 사용에서 지연으로 인해를 호출 합니다. 간격을 설정 합니다 **CommandTimeout** 속성 명령 실행이 완료 오류가 발생 하 고 ADO 명령 취소 되기 전에 경과 합니다. 속성을 0으로 설정 하는 경우 ADO는 무기한 실행이 완료 될 때까지 대기 합니다. 공급자 및 데이터 소스를 작성 하는 코드 지원을 해야 합니다 **CommandTimeout** 기능입니다.  
   
  **CommandTimeout** 에 설정를 **연결** 에 영향을 주지 않습니다를 **CommandTimeout** 설정를 **명령** 에서 개체를 동일한 **연결**, 즉 합니다 **명령** 개체의 **CommandTimeout** 속성의 값을 상속 하지 않습니다는 **연결** 개체의 **CommandTimeout** 값입니다.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910150"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 복원 작업에 대해 하나의 행을 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|각 복원 작업을 식별하는 고유 ID입니다. ID, 즉 기본 키입니다.|  
 |**restore_date**|**datetime**|날짜 및 시간 복원 작업의 시작입니다. NULL일 수 있습니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "52617563"
 |**stop_at_mark_name**|**nvarchar(128)**|명명된 표시가 포함된 트랜잭션으로의 복구를 나타냅니다. NULL일 수 있습니다.<br /><br /> 데이터베이스가 데이터베이스 스냅숏으로 되돌린 경우 이 값은 NULL입니다.|  
 |**stop_before**|**bit**|명명된 표시가 포함된 트랜잭션이 복구에 포함되었는지 여부를 나타냅니다.<br /><br /> 0 = 표시된 트랜잭션 앞에서 복구가 중단되었습니다.<br /><br /> 1 = 표시된 트랜잭션까지 포함하여 복구되었습니다.<br /><br /> NULL일 수 있습니다.<br /><br /> 데이터베이스가 데이터베이스 스냅숏으로 되돌린 경우 이 값은 NULL입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  
   
 ## <a name="see-also"></a>관련 항목  

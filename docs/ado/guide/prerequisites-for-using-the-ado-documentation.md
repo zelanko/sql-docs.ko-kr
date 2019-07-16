@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d3132a1ac1ca146ecd4920ed907b3489da2354f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923123"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO 설명서 사용을 위한 필수 구성 요소
 이 설명서를 사용 하려면 해야, 대부분의 가이드의 예제는이 언어에 기록 되기 때문에 Microsoft Visual Basic로 응용 프로그램을 개발 경험이 최소한 합니다. Microsoft Visual로 작성 된 몇 가지 예도 있습니다 C++, Java, Visual Basic Scripting Edition (VBScript) 및 Microsoft JScript입니다.  

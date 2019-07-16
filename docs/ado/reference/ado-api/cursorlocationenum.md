@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43c2043917d6b21293fea71566dfdf1202b6f59e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919298"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 커서 서비스의 위치를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|로컬 커서 라이브러리에서 제공 하는 클라이언트 쪽 커서를 사용 합니다. 로컬 커서 서비스 드라이버 제공 커서 않을 많은 기능이 허용는 종종이 설정을 사용 하 여 사용할 수 있는 기능에 대해이 점으로 손꼽을 제공할 수 있도록 합니다. 이전 버전과 호환성을 위해 동의어 **adUseClientBatch** 도 지원 됩니다.|  
 |**adUseNone**|1|커서 서비스를 사용 하지 않습니다. (이 상수는 사용 되지 않습니다 및 이전 버전과 호환성을 위해서만 나타납니다.)|  

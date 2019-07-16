@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d5d1a211e473cf2eed96603d91b581a52e9062d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905867"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend(MDX)
 
@@ -32,7 +31,7 @@ KPITrend(KPI_Name)
  *KPI_Name*  
  KPI의 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  추세 값은 일반적으로 -1에서 1 사이의 정규화된 값입니다.  
   
 ## <a name="example"></a>예제  

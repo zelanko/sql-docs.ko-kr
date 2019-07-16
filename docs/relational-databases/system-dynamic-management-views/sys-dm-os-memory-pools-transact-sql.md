@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0483d616a8e95662b7501b1d5de74abd6ad3cfef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4292c659e796a61e601296a2ac984de987526cad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899901"
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013293"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_memory_pools**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**memory_pool_address**|**varbinary(8)**|메모리 풀을 나타내는 항목의 메모리 주소입니다. Null을 허용하지 않습니다.|  
 |**pool_id**|**int**|풀 집합 내에 있는 특정 풀의 ID입니다. Null을 허용하지 않습니다.|  
@@ -50,9 +49,9 @@ ms.locfileid: "63013293"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 공용 풀 프레임워크를 사용하여 유형이 같은 상태 비저장 유형의 데이터를 캐싱하는 경우가 있습니다. 풀 프레임워크는 캐시 프레임워크보다 간단합니다. 풀의 모든 항목은 동일하게 간주됩니다. 내부적으로 풀은 메모리 클럭이며 메모리 클럭이 사용되는 곳에 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

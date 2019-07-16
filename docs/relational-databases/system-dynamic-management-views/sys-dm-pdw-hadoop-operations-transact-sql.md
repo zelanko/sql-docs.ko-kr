@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 11c8cc0797bafff6cc8c38bffb55023be00003a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899386"
 ---
-# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact-SQL)
+# <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   각 맵 감소 작업 실행의 일부로 Hadoop에 푸시되는 대 한 행을 포함 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 외부 Hadoop 테이블에 대 한 쿼리 합니다. 각 맵 감소 작업을 쿼리에서 조건부 중 하나를 나타냅니다. 이 Hadoop 외부 테이블에 대 한 쿼리 조건자 푸시 다운이 활성화 될 때만 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 외부 Hadoop 작업의 ID입니다.|ID로 동일한 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|이 Hadoop 작업을 나타내는 쿼리 단계의 인덱스입니다.|step_index 동일 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  

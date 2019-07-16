@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e027e325ec27bf5a80cf4df85afcfe59656ce3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918447"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel 속성
 에 대 한 격리 수준을 나타냅니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66697588"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) 값입니다. 기본값은 **adXactReadCommitted**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **IsolationLevel** 격리 수준을 설정 하려면 속성을 **연결** 개체. 설정이 적용 되지 않습니다 다음에 호출 될 때까지 합니다 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드. 요청 하는 격리 수준을 사용할 수 없는 경우 공급자를 업데이트 하지 않고 다음 더 높은 수준의 격리를 반환할 수 있습니다 합니다 **IsolationLevel** 속성입니다.  
   
  합니다 **IsolationLevel** 속성은 읽기/쓰기가 가능 합니다.  

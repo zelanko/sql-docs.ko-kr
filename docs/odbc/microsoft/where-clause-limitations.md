@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46b54f74-e4a3-4318-87cf-8a97c38a2718
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e883d585db0fe11e92b188b2cfc26db9fff415fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bb6194d93e545526a850443f5e97074d88e7e1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911420"
 ---
 # <a name="where-clause-limitations"></a>WHERE 절 제한 사항
 절을 WHERE 절은 40의 최대 수입니다.  

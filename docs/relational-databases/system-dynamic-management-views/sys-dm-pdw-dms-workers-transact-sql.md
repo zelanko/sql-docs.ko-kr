@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_dms_workers (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,28 +11,27 @@ dev_langs:
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899497"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   DMS 단계를 완료 하는 모든 작업자에 대 한 정보를 보유 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|이 DMS 작업자의 일부인 쿼리입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|참조의 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|이 DMS 작업자의 일부인 단계를 쿼리 합니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.|step_index를 참조 하세요 [sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)합니다.|  
 |dms_step_index|**int**|이 작업 자가 실행 되는 DMS 계획의 단계입니다.<br /><br /> request_id, step_index, 및 dms_step_index이이 보기에 대 한 키를 구성합니다.||  
 |pdw_node_id|**int**|작업자에서 실행 되는 노드.|에 대 한 node_id를 참조 하세요 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  
 |distribution_id|**정수**|있는 경우에 실행 되는 배포 합니다.|distribution_id를 참조 하세요 [sys.pdw_distributions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)합니다.|  
-|유형|**nvarchar(32)**|이 항목을 나타내는 DMS 작업자 스레드의 유형입니다.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
+|type|**nvarchar(32)**|이 항목을 나타내는 DMS 작업자 스레드의 유형입니다.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |상태|**nvarchar(32)**|DMS 작업자의 상태입니다.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|마지막 1 초에서 읽기 또는 쓰기 처리량입니다.|보다 크거나 0입니다. 쿼리 취소 되었거나 작업 자가 실행할 수 전에 실패 하는 경우 NULL입니다.|  
 |bytes_processed|**bigint**|이 작업자에 의해 처리 된 총 바이트 수입니다.|보다 크거나 0입니다. 쿼리 취소 되었거나 작업 자가 실행할 수 전에 실패 하는 경우 NULL입니다.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908850"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>새 프로젝트(SSMA)(MySQLToSQL)
 사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  
@@ -25,7 +24,7 @@ ms.locfileid: "63312022"
   
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명이 추가 됩니다.  
   
-**위치**  
+**Location**:  
   
 입력 하거나 폴더 또는 프로젝트를 저장할 네트워크 위치를 찾습니다.  
   
